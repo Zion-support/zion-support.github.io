@@ -1,442 +1,287 @@
 import React, { useState } from 'react';
-import { 
-  Brain, 
-  Shield, 
-  Cpu, 
-  Cloud, 
-  Rocket, 
-    Target,
-  Users,
-  Code,
-  Network,
-  Database,
-  Lock,
-  BarChart3,
-  Heart,
-  DollarSign,
-  ShoppingCart,
-  Building,
-  Eye,
-  Zap,
-  Globe,
-  ArrowRight,
-  Search,
-  Filter,
-  Star,
-  CheckCircle,
-  Clock,
-  TrendingUp,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  ChevronDown,
-  ChevronUp,
-  Award,
-  Users2,
-  Globe2,
-  ShieldCheck,
-  TrendingDown,
-  Percent,
-  Calculator
-} from 'lucide-react';
-import { ENHANCED_INNOVATIVE_SERVICES_2025 } from '../data/enhancedInnovativeServices2025';
+import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
+import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
 
-export default function ComprehensivePricingComparison2025() {
+const ComprehensivePricingComparison2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('price');
-  const [sortOrder, setSortOrder] = useState('asc');
 
-  const categories = Array.from(new Set(ENHANCED_INNOVATIVE_SERVICES_2025.map(service => service.category)));
+  const allServices = [
+    ...advancedInnovativeServicesExpansionV3,
+    ...specializedEnterpriseSolutions2025
+  ];
 
-  const filteredServices = ENHANCED_INNOVATIVE_SERVICES_2025.filter(service =>
-    selectedCategory === 'all' || service.category === selectedCategory
-  );
+  const categories = [
+    { id: 'all', name: 'All Services', count: allServices.length },
+    { id: 'AI & Machine Learning', name: 'AI & Machine Learning', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine')).length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Security')).length },
+    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length },
+    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('Web3')).length },
+    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: allServices.filter(s => s.category.includes('IoT') || s.category.includes('Edge')).length },
+    { id: 'Digital Twin & Simulation', name: 'Digital Twin & Simulation', count: allServices.filter(s => s.category.includes('Digital Twin') || s.category.includes('Simulation')).length },
+    { id: 'Testing & Quality Assurance', name: 'Testing & Quality Assurance', count: allServices.filter(s => s.category.includes('Testing') || s.category.includes('Quality')).length },
+    { id: 'Compliance & Privacy', name: 'Compliance & Privacy', count: allServices.filter(s => s.category.includes('Compliance') || s.category.includes('Privacy')).length },
+    { id: 'Fintech & Digital Banking', name: 'Fintech & Digital Banking', count: allServices.filter(s => s.category.includes('Fintech') || s.category.includes('Banking')).length },
+    { id: 'Healthcare & Biotech', name: 'Healthcare & Biotech', count: allServices.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length },
+    { id: 'Space Technology', name: 'Space Technology', count: allServices.filter(s => s.category.includes('Space') || s.category.includes('Satellite')).length },
+    { id: 'Automotive & Transportation', name: 'Automotive & Transportation', count: allServices.filter(s => s.category.includes('Automotive') || s.category.includes('Transportation')).length },
+    { id: 'Energy & Sustainability', name: 'Energy & Sustainability', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Sustainability')).length },
+    { id: 'Manufacturing & Industrial', name: 'Manufacturing & Industrial', count: allServices.filter(s => s.category.includes('Manufacturing') || s.category.includes('Industrial')).length }
+  ];
 
-  // Sort services based on selected criteria
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    let comparison = 0;
-    
-    switch (sortBy) {
-      case 'price':
-        comparison = a.price - b.price;
-        break;
-      case 'name':
-        comparison = a.title.localeCompare(b.title);
-        break;
-      case 'category':
-        comparison = a.category.localeCompare(b.category);
-        break;
-      case 'delivery':
-        const aWeeks = parseInt(a.estimatedDelivery.split('-')[0]);
-        const bWeeks = parseInt(b.estimatedDelivery.split('-')[0]);
-        comparison = aWeeks - bWeeks;
-        break;
-      default:
-        comparison = 0;
-    }
-    
-    return sortOrder === 'asc' ? comparison : -comparison;
+  const filteredServices = allServices.filter(service => {
+    if (selectedCategory === 'all') return true;
+    return service.category.includes(selectedCategory) || 
+           service.category.includes(selectedCategory.split(' ')[0]) ||
+           service.category.includes(selectedCategory.split(' ')[1]);
   });
 
-  const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: any } = {
-      'Advanced AI & Machine Learning': Brain,
-      'Emerging Technology Solutions': Rocket,
-      'Industry-Specific AI Solutions': Target,
-      'Enterprise Automation Services': Building,
-      'Cybersecurity & Compliance': Shield,
-      'Data & Analytics Services': BarChart3,
-      'Cloud & DevOps Solutions': Cloud,
-      'Digital Transformation Services': Zap
+  const getCategoryIcon = (categoryName: string) => {
+    const iconMap: { [key: string]: string } = {
+      'AI & Machine Learning': '🤖',
+      'Cybersecurity': '🔐',
+      'Cloud & DevOps': '☁️',
+      'Blockchain & Web3': '⛓️',
+      'IoT & Edge Computing': '🌐',
+      'Digital Twin & Simulation': '🔄',
+      'Testing & Quality Assurance': '🧪',
+      'Compliance & Privacy': '📋',
+      'Fintech & Digital Banking': '💰',
+      'Healthcare & Biotech': '🏥',
+      'Space Technology': '🚀',
+      'Automotive & Transportation': '🚗',
+      'Energy & Sustainability': '⚡',
+      'Manufacturing & Industrial': '🏭'
     };
-    return iconMap[category] || Code;
+    return iconMap[categoryName] || '⚡';
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (categoryName: string) => {
     const colorMap: { [key: string]: string } = {
-      'Advanced AI & Machine Learning': 'from-purple-500 to-pink-500',
-      'Emerging Technology Solutions': 'from-blue-500 to-cyan-500',
-      'Industry-Specific AI Solutions': 'from-green-500 to-emerald-500',
-      'Enterprise Automation Services': 'from-orange-500 to-yellow-500',
-      'Cybersecurity & Compliance': 'from-red-500 to-pink-500',
-      'Data & Analytics Services': 'from-indigo-500 to-purple-500',
-      'Cloud & DevOps Solutions': 'from-blue-500 to-indigo-500',
-      'Digital Transformation Services': 'from-teal-500 to-green-500'
+      'AI & Machine Learning': 'from-blue-600 to-purple-700',
+      'Cybersecurity': 'from-red-600 to-orange-700',
+      'Cloud & DevOps': 'from-green-600 to-teal-700',
+      'Blockchain & Web3': 'from-purple-600 to-indigo-700',
+      'IoT & Edge Computing': 'from-cyan-600 to-blue-700',
+      'Digital Twin & Simulation': 'from-orange-600 to-red-700',
+      'Testing & Quality Assurance': 'from-emerald-600 to-green-700',
+      'Compliance & Privacy': 'from-indigo-600 to-purple-700',
+      'Fintech & Digital Banking': 'from-green-600 to-emerald-700',
+      'Healthcare & Biotech': 'from-blue-600 to-cyan-700',
+      'Space Technology': 'from-purple-600 to-pink-700',
+      'Automotive & Transportation': 'from-orange-600 to-red-700',
+      'Energy & Sustainability': 'from-green-600 to-teal-700',
+      'Manufacturing & Industrial': 'from-gray-600 to-slate-700'
     };
-    return colorMap[category] || 'from-gray-500 to-gray-600';
+    return colorMap[categoryName] || 'from-blue-600 to-cyan-700';
   };
 
-  const getCategoryStats = (category: string) => {
-    const servicesInCategory = ENHANCED_INNOVATIVE_SERVICES_2025.filter(service => service.category === category);
-    const totalPrice = servicesInCategory.reduce((sum, service) => sum + service.price, 0);
-    const avgPrice = totalPrice / servicesInCategory.length;
+  const getCategoryStats = (categoryName: string) => {
+    const categoryServices = allServices.filter(service => {
+      if (categoryName === 'all') return true;
+      return service.category.includes(categoryName) || 
+             service.category.includes(categoryName.split(' ')[0]) ||
+             service.category.includes(categoryName.split(' ')[1]);
+    });
+    
+    const avgPrice = categoryServices.reduce((sum, service) => {
+      const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+      return sum + price;
+    }, 0) / categoryServices.length;
+    
+    const avgRating = categoryServices.reduce((sum, service) => sum + service.rating, 0) / categoryServices.length;
     
     return {
-      count: servicesInCategory.length,
+      count: categoryServices.length,
       avgPrice: Math.round(avgPrice),
-      totalValue: totalPrice
+      avgRating: Math.round(avgRating * 10) / 10
     };
   };
-
-  const getOverallStats = () => {
-    const totalPrice = ENHANCED_INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
-    const avgPrice = totalPrice / ENHANCED_INNOVATIVE_SERVICES_2025.length;
-    const minPrice = Math.min(...ENHANCED_INNOVATIVE_SERVICES_2025.map(s => s.price));
-    const maxPrice = Math.max(...ENHANCED_INNOVATIVE_SERVICES_2025.map(s => s.price));
-    
-    return {
-      totalServices: ENHANCED_INNOVATIVE_SERVICES_2025.length,
-      totalValue: totalPrice,
-      avgPrice: Math.round(avgPrice),
-      minPrice,
-      maxPrice
-    };
-  };
-
-  const overallStats = getOverallStats();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-              2025 Pricing
-            </span> 
-            <br />
-            & Market Comparison
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Comprehensive
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Pricing Comparison 2025
+            </span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Transparent pricing for all our innovative services. Compare our competitive rates with market averages 
-            and discover the exceptional value we provide across our comprehensive service portfolio.
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Compare our innovative services across different categories and find the perfect solution for your business needs
           </p>
+        </div>
+      </section>
+
+      {/* Category Overview */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Service Categories Overview
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our comprehensive range of innovative services across multiple technology domains
+            </p>
+          </div>
           
-          {/* Contact Information */}
-          <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 max-w-2xl mx-auto mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-              <div className="flex flex-col items-center">
-                <Phone className="w-6 h-6 text-cyan-400 mb-2" />
-                <span className="text-sm text-gray-400">Phone</span>
-                <a href="tel:+13024640950" className="text-white hover:text-cyan-400 transition-colors">
-                  +1 302 464 0950
-                </a>
-              </div>
-              <div className="flex flex-col items-center">
-                <Mail className="w-6 h-6 text-cyan-400 mb-2" />
-                <span className="text-sm text-gray-400">Email</span>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-400 transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex flex-col items-center">
-                <MapPin className="w-6 h-6 text-cyan-400 mb-2" />
-                <span className="text-sm text-gray-400">Address</span>
-                <span className="text-white text-sm">
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Overall Statistics */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">Portfolio Overview</h2>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-6xl mx-auto">
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{overallStats.totalServices}</div>
-              <div className="text-gray-400">Total Services</div>
-            </div>
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">${overallStats.avgPrice.toLocaleString()}</div>
-              <div className="text-gray-400">Average Price</div>
-            </div>
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6">
-              <div className="text-3xl font-bold text-blue-400 mb-2">${overallStats.minPrice.toLocaleString()}</div>
-              <div className="text-gray-400">Starting Price</div>
-            </div>
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">${overallStats.maxPrice.toLocaleString()}</div>
-              <div className="text-gray-400">Premium Price</div>
-            </div>
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">{categories.length}</div>
-              <div className="text-gray-400">Categories</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Category Statistics */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Category Breakdown</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {categories.map((category) => {
-              const IconComponent = getCategoryIcon(category);
-              const stats = getCategoryStats(category);
+              const IconComponent = getCategoryIcon(category.name);
+              const stats = getCategoryStats(category.name);
               
               return (
                 <div
-                  key={category}
-                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 cursor-pointer"
-                  onClick={() => setSelectedCategory(category === selectedCategory ? 'all' : category)}
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.name === selectedCategory ? 'all' : category.name)}
+                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-6 border cursor-pointer transition-all duration-300 hover:transform hover:scale-105 ${
+                    selectedCategory === category.name
+                      ? 'border-blue-500 bg-gradient-to-br from-blue-600/20 to-cyan-600/20'
+                      : 'border-white/20 hover:border-white/40'
+                  }`}
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${getCategoryColor(category)} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className={`w-16 h-16 bg-gradient-to-r ${getCategoryColor(category.name)} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
+                    <span className="text-2xl">{IconComponent}</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2 text-center">{category}</h3>
+                  
+                  <h3 className="text-lg font-semibold text-white mb-2 text-center">{category.name}</h3>
+                  
                   <div className="text-center space-y-2">
-                    <div className="text-2xl font-bold text-cyan-400">{stats.count}</div>
+                    <div className="text-2xl font-bold text-blue-400">{stats.count}</div>
                     <div className="text-sm text-gray-400">Services</div>
-                    <div className="text-sm text-gray-500">Avg: ${stats.avgPrice}/mo</div>
+                    
+                    <div className="text-lg font-semibold text-green-400">${stats.avgPrice.toLocaleString()}</div>
+                    <div className="text-sm text-gray-400">Avg. Price</div>
+                    
+                    <div className="text-lg font-semibold text-yellow-400">{stats.avgRating}</div>
+                    <div className="text-sm text-gray-400">Avg. Rating</div>
                   </div>
                 </div>
               );
             })}
           </div>
         </div>
+      </section>
 
-        {/* Filters and Sorting */}
-        <div className="mb-8">
-          <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-3">
-              <button
-                onClick={() => setSelectedCategory('all')}
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-                  selectedCategory === 'all'
-                    ? 'bg-cyan-500 text-white'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                }`}
-              >
-                All Categories
-              </button>
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-                    selectedCategory === category
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-
-            {/* Sorting Options */}
-            <div className="flex gap-3">
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="bg-gray-800 text-white border border-gray-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              >
-                <option value="price">Sort by Price</option>
-                <option value="name">Sort by Name</option>
-                <option value="category">Sort by Category</option>
-                <option value="delivery">Sort by Delivery Time</option>
-              </select>
-              <button
-                onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-                className="bg-gray-800 text-white border border-gray-700 rounded-lg px-3 py-2 hover:bg-gray-700 transition-colors"
-              >
-                {sortOrder === 'asc' ? '↑' : '↓'}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Services Pricing Table */}
-        <div className="mb-16">
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-gray-700/50">
-                    <th className="text-left p-4 text-white font-semibold">Service</th>
-                    <th className="text-left p-4 text-white font-semibold">Category</th>
-                    <th className="text-left p-4 text-white font-semibold">Our Price</th>
-                    <th className="text-left p-4 text-white font-semibold">Market Average</th>
-                    <th className="text-left p-4 text-white font-semibold">Delivery</th>
-                    <th className="text-left p-4 text-white font-semibold">Support</th>
-                    <th className="text-left p-4 text-white font-semibold">Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {sortedServices.map((service, idx) => {
-                    const IconComponent = getCategoryIcon(service.category);
-                    
-                    return (
-                      <tr key={service.id} className="border-t border-gray-700 hover:bg-gray-700/30 transition-colors">
-                        <td className="p-4">
-                          <div className="flex items-center space-x-3">
-                            <div className={`w-10 h-10 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-lg flex items-center justify-center`}>
-                              <IconComponent className="w-5 h-5 text-white" />
-                            </div>
-                            <div>
-                              <div className="text-white font-medium">{service.title}</div>
-                              <div className="text-gray-400 text-sm">{service.subcategory}</div>
-                            </div>
-                          </div>
-                        </td>
-                        <td className="p-4">
-                          <span className="text-gray-300">{service.category}</span>
-                        </td>
-                        <td className="p-4">
-                          <div className="text-cyan-400 font-semibold">
-                            ${service.price.toLocaleString()}/mo
-                          </div>
-                        </td>
-                        <td className="p-4">
-                          <div className="text-gray-400">{service.marketPrice}</div>
-                        </td>
-                        <td className="p-4">
-                          <div className="text-gray-300">{service.estimatedDelivery}</div>
-                        </td>
-                        <td className="p-4">
-                          <span className={`px-2 py-1 rounded-full text-xs ${
-                            service.supportLevel === 'enterprise' 
-                              ? 'bg-purple-500/20 text-purple-300' 
-                              : 'bg-blue-500/20 text-blue-300'
-                          }`}>
-                            {service.supportLevel}
-                          </span>
-                        </td>
-                        <td className="p-4">
-                          <div className="flex space-x-2">
-                            <a
-                              href={`mailto:${service.contactInfo.email}?subject=Quote for ${service.title}`}
-                              className="bg-cyan-500 text-white px-3 py-1 rounded text-sm hover:bg-cyan-600 transition-colors"
-                            >
-                              Quote
-                            </a>
-                            <a
-                              href={`tel:${service.contactInfo.phone}`}
-                              className="border border-cyan-500 text-cyan-400 px-3 py-1 rounded text-sm hover:bg-cyan-500/10 transition-colors"
-                            >
-                              Call
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        {/* Value Proposition */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Zion Tech Group?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <TrendingDown className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Competitive Pricing</h3>
-              <p className="text-gray-300">
-                Our services are priced 20-40% below market averages while maintaining enterprise-grade quality and support.
-              </p>
-            </div>
-            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Premium Quality</h3>
-              <p className="text-gray-300">
-                Enterprise-grade solutions with cutting-edge technology, comprehensive support, and proven reliability.
-              </p>
-            </div>
-            <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Calculator className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">ROI Focused</h3>
-              <p className="text-gray-300">
-                Our solutions deliver measurable business value with rapid implementation and quick time-to-value.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-xl p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Get Started?
+      {/* Services Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              {selectedCategory === 'all' ? 'All Services' : selectedCategory}
             </h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Contact us today for a personalized quote and consultation. Our team will work with you to 
-              understand your needs and recommend the best solutions for your business.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {selectedCategory === 'all' 
+                ? 'Browse our complete portfolio of innovative services'
+                : `Explore our ${selectedCategory} solutions`
+              }
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Custom Quote Request"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center"
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <div
+                key={service.id}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <Mail className="w-4 h-4 mr-2" />
-                Request Custom Quote
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-200 flex items-center justify-center"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                Call for Consultation
-              </a>
-            </div>
-            <div className="mt-6 text-sm text-gray-400">
-              <p>Visit our website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:underline">https://ziontechgroup.com</a></p>
-            </div>
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
+                <p className="text-gray-300 mb-4 line-clamp-2">{service.description}</p>
+                
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30">
+                    {service.category}
+                  </span>
+                </div>
+
+                <div className="mb-6">
+                  <div className="text-3xl font-bold text-green-400 mb-2">{service.price}</div>
+                  <div className="text-gray-400">{service.period}</div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.slice(0, 3).map((feature, idx) => (
+                      <li key={idx} className="text-sm text-gray-300 flex items-center">
+                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                        {feature}
+                      </li>
+                    ))}
+                    {service.features.length > 3 && (
+                      <li className="text-sm text-gray-400 flex items-center">
+                        <span className="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>
+                        +{service.features.length - 3} more features
+                      </li>
+                    )}
+                  </ul>
+                </div>
+
+                <div className="space-y-3">
+                  <a
+                    href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
+                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+                  >
+                    Get Started
+                  </a>
+                  <a
+                    href={`tel:${service.contactInfo.mobile}`}
+                    className="block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+                  >
+                    Call for Demo
+                  </a>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-white/20">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-400">Rating:</span>
+                    <div className="flex items-center space-x-1">
+                      <div className="flex text-yellow-400">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : 'fill-gray-600'}`} viewBox="0 0 20 20">
+                            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                          </svg>
+                        ))}
+                      </div>
+                      <span className="text-gray-400">({service.reviews})</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our services can help transform your business and drive competitive advantage
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:kleber@ziontechgroup.com?subject=Pricing Comparison Inquiry"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Get Custom Quote
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+            >
+              Schedule Consultation
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default ComprehensivePricingComparison2025;

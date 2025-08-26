@@ -7,6 +7,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import InnovativeServices2025 from './pages/InnovativeServices2025';
+import InnovativeServicesShowcase2025 from './pages/InnovativeServicesShowcase2025';
 import ComprehensivePricing2025 from './pages/ComprehensivePricing2025';
 import Blog from './pages/Blog';
 import NotFound from './pages/NotFound';
@@ -23,6 +24,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
             <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
+            <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
             <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricing2025 />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
