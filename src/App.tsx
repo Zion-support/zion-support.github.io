@@ -1,8 +1,9 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader.jsx';
-import { Footer } from './components/Footer.jsx';
-import { ChatAssistant } from './components/ChatAssistant.jsx';
+import { EnhancedFuturisticNavigation } from './components/EnhancedFuturisticNavigation';
+import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
+import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
+import { ChatAssistant } from './components/ChatAssistant';
 
 // Lazy load pages with better chunking
 const Home = lazy(() => import('./pages/Home.jsx'));
@@ -34,12 +35,24 @@ const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 
-const LoadingSpinner = () => (
-  <div className="min-h-screen bg-futuristic flex items-center justify-center">
-    <div className="text-center">
-      <div className="relative">
-        <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-        <div className="absolute inset-0 w-16 h-16 border-4 border-zion-purple border-t-transparent rounded-full animate-spin mx-auto mb-4" style={{ animationDelay: '-0.5s' }}></div>
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
+const ComprehensiveServicesOverview = React.lazy(() => import('./pages/ComprehensiveServicesOverview'));
+const ComprehensivePricingGuide2027New = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+
+// Enhanced loading component with better UX
+const EnhancedLoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="relative">
+      <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
+      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
+        ZION
+      </div>
+      <div className="mt-4 text-center">
+        <div className="text-zion-cyan text-sm animate-pulse">Loading amazing experiences...</div>
       </div>
       <p className="text-zion-cyan text-lg font-medium">Loading Zion Tech Group...</p>
       <p className="text-zion-slate-light text-sm mt-2">Preparing your experience</p>
@@ -50,10 +63,15 @@ const LoadingSpinner = () => (
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
-        <AppHeader />
-        <main className="flex-1 pt-16 lg:pt-20">
-          <Suspense fallback={<LoadingSpinner />}>
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
+        {/* Futuristic Animated Background */}
+        <FuturisticAnimatedBackground />
+        
+        {/* Navigation */}
+        <EnhancedFuturisticNavigation />
+        
+        <main className="flex-1 relative z-10">
+          <Suspense fallback={<EnhancedLoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -91,6 +109,16 @@ function App() {
               <Route path="/it-services" element={<ITServicesPage />} />
               <Route path="/it-services/:service" element={<ITServicesPage />} />
               
+              {/* Innovative Services 2027 Routes */}
+              <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
+              
+              {/* New Comprehensive Routes */}
+              <Route path="/services-overview" element={<ComprehensiveServicesOverview />} />
+              <Route path="/pricing-guide" element={<ComprehensivePricingGuide2027New />} />
+              
               {/* Emerging Tech Routes */}
               <Route path="/emerging-tech" element={<GreenIT />} />
               <Route path="/emerging-tech/:service" element={<GreenIT />} />
@@ -113,7 +141,11 @@ function App() {
             </Routes>
           </Suspense>
         </main>
-        <Footer />
+        
+        {/* Footer */}
+        <EnhancedFuturisticFooter />
+        
+        {/* Chat Assistant */}
         <ChatAssistant />
       </div>
     </Router>
