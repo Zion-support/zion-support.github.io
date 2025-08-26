@@ -21,7 +21,6 @@ import { NotificationProvider } from './context';
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
-import { CartProvider } from './context/CartContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
@@ -133,4 +132,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>,
-)
+);
+
+registerServiceWorker();
