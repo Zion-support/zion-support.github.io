@@ -104,11 +104,14 @@ export default function About() {
         keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-aa85
         canonical="https://ziontechgroup.com/about"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">

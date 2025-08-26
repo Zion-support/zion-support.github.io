@@ -561,6 +561,7 @@ const Careers: React.FC = () => {
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
         keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
@@ -573,6 +574,8 @@ export default function Careers() {
         description="Explore career opportunities at Zion. Join our mission to democratize AI and technology access." 
         keywords="careers, jobs, Zion, AI, technology, employment"
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-aa85
         canonical="https://ziontechgroup.com/careers"
       />
       <AppHeader />

@@ -71,12 +71,16 @@ export default function GreenIT() {
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
         canonical="https://ziontechgroup.com/green-it"
+=======
+        canonical="https://ziontechgroup.com/marketplace/category/green-it"
+>>>>>>> origin/cursor/website-audit-and-enhancement-aa85
       />
       <AppHeader />
       <main className="min-h-screen bg-background pt-16 pb-20">
