@@ -292,6 +292,7 @@ export default function Contact() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
@@ -328,6 +329,21 @@ export default function Contact() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Choose the most convenient way to reach us. Our team is ready to help 
               you with any questions or project requirements.
+=======
+    <>
+      <SEO
+        title="Contact Zion - Get in Touch"
+        description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform."
+        keywords="contact Zion, AI marketplace support, tech platform contact"
+        canonical="https://ziontechgroup.com/contact"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>Contact Us</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Have questions or want to learn more? We'd love to hear from you.
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5
             </p>
           </motion.div>
           

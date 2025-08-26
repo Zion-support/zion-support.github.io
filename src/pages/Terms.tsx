@@ -1086,8 +1086,13 @@ const Terms: React.FC = () => {
 =======
     <AppLayout>
       <SEO
+<<<<<<< HEAD
         title="Terms of Service | Zion Tech Group"
         description="The terms and conditions for using the Zion Tech Group platform."
+=======
+        title="Terms of Service"
+        description="The terms and conditions for using the Zion platform."
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5
         canonical="https://ziontechgroup.com/terms"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">

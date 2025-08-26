@@ -731,9 +731,15 @@ const Sitemap: React.FC = () => {
 =======
     <AppLayout>
       <SEO
+<<<<<<< HEAD
         title="Sitemap | Zion Tech Group"
         description="Complete sitemap for Zion Tech Group - navigate through all our services, pages, and resources"
         keywords="sitemap, navigation, Zion Tech Group, services, pages"
+=======
+        title="Sitemap | Zion AI Marketplace"
+        description="Human readable sitemap for all public routes"
+        keywords="sitemap, navigation"
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5
         canonical="https://ziontechgroup.com/sitemap"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">

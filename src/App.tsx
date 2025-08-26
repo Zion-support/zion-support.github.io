@@ -45,9 +45,10 @@ const About = React.lazy(() => import('./pages/About'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const HelpCenterPage = React.lazy(() => import('./pages/HelpCenterPage'));
+const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -76,9 +77,12 @@ const baseRoutes = [
   { path: '/careers', element: <Careers /> },
   { path: '/privacy', element: <Privacy /> },
   { path: '/terms', element: <Terms /> },
-  { path: '/sitemap', element: <Sitemap /> },
   { path: '/green-it', element: <GreenIT /> },
-  { path: '/marketplace', element: <Marketplace /> },
+  { path: '/sitemap', element: <Sitemap /> },
+  { path: '/help', element: <HelpCenterPage /> },
+  { path: '/support', element: <HelpCenterPage /> },
+  { path: '/developers', element: <DeveloperPortal /> },
+  { path: '/api-docs', element: <DeveloperPortal /> },
 ];
 
 const App = () => {

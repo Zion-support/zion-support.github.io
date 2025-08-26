@@ -23,6 +23,7 @@ export default function About() {
 <<<<<<< HEAD
     <div className="min-h-screen bg-background">
       <SEO 
+<<<<<<< HEAD
         title="About Zion Tech Group - Leading Technology Solutions Provider" 
         description="Learn about Zion Tech Group's mission to revolutionize technology services through AI, innovation, and digital transformation expertise."
         keywords="about us, Zion Tech Group, technology company, AI services, digital transformation"
@@ -89,6 +90,11 @@ export default function About() {
         title="About Zion Tech Group - The Future of AI & Tech Marketplace" 
         description="Learn about Zion Tech Group's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
         keywords="about Zion Tech Group, AI marketplace, tech platform, mission, vision, team"
+=======
+        title="About Zion - The Future of AI & Tech Marketplace" 
+        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
+        keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5
         canonical="https://ziontechgroup.com/about"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">

@@ -52,7 +52,11 @@ export default function GreenIT() {
       <SEO
         title="Green IT Solutions - Sustainable Technology | Zion Tech Group"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
+<<<<<<< HEAD
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware, Zion Tech Group"
+=======
+        keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5
         canonical="https://ziontechgroup.com/green-it"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
