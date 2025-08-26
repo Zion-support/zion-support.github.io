@@ -10,9 +10,9 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { advancedAIautomationServices as advancedAIAutomationServices2026 } from '../data/2025-advanced-ai-automation-services';
-import { advancedCybersecurityServices2026 } from '../data/2026-advanced-cybersecurity-services';
-import { advancedFintechServices2026 } from '../data/2026-advanced-fintech-services';
-import { advancedHealthcareBiotechServices2026 } from '../data/2026-advanced-healthcare-biotech-services';
+import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
+import { advancedFintechSolutions2025 } from '../data/2025-advanced-fintech-solutions';
+import { advancedAIautomationServices as advancedHealthcareTechSolutions2025 } from '../data/2025-advanced-ai-automation-services';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -41,7 +41,7 @@ const serviceCategories = [
   {
     title: 'Cybersecurity & Quantum',
     description: 'Quantum-powered security solutions with unbreakable encryption',
-    services: advancedCybersecurityServices2026,
+    		services: advancedCybersecurityServices2025,
     icon: Shield,
     color: 'from-red-500 to-pink-600',
     href: '/cybersecurity-quantum-services',
@@ -50,7 +50,7 @@ const serviceCategories = [
   {
     title: 'Fintech & Blockchain',
     description: 'Next-generation financial technology with quantum computing',
-    services: advancedFintechServices2026,
+    		services: advancedFintechSolutions2025,
     icon: DollarSign,
     color: 'from-green-500 to-emerald-600',
     href: '/fintech-blockchain-services',
@@ -59,7 +59,7 @@ const serviceCategories = [
   {
     title: 'Healthcare & Biotech',
     description: 'Breakthrough medical technology with AI and quantum computing',
-    services: advancedHealthcareBiotechServices2026,
+    		services: advancedHealthcareTechSolutions2025,
     icon: Dna,
     color: 'from-blue-500 to-cyan-600',
     href: '/healthcare-biotech-services',
@@ -403,7 +403,7 @@ export default function UltimateServicesShowcase2026() {
           <div className="mb-20">
             <h3 className="text-3xl font-bold text-white mb-8 text-center">Cybersecurity & Quantum Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {advancedCybersecurityServices2026.slice(0, 3).map((service, index) => (
+              				{advancedCybersecurityServices2025.slice(0, 3).map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -440,7 +440,7 @@ export default function UltimateServicesShowcase2026() {
           <div className="mb-20">
             <h3 className="text-3xl font-bold text-white mb-8 text-center">Fintech & Blockchain Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {advancedFintechServices2026.slice(0, 3).map((service, index) => (
+              				{advancedFintechSolutions2025.slice(0, 3).map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -477,7 +477,7 @@ export default function UltimateServicesShowcase2026() {
           <div className="mb-20">
             <h3 className="text-3xl font-bold text-white mb-8 text-center">Healthcare & Biotech Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {advancedHealthcareBiotechServices2026.slice(0, 3).map((service, index) => (
+              				{advancedHealthcareTechSolutions2025.slice(0, 3).map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}

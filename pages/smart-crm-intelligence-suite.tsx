@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 // import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Check, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
@@ -22,7 +22,7 @@ export default function SmartCrmIntelligenceSuitePage() {
 	];
 
 	return (
-		<UltraFuturisticBackground variant="quantum" intensity="high">
+		<UltraAdvancedFuturisticBackground>
 			<Head>
 				<title>Smart CRM Intelligence Suite | Zion Tech Group</title>
 				<meta name="description" content="Transform your CRM with AI-driven lead scoring, next-best-actions, and pipeline risk alerts. Boost win rates and forecast accuracy." />
@@ -70,6 +70,6 @@ export default function SmartCrmIntelligenceSuitePage() {
 					</div>
 				</div>
 			</div>
-		</UltraFuturisticBackground>
+		</UltraAdvancedFuturisticBackground>
 	);
 }

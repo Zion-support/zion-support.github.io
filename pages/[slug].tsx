@@ -1,5 +1,5 @@
 import NextHead from 'next/head';
-import UltraFuturisticBackgroundComponent from '../components/ui/UltraFuturisticBackground';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UIButton from '../components/ui/Button';
 // import UICard from '../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
@@ -154,7 +154,7 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
   };
 
   return (
-    <UltraFuturisticBackgroundComponent variant="quantum" intensity="high">
+    		<UltraAdvancedFuturisticBackground>
       <NextHead>
         <title>{service.name} | Zion Tech Group</title>
         <meta name="description" content={service.tagline || service.description} />
@@ -247,6 +247,6 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
           </div>
         </div>
       </div>
-    </UltraFuturisticBackgroundComponent>
+    		</UltraAdvancedFuturisticBackground>
   );
 }

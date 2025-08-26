@@ -9,8 +9,8 @@ import {
   ExternalLink, Users, Clock, BarChart3, Award
 } from 'lucide-react';
 import Button from '../components/ui/Button';
-import UltraFuturisticBackground2035 from '../components/ui/UltraFuturisticBackground2035';
-import UltraFuturisticNavigation2033 from '../components/layout/UltraFuturisticNavigation2033';
+import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
 import { realMicroSaasServices2025, microSaasCategories } from '../data/2025-real-micro-saas-expansion';
 
@@ -88,8 +88,8 @@ export default function EnhancedMicroSaasShowcase() {
         <link rel="canonical" href="https://ziontechgroup.com/enhanced-micro-saas-showcase" />
       </Head>
 
-      <UltraFuturisticBackground2035>
-        <UltraFuturisticNavigation2033 />
+      		<UltraFuturisticBackground2034>
+        			<UltraFuturisticNavigation2029 />
         
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center pt-32">
@@ -455,7 +455,7 @@ export default function EnhancedMicroSaasShowcase() {
         </section>
 
         <UltraFuturisticFooter2034 />
-              </UltraFuturisticBackground2035>
+              		</UltraFuturisticBackground2034>
     </>
   );
 }

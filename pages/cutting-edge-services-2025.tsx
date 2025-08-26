@@ -9,8 +9,8 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-import { cuttingEdgeITInfrastructure2025 } from '../data/2025-cutting-edge-it-infrastructure';
-import { cuttingEdgeMicroSaas2025 } from '../data/2025-cutting-edge-micro-saas';
+import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations';
+import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -38,25 +38,25 @@ const serviceCategories = [
   {
     title: 'IT Infrastructure',
     description: 'Next-generation infrastructure with quantum computing and edge computing',
-    services: cuttingEdgeITInfrastructure2025,
+    		services: cuttingEdgeITInfrastructureInnovations2025,
     icon: Cloud,
     color: 'from-blue-500 to-cyan-600',
-    count: cuttingEdgeITInfrastructure2025.length
+    		count: cuttingEdgeITInfrastructureInnovations2025.length
   },
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
-    services: cuttingEdgeMicroSaas2025,
+    		services: innovativeMicroSaasSolutions2025,
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
-    count: cuttingEdgeMicroSaas2025.length
+    		count: innovativeMicroSaasSolutions2025.length
   }
 ];
 
 const allServices = [
   ...cuttingEdgeAIServices2025,
-  ...cuttingEdgeITInfrastructure2025,
-  ...cuttingEdgeMicroSaas2025
+  	...cuttingEdgeITInfrastructureInnovations2025,
+  	...innovativeMicroSaasSolutions2025
 ];
 
 export default function CuttingEdgeServices2025() {

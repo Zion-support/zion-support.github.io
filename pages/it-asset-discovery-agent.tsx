@@ -3,10 +3,10 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Search } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-import { extraServices } from '../data/extra-services';
+import { additionalRealServices } from '../data/additional-real-services';
 
 export default function ITAssetDiscoveryAgentPage() {
-  const service = extraServices.find(s => s.id === 'it-asset-discovery-agent');
+  	const service = additionalRealServices.find(s => s.id === 'it-asset-discovery-agent');
   if (!service) return null;
 
   return (

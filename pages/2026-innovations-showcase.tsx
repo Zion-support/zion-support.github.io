@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Brain, Sparkles, Rocket, Shield, Globe, Cpu, Database, Phone, Mail, MapPin } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
 import { innovative2026MicroSaasV2Services } from '../data/innovative-2026-micro-saas-v2';
 import { emergingTech2028Services as emergingTech2026ServicesV2 } from '../data/2028-emerging-tech-services';
 
@@ -59,7 +59,7 @@ export default function Innovations2026Showcase() {
         </Head>
 
         {/* Enhanced Navigation */}
-        <EnhancedNavigation2026 />
+        			<EnhancedNavigation />
 
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">

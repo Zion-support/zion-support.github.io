@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as MessageSquareIcon2, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as CodeIcon2, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
 
 
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import FuturisticCard from '../components/ui/FuturisticCard';
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
@@ -221,7 +221,7 @@ export default function PricingEnhanced2026Page() {
   ];
 
   return (
-    <UltraFuturisticBackground  intensity="high">
+    	<UltraAdvancedFuturisticBackground>
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
         <Head>
           <title>Enhanced 2026 Pricing - Zion Tech Group</title>
@@ -308,7 +308,7 @@ export default function PricingEnhanced2026Page() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }} className="relative">
-                  <UltraFuturisticCard
+                  <FuturisticCard
                     className={`h-full ${tier.popular ? 'ring-2 ring-cyan-500 ring-opacity-50' : ''}`}
                   >
                     {tier.popular && (
@@ -358,7 +358,7 @@ export default function PricingEnhanced2026Page() {
                          {tier.cta}
                        </button>
                     </div>
-                  </UltraFuturisticCard>
+                  </FuturisticCard>
                 </motion.div>
               ))}
             </div>
@@ -390,7 +390,7 @@ export default function PricingEnhanced2026Page() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <UltraFuturisticCard className="h-full">
+                  <FuturisticCard className="h-full">
                     <div className="p-6">
                       <div className="flex items-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${category.color} mr-4`}>
@@ -422,7 +422,7 @@ export default function PricingEnhanced2026Page() {
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </button>
                     </div>
-                  </UltraFuturisticCard>
+                  </FuturisticCard>
                 </motion.div>
               ))}
             </div>
@@ -454,7 +454,7 @@ export default function PricingEnhanced2026Page() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <UltraFuturisticCard className="h-full">
+                  <FuturisticCard className="h-full">
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="text-4xl">{service.icon}</div>
@@ -490,7 +490,7 @@ export default function PricingEnhanced2026Page() {
                         </button>
                       </div>
                     </div>
-                  </UltraFuturisticCard>
+                  </FuturisticCard>
                 </motion.div>
               ))}
             </div>
@@ -533,6 +533,6 @@ export default function PricingEnhanced2026Page() {
           </div>
         </div>
       </div>
-    </UltraFuturisticBackground>
+    	</UltraAdvancedFuturisticBackground>
   );
 }

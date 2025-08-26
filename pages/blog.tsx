@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/layout/Footer';
 
 const Blog: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');

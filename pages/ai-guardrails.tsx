@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
 import { Shield, Lock, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 
@@ -19,7 +19,7 @@ export default function AIGuardrailsPage() {
 	];
 
 	return (
-		<UltraFuturisticBackground  intensity="high">
+		<UltraAdvancedFuturisticBackground>
 			<Head>
 				<title>AI Guardrails Platform | Zion Tech Group</title>
 				<meta name="description" content="Safety and compliance for AI. PII redaction, toxicity and jailbreak detection, policy enforcement with audit logs." />
@@ -61,6 +61,6 @@ export default function AIGuardrailsPage() {
 					</div>
 				</div>
 			</div>
-		</UltraFuturisticBackground>
+		</UltraAdvancedFuturisticBackground>
 	);
 }

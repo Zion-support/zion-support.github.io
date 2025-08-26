@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Cloud, Cpu, Server, Database, Settings, Shield, Phone, Mail, MapPin, Check } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-import ServiceAds from '../components/sections/ServiceAds';
+// import ServiceAds from '../components/sections/ServiceAds';
 
 export default function ITServicesPage() {
   const contactInfo = {
@@ -72,7 +72,10 @@ export default function ITServicesPage() {
       </Head>
 
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-        <ServiceAds heading="Featured IT Services" subheading="Production-grade solutions with clear pricing." items={featuredITAds} />
+        			<div className="bg-black/20 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8 text-center">
+				<h2 className="text-2xl font-bold text-white mb-2">Featured IT Services</h2>
+				<p className="text-gray-300 mb-6">Production-grade solutions with clear pricing.</p>
+			</div>
         <div className="text-center max-w-4xl mx-auto mb-12">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Modern IT Services</h1>
           <p className="text-xl text-gray-300">Outcome-driven cloud, platform, and reliability engineering to accelerate delivery and reduce costs.</p>

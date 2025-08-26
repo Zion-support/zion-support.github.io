@@ -10,7 +10,7 @@ import {
   BarChart3, Target, Microscope, Cloud
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { innovative2025NewServices } from '../data/innovative-2025-new-services';
+import { innovativeNewServices2025 } from '../data/2025-innovative-new-services';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -188,7 +188,7 @@ export default function Innovative2025ServicesShowcase() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {innovative2025NewServices.map((service, index) => (
+            				{innovativeNewServices2025.map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 // import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin } from 'lucide-react';
@@ -16,7 +16,7 @@ export default function Revolutionary2027Q4Showcase() {
 	};
 
 	return (
-		<UltraFuturisticBackground>
+		<UltraAdvancedFuturisticBackground>
 			<Head>
 				<title>Q4 2027 Services Showcase | Zion Tech Group</title>
 				<meta name="description" content="Discover our latest real micro SaaS, IT, and AI services with transparent pricing and direct links." />
@@ -71,6 +71,6 @@ export default function Revolutionary2027Q4Showcase() {
 					</div>
 				</div>
 			</div>
-		</UltraFuturisticBackground>
+		</UltraAdvancedFuturisticBackground>
 	);
 }

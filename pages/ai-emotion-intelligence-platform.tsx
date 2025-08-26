@@ -9,7 +9,7 @@ import {
   MessageCircle, BarChart3, Globe, Smartphone
 } from 'lucide-react';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
+import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 
 const contactInfo = {
@@ -140,7 +140,7 @@ export default function AIEmotionIntelligencePlatform() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <UltraFuturisticBackground2030>
+      <UltraFuturisticBackground2034>
         <UltraFuturisticNavigation2030 />
         
         {/* Hero Section */}
@@ -435,7 +435,7 @@ export default function AIEmotionIntelligencePlatform() {
         </section>
 
         <UltraFuturisticFooter2030 />
-      </UltraFuturisticBackground2030>
+      </UltraFuturisticBackground2034>
     </>
   );
 }

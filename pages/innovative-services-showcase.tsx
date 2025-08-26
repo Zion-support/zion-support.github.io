@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { innovativeAIServices } from '../data/innovative-ai-services';
-import { innovativeITServices } from '../data/innovative-it-services';
+import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { innovativeMicroSaas } from '../data/innovative-micro-saas';
 
 export default function InnovativeServicesShowcase() {
@@ -256,7 +256,7 @@ export default function InnovativeServicesShowcase() {
               viewport={{ once: true }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {innovativeITServices.map((service, index) => (
+              				{innovativeITServicesEnhanced2025.map((service, index) => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
             </motion.div>

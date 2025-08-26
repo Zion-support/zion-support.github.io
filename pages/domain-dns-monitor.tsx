@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { Button } from '../components/ui/Button';
 import { Globe, Check, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 
@@ -22,7 +22,7 @@ export default function DomainDNSMonitorPage() {
   ];
 
   return (
-    <UltraFuturisticBackground>
+    <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Domain & DNS Monitor | Zion Tech Group</title>
         <meta name="description" content="Continuous domain and DNS health monitoring with registrar expiry, DNSSEC, MX/SPF/DMARC checks and alerts." />
@@ -66,7 +66,7 @@ export default function DomainDNSMonitorPage() {
           </div>
         </div>
       </div>
-    </UltraFuturisticBackground>
+          </UltraAdvancedFuturisticBackground>
   );
 }
 
