@@ -52,6 +52,31 @@ export default function Services(){return (<main style={{padding:20,fontFamily:'
     <li>Typical pricing: $2,500 setup + $99/mo.</li>
     <li>Learn more: <a href="https://ziontechgroup.com/services#customer-portal" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#customer-portal</a></li>
   </ul>
+
+  {/* New Micro SaaS */}
+  <h3>6) AI Sales Email Personalizer</h3>
+  <ul>
+    <li>Features: Prospect research, persona-based messaging, sequence A/B tests, CRM sync.</li>
+    <li>Benefits: Higher reply rates, less manual drafting, faster pipeline generation.</li>
+    <li>Typical pricing: $79/mo Starter, $199/mo Growth, $599/mo Scale.</li>
+    <li>Learn more: <a href="https://ziontechgroup.com/services#ai-sales-personalizer" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#ai-sales-personalizer</a></li>
+  </ul>
+
+  <h3>7) Policy & SOP Generator</h3>
+  <ul>
+    <li>Features: SOC 2/ISO templates, gap analysis, versioning, e‑sign, audit exports.</li>
+    <li>Benefits: Faster audits, consistent compliance, fewer manual errors.</li>
+    <li>Typical pricing: $99/mo Base, $249/mo Team, $799/mo Enterprise.</li>
+    <li>Learn more: <a href="https://ziontechgroup.com/services#sop-generator" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#sop-generator</a></li>
+  </ul>
+
+  <h3>8) AI Meeting Notes & Action Tracker</h3>
+  <ul>
+    <li>Features: Multi‑speaker transcription, decisions/actions extraction, JIRA/Asana push, summaries.</li>
+    <li>Benefits: Better follow‑through, fewer missed tasks, searchable knowledge.</li>
+    <li>Typical pricing: $29/mo User, $12/mo per extra seat; SSO on Enterprise.</li>
+    <li>Learn more: <a href="https://ziontechgroup.com/services#meeting-notes" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#meeting-notes</a></li>
+  </ul>
 </section>
 
 <section id="it-services" style={{marginTop:32}}>
@@ -84,6 +109,28 @@ export default function Services(){return (<main style={{padding:20,fontFamily:'
     <li>Capabilities: ETL/ELT, dbt, warehousing, BI dashboards, quality and lineage.</li>
     <li>Engagements: Quickstart from $5,000; monthly ops from $2,000/mo.</li>
     <li>Details: <a href="https://ziontechgroup.com/services#data" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#data</a></li>
+  </ul>
+
+  {/* New IT Services */}
+  <h3>Cybersecurity & Fractional CISO</h3>
+  <ul>
+    <li>Capabilities: Risk assessment, pen‑testing coordination, policies, SOC 2/ISO 27001 program setup.</li>
+    <li>Engagements: Assessments from $5,000; vCISO from $4,000/mo; pentest mgmt from $6,500.</li>
+    <li>Details: <a href="https://ziontechgroup.com/services#security" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#security</a></li>
+  </ul>
+
+  <h3>CRM & RevOps Implementation</h3>
+  <ul>
+    <li>Capabilities: HubSpot/Salesforce setup, data model, lifecycle stages, playbooks, reporting.</li>
+    <li>Engagements: Implementations from $7,500; audits from $2,500; ongoing ops from $2,000/mo.</li>
+    <li>Details: <a href="https://ziontechgroup.com/services#revops" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#revops</a></li>
+  </ul>
+
+  <h3>eCommerce & Headless</h3>
+  <ul>
+    <li>Capabilities: Shopify/Medusa/Commerce.js, headless storefronts, payments, subscriptions, analytics.</li>
+    <li>Engagements: Launch packs from $9,000; migrations from $6,000; growth retainers from $2,500/mo.</li>
+    <li>Details: <a href="https://ziontechgroup.com/services#ecommerce" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#ecommerce</a></li>
   </ul>
 </section>
 
@@ -125,6 +172,28 @@ export default function Services(){return (<main style={{padding:20,fontFamily:'
     <li>Capabilities: Offline/online evals, cost/perf tracking, rollout strategies, guardrails.</li>
     <li>Typical pricing: Assessment from $4,000; platform setup from $12,000.</li>
     <li>Details: <a href="https://ziontechgroup.com/services#mlops" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#mlops</a></li>
+  </ul>
+
+  {/* New AI Services */}
+  <h3>Agentic Automation (Ops, Finance, Support)</h3>
+  <ul>
+    <li>Use cases: Invoice reconciliation, ticket triage, vendor intake, procurement checks, report generation.</li>
+    <li>Pricing: Pilots from $8,500; production from $18,000; managed from $3,000/mo.</li>
+    <li>Details: <a href="https://ziontechgroup.com/services#agentic-automation" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#agentic-automation</a></li>
+  </ul>
+
+  <h3>AI Governance & Risk (AIGC)</h3>
+  <ul>
+    <li>Deliverables: Policy pack, model registry, prompt logging, eval metrics, human‑in‑the‑loop workflows.</li>
+    <li>Pricing: Starter from $6,500; enterprise advisory from $4,000/mo.</li>
+    <li>Details: <a href="https://ziontechgroup.com/services#aigc" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#aigc</a></li>
+  </ul>
+
+  <h3>Enterprise Search & Insights</h3>
+  <ul>
+    <li>Capabilities: Connectors (GDrive, M365, Slack), hybrid search, role‑based access, analytics.</li>
+    <li>Pricing: Deployment from $12,000; tuning from $3,500; support from $1,500/mo.</li>
+    <li>Details: <a href="https://ziontechgroup.com/services#enterprise-search" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#enterprise-search</a></li>
   </ul>
 </section>
 
