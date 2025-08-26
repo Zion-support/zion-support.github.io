@@ -16,7 +16,12 @@ class ZionDocument extends Document {
 					<link rel="icon" href="/favicon.ico" />
 					<meta name="theme-color" content="#0a0a0a" />
 					<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-					<script defer data-domain="ziontechgroup.com" src="https://plausible.io/js/script.js"></script>
+					<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+					<link rel="alternate icon" href="/favicon.ico" />
+					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+					<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+					<link rel="preconnect" href="https://plausible.io" crossOrigin="anonymous" />
+					<meta name="format-detection" content="telephone=no" />
 					<script
 						type="application/ld+json"
 						dangerouslySetInnerHTML={{
@@ -26,7 +31,7 @@ class ZionDocument extends Document {
 									"@type": "Organization",
 									name: "Zion Tech Group",
 									url: "https://ziontechgroup.com",
-									logo: "https://ziontechgroup.com/logo.png",
+									logo: "https://ziontechgroup.com/logo.svg",
 									sameAs: [
 										"https://www.linkedin.com/company/zion-tech-group",
 										"https://github.com/Zion-Holdings",
