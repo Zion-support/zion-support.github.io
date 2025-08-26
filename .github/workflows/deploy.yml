@@ -1,0 +1,62 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Verify build output
+        run: |
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
+          fi
+          echo "Build successful. Contents of dist folder:"
+          ls -la dist/
+
+      - name: Generate sitemap
+        run: npm run sitemap
+        continue-on-error: true
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-build
+          path: dist/
+
+      - name: Deploy to production
+        run: |
+          echo "🚀 Deploying to production..."
+          echo "Build completed successfully at $(date)"
+          echo "Ready for deployment to hosting platform"
+          
+          # Add your deployment commands here
+          # Examples:
+          # - AWS S3: aws s3 sync dist/ s3://your-bucket --delete
+          # - Netlify: npx netlify-cli deploy --dir=dist --prod
+          # - Vercel: npx vercel --prod --cwd dist
+          
+          echo "✅ Deployment preparation completed"

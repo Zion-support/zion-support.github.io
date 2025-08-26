@@ -14,7 +14,7 @@ import {
   ArrowUp 
 } from 'lucide-react';
 
-const Footer = () => {
+export const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -214,5 +214,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;
