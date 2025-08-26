@@ -154,18 +154,30 @@ export function MainNavigation({ className }: MainNavigationProps) {
         )}
       </div>
       
-      <Link to="/blog" className="text-zion-slate-light hover:text-white transition-colors">
-        Blog
+      <Link to="/solutions" className="text-zion-slate-light hover:text-white transition-colors">
+        Solutions
       </Link>
       
+      <Link to="/services" className="text-zion-slate-light hover:text-white transition-colors">
+        Services
+      </Link>
+
+      <Link to="/case-studies" className="text-zion-slate-light hover:text-white transition-colors">
+        Case Studies
+      </Link>
+
+      <Link to="/news" className="text-zion-slate-light hover:text-white transition-colors">
+        News
+      </Link>
+
+      <Link to="/events" className="text-zion-slate-light hover:text-white transition-colors">
+        Events
+      </Link>
+
       <Link to="/about" className="text-zion-slate-light hover:text-white transition-colors">
         About Us
       </Link>
-      
-      <Link to="/partners" className="text-zion-slate-light hover:text-white transition-colors">
-        Partners
-      </Link>
-      
+
       <Link to="/contact" className="text-zion-slate-light hover:text-white transition-colors">
         Contact
       </Link>

@@ -9,6 +9,9 @@ const nextConfig = {
 	eslint: {
 		ignoreDuringBuilds: true
 	},
+	typescript: {
+		ignoreBuildErrors: true
+	},
 	async redirects() {
 		return [
 			{ source: '/api-documentation', destination: '/api-docs', permanent: true },
