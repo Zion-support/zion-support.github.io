@@ -9,6 +9,7 @@ import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
+<<<<<<< HEAD
 import { newlyAddedServices } from '../../data/newly-added-services';
 import { curatedMarketServices } from '../../data/curated-market-services';
 import { new2025Services } from '../../data/new-2025-services';
@@ -39,6 +40,10 @@ import { real2026Q2Additions } from '../../data/real-2026-q2-additions';
 =======
 import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8790
+=======
+import { newRealServices } from '../../data/new-real-services';
+import { marketReadyServices } from '../../data/market-ready-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
 
 export default function ServiceSlugPage(props: { params?: { slug?: string } }) {
 	const slug = props?.params?.slug || 'service';
@@ -62,6 +67,7 @@ const contactInfo = {
 
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
+<<<<<<< HEAD
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
 		.concat(curatedMarketServices as Service[])
@@ -92,6 +98,14 @@ function getAllServices(): Service[] {
 =======
 		.concat(real2025Q4Additions as unknown as Service[]);
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8790
+=======
+		.concat(
+			extraServices as Service[],
+			additionalEnhancedServices as Service[],
+			newRealServices as Service[],
+			marketReadyServices as Service[]
+		);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
 }
 
 function toSlug(value: string): string {
@@ -166,4 +180,8 @@ export async function getStaticPaths() {
 			</div>
 		</>
 	);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d

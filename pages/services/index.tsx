@@ -7,6 +7,7 @@ import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-sa
 import { additionalEnhancedServices } from '../../data/additional-real-services';
 import { extraServices } from '../../data/extra-services';
 import { newlyAddedServices } from '../../data/newly-added-services';
+<<<<<<< HEAD
 import { curatedMarketServices } from '../../data/curated-market-services';
 import { realMarketServices } from '../../data/real-market-services';
 import { new2025Services } from '../../data/new-2025-services';
@@ -36,6 +37,10 @@ import { real2026Q2Additions } from '../../data/real-2026-q2-additions';
 =======
 import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8790
+=======
+import { newRealServices } from '../../data/new-real-services';
+import { marketReadyServices } from '../../data/market-ready-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
 
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -50,6 +55,7 @@ const categories = [
 ];
 
 export default function ServicesIndexPage() {
+<<<<<<< HEAD
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
       extraServices as unknown[],
@@ -85,6 +91,17 @@ export default function ServicesIndexPage() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8790
     );
   const byCategory: Record<string, unknown[]> = {};
+=======
+  const all = (enhancedRealMicroSaasServices as any[])
+    .concat(
+      extraServices as any[],
+      additionalEnhancedServices as any[],
+      newlyAddedServices as any[],
+      newRealServices as any[],
+      marketReadyServices as any[]
+    );
+  const byCategory: Record<string, any[]> = {};
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
   for (const c of categories) byCategory[c] = [];
   // Normalize various category labels into our main buckets
   const categoryAliases: Record<string, string> = {

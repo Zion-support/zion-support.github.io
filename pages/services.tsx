@@ -211,6 +211,7 @@ import { marketValidatedServices } from '../data/market-validated-services';
 import { emergingTechnologyServices } from '../data/emerging-technology-services';
 import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { curatedMarketServices } from '../data/curated-market-services';
 import { realMarketServices } from '../data/real-market-services';
 import { new2025Services } from '../data/new-2025-services';
@@ -271,6 +272,10 @@ import { comprehensiveITServices } from '../data/comprehensive-it-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { advancedCybersecurityServices } from '../data/advanced-cybersecurity-services';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7f29
+=======
+import { newRealServices } from '../data/new-real-services';
+import { marketReadyServices } from '../data/market-ready-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -305,6 +310,7 @@ export default function ServicesPage() {
     ...innovativeMicroSaasV2Services,
     ...marketValidatedServices,
     ...emergingTechnologyServices,
+<<<<<<< HEAD
 <<<<<<< HEAD
     ...comprehensiveITSolutions,
     ...curatedMarketServices,
@@ -342,6 +348,11 @@ export default function ServicesPage() {
     ...nextGenerationAIServices,
     ...advancedCybersecurityServices
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7f29
+=======
+    ...comprehensiveITSolutions,
+    ...newRealServices,
+    ...marketReadyServices
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
   ];
 
   // Dynamic category counts mapped to the same filter logic below

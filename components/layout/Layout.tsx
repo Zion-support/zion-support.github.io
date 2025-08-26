@@ -1,8 +1,13 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import UltraFuturisticNavigation from './UltraFuturisticNavigation';
+=======
+import EnhancedNavigation from './EnhancedNavigation';
+import UltraAdvancedNavigation from './UltraAdvancedNavigation';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
 import EnhancedFooter from './EnhancedFooter';
 import UltraAdvancedFuturisticBackground from '../ui/UltraAdvancedFuturisticBackground';
 =======
@@ -31,11 +36,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 			<a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-black/80 focus:text-white focus:border focus:border-cyan-500 focus:rounded px-3 py-2 z-[100]">Skip to content</a>
 			<UltraAdvancedFuturisticBackground intensity="high" colorScheme="quantum-fusion" particleCount={300} animationSpeed={1.5} enableHolographic={true} enableQuantumEffects={true}>
 				<TopContactBar />
+<<<<<<< HEAD
 				<UltraFuturisticNavigation />
 				<main id="main" className="pt-24 lg:pt-28">
 =======
 			<UltraAdvancedFuturisticBackground variant="fusion">
 				<QuantumHolographicNavbar />
+=======
+				<UltraAdvancedNavigation />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
 				<main className="pt-24 lg:pt-28">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7f29
 					{children}
