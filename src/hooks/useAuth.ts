@@ -1,74 +1,70 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext, useContext } from 'react';
 
 interface User {
   id: string;
+  name?: string;
   email: string;
-  name: string;
-  role: 'user' | 'admin' | 'moderator';
-  userType?: string;
-  displayName?: string;
-  avatarUrl?: string;
+  role?: string;
 }
 
-interface AuthState {
+interface AuthContextType {
   user: User | null;
-  isAuthenticated: boolean;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => void;
+  signup: (email: string, password: string, name: string) => Promise<void>;
   isLoading: boolean;
 }
 
-export const useAuth = () => {
-  const [authState, setAuthState] = useState<AuthState>({
-    user: null,
-    isAuthenticated: false,
-    isLoading: true,
-  });
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
 export function useAuth() {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+}
+
+export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-    const checkAuth = () => {
-      const storedUser = localStorage.getItem('zion_user');
-      if (storedUser) {
-        try {
-          setUser(JSON.parse(storedUser));
-        } catch (error) {
-          console.error('Error parsing stored user:', error);
-        }
+    // Check if user is logged in from localStorage
+    const savedUser = localStorage.getItem('zion_user');
+    if (savedUser) {
+      try {
+        setUser(JSON.parse(savedUser));
+      } catch (error) {
+        console.error('Error parsing saved user:', error);
+        localStorage.removeItem('zion_user');
       }
-      setLoading(false);
-    };
-
-    checkAuth();
+    }
+    setIsLoading(false);
   }, []);
 
   const login = async (email: string, password: string) => {
-    // Implement actual login logic here
-    const mockUser: User = {
-      id: '1',
-      email,
-      name: 'User',
-      role: 'user'
-    };
-    
-    setUser(mockUser);
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    return mockUser;
-  const login = async (email: string, _password: string) => {
-    // In a real app, you would make an API call to your backend
-    setAuthState({
-      user: {
+    setIsLoading(true);
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Mock user data
+      const mockUser: User = {
         id: '1',
+        name: 'Demo User',
         email,
-        name: 'John Doe',
-        role: 'user',
-        userType: 'creator',
-      },
-      isAuthenticated: true,
-      isLoading: false,
-    });
-    localStorage.setItem('authToken', 'dummy-token');
+        role: 'user'
+      };
+      
+      setUser(mockUser);
+      localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    } catch (error) {
+      console.error('Login error:', error);
+      throw error;
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const logout = () => {
@@ -76,28 +72,41 @@ export function useAuth() {
     localStorage.removeItem('zion_user');
   };
 
-  const register = async (email: string, password: string, name: string) => {
-    // Implement actual registration logic here
-    const mockUser: User = {
-      id: '1',
-      email,
-      name,
-      role: 'user'
-    };
-    
-    setUser(mockUser);
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    return mockUser;
+  const signup = async (email: string, password: string, name: string) => {
+    setIsLoading(true);
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Mock user data
+      const mockUser: User = {
+        id: '1',
+        name,
+        email,
+        role: 'user'
+      };
+      
+      setUser(mockUser);
+      localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    } catch (error) {
+      console.error('Signup error:', error);
+      throw error;
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  return {
+  const value: AuthContextType = {
     user,
-    loading,
     login,
     logout,
-    register,
-    isAuthenticated: !!user,
-    isAdmin: user?.role === 'admin'
+    signup,
+    isLoading
   };
-};
+
+  return (
+    <AuthContext.Provider value={value}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
