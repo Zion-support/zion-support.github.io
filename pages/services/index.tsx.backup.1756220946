@@ -17,6 +17,9 @@ import { realOperationalServices } from '../../data/real-operational-services';
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
+<<<<<<< HEAD
+import { newRealServices2025 } from '../../data/new-real-services-2025';
+=======
 import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
 import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
 import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
@@ -35,6 +38,7 @@ import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
 import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
 import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
 import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e0e2
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -109,6 +113,21 @@ const serviceCategories = [
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
+<<<<<<< HEAD
+      extraServices as any[],
+      additionalEnhancedServices as any[],
+      newlyAddedServices as any[],
+      curatedMarketServices as any[],
+      realMarketServices as any[],
+      new2025Services as any[],
+      marketValidatedServices as any[],
+      moreRealServices2025 as any[],
+      realOperationalServices as any[],
+      verified2025Additions as any[],
+      realServicesQ12025 as any[],
+      realEnterpriseServices2025 as any[],
+      newRealServices2025 as any[]
+=======
       extraServices as unknown[],
       additionalEnhancedServices as unknown[],
       newlyAddedServices as unknown[],
@@ -139,6 +158,7 @@ export default function ServicesIndexPage() {
       real2027Q1Additions as unknown[],
       real2027Q2Additions as unknown[],
       real2027Q3Additions as unknown[]
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e0e2
     );
   const byCategory: Record<string, unknown[]> = {};
   for (const c of categories) byCategory[c] = [];
