@@ -39,6 +39,13 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     }
   },
   {
+<<<<<<< HEAD
+    id: "data-warehouse-solution",
+    name: "Data Warehouse Solution",
+    tagline: "Enterprise-grade data management and analytics",
+    price: "$149/month",
+    description: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.",
+=======
     id: 'ai-email-responder',
     name: 'AI Email Responder',
     tagline: 'Autonomous inbox triage with drafts, tone, and approvals',
@@ -445,6 +452,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     price: '$99',
     period: '/month',
     description: 'Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cb52
     features: [
       "Data integration",
       "Real-time processing",
