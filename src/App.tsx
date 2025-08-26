@@ -7,6 +7,7 @@ import { Footer } from './components/Footer';
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+const Services = React.lazy(() => import('./pages/Services'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -31,6 +32,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
             </Routes>
           </Suspense>
         </main>
