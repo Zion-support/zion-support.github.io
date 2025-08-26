@@ -1,97 +1,50 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';
-import { CartContextType, CartItem, CartAction } from '@/types/cart';
-import { safeStorage } from '@/utils/safeStorage';
-import { useAuth } from '@/hooks/useAuth';
-import { useAnalytics } from './AnalyticsContext';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-interface CartState { items: CartItem[]; }
-
-const initialState: CartState = { items: [] };
-
-function cartReducer(state: CartState, action: CartAction): CartState {
-  switch (action.type) {
-    case 'ADD_ITEM': {
-      const existing = state.items.find(i => i.id === action.payload.id);
-      let items;
-      if (existing) {
-        items = state.items.map(i =>
-          i.id === action.payload.id
-            ? { ...i, quantity: i.quantity + action.payload.quantity }
-            : i
-        );
-      } else {
-        items = [...state.items, action.payload];
-      }
-      return { items };
-    }
-    case 'REMOVE_ITEM':
-      return { items: state.items.filter(i => i.id !== action.payload) };
-    case 'CLEAR_CART':
-      return { items: [] };
-    case 'SET_ITEMS':
-      return { items: action.payload };
-    default:
-      return state;
-  }
+export interface CartItem {
+  id: string;
+  quantity: number;
 }
 
-const CartContext = createContext<CartContextType | undefined>(undefined);
+export interface CartContextType {
+  items: CartItem[];
+  addItem: (item: CartItem) => void;
+  removeItem: (id: string) => void;
+  clear: () => void;
+}
+
+const CartContext = createContext<CartContextType>({
+  items: [],
+  addItem: () => {},
+  removeItem: () => {},
+  clear: () => {},
+});
 
 export function useCart(): CartContextType {
-  const ctx = useContext(CartContext) as CartContextType;
-  if (!ctx) throw new Error('useCart must be used within a CartProvider');
-  return ctx;
+  return useContext(CartContext);
 }
 
-export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [state, dispatch] = useReducer(
-    cartReducer,
-    initialState,
-    () => {
-      try {
-        const stored = safeStorage.getItem('cart');
-        return stored ? { items: JSON.parse(stored) as CartItem[] } : initialState;
-      } catch {
-        return initialState;
+export function CartProvider({ children }: { children: ReactNode }) {
+  const [items, setItems] = useState<CartItem[]>([]);
+
+  const addItem = (item: CartItem) => {
+    setItems(prev => {
+      const existing = prev.find(i => i.id === item.id);
+      if (existing) {
+        return prev.map(i => i.id === item.id ? { ...i, quantity: i.quantity + item.quantity } : i);
       }
-    }
-  );
-
-  const { user } = useAuth();
-  const { trackConversion } = useAnalytics();
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const token = params.get('token');
-    if (token) {
-      fetch(`/cart/restore/${token}`)
-        .then(res => res.ok ? res.json() : Promise.reject())
-        .then(data => {
-          dispatch({ type: 'SET_ITEMS', payload: data.items as CartItem[] });
-          safeStorage.setItem('cart', JSON.stringify(data.items));
-          trackConversion('cart_restored');
-        })
-        .catch(() => {});
-    }
-  }, []);
-
-  useEffect(() => {
-    safeStorage.setItem('cart', JSON.stringify(state.items));
-    fetch('/cart/snapshot', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        items: state.items,
-        user: user?.id,
-        email: user?.email,
-      }),
-    }).catch(() => {});
-  }, [state.items]);
-
-  const value: CartContextType = {
-    items: state.items,
-    dispatch,
+      return [...prev, item];
+    });
   };
 
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+  const removeItem = (id: string) => {
+    setItems(prev => prev.filter(i => i.id !== id));
+  };
+
+  const clear = () => setItems([]);
+
+  return (
+    <CartContext.Provider value={{ items, addItem, removeItem, clear }}>
+      {children}
+    </CartContext.Provider>
+  );
 }
