@@ -1,5 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
+import { ExternalLink, ArrowRight, CheckCircle } from 'lucide-react';
 
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace('https://', '')}</a>
@@ -8,12 +9,6 @@ const ext = (url: string) => (
 export default function ServicesAdvertisingPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-			<Head>
-				<title>Services Advertising | Zion Tech Group</title>
-				<meta name="description" content="Features, benefits, and market references for Zion Tech Group services" />
-				<link rel="canonical" href="https://ziontechgroup.com/services-advertising" />
-			</Head>
-=======
 			<SEO title="Services Advertising | Zion Tech Group" description="Features, benefits, and market references for Zion Tech Group services" canonical="https://ziontechgroup.com/services-advertising/" />
 			<div className="max-w-6xl mx-auto space-y-10">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
@@ -68,12 +63,12 @@ export default function ServicesAdvertisingPage() {
             </h1>
             <p className="text-gray-300 text-lg">AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
+              <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white inline-flex items-center justify-center rounded-lg">
                 Talk to Sales <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button href="/market-pricing" variant="outline" className="px-8 py-4 border border-gray-600 text-gray-200">
+              </a>
+              <a href="/market-pricing" className="px-8 py-4 border border-gray-600 text-gray-200 inline-flex items-center justify-center rounded-lg">
                 View Market Pricing <ExternalLink className="w-5 h-5 ml-2" />
-              </Button>
+              </a>
             </div>
           </header>
 
