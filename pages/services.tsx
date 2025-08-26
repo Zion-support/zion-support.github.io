@@ -254,6 +254,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 <<<<<<< HEAD
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { newRealServices } from '../data/new-real-services';
+<<<<<<< HEAD
 import { industryRealServices } from '../data/industry-real-services';
 =======
 <<<<<<< HEAD
@@ -371,6 +372,9 @@ import { enterpriseAIServices } from '../data/enterprise-ai-services';
 import { revolutionary2025Services } from '../data/revolutionary-2025-services';
 import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cef6
+=======
+import { marketValidatedServices } from '../data/market-validated-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d124
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -387,6 +391,7 @@ export default function ServicesPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
     ...additionalEnhancedServices,
+<<<<<<< HEAD
 <<<<<<< HEAD
     ...extraServices,
 <<<<<<< HEAD
@@ -485,6 +490,10 @@ export default function ServicesPage() {
     ...revolutionary2025Services,
     ...nextGenInnovations2025
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cef6
+=======
+    ...newRealServices,
+    ...marketValidatedServices
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d124
   ];
 
   // Dynamic category counts mapped to the same filter logic below
@@ -960,6 +969,7 @@ export default function ServicesPage() {
                 >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <UltraFuturisticServiceCard service={service} />
 =======
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/30 h-full relative overflow-hidden">
@@ -974,6 +984,28 @@ export default function ServicesPage() {
 =======
                         🚀
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a889
+=======
+                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 h-full">
+                    {/* Service Icon */}
+                    <div className="text-4xl mb-4">
+                      {((service as any).icon) || '🚀'}
+                    </div>
+
+                    {/* Service Name */}
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {service.name}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-300 mb-4 text-sm line-clamp-3">
+                      {service.description}
+                    </p>
+
+                    {/* Price */}
+                    <div className="mb-4">
+                      <div className="text-2xl font-bold text-cyan-400">
+                        {typeof (service as any).price === 'number' ? `$${(service as any).price.toLocaleString()}/month` : `${(service as any).price}${(service as any).period ? '' : ''}`}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d124
                       </div>
 
                       {/* Service Name */}
