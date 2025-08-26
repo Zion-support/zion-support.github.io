@@ -19,6 +19,7 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const ComprehensiveServicesShowcase = React.lazy(() => import('../pages/comprehensive-services-showcase-2026'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -56,6 +57,7 @@ function App() {
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/comprehensive-services" element={<ComprehensiveServicesShowcase />} />
             </Routes>
           </Suspense>
         </main>
