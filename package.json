@@ -13,11 +13,9 @@
     "test:watch": "vitest --watch",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
-    bplr8i-codex/fix-npm-ci-errors-and-missing-dependencies
     "test:accessibility": "vitest run tests/Accessibility.test.tsx",
     "test:e2e": "playwright test",
     "es:index": "node scripts/index-elasticsearch.js"
-    main
   },
   "bugs": {
     "url": "https://github.com/Zion-Holdings/zion.app/issues"
