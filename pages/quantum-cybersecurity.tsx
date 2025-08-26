@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+
 
 export default function QuantumCybersecurityPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-cybersecurity'));

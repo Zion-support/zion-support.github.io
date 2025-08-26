@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Database, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+
 
 export default function DataPipelineHealthPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-pipeline-health'));

@@ -1,60 +1,69 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Rocket, Brain, Cog, ArrowRight } from 'lucide-react';
 
 const Home: NextPage = () => {
-	return (
-		<div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-			<Head>
-				<title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
-				<meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
-				<meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />
-				<meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />
-				<link rel="canonical" href="https://ziontechgroup.com" />
-				<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform","url":"https://ziontechgroup.com/","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script>
-			</Head>
-			
-			<main className="container mx-auto px-6 py-12">
-				{/* Hero Section */}
-				<section className="text-center mb-16">
-					<h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-						Zion Tech Group
-					</h1>
-					<p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-						Autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems.
-					</p>
-					
-					{/* Navigation Links */}
-					<div className="flex flex-wrap justify-center gap-4">
-						<a href="/about" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
-							About Us
-						</a>
-						<a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
-							Our Services
-						</a>
-						<a href="/revolutionary-2026-services-showcase" className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 border border-purple-400/50 rounded-lg transition-all duration-200">
-							🚀 2026 Services
-						</a>
-						<a href="/revolutionary-2025-pricing" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
-							Pricing
-						</a>
-						<a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
-							Contact
-						</a>
-					</div>
-				</section>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+      <Head>
+        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
+        <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
+      </Head>
+      
+      <main className="container mx-auto px-4 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Leading-edge technology solutions and autonomous innovation platform.
+          </p>
+        </div>
 
-				{/* Services Overview (truncated for brevity) */}
-				<section className="mb-16">
-					<h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-						Innovative Technology Solutions 2026
-					</h2>
-				</section>
-			</main>
-		</div>
-	);
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Rocket className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">Innovation</h3>
+            <p className="text-gray-300 text-center">Cutting-edge technology solutions</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Brain className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">AI Solutions</h3>
+            <p className="text-gray-300 text-center">Advanced artificial intelligence</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Cog className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">Automation</h3>
+            <p className="text-gray-300 text-center">Intelligent process automation</p>
+          </motion.div>
+        </div>
+      </main>
+    </div>
+  );
 };
 
 export default Home;

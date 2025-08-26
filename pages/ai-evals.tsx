@@ -1,84 +1,70 @@
 import React from 'react';
 import Head from 'next/head';
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
-
-import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Brain, CheckCircle, BarChart3, ArrowRight } from 'lucide-react';
 
 export default function AIEvalsPage() {
-	const contactInfo = {
-		mobile: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com'
-	};
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <Head>
+        <title>AI Evals | Zion Tech Group</title>
+        <meta name="description" content="AI evaluation and testing platform" />
+      </Head>
+      
+      {/* Simple background instead of complex component */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 opacity-50"></div>
+      
+      <main className="relative z-10 container mx-auto px-4 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            AI Evaluation Platform
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive AI evaluation and testing platform for model performance assessment.
+          </p>
+        </div>
 
-	const plans = [
-		{ name: 'Startup', price: '$149/month', items: ['5K eval calls', 'Latency/Cost tracking', 'Toxicity/PII checks', 'CSV export'] },
-		{ name: 'Growth', price: '$499/month', items: ['50K eval calls', 'Custom metrics (BLEU/ROUGE/F1)', 'CI evals via API', 'Slack alerts'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Private cloud/VPC', 'SLA & audit logs', 'SOC2 support', 'SAML/SSO'] },
-	];
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Brain className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">Model Testing</h3>
+            <p className="text-gray-300 text-center">Comprehensive AI model evaluation</p>
+          </motion.div>
 
-	return (
-		<QuantumHolographicMatrixBackground intensity={1.5}>
-			<Head>
-				<title>AI Evaluations Platform | Zion Tech Group</title>
-				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />
-				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
-			</Head>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <CheckCircle className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">Quality Assurance</h3>
+            <p className="text-gray-300 text-center">Rigorous testing and validation</p>
+          </motion.div>
 
-			<div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-				<div className="text-center max-w-4xl mx-auto mb-12">
-					<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Evaluations</h1>
-					<p className="text-xl text-gray-300">Benchmark models and prompts with real metrics and safety checks. Ship reliable AI faster.</p>
-					<div className="mt-6 flex justify-center gap-3">
-						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Get a Demo</a>
-						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</a>
-					</div>
-				</div>
-
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
-					{plans.map((p) => (
-						<div key={p.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
-							<h3 className="text-2xl font-bold text-white mb-2">{p.name}</h3>
-							<div className="text-cyan-400 font-semibold mb-4">{p.price}</div>
-							<ul className="space-y-2 text-gray-300 text-sm">
-								{p.items.map((i) => (
-									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
-								))}
-							</ul>
-						</div>
-					))}
-				</div>
-
-				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
-						<div className="text-gray-400 text-sm mb-2">Key Metric</div>
-						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-cyan-400"><Gauge /> Accuracy & Faithfulness</div>
-						<p className="text-gray-400 mt-2 text-sm">Track quality with BLEU/ROUGE/F1 and hallucination/faithfulness scores across datasets.</p>
-					</div>
-					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
-						<div className="text-gray-400 text-sm mb-2">Ops Metric</div>
-						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-purple-400"><Gauge /> Latency & Cost</div>
-						<p className="text-gray-400 mt-2 text-sm">Measure P50/P95 latency and per-call costs to optimize throughput and budget.</p>
-					</div>
-					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
-						<div className="text-gray-400 text-sm mb-2">Safety Metric</div>
-						<div className="text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-rose-400"><Gauge /> Guardrails</div>
-						<p className="text-gray-400 mt-2 text-sm">PII redaction, toxicity/abuse detection, jailbreak detection, exportable audit logs.</p>
-					</div>
-				</div>
-
-				<div className="max-w-3xl mx-auto mt-16 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
-						<div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
-						<div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
-						<div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
-					</div>
-					<div className="text-center">
-						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</a>
-					</div>
-				</div>
-			</div>
-		</QuantumHolographicMatrixBackground>
-	);
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <BarChart3 className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">Performance Metrics</h3>
+            <p className="text-gray-300 text-center">Detailed analytics and reporting</p>
+          </motion.div>
+        </div>
+      </main>
+    </div>
+  );
 }

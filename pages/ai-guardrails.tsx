@@ -1,66 +1,70 @@
 import React from 'react';
 import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-
-import { Shield, Lock, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Shield, Brain, Lock, ArrowRight } from 'lucide-react';
 
 export default function AIGuardrailsPage() {
-	const contactInfo = {
-		mobile: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com'
-	};
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <Head>
+        <title>AI Guardrails | Zion Tech Group</title>
+        <meta name="description" content="AI safety and guardrails platform" />
+      </Head>
+      
+      {/* Simple background instead of complex component */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 opacity-50"></div>
+      
+      <main className="relative z-10 container mx-auto px-4 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            AI Guardrails Platform
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive AI safety and guardrails platform for responsible AI deployment.
+          </p>
+        </div>
 
-	const plans = [
-		{ name: 'Starter', price: '$99/month', items: ['PII redaction', 'Toxicity checks', 'Policy-based blocking', 'REST API'] },
-		{ name: 'Pro', price: '$349/month', items: ['Real-time streaming', 'Custom policies', 'Slack/Teams alerts', 'Audit logs'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Private deployment', 'DLP integrations', 'SAML/SSO', 'SLA & support'] },
-	];
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Shield className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">Safety Controls</h3>
+            <p className="text-gray-300 text-center">Advanced AI safety mechanisms</p>
+          </motion.div>
 
-	return (
-		<UltraFuturisticBackground  intensity="high">
-			<Head>
-				<title>AI Guardrails Platform | Zion Tech Group</title>
-				<meta name="description" content="Safety and compliance for AI. PII redaction, toxicity and jailbreak detection, policy enforcement with audit logs." />
-				<link rel="canonical" href="https://ziontechgroup.com/ai-guardrails" />
-			</Head>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Brain className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">AI Monitoring</h3>
+            <p className="text-gray-300 text-center">Intelligent behavior tracking</p>
+          </motion.div>
 
-			<div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-				<div className="text-center max-w-4xl mx-auto mb-12">
-					<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Guardrails</h1>
-					<p className="text-xl text-gray-300">Protect users and your brand with robust safety checks and policy enforcement for AI systems.</p>
-					<div className="mt-6 flex justify-center gap-3">
-						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Request a Demo</a>
-						<a href="/resources" className="border-gray-600 text-gray-200">Explore Docs</a>
-					</div>
-				</div>
-
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
-					{plans.map((p) => (
-						<div key={p.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
-							<h3 className="text-2xl font-bold text-white mb-2">{p.name}</h3>
-							<div className="text-cyan-400 font-semibold mb-4">{p.price}</div>
-							<ul className="space-y-2 text-gray-300 text-sm">
-								{p.items.map((i) => (
-									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
-								))}
-							</ul>
-						</div>
-					))}
-				</div>
-
-				<div className="max-w-3xl mx-auto mt-4 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
-						<div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
-						<div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
-						<div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
-					</div>
-					<div className="text-center">
-						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Security</a>
-					</div>
-				</div>
-			</div>
-		</UltraFuturisticBackground>
-	);
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Lock className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">Access Control</h3>
+            <p className="text-gray-300 text-center">Secure AI system management</p>
+          </motion.div>
+        </div>
+      </main>
+    </div>
+  );
 }

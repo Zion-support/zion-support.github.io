@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Rocket } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+
 
 export default function SalesCopilotPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/sales-copilot'));

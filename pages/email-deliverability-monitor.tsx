@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Mail, Phone, MapPin, Check, ArrowRight, Inbox, Star } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+
 
 export default function EmailDeliverabilityMonitorPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/email-deliverability-monitor'));

@@ -1,82 +1,68 @@
 import React from 'react';
 import Head from 'next/head';
-import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import ServiceAds from '../components/sections/ServiceAds';
+import { motion } from 'framer-motion';
+import { Code, TestTube, Shield, ArrowRight } from 'lucide-react';
 
-
-export default function ApiMockContractTestingPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const adItems = [
-    {
-      title: '🧪 API Mock & Contract Testing Platform',
-      description: 'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',
-      price: 'Starting at $69/month',
-      features: [
-        'OpenAPI/GraphQL import and live mock server',
-        'Contract tests gated in CI (GitHub/GitLab/Bitbucket)',
-        'Dynamic data generators and scenario templates',
-        'Snapshot diffs and changelog with approvals'
-      ],
-      link: 'https://ziontechgroup.com/api-mock-contract-testing',
-      contactInfo
-    }
-  ];
-
-  const tiers = [
-    { name: 'Starter', price: '$69/month', items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks'] },
-    { name: 'Team', price: '$149/month', items: ['5 projects', 'Unlimited mocks', 'Record/replay', 'Slack alerts'] },
-    { name: 'Enterprise', price: 'Custom', items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support'] }
-  ];
-
+export default function APIMockContractTestingPage() {
   return (
-    <Layout>
+    <div className="min-h-screen bg-black text-white">
       <Head>
-        <title>API Mock & Contract Testing | Zion Tech Group</title>
-        <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />
-        <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
+        <title>API Mock Contract Testing | Zion Tech Group</title>
+        <meta name="description" content="API mock contract testing platform" />
       </Head>
-
-      <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-        <ServiceAds heading="API Quality Fast-Track" subheading="Mock, validate, and ship with confidence." items={adItems} />
-
-        <div className="max-w-5xl mx-auto mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {tiers.map((t) => (
-              <div key={t.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <ShieldCheck className="w-5 h-5 text-cyan-400" />
-                  <h3 className="text-white text-xl font-bold">{t.name}</h3>
-                </div>
-                <div className="text-cyan-400 font-semibold mb-4">{t.price}</div>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  {t.items.map((i) => (
-                    <li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
-              <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
-              <div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
-              <div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
-            </div>
-            <div className="text-center">
-              <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</a>
-            </div>
-          </div>
+      
+      <main className="container mx-auto px-4 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            API Mock Contract Testing
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive API testing platform with mock contracts and validation.
+          </p>
         </div>
-      </div>
-    </Layout>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Code className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">API Testing</h3>
+            <p className="text-gray-300 text-center">Comprehensive API validation and testing</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <TestTube className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">Mock Contracts</h3>
+            <p className="text-gray-300 text-center">Intelligent mock service generation</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Shield className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">Contract Validation</h3>
+            <p className="text-gray-300 text-center">Robust contract testing and validation</p>
+          </motion.div>
+        </div>
+      </main>
+    </div>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import { real2027Q4Additions } from '../data/real-2027-q4-additions';
