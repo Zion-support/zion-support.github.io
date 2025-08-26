@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -47,6 +47,32 @@
     --sidebar-accent-foreground: 0 0% 7%;
     --sidebar-border: 0 0% 68%;
     --sidebar-ring: 216 84% 53%;
+
+    /* Enhanced Zion brand colors */
+    --zion-cyan: #22ddd2;
+    --zion-cyan-dark: #14b8a6;
+    --zion-cyan-light: #5eead4;
+    --zion-blue: #1e3a8a;
+    --zion-blue-dark: #172d67;
+    --zion-blue-light: #2e73ea;
+    --zion-purple: #8c15e9;
+    --zion-purple-dark: #6b21a8;
+    --zion-purple-light: #a855f7;
+    --zion-pink: #ec4899;
+    --zion-pink-dark: #be185d;
+    --zion-pink-light: #f472b6;
+    --zion-green: #10b981;
+    --zion-green-dark: #059669;
+    --zion-green-light: #34d399;
+    --zion-orange: #f59e0b;
+    --zion-orange-dark: #d97706;
+    --zion-orange-light: #fbbf24;
+    --zion-red: #ef4444;
+    --zion-red-dark: #dc2626;
+    --zion-red-light: #f87171;
+    --zion-slate: #64748b;
+    --zion-slate-light: #94a3b8;
+    --zion-slate-dark: #475569;
   }
 
   .dark {
@@ -379,6 +405,42 @@
     to { transform: translateY(0); opacity: 1; }
   }
 
+  @keyframes matrix-rain {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+  }
+
+  @keyframes particle-drift {
+    0% { transform: translateY(0) translateX(0); }
+    100% { transform: translateY(-100vh) translateX(100vw); }
+  }
+
+  @keyframes scan-line {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+  }
+
+  @keyframes glitch {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+  }
+
+  @keyframes orbit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
   /* Utility Classes */
   .animate-fade-in-up {
     animation: fade-in-up 0.6s ease-out;
@@ -411,5 +473,70 @@
 
   .heading-responsive {
     @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+  }
+
+  /* Enhanced futuristic utilities */
+  .text-gradient {
+    @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
+  }
+
+  .bg-futuristic {
+    @apply bg-gradient-to-br from-zion-slate-dark via-zion-slate to-black;
+  }
+
+  .card-futuristic {
+    @apply bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 shadow-2xl hover:shadow-zion-cyan/20 transition-all duration-500;
+  }
+
+  .btn-futuristic {
+    @apply bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold px-6 py-3 rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-neon {
+    @apply bg-transparent border-2 border-zion-cyan text-zion-cyan font-semibold px-6 py-3 rounded-xl hover:bg-zion-cyan hover:text-white hover:shadow-lg hover:shadow-zion-cyan/50 transition-all duration-300 transform hover:scale-105;
+  }
+
+  .neon-glow {
+    @apply shadow-[0_0_20px_rgba(34,221,210,0.5)] shadow-zion-cyan;
+  }
+
+  .neon-text {
+    @apply text-zion-cyan drop-shadow-[0_0_10px_rgba(34,221,210,0.8)];
+  }
+
+  .holographic {
+    @apply bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20 backdrop-blur-sm border border-zion-cyan/30;
+  }
+
+  .cyber-border {
+    @apply border border-zion-cyan/40 before:absolute before:inset-0 before:border before:border-zion-cyan/20 before:rounded-lg before:animate-pulse;
+  }
+
+  .matrix-bg {
+    @apply bg-[linear-gradient(90deg,transparent_25%,rgba(34,221,210,0.1)_50%,transparent_75%)] bg-[length:200%_100%] animate-[matrix-rain_3s_linear_infinite];
+  }
+
+  .particle-field {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_50%_50%,rgba(34,221,210,0.1)_0%,transparent_50%)] before:animate-[particle-drift_8s_linear_infinite];
+  }
+
+  .scan-line {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:h-0.5 before:bg-gradient-to-r before:from-transparent before:via-zion-cyan before:to-transparent before:animate-[scan-line_3s_linear_infinite];
+  }
+
+  .glitch-text {
+    @apply relative before:absolute before:inset-0 before:content-[attr(data-text)] before:text-zion-purple before:animate-[glitch_0.3s_ease-in-out_infinite] before:translate-x-1;
+  }
+
+  .orbit-animation {
+    @apply animate-[orbit_20s_linear_infinite] transform-gpu;
+  }
+
+  .breathe-animation {
+    @apply animate-[breathe_4s_ease-in-out_infinite];
+  }
+
+  .shimmer-effect {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-zion-cyan/20 before:to-transparent before:animate-[shimmer_2s_linear_infinite];
   }
 }

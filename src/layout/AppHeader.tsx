@@ -139,17 +139,21 @@ export function AppHeader() {
     <>
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled 
-          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20' 
+          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-lg shadow-zion-cyan/10' 
           : 'bg-transparent'
       }`}>
-        {/* Animated background elements */}
+        {/* Enhanced animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan/20 rounded-full animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/20 rounded-full animate-pulse delay-2000"></div>
+            <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan/20 rounded-full animate-pulse neon-glow"></div>
+            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full animate-pulse delay-1000 neon-glow"></div>
+            <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/20 rounded-full animate-pulse delay-2000 neon-glow"></div>
+            <div className="absolute top-20 right-20 w-12 h-12 border border-zion-pink/20 rounded-full animate-pulse delay-3000 neon-glow"></div>
           </div>
         </div>
+        
+        {/* Matrix rain effect for header */}
+        <div className="absolute inset-0 matrix-bg opacity-5"></div>
 
         <div className="container-responsive relative z-10">
           <div className="flex h-20 items-center justify-between">
@@ -162,10 +166,11 @@ export function AppHeader() {
             >
               <Link to="/" className="flex items-center space-x-3 group">
                 <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 neon-glow">
                     <span className="text-2xl font-bold text-white">Z</span>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/20 to-zion-cyan/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shimmer-effect"></div>
                 </div>
                 <div className="hidden sm:block">
                   <h1 className="text-2xl font-bold text-gradient">ZION TECH GROUP</h1>
@@ -180,12 +185,14 @@ export function AppHeader() {
                 <div key={item.name} className="relative">
                   <button
                     onClick={() => toggleDropdown(item.name)}
-                    className={`nav-link flex items-center space-x-1 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    className={`nav-link flex items-center space-x-1 px-4 py-2 rounded-lg transition-all duration-300 relative overflow-hidden ${
                       activeDropdown === item.name 
-                        ? 'text-zion-cyan bg-zion-cyan/10' 
+                        ? 'text-zion-cyan bg-zion-cyan/10 neon-glow' 
                         : 'hover:text-zion-cyan hover:bg-zion-cyan/5'
                     }`}
                   >
+                    {/* Hover effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/10 to-zion-cyan/0 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
                     <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${
@@ -222,15 +229,15 @@ export function AppHeader() {
               ))}
             </nav>
 
-            {/* Search Bar */}
+            {/* Enhanced Search Bar */}
             <div className="hidden md:flex flex-1 max-w-md mx-8">
-              <form onSubmit={handleSearch} className="relative w-full">
+              <form onSubmit={handleSearch} className="relative w-full group">
                 <input
                   type="text"
                   placeholder="Search services, talent, equipment..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                  className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 hover:border-zion-cyan/40 focus:bg-zion-slate-light/20"
                 />
                 <button
                   type="submit"
@@ -238,6 +245,8 @@ export function AppHeader() {
                 >
                   <Search className="h-4 w-4" />
                 </button>
+                {/* Hover effect */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/5 to-zion-cyan/0 opacity-0 group-focus-within:opacity-100 transition-opacity duration-500"></div>
               </form>
             </div>
 
@@ -261,13 +270,13 @@ export function AppHeader() {
                 <div className="flex items-center space-x-2">
                   <Link
                     to="/login"
-                    className="btn-neon px-4 py-2 text-sm"
+                    className="btn-neon px-4 py-2 text-sm hover:neon-glow transition-all duration-300"
                   >
                     Login
                   </Link>
                   <Link
                     to="/signup"
-                    className="btn-futuristic px-4 py-2 text-sm"
+                    className="btn-futuristic px-4 py-2 text-sm hover:shadow-zion-cyan/30 transition-all duration-300"
                   >
                     Get Started
                   </Link>

@@ -43,6 +43,11 @@ export default function ServicesPage() {
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'ai-autonomous-systems', name: 'AI & Autonomous', icon: Rocket, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'ai-fintech', name: 'AI & FinTech', icon: DollarSign, color: 'from-zion-green to-zion-blue' },
+    { id: 'ai-metaverse', name: 'AI & Metaverse', icon: Globe, color: 'from-zion-purple to-zion-pink' },
+    { id: 'ai-space-tech', name: 'AI & Space Tech', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
+    { id: 'ai-biotechnology', name: 'AI & Biotechnology', icon: Brain, color: 'from-zion-green to-zion-purple' },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
     { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
@@ -120,12 +125,20 @@ export default function ServicesPage() {
       
       {/* Hero Section */}
       <section className="bg-futuristic min-h-[60vh] flex items-center relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>
+        {/* Enhanced animated background elements */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse neon-glow"></div>
+          <div className="absolute bottom-20 right-20 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000 neon-glow"></div>
+          <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000 neon-glow"></div>
+          <div className="absolute top-40 right-40 w-16 h-16 border border-zion-pink rounded-full animate-pulse delay-3000 neon-glow"></div>
+          <div className="absolute bottom-40 left-40 w-20 h-20 border border-zion-green rounded-full animate-pulse delay-4000 neon-glow"></div>
         </div>
+        
+        {/* Matrix rain effect */}
+        <div className="absolute inset-0 matrix-bg opacity-10"></div>
+        
+        {/* Particle field */}
+        <div className="absolute inset-0 particle-field"></div>
 
         <div className="container-responsive relative z-10">
           <motion.div 
@@ -135,26 +148,27 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="heading-responsive font-bold mb-6">
-              <span className="text-gradient">Innovative Micro SAAS</span>
+              <span className="text-gradient glitch-text" data-text="Innovative Micro SAAS">Innovative Micro SAAS</span>
               <br />
-              <span className="text-white">Services & Solutions</span>
+              <span className="text-white neon-text">Services & Solutions</span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing, 
               discover the future of business technology with our comprehensive micro SAAS platform.
             </p>
             
-            {/* Search Bar */}
+            {/* Enhanced Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <div className="relative group">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 group-focus-within:text-zion-cyan transition-colors duration-300" />
                 <input
                   type="text"
                   placeholder="Search for services, technologies, or solutions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-xl px-12 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
+                  className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-xl px-12 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg transition-all duration-300 hover:border-zion-cyan/40 focus:bg-zion-slate-light/20"
                 />
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/5 to-zion-cyan/0 opacity-0 group-focus-within:opacity-100 transition-opacity duration-500"></div>
               </div>
             </div>
 
@@ -175,7 +189,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <div className="text-3xl font-bold text-zion-purple mb-2">10+</div>
+                <div className="text-3xl font-bold text-zion-purple mb-2">15+</div>
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
               <motion.div 
@@ -277,17 +291,23 @@ export default function ServicesPage() {
                 {sortedServices.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    className="card-futuristic group"
+                    className="card-futuristic group relative overflow-hidden"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     whileHover={{ y: -10 }}
                   >
+                    {/* Scan line effect */}
+                    <div className="scan-line"></div>
+                    
+                    {/* Holographic border effect */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/10 to-zion-cyan/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     {/* Service Header */}
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-4">
-                        <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
+                        <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center relative group-hover:scale-110 transition-transform duration-300`}>
                           <getCategoryIcon(service.category) className="w-6 h-6 text-white" />
+                          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-zion-cyan">${service.price.toLocaleString()}</div>
@@ -450,16 +470,22 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
-        <div className="container-responsive text-center">
+      {/* Enhanced CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10 relative overflow-hidden">
+        {/* Background effects */}
+        <div className="absolute inset-0 particle-field opacity-30"></div>
+        <div className="absolute inset-0 matrix-bg opacity-5"></div>
+        
+        <div className="container-responsive text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="heading-responsive font-bold mb-6">
-              Ready to Transform Your Business?
+              <span className="text-gradient">Ready to Transform</span>
+              <br />
+              <span className="text-white neon-text">Your Business?</span>
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Get in touch with our technology experts to discuss your specific needs and discover 
@@ -484,10 +510,19 @@ export default function ServicesPage() {
               </a>
             </div>
             
-            <div className="mt-8 text-zion-slate-light">
-              <p className="mb-2">📍 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>📧 <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a></p>
-              <p>🌐 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a></p>
+            <div className="mt-8 text-zion-slate-light space-y-3">
+              <div className="flex items-center justify-center gap-3 p-3 bg-zion-slate-dark/30 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/40 transition-colors duration-300">
+                <span className="text-2xl">📍</span>
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center justify-center gap-3 p-3 bg-zion-slate-dark/30 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/40 transition-colors duration-300">
+                <span className="text-2xl">📧</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">kleber@ziontechgroup.com</a>
+              </div>
+              <div className="flex items-center justify-center gap-3 p-3 bg-zion-slate-dark/30 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/40 transition-colors duration-300">
+                <span className="text-2xl">🌐</span>
+                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">ziontechgroup.com</a>
+              </div>
             </div>
           </motion.div>
         </div>

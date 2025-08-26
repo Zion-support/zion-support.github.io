@@ -112,13 +112,20 @@ export function Footer() {
 
   return (
     <footer className="bg-futuristic border-t border-zion-cyan/20 pt-20 pb-8 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse"></div>
-        <div className="absolute bottom-32 right-32 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute top-40 right-40 w-16 h-16 border border-zion-cyan rounded-full animate-pulse delay-3000"></div>
+      {/* Enhanced animated background elements */}
+      <div className="absolute inset-0 opacity-15">
+        <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse neon-glow"></div>
+        <div className="absolute bottom-32 right-32 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000 neon-glow"></div>
+        <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000 neon-glow"></div>
+        <div className="absolute top-40 right-40 w-16 h-16 border border-zion-cyan rounded-full animate-pulse delay-3000 neon-glow"></div>
+        <div className="absolute bottom-40 left-40 w-20 h-20 border border-zion-pink rounded-full animate-pulse delay-4000 neon-glow"></div>
       </div>
+      
+      {/* Matrix rain effect */}
+      <div className="absolute inset-0 matrix-bg opacity-5"></div>
+      
+      {/* Particle field */}
+      <div className="absolute inset-0 particle-field opacity-20"></div>
 
       <div className="container-responsive relative z-10">
         {/* Main footer content */}
@@ -132,8 +139,9 @@ export function Footer() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center relative neon-glow">
                   <span className="text-2xl font-bold text-white">Z</span>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 hover:opacity-100 transition-opacity duration-300 shimmer-effect"></div>
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gradient">ZION TECH GROUP</h3>
@@ -196,9 +204,10 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 hover:scale-110"
+                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 hover:scale-110 relative group"
                 >
                   <social.icon className="w-5 h-5" />
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/10 to-zion-cyan/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
               ))}
             </motion.div>
@@ -266,16 +275,17 @@ export function Footer() {
           </div>
         </motion.div>
 
-        {/* Scroll to top button */}
+        {/* Enhanced Scroll to top button */}
         <motion.button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50"
+          className="fixed bottom-8 right-8 p-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50 neon-glow hover:shadow-zion-cyan/50"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
           whileHover={{ y: -5 }}
         >
           <ArrowUp className="w-5 h-5" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 hover:opacity-100 transition-opacity duration-300 shimmer-effect"></div>
         </motion.button>
       </div>
     </footer>

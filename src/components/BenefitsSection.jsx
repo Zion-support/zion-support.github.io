@@ -135,7 +135,7 @@ export function BenefitsSection() {
             </motion.div>))}
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {benefits.map((benefit, index) => (<motion.div key={index} variants={itemVariants} onHoverStart={() => setHoveredIndex(index)} onHoverEnd={() => setHoveredIndex(null)} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }}>
               <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
                 {/* Icon with enhanced background */}
