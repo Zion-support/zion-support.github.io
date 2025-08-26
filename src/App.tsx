@@ -8,6 +8,8 @@ import { ChatAssistant } from './components/ChatAssistant.jsx';
 const Home = React.lazy(() => import('./pages/Home.jsx'));
 const About = React.lazy(() => import('./pages/About.jsx'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.jsx'));
+const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage.jsx'));
 const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const Login = React.lazy(() => import('./pages/Login.jsx'));
 
@@ -31,6 +33,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
+              <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
             </Routes>

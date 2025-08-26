@@ -16,18 +16,26 @@ import {
   Brain,
   MessageSquare,
   Wrench,
-  Rocket
+  Rocket,
+  TrendingUp,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Award,
+  Headphones
 } from 'lucide-react';
 import { ENHANCED_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS, CONTACT_INFO } from '../data/enhanced-services';
 import { SEO } from '../components/SEO';
 
-export default function EnhancedServicesPage() {
+export default function ComprehensiveServicesPage() {
   const [services, setServices] = useState(ENHANCED_SERVICES);
   const [filteredServices, setFilteredServices] = useState(ENHANCED_SERVICES);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('rating');
   const [viewMode, setViewMode] = useState('grid');
+  const [showFeatures, setShowFeatures] = useState({});
 
   // Filter and search services
   useEffect(() => {
@@ -68,6 +76,13 @@ export default function EnhancedServicesPage() {
     setFilteredServices(filtered);
   }, [services, selectedCategory, searchQuery, sortBy]);
 
+  const toggleFeatures = (serviceId) => {
+    setShowFeatures(prev => ({
+      ...prev,
+      [serviceId]: !prev[serviceId]
+    }));
+  };
+
   const getCategoryIcon = (category) => {
     const categoryMap = {
       'AI & ML': <Brain className="w-5 h-5" />,
@@ -75,7 +90,7 @@ export default function EnhancedServicesPage() {
       'Cloud & Infrastructure': <Cloud className="w-5 h-5" />,
       'Business Intelligence': <Zap className="w-5 h-5" />,
       'Communication': <MessageSquare className="w-5 h-5" />,
-      'Specialized Tools': <Wrench className="w-5 h-5" />,
+      'Specialized Tools': <Tool className="w-5 h-5" />,
       'Emerging Tech': <Rocket className="w-5 h-5" />
     };
     return categoryMap[category] || <Globe className="w-5 h-5" />;
@@ -94,13 +109,25 @@ export default function EnhancedServicesPage() {
     return colorMap[category] || 'from-zion-cyan to-zion-purple';
   };
 
+  const getCategoryStats = (category) => {
+    const categoryServices = services.filter(service => service.category === category);
+    const avgRating = categoryServices.reduce((sum, service) => sum + service.rating, 0) / categoryServices.length;
+    const avgPrice = categoryServices.reduce((sum, service) => sum + service.price, 0) / categoryServices.length;
+    
+    return {
+      count: categoryServices.length,
+      avgRating: avgRating.toFixed(1),
+      avgPrice: Math.round(avgPrice)
+    };
+  };
+
   return (
     <div className="min-h-screen futuristic-bg">
       <SEO 
-        title="Enhanced IT & AI Services - Zion Tech Group" 
-        description="Discover our comprehensive collection of micro SAAS services, IT solutions, and AI-powered tools. From AI content generation to quantum computing simulation."
-        keywords="micro SAAS, AI services, IT solutions, cybersecurity, cloud computing, Zion Tech Group"
-        url="https://ziontechgroup.com/enhanced-services"
+        title="Comprehensive IT & AI Services - Zion Tech Group" 
+        description="Explore our complete portfolio of micro SAAS services, AI solutions, and IT services. From AI content generation to quantum computing simulation."
+        keywords="comprehensive services, micro SAAS, AI solutions, IT services, cybersecurity, cloud computing, Zion Tech Group"
+        url="https://ziontechgroup.com/comprehensive-services"
       />
       
       {/* Matrix Rain Background */}
@@ -115,11 +142,11 @@ export default function EnhancedServicesPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="futuristic-title text-5xl md:text-7xl mb-6">
-              Enhanced Services
+              Comprehensive Services
             </h1>
             <p className="futuristic-subtitle text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-              Discover our comprehensive collection of micro SAAS services, cutting-edge AI solutions, 
-              and innovative IT services designed to transform your business
+              Your one-stop destination for cutting-edge AI solutions, micro SAAS services, 
+              and comprehensive IT services designed to accelerate your business transformation
             </p>
             
             {/* Stats */}
@@ -142,6 +169,62 @@ export default function EnhancedServicesPage() {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Category Overview */}
+      <section className="py-16 bg-zion-blue-dark/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="futuristic-title text-4xl md:text-5xl mb-6">
+              Service Categories
+            </h2>
+            <p className="futuristic-subtitle text-xl max-w-3xl mx-auto">
+              Explore our services organized by category to find the perfect solution for your needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {SERVICE_CATEGORIES.map((category, index) => {
+              const stats = getCategoryStats(category.label);
+              return (
+                <motion.div
+                  key={category.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="futuristic-card hover-lift cursor-pointer"
+                  onClick={() => setSelectedCategory(category.id)}
+                >
+                  <div className="text-center mb-6">
+                    <div className="text-4xl mb-4">{category.icon}</div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{category.label}</h3>
+                    <p className="text-zion-slate-light">{stats.count} services available</p>
+                  </div>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex justify-between items-center">
+                      <span className="text-zion-slate-light">Avg Rating:</span>
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-white font-medium">{stats.avgRating}</span>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-zion-slate-light">Avg Price:</span>
+                      <span className="text-zion-cyan font-medium">${stats.avgPrice}/mo</span>
+                    </div>
+                  </div>
+
+                  <button
+                    className="w-full px-4 py-2 bg-zion-cyan text-black rounded-lg hover:bg-zion-cyan-dark transition-colors duration-300 font-medium"
+                  >
+                    View Services
+                  </button>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -263,6 +346,11 @@ export default function EnhancedServicesPage() {
                           {service.category}
                         </span>
                       </div>
+                      <div className="absolute top-4 left-4">
+                        <span className="px-2 py-1 bg-black/70 text-white text-xs rounded-full">
+                          AI Score: {service.aiScore}
+                        </span>
+                      </div>
                     </div>
                   </div>
 
@@ -281,14 +369,37 @@ export default function EnhancedServicesPage() {
 
                     {/* Features */}
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {service.features?.slice(0, 3).map((feature, idx) => (
-                          <span key={idx} className="px-2 py-1 bg-zion-blue/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
+                      <button
+                        onClick={() => toggleFeatures(service.id)}
+                        className="flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300 mb-2"
+                      >
+                        <span className="text-sm font-semibold">
+                          {showFeatures[service.id] ? 'Hide' : 'Show'} Key Features
+                        </span>
+                        <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${
+                          showFeatures[service.id] ? 'rotate-90' : ''
+                        }`} />
+                      </button>
+                      
+                      <AnimatePresence>
+                        {showFeatures[service.id] && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="mb-4"
+                          >
+                            <div className="flex flex-wrap gap-2">
+                              {service.features?.map((feature, idx) => (
+                                <span key={idx} className="px-2 py-1 bg-zion-blue/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
+                                  {feature}
+                                </span>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
 
                     {/* Tags */}
@@ -350,54 +461,78 @@ export default function EnhancedServicesPage() {
         </div>
       </section>
 
-      {/* Pricing Tiers */}
+      {/* Why Choose Us */}
       <section className="py-20 bg-zion-blue-dark/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="futuristic-title text-4xl md:text-5xl mb-6">
-              Flexible Pricing Tiers
+              Why Choose Zion Tech Group?
             </h2>
             <p className="futuristic-subtitle text-xl max-w-3xl mx-auto">
-              Choose the perfect plan for your business size and needs. All plans include 24/7 support and regular updates.
+              We combine cutting-edge technology with proven expertise to deliver exceptional results
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {PRICING_TIERS.map((tier, index) => (
-              <motion.div
-                key={tier.label}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="futuristic-card text-center hover-lift"
-              >
-                <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r ${tier.color} flex items-center justify-center`}>
-                  <span className="text-2xl font-bold text-white">{tier.label[0]}</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{tier.label}</h3>
-                <p className="text-zion-slate-light mb-4">Up to {tier.range} users</p>
-                <ul className="text-left space-y-2 mb-6">
-                  <li className="flex items-center gap-2 text-sm text-zion-slate-light">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Custom integrations
-                  </li>
-                  <li className="flex items-center gap-2 text-sm text-zion-slate-light">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Priority support
-                  </li>
-                  <li className="flex items-center gap-2 text-sm text-zion-slate-light">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Advanced analytics
-                  </li>
-                </ul>
-                <Link
-                  to="/contact"
-                  className="futuristic-btn w-full"
-                >
-                  Get Started
-                </Link>
-              </motion.div>
-            ))}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="futuristic-card text-center hover-lift"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Proven Expertise</h3>
+              <p className="text-zion-slate-light text-sm">
+                Industry-leading solutions with proven track records and customer success stories
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="futuristic-card text-center hover-lift"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Innovation First</h3>
+              <p className="text-zion-slate-light text-sm">
+                Cutting-edge AI and emerging technologies to keep you ahead of the competition
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="futuristic-card text-center hover-lift"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                <Headphones className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Dedicated Support</h3>
+              <p className="text-zion-slate-light text-sm">
+                Personalized service with dedicated account managers and 24/7 technical support
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="futuristic-card text-center hover-lift"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">ROI Focused</h3>
+              <p className="text-zion-slate-light text-sm">
+                Measurable business outcomes and rapid return on investment for all solutions
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -410,7 +545,7 @@ export default function EnhancedServicesPage() {
               Ready to Transform Your Business?
             </h2>
             <p className="futuristic-subtitle text-xl mb-12">
-              Get in touch with our team to discuss your needs and discover how our services can help you achieve your goals.
+              Get in touch with our team to discuss your needs and discover how our comprehensive services can help you achieve your goals.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
