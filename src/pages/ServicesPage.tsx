@@ -6,7 +6,7 @@ import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { Globe, ArrowRight, TrendingUp } from "lucide-react";
+import { Globe, ExternalLink, Star, Clock, Shield, Zap, Database, Code, Smartphone, Blockchain, Cpu, BarChart3 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { EXPANDED_SERVICES } from "@/data/expandedServices";
 
