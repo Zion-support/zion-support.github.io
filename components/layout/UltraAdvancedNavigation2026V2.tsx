@@ -196,7 +196,7 @@ export default function UltraAdvancedNavigation2026V2() {
                   ) : (
                     <Link
                       href={item.href}
-                      className="block text-white hover:text-purple-400 transition-colors py-2"
+                      className="block text-white hover:text-cyan-300 transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}

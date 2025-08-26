@@ -13,9 +13,9 @@ import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { quantumSpaceServices } from '../data/quantum-space-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
-import { newRealServices } from '../data/new-real-services';
-import { marketReadyServices } from '../data/market-ready-services';
+// import { enterpriseITServices } from '../data/enterprise-it-services';
+// import { newRealServices } from '../data/new-real-services';
+import { realMarketServices as marketReadyServices } from '../data/real-market-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { emergingTechnologyServices } from '../data/emerging-technology-services';
 import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
@@ -159,9 +159,9 @@ function collectAllServices(): Svc[] {
       additionalEnhancedServices as Svc[],
       innovativeAIServices as Svc[],
       quantumSpaceServices as Svc[],
-      enterpriseITServices as Svc[],
-      newRealServices as Svc[],
-      marketReadyServices as Svc[],
+              // enterpriseITServices as Svc[],
+        // newRealServices as Svc[],
+        marketReadyServices as Svc[],
       realMarketServices as Svc[],
       new2025Services as Svc[],
       newRealInnovations as Svc[],

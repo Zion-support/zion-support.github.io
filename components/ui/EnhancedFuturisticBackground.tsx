@@ -82,7 +82,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     window.addEventListener('resize', resizeCanvas);
 
     // Particle system
-    const particles: Array<{
+    const uiParticles: Array<{
       x: number;
       y: number;
       vx: number;
@@ -136,7 +136,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
-      particles.push({
+      uiParticles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 2,
@@ -217,7 +217,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     const drawMatrix = matrixRain();
 
     // Main animation loop
-    const animate = () => {
+    const animateMain = () => {
       // Clear canvas with fade effect
       ctx.fillStyle = colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -226,7 +226,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       drawMatrix();
 
       // Update and draw particles
-      particles.forEach((particle, index) => {
+      uiParticles.forEach((particle, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -253,7 +253,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         ctx.fill();
 
         // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
+        uiParticles.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
           
           const distance = Math.sqrt(
@@ -349,14 +349,15 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       if (prefersReduced) {
         // Slow down updates
         setTimeout(() => {
-          animationRef.current = requestAnimationFrame(animate);
+          animationRef.current = requestAnimationFrame(animateMain);
         }, 100);
       } else {
-        animationRef.current = requestAnimationFrame(animate);
+        animationRef.current = requestAnimationFrame(animateMain);
       }
     };
 
     animate();
+    animateMain();
 
     return () => {
       if (animationRef.current) {

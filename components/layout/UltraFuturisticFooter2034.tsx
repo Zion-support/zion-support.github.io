@@ -197,7 +197,7 @@ export default function UltraFuturisticFooter2034() {
           </div>
 
           {/* Service Categories */}
-          {footerSections.map((section, index) => (
+          {serviceCategories.map((section, index) => (
             <motion.div
               key={section.title}
               initial={{ opacity: 0, y: 20 }}
@@ -216,14 +216,14 @@ export default function UltraFuturisticFooter2034() {
                 {section.description}
               </p>
               <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.name}>
+                {section.services.map((service) => (
+                  <li key={service.name}>
                     <Link
-                      href={link.href}
+                      href={service.href}
                       className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
                     >
                       <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-200" />
-                      <span>{link.name}</span>
+                      <span>{service.name}</span>
                     </Link>
                   </li>
                 ))}
@@ -263,7 +263,7 @@ export default function UltraFuturisticFooter2034() {
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4">Resources</h4>
                   <ul className="space-y-2">
-                    {footerSections.find(section => section.title === 'Resources')?.links.map((link) => (
+                    {serviceCategories.find(section => section.title === 'Resources')?.services.map((link) => (
                       <li key={link.name}>
                         <Link
                           href={link.href}
@@ -369,20 +369,20 @@ export default function UltraFuturisticFooter2034() {
 
           {/* Enhanced Service Categories */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {footerSections.map((section, index) => (
+            {serviceCategories.map((section, index) => (
               <div key={index} className="space-y-4">
                 <h4 className="text-lg font-semibold text-white border-b border-cyan-500/30 pb-2">
                   {section.title}
                 </h4>
                 <ul className="space-y-2">
-                  {section.links.map((link) => (
-                    <li key={link.name}>
+                  {section.services.map((service) => (
+                    <li key={service.name}>
                       <Link
-                        href={link.href}
+                        href={service.href}
                         className="text-gray-400 hover:text-cyan-300 transition-colors duration-200 flex items-center group"
                       >
                         <ArrowRight className="w-3 h-3 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform duration-200" />
-                        {link.name}
+                        {service.name}
                       </Link>
                     </li>
                   ))}
@@ -397,7 +397,7 @@ export default function UltraFuturisticFooter2034() {
               Industry Solutions
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {footerSections.find(section => section.title === 'Industry Solutions')?.links.map((link) => (
+              {serviceCategories.find(section => section.title === 'Industry Solutions')?.services.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -420,10 +420,10 @@ export default function UltraFuturisticFooter2034() {
                 <span>Quick Links</span>
               </h4>
               <div className="grid grid-cols-2 gap-2">
-                {quickLinks.map((link) => (
+                {socialLinks.map((social) => (
                   <Link
-                    key={link.name}
-                    href={link.href}
+                    key={social.name}
+                    href={social.href}
                     className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
                   >
                     {social.icon}
@@ -532,5 +532,3 @@ export default function UltraFuturisticFooter2034() {
     </footer>
   );
 };
-
-export default UltraFuturisticFooter2034;
