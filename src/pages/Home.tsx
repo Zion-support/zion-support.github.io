@@ -274,12 +274,12 @@ const Home: React.FC = () => {
               Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/services" 
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Our Services
-              </Link>
+                          <Link 
+              to="/innovative-new-services-2025" 
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore Our Services
+            </Link>
               <Link 
                 to="/contact" 
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
@@ -559,3 +559,5 @@ const Home: React.FC = () => {
     </div>
   );
 }
+
+export default Home;
