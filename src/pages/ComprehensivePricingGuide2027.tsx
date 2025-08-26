@@ -37,7 +37,7 @@ import {
   Play,
   Eye,
   X,
-  Flask,
+  Beaker,
   Calculator,
   TrendingDown,
   Minus,
