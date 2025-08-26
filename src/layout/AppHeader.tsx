@@ -18,6 +18,9 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Case Studies', href: '/case-studies', current: false },
+    { name: 'News', href: '/news', current: false },
+    { name: 'Careers', href: '/careers', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
 

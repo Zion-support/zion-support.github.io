@@ -3,7 +3,7 @@ import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.js';
 import './index.css';
-// import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 // import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 // import './utils/globalFetchInterceptor';
@@ -19,21 +19,23 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // import { NotificationProvider } from './context/notifications/NotificationContext';
 // Import analytics provider
 // import { AnalyticsProvider } from './context/AnalyticsContext';
-// import { ViewModeProvider } from './context/ViewModeContext';
+// import { ViewModeProvider } from '@/context/ViewModeContext';
 // Initialize a React Query client with global error handling
-const queryClient = new QueryClient({
-    defaultOptions: {
-        queries: {
-            retry: 1,
-            refetchOnWindowFocus: false,
-        },
-    },
-});
+// const queryClient = new QueryClient({
+//     defaultOptions: {
+//         queries: {
+//             retry: 1,
+//             refetchOnWindowFocus: false,
+//         },
+//     },
+// });
 const rootElement = document.getElementById('root');
 function renderApp() {
     const app = React.createElement(React.StrictMode, null,
-        React.createElement(Router, null,
-            React.createElement(App, null)
+        React.createElement(HelmetProvider, null,
+            React.createElement(Router, null,
+                React.createElement(App, null)
+            )
         )
     );
     if (rootElement?.hasChildNodes()) {

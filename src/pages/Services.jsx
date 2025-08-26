@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEOHead from '@/components/SEOHead';
 import { Link } from 'react-router-dom';
 import { servicesCatalog } from '@/data/servicesCatalog';
 import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
@@ -11,7 +11,7 @@ export default function Services() {
         website: 'https://ziontechgroup.com'
     };
     return (<>
-			<SEO title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group" description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started." canonical="/services" url="https://ziontechgroup.com/services"/>
+			<SEOHead title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group" description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started." url="https://ziontechgroup.com/services"/>
 
 			<main className="min-h-screen bg-zion-blue pt-24 pb-20">
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
