@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, ChevronRight, Home, Briefcase, Phone, Shield, FileText, Users, Building, Globe, Brain, Cloud, Lock, Code, Rocket, Target, Lightbulb, Zap, Database, Network, Server, Settings, HelpCircle, MessageSquare, BarChart3, ShoppingCart, Wrench, Star, Award, TrendingUp, Palette, Monitor, Key, Eye, ShieldCheck, Bug, Activity, PieChart, LineChart, Map, Calendar, Clock, Mail, MapPin, Linkedin, Twitter, Github, Youtube, BookOpen, Video, GraduationCap, Handshake, Cookie } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronRight, Home, Briefcase, Phone, Shield, FileText, Users, Building, Globe, Brain, Cloud, Lock, Code, Rocket, Target, Lightbulb, Zap, Database, Network, Server, Settings, HelpCircle, MessageSquare, BarChart3, ShoppingCart, Wrench, Star, Award, TrendingUp, Palette, Monitor, Key, Eye, ShieldCheck, Bug, Activity, PieChart, LineChart, Map, Calendar, Clock, Mail, MapPin, Linkedin, Twitter, Github, Youtube, BookOpen, Video, GraduationCap, Users2, Cookie } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import Search from './Search';
 import ScrollToTop from './ScrollToTop';
@@ -46,7 +46,7 @@ const sidebarNavigation: NavItem[] = [
     { label: 'About Us', href: '/', icon: Building },
     { label: 'Our Team', href: '/', icon: Users },
     { label: 'Careers', href: '/', icon: Target },
-    { label: 'Partners', href: '/', icon: Handshake }
+    { label: 'Partners', href: '/', icon: Users2 }
   ]},
   { label: 'Resources', icon: BookOpen, href: '#', children: [
     { label: 'Blog', href: '/', icon: FileText },
