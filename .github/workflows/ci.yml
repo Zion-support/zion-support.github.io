@@ -23,18 +23,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Lint and type-check
         run: |
-          yarn lint
-          yarn type-check
+          npm run lint
+          npm run type-check
 
       - name: Build project
-        run: yarn build
+        run: npm run build
 
       - name: Verify build output
         run: |
@@ -42,40 +42,6 @@ jobs:
             echo "Build failed: dist folder not found"
             exit 1
           fi
-          echo "Build successful! Found dist folder with:"
-          ls -la dist/
-
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'yarn'
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Run type check
-        run: yarn type-check
-
-      - name: Run linting
-        run: yarn lint
-
-      - name: Build project
-        run: yarn build
-
-      - name: Verify build artifacts
-        run: |
-          echo "Build artifacts:"
-          ls -la dist/
-          echo "Build size:"
-          du -sh dist/
+          echo "Build completed successfully"
 
 
