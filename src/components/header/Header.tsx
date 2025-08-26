@@ -53,6 +53,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   };
   
   return (
+<<<<<<< HEAD
     <>
       <FuturisticBackground variant="grid" intensity="low" className="opacity-30" />
       <header 
@@ -81,12 +82,37 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
               searchSuggestions={searchSuggestions}
             />
           </form>
+=======
+    <header 
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-lg shadow-2xl shadow-zion-purple/10"
+      style={headerStyle}
+    >
+      <div className="container flex h-16 items-center px-4 sm:px-6">
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+
+        <div className="ml-6 flex-1">
+          <MainNavigation />
+        </div>
+        
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+          <EnhancedSearchInput
+            value={query}
+            onChange={setQuery}
+            onSelectSuggestion={(text) => {
+              navigate(`/search?q=${encodeURIComponent(text)}`);
+              setQuery("");
+            }}
+            searchSuggestions={searchSuggestions}
+          />
+        </form>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5241
 
           <div className="flex items-center gap-2">
             <LanguageSelector />
             {!hideLogin && <UserMenu />}
           </div>
         </div>
+<<<<<<< HEAD
         
         {/* Floating navigation indicators */}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-1">
@@ -96,5 +122,12 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         </div>
       </header>
     </>
+=======
+      </div>
+      
+      {/* Animated Header Border */}
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
+    </header>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5241
   );
 }

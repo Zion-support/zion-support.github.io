@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@hello-pangea/dnd": "^18.0.1",
-    "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -93,7 +92,6 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
-    "vite-plugin-pwa": "^1.0.3",
     "vitest": "^1.4.0"
   },
   "peerDependencies": {
@@ -102,7 +100,7 @@
   },
   "overrides": {
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
-    "glob": "^10.4.5",
+    "glob": "^10.3.10",
     "rimraf": "^5.0.5"
   },
   "resolutions": {
