@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>Zion Tech Group - AI-Powered Technology Solutions & Digital Transformation Services</title>
     
     <!-- Enhanced SEO Meta Tags -->
     <meta name="description" content="Zion Tech Group - Leading AI, Cybersecurity, Cloud & Digital Transformation Services. Transform your business with cutting-edge technology solutions. 500+ projects delivered, 50+ expert team members." />
@@ -12,6 +14,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="language" content="English" />
     <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#17072b" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -31,24 +34,26 @@
     <meta property="twitter:description" content="Leading provider of AI services, cybersecurity, cloud computing, and digital transformation. Transform your business today." />
     <meta property="twitter:image" content="/og-image.svg" />
     <meta property="twitter:creator" content="@ziontechgroup" />
+    <meta property="twitter:site" content="@ziontechgroup" />
     
-    <title>Zion Tech Group - AI-Powered Technology Solutions & Digital Transformation Services</title>
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="//cdn.gpteng.co" />
+    
+    <!-- Theme color -->
+    <meta name="msapplication-TileColor" content="#17072b" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="/manifest.json" />
     
     <!-- Preload critical resources -->
     <link rel="preload" href="/src/main.tsx" as="script" />
     <link rel="preload" href="/src/index.css" as="style" />
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" as="style" />
-    
-    <!-- DNS Prefetch for external domains -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="//cdn.gpteng.co" />
-    
-    <!-- Manifest for PWA -->
-    <link rel="manifest" href="/manifest.json" />
-    
-    <!-- Theme color -->
-    <meta name="theme-color" content="#17072b" />
-    <meta name="msapplication-TileColor" content="#17072b" />
     
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -59,6 +64,7 @@
       "url": "https://ziontechgroup.com",
       "logo": "https://ziontechgroup.com/logo.svg",
       "description": "Leading provider of AI services, cybersecurity, cloud computing, and digital transformation solutions.",
+      "foundingDate": "2020",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "364 E Main St STE 1008",
@@ -71,15 +77,46 @@
         "@type": "ContactPoint",
         "telephone": "+1-302-464-0950",
         "contactType": "customer service",
-        "email": "kleber@ziontechgroup.com"
+        "email": "kleber@ziontechgroup.com",
+        "availableLanguage": "English"
       },
       "sameAs": [
         "https://linkedin.com/company/ziontechgroup",
-        "https://twitter.com/ziontechgroup"
+        "https://twitter.com/ziontechgroup",
+        "https://facebook.com/ziontechgroup"
       ],
-      "foundingDate": "2020",
       "numberOfEmployees": "50+",
-      "serviceArea": "Worldwide"
+      "serviceArea": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Technology Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI & Analytics Solutions",
+              "description": "Advanced AI-powered business intelligence and analytics solutions"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cybersecurity Services",
+              "description": "Enterprise-grade security and threat detection systems"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cloud Solutions",
+              "description": "Scalable cloud infrastructure and DevOps services"
+            }
+          }
+        ]
+      }
     }
     </script>
     
@@ -96,6 +133,17 @@
             });
         });
       }
+    </script>
+    
+    <!-- Performance monitoring -->
+    <script>
+      // Performance monitoring
+      window.addEventListener('load', () => {
+        if ('performance' in window) {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+        }
+      });
     </script>
   </head>
   <body>
