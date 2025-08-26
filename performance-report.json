@@ -1,0 +1,470 @@
+{
+  "timestamp": "2025-08-25T22:09:45.331Z",
+  "totalSize": 1169255,
+  "chunkAnalysis": {
+    "animation": {
+      "totalSize": 80225,
+      "files": [
+        {
+          "name": "animation-vendor-PPi7R1sA.js",
+          "size": 80225,
+          "sizeInKB": 78
+        }
+      ],
+      "averageSize": 80225
+    },
+    "component": {
+      "totalSize": 114137,
+      "files": [
+        {
+          "name": "component-AIChatbot-6OKwXKsf.js",
+          "size": 14676,
+          "sizeInKB": 14
+        },
+        {
+          "name": "component-AICodeGenerator-CP1q-K7E.js",
+          "size": 36,
+          "sizeInKB": 0
+        },
+        {
+          "name": "component-Accessibility-C6HjFOfG.js",
+          "size": 377,
+          "sizeInKB": 0
+        },
+        {
+          "name": "component-AnalyticsDashboard-CP1q-K7E.js",
+          "size": 36,
+          "sizeInKB": 0
+        },
+        {
+          "name": "component-BrokenLinkFixer-fIYNn1aq.js",
+          "size": 12299,
+          "sizeInKB": 12
+        },
+        {
+          "name": "component-CollaborativeTextEditor-CP1q-K7E.js",
+          "size": 36,
+          "sizeInKB": 0
+        },
+        {
+          "name": "component-ContentQualityEnhancer-DmfkpGCD.js",
+          "size": 15991,
+          "sizeInKB": 16
+        },
+        {
+          "name": "component-EnhancedAccessibility-B3EiQ3jc.js",
+          "size": 14653,
+          "sizeInKB": 14
+        },
+        {
+          "name": "component-EnhancedErrorBoundary-sFPqzT0s.js",
+          "size": 5601,
+          "sizeInKB": 5
+        },
+        {
+          "name": "component-EnhancedSEO-Dmb3Y52l.js",
+          "size": 4848,
+          "sizeInKB": 5
+        },
+        {
+          "name": "component-EnterpriseDashboard-CP1q-K7E.js",
+          "size": 36,
+          "sizeInKB": 0
+        },
+        {
+          "name": "component-Footer-DyESIvbf.js",
+          "size": 3644,
+          "sizeInKB": 4
+        },
+        {
+          "name": "component-GradientHeading-B5iA-veY.js",
+          "size": 240,
+          "sizeInKB": 0
+        },
+        {
+          "name": "component-Header-jn7lbB0q.js",
+          "size": 2780,
+          "sizeInKB": 3
+        },
+        {
+          "name": "component-MachineLearningDashboard-CP1q-K7E.js",
+          "size": 36,
+          "sizeInKB": 0
+        },
+        {
+          "name": "component-PerformanceDashboard-CP1q-K7E.js",
+          "size": 36,
+          "sizeInKB": 0
+        },
+        {
+          "name": "component-PerformanceMonitor-F2LMW7wb.js",
+          "size": 9017,
+          "sizeInKB": 9
+        },
+        {
+          "name": "component-SEO-CwcYCrNN.js",
+          "size": 2481,
+          "sizeInKB": 2
+        },
+        {
+          "name": "component-SEOHead-DNTxRSd-.js",
+          "size": 3629,
+          "sizeInKB": 4
+        },
+        {
+          "name": "component-ScrollToTop-DNCkWwQK.js",
+          "size": 708,
+          "sizeInKB": 1
+        },
+        {
+          "name": "component-SecurityComplianceDashboard-CP1q-K7E.js",
+          "size": 36,
+          "sizeInKB": 0
+        },
+        {
+          "name": "component-Sidebar-DfYZVlla.js",
+          "size": 7837,
+          "sizeInKB": 8
+        },
+        {
+          "name": "component-ThemeProvider-C9SyJB4Y.js",
+          "size": 483,
+          "sizeInKB": 0
+        },
+        {
+          "name": "component-ThemeToggle-CL8jMyNg.js",
+          "size": 910,
+          "sizeInKB": 1
+        },
+        {
+          "name": "component-WebsiteImprovementDashboard-qoX0fmpY.js",
+          "size": 13711,
+          "sizeInKB": 13
+        }
+      ],
+      "averageSize": 4565
+    },
+    "page": {
+      "totalSize": 596161,
+      "files": [
+        {
+          "name": "page-5GEnterpriseSolutions-bqd_3rB0.js",
+          "size": 7538,
+          "sizeInKB": 7
+        },
+        {
+          "name": "page-AIAutonomousResearchAssistant-Di6OEcwE.js",
+          "size": 7713,
+          "sizeInKB": 8
+        },
+        {
+          "name": "page-AIMatcher-BZlVfR0l.js",
+          "size": 1122,
+          "sizeInKB": 1
+        },
+        {
+          "name": "page-AIPoweredITAssetManagement-BHwJ9hxD.js",
+          "size": 7682,
+          "sizeInKB": 8
+        },
+        {
+          "name": "page-AIServices-DZCmAgmA.js",
+          "size": 10221,
+          "sizeInKB": 10
+        },
+        {
+          "name": "page-AISolutions-8tj5gUWh.js",
+          "size": 6688,
+          "sizeInKB": 7
+        },
+        {
+          "name": "page-About-D3jQf6Zd.js",
+          "size": 13184,
+          "sizeInKB": 13
+        },
+        {
+          "name": "page-AutonomousBusinessOperationsPlatform-DjYMYIwq.js",
+          "size": 7787,
+          "sizeInKB": 8
+        },
+        {
+          "name": "page-Blog-Bwr3UjUU.js",
+          "size": 9888,
+          "sizeInKB": 10
+        },
+        {
+          "name": "page-Careers-B5v1FwOR.js",
+          "size": 10786,
+          "sizeInKB": 11
+        },
+        {
+          "name": "page-CaseStudies-C9289T3H.js",
+          "size": 8218,
+          "sizeInKB": 8
+        },
+        {
+          "name": "page-CloudDevOps-DikNR2IW.js",
+          "size": 11532,
+          "sizeInKB": 11
+        },
+        {
+          "name": "page-CommunityPage-B7s_tLiS.js",
+          "size": 10982,
+          "sizeInKB": 11
+        },
+        {
+          "name": "page-ComprehensiveInnovativeServices-BDtTKX87.js",
+          "size": 23981,
+          "sizeInKB": 23
+        },
+        {
+          "name": "page-ComprehensiveServicesOverview-BRDBQYiJ.js",
+          "size": 147382,
+          "sizeInKB": 144
+        },
+        {
+          "name": "page-Contact-aiF0U6Qr.js",
+          "size": 15737,
+          "sizeInKB": 15
+        },
+        {
+          "name": "page-Cookies-CSm6GcIt.js",
+          "size": 7530,
+          "sizeInKB": 7
+        },
+        {
+          "name": "page-DigitalTransformation-Bi7jf4mN.js",
+          "size": 13965,
+          "sizeInKB": 14
+        },
+        {
+          "name": "page-EmergingTech-Cs1a_K8L.js",
+          "size": 10350,
+          "sizeInKB": 10
+        },
+        {
+          "name": "page-EnterpriseSolutions-B_--4Vit.js",
+          "size": 13276,
+          "sizeInKB": 13
+        },
+        {
+          "name": "page-Events-B9DbqCud.js",
+          "size": 10613,
+          "sizeInKB": 10
+        },
+        {
+          "name": "page-FAQ-BeowhZo9.js",
+          "size": 5697,
+          "sizeInKB": 6
+        },
+        {
+          "name": "page-HelpCenter-CjAFFYp6.js",
+          "size": 11740,
+          "sizeInKB": 11
+        },
+        {
+          "name": "page-Home-Cg0-7pX5.js",
+          "size": 10703,
+          "sizeInKB": 10
+        },
+        {
+          "name": "page-InnovativeMicroSaasServices-Cvo-vCvB.js",
+          "size": 16204,
+          "sizeInKB": 16
+        },
+        {
+          "name": "page-Marketplace-BcUnzE4V.js",
+          "size": 12123,
+          "sizeInKB": 12
+        },
+        {
+          "name": "page-Mission-CvwwtuTG.js",
+          "size": 10260,
+          "sizeInKB": 10
+        },
+        {
+          "name": "page-NewServices-p03J2vzk.js",
+          "size": 10654,
+          "sizeInKB": 10
+        },
+        {
+          "name": "page-News-DAWR6tcU.js",
+          "size": 10142,
+          "sizeInKB": 10
+        },
+        {
+          "name": "page-Partners-CDa36ODS.js",
+          "size": 10726,
+          "sizeInKB": 10
+        },
+        {
+          "name": "page-Pricing-C0VZXcqi.js",
+          "size": 51128,
+          "sizeInKB": 50
+        },
+        {
+          "name": "page-Privacy-DmwDpFXl.js",
+          "size": 1762,
+          "sizeInKB": 2
+        },
+        {
+          "name": "page-QuantumNeuralNetworkPlatform-CI8oy8BJ.js",
+          "size": 6242,
+          "sizeInKB": 6
+        },
+        {
+          "name": "page-SOC2ComplianceAutomation-CrjDdDR_.js",
+          "size": 7748,
+          "sizeInKB": 8
+        },
+        {
+          "name": "page-Services-DpW-IDjJ.js",
+          "size": 10107,
+          "sizeInKB": 10
+        },
+        {
+          "name": "page-ServicesShowcase-eao7MmZt.js",
+          "size": 13115,
+          "sizeInKB": 13
+        },
+        {
+          "name": "page-TalentDirectory-CoHZE8Ke.js",
+          "size": 1089,
+          "sizeInKB": 1
+        },
+        {
+          "name": "page-TalentsPage-DyAkkPrg.js",
+          "size": 1013,
+          "sizeInKB": 1
+        },
+        {
+          "name": "page-Team-C5Bgesgz.js",
+          "size": 8079,
+          "sizeInKB": 8
+        },
+        {
+          "name": "page-Terms-CkPG4167.js",
+          "size": 12001,
+          "sizeInKB": 12
+        },
+        {
+          "name": "page-Testimonials-Cfi8uKKx.js",
+          "size": 9377,
+          "sizeInKB": 9
+        },
+        {
+          "name": "page-Webinars-BJzsNUmt.js",
+          "size": 12219,
+          "sizeInKB": 12
+        },
+        {
+          "name": "page-WhitePapers-ZbV7lLvl.js",
+          "size": 7857,
+          "sizeInKB": 8
+        }
+      ],
+      "averageSize": 13864
+    },
+    "react": {
+      "totalSize": 312869,
+      "files": [
+        {
+          "name": "react-vendor-eQ6940WM.js",
+          "size": 312869,
+          "sizeInKB": 306
+        }
+      ],
+      "averageSize": 312869
+    },
+    "ui": {
+      "totalSize": 219,
+      "files": [
+        {
+          "name": "ui-vendor-DG083FVs.js",
+          "size": 219,
+          "sizeInKB": 0
+        }
+      ],
+      "averageSize": 219
+    },
+    "utility": {
+      "totalSize": 21998,
+      "files": [
+        {
+          "name": "utility-vendor-s82dr35Y.js",
+          "size": 21998,
+          "sizeInKB": 21
+        }
+      ],
+      "averageSize": 21998
+    },
+    "vendor": {
+      "totalSize": 43646,
+      "files": [
+        {
+          "name": "vendor-CiCrVgw-.js",
+          "size": 43646,
+          "sizeInKB": 43
+        }
+      ],
+      "averageSize": 43646
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "medium",
+      "category": "chunk-optimization",
+      "title": "Optimize page chunk",
+      "description": "Chunk is 582KB. Consider splitting or lazy loading.",
+      "actions": [
+        "Split large components into smaller chunks",
+        "Implement route-based code splitting",
+        "Use React.lazy() for heavy components"
+      ]
+    },
+    {
+      "priority": "medium",
+      "category": "chunk-optimization",
+      "title": "Optimize react chunk",
+      "description": "Chunk is 306KB. Consider splitting or lazy loading.",
+      "actions": [
+        "Split large components into smaller chunks",
+        "Implement route-based code splitting",
+        "Use React.lazy() for heavy components"
+      ]
+    },
+    {
+      "priority": "low",
+      "category": "best-practices",
+      "title": "Implement performance monitoring",
+      "description": "Add performance monitoring and metrics collection.",
+      "actions": [
+        "Add Core Web Vitals monitoring",
+        "Implement bundle size CI/CD checks",
+        "Add performance budgets to build process"
+      ]
+    }
+  ],
+  "criticalIssues": [
+    {
+      "type": "oversized-chunk",
+      "chunk": "page",
+      "size": 596161,
+      "message": "Chunk page is 582KB - consider splitting"
+    }
+  ],
+  "warnings": [
+    {
+      "type": "too-many-files",
+      "chunk": "component",
+      "count": 25,
+      "message": "Chunk component has 25 files - consider consolidation"
+    },
+    {
+      "type": "too-many-files",
+      "chunk": "page",
+      "count": 43,
+      "message": "Chunk page has 43 files - consider consolidation"
+    }
+  ]
+}

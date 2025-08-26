@@ -1,22 +1,10 @@
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
-import EnterprisePlans from "../pages/EnterprisePlans";
-import EnterpriseAdmin from "../pages/EnterpriseAdmin";
-import CompanyWorkspace from "../pages/CompanyWorkspace";
-import EnterpriseBilling from "../pages/EnterpriseBilling";
+import React from 'react';
+import { Route } from 'react-router-dom';
 
-const EnterpriseRoutes = () => {
+export default function EnterpriseRoutes() {
   return (
-    <Routes>
-      {/* Enterprise Routes */}
-      <Route path="/enterprise" element={<EnterprisePlans />} />
-      <Route path="/plans/enterprise" element={<EnterprisePlans />} />
-      <Route path="/enterprise/admin" element={<EnterpriseAdmin />} />
-      <Route path="/company/:companySlug" element={<CompanyWorkspace />} />
-      <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
-      
-    </Routes>
+    <>
+      {/* Enterprise-specific routes can be added here */}
+    </>
   );
-};
-
-export default EnterpriseRoutes;
+}

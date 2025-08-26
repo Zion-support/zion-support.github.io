@@ -1,17 +1,9 @@
+import React from 'react';
+import { Route } from 'react-router-dom';
+import NotFound from '@/pages/NotFound';
 
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
-import NotFound from "@/pages/NotFound";
-import Unauthorized from "@/pages/Unauthorized";
-
-const ErrorRoutes = () => {
+export default function ErrorRoutes() {
   return (
-    <Routes>
-      {/* Error Routes */}
-      <Route path="/unauthorized" element={<Unauthorized />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <Route path="*" element={<NotFound />} />
   );
-};
-
-export default ErrorRoutes;
+}

@@ -16,6 +16,7 @@
   "nav": {
     "home": "الرئيسية",
     "marketplace": "السوق",
+    "services": "الخدمات",
     "categories": "الفئات",
     "talent": "المواهب",
     "equipment": "المعدات",
@@ -23,7 +24,9 @@
     "dashboard": "لوحة التحكم",
     "messages": "الرسائل",
     "post_job": "نشر وظيفة",
-    "analytics": "تحليلات"
+    "analytics": "تحليلات",
+    "faq": "الأسئلة الشائعة",
+    "help": "مركز المساعدة"
   },
   "auth": {
     "login": "تسجيل الدخول",

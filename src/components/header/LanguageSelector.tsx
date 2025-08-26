@@ -1,44 +1,68 @@
+import React, { useState } from 'react';
+import { ChevronDown, Globe } from 'lucide-react';
 
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
-import { Globe } from 'lucide-react';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
+interface Language {
+  code: string;
+  name: string;
+  flag: string;
+}
 
-export function LanguageSelector() {
-  const { t } = useTranslation();
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+export const LanguageSelector: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState('EN');
+
+  const languages: Language[] = [
+    { code: 'EN', name: 'English', flag: '🇺🇸' },
+    { code: 'ES', name: 'Español', flag: '🇪🇸' },
+    { code: 'FR', name: 'Français', flag: '🇫🇷' },
+    { code: 'DE', name: 'Deutsch', flag: '🇩🇪' },
+    { code: 'IT', name: 'Italiano', flag: '🇮🇹' },
+    { code: 'PT', name: 'Português', flag: '🇵🇹' },
+    { code: 'RU', name: 'Русский', flag: '🇷🇺' },
+    { code: 'ZH', name: '中文', flag: '🇨🇳' },
+    { code: 'JA', name: '日本語', flag: '🇯🇵' },
+    { code: 'KO', name: '한국어', flag: '🇰🇷' }
+  ];
+
+  const handleLanguageChange = (languageCode: string) => {
+    setCurrentLanguage(languageCode);
+    setIsOpen(false);
+    // Here you would typically implement language change logic
+  };
+
+  const currentLang = languages.find(lang => lang.code === currentLanguage);
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10">
-          <Globe className="h-5 w-5" />
-          <span className="sr-only">{t('general.select_language')}</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-zion-blue-dark border border-zion-purple/20">
-        {supportedLanguages.map((lang) => (
-          <DropdownMenuItem
-            key={lang.code}
-            className={`cursor-pointer ${
-              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10'
-            }`}
-            onClick={() => changeLanguage(lang.code)}
-          >
-            <div className="flex items-center gap-2">
-              <span className="text-lg">{lang.flag}</span>
-              <span>{t(`language.${lang.code}`)}</span>
-            </div>
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className="relative">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer"
+      >
+        <Globe className="w-4 h-4" />
+        <span className="text-sm font-medium">{currentLang?.code}</span>
+        <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+
+      {isOpen && (
+        <div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
+          <div className="py-2">
+            {languages.map((language) => (
+              <button
+                key={language.code}
+                onClick={() => handleLanguageChange(language.code)}
+                className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-colors ${
+                  currentLanguage === language.code
+                    ? 'text-zion-cyan bg-gray-800/50'
+                    : 'text-white hover:text-zion-cyan hover:bg-gray-800/30'
+                }`}
+              >
+                <span className="text-lg">{language.flag}</span>
+                <span>{language.name}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
   );
-}
+};

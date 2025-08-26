@@ -1,108 +1,182 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { Search, X, ArrowDown } from 'lucide-react';
 
-import React, { useState, useEffect, useRef } from "react";
-import { Search, X } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions"; 
-import { SearchSuggestion } from "@/types/search";
+interface SearchSuggestion {
+  id: string;
+  title: string;
+  type: 'service' | 'talent' | 'equipment';
+  description?: string;
+}
 
 interface EnhancedSearchInputProps {
-  value: string;
-  onChange: (value: string) => void;
-  /**
-   * Optional callback when a suggestion is selected. This allows parent
-   * components to perform actions such as navigation.
-   */
-  onSelectSuggestion?: (value: string) => void;
   placeholder?: string;
-  searchSuggestions: SearchSuggestion[];
+  onSearch?: (query: string) => void;
+  suggestions?: SearchSuggestion[];
+  className?: string;
 }
 
-export function EnhancedSearchInput({
-  value,
-  onChange,
-  onSelectSuggestion,
-  placeholder = "Search...",
-  searchSuggestions
-}: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState(false);
+export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
+  placeholder = "Search for services, talent, or equipment...",
+  onSearch,
+  suggestions = [],
+  className = ""
+}) => {
+  const [query, setQuery] = useState('');
+  const [showSuggestions, setShowSuggestions] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const suggestionsRef = useRef<HTMLDivElement>(null);
 
-  // Filter suggestions based on input value
   useEffect(() => {
-    if (!value) {
-      // Show recent searches when input is empty
-      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
-      return;
+    if (query.trim()) {
+      const filtered = suggestions.filter(suggestion =>
+        suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
+        suggestion.description?.toLowerCase().includes(query.toLowerCase())
+      );
+      setFilteredSuggestions(filtered.slice(0, 5));
+      setShowSuggestions(true);
+      setSelectedIndex(-1);
+    } else {
+      setFilteredSuggestions([]);
+      setShowSuggestions(false);
     }
-    
-    const filtered = searchSuggestions.filter(suggestion => 
-      suggestion.text.toLowerCase().includes(value.toLowerCase())
-    );
-    
-    // Sort suggestions to prioritize those that start with the search term
-    filtered.sort((a, b) => {
-      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      return aStartsWith - bStartsWith;
-    });
-    
-    setFilteredSuggestions(filtered.slice(0, 8)); // Limit to 8 suggestions
-  }, [value, searchSuggestions]);
+  }, [query, suggestions]);
 
-  // Handle clicks outside the component to close suggestions
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        setIsFocused(false);
+    const handleClickOutside = (event: MouseEvent) => {
+      if (suggestionsRef.current && !suggestionsRef.current.contains(event.target as Node)) {
+        setShowSuggestions(false);
       }
-    }
-    
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const handleSelectSuggestion = (suggestion: string) => {
-    onChange(suggestion);
-    if (onSelectSuggestion) {
-      onSelectSuggestion(suggestion);
-    }
-    setIsFocused(false);
-    inputRef.current?.blur();
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
   };
-  
+
+  const handleClear = () => {
+    setQuery('');
+    setShowSuggestions(false);
+    inputRef.current?.focus();
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (query.trim() && onSearch) {
+      onSearch(query.trim());
+      setShowSuggestions(false);
+    }
+  };
+
+  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
+    setQuery(suggestion.title);
+    setShowSuggestions(false);
+    if (onSearch) {
+      onSearch(suggestion.title);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!showSuggestions) return;
+
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        setSelectedIndex(prev => 
+          prev < filteredSuggestions.length - 1 ? prev + 1 : prev
+        );
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
+        break;
+      case 'Enter':
+        e.preventDefault();
+        if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
+          handleSuggestionClick(filteredSuggestions[selectedIndex]);
+        } else if (query.trim()) {
+          handleSubmit(e);
+        }
+        break;
+      case 'Escape':
+        setShowSuggestions(false);
+        setSelectedIndex(-1);
+        break;
+    }
+  };
+
   return (
-    <div className="relative w-full" ref={containerRef}>
-      <div className="relative">
-        <Search 
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
-        />
-        <Input
-          ref={inputRef}
-          type="text"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          onFocus={() => setIsFocused(true)}
-          placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-        />
-        {value && (
-          <button 
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
+    <div className={`relative ${className}`} ref={suggestionsRef}>
+      <form onSubmit={handleSubmit} className="relative">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+          <input
+            ref={inputRef}
+            type="text"
+            value={query}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+            onFocus={() => query.trim() && setShowSuggestions(true)}
+            placeholder={placeholder}
+            className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+          />
+          {query && (
+            <button
+              type="button"
+              onClick={handleClear}
+              className="absolute right-12 top-1/2 transform -translate-y-1/2 p-1 hover:bg-gray-100 rounded-full transition-colors"
+            >
+              <X className="w-4 h-4 text-gray-400" />
+            </button>
+          )}
+          <button
+            type="submit"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
           >
-            <X className="h-4 w-4" />
+            <ArrowDown className="w-4 h-4" />
           </button>
-        )}
-      </div>
-      
-      <AutocompleteSuggestions
-        suggestions={filteredSuggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelectSuggestion}
-        visible={isFocused}
-      />
+        </div>
+      </form>
+
+      {showSuggestions && filteredSuggestions.length > 0 && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
+          {filteredSuggestions.map((suggestion, index) => (
+            <button
+              key={suggestion.id}
+              onClick={() => handleSuggestionClick(suggestion)}
+              className={`w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors ${
+                index === selectedIndex ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <div className="flex-shrink-0">
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium ${
+                    suggestion.type === 'service' ? 'bg-blue-100 text-blue-600' :
+                    suggestion.type === 'talent' ? 'bg-green-100 text-green-600' :
+                    'bg-purple-100 text-purple-600'
+                  }`}>
+                    {suggestion.type.charAt(0).toUpperCase()}
+                  </div>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-medium text-gray-900 truncate">
+                    {suggestion.title}
+                  </div>
+                  {suggestion.description && (
+                    <div className="text-sm text-gray-500 truncate">
+                      {suggestion.description}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
-}
+};

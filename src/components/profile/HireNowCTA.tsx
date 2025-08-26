@@ -1,111 +1,157 @@
-
-import { Button } from "@/components/ui/button";
-import { HireRequestModal } from "./hire-request";
-import { useState } from "react";
-import { TalentProfile } from "@/types/talent";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/Textarea';
+import { DollarSign, MessageSquare } from 'lucide-react';
+import React, { useState } from 'react';
 
 interface HireNowCTAProps {
-  talentProfile: {
-    id: string;
-    full_name?: string;
-    professional_title?: string;
-    hourly_rate?: number;
-  };
+  talentName: string;
+  hourlyRate?: number;
+  onHire?: (data: HireData) => void;
 }
 
-export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
-  const [modalOpen, setModalOpen] = useState(false);
+interface HireData {
+  projectDescription: string;
+  budget: string;
+  startDate: string;
+  message: string;
+}
 
-  const handleOpenModal = () => {
-    setModalOpen(true);
+export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [formData, setFormData] = useState<HireData>({
+    projectDescription: '',
+    budget: '',
+    startDate: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (onHire) {
+      onHire(formData);
+    }
+    // Reset form and close
+    setFormData({
+      projectDescription: '',
+      budget: '',
+      startDate: '',
+      message: ''
+    });
+    setIsFormOpen(false);
   };
 
-  const handleCloseModal = () => {
-    setModalOpen(false);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
   };
-
-  // Check if we have minimum required data
-  const canHire = talentProfile && talentProfile.id && talentProfile.full_name;
-
-  // Calculate talent profile completeness (simplified)
-  const profileCompleteness = calculateProfileCompleteness(talentProfile);
 
   return (
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
-      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
-      
-      <div className="mb-4">
-        <div className="flex justify-between mb-2">
-          <span>Profile Completeness</span>
-          <span className="font-bold">{profileCompleteness}%</span>
-        </div>
-        <div className="h-2 bg-zion-blue-light rounded-full overflow-hidden">
-          <div
-            className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
-            style={{ width: `${profileCompleteness}%` }}
-          />
-        </div>
-      </div>
-      
-      <div className="flex flex-col space-y-4 mt-6">
-        <Button
-          onClick={handleOpenModal}
-          disabled={!canHire}
-          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-        >
-          Request to Hire
-        </Button>
-        
-        <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-          Schedule Interview
-        </Button>
-      </div>
+    <Card className="bg-zion-blue-light border-zion-blue-lighter">
+      <CardHeader>
+        <CardTitle className="text-white flex items-center gap-2">
+          <MessageSquare className="h-5 w-5 text-zion-cyan" />
+          Hire {talentName}
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        {!isFormOpen ? (
+          <div className="space-y-4">
+            {hourlyRate && (
+              <div className="flex items-center gap-2 text-zion-slate-light">
+                <DollarSign className="h-4 w-4" />
+                <span>Starting at ${hourlyRate}/hour</span>
+              </div>
+            )}
+            <p className="text-zion-slate-light text-sm">
+              Ready to start your project? Send a message to discuss details and get started.
+            </p>
+            <Button
+              onClick={() => setIsFormOpen(true)}
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+            >
+              Start Project Discussion
+            </Button>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">
+                Project Description
+              </label>
+              <Textarea
+                name="projectDescription"
+                value={formData.projectDescription}
+                onChange={handleChange}
+                placeholder="Describe your project requirements..."
+                className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
+              />
+            </div>
 
-      <HireRequestModal 
-        isOpen={modalOpen}
-        onClose={handleCloseModal}
-        talent={talentProfile ? {
-          id: talentProfile.id,
-          user_id: talentProfile.id,
-          full_name: talentProfile.full_name || 'Talent',
-          professional_title: talentProfile.professional_title || 'Professional',
-          bio: '',
-          years_experience: 0,
-          skills: [],
-          availability_type: 'full_time',
-          timezone: '',
-          hourly_rate: talentProfile.hourly_rate
-        } : null}
-      />
-    </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
+                  Budget Range
+                </label>
+                <Input
+                  name="budget"
+                  value={formData.budget}
+                  onChange={handleChange}
+                  placeholder="e.g., $1000-5000"
+                  className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">
+                  Start Date
+                </label>
+                <Input
+                  name="startDate"
+                  type="date"
+                  value={formData.startDate}
+                  onChange={handleChange}
+                  className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+                Additional Message
+              </label>
+              <Textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Any additional details or questions..."
+                className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
+                rows={3}
+              />
+            </div>
+
+            <div className="flex gap-3">
+              <Button
+                type="submit"
+                className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+              >
+                Send Message
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => setIsFormOpen(false)}
+                className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+              >
+                Cancel
+              </Button>
+            </div>
+          </form>
+        )}
+      </CardContent>
+    </Card>
   );
-}
-
-// Helper function to calculate profile completeness
-function calculateProfileCompleteness(profile: any) {
-  if (!profile) return 0;
-  
-  const fields = [
-    'full_name', 
-    'professional_title', 
-    'bio', 
-    'skills', 
-    'hourly_rate',
-    'location',
-    'portfolio_links',
-    'experience',
-    'availability_type'
-  ];
-  
-  let completedFields = 0;
-  let totalFields = 0;
-  
-  fields.forEach(field => {
-    if (profile[field]) {
-      completedFields++;
-    }
-    totalFields++;
-  });
-  
-  return Math.min(Math.round((completedFields / totalFields) * 100), 100);
 }

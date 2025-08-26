@@ -16,6 +16,7 @@
   "nav": {
     "home": "Início",
     "marketplace": "Mercado",
+    "services": "Serviços",
     "categories": "Categorias",
     "talent": "Talento",
     "equipment": "Equipamento",
@@ -23,7 +24,9 @@
     "dashboard": "Painel",
     "messages": "Mensagens",
     "post_job": "Publicar Vaga",
-    "analytics": "Análises"
+    "analytics": "Análises",
+    "faq": "Perguntas Frequentes",
+    "help": "Central de Ajuda"
   },
   "auth": {
     "login": "Entrar",

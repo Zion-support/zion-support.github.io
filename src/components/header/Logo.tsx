@@ -1,34 +1,13 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useWhitelabel } from '@/context/WhitelabelContext';
 
-interface LogoProps {
-  customLogo?: string;
-  customColor?: string;
-}
-
-export function Logo({ customLogo, customColor }: LogoProps) {
-  const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
-  
-  // Use the white-label logo if available and no specific customLogo is provided
-  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
-  // Use the white-label color if available and no specific customColor is provided
-  const colorToUse = customColor || (isWhitelabel ? primaryColor : undefined);
-  
-  if (logoToUse) {
-    return (
-      <Link to="/" className="flex items-center">
-        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />
-      </Link>
-    );
-  }
-  
+export const Logo: React.FC = () => {
   return (
-    <Link to="/" className="flex items-center">
-      <div className="text-2xl font-bold" style={colorToUse ? { color: colorToUse } : {}}>
-        {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>
+    <Link to="/" className="flex items-center space-x-2">
+      <div className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-zion-cyan via-blue-500 to-zion-cyan bg-clip-text text-transparent">
+        Zion Tech
       </div>
+      <div className="text-xs lg:text-sm text-gray-300 font-medium">Group</div>
     </Link>
   );
-}
+};

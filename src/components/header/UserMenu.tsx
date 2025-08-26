@@ -1,88 +1,111 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react';
+import { useAuth } from '../../hooks/useAuth';
 
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { useToast } from "@/hooks/use-toast";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuSeparator, 
-  DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu";
-
-export function UserMenu() {
+export const UserMenu: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
   const { user, logout } = useAuth();
-  const navigate = useNavigate();
-  const { toast } = useToast();
 
-  const handleIconClick = () => {
-    if (user) {
-      navigate("/profile");
-    } else {
-      navigate("/login");
-    }
-  };
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
 
-  const handleSignOut = async () => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleLogout = async () => {
     try {
       await logout();
+      setIsOpen(false);
     } catch (error) {
-      toast({
-        title: "Error signing out",
-        description: "There was an error signing you out. Please try again.",
-        variant: "destructive",
-      });
+      console.error('Logout failed:', error);
     }
   };
 
   if (!user) {
-    return (
-      <div className="hidden md:flex items-center space-x-4">
-        <Link to="/login" className="text-zion-slate-light hover:text-white">Login</Link>
-        <Link 
-          to="/signup" 
-          className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-zion-purple text-white hover:bg-zion-purple-light h-10 px-4 py-2"
-        >
-          Register
-        </Link>
-      </div>
-    );
+    return null;
   }
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="h-8 w-8 rounded-full" onClick={handleIconClick}>
-          <Avatar className="h-8 w-8">
-            <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />
-            <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>
-          </Avatar>
-          <span className="sr-only">Open user menu</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <div className="grid gap-2 px-2 py-2">
-          <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>
-          <div className="text-muted-foreground text-xs leading-none">{user.email}</div>
+    <div className="relative" ref={menuRef}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer"
+      >
+        <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
+          <User className="w-4 h-4 text-black" />
         </div>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem asChild>
-          <Link to="/dashboard">Dashboard</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link to="/profile">Profile</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link to="/saved-talents">Saved Talents</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link to="/wallet">Wallet</Link>
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+        <span className="text-sm font-medium hidden sm:block">{user.name || user.email}</span>
+        <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+
+      {isOpen && (
+        <div className="absolute top-full right-0 mt-2 w-56 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
+          <div className="py-2">
+            {/* User Info */}
+            <div className="px-4 py-3 border-b border-gray-800">
+              <div className="text-sm font-medium text-white">{user.name || 'User'}</div>
+              <div className="text-xs text-gray-400">{user.email}</div>
+            </div>
+
+            {/* Menu Items */}
+            <div className="py-1">
+              <Link
+                to="/profile"
+                className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                <User className="w-4 h-4" />
+                Profile
+              </Link>
+              
+              <Link
+                to="/notifications"
+                className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                <Bell className="w-4 h-4" />
+                Notifications
+              </Link>
+              
+              <Link
+                to="/orders"
+                className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                <ShoppingCart className="w-4 h-4" />
+                Orders
+              </Link>
+              
+              <Link
+                to="/settings"
+                className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                <Settings className="w-4 h-4" />
+                Settings
+              </Link>
+            </div>
+
+            {/* Logout */}
+            <div className="border-t border-gray-800 pt-1">
+              <button
+                onClick={handleLogout}
+                className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-400 hover:text-red-300 hover:bg-red-900/20 transition-colors"
+              >
+                <LogOut className="w-4 h-4" />
+                Sign Out
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
-}
+};
