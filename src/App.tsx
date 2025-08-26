@@ -42,6 +42,7 @@ const Terms = lazy(() => import('./pages/Terms'));
 const FAQ = lazy(() => import('./pages/FAQ'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Service pages
 const ServicesOverview = lazy(() => import('./pages/services/ServicesOverview'));
@@ -102,7 +103,6 @@ const App: React.FC = () => {
   useScrollToTop();
   return (
     <EnhancedErrorBoundary>
-      <EnhancedAccessibility />
       <PerformanceMonitor />
       <ThemeProvider>
         <WhitelabelProvider>
@@ -123,12 +123,12 @@ const App: React.FC = () => {
                     
                     {/* Main Service Routes */}
                     <Route path="/services" element={<Services />} />
+                    <Route path="/services-overview" element={<ServicesOverview />} />
                     <Route path="/ai-services" element={<AIServices />} />
                     <Route path="/cloud-devops" element={<CloudDevOps />} />
                     <Route path="/micro-saas-services" element={<MicroSaasServices />} />
                     
                     {/* Service Detail Routes */}
-                    <Route path="/services-overview" element={<ServicesOverview />} />
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
                     <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
@@ -190,6 +190,9 @@ const App: React.FC = () => {
                     <Route path="/faq" element={<FAQ />} />
                     <Route path="/help" element={<HelpCenter />} />
                     <Route path="/sitemap" element={<Sitemap />} />
+                    
+                    {/* 404 Error Route - Must be last */}
+                    <Route path="*" element={<NotFound />} />
                   </Routes>
                 </Suspense>
               </main>
@@ -253,17 +256,17 @@ const App: React.FC = () => {
                 </div>
                 
                 {/* Enterprise Dashboard */}
-                <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
+                <div className="fixed top-20 left-4 z-40">
                   <EnterpriseDashboard />
                 </div>
                 
                 {/* Security & Compliance Dashboard */}
-                <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
+                <div className="fixed top-20 right-4 z-40">
                   <SecurityComplianceDashboard />
                 </div>
                 
                 {/* Machine Learning Dashboard */}
-                <div className="fixed top-4 right-4 z-40">
+                <div className="fixed top-36 left-4 z-40">
                   <MachineLearningDashboard />
                 </div>
               </>
