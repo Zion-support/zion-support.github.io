@@ -122,7 +122,7 @@ export function AppHeader() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <MobileMenu onClose={() => setMobileMenuOpen(false)} />
+          <MobileMenu isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
         )}
       </header>
 

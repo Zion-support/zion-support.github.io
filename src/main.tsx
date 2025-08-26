@@ -18,7 +18,7 @@ const queryClient = new QueryClient({
 })
 
 // Performance monitoring setup
-if (import.meta.env.DEV) {
+if ((import.meta as any).env?.DEV) {
   console.log('🚀 Zion Tech Group - Development Mode')
   console.log('📊 Performance monitoring enabled')
   console.log('🔧 Accessibility controls available')

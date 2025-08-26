@@ -35,7 +35,16 @@
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false
   },
-  "include": ["src"],
-  "exclude": ["src/components.disabled", "src/components.disabled/**/*", "src/pages.disabled", "src/pages.disabled/**/*"],
+  "include": ["src/main.tsx", "src/App.tsx", "src/pages/Home.tsx"],
+  "exclude": [
+    "src/**/.backup/**",
+    "src/**/*.disabled",
+    "src/**/*.backup.*",
+    "src/components/**",
+    "src/pages/**",
+    "!src/pages/Home.tsx",
+    "src/routes/**",
+    "src/data/**"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
