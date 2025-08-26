@@ -11,7 +11,7 @@ import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-import { HeroSkeleton } from "@/components/LoadingSkeleton";
+import { ExpandedServicesPreview } from "@/components/home/ExpandedServicesPreview";
 
   return (
     <div className="min-h-screen bg-background">
@@ -87,6 +87,8 @@ import { HeroSkeleton } from "@/components/LoadingSkeleton";
       <FeatureCTAs />
       
       <FeatureHighlights />
+      
+      <ExpandedServicesPreview />
       
       <CategoriesSection />
       <ServicesOverview />
