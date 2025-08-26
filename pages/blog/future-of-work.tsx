@@ -36,150 +36,147 @@ export default function FutureOfWork() {
                   The Future of Work: Human-AI Collaboration
                 </h1>
                 <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                  Discover how autonomous systems are reshaping the workplace and creating new opportunities 
-                  for human-AI collaboration that enhances productivity and innovation.
+                  Discover how autonomous systems are reshaping the workplace and creating 
+                  new opportunities for human-AI collaboration that enhances productivity and innovation.
                 </p>
               </header>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">The Evolution of Work</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">The Collaboration Revolution</h2>
                 <p className="text-white/90 mb-4">
-                  The workplace is undergoing a fundamental transformation as AI and automation technologies 
-                  become more sophisticated. Rather than replacing human workers, these technologies are 
-                  creating new collaborative models that amplify human capabilities.
+                  The future of work isn&apos;t about AI replacing humans—it&apos;s about AI augmenting 
+                  human capabilities and creating new forms of collaboration that were previously impossible. 
+                  As autonomous systems become more sophisticated, they&apos;re opening up exciting 
+                  possibilities for how we work, create, and solve problems.
                 </p>
                 <p className="text-white/90 mb-4">
-                  At Zion Tech Group, we see this evolution as an opportunity to reimagine how work gets done, 
-                  focusing on the unique strengths that humans and AI bring to different tasks.
+                  At Zion Tech Group, we&apos;re at the forefront of this transformation, 
+                  developing autonomous systems that work alongside humans to amplify creativity, 
+                  productivity, and innovation.
                 </p>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Complementary Strengths</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Augmented Intelligence</h2>
                 <p className="text-white/90 mb-4">
-                  The most successful human-AI collaborations leverage the complementary strengths of both parties:
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h3 className="text-lg font-semibold text-cyan-400 mb-3">Human Strengths</h3>
-                    <ul className="space-y-2 text-white/80 text-sm">
-                      <li>• Creative problem-solving</li>
-                      <li>• Emotional intelligence</li>
-                      <li>• Complex decision-making</li>
-                      <li>• Adaptability to new situations</li>
-                      <li>• Ethical judgment</li>
-                    </ul>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h3 className="text-lg font-semibold text-fuchsia-400 mb-3">AI Strengths</h3>
-                    <ul className="space-y-2 text-white/80 text-sm">
-                      <li>• Data processing at scale</li>
-                      <li>• Pattern recognition</li>
-                      <li>• Repetitive task execution</li>
-                      <li>• 24/7 availability</li>
-                      <li>• Consistent performance</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-              
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">New Collaborative Models</h2>
-                <p className="text-white/90 mb-4">
-                  We're seeing several new collaborative models emerge in the workplace:
+                  Rather than artificial intelligence, we&apos;re building augmented intelligence 
+                  systems that enhance human capabilities. These systems:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• <strong>Human-in-the-loop:</strong> AI handles routine tasks while humans provide oversight and handle exceptions</li>
-                  <li>• <strong>AI augmentation:</strong> AI provides insights and recommendations that humans can evaluate and act upon</li>
-                  <li>• <strong>Collaborative decision-making:</strong> Humans and AI work together to analyze complex scenarios</li>
-                  <li>• <strong>Skill development:</strong> AI helps humans learn new skills and improve existing ones</li>
-                  <li>• <strong>Creative partnership:</strong> AI generates options while humans provide creative direction</li>
+                  <li>• Process vast amounts of data to provide human-readable insights</li>
+                  <li>• Automate routine tasks, freeing humans for creative work</li>
+                  <li>• Provide real-time recommendations and decision support</li>
+                  <li>• Learn from human feedback to improve over time</li>
                 </ul>
-              </section>
-              
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Transforming Industries</h2>
                 <p className="text-white/90 mb-4">
-                  Human-AI collaboration is transforming industries across the board:
+                  This approach creates a symbiotic relationship where humans and AI 
+                  systems complement each other&apos;s strengths and compensate for weaknesses.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h3 className="text-lg font-semibold text-blue-400 mb-3">Healthcare</h3>
-                    <p className="text-white/80 text-sm">
-                      AI assists doctors with diagnosis and treatment planning, while humans provide 
-                      patient care and make final medical decisions.
-                    </p>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h3 className="text-lg font-semibold text-purple-400 mb-3">Finance</h3>
-                    <p className="text-white/80 text-sm">
-                      AI analyzes market data and identifies opportunities, while humans make strategic 
-                      investment decisions and manage client relationships.
-                    </p>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h3 className="text-lg font-semibold text-green-400 mb-3">Manufacturing</h3>
-                    <p className="text-white/80 text-sm">
-                      AI optimizes production processes and predicts maintenance needs, while humans 
-                      oversee operations and handle complex problem-solving.
-                    </p>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h3 className="text-lg font-semibold text-yellow-400 mb-3">Education</h3>
-                    <p className="text-white/80 text-sm">
-                      AI personalizes learning experiences and provides feedback, while humans create 
-                      curriculum and provide mentorship.
-                    </p>
-                  </div>
-                </div>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Preparing for the Future</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-green-400">New Work Patterns</h2>
                 <p className="text-white/90 mb-4">
-                  To thrive in this new collaborative environment, organizations and individuals need to:
+                  Autonomous systems are enabling entirely new ways of working:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Develop AI literacy and understanding</li>
-                  <li>• Focus on uniquely human skills and capabilities</li>
-                  <li>• Embrace continuous learning and adaptation</li>
-                  <li>• Build collaborative workflows and processes</li>
-                  <li>• Invest in training and development programs</li>
+                  <li>• Distributed teams collaborating through AI-powered platforms</li>
+                  <li>• Real-time translation and communication across languages</li>
+                  <li>• Intelligent project management and resource allocation</li>
+                  <li>• Automated quality assurance and compliance monitoring</li>
                 </ul>
+                <p className="text-white/90 mb-4">
+                  These new patterns are making work more flexible, efficient, and 
+                  accessible to people regardless of their location or background.
+                </p>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">The Path Forward</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Skill Evolution</h2>
                 <p className="text-white/90 mb-4">
-                  The future of work isn't about humans versus AI—it's about humans working with AI 
-                  to achieve outcomes that neither could accomplish alone. This collaboration will 
-                  drive innovation, productivity, and job satisfaction.
+                  As AI takes over routine tasks, human skills are evolving to focus on:
                 </p>
+                <ul className="space-y-2 text-white/80 mb-6">
+                  <li>• Creative problem-solving and innovation</li>
+                  <li>• Emotional intelligence and human connection</li>
+                  <li>• Strategic thinking and complex decision-making</li>
+                  <li>• AI system design and human-AI interaction</li>
+                </ul>
                 <p className="text-white/90 mb-4">
-                  At Zion Tech Group, we're committed to developing AI systems that enhance human 
-                  capabilities and create more meaningful, engaging work experiences. The future is 
-                  collaborative, and we're excited to be part of building it.
+                  The most valuable workers will be those who can effectively collaborate 
+                  with AI systems and leverage them to achieve human goals.
+                </p>
+              </section>
+              
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Workplace Transformation</h2>
+                <p className="text-white/90 mb-4">
+                  Autonomous systems are transforming physical and virtual workplaces:
+                </p>
+                <ul className="space-y-2 text-white/80 mb-6">
+                  <li>• Smart offices that adapt to worker preferences</li>
+                  <li>• Virtual reality collaboration spaces</li>
+                  <li>• AI-powered meeting assistants and note-takers</li>
+                  <li>• Intelligent scheduling and resource optimization</li>
+                </ul>
+                <p className="text-white/90 mb-4">
+                  These transformations are creating more productive, engaging, and 
+                  human-centered work environments.
+                </p>
+              </section>
+              
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Challenges and Opportunities</h2>
+                <p className="text-white/90 mb-4">
+                  The transition to human-AI collaboration presents both challenges and opportunities:
+                </p>
+                <ul className="space-y-2 text-white/80 mb-6">
+                  <li>• Ensuring AI systems are transparent and explainable</li>
+                  <li>• Maintaining human agency and control</li>
+                  <li>• Addressing concerns about job displacement</li>
+                  <li>• Creating inclusive access to AI tools and training</li>
+                </ul>
+                <p className="text-white/90 mb-4">
+                  We&apos;re committed to addressing these challenges while maximizing 
+                  the opportunities for positive transformation.
+                </p>
+              </section>
+              
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Preparing for the Future</h2>
+                <p className="text-white/90 mb-4">
+                  To thrive in the future of work, organizations and individuals should:
+                </p>
+                <ul className="space-y-2 text-white/80 mb-6">
+                  <li>• Invest in AI literacy and training programs</li>
+                  <li>• Develop human-AI collaboration frameworks</li>
+                  <li>• Create inclusive and accessible AI tools</li>
+                  <li>• Foster a culture of continuous learning and adaptation</li>
+                </ul>
+                <p className="text-white/90 mb-4">
+                  The future belongs to those who can effectively partner with AI 
+                  systems to achieve human goals and aspirations.
                 </p>
               </section>
               
               <div className="mt-12 p-6 bg-white/10 rounded-xl border border-white/20">
                 <h3 className="text-xl font-semibold mb-4 text-cyan-400">Shape the Future of Work</h3>
                 <p className="text-white/80 mb-4">
-                  Ready to explore how human-AI collaboration can transform your organization? 
-                  Let's discuss the possibilities.
+                  Ready to transform your workplace with human-AI collaboration? 
+                  Our autonomous systems can help you create the future of work today.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
                     href="/contact" 
                     className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
-                    Start the Conversation
+                    Get Started
                   </Link>
                   <Link 
                     href="/case-studies" 
-                    className="px-6 py-3 border border-white/20 text-white rounded-lg font-semibold hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300"
+                    className="px-6 py-3 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300"
                   >
-                    View Success Stories
+                    View Examples
                   </Link>
                 </div>
               </div>
