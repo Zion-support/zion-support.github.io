@@ -307,3 +307,20 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     reviews: 950
   }
 ];
+
+export const getPopularAIServices = () => {
+  return innovative2026AIServices.filter(service => service.popular);
+};
+
+export const getAIServicesByCategory = (category: string) => {
+  return innovative2026AIServices.filter(service => 
+    service.category.toLowerCase().includes(category.toLowerCase())
+  );
+};
+
+export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+  return innovative2026AIServices.filter(service => {
+    const price = parseInt(service.price.replace('$', '').replace(',', ''));
+    return price >= minPrice && price <= maxPrice;
+  });
+};

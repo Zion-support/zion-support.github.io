@@ -11,6 +11,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
   variant = 'quantum-holographic-advanced' 
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<any[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
   const holographicRef = useRef<HTMLDivElement>(null);
 
@@ -21,13 +22,16 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     const ctx = canvas.getContext('2d');
     if (!canvas || !ctx) return;
 
-    const particles: Array<{
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Enhanced particle system
+    class Particle {
       x: number;
       y: number;
       vx: number;
       vy: number;
       size: number;
-      opacity: number;
       color: string;
       opacity: number;
       life: number;
@@ -159,7 +163,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         if (particle.life > particle.maxLife) {
           particles[index] = createParticle();
         }
-      });
 
       // Add matrix effect for cyberpunk variants
       if (variant.includes('cyberpunk') || variant.includes('matrix')) {
@@ -169,6 +172,17 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           const x = Math.random() * canvas.width;
           const y = Math.random() * canvas.height;
           ctx.fillText('01', x, y);
+        }
+
+        // Neural network visualization
+        if (variant.includes('neural')) {
+          ctx.strokeStyle = 'rgba(16, 185, 129, 0.03)';
+          ctx.lineWidth = 0.3;
+          particlesRef.current.forEach(particle => {
+            if (Math.random() < 0.01) {
+              particle.createConnection();
+            }
+          });
         }
       }
 
@@ -197,7 +211,53 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       }
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, [variant, intensity]);
+  }, [intensity, variant]);
+
+  const drawQuantumField = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, colors: any, intensity: number) => {
+    const time = Date.now() * 0.001;
+    const gridSize = 50 * intensity;
+    
+    ctx.strokeStyle = colors.quantum;
+    ctx.lineWidth = 0.5;
+    ctx.globalAlpha = 0.3;
+
+    for (let x = 0; x < canvas.width; x += gridSize) {
+      for (let y = 0; y < canvas.height; y += gridSize) {
+        const wave = Math.sin(x * 0.01 + time) * Math.cos(y * 0.01 + time) * 20;
+        ctx.beginPath();
+        ctx.moveTo(x, y + wave);
+        ctx.lineTo(x + gridSize, y + wave);
+        ctx.stroke();
+      }
+    }
+  };
+
+  const drawHolographicGrid = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, colors: any, intensity: number) => {
+    const time = Date.now() * 0.0005;
+    const gridSize = 80 * intensity;
+    
+    ctx.strokeStyle = colors.holographic;
+    ctx.lineWidth = 0.3;
+    ctx.globalAlpha = 0.2;
+
+    // Vertical lines
+    for (let x = 0; x < canvas.width; x += gridSize) {
+      const wave = Math.sin(x * 0.02 + time) * 30;
+      ctx.beginPath();
+      ctx.moveTo(x + wave, 0);
+      ctx.lineTo(x + wave, canvas.height);
+      ctx.stroke();
+    }
+
+    // Horizontal lines
+    for (let y = 0; y < canvas.height; y += gridSize) {
+      const wave = Math.cos(y * 0.02 + time) * 30;
+      ctx.beginPath();
+      ctx.moveTo(0, y + wave);
+      ctx.lineTo(canvas.width, y + wave);
+      ctx.stroke();
+    }
+  };
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -300,9 +360,57 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         </div>
       )}
 
-      {/* Content */}
-      <div className="relative z-10">
+      {/* Neural Network Pattern */}
+      <div className="absolute inset-0 pointer-events-none z-30">
+        <div className="absolute inset-0 opacity-20">
+          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="neural-grid" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                <circle cx="5" cy="5" r="0.5" fill="currentColor" className="text-cyan-400">
+                  <animate attributeName="r" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
+                </circle>
+              </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#neural-grid)" />
+          </svg>
+        </div>
+      </div>
+
+      {/* Content Layer */}
+      <div className="relative z-20">
         {children}
+      </div>
+
+      {/* Enhanced Overlay Effects */}
+      <div className="absolute inset-0 pointer-events-none z-30">
+        {/* Quantum Field Lines */}
+        {variant.includes('quantum') && (
+          <svg className="absolute inset-0 w-full h-full">
+            <defs>
+              <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="rgba(0, 255, 255, 0.1)" />
+                <stop offset="100%" stopColor="rgba(0, 255, 255, 0)" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M 0 50 Q 200 0 400 50 T 800 50"
+              stroke="url(#quantumGradient)"
+              strokeWidth="1"
+              fill="none"
+              opacity="0.3"
+            />
+          </svg>
+        )}
+
+        {/* Holographic Grid */}
+        {variant.includes('holographic') && (
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/5 to-transparent" />
+        )}
+
+        {/* Cyberpunk Scan Lines */}
+        {variant.includes('cyberpunk') && (
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-pink-500/3 to-transparent" />
+        )}
       </div>
     </div>
   );

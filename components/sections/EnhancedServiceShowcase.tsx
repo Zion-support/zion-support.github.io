@@ -14,7 +14,11 @@ import { emergingTechnologyServices } from '../../data/emerging-technology-servi
 import { comprehensiveITSolutions } from '../../data/comprehensive-it-solutions';
 import { marketValidatedServices } from '../../data/market-validated-services';
 import { newRealInnovations } from '../../data/new-real-innovations';
-import { additionalMarketServices2025 } from '../../data/additional-market-services-2025';
+import { realMarketServices } from '../../data/real-market-services';
+import { realOperationalServices } from '../../data/real-operational-services';
+import { professionalServices } from '../../data/professional-services';
+import { verified2025Additions } from '../../data/verified-2025-additions';
+import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 
 interface ServiceShowcaseProps {
   className?: string;
@@ -42,39 +46,48 @@ const EnhancedServiceShowcase: React.FC<ServiceShowcaseProps> = ({
     ...comprehensiveITSolutions,
     ...marketValidatedServices,
     ...newRealInnovations,
-    ...additionalMarketServices2025
+    ...realMarketServices,
+    ...realOperationalServices,
+    ...professionalServices,
+    ...verified2025Additions,
+    ...realServicesQ32025
   ];
+
+  // Derived counts to better reflect all datasets
+  const aiCount = allServices.filter(s => (s.category || '').toLowerCase().includes('ai')).length;
+  const quantumCount = allServices.filter(s => s.name.toLowerCase().includes('quantum') || (s.category || '').toLowerCase().includes('quantum')).length;
+  const spaceCount = allServices.filter(s => s.name.toLowerCase().includes('space')).length;
+  const enterpriseCount = allServices.filter(s => ['enterprise', 'it', 'cloud', 'security'].some(k => (s.category || '').toLowerCase().includes(k))).length;
+  const microSaasCount = allServices.filter(s => (s.category || '').toLowerCase().includes('saas')).length || enhancedRealMicroSaasServices.length;
+  const emergingCount = allServices.filter(s => (s.category || '').toLowerCase().includes('emerging')).length;
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: innovativeAIServices.length + nextGenerationAIServices.length },
-    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', count: quantumSpaceServices.filter(s => s.name.toLowerCase().includes('quantum')).length },
-    { id: 'space', name: 'Space Technology', icon: '🚀', count: quantumSpaceServices.filter(s => s.name.toLowerCase().includes('space')).length },
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length + comprehensiveITSolutions.length },
-    { id: 'saas', name: 'Micro SaaS', icon: '💻', count: enhancedRealMicroSaasServices.length },
-    { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: emergingTechnologyServices.length }
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', count: quantumCount },
+    { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
+    { id: 'saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
+    { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: emergingCount }
   ];
 
-  const filteredServices = allServices.filter((service: any) => {
+  const filteredServices = allServices.filter(service => {
     const categoryLower = (service.category || '').toLowerCase();
-    const nameLower = (service.name || '').toLowerCase();
+    const nameLower = service.name.toLowerCase();
 
-    const matchesCategory =
-      selectedCategory === 'all' ||
-      (selectedCategory === 'ai' && (categoryLower.includes('ai') || categoryLower.includes('machine learning'))) ||
-      (selectedCategory === 'quantum' && (categoryLower.includes('quantum') || nameLower.includes('quantum'))) ||
-      (selectedCategory === 'space' && (categoryLower.includes('space') || nameLower.includes('space'))) ||
-      (selectedCategory === 'enterprise' && (categoryLower.includes('enterprise') || categoryLower.includes('it') || categoryLower.includes('cloud') || categoryLower.includes('security'))) ||
-      (selectedCategory === 'saas' && categoryLower.includes('micro saas')) ||
+    const matchesCategory = selectedCategory === 'all' || 
+      (selectedCategory === 'ai' && (categoryLower.includes('ai') || categoryLower.includes('machine'))) ||
+      (selectedCategory === 'quantum' && (nameLower.includes('quantum') || categoryLower.includes('quantum'))) ||
+      (selectedCategory === 'space' && nameLower.includes('space')) ||
+      (selectedCategory === 'enterprise' && ['enterprise', 'it', 'cloud', 'security'].some(k => categoryLower.includes(k))) ||
+      (selectedCategory === 'saas' && categoryLower.includes('saas')) ||
       (selectedCategory === 'emerging' && categoryLower.includes('emerging'));
-
+    
     const searchLower = searchTerm.toLowerCase();
-    const matchesSearch =
-      nameLower.includes(searchLower) ||
-      (service.description || '').toLowerCase().includes(searchLower) ||
-      categoryLower.includes(searchLower) ||
-      (service.tagline ? service.tagline.toLowerCase().includes(searchLower) : false);
-
+    const matchesSearch = nameLower.includes(searchLower) ||
+                         (service.description || '').toLowerCase().includes(searchLower) ||
+                         categoryLower.includes(searchLower);
+    
     return matchesCategory && matchesSearch;
   });
 
@@ -265,14 +278,16 @@ const EnhancedServiceShowcase: React.FC<ServiceShowcaseProps> = ({
                 </div>
 
                 {/* Contact Info */}
-                <div className="mt-4 pt-4 border-t border-gray-700">
-                  <div className="text-xs text-gray-400 mb-2">Contact Information:</div>
-                  <div className="text-xs text-gray-300 space-y-1">
-                    <div>📱 {service.contactInfo.mobile}</div>
-                    <div>✉️ {service.contactInfo.email}</div>
-                    <div>🌐 {service.contactInfo.website}</div>
+                {'contactInfo' in service && (service as any).contactInfo ? (
+                  <div className="mt-4 pt-4 border-t border-gray-700">
+                    <div className="text-xs text-gray-400 mb-2">Contact Information:</div>
+                    <div className="text-xs text-gray-300 space-y-1">
+                      <div>📱 {(service as any).contactInfo.mobile}</div>
+                      <div>✉️ {(service as any).contactInfo.email}</div>
+                      <div>🌐 {(service as any).contactInfo.website}</div>
+                    </div>
                   </div>
-                </div>
+                ) : null}
               </motion.div>
             ))}
           </AnimatePresence>

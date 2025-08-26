@@ -25,7 +25,28 @@ import { realServicesQ22025 } from '../../data/real-services-q2-2025';
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 import { realQ4Services2025 } from '../../data/real-2025-q4-additions';
 import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
+import { realMarketServicesExtended } from '../../data/real-market-services-extended';
 import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
+import { added2026Q2Services } from '../../data/added-2026-q2-services';
+import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
+import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
+import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
+import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
+import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
+import { real2028ServiceExpansions } from '../../data/real-2028-service-expansions';
+import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
+import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
+import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
+import { real2030Q1Additions } from '../../data/real-2030-q1-additions';
+import { real2031MicroSaasAdditions } from '../../data/real-2031-micro-saas-additions';
+import { real2031ITServicesAdditions } from '../../data/real-2031-it-services-additions';
+import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-additions';
+import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
+import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
+import { professionalServices } from '../../data/professional-services';
+import { real2032ServiceExpansions } from '../../data/real-2032-service-expansions';
+import { real2035Q1Additions } from '../../data/real-2035-q1-additions';
+import { real2035Q2Additions } from '../../data/real-2035-q2-additions';
 
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -62,8 +83,29 @@ export default function ServicesIndexPage() {
       augmentedServicesBatch3 as unknown[],
       realServicesQ22025 as unknown[],
       realServicesQ32025 as unknown[],
+      realQ4Services2025 as unknown[],
       real2025Q4Additions as unknown[],
-      real2026Q1Additions as unknown[]
+      real2026Q1Additions as unknown[],
+      added2026Q2Services as unknown[],
+      real2026Q3Additions as unknown[],
+      real2026Q4Additions as unknown[],
+      real2026Q4NewServices as unknown[],
+      real2027Q1Additions as unknown[],
+      real2027Q2Additions as unknown[],
+      real2027Q3Additions as unknown[],
+      real2028ServiceExpansions as unknown[],
+      real2029Q1Additions as unknown[],
+      real2029Q2Additions as unknown[],
+      real2029Q3Additions as unknown[],
+      real2030Q1Additions as unknown[],
+      real2030Q2Additions as unknown[],
+      real2031MicroSaasAdditions as unknown[],
+      real2031ITServicesAdditions as unknown[],
+      real2031AIServicesAdditions as unknown[],
+      professionalServices as unknown[],
+      real2032ServiceExpansions as unknown[],
+      real2035Q1Additions as unknown[],
+      real2035Q2Additions as unknown[]
     );
   const byCategory: Record<string, unknown[]> = {};
   for (const c of categories) byCategory[c] = [];
@@ -154,7 +196,7 @@ export default function ServicesIndexPage() {
                       <Link href={service.link || `/services/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
                       <Link href={service.link || `/services/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover:border-cyan-500/70">Learn</Link>
                     </div>
-                  </div>
+                  </Card>
                 );
               })}
             </div>

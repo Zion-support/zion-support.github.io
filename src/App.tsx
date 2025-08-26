@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
 import PerformanceDashboard from './components/PerformanceDashboard';
@@ -12,20 +12,17 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import { ScrollToTop } from './components/ScrollToTop';
-import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
-import { BrokenLinkFixer } from './components/BrokenLinkFixer';
-import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -45,10 +42,6 @@ const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation')
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 
-// Additional innovative services
-const IoTManagementPlatform = lazy(() => import('./pages/services/IoTManagementPlatform'));
-const BlockchainDeFiSolutions = lazy(() => import('./pages/services/BlockchainDeFiSolutions'));
-
 // New innovative service pages
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
@@ -64,8 +57,6 @@ const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolution
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
-
-// Additional missing pages
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -91,8 +82,8 @@ const SpecializedITInfrastructure = lazy(() => import('./pages/services/Speciali
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
-const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
-const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
+const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase'));
+const InnovativeServicesMarketing = lazy(() => import('./pages/InnovativeServicesMarketing'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -166,16 +157,14 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer>
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
                   title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
                   description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
                   keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
-                  url="https://ziontechgroup.com"
-                  image="https://ziontechgroup.com/og-image.jpg"
                   type="website"
+                  url="https://ziontechgroup.com"
                 />
                 
                 <Header />
@@ -189,7 +178,6 @@ const App: React.FC = () => {
                       <Route path="/services" element={<Services />} />
                       <Route path="/ai-solutions" element={<AISolutions />} />
                       <Route path="/services-showcase" element={<ServicesShowcase />} />
-                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       <Route path="/ai-matcher" element={<AIMatcherPage />} />
                       <Route path="/talent-directory" element={<TalentDirectory />} />
                       <Route path="/talents" element={<TalentsPage />} />
@@ -211,14 +199,6 @@ const App: React.FC = () => {
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
                       <Route path="/new-services" element={<NewServices />} />
-                      
-                      {/* Additional missing pages */}
-                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
-                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
-                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
-                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
-                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
-                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirector />} />
                       
                       {/* Company Routes */}
                       <Route path="/about" element={<About />} />
@@ -246,18 +226,13 @@ const App: React.FC = () => {
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
-                      <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
-                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
+                      <Route path="/services-showcase" element={<ComprehensiveServicesShowcase />} />
+                      <Route path="/innovative-services-marketing" element={<InnovativeServicesMarketing />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
-                      
-                      {/* Additional innovative service routes */}
-                      <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                      <Route path="/iot-management-platform" element={<IoTManagementPlatform />} />
-                      <Route path="/blockchain-defi-solutions" element={<BlockchainDeFiSolutions />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
@@ -338,79 +313,73 @@ const App: React.FC = () => {
                 
                 <Footer />
                 <SonnerToaster />
+                
+                {/* Enhanced Accessibility Controls */}
+                <EnhancedAccessibility position="bottom-right" />
+                
+                {/* AI Chatbot - Always Available */}
+                <AIChatbot />
+                
+                {/* Scroll to Top Button */}
+                <ScrollToTop />
+                
+                {/* Collaborative Text Editor - Development Mode */}
+                {import.meta.env.DEV && (
+                  <div className="fixed bottom-24 left-6 z-40 w-96">
+                    <CollaborativeTextEditor
+                      roomId="dev-editor"
+                      userId="dev-user"
+                      userName="Developer"
+                      initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
+                      enableAI={true}
+                      enableCollaboration={true}
+                      enableVersioning={true}
+                    />
+                  </div>
+                )}
+                
+                {/* AI Code Generator - Development Mode */}
+                {import.meta.env.DEV && (
+                  <div className="fixed bottom-24 right-6 z-40 w-96">
+                    <AICodeGenerator />
+                  </div>
+                )}
+                
+                {/* Development Dashboards */}
+                {import.meta.env.DEV && (
+                  <>
+                    {/* Performance Dashboard */}
+                    <div className="fixed top-4 left-4 z-40">
+                      <PerformanceDashboard />
+                    </div>
+                    
+                    {/* Analytics Dashboard */}
+                    <div className="fixed top-4 right-4 z-40">
+                      <AnalyticsDashboard />
+                    </div>
+                    
+                    {/* Enterprise Dashboard */}
+                    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
+                      <EnterpriseDashboard />
+                    </div>
+                    
+                    {/* Security & Compliance Dashboard */}
+                    <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
+                      <SecurityComplianceDashboard />
+                    </div>
+                    
+                    {/* Machine Learning Dashboard */}
+                    <div className="fixed top-4 right-4 z-40">
+                      <MachineLearningDashboard />
+                    </div>
+                  </>
+                )}
               </div>
-              
-              {/* Enhanced Accessibility Controls */}
-              <EnhancedAccessibility />
-              
-              {/* Website Improvement Tools */}
-              <ContentQualityEnhancer />
-              <BrokenLinkFixer />
-              <WebsiteImprovementDashboard />
-              
-              {/* AI Chatbot - Always Available */}
-              <AIChatbot />
-              
-              {/* Scroll to Top Button */}
-              <ScrollToTop />
-              
-              {/* Collaborative Text Editor - Development Mode */}
-              {import.meta.env.DEV && (
-                <div className="fixed bottom-24 left-6 z-40 w-96">
-                  <CollaborativeTextEditor
-                    roomId="dev-editor"
-                    userId="dev-user"
-                    userName="Developer"
-                    initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
-                    enableAI={true}
-                    enableCollaboration={true}
-                    enableVersioning={true}
-                  />
-                </div>
-              )}
-              
-              {/* AI Code Generator - Development Mode */}
-              {import.meta.env.DEV && (
-                <div className="fixed bottom-24 right-6 z-40 w-96">
-                  <AICodeGenerator />
-                </div>
-              )}
-              
-              {/* Development Dashboards */}
-              {import.meta.env.DEV && (
-                <>
-                  {/* Performance Dashboard */}
-                  <div className="fixed top-4 left-4 z-40">
-                    <PerformanceDashboard />
-                  </div>
-                  
-                  {/* Analytics Dashboard */}
-                  <div className="fixed top-4 right-4 z-40">
-                    <AnalyticsDashboard />
-                  </div>
-                  
-                  {/* Enterprise Dashboard */}
-                  <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
-                    <EnterpriseDashboard />
-                  </div>
-                  
-                  {/* Security & Compliance Dashboard */}
-                  <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
-                    <SecurityComplianceDashboard />
-                  </div>
-                  
-                  {/* Machine Learning Dashboard */}
-                  <div className="fixed top-4 right-4 z-40">
-                    <MachineLearningDashboard />
-                  </div>
-                </>
-              )}
-            </PerformanceOptimizer>
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
-};
+}
 
 export default App;

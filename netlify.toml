@@ -12,30 +12,78 @@
   to = "/index.html"
   status = 200
 
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
+# Headers for static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    X-Permitted-Cross-Domain-Policies = "none"
+    Origin-Agent-Cluster = "?1"
 
 [[redirects]]
-  from = "/quantum-internet-security-platform"
-  to = "/quantum-internet-security"
+  from = "/ai-autonomous-ecosystem"
+  to = "/ai-autonomous-ecosystem-manager"
   status = 301
 
 [[redirects]]
-  from = "/ai-legal-contract-analyzer"
-  to = "/ai-legal-analysis"
+  from = "/ai-consciousness-evolution"
+  to = "/ai-consciousness-evolution-2029"
   status = 301
 
 [[redirects]]
-  from = "/ai-cybersecurity-suite"
-  to = "/ai-cybersecurity"
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
   status = 301
 
 [[redirects]]
-  from = "/iot-edge-computing-orchestration"
-  to = "/edge-computing-orchestration"
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
   status = 301
 
 [[redirects]]
-  from = "/ai-agents"
-  to = "/ai-services"
+  from = "/quantum-materials-discovery"
+  to = "/quantum-materials-discovery-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-vehicle-ai"
+  to = "/autonomous-vehicle-ai-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/ai-content-generator"
+  status = 301
+
+[[redirects]]
+  from = "/ai-customer-success-automation"
+  to = "/ai-customer-success-platform"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-networking"
+  to = "/quantum-services"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-data-center"
+  to = "/quantum-services"
   status = 301
