@@ -1,8 +1,7 @@
 {
-  "name": @zion-holdings/zion.app
-  
+  "name": "@zion-holdings/zion.app",
   "version": "0.0.0",
-    "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "bin": {
     "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.js"
   },
@@ -15,7 +14,6 @@
     "test:watch": "jest --watch",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
-    bplr8i-codex/fix-npm-ci-errors-and-missing-dependencies
     "test:accessibility": "vitest run tests/Accessibility.test.tsx",
     "test:e2e": "playwright test",
     "seed": "prisma db seed",
@@ -69,13 +67,12 @@
     "lucide-react": "^0.323.0",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
-    "@hello-pangea/dnd": "^13.1.1",
     "react-day-picker": "^8.10.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.0",
     "react-helmet-async": "^2.0.4",
     "react-hook-form": "^7.50.1",
-    "react-toastify": "^9.2.0",
+    "react-toastify": "^10.0.5",
     "react-i18next": "^14.1.3",
     "react-markdown": "^9.0.0",
     "react-player": "^2.12.0",
@@ -91,7 +88,7 @@
     "zod": "^3.22.4",
     "yup": "^1.2.0",
     "firebase": "^9.23.0",
-    "notistack": "^2.0.11",
+    "notistack": "^3.0.0",
     "@sentry/browser": "^7.91.0"
   },
   "optionalDependencies": {
@@ -123,20 +120,20 @@
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^24.0.0",
     "postcss": "^8.4.35",
-    "prettier": "^3.5.3",
-    "prisma": "^6.9.0",
-    "puppeteer": "^24.10.0",
-    "rimraf": "^6.0.1",
+    "prettier": "^3.2.5",
+    "prisma": "^5.16.2",
+    "puppeteer": "^23.7.0",
+    "rimraf": "^5.0.5",
     "rollup-plugin-visualizer": "^5.10.1",
-    "sass": "^1.89.1",
+    "sass": "^1.77.8",
     "serve": "^14.2.3",
     "supertest": "^6.3.3",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.13",
     "ts-jest": "^29.1.1",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.8",
-    "vitest": "^1.4.0",
-    "@playwright/test": "^1.41.2"
+    "typescript": "^5.4.5",
+    "vite": "^5.4.2",
+    "vitest": "^2.0.5",
+    "@playwright/test": "^1.45.3"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
