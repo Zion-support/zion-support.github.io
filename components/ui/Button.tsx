@@ -13,12 +13,12 @@ export default function Button({
   children, 
   ...rest 
 }: ButtonProps) {
-  const base = 'inline-flex items-center justify-center font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-cyan disabled:opacity-50 disabled:pointer-events-none';
+  const base = 'inline-flex items-center justify-center font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none';
   
   const variants = {
-    default: 'bg-zion-cyan text-white hover:bg-zion-cyan/90 focus:ring-zion-cyan',
-    outline: 'border border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan hover:text-white',
-    ghost: 'text-zion-cyan hover:bg-zion-cyan/10',
+    default: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+    outline: 'border border-blue-600/30 text-blue-600 hover:bg-blue-600 hover:text-white',
+    ghost: 'text-blue-600 hover:bg-blue-600/10',
     destructive: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500'
   };
   
