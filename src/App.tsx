@@ -76,14 +76,19 @@ import PrivacyPage from './pages/PrivacyPage';
 import Rewards from './pages/Rewards';
 import { SupportChatbot } from './components/SupportChatbot';
 import PrivateRoute from './components/PrivateRoute';
-=======
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const WishlistPage = React.lazy(() => import('./pages/Wishlist'));
+=======
+import RecommendationsPage from './pages/Recommendations';
+import withAuth from './components/withAuth';
+
+const RecommendationsProtected = withAuth(RecommendationsPage);
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
   { path: '/match', element: <AIMatcherPage /> },
+  { path: '/recommendations', element: <RecommendationsProtected /> },
   { path: '/login', element: <Login /> },
   { path: '/signup', element: <Signup /> },
   { path: '/talent', element: <TalentDirectory /> },
