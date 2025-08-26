@@ -44,6 +44,14 @@ const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 
+// New service pages
+const AISolutions = React.lazy(() => import('./pages/ai-solutions'));
+const Cybersecurity = React.lazy(() => import('./pages/cybersecurity'));
+const CloudDevOps = React.lazy(() => import('./pages/cloud-devops'));
+const DataAnalytics = React.lazy(() => import('./pages/data-analytics'));
+const EnterpriseSolutions = React.lazy(() => import('./pages/enterprise-solutions'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+
 const baseRoutes = [
   { path: '/', element: <Home /> },
   { path: '/match', element: <AIMatcherPage /> },
@@ -69,6 +77,14 @@ const baseRoutes = [
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
+  
+  // New service routes
+  { path: '/ai-solutions', element: <AISolutions /> },
+  { path: '/cybersecurity', element: <Cybersecurity /> },
+  { path: '/cloud-devops', element: <CloudDevOps /> },
+  { path: '/data-analytics', element: <DataAnalytics /> },
+  { path: '/enterprise-solutions', element: <EnterpriseSolutions /> },
+  { path: '/sitemap', element: <Sitemap /> },
 ];
 
 const App = () => {
