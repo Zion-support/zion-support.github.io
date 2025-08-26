@@ -1,7 +1,8 @@
 
 import { useState } from "react";
-import { NextSeo } from "@/components/NextSeo";
-import { useRouter } from 'next/router';
+import { useParams, useNavigate } from "react-router-dom";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -9,17 +10,13 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
-import { useCart } from '@/context/CartContext';
-import { getCartKey } from '@/utils/cartUtils';
 import { getStripe } from "@/utils/getStripe";
-import { apiClient } from "@/utils/apiClient";
 
 
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string };
   const navigate = useNavigate();
-  const { isAuthenticated, user } = useAuth();
-  const { dispatch } = useCart();
+  const { isAuthenticated } = useAuth();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
@@ -75,7 +72,7 @@ export default function EquipmentDetail() {
 
     setIsAdding(true);
     try {
-      const response = await apiClient('/api/checkout_sessions', {
+      const response = await fetch('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ productId: equipmentId }),
