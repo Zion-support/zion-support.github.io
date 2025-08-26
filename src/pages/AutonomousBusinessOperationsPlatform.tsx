@@ -1,12 +1,17 @@
-=======
+import { motion } from 'framer-motion';
+import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Building, Zap, Brain, Users, Shield, TrendingUp, ArrowRight, Star, Rocket, Globe, Cpu, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
 import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
-=======
+import { motion } from 'framer-motion';
+import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Building, Zap, Brain, Users, Shield, TrendingUp, ArrowRight, Star, Rocket, Globe, Cpu, Database } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 import { Helmet } from 'react-helmet-async';
 import { 
   Building, 
@@ -33,8 +38,6 @@ import {
   Cpu,
   Brain
 } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-enhancement-2b07
-=======
 import { 
   Brain, 
   Cpu, 
@@ -69,11 +72,58 @@ import {
   PieChart
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ec46
-=======
 import { Bot, Zap, TrendingUp, Shield, Users, ArrowRight, Cpu, Target } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
 
+import { Bot, Zap, TrendingUp, Shield, Users, ArrowRight, Cpu, Target } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { 
+  Bot, 
+  Zap, 
+  Cpu, 
+  Database, 
+  BarChart3, 
+  Globe, 
+  Network, 
+  Shield,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  Award,
+  Lightbulb,
+  Target,
+  Settings,
+  Workflow
+} from 'lucide-react';
+
+const AutonomousBusinessOperationsPlatform = () => {
+  const features = [
+    {
+      icon: Bot,
+      title: "Autonomous Operations",
+      description: "AI-powered systems that operate independently and make intelligent decisions"
+    },
+    {
+      icon: Zap,
+      title: "Real-time Processing",
+      description: "Instant processing and decision-making for critical business operations"
+  const features = [
+    {
+      icon: Bot,
+      title: "AI Autonomous Systems",
+      description: "Self-managing AI systems that operate independently and make intelligent decisions."
+    },
+    {
+      icon: Zap,
+      title: "Real-time Optimization",
+      description: "Continuous monitoring and optimization of business processes for maximum efficiency."
+    },
+    {
+      icon: Shield,
+      title: "Intelligent Security",
+      description: "Advanced threat detection and automated security responses powered by AI."
     },
     {
       icon: Cpu,
@@ -88,515 +138,236 @@ import { Bot, Zap, TrendingUp, Shield, Users, ArrowRight, Cpu, Target } from 'lu
     {
       icon: BarChart3,
       title: "Predictive Analytics",
+  const features = [
+    {
+      title: "Intelligent Process Automation",
+      description: "AI-powered automation that learns and adapts to your business processes",
+      icon: Workflow,
+      benefits: ["Smart workflows", "Adaptive learning", "Process optimization"]
+    },
+    {
+      title: "Real-time Analytics Dashboard",
+      description: "Comprehensive business intelligence with live data visualization",
+      icon: BarChart,
+      benefits: ["Live insights", "Custom dashboards", "Predictive analytics"]
+    },
+    {
+      title: "Autonomous Decision Engine",
+      description: "AI-driven decision making for operational efficiency",
+      icon: Brain,
+      benefits: ["Data-driven decisions", "Risk assessment", "Performance optimization"]
     },
     {
       title: "Enterprise Security & Compliance",
       description: "Bank-grade security with automated compliance monitoring",
       icon: Shield,
+  const features = [
+    {
+      icon: Building,
+      title: "Autonomous Business Management",
+      description: "AI-powered systems that manage business operations independently, making decisions and executing tasks without human intervention."
+    },
+    {
+      icon: Zap,
+      title: "Real-time Process Automation",
+      description: "Continuous monitoring and automation of business processes with instant response to changing conditions and requirements."
+    },
+    {
+      icon: Target,
+      title: "Intelligent Decision Making",
+      description: "Advanced algorithms that analyze data, predict outcomes, and make optimal business decisions based on multiple factors."
+    },
+    {
+      icon: Shield,
+      title: "Risk Management & Compliance",
+      description: "Automated risk assessment, compliance monitoring, and regulatory adherence with built-in safety protocols."
+    },
+    {
+      icon: Rocket,
+      title: "Scalable Operations",
+      description: "Flexible architecture that grows with your business, handling increased complexity and volume automatically."
+    },
+    {
+      icon: Globe,
+      title: "Multi-Platform Integration",
+      description: "Seamless integration with existing business systems, CRMs, ERPs, and third-party applications."
+    }
+  ];
+
+  const useCases = [
+    {
+      icon: BarChart3,
+      title: "Financial Operations",
+      description: "Automated accounting, expense management, budget optimization, and financial reporting with AI-driven insights."
+    },
+    {
+      icon: Users,
+      title: "Human Resources",
+      description: "Intelligent recruitment, performance management, training optimization, and employee engagement automation."
+    },
+    {
+      icon: Code,
+      title: "IT Operations",
+      description: "Automated system monitoring, incident response, capacity planning, and infrastructure optimization."
+    },
+    {
+      icon: Database,
+      title: "Data Management",
+      description: "Intelligent data processing, analytics automation, report generation, and business intelligence optimization."
+    },
+    {
+      icon: Network,
+      title: "Supply Chain",
+      description: "Automated inventory management, demand forecasting, supplier optimization, and logistics coordination."
     },
     {
       icon: Cloud,
       title: "Customer Service",
-=======
 import { motion } from 'framer-motion';
 import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Network } from 'lucide-react';
-=======
+import { motion } from 'framer-motion';
+import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Network } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Bot, Zap, Shield, TrendingUp, Users, Globe, Cpu, BarChart3 } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-enhancement-91fb
+import { 
+  Bot, 
+  Zap, 
+  Settings, 
+  TrendingUp, 
+  Shield, 
+  Users, 
+  BarChart3, 
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Download,
+  BookOpen,
+  MessageSquare,
+  Workflow,
+  Target,
+  Cpu,
+  Database
+} from 'lucide-react';
 
 const AutonomousBusinessOperationsPlatform: React.FC = () => {
   const features = [
     {
       icon: Bot,
-=======
-      description: "AI-powered customer support, automated issue resolution, sentiment analysis, and service optimization."
->>>>>>> origin/cursor/website-audit-and-enhancement-2b07
-=======
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Settings } from 'lucide-react';
-
-export default function AutonomousBusinessOperationsPlatform() {
->>>>>>> origin/cursor/website-audit-and-enhancement-d426
-  const features = [
-    {
-      icon: Bot,
-      title: "AI-Powered Automation",
-    }
-  ];
-
-  const benefits = [
-    }
-=======
-      benefits: ["SOC2 compliance", "GDPR ready", "24/7 monitoring"]
-=======
-    "Reduce operational costs by up to 40%",
-    "Increase efficiency by 60%",
-    "24/7 autonomous operation",
-    "Real-time performance monitoring"
-  ];
-
-  const useCases = [
-    {
-      title: "Supply Chain Management",
-      description: "Automated inventory management, demand forecasting, and logistics optimization."
+      title: 'Intelligent Automation',
+      description: 'AI-powered automation that learns from your business processes and continuously improves efficiency.'
     },
     {
-      title: "Customer Service",
-      description: "AI-powered chatbots and automated ticket routing for instant customer support."
-    },
-    {
-      title: "Financial Operations",
-      description: "Automated invoicing, expense tracking, and financial reporting."
-    },
-    {
-      title: "HR Management",
-      description: "Streamlined recruitment, onboarding, and performance management processes."
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Supply Chain Optimization",
-      description: "Automated inventory management and demand forecasting",
-      icon: Network,
-      impact: "30% cost reduction"
-    },
-    {
-      title: "Customer Service Automation",
-      description: "AI-powered customer support with human-like interactions",
-      icon: Users,
-      impact: "80% faster resolution"
-    },
-    {
-      title: "Financial Operations",
-      description: "Automated accounting, invoicing, and financial reporting",
-      icon: BarChart3,
-      impact: "95% accuracy improvement"
-    },
-    {
-      title: "HR Process Automation",
-      description: "Streamlined recruitment, onboarding, and performance management",
-      icon: Settings,
-      impact: "50% time savings"
-    }
-  ];
-
-  const stats = [
-    { icon: Users, value: "1000+", label: "Businesses Automated", description: "Trusted by companies worldwide" },
-    { icon: TrendingUp, value: "40%", label: "Efficiency Gain", description: "Average improvement across clients" },
-    { icon: Award, value: "99.9%", label: "Uptime", description: "Enterprise-grade reliability" },
-    { icon: Globe, value: "45+", label: "Countries", description: "Global deployment network" }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ec46
-  ];
-
-  const capabilities = [
-    {
-      title: "Process Automation",
-      description: "Automate complex business workflows with intelligent decision-making capabilities."
-    },
-    {
-      title: "Resource Management",
-      description: "Optimize resource allocation across departments and projects automatically."
-    },
-    {
-      title: "Customer Intelligence",
-      description: "Deep insights into customer behavior and preferences for personalized experiences."
-    },
-    {
-      title: "Risk Management",
-      description: "Proactive identification and mitigation of business risks using AI algorithms."
-    }
-  ];
-
-  const industries = [
-    "Healthcare",
-    "Finance",
-    "Manufacturing",
-    "Retail",
-    "Logistics",
-    "Technology"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
-=======
-      description: "Intelligent automation that learns and adapts to your business processes"
+      icon: Workflow,
+      title: 'Process Orchestration',
+      description: 'Seamlessly orchestrate complex business workflows across multiple systems and departments.'
     },
     {
       icon: Zap,
-      title: "Real-time Operations",
-      description: "24/7 autonomous business operations with instant response capabilities"
+      title: 'Real-time Optimization',
+      description: 'Dynamic optimization of business operations based on real-time data and market conditions.'
     },
     {
       icon: Shield,
-      title: "Secure & Compliant",
-      description: "Enterprise-grade security with built-in compliance monitoring"
-    },
-    {
-      icon: TrendingUp,
-      title: "Performance Analytics",
-      description: "Advanced analytics and insights for continuous optimization"
+      title: 'Secure Operations',
+      description: 'Enterprise-grade security with role-based access control and audit trails for all operations.'
     }
-  ];
-
-  const capabilities = [
-    "Process Automation & Optimization",
-    "Intelligent Decision Making",
-    "Resource Management & Allocation",
-    "Customer Service Automation",
-    "Financial Operations & Reporting",
-    "Supply Chain Management",
-    "Quality Control & Monitoring",
-    "Risk Assessment & Mitigation"
-  ];
-
-  const benefits = [
-    "Reduce operational costs by up to 60%",
-    "Increase efficiency and productivity",
-    "24/7 autonomous operations",
-    "Real-time monitoring and alerts",
-    "Scalable business processes",
-    "Data-driven decision making",
-    "Improved customer satisfaction",
-    "Compliance automation"
->>>>>>> origin/cursor/website-audit-and-enhancement-d426
-  ];
-
-  const industries = [
-    "Manufacturing",
-    "Healthcare",
   ];
 
   const useCases = [
     {
+      title: 'Supply Chain Management',
+      description: 'Automated inventory management, demand forecasting, and supplier coordination.',
+      icon: Workflow
+    },
+    {
+      title: 'Customer Service',
+      description: 'Intelligent chatbots, ticket routing, and automated customer support workflows.',
+      icon: Users
+    },
+    {
+      title: 'Financial Operations',
+      description: 'Automated invoicing, expense management, and financial reporting.',
+      icon: BarChart3
+    },
+    {
+      title: 'HR & Recruitment',
+      description: 'Automated candidate screening, onboarding processes, and performance management.',
+      icon: Users
     }
->>>>>>> origin/cursor/website-audit-and-enhancement-98d1
   ];
-=======
-import { Building, Brain, Zap, Shield, ArrowRight, Users, Target, TrendingUp, Clock, BarChart3 } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-enhancement-a260
 
-export default function AutonomousBusinessOperationsPlatform() {
+  const benefits = [
+    'Reduce operational costs by up to 40%',
+    'Improve process efficiency by 60%',
+    'Eliminate manual errors and delays',
+    '24/7 automated operations',
+    'Scalable infrastructure for growth',
+    'Real-time monitoring and analytics'
+  ];
+
+  const industries = [
+    'Manufacturing',
+    'Healthcare',
+    'Finance',
+    'Retail',
+    'Logistics',
+    'Technology',
+    'Energy',
+    'Education'
+  ];
+
   return (
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20" />
-        <div className="relative z-10 container mx-auto px-4">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-              Autonomous Business
-              <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Operations Platform
-              </span>
-            </h1>
-=======
-      <section className="pt-20 pb-16 px-4">
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">
               <Bot className="w-4 h-4 mr-2" />
               Autonomous Operations
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent mb-6">
-              Autonomous Business Operations Platform
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Autonomous Business
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                {' '}Operations Platform
+              </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with intelligent automation that works 24/7. 
-              Our platform autonomously manages operations, reduces costs, and increases efficiency.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-green-500/30 text-green-400 hover:bg-green-500/20 rounded-lg font-semibold transition-all duration-300">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
-                Schedule Demo
-              </button>
-=======
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Bot className="w-12 h-12 text-cyan-400 mr-3" />
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                Autonomous Business Operations Platform
-              </h1>
-            </div>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your business with fully autonomous operations. Our AI-powered platform 
-              handles complex business processes independently, optimizing efficiency and 
-              driving growth while you focus on strategic decisions.
-=======
-  return (
-    <>
-      <Helmet>
-        <title>Autonomous Business Operations Platform - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary autonomous business operations platform that runs your business 24/7 with AI-powered automation. Streamline operations, reduce costs, and increase efficiency." />
-        <meta name="keywords" content="autonomous business operations, business automation, AI business platform, autonomous systems, business process automation, AI operations" />
-        <link rel="canonical" href="https://ziontechgroup.com/autonomous-business-operations-platform" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-4">
-                  <Building className="w-10 h-10 text-white" />
-                </div>
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Autonomous Business
-                <span className="block bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-                  Operations Platform
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your business with our revolutionary autonomous operations platform. 
-                Let AI run your business 24/7 while you focus on strategic growth and innovation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg text-white font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105"
-                >
-                  <span>Get Started</span>
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  to="/services/ai-autonomous-systems"
-                  className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-            >
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-              </div>
-
-              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-500 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">24/7 Operations</h3>
-                <p className="text-gray-300">
-                  Continuous business operations without downtime, holidays, or human limitations.
-                </p>
-=======
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Platform Features</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Discover the intelligent automation capabilities that revolutionize business operations.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
-              </div>
-
-              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-500 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Autonomous Teams</h3>
-                <p className="text-gray-300">
-                  AI agents work together as autonomous teams to handle complex business processes and workflows.
-                </p>
-              </div>
-
-              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-500 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Risk Management</h3>
-                <p className="text-gray-300">
-                  Proactive risk assessment and mitigation with real-time monitoring and automated response systems.
-                </p>
-              </div>
-
-              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-500 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Performance Optimization</h3>
-                <p className="text-gray-300">
-                  Continuous optimization of business processes for maximum efficiency and profitability.
-                </p>
-              </div>
-
-              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-500 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
-                  <Database className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Data-Driven Insights</h3>
-                <p className="text-gray-300">
-                  Real-time analytics and insights to drive strategic decision-making and business growth.
-                </p>
-              </div>
-=======
-
-        {/* Features Section */}
-        <section className="py-20 relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Revolutionary Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our autonomous business operations platform delivers unprecedented capabilities 
-                that redefine how businesses operate and scale.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
-                return (
-                  <div key={index} className="group">
-                    <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                      <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="w-8 h-8 text-green-400" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                      <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-                    </div>
-                  </div>
-                );
-              })}
->>>>>>> origin/cursor/website-audit-and-enhancement-2b07
-            </div>
-          </div>
-        </section>
-
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-=======
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-4">
-                <Building className="w-8 h-8 text-white" />
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Autonomous Business
-              <span className="block bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-                Operations Platform
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with AI-powered autonomous operations that run 24/7. 
-              Automate complex workflows, optimize processes, and scale operations without limits.
->>>>>>> origin/cursor/website-audit-and-enhancement-a260
-=======
-import { Bot, TrendingUp, Users, Shield, Zap, Globe, ArrowRight, BarChart3, Cpu, Network } from 'lucide-react';
-
-export default function AutonomousBusinessOperationsPlatform() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue to-zion-purple">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Autonomous Business
-              <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple-light bg-clip-text text-transparent">
-                Operations Platform
-              </span>
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-              Transform your business operations with AI-powered automation that works 24/7. 
-              Streamline processes, reduce costs, and increase efficiency with our intelligent platform.
->>>>>>> origin/cursor/website-audit-and-enhancement-311e
+              Transform your business with intelligent automation that runs 24/7. 
+              Our platform orchestrates your entire business operations autonomously, 
+              driving efficiency and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Link
                 to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
-=======
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Autonomous Business Operations Platform
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with AI-powered autonomous operations. Our platform enables businesses 
-              to run 24/7 with intelligent automation, real-time optimization, and predictive insights.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30">
-                Start Free Trial
-              </button>
-              <button className="border border-green-500 text-green-400 hover:bg-green-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-                Schedule Demo
-=======
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with AI-powered automation that runs 24/7. Streamline operations, reduce costs, and scale effortlessly.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
-                Start Automation
-              </button>
-              <button className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
+              <button className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+                <Play className="mr-2 w-5 h-5" />
                 Watch Demo
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
               </button>
->>>>>>> origin/cursor/website-audit-and-enhancement-efd3
-            </div>
-          </motion.div>
-              >
-                Learn More
-              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Platform Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our autonomous platform combines cutting-edge AI with business intelligence to create 
+              a truly intelligent and self-optimizing business environment.
             </p>
           </motion.div>
 
@@ -606,8 +377,32 @@ export default function AutonomousBusinessOperationsPlatform() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Revolutionary Autonomous Capabilities
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our platform combines cutting-edge AI with business process automation to create 
+              truly autonomous operations that work around the clock.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
             ))}
-=======
+            ))}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -618,7 +413,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
-=======
 export default function AutonomousBusinessOperationsPlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue to-zion-purple">
@@ -645,8 +439,6 @@ export default function AutonomousBusinessOperationsPlatform() {
             >
               Request Demo
             </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-3be4
-=======
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -665,8 +457,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <p className="text-gray-300 text-lg">{capability.description}</p>
               </div>
             ))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
-=======
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -706,406 +496,122 @@ export default function AutonomousBusinessOperationsPlatform() {
                 </div>
               </div>
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
-=======
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Platform Features</h2>
-            <p className="text-xl text-gray-400">Everything you need to automate and optimize your business</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Revolutionary Automation Features
+              Intelligent Automation Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the powerful capabilities that make our platform the future of business operations
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform combines AI, machine learning, and advanced workflow automation 
+              to create a truly autonomous business environment.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> origin/cursor/website-audit-and-enhancement-d426
             {features.map((feature, index) => {
-              const Icon = feature.icon;
+              const IconComponent = feature.icon;
               return (
-                <div
-                  key={index}
-=======
-                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300 transform hover:scale-105"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white" />
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                    <IconComponent className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
               );
             })}
->>>>>>> origin/cursor/website-audit-and-enhancement-d426
           </div>
         </div>
       </section>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-          </div>
-        </div>
-      </section>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            ))}
-=======
-      {/* Modules Section */}
-      <section className="py-16 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Core Modules</h2>
-            <p className="text-xl text-gray-400">Comprehensive solutions for every aspect of your business</p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {modules.map((module, index) => {
-              const Icon = module.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50"
-                >
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-semibold">{module.title}</h3>
-                  </div>
-                  <p className="text-gray-400 text-lg mb-6">{module.description}</p>
-                  <div className="grid grid-cols-2 gap-3">
-                    {module.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
->>>>>>> origin/cursor/website-audit-and-enhancement-91fb
-          </div>
-        </div>
-      </section>
-
-=======
-      {/* Benefits Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Measurable Benefits</h2>
-            <p className="text-xl text-gray-400">See the real impact on your business performance</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-gray-800/30 rounded-lg border border-gray-700/30"
-              >
-                <div className="text-4xl font-bold text-green-400 mb-2">{benefit.metric}</div>
-                <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-sm text-gray-400">{benefit.description}</p>
-              </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-91fb
-            ))}
-          </div>
-        </div>
-      </section>
-
-=======
       {/* Use Cases Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Use Cases</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              See how autonomous operations transform different business functions.
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transform Every Business Function
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              From front-office operations to back-office processes, our platform 
+              automates and optimizes every aspect of your business.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
-                <h3 className="text-xl font-semibold mb-3 text-green-400">{useCase.title}</h3>
-                <p className="text-gray-400">{useCase.description}</p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
-              </div>
-              
-              <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-2xl p-8">
-                <div className="text-center">
-                  <Star className="w-16 h-16 text-green-400 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Industry Pioneer</h3>
-                  <p className="text-gray-300 mb-6">
-                    Be among the first to experience truly autonomous business operations 
-                    and gain a significant competitive advantage in your industry.
-                  </p>
-                  <button className="px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-500 hover:to-emerald-500 transition-all duration-300">
-                    Learn More
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-              </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-98d1
-=======
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Real-World Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how autonomous operations are transforming businesses across industries.
-            </p>
-          </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-green-500 transition-all duration-300"
-              >
-                <h3 className="text-2xl font-semibold mb-4 text-green-400">{useCase.title}</h3>
-                <p className="text-gray-300 text-lg">{useCase.description}</p>
-              </motion.div>
->>>>>>> origin/cursor/website-audit-and-enhancement-efd3
-            ))}
-=======
-      {/* Features Section */}
-      <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">
-            Autonomous Capabilities
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Bot className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-4">AI-Powered Automation</h3>
-              <p className="text-zion-slate-light">
-                Intelligent automation that learns from your business processes and optimizes them continuously
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Real-Time Operations</h3>
-              <p className="text-zion-slate-light">
-                Monitor and control your business operations in real-time with instant alerts and responses
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Performance Optimization</h3>
-              <p className="text-zion-slate-light">
-                Continuously optimize performance metrics and resource allocation for maximum efficiency
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Security & Compliance</h3>
-              <p className="text-zion-slate-light">
-                Built-in security protocols and compliance monitoring for enterprise-grade protection
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Team Collaboration</h3>
-              <p className="text-zion-slate-light">
-                Seamless collaboration between human teams and AI systems for optimal results
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Global Operations</h3>
-              <p className="text-zion-slate-light">
-                Manage operations across multiple locations and time zones with unified control
-              </p>
-            </div>
-=======
-      {/* Automation Modules */}
-      <section className="py-20 bg-black/20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Automation Modules
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive automation solutions for every aspect of your business
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Users,
-                title: "HR & Recruitment",
-                description: "Automate candidate screening, onboarding, and performance management"
-              },
-              {
-                icon: BarChart3,
-                title: "Financial Operations",
-                description: "Automated invoicing, expense tracking, and financial reporting"
-              },
-              {
-                icon: Globe,
-                title: "Customer Support",
-                description: "24/7 AI-powered customer service and ticket management"
-              },
-              {
-                icon: Settings,
-                title: "IT Infrastructure",
-                description: "Automated monitoring, maintenance, and security updates"
-              },
-              {
-                icon: TrendingUp,
-                title: "Sales & Marketing",
-                description: "Lead generation, follow-ups, and campaign automation"
-              },
-              {
-                icon: Shield,
-                title: "Compliance & Security",
-                description: "Automated compliance monitoring and security threat detection"
-              }
-            ].map((module, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">
-                  <module.icon className="w-8 h-8 text-white" />
+            {useCases.map((useCase, index) => {
+              const IconComponent = useCase.icon;
+              return (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300 text-lg">{useCase.description}</p>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{module.title}</h3>
-                <p className="text-gray-300">{module.description}</p>
-              </motion.div>
-            ))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
-=======
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Autonomous Business Capabilities
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Experience the future of business operations with intelligent automation
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-green-500 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">AI Decision Making</h3>
-              <p className="text-gray-400">
-                Autonomous AI agents that make intelligent business decisions based on real-time data and market conditions.
-              </p>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-green-500 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Process Automation</h3>
-              <p className="text-gray-400">
-                End-to-end workflow automation that eliminates manual tasks and optimizes business processes.
-              </p>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-green-500 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Risk Management</h3>
-              <p className="text-gray-400">
-                Proactive risk assessment and mitigation through continuous monitoring and predictive analytics.
-              </p>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-green-500 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-6">
-                <TrendingUp className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Performance Optimization</h3>
-              <p className="text-gray-400">
-                Continuous optimization of business metrics and KPIs through machine learning and data analysis.
-              </p>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-green-500 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <Clock className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">24/7 Operations</h3>
-              <p className="text-gray-400">
-                Round-the-clock business operations with intelligent monitoring and automated incident response.
-              </p>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-green-500 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
-                <BarChart3 className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Real-Time Analytics</h3>
-              <p className="text-gray-400">
-                Live business intelligence and predictive analytics for data-driven decision making.
-              </p>
-            </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-a260
+              );
+            })}
           </div>
         </div>
       </section>
 
-=======
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why Choose Autonomous Operations?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Experience unprecedented efficiency and productivity with our autonomous 
+                business operations platform. Let AI handle the routine while you focus on strategy.
+              </p>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+              <h3 className="text-2xl font-semibold text-white mb-6">Performance Metrics</h3>
+              <div className="space-y-6">
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-gray-300">Cost Reduction</span>
+                    <span className="text-green-400 font-semibold">40%</span>
+                  </div>
+                  <div className="w-full bg-slate-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-green-600 to-emerald-600 h-2 rounded-full" style={{ width: '40%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-gray-300">Efficiency Gain</span>
+                    <span className="text-green-400 font-semibold">60%</span>
+                  </div>
+                  <div className="w-full bg-slate-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-green-600 to-emerald-600 h-2 rounded-full" style={{ width: '60%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-gray-300">Error Reduction</span>
+                    <span className="text-green-400 font-semibold">95%</span>
+                  </div>
+                  <div className="w-full bg-slate-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-green-600 to-emerald-600 h-2 rounded-full" style={{ width: '95%' }}></div>
+                  </div>
+                </div>
+              </div>
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"
               >
                 Get Started
@@ -1117,107 +623,98 @@ export default function AutonomousBusinessOperationsPlatform() {
               >
                 View All Services
               </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-311e
             </div>
           </div>
         </div>
       </section>
 
-=======
-      {/* ROI Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Proven Results
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the impact of autonomous operations on your bottom line
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { metric: "85%", description: "Reduction in operational costs" },
-              { metric: "24/7", description: "Continuous business operations" },
-              { metric: "300%", description: "Increase in productivity" }
-            ].map((result, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"
-              >
-                <div className="text-6xl font-bold text-blue-400 mb-4">{result.metric}</div>
-                <p className="text-xl text-gray-300">{result.description}</p>
-              </motion.div>
-            ))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
-=======
-      {/* Benefits Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Industries Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Business Benefits
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry Solutions
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Transform your business operations with autonomous AI capabilities
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform is designed to work across industries, with specialized 
+              automation solutions for your specific business needs.
             </p>
           </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {industries.map((industry, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{industry}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-r from-green-500/10 to-emerald-600/10 rounded-2xl p-8 border border-green-500/20">
-              <h3 className="text-2xl font-semibold text-white mb-4">Operational Efficiency</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>Reduce operational costs by up to 40%</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>Eliminate manual errors and bottlenecks</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>24/7 automated operations</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>Scalable business processes</span>
-                </li>
+      {/* Technology Stack Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Built on Cutting-Edge Technology
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform leverages the latest advancements in AI, machine learning, 
+              and cloud computing to deliver enterprise-grade performance.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                <Cpu className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">AI & Machine Learning</h3>
+              <p className="text-gray-300 text-lg mb-4">
+                Advanced algorithms that learn from your business processes and continuously improve performance.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Natural Language Processing</li>
+                <li>• Predictive Analytics</li>
+                <li>• Computer Vision</li>
+                <li>• Deep Learning Models</li>
               </ul>
             </div>
-
-            <div className="bg-gradient-to-r from-blue-500/10 to-cyan-600/10 rounded-2xl p-8 border border-blue-500/20">
-              <h3 className="text-2xl font-semibold text-white mb-4">Strategic Advantages</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span>Data-driven decision making</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span>Predictive analytics and insights</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span>Competitive market advantage</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span>Future-ready business model</span>
-                </li>
+            
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                <Database className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Cloud Infrastructure</h3>
+              <p className="text-gray-300 text-lg mb-4">
+                Scalable, secure, and reliable cloud infrastructure that grows with your business.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Multi-cloud Support</li>
+                <li>• Auto-scaling</li>
+                <li>• High Availability</li>
+                <li>• Disaster Recovery</li>
               </ul>
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-a260
-=======
+            
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Enterprise Security</h3>
+              <p className="text-gray-300 text-lg mb-4">
+                Bank-level security with comprehensive compliance and audit capabilities.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• SOC 2 Type II</li>
+                <li>• GDPR Compliance</li>
+                <li>• End-to-end Encryption</li>
+                <li>• Role-based Access Control</li>
+              </ul>
+            </div>
       {/* Features Section */}
       <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto max-w-7xl">
@@ -1450,8 +947,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 SOC2 compliant with advanced encryption and access controls
               </p>
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-311e
-=======
       {/* Integration Section */}
       <section className="py-16 bg-gray-800/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1471,8 +966,6 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <div className="text-gray-300 font-medium">{tool}</div>
               </div>
             ))}
->>>>>>> origin/cursor/website-audit-and-enhancement-91fb
-=======
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-green-900/50">
         <div className="max-w-7xl mx-auto">
@@ -1543,124 +1036,83 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <h3 className="text-lg font-semibold text-white">{industry}</h3>
               </div>
             ))}
->>>>>>> origin/cursor/website-audit-and-enhancement-d426
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-=======
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      ],
-      popular: false
-    },
-    {
-      ],
-      popular: true
-    },
-    {
-      ],
-      popular: false
-    }
-  ];
-
-=======
-      <section className="py-20 px-4 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Business?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-            Join thousands of businesses that have transformed their operations with our AI platform. 
-            Start your automation journey today.
->>>>>>> origin/cursor/website-audit-and-enhancement-311e
-=======
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Automate Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the autonomous business revolution and transform your operations with AI-powered automation.
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
-=======
-      <section className="py-16 bg-gradient-to-r from-green-900/20 to-blue-900/20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-6">Ready to Automate Your Business?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of businesses that have transformed their operations with our 
-            autonomous platform. Start your journey today.
->>>>>>> origin/cursor/website-audit-and-enhancement-91fb
+            autonomous platform. Start your automation journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-=======
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
             >
               Schedule a Demo
-              <ArrowRight className="w-5 h-5" />
-=======
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-            >
-              Schedule a Demo
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
-              to="/services/ai-autonomous-systems"
-              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              to="/pricing"
+              className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
-              Explore AI Services
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
+              View Pricing
             </Link>
-            <Link
-              to="/services"
-              className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              Explore All Services
->>>>>>> origin/cursor/website-audit-and-enhancement-311e
-            </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-98d1
-=======
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-green-500/10 to-emerald-600/10 rounded-2xl p-12 text-center border border-green-500/20">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Business?
+          </div>
+        </div>
+      </section>
+
+      {/* Resources Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Learn More About Autonomous Operations
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join the autonomous business revolution and transform your operations with 
-              AI-powered automation and intelligent decision making.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Explore our resources to understand how autonomous operations can transform your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg text-white font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105"
-              >
-                Schedule a Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200"
-              >
-                View Pricing
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Documentation</h3>
+              <p className="text-gray-300 mb-4">Comprehensive guides and API documentation for developers.</p>
+              <Link to="/docs" className="text-green-400 hover:text-green-300 transition-colors duration-300">
+                Read Docs →
               </Link>
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-a260
-=======
+            
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                <Download className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">SDK & Tools</h3>
+              <p className="text-gray-300 mb-4">Download our SDK and development tools to get started.</p>
+              <Link to="/downloads" className="text-green-400 hover:text-green-300 transition-colors duration-300">
+                Download →
+              </Link>
+            </div>
+            
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                <MessageSquare className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Support</h3>
+              <p className="text-gray-300 mb-4">Get help from our automation experts and support team.</p>
+              <Link to="/contact" className="text-green-400 hover:text-green-300 transition-colors duration-300">
+                Contact Support →
+              </Link>
+            </div>
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Automate Your Business?</h2>
@@ -1675,10 +1127,8 @@ export default function AutonomousBusinessOperationsPlatform() {
             <button className="px-8 py-4 border border-green-500/30 text-green-400 hover:bg-green-500/20 rounded-lg font-semibold transition-all duration-300">
               Contact Sales
             </button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
           </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
-=======
+          </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Automate Your Business?
             </h2>
@@ -1694,8 +1144,6 @@ export default function AutonomousBusinessOperationsPlatform() {
               </button>
             </div>
           </motion.div>
->>>>>>> origin/cursor/website-audit-and-enhancement-efd3
-=======
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Automate Your Business?
             </h2>
@@ -1711,13 +1159,28 @@ export default function AutonomousBusinessOperationsPlatform() {
               </button>
             </div>
           </motion.div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
         </div>
-=======
+        </div>
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg text-white font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105"
+              >
+                <span>Schedule a Demo</span>
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
       </section>
     </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-a260
-=======
+      </section>
+    </div>
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1744,8 +1207,6 @@ export default function AutonomousBusinessOperationsPlatform() {
         </section>
       </div>
     </>
->>>>>>> origin/cursor/website-audit-and-enhancement-2b07
-=======
     <>
       <SEOHead 
         customData={{
@@ -1896,10 +1357,10 @@ export default function AutonomousBusinessOperationsPlatform() {
         </section>
       </div>
     </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ec46
   );
 }
-=======
+  );
+}
               className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Get Started Free
@@ -1907,7 +1368,6 @@ export default function AutonomousBusinessOperationsPlatform() {
             <Link
               to="/pricing"
               className="px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200"
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1929,11 +1389,12 @@ export default function AutonomousBusinessOperationsPlatform() {
             <Link
               to="/pricing"
               className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-semibold rounded-lg transition-all duration-200"
->>>>>>> origin/cursor/website-audit-and-enhancement-d426
             >
               View Pricing Plans
             </Link>
-=======
+            >
+              View Pricing Plans
+            </Link>
   const testimonials = [
     {
       name: "Operations Director",
@@ -2257,17 +1718,11 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <li><Link to="/white-papers" className="text-gray-300 hover:text-green-400 transition-colors">White Papers</Link></li>
               </ul>
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-79b4
           </div>
         </div>
       </section>
     </div>
   );
-=======
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-d426
-=======
 };
 
 export default AutonomousBusinessOperationsPlatform;
->>>>>>> origin/cursor/website-audit-and-enhancement-79b4

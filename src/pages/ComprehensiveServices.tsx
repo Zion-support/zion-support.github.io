@@ -1,669 +1,489 @@
 import React, { useState } from 'react';
-import { Search, Star, Clock, DollarSign, Users, Zap, Brain, Shield, Eye, Leaf, CreditCard, Phone, Mail, MapPin, Globe, Cpu, Network, Building, Home, Hospital, Rocket, CheckCircle, ArrowRight } from 'lucide-react';
+import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES, EXPANDED_SERVICE_SUBCATEGORIES } from '@/data/expandedServices';
+import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import {
+  Brain, Cloud, Database, Shield, Settings, Zap, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart,
+  Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Filter, Building
+} from 'lucide-react';
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
 
-const ComprehensiveServices: React.FC = () => {
+export default function ComprehensiveServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPricing, setSelectedPricing] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPricingTier, setSelectedPricingTier] = useState('all');
 
-  // Comprehensive Services Data
-  const comprehensiveServices = [
-    // AI & Machine Learning Services
-    {
-      id: "ai-powered-crm",
-      name: "AI-Powered Customer Relationship Management",
-      category: "AI & Machine Learning",
-      subcategory: "Business Applications",
-      pricing: "Premium",
-      description: "Intelligent CRM system that uses machine learning to predict customer behavior, automate follow-ups, and optimize sales strategies.",
-      price: 1500,
-      pricingModel: "monthly",
-      userLimit: "Up to 100 users",
-      features: [
-        "Predictive customer analytics",
-        "Automated lead scoring",
-        "Smart email campaigns",
-        "Sales forecasting",
-        "Customer sentiment analysis",
-        "Integration with existing tools"
-      ],
-      benefits: [
-        "Increase sales conversion by 35%",
-        "Reduce manual follow-up time by 60%",
-        "Improve customer retention",
-        "Data-driven decision making",
-        "Scalable automation"
-      ],
-      targetAudience: [
-        "Sales teams",
-        "Marketing departments",
-        "Customer service",
-        "E-commerce businesses",
-        "B2B companies"
-      ],
-      tags: ["AI", "CRM", "Sales Automation", "Customer Analytics", "Machine Learning"],
-      estimatedDelivery: "2-3 weeks",
-      supportLevel: "premium",
-      marketPrice: "$1,500 - $5,000/month",
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: "quantum-computing-simulation",
-      name: "Quantum Computing Simulation Platform",
-      category: "AI & Machine Learning",
-      subcategory: "Quantum Computing",
-      pricing: "Enterprise",
-      description: "Advanced quantum computing simulation and optimization platform for research institutions and enterprises exploring quantum algorithms.",
-      price: 5000,
-      pricingModel: "monthly",
-      userLimit: "Up to 50 users",
-      features: [
-        "Quantum circuit simulator",
-        "Algorithm optimization tools",
-        "Performance benchmarking",
-        "Multi-qubit support",
-        "Cloud-based access",
-        "Real-time collaboration"
-      ],
-      benefits: [
-        "Accelerate quantum research",
-        "Reduce hardware costs",
-        "Faster algorithm development",
-        "Collaborative development",
-        "Scalable simulations",
-        "Future-proof technology"
-      ],
-      targetAudience: [
-        "Research institutions",
-        "Pharmaceutical companies",
-        "Financial services firms",
-        "Government agencies",
-        "Technology companies"
-      ],
-      tags: ["Quantum Computing", "Simulation", "Research", "Optimization", "Collaboration"],
-      estimatedDelivery: "8-12 weeks",
-      supportLevel: "enterprise",
-      marketPrice: "$5,000 - $15,000/month",
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: "edge-ai-computing",
-      name: "Edge AI Computing Platform",
-      category: "Edge Computing",
-      subcategory: "Artificial Intelligence",
-      pricing: "Premium",
-      description: "Advanced edge computing platform that brings AI processing to the edge of networks, enabling real-time decision making and reduced latency for IoT and mobile applications.",
-      price: 3200,
-      pricingModel: "monthly",
-      userLimit: "Up to 200 devices",
-      features: [
-        "Edge AI processing",
-        "Real-time analytics",
-        "Low latency inference",
-        "Offline capabilities",
-        "Scalable deployment",
-        "Security protocols"
-      ],
-      benefits: [
-        "Reduced latency by 80%",
-        "Bandwidth savings of 60%",
-        "Offline operation capability",
-        "Real-time insights",
-        "Cost efficiency",
-        "Scalable architecture"
-      ],
-      targetAudience: [
-        "Manufacturing companies",
-        "Autonomous vehicle developers",
-        "Smart city initiatives",
-        "IoT application developers",
-        "Real-time systems"
-      ],
-      tags: ["Edge Computing", "AI", "IoT", "Real-time", "Low Latency"],
-      estimatedDelivery: "6-8 weeks",
-      supportLevel: "premium",
-      marketPrice: "$3,200 - $8,000/month",
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: "blockchain-supply-chain",
-      name: "Blockchain Supply Chain Management",
-      category: "Blockchain",
-      subcategory: "Supply Chain",
-      pricing: "Enterprise",
-      description: "Transparent and secure supply chain management using blockchain technology for end-to-end visibility and trust.",
-      price: 120,
-      pricingModel: "monthly",
-      userLimit: "Up to 50 users",
-      features: [
-        "Blockchain tracking",
-        "Smart contracts",
-        "Real-time visibility",
-        "Compliance reporting",
-        "Audit trails",
-        "Integration APIs"
-      ],
-      benefits: [
-        "Complete transparency",
-        "Enhanced security",
-        "Regulatory compliance",
-        "Cost reduction",
-        "Trust building",
-        "Automated processes"
-      ],
-      targetAudience: [
-        "Manufacturing companies",
-        "Logistics providers",
-        "Retail chains",
-        "Food industry",
-        "Pharmaceutical companies"
-      ],
-      tags: ["Blockchain", "Supply Chain", "Smart Contracts", "Transparency", "Security"],
-      estimatedDelivery: "10-14 weeks",
-      supportLevel: "enterprise",
-      marketPrice: "$120 - $500/month",
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: "ar-vr-business-solutions",
-      name: "AR/VR Business Solutions",
-      category: "Immersive Technology",
-      subcategory: "Business Applications",
-      pricing: "Premium",
-      description: "Augmented and virtual reality solutions for business training, customer engagement, and immersive experiences.",
-      price: 85,
-      pricingModel: "monthly",
-      userLimit: "Up to 20 users",
-      features: [
-        "AR training modules",
-        "VR simulations",
-        "3D visualization",
-        "Interactive experiences",
-        "Analytics dashboard",
-        "Content management"
-      ],
-      benefits: [
-        "Enhanced training effectiveness",
-        "Better customer engagement",
-        "Cost savings on physical resources",
-        "Innovation leadership",
-        "Scalable training",
-        "Immersive learning"
-      ],
-      targetAudience: [
-        "Training companies",
-        "Manufacturing firms",
-        "Healthcare institutions",
-        "Educational organizations",
-        "Real estate companies"
-      ],
-      tags: ["AR/VR", "Immersive Tech", "Training", "3D Visualization", "Innovation"],
-      estimatedDelivery: "8-12 weeks",
-      supportLevel: "premium",
-      marketPrice: "$85 - $300/month",
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: "iot-intelligence-hub",
-      name: "IoT Intelligence Hub",
-      category: "IoT & Smart Cities",
-      subcategory: "Platform Management",
-      pricing: "Enterprise",
-      description: "Comprehensive IoT platform for smart city and industrial applications with advanced analytics and automation.",
-      price: 95,
-      pricingModel: "monthly",
-      userLimit: "Up to 100 devices",
-      features: [
-        "Device management",
-        "Data analytics",
-        "Real-time monitoring",
-        "Predictive maintenance",
-        "Security protocols",
-        "Scalable infrastructure"
-      ],
-      benefits: [
-        "Operational efficiency",
-        "Predictive insights",
-        "Cost reduction",
-        "Automation capabilities",
-        "Scalable architecture",
-        "Real-time decision making"
-      ],
-      targetAudience: [
-        "Smart city initiatives",
-        "Manufacturing companies",
-        "Utility companies",
-        "Transportation systems",
-        "Healthcare facilities"
-      ],
-      tags: ["IoT", "Smart Cities", "Industrial IoT", "Predictive Maintenance", "Automation"],
-      estimatedDelivery: "12-16 weeks",
-      supportLevel: "enterprise",
-      marketPrice: "$95 - $400/month",
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: "cybersecurity-sentinel",
-      name: "Cybersecurity Sentinel",
-      category: "Security",
-      subcategory: "Threat Detection",
-      pricing: "Premium",
-      description: "Advanced cybersecurity platform with AI-powered threat detection, response, and compliance management.",
-      price: 65,
-      pricingModel: "monthly",
-      userLimit: "Up to 30 users",
-      features: [
-        "AI threat detection",
-        "Real-time monitoring",
-        "Incident response",
-        "Compliance reporting",
-        "Security training",
-        "24/7 monitoring"
-      ],
-      benefits: [
-        "Proactive security",
-        "Threat prevention",
-        "Regulatory compliance",
-        "Risk reduction",
-        "Peace of mind",
-        "Cost-effective protection"
-      ],
-      targetAudience: [
-        "Financial services",
-        "Healthcare organizations",
-        "Government agencies",
-        "E-commerce businesses",
-        "Technology companies"
-      ],
-      tags: ["Cybersecurity", "AI", "Threat Detection", "Compliance", "Risk Management"],
-      estimatedDelivery: "4-6 weeks",
-      supportLevel: "premium",
-      marketPrice: "$65 - $200/month",
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: "fintech-solutions-pro",
-      name: "FinTech Solutions Pro",
-      category: "Financial Technology",
-      subcategory: "Digital Banking",
-      pricing: "Premium",
-      description: "Comprehensive financial technology platform for modern banking, payments, and financial services.",
-      price: 70,
-      pricingModel: "monthly",
-      userLimit: "Up to 40 users",
-      features: [
-        "Digital banking",
-        "Payment processing",
-        "Cryptocurrency support",
-        "Financial analytics",
-        "Compliance tools",
-        "API integration"
-      ],
-      benefits: [
-        "Modern banking experience",
-        "Cost reduction",
-        "Better user experience",
-        "Regulatory compliance",
-        "Innovation leadership",
-        "Scalable solutions"
-      ],
-      targetAudience: [
-        "Banks",
-        "Credit unions",
-        "Fintech startups",
-        "Payment processors",
-        "Financial services"
-      ],
-      tags: ["FinTech", "Digital Banking", "Payments", "Cryptocurrency", "Compliance"],
-      estimatedDelivery: "16-20 weeks",
-      supportLevel: "premium",
-      marketPrice: "$70 - $250/month",
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: "greentech-analytics",
-      name: "GreenTech Analytics",
-      category: "Sustainability",
-      subcategory: "Environmental Impact",
-      pricing: "Premium",
-      description: "Advanced sustainability analytics and environmental impact assessment platform for businesses and organizations.",
-      price: 55,
-      pricingModel: "monthly",
-      userLimit: "Up to 30 users",
-      features: [
-        "Carbon tracking",
-        "ESG reporting",
-        "Sustainability metrics",
-        "Goal setting",
-        "Progress monitoring",
-        "Regulatory compliance"
-      ],
-      benefits: [
-        "Environmental compliance",
-        "Brand reputation enhancement",
-        "Cost savings",
-        "Sustainability leadership",
-        "Investor confidence",
-        "Regulatory adherence"
-      ],
-      targetAudience: [
-        "Manufacturing companies",
-        "Energy companies",
-        "Real estate firms",
-        "Investment firms",
-        "Government agencies"
-      ],
-      tags: ["Sustainability", "ESG", "Carbon Tracking", "Environmental Impact", "Compliance"],
-      estimatedDelivery: "6-8 weeks",
-      supportLevel: "premium",
-      marketPrice: "$55 - $180/month",
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: "healthcare-it-solutions",
-      name: "Healthcare IT Solutions",
-      category: "Healthcare Technology",
-      subcategory: "Patient Management",
-      pricing: "Enterprise",
-      description: "Comprehensive healthcare IT solutions with HIPAA compliance, patient management, and telemedicine capabilities.",
-      price: 4500,
-      pricingModel: "monthly",
-      userLimit: "Up to 1000 patients",
-      features: [
-        "HIPAA compliance",
-        "Patient management",
-        "Telemedicine platform",
-        "Electronic health records",
-        "Billing integration",
-        "Security protocols"
-      ],
-      benefits: [
-        "Regulatory compliance",
-        "Improved patient care",
-        "Operational efficiency",
-        "Cost reduction",
-        "Better patient experience",
-        "Scalable solutions"
-      ],
-      targetAudience: [
-        "Hospitals",
-        "Clinics",
-        "Medical practices",
-        "Healthcare networks",
-        "Telemedicine providers"
-      ],
-      tags: ["Healthcare", "HIPAA", "Telemedicine", "Patient Management", "Compliance"],
-      estimatedDelivery: "20-24 weeks",
-      supportLevel: "enterprise",
-      marketPrice: "$4,500 - $12,000/month",
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    }
-  ];
+  const filteredServices = useMemo(() => {
+    return COMPREHENSIVE_SERVICES.filter(service => {
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
+      
+      return matchesSearch && matchesCategory && matchesPricing;
+    });
+  }, [searchTerm, selectedCategory, selectedPricingTier]);
 
-  // Filter services based on search and category
-  const filteredServices = comprehensiveServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  return (
+    <div className="min-h-screen bg-zion-blue-dark">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Comprehensive Micro SAAS Solutions
+          </h1>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+            Discover our extensive portfolio of innovative micro SAAS, IT, and AI services designed to transform your business operations and drive growth
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/contact">
+              <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
+                <Phone className="w-5 h-5 mr-2" />
+                Get Started Today
+              </Button>
+            </Link>
+            <Link to="/services-pricing">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <DollarSign className="w-5 h-5 mr-2" />
+                View Pricing
+import { Search, Mail, Phone, MapPin, Star, Clock, Globe, Shield, Zap, Database, Cloud, Brain, Lock, TrendingUp } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { Link } from 'react-router-dom';
+
+export default function ComprehensiveServices() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
+
+  const filteredServices = EXPANDED_SERVICES.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
+    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory;
     
-    return matchesSearch && matchesCategory && matchesPricing;
+    const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
+    
+    const matchesPrice = priceRange === 'all' || 
+                        (priceRange === 'low' && service.price < 10000) ||
+                        (priceRange === 'medium' && service.price >= 10000 && service.price < 25000) ||
+                        (priceRange === 'high' && service.price >= 25000);
+    
+    return matchesSearch && matchesCategory && matchesSubcategory && matchesPrice;
   });
 
-  // Get unique categories
-  const categories = ['all', ...Array.from(new Set(comprehensiveServices.map(service => service.category)))];
-  const pricingTiers = ['all', ...Array.from(new Set(comprehensiveServices.map(service => service.pricing)))];
+  const getSubcategories = () => {
+    if (selectedCategory === 'all') return [];
+    return EXPANDED_SERVICE_SUBCATEGORIES[selectedCategory as keyof typeof EXPANDED_SERVICE_SUBCATEGORIES] || [];
+  };
 
-  // Get category icon
   const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: any } = {
-      'AI & Machine Learning': Brain,
-      'Edge Computing': Cpu,
-      'Blockchain': Shield,
-      'Immersive Technology': Eye,
-      'IoT & Smart Cities': Network,
-      'Security': Shield,
-      'Financial Technology': CreditCard,
-      'Sustainability': Leaf,
-      'Healthcare Technology': Home
+    const icons: { [key: string]: React.ReactNode } = {
+      'AI Development': <Brain className="w-6 h-6" />,
+      'Cloud Services': <Cloud className="w-6 h-6" />,
+      'DevOps': <Zap className="w-6 h-6" />,
+      'Cybersecurity': <Shield className="w-6 h-6" />,
+      'Data & Analytics': <Database className="w-6 h-6" />,
+      'Digital Transformation': <TrendingUp className="w-6 h-6" />,
+      'Emerging Tech': <Globe className="w-6 h-6" />,
+      'Managed Services': <Lock className="w-6 h-6" />
     };
-    return iconMap[category] || Zap;
+    return icons[category] || <Star className="w-6 h-6" />;
   };
 
-  // Get pricing color
-  const getPricingColor = (pricing: string) => {
-    const colorMap: { [key: string]: string } = {
-      'Freemium': 'text-green-400',
-      'Premium': 'text-blue-400',
-      'Enterprise': 'text-purple-400'
-    };
-    return colorMap[pricing] || 'text-gray-400';
-  };
-
-  // Format price
-  const formatPrice = (price: number, model: string) => {
+  const formatPrice = (price: number) => {
     if (price >= 1000) {
-      return `$${(price / 1000).toFixed(1)}k/${model}`;
+      return `$${(price / 1000).toFixed(0)}K`;
     }
-    return `$${price}/${model}`;
+    return `$${price}`;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark pt-24 pb-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
+      <SEO 
+        title="Comprehensive IT & AI Services - Zion Tech Group" 
+        description="Discover our complete range of enterprise IT services, AI solutions, cybersecurity, cloud migration, and digital transformation services. Expert consulting and implementation worldwide."
+        keywords="IT services, AI development, cybersecurity, cloud migration, digital transformation, managed services, blockchain, IoT, AR/VR"
+        canonical="https://ziontechgroup.com/comprehensive-services"
+      />
+
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
+        <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Comprehensive Services
+            Comprehensive IT & AI Services
           </h1>
-          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-            Discover our complete portfolio of innovative micro SAAS, IT, and AI services designed to transform your business
+          <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
+            Enterprise-grade technology solutions delivered by experts. From AI development to cybersecurity, 
+            we provide end-to-end services to transform your business.
           </p>
-          <div className="flex items-center justify-center space-x-4">
-            <div className="flex items-center space-x-2 text-zion-cyan">
-              <Rocket className="w-6 h-6" />
-              <span className="text-lg font-semibold">30+ Services</span>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan hover:text-white">
+              <Phone className="w-5 h-5 mr-2" />
+              +1 302 464 0950
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
+              <Mail className="w-5 h-5 mr-2" />
+              kleber@ziontechgroup.com
+            </Button>
+            <Link to="/pricing-guide">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
+                <TrendingUp className="w-5 h-5 mr-2" />
+                View Pricing Guide
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Information */}
+      <div className="bg-zion-blue py-8 px-4">
+        <div className="container mx-auto">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-white">
+            <div className="flex items-center gap-2">
+              <Phone className="w-5 h-5 text-zion-cyan" />
+              <span>+1 302 464 0950</span>
             </div>
-            <div className="flex items-center space-x-2 text-zion-cyan">
-              <Brain className="w-6 h-6" />
-              <span className="text-lg font-semibold">AI-Powered</span>
+            <div className="flex items-center gap-2">
+              <Mail className="w-5 h-5 text-zion-cyan" />
+              <span>kleber@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center space-x-2 text-zion-cyan">
-              <Shield className="w-6 h-6" />
-              <span className="text-lg font-semibold">Enterprise Ready</span>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-5 h-5 text-zion-cyan" />
+              <span>364 E Main St STE 1008 Middletown DE 19709</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Globe className="w-5 h-5 text-zion-cyan" />
+              <a href="https://ziontechgroup.com" className="hover:text-zion-cyan transition-colors">
+                ziontechgroup.com
+              </a>
+      {/* Contact Information Banner */}
+      <div className="bg-zion-blue-dark py-6 px-4 border-b border-zion-blue-light">
+        <div className="container mx-auto">
+          <div className="flex flex-wrap items-center justify-center gap-8 text-zion-cyan">
+            <div className="flex items-center gap-2">
+              <Phone className="w-5 h-5" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail className="w-5 h-5" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-5 h-5" />
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Search and Filters */}
-        <div className="mb-12">
-          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6">
-            <div className="flex flex-col lg:flex-row gap-4">
-              <div className="flex-1">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search services, features, or technologies..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                  />
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                >
-                  {categories.map((category) => (
-                    <option key={category} value={category} className="bg-zion-blue-dark text-white">
-                      {category === 'all' ? 'All Categories' : category}
-                    </option>
-                  ))}
-                </select>
-                <select
-                  value={selectedPricing}
-                  onChange={(e) => setSelectedPricing(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                >
-                  {pricingTiers.map((tier) => (
-                    <option key={tier} value={tier} className="bg-zion-blue-dark text-white">
-                      {tier === 'all' ? 'All Pricing' : tier}
-                    </option>
-                  ))}
-                </select>
-              </div>
+      {/* Search and Filter Controls */}
+      <div className="bg-zion-blue-dark py-8 px-4">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row gap-4 max-w-4xl mx-auto">
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <Input
+                placeholder="Search services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light"
+              />
             </div>
+            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+              <SelectTrigger className="w-full md:w-48 bg-zion-blue border-zion-blue-light text-white">
+                <SelectValue placeholder="Category" />
+              </SelectTrigger>
+              <SelectContent className="bg-zion-blue border-zion-blue-light">
+                <SelectItem value="all">All Categories</SelectItem>
+                {SERVICE_CATEGORIES.map(category => (
+                  <SelectItem key={category} value={category}>{category}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <Select value={selectedPricingTier} onValueChange={setSelectedPricingTier}>
+              <SelectTrigger className="w-full md:w-48 bg-zion-blue border-zion-blue-light text-white">
+                <SelectValue placeholder="Pricing Tier" />
+              </SelectTrigger>
+              <SelectContent className="bg-zion-blue border-zion-blue-light">
+                <SelectItem value="all">All Tiers</SelectItem>
+                {Object.keys(PRICING_TIERS).map(tier => (
+                  <SelectItem key={tier} value={tier}>{tier}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+      {/* Filters Section */}
+      <div className="bg-zion-blue py-8 px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <Input
+              placeholder="Search services..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="bg-white/10 border-zion-blue-light text-white placeholder:text-zion-slate-light"
+            />
+            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+              <SelectTrigger className="bg-white/10 border-zion-blue-light text-white">
+                <SelectValue placeholder="Category" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Categories</SelectItem>
+                {EXPANDED_SERVICE_CATEGORIES.map(category => (
+                  <SelectItem key={category.value} value={category.value}>
+                    {category.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <Select value={selectedSubcategory} onValueChange={setSelectedSubcategory}>
+              <SelectTrigger className="bg-white/10 border-zion-blue-light text-white">
+                <SelectValue placeholder="Subcategory" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Subcategories</SelectItem>
+                {getSubcategories().map(subcategory => (
+                  <SelectItem key={subcategory} value={subcategory}>
+                    {subcategory}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <Select value={priceRange} onValueChange={setPriceRange}>
+              <SelectTrigger className="bg-white/10 border-zion-blue-light text-white">
+                <SelectValue placeholder="Price Range" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Prices</SelectItem>
+                <SelectItem value="low">Under $10K</SelectItem>
+                <SelectItem value="medium">$10K - $25K</SelectItem>
+                <SelectItem value="high">Over $25K</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
         </div>
+      </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredServices.map((service) => {
-            const CategoryIcon = getCategoryIcon(service.category);
-            return (
-              <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="text-green-400">
-                      <CategoryIcon className="w-6 h-6" />
+      {/* Services Grid */}
+      <div className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredServices.map((service) => (
+              <Card key={service.id} className="bg-zion-blue border-zion-blue-light hover:border-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
+                <CardHeader className="pb-4">
+                  <div className="flex items-start justify-between">
+                    <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-lg flex items-center justify-center text-zion-cyan mb-3">
+                      <Building className="w-6 h-6" />
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white">{service.name}</h3>
-                      <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 bg-current`}>
-                          {service.pricing}
-                        </span>
-                        <span className="px-2 py-1 text-xs font-medium rounded-full text-green-400 bg-green-400 bg-opacity-20">
-                          {service.category}
-                        </span>
-                      </div>
-                    </div>
+                    <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
+                      {service.category}
+                    </Badge>
                   </div>
-                </div>
-                
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                
-                <div className="mb-4">
-                  <div className="text-2xl font-bold text-white mb-2">
-                    {formatPrice(service.price, service.pricingModel)}
-                  </div>
-                  <div className="text-sm text-gray-400">{service.userLimit}</div>
-                </div>
-
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {service.features.slice(0, 3).map((feature, index) => (
-                      <span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {service.targetAudience.slice(0, 2).map((audience, index) => (
-                      <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
-                        {audience}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="border-t border-gray-600 pt-4">
-                  <div className="flex items-center justify-between text-sm text-gray-400">
-                    <span>Start your free trial today</span>
-                    <a 
-                      href={service.contactInfo.website}
-                      className="text-green-400 hover:text-green-300 transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Get Started →
-                    </a>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Contact Information */}
-        <div className="mt-16 text-center">
-          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-gray-300 mb-6">
-              Our comprehensive solutions are designed to scale with your business needs
+                  <CardTitle className="text-white text-lg">{service.title}</CardTitle>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              {filteredServices.length} Services Available
+            </h2>
+            <p className="text-zion-slate-light text-lg">
+              Professional IT solutions tailored to your business needs
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div>
-                <Phone className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Phone</p>
-                <p className="text-gray-300">+1 302 464 0950</p>
-              </div>
-              <div>
-                <Mail className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Email</p>
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>
-              </div>
-              <div>
-                <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Address</p>
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <Card key={service.id} className="bg-white/5 border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
+                <CardHeader className="pb-4">
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="p-2 rounded-lg bg-zion-purple/20 text-zion-cyan">
+                      {getCategoryIcon(service.category)}
+                    </div>
+                    {service.featured && (
+                      <Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+                        Featured
+                      </Badge>
+                    )}
+                  </div>
+                  <CardTitle className="text-white text-xl mb-2">{service.title}</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="pt-0">
+                <CardContent className="space-y-4">
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {service.tags.slice(0, 3).map((tag) => (
+                      <Badge key={tag} variant="secondary" className="bg-zion-blue-light text-zion-cyan">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+
+                  {/* Service Details */}
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center gap-2 text-zion-slate-light">
+                      <Clock className="w-4 h-4" />
+                      <span className="text-sm">{service.availability}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-zion-slate-light">
+                      <Globe className="w-4 h-4" />
+                      <span>{service.location}</span>
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex gap-2 pt-2">
+                    <Button className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Get Quote
+                    </Button>
+                    <Button variant="outline" className="border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10">
+                      <Eye className="w-4 h-4" />
+                    </Button>
+                      <span className="text-sm">{service.location}</span>
+                    </div>
+                    {service.rating && (
+                      <div className="flex items-center gap-2 text-zion-slate-light">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-sm">{service.rating} ({service.reviewCount} reviews)</span>
+                      </div>
+                    )}
+                    {service.aiScore && (
+                      <div className="flex items-center gap-2 text-zion-slate-light">
+                        <Brain className="w-4 h-4 text-zion-cyan" />
+                        <span className="text-sm">AI Score: {service.aiScore}%</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Price and CTA */}
+                  <div className="flex items-center justify-between">
+                    <div className="text-2xl font-bold text-zion-cyan">
+                      {formatPrice(service.price)}
+                    </div>
+                    <div className="flex gap-2">
+                      <Button size="sm" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
+                        <Mail className="w-4 h-4 mr-1" />
+                        Quote
+                      </Button>
+                      <Button size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+                        Learn More
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {filteredServices.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-zion-slate-light text-xl mb-4">No services found matching your criteria</div>
+              <Button onClick={() => {
+                setSearchTerm('');
+                setSelectedCategory('all');
+                setSelectedSubcategory('all');
+                setPriceRange('all');
+              }}>
+                Clear Filters
+              </Button>
             </div>
+          )}
+        </div>
+      </div>
+
+      {/* Service Categories Overview */}
+      <div className="py-16 px-4 bg-zion-blue-dark">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Service Categories</h2>
+            <p className="text-zion-slate-light text-lg">
+              Explore our comprehensive range of technology services
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: <Zap className="w-8 h-8" />,
+                title: "Innovation First",
+                description: "Cutting-edge AI and technology solutions that keep you ahead of the competition"
+              },
+              {
+                icon: <Shield className="w-8 h-8" />,
+                title: "Enterprise Security",
+                description: "Bank-level security and compliance for all our solutions and services"
+              },
+              {
+                icon: <Building className="w-8 h-8" />,
+                title: "Proven Results",
+                description: "Track record of successful implementations and measurable business outcomes"
+              },
+              {
+                icon: <Users className="w-8 h-8" />,
+                title: "Expert Support",
+                description: "24/7 technical support and dedicated account management for enterprise clients"
+              }
+            ].map((feature, index) => (
+              <div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
+                  {feature.icon}
+                </div>
+                <h3 className="text-white font-semibold mb-2">{feature.title}</h3>
+                <p className="text-zion-slate-light text-sm">{feature.description}</p>
+              </div>
+            {EXPANDED_SERVICE_CATEGORIES.map((category) => (
+              <Card key={category.value} className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300">
+                <CardHeader className="text-center">
+                  <div className="mx-auto p-3 rounded-full bg-zion-purple/20 text-zion-cyan mb-4">
+                    {getCategoryIcon(category.label)}
+                  </div>
+                  <CardTitle className="text-white">{category.label}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-zion-slate-light text-sm mb-4">
+                    {EXPANDED_SERVICE_SUBCATEGORIES[category.value as keyof typeof EXPANDED_SERVICE_SUBCATEGORIES]?.join(', ')}
+                  </p>
+                  <Button variant="outline" size="sm" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
+                    View Services
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Contact CTA Section */}
+      <div className="py-20 px-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl text-zion-cyan mb-8 max-w-2xl mx-auto">
+            Get in touch with our experts to discuss your technology needs and discover how we can help you achieve your goals.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan hover:text-white">
+              <Phone className="w-5 h-5 mr-2" />
+              Call +1 302 464 0950
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
+              <Mail className="w-5 h-5 mr-2" />
+              Email kleber@ziontechgroup.com
+            </Button>
+          </div>
+          <div className="mt-8 text-zion-cyan">
+            <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>Website: <a href="https://ziontechgroup.com" className="underline hover:text-white">https://ziontechgroup.com</a></p>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default ComprehensiveServices;
+}

@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react";
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { useNavigate } from "react-router-dom";
-// import { toast } from "@/hooks/use-toast";
+import { toast } from "@/hooks/use-toast";
 const AUTO_SERVICE_TITLES = [
     "AI-Powered Customer Support",
     "Cloud Infrastructure Management",

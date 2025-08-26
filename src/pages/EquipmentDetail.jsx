@@ -50,7 +50,7 @@ export const SAMPLE_EQUIPMENT = [
         currency: "USD",
         rating: 4.9,
         reviews: 89,
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         features: [
             "Multi-GPU configuration",
             "High-speed networking",
@@ -69,7 +69,7 @@ export const SAMPLE_EQUIPMENT = [
         availability: "Available for Order",
         location: "Middletown, DE",
         shipping: "Professional installation",
-            warranty: "5-year enterprise warranty"
+        warranty: "5-year enterprise warranty"
     }
 ];
 
