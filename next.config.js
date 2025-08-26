@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || ''
 const nextConfig = {
 	reactStrictMode: true,
 	trailingSlash: true,
@@ -7,9 +8,6 @@ const nextConfig = {
 	images: {
 		// Using unoptimized to support static hosting/CDN without Next Image optimization
 		unoptimized: true
-	},
-	typescript: {
-		ignoreBuildErrors: true,
 	},
 	eslint: {
 		ignoreDuringBuilds: true
