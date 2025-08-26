@@ -12,6 +12,13 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import NotFound from './pages/NotFound';
 
+// New Pages
+import Solutions from './pages/Solutions';
+import ResearchDevelopment from './pages/ResearchDevelopment';
+import CaseStudies from './pages/CaseStudies';
+import News from './pages/News';
+import Events from './pages/Events';
+
 // Service Pages
 import AISolutions from './pages/services/AI';
 import CloudDevOps from './pages/services/Cloud';
@@ -35,6 +42,13 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
+            
+            {/* New Routes */}
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/research-development" element={<ResearchDevelopment />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/events" element={<Events />} />
             
             {/* Service Routes */}
             <Route path="/services/ai" element={<AISolutions />} />

@@ -11,10 +11,22 @@ const Footer: React.FC = () => {
     { name: "Consulting", path: "/services/consulting" }
   ];
 
+  const solutions = [
+    { name: "AI Autonomous Systems", path: "/solutions" },
+    { name: "AI Autonomous Security", path: "/solutions" },
+    { name: "AI Autonomous DevOps", path: "/solutions" },
+    { name: "AI Autonomous Testing", path: "/solutions" },
+    { name: "AI Autonomous Monitoring", path: "/solutions" },
+    { name: "AI Autonomous Compliance", path: "/solutions" }
+  ];
+
   const company = [
     { name: "About Us", path: "/about" },
+    { name: "Research & Development", path: "/research-development" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "News", path: "/news" },
+    { name: "Events", path: "/events" },
     { name: "Careers", path: "/careers" },
-    { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" }
   ];
 
@@ -56,7 +68,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
@@ -92,6 +104,23 @@ const Footer: React.FC = () => {
                     className="text-gray-300 hover:text-white transition-colors duration-300"
                   >
                     {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+            <ul className="space-y-2">
+              {solutions.map((solution) => (
+                <li key={solution.path}>
+                  <Link 
+                    to={solution.path} 
+                    className="text-gray-300 hover:text-white transition-colors duration-300"
+                  >
+                    {solution.name}
                   </Link>
                 </li>
               ))}

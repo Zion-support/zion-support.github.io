@@ -121,6 +121,20 @@ const Header: React.FC = () => {
             </div>
             
             <Link
+              to="/solutions"
+              className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
+                isActive('/solutions')
+                  ? 'text-white bg-blue-600/20'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+              }`}
+            >
+              Solutions
+              {isActive('/solutions') && (
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
+              )}
+            </Link>
+            
+            <Link
               to="/about"
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                 isActive('/about')
@@ -133,19 +147,49 @@ const Header: React.FC = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
               )}
             </Link>
+            
             <Link
-              to="/blog"
+              to="/case-studies"
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
-                isActive('/blog')
+                isActive('/case-studies')
                   ? 'text-white bg-blue-600/20'
                   : 'text-gray-300 hover:text-white hover:bg-white/10'
               }`}
             >
-              Blog
-              {isActive('/blog') && (
+              Case Studies
+              {isActive('/case-studies') && (
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
               )}
             </Link>
+            
+            <Link
+              to="/news"
+              className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
+                isActive('/news')
+                  ? 'text-white bg-blue-600/20'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+              }`}
+            >
+              News
+              {isActive('/news') && (
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
+              )}
+            </Link>
+            
+            <Link
+              to="/events"
+              className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
+                isActive('/events')
+                  ? 'text-white bg-blue-600/20'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+              }`}
+            >
+              Events
+              {isActive('/events') && (
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
+              )}
+            </Link>
+            
             <Link
               to="/careers"
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
@@ -159,6 +203,7 @@ const Header: React.FC = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
               )}
             </Link>
+            
             <Link
               to="/contact"
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
@@ -237,6 +282,18 @@ const Header: React.FC = () => {
             </div>
             
             <Link
+              to="/solutions"
+              className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                isActive('/solutions')
+                  ? 'text-white bg-blue-600/20 border-l-4 border-blue-400'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+              }`}
+              onClick={closeMenu}
+            >
+              Solutions
+            </Link>
+            
+            <Link
               to="/about"
               className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                 isActive('/about')
@@ -247,16 +304,41 @@ const Header: React.FC = () => {
             >
               About
             </Link>
+            
             <Link
-              to="/blog"
+              to="/case-studies"
               className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                isActive('/blog')
+                isActive('/case-studies')
                   ? 'text-white bg-blue-600/20 border-l-4 border-blue-400'
                   : 'text-gray-300 hover:text-white hover:bg-white/10'
               }`}
               onClick={closeMenu}
             >
-              Blog
+              Case Studies
+            </Link>
+            
+            <Link
+              to="/news"
+              className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                isActive('/news')
+                  ? 'text-white bg-blue-600/20 border-l-4 border-blue-400'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+              }`}
+              onClick={closeMenu}
+            >
+              News
+            </Link>
+            
+            <Link
+              to="/events"
+              className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                isActive('/events')
+                  ? 'text-white bg-blue-600/20 border-l-4 border-blue-400'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+              }`}
+              onClick={closeMenu}
+            >
+              Events
             </Link>
             
             <div className="pt-4 border-t border-white/10">
