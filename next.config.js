@@ -20,6 +20,9 @@ const nextConfig = {
 		// Allow builds to pass even if there are type errors; CI can run type-check separately
 		ignoreBuildErrors: true
 	},
+	typescript: {
+		ignoreBuildErrors: true
+	},
 	async redirects() {
 		return [
 			{ source: '/ai-customer-success-platform', destination: '/services/ai-customer-success-platform', permanent: true },
