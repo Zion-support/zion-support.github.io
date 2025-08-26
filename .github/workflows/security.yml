@@ -167,7 +167,8 @@ jobs:
           
           ### Testing:
           - [ ] Build passes
-          - [ ] Tests pass
+          - [ ] Linting passes
+          - [ ] Type checking passes
           - [ ] Security scan clean
           
           ### Review:

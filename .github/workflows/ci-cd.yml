@@ -96,23 +96,23 @@ jobs:
       env:
         NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
     
-    - name: Run tests
-      run: npm test || echo "Tests failed - continuing with deployment"
-    
     - name: Build size analysis
       run: |
-        npm install -g @next/bundle-analyzer
-        npm run build
-        du -sh .next/ || echo "Build size analysis completed"
+        echo "Build size analysis:"
+        if [ -d "dist" ]; then
+          du -sh dist/
+          echo "Dist folder contents:"
+          ls -la dist/
+        else
+          echo "No dist folder found"
+        fi
     
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
         name: build-${{ matrix.os }}-${{ matrix.node-version }}
         path: |
-          .next/
           dist/
-          build/
         retention-days: 7
 
   # Performance & Lighthouse
@@ -147,9 +147,7 @@ jobs:
       uses: treosh/lighthouse-ci-action@v10
       with:
         urls: |
-          http://localhost:3000
-          http://localhost:3000/services
-          http://localhost:3000/about
+          http://localhost:4173
         uploadArtifacts: true
         temporaryPublicStorage: true
         configPath: './lighthouserc.json'

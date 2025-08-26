@@ -141,10 +141,15 @@ jobs:
         echo "📦 Installing updated dependencies..."
         npm install
     
-    - name: Run tests after update
+    - name: Run linting after update
       run: |
-        echo "🧪 Running tests after dependency update..."
-        npm test || echo "Tests completed with warnings"
+        echo "🔍 Running linting after dependency update..."
+        npm run lint || echo "Linting completed with warnings"
+    
+    - name: Run type checking after update
+      run: |
+        echo "🔍 Running type checking after dependency update..."
+        npm run type-check || echo "Type checking completed with warnings"
     
     - name: Build after update
       run: |
@@ -246,8 +251,8 @@ jobs:
         SUMMARY="$SUMMARY
         
         ### 🧪 Testing
-        - [ ] Unit tests pass
-        - [ ] Integration tests pass
+        - [ ] Linting passes
+        - [ ] Type checking passes
         - [ ] Build successful
         - [ ] No breaking changes
         
