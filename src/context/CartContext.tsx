@@ -40,16 +40,33 @@ export function useCart(): CartContextType {
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [state, dispatch] = useReducer(
-    cartReducer,
-    initialState,
-    () => {
-      try {
-        const stored = safeStorage.getItem('cart');
-        return stored ? { items: JSON.parse(stored) as CartItem[] } : initialState;
-      } catch {
-        return initialState;
-      }
+  console.log('[CartProvider] Initializing...');
+  const items = useSelector((state: RootState) => state.cart.items);
+  const reduxDispatch = useDispatch<AppDispatch>();
+
+  const dispatch = (action: CartAction) => {
+    switch (action.type) {
+      case 'ADD_ITEM':
+        reduxDispatch(
+          addItem({
+            id: action.payload.id,
+            title: action.payload.name,
+            price: action.payload.price,
+            image: action.payload.image,
+          })
+        );
+        break;
+      case 'REMOVE_ITEM':
+        reduxDispatch(removeItem(action.payload));
+        break;
+      case 'CLEAR_CART':
+        reduxDispatch(clear());
+        break;
+      case 'SET_ITEMS':
+        reduxDispatch(setItems(action.payload));
+        break;
+      default:
+        break;
     }
   );
 
