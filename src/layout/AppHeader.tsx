@@ -1,59 +1,37 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MainNavigation } from './MainNavigation';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  Search, 
+  User, 
+  Bell, 
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  Cpu
+} from 'lucide-react';
 
-export function AppHeader() {
-  return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
-            </Link>
-          </div>
-          <MainNavigation />
-        </div>
-      </div>
-    </header>
-  );
-
-import { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
-import { MainNavigation } from './MainNavigation';
-import { Logo } from '@/components/header/Logo';
-import { ModeToggle } from '@/components/ModeToggle';
-import Menu from 'lucide-react/dist/esm/icons/menu';
-import X from 'lucide-react/dist/esm/icons/x';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Sidebar } from '@/components/Sidebar';
-
-export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-import { Menu, X, Search, User, Bell } from 'lucide-react';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { useAuth } from '@/hooks/useAuth';
-import { Link } from 'react-router-dom';
-
-export function AppHeader() {
+const AppHeader: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const isMobile = useIsMobile();
-  const { user, logout } = useAuth();
-  
-  // Try to access the messaging context, but provide a fallback value if it's not available
-  let unreadCount = 0;
-  try {
-    const { unreadCount: count } = useMessaging();
-    unreadCount = count;
-  } catch (error) {
-    console.warn('Messaging context not available');
-  }
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -62,182 +40,230 @@ export function AppHeader() {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
-  
+
+  const navigation = [
+    { name: 'Home', href: '/', icon: Globe },
+    { name: 'AI Services', href: '/services/ai', icon: Brain },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+    { name: 'Cloud & DevOps', href: '/services/cloud', icon: Cloud },
+    { name: 'Quantum Tech', href: '/services/quantum', icon: Cpu },
+    { name: 'Space Tech', href: '/services/space', icon: Rocket },
+    { name: 'All Services', href: '/comprehensive-services-showcase-2025', icon: Zap },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+  const contactInfo = [
+    { icon: Phone, label: 'Phone', value: '+1 302 464 0950', href: 'tel:+13024640950' },
+    { icon: Mail, label: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: MapPin, label: 'Address', value: '364 E Main St STE 1008, Middletown DE 19709' }
+  ];
+
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md">
-        <div className="container flex h-16 items-center px-4 sm:px-6">
-          {/* Sidebar Toggle */}
-          <button
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="mr-4 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
-            aria-label="Toggle sidebar"
-          >
-            <PanelLeft className="h-5 w-5" />
-          </button>
-          
-          <Logo />
-          
-          {/* Search Bar - Hidden on mobile */}
-          <div className="hidden md:flex ml-6 flex-1 max-w-md">
-            <form onSubmit={handleSearch} className="relative w-full">
-              <input
-                type="text"
-                placeholder="Search services, talent, equipment..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-              >
-                <Search className="h-4 w-4" />
-              </button>
-            </form>
-          </div>
-
-          <div className="ml-6 flex-1 hidden lg:block">
-            <MainNavigation unreadCount={unreadCount} />
-          </div>
-          
-          {/* Right side actions */}
-          <div className="flex items-center space-x-2 ml-auto">
-            {/* Notifications */}
-            {user && (
-              <Link
-                to="/notifications"
-                className="relative p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-colors"
-              >
-                <Bell className="h-5 w-5" />
-                {unreadCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                    {unreadCount}
-                  </span>
-                )}
-              </Link>
-            )}
-
-            {/* User Menu */}
-            {user ? (
-              <div className="relative group">
-                <button className="flex items-center space-x-2 p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-colors">
-                  <User className="h-5 w-5" />
-                  <span className="hidden sm:block text-sm font-medium">{user.name || user.email}</span>
-                </button>
-                
-                {/* Dropdown Menu */}
-                <div className="absolute right-0 top-full mt-2 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="py-2">
-                    <Link
-                      to="/dashboard"
-                      className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
+      {/* Top Contact Bar */}
+      <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
+            <div className="flex items-center gap-6 mb-2 sm:mb-0">
+              {contactInfo.map((info, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <info.icon className="w-4 h-4 text-cyan-400" />
+                  {info.href ? (
+                    <a 
+                      href={info.href} 
+                      className="hover:text-cyan-400 transition-colors duration-300"
                     >
-                      Dashboard
-                    </Link>
-                    <Link
-                      to="/profile"
-                      className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
-                    >
-                      Profile
-                    </Link>
-                    <Link
-                      to="/settings"
-                      className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
-                    >
-                      Settings
-                    </Link>
-                    <hr className="border-zion-purple/20 my-2" />
-                    <button
-                      onClick={logout}
-                      className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
-                    >
-                      Sign Out
-                    </button>
-                  </div>
+                      {info.value}
+                    </a>
+                  ) : (
+                    <span>{info.value}</span>
+                  )}
                 </div>
-              </div>
-            ) : (
-              <div className="flex items-center space-x-2">
-                <Link
-                  to="/login"
-                  className="text-zion-slate-light hover:text-zion-cyan transition-colors px-3 py-2 rounded-lg hover:bg-zion-purple/10"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  to="/signup"
-                  className="bg-zion-purple hover:bg-zion-purple/80 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                >
-                  Sign Up
-                </Link>
-              </div>
-            )}
-
-            {/* Mobile menu button */}
-            <div className="lg:hidden ml-2">
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none"
-                aria-expanded={mobileMenuOpen}
-                aria-label="Toggle mobile menu"
-              >
-                <span className="sr-only">Open main menu</span>
-                {mobileMenuOpen ? (
-                  <X className="block h-6 w-6" aria-hidden="true" />
-                ) : (
-                  <Menu className="block h-6 w-6" aria-hidden="true" />
-                )}
-              </button>
+              ))}
             </div>
-            
-            <ModeToggle />
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://ziontechgroup.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-cyan-400 transition-colors duration-300"
+              >
+                ziontechgroup.com
+              </a>
+            </div>
           </div>
         </div>
-      </header>
-      
-      {/* Sidebar */}
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      
-      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-40 pt-16">
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            {/* Mobile Search */}
-            <div className="p-4 border-b border-zion-purple/20">
-              <form onSubmit={handleSearch} className="relative">
+      </div>
+
+      {/* Main Header */}
+      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        scrolled 
+          ? 'bg-zion-blue-dark/95 backdrop-blur-md border-b border-cyan-500/20 shadow-lg shadow-cyan-500/10' 
+          : 'bg-transparent'
+      }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl scale-110"></div>
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </h1>
+                <p className="text-xs text-gray-400">Innovation • Technology • Future</p>
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-8">
+              {navigation.slice(0, 6).map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                    location.pathname === item.href
+                      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  <item.icon className="w-4 h-4" />
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+
+            {/* Search Bar */}
+            <div className="hidden md:flex flex-1 max-w-md mx-8">
+              <form onSubmit={handleSearch} className="relative w-full">
                 <input
                   type="text"
-                  placeholder="Search services, talent, equipment..."
+                  placeholder="Search services, solutions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  className="w-full bg-white/10 border border-cyan-500/30 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                 >
-                  <Search className="h-4 w-4" />
+                  <Search className="w-4 h-4" />
                 </button>
               </form>
             </div>
-            
-            <MobileMenu 
-              unreadCount={unreadCount} 
-              onClose={() => setMobileMenuOpen(false)} 
-            />
+
+            {/* Right Side Actions */}
+            <div className="flex items-center space-x-4">
+              {/* User Menu */}
+              <button className="p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-300">
+                <User className="w-5 h-5" />
+              </button>
+
+              {/* Notifications */}
+              <button className="p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-300 relative">
+                <Bell className="w-5 h-5" />
+                <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+              </button>
+
+              {/* CTA Button */}
+              <Link
+                to="/contact"
+                className="neon-button px-6 py-2 rounded-lg font-semibold text-white hover:scale-105 transition-transform duration-300"
+              >
+                Get Started
+              </Link>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-300"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
-      )}
 
-      {/* Mobile Bottom Navigation */}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden bg-zion-blue-dark/95 backdrop-blur-md border-t border-cyan-500/20"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {/* Mobile Search */}
+                <form onSubmit={handleSearch} className="relative">
+                  <input
+                    type="text"
+                    placeholder="Search services, solutions..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full bg-white/10 border border-cyan-500/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                  <button
+                    type="submit"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                  >
+                    <Search className="w-5 h-5" />
+                  </button>
+                </form>
+
+                {/* Mobile Navigation */}
+                <nav className="space-y-2">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
+                        location.pathname === item.href
+                          ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                          : 'text-white/80 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <item.icon className="w-5 h-5" />
+                      {item.name}
+                    </Link>
+                  ))}
+                </nav>
+
+                {/* Mobile Contact Info */}
+                <div className="pt-4 border-t border-cyan-500/20">
+                  <h3 className="text-sm font-semibold text-cyan-400 mb-3">Contact Us</h3>
+                  <div className="space-y-2">
+                    {contactInfo.map((info, index) => (
+                      <div key={index} className="flex items-center gap-3 text-sm text-white/80">
+                        <info.icon className="w-4 h-4 text-cyan-400" />
+                        {info.href ? (
+                          <a 
+                            href={info.href} 
+                            className="hover:text-cyan-400 transition-colors duration-300"
+                          >
+                            {info.value}
+                          </a>
+                        ) : (
+                          <span>{info.value}</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
     </>
   );
-}
-}
+};
+
+export default AppHeader;

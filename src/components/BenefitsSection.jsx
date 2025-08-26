@@ -173,8 +173,9 @@ export function BenefitsSection() {
                   {hoveredIndex === index ? "Hover to see details" : "Hover for details"}
                 </div>
               </div>
-            </motion.div>))}
-        </motion.div>
+            </motion.div>
+          ))}
+        </div>
 
         {/* Call to action */}
         <motion.div className="text-center mt-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
@@ -190,5 +191,6 @@ export function BenefitsSection() {
           </div>
         </motion.div>
       </div>
-    </section>);
+    </section>
+  );
 }
