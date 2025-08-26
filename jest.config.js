@@ -1,18 +1,14 @@
-module.exports = {
+export default {
   preset: 'ts-jest/presets/default-esm',
   testEnvironment: 'jsdom',
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  globals: {
-    'ts-jest': {
-      useESM: true,
-    },
-  },
   setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
   moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
     '^@/(.*)$': '<rootDir>/src/$1',
     '^vitest$': '<rootDir>/tests/vitest-mock.ts',
   },
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  transform: {},
   roots: ['<rootDir>/tests'],
   // Use Node's native V8 coverage provider to avoid issues with
   // babel-plugin-istanbul instrumentation when running tests.
