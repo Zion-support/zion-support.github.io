@@ -9,13 +9,14 @@ import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-reac
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
-import { useAppDispatch } from '@/store/hooks';
-import { addItem } from '@/store/cartSlice';
+import axios from 'axios';
+import { safeStorage } from '@/utils/safeStorage';
 
 
 export default function EquipmentDetail() {
-  // Cast to specify the expected route param type since useParams may be untyped
-  const { equipmentId } = useParams() as { equipmentId?: string };
+  const { id } = useParams() as { id?: string };
+  const navigate = useNavigate();
+  const { isAuthenticated, user } = useAuth();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
@@ -58,8 +59,21 @@ export default function EquipmentDetail() {
       return;
     }
 
-    dispatch(addItem({ id, title: equipment.name, price: equipment.price }));
-    navigate(`/checkout/${id}`);
+    setIsAdding(true);
+    try {
+      const { data } = await axios.post('/api/create-checkout-session', {
+        productId: id,
+        userId: user?.id,
+      });
+      const stripe = await getStripe();
+      if (stripe && data.sessionId) {
+        await stripe.redirectToCheckout({ sessionId: data.sessionId });
+      }
+    } catch (err) {
+      toast({ title: 'Payment error', description: 'Could not start checkout.' });
+    } finally {
+      setIsAdding(false);
+    }
   };
 
   return (
