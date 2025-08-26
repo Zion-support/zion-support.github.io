@@ -114,7 +114,6 @@ export class LinkHealthChecker {
         const summary = this.getHealthSummary(results);
         const timestamp = new Date().toISOString();
         let report = `Link Health Report - ${timestamp}\n`;
-        report += `=====================================\n\n`;
         report += `Summary:\n`;
         report += `- Total Links: ${summary.total}\n`;
         report += `- Healthy: ${summary.healthy}\n`;
@@ -122,7 +121,6 @@ export class LinkHealthChecker {
         report += `- Errors: ${summary.errors}\n`;
         report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`;
         report += `Detailed Results:\n`;
-        report += `=================\n\n`;
         results.forEach((result, index) => {
             report += `${index + 1}. ${result.url}\n`;
             report += `   Status: ${result.status}\n`;

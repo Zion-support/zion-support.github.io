@@ -216,7 +216,6 @@ export default function EnhancedSidebar2025() {
       <button
         onClick={toggleSidebar}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-black/80 backdrop-blur-sm border border-white/20 rounded-lg text-white hover:bg-white/10 transition-all duration-200"
-=======
       {/* Sidebar Toggle Button */}
       <button
         onClick={() => setIsOpen(true)}

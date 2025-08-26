@@ -169,7 +169,6 @@ export default function Support() {
       description: 'Connect with other users and experts',
       icon: '👥',
       link: '/community'
-=======
 import { 
   Ticket, 
   MessageCircle, 
@@ -256,7 +255,6 @@ const Support: React.FC = () => {
       description: "Recommended practices for optimal performance and security",
       readTime: "10 min read",
       tags: ["best-practices", "performance", "security"]
-=======
 
 const Support: React.FC = () => {
   const supportChannels = [
@@ -640,7 +638,6 @@ const Support: React.FC = () => {
           )}
         </div>
       </section>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -702,7 +699,6 @@ const Support: React.FC = () => {
           </div>
         </div>
       </section>
-=======
 import { CogIcon } from '@heroicons/react/24/outline';
 
 const $page: React.FC = () => {

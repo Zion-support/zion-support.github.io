@@ -434,7 +434,6 @@ optimizer.optimizePerformance().then(report => {
 
   listScripts() {
     console.log('\\nAvailable Automation Scripts:');
-    console.log('==============================');
     
     for (const [name, script] of this.scripts) {
       const status = this.runningScripts.has(name) ? 'RUNNING' : script.status.toUpperCase();
@@ -449,7 +448,6 @@ optimizer.optimizePerformance().then(report => {
     }
     
     console.log('\nRunning Scripts:');
-    console.log('==================');
     for (const [name, info] of this.runningScripts) {
       const duration = Date.now() - info.startTime;
       console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`);
