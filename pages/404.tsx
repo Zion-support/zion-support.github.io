@@ -1,20 +1,16 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import Link from 'next/link'
 
-const Custom404: NextPage = () => {
+export default function NotFound(){
   return (
-    <div>
-      <Head>
-        <title>404 - Zion Tech Solutions</title>
-        <meta name="description" content="404 page" />
-      </Head>
-      
-      <main>
-        <h1>404</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  );
-};
-
-export default Custom404;
+    <main style={{padding:24,fontFamily:'sans-serif'}}>
+      <h1>Page not found</h1>
+      <p>The page you are looking for doesn’t exist.</p>
+      <p>
+        Try these:
+        {' '}<Link href="/">Home</Link>{' '}|{' '}
+        <Link href="/services">Services</Link>{' '}|{' '}
+        <Link href="/contact">Contact</Link>
+      </p>
+    </main>
+  )
+}

@@ -20,9 +20,6 @@ dist/
 # Logs
 logs/
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 lerna-debug.log*
 
 # Runtime data
@@ -59,19 +56,12 @@ jspm_packages/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn Integrity file
-.yarn-integrity
-
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
 
-# Next.js build output
-.next
-
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -109,9 +99,6 @@ Thumbs.db
 automation/logs/*.log
 automation/logs/*.backup
 automation/logs/*.pid
-logs/*.log
-logs/*.backup
-logs/*.pid
 
 # Large files
 *.backup
@@ -119,49 +106,22 @@ logs/*.pid
 *.tmp
 *.temp
 
-# Build artifacts
-*.tgz
-*.tar.gz
-*.zip
-*.rar
-
 # Database
 *.db
 *.sqlite
 *.sqlite3
 
 # Backup files
-*.backup
-*.bak
 *.old
 *.orig
 
 # Cache directories
 .cache/
 .parcel-cache/
-.next/
-out/
-build/
-dist/
 
 # Test coverage
 coverage/
 .nyc_output/
 
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS files
-.DS_Store
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Large log files
-logs/enhanced-sync-manager.log
-logs/enhanced-sync-manager.log.backup
-automation/logs/autonomous-system.log .next/
+# TypeScript
+tsconfig.tsbuildinfo
