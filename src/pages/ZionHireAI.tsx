@@ -1,60 +1,108 @@
 
-import React from "react";
-import { SEO } from "@/components/SEO";
-import { useWhitelabel } from "@/context/WhitelabelContext";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+
+export default function ZionHireAI() {
+  const features = [
+    {
+      icon: '🤖',
+      label: 'AI-Powered Matching',
+      description: 'Advanced algorithms match candidates to job requirements with 95% accuracy'
+    },
+    {
+      icon: '📊',
+      label: 'Predictive Analytics',
+      description: 'Data-driven insights predict candidate success and cultural fit'
+    },
+    {
+      icon: '⚡',
+      label: 'Automated Screening',
+      description: 'Reduce screening time by 80% with intelligent automation'
+    },
+    {
+      icon: '🎯',
+      label: 'Skill Assessment',
+      description: 'Comprehensive technical and soft skill evaluation'
+    },
+    {
+      icon: '🔒',
+      label: 'Secure & Compliant',
+      description: 'Enterprise-grade security with GDPR and SOC2 compliance'
+    },
+    {
+      icon: '📱',
+      label: 'Mobile First',
+      description: 'Optimized for mobile devices with responsive design'
+    }
+  ];
 
   return (
     <>
-      <SEO 
-        title="Zion Hire AI - White-labeled AI Recruiting Assistant" 
-        description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience."
-        keywords="AI hiring, AI recruiting, talent acquisition, AI assistant, Zion Hire AI"
-        canonical="https://ziontechgroup.com/zion-hire-ai"
-      />
-      
-      <main className="flex-1">
-        {/* Hero Section */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark">
+        <div className="container mx-auto px-4 py-20">
+          {/* Hero Section */}
+          <div className="text-center mb-20">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Zion Hire AI
             </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-              Revolutionary AI-powered hiring platform that transforms recruitment, screening, onboarding, and retention
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
+              Revolutionize your hiring process with AI-powered talent matching that finds the perfect candidates faster than ever before
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="https://ziontechgroup.com"
-                className="px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/contact"
+                className="px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors text-lg"
               >
-                Start Free Trial
+                Get Started
               </a>
               <a 
-                href="#demo"
-                className="px-8 py-4 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-colors"
+                href="/request-quote"
+                className="px-8 py-4 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-colors text-lg"
               >
-                Watch Demo
+                Request Demo
               </a>
             </div>
           </div>
 
-          {/* Success Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {successMetrics.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">
-                  {item.metric}
-                </div>
-                <div className="text-zion-slate-light">
+          {/* Features Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {features.map((item, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {item.label}
-                </div>
+                </h3>
+                <p className="text-zion-slate-light">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Demo Section */}
+          <div className="bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 mb-20">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  See Zion Hire AI in Action
+                </h2>
+                <p className="text-zion-slate-light mb-6">
+                  Our AI-powered platform analyzes thousands of data points to find the perfect match between candidates and your company culture.
+                </p>
+                <ul className="space-y-3 text-zion-slate-light">
+                  <li className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                    Intelligent candidate scoring
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                    Automated interview scheduling
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                    Real-time collaboration tools
+                  </li>
+                </ul>
               </div>
               <div className="relative hidden md:block">
                 <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>
@@ -108,46 +156,6 @@ import { Link } from "react-router-dom";
           </div>
         </div>
       </div>
-    </>
-  );
-};
-
-export default ZionHireAI;
-import React from 'react';
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-
-export default function ZionHireAI() {
-  return (
-    <>
-      <SEO
-        title="Zion Hire AI - Zion Tech Group"
-        description="AI-powered hiring platform for finding the perfect tech talent."
-        canonical="https://ziontechgroup.com/zion-hire-ai"
-      />
-      <Header />
-      <main className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <GradientHeading>Zion Hire AI</GradientHeading>
-            <p className="text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto">
-              Revolutionize your hiring process with our AI-powered talent matching platform.
-            </p>
-          </div>
-          
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter">
-              <h2 className="text-2xl font-bold text-white mb-6">Coming Soon</h2>
-              <p className="text-zion-slate-light mb-6">
-                Zion Hire AI is currently under development and will revolutionize how you find and hire tech talent.
-              </p>
-            </div>
-          </div>
-        </div>
-      </main>
-      
     </>
   );
 }
