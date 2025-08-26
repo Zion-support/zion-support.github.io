@@ -4,15 +4,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
 import { AuthProvider } from '@/context/auth/AuthProvider';
 import { Provider as ReduxProvider } from 'react-redux';
-import { store } from '@/store'; // Changed to named import
-import { WhitelabelProvider } from '@/context/WhitelabelContext'; // Added WhitelabelProvider
-import { WalletProvider } from '@/context/WalletContext'; // Added WalletProvider
-import { useAuth } from '@/hooks/useAuth';
-import { AnalyticsProvider } from '@/context/AnalyticsContext'; // Added AnalyticsProvider
-import { CartProvider } from '@/context/CartContext'; // Added CartProvider
-import { ErrorProvider } from '@/context/ErrorContext';
-import { FeedbackProvider } from '@/context/FeedbackContext'; // Added FeedbackProvider
-import ErrorResetOnRouteChange from '@/components/ErrorResetOnRouteChange';
+import { store } from '@/store';
+import { checkEssentialEnvVars } from '../src/utils/validateEnv';
+
 import { I18nextProvider } from 'react-i18next';
 import i18n from '@/i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
@@ -139,8 +133,37 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     const initializeApp = async () => {
       try {
-        if (process.env.NODE_ENV === 'development') {
-          logInfo('[App] Starting optimized initialization...');
+        // Validate essential environment variables early
+        try {
+          checkEssentialEnvVars();
+        } catch (envError: any) {
+          console.error('Environment validation failed:', envError);
+          setInitializationError(envError.message);
+          setIsLoading(false);
+          return;
+        }
+        // Simulate progressive loading with realistic steps
+        const steps = [
+          { name: 'Loading Core Components', duration: 300 },
+          { name: 'Initializing Providers', duration: 400 },
+          { name: 'Setting up Analytics', duration: 200 },
+          { name: 'Configuring Theme', duration: 200 },
+          { name: 'Final Setup', duration: 300 }
+        ];
+
+        let currentProgress = 0;
+        const progressStep = 100 / steps.length;
+
+        for (let i = 0; i < steps.length; i++) {
+          const step = steps[i];
+          if (!step) continue;
+          
+          // Update progress
+          currentProgress = (i + 1) * progressStep;
+          setLoadingProgress(Math.min(currentProgress, 95));
+
+          // Simulate async work
+          await new Promise(resolve => setTimeout(resolve, step.duration));
         }
 
         // Critical: Initialize error handlers first
