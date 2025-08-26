@@ -114,6 +114,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     <header 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-lg shadow-2xl shadow-zion-purple/10"
 =======
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-purple-dark/95 to-zion-slate-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10"
@@ -121,6 +122,9 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 =======
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-slate-dark/95 to-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
+=======
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md neon-pulse"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
       style={headerStyle}
     >
       {/* Animated background pattern */}

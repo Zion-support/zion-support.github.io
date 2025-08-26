@@ -40,12 +40,42 @@ export function ITServiceRequestHero() {
   };
 
   return (
+<<<<<<< HEAD
     <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 md:py-28 border-b border-zion-purple/20 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-32 h-32 bg-zion-cyan/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 right-10 w-40 h-40 bg-zion-purple/10 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-zion-blue/5 rounded-full blur-3xl"></div>
+=======
+    <section className="bg-zion-blue-dark py-16 md:py-24 border-b border-zion-purple/20 cyber-grid relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10"></div>
+      <div className="relative container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="float">
+          <GradientHeading className="mb-6 text-4xl md:text-5xl glow">
+            24x7 Global IT Onsite Services
+          </GradientHeading>
+          <p className="text-lg text-zion-slate-light mb-8 max-w-md">
+            Request professional technicians anywhere in the world, anytime you need them.
+          </p>
+        </div>
+        <div className="bg-zion-blue-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg neon-border float">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <Input
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+              placeholder="Enter service location"
+              className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+            />
+            <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6">
+              Request Service
+            </Button>
+          </form>
+          <p className="text-xs text-center text-zion-slate-light mt-3">
+            Available worldwide, 24 hours a day
+          </p>
+        </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
       </div>
 
       <motion.div 

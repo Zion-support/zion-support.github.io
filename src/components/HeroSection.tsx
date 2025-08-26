@@ -10,6 +10,7 @@ export function HeroSection() {
   const { t } = useTranslation();
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <section 
       className="relative overflow-hidden py-20 md:py-32"
       aria-labelledby="hero-heading"
@@ -33,6 +34,24 @@ export function HeroSection() {
           id="hero-heading"
           className="mb-6 text-5xl md:text-7xl font-bold animate-fade-in-up"
         >
+=======
+    <section className="relative overflow-hidden py-20 md:py-32 cyber-grid">
+      {/* Background gradient effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
+      
+      {/* Enhanced animated floating particles */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse float"></div>
+        <div className="absolute top-1/3 right-1/3 w-3 h-3 rounded-full bg-zion-cyan opacity-30 animate-pulse float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-pulse float" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-1/6 left-1/6 w-1 h-1 rounded-full bg-zion-cyan opacity-50 animate-pulse float" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute bottom-1/3 right-1/6 w-2 h-2 rounded-full bg-zion-purple-light opacity-30 animate-pulse float" style={{animationDelay: '2.5s'}}></div>
+      </div>
+      
+      <div className="container relative z-10 px-4 mx-auto text-center">
+        <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold glow">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
           {t('home.hero_title')}
         </GradientHeading>
 
@@ -42,6 +61,7 @@ export function HeroSection() {
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animation-delay-400">
           <Button
+<<<<<<< HEAD
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
 =======
     <section className="relative overflow-hidden py-20 md:py-32">
@@ -82,6 +102,9 @@ export function HeroSection() {
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-2xl shadow-zion-purple/30 hover:shadow-2xl hover:shadow-zion-purple/50 transition-all duration-300 hover:scale-105 animate-glow"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5241
+=======
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 neon-pulse"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
             size="lg"
             asChild
           >
@@ -99,10 +122,14 @@ export function HeroSection() {
             id="browse-marketplace"
             to="/marketplace"
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-lg inline-flex items-center justify-center transition-all duration-300 hover:shadow-lg transform hover:scale-105"
 =======
             className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/30 neon-border"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5241
+=======
+            className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-4 rounded-md inline-flex items-center justify-center neon-border hover:neon-pulse transition-all duration-300"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
           >
             {t('home.browse_marketplace')}
           </Link>

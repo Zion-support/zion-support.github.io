@@ -132,12 +132,12 @@ export function FeatureCTAs() {
       details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability."
     },
     {
-      title: "Services Marketplace",
-      description: "Discover professional tech and AI services for your business needs, from development to consulting.",
+      title: "AI Services Hub",
+      description: "Cutting-edge AI solutions including chatbots, image generation, video editing, and data analytics.",
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
-      link: "/services",
+      link: "/ai-services",
       badge: "New",
-      details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
+      details: "From AI chatbots to advanced analytics, our AI services help businesses leverage artificial intelligence for competitive advantage."
     },
     {
       title: "Equipment Catalog",
@@ -162,11 +162,11 @@ export function FeatureCTAs() {
       details: "Manage your projects, communicate with clients or talents, and receive real-time updates wherever you are."
     },
     {
-      title: "Enterprise Solutions",
-      description: "Custom-branded hiring portal, dedicated talent pool, and powerful admin controls for your organization.",
+      title: "IT Services Hub",
+      description: "Comprehensive IT solutions including cloud migration, cybersecurity, network infrastructure, and 24/7 support.",
       icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
-      link: "/enterprise",
-      details: "Scale your talent acquisition with white-labeled solutions, analytics dashboards, and dedicated account managers."
+      link: "/it-services",
+      details: "From cloud migration to cybersecurity audits, our IT services help businesses modernize their infrastructure and enhance security."
     },
     {
       title: "Developer Tools",
@@ -188,6 +188,14 @@ export function FeatureCTAs() {
       icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
       link: "/dashboard/projects",
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
+    },
+    {
+      title: "Micro SAAS Hub",
+      description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
+      link: "/micro-saas",
+      badge: "New",
+      details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank."
     },
     {
       title: "Zion Hire AI",
@@ -584,6 +592,7 @@ export function FeatureCTAs() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <section className="py-20 bg-gradient-to-b from-background to-zion-slate/5 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
@@ -756,17 +765,30 @@ export function FeatureCTAs() {
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
             Explore our extensive suite of micro SAAS services, AI solutions, and IT services designed to transform how you work, innovate, and grow in the digital age.
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
+=======
+    <section className="py-16 bg-gradient-to-b from-background to-background/90 cyber-grid relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5"></div>
+      <div className="relative container mx-auto px-4">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-bold tracking-tight mb-3 glow">Discover Zion's Powerful Features</h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Explore our comprehensive suite of tools designed to transform how you connect, collaborate, and create in the tech ecosystem.
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {features.map((feature, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:border-zion-purple/50 hover:scale-105 group">
 =======
             <Card key={index} className="relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50 group">
               <AnimatedBackground variant="card" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
+=======
+            <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50 hover:neon-pulse group">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
               <CardHeader className="pb-2">
                 <div className="flex justify-between items-start">
                   <div className="group-hover:scale-110 transition-transform duration-300">
@@ -790,10 +812,14 @@ export function FeatureCTAs() {
               </CardContent>
               <CardFooter>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Button asChild className="w-full gap-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white border-0 group-hover:shadow-lg group-hover:shadow-zion-purple/25 transition-all duration-300">
 =======
                 <Button asChild className="w-full gap-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white transition-all duration-300 group-hover:shadow-lg group-hover:shadow-zion-purple/25">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
+=======
+                <Button asChild className="w-full gap-1 hover:neon-pulse transition-all duration-300">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
                   <Link to={feature.link}>
                     <span>Explore {feature.title}</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
