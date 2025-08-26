@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code } from 'lucide-react'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Plus, Star, TrendingUp } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
 
 export default function Services() {
@@ -186,6 +186,80 @@ export default function Services() {
 								</Link>
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Expanded Services Showcase */}
+			<section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-24 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center mb-12">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+							Expanded Service Portfolio
+						</h2>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							Discover our comprehensive range of AI, cloud, data, and emerging technology solutions designed to accelerate your digital transformation.
+						</p>
+					</div>
+					
+					<div className="grid gap-8 lg:grid-cols-3 mb-12">
+						{/* AI & Machine Learning */}
+						<div className="text-center">
+							<div className="flex justify-center mb-4">
+								<div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-4xl">
+									🤖
+								</div>
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">AI & Machine Learning</h3>
+							<p className="text-sm text-gray-600 mb-4">Intelligent automation and decision-making systems</p>
+							<div className="flex items-center justify-center gap-2 text-sm text-gray-500">
+								<Star className="h-4 w-4 text-yellow-400" />
+								<span>15+ AI Solutions</span>
+							</div>
+						</div>
+
+						{/* Cloud & Infrastructure */}
+						<div className="text-center">
+							<div className="flex justify-center mb-4">
+								<div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-4xl">
+									☁️
+								</div>
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud & Infrastructure</h3>
+							<p className="text-sm text-gray-600 mb-4">Scalable cloud solutions and infrastructure management</p>
+							<div className="flex items-center justify-center gap-2 text-sm text-gray-500">
+								<TrendingUp className="h-4 w-4 text-green-400" />
+								<span>12+ Cloud Solutions</span>
+							</div>
+						</div>
+
+						{/* Emerging Technology */}
+						<div className="text-center">
+							<div className="flex justify-center mb-4">
+								<div className="flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 text-4xl">
+									🚀
+								</div>
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">Emerging Technology</h3>
+							<p className="text-sm text-gray-600 mb-4">Cutting-edge technology solutions and platforms</p>
+							<div className="flex items-center justify-center gap-2 text-sm text-gray-500">
+								<Plus className="h-4 w-4 text-purple-400" />
+								<span>8+ Emerging Tech</span>
+							</div>
+						</div>
+					</div>
+
+					<div className="text-center">
+						<Link
+							to="/comprehensive-services"
+							className="inline-flex items-center rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 text-lg font-semibold text-white shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
+						>
+							Explore All Services
+							<ArrowRight className="ml-2 h-5 w-5" />
+						</Link>
+						<p className="mt-4 text-sm text-gray-600">
+							Over 50+ specialized solutions across 6 major categories
+						</p>
 					</div>
 				</div>
 			</section>
