@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MainNavigation } from '../components/header/MainNavigation';
+import { MainNavigation } from './MainNavigation';
 
 export function AppHeader() {
   return (

@@ -18,7 +18,7 @@ import {
   Video,
   ExternalLink,
   BookOpen,
-  Microphone,
+  Mic,
   Network,
   Lightbulb
 } from 'lucide-react';
@@ -30,7 +30,7 @@ const Events: React.FC = () => {
 
   const filters = [
     { id: 'all', label: 'All Events', icon: Globe, count: 18 },
-    { id: 'conference', label: 'Conferences', icon: Microphone, count: 6 },
+    { id: 'conference', label: 'Conferences', icon: Mic, count: 6 },
     { id: 'workshop', label: 'Workshops', icon: BookOpen, count: 8 },
     { id: 'webinar', label: 'Webinars', icon: Video, count: 4 }
   ];
