@@ -46,6 +46,9 @@ const ConsultingServices = React.lazy(() => import('./pages/services/Consulting'
 const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
 const AdvancedServices2025 = React.lazy(() => import('./pages/AdvancedServices2025'));
 const AdvancedServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedServicesShowcase2025'));
+const AdvancedInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedInnovativeServicesShowcase2025'));
+const ComprehensiveServicesMarketing2025 = React.lazy(() => import('./pages/ComprehensiveServicesMarketing2025'));
+const ComprehensivePricingShowcase2025 = React.lazy(() => import('./pages/ComprehensivePricingShowcase2025'));
 const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025'));
 const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
@@ -113,6 +116,9 @@ const routes = [
   { path: '/innovative-services-2025', element: <InnovativeServices2025 /> },
   { path: '/advanced-services-2025', element: <AdvancedServices2025 /> },
   { path: '/advanced-services-showcase-2025', element: <AdvancedServicesShowcase2025 /> },
+  { path: '/advanced-innovative-services-showcase-2025', element: <AdvancedInnovativeServicesShowcase2025 /> },
+  { path: '/comprehensive-services-marketing-2025', element: <ComprehensiveServicesMarketing2025 /> },
+  { path: '/comprehensive-pricing-showcase-2025', element: <ComprehensivePricingShowcase2025 /> },
   { path: '/comprehensive-pricing-2025', element: <ComprehensivePricing2025 /> },
   { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
   
