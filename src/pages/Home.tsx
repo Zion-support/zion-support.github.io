@@ -25,6 +25,8 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
+import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
+import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -442,6 +444,12 @@ export default function Home() {
 
       {/* Enhanced Categories Section */}
       <CategoriesSection />
+
+      {/* Enhanced Innovative Services Showcase */}
+      <EnhancedInnovativeServicesShowcase />
+
+      {/* Enhanced Pricing Comparison */}
+      <EnhancedPricingComparison />
 
       {/* Enhanced Benefits Section */}
       <BenefitsSection />
