@@ -24,8 +24,8 @@ import { NotificationProvider, WhitelabelProvider } from './context';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
-import { registerServiceWorker } from './serviceWorkerRegistration';
+import { initGA } from './lib/gtag';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
@@ -96,24 +96,29 @@ window.addEventListener('error', (e) => {
   displayFatalError(e.message);
 });
 
+initGA();
 // Render the app with proper provider structure
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
-      <Router>
-        <AuthProvider>
-          <NotificationProvider>
-            <AnalyticsProvider>
-              <WhitelabelProvider>
-                <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                  <App />
-                  <LanguageDetectionPopup />
-                </LanguageProvider>
-              </WhitelabelProvider>
-            </AnalyticsProvider>
-          </NotificationProvider>
-        </AuthProvider>
-      </Router>
+      <QueryClientProvider client={queryClient}>
+        <WhitelabelProvider>
+          <Router>
+            <AuthProvider>
+              <NotificationProvider>
+                <AnalyticsProvider>
+                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                    <ErrorBoundary>
+                      <App />
+                      <LanguageDetectionPopup />
+                    </ErrorBoundary>
+                  </LanguageProvider>
+                </AnalyticsProvider>
+              </NotificationProvider>
+            </AuthProvider>
+          </Router>
+        </WhitelabelProvider>
+      </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>,
 );
