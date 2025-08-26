@@ -1,6 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
-import UltraAdvancedServicesShowcase2026 from '../components/sections/UltraAdvancedServicesShowcase2026';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import Footer from '../components/layout/Footer';
 
 export default function Services2026Page() {
   return (
@@ -14,7 +17,9 @@ export default function Services2026Page() {
         <meta name="keywords" content="AI services, quantum computing, emerging technology, micro SAAS, healthcare AI, fintech, manufacturing IoT, retail AI, education AI, logistics AI, Zion Tech Group" />
       </Head>
       
-      <div className="min-h-screen bg-black text-white">
+      <EnhancedNavigation />
+      
+      <div className="min-h-screen bg-black text-white pt-20">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -99,186 +104,121 @@ export default function Services2026Page() {
                 </ul>
               </div>
 
-              {/* Quantum & Emerging Tech */}
+              {/* Quantum Computing */}
               <div className="bg-gradient-to-br from-purple-600/20 to-pink-700/20 backdrop-blur-xl rounded-2xl p-8 border border-purple-500/30">
                 <div className="text-4xl mb-4">⚛️</div>
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">Quantum & Emerging Tech</h3>
+                <h3 className="text-2xl font-bold mb-4 text-purple-400">Quantum Computing</h3>
                 <p className="text-white/70 mb-6">
-                  Cutting-edge quantum computing, space mining, zero trust security, and metaverse development solutions.
+                  Revolutionary quantum computing solutions for cryptography, optimization, and scientific research applications.
                 </p>
                 <ul className="space-y-2 text-sm text-white/60">
+                  <li>• Quantum Cryptography Platform</li>
+                  <li>• Quantum Optimization Engine</li>
+                  <li>• Quantum Machine Learning</li>
                   <li>• Quantum Internet Protocol</li>
-                  <li>• Space Mining Platform</li>
-                  <li>• Zero Trust Architecture</li>
-                  <li>• Metaverse Development</li>
                 </ul>
               </div>
 
-              {/* Healthcare & Biotech */}
+              {/* Emerging Technology */}
               <div className="bg-gradient-to-br from-green-600/20 to-emerald-700/20 backdrop-blur-xl rounded-2xl p-8 border border-green-500/30">
-                <div className="text-4xl mb-4">🏥</div>
-                <h3 className="text-2xl font-bold mb-4 text-green-400">Healthcare & Biotech</h3>
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-2xl font-bold mb-4 text-green-400">Emerging Technology</h3>
                 <p className="text-white/70 mb-6">
-                  AI-powered diagnostic platforms, medical image analysis, and healthcare automation solutions.
+                  Cutting-edge technologies including holographic displays, brain-computer interfaces, and advanced robotics.
                 </p>
                 <ul className="space-y-2 text-sm text-white/60">
-                  <li>• AI Diagnostic Platform</li>
-                  <li>• Medical Image Analysis</li>
-                  <li>• Healthcare Automation</li>
-                  <li>• Patient Data Analytics</li>
+                  <li>• Holographic Display Platform</li>
+                  <li>• Brain-Computer Interface</li>
+                  <li>• Advanced Robotics</li>
+                  <li>• Neuromorphic Computing</li>
                 </ul>
               </div>
 
-              {/* Fintech & Finance */}
-              <div className="bg-gradient-to-br from-yellow-600/20 to-orange-700/20 backdrop-blur-xl rounded-2xl p-8 border border-yellow-500/30">
-                <div className="text-4xl mb-4">📈</div>
-                <h3 className="text-2xl font-bold mb-4 text-yellow-400">Fintech & Finance</h3>
+              {/* Micro SaaS Solutions */}
+              <div className="bg-gradient-to-br from-orange-600/20 to-red-700/20 backdrop-blur-xl rounded-2xl p-8 border border-orange-500/30">
+                <div className="text-4xl mb-4">💻</div>
+                <h3 className="text-2xl font-bold mb-4 text-orange-400">Micro SaaS Solutions</h3>
                 <p className="text-white/70 mb-6">
-                  AI-powered trading platforms, portfolio optimization, and financial advisory services.
+                  Specialized software solutions for specific business needs and industry verticals.
                 </p>
                 <ul className="space-y-2 text-sm text-white/60">
-                  <li>• AI Trading Platform</li>
-                  <li>• Portfolio Optimization</li>
-                  <li>• Risk Management</li>
-                  <li>• Financial Analytics</li>
+                  <li>• Legal Document Automation</li>
+                  <li>• Healthcare AI Platform</li>
+                  <li>• Fintech Solutions</li>
+                  <li>• E-commerce Optimization</li>
                 </ul>
               </div>
 
-              {/* Manufacturing & IoT */}
-              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-700/20 backdrop-blur-xl rounded-2xl p-8 border border-cyan-500/30">
+              {/* Industry Solutions */}
+              <div className="bg-gradient-to-br from-cyan-600/20 to-blue-700/20 backdrop-blur-xl rounded-2xl p-8 border border-cyan-500/30">
                 <div className="text-4xl mb-4">🏭</div>
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Manufacturing & IoT</h3>
+                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Industry Solutions</h3>
                 <p className="text-white/70 mb-6">
-                  Smart factory automation, IoT sensor integration, and predictive maintenance solutions.
+                  Tailored solutions for manufacturing, retail, education, logistics, and other key industries.
                 </p>
                 <ul className="space-y-2 text-sm text-white/60">
-                  <li>• IoT Platform</li>
-                  <li>• Predictive Maintenance</li>
-                  <li>• Process Optimization</li>
-                  <li>• Quality Control</li>
+                  <li>• Manufacturing IoT Platform</li>
+                  <li>• Retail AI Solutions</li>
+                  <li>• Education Technology</li>
+                  <li>• Logistics Optimization</li>
                 </ul>
               </div>
 
-              {/* Retail & E-commerce */}
-              <div className="bg-gradient-to-br from-pink-600/20 to-rose-700/20 backdrop-blur-xl rounded-2xl p-8 border border-pink-500/30">
-                <div className="text-4xl mb-4">🛍️</div>
-                <h3 className="text-2xl font-bold mb-4 text-pink-400">Retail & E-commerce</h3>
+              {/* Infrastructure & Security */}
+              <div className="bg-gradient-to-br from-indigo-600/20 to-purple-700/20 backdrop-blur-xl rounded-2xl p-8 border border-indigo-500/30">
+                <div className="text-4xl mb-4">🛡️</div>
+                <h3 className="text-2xl font-bold mb-4 text-indigo-400">Infrastructure & Security</h3>
                 <p className="text-white/70 mb-6">
-                  AI-powered personalization, dynamic pricing, and customer experience optimization.
+                  Next-generation infrastructure and cybersecurity solutions for modern enterprises.
                 </p>
                 <ul className="space-y-2 text-sm text-white/60">
-                  <li>• AI Personalization</li>
-                  <li>• Dynamic Pricing</li>
-                  <li>• Customer Analytics</li>
-                  <li>• Inventory Management</li>
+                  <li>• Zero Trust Architecture</li>
+                  <li>• Edge Computing Platform</li>
+                  <li>• 5G Private Networks</li>
+                  <li>• Blockchain Infrastructure</li>
                 </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Main Services Showcase */}
-        <UltraAdvancedServicesShowcase2026 />
-
-        {/* Why Choose Zion Tech Group */}
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Zion Tech Group?
-              </h2>
-              <p className="text-xl text-white/70 max-w-3xl mx-auto">
-                We combine cutting-edge technology with real-world business value to deliver solutions that transform industries.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lightbulb className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Innovation First</h3>
-                <p className="text-white/70">Pioneering the latest technologies and approaches in every solution we deliver.</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Customer Success</h3>
-                <p className="text-white/70">Dedicated support and success teams ensuring your implementation succeeds.</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Enterprise Grade</h3>
-                <p className="text-white/70">Bank-level security, compliance, and scalability for enterprise deployments.</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Proven ROI</h3>
-                <p className="text-white/70">Measurable business impact with average 300%+ ROI across all solutions.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact CTA */}
-        <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
+        {/* CTA Section */}
+        <section className="py-16 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Join thousands of businesses already leveraging our cutting-edge technology solutions to drive innovation and growth.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-6 mb-8">
-              <div className="flex items-center gap-2 text-white/90">
-                <Phone className="w-5 h-5" />
-                +1 302 464 0950
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-black/40 backdrop-blur-xl rounded-3xl p-12 border border-cyan-500/30"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-white/70 mb-8 max-w-3xl mx-auto">
+                Join the future of technology with our comprehensive 2026 services portfolio. Each solution is designed to deliver measurable ROI and competitive advantage.
+              </p>
+              
+              <div className="flex flex-wrap justify-center gap-6">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 text-lg font-semibold"
+                >
+                  Start Your Transformation
+                </a>
+                <a
+                  href="/services"
+                  className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50 text-lg font-semibold"
+                >
+                  Explore All Services
+                </a>
               </div>
-              <div className="flex items-center gap-2 text-white/90">
-                <Mail className="w-5 h-5" />
-                kleber@ziontechgroup.com
-              </div>
-              <div className="flex items-center gap-2 text-white/90">
-                <MapPin className="w-5 h-5" />
-                364 E Main St STE 1008 Middletown DE 19709
-              </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="https://ziontechgroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-200 flex items-center gap-2 text-lg font-semibold"
-              >
-                Visit Website <ExternalLink className="w-5 h-5" />
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-4 bg-white/20 hover:bg-white/30 border border-white/30 rounded-lg text-white transition-all duration-200 text-lg font-semibold"
-              >
-                Schedule Demo
-              </a>
-            </div>
+            </motion.div>
           </div>
         </section>
       </div>
+
+      <Footer />
     </>
   );
 }
-
-// Import required components and icons
-import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, ExternalLink, Lightbulb, 
-  Users, Shield, TrendingUp 
-} from 'lucide-react';

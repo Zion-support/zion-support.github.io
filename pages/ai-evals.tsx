@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
+
 
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 
@@ -19,7 +19,7 @@ export default function AIEvalsPage() {
 	];
 
 	return (
-		<QuantumHolographicMatrixBackground intensity={1.5}>
+		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
 				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />
@@ -79,6 +79,6 @@ export default function AIEvalsPage() {
 					</div>
 				</div>
 			</div>
-		</QuantumHolographicMatrixBackground>
+		</div>
 	);
 }

@@ -1,48 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-
-const About: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>About - Zion Tech Solutions</title>
-        <meta name="description" content="About page" />
-      </Head>
-      
-      <main>
-        <h1>About</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  );
-};
-
-export default About;
-
-export default function AboutPage() {
-	return (
-		<>
-			<Head>
-				<title>About | Zion Tech Group</title>
-				<meta name="description" content="About Zion Tech Group" />
-				<link rel="canonical" href="https://ziontechgroup.com/about" />
-			</Head>
-			<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-				<div className="container mx-auto px-6 py-16">
-					<h1 className="text-4xl font-bold mb-4">About Us</h1>
-					<p className="text-white/80 max-w-2xl">We build autonomous systems and cutting-edge technology solutions.</p>
-				</div>
-			</main>
-		</>
-	);
-}
 import { motion } from 'framer-motion';
 import { Brain, Shield, Rocket, Cpu, Database, Users, Target, Star, Award, Globe } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import EnhancedFooter from '../components/layout/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
 
-export default function AboutPage() {
+const AboutPage: NextPage = () => {
   const values = [
     {
       icon: Brain,
@@ -298,4 +262,6 @@ export default function AboutPage() {
       <EnhancedFooter />
     </div>
   );
-}
+};
+
+export default AboutPage;

@@ -1,21 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as MessageSquareIcon2, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as CodeIcon2, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
-
-
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
-import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
-import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
-import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
+import { motion } from 'framer-motion';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function PricingEnhanced2026Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
@@ -28,20 +14,65 @@ export default function PricingEnhanced2026Page() {
     website: 'https://ziontechgroup.com'
   };
 
-  const popularServices = getPopularServices();
-  
-  // Combine all services for comprehensive pricing
-  const allServices = [
-    ...enhancedRealMicroSaasServices,
-    ...nextGenerationAIServices,
-    ...cuttingEdgeITServices,
-    ...innovativeMicroSaasV2Services,
-    ...innovative2026MicroSaasServicesV2,
-    ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesV2,
-    ...innovative2026AIServicesV3,
-    ...emergingTech2026ServicesV3,
-    ...enterpriseIT2026ServicesV3
+  // Enhanced pricing tiers with more realistic and comprehensive offerings
+  const pricingTiers = [
+    {
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: billingCycle === 'monthly' ? 99 : 79,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      features: [
+        'Access to 100+ Core Services',
+        'Basic AI Integration',
+        'Email Support',
+        'Standard Security',
+        'Monthly Reports'
+      ],
+      cta: 'Start Free Trial',
+      popular: false,
+      color: 'from-green-500 to-emerald-600',
+      icon: Rocket
+    },
+    {
+      name: 'Professional',
+      description: 'Ideal for growing businesses',
+      price: billingCycle === 'monthly' ? 299 : 239,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      features: [
+        'Everything in Starter',
+        'Advanced AI Features',
+        'Priority Support',
+        'Enhanced Security',
+        'Real-time Analytics',
+        'Custom Integrations'
+      ],
+      cta: 'Start Free Trial',
+      popular: true,
+      color: 'from-blue-500 to-cyan-600',
+      icon: Shield
+    },
+    {
+      name: 'Enterprise',
+      description: 'For large organizations',
+      price: 'Custom',
+      period: '',
+      savings: '',
+      features: [
+        'Everything in Professional',
+        'Custom AI Solutions',
+        '24/7 Dedicated Support',
+        'Advanced Security',
+        'Custom Development',
+        'SLA Guarantees',
+        'On-premise Options'
+      ],
+      cta: 'Contact Sales',
+      popular: false,
+      color: 'from-purple-500 to-pink-600',
+      icon: Crown
+    }
   ];
 
   // Enhanced service categories with pricing for 2026
@@ -72,115 +103,6 @@ export default function PricingEnhanced2026Page() {
       savings: 'Save 50-75% vs. competitors',
       icon: Shield,
       color: 'from-red-500 to-pink-600'
-    },
-    {
-      name: 'Innovative Micro SaaS 2026',
-      description: 'Creative and practical SaaS tools',
-      services: ['AI Content Creation Studio', 'AI Business Intelligence Suite', 'AI Customer Success Platform', 'AI Meeting Transcriber'],
-      avgPrice: '$299/month',
-      savings: 'Save 40-60% vs. competitors',
-      icon: Rocket,
-      color: 'from-green-500 to-emerald-600'
-    },
-    {
-      name: 'Healthcare & Biotech 2026',
-      description: 'AI-powered healthcare and biotechnology solutions',
-      services: ['AI Healthcare Diagnostics', 'DNA Computing Platform', 'Neuromorphic Healthcare AI', 'Quantum Medical Imaging'],
-      avgPrice: '$3,999/month',
-      savings: 'Save 65-80% vs. competitors',
-      icon: FlaskConical,
-      color: 'from-blue-500 to-teal-600'
-    },
-    {
-      name: 'Financial Technology 2026',
-      description: 'Advanced financial and trading solutions',
-      services: ['AI Quantum Financial Trading', 'Blockchain Infrastructure', 'Quantum Internet Security', 'Photonic Computing'],
-      avgPrice: '$4,499/month',
-      savings: 'Save 55-75% vs. competitors',
-      icon: DollarSign,
-      color: 'from-green-500 to-emerald-600'
-    }
-  ];
-
-  // Enhanced pricing tiers with more realistic and comprehensive offerings
-  const pricingTiers = [
-    {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: billingCycle === 'monthly' ? 99 : 79,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
-      features: [
-        'Access to 100+ Core Services',
-        'Basic AI Integration',
-        'Standard Support (24/7)',
-        '30-Day Free Trial',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        '99.5% Uptime Guarantee',
-        'Standard Security Features',
-        'Mobile App Access',
-        'API Access (1000 calls/month)'
-      ],
-      icon: <Sparkles className="w-8 h-8" />,
-      variant: 'quantum' as const,
-      popular: false,
-      cta: 'Start Free Trial',
-      color: 'from-blue-500 to-indigo-600'
-    },
-    {
-      name: 'Professional',
-      description: 'Ideal for growing businesses and teams',
-      price: billingCycle === 'monthly' ? 299 : 239,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
-      features: [
-        'Access to 500+ Services',
-        'Advanced AI & Quantum Features',
-        'Priority Support (24/7)',
-        '60-Day Free Trial',
-        'Advanced Analytics & Reporting',
-        'Phone & Email Support',
-        '99.9% Uptime Guarantee',
-        'Enhanced Security Features',
-        'Custom Integrations',
-        'API Access (10,000 calls/month)',
-        'Team Collaboration Tools',
-        'Advanced Workflow Automation'
-      ],
-      icon: <Star className="w-8 h-8" />,
-      variant: 'holographic' as const,
-      popular: true,
-      cta: 'Start Free Trial',
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      name: 'Enterprise',
-      description: 'For large organizations and enterprises',
-      price: billingCycle === 'monthly' ? 999 : 799,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
-      features: [
-        'Access to ALL Services (1000+)',
-        'Full AI & Quantum Suite',
-        'Dedicated Support Team',
-        '90-Day Free Trial',
-        'Enterprise Analytics & BI',
-        '24/7 Dedicated Support',
-        '99.99% Uptime Guarantee',
-        'Enterprise Security & Compliance',
-        'Custom Development',
-        'Unlimited API Access',
-        'Advanced Team Management',
-        'White-label Solutions',
-        'Custom SLA Agreements',
-        'On-site Implementation'
-      ],
-      icon: <Crown className="w-8 h-8" />,
-      variant: 'quantum-advanced' as const,
-      popular: false,
-      cta: 'Contact Sales',
-      color: 'from-yellow-500 to-orange-600'
     }
   ];
 
@@ -188,71 +110,39 @@ export default function PricingEnhanced2026Page() {
   const featuredServices = [
     {
       name: 'AI Quantum Financial Trading',
-      price: '$2,999/month',
-      description: 'Revolutionary AI-powered quantum trading with 99.9% accuracy',
-      features: ['Quantum-inspired AI algorithms', 'Real-time market analysis', 'Automated trading strategies'],
-      link: 'https://ziontechgroup.com/services/ai-quantum-financial-trading',
-      icon: '📈',
-      color: 'from-green-500 to-emerald-600'
+      description: 'Revolutionary AI-powered financial trading platform with quantum computing integration for unprecedented accuracy and speed.',
+      price: '$2,499/month',
+      features: ['Real-time market analysis', 'Quantum-powered predictions', 'Risk management', 'Multi-exchange support'],
+      icon: '🧠',
+      link: 'https://ziontechgroup.com/services/ai-quantum-financial-trading'
     },
     {
-      name: 'Zero Trust Network Architecture 2026',
-      price: '$6,999/month',
-      description: 'Next-generation network security with continuous verification',
-      features: ['Continuous verification', 'Micro-segmentation', 'Real-time threat detection'],
-      link: 'https://ziontechgroup.com/services/zero-trust-network-architecture-2026',
-      icon: '🛡️',
-      color: 'from-red-500 to-pink-600'
-    },
-    {
-      name: 'AI Healthcare Diagnostics Platform',
-      price: '$1,499/month',
-      description: 'AI-powered medical diagnostics with 95% accuracy rate',
-      features: ['Medical image analysis', 'Diagnosis prediction', 'Treatment recommendations'],
-      link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics',
-      icon: '🏥',
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      name: 'Quantum Internet Security Platform',
-      price: '$4,999/month',
-      description: 'Unbreakable quantum encryption for the future internet',
-      features: ['Quantum key distribution', 'Post-quantum cryptography', 'Real-time threat detection'],
-      link: 'https://ziontechgroup.com/services/quantum-internet-security-platform',
-      icon: '🔐',
-      color: 'from-blue-500 to-cyan-600'
+      name: 'Zero Trust Network Architecture',
+      description: 'Advanced zero trust security architecture implementation for enterprise-grade protection.',
+      price: '$5,199/month',
+      features: ['Continuous verification', 'Micro-segmentation', 'Threat intelligence', 'Compliance ready'],
+      icon: '🔒',
+      link: 'https://ziontechgroup.com/services/zero-trust-network-architecture'
     }
   ];
 
   return (
-    <UltraFuturisticBackground  intensity="high">
+    <>
+      <Head>
+        <title>Enhanced 2026 Pricing - Zion Tech Group</title>
+        <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions." />
+        <link rel="canonical" href="https://ziontechgroup.com/pricing-enhanced-2026" />
+      </Head>
+
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
-        <Head>
-          <title>Enhanced 2026 Pricing - Zion Tech Group</title>
-          <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions." />
-          <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
-          
-          {/* Open Graph */}
-          <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
-          <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-          
-          {/* Twitter */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
-          <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
-          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-        </Head>
         {/* Enhanced Header Section */}
         <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }} className="max-w-7xl mx-auto text-center">
+            transition={{ duration: 0.8 }}
+            className="max-w-7xl mx-auto text-center"
+          >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
               Enhanced 2026 Pricing
             </h1>
@@ -311,9 +201,13 @@ export default function PricingEnhanced2026Page() {
                   key={tier.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }} className="relative">
-                  <UltraFuturisticCard
-                    className={`h-full ${tier.popular ? 'ring-2 ring-cyan-500 ring-opacity-50' : ''}`}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative"
+                >
+                  <div
+                    className={`h-full bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 ${
+                      tier.popular ? 'ring-2 ring-cyan-500 ring-opacity-50' : ''
+                    }`}
                   >
                     {tier.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -326,7 +220,7 @@ export default function PricingEnhanced2026Page() {
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
-                          {tier.icon}
+                          <tier.icon className="w-6 h-6 text-white" />
                         </div>
                       </div>
                       
@@ -334,7 +228,9 @@ export default function PricingEnhanced2026Page() {
                       <p className="text-gray-400 mb-6">{tier.description}</p>
                       
                       <div className="mb-6">
-                        <span className="text-4xl font-bold text-cyan-400">${tier.price}</span>
+                        <span className="text-4xl font-bold text-cyan-400">
+                          {typeof tier.price === 'number' ? `$${tier.price}` : tier.price}
+                        </span>
                         <span className="text-gray-400">{tier.period}</span>
                         {tier.savings && (
                           <div className="text-sm text-green-400 mt-1">{tier.savings}</div>
@@ -350,19 +246,20 @@ export default function PricingEnhanced2026Page() {
                         ))}
                       </ul>
                       
-                                             <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200"
-                         onClick={() => {
-                           if (tier.name === 'Enterprise') {
-                             window.open(`mailto:${contactInfo.email}?subject=Enterprise Pricing Inquiry`, '_blank');
-                           } else {
-                             window.open(`mailto:${contactInfo.email}?subject=Start Free Trial - ${tier.name}`, '_blank');
-                           }
-                         }}
-                       >
-                         {tier.cta}
-                       </button>
+                      <button 
+                        className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200"
+                        onClick={() => {
+                          if (tier.name === 'Enterprise') {
+                            window.open(`mailto:${contactInfo.email}?subject=Enterprise Pricing Inquiry`, '_blank');
+                          } else {
+                            window.open(`mailto:${contactInfo.email}?subject=Start Free Trial - ${tier.name}`, '_blank');
+                          }
+                        }}
+                      >
+                        {tier.cta}
+                      </button>
                     </div>
-                  </UltraFuturisticCard>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -376,7 +273,9 @@ export default function PricingEnhanced2026Page() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-12">
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Service Categories & Pricing
               </h2>
@@ -394,7 +293,7 @@ export default function PricingEnhanced2026Page() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <UltraFuturisticCard className="h-full">
+                  <div className="h-full bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
                     <div className="p-6">
                       <div className="flex items-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${category.color} mr-4`}>
@@ -419,14 +318,12 @@ export default function PricingEnhanced2026Page() {
                         ))}
                       </ul>
                       
-                      <button className="w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center"
-                        onClick={() => window.open(`/2026-services-showcase-enhanced`, '_blank')}
-                      >
+                      <button className="w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center">
                         View Services
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </button>
                     </div>
-                  </UltraFuturisticCard>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -440,7 +337,9 @@ export default function PricingEnhanced2026Page() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="text-center mb-12">
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Featured Services
               </h2>
@@ -458,7 +357,7 @@ export default function PricingEnhanced2026Page() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <UltraFuturisticCard className="h-full">
+                  <div className="h-full bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="text-4xl">{service.icon}</div>
@@ -481,20 +380,16 @@ export default function PricingEnhanced2026Page() {
                       </ul>
                       
                       <div className="flex space-x-2">
-                        <button className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center"
-                          onClick={() => window.open(service.link, '_blank')}
-                        >
+                        <button className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center">
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-1" />
                         </button>
-                        <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center"
-                          onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')}
-                        >
+                        <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center">
                           Contact
                         </button>
                       </div>
                     </div>
-                  </UltraFuturisticCard>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -508,7 +403,9 @@ export default function PricingEnhanced2026Page() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center">
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
               </h2>
@@ -516,15 +413,11 @@ export default function PricingEnhanced2026Page() {
                 Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center"
-                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
-                >
+                <button className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center">
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
                 </button>
-                <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center"
-                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
-                >
+                <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center">
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
                 </button>
@@ -537,6 +430,6 @@ export default function PricingEnhanced2026Page() {
           </div>
         </div>
       </div>
-    </UltraFuturisticBackground>
+    </>
   );
 }

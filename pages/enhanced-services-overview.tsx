@@ -11,9 +11,8 @@ import {
   UserCheck, FileText, Palette, Camera, Video, Music
 } from 'lucide-react';
 import Button from '../components/ui/Button';
-import UltraFuturisticBackground2035 from '../components/ui/UltraFuturisticBackground2035';
-import UltraFuturisticNavigation2033 from '../components/layout/UltraFuturisticNavigation2033';
-import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import Footer from '../components/layout/Footer';
 
 export default function EnhancedServicesOverview() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -288,8 +287,8 @@ export default function EnhancedServicesOverview() {
         <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-overview" />
       </Head>
 
-      <UltraFuturisticBackground2035>
-        <UltraFuturisticNavigation2033 />
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <EnhancedNavigation />
         
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center pt-32">
@@ -615,8 +614,8 @@ export default function EnhancedServicesOverview() {
           </div>
         </section>
 
-        <UltraFuturisticFooter2034 />
-      </UltraFuturisticBackground2035>
+        <Footer />
+      </div>
     </>
   );
 }

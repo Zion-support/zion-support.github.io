@@ -1,11 +1,8 @@
 import React from 'react';
-			<SEO title="Services Advertising | Zion Tech Group" description="Features, benefits, and market references for Zion Tech Group services" canonical="https://ziontechgroup.com/services-advertising/" />
-			<div className="max-w-6xl mx-auto space-y-10">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
 import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
 import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import Footer from '../components/layout/Footer';
 
 export default function ServicesAdvertisingPage() {
   const contact = {
@@ -72,199 +69,132 @@ export default function ServicesAdvertisingPage() {
         { name: 'Netlify', href: 'https://www.netlify.com/pricing/' }
       ],
       note: 'SMB budgets: $200–$10,000/mo.'
-    },
-    {
-      title: 'EDR/XDR & MDR',
-      links: [
-        { name: 'CrowdStrike', href: 'https://www.crowdstrike.com/pricing/' },
-        { name: 'Microsoft Defender', href: 'https://www.microsoft.com/security/business/microsoft-defender-pricing' },
-        { name: 'Arctic Wolf MDR', href: 'https://arcticwolf.com/platform/managed-detection-response/' }
-      ],
-      note: 'EDR/XDR from $5–$25/endpoint; MDR from $2k–$10k+/mo.'
-    },
-    {
-      title: 'MDM/Device Management',
-      links: [
-        { name: 'Microsoft Intune', href: 'https://www.microsoft.com/en-us/microsoft-365/compare-microsoft-intune-plans' },
-        { name: 'Jamf', href: 'https://www.jamf.com/pricing/' },
-        { name: 'Kandji', href: 'https://www.kandji.io/pricing' }
-      ],
-      note: 'Typical: $2–$8/device/mo depending on platform and features.'
-    },
-    {
-      title: 'Observability & Logging',
-      links: [
-        { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },
-        { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' },
-        { name: 'New Relic', href: 'https://newrelic.com/pricing' }
-      ],
-      note: 'SMB: $100–$2,000/mo based on ingest and hosts.'
     }
   ];
 
   return (
-    <UltraAdvancedFuturisticBackground 
-      intensity="high" 
-      colorScheme="quantum-fusion"
-      particleCount={300}
-      animationSpeed={1.5}
-      enableHolographic={true}
-      enableQuantumEffects={true}
-    >
+    <>
       <Head>
-        <title>AI, IT and Micro SaaS Services Advertising | Zion Tech Group</title>
-        <meta name="description" content="Explore our AI, IT, and micro SaaS services with features, capabilities, benefits, pricing references, and easy contact options." />
+        <title>Services Advertising | Zion Tech Group</title>
+        <meta name="description" content="Features, benefits, and market references for Zion Tech Group services" />
         <link rel="canonical" href="https://ziontechgroup.com/services-advertising" />
       </Head>
 
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <header className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
-              Services That Ship Outcomes
+      <EnhancedNavigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white pt-20">
+        <main className="container mx-auto px-6 py-16">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Services Advertising
             </h1>
-            <p className="text-gray-300 text-lg">AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
-                Talk to Sales <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button href="/market-pricing" variant="outline" className="px-8 py-4 border border-gray-600 text-gray-200">
-                View Market Pricing <ExternalLink className="w-5 h-5 ml-2" />
-              </Button>
-            </div>
-          </header>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Discover the features, benefits, and market references for our comprehensive service offerings
+            </p>
+          </div>
 
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {benefits.map((b) => (
-                <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
-                    <p className="text-gray-200">{b}</p>
+          {/* Benefits Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-8">Key Benefits</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-3" />
+                    <span className="text-white font-semibold">{benefit}</span>
                   </div>
                 </div>
               ))}
             </div>
           </section>
 
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Featured Offerings</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { name: 'LLM Gateway & Cost Control', price: '$299/mo', href: '/llm-gateway' },
-                { name: 'API Observability Starter', price: '$149/mo', href: '/api-observability-starter' },
-                { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/cloud-cost-optimizer' },
-                { name: 'SOC 2 Evidence Automation', price: '$499/mo', href: '/soc2-evidence-automation' },
-                { name: 'Vector Search Starter', price: '$249/mo', href: '/vector-search-starter' },
-                { name: 'TLS Certificate Monitor', price: '$49/mo', href: '/tls-certificate-monitor' },
-                { name: 'AI Multimodal Fusion', price: '$2,499/mo', href: '/ai-multimodal-fusion-platform' },
-                { name: 'Zero Trust Architecture', price: '$4,999/mo', href: '/zero-trust-network-architecture' },
-                { name: 'Edge Orchestration', price: '$3,499/mo', href: '/edge-computing-orchestration' }
-              ].map((o) => (
-                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
-                  <div className="text-sm text-gray-400 mb-1">From</div>
-                  <div className="text-2xl font-bold text-white">{o.price}</div>
-                  <div className="text-gray-200 mt-2">{o.name}</div>
+          {/* Service Categories */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-8">Service Categories</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+              {anchors.map((anchor, index) => (
+                <a
+                  key={index}
+                  href={anchor.href}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:border-cyan-500/50 transition-all duration-300 text-center"
+                >
+                  <span className="text-white font-semibold">{anchor.title}</span>
                 </a>
               ))}
             </div>
           </section>
 
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New in Q2 2025</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { name: 'AI Sales Playbook Generator', price: '$99/mo', href: '/services/ai-sales-playbook-generator' },
-                { name: 'Customer Journey Analytics Starter', price: '$79/mo', href: '/services/customer-journey-analytics-starter' },
-                { name: 'Incident Postmortem AI Scribe', price: '$39/mo', href: '/services/incident-postmortem-ai-scribe' },
-                { name: 'SLO Burn Rate Coach', price: '$49/mo', href: '/services/slo-burn-rate-coach' },
-                { name: 'API Changelog & SDK Publisher', price: '$59/mo', href: '/services/api-changelog-sdk-publisher' },
-                { name: 'Browser Performance Optimizer', price: '$69/mo', href: '/services/browser-performance-optimizer' },
-                { name: 'Secret Rotation Orchestrator', price: '$129/mo', href: '/services/secret-rotation-orchestrator' },
-                { name: 'SaaS Billing Anomaly Guard', price: '$119/mo', href: '/services/saas-billing-anomaly-guard' },
-                { name: 'ML Feature Store Starter', price: '$149/mo', href: '/services/ml-feature-store-starter' },
-                { name: 'Edge Cron Orchestrator', price: '$59/mo', href: '/services/edge-cron-orchestrator' }
-              ].map((o) => (
-                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
-                  <div className="text-sm text-gray-400 mb-1">From</div>
-                  <div className="text-2xl font-bold text-white">{o.price}</div>
-                  <div className="text-gray-200 mt-2">{o.name}</div>
-                </a>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Practical Micro SaaS Additions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { name: 'Affiliate Program Manager', price: '$99/mo', href: '/services/affiliate-program-manager' },
-                { name: 'Email Follow-up Automation', price: '$49/mo', href: '/services/email-follow-up-automation' },
-                { name: 'Podcast Transcription Studio', price: '$29/mo', href: '/services/podcast-transcription-studio' },
-                { name: 'Freelancer Portfolio Builder', price: '$9/mo', href: '/services/freelancer-portfolio-builder' },
-                { name: 'Cookie Consent Manager', price: '$10/mo', href: '/services/cookie-consent-manager' },
-                { name: 'SMB Website Analytics', price: '$14/mo', href: '/services/smb-website-analytics' }
-              ].map((o) => (
-                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
-                  <div className="text-sm text-gray-400 mb-1">From</div>
-                  <div className="text-2xl font-bold text-white">{o.price}</div>
-                  <div className="text-gray-200 mt-2">{o.name}</div>
-                </a>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Benchmark With Market Pricing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {pricingRefs.map((group) => (
-                <div key={group.title} className="p-6 rounded-2xl bg-black/40 border border-cyan-500/30">
-                  <h3 className="text-xl font-semibold text-white mb-3">{group.title}</h3>
-                  <ul className="text-slate-300 space-y-1">
-                    {group.links.map((l) => (
-                      <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{l.name}: {new URL(l.href).hostname + new URL(l.href).pathname}</a></li>
+          {/* Pricing References */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-8">Market Pricing References</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {pricingRefs.map((ref, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <h3 className="text-xl font-bold text-white mb-4">{ref.title}</h3>
+                  <div className="space-y-2 mb-4">
+                    {ref.links.map((link, linkIndex) => (
+                      <a
+                        key={linkIndex}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between text-cyan-400 hover:text-cyan-300 transition-colors"
+                      >
+                        <span>{link.name}</span>
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
                     ))}
-                  </ul>
-                  <div className="text-sm text-slate-400 mt-3">{group.note}</div>
+                  </div>
+                  <p className="text-sm text-white/60">{ref.note}</p>
                 </div>
               ))}
             </div>
-            <div className="text-center mt-6">
-              <Button href="/market-pricing" variant="secondary" className="px-8 py-4">Full Market Pricing</Button>
-            </div>
           </section>
 
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Explore by Category</h2>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              {anchors.map((a) => (
-                <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
-                  {a.title}
-                </a>
-              ))}
-            </div>
-          </section>
+          {/* CTA Section */}
+          <section className="text-center">
+            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/30">
+              <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+                Contact our team to discuss your specific needs and discover how our services can transform your business.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30">
+                  <Phone className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                  <p className="text-blue-400 font-mono">{contact.mobile}</p>
+                </div>
+                
+                <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30">
+                  <Mail className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                  <p className="text-green-400">{contact.email}</p>
+                </div>
+                
+                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30">
+                  <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+                  <p className="text-purple-400 text-sm">{contact.address}</p>
+                </div>
+              </div>
 
-          <section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Contact Us</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <a href={`tel:${contact.mobile.replace(/[^+\d]/g, '')}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 flex items-center gap-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-gray-200">{contact.mobile}</span>
-              </a>
-              <a href={`mailto:${contact.email}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 flex items-center gap-3">
-                <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-gray-200">{contact.email}</span>
-              </a>
-              <a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-emerald-400" />
-                <span className="text-gray-200 text-sm">{contact.address}</span>
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Get Custom Quote
+                </button>
+                <button className="border border-blue-500 text-blue-400 hover:bg-blue-500/20 px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
+                  Schedule Demo
+                </button>
+              </div>
             </div>
           </section>
-        </div>
+        </main>
       </div>
-    </UltraAdvancedFuturisticBackground>
+      
+      <Footer />
+    </>
   );
 }

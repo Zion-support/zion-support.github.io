@@ -1,6 +1,6 @@
 import React from 'react';
 import type { GetStaticPaths, GetStaticProps } from 'next';
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { marketplaceData as MARKETPLACE_LISTINGS } from '../../../data/marketplaceData';
 import type { ProductListing } from '@/types/listings';
 
 interface ListingProps {

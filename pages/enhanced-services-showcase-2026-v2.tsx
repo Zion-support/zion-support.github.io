@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Zap, Shield, Globe, Microscope, Atom, Cpu, Database, Lock, Eye, Code, Palette, Cloud, Server, Network, TestTube, Dna, Car, Gamepad2, ShieldCheck } from 'lucide-react';
 import { innovativeRealMicroSaasServices2025 as allData } from '../data/2025-innovative-real-micro-saas-services';
-import UltraAdvancedFuturisticBackground2026V2 from '../components/ui/UltraAdvancedFuturisticBackground2026V2';
-import UltraAdvancedNavigation2026V2 from '../components/layout/UltraAdvancedNavigation2026V2';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import Footer from '../components/layout/Footer';
 
 export default function EnhancedServicesShowcase2026V2() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -164,9 +164,9 @@ export default function EnhancedServicesShowcase2026V2() {
         <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-showcase-2026-v2" />
       </Head>
 
-      <UltraAdvancedFuturisticBackground2026V2>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         <div className="min-h-screen">
-          <UltraAdvancedNavigation2026V2 />
+          <EnhancedNavigation />
 
           {/* Hero Section */}
           <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -433,7 +433,8 @@ export default function EnhancedServicesShowcase2026V2() {
             </div>
           </section>
         </div>
-      </UltraAdvancedFuturisticBackground2026V2>
+        <Footer />
+      </div>
     </>
   );
 }

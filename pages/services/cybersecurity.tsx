@@ -5,8 +5,8 @@ import {
   Shield, ArrowRight, CheckCircle, Zap, Target, Users, 
   TrendingUp, Lock, Cpu, Database, Globe, Star, Eye
 } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
+import EnhancedNavigation from '../../components/layout/EnhancedNavigation';
+import EnhancedFooter from '../../components/layout/EnhancedFooter';
 
 export default function CybersecurityPage() {
   const services = [

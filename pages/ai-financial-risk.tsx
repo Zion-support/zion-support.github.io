@@ -1,11 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+
 
 
 export default function AIFinancialRiskPage() {
   return (
-    <UltraFuturisticBackground  intensity="high">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <Head>
         <title>AI Financial Risk Analytics | Zion Tech Group</title>
         <meta name="description" content="Scenario stress-tests, risk scoring with explainability, drift monitoring and governance for lending and trading models." />
@@ -56,7 +56,7 @@ export default function AIFinancialRiskPage() {
           </div>
         </div>
       </div>
-    </UltraFuturisticBackground>
+    </div>
   );
 }
 
