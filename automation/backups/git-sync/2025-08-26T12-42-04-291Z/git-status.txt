@@ -1,0 +1,13 @@
+M  automation/enhanced-git-sync.cjs
+M  automation/logs/HEALTH.runtime.log
+M  automation/logs/SYSTEM.runtime.log
+M  automation/logs/autonomous-system-manager.runtime.log
+M  automation/logs/continuous-improvement.log
+M  automation/logs/error-recovery.log
+MM automation/logs/git-sync.log
+M  automation/logs/link-health-scheduler.runtime.log
+M  automation/logs/master-coordinator.log
+M  automation/logs/ml-link-intelligence-coordinated.log
+M  automation/logs/ml-link-intelligence.runtime.log
+M  automation/logs/real-time-performance-monitor.runtime.log
+M  automation/netlify-functions-manifest.json
