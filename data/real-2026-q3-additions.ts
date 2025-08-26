@@ -1,24 +1,17 @@
-export const real2026Q3Additions = [
+export interface Real2026Q3Addition {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+}
+
+export const real2026Q3Additions: Real2026Q3Addition[] = [
   {
-    id: 'autonomous-business-operations-platform',
-    name: 'Autonomous Business Operations Platform',
-    description: 'Fully autonomous business operations management system',
-    category: 'Business Automation',
-    pricing: {
-      starter: 799,
-      professional: 2399,
-      enterprise: 5999
-    },
-    features: [
-      'Autonomous Operations',
-      'Process Optimization',
-      'Resource Management',
-      'Performance Analytics',
-      'Strategic Planning'
-    ],
-    targetAudience: 'Business Executives',
-    technology: ['AI', 'Machine Learning', 'React', 'PostgreSQL'],
-    status: 'Live',
-    launchDate: '2026-07-15'
+    id: 'q3-2026-addition-1',
+    name: 'Q3 2026 Addition 1',
+    tagline: 'Third quarter 2026 addition',
+    price: '$899',
+    features: ['Q3 2026 features', 'Latest innovations', 'Advanced solutions']
   }
 ];

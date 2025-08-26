@@ -1,24 +1,17 @@
-export const real2026Q4Additions = [
+export interface Real2026Q4Addition {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+}
+
+export const real2026Q4Additions: Real2026Q4Addition[] = [
   {
-    id: 'ai-powered-it-asset-management',
-    name: 'AI-Powered IT Asset Management',
-    description: 'Intelligent IT asset management and optimization platform',
-    category: 'IT Management',
-    pricing: {
-      starter: 299,
-      professional: 899,
-      enterprise: 2499
-    },
-    features: [
-      'Asset Tracking',
-      'Optimization Recommendations',
-      'Cost Analysis',
-      'Lifecycle Management',
-      'Compliance Monitoring'
-    ],
-    targetAudience: 'IT Managers & Administrators',
-    technology: ['Python', 'AI', 'React', 'PostgreSQL'],
-    status: 'Live',
-    launchDate: '2026-10-20'
+    id: 'q4-2026-addition-1',
+    name: 'Q4 2026 Addition 1',
+    tagline: 'Fourth quarter 2026 addition',
+    price: '$999',
+    features: ['Q4 2026 features', 'Year-end innovations', 'Premium solutions']
   }
 ];

@@ -1,6 +1,51 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { 
+  Video, 
+  Calendar, 
+  Clock, 
+  Users, 
+  Play, 
+  ExternalLink, 
+  Search,
+  Filter,
+  Eye,
+  Download,
+  Share2,
+  Bookmark,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Cpu,
+  Shield,
+  Zap,
+  Rocket,
+  Globe,
+  Building
+} from 'lucide-react';
+
+export default function Webinars() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedStatus, setSelectedStatus] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Topics', icon: Video },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },
+    { id: 'quantum', name: 'Quantum Technology', icon: Cpu },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Zap },
+    { id: 'business', name: 'Business Solutions', icon: Building },
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Rocket }
+  ];
+
+  const statuses = [
+    { id: 'all', name: 'All Webinars' },
+    { id: 'upcoming', name: 'Upcoming' },
+    { id: 'live', name: 'Live Now' },
+    { id: 'recorded', name: 'Recorded' }
+  ];
 
 const Webinars: React.FC = () => {
   const webinars = [
@@ -130,15 +175,10 @@ const $page: React.FC = () => {
           >
             Contact Us for More Information
           </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
         </div>
       </section>
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default Webinars;
-=======
 export default $page;
->>>>>>> origin/cursor/website-audit-and-enhancement-56af

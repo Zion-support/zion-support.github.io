@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Head from 'next/head';
+import Link from 'next/link';
 
 const Training: React.FC = () => {
   return (

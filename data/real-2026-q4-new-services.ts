@@ -1,24 +1,17 @@
-export const real2026Q4NewServices = [
+export interface Real2026Q4NewService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+}
+
+export const real2026Q4NewServices: Real2026Q4NewService[] = [
   {
-    id: 'soc2-compliance-automation',
-    name: 'SOC2 Compliance Automation',
-    description: 'Automated SOC2 compliance management and monitoring platform',
-    category: 'Compliance & Security',
-    pricing: {
-      starter: 399,
-      professional: 1199,
-      enterprise: 2999
-    },
-    features: [
-      'Automated Compliance',
-      'Real-time Monitoring',
-      'Audit Preparation',
-      'Risk Assessment',
-      'Reporting Tools'
-    ],
-    targetAudience: 'Security & Compliance Teams',
-    technology: ['Python', 'AI', 'React', 'PostgreSQL'],
-    status: 'Live',
-    launchDate: '2026-12-15'
+    id: 'q4-2026-new-service-1',
+    name: 'Q4 2026 New Service 1',
+    tagline: 'Fourth quarter 2026 new service',
+    price: '$1099',
+    features: ['Q4 2026 new features', 'Brand new innovations', 'Cutting-edge solutions']
   }
 ];

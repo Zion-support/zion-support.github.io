@@ -1,45 +1,17 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { Brain, Cpu, Database, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 =======
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
-=======
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 
 const AISolutions: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Brain,
-      title: "Machine Learning Models",
-      description: "Custom ML models tailored to your business needs and data"
-    },
-    {
-      icon: Cpu,
-      title: "AI Infrastructure",
-      description: "Scalable AI infrastructure and deployment solutions"
-    },
-    {
-      icon: Database,
-      title: "Data Analytics",
-      description: "Advanced analytics and insights powered by AI"
-    },
-    {
-      icon: Shield,
-      title: "AI Security",
-      description: "Robust security measures for AI systems"
-=======
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Target, TrendingUp, Shield, Users, Globe, Cpu, FileText } from 'lucide-react';
+=======
+import Head from 'next/head';
 
 const AISolutions: React.FC = () => {
   const aiServices = [
@@ -84,28 +56,10 @@ const AISolutions: React.FC = () => {
       description: "Transform raw data into actionable insights with AI-powered business intelligence that helps you make better decisions.",
       features: ["Data Visualization", "Predictive Analytics", "Real-time Reporting", "Strategic Insights"],
       path: "/solutions/ai-business-intelligence"
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-    "Increased operational efficiency by 40%",
-    "Reduced costs through automation",
-    "Improved decision-making with data insights",
-    "Enhanced customer experience",
-    "Competitive advantage in the market"
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="AI Solutions - Zion Tech Group"
-        description="Transform your business with cutting-edge AI solutions. Machine learning, automation, and intelligent systems."
-        keywords="AI solutions, machine learning, artificial intelligence, automation, data analytics"
-        canonical="https://ziontechgroup.com/services/ai"
-      />
-=======
       title: "Machine Learning Solutions",
       description: "Custom ML models and algorithms tailored to your business needs",
       features: ["Predictive Analytics", "Pattern Recognition", "Automated Decision Making", "Real-time Learning"],
@@ -125,18 +79,12 @@ const AISolutions: React.FC = () => {
       title: "Natural Language Processing",
       description: "AI-powered text and language understanding solutions",
       features: ["Text Analysis", "Sentiment Analysis", "Language Translation", "Chatbots"],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
       icon: "💬"
     },
     {
       title: "Computer Vision",
-<<<<<<< HEAD
-      description: "Image and video analysis for automation and insights",
-      features: ["Object Detection", "Facial Recognition", "Quality Control", "Process Automation"],
-=======
       description: "Advanced image and video analysis capabilities",
       features: ["Object Detection", "Image Recognition", "Video Analytics", "Facial Recognition"],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
       icon: "👁️"
     },
     {
@@ -145,8 +93,6 @@ const AISolutions: React.FC = () => {
       features: ["AI Strategy", "Use Case Analysis", "Technology Selection", "Implementation Planning"],
       icon: "🎯"
     }
-<<<<<<< HEAD
-=======
   ];
 
   const aiTechnologies = [
@@ -154,7 +100,6 @@ const AISolutions: React.FC = () => {
     { name: "PyTorch", icon: "🔥", description: "Deep learning platform" },
     { name: "OpenAI", icon: "🌟", description: "Advanced language models" },
     { name: "Computer Vision", icon: "📷", description: "Image recognition APIs" }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
   ];
 
   return (
@@ -167,54 +112,7 @@ const AISolutions: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/ai-solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/services/ai-solutions" />
       </Helmet>
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
 
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
-          <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            AI Solutions for the
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Future
-            </span>
-          </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Leverage the power of artificial intelligence to transform your business operations, 
-            enhance customer experiences, and drive innovation across all departments.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
-              Get Started with AI
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Capabilities</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI solutions designed to meet your business challenges and drive growth
-            </p>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -268,44 +166,10 @@ const AISolutions: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Leverage the power of artificial intelligence to automate operations, enhance decision-making, 
               and create intelligent systems that work for you 24/7.
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-<<<<<<< HEAD
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Explore AI Solutions
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-              >
-                View All Services
-              </Link>
-            </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
-          </div>
-
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
-=======
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Get Started
@@ -363,22 +227,12 @@ const AISolutions: React.FC = () => {
                   </svg>
                 </Link>
               </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our AI Solutions?</h2>
-              <p className="text-xl text-gray-600">
-                Experience the transformative power of AI with our proven approach
-=======
         {/* AI Technologies */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -415,7 +269,6 @@ const AISolutions: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Comprehensive AI solutions to meet your business challenges
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
               </p>
             </div>
 
@@ -429,10 +282,6 @@ const AISolutions: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-<<<<<<< HEAD
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                    <TrendingUp className="w-4 h-4 text-green-600" />
-=======
                   <div className="text-5xl mb-6">{service.icon}</div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -447,15 +296,12 @@ const AISolutions: React.FC = () => {
                         </li>
                       ))}
                     </ul>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
                   </div>
                   <span className="text-lg text-gray-700">{benefit}</span>
                 </motion.div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -478,25 +324,10 @@ const AISolutions: React.FC = () => {
               </div>
             ))}
           </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how AI can revolutionize your operations and create new opportunities for growth.
-          </p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Schedule a Consultation
-          </button>
-        </div>
-      </section>
-    </div>
-=======
         </section>
 
         {/* Benefits */}
@@ -564,10 +395,6 @@ const AISolutions: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 =======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -594,7 +421,6 @@ const AISolutions: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
   );
 };
 

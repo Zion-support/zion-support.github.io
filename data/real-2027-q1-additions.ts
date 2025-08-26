@@ -1,24 +1,17 @@
-export const real2027Q1Additions = [
+export interface Real2027Q1Addition {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+}
+
+export const real2027Q1Additions: Real2027Q1Addition[] = [
   {
-    id: 'ai-autonomous-research-assistant-2027',
-    name: 'AI Autonomous Research Assistant 2027',
-    description: 'Next-generation autonomous research platform with advanced AI capabilities',
-    category: 'Research & AI',
-    pricing: {
-      starter: 499,
-      professional: 1499,
-      enterprise: 3999
-    },
-    features: [
-      'Advanced AI Research',
-      'Autonomous Discovery',
-      'Multi-source Analysis',
-      'Intelligent Synthesis',
-      'Collaborative Research'
-    ],
-    targetAudience: 'Researchers & Scientists',
-    technology: ['Advanced AI', 'Machine Learning', 'React', 'PostgreSQL'],
-    status: 'Live',
-    launchDate: '2027-01-20'
+    id: 'q1-2027-addition-1',
+    name: 'Q1 2027 Addition 1',
+    tagline: 'First quarter 2027 addition',
+    price: '$1199',
+    features: ['Q1 2027 features', 'Future innovations', 'Next-gen solutions']
   }
 ];

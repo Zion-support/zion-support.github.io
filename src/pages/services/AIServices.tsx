@@ -1,7 +1,7 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { Brain, Cpu, Database, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
+import { SEO } from "@/components/SEO";
+import Link from 'next/link';
+import { Check, Brain, Zap, Shield, Database, Users, TrendingUp, Globe } from 'lucide-react';
 
 const AIServices: React.FC = () => {
   const features = [

@@ -132,7 +132,6 @@ const ServiceInnovationHub: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button 
-                variant="outline"
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
                 onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation', '_blank')}
               >
@@ -316,7 +315,6 @@ const ServiceInnovationHub: React.FC = () => {
                 Lead Innovation
               </Button>
               <Button 
-                variant="outline"
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
                 onClick={() => window.open('tel:+13024640950', '_blank')}
               >

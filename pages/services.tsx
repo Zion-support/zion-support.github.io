@@ -337,6 +337,40 @@ export default function ServicesPage() {
               </div>
             </div>
 
+            {/* 2026 Services Preview Section */}
+            <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl p-12 border border-purple-500/20 text-center mb-12">
+              <h2 className="text-3xl font-bold mb-6 text-white">🚀 2026 Services Portfolio</h2>
+              <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+                Discover our cutting-edge 2026 portfolio featuring AI autonomous ecosystems, quantum computing, 
+                emerging technology breakthroughs, and specialized industry solutions.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-white/10 rounded-xl p-6">
+                  <div className="text-3xl mb-3">🤖</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">AI Autonomous Ecosystem</h3>
+                  <p className="text-white/70 text-sm">Content factories, customer success, financial advisors, and HR platforms</p>
+                </div>
+                <div className="bg-white/10 rounded-xl p-6">
+                  <div className="text-3xl mb-3">⚛️</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Quantum & Emerging Tech</h3>
+                  <p className="text-white/70 text-sm">Quantum internet, space mining, zero trust security, metaverse development</p>
+                </div>
+                <div className="bg-white/10 rounded-xl p-6">
+                  <div className="text-3xl mb-3">🏥</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Industry Solutions</h3>
+                  <p className="text-white/70 text-sm">Healthcare AI, fintech trading, manufacturing IoT, retail personalization</p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/services-2026" className="bg-gradient-to-r from-purple-400 to-pink-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-500 transition-all duration-300 text-lg">
+                  Explore 2026 Services
+                </a>
+                <a href="/contact" className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:border-purple-400/50 hover:text-purple-400 transition-all duration-300 text-lg">
+                  Schedule Demo
+                </a>
+              </div>
+            </div>
+
             {/* Call to Action Section */}
             <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-12 border border-cyan-500/20 text-center">
               <h2 className="text-3xl font-bold mb-6 text-white">Ready to Get Started?</h2>

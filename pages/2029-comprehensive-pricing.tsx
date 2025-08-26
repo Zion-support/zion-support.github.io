@@ -9,10 +9,10 @@ import {
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-import FuturisticAnimatedBackground2029 from '../src/components/ui/FuturisticAnimatedBackground2029';
-import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
-import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+// import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029';
+// import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
+// import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
+// import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -26,16 +26,16 @@ export default function ComprehensivePricing2029() {
   const [billingCycle, setBillingCycle] = useState('monthly');
 
   const allServices = [
-    ...aiAutonomousEcosystemServices2029,
-    ...emergingTechBreakthroughServices2029,
-    ...practicalBusinessSolutionServices2029
+    // ...aiAutonomousEcosystemServices2029,
+    // ...emergingTechBreakthroughServices2029,
+    // ...practicalBusinessSolutionServices2029
   ];
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length },
-    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices2029.length },
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length },
-    { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length }
+    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: 0 },
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: 0 },
+    { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: 0 }
   ];
 
   const filteredServices = selectedCategory === 'all' 
@@ -67,7 +67,7 @@ export default function ComprehensivePricing2029() {
 
   return (
     <div className="min-h-screen bg-black text-white relative">
-      <FuturisticAnimatedBackground2029 />
+      {/* <FuturisticAnimatedBackground2029 /> */}
       
       <Head>
         <title>2029 Comprehensive Pricing - Zion Tech Group</title>

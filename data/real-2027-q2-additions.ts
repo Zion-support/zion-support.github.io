@@ -1,24 +1,17 @@
-export const real2027Q2Additions = [
+export interface Real2027Q2Addition {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+}
+
+export const real2027Q2Additions: Real2027Q2Addition[] = [
   {
-    id: 'quantum-edge-computing-platform',
-    name: 'Quantum Edge Computing Platform',
-    description: 'Revolutionary edge computing platform leveraging quantum principles',
-    category: 'Quantum Computing',
-    pricing: {
-      starter: 799,
-      professional: 2399,
-      enterprise: 5999
-    },
-    features: [
-      'Quantum Edge Processing',
-      'Distributed Computing',
-      'Real-time Analytics',
-      'Low Latency Operations',
-      'Scalable Architecture'
-    ],
-    targetAudience: 'Edge Computing & IoT',
-    technology: ['Quantum Computing', 'Edge Computing', 'React', 'Kubernetes'],
-    status: 'Live',
-    launchDate: '2027-04-15'
+    id: 'q2-2027-addition-1',
+    name: 'Q2 2027 Addition 1',
+    tagline: 'Second quarter 2027 addition',
+    price: '$1299',
+    features: ['Q2 2027 features', 'Mid-year innovations', 'Advanced solutions']
   }
 ];
