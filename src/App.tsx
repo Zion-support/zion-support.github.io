@@ -21,6 +21,7 @@ const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 const MicroSAAS = React.lazy(() => import('./pages/MicroSAAS'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+const GenericPage = React.lazy(() => import('./pages/[...slug]'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -60,6 +61,7 @@ function App() {
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/micro-saas" element={<MicroSAAS />} />
               <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="*" element={<GenericPage />} />
             </Routes>
           </Suspense>
         </main>
