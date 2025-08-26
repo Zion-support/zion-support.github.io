@@ -3,12 +3,7 @@ Allow: /
 # Sitemap location
 Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
 =======
 # Allow all crawlers
 Allow: /about
