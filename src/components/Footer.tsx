@@ -61,6 +61,7 @@ const Footer: React.FC = () => {
     }
   ];
 
+
   return (
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}

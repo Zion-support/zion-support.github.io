@@ -208,7 +208,7 @@ const InnovativeNewServices2025: React.FC = () => {
                       </div>
                       <div className="text-right">
                         <div className="text-2xl font-bold text-cyan-400">
-                          {service.currency}{('price' in service ? service.price : ((service as any).hourlyRate * 160)).toLocaleString()}/mo
+                          {service.currency}{('price' in service && typeof service.price === 'number') ? service.price : (('hourlyRate' in service && typeof service.hourlyRate === 'number') ? service.hourlyRate * 160 : 0)}/mo
                         </div>
                         <div className="text-sm text-gray-400">{('pricingModel' in service ? service.pricingModel : 'hourly')}</div>
                       </div>
