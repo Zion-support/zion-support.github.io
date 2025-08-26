@@ -41,9 +41,9 @@ export interface EmergingTech2028Service {
   reviews: number;
 }
 
-export const emergingTech2028Services: EmergingTech2028Service[] = [
-  // Blockchain Supply Chain Transparency
+export const emergingTech2028Services = [
   {
+<<<<<<< HEAD
     id: 'blockchain-supply-chain-transparency',
     name: 'Blockchain Supply Chain Transparency',
     tagline: 'End-to-end supply chain visibility with blockchain',
@@ -517,5 +517,16 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     customers: 180,
     rating: 4.8,
     reviews: 145
+=======
+    id: '2028-emerging-001',
+    title: '2028 Emerging Tech Services Platform',
+    description: 'Emerging tech services platform for 2028',
+    category: 'Emerging Tech',
+    pricing: { starter: 399, professional: 1199, enterprise: 3499 },
+    features: ['2028 emerging tech', 'Cutting edge tools', 'Future ready'],
+    slug: '2028-emerging-tech-services-platform'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7
   }
 ];
+
+export default emergingTech2028Services;

@@ -36,4 +36,9 @@ export default function Layout({ children }: LayoutProps) {
 			</UltraFuturisticBackground2035>
 		</div>
 	);
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7

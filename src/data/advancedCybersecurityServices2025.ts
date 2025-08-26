@@ -4,7 +4,6 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
-
 export interface AdvancedCybersecurityService {
   id: number;
   name: string;
@@ -41,7 +40,6 @@ export interface AdvancedCybersecurityService {
   quantumResistant: boolean;
   threatIntelligence: boolean;
 }
-
 // Advanced Cybersecurity Services for 2025
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
   {
@@ -387,5 +385,4 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     threatIntelligence: true
   }
 ];
-
 export default advancedCybersecurityServices2025;

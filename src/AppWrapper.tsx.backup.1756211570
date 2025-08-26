@@ -1,0 +1,9 @@
+import React from 'react';
+
+export const AppWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+<<<<<<< HEAD
+  return <>{children}</>;
+=======
+	return <>{children}</>;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9117
+};

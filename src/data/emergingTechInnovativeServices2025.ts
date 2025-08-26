@@ -33,7 +33,6 @@ export interface EmergingTechInnovativeService2025 {
   marketSize: string;
   growthPotential: string;
 }
-
 export const EMERGING_TECH_INNOVATIVE_SERVICES_2025: EmergingTechInnovativeService2025[] = [
   // AI-Powered Brain-Computer Interface Platform
   {
@@ -92,7 +91,6 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025: EmergingTechInnovativeServi
     marketSize: "$1.7 billion (BCI market)",
     growthPotential: "1000% annual growth expected"
   },
-
   // AI-Powered Space Technology Platform
   {
     id: "space-technology-ai",
@@ -150,7 +148,6 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025: EmergingTechInnovativeServi
     marketSize: "$4.5 billion (space technology market)",
     growthPotential: "700% annual growth expected"
   },
-
   // AI-Powered Quantum Internet Platform
   {
     id: "quantum-internet-ai",
@@ -208,7 +205,6 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025: EmergingTechInnovativeServi
     marketSize: "$2.8 billion (quantum internet market)",
     growthPotential: "1200% annual growth expected"
   },
-
   // AI-Powered Autonomous Vehicle Fleet Management
   {
     id: "autonomous-vehicle-fleet-ai",
@@ -266,7 +262,6 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025: EmergingTechInnovativeServi
     marketSize: "$22.5 billion (autonomous vehicle market)",
     growthPotential: "600% annual growth expected"
   },
-
   // AI-Powered Climate Prediction and Adaptation Platform
   {
     id: "climate-prediction-adaptation-ai",

@@ -29,7 +29,6 @@ export interface SpecializedITInfrastructureService2025 {
   scalability: string;
   uptime: string;
 }
-
 export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureService2025[] = [
   // Edge Computing Orchestration Platform
   {
@@ -90,7 +89,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureServ
     scalability: "Auto-scaling edge clusters",
     uptime: "99.9% edge availability"
   },
-
   // Quantum-Ready Cloud Infrastructure
   {
     id: "quantum-ready-cloud-infrastructure",
@@ -150,7 +148,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureServ
     scalability: "Quantum resource scaling",
     uptime: "99.5% quantum availability"
   },
-
   // Autonomous DevOps Infrastructure
   {
     id: "autonomous-devops-infrastructure",
@@ -210,7 +207,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureServ
     scalability: "Infinite auto-scaling",
     uptime: "99.99% availability"
   },
-
   // Zero-Trust Security Infrastructure
   {
     id: "zero-trust-security-infrastructure",
@@ -270,7 +266,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureServ
     scalability: "Enterprise-wide deployment",
     uptime: "99.9% security availability"
   },
-
   // Green Computing Infrastructure
   {
     id: "green-computing-infrastructure",
@@ -330,7 +325,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureServ
     scalability: "Sustainable scaling",
     uptime: "99.5% green availability"
   },
-
   // Hybrid Multi-Cloud Orchestration
   {
     id: "hybrid-multi-cloud-orchestration",

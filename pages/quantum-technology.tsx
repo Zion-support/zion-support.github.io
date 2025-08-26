@@ -1,311 +1,209 @@
 import React from 'react';
 import Head from 'next/head';
-import { Atom, Cpu, Shield, Zap, Target, CheckCircle, ArrowRight, Brain } from 'lucide-react';
 
 export default function QuantumTechnologyPage() {
   return (
     <>
       <Head>
-        <title>Quantum Technology — Zion Tech Group</title>
-        <meta name="description" content="Explore the future with Zion Tech Group's quantum technology solutions. From quantum computing to quantum cryptography, we're pioneering the next generation of technology." />
-        <meta property="og:title" content="Quantum Technology — Zion Tech Group" />
-        <meta property="og:description" content="Explore the future with Zion Tech Group's quantum technology solutions. From quantum computing to quantum cryptography, we're pioneering the next generation of technology." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <title>Quantum Technology | Zion Tech Group</title>
+        <meta name="description" content="Explore the future with Zion Tech Group's quantum technology solutions. Quantum computing, quantum cryptography, and quantum-safe systems." />
+        <meta property="og:title" content="Quantum Technology | Zion Tech Group" />
+        <meta property="og:description" content="Explore the future with Zion Tech Group's quantum technology solutions." />
+        <link rel="canonical" href="https://ziontechgroup.com/quantum-technology" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        {/* Hero Section */}
-        <section className="pt-24 pb-16">
-          <div className="container mx-auto px-6 text-center">
+        <main className="container mx-auto px-6 py-16">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
               Quantum Technology
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Pioneering the quantum revolution with cutting-edge quantum computing, quantum cryptography, and quantum sensing solutions that will transform industries and solve previously impossible problems.
+              Step into the quantum realm with cutting-edge technology that will revolutionize computing, security, and innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+              <a href="/contact" className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-fuchsia-700 transition-all duration-200">
                 Explore Quantum Solutions
               </a>
-              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300">
-                View Case Studies
+              <a href="/services" className="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200">
+                View All Services
               </a>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Quantum Technology Overview */}
-        <section className="py-16">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12 text-cyan-400">Quantum Technology Solutions</h2>
+          {/* Quantum Services Grid */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Quantum Technology Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-xl p-6">
-                <Cpu className="w-12 h-12 text-cyan-400 mb-4" />
+              {/* Quantum Computing */}
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
+                </div>
                 <h3 className="text-xl font-semibold mb-3">Quantum Computing</h3>
-                <p className="text-white/70">
-                  Leverage quantum bits (qubits) to solve complex computational problems that are impossible for classical computers.
-                </p>
+                <p className="text-white/70 mb-4">Harness the power of quantum bits for unprecedented computational capabilities.</p>
+                <a href="/services/quantum-computing" className="text-cyan-400 hover:text-cyan-300 transition-colors">Learn More →</a>
               </div>
-              
-              <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-6">
-                <Shield className="w-12 h-12 text-purple-400 mb-4" />
+
+              {/* Quantum Cryptography */}
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-fuchsia-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
                 <h3 className="text-xl font-semibold mb-3">Quantum Cryptography</h3>
-                <p className="text-white/70">
-                  Unbreakable encryption using quantum key distribution and quantum-resistant algorithms for ultimate security.
-                </p>
+                <p className="text-white/70 mb-4">Unbreakable encryption using quantum mechanical principles for ultimate security.</p>
+                <a href="/services/quantum-cryptography" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">Learn More →</a>
               </div>
-              
-              <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-xl p-6">
-                <Zap className="w-12 h-12 text-green-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Quantum Sensing</h3>
-                <p className="text-white/70">
-                  Ultra-sensitive detection systems for medical imaging, environmental monitoring, and precision measurements.
-                </p>
+
+              {/* Quantum Networks */}
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Quantum Networks</h3>
+                <p className="text-white/70 mb-4">Secure quantum communication networks for ultra-fast data transmission.</p>
+                <a href="/services/quantum-networks" className="text-green-400 hover:text-green-300 transition-colors">Learn More →</a>
               </div>
-              
-              <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-xl p-6">
-                <Brain className="w-12 h-12 text-orange-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Quantum Machine Learning</h3>
-                <p className="text-white/70">
-                  Quantum algorithms that accelerate machine learning tasks and enable new AI capabilities.
-                </p>
+
+              {/* Quantum Sensors */}
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-orange-400/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Quantum Sensors</h3>
+                <p className="text-white/70 mb-4">Ultra-sensitive detection systems for medical, environmental, and industrial applications.</p>
+                <a href="/services/quantum-sensors" className="text-orange-400 hover:text-orange-300 transition-colors">Learn More →</a>
               </div>
-              
-              <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-6">
-                <Target className="w-12 h-12 text-indigo-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Quantum Optimization</h3>
-                <p className="text-white/70">
-                  Solve complex optimization problems in logistics, finance, and manufacturing with quantum algorithms.
-                </p>
+
+              {/* Quantum Machine Learning */}
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Quantum ML</h3>
+                <p className="text-white/70 mb-4">Machine learning algorithms enhanced by quantum computing capabilities.</p>
+                <a href="/services/quantum-ml" className="text-blue-400 hover:text-blue-300 transition-colors">Learn More →</a>
               </div>
-              
-              <div className="bg-gradient-to-br from-pink-500/10 to-rose-500/10 border border-pink-500/20 rounded-xl p-6">
-                <Atom className="w-12 h-12 text-pink-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Quantum Materials</h3>
-                <p className="text-white/70">
-                  Advanced materials with quantum properties for next-generation electronics and energy systems.
-                </p>
+
+              {/* Quantum Consulting */}
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Quantum Consulting</h3>
+                <p className="text-white/70 mb-4">Strategic guidance for quantum technology adoption and implementation.</p>
+                <a href="/services/quantum-consulting" className="text-purple-400 hover:text-purple-300 transition-colors">Learn More →</a>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Quantum Applications by Industry */}
-        <section className="py-16 bg-white/5">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12 text-fuchsia-400">Quantum Applications by Industry</h2>
+          {/* Quantum Applications */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Quantum Technology Applications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Financial Services</h3>
-                <ul className="space-y-3 text-white/80">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
-                    <span>Portfolio optimization and risk assessment</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
-                    <span>High-frequency trading algorithms</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
-                    <span>Fraud detection and cybersecurity</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
-                    <span>Monte Carlo simulations</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">Healthcare & Pharmaceuticals</h3>
-                <ul className="space-y-3 text-white/80">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                    <span>Drug discovery and molecular modeling</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                    <span>Medical imaging and diagnostics</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                    <span>Protein folding and genomics</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                    <span>Personalized medicine optimization</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4 text-green-400">Manufacturing & Logistics</h3>
-                <ul className="space-y-3 text-white/80">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span>Supply chain optimization</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span>Production scheduling and routing</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span>Quality control and defect detection</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span>Energy efficiency optimization</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4 text-orange-400">Energy & Climate</h3>
-                <ul className="space-y-3 text-white/80">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" />
-                    <span>Climate modeling and prediction</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" />
-                    <span>Renewable energy optimization</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" />
-                    <span>Carbon capture and storage</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-orange-400 mt-0.5 flex-shrink-0" />
-                    <span>Smart grid management</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Quantum Advantage */}
-        <section className="py-16">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12 text-cyan-400">Quantum Advantage</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-white">Why Quantum Technology?</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold">1</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-cyan-400 mb-2">Exponential Speedup</h4>
-                      <p className="text-white/70">Quantum algorithms can solve certain problems exponentially faster than classical computers.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold">2</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-purple-400 mb-2">Unbreakable Security</h4>
-                      <p className="text-white/70">Quantum cryptography provides theoretically unbreakable encryption for sensitive communications.</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold">3</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-green-400 mb-2">Precision Sensing</h4>
-                      <p className="text-white/70">Quantum sensors offer unprecedented sensitivity for medical, environmental, and industrial applications.</p>
-                    </div>
-                  </div>
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold mb-3 text-cyan-400">Financial Services</h3>
+                  <p className="text-white/70">Quantum algorithms for portfolio optimization, risk assessment, and fraud detection in real-time.</p>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold mb-3 text-fuchsia-400">Healthcare & Medicine</h3>
+                  <p className="text-white/70">Drug discovery, protein folding, and personalized medicine through quantum simulations.</p>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold mb-3 text-green-400">Cybersecurity</h3>
+                  <p className="text-white/70">Post-quantum cryptography and quantum-resistant security protocols for future-proof protection.</p>
                 </div>
               </div>
+
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold mb-3 text-orange-400">Logistics & Supply Chain</h3>
+                  <p className="text-white/70">Quantum optimization for complex routing, scheduling, and resource allocation problems.</p>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold mb-3 text-blue-400">Climate Research</h3>
+                  <p className="text-white/70">Advanced climate modeling and environmental simulations using quantum computing power.</p>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold mb-3 text-purple-400">Artificial Intelligence</h3>
+                  <p className="text-white/70">Enhanced AI capabilities through quantum machine learning and neural network optimization.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Why Quantum Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Why Quantum Technology?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Exponential Speed</h3>
+                <p className="text-white/70">Solve complex problems in seconds that would take classical computers thousands of years.</p>
+              </div>
               
-              <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">Quantum Readiness Assessment</h3>
-                <p className="text-white/80 mb-6">
-                  Not sure if your organization is ready for quantum technology? We provide comprehensive assessments to evaluate your quantum readiness and develop a strategic roadmap.
-                </p>
-                <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300">
-                  Get Quantum Assessment
-                  <ArrowRight className="w-4 h-4" />
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-fuchsia-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Unbreakable Security</h3>
+                <p className="text-white/70">Quantum cryptography provides theoretically unbreakable encryption for sensitive data.</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Innovation Edge</h3>
+                <p className="text-white/70">Stay ahead of the competition with cutting-edge quantum technology solutions.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="text-center">
+            <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 rounded-2xl p-12 border border-cyan-500/30">
+              <h2 className="text-3xl font-bold mb-4">Ready to Embrace the Quantum Future?</h2>
+              <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+                Discover how quantum technology can transform your business and give you a competitive advantage in the digital age.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a href="/contact" className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-fuchsia-700 transition-all duration-200">
+                  Schedule a Quantum Consultation
+                </a>
+                <a href="/case-studies" className="px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200">
+                  View Quantum Case Studies
                 </a>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Quantum Development Timeline */}
-        <section className="py-16 bg-white/5">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center mb-12 text-fuchsia-400">Quantum Development Timeline</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                  Q1
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Quantum Assessment</h3>
-                <p className="text-white/70">
-                  Evaluate your organization's quantum readiness and identify opportunities for quantum advantage.
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                  Q2
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Strategy Development</h3>
-                <p className="text-white/70">
-                  Develop a comprehensive quantum technology strategy and implementation roadmap.
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                  Q3
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Pilot Implementation</h3>
-                <p className="text-white/70">
-                  Launch pilot quantum projects to demonstrate value and build organizational capabilities.
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                  Q4
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Scale & Optimize</h3>
-                <p className="text-white/70">
-                  Scale successful pilots and continuously optimize quantum solutions for maximum impact.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">Ready to Embrace the Quantum Future?</h2>
-            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              Join the quantum revolution and position your organization at the forefront of the next technological breakthrough.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-lg flex items-center gap-2">
-                Start Your Quantum Journey
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a href="/services" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 text-lg">
-                Explore All Services
-              </a>
-            </div>
-          </div>
-        </section>
+          </section>
+        </main>
       </div>
     </>
   );

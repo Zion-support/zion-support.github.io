@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function NewsletterSection() {
   return (
     <section className="bg-zion-blue-dark py-16">

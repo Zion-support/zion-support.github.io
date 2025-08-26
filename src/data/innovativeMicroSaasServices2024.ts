@@ -29,7 +29,6 @@ export interface InnovativeMicroSaasService2024 {
   growthRate: string;
   fundingTrends: string;
 }
-
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2024: InnovativeMicroSaasService2024[] = [
   // AI-Powered Video Content Creation
   {
@@ -91,7 +90,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024: InnovativeMicroSaasService2024
     growthRate: "34.8% annually",
     fundingTrends: "High investor interest in AI video tools"
   },
-
   // AI-Powered Customer Success Platform
   {
     id: "ai-customer-success-platform",
@@ -151,7 +149,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024: InnovativeMicroSaasService2024
     growthRate: "28.9% annually",
     fundingTrends: "Growing focus on customer retention tools"
   },
-
   // AI-Powered Email Marketing Automation
   {
     id: "ai-email-marketing-automation",
@@ -212,7 +209,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024: InnovativeMicroSaasService2024
     growthRate: "22.4% annually",
     fundingTrends: "AI-powered marketing tools gaining traction"
   },
-
   // AI-Powered Social Media Management
   {
     id: "ai-social-media-management",
@@ -273,7 +269,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024: InnovativeMicroSaasService2024
     growthRate: "26.8% annually",
     fundingTrends: "High demand for AI-powered social tools"
   },
-
   // AI-Powered SEO Optimization
   {
     id: "ai-seo-optimization",
@@ -334,7 +329,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024: InnovativeMicroSaasService2024
     growthRate: "19.7% annually",
     fundingTrends: "AI SEO tools in high demand"
   },
-
   // AI-Powered Customer Support Chatbot
   {
     id: "ai-customer-support-chatbot",
@@ -395,7 +389,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024: InnovativeMicroSaasService2024
     growthRate: "31.2% annually",
     fundingTrends: "AI chatbots gaining significant investment"
   },
-
   // AI-Powered Project Management
   {
     id: "ai-project-management",
@@ -456,7 +449,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024: InnovativeMicroSaasService2024
     growthRate: "24.6% annually",
     fundingTrends: "AI project management tools attracting investors"
   },
-
   // AI-Powered Financial Planning
   {
     id: "ai-financial-planning",
