@@ -5682,8 +5682,7 @@ export const serviceCategories = [
     customers: 410,
     rating: 4.8,
     reviews: 166
-  }
-  ,
+  },
   {
     id: 'uptime-slo-monitor',
     name: 'Uptime & SLO Monitor',
@@ -7550,4 +7549,4 @@ const additionalZionServices: EnhancedRealMicroSaasService[] = [
   }
 ];
 
-enhancedRealMicroSaasServices.push(...additionalZionServices);
+// Additional services have been integrated into the main array
