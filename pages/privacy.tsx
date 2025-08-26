@@ -1,22 +1,17 @@
-import React from 'react';
-import Head from 'next/head';
+import SEO from '../components/SEO';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
 export default function Privacy() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Head>
-        <title>Privacy Policy - Zion App</title>
-        <meta name="description" content="Privacy policy and data protection information" />
-      </Head>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Privacy Policy
-            </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              How we collect, use, and protect your information
+    <UltraAdvancedFuturisticBackground>
+      <SEO title="Privacy Policy | Zion Tech Group" description="Zion Tech Group Privacy Policy: data collection, usage, security, and contact details." canonical="https://ziontechgroup.com/privacy/" />
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 text-white">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Privacy Policy</h1>
+          <p className="text-gray-300">Last updated: 2025-02-07</p>
+          <section className="space-y-4 text-gray-200 leading-relaxed">
+            <p>
+              We respect your privacy. This policy explains what information we collect, how we use it, and your choices. We collect minimal personal information necessary to provide our services and improve your experience.
             </p>
             <p className="text-gray-400 text-sm mt-4">
               Last updated: January 17, 2025
