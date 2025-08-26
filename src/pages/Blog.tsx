@@ -7,69 +7,68 @@ const Blog: React.FC = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "The Future of AI in Business: 2025 and Beyond",
-      excerpt: "Explore how artificial intelligence is reshaping business operations and what to expect in the coming years.",
-      category: "AI & Technology",
-      date: "January 15, 2025",
+      title: "The Future of AI in Enterprise Technology",
+      excerpt: "Discover how artificial intelligence is transforming business operations and what it means for your organization.",
+      category: "AI & Machine Learning",
+      date: "March 15, 2024",
       readTime: "5 min read",
-      image: "🤖",
+      image: "/images/blog/ai-enterprise.jpg",
       featured: true
     },
     {
       id: 2,
-      title: "Cybersecurity Trends: Protecting Your Digital Assets",
-      excerpt: "Discover the latest cybersecurity threats and best practices to safeguard your business in an increasingly digital world.",
+      title: "Cybersecurity Best Practices for 2024",
+      excerpt: "Stay ahead of evolving threats with our comprehensive guide to cybersecurity best practices.",
       category: "Cybersecurity",
-      date: "January 12, 2025",
-      readTime: "4 min read",
-      image: "🔒"
+      date: "March 10, 2024",
+      readTime: "7 min read",
+      image: "/images/blog/cybersecurity-2024.jpg"
     },
     {
       id: 3,
-      title: "Cloud Migration Strategies for Enterprise Success",
-      excerpt: "Learn proven strategies for migrating your business to the cloud while minimizing risks and maximizing benefits.",
-      category: "Cloud Computing",
-      date: "January 10, 2025",
-      readTime: "6 min read",
-      image: "☁️"
+      title: "Cloud Migration Strategies: A Complete Guide",
+      excerpt: "Learn the essential steps and best practices for successful cloud migration projects.",
+      category: "Cloud & DevOps",
+      date: "March 5, 2024",
+      readTime: "8 min read",
+      image: "/images/blog/cloud-migration.jpg"
     },
     {
       id: 4,
-      title: "Quantum Computing: The Next Frontier in Technology",
-      excerpt: "Understand how quantum computing is revolutionizing industries and what it means for the future of technology.",
-      category: "Emerging Tech",
-      date: "January 8, 2025",
-      readTime: "7 min read",
-      image: "⚛️"
+      title: "Digital Transformation: Where to Start",
+      excerpt: "Begin your digital transformation journey with our step-by-step roadmap and expert insights.",
+      category: "Digital Transformation",
+      date: "February 28, 2024",
+      readTime: "6 min read",
+      image: "/images/blog/digital-transformation.jpg"
     },
     {
       id: 5,
-      title: "DevOps Best Practices for Modern Development Teams",
-      excerpt: "Implement effective DevOps practices to streamline your development process and improve team collaboration.",
-      category: "DevOps",
-      date: "January 5, 2025",
-      readTime: "5 min read",
-      image: "⚡"
+      title: "DevOps Automation: Tools and Techniques",
+      excerpt: "Explore the latest DevOps automation tools and techniques to streamline your development process.",
+      category: "Cloud & DevOps",
+      date: "February 20, 2024",
+      readTime: "9 min read",
+      image: "/images/blog/devops-automation.jpg"
     },
     {
       id: 6,
-      title: "Blockchain Applications Beyond Cryptocurrency",
-      excerpt: "Explore innovative blockchain use cases in supply chain, healthcare, and other industries.",
-      category: "Blockchain",
-      date: "January 3, 2025",
-      readTime: "6 min read",
-      image: "🔗"
+      title: "Building a Zero-Trust Security Architecture",
+      excerpt: "Implement a robust zero-trust security model to protect your organization's digital assets.",
+      category: "Cybersecurity",
+      date: "February 15, 2024",
+      readTime: "7 min read",
+      image: "/images/blog/zero-trust.jpg"
     }
   ];
 
   const categories = [
-    "All",
-    "AI & Technology",
+    "All Posts",
+    "AI & Machine Learning",
+    "Cloud & DevOps",
     "Cybersecurity",
-    "Cloud Computing",
-    "Emerging Tech",
-    "DevOps",
-    "Blockchain"
+    "Digital Transformation",
+    "IT Infrastructure"
   ];
 
   return (
@@ -110,7 +109,6 @@ const Blog: React.FC = () => {
               <div key={post.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                   <div className="text-center lg:text-left">
-                    <div className="text-6xl mb-4">{post.image}</div>
                     <div className="inline-block bg-blue-500/20 text-blue-400 text-sm px-3 py-1 rounded-full mb-4">
                       {post.category}
                     </div>
@@ -129,7 +127,7 @@ const Blog: React.FC = () => {
                     </Link>
                   </div>
                   <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-8 text-center">
-                    <div className="text-8xl mb-4">{post.image}</div>
+                    <div className="text-6xl mb-4">🤖</div>
                     <p className="text-blue-400 font-medium">Featured Content</p>
                   </div>
                 </div>
@@ -174,7 +172,6 @@ const Blog: React.FC = () => {
                   className="bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
                 >
                   <div className="p-6">
-                    <div className="text-4xl mb-4 text-center">{post.image}</div>
                     <div className="inline-block bg-blue-500/20 text-blue-400 text-sm px-3 py-1 rounded-full mb-4">
                       {post.category}
                     </div>

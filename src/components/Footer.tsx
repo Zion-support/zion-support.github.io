@@ -4,26 +4,35 @@ import { Link } from 'react-router-dom';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+  const services = [
+    { name: "AI Solutions", path: "/services/ai" },
+    { name: "Cloud & DevOps", path: "/services/cloud" },
+    { name: "Cybersecurity", path: "/services/cybersecurity" },
+    { name: "IT Infrastructure", path: "/services/infrastructure" },
+    { name: "Digital Transformation", path: "/services/transformation" },
+    { name: "Consulting", path: "/services/consulting" }
+  ];
+
+  const company = [
+    { name: "About Us", path: "/about" },
+    { name: "Careers", path: "/careers" },
+    { name: "Blog", path: "/blog" },
+    { name: "Contact", path: "/contact" }
+  ];
+
+  const legal = [
+    { name: "Privacy Policy", path: "/privacy" },
+    { name: "Terms of Service", path: "/terms" }
+  ];
+
   const footerSections = [
     {
       title: "Services",
-      links: [
-        { label: "AI Solutions", path: "/services" },
-        { label: "Cloud & DevOps", path: "/services" },
-        { label: "Cybersecurity", path: "/services" },
-        { label: "Quantum Computing", path: "/services" },
-        { label: "Blockchain & Web3", path: "/services" }
-      ]
+      links: services.map(service => ({ label: service.name, path: service.path }))
     },
     {
       title: "Company",
-      links: [
-        { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
-        { label: "Careers", path: "/about" },
-        { label: "News & Updates", path: "/blog" },
-        { label: "Case Studies", path: "/services" }
-      ]
+      links: company.map(item => ({ label: item.name, path: item.path }))
     },
     {
       title: "Resources",
@@ -143,12 +152,15 @@ const Footer: React.FC = () => {
             </div>
             
             <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm text-gray-300">
-              <Link to="/privacy" className="hover:text-blue-400 transition-colors duration-300">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="hover:text-blue-400 transition-colors duration-300">
-                Terms of Service
-              </Link>
+              {legal.map((item) => (
+                <Link 
+                  key={item.path}
+                  to={item.path} 
+                  className="hover:text-blue-400 transition-colors duration-300"
+                >
+                  {item.name}
+                </Link>
+              ))}
               <Link to="/cookies" className="hover:text-blue-400 transition-colors duration-300">
                 Cookie Policy
               </Link>

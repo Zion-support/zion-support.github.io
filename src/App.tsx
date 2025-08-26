@@ -7,7 +7,7 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { Footer } from "./components/Footer";
+import Footer from "./components/Footer";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -21,6 +21,7 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
+
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
@@ -42,6 +43,18 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+
+// New pages from our feature branch
+const About = React.lazy(() => import('./pages/About'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const AIServices = React.lazy(() => import('./pages/services/AI'));
+const CloudServices = React.lazy(() => import('./pages/services/Cloud'));
+const CybersecurityServices = React.lazy(() => import('./pages/services/Cybersecurity'));
+const InfrastructureServices = React.lazy(() => import('./pages/services/Infrastructure'));
+const DigitalTransformation = React.lazy(() => import('./pages/services/Transformation'));
+const ConsultingServices = React.lazy(() => import('./pages/services/Consulting'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -66,6 +79,17 @@ const baseRoutes = [
   { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
+  // New routes from our feature branch
+  { path: '/about', element: <About /> },
+  { path: '/privacy', element: <Privacy /> },
+  { path: '/terms', element: <Terms /> },
+  { path: '/careers', element: <Careers /> },
+  { path: '/services/ai', element: <AIServices /> },
+  { path: '/services/cloud', element: <CloudServices /> },
+  { path: '/services/cybersecurity', element: <CybersecurityServices /> },
+  { path: '/services/infrastructure', element: <InfrastructureServices /> },
+  { path: '/services/transformation', element: <DigitalTransformation /> },
+  { path: '/services/consulting', element: <ConsultingServices /> },
 ];
 
 const App = () => {
