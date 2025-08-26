@@ -22,7 +22,8 @@ import {
   TrendingUp,
   Award,
   Globe,
-  Headphones
+  Headphones,
+  MapPin
 } from 'lucide-react';
 
 export default function Pricing() {
@@ -525,7 +526,7 @@ export default function Pricing() {
                 <p className="text-zion-slate-light">364 E Main St STE 1008</p>
                 <p className="text-sm text-zion-slate-light">Middletown DE 19709</p>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
