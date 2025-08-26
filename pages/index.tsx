@@ -2,8 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  ArrowRight, Brain, Shield, Rocket, 
-  CheckCircle, Users, ExternalLink
+  ArrowRight, Brain, Shield, Rocket, Users, CheckCircle, ExternalLink
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
@@ -17,8 +16,6 @@ export default function HomePage() {
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
-
 
   const services = [
     {
