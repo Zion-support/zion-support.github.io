@@ -1,270 +1,186 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import Footer from '../components/Footer';
 
 export default function AutomationPage() {
-  const automationSystems = [
-    {
-      id: 1,
-      name: "Content Generation Engine",
-      description: "AI-powered system that autonomously creates, optimizes, and manages digital content across multiple platforms.",
-      status: "Active",
-      uptime: "99.9%",
-      efficiency: "94%",
-      icon: "✍️",
-      features: ["SEO Optimization", "Multi-language Support", "Content Scheduling", "Performance Analytics"]
-    },
-    {
-      id: 2,
-      name: "Infrastructure Monitor",
-      description: "Continuous monitoring and self-healing system that maintains optimal performance across all cloud infrastructure.",
-      status: "Active",
-      uptime: "99.7%",
-      efficiency: "97%",
-      icon: "🔧",
-      features: ["Auto-scaling", "Load Balancing", "Error Detection", "Performance Optimization"]
-    },
-    {
-      id: 3,
-      name: "Security Sentinel",
-      description: "Advanced threat detection and response system that protects against cyber attacks in real-time.",
-      status: "Active",
-      uptime: "99.8%",
-      efficiency: "96%",
-      icon: "🛡️",
-      features: ["Threat Detection", "Automated Response", "Vulnerability Scanning", "Compliance Monitoring"]
-    },
-    {
-      id: 4,
-      name: "Data Analytics Pipeline",
-      description: "Real-time data processing and analytics system that provides insights and drives decision-making.",
-      status: "Active",
-      uptime: "99.6%",
-      efficiency: "92%",
-      icon: "📊",
-      features: ["Real-time Processing", "Predictive Analytics", "Data Visualization", "Machine Learning"]
-    },
-    {
-      id: 5,
-      name: "Deployment Orchestrator",
-      description: "Automated CI/CD pipeline that manages deployments with zero downtime and intelligent rollback capabilities.",
-      status: "Active",
-      uptime: "99.5%",
-      efficiency: "95%",
-      icon: "🚀",
-      features: ["Continuous Deployment", "A/B Testing", "Rollback Management", "Performance Monitoring"]
-    },
-    {
-      id: 6,
-      name: "Customer Experience Optimizer",
-      description: "AI-driven system that personalizes user experiences and optimizes conversion rates in real-time.",
-      status: "Active",
-      uptime: "99.4%",
-      efficiency: "89%",
-      icon: "🎯",
-      features: ["Personalization", "A/B Testing", "Conversion Optimization", "User Behavior Analysis"]
-    }
-  ];
-
-  const metrics = [
-    { label: "Total Automations", value: "227", change: "+12", changeType: "positive" },
-    { label: "System Uptime", value: "99.7%", change: "+0.3%", changeType: "positive" },
-    { label: "Content Generated", value: "2,960", change: "+156", changeType: "positive" },
-    { label: "Performance Gain", value: "23%", change: "+5%", changeType: "positive" }
-  ];
-
   return (
     <>
       <Head>
-        <title>Automation Solutions | Zion Tech Group - Autonomous Systems</title>
-        <meta name="description" content="Explore Zion Tech Group's autonomous automation systems. Discover AI-powered solutions that operate 24/7 with self-healing capabilities and continuous optimization." />
-        <meta property="og:title" content="Automation Solutions | Zion Tech Group - Autonomous Systems" />
-        <meta property="og:description" content="Explore Zion Tech Group's autonomous automation systems. Discover AI-powered solutions that operate 24/7 with self-healing capabilities and continuous optimization." />
+        <title>Automation | Zion Tech Group - Autonomous Systems Showcase</title>
+        <meta name="description" content="Explore Zion Tech Group's cutting-edge autonomous automation systems, AI agents, and self-managing infrastructure solutions." />
+        <meta property="og:title" content="Automation - Zion Tech Group" />
+        <meta property="og:description" content="Cutting-edge autonomous automation systems and AI agents." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="mb-8">
-            <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              ← Back to Home
-            </Link>
-          </div>
-          
-          <header className="text-center mb-16">
+          <section className="text-center mb-16">
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
               Autonomous Automation
             </h1>
-            <p className="text-xl text-white/80 max-w-4xl mx-auto">
-              Experience the future of technology with our self-managing, intelligent systems that operate 24/7, 
-              continuously learn, and automatically optimize performance.
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Experience the future of technology with our self-managing, intelligent automation systems
             </p>
-          </header>
-
-          {/* Key Metrics */}
-          <section className="mb-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {metrics.map((metric, index) => (
-                <div key={index} className="bg-white/5 border border-white/10 rounded-lg p-6 text-center">
-                  <div className="text-3xl font-bold text-cyan-300 mb-2">{metric.value}</div>
-                  <div className="text-white/80 mb-2">{metric.label}</div>
-                  <div className={`text-sm ${
-                    metric.changeType === 'positive' ? 'text-green-400' : 'text-red-400'
-                  }`}>
-                    {metric.change}
-                  </div>
-                </div>
-              ))}
-            </div>
           </section>
 
-          {/* Live Dashboard Preview */}
-          <section className="mb-16">
-            <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-cyan-500/30 rounded-2xl p-8">
-              <h2 className="text-2xl font-bold mb-6 text-cyan-300">Live System Status</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white/10 rounded-lg p-6 text-center">
-                  <div className="text-4xl mb-3">🟢</div>
-                  <div className="text-lg font-semibold text-white">All Systems Operational</div>
-                  <div className="text-sm text-white/70 mt-2">227 automations running</div>
+          <section className="mx-auto max-w-6xl">
+            {/* Live System Status */}
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Live System Status</h2>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="bg-green-400/20 border border-green-400/30 rounded-xl p-6 text-center">
+                  <div className="text-3xl font-bold text-green-400">227</div>
+                  <div className="text-sm text-white/70">Active Automations</div>
+                  <div className="text-xs text-green-400 mt-2">✓ Operational</div>
                 </div>
-                <div className="bg-white/10 rounded-lg p-6 text-center">
-                  <div className="text-4xl mb-3">⚡</div>
-                  <div className="text-lg font-semibold text-white">Peak Performance</div>
-                  <div className="text-sm text-white/70 mt-2">99.7% efficiency</div>
+                <div className="bg-blue-400/20 border border-blue-400/30 rounded-xl p-6 text-center">
+                  <div className="text-3xl font-bold text-blue-400">2,960</div>
+                  <div className="text-sm text-white/70">Pages Generated</div>
+                  <div className="text-xs text-blue-400 mt-2">✓ Growing</div>
                 </div>
-                <div className="bg-white/10 rounded-lg p-6 text-center">
-                  <div className="text-4xl mb-3">🔮</div>
-                  <div className="text-lg font-semibold text-white">Predictive Mode</div>
-                  <div className="text-sm text-white/70 mt-2">AI learning active</div>
+                <div className="bg-purple-400/20 border border-purple-400/30 rounded-xl p-6 text-center">
+                  <div className="text-3xl font-bold text-purple-400">99.9%</div>
+                  <div className="text-sm text-white/70">Uptime</div>
+                  <div className="text-xs text-purple-400 mt-2">✓ Reliable</div>
                 </div>
-              </div>
-              <div className="text-center mt-6">
-                <Link 
-                  href="/live-dashboard"
-                  className="inline-block bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-600 hover:to-fuchsia-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200"
-                >
-                  View Live Dashboard →
-                </Link>
+                <div className="bg-orange-400/20 border border-orange-400/30 rounded-xl p-6 text-center">
+                  <div className="text-3xl font-bold text-orange-400">24/7</div>
+                  <div className="text-sm text-white/70">Monitoring</div>
+                  <div className="text-xs text-orange-400 mt-2">✓ Active</div>
+                </div>
               </div>
             </div>
-          </section>
 
-          {/* Automation Systems */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-cyan-300">Our Autonomous Systems</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {automationSystems.map((system) => (
-                <div key={system.id} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200 group">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="text-4xl">{system.icon}</div>
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      system.status === 'Active' 
-                        ? 'bg-green-500/20 text-green-300 border border-green-500/30'
-                        : 'bg-red-500/20 text-red-300 border border-red-500/30'
-                    }`}>
-                      {system.status}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-cyan-300 transition-colors">
-                    {system.name}
-                  </h3>
-                  
-                  <p className="text-white/80 mb-4 text-sm leading-relaxed">
-                    {system.description}
+            {/* Core Automation Systems */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-white">Core Automation Systems</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                  <div className="text-4xl mb-4">🤖</div>
+                  <h3 className="text-2xl font-bold mb-4 text-cyan-400">AI Content Factory</h3>
+                  <p className="text-white/70 mb-6">
+                    Autonomous content generation system that creates, optimizes, and publishes high-quality content 24/7 without human intervention.
                   </p>
-                  
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-cyan-300">{system.uptime}</div>
-                      <div className="text-xs text-white/60">Uptime</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-fuchsia-300">{system.efficiency}</div>
-                      <div className="text-xs text-white/60">Efficiency</div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <h4 className="text-sm font-medium text-white/90">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {system.features.map((feature, index) => (
-                        <li key={index} className="text-xs text-white/70 flex items-center gap-2">
-                          <span className="text-cyan-400">•</span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="space-y-2 text-sm text-white/60">
+                    <div>• SEO-optimized content creation</div>
+                    <div>• Multi-language support</div>
+                    <div>• Automatic publishing schedules</div>
+                    <div>• Performance analytics</div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </section>
 
-          {/* How It Works */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-cyan-300">How Autonomous Automation Works</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg p-6 mb-4">
-                  <div className="text-4xl mb-3">🧠</div>
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h3 className="text-2xl font-bold mb-4 text-fuchsia-400">Self-Healing Infrastructure</h3>
+                  <p className="text-white/70 mb-6">
+                    Intelligent monitoring and automatic recovery systems that detect and resolve issues before they impact users.
+                  </p>
+                  <div className="space-y-2 text-sm text-white/60">
+                    <div>• Real-time error detection</div>
+                    <div>• Automatic rollback systems</div>
+                    <div>• Performance optimization</div>
+                    <div>• Predictive maintenance</div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-cyan-300 mb-2">1. Intelligent Analysis</h3>
-                <p className="text-white/80 text-sm">AI systems continuously analyze data and identify optimization opportunities</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-gradient-to-br from-purple-500/20 to-fuchsia-500/20 border border-purple-500/30 rounded-lg p-6 mb-4">
-                  <div className="text-4xl mb-3">⚡</div>
+
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                  <div className="text-4xl mb-4">🌐</div>
+                  <h3 className="text-2xl font-bold mb-4 text-green-400">Cloud Orchestration</h3>
+                  <p className="text-white/70 mb-6">
+                    Multi-cloud management system that automatically scales, optimizes, and maintains infrastructure across different cloud providers.
+                  </p>
+                  <div className="space-y-2 text-sm text-white/60">
+                    <div>• Auto-scaling capabilities</div>
+                    <div>• Cost optimization</div>
+                    <div>• Multi-region deployment</div>
+                    <div>• Load balancing</div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-purple-300 mb-2">2. Automatic Execution</h3>
-                <p className="text-white/80 text-sm">Systems automatically implement improvements without human intervention</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-lg p-6 mb-4">
-                  <div className="text-4xl mb-3">📈</div>
+
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                  <div className="text-4xl mb-4">🔧</div>
+                  <h3 className="text-2xl font-bold mb-4 text-blue-400">CI/CD Automation</h3>
+                  <p className="text-white/70 mb-6">
+                    Fully automated development pipeline that builds, tests, and deploys code with intelligent quality gates and rollback capabilities.
+                  </p>
+                  <div className="space-y-2 text-sm text-white/60">
+                    <div>• Automated testing suites</div>
+                    <div>• Quality assurance checks</div>
+                    <div>• Zero-downtime deployments</div>
+                    <div>• Performance monitoring</div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-green-300 mb-2">3. Performance Monitoring</h3>
-                <p className="text-white/80 text-sm">Real-time tracking of system performance and outcomes</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-lg p-6 mb-4">
-                  <div className="text-4xl mb-3">🔄</div>
-                </div>
-                <h3 className="text-lg font-semibold text-orange-300 mb-2">4. Continuous Learning</h3>
-                <p className="text-white/80 text-sm">AI models learn from results and improve future decisions</p>
               </div>
             </div>
-          </section>
 
-          {/* Call to Action */}
-          <section className="mb-16">
-            <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-2xl p-8 text-center">
-              <h2 className="text-2xl font-bold mb-4 text-purple-300">Ready to Automate Your Future?</h2>
-              <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-                Join the autonomous revolution and experience technology that works for you 24/7. 
-                Our systems never sleep, never stop learning, and never stop improving.
+            {/* Automation Benefits */}
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-purple-400">Why Choose Autonomous Automation?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🚀</div>
+                  <h3 className="text-xl font-semibold mb-2 text-cyan-400">24/7 Operation</h3>
+                  <p className="text-white/70">Our systems never sleep, ensuring continuous operation and immediate response to any issues.</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">💡</div>
+                  <h3 className="text-xl font-semibold mb-2 text-fuchsia-400">Self-Improvement</h3>
+                  <p className="text-white/70">AI systems that learn from every interaction and continuously optimize their performance.</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🔄</div>
+                  <h3 className="text-xl font-semibold mb-2 text-green-400">Adaptive Scaling</h3>
+                  <p className="text-white/70">Automatic resource allocation and scaling based on real-time demand and performance metrics.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Technology Stack */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-white">Technology Stack</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 text-center hover:bg-white/15 transition-all duration-300">
+                  <div className="text-3xl mb-3">☁️</div>
+                  <div className="font-semibold">Cloud Platforms</div>
+                  <div className="text-sm text-white/60 mt-2">AWS, Azure, GCP</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 text-center hover:bg-white/15 transition-all duration-300">
+                  <div className="text-3xl mb-3">🤖</div>
+                  <div className="font-semibold">AI/ML</div>
+                  <div className="text-sm text-white/60 mt-2">TensorFlow, PyTorch</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 text-center hover:bg-white/15 transition-all duration-300">
+                  <div className="text-3xl mb-3">🐳</div>
+                  <div className="font-semibold">Containers</div>
+                  <div className="text-sm text-white/60 mt-2">Docker, Kubernetes</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 text-center hover:bg-white/15 transition-all duration-300">
+                  <div className="text-3xl mb-3">⚡</div>
+                  <div className="font-semibold">Monitoring</div>
+                  <div className="text-sm text-white/60 mt-2">Prometheus, Grafana</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center">
+              <h2 className="text-3xl font-bold mb-4 text-white">Ready to Automate?</h2>
+              <p className="text-lg text-white/80 mb-6 max-w-2xl mx-auto">
+                Transform your business with autonomous automation systems that work around the clock to drive efficiency and innovation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
-                  className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105"
-                >
+                <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
                   Get Started
-                </Link>
-                <Link 
-                  href="/reports"
-                  className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200"
-                >
-                  View Reports
-                </Link>
+                </a>
+                <a href="/services" className="px-8 py-4 bg-white/10 border border-white/20 text-white font-bold rounded-lg hover:bg-white/20 transition-all duration-200">
+                  Learn More
+                </a>
               </div>
             </div>
           </section>
         </main>
+        <Footer />
       </div>
     </>
   );

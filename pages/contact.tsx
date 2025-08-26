@@ -1,261 +1,165 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import Footer from '../components/Footer';
 
 export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact Us | Zion Tech Group - Get in Touch</title>
-        <meta name="description" content="Get in touch with Zion Tech Group. Contact our team for inquiries about autonomous AI systems, automation solutions, and technological partnerships." />
-        <meta property="og:title" content="Contact Us | Zion Tech Group - Get in Touch" />
-        <meta property="og:description" content="Get in touch with Zion Tech Group. Contact our team for inquiries about autonomous AI systems, automation solutions, and technological partnerships." />
+        <title>Contact Zion Tech Group | Get in Touch</title>
+        <meta name="description" content="Get in touch with Zion Tech Group. We're here to help with your autonomous technology needs and AI innovation projects." />
+        <meta property="og:title" content="Contact Zion Tech Group" />
+        <meta property="og:description" content="Get in touch with Zion Tech Group." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="mb-8">
-            <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              ← Back to Home
-            </Link>
-          </div>
-          
-          <div className="max-w-6xl mx-auto">
-            <header className="text-center mb-16">
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Get in Touch
-              </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Ready to explore the future of autonomous technology? Let's discuss how we can transform your business 
-                with intelligent automation and AI-powered solutions.
-              </p>
-            </header>
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Contact Us
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Ready to explore the future of autonomous technology? Let's connect and discuss how we can help transform your vision into reality.
+            </p>
+          </section>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <section>
-                <h2 className="text-2xl font-bold mb-6 text-cyan-300">Send us a Message</h2>
+          <section className="mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
+                <h2 className="text-3xl font-bold mb-6 text-cyan-400">Get in Touch</h2>
                 <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-white/80 mb-2">
-                        First Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        required
-                        className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
-                        placeholder="Enter your first name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-white/80 mb-2">
-                        Last Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        required
-                        className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
-                        placeholder="Enter your last name"
-                      />
-                    </div>
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                      placeholder="Your full name"
+                    />
                   </div>
                   
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2">
-                      Email Address *
+                      Email
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
-                      required
-                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
-                      placeholder="Enter your email address"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-white/80 mb-2">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
-                      placeholder="Enter your company name"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                      placeholder="your.email@example.com"
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-white/80 mb-2">
-                      Subject *
+                      Subject
                     </label>
                     <select
                       id="subject"
                       name="subject"
-                      required
-                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     >
                       <option value="">Select a subject</option>
-                      <option value="general">General Inquiry</option>
-                      <option value="partnership">Partnership Opportunity</option>
-                      <option value="automation">Automation Solutions</option>
-                      <option value="ai-systems">AI Systems</option>
-                      <option value="consulting">Consulting Services</option>
-                      <option value="support">Technical Support</option>
+                      <option value="ai-development">AI Development</option>
+                      <option value="automation">Automation Services</option>
+                      <option value="consulting">Consulting</option>
+                      <option value="partnership">Partnership</option>
+                      <option value="other">Other</option>
                     </select>
                   </div>
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2">
-                      Message *
+                      Message
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       rows={6}
-                      required
-                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                       placeholder="Tell us about your project or inquiry..."
                     ></textarea>
                   </div>
                   
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-600 hover:to-fuchsia-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105"
+                    className="w-full bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold py-3 px-6 rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                   >
                     Send Message
                   </button>
                 </form>
-              </section>
-
-              {/* Contact Information */}
-              <section>
-                <h2 className="text-2xl font-bold mb-6 text-cyan-300">Contact Information</h2>
+              </div>
+              
+              <div className="space-y-8">
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold mb-4 text-fuchsia-400">Contact Information</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center">
+                      <div className="text-2xl mr-4">📧</div>
+                      <div>
+                        <div className="font-semibold">Email</div>
+                        <div className="text-white/70">hello@zion.tech</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="text-2xl mr-4">🌐</div>
+                      <div>
+                        <div className="font-semibold">Website</div>
+                        <div className="text-white/70">zion.tech</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="text-2xl mr-4">📍</div>
+                      <div>
+                        <div className="font-semibold">Location</div>
+                        <div className="text-white/70">Global (Remote First)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 
-                <div className="space-y-6">
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="text-2xl">📍</div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-fuchsia-300 mb-2">Headquarters</h3>
-                        <p className="text-white/80">
-                          Zion Tech Group<br />
-                          Innovation District<br />
-                          Tech Valley, CA 94000<br />
-                          United States
-                        </p>
-                      </div>
-                    </div>
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold mb-4 text-green-400">Business Hours</h3>
+                  <div className="space-y-2 text-white/70">
+                    <div>Monday - Friday: 9:00 AM - 6:00 PM UTC</div>
+                    <div>Saturday: 10:00 AM - 2:00 PM UTC</div>
+                    <div>Sunday: Closed</div>
                   </div>
-
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="text-2xl">📧</div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-fuchsia-300 mb-2">Email</h3>
-                        <p className="text-white/80">
-                          <a href="mailto:hello@zion.tech" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                            hello@zion.tech
-                          </a><br />
-                          <a href="mailto:support@zion.tech" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                            support@zion.tech
-                          </a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="text-2xl">🌐</div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-fuchsia-300 mb-2">Online</h3>
-                        <p className="text-white/80">
-                          <a href="https://zion.tech" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                            zion.tech
-                          </a><br />
-                          <a href="https://github.com/Zion-Holdings" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                            GitHub
-                          </a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="text-2xl">⏰</div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-fuchsia-300 mb-2">Business Hours</h3>
-                        <p className="text-white/80">
-                          Monday - Friday: 9:00 AM - 6:00 PM PST<br />
-                          Saturday: 10:00 AM - 4:00 PM PST<br />
-                          Sunday: Closed
-                        </p>
-                        <p className="text-cyan-300 text-sm mt-2">
-                          Our autonomous systems operate 24/7
-                        </p>
-                      </div>
-                    </div>
+                  <div className="mt-4 text-sm text-white/50">
+                    * Our AI systems operate 24/7 for continuous support
                   </div>
                 </div>
-
-                {/* Quick Actions */}
-                <div className="mt-8 space-y-4">
-                  <h3 className="text-lg font-semibold text-cyan-300">Quick Actions</h3>
-                  <div className="grid grid-cols-1 gap-3">
-                    <Link 
-                      href="/automation"
-                      className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-lg hover:border-cyan-400/30 transition-all duration-200 group"
-                    >
-                      <div className="text-xl">🤖</div>
-                      <div>
-                        <div className="font-medium text-white group-hover:text-cyan-300 transition-colors">
-                          Explore Automation Solutions
-                        </div>
-                        <div className="text-sm text-white/60">See our autonomous systems in action</div>
-                      </div>
-                    </Link>
-                    
-                    <Link 
-                      href="/blog"
-                      className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-lg hover:border-cyan-400/30 transition-all duration-200 group"
-                    >
-                      <div className="text-xl">📚</div>
-                      <div>
-                        <div className="font-medium text-white group-hover:text-cyan-300 transition-colors">
-                          Read Our Blog
-                        </div>
-                        <div className="text-sm text-white/60">Latest insights and trends</div>
-                      </div>
-                    </Link>
-                    
-                    <Link 
-                      href="/about"
-                      className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-lg hover:border-cyan-400/30 transition-all duration-200 group"
-                    >
-                      <div className="text-xl">ℹ️</div>
-                      <div>
-                        <div className="font-medium text-white group-hover:text-cyan-300 transition-colors">
-                          Learn About Us
-                        </div>
-                        <div className="text-sm text-white/60">Our mission and vision</div>
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-              </section>
+              </div>
             </div>
-          </div>
+
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400">Why Choose Zion Tech Group?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h3 className="text-xl font-semibold mb-2">Fast Response</h3>
+                  <p className="text-white/70">Get a response within 24 hours, often much sooner</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🤖</div>
+                  <h3 className="text-xl font-semibold mb-2">AI-Powered</h3>
+                  <p className="text-white/70">Leverage our autonomous systems for your projects</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🌍</div>
+                  <h3 className="text-xl font-semibold mb-2">Global Reach</h3>
+                  <p className="text-white/70">We work with clients worldwide, 24/7</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
+        <Footer />
       </div>
     </>
   );
