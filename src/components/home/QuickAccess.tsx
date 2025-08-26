@@ -99,4 +99,3 @@ export const QuickAccess: React.FC = () => {
     </section>
   );
 };
-}

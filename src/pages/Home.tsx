@@ -26,6 +26,7 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
+import { ServicesShowcase } from "@/components/ServicesShowcase";
 
 export default function Home() {
   return (
@@ -635,6 +636,9 @@ export default function Home() {
 
       {/* Enhanced Featured Listings Section */}
       <FeaturedListingsSection />
+
+      {/* Comprehensive Services Showcase */}
+      <ServicesShowcase />
 
       {/* Enhanced Newsletter Section */}
       <NewsletterSection />
