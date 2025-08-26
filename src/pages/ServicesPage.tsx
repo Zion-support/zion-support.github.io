@@ -30,11 +30,15 @@ import {
   Mail,
   MapPin,
   Globe as GlobeIcon,
-  ShoppingCart,
-  Building
+  Atom,
+  Blockchain,
+  Heart,
+  Scale,
+  Factory,
+  Satellite
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -45,21 +49,20 @@ export default function ServicesPage() {
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'ai-finance', name: 'AI Finance', icon: DollarSign, color: 'from-zion-green to-zion-cyan' },
+    { id: 'ai-automation', name: 'AI & Automation', icon: Cpu, color: 'from-zion-purple to-zion-red' },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Atom, color: 'from-zion-blue to-zion-cyan' },
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: Blockchain, color: 'from-zion-purple to-zion-blue' },
     { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
+    { id: 'healthcare-ai', name: 'Healthcare AI', icon: Heart, color: 'from-zion-pink to-zion-purple' },
+    { id: 'legal-tech', name: 'Legal Tech', icon: Scale, color: 'from-zion-orange to-zion-purple' },
+    { id: 'financial-ai', name: 'Financial AI', icon: DollarSign, color: 'from-zion-green to-zion-blue' },
+    { id: 'manufacturing-ai', name: 'Manufacturing AI', icon: Factory, color: 'from-zion-blue to-zion-purple' },
+    { id: 'space-tech', name: 'Space Technology', icon: Satellite, color: 'from-zion-purple to-zion-cyan' },
     { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
     { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
     { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
-    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' },
-    { id: 'education-technology', name: 'Education Tech', icon: BookOpen, color: 'from-zion-blue to-zion-green' },
-    { id: 'real-estate-technology', name: 'Real Estate Tech', icon: Building, color: 'from-zion-orange to-zion-blue' },
-    { id: 'manufacturing-technology', name: 'Manufacturing Tech', icon: Cpu, color: 'from-zion-purple to-zion-orange' },
-    { id: 'energy-technology', name: 'Energy Tech', icon: Zap, color: 'from-zion-yellow to-zion-green' },
-    { id: 'retail-technology', name: 'Retail Tech', icon: ShoppingCart, color: 'from-zion-pink to-zion-orange' },
-    { id: 'media-technology', name: 'Media Tech', icon: Play, color: 'from-zion-purple to-zion-pink' }
+    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' }
   ];
 
   const priceRanges = [
@@ -78,7 +81,7 @@ export default function ServicesPage() {
   ];
 
   // Filter and sort services
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => {
+  const filteredServices = ALL_INNOVATIVE_SERVICES.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -122,7 +125,7 @@ export default function ServicesPage() {
     <>
       <SEO 
         title="Innovative Micro SAAS Services - Zion Tech Group"
-        description="Discover cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with our innovative technology services."
+        description="Discover cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, Healthcare AI, Legal Tech, and more. Transform your business with our innovative technology services."
         canonical="/services"
         url="https://ziontechgroup.com/services"
       />
@@ -150,7 +153,7 @@ export default function ServicesPage() {
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing, 
-              discover the future of business technology with our comprehensive micro SAAS platform.
+              blockchain applications to healthcare AI, discover the future of business technology with our comprehensive micro SAAS platform.
             </p>
             
             {/* Search Bar */}
@@ -175,7 +178,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length}+</div>
+                <div className="text-3xl font-bold text-zion-cyan mb-2">{ALL_INNOVATIVE_SERVICES.length}+</div>
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               <motion.div 
@@ -265,7 +268,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-zion-slate-light">
-              Showing {sortedServices.length} of {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
+              Showing {sortedServices.length} of {ALL_INNOVATIVE_SERVICES.length} services
             </div>
           </motion.div>
         </div>

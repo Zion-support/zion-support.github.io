@@ -1,48 +1,29 @@
-// Production logger utility for safe error logging
-export function logErrorToProduction(message: string, error?: any): void {
-  // In production, we might want to send errors to a logging service
-  // For now, we'll just use console.error in a safe way
+// Production-safe logging utility
+export const productionLogger = {
+  log: (...args: any[]) => {
+    if (process.env.NODE_ENV !== 'production') {
+      console.log(...args);
+    }
+  },
   
-  try {
-    // Only log in development or if explicitly enabled
-    if (process.env.NODE_ENV === 'development') {
-      console.error(`[Production Logger] ${message}`, error);
+  error: (...args: any[]) => {
+    if (process.env.NODE_ENV !== 'production') {
+      console.error(...args);
     }
-    
-    // In production, you could send to:
-    // - Sentry
-    // - LogRocket
-    // - Custom logging service
-    // - Analytics service
-    
-    // Example: sendToLoggingService(message, error);
-    
-  } catch (loggingError) {
-    // Prevent infinite recursion if logging itself fails
-    // Silently fail in production
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('Failed to log error:', loggingError);
+    // In production, you might want to send errors to a monitoring service
+  },
+  
+  warn: (...args: any[]) => {
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(...args);
+    }
+  },
+  
+  info: (...args: any[]) => {
+    if (process.env.NODE_ENV !== 'production') {
+      console.info(...args);
     }
   }
-}
+};
 
-// Additional logging utilities
-export function logInfoToProduction(message: string, data?: any): void {
-  try {
-    if (process.env.NODE_ENV === 'development') {
-      console.info(`[Production Logger] ${message}`, data);
-    }
-  } catch {
-    // Silent fail
-  }
-}
-
-export function logWarningToProduction(message: string, data?: any): void {
-  try {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn(`[Production Logger] ${message}`, data);
-    }
-  } catch {
-    // Silent fail
-  }
-}
+export default productionLogger;
