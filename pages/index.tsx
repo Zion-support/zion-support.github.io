@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -199,3 +200,10 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+=======
+import Home from '../src/pages/Home';
+
+export default function Index() {
+  return <Home />;
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2900
