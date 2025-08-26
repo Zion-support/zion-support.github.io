@@ -38,56 +38,24 @@ const HeroSection: React.FC = () => {
   };
 
   const trustMetrics = [
-    { icon: "🚀", label: "35+ Services", value: "Innovative Solutions", color: "from-zion-cyan to-zion-blue" },
-    { icon: "💎", label: "Enterprise", value: "Fortune 500 Clients", color: "from-zion-purple to-zion-cyan" },
-    { icon: "🔒", label: "Secure", value: "Bank-Level Security", color: "from-zion-green to-zion-cyan" },
-    { icon: "⚡", label: "24/7 Support", value: "Always Available", color: "from-zion-orange to-zion-yellow" }
-  ];
-
-  const techFeatures = [
-    { icon: "🤖", label: "AI-Powered", description: "Advanced AI algorithms", color: "from-zion-cyan to-zion-blue" },
-    { icon: "🔮", label: "Quantum Ready", description: "Future-proof technology", color: "from-zion-purple to-zion-cyan" },
-    { icon: "🌐", label: "Cloud Native", description: "Scalable architecture", color: "from-zion-blue to-zion-cyan" },
-    { icon: "🛡️", label: "Enterprise Grade", description: "Production ready", color: "from-zion-green to-zion-cyan" }
-  ];
-
-  const innovativeServices = [
-    "QuantumEdge AI Platform",
-    "NeuromorphicAI Studio", 
-    "Zero-Trust Security",
-    "5G Private Networks",
-    "SpaceTech AI Platform",
-    "GreenTech AI Solutions"
+    { icon: "🚀", label: "35+ Services", value: "Innovative Solutions", ariaLabel: "Over 35 innovative technology services available" },
+    { icon: "💎", label: "Enterprise", value: "Fortune 500 Clients", ariaLabel: "Trusted by Fortune 500 companies" },
+    { icon: "🔒", label: "Secure", value: "Bank-Level Security", ariaLabel: "Bank-level security standards" },
+    { icon: "⚡", label: "24/7 Support", value: "Always Available", ariaLabel: "24/7 customer support available" }
   ];
 
   return (
-    <section className="relative overflow-hidden min-h-screen flex items-center justify-center bg-zion-gradient">
-      {/* Enhanced Animated Background Elements */}
-      <div className="absolute inset-0">
-        {/* Floating geometric shapes */}
-        <motion.div 
-          className="absolute top-1/4 left-1/4 w-6 h-6 rounded-full bg-gradient-to-r from-zion-cyan/30 to-zion-blue/30"
-          variants={floatingVariants}
-          animate="animate"
-        />
-        <motion.div 
-          className="absolute top-1/3 right-1/3 w-8 h-8 rounded-full bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: '1s' }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 left-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-zion-blue/40 to-zion-cyan/40"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: '2s' }}
-        />
-        <motion.div 
-          className="absolute top-1/2 right-1/4 w-6 h-6 rounded-full bg-gradient-to-r from-zion-cyan/25 to-zion-purple/25"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: '3s' }}
-        />
+    <section 
+      className="relative overflow-hidden min-h-screen flex items-center justify-center bg-zion-gradient"
+      aria-labelledby="hero-heading"
+      role="banner"
+    >
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0" aria-hidden="true">
+        <div className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-cyan/30 animate-float" />
+        <div className="absolute top-1/3 right-1/3 w-6 h-6 rounded-full bg-zion-purple/20 animate-float floating-delay-1" />
+        <div className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full bg-zion-blue/40 animate-float floating-delay-2" />
+        <div className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan/25 animate-float floating-delay-3" />
         
         {/* Enhanced Grid Pattern with Animation */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse-slow" />
@@ -120,7 +88,8 @@ const HeroSection: React.FC = () => {
         <motion.div 
           className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-8 backdrop-blur-sm hover:scale-105 transition-transform duration-300"
           variants={itemVariants}
-          whileHover={{ scale: 1.05 }}
+          role="status"
+          aria-label="AI-Powered Technology Solutions badge"
         >
           <span className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse" />
           🚀 AI-Powered Technology Solutions
@@ -129,7 +98,8 @@ const HeroSection: React.FC = () => {
 
         {/* Enhanced Main Heading */}
         <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight"
+          id="hero-heading"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
           variants={itemVariants}
         >
           <span className="text-white drop-shadow-lg">The Future of</span>
@@ -141,7 +111,7 @@ const HeroSection: React.FC = () => {
 
         {/* Enhanced Subtitle */}
         <motion.p 
-          className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-12 leading-relaxed"
+          className="text-lg sm:text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-10 leading-relaxed"
           variants={itemVariants}
         >
           Discover our comprehensive collection of{' '}
@@ -159,7 +129,8 @@ const HeroSection: React.FC = () => {
         >
           <Link
             to="/services"
-            className="btn-primary text-lg py-4 px-8 neon-border hover:scale-105 transition-all duration-300 group"
+            className="btn-primary text-lg py-4 px-8 neon-border focus:ring-4 focus:ring-zion-cyan/50 focus:outline-none transition-all duration-300"
+            aria-label="Explore all our technology services"
           >
             <span className="flex items-center gap-3">
               <span className="group-hover:rotate-12 transition-transform duration-300">🚀</span>
@@ -170,7 +141,8 @@ const HeroSection: React.FC = () => {
           
           <a
             href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry"
-            className="btn-secondary text-lg py-4 px-8 hover:scale-105 transition-all duration-300 group"
+            className="btn-secondary text-lg py-4 px-8 focus:ring-4 focus:ring-zion-purple/50 focus:outline-none transition-all duration-300"
+            aria-label="Contact us via email for service inquiries"
           >
             <span className="flex items-center gap-3">
               <span className="group-hover:bounce transition-all duration-300">💬</span>
@@ -181,8 +153,10 @@ const HeroSection: React.FC = () => {
 
         {/* Enhanced Trust Metrics */}
         <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-16"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto mb-12"
           variants={itemVariants}
+          role="region"
+          aria-label="Company trust metrics and achievements"
         >
           {trustMetrics.map((metric, index) => (
             <motion.div 
@@ -190,47 +164,60 @@ const HeroSection: React.FC = () => {
               className="text-center group cursor-pointer"
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ type: "spring", stiffness: 300 }}
+              tabIndex={0}
+              role="article"
+              aria-label={metric.ariaLabel}
             >
-              <div className="text-4xl mb-3 group-hover:animate-bounce-gentle transition-all duration-300">{metric.icon}</div>
-              <div className="text-zion-cyan font-bold text-lg mb-2 group-hover:text-zion-purple transition-colors duration-300">{metric.label}</div>
-              <div className="text-zion-slate-light text-sm group-hover:text-white transition-colors duration-300">{metric.value}</div>
+              <div className="text-2xl sm:text-3xl mb-2 group-hover:animate-bounce-gentle">{metric.icon}</div>
+              <div className="text-zion-cyan font-bold text-base sm:text-lg mb-1">{metric.label}</div>
+              <div className="text-zion-slate-light text-xs sm:text-sm">{metric.value}</div>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Enhanced Contact Info Card */}
         <motion.div 
-          className="glass max-w-3xl mx-auto p-8 rounded-3xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-500 hover:shadow-zion-glow"
+          className="glass max-w-2xl mx-auto p-4 sm:p-6 rounded-2xl border border-white/20"
           variants={itemVariants}
           whileHover={{ scale: 1.02, y: -5 }}
           transition={{ type: "spring", stiffness: 300 }}
+          role="region"
+          aria-label="Contact information"
         >
-          <h3 className="text-xl font-semibold text-zion-cyan mb-6 flex items-center justify-center gap-2">
-            📞 Contact Information
-            <span className="text-zion-purple">|</span>
-            <span className="text-zion-blue">Ready to Connect</span>
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-            <div className="space-y-3">
-              <p className="flex items-center gap-3 group">
-                <span className="text-zion-cyan group-hover:scale-110 transition-transform duration-300">📱</span>
+          <h3 className="text-lg font-semibold text-zion-cyan mb-4">📞 Contact Information</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div className="space-y-2">
+              <p className="flex items-center gap-2">
+                <span className="text-zion-cyan" aria-hidden="true">📱</span>
                 <span className="text-zion-slate-light">Phone:</span>
-                <span className="text-white font-medium">+1 302 464 0950</span>
+                <a 
+                  href="tel:+13024640950" 
+                  className="text-white hover:text-zion-cyan transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded"
+                  aria-label="Call us at +1 302 464 0950"
+                >
+                  +1 302 464 0950
+                </a>
               </p>
-              <p className="flex items-center gap-3 group">
-                <span className="text-zion-cyan group-hover:scale-110 transition-transform duration-300">✉️</span>
+              <p className="flex items-center gap-2">
+                <span className="text-zion-cyan" aria-hidden="true">✉️</span>
                 <span className="text-zion-slate-light">Email:</span>
-                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry"
+                  className="text-white hover:text-zion-cyan transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded"
+                  aria-label="Email us at kleber@ziontechgroup.com"
+                >
+                  kleber@ziontechgroup.com
+                </a>
               </p>
             </div>
-            <div className="space-y-3">
-              <p className="flex items-center gap-3 group">
-                <span className="text-zion-cyan group-hover:scale-110 transition-transform duration-300">🌐</span>
+            <div className="space-y-2">
+              <p className="flex items-center gap-2">
+                <span className="text-zion-cyan" aria-hidden="true">🌐</span>
                 <span className="text-zion-slate-light">Website:</span>
                 <span className="text-white font-medium">ziontechgroup.com</span>
               </p>
-              <p className="flex items-center gap-3 group">
-                <span className="text-zion-cyan group-hover:scale-110 transition-transform duration-300">📍</span>
+              <p className="flex items-center gap-2">
+                <span className="text-zion-cyan" aria-hidden="true">📍</span>
                 <span className="text-zion-slate-light">Address:</span>
                 <span className="text-white font-medium">364 E Main St STE 1008, Middletown DE 19709</span>
               </p>
@@ -240,8 +227,10 @@ const HeroSection: React.FC = () => {
 
         {/* Enhanced Feature Pills */}
         <motion.div 
-          className="flex flex-wrap justify-center items-center gap-4 mt-12 text-zion-slate-light text-sm"
+          className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mt-8 text-zion-slate-light text-xs sm:text-sm"
           variants={itemVariants}
+          role="region"
+          aria-label="Key platform features"
         >
           <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-cyan/30 border border-zion-cyan/40 rounded-full hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse" />
@@ -267,7 +256,7 @@ const HeroSection: React.FC = () => {
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        whileHover={{ scale: 1.2 }}
+        aria-hidden="true"
       >
         <div className="w-8 h-12 border-2 border-zion-cyan/50 rounded-full flex justify-center hover:border-zion-cyan transition-colors duration-300">
           <div className="w-1 h-4 bg-zion-cyan rounded-full mt-2 animate-bounce" />

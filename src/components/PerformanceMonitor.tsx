@@ -1,237 +1,245 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  score: number;
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  domLoad: number | null;
+  windowLoad: number | null;
 }
 
-interface PerformanceMonitorProps {
-  showDetails?: boolean;
-  autoHide?: boolean;
+// Extended interfaces for specific performance entry types
+interface FirstInputEntry extends PerformanceEntry {
+  processingStart: number;
+  target?: EventTarget;
 }
 
-export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  showDetails = false,
-  autoHide = true
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(true);
-  const [isExpanded, setIsExpanded] = useState(false);
+interface LayoutShiftEntry extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+}
 
-  const calculateScore = useCallback((metrics: Partial<PerformanceMetrics>): number => {
-    let score = 100;
-    
-    // FCP scoring (0-2500ms is good)
-    if (metrics.fcp && metrics.fcp > 2500) {
-      score -= Math.min(20, (metrics.fcp - 2500) / 100);
-    }
-    
-    // LCP scoring (0-2500ms is good)
-    if (metrics.lcp && metrics.lcp > 2500) {
-      score -= Math.min(25, (metrics.lcp - 2500) / 100);
-    }
-    
-    // CLS scoring (0-0.1 is good)
-    if (metrics.cls && metrics.cls > 0.1) {
-      score -= Math.min(15, metrics.cls * 100);
-    }
-    
-    // TTFB scoring (0-800ms is good)
-    if (metrics.ttfb && metrics.ttfb > 800) {
-      score -= Math.min(20, (metrics.ttfb - 800) / 100);
-    }
-    
-    return Math.max(0, Math.round(score));
-  }, []);
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    domLoad: null,
+    windowLoad: null
+  });
 
-  const getScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-400';
-    if (score >= 70) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  const getScoreBgColor = (score: number): string => {
-    if (score >= 90) return 'bg-green-500/20 border-green-400/30';
-    if (score >= 70) return 'bg-yellow-500/20 border-yellow-400/30';
-    return 'bg-red-500/20 border-red-400/30';
-  };
-
-  const measurePerformance = useCallback(async () => {
-    try {
-      // Wait for page to be fully loaded
-      if (document.readyState !== 'complete') {
-        return;
-      }
-
-      // Measure FCP
-      const fcpEntry = performance.getEntriesByType('paint').find(
-        entry => entry.name === 'first-contentful-paint'
-      );
-      const fcp = fcpEntry ? fcpEntry.startTime : 0;
-
-      // Measure LCP
-      const lcpEntry = performance.getEntriesByType('largest-contentful-paint')[0];
-      const lcp = lcpEntry ? lcpEntry.startTime : 0;
-
-      // Measure TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const ttfb = navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart : 0;
-
-      // Measure CLS
-      let cls = 0;
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
-              cls += (entry as any).value;
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['layout-shift'] });
-      }
-
-      // FID measurement (simplified)
-      const fid = 0; // Would need user interaction to measure
-
-      const newMetrics: PerformanceMetrics = {
-        fcp: Math.round(fcp),
-        lcp: Math.round(lcp),
-        fid: Math.round(fid),
-        cls: Math.round(cls * 1000) / 1000,
-        ttfb: Math.round(ttfb),
-        score: 0
-      };
-
-      newMetrics.score = calculateScore(newMetrics);
-      setMetrics(newMetrics);
-
-      // Auto-hide after 5 seconds if enabled
-      if (autoHide) {
-        setTimeout(() => setIsVisible(false), 5000);
-      }
-    } catch (error) {
-      console.error('Performance measurement failed:', error);
-    }
-  }, [calculateScore, autoHide]);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Initial measurement
+    // Only show in development or when explicitly enabled
+    if (process.env.NODE_ENV === 'development' || process.env.REACT_APP_SHOW_PERFORMANCE === 'true') {
+      setIsVisible(true);
+    }
+
+    const measurePerformance = () => {
+      // Check if PerformanceObserver is supported
+      if ('PerformanceObserver' in window) {
+        // First Contentful Paint (FCP)
+        const fcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+          if (fcpEntry) {
+            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+          }
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
+
+        // Largest Contentful Paint (LCP)
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          }
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // First Input Delay (FID)
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            if (entry.entryType === 'first-input') {
+              const fidEntry = entry as FirstInputEntry;
+              setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+            }
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+
+        // Cumulative Layout Shift (CLS)
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            if (entry.entryType === 'layout-shift') {
+              const layoutShiftEntry = entry as LayoutShiftEntry;
+              if (!layoutShiftEntry.hadRecentInput) {
+                clsValue += layoutShiftEntry.value;
+                setMetrics(prev => ({ ...prev, cls: clsValue }));
+              }
+            }
+          });
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+        // Time to First Byte (TTFB)
+        const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigationEntry) {
+          setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+        }
+
+        // DOM Content Loaded (using legacy timing API as fallback)
+        if ('timing' in performance) {
+          const timing = (performance as any).timing;
+          const domLoadTime = timing.domContentLoadedEventEnd - timing.navigationStart;
+          setMetrics(prev => ({ ...prev, domLoad: domLoadTime }));
+          
+          // Window Load
+          const windowLoadTime = timing.loadEventEnd - timing.navigationStart;
+          setMetrics(prev => ({ ...prev, windowLoad: windowLoadTime }));
+        }
+
+        // Cleanup observers
+        return () => {
+          fcpObserver.disconnect();
+          lcpObserver.disconnect();
+          fidObserver.disconnect();
+          clsObserver.disconnect();
+        };
+      }
+    };
+
+    // Measure performance after a short delay to ensure page is loaded
     const timer = setTimeout(measurePerformance, 1000);
-    
-    // Measure on route changes
-    const handleRouteChange = () => {
-      setTimeout(measurePerformance, 500);
-    };
 
-    window.addEventListener('popstate', handleRouteChange);
-    
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, [measurePerformance]);
+    return () => clearTimeout(timer);
+  }, []);
 
-  if (!metrics || !isVisible) return null;
+  const getPerformanceScore = (metric: keyof PerformanceMetrics): string => {
+    const value = metrics[metric];
+    if (value === null) return 'N/A';
+
+    switch (metric) {
+      case 'fcp':
+        if (value < 1800) return '🟢 Good';
+        if (value < 3000) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      case 'lcp':
+        if (value < 2500) return '🟢 Good';
+        if (value < 4000) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      case 'fid':
+        if (value < 100) return '🟢 Good';
+        if (value < 300) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      case 'cls':
+        if (value < 0.1) return '🟢 Good';
+        if (value < 0.25) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      case 'ttfb':
+        if (value < 800) return '🟢 Good';
+        if (value < 1800) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      default:
+        return 'N/A';
+    }
+  };
+
+  const getMetricValue = (metric: keyof PerformanceMetrics): string => {
+    const value = metrics[metric];
+    if (value === null) return 'N/A';
+    
+    switch (metric) {
+      case 'fcp':
+      case 'lcp':
+      case 'fid':
+      case 'ttfb':
+      case 'domLoad':
+      case 'windowLoad':
+        return `${Math.round(value)}ms`;
+      case 'cls':
+        return value.toFixed(3);
+      default:
+        return 'N/A';
+    }
+  };
+
+  if (!isVisible) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        className={`fixed top-4 right-4 z-50 ${getScoreBgColor(metrics.score)} border rounded-lg p-4 backdrop-blur-sm transition-all duration-300 ${
-          isExpanded ? 'w-80' : 'w-auto'
-        }`}
-      >
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center space-x-2">
-            <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-            <span className="text-white font-medium text-sm">Performance</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="text-white/70 hover:text-white transition-colors"
-            >
-              {isExpanded ? (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                </svg>
-              )}
-            </button>
-            <button
-              onClick={() => setIsVisible(false)}
-              className="text-white/70 hover:text-white transition-colors"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
+    <div className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-md text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-sm font-semibold">Performance Monitor</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white text-xs"
+          aria-label="Close performance monitor"
+        >
+          ✕
+        </button>
+      </div>
+      
+      <div className="space-y-2 text-xs">
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className="font-mono">{getMetricValue('fcp')}</span>
+          <span>{getPerformanceScore('fcp')}</span>
         </div>
-
-        <div className="text-center mb-3">
-          <div className={`text-2xl font-bold ${getScoreColor(metrics.score)}`}>
-            {metrics.score}/100
-          </div>
-          <div className="text-white/70 text-xs">
-            {metrics.score >= 90 ? 'Excellent' : metrics.score >= 70 ? 'Good' : 'Needs Improvement'}
-          </div>
+        
+        <div className="flex justify-between">
+          <span>LCP:</span>
+          <span className="font-mono">{getMetricValue('lcp')}</span>
+          <span>{getPerformanceScore('lcp')}</span>
         </div>
-
-        {isExpanded && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="space-y-2 text-xs"
-          >
-            <div className="flex justify-between">
-              <span className="text-white/70">FCP:</span>
-              <span className={`font-mono ${metrics.fcp <= 2500 ? 'text-green-400' : 'text-red-400'}`}>
-                {metrics.fcp}ms
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-white/70">LCP:</span>
-              <span className={`font-mono ${metrics.lcp <= 2500 ? 'text-green-400' : 'text-red-400'}`}>
-                {metrics.lcp}ms
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-white/70">CLS:</span>
-              <span className={`font-mono ${metrics.cls <= 0.1 ? 'text-green-400' : 'text-red-400'}`}>
-                {metrics.cls}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-white/70">TTFB:</span>
-              <span className={`font-mono ${metrics.ttfb <= 800 ? 'text-green-400' : 'text-red-400'}`}>
-                {metrics.ttfb}ms
-              </span>
-            </div>
-          </motion.div>
-        )}
-
-        <div className="mt-3 pt-3 border-t border-white/20">
-          <button
-            onClick={measurePerformance}
-            className="w-full bg-white/10 hover:bg-white/20 text-white text-xs py-2 px-3 rounded transition-colors"
-          >
-            Refresh Metrics
-          </button>
+        
+        <div className="flex justify-between">
+          <span>FID:</span>
+          <span className="font-mono">{getMetricValue('fid')}</span>
+          <span>{getPerformanceScore('fid')}</span>
         </div>
-      </motion.div>
-    </AnimatePresence>
+        
+        <div className="flex justify-between">
+          <span>CLS:</span>
+          <span className="font-mono">{getMetricValue('cls')}</span>
+          <span>{getPerformanceScore('cls')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>TTFB:</span>
+          <span className="font-mono">{getMetricValue('ttfb')}</span>
+          <span>{getPerformanceScore('ttfb')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>DOM Load:</span>
+          <span className="font-mono">{getMetricValue('domLoad')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>Window Load:</span>
+          <span className="font-mono">{getMetricValue('windowLoad')}</span>
+        </div>
+      </div>
+      
+      <div className="mt-3 pt-2 border-t border-gray-600">
+        <button
+          onClick={() => window.location.reload()}
+          className="w-full bg-zion-cyan text-black text-xs py-1 px-2 rounded hover:bg-zion-cyan/80 transition-colors"
+        >
+          Refresh Metrics
+        </button>
+      </div>
+    </div>
   );
 };
 
