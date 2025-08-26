@@ -1002,6 +1002,7 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 7
   },
   {
+<<<<<<< HEAD
     id: 'cloudflare-turnstile-proxy',
     name: 'Cloudflare Turnstile & Bot Shield Proxy',
     tagline: 'Kill signup spam and bot abuse without CAPTCHAs',
@@ -1034,6 +1035,39 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$2B bot mitigation',
     growthRate: '16% YoY',
     variant: 'security-futuristic' as any,
+=======
+    id: 'mdm-intune-starter',
+    name: 'MDM/MAM with Microsoft Intune Starter',
+    tagline: 'Zero‑touch enrollment, app protection, device compliance',
+    price: '$4',
+    period: '/device/month',
+    description: 'Baseline mobile device and app management with policy templates, compliance rules, and reporting integrated with Microsoft 365.',
+    features: [
+      'Zero‑touch enrollment (ABM/DEP, Android Enterprise)',
+      'Compliance and conditional access',
+      'App protection policies',
+      'Baseline reports and alerts'
+    ],
+    popular: false,
+    icon: '📱',
+    color: 'from-sky-600 to-indigo-700',
+    textColor: 'text-sky-300',
+    link: 'https://ziontechgroup.com/mobile-device-management',
+    marketPosition: 'SMB-focused MDM starter; complements Intune and Apple Business Manager.',
+    targetAudience: 'IT, MSPs, security teams',
+    trialDays: 7,
+    setupTime: '1–2 days',
+    category: 'Enterprise IT',
+    realService: true,
+    technology: ['Intune, ABM/DEP, Android Enterprise'],
+    integrations: ['Azure AD, Microsoft 365'],
+    useCases: ['Device compliance, App protection, Zero‑touch rollout'],
+    roi: 'Reduce manual enrollments and improve compliance posture.',
+    competitors: ['Jamf, Kandji, Intune turnkey partners'],
+    marketSize: '$6B+ MDM',
+    growthRate: '18% YoY',
+    variant: 'cloud-futuristic' as any,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a54a
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1041,6 +1075,7 @@ export const realMarketServices: RealMarketService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
     implementationDetails: 'Edge verify and adaptive challenge, policy config UI, analytics.',
     launchDate: '2025-02-25',
     customers: 19,
@@ -1171,6 +1206,45 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['Humanloop, Arize Phoenix (evals)'],
     marketSize: '$1B eval tooling',
     growthRate: '35% YoY',
+=======
+    implementationDetails: 'Policy baselines, enrollment automation, reporting dashboards.',
+    launchDate: '2025-02-20',
+    customers: 19,
+    rating: 4.5,
+    reviews: 8
+  },
+  {
+    id: 'ai-meeting-to-ticket',
+    name: 'AI Meeting‑to‑Ticket Copilot',
+    tagline: 'Turn meetings into tracked tickets, actions, and follow‑ups',
+    price: '$25',
+    period: '/user/month',
+    description: 'Multi‑speaker transcription, action item extraction, and automatic creation of Jira/GitHub issues with summaries and owners.',
+    features: [
+      'Speaker‑aware transcription',
+      'Action extraction and owners',
+      'Jira/GitHub ticket creation',
+      'Meeting recap emails'
+    ],
+    popular: false,
+    icon: '📝',
+    color: 'from-purple-600 to-fuchsia-700',
+    textColor: 'text-purple-300',
+    link: 'https://ziontechgroup.com/services/ai-meeting-to-ticket',
+    marketPosition: 'Bridges meetings and issue trackers with grounded AI.',
+    targetAudience: 'Engineering, product, support',
+    trialDays: 7,
+    setupTime: '1 hour',
+    category: 'AI & Data',
+    realService: true,
+    technology: ['OpenAI STT, Embeddings, Jira/GitHub APIs'],
+    integrations: ['Google Meet, Zoom, Jira, GitHub'],
+    useCases: ['Reduce manual note‑taking, Faster follow‑ups, Better accountability'],
+    roi: 'Save hours/week per team; fewer missed actions.',
+    competitors: ['Supernormal, Tactiq + custom flows'],
+    marketSize: '$3B productivity AI',
+    growthRate: '25% YoY',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a54a
     variant: 'ai-futuristic' as any,
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -1179,6 +1253,7 @@ export const realMarketServices: RealMarketService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
     implementationDetails: 'Task runners, judge prompts, scoring stores, CI plugin.',
     launchDate: '2025-02-12',
     customers: 16,
@@ -2050,5 +2125,57 @@ export const realMarketServices: RealMarketService[] = [
     customers: 88,
     rating: 4.6,
     reviews: 36
+=======
+    implementationDetails: 'Speech‑to‑text pipeline, action classifiers, and ticket APIs.',
+    launchDate: '2025-02-22',
+    customers: 23,
+    rating: 4.6,
+    reviews: 12
+  },
+  {
+    id: 'feature-flag-auditor',
+    name: 'Feature Flag Auditor',
+    tagline: 'Catch stale flags, drift, and experiment hygiene issues',
+    price: '$29',
+    period: '/month',
+    description: 'Continuously scans your flags for stale keys, dead code, missing cleanups, and risky rollout patterns. Auto‑opens PRs with fixes.',
+    features: [
+      'Stale and orphan flag detection',
+      'Env parity and drift checks',
+      'Experiment hygiene scoring',
+      'Auto‑PR cleanup scripts'
+    ],
+    popular: false,
+    icon: '🚩',
+    color: 'from-rose-600 to-orange-700',
+    textColor: 'text-rose-300',
+    link: 'https://ziontechgroup.com/services/feature-flag-auditor',
+    marketPosition: 'Augments LaunchDarkly/Flagsmith with hygiene guardrails.',
+    targetAudience: 'Platform, frontend, growth teams',
+    trialDays: 7,
+    setupTime: '1 day',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Static analysis, SDK hooks, CI'],
+    integrations: ['LaunchDarkly, Flagsmith, Split.io'],
+    useCases: ['Reduce tech debt, Safer rollouts, Faster cleanups'],
+    roi: 'Cut incidents from stale flags; improve developer velocity.',
+    competitors: ['Native vendor hygiene, manual audits'],
+    marketSize: '$2B experimentation',
+    growthRate: '18% YoY',
+    variant: 'devops-futuristic' as any,
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Repo scanner, config parser, pull‑request bot.',
+    launchDate: '2025-02-22',
+    customers: 14,
+    rating: 4.5,
+    reviews: 7
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a54a
   }
 ];

@@ -71,7 +71,13 @@
   "quantum-supply-chain-optimizer",
   "quantum-threat-detection",
   "real-estate-technology-solutions",
+<<<<<<< HEAD
   "services/data-contracts-hub",
+=======
+  "services/ai-knowledge-graph-studio",
+  "services/data-contracts-hub",
+  "services/llm-guarded-api-gateway",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a54a
   "services/serverless-lakehouse-starter",
   "space-colonization-services",
   "space-mining-platform"

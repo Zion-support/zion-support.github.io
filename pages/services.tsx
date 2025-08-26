@@ -29,9 +29,15 @@ import { researchDevelopmentServices2033 } from '../data/2033-research-developme
 import { enterpriseITServices2033 } from '../data/2033-enterprise-it-services-v2';
 =======
 // Import our new service data
+<<<<<<< HEAD
 // import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
 // import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
 // import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services';
+=======
+// Note: Removed non-existent data imports (2034 datasets) to prevent build errors.
+import { real2025Q4AugmentedBatch } from '../data/real-2025-q4-augmented-batch';
+import { real2029Q3Additions } from '../data/real-2029-q3-additions';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a54a
 
 // Import existing service data
 <<<<<<< HEAD
@@ -117,6 +123,7 @@ const getServiceDescription = (service: any) => {
 // Create unified services array
 const allServices = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 	...enterpriseITServices,
 	...innovativeMicroSaasServices,
 	...innovativeAIServices,
@@ -138,6 +145,8 @@ const allServices = [
   ...additionalRealMicroSaas2026
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78c2
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a54a
   ...realMicroSaasServices,
   ...innovativeAIServices,
   ...enterpriseITServices,
