@@ -3,7 +3,7 @@ import React, { Suspense, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
+import BenefitsSection from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
@@ -25,6 +25,8 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
+import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
+import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -441,6 +443,12 @@ export default function Home() {
 
       {/* Enhanced Categories Section */}
       <CategoriesSection />
+
+      {/* Enhanced Innovative Services Showcase */}
+      <EnhancedInnovativeServicesShowcase />
+
+      {/* Enhanced Pricing Comparison */}
+      <EnhancedPricingComparison />
 
       {/* Enhanced Benefits Section */}
       <BenefitsSection />
