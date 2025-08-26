@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { enhancedMicroSaasServices2025 } from '../data/comprehensiveServices2025';
+import { enhancedMicroSaasServices2025, enhancedITServices2025, enhancedAIServices2025 } from '../data/comprehensiveServices2025';
 
 const Services: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedServiceType, setSelectedServiceType] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('name');
 
@@ -20,12 +21,41 @@ const Services: React.FC = () => {
     'Edge Computing',
     'Privacy AI',
     'AI Governance',
-    'AI Ecosystem'
+    'AI Ecosystem',
+    'Infrastructure',
+    'Cloud Services',
+    'Security',
+    'DevOps',
+    'IoT',
+    'Consulting',
+    'Modernization',
+    'Software Development',
+    'Business Intelligence',
+    'Language AI',
+    'Visual AI',
+    'Process Automation',
+    'Conversational AI',
+    'Predictive Analytics',
+    'Supply Chain',
+    'Customer Experience',
+    'Financial AI',
+    'Healthcare AI',
+    'Marketing AI'
   ];
 
-  const filteredServices = enhancedMicroSaasServices2025
+  // Combine all services with proper typing
+  const allServices = [
+    ...enhancedMicroSaasServices2025.map(service => ({ ...service, serviceType: 'Micro SAAS' as const })),
+    ...enhancedITServices2025.map(service => ({ ...service, serviceType: 'IT Service' as const })),
+    ...enhancedAIServices2025.map(service => ({ ...service, serviceType: 'AI Service' as const }))
+  ];
+
+  const filteredServices = allServices
     .filter(service => 
       selectedCategory === 'all' || service.category === selectedCategory
+    )
+    .filter(service =>
+      selectedServiceType === 'all' || service.serviceType === selectedServiceType
     )
     .filter(service =>
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -35,7 +65,9 @@ const Services: React.FC = () => {
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return a.price - b.price;
+          const aPrice = a.serviceType === 'IT Service' ? a.projectRate : (a as any).price || 0;
+          const bPrice = b.serviceType === 'IT Service' ? b.projectRate : (b as any).price || 0;
+          return aPrice - bPrice;
         case 'category':
           return a.category.localeCompare(b.category);
         case 'name':
@@ -66,7 +98,26 @@ const Services: React.FC = () => {
       'Edge Computing': '🌐',
       'Privacy AI': '🔒',
       'AI Governance': '⚖️',
-      'AI Ecosystem': '🌍'
+      'AI Ecosystem': '🌍',
+      'Infrastructure': '🏗️',
+      'Cloud Services': '☁️',
+      'Security': '🛡️',
+      'DevOps': '🔧',
+      'IoT': '📡',
+      'Consulting': '💼',
+      'Modernization': '🔄',
+      'Software Development': '💻',
+      'Business Intelligence': '📈',
+      'Language AI': '🗣️',
+      'Visual AI': '👁️',
+      'Process Automation': '🤖',
+      'Conversational AI': '💬',
+      'Predictive Analytics': '🔮',
+      'Supply Chain': '📦',
+      'Customer Experience': '😊',
+      'Financial AI': '🏦',
+      'Healthcare AI': '🏥',
+      'Marketing AI': '📈'
     };
     return icons[category] || '🚀';
   };
@@ -83,7 +134,7 @@ const Services: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Discover our cutting-edge collection of 35+ innovative micro SAAS solutions, 
+            Discover our cutting-edge collection of 60+ innovative micro SAAS, IT, and AI solutions, 
             from AI-powered productivity tools to revolutionary quantum computing platforms. 
             Each service is designed to transform your business and drive innovation.
           </p>
@@ -123,6 +174,23 @@ const Services: React.FC = () => {
               </svg>
             </div>
 
+            {/* Service Type Filter */}
+            <div className="flex gap-2 flex-wrap">
+              {['all', 'Micro SAAS', 'IT Service', 'AI Service'].map(type => (
+                <button
+                  key={type}
+                  onClick={() => setSelectedServiceType(type)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    selectedServiceType === type
+                      ? 'bg-green-600 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
+                >
+                  {type === 'all' ? 'All Types' : type}
+                </button>
+              ))}
+            </div>
+
             {/* Category Filter */}
             <div className="flex gap-2 flex-wrap">
               {categories.map(category => (
@@ -133,7 +201,7 @@ const Services: React.FC = () => {
                     selectedCategory === category
                       ? 'bg-blue-600 text-white'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
+                    }`}
                 >
                   {category === 'all' ? 'All Categories' : category}
                 </button>
@@ -162,7 +230,7 @@ const Services: React.FC = () => {
               {filteredServices.length} Services Found
             </h2>
             <p className="text-gray-300">
-              Showing {filteredServices.length} of {enhancedMicroSaasServices2025.length} total services
+              Showing {filteredServices.length} of {allServices.length} total services
             </p>
           </div>
 
@@ -177,11 +245,11 @@ const Services: React.FC = () => {
                   <div className="text-3xl">{getCategoryIcon(service.category)}</div>
                   <div className="text-right">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      service.pricing === 'Freemium' ? 'bg-green-500/20 text-green-400' :
-                      service.pricing === 'Professional' ? 'bg-blue-500/20 text-blue-400' :
+                      service.serviceType === 'Micro SAAS' && (service as any).pricing === 'Freemium' ? 'bg-green-500/20 text-green-400' :
+                      service.serviceType === 'Micro SAAS' && (service as any).pricing === 'Professional' ? 'bg-blue-500/20 text-blue-400' :
                       'bg-purple-500/20 text-purple-400'
                     }`}>
-                      {service.pricing}
+                      {service.serviceType === 'Micro SAAS' ? (service as any).pricing : service.serviceType}
                     </span>
                   </div>
                 </div>
@@ -193,11 +261,19 @@ const Services: React.FC = () => {
                 {/* Pricing */}
                 <div className="mb-4">
                   <div className="text-2xl font-bold text-blue-400">
-                    {formatPrice(service.price, service.pricingModel)}
+                    {service.serviceType === 'IT Service' 
+                      ? `$${(service as any).hourlyRate}/hour or $${(service as any).projectRate.toLocaleString()} project`
+                      : formatPrice((service as any).price, (service as any).pricingModel)
+                    }
                   </div>
                   <div className="text-sm text-gray-400">
                     Market Price: {service.marketPrice}
                   </div>
+                  {service.serviceType !== 'Micro SAAS' && (
+                    <div className="text-xs text-gray-500 mt-1">
+                      {service.serviceType}
+                    </div>
+                  )}
                 </div>
 
                 {/* Features */}
@@ -233,18 +309,52 @@ const Services: React.FC = () => {
 
                 {/* Additional Info */}
                 <div className="mb-6 space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Setup Time:</span>
-                    <span className="text-white">{service.setupTime}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">ROI:</span>
-                    <span className="text-green-400">{service.roi}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Users:</span>
-                    <span className="text-white">{service.userLimit}</span>
-                  </div>
+                  {service.serviceType === 'Micro SAAS' ? (
+                    <>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Setup Time:</span>
+                        <span className="text-white">{(service as any).setupTime}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">ROI:</span>
+                        <span className="text-green-400">{(service as any).roi}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Users:</span>
+                        <span className="text-white">{(service as any).userLimit}</span>
+                      </div>
+                    </>
+                  ) : service.serviceType === 'IT Service' ? (
+                    <>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Response Time:</span>
+                        <span className="text-white">{(service as any).responseTime}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">SLA:</span>
+                        <span className="text-green-400">{(service as any).sla}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Delivery:</span>
+                        <span className="text-white">{(service as any).deliveryTime}</span>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">AI Score:</span>
+                        <span className="text-green-400">{(service as any).aiScore}/100</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Accuracy:</span>
+                        <span className="text-white">{(service as any).accuracy}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Models:</span>
+                        <span className="text-white">{(service as any).aiModels?.length || 0}</span>
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 {/* Tags */}
