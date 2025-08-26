@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -41,6 +42,11 @@ module.exports = {
             textShadow: '0 0 10px rgba(34, 221, 210, 0.8), 0 0 20px rgba(34, 221, 210, 0.6), 0 0 30px rgba(34, 221, 210, 0.4)' 
           },
         },
+        border: 'hsl(var(--border))',
+        'zion-blue': { DEFAULT: '#2e73ea', light: '#8ab1f3', dark: '#172d67' },
+        'zion-purple': { DEFAULT: '#8c15e9', light: '#b971f2', dark: '#530c8b' },
+        'zion-cyan': { DEFAULT: '#22ddd2', light: '#7aeae4', dark: '#14847e' },
+        'zion-slate': { DEFAULT: '#17072b', light: '#451582', dark: '#000000' },
       },
       backdropBlur: {
         'xs': '2px',
