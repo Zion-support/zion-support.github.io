@@ -2,103 +2,174 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+  const footerSections = [
+    {
+      title: "Services",
+      links: [
+        { label: "AI Solutions", path: "/services" },
+        { label: "Cloud & DevOps", path: "/services" },
+        { label: "Cybersecurity", path: "/services" },
+        { label: "Quantum Computing", path: "/services" },
+        { label: "Blockchain & Web3", path: "/services" }
+      ]
+    },
+    {
+      title: "Company",
+      links: [
+        { label: "About Us", path: "/about" },
+        { label: "Our Team", path: "/about" },
+        { label: "Careers", path: "/about" },
+        { label: "News & Updates", path: "/blog" },
+        { label: "Case Studies", path: "/services" }
+      ]
+    },
+    {
+      title: "Resources",
+      links: [
+        { label: "Blog", path: "/blog" },
+        { label: "Documentation", path: "/services" },
+        { label: "White Papers", path: "/services" },
+        { label: "Webinars", path: "/services" },
+        { label: "Research", path: "/about" }
+      ]
+    },
+    {
+      title: "Support",
+      links: [
+        { label: "Contact Us", path: "/contact" },
+        { label: "Help Center", path: "/contact" },
+        { label: "Support Portal", path: "/contact" },
+        { label: "Training", path: "/services" },
+        { label: "Consulting", path: "/contact" }
+      ]
+    }
+  ];
+
+  const socialLinks = [
+    { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼" },
+    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦" },
+    { name: "GitHub", url: "https://github.com/ziontechgroup", icon: "💻" },
+    { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: "📺" }
+  ];
+
   return (
     <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+          <div className="lg:col-span-2">
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <span className="text-2xl font-bold">Zion Tech Group</span>
+            </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise.
+              Leading provider of innovative technology solutions, AI-powered services, 
+              and digital transformation expertise. We help businesses navigate the future of technology.
             </p>
+            
+            {/* Social Links */}
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <span className="sr-only">LinkedIn</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.032-3.047-1.033 0-1.191.805-1.191 2.951v5.665H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <span className="sr-only">Twitter</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                </svg>
-              </a>
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-lg hover:bg-blue-500/20 hover:scale-110 transition-all duration-300"
+                  aria-label={`Follow us on ${social.name}`}
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  AI Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Cloud & DevOps
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  IT Infrastructure
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Footer Sections */}
+          {footerSections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-lg font-semibold text-white mb-4">{section.title}</h3>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      to={link.path}
+                      className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
 
-          {/* Company */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link to="/careers" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Careers
-                </Link>
-              </li>
-            </ul>
+      {/* Newsletter Signup */}
+      <div className="border-t border-white/10 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Stay Updated with Our Latest Insights
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Get the latest technology trends, AI insights, and industry updates delivered to your inbox.
+            </p>
+            <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+      {/* Bottom Footer */}
+      <div className="border-t border-white/10 bg-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-gray-300 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            
+            <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm text-gray-300">
+              <Link to="/privacy" className="hover:text-blue-400 transition-colors duration-300">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+              <Link to="/terms" className="hover:text-blue-400 transition-colors duration-300">
                 Terms of Service
+              </Link>
+              <Link to="/cookies" className="hover:text-blue-400 transition-colors duration-300">
+                Cookie Policy
+              </Link>
+              <Link to="/sitemap" className="hover:text-blue-400 transition-colors duration-300">
+                Sitemap
               </Link>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Back to Top Button */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
+        aria-label="Back to top"
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </button>
     </footer>
   );
 };
