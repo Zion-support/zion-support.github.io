@@ -14,7 +14,7 @@ export function ApiPlayground({ method, path, params = [] }) {
         setParamValues((prev) => ({ ...prev, [name]: value }));
     };
     const sendRequest = async () => {
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
+        const baseUrl = import.meta.env.VITE_API_URL || "";
         let url = `${baseUrl}${path}`;
         const searchParams = new URLSearchParams();
         if (method === "GET" || method === "DELETE") {

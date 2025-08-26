@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/Button.jsx";
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 import { useEffect, useState } from "react";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEO.jsx";
 // Enhanced service listings with new micro SAAS services
 const SERVICE_LISTINGS = [
     // AI & Machine Learning Services

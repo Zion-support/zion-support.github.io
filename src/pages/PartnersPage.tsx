@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Handshake, 
+  Users, 
   Globe, 
   Award, 
-  Users, 
   TrendingUp, 
   Shield,
   Zap,
@@ -96,7 +95,7 @@ const PartnersPage: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Handshake className="w-20 h-20 text-zion-cyan mx-auto mb-8" />
+              <Users className="w-20 h-20 text-zion-cyan mx-auto mb-8" />
               <h1 className="text-5xl md:text-7xl font-bold mb-8">
                 Strategic <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
                   Partnerships
