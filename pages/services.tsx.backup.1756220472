@@ -17,6 +17,17 @@ export default function Services() {
 	const itServices = advancedITServices.slice(0, 12).concat(addedITServices2025)
 	const aiServices = innovativeAIServices.slice(0, 12).concat(addedAIServices2025)
 
+<<<<<<< HEAD
+	return (
+		<>
+			<Head>
+				<title>{title}</title>
+				<meta name="description" content={description} />
+			</Head>
+			<main className="mx-auto min-h-screen max-w-5xl px-6 py-12">
+				<h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Services</h1>
+				<p className="mt-3 max-w-2xl text-gray-700">From strategy to production, we deliver outcomes fast.</p>
+=======
 // Import new 2024 real market services
 import { realMarketServices } from '../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../data/2024-ai-emerging-tech-services';
@@ -26,6 +37,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { quantumSpaceServices } from '../data/quantum-space-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-767b
 
 				<div className="mt-10 grid gap-6 sm:grid-cols-2">
 					<section className="rounded-lg border p-6">
@@ -37,6 +49,16 @@ import { enterpriseITServices } from '../data/enterprise-it-services';
 						</ul>
 					</section>
 
+<<<<<<< HEAD
+					<section className="rounded-lg border p-6">
+						<h2 className="text-xl font-medium">Cloud Platforms</h2>
+						<ul className="mt-2 list-disc pl-5 text-gray-700">
+							<li>Serverless and Kubernetes</li>
+							<li>Data pipelines and ML ops</li>
+							<li>FinOps and SRE practices</li>
+						</ul>
+					</section>
+=======
 const serviceCategories = [
   {
     id: 'ai-services',
@@ -93,6 +115,7 @@ const serviceCategories = [
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
 ];
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-767b
 
 					<section className="rounded-lg border p-6">
 						<h2 className="text-xl font-medium">Cybersecurity</h2>
