@@ -18,6 +18,8 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const EnhancedInnovativeServices2026 = React.lazy(() => import('./pages/EnhancedInnovativeServices2026'));
+const ComprehensiveServicesMarketing2026 = React.lazy(() => import('./pages/ComprehensiveServicesMarketing2026'));
 
 // Enhanced loading component with skeleton
 const LoadingFallback = () => (
@@ -52,6 +54,8 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/enhanced-innovative-services-2026" element={<EnhancedInnovativeServices2026 />} />
+              <Route path="/comprehensive-services-marketing-2026" element={<ComprehensiveServicesMarketing2026 />} />
             </Routes>
           </Suspense>
         </main>
