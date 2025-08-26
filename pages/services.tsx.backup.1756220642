@@ -11,6 +11,11 @@ import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceC
 import UltraFuturisticNavigation from '../components/layout/UltraFuturisticNavigation';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';
+<<<<<<< HEAD
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { emergingTechServices } from '../data/emerging-tech-services';
+import { aiFuturisticServices } from '../data/ai-futuristic-services';
+=======
 import { newlyAddedServices } from '../data/newly-added-services';
 import { moreRealServices2025 } from '../data/more-real-services-2025';
 import { verified2025Additions } from '../data/verified-2025-additions';
@@ -35,6 +40,7 @@ import { emergingTechServices2029V2 } from '../data/2029-emerging-tech-services-
 import { enterpriseITServices2029V2 } from '../data/2029-enterprise-it-services-v2';
 import { spaceMetaverseServices2029 } from '../data/2029-space-metaverse-services';
 import { researchDevelopmentServices2029 } from '../data/2029-research-development-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9d55
 
 				<div className="mt-10 grid gap-6 sm:grid-cols-2">
 					<section className="rounded-lg border p-6">
@@ -51,6 +57,17 @@ import { researchDevelopmentServices2029 } from '../data/2029-research-developme
     ...enhancedRealMicroSaasServices,
     ...innovativeMicroSaasServices,
     ...extraServices,
+<<<<<<< HEAD
+    ...additionalEnhancedServices,
+    ...emergingTechServices,
+    ...aiFuturisticServices
+  ];
+
+  const allServices = useMemo(() => {
+    return enhancedRealMicroSaasServices
+      .concat(extraServices)
+      .concat(additionalEnhancedServices);
+=======
     ...newlyAddedServices,
     ...newRealServices,
     ...moreRealServices2025,
@@ -195,6 +212,7 @@ import { researchDevelopmentServices2029 } from '../data/2029-research-developme
     else if (hash === 'enterprise' || hash === 'it') setSelectedCategory('enterprise');
     else if (hash === 'micro-saas') setSelectedCategory('micro-saas');
     else if (hash === 'metaverse') setSelectedCategory('metaverse');
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9d55
   }, []);
 
   // Filter and search services
@@ -619,6 +637,9 @@ export default function Services() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.05 }}
                 >
+<<<<<<< HEAD
+                  <UltraFuturisticServiceCard service={service} />
+=======
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/30 h-full relative overflow-hidden">
                     {/* Background Glow Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -693,6 +714,7 @@ export default function Services() {
                       </a>
                     </div>
                   </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9d55
                 </motion.div>
               ))}
             </div>
