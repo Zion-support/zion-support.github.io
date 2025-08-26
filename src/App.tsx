@@ -167,7 +167,8 @@ function App() {
       <ThemeProvider>
         <Router>
           <div className="App min-h-screen flex flex-col">
-            <main className="flex-1">
+            <Header />
+            <main className="flex-1 pt-16">
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
                   {routes.map(({ path, element }) => (
