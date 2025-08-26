@@ -285,7 +285,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
