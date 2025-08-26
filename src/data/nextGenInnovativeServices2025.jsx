@@ -348,4 +348,4 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         betaAccess: true
     }
 ];
-export default nextGenInnovativeServices2025;
+export default NEXT_GEN_INNOVATIVE_SERVICES_2025;

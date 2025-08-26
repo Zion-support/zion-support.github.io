@@ -174,6 +174,10 @@ const EnhancedLoadingSpinner = () => (
     return () => clearInterval(interval);
   }, [isAutoPlaying, heroSlides.length]);
 
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   };
@@ -397,6 +401,7 @@ const EnhancedLoadingSpinner = () => (
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-zion-cyan/25"
                 >
                   Learn More
+                  <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </motion.div>
             ))}

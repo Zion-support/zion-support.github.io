@@ -228,7 +228,6 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  
   <url>
     <loc>https://ziontechgroup.com/categories</loc>
     <lastmod>2025-05-15</lastmod>
@@ -1098,7 +1097,6 @@
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-  
   <url>
 =======
     <loc>https://ziontechgroup.com/blog/ai-trends-2025</loc>
@@ -1108,7 +1106,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
   <url>
 =======
     <loc>https://ziontechgroup.com/blog/optimize-ai-listings</loc>
@@ -1118,7 +1115,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
   <url>
 =======
     <loc>https://ziontechgroup.com/blog/green-it</loc>
@@ -4881,27 +4877,23 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ziontechgroup.com/services/infrastructure</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ziontechgroup.com/blog</loc>
+    <lastmod>2025-08-26T13:55:24.473Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-  
   <url>
-    <loc>https://ziontechgroup.com/services/consulting</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ziontechgroup.com/careers</loc>
+    <lastmod>2025-08-26T13:55:24.473Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-  
   <url>
-    <loc>https://ziontechgroup.com/services/transformation</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ziontechgroup.com/case-studies</loc>
+    <lastmod>2025-08-26T13:55:24.473Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-  
-  <!-- AI Autonomous Services -->
   <url>
     <loc>https://ziontechgroup.com/signup/client</loc>
 =======
@@ -4962,7 +4954,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
     <loc>https://ziontechgroup.com/services/agentic-web-monitor-copilot/</loc>
     <changefreq>weekly</changefreq>
@@ -52031,7 +52022,7 @@
     <loc>https://ziontechgroup.com/terms</loc>
     <lastmod>2025-08-26T13:55:24.473Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.9</priority>
   </url>
   
   <!-- AI Consumer Research -->

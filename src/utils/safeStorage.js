@@ -41,130 +41,42 @@ function safeConsoleError(message, error) {
     }
 }
 export const safeStorage = {
-    getItem: (key) => {
-        if (typeof window === 'undefined')
-            return null;
-        // Don't log verbose messages for Supabase auth tokens to prevent spam
-        const isVerboseKey = key.includes('sb-') || key.includes('supabase');
-        try {
-            return localStorage.getItem(key);
-        }
-        catch (e) {
-            if (!isVerboseKey) {
-                safeConsoleError(`safeStorage.getItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
-            }
-            return inMemoryStore[key] || null;
-        }
-    },
-    setItem: (key, value) => {
-        if (typeof window === 'undefined')
-            return;
-        const isVerboseKey = key.includes('sb-') || key.includes('supabase');
-        try {
-            localStorage.setItem(key, value);
-        }
-        catch (e) {
-            if (!isVerboseKey) {
-                safeConsoleError(`safeStorage.setItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
-            }
-            inMemoryStore[key] = value;
-        }
-    },
-    removeItem: (key) => {
-        if (typeof window === 'undefined')
-            return;
-        const isVerboseKey = key.includes('sb-') || key.includes('supabase');
-        try {
-            localStorage.removeItem(key);
-        }
-        catch (e) {
-            if (!isVerboseKey) {
-                safeConsoleError(`safeStorage.removeItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
-            }
-            delete inMemoryStore[key];
-        }
-    },
-    clear: () => {
-        if (typeof window === 'undefined') {
-            for (const key in inMemoryStore) {
-                delete inMemoryStore[key];
-            }
-            return;
-        }
-        try {
-            localStorage.clear();
-        }
-        catch (e) {
-            safeConsoleError('safeStorage.clear: Error clearing localStorage. Falling back to in-memory.', e);
-            for (const key in inMemoryStore) {
-                delete inMemoryStore[key];
-            }
-        }
-    },
-    get isAvailable() {
-        return isLocalStorageAvailable();
+  getItem: (key) => {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      console.warn('Failed to get item from localStorage:', error);
+      return null;
     }
-};
-// Simplified session storage without excessive logging
-const sessionMemoryStore = {};
-export const safeSessionStorage = {
-    getItem: (key) => {
-        if (typeof window === 'undefined')
-            return null;
-        try {
-            return sessionStorage.getItem(key);
-        }
-        catch (e) {
-            return sessionMemoryStore[key] || null;
-        }
-    },
-    setItem: (key, value) => {
-        if (typeof window === 'undefined')
-            return;
-        try {
-            sessionStorage.setItem(key, value);
-        }
-        catch (e) {
-            sessionMemoryStore[key] = value;
-        }
-    },
-    removeItem: (key) => {
-        if (typeof window === 'undefined')
-            return;
-        try {
-            sessionStorage.removeItem(key);
-        }
-        catch (e) {
-            delete sessionMemoryStore[key];
-        }
-    },
-    clear: () => {
-        if (typeof window === 'undefined') {
-            for (const key in sessionMemoryStore) {
-                delete sessionMemoryStore[key];
-            }
-            return;
-        }
-        try {
-            sessionStorage.clear();
-        }
-        catch {
-            for (const key in sessionMemoryStore) {
-                delete sessionMemoryStore[key];
-            }
-        }
-    },
-    get isAvailable() {
-        try {
-            if (typeof window === 'undefined')
-                return false;
-            const testKey = '__session_test__';
-            sessionStorage.setItem(testKey, 'test');
-            sessionStorage.removeItem(testKey);
-            return true;
-        }
-        catch {
-            return false;
-        }
+  },
+
+  setItem: (key, value) => {
+    try {
+      localStorage.setItem(key, value);
+      return true;
+    } catch (error) {
+      console.warn('Failed to set item in localStorage:', error);
+      return false;
     }
+  },
+
+  removeItem: (key) => {
+    try {
+      localStorage.removeItem(key);
+      return true;
+    } catch (error) {
+      console.warn('Failed to remove item from localStorage:', error);
+      return false;
+    }
+  },
+
+  clear: () => {
+    try {
+      localStorage.clear();
+      return true;
+    } catch (error) {
+      console.warn('Failed to clear localStorage:', error);
+      return false;
+    }
+  }
 };
