@@ -55,7 +55,8 @@ const Header: React.FC = () => {
               { path: '/', label: 'Home' },
               { path: '/services', label: 'Services' },
               { path: '/about', label: 'About' },
-              { path: '/blog', label: 'Blog' },
+              { path: '/news', label: 'News' },
+              { path: '/careers', label: 'Careers' },
               { path: '/contact', label: 'Contact' }
             ].map(({ path, label }) => (
               <Link
@@ -120,7 +121,8 @@ const Header: React.FC = () => {
               { path: '/', label: 'Home' },
               { path: '/services', label: 'Services' },
               { path: '/about', label: 'About' },
-              { path: '/blog', label: 'Blog' },
+              { path: '/news', label: 'News' },
+              { path: '/careers', label: 'Careers' },
               { path: '/contact', label: 'Contact' }
             ].map(({ path, label }) => (
               <Link

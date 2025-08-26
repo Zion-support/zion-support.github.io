@@ -1,211 +1,257 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Search, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { 
+  Search, 
+  BookOpen, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  FileText, 
+  Video, 
+  Users,
+  Lightbulb,
+  Shield,
+  Zap,
+  Cloud
+} from 'lucide-react';
 
-export default function HelpCenter() {
+const HelpCenter: React.FC = () => {
   const faqCategories = [
     {
-      title: 'Getting Started',
-      icon: BookOpen,
-      items: [
+      title: "Getting Started",
+      icon: Zap,
+      questions: [
         {
-          question: 'How do I create an account?',
-          answer: 'Click the "Sign Up" button in the top right corner and fill out the registration form with your email and password.'
+          question: "How do I get started with Zion Tech Group services?",
+          answer: "Getting started is easy! Simply contact us through our contact form, call us at +1 (302) 464-0950, or email us at info@ziontechgroup.com. Our team will schedule a consultation to understand your needs and recommend the best solutions."
         },
         {
-          question: 'How do I post a job or service?',
-          answer: 'After logging in, go to your dashboard and click "Post Job" or "Create Service" to get started.'
-        },
-        {
-          question: 'What information do I need to create a profile?',
-          answer: 'You\'ll need basic information like your name, skills, experience, and optionally a profile picture and portfolio.'
+          question: "What information do I need to provide for a consultation?",
+          answer: "For an initial consultation, it's helpful to have information about your current technology infrastructure, business goals, challenges you're facing, and any specific requirements or constraints. We'll guide you through the process."
         }
       ]
     },
     {
-      title: 'Marketplace',
-      icon: Settings,
-      items: [
+      title: "Services & Pricing",
+      icon: Cloud,
+      questions: [
         {
-          question: 'How do I find talent or services?',
-          answer: 'Use the search bar or browse categories to find what you\'re looking for. You can also use our AI-powered matching system.'
+          question: "What services does Zion Tech Group offer?",
+          answer: "We offer a comprehensive range of technology services including AI solutions, cloud migration, cybersecurity, digital transformation, web development, data analytics, and more. Each service is tailored to meet your specific business needs."
         },
         {
-          question: 'How do payments work?',
-          answer: 'We support secure payments through Stripe. Payments are held in escrow until the work is completed and approved.'
-        },
-        {
-          question: 'What if I\'m not satisfied with the work?',
-          answer: 'We have a dispute resolution process. Contact our support team if you need help resolving an issue.'
+          question: "How is pricing structured for your services?",
+          answer: "Our pricing varies based on the scope and complexity of the project. We offer hourly rates, project-based pricing, and ongoing support packages. We'll provide a detailed quote after understanding your requirements."
         }
       ]
     },
     {
-      title: 'Account & Billing',
-      icon: Users,
-      items: [
+      title: "Technical Support",
+      icon: Shield,
+      questions: [
         {
-          question: 'How do I update my profile?',
-          answer: 'Go to your dashboard and click on "Edit Profile" to make changes to your information.'
+          question: "What kind of technical support do you provide?",
+          answer: "We provide comprehensive technical support including 24/7 monitoring, emergency response, regular maintenance, and ongoing optimization. Our support team is available through multiple channels including phone, email, and our support portal."
         },
         {
-          question: 'How do I change my password?',
-          answer: 'Go to Account Settings and click on "Change Password" to update your password.'
-        },
-        {
-          question: 'What are the fees?',
-          answer: 'We charge a small percentage fee on successful transactions. There are no upfront costs to use our platform.'
-        }
-      ]
-    },
-    {
-      title: 'Technical Support',
-      icon: HelpCircle,
-      items: [
-        {
-          question: 'The website is not loading properly',
-          answer: 'Try refreshing the page, clearing your browser cache, or using a different browser. If the issue persists, contact support.'
-        },
-        {
-          question: 'I can\'t upload files',
-          answer: 'Check that your file size is under 10MB and that you\'re using a supported file format (PDF, DOC, JPG, PNG).'
-        },
-        {
-          question: 'How do I contact support?',
-          answer: 'You can reach us through the contact form, email us at support@ziontechgroup.com, or call us at +1 (555) 123-4567.'
+          question: "How quickly do you respond to support requests?",
+          answer: "We prioritize support requests based on severity. Critical issues receive immediate attention, while standard requests are typically addressed within 4-8 hours during business hours."
         }
       ]
     }
   ];
 
-  const quickLinks = [
-    { title: 'Contact Support', href: '/contact', icon: MessageCircle, description: 'Get in touch with our support team' },
-    { title: 'API Documentation', href: '/api-docs', icon: FileText, description: 'Developer resources and API guides' },
-    { title: 'Community Forum', href: '/community', icon: Users, description: 'Connect with other users' },
-    { title: 'Blog & Updates', href: '/blog', icon: FileText, description: 'Latest news and platform updates' }
+  const supportChannels = [
+    {
+      title: "Phone Support",
+      icon: Phone,
+      description: "Speak directly with our technical experts",
+      contact: "+1 (302) 464-0950",
+      availability: "Mon-Fri: 9AM-6PM EST",
+      response: "Immediate for urgent issues"
+    },
+    {
+      title: "Email Support",
+      icon: Mail,
+      description: "Send detailed inquiries and get comprehensive responses",
+      contact: "support@ziontechgroup.com",
+      availability: "24/7",
+      response: "Within 4-8 hours"
+    },
+    {
+      title: "Live Chat",
+      icon: MessageCircle,
+      description: "Get instant help from our support team",
+      contact: "Available on website",
+      availability: "Mon-Fri: 9AM-6PM EST",
+      response: "Immediate"
+    }
+  ];
+
+  const resources = [
+    {
+      title: "Documentation",
+      icon: FileText,
+      description: "Comprehensive guides and technical documentation",
+      link: "/docs",
+      category: "Technical"
+    },
+    {
+      title: "Video Tutorials",
+      icon: Video,
+      description: "Step-by-step video guides for common tasks",
+      link: "/tutorials",
+      category: "Learning"
+    },
+    {
+      title: "Knowledge Base",
+      icon: BookOpen,
+      description: "Searchable database of articles and solutions",
+      link: "/knowledge-base",
+      category: "Self-Service"
+    },
+    {
+      title: "Community Forum",
+      icon: Users,
+      description: "Connect with other users and share experiences",
+      link: "/community",
+      category: "Community"
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Help Center | Zion Tech Group" 
-        description="Get help and support for using the Zion Tech Group platform. Find answers to frequently asked questions and contact our support team."
-        keywords="help, support, FAQ, customer service, Zion Tech Group"
-        canonical="https://ziontechgroup.com/help"
-      />
-
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">Help Center</h1>
-          <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-            Find answers to common questions and get the support you need to make the most of our platform.
-          </p>
-        </div>
-
-        {/* Search Bar */}
-        <div className="max-w-2xl mx-auto mb-12">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-5 w-5" />
-            <input
-              type="text"
-              placeholder="Search for help articles, FAQs, or topics..."
-              className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
-            />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              How Can We
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                {" "}Help You?
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Find answers to your questions, get technical support, and access helpful resources to make the most of our services.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search for help articles, tutorials, or contact information..."
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Quick Links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {quickLinks.map((link) => {
-            const IconComponent = link.icon;
-            return (
-              <Link key={link.title} to={link.href}>
-                <Card className="h-full hover:bg-zion-blue-dark/50 transition-colors cursor-pointer border-zion-blue-light">
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center space-x-2">
-                      <IconComponent className="h-5 w-5 text-zion-cyan" />
-                      <CardTitle className="text-white text-lg">{link.title}</CardTitle>
+          {/* Support Channels */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Get Support</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {supportChannels.map((channel) => {
+                const IconComponent = channel.icon;
+                return (
+                  <div key={channel.title} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-zion-slate-light">
-                      {link.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </Link>
-            );
-          })}
-        </div>
-
-        {/* FAQ Categories */}
-        <div className="space-y-8">
-          {faqCategories.map((category) => {
-            const IconComponent = category.icon;
-            return (
-              <Card key={category.title} className="border-zion-blue-light">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <IconComponent className="h-6 w-6 text-zion-cyan" />
-                    <CardTitle className="text-white text-xl">{category.title}</CardTitle>
+                    <h3 className="text-xl font-semibold mb-2">{channel.title}</h3>
+                    <p className="text-gray-300 mb-4">{channel.description}</p>
+                    <div className="space-y-2 text-sm">
+                      <p className="text-blue-400 font-semibold">{channel.contact}</p>
+                      <p className="text-gray-400">{channel.availability}</p>
+                      <p className="text-gray-400">Response: {channel.response}</p>
+                    </div>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <Accordion type="single" collapsible className="w-full">
-                    {category.items.map((item, index) => (
-                      <AccordionItem key={index} value={`item-${index}`}>
-                        <AccordionTrigger className="text-left text-zion-slate-light hover:text-white">
-                          {item.question}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-zion-slate-light">
-                          {item.answer}
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
+                );
+              })}
+            </div>
+          </div>
 
-        {/* Contact Support Section */}
-        <div className="mt-16 text-center">
-          <Card className="border-zion-blue-light bg-zion-blue-dark/50">
-            <CardHeader>
-              <CardTitle className="text-white text-2xl">Still Need Help?</CardTitle>
-              <CardDescription className="text-zion-slate-light text-lg">
-                Can't find what you're looking for? Our support team is here to help.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
+          {/* FAQ Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div className="space-y-8">
+              {faqCategories.map((category) => {
+                const IconComponent = category.icon;
+                return (
+                  <div key={category.title} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                    <div className="flex items-center mb-6">
+                      <IconComponent className="w-8 h-8 text-blue-400 mr-3" />
+                      <h3 className="text-2xl font-semibold">{category.title}</h3>
+                    </div>
+                    <div className="space-y-4">
+                      {category.questions.map((item, index) => (
+                        <div key={index} className="bg-white/5 rounded-lg p-4">
+                          <h4 className="font-semibold mb-2 text-blue-300">{item.question}</h4>
+                          <p className="text-gray-300 text-sm">{item.answer}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Resources Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Helpful Resources</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {resources.map((resource) => {
+                const IconComponent = resource.icon;
+                return (
+                  <Link
+                    key={resource.title}
+                    to={resource.link}
+                    className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <IconComponent className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2">{resource.title}</h3>
+                    <p className="text-gray-300 text-sm mb-3">{resource.description}</p>
+                    <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
+                      {resource.category}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Contact CTA */}
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-xl p-8 border border-blue-500/30">
+              <Lightbulb className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold mb-4">Still Need Help?</h3>
+              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                Can't find what you're looking for? Our expert team is here to help you with any questions or technical issues you may have.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple/90 transition-colors"
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
                 >
-                  <MessageCircle className="h-5 w-5 mr-2" />
                   Contact Support
                 </Link>
                 <a
                   href="mailto:support@ziontechgroup.com"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light text-white font-medium rounded-lg hover:bg-zion-blue-light/20 transition-colors"
+                  className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/20 transition-all duration-300"
                 >
-                  <Mail className="h-5 w-5 mr-2" />
                   Email Support
                 </a>
               </div>
-              <p className="text-zion-slate-light">
-                Response time: Usually within 24 hours
-              </p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
-}
+};
+
+export default HelpCenter;

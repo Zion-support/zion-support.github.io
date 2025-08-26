@@ -40,16 +40,16 @@ import {
   Percent,
   Calculator
 } from 'lucide-react';
-import { ENHANCED_INNOVATIVE_SERVICES_2025 } from '../data/enhancedInnovativeServices2025';
+import { enhancedInnovativeMicroSaasServices2025 } from '../data/enhancedInnovativeServices2025';
 
 export default function ComprehensivePricingComparison2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('price');
   const [sortOrder, setSortOrder] = useState('asc');
 
-  const categories = Array.from(new Set(ENHANCED_INNOVATIVE_SERVICES_2025.map(service => service.category)));
+  const categories = Array.from(new Set(enhancedInnovativeMicroSaasServices2025.map(service => service.category)));
 
-  const filteredServices = ENHANCED_INNOVATIVE_SERVICES_2025.filter(service =>
+  const filteredServices = enhancedInnovativeMicroSaasServices2025.filter(service =>
     selectedCategory === 'all' || service.category === selectedCategory
   );
 
@@ -108,7 +108,7 @@ export default function ComprehensivePricingComparison2025() {
   };
 
   const getCategoryStats = (category: string) => {
-    const servicesInCategory = ENHANCED_INNOVATIVE_SERVICES_2025.filter(service => service.category === category);
+    const servicesInCategory = enhancedInnovativeMicroSaasServices2025.filter(service => service.category === category);
     const totalPrice = servicesInCategory.reduce((sum, service) => sum + service.price, 0);
     const avgPrice = totalPrice / servicesInCategory.length;
     
@@ -120,13 +120,13 @@ export default function ComprehensivePricingComparison2025() {
   };
 
   const getOverallStats = () => {
-    const totalPrice = ENHANCED_INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
-    const avgPrice = totalPrice / ENHANCED_INNOVATIVE_SERVICES_2025.length;
-    const minPrice = Math.min(...ENHANCED_INNOVATIVE_SERVICES_2025.map(s => s.price));
-    const maxPrice = Math.max(...ENHANCED_INNOVATIVE_SERVICES_2025.map(s => s.price));
+    const totalPrice = enhancedInnovativeMicroSaasServices2025.reduce((sum, service) => sum + service.price, 0);
+    const avgPrice = totalPrice / enhancedInnovativeMicroSaasServices2025.length;
+    const minPrice = Math.min(...enhancedInnovativeMicroSaasServices2025.map(s => s.price));
+    const maxPrice = Math.max(...enhancedInnovativeMicroSaasServices2025.map(s => s.price));
     
     return {
-      totalServices: ENHANCED_INNOVATIVE_SERVICES_2025.length,
+      totalServices: enhancedInnovativeMicroSaasServices2025.length,
       totalValue: totalPrice,
       avgPrice: Math.round(avgPrice),
       minPrice,

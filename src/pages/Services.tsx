@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ComprehensiveServicesShowcase from '../components/ComprehensiveServicesShowcase';
 
 const Services: React.FC = () => {
   const services = [
@@ -98,6 +99,11 @@ const Services: React.FC = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Comprehensive Services Showcase */}
+      <section className="py-20">
+        <ComprehensiveServicesShowcase />
       </section>
 
       {/* Innovative Services 2025 Section */}
