@@ -105,42 +105,45 @@ const Home: React.FC = () => {
     { label: "Years Experience", value: "10+", icon: "⏰", color: "from-zion-orange to-zion-red" }
   ];
 
-  const featuredServices = [
+  const whyChooseUs = [
     {
-      title: "AI Business Intelligence",
-      description: "Transform data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.",
-      icon: Brain,
-      path: "/services/ai-business-intelligence",
-      category: "AI Solutions",
-      price: "$2,500/mo",
-      rating: 4.9,
-      reviewCount: 127,
-      highlights: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "AI Insights"],
-      features: ["Machine Learning", "Data Visualization", "API Integration", "24/7 Support", "Custom Alerts", "Performance Monitoring"]
+      icon: "🎯",
+      title: "Proven Track Record",
+      description: "500+ successful projects delivered across diverse industries with measurable ROI"
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions designed for enterprise performance and security. Optimize costs while maintaining high availability and performance.",
-      icon: Cloud,
-      path: "/services/cloud-infrastructure",
-      category: "Infrastructure",
-      price: "$1,800/mo",
-      rating: 4.8,
-      reviewCount: 89,
-      highlights: ["99.9% Uptime", "Auto-scaling", "Security First", "Cost Optimization"],
-      features: ["AWS/Azure/GCP", "Load Balancing", "Backup & Recovery", "Monitoring", "Security Compliance", "Disaster Recovery"]
+      icon: "🚀",
+      title: "Innovation First",
+      description: "Pioneering cutting-edge technologies like quantum AI and neuromorphic computing"
     },
     {
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive security services to protect your digital assets and data. Stay ahead of threats with proactive security measures.",
-      icon: Shield,
-      path: "/services/cybersecurity",
-      category: "Security",
-      price: "$3,200/mo",
-      rating: 4.9,
-      reviewCount: 156,
-      highlights: ["Threat Detection", "Compliance Ready", "24/7 Monitoring", "Incident Response"],
-      features: ["Penetration Testing", "Security Audits", "Incident Response", "Training", "Vulnerability Assessment", "Security Architecture"]
+      icon: "🛡️",
+      title: "Enterprise Security",
+      description: "Bank-level security protocols and compliance standards for mission-critical applications"
+    },
+    {
+      icon: "🌍",
+      title: "Global Reach",
+      description: "Serving clients worldwide with 24/7 support and localized expertise"
+    }
+  ];
+
+  const industries = [
+    { name: "Financial Services", icon: "💰", description: "AI-powered trading, risk management, and compliance solutions" },
+    { name: "Healthcare", icon: "🏥", description: "Medical AI, drug discovery, and patient care optimization" },
+    { name: "Manufacturing", icon: "🏭", description: "Smart factories, predictive maintenance, and quality control" },
+    { name: "Energy", icon: "⚡", description: "Renewable energy optimization and smart grid management" },
+    { name: "Transportation", icon: "🚗", description: "Autonomous vehicles and intelligent logistics systems" },
+    { name: "Retail", icon: "🛍️", description: "AI-powered customer experience and inventory optimization" }
+  ];
+
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
     }
   ];
 
@@ -353,7 +356,7 @@ const Home: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Enhanced Stats Section */}
+      {/* Industries We Serve */}
       <motion.section 
         className="py-24 bg-white/5 backdrop-blur-sm"
         variants={containerVariants}
@@ -362,9 +365,57 @@ const Home: React.FC = () => {
         viewport={{ once: true }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-20" variants={itemVariants}>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Why Choose <span className="gradient-text bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">Zion Tech Group</span>
+          <motion.div className="text-center mb-16" variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Industries We <span className="gradient-text">Transform</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our innovative solutions drive digital transformation across diverse sectors
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {industries.map((industry, index) => (
+              <motion.div
+                key={industry.name}
+                variants={itemVariants}
+                className="group"
+              >
+                <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover-lift">
+                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">{industry.icon}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-zion-cyan transition-colors duration-300">
+                    {industry.name}
+                  </h3>
+                  <p className="text-zion-slate-light text-center">
+                    {industry.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Why Choose Us */}
+      <motion.section 
+        className="py-20"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose <span className="gradient-text">Zion Tech Group</span>
             </h2>
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
               Our track record speaks for itself - we deliver results that exceed expectations
@@ -372,7 +423,55 @@ const Home: React.FC = () => {
           </motion.div>
           
           <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-10"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {whyChooseUs.map((reason, index) => (
+              <motion.div
+                key={reason.title}
+                variants={itemVariants}
+                className="group"
+              >
+                <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover-lift">
+                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">{reason.icon}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                    {reason.title}
+                  </h3>
+                  <p className="text-zion-slate-light">
+                    {reason.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Stats Section */}
+      <motion.section 
+        className="py-20 bg-white/5 backdrop-blur-sm"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our <span className="gradient-text">Impact</span> in Numbers
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Quantifying our success through measurable achievements and client satisfaction
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

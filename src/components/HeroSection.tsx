@@ -38,17 +38,10 @@ const HeroSection: React.FC = () => {
   };
 
   const trustMetrics = [
-    { icon: "🚀", label: "35+ Services", value: "Innovative Solutions", color: "from-zion-cyan to-zion-blue" },
-    { icon: "💎", label: "Enterprise", value: "Fortune 500 Clients", color: "from-zion-purple to-zion-cyan" },
-    { icon: "🔒", label: "Secure", value: "Bank-Level Security", color: "from-zion-blue to-zion-green" },
-    { icon: "⚡", label: "24/7 Support", value: "Always Available", color: "from-zion-orange to-zion-red" }
-  ];
-
-  const keyFeatures = [
-    { icon: "🤖", title: "AI-Powered Matching", description: "Intelligent service recommendations" },
-    { icon: "🔐", title: "Enterprise Security", description: "Bank-level protection for your data" },
-    { icon: "📱", title: "Mobile First", description: "Optimized for all devices" },
-    { icon: "⚡", title: "Lightning Fast", description: "Sub-second response times" }
+    { icon: "🚀", label: "500+ Projects", value: "Successfully Delivered" },
+    { icon: "💎", label: "Enterprise", value: "Fortune 500 Clients" },
+    { icon: "🔒", label: "Bank-Level", value: "Security & Compliance" },
+    { icon: "⚡", label: "24/7 Support", value: "Always Available" }
   ];
 
   const techFeatures = [
@@ -56,6 +49,15 @@ const HeroSection: React.FC = () => {
     { icon: "🔮", label: "Quantum Ready", description: "Future-proof technology" },
     { icon: "🌐", label: "Cloud Native", description: "Scalable architecture" },
     { icon: "🛡️", label: "Enterprise Grade", description: "Production ready" }
+  ];
+
+  const innovativeServices = [
+    "QuantumEdge AI Platform",
+    "NeuromorphicAI Studio", 
+    "Zero-Trust Security",
+    "5G Private Networks",
+    "SpaceTech AI Platform",
+    "GreenTech AI Solutions"
   ];
 
   return (
@@ -170,19 +172,8 @@ const HeroSection: React.FC = () => {
             boxShadow: "0 0 30px rgba(34, 221, 210, 0.3)"
           }}
         >
-          <motion.span 
-            className="w-2 h-2 bg-zion-cyan rounded-full"
-            animate={{ 
-              scale: [1, 1.5, 1],
-              opacity: [0.5, 1, 0.5]
-            }}
-            transition={{ 
-              duration: 2, 
-              repeat: Infinity, 
-              ease: "easeInOut" 
-            }}
-          />
-          🚀 AI-Powered Technology Solutions
+          <span className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse" />
+          🚀 Leading AI & Quantum Technology Solutions
         </motion.div>
 
         {/* Enhanced Main Heading with better typography */}
@@ -190,13 +181,11 @@ const HeroSection: React.FC = () => {
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight"
           variants={itemVariants}
         >
-          <span className="text-white drop-shadow-lg">The Future of</span>
+          <span className="text-white">Transforming Business</span>
           <br />
-          <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent animate-gradient drop-shadow-lg">
-            Tech & AI
-          </span>
+          <span className="gradient-text animate-gradient">Through Innovation</span>
           <br />
-          <span className="text-white drop-shadow-lg">Marketplace</span>
+          <span className="text-white">& Technology</span>
         </motion.h1>
 
         {/* Enhanced Subtitle with better readability */}
@@ -204,12 +193,8 @@ const HeroSection: React.FC = () => {
           className="text-xl md:text-2xl text-zion-slate-light max-w-5xl mx-auto mb-12 leading-relaxed"
           variants={itemVariants}
         >
-          Discover our comprehensive collection of{' '}
-          <span className="text-zion-cyan font-semibold bg-zion-cyan/10 px-2 py-1 rounded-lg">
-            35+ innovative micro SAAS services
-          </span>
-          , from AI-powered productivity tools to revolutionary quantum computing platforms. 
-          Transform your business with cutting-edge technology solutions.
+          Zion Tech Group delivers <span className="text-zion-cyan font-semibold">cutting-edge AI, quantum computing, and emerging technology solutions</span> 
+          that drive digital transformation and competitive advantage for forward-thinking enterprises worldwide.
         </motion.p>
 
         {/* Enhanced CTA Buttons with better visual appeal */}
@@ -221,22 +206,22 @@ const HeroSection: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="flex items-center gap-3">
-              <span className="text-2xl">🚀</span>
-              <span className="font-semibold">Explore All Services</span>
-              <span className="text-xl">→</span>
+            <span className="flex items-center gap-2">
+              <span>🚀</span>
+              Explore Our Solutions
+              <span>→</span>
             </span>
           </Link>
           
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <Link
+            to="/contact"
+            className="btn-secondary text-lg py-4 px-8 hover:scale-105 transition-transform duration-300"
           >
-            <span className="flex items-center gap-3">
-              <span className="text-2xl">💬</span>
-              <span className="font-semibold">Contact Us</span>
+            <span className="flex items-center gap-2">
+              <span>💬</span>
+              Get Free Consultation
             </span>
-          </a>
+          </Link>
         </motion.div>
 
         {/* Enhanced Trust Metrics with better layout */}
@@ -292,14 +277,11 @@ const HeroSection: React.FC = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          <h3 className="text-xl font-semibold text-zion-cyan mb-6 flex items-center gap-3">
-            <span className="text-2xl">📞</span>
-            Contact Information
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-            <div className="space-y-3">
-              <p className="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
-                <span className="text-zion-cyan text-lg">📱</span>
+          <h3 className="text-lg font-semibold text-zion-cyan mb-4">📞 Ready to Get Started?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div className="space-y-2">
+              <p className="flex items-center gap-2">
+                <span className="text-zion-cyan">📱</span>
                 <span className="text-zion-slate-light">Phone:</span>
                 <span className="text-white font-semibold">+1 302 464 0950</span>
               </p>
@@ -309,42 +291,54 @@ const HeroSection: React.FC = () => {
                 <span className="text-white font-semibold">kleber@ziontechgroup.com</span>
               </p>
             </div>
-            <div className="space-y-3">
-              <p className="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
-                <span className="text-zion-cyan text-lg">🌐</span>
-                <span className="text-zion-slate-light">Website:</span>
-                <span className="text-white font-semibold">ziontechgroup.com</span>
+            <div className="space-y-2">
+              <p className="flex items-center gap-2">
+                <span className="text-zion-cyan">🌐</span>
+                <span className="text-zion-slate-light">Location:</span>
+                <span className="text-white">Global Services</span>
               </p>
-              <p className="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
-                <span className="text-zion-cyan text-lg">📍</span>
-                <span className="text-zion-slate-light">Address:</span>
-                <span className="text-white font-semibold">364 E Main St STE 1008, Middletown DE 19709</span>
+              <p className="flex items-center gap-2">
+                <span className="text-zion-cyan">⏰</span>
+                <span className="text-zion-slate-light">Response:</span>
+                <span className="text-white">Within 2 hours</span>
               </p>
             </div>
           </div>
+          
+          {/* Quick Contact CTA */}
+          <div className="mt-4 pt-4 border-t border-white/20">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300"
+            >
+              <span>📋</span>
+              Request Free Quote
+              <span>→</span>
+            </Link>
+          </div>
         </motion.div>
 
-        {/* Enhanced Feature Pills with better visual hierarchy */}
+        {/* Floating Innovation Highlights */}
         <motion.div 
-          className="flex flex-wrap justify-center items-center gap-4 mt-12 text-zion-slate-light text-sm"
-          variants={itemVariants}
+          className="absolute top-1/4 right-8 hidden lg:block"
+          variants={floatingVariants}
+          animate="animate"
         >
-          {[
-            { text: "AI-Powered Matching", color: "zion-cyan" },
-            { text: "Verified Professionals", color: "zion-purple" },
-            { text: "Secure Payments", color: "zion-blue" },
-            { text: "Enterprise Security", color: "zion-cyan" }
-          ].map((pill, index) => (
-            <motion.div
-              key={index}
-              className={`flex items-center gap-2 px-4 py-2 bg-${pill.color}/20 border border-${pill.color}/30 rounded-full hover:bg-${pill.color}/30 transition-colors duration-300 cursor-pointer`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className={`w-2 h-2 bg-${pill.color} rounded-full animate-pulse`} />
-              <span>{pill.text}</span>
-            </motion.div>
-          ))}
+          <div className="bg-zion-purple/20 backdrop-blur-md p-4 rounded-xl border border-zion-purple/30">
+            <div className="text-zion-purple text-sm font-medium">🔮 Quantum Computing</div>
+            <div className="text-zion-slate-light text-xs">Next-gen solutions</div>
+          </div>
+        </motion.div>
+
+        <motion.div 
+          className="absolute bottom-1/4 left-8 hidden lg:block"
+          variants={floatingVariants}
+          animate="animate"
+        >
+          <div className="bg-zion-cyan/20 backdrop-blur-md p-4 rounded-xl border border-zion-cyan/30">
+            <div className="text-zion-cyan text-sm font-medium">🤖 AI & ML</div>
+            <div className="text-zion-slate-light text-xs">Enterprise ready</div>
+          </div>
         </motion.div>
       </motion.div>
 
