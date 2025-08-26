@@ -216,12 +216,12 @@ export const FuturisticNavigation: React.FC = () => {
       icon: Brain,
       color: 'from-zion-cyan to-zion-blue',
       dropdown: [
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
-        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
+        { name: 'AI Quantum Computing Platform', href: '/ai-services/ai-quantum-computing-platform', icon: Brain, description: 'Revolutionary quantum computing with AI' },
+        { name: 'Autonomous AI Business Platform', href: '/ai-services/autonomous-ai-business-platform', icon: Rocket, description: 'Complete business automation with AI' },
+        { name: 'Next-Gen Cybersecurity AI', href: '/ai-services/nextgen-cybersecurity-ai-platform', icon: Shield, description: 'AI-powered threat detection and response' },
+        { name: 'Hyper-Intelligent Data Analytics', href: '/ai-services/hyper-intelligent-data-analytics-platform', icon: BarChart3, description: 'AI-powered data insights and predictions' },
         { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
-        { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },
-        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
+        { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' }
       ]
     },
     {
@@ -230,14 +230,14 @@ export const FuturisticNavigation: React.FC = () => {
       icon: Code,
       color: 'from-zion-purple to-zion-cyan',
       dropdown: [
+        { name: 'AI Content Creation Suite', href: '/micro-saas/ai-content-creation-suite', icon: FileText, description: 'AI-powered content generation platform' },
+        { name: 'Smart Invoice & Expense Management', href: '/micro-saas/smart-invoice-expense-management', icon: DollarSign, description: 'Intelligent financial management' },
+        { name: 'Customer Success Automation', href: '/micro-saas/customer-success-automation-platform', icon: Users, description: 'AI-powered customer success platform' },
+        { name: 'AI Project Management Suite', href: '/micro-saas/ai-project-management-suite', icon: Briefcase, description: 'Intelligent project management' },
+        { name: 'Smart HR & Recruitment Platform', href: '/micro-saas/smart-hr-recruitment-platform', icon: Users, description: 'AI-powered HR and recruitment' },
         { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Intelligent business analytics platform' },
         { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience', icon: Users, description: '360° customer journey management' },
-        { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
-        { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain', icon: Globe, description: 'AI-powered supply chain management' },
-        { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity', icon: ShieldCheck, description: 'Advanced threat protection' },
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', icon: Cpu, description: 'Edge computing solutions' },
-        { name: 'Content Creation AI', href: '/micro-saas/content-creation', icon: FileText, description: 'AI-powered content generation' },
-        { name: 'HR Management Suite', href: '/micro-saas/hr-platform', icon: Briefcase, description: 'Modern HR management platform' }
+        { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain', icon: Globe, description: 'AI-powered supply chain management' }
       ]
     },
     {
@@ -246,12 +246,14 @@ export const FuturisticNavigation: React.FC = () => {
       icon: Network,
       color: 'from-zion-blue to-zion-purple',
       dropdown: [
+        { name: 'Cloud-Native Infrastructure as Code', href: '/it-services/cloud-native-infrastructure-as-code', icon: Cloud, description: 'AI-powered infrastructure automation' },
+        { name: 'Next-Gen Cybersecurity Operations', href: '/it-services/nextgen-cybersecurity-operations-center', icon: Shield, description: '24/7 AI-powered security operations' },
+        { name: 'AI-Powered Data Center Optimization', href: '/it-services/ai-powered-data-center-optimization', icon: Server, description: 'Intelligent data center management' },
+        { name: 'Quantum-Safe Network Infrastructure', href: '/it-services/quantum-safe-network-infrastructure', icon: Network, description: 'Future-proof quantum-resistant networking' },
+        { name: 'Intelligent Edge Computing Platform', href: '/it-services/intelligent-edge-computing-platform', icon: Wifi, description: 'AI-powered edge computing solutions' },
         { name: 'Infrastructure Management', href: '/it-services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' },
         { name: 'Digital Transformation', href: '/it-services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' },
-        { name: 'IT Consulting', href: '/it-services/consulting', icon: Users, description: 'Expert IT consulting services' },
-        { name: 'Onsite Support', href: '/it-services/onsite-support', icon: Wifi, description: '24/7 onsite technical support' },
-        { name: 'Green IT Solutions', href: '/it-services/green-it', icon: Heart, description: 'Sustainable IT infrastructure' },
-        { name: '5G Network Solutions', href: '/it-services/5g-solutions', icon: Satellite, description: 'Next-gen network infrastructure' }
+        { name: 'IT Consulting', href: '/it-services/consulting', icon: Users, description: 'Expert IT consulting services' }
       ]
     },
     {
