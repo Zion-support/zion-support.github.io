@@ -3,12 +3,9 @@ import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
-import { Star, DollarSign, Heart } from "lucide-react";
-import { useAppDispatch } from "@/store/hooks";
-import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
-import { useAuth } from "@/hooks/useAuth";
-import { useLocation } from "react-router-dom";
-import { toast } from "sonner";
+import { DollarSign } from "lucide-react";
+import StarRating from "@/components/StarRating";
+import { FavoriteButton } from "@/components/FavoriteButton";
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -127,7 +124,12 @@ export function ProductListingCard({
               {listing.category}
             </Badge>
             {listing.rating && (
-              <RatingStars value={listing.rating} count={listing.reviewCount} />
+              <div className="flex items-center text-zion-slate-light">
+                <StarRating value={listing.rating} />
+                {typeof listing.reviewCount === 'number' && (
+                  <span className="text-xs ml-1">({listing.reviewCount})</span>
+                )}
+              </div>
             )}
           </div>
           
