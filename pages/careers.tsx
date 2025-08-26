@@ -1,0 +1,1 @@
+export default function Careers(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Careers</h1><p>We are not hiring currently. Check back soon.</p></main>);}

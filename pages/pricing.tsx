@@ -1,0 +1,1 @@
+export default function Pricing(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Pricing</h1><p>Custom pricing based on your needs. Contact us for a quote.</p></main>);}

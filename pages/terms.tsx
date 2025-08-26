@@ -1,0 +1,1 @@
+export default function Terms(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Terms of Service</h1><p>Standard terms. This placeholder will be replaced with our detailed terms.</p></main>);}
