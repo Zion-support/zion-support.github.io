@@ -83,7 +83,7 @@ const Home: React.FC = () => {
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
               <h3 className="text-xl font-semibold text-white mb-3">Micro SAAS Services</h3>
               <p className="text-gray-300 mb-4">
-                AI-powered content generation, smart invoice management, and more
+                AI-powered content generation, smart invoice management, social media automation, and more
               </p>
               <div className="text-sm text-green-400 mb-3">Starting at $79/month</div>
               <Link to="/services" className="text-blue-400 hover:text-blue-300">
@@ -92,9 +92,9 @@ const Home: React.FC = () => {
             </div>
 
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-              <h3 className="text-xl font-semibold text-white mb-3">IT Services</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Advanced IT Services</h3>
               <p className="text-gray-300 mb-4">
-                Network security, data backup, asset management, and performance monitoring
+                Zero trust security, edge computing, 5G optimization, quantum-safe cryptography, and more
               </p>
               <div className="text-sm text-green-400 mb-3">Starting at $299/month</div>
               <Link to="/services" className="text-blue-400 hover:text-blue-300">
@@ -152,6 +152,58 @@ const Home: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
               <p className="text-gray-300">Measurable ROI and business impact</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advanced Services Preview */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              2025 Advanced Technology Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Cutting-edge AI, quantum computing, metaverse development, and emerging technology solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-xl p-6 border border-blue-400/30">
+              <div className="text-3xl mb-4">🤖</div>
+              <h3 className="text-lg font-semibold text-white mb-3">Enterprise AI Solutions</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Advanced AI-powered analytics, business process automation, and customer experience platforms
+              </p>
+              <div className="text-sm text-green-400 mb-3">Starting at $5,000/month</div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-xl p-6 border border-purple-400/30">
+              <div className="text-3xl mb-4">⚛️</div>
+              <h3 className="text-lg font-semibold text-white mb-3">Quantum Computing</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Quantum strategy development, algorithm optimization, and implementation planning
+              </p>
+              <div className="text-sm text-green-400 mb-3">Starting at $8,000/month</div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-lg rounded-xl p-6 border border-green-400/30">
+              <div className="text-3xl mb-4">🥽</div>
+              <h3 className="text-lg font-semibold text-white mb-3">Metaverse Development</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                VR/AR platforms, 3D asset creation, interactive experiences, and virtual commerce
+              </p>
+              <div className="text-sm text-green-400 mb-3">Starting at $10,000/month</div>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link
+              to="/advanced-services-2025"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+            >
+              Explore Advanced Services 2025
+            </Link>
           </div>
         </div>
       </section>

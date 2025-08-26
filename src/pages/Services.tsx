@@ -409,6 +409,118 @@ const Services: React.FC = () => {
       path: "/services/green-tech",
       pricing: "$3,000 - $25,000/month",
       benefits: ["Environmental impact", "Cost savings", "Compliance"]
+    },
+
+    // NEW INNOVATIVE MICRO SAAS SERVICES - 2025
+    {
+      title: "AI-Powered Social Media Management",
+      description: "Intelligent social media automation with content creation and analytics",
+      icon: "📱",
+      features: ["AI content generation", "Automated posting", "Engagement analytics", "Trend prediction", "Multi-platform management"],
+      path: "/services/social-media-ai",
+      pricing: "$149 - $899/month",
+      benefits: ["3x engagement increase", "Time savings", "Better reach", "Automated optimization"]
+    },
+    {
+      title: "Smart Email Marketing Automation",
+      description: "Advanced email marketing with AI-driven personalization and optimization",
+      icon: "📧",
+      features: ["AI personalization", "Behavioral triggers", "A/B testing", "Predictive analytics", "Advanced segmentation"],
+      path: "/services/email-automation-advanced",
+      pricing: "$199 - $1,299/month",
+      benefits: ["40% higher open rates", "Better conversions", "Automated optimization", "ROI tracking"]
+    },
+    {
+      title: "AI-Powered SEO Optimization",
+      description: "Intelligent SEO optimization with automated content and keyword analysis",
+      icon: "🔍",
+      features: ["Keyword research automation", "Content optimization", "Ranking tracking", "Competitor analysis", "Performance reporting"],
+      path: "/services/seo-ai",
+      pricing: "$299 - $1,999/month",
+      benefits: ["50% ranking improvement", "Traffic growth", "Automated optimization", "Comprehensive reporting"]
+    },
+    {
+      title: "Smart Customer Support Automation",
+      description: "AI-powered customer support with intelligent ticket routing and resolution",
+      icon: "🆘",
+      features: ["Intelligent routing", "Automated responses", "Sentiment analysis", "Escalation prediction", "Performance analytics"],
+      path: "/services/support-automation",
+      pricing: "$179 - $799/month",
+      benefits: ["80% faster resolution", "24/7 support", "Customer satisfaction", "Cost reduction"]
+    },
+    {
+      title: "AI-Powered Lead Generation",
+      description: "Intelligent lead generation with predictive scoring and qualification",
+      icon: "🎯",
+      features: ["Predictive lead scoring", "Automated qualification", "Behavioral tracking", "Nurture campaigns", "ROI analytics"],
+      path: "/services/lead-generation-ai",
+      pricing: "$249 - $1,499/month",
+      benefits: ["3x higher conversion rates", "Better lead quality", "Automated nurturing", "Increased revenue"]
+    },
+    {
+      title: "Smart Event Management Platform",
+      description: "AI-powered event management with automated planning and optimization",
+      icon: "🎪",
+      features: ["Automated planning", "Attendee engagement", "Resource optimization", "Real-time analytics", "Post-event insights"],
+      path: "/services/event-management",
+      pricing: "$399 - $2,499/month",
+      benefits: ["Reduced planning time", "Better attendee experience", "Resource optimization", "ROI tracking"]
+    },
+
+    // NEW ADVANCED IT SERVICES - 2025
+    {
+      title: "Zero Trust Security Architecture",
+      description: "Comprehensive zero trust security implementation and management",
+      icon: "🛡️",
+      features: ["Identity verification", "Access control", "Network segmentation", "Continuous monitoring", "Threat detection"],
+      path: "/services/zero-trust",
+      pricing: "$4,500 - $35,000/month",
+      benefits: ["Enhanced security", "Compliance assurance", "Risk reduction", "Operational efficiency"]
+    },
+    {
+      title: "Edge Computing Infrastructure",
+      description: "Distributed edge computing solutions for IoT and real-time applications",
+      icon: "🌐",
+      features: ["Edge deployment", "Latency optimization", "IoT integration", "Real-time processing", "Scalable infrastructure"],
+      path: "/services/edge-computing",
+      pricing: "$3,000 - $25,000/month",
+      benefits: ["Ultra-low latency", "Real-time processing", "Cost optimization", "Scalable performance"]
+    },
+    {
+      title: "5G Network Optimization",
+      description: "5G network design, deployment, and performance optimization",
+      icon: "📡",
+      features: ["Network planning", "Performance optimization", "Coverage analysis", "Capacity planning", "Monitoring"],
+      path: "/services/5g-optimization",
+      pricing: "$4,000 - $30,000/month",
+      benefits: ["Maximum performance", "Optimal coverage", "Future scalability", "Cost efficiency"]
+    },
+    {
+      title: "AI-Powered DevOps Automation",
+      description: "Intelligent DevOps automation with AI-driven optimization",
+      icon: "🚀",
+      features: ["CI/CD automation", "Performance monitoring", "Resource optimization", "Deployment automation", "Incident management"],
+      path: "/services/devops-ai",
+      pricing: "$2,500 - $20,000/month",
+      benefits: ["Faster deployments", "Reduced downtime", "Cost optimization", "Improved reliability"]
+    },
+    {
+      title: "Quantum-Safe Cryptography",
+      description: "Post-quantum cryptography implementation and migration services",
+      icon: "🔐",
+      features: ["Algorithm selection", "Implementation", "Testing", "Migration planning", "Compliance assurance"],
+      path: "/services/quantum-crypto",
+      pricing: "$4,000 - $30,000/month",
+      benefits: ["Future security", "Quantum resistance", "Compliance", "Risk mitigation"]
+    },
+    {
+      title: "Smart Data Center Management",
+      description: "AI-powered data center optimization and management",
+      icon: "🏢",
+      features: ["Energy optimization", "Capacity planning", "Performance monitoring", "Predictive maintenance", "Cost management"],
+      path: "/services/data-center-ai",
+      pricing: "$3,500 - $25,000/month",
+      benefits: ["Energy savings", "Performance optimization", "Cost reduction", "Operational efficiency"]
     }
   ];
 
@@ -505,12 +617,18 @@ const Services: React.FC = () => {
               Call: +1 302 464 0950
             </a>
           </div>
-          <div className="mb-6">
+          <div className="mb-6 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/services-showcase"
               className="inline-flex items-center px-6 py-2 text-blue-400 hover:text-blue-300 border border-blue-400 rounded-lg transition-all duration-300"
             >
               View Complete Services Portfolio →
+            </Link>
+            <Link
+              to="/advanced-services-2025"
+              className="inline-flex items-center px-6 py-2 text-cyan-400 hover:text-cyan-300 border border-cyan-400 rounded-lg transition-all duration-300"
+            >
+              Advanced Services 2025 →
             </Link>
           </div>
           <div className="text-sm text-gray-400">
