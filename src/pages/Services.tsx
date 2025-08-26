@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-=======
 import { useState, useMemo } from 'react';
-=======
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/comprehensiveServices';
-=======
 import React, { useState, useEffect } from 'react';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -30,7 +27,6 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { enhancedMicroSaasServices2025, enhancedITServices2025, enhancedAIServices2025 } from '../data/comprehensiveServices2025';
-=======
 import Link from 'next/link';
 import { enhancedMicroSaasServices2025 } from '../data/comprehensiveServices2025';
 
@@ -60,7 +56,6 @@ import { enhancedMicroSaasServices2025 } from '../data/comprehensiveServices2025
                 Request Quote
               </Link>
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -71,9 +66,7 @@ import { enhancedMicroSaasServices2025 } from '../data/comprehensiveServices2025
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
           </p>
-=======
 import React from 'react';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -134,8 +127,6 @@ import {
                   {category.title}
                 </h3>
                 <p className="text-zion-slate mb-6 text-center leading-relaxed">
-=======
-=======
       {/* Service Categories */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -156,8 +147,6 @@ import {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <motion.div
             className="text-center"
-=======
-=======
     <div className="min-h-screen bg-zion-blue-dark text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple overflow-hidden">
@@ -192,10 +181,8 @@ import {
             ))}
           </div>
         </motion.div>
-=======
         </section>
 
-=======
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Revolutionary Technology Services
             </h1>
@@ -242,9 +229,6 @@ import {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300"
-=======
-=======
-=======
           className="mb-12"
         >
           <div className="bg-zion-blue-light/20 backdrop-blur-md border border-zion-purple/30 rounded-2xl p-6">
@@ -269,7 +253,6 @@ import {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
-=======
                 >
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
@@ -277,8 +260,6 @@ import {
                 </select>
               </div>
 
-=======
-=======
               {/* Pricing Filter */}
               <div className="flex-1 min-w-48">
                 <label className="block text-zion-slate-light text-sm font-medium mb-2">Pricing Model</label>
@@ -289,7 +270,6 @@ import {
                 >
                   {pricingModels.map(model => (
                     <option key={model} value={model}>{model.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}</option>
-=======
                   ))}
                 </select>
               </div>
@@ -547,7 +527,6 @@ import {
           </div>
         </section>
 
-=======
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -560,7 +539,6 @@ import {
               <Link
                 to="/comprehensive-services-showcase"
                 className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
-=======
     { name: "Healthcare", icon: "🏥", description: "HIPAA compliant solutions for healthcare providers" },
     { name: "Finance", icon: "🏦", description: "Secure financial technology solutions" },
     { name: "Retail", icon: "🛍️", description: "E-commerce and retail technology platforms" },
@@ -839,7 +817,6 @@ import {
               <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
               <p className="text-gray-400">Try adjusting your search terms or category filter</p>
             </div>
-=======
           {/* Filters and Sort Controls */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1033,7 +1010,6 @@ const Services = () => {
       icon: Shield,
       title: "Enterprise Security",
       description: "Bank-level security protocols and compliance frameworks for enterprise environments."
-=======
   BarChart3,
   CheckCircle,
   ArrowRight,
@@ -1209,9 +1185,7 @@ export default function Services() {
             </div>
           </div>
         </div>
-=======
         </motion.div>
-=======
                   </div>
                 </div>
 
@@ -1279,7 +1253,6 @@ export default function Services() {
                   setSelectedCategory('all');
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-=======
                 {/* Technology Stack */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
@@ -1337,7 +1310,6 @@ export default function Services() {
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
               Our most popular and impactful solutions that are transforming businesses worldwide.
-=======
     { value: '200+', label: 'Projects Delivered', icon: CheckCircle, color: 'text-green-400' },
     { value: '99.99%', label: 'Uptime Guarantee', icon: Shield, color: 'text-blue-400' },
     { value: '24/7', label: 'Support Available', icon: Clock, color: 'text-purple-400' },
@@ -1394,7 +1366,6 @@ export default function Services() {
               <div key={index} className="bg-gradient-to-br from-zion-blue-dark to-zion-blue text-white rounded-xl p-8 hover:shadow-xl transition-shadow">
                 <div className="flex justify-center mb-6">
                   <service.icon className="w-16 h-16 text-zion-cyan" />
-=======
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -1565,7 +1536,6 @@ export default Services;
 };
 
 export default Services;
-=======
                     <li key={serviceIndex} className="flex items-center gap-2 text-sm text-zion-slate-light">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                       {service}
@@ -1903,7 +1873,6 @@ export default Services;
               >
                 Get Free Quote
               </Link>
-=======
         </div>
       </section>
 
@@ -1948,7 +1917,6 @@ export default Services;
       </section>
     </div>
   );
-=======
               <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-zion-cyan rounded-lg flex items-center justify-center mb-4 text-white">
                   {category.icon}
@@ -2154,13 +2122,8 @@ export default Services;
 };
 
 export default Services;
-=======
 }
-=======
 }
-=======
-=======
-=======
               {/* Results Count */}
               <div className="flex items-end">
                 <span className="text-zion-slate-light">
@@ -2317,5 +2280,4 @@ export default Services;
     </div>
   );
 }
-=======
 }

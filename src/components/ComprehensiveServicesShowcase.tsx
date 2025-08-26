@@ -1,50 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  BarChart3, 
-  MessageSquare, 
-  Eye, 
-  Globe, 
-  TrendingUp,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Star,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Sparkles
-} from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS, CONTACT_INFO } from '@/data/comprehensiveServices';
-
-export function ComprehensiveServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI Services':
-        return <Brain className="w-6 h-6" />;
-      case 'IT Services':
-        return <Cloud className="w-6 h-6" />;
-      case 'Micro SAAS':
-        return <Zap className="w-6 h-6" />;
-      default:
-        return <Sparkles className="w-6 h-6" />;
-    }
-=======
 import { motion } from 'framer-motion';
 import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
 import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
@@ -188,7 +141,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
   };
 
   const filteredServices = selectedCategory === 'all' 
@@ -196,15 +148,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     : COMPREHENSIVE_SERVICES.filter(service => service.category === selectedCategory);
 
   return (
-<<<<<<< HEAD
-    <div className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Zion Tech Group
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -217,77 +160,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-8">
             Comprehensive
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 block">
-<<<<<<< HEAD
-              Micro SAAS Services
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
-=======
               Innovative Services
->>>>>>> origin/cursor/expand-services-and-deploy-updates-96bc
             </span>
             <br />
             <span className="text-white">Comprehensive Tech Solutions</span>
           </h1>
-<<<<<<< HEAD
-          <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
-            Discover our cutting-edge micro SAAS services, enterprise IT solutions, and advanced AI capabilities. 
-            Transform your business with innovative technology solutions backed by expert support.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
-              <Phone className="w-4 h-4 mr-2" />
-              {CONTACT_INFO.mobile}
-            </Button>
-            <Button size="lg" variant="outline" className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white">
-              <Mail className="w-4 h-4 mr-2" />
-              {CONTACT_INFO.email}
-            </Button>
-          </div>
-        </div>
-
-        {/* Contact Information Banner */}
-        <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 border border-cyan-500/30 rounded-2xl p-6 mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-cyan-400 mb-2" />
-              <h3 className="text-white font-semibold mb-1">Phone</h3>
-              <p className="text-cyan-300">{CONTACT_INFO.mobile}</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-cyan-400 mb-2" />
-              <h3 className="text-white font-semibold mb-1">Email</h3>
-              <p className="text-cyan-300">{CONTACT_INFO.email}</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-cyan-400 mb-2" />
-              <h3 className="text-white font-semibold mb-1">Address</h3>
-              <p className="text-cyan-300 text-sm">{CONTACT_INFO.address}</p>
-            </div>
-          </div>
-          <div className="text-center mt-4 pt-4 border-t border-cyan-500/30">
-            <p className="text-slate-300">
-              <Clock className="w-4 h-4 inline mr-2" />
-              {CONTACT_INFO.businessHours} • Response Time: {CONTACT_INFO.responseTime}
-            </p>
-          </div>
-        </div>
-
-        {/* Service Categories Tabs */}
-        <Tabs defaultValue="all" className="mb-16">
-          <TabsList className="grid w-full grid-cols-4 bg-slate-800 border border-slate-700">
-            <TabsTrigger 
-              value="all" 
-              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-blue-600"
-              onClick={() => setSelectedCategory('all')}
-            >
-              All Services
-            </TabsTrigger>
-            {SERVICE_CATEGORIES.map((category) => (
-              <TabsTrigger 
-                key={category.id}
-                value={category.id}
-                className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-blue-600"
-                onClick={() => setSelectedCategory(category.name)}
-=======
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
             Discover our cutting-edge collection of AI-powered micro SAAS services, innovative IT solutions, 
             emerging technology innovations, enterprise services, quantum computing solutions, and revolutionary 
@@ -326,57 +203,12 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
               >
                 {category.icon} {category.name}
               </TabsTrigger>
             ))}
           </TabsList>
 
-<<<<<<< HEAD
-          <TabsContent value="all" className="mt-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredServices.map((service) => (
-                <ServiceCard key={service.id} service={service} getCategoryIcon={getCategoryIcon} />
-              ))}
-            </div>
-          </TabsContent>
-
-          {SERVICE_CATEGORIES.map((category) => (
-            <TabsContent key={category.id} value={category.id} className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.services.map((service) => (
-                  <ServiceCard key={service.id} service={service} getCategoryIcon={getCategoryIcon} />
-                ))}
-              </div>
-            </TabsContent>
-          ))}
-        </Tabs>
-
-        {/* Pricing Tiers */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Flexible Pricing Options
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {PRICING_TIERS.map((tier, index) => (
-              <Card key={tier.name} className={`border-2 ${
-                index === 1 ? 'border-cyan-500 scale-105' : 'border-slate-700'
-              } bg-slate-800/50 backdrop-blur-sm`}>
-                <CardHeader className="text-center">
-                  <CardTitle className="text-white">{tier.name}</CardTitle>
-                  <div className="text-3xl font-bold text-cyan-400">
-                    {tier.price}
-                    <span className="text-sm text-slate-400">/{tier.period}</span>
-                  </div>
-                  <CardDescription className="text-slate-300">{tier.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-slate-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-=======
 import { 
   Brain, 
   Shield, 
@@ -656,82 +488,10 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="text-xs text-gray-400 flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-                  <Button className="w-full mt-6 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
-                    Get Started
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Why Choose Zion Tech Group */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Why Choose Zion Tech Group?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Sparkles className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Innovation First</h3>
-              <p className="text-slate-300 text-sm">Cutting-edge AI and technology solutions</p>
-            </div>
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Expert Team</h3>
-              <p className="text-slate-300 text-sm">Certified professionals with industry experience</p>
-            </div>
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Enterprise Security</h3>
-              <p className="text-slate-300 text-sm">SOC 2, ISO 27001, GDPR compliant solutions</p>
-            </div>
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">24/7 Support</h3>
-              <p className="text-slate-300 text-sm">Round-the-clock technical support and monitoring</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-cyan-900/50 to-blue-900/50 border border-cyan-500/30 rounded-2xl p-12">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our innovative solutions can drive your digital transformation and accelerate growth.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
-              <Phone className="w-4 h-4 mr-2" />
-              Schedule a Consultation
-            </Button>
-            <Button size="lg" variant="outline" className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white">
-              <Mail className="w-4 h-4 mr-2" />
-              Request Quote
-            </Button>
-            <Link to={CONTACT_INFO.website} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="ghost" className="text-cyan-400 hover:text-white">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Visit Website
-              </Button>
-            </Link>
-=======
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -957,7 +717,6 @@ export const ComprehensiveServicesShowcase: React.FC = () => {
           <div className="mt-8 text-gray-300">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>🌐 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
           </div>
         </div>
       </div>
@@ -1064,7 +823,6 @@ function ServiceCard({ service, getCategoryIcon }: ServiceCardProps) {
     </Card>
   );
 }
-=======
                 </div>
                 
                 <div className="mb-4">
@@ -1086,7 +844,6 @@ function ServiceCard({ service, getCategoryIcon }: ServiceCardProps) {
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </a>
-=======
 import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -1271,46 +1028,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
               <div key={idx} className="flex items-center gap-2 text-xs text-gray-400">
                 <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
                 <span className="truncate">{feature}</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bec0
               </div>
             ))}
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Solutions Section */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">
-            Advanced Solutions
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSolutions.map((solution) => (
-              <div
-                key={solution.id}
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <solution.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h4 className="text-xl font-semibold text-white mb-3 text-center">
-                  {solution.title}
-                </h4>
-                
-                <p className="text-gray-300 mb-6 text-center text-sm">
-                  {solution.description}
-                </p>
-                
-                <a
-                  href={solution.href}
-                  className="w-full flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 group-hover:shadow-lg"
-                >
-                  Explore Solution
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </a>
-              </div>
-            ))}
-=======
         {/* Action Buttons */}
         <div className="relative z-10 flex gap-2">
           <button 
@@ -1411,44 +1133,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode, onS
                 </div>
               ))}
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bec0
           </div>
         </div>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Let our experts help you choose the right services and solutions 
-              for your specific business needs and objectives.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </a>
-              <a
-                href="/case-studies"
-                className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
-                View Case Studies
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-=======
         <div className="lg:w-48 flex flex-col justify-between">
           <div className="space-y-3 mb-4">
             <div className="text-center">
@@ -1765,4 +1453,3 @@ const ComprehensiveServicesShowcase: React.FC = () => {
 };
 
 export default ComprehensiveServicesShowcase;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bec0

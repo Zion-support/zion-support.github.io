@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { MapPin, Clock, Globe, ArrowRight, Shield, Zap } from "lucide-react";
-
-export function ITServiceRequestHero() {
-  const [location, setLocation] = useState("");
-  const navigate = useNavigate();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (location.trim()) {
-      navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
-    }
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
-    }
-  };
-
-  return (
-<<<<<<< HEAD
-    <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 md:py-28 border-b border-zion-purple/20 overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-zion-cyan/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-zion-purple/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-zion-blue/5 rounded-full blur-3xl"></div>
-=======
     <section className="bg-zion-blue-dark py-16 md:py-24 border-b border-zion-purple/20 cyber-grid relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10"></div>
       <div className="relative container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -75,7 +25,6 @@ export function ITServiceRequestHero() {
             Available worldwide, 24 hours a day
           </p>
         </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
       </div>
 
       <motion.div 
@@ -204,7 +153,6 @@ export function ITServiceRequestHero() {
     </section>
   );
 }
-=======
 import React from 'react';
 import { ArrowRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
 
@@ -308,4 +256,3 @@ export const ITServiceRequestHero: React.FC = () => {
     </section>
   );
 };
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
