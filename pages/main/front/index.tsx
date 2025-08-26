@@ -38,10 +38,8 @@ export default function MainFrontIndex() {
         {/* Neural mesh lines */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_400px_at_10%_-10%,rgba(34,211,238,0.08),transparent),radial-gradient(600px_400px_at_110%_10%,rgba(168,85,247,0.08),transparent)]" />
         <div className="pointer-events-none absolute inset-0 opacity-20 [background:repeating-linear-gradient(0deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px),repeating-linear-gradient(90deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px)] [mask-image:radial-gradient(ellipse_at_center,black,transparent_65%)]" />
-        {/* Cyber grid mask */}
-        <div className="absolute inset-0 cyber-grid opacity-20" />
-        {/* Subtle noise */}
-        <div className="absolute inset-0 noise-overlay" />
+        {/* Cyber 3D grid */}
+        <div className="absolute inset-x-0 bottom-0 h-[40vh] cyber-grid" />
       </div>
 
       {/* Header */}
@@ -483,6 +481,9 @@ export default function MainFrontIndex() {
               { Icon: Rocket, title: 'Generative Factories', desc: 'Spins up domain‑specific automation factories that build for you.' },
               { Icon: ShieldCheck, title: 'Safety by Design', desc: 'Layered validations — type checks, builds, a11y, links, and more.' },
               { Icon: GitBranch, title: 'Main Sync', desc: 'Small, reviewable edits committed and pushed continuously.' },
+              { Icon: Cpu, title: 'AI Orchestration', desc: 'Coordinates multi‑agent systems for maximum throughput.' },
+              { Icon: Gauge, title: 'Performance‑Driven', desc: 'Every change measured, benchmarked, and optimized.' },
+              { Icon: Zap, title: 'Instant Rollouts', desc: 'Safe, incremental releases with immediate feedback.' },
             ].map(({ Icon, title, desc }) => (
               <article key={title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 hover-tilt holo-card">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -499,9 +500,15 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">What you can build</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
-              { Icon: Sparkles, title: 'Automated Landing Pages', desc: 'Spin up conversion‑tuned pages from content and data feeds.' },
-              { Icon: Activity, title: 'Realtime Promotions', desc: 'Autonomously schedule and rotate offers across surfaces.' },
-              { Icon: Layers, title: 'A/B Experiments', desc: 'Continuously propose, launch, and measure UX variations.' },
+              { Icon: Zap, title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.' },
+              { Icon: GitBranch, title: 'Repo Sync', desc: 'Changes are committed and pushed automatically to main.' },
+              { Icon: Cpu, title: 'Zero Ops', desc: 'Runs fully in the cloud—no servers or manual intervention.' },
+              { Icon: ShieldCheck, title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.' },
+              { Icon: Rocket, title: 'Scalable', desc: 'Generates domain‑specific factories on demand.' },
+              { Icon: Gauge, title: 'Observability', desc: 'Dashboards, reports, and GitHub Actions artifacts.' },
+              { Icon: Zap, title: 'A/B Evolution', desc: 'Continuously compares variants and keeps the best.' },
+              { Icon: Cpu, title: 'Knowledge‑Aware', desc: 'Leverages codebase memory and context for smarter edits.' },
+              { Icon: ShieldCheck, title: 'Compliance‑Ready', desc: 'Auditable logs and constraints by default.' },
             ].map(({ Icon, title, desc }) => (
               <article key={title} className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                 <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl" />
@@ -788,8 +795,8 @@ export default function MainFrontIndex() {
               'Rapid feedback loop with safe, incremental edits',
               'Continuous delivery directly to main branch',
               'Fewer regressions via layered checks and reports',
-              'Consistent, modern design language across surfaces',
-              'Improved Core Web Vitals and accessibility scores',
+              'Observable from PR to production with live reports',
+              'Lower TCO via automation and zero‑ops runtime',
             ].map((b) => (
               <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
@@ -851,123 +858,25 @@ export default function MainFrontIndex() {
           </div>
         </section>
 
-        {/* Demos & Live Data */}
-        <section className="mx-auto max-w-7xl px-6 pb-20">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Demos & Live Data</h2>
-          <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-            <Link href="/automation"><a className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">Automation Hub →</a></Link>
-            <Link href="/site-health"><a className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">Site Health →</a></Link>
-            <Link href="/reports/seo"><a className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">SEO Audit →</a></Link>
-            <Link href="/reports/ai-trends"><a className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">AI Trends →</a></Link>
-            <a href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">GitHub Actions ↗</a>
-          </div>
-        </section>
-
-        {/* Highlights */}
-        <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-7xl px-6 pb-14"
-        >
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Highlights</h2>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <Link href="/automation"><a className="holo tilt-on-hover rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-              <div className="text-base font-semibold">Automation Hub</div>
-              <div className="mt-1 text-sm text-white/75">Live agents, factories, and workflows</div>
-            </a></Link>
-            <Link href="/reports/seo"><a className="holo tilt-on-hover rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-              <div className="text-base font-semibold">SEO Audit</div>
-              <div className="mt-1 text-sm text-white/75">Continuous on‑site improvements</div>
-            </a></Link>
-            <Link href="/site-health"><a className="holo tilt-on-hover rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-              <div className="text-base font-semibold">Site Health</div>
-              <div className="mt-1 text-sm text-white/75">A11y, performance, and link checks</div>
-            </a></Link>
-            <Link href="/reports/ai-trends"><a className="holo tilt-on-hover rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-              <div className="text-base font-semibold">AI Trends</div>
-              <div className="mt-1 text-sm text-white/75">Signals that inspire new factories</div>
-            </a></Link>
-          </div>
-        </motion.section>
-
-        {/* Case Studies & Stories */}
-        <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-7xl px-6 pb-14"
-        >
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Case Studies & Stories</h2>
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Real outcomes from autonomous systems at work — dive into detailed write‑ups.</p>
+        {/* Use Cases */}
+        <section className="mx-auto max-w-7xl px-6 pb-14">
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Use Cases</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
-              { title: 'UX Lift on Homepage', desc: 'Autonomous design evolution and promo curation.', href: '/newsroom' },
-              { title: 'SEO Wins in 30 Days', desc: 'Continuous audits and safe diffs improved visibility.', href: '/reports/seo' },
-              { title: 'Zero‑Ops Rollouts', desc: 'Pipelines deliver small, safe changes to main.', href: '/automation' },
-            ].map((s) => (
-              <Link key={s.title} href={s.href}>
-                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h3 className="text-lg font-semibold">{s.title}</h3>
-                  <p className="mt-1 text-sm text-white/75">{s.desc}</p>
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read more <span aria-hidden>→</span></div>
-                </a>
-              </Link>
+              ['UX Upgrades', 'Ship polished UI improvements weekly'],
+              ['SEO Growth', 'Continuously improve ranking signals'],
+              ['Content Ops', 'Generate, localize, and publish content'],
+              ['Code Quality', 'Refactors, types, and linting at scale'],
+              ['Perf & A11y', 'Optimize Core Web Vitals and accessibility'],
+              ['Data Pipelines', 'Integrate APIs and keep data in sync'],
+            ].map(([title, desc]) => (
+              <article key={title as string} className="holo-card relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+                <h3 className="text-lg font-semibold">{title as string}</h3>
+                <p className="mt-1 text-sm text-white/75">{desc as string}</p>
+              </article>
             ))}
           </div>
-        </motion.section>
-
-        {/* Roadmap & Docs */}
-        <motion.section
-          id="roadmap"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-7xl px-6 pb-16"
-        >
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Roadmap & Docs</h2>
-          <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            <a href="https://github.com/Zion-Holdings/zion.app/tree/main/docs" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-base font-semibold">Documentation</div>
-              <div className="mt-1 text-sm text-white/75">Technical notes and guides for the platform.</div>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-            <a href="https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-base font-semibold">AI Changelog</div>
-              <div className="mt-1 text-sm text-white/75">Summarized autonomous changes and highlights.</div>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-            <a href="https://github.com/Zion-Holdings/zion.app/issues" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-base font-semibold">Open Issues</div>
-              <div className="mt-1 text-sm text-white/75">Track roadmap items and discussions.</div>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Browse <span aria-hidden>↗</span></div>
-            </a>
-            <a href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-base font-semibold">Live Pipelines</div>
-              <div className="mt-1 text-sm text-white/75">Observe builds, checks, and deployments 24/7.</div>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-          </div>
-        </motion.section>
-
-        {/* Floating CTA Ribbon */}
-        <div className="fixed inset-x-0 bottom-4 z-20 mx-auto max-w-3xl px-4">
-          <div className="animated-border flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-md">
-            <div className="text-sm text-white/80">Launch automations now — safe diffs, continuous delivery.</div>
-            <div className="flex items-center gap-2">
-              <Link href="/automation"><a className="rounded-lg bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-4 py-2 text-sm font-semibold">Open Hub</a></Link>
-              <Link href="/reports/seo"><a className="rounded-lg border border-white/20 bg-white/5 px-4 py-2 text-sm">SEO Audit</a></Link>
-            </div>
-          </div>
-        </div>
+        </section>
 
         {/* Footer */}
         <footer className="mx-auto max-w-7xl px-6 pb-16">
