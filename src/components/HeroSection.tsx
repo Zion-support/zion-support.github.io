@@ -184,29 +184,56 @@ const HeroSection: React.FC = () => {
           <h3 className="text-lg font-semibold text-zion-cyan mb-4">📞 Contact Information</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
             <div className="space-y-2">
-              <p className="flex items-center gap-2">
+              <a 
+                href="tel:+13024640950"
+                className="flex items-center gap-2 hover:text-zion-cyan transition-colors duration-300 cursor-pointer"
+              >
                 <span className="text-zion-cyan">📱</span>
                 <span className="text-zion-slate-light">Phone:</span>
-                <span className="text-white">+1 302 464 0950</span>
-              </p>
-              <p className="flex items-center gap-2">
+                <span className="text-white hover:text-zion-cyan">+1 302 464 0950</span>
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry"
+                className="flex items-center gap-2 hover:text-zion-cyan transition-colors duration-300 cursor-pointer"
+              >
                 <span className="text-zion-cyan">✉️</span>
                 <span className="text-zion-slate-light">Email:</span>
-                <span className="text-white">kleber@ziontechgroup.com</span>
-              </p>
+                <span className="text-white hover:text-zion-cyan">kleber@ziontechgroup.com</span>
+              </a>
             </div>
             <div className="space-y-2">
-              <p className="flex items-center gap-2">
+              <a 
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-zion-cyan transition-colors duration-300 cursor-pointer"
+              >
                 <span className="text-zion-cyan">🌐</span>
                 <span className="text-zion-slate-light">Website:</span>
-                <span className="text-white">ziontechgroup.com</span>
-              </p>
-              <p className="flex items-center gap-2">
+                <span className="text-white hover:text-zion-cyan">ziontechgroup.com</span>
+              </a>
+              <div className="flex items-center gap-2">
                 <span className="text-zion-cyan">📍</span>
                 <span className="text-zion-slate-light">Address:</span>
                 <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
-              </p>
+              </div>
             </div>
+          </div>
+          
+          {/* Quick Contact Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 mt-6">
+            <a
+              href="tel:+13024640950"
+              className="flex-1 bg-zion-cyan/20 hover:bg-zion-cyan/30 border border-zion-cyan/30 text-zion-cyan px-4 py-2 rounded-lg text-center transition-all duration-300 hover:scale-105"
+            >
+              📞 Call Now
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry"
+              className="flex-1 bg-zion-purple/20 hover:bg-zion-purple/30 border border-zion-purple/30 text-zion-purple px-4 py-2 rounded-lg text-center transition-all duration-300 hover:scale-105"
+            >
+              ✉️ Send Email
+            </a>
           </div>
         </motion.div>
 

@@ -5,6 +5,8 @@ import { motion, Variants } from 'framer-motion';
 import HeroSection from '../components/HeroSection';
 import ServiceCard from '../components/ServiceCard';
 import InteractiveServiceShowcase from '../components/InteractiveServiceShowcase';
+import LinkHealthChecker from '../components/LinkHealthChecker';
+import PerformanceMonitor from '../components/PerformanceMonitor';
 
 const Home: React.FC = () => {
   const featuredServices = [
@@ -308,6 +310,67 @@ const Home: React.FC = () => {
                 View All Services
               </Link>
             </div>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Website Health Monitor */}
+      <motion.section 
+        className="py-20 bg-white/5 backdrop-blur-sm"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Website <span className="gradient-text">Health Monitor</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              We continuously monitor our website to ensure all links and services are working properly
+            </p>
+          </motion.div>
+          
+          <motion.div variants={itemVariants}>
+            <LinkHealthChecker 
+              links={[
+                { url: '/', label: 'Home Page' },
+                { url: '/services', label: 'Services Page' },
+                { url: '/about', label: 'About Page' },
+                { url: '/contact', label: 'Contact Page' },
+                { url: '/blog', label: 'Blog Page' },
+                { url: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn Profile' },
+                { url: 'https://twitter.com/ziontechgroup', label: 'Twitter Profile' },
+                { url: 'https://github.com/ziontechgroup', label: 'GitHub Profile' },
+                { url: 'tel:+13024640950', label: 'Phone Number' },
+                { url: 'mailto:kleber@ziontechgroup.com', label: 'Email Address' }
+              ]}
+            />
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Performance Monitor */}
+      <motion.section 
+        className="py-20"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="gradient-text">Performance</span> Monitoring
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Real-time performance metrics to ensure optimal user experience and fast loading times
+            </p>
+          </motion.div>
+          
+          <motion.div variants={itemVariants}>
+            <PerformanceMonitor />
           </motion.div>
         </div>
       </motion.section>

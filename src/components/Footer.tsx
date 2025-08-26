@@ -6,10 +6,10 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
     { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
     { name: "GitHub", url: "https://github.com/ziontechgroup", icon: "💻", color: "hover:bg-gray-600/20" },
-    { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
+    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
     { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
   ];
 
@@ -90,10 +90,32 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className={`w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-lg ${social.color} hover:scale-110 transition-all duration-300`}
                   aria-label={`Follow us on ${social.name}`}
+                  title={`Visit our ${social.name} profile`}
+                  onError={(e) => {
+                    console.warn(`Failed to load ${social.name} link: ${social.url}`);
+                    e.currentTarget.style.opacity = '0.5';
+                    e.currentTarget.style.cursor = 'not-allowed';
+                  }}
                 >
                   {social.icon}
                 </a>
               ))}
+            </div>
+            
+            {/* Contact Information */}
+            <div className="mt-6 space-y-2 text-sm">
+              <div className="flex items-center gap-2 text-gray-300">
+                <span>📱</span>
+                <a href="tel:+13024640950" className="hover:text-blue-400 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-gray-300">
+                <span>✉️</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
             </div>
           </div>
 
