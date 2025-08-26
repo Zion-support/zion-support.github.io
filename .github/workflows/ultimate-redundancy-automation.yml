@@ -132,11 +132,7 @@ jobs:
           for workflow in .github/workflows/*.yml .github/workflows/*.yaml; do
             if [ -f "$workflow" ]; then
               echo "Validating $(basename "$workflow")..."
-<<<<<<< HEAD
-              python3 -c "import yaml; import sys; yaml.safe_load(open('$workflow', 'r')); print('  ✓ Valid YAML')" || echo "  ✗ Invalid YAML"
-=======
               python3 -c "import yaml,sys; yaml.safe_load(open('$workflow','r')); print('  ✓ Valid YAML')" || { echo "  ✗ Invalid YAML"; exit 1; }
->>>>>>> origin/cursor/check-and-fix-github-actions-7c73
             fi
           done
 
