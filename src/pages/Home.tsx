@@ -42,10 +42,16 @@ export default function Home() {
 
   const services = [
     {
-      title: "AI Solutions",
+      title: "AI Services",
       description: "Cutting-edge artificial intelligence services",
       icon: "🤖",
-      link: "/services"
+      link: "/enhanced-services"
+    },
+    {
+      title: "Micro SAAS",
+      description: "Innovative micro SAAS solutions",
+      icon: "🚀",
+      link: "/micro-saas-showcase"
     },
     {
       title: "Tech Talent",

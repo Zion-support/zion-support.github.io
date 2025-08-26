@@ -18,6 +18,8 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
+    { name: 'AI Services', href: '/enhanced-services', current: false },
+    { name: 'Micro SAAS', href: '/micro-saas-showcase', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
 

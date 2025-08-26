@@ -216,14 +216,14 @@ import {
   FolderClosed2
 } from 'lucide-react';
 
-export default function EnhancedServices() {
-  const innovativeServices = [
+export default function MicroSaasShowcase() {
+  const microSaasServices = [
     {
-      category: "AI & Autonomous Systems",
+      category: "AI-Powered Business Automation",
       services: [
         {
           title: "AI Autonomous Business Platform",
-          description: "Complete AI-powered business automation platform with 24/7 operations",
+          description: "Complete AI-powered business automation with 24/7 operations and intelligent decision making",
           icon: Brain,
           features: [
             "Process Automation & Optimization",
@@ -231,47 +231,94 @@ export default function EnhancedServices() {
             "Predictive Business Insights",
             "24/7 Autonomous Operations",
             "Real-time Performance Monitoring",
-            "Intelligent Resource Allocation"
+            "Intelligent Resource Allocation",
+            "Automated Customer Service",
+            "Smart Workflow Management"
           ],
           pricing: "$2,500/month",
           marketPrice: "$5,000-15,000/month",
+          savings: "50-83% savings",
           benefits: [
             "Reduce operational costs by 40-60%",
             "Increase efficiency by 300%",
             "24/7 business operations",
             "Real-time decision making",
-            "Scalable automation"
+            "Scalable automation",
+            "ROI within 3-6 months"
           ],
           link: "/services/ai-autonomous-business",
-          color: "from-purple-500 to-pink-500"
+          color: "from-purple-500 to-pink-500",
+          marketSize: "$15.7B",
+          growthRate: "23.4% CAGR"
         },
         {
-          title: "AI Autonomous Development",
-          description: "AI-powered software development with autonomous coding and testing",
-          icon: Code,
+          title: "AI Content Generation Suite",
+          description: "Advanced AI content creation for marketing, blogs, and social media with SEO optimization",
+          icon: FileText,
           features: [
-            "Autonomous Code Generation",
-            "Intelligent Testing & QA",
-            "Bug Detection & Fixing",
-            "Performance Optimization",
-            "Security Vulnerability Scanning",
-            "Continuous Integration/Deployment"
+            "Article & Blog Writing",
+            "Social Media Content",
+            "Video Script Generation",
+            "Marketing Copy",
+            "Multilingual Content",
+            "SEO-Optimized Writing",
+            "Brand Voice Consistency",
+            "Content Calendar Management"
           ],
-          pricing: "$1,800/month",
-          marketPrice: "$3,000-8,000/month",
+          pricing: "$800/month",
+          marketPrice: "$1,500-4,000/month",
+          savings: "47-80% savings",
           benefits: [
-            "10x faster development cycles",
-            "90% reduction in bugs",
-            "Automated quality assurance",
-            "Continuous improvement",
-            "Cost-effective development"
+            "10x faster content creation",
+            "Consistent brand voice",
+            "SEO optimization",
+            "Multilingual support",
+            "Cost-effective content",
+            "Scalable content strategy"
           ],
-          link: "/services/ai-autonomous-development",
-          color: "from-blue-500 to-cyan-500"
+          link: "/services/ai-content-generation",
+          color: "from-blue-500 to-indigo-500",
+          marketSize: "$8.2B",
+          growthRate: "18.7% CAGR"
         },
         {
-          title: "AI Autonomous Security",
-          description: "Next-generation AI-powered cybersecurity with autonomous threat response",
+          title: "AI Video Production Platform",
+          description: "AI-powered video creation and editing automation with professional quality output",
+          icon: Video,
+          features: [
+            "Automated Video Editing",
+            "Content Generation",
+            "Voice Synthesis",
+            "Visual Effects",
+            "Multi-format Export",
+            "Cloud Rendering",
+            "Template Library",
+            "Brand Asset Integration"
+          ],
+          pricing: "$1,500/month",
+          marketPrice: "$3,000-8,000/month",
+          savings: "50-81% savings",
+          benefits: [
+            "90% faster video production",
+            "Professional quality output",
+            "Cost-effective production",
+            "Scalable content creation",
+            "Automated workflows",
+            "Reduced production costs"
+          ],
+          link: "/services/ai-video-production",
+          color: "from-red-500 to-pink-500",
+          marketSize: "$12.4B",
+          growthRate: "21.3% CAGR"
+        }
+      ]
+    },
+    {
+      category: "Cybersecurity & Compliance",
+      services: [
+        {
+          title: "AI Autonomous Security Suite",
+          description: "Next-generation AI-powered cybersecurity with autonomous threat response and compliance automation",
           icon: Shield,
           features: [
             "Autonomous Threat Detection",
@@ -279,24 +326,220 @@ export default function EnhancedServices() {
             "Behavioral Analysis",
             "Zero-Day Attack Prevention",
             "Compliance Automation",
-            "Security Training AI"
+            "Security Training AI",
+            "Real-time Monitoring",
+            "Automated Remediation"
           ],
           pricing: "$2,200/month",
           marketPrice: "$4,000-12,000/month",
+          savings: "45-82% savings",
           benefits: [
             "99.9% threat detection rate",
             "Real-time response in milliseconds",
             "Reduced security incidents by 80%",
             "Automated compliance reporting",
-            "24/7 security monitoring"
+            "24/7 security monitoring",
+            "Lower security costs"
           ],
           link: "/services/ai-autonomous-security",
-          color: "from-red-500 to-orange-500"
+          color: "from-red-500 to-orange-500",
+          marketSize: "$22.1B",
+          growthRate: "25.8% CAGR"
+        },
+        {
+          title: "Zero Trust Security Platform",
+          description: "Comprehensive zero trust architecture with AI-powered access control and monitoring",
+          icon: Lock,
+          features: [
+            "Identity Verification",
+            "Access Control",
+            "Network Segmentation",
+            "Device Management",
+            "Threat Intelligence",
+            "Compliance Reporting",
+            "Real-time Analytics",
+            "Automated Response"
+          ],
+          pricing: "$1,800/month",
+          marketPrice: "$3,500-10,000/month",
+          savings: "49-82% savings",
+          benefits: [
+            "Enhanced security posture",
+            "Reduced attack surface",
+            "Compliance automation",
+            "Lower security overhead",
+            "Real-time monitoring",
+            "Scalable security"
+          ],
+          link: "/services/zero-trust-security",
+          color: "from-orange-500 to-red-500",
+          marketSize: "$19.8B",
+          growthRate: "24.2% CAGR"
         }
       ]
     },
     {
-      category: "Quantum & Emerging Tech",
+      category: "Cloud & Infrastructure",
+      services: [
+        {
+          title: "AI-Powered DevOps Platform",
+          description: "Intelligent DevOps automation with AI-driven deployment and monitoring",
+          icon: Cloud,
+          features: [
+            "Automated CI/CD Pipelines",
+            "Intelligent Testing",
+            "Performance Monitoring",
+            "Auto-scaling",
+            "Cost Optimization",
+            "Security Scanning",
+            "Deployment Automation",
+            "Real-time Analytics"
+          ],
+          pricing: "$1,200/month",
+          marketPrice: "$2,500-7,000/month",
+          savings: "52-83% savings",
+          benefits: [
+            "10x faster deployments",
+            "Reduced downtime by 90%",
+            "Lower infrastructure costs",
+            "Automated operations",
+            "Enhanced security",
+            "Scalable infrastructure"
+          ],
+          link: "/services/ai-devops",
+          color: "from-blue-500 to-cyan-500",
+          marketSize: "$18.9B",
+          growthRate: "22.1% CAGR"
+        },
+        {
+          title: "Multi-Cloud Management Platform",
+          description: "Unified management across AWS, Azure, Google Cloud with AI optimization",
+          icon: Server,
+          features: [
+            "Unified Dashboard",
+            "Cost Optimization",
+            "Security Management",
+            "Performance Monitoring",
+            "Automated Migration",
+            "Compliance Management",
+            "Resource Optimization",
+            "Multi-cloud Analytics"
+          ],
+          pricing: "$1,600/month",
+          marketPrice: "$3,000-8,000/month",
+          savings: "47-80% savings",
+          benefits: [
+            "Reduced cloud costs by 30%",
+            "Unified management",
+            "Enhanced security",
+            "Better performance",
+            "Automated optimization",
+            "Simplified operations"
+          ],
+          link: "/services/multi-cloud-management",
+          color: "from-cyan-500 to-blue-500",
+          marketSize: "$16.7B",
+          growthRate: "20.8% CAGR"
+        }
+      ]
+    },
+    {
+      category: "Industry-Specific AI Solutions",
+      services: [
+        {
+          title: "Healthcare AI Diagnostics",
+          description: "AI-powered medical diagnostics and patient care optimization platform",
+          icon: Heart,
+          features: [
+            "Medical Image Analysis",
+            "Diagnostic Assistance",
+            "Patient Care Optimization",
+            "Drug Discovery Support",
+            "Healthcare Analytics",
+            "Telemedicine Integration",
+            "Predictive Medicine",
+            "Clinical Decision Support"
+          ],
+          pricing: "$3,200/month",
+          marketPrice: "$6,000-20,000/month",
+          savings: "47-84% savings",
+          benefits: [
+            "Improve diagnostic accuracy by 30%",
+            "Reduce patient wait times by 50%",
+            "Lower healthcare costs by 25%",
+            "Enhanced patient outcomes",
+            "24/7 medical support",
+            "Better resource utilization"
+          ],
+          link: "/services/healthcare-ai",
+          color: "from-pink-500 to-rose-500",
+          marketSize: "$28.3B",
+          growthRate: "26.7% CAGR"
+        },
+        {
+          title: "Manufacturing AI Optimization",
+          description: "AI-powered manufacturing optimization with predictive maintenance and quality control",
+          icon: Factory,
+          features: [
+            "Predictive Maintenance",
+            "Quality Control Automation",
+            "Supply Chain Optimization",
+            "Production Planning",
+            "Energy Efficiency",
+            "Safety Monitoring",
+            "Inventory Management",
+            "Performance Analytics"
+          ],
+          pricing: "$2,800/month",
+          marketPrice: "$5,000-15,000/month",
+          savings: "44-81% savings",
+          benefits: [
+            "Reduce downtime by 60%",
+            "Increase production by 25%",
+            "Lower energy costs by 30%",
+            "Improve quality by 40%",
+            "Enhanced safety compliance",
+            "Optimized operations"
+          ],
+          link: "/services/manufacturing-ai",
+          color: "from-orange-500 to-red-500",
+          marketSize: "$24.6B",
+          growthRate: "23.9% CAGR"
+        },
+        {
+          title: "Financial AI Trading Platform",
+          description: "AI-powered financial analysis and automated trading systems",
+          icon: DollarSign,
+          features: [
+            "Automated Trading Systems",
+            "Risk Assessment",
+            "Fraud Detection",
+            "Portfolio Optimization",
+            "Market Analysis",
+            "Compliance Automation",
+            "Real-time Monitoring",
+            "Predictive Analytics"
+          ],
+          pricing: "$4,000/month",
+          marketPrice: "$8,000-25,000/month",
+          savings: "50-84% savings",
+          benefits: [
+            "Increase trading profits by 40%",
+            "Reduce risk by 60%",
+            "24/7 market monitoring",
+            "Automated compliance",
+            "Real-time decision making",
+            "Enhanced portfolio performance"
+          ],
+          link: "/services/financial-ai",
+          color: "from-yellow-500 to-orange-500",
+          marketSize: "$31.2B",
+          growthRate: "27.4% CAGR"
+        }
+      ]
+    },
+    {
+      category: "Emerging Technologies",
       services: [
         {
           title: "Quantum Computing Solutions",
@@ -308,19 +551,25 @@ export default function EnhancedServices() {
             "Cryptography & Security",
             "Research & Development",
             "Quantum Machine Learning",
-            "Quantum Simulation"
+            "Quantum Simulation",
+            "Quantum Error Correction",
+            "Quantum Networking"
           ],
           pricing: "$5,000/month",
           marketPrice: "$10,000-50,000/month",
+          savings: "50-90% savings",
           benefits: [
             "Exponential computational power",
             "Solve previously impossible problems",
             "Future-proof technology investment",
             "Competitive advantage",
-            "Research collaboration opportunities"
+            "Research collaboration opportunities",
+            "Breakthrough innovations"
           ],
           link: "/services/quantum-computing",
-          color: "from-indigo-500 to-purple-600"
+          color: "from-indigo-500 to-purple-600",
+          marketSize: "$8.9B",
+          growthRate: "32.1% CAGR"
         },
         {
           title: "5G Network Optimization",
@@ -332,210 +581,33 @@ export default function EnhancedServices() {
             "Latency Reduction",
             "Coverage Enhancement",
             "Security Implementation",
-            "IoT Integration Support"
+            "IoT Integration Support",
+            "Network Slicing",
+            "Edge Computing"
           ],
           pricing: "$1,500/month",
           marketPrice: "$3,000-8,000/month",
+          savings: "50-81% savings",
           benefits: [
             "50% faster network speeds",
             "Reduced latency by 80%",
             "Enhanced user experience",
             "Future-ready infrastructure",
-            "Cost-effective optimization"
+            "Cost-effective optimization",
+            "IoT ready networks"
           ],
           link: "/services/5g-optimization",
-          color: "from-green-500 to-emerald-500"
-        }
-      ]
-    },
-    {
-      category: "Industry-Specific Solutions",
-      services: [
-        {
-          title: "Manufacturing AI Solutions",
-          description: "AI-powered manufacturing optimization and predictive maintenance",
-          icon: Factory,
-          features: [
-            "Predictive Maintenance",
-            "Quality Control Automation",
-            "Supply Chain Optimization",
-            "Production Planning",
-            "Energy Efficiency",
-            "Safety Monitoring"
-          ],
-          pricing: "$2,800/month",
-          marketPrice: "$5,000-15,000/month",
-          benefits: [
-            "Reduce downtime by 60%",
-            "Increase production by 25%",
-            "Lower energy costs by 30%",
-            "Improve quality by 40%",
-            "Enhanced safety compliance"
-          ],
-          link: "/services/manufacturing-ai",
-          color: "from-orange-500 to-red-500"
-        },
-        {
-          title: "Healthcare AI Solutions",
-          description: "AI-powered healthcare diagnostics and patient care optimization",
-          icon: Heart,
-          features: [
-            "Medical Image Analysis",
-            "Diagnostic Assistance",
-            "Patient Care Optimization",
-            "Drug Discovery Support",
-            "Healthcare Analytics",
-            "Telemedicine Integration"
-          ],
-          pricing: "$3,200/month",
-          marketPrice: "$6,000-20,000/month",
-          benefits: [
-            "Improve diagnostic accuracy by 30%",
-            "Reduce patient wait times by 50%",
-            "Lower healthcare costs by 25%",
-            "Enhanced patient outcomes",
-            "24/7 medical support"
-          ],
-          link: "/services/healthcare-ai",
-          color: "from-pink-500 to-rose-500"
-        },
-        {
-          title: "Financial AI Solutions",
-          description: "AI-powered financial analysis and automated trading systems",
-          icon: DollarSign,
-          features: [
-            "Automated Trading Systems",
-            "Risk Assessment",
-            "Fraud Detection",
-            "Portfolio Optimization",
-            "Market Analysis",
-            "Compliance Automation"
-          ],
-          pricing: "$4,000/month",
-          marketPrice: "$8,000-25,000/month",
-          benefits: [
-            "Increase trading profits by 40%",
-            "Reduce risk by 60%",
-            "24/7 market monitoring",
-            "Automated compliance",
-            "Real-time decision making"
-          ],
-          link: "/services/financial-ai",
-          color: "from-yellow-500 to-orange-500"
-        }
-      ]
-    },
-    {
-      category: "Digital Transformation",
-      services: [
-        {
-          title: "Digital Marketing AI",
-          description: "AI-powered digital marketing automation and optimization",
-          icon: Target,
-          features: [
-            "Content Generation",
-            "Campaign Optimization",
-            "Customer Segmentation",
-            "ROI Analysis",
-            "Social Media Management",
-            "SEO Optimization"
-          ],
-          pricing: "$1,200/month",
-          marketPrice: "$2,500-7,000/month",
-          benefits: [
-            "Increase conversion rates by 50%",
-            "Reduce marketing costs by 30%",
-            "Personalized customer experiences",
-            "Automated campaign management",
-            "Data-driven insights"
-          ],
-          link: "/services/digital-marketing-ai",
-          color: "from-blue-500 to-indigo-500"
-        },
-        {
-          title: "E-commerce AI Platform",
-          description: "Intelligent e-commerce platform with AI-powered recommendations",
-          icon: ShoppingCart,
-          features: [
-            "AI Product Recommendations",
-            "Dynamic Pricing",
-            "Inventory Management",
-            "Customer Behavior Analysis",
-            "Automated Customer Service",
-            "Fraud Prevention"
-          ],
-          pricing: "$1,800/month",
-          marketPrice: "$3,500-10,000/month",
-          benefits: [
-            "Increase sales by 35%",
-            "Reduce cart abandonment by 40%",
-            "Optimize inventory costs",
-            "Enhanced customer experience",
-            "Automated operations"
-          ],
-          link: "/services/ecommerce-ai",
-          color: "from-green-500 to-teal-500"
-        }
-      ]
-    },
-    {
-      category: "Creative & Media AI",
-      services: [
-        {
-          title: "AI Content Generation",
-          description: "Advanced AI content creation for marketing and media",
-          icon: FileText,
-          features: [
-            "Article & Blog Writing",
-            "Social Media Content",
-            "Video Script Generation",
-            "Marketing Copy",
-            "Multilingual Content",
-            "SEO-Optimized Writing"
-          ],
-          pricing: "$800/month",
-          marketPrice: "$1,500-4,000/month",
-          benefits: [
-            "10x faster content creation",
-            "Consistent brand voice",
-            "SEO optimization",
-            "Multilingual support",
-            "Cost-effective content"
-          ],
-          link: "/services/ai-content-generation",
-          color: "from-purple-500 to-pink-500"
-        },
-        {
-          title: "AI Video Production",
-          description: "AI-powered video creation and editing automation",
-          icon: Video,
-          features: [
-            "Automated Video Editing",
-            "Content Generation",
-            "Voice Synthesis",
-            "Visual Effects",
-            "Multi-format Export",
-            "Cloud Rendering"
-          ],
-          pricing: "$1,500/month",
-          marketPrice: "$3,000-8,000/month",
-          benefits: [
-            "90% faster video production",
-            "Professional quality output",
-            "Cost-effective production",
-            "Scalable content creation",
-            "Automated workflows"
-          ],
-          link: "/services/ai-video-production",
-          color: "from-red-500 to-pink-500"
+          color: "from-green-500 to-emerald-500",
+          marketSize: "$14.2B",
+          growthRate: "19.6% CAGR"
         }
       ]
     }
   ];
 
   const stats = [
-    { value: "100+", label: "AI Services", description: "Innovative solutions" },
-    { value: "50+", label: "Industries", description: "Served worldwide" },
+    { value: "150+", label: "Micro SAAS Services", description: "Innovative solutions" },
+    { value: "60+", label: "Industries", description: "Served worldwide" },
     { value: "99.9%", label: "Uptime", description: "Reliable service" },
     { value: "24/7", label: "Support", description: "Round-the-clock assistance" }
   ];
@@ -546,6 +618,37 @@ export default function EnhancedServices() {
     address: "364 E Main St STE 1008, Middletown DE 19709",
     website: "https://ziontechgroup.com"
   };
+
+  const marketInsights = [
+    {
+      title: "AI Market Growth",
+      value: "$1.8T",
+      description: "Global AI market by 2030",
+      trend: "up",
+      color: "text-green-400"
+    },
+    {
+      title: "Micro SAAS Growth",
+      value: "23.4%",
+      description: "Annual growth rate",
+      trend: "up",
+      color: "text-blue-400"
+    },
+    {
+      title: "Cost Savings",
+      value: "60-80%",
+      description: "Average cost reduction",
+      trend: "up",
+      color: "text-cyan-400"
+    },
+    {
+      title: "ROI Timeline",
+      value: "3-6 months",
+      description: "Average payback period",
+      trend: "up",
+      color: "text-purple-400"
+    }
+  ];
 
   return (
     <FuturisticBackground>
@@ -559,15 +662,38 @@ export default function EnhancedServices() {
             className="max-w-6xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Innovative AI Services
+              Micro SAAS Showcase
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Cutting-edge micro SAAS solutions powered by artificial intelligence, quantum computing, and emerging technologies
+              Revolutionary micro SAAS solutions with enterprise-grade quality at startup-friendly prices
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Transform your business with our comprehensive suite of AI-powered services, from autonomous business platforms 
-              to quantum computing solutions. Competitive pricing with enterprise-grade quality.
+              Discover our comprehensive portfolio of AI-powered, quantum-ready, and emerging technology solutions. 
+              Competitive pricing with 50-90% savings compared to market rates.
             </p>
+            
+            {/* Market Insights */}
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {marketInsights.map((insight, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-slate-800/50 p-4 rounded-xl border border-slate-700"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <div className={`text-2xl font-bold ${insight.color} mb-2`}>
+                    {insight.value}
+                  </div>
+                  <div className="text-sm text-white font-semibold mb-1">
+                    {insight.title}
+                  </div>
+                  <div className="text-xs text-gray-400">
+                    {insight.description}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
             
             {/* Contact CTA */}
             <div className="mt-8 p-6 bg-slate-800/50 rounded-xl border border-slate-700 max-w-2xl mx-auto">
@@ -597,7 +723,7 @@ export default function EnhancedServices() {
       </section>
 
       {/* Services by Category */}
-      {innovativeServices.map((category, categoryIndex) => (
+      {microSaasServices.map((category, categoryIndex) => (
         <section key={categoryIndex} className={`py-20 ${categoryIndex % 2 === 0 ? 'bg-black/30' : ''}`}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -605,7 +731,7 @@ export default function EnhancedServices() {
                 {category.category}
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Revolutionary solutions that redefine industry standards
+                Cutting-edge solutions that redefine industry standards with competitive pricing
               </p>
             </div>
             
@@ -627,9 +753,23 @@ export default function EnhancedServices() {
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   
+                  {/* Market Info */}
+                  <div className="mb-6 p-4 bg-slate-700/30 rounded-lg">
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <p className="text-gray-400">Market Size</p>
+                        <p className="text-cyan-400 font-semibold">{service.marketSize}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-400">Growth Rate</p>
+                        <p className="text-green-400 font-semibold">{service.growthRate}</p>
+                      </div>
+                    </div>
+                  </div>
+                  
                   {/* Pricing */}
                   <div className="mb-6 p-4 bg-slate-700/50 rounded-lg">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mb-2">
                       <div>
                         <p className="text-sm text-gray-400">Our Price</p>
                         <p className="text-2xl font-bold text-cyan-400">{service.pricing}</p>
@@ -638,6 +778,11 @@ export default function EnhancedServices() {
                         <p className="text-sm text-gray-400">Market Price</p>
                         <p className="text-lg text-gray-300 line-through">{service.marketPrice}</p>
                       </div>
+                    </div>
+                    <div className="text-center">
+                      <span className="text-sm text-green-400 font-semibold bg-green-400/10 px-3 py-1 rounded-full">
+                        {service.savings}
+                      </span>
                     </div>
                   </div>
                   
@@ -718,7 +863,7 @@ export default function EnhancedServices() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join hundreds of companies already leveraging our cutting-edge AI solutions
+            Join hundreds of companies already leveraging our cutting-edge micro SAAS solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

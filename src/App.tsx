@@ -7,6 +7,8 @@ import { Footer } from './components/Footer';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
+const EnhancedServices = lazy(() => import('./pages/EnhancedServices'));
+const MicroSaasShowcase = lazy(() => import('./pages/MicroSaasShowcase'));
 const Contact = lazy(() => import('./pages/Contact'));
 
 // Loading spinner component
@@ -40,6 +42,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/enhanced-services" element={<EnhancedServices />} />
+              <Route path="/micro-saas-showcase" element={<MicroSaasShowcase />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

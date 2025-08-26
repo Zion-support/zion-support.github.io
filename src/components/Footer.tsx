@@ -17,6 +17,8 @@ export const Footer: React.FC = () => {
     {
       title: "Services",
       links: [
+        { label: "AI Services", path: "/enhanced-services" },
+        { label: "Micro SAAS", path: "/micro-saas-showcase" },
         { label: "AI Solutions", path: "/services/ai" },
         { label: "Cloud & DevOps", path: "/services/cloud" },
         { label: "Cybersecurity", path: "/services/cybersecurity" },
