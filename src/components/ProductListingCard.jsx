@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { DollarSign } from "lucide-react";
 import { RatingStars } from "@/components/RatingStars";
 import { FavoriteButton } from "@/components/FavoriteButton";
-import Image from 'next/image'; // Import next/image
-export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
+// Using regular img tag instead of Next.js Image
+const ProductListingCardComponent = ({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) => {
     const isGrid = view === 'grid';
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
@@ -55,9 +55,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
             }
         }}>
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <Image src={imageSrc} alt={listing.title} layout="fill" objectFit="cover" onError={handleImageError} priority={false} // Assuming these are not LCP images
-     sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
-    />
+          <img src={imageSrc} alt={listing.title} className="w-full h-full object-cover" onError={handleImageError} />
           {listing.featured && (<Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
               Featured
             </Badge>)}
