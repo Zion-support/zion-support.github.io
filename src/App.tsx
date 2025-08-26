@@ -1,171 +1,96 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
-import { ChatAssistant } from './components/ChatAssistant';
+import { EnhancedHero } from './components/EnhancedHero';
+import { ServicesShowcase } from './components/ServicesShowcase';
 
-// Lazy load pages
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
-const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Careers = React.lazy(() => import('./pages/Careers'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-
-const APIDocs = React.lazy(() => import('./pages/APIDocs'));
-
-const baseRoutes = [
-  { path: '/', element: <Home /> },
-  { path: '/about', element: <About /> },
-  { path: '/team', element: <Team /> },
-  { path: '/careers', element: <Careers /> },
-  { path: '/pricing', element: <Pricing /> },
-  { path: '/case-studies', element: <CaseStudies /> },
-  { path: '/white-papers', element: <WhitePapers /> },
-  { path: '/privacy', element: <Privacy /> },
-  { path: '/terms', element: <Terms /> },
-  
-  // Additional missing pages
-  { path: '/partners', element: <Partners /> },
-  { path: '/docs', element: <Documentation /> },
-  { path: '/cookies', element: <Cookies /> },
-  { path: '/sitemap', element: <Sitemap /> },
-  { path: '/help', element: <HelpCenter /> },
-  { path: '/training', element: <Training /> },
-  { path: '/webinars', element: <Webinars /> },
-  { path: '/events', element: <Events /> },
-  { path: '/support', element: <Support /> },
-  { path: '/faq', element: <FAQ /> },
-  { path: '/green-it', element: <GreenIT /> },
-  { path: '/financial-solutions', element: <FinancialSolutions /> },
-  { path: '/mobile', element: <Mobile /> },
-  { path: '/quantum-technology', element: <QuantumTechnology /> },
-  { path: '/space-tech', element: <SpaceTech /> },
-  
-  // New routes from incoming branch
-  { path: '/services', element: <Services /> },
-  { path: '/ai-solutions', element: <AISolutions /> },
-  { path: '/services-showcase', element: <ServicesShowcase /> },
-  { path: '/innovative-services-showcase', element: <InnovativeServicesShowcase /> },
-  { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
-  { path: '/pricing', element: <PricingPage /> },
-  { path: '/emerging-tech', element: <EmergingTech /> },
-  
-  // 2027 Innovation Routes
-  { path: '/cutting-edge-innovations-2027', element: <CuttingEdgeInnovations2027 /> },
-  { path: '/practical-micro-saas-2027', element: <PracticalMicroSaas2027 /> },
-  { path: '/all-services-2027', element: <AllServices2027 /> },
-  
-  // New missing page routes
-  { path: '/quantum-neural-network-platform', element: <QuantumNeuralNetworkPlatform /> },
-  { path: '/autonomous-business-operations-platform', element: <AutonomousBusinessOperationsPlatform /> },
-  { path: '/ai-powered-it-asset-management', element: <AIPoweredITAssetManagement /> },
-  { path: '/soc2-compliance-automation', element: <SOC2ComplianceAutomation /> },
-  { path: '/ai-autonomous-research-assistant', element: <AIAutonomousResearchAssistant /> },
-  { path: '/5g-enterprise-solutions', element: <FiveGEnterpriseSolutions /> },
-  
-  // Service routes
-  { path: '/services/ai', element: <AIServices /> },
-  { path: '/services/cloud', element: <CloudServices /> },
-  { path: '/services/cybersecurity', element: <CybersecurityServices /> },
-  { path: '/services/infrastructure', element: <InfrastructureServices /> },
-  { path: '/services/transformation', element: <DigitalTransformation /> },
-  { path: '/services/consulting', element: <ConsultingServices /> },
-  { path: '/services/quantum-ai', element: <QuantumAIServices /> },
-  
-  // Additional service routes
-  { path: '/innovative-services-2025', element: <InnovativeServices2025 /> },
-  { path: '/advanced-services-2025', element: <AdvancedServices2025 /> },
-  { path: '/advanced-services-showcase-2025', element: <AdvancedServicesShowcase2025 /> },
-  { path: '/comprehensive-pricing-2025', element: <ComprehensivePricing2025 /> },
-  { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
-  { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
-  { path: '/services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
-  
-  // Ultimate Innovative Services 2026
-  { path: '/ultimate-services-showcase-2026', element: <UltimateServicesShowcase2026 /> },
-  { path: '/ultimate-services-2026', element: <UltimateServicesShowcase2026 /> },
-  { path: '/comprehensive-pricing-2026', element: <ComprehensivePricing2026 /> },
-  { path: '/pricing-2026', element: <ComprehensivePricing2026 /> },
-  
-  // Other routes
-  { path: '/match', element: <AIMatcherPage /> },
-  { path: '/login', element: <Login /> },
-  { path: '/signup', element: <Signup /> },
-  { path: '/talent', element: <TalentDirectory /> },
-  { path: '/talents', element: <TalentsPage /> },
-  { path: '/services', element: <ServicesPage /> },
-  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
-  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
-  { path: '/categories', element: <Categories /> },
-  { path: '/equipment', element: <EquipmentPage /> },
-  { path: '/equipment/:id', element: <EquipmentDetail /> },
-  { path: '/analytics', element: <Analytics /> },
-  { path: '/mobile-launch', element: <MobileLaunchPage /> },
-  { path: '/open-app', element: <OpenAppRedirect /> },
-  { path: '/community', element: <CommunityPage /> },
-  { path: '/contact', element: <ContactPage /> },
-  { path: '/partners', element: <PartnersPage /> },
-  { path: '/zion-hire-ai', element: <ZionHireAI /> },
-  { path: '/hire-ai', element: <ZionHireAI /> },
-  { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/blog', element: <Blog /> },
-  { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/accessibility', element: <Accessibility /> },
-  { path: '/gdpr', element: <GDPR /> },
-  { path: '/api', element: <API /> },
-  { path: '/status', element: <Status /> },
-];
-
-// Enhanced loading component with skeleton
-const LoadingFallback = () => (
-  <div className="min-h-screen bg-background flex items-center justify-center">
-    <div className="text-center space-y-4">
-      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto"></div>
-      <p className="text-zion-cyan text-lg font-medium">Loading Zion...</p>
-      <p className="text-muted-foreground text-sm">Preparing your AI marketplace experience</p>
+// Simple About component
+const About = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 flex items-center justify-center">
+    <div className="text-center text-white max-w-4xl mx-auto px-6">
+      <h1 className="text-4xl font-bold mb-6">About Zion Tech Group</h1>
+      <p className="text-lg text-gray-300 mb-6">
+        We are a forward-thinking technology company specializing in cutting-edge AI solutions, 
+        quantum computing applications, and next-generation IT infrastructure.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+        <div className="bg-white/10 p-6 rounded-lg backdrop-blur-lg">
+          <h3 className="text-xl font-semibold mb-3 text-cyan-400">AI Innovation</h3>
+          <p className="text-gray-300">Leading-edge artificial intelligence solutions for modern businesses</p>
+        </div>
+        <div className="bg-white/10 p-6 rounded-lg backdrop-blur-lg">
+          <h3 className="text-xl font-semibold mb-3 text-blue-400">Quantum Computing</h3>
+          <p className="text-gray-300">Next-generation quantum technology applications</p>
+        </div>
+        <div className="bg-white/10 p-6 rounded-lg backdrop-blur-lg">
+          <h3 className="text-xl font-semibold mb-3 text-purple-400">IT Services</h3>
+          <p className="text-gray-300">Comprehensive technology solutions and consulting</p>
+        </div>
+      </div>
     </div>
   </div>
+);
+
+// Simple Contact component
+const Contact = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 flex items-center justify-center">
+    <div className="text-center text-white max-w-2xl mx-auto px-6">
+      <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
+      <p className="text-lg text-gray-300 mb-8">
+        Ready to transform your business with cutting-edge technology? Get in touch with our team.
+      </p>
+      <div className="space-y-4 text-left">
+        <div className="bg-white/10 p-4 rounded-lg backdrop-blur-lg">
+          <h3 className="font-semibold text-cyan-400">Email</h3>
+          <p className="text-gray-300">contact@ziontechgroup.com</p>
+        </div>
+        <div className="bg-white/10 p-4 rounded-lg backdrop-blur-lg">
+          <h3 className="font-semibold text-blue-400">Phone</h3>
+          <p className="text-gray-300">+1 (555) 123-4567</p>
+        </div>
+        <div className="bg-white/10 p-4 rounded-lg backdrop-blur-lg">
+          <h3 className="font-semibold text-purple-400">Address</h3>
+          <p className="text-gray-300">123 Innovation Drive, Tech City, TC 12345</p>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+// Enhanced Home component
+const Home = () => (
+  <>
+    <EnhancedHero />
+    <ServicesShowcase />
+  </>
 );
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-        <AppHeader />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700">
+        <nav className="bg-black/20 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-6 py-4">
+            <div className="flex items-center justify-between">
+              <div className="text-2xl font-bold text-white">Zion Tech Group</div>
+              <div className="flex space-x-6">
+                <a href="/" className="text-gray-300 hover:text-white transition-colors">Home</a>
+                <a href="/about" className="text-gray-300 hover:text-white transition-colors">About</a>
+                <a href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+              </div>
+            </div>
+          </div>
+        </nav>
         
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/green-it" element={<GreenIT />} />
-              <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
-            </Routes>
-          </Suspense>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
         </main>
-        
-        <Footer />
-        <ChatAssistant />
       </div>
     </Router>
   );
 }
 
-export default App
+export default App;
