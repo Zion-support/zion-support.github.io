@@ -1,125 +1,139 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const services = [
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & AI Services' },
-    { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Cloud Migration & Automation' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Threat Protection' },
-    { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Network & System Management' },
-    { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Process Optimization' },
-    { name: 'Consulting', href: '/services/consulting', description: 'Technology Strategy & Advisory' }
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & AI Services', icon: '🤖' },
+    { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Cloud Migration & Automation', icon: '☁️' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Threat Protection', icon: '🔒' },
+    { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Network & System Management', icon: '🏗️' },
+    { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Process Optimization', icon: '🚀' },
+    { name: 'Consulting', href: '/services/consulting', description: 'Technology Strategy & Advisory', icon: '💡' }
+  ];
+
+  const navItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services', hasDropdown: true },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
-    <header className="bg-slate-900/95 backdrop-blur-lg border-b border-white/10 fixed w-full top-0 z-50">
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/20 shadow-2xl' 
+        : 'bg-slate-900/80 backdrop-blur-lg border-b border-white/10'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-white">
+        <div className="flex items-center justify-between h-20">
+          {/* Enhanced Logo */}
+          <Link to="/" className="flex items-center group">
+            <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <span className="text-white font-bold text-xl">Z</span>
+            </div>
+            <span className="text-2xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
               Zion Tech Group
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link
-              to="/"
-              className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
-              Home
-            </Link>
-            
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-                className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center"
-              >
-                Services
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              
-              {/* Services Dropdown Menu */}
-              {isServicesOpen && (
-                <div
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
-                  className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl"
-                >
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 gap-2">
-                      {services.map((service) => (
-                        <Link
-                          key={service.name}
-                          to={service.href}
-                          className="flex items-start p-3 rounded-lg hover:bg-white/10 transition-all duration-200 group"
-                        >
-                          <div className="flex-1">
-                            <div className="text-white font-medium group-hover:text-blue-400 transition-colors duration-200">
-                              {service.name}
-                            </div>
-                            <div className="text-sm text-gray-400 mt-1">
-                              {service.description}
-                            </div>
-                          </div>
-                          <svg className="h-4 w-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="mt-4 pt-4 border-t border-white/10">
-                      <Link
-                        to="/services"
-                        className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
+            {navItems.map((item) => (
+              item.hasDropdown ? (
+                <div key={item.name} className="relative group">
+                  <button
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseLeave={() => setIsServicesOpen(false)}
+                    className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group"
+                  >
+                    {item.name}
+                    <svg className="ml-1 h-4 w-4 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  
+                  {/* Enhanced Services Dropdown Menu */}
+                  <AnimatePresence>
+                    {isServicesOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                        className="absolute top-full left-0 mt-3 w-96 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl overflow-hidden"
                       >
-                        View All Services
-                      </Link>
-                    </div>
-                  </div>
+                        <div className="p-6">
+                          <div className="grid grid-cols-1 gap-3">
+                            {services.map((service) => (
+                              <Link
+                                key={service.name}
+                                to={service.href}
+                                className="flex items-start p-4 rounded-xl hover:bg-white/10 transition-all duration-200 group border border-transparent hover:border-zion-cyan/30"
+                              >
+                                <div className="text-2xl mr-4 group-hover:scale-110 transition-transform duration-200">
+                                  {service.icon}
+                                </div>
+                                <div className="flex-1">
+                                  <div className="text-white font-semibold group-hover:text-zion-cyan transition-colors duration-200">
+                                    {service.name}
+                                  </div>
+                                  <div className="text-sm text-gray-400 mt-1 group-hover:text-zion-cyan/80 transition-colors duration-200">
+                                    {service.description}
+                                  </div>
+                                </div>
+                                <svg className="h-5 w-5 text-gray-500 group-hover:text-zion-cyan transition-colors duration-200 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                              </Link>
+                            ))}
+                          </div>
+                          <div className="mt-6 pt-6 border-t border-white/10">
+                            <Link
+                              to="/services"
+                              className="block w-full text-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl font-semibold hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
+                            >
+                              View All Services
+                            </Link>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
-              )}
-            </div>
-            
-            <Link
-              to="/about"
-              className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
-              About
-            </Link>
-            <Link
-              to="/blog"
-              className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
-              Blog
-            </Link>
-            <Link
-              to="/careers"
-              className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
-              Careers
-            </Link>
-            <Link
-              to="/contact"
-              className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
-              Contact
-            </Link>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-gray-300 hover:text-white transition-colors duration-300 relative group"
+                >
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-zion-cyan to-zion-purple transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              )
+            ))}
           </nav>
 
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+              to="/request-quote"
+              className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-6 py-3 rounded-xl font-semibold hover:from-zion-purple-dark hover:to-zion-cyan-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-purple/25 border border-zion-purple/30"
             >
               Get Started
             </Link>
@@ -128,9 +142,9 @@ const Header: React.FC = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none"
+            className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors duration-200"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -141,82 +155,39 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 rounded-lg mt-2">
-              <Link
-                to="/"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Home
-              </Link>
-              
-              {/* Mobile Services Section */}
-              <div className="px-3 py-2">
-                <div className="text-sm font-medium text-gray-400 mb-2">Services</div>
-                <div className="space-y-1 ml-4">
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.href}
-                      className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden border-t border-white/10"
+            >
+              <div className="py-4 space-y-2">
+                {navItems.map((item) => (
                   <Link
-                    to="/services"
-                    className="block px-3 py-2 text-sm text-blue-400 hover:text-blue-300 hover:bg-gray-700 rounded-md"
+                    key={item.name}
+                    to={item.href}
                     onClick={() => setIsMenuOpen(false)}
+                    className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
                   >
-                    View All Services →
+                    {item.name}
+                  </Link>
+                ))}
+                <div className="px-4 pt-4">
+                  <Link
+                    to="/request-quote"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block w-full text-center bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+                  >
+                    Get Started
                   </Link>
                 </div>
               </div>
-              
-              <Link
-                to="/about"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                to="/blog"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              <Link
-                to="/careers"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Careers
-              </Link>
-              <Link
-                to="/contact"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </Link>
-              
-              <div className="pt-4">
-                <Link
-                  to="/contact"
-                  className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );

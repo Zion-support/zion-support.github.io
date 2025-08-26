@@ -1,111 +1,155 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PlusIcon, XMarkIcon, ChatBubbleLeftRightIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom';
+import { MessageCircle, ArrowUp, Phone, Mail, X } from 'lucide-react';
 
-interface FloatingActionButtonProps {
-  className?: string;
-}
+const FloatingActionButton: React.FC = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
-const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ className = '' }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 400);
+    };
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const actionItems = [
     {
-      icon: ChatBubbleLeftRightIcon,
-      label: 'Live Chat',
-      action: () => window.open('https://ziontechgroup.com/chat', '_blank'),
-      color: 'bg-green-500 hover:bg-green-600'
+      icon: MessageCircle,
+      label: 'Chat Support',
+      action: () => window.open('/contact', '_blank'),
+      color: 'from-zion-cyan to-zion-cyan-dark'
     },
     {
-      icon: PhoneIcon,
+      icon: Phone,
       label: 'Call Us',
-      action: () => window.open('tel:+1-555-0123', '_self'),
-      color: 'bg-blue-500 hover:bg-blue-600'
+      action: () => window.open('tel:+13024640950', '_blank'),
+      color: 'from-zion-purple to-zion-purple-dark'
     },
     {
-      icon: EnvelopeIcon,
-      label: 'Email',
-      action: () => window.open('mailto:info@ziontechgroup.com', '_self'),
-      color: 'bg-purple-500 hover:bg-purple-600'
+      icon: Mail,
+      label: 'Email Us',
+      action: () => window.open('mailto:kleber@ziontechgroup.com', '_blank'),
+      color: 'from-zion-blue to-zion-blue-dark'
     }
   ];
 
   return (
-    <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute bottom-16 right-0 mb-2 space-y-3"
-          >
-            {actionItems.map((item, index) => (
+    <>
+      {/* Main Floating Action Button */}
+      <motion.div
+        className="fixed bottom-8 right-8 z-50"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+      >
+        {/* Action Items */}
+        <AnimatePresence>
+          {isExpanded && (
+            <div className="absolute bottom-20 right-0 space-y-4">
+              {actionItems.map((item, index) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ scale: 0, opacity: 0, x: 20 }}
+                  animate={{ scale: 1, opacity: 1, x: 0 }}
+                  exit={{ scale: 0, opacity: 0, x: 20 }}
+                  transition={{ delay: index * 0.1, duration: 0.3 }}
+                  className="flex items-center space-x-3"
+                >
+                  <span className="text-white text-sm font-medium bg-slate-800/90 backdrop-blur-sm px-3 py-2 rounded-lg whitespace-nowrap border border-white/20">
+                    {item.label}
+                  </span>
+                  <button
+                    onClick={item.action}
+                    className={`w-14 h-14 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center text-white shadow-2xl hover:shadow-neon-xl transform hover:scale-110 transition-all duration-300 border border-white/30`}
+                    aria-label={item.label}
+                  >
+                    <item.icon className="h-6 w-6" />
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </AnimatePresence>
+
+        {/* Main Button */}
+        <motion.button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-2xl flex items-center justify-center text-white shadow-2xl hover:shadow-purple-neon-xl transform hover:scale-110 transition-all duration-300 border border-white/30 relative overflow-hidden group"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <AnimatePresence mode="wait">
+            {isExpanded ? (
               <motion.div
-                key={item.label}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-center space-x-3"
+                key="close"
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: 90, opacity: 0 }}
+                transition={{ duration: 0.2 }}
               >
-                <motion.button
-                  onClick={item.action}
-                  className={`${item.color} text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110`}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  aria-label={item.label}
-                >
-                  <item.icon className="w-5 h-5" />
-                </motion.button>
-                <motion.span
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap"
-                >
-                  {item.label}
-                </motion.span>
+                <X className="h-7 w-7" />
               </motion.div>
-            ))}
-          </motion.div>
+            ) : (
+              <motion.div
+                key="chat"
+                initial={{ rotate: 90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: -90, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                <MessageCircle className="h-7 w-7" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+          
+          {/* Ripple effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl" />
+        </motion.button>
+      </motion.div>
+
+      {/* Back to Top Button */}
+      <AnimatePresence>
+        {showBackToTop && (
+          <motion.button
+            onClick={scrollToTop}
+            className="fixed bottom-8 left-8 z-50 w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center text-white shadow-2xl hover:shadow-neon-xl transform hover:scale-110 transition-all duration-300 border border-white/30"
+            initial={{ scale: 0, opacity: 0, y: 20 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            exit={{ scale: 0, opacity: 0, y: 20 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            aria-label="Back to top"
+          >
+            <ArrowUp className="h-6 w-6" />
+          </motion.button>
         )}
       </AnimatePresence>
 
-      <motion.button
-        onClick={toggleMenu}
-        className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}
-      >
-        <AnimatePresence mode="wait">
-          {isOpen ? (
-            <motion.div
-              key="close"
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <XMarkIcon className="w-6 h-6" />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="open"
-              initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <PlusIcon className="w-6 h-6" />
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.button>
-    </div>
+      {/* Quick Contact Tooltip */}
+      <AnimatePresence>
+        {!isExpanded && (
+          <motion.div
+            className="fixed bottom-32 right-8 z-40"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
+            transition={{ delay: 2, duration: 0.5 }}
+          >
+            <div className="bg-slate-800/90 backdrop-blur-sm text-white px-4 py-2 rounded-lg border border-zion-cyan/30 shadow-lg">
+              <p className="text-sm text-zion-cyan font-medium">Need help? We're here!</p>
+              <div className="w-0 h-0 border-l-4 border-l-slate-800/90 border-t-4 border-t-transparent border-b-4 border-b-transparent ml-auto mr-2" />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

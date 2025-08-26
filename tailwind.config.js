@@ -9,7 +9,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -48,19 +47,9 @@ module.exports = {
         'zion-blue': '#2e73ea',
         'zion-purple': '#8c15e9',
         'zion-blue-dark': '#172d67',
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-=======
-        'zion-blue-dark': '#172d67',
-        'zion-blue': '#1e3a8a',
         'zion-blue-light': '#2e73ea',
-        'zion-purple': '#8c15e9',
         'zion-purple-dark': '#6b21a8',
         'zion-purple-light': '#a855f7',
-        'zion-cyan': '#22ddd2',
         'zion-cyan-dark': '#14b8a6',
         'zion-slate-light': '#94a3b8',
         'zion-slate': '#64748b',
@@ -173,6 +162,9 @@ module.exports = {
         'extra-loose': '2.25',
       },
       borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
         '4xl': '2rem',
         '5xl': '2.5rem',
       },
@@ -188,7 +180,6 @@ module.exports = {
       minHeight: {
         'screen-75': '75vh',
         'screen-90': '90vh',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
       },
     },
   },
