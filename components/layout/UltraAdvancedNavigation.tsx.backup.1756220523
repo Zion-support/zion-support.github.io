@@ -1,5 +1,8 @@
 import React from 'react';
 
+<<<<<<< HEAD
+const UltraAdvancedNavigation: React.FC = () => {
+=======
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -70,6 +73,7 @@ const companyLinks = [
 ];
 
 export default function UltraAdvancedNavigation() {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8223
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
