@@ -1,131 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Rocket, 
-  TrendingUp, 
-  Users, 
-  BarChart3,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink
-} from 'lucide-react';
+import React from 'react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2 } from '../data/innovativeMicroSaasServices2028Part2';
 
 const InnovativeServicesShowcase2028: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [sortBy, setSortBy] = useState<string>('rating');
-
-  // Combine all services
-  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2028, ...INNOVATIVE_MICRO_SAAS_SERVICES_2028_PART2];
-
-  // Get unique categories
-  const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
-
-  // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => 
-      (selectedCategory === 'All' || service.category === selectedCategory) &&
-      (service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())))
-    )
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'rating':
-          return b.rating - a.rating;
-        case 'price':
-          return a.price - b.price;
-        case 'aiScore':
-          return b.aiScore - a.aiScore;
-        case 'name':
-          return a.title.localeCompare(b.title);
-        default:
-          return 0;
-      }
-    });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI Services':
-        return <Brain className="w-6 h-6" />;
-      case 'Cybersecurity':
-        return <Shield className="w-6 h-6" />;
-      case 'Green Technology':
-        return <Zap className="w-6 h-6" />;
-      case 'Supply Chain':
-        return <Globe className="w-6 h-6" />;
-      case 'Healthcare Technology':
-        return <Users className="w-6 h-6" />;
-      case 'Financial Technology':
-        return <TrendingUp className="w-6 h-6" />;
-      case 'Legal Technology':
-        return <Shield className="w-6 h-6" />;
-      case 'Manufacturing Technology':
-        return <BarChart3 className="w-6 h-6" />;
-      case 'Space Technology':
-        return <Rocket className="w-6 h-6" />;
-      case 'Retail Technology':
-        return <TrendingUp className="w-6 h-6" />;
-      case 'Education Technology':
-        return <Users className="w-6 h-6" />;
-      case 'Transportation Technology':
-        return <Globe className="w-6 h-6" />;
-      case 'Real Estate Technology':
-        return <BarChart3 className="w-6 h-6" />;
-      case 'Agriculture Technology':
-        return <Zap className="w-6 h-6" />;
-      case 'Hospitality Technology':
-        return <Users className="w-6 h-6" />;
-      case 'Media Technology':
-        return <TrendingUp className="w-6 h-6" />;
-      default:
-        return <Brain className="w-6 h-6" />;
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+          <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Zion Tech Group
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
@@ -136,24 +19,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {
               Discover the future of technology with our cutting-edge AI-powered micro SAAS solutions. 
               Transform your business with autonomous systems, quantum computing, and intelligent automation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2"
-              >
-                Explore Services
-                <ArrowRight className="w-5 h-5" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Contact Us
-              </motion.button>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -162,63 +28,13 @@ const InnovativeServicesShowcase2028: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="flex flex-col items-center gap-2">
-              <Phone className="w-6 h-6 text-blue-400" />
               <span className="text-white font-semibold">+1 302 464 0950</span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <Mail className="w-6 h-6 text-purple-400" />
               <span className="text-white font-semibold">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <MapPin className="w-6 h-6 text-green-400" />
               <span className="text-white font-semibold">364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Filters and Search */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            {/* Search */}
-            <div className="md:col-span-2">
-              <input
-                type="text"
-                placeholder="Search services, features, or benefits..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            {/* Category Filter */}
-            <div>
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                {categories.map(category => (
-                  <option key={category} value={category} className="bg-gray-800 text-white">
-                    {category}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Sort */}
-            <div>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="rating" className="bg-gray-800 text-white">Sort by Rating</option>
-                <option value="price" className="bg-gray-800 text-white">Sort by Price</option>
-                <option value="aiScore" className="bg-gray-800 text-white">Sort by AI Score</option>
-                <option value="name" className="bg-gray-800 text-white">Sort by Name</option>
-              </select>
             </div>
           </div>
         </div>
@@ -226,24 +42,18 @@ const InnovativeServicesShowcase2028: React.FC = () => {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {filteredServices.map((service) => (
-            <motion.div
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {INNOVATIVE_MICRO_SAAS_SERVICES_2028.map((service) => (
+            <div
               key={service.id}
-              variants={itemVariants}
-              className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden hover:border-white/40 transition-all duration-300 group"
+              className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden hover:border-white/40 transition-all duration-300"
             >
               {/* Service Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={service.images[0]}
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute top-4 right-4 flex items-center gap-2">
@@ -258,7 +68,6 @@ const InnovativeServicesShowcase2028: React.FC = () => {
                 </div>
                 <div className="absolute bottom-4 left-4">
                   <div className="flex items-center gap-1 text-white">
-                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                     <span className="font-semibold">{service.rating}</span>
                     <span className="text-sm text-gray-300">({service.reviewCount})</span>
                   </div>
@@ -268,18 +77,17 @@ const InnovativeServicesShowcase2028: React.FC = () => {
               {/* Service Content */}
               <div className="p-6">
                 {/* Category */}
-                <div className="flex items-center gap-2 mb-3">
-                  {getCategoryIcon(service.category)}
+                <div className="mb-3">
                   <span className="text-sm text-blue-400 font-medium">{service.category}</span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-3">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-300 mb-4 line-clamp-3">
+                <p className="text-gray-300 mb-4">
                   {service.description}
                 </p>
 
@@ -300,7 +108,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {
                   <div className="space-y-1">
                     {service.features.slice(0, 3).map((feature, index) => (
                       <div key={index} className="flex items-center gap-2 text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <span className="text-green-400">•</span>
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -333,21 +141,12 @@ const InnovativeServicesShowcase2028: React.FC = () => {
 
                 {/* Actions */}
                 <div className="flex gap-3">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
+                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                     Learn More
-                    <ExternalLink className="w-4 h-4" />
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="px-4 py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-                  >
+                  </button>
+                  <button className="px-4 py-3 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
                     Contact
-                  </motion.button>
+                  </button>
                 </div>
 
                 {/* Availability */}
@@ -361,18 +160,9 @@ const InnovativeServicesShowcase2028: React.FC = () => {
                   </span>
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* No Results */}
-        {filteredServices.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-gray-400 text-lg">
-              No services found matching your criteria. Try adjusting your search or filters.
             </div>
-          </div>
-        )}
+          ))}
+        </div>
       </div>
 
       {/* Call to Action */}
@@ -387,22 +177,12 @@ const InnovativeServicesShowcase2028: React.FC = () => {
               Get started today and experience the future of technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                 Call +1 302 464 0950
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 flex items-center gap-2"
-              >
-                <Mail className="w-5 h-5" />
+              </button>
+              <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300">
                 Email kleber@ziontechgroup.com
-              </motion.button>
+              </button>
             </div>
             <div className="mt-8 text-gray-400">
               <p>Visit us at: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 underline">https://ziontechgroup.com</a></p>
