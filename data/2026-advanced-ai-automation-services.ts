@@ -329,3 +329,56 @@ export const getAIAutomationServicesByPriceRange = (minPrice: number, maxPrice: 
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
   });
 };
+
+export const advancedAIAutomationServices2026 = [
+  {
+    name: 'Advanced AI Automation Platform 2026',
+    path: '/services/advanced-ai-automation-platform-2026',
+    description: 'Next-generation AI automation platform for enterprise',
+    icon: 'Brain',
+    category: 'AI & Automation',
+    features: [
+      'Advanced AI algorithms',
+      'Process automation',
+      'Intelligent decision making',
+      'Performance optimization'
+    ],
+    pricing: {
+      starter: '$599/month',
+      professional: '$1199/month',
+      enterprise: 'Custom'
+    }
+  },
+  {
+    name: 'Advanced AI Workflow Engine 2026',
+    path: '/services/advanced-ai-workflow-engine-2026',
+    description: 'Intelligent workflow automation with AI',
+    icon: 'Workflow',
+    category: 'AI & Automation',
+    features: [
+      'Smart workflow design',
+      'AI optimization',
+      'Real-time monitoring',
+      'Advanced analytics'
+    ],
+    pricing: {
+      starter: '$399/month',
+      professional: '$799/month',
+      enterprise: 'Custom'
+    }
+  }
+];
+
+export const advancedAIAutomationCategories2026 = [
+  'Process Automation',
+  'Workflow Management',
+  'Decision Intelligence',
+  'Performance Optimization'
+];
+
+export const advancedAIAutomationStats2026 = {
+  totalServices: 2,
+  categories: 4,
+  averageRating: 4.9,
+  activeUsers: 3000
+};
