@@ -44,17 +44,6 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         // Zion brand colors
-<<<<<<< HEAD
-        'zion-cyan': '#22ddd2',
-        'zion-blue': '#2e73ea',
-        'zion-purple': '#8c15e9',
-        'zion-blue-dark': '#172d67',
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-=======
         'zion-blue-dark': '#172d67',
         'zion-blue': '#1e3a8a',
         'zion-blue-light': '#2e73ea',
@@ -75,6 +64,10 @@ module.exports = {
         'shimmer': 'shimmer 2.5s linear infinite',
         'gradient': 'gradient 8s ease infinite',
         'neon-pulse': 'neon-pulse 1.5s ease-in-out infinite alternate',
+        'float-slow': 'float 8s ease-in-out infinite',
+        'float-medium': 'float 6s ease-in-out infinite',
+        'float-fast': 'float 4s ease-in-out infinite',
+        'fade-in-up': 'fadeInUp 0.6s ease-out',
       },
       keyframes: {
         float: {
@@ -99,6 +92,16 @@ module.exports = {
           },
           '100%': { 
             textShadow: '0 0 10px rgba(34, 221, 210, 0.8), 0 0 20px rgba(34, 221, 210, 0.6), 0 0 30px rgba(34, 221, 210, 0.4)' 
+          },
+        },
+        fadeInUp: {
+          '0%': { 
+            opacity: '0',
+            transform: 'translateY(30px)'
+          },
+          '100%': { 
+            opacity: '1',
+            transform: 'translateY(0)'
           },
         },
       },
@@ -189,7 +192,6 @@ module.exports = {
       minHeight: {
         'screen-75': '75vh',
         'screen-90': '90vh',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
       },
     },
   },
