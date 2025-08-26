@@ -44,6 +44,7 @@ const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 
 const InnovativeNewServices2025 = React.lazy(() => import('./pages/InnovativeNewServices2025'));
+const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -69,6 +70,7 @@ const baseRoutes = [
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/innovative-new-services-2025', element: <InnovativeNewServices2025 /> },
+  { path: '/services-pricing', element: <ServicesPricingPage /> },
 ];
 
 const App = () => {
