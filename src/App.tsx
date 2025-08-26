@@ -36,55 +36,8 @@ const ComprehensiveServicesMarketing2025 = React.lazy(() => import('./pages/Comp
 const ComprehensivePricingShowcase2025 = React.lazy(() => import('./pages/ComprehensivePricingShowcase2025'));
 const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025'));
 const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
-const AdvancedRealServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedServicesShowcase2025'));
-
-// Missing pages from analysis
-const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
-const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
-const AIPoweredITAssetManagement = lazy(() => import('./pages/AIPoweredITAssetManagement'));
-const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutomation'));
-const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
-const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
-const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-const NewServices = lazy(() => import('./pages/NewServices'));
-const InnovativeNewServices2025 = lazy(() => import('./pages/InnovativeNewServices2025'));
-
-// Company information pages
-const About = lazy(() => import('./pages/About'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Mission = lazy(() => import('./pages/Mission'));
-const Team = lazy(() => import('./pages/Team'));
-const Pricing = lazy(() => import('./pages/Pricing'));
-const Careers = lazy(() => import('./pages/Careers'));
-const Partners = lazy(() => import('./pages/Partners'));
-const Blog = lazy(() => import('./pages/Blog'));
-const News = lazy(() => import('./pages/News'));
-
-// Service detail pages
-const ServicesOverview = lazy(() => import('./pages/services/ServicesOverview'));
-const AIAutonomousSystems = lazy(() => import('./pages/services/AIAutonomousSystems'));
-const QuantumTechnology = lazy(() => import('./pages/services/QuantumTechnology'));
-const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity'));
-const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure'));
-const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolutions'));
-const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
-const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewServices'));
-const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
-const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
-const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
-const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
-
-// Solutions pages
-const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
-const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
-
-// Other pages from existing structure
-const Login = React.lazy(() => import('./pages/Login'));
-const Signup = React.lazy(() => import('./pages/Signup'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
-const Categories = React.lazy(() => import('./pages/Categories'));
+const RevolutionaryServicesShowcase2025 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2025'));
+const ServicesMarketingPage = React.lazy(() => import('./pages/ServicesMarketingPage'));
 const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
 const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
 const Analytics = React.lazy(() => import('./pages/Analytics'));
@@ -155,8 +108,9 @@ const routes = [
   { path: '/talent', element: <TalentDirectory /> },
   { path: '/talents', element: <TalentsPage /> },
   { path: '/services', element: <ServicesPage /> },
-  { path: '/pricing', element: <PricingPage /> },
-  { path: '/support', element: <SupportPage /> },
+  { path: '/comprehensive-services-2025', element: <ComprehensiveServicesShowcase2025 /> },
+  { path: '/revolutionary-services-2025', element: <RevolutionaryServicesShowcase2025 /> },
+  { path: '/services-marketing', element: <ServicesMarketingPage /> },
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/categories', element: <Categories /> },
   { path: '/equipment', element: <EquipmentPage /> },
