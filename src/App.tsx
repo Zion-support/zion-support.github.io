@@ -20,7 +20,13 @@ import ITInfrastructure from './pages/services/ITInfrastructure';
 import DigitalTransformation from './pages/services/DigitalTransformation';
 import Consulting from './pages/services/Consulting';
 
-function App() {
+// New pages for missing content
+import Pricing from './pages/Pricing';
+import ITSolutions from './pages/services/ITSolutions';
+import AIServices from './pages/services/AIServices';
+import TalentDirectory from './pages/TalentDirectory';
+
+const App = () => {
   return (
     <Router>
       <div className="App">
@@ -44,6 +50,12 @@ function App() {
             <Route path="/services/transformation" element={<DigitalTransformation />} />
             <Route path="/services/consulting" element={<Consulting />} />
             
+            {/* New routes for missing pages */}
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/services/it-solutions" element={<ITSolutions />} />
+            <Route path="/services/ai-services" element={<AIServices />} />
+            <Route path="/talent" element={<TalentDirectory />} />
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
@@ -51,6 +63,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;
