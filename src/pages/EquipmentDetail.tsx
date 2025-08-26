@@ -65,7 +65,8 @@ export default function EquipmentDetail() {
 
   const handleBuyNow = async () => {
     if (!isAuthenticated) {
-      navigate(`/login?next=/product/${id}`);
+      const next = encodeURIComponent(`/checkout?sku=${id}`);
+      navigate(`/login?next=${next}`);
       return;
     }
 
