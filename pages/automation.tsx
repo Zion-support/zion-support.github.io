@@ -1,116 +1,79 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function AutomationPage() {
-  const automationFeatures = [
-    {
-      title: "Autonomous Cloud Management",
-      description: "Self-managing cloud infrastructure that monitors, scales, and optimizes automatically.",
-      icon: "☁️",
-      benefits: ["24/7 monitoring", "Auto-scaling", "Cost optimization"]
-    },
-    {
-      title: "AI Content Generation",
-      description: "Automated content creation that learns from your brand and generates relevant material.",
-      icon: "✍️",
-      benefits: ["SEO optimization", "Brand consistency", "Scalable content"]
-    },
-    {
-      title: "Intelligent DevOps",
-      description: "Self-healing CI/CD pipelines that detect and fix issues automatically.",
-      icon: "🔄",
-      benefits: ["Error detection", "Auto-fixing", "Deployment optimization"]
-    },
-    {
-      title: "Smart Security",
-      description: "Proactive security systems that identify and respond to threats in real-time.",
-      icon: "🔒",
-      benefits: ["Threat detection", "Auto-response", "Vulnerability scanning"]
-    }
-  ];
-
   return (
     <>
       <Head>
-        <title>Automation | Zion - Autonomous Cloud Systems</title>
-        <meta name="description" content="Discover Zion's autonomous cloud automation systems that run without human intervention." />
+        <title>Automation Systems — Zion Tech Group</title>
+        <meta name="description" content="Explore Zion Tech Group's autonomous systems: redundancy, AI content, build orchestration, monitoring, and security." />
       </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Autonomous Cloud Automation
+
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <section className="text-center mb-12">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-blue-400 bg-clip-text text-transparent">
+              Autonomous Systems
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Systems that run themselves, learn from experience, and continuously improve without human intervention
+            <p className="text-white/90 max-w-3xl mx-auto">
+              A unified suite of intelligent, self-healing automation layers that power zero-downtime operations, continuous improvement, and enterprise-grade reliability.
             </p>
-          </div>
-        </div>
+          </section>
 
-        {/* Features Grid */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {automationFeatures.map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-                <div className="text-6xl mb-4">{feature.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 mb-6">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-gray-700">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      {benefit}
-                    </li>
-                  ))}
+          <section className="mx-auto max-w-7xl px-0 pb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h2 className="text-xl font-bold text-cyan-400 mb-3">🔄 Redundancy Systems</h2>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Ultimate Redundancy V2</li>
+                  <li>• Comprehensive Redundancy</li>
+                  <li>• GitHub Actions & Netlify Redundancy</li>
+                  <li>• PM2 Process Management</li>
                 </ul>
+                <div className="flex flex-wrap gap-3">
+                  <a className="text-cyan-300 hover:text-cyan-200 text-sm" href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY_V2.md" target="_blank" rel="noopener noreferrer">Ultimate Redundancy V2 →</a>
+                  <a className="text-cyan-300 hover:text-cyan-200 text-sm" href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPREHENSIVE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer">Comprehensive →</a>
+                </div>
               </div>
-            ))}
-          </div>
 
-          {/* Stats Section */}
-          <div className="mt-20 bg-white rounded-2xl shadow-xl p-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Automation Impact</h2>
-              <p className="text-xl text-gray-600">See how our autonomous systems are transforming operations</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">227</div>
-                <div className="text-gray-600">Active Automations</div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h2 className="text-xl font-bold text-fuchsia-400 mb-3">🧠 AI Content & Orchestration</h2>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Autonomous content generation</li>
+                  <li>• Intelligent scheduling</li>
+                  <li>• Continuous optimization</li>
+                  <li>• Innovation agents</li>
+                </ul>
+                <div className="flex flex-wrap gap-3">
+                  <a className="text-fuchsia-300 hover:text-fuchsia-200 text-sm" href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" target="_blank" rel="noopener noreferrer">Growth Automation →</a>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">99.9%</div>
-                <div className="text-gray-600">Uptime</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">24/7</div>
-                <div className="text-gray-600">Operation</div>
-              </div>
-            </div>
-          </div>
 
-          {/* CTA Section */}
-          <div className="mt-20 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Experience True Automation?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join the future of autonomous cloud systems and see how Zion can transform your operations.
-            </p>
-            <div className="space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
-                Get Started
-              </button>
-              <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-8 rounded-lg transition-colors">
-                Learn More
-              </button>
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h2 className="text-xl font-bold text-green-400 mb-3">⚡ Build & Delivery</h2>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Smart build orchestration</li>
+                  <li>• Self-healing CI/CD</li>
+                  <li>• Performance optimization</li>
+                  <li>• Quality assurance</li>
+                </ul>
+                <div className="flex flex-wrap gap-3">
+                  <a className="text-green-300 hover:text-green-200 text-sm" href="https://github.com/Zion-Holdings/zion.app/blob/main/README_GITHUB_ACTIONS.md" target="_blank" rel="noopener noreferrer">GitHub Actions →</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </section>
+
+          <section className="text-center mt-10">
+            <div className="inline-flex flex-wrap justify-center gap-3">
+              <Link href="/" className="px-5 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all">Back to Home</Link>
+              <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white font-semibold transition-all">Talk to Us</Link>
+            </div>
+          </section>
+        </main>
       </div>
     </>
   );
 }
+

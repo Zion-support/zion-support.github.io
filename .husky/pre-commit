@@ -16,4 +16,16 @@ npm run build || {
   exit 1
 }
 
-echo "✅ All pre-commit checks passed!"
+# Run lint-staged on staged files
+echo "  🧹 Running lint-staged on staged files..."
+npx lint-staged
+
+if [ $? -ne 0 ]; then
+  echo "❌ Lint-staged checks failed!"
+  echo "   Please fix the lint errors in staged files."
+  echo "   Run 'npx lint-staged' locally to see details."
+  exit 1
+fi
+
+echo "✅ All pre-commit checks passed"
+echo "   🚀 Ready to commit!"

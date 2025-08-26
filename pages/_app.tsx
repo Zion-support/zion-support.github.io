@@ -1,19 +1,23 @@
-import type { AppProps } from 'next/app'
-import Head from 'next/head'
-import SiteLayout from '../components/SiteLayout'
-import '../styles/globals.css'
+import React from 'react';
+import type { AppProps } from 'next/app';
+import Script from 'next/script';
+import SiteLayout from '../components/layout/Layout';
+import '../styles/globals.css';
+import Layout from '../components/layout/Layout';
+import Analytics from '../components/Analytics';
+import { SEOContext } from '../components/SEOContext';
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<SiteLayout>
-			<Head>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<meta name="theme-color" content="#0b1020" />
-				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-				<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet" />
-			</Head>
+			{/* Plausible Analytics */}
+			<Script
+				strategy="afterInteractive"
+				data-domain="ziontechgroup.com"
+				src="https://plausible.io/js/script.js"
+			/>
+			<SEO />
 			<Component {...pageProps} />
 		</SiteLayout>
-	)
+	);
 }

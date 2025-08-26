@@ -54,9 +54,10 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> }
+    { name: 'X', href: 'https://x.com/ziontechgroup', icon: Twitter },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+    { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: Youtube }
   ];
 
   const scrollToTop = () => {

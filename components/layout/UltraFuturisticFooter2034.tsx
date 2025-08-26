@@ -77,6 +77,14 @@ const UltraFuturisticFooter2034: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
+const socialLinks = [
+  { name: 'X', href: 'https://x.com/ziontechgroup', icon: Twitter },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+];
+
+export default function UltraFuturisticFooter2034() {
   return (
     <footer className="relative bg-black border-t border-cyan-500/30 overflow-hidden">
       {/* Background Effects */}
