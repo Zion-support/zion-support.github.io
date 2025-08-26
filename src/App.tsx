@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import './App.css';
@@ -20,9 +20,6 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
-const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
-const Cookies = React.lazy(() => import('./pages/Cookies'));
-=======
 const FAQPage = React.lazy(() => import('./pages/FAQ'));
 =======
 const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices'));
@@ -63,6 +60,22 @@ const Signup = React.lazy(() => import('./pages/Signup'));
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
+=======
+
+const { lazy, Suspense } = React;
+const Home = lazy(() => import('./pages/Home'));
+const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = lazy(() => import('./pages/TalentsPage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = lazy(() => import('./pages/EquipmentPage'));
+const Analytics = lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = lazy(() => import('./pages/CommunityPage'));
+const Categories = lazy(() => import('./pages/Categories'));
+const Login = lazy(() => import('./pages/Login'));
+const Signup = lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = lazy(() => import('./pages/ITOnsiteServicesPage'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
