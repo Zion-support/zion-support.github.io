@@ -131,6 +131,10 @@ export default function Services() {
 					</ul>
 					<p className="mt-3 text-sm text-gray-700">Average market prices (monthly): Micro SaaS $99–$999, AI Services $499–$4,999, Enterprise IT $2,000–$15,000. We price competitively based on scope.</p>
 					<p className="mt-1 text-sm text-gray-700">Call <a className="text-blue-600 underline" href="tel:+13024640950">+1 302 464 0950</a>, email <a className="text-blue-600 underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>, or visit <a className="text-blue-600 underline" href="https://ziontechgroup.com">ziontechgroup.com</a>.</p>
+					<div className="mt-4 grid gap-3 sm:grid-cols-2">
+						<a href="/pricing" className="inline-block rounded border px-4 py-2 text-blue-700 hover:bg-blue-50">See pricing guidance</a>
+						<a href="/request-quote" className="inline-block rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Request a custom quote</a>
+					</div>
 				</section>
 			</main>
 		</>
