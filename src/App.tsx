@@ -1,10 +1,13 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './components/ThemeProvider';
 import { WhitelabelProvider } from './context/WhitelabelContext';
 import { Toaster } from './components/ui/toaster';
 import { Toaster as SonnerToaster } from './components/ui/sonner';
 import Footer from './components/Footer';
+import SEOHead from './components/SEOHead';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Lazy load all pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -149,23 +152,67 @@ const LoadingSpinner = () => (
 );
 
 function App() {
+  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
+
+  // Toggle performance monitor with keyboard shortcut (Ctrl+Shift+P)
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        setShowPerformanceMonitor(prev => !prev);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   return (
     <WhitelabelProvider>
       <ThemeProvider>
         <Router>
           <div className="App min-h-screen flex flex-col">
-            <main className="flex-1">
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  {routes.map(({ path, element }) => (
-                    <Route key={path} path={path} element={element} />
-                  ))}
-                </Routes>
-              </Suspense>
-            </main>
+            {/* SEO Head Component */}
+            <SEOHead />
+            
+            {/* Accessibility Enhancer */}
+            <AccessibilityEnhancer>
+              <main className="flex-1">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    {routes.map(({ path, element }) => (
+                      <Route key={path} path={path} element={element} />
+                    ))}
+                  </Routes>
+                </Suspense>
+              </main>
+            </AccessibilityEnhancer>
+            
             <Footer />
             <Toaster />
             <SonnerToaster />
+            
+            {/* Performance Monitor */}
+            <PerformanceMonitor 
+              showMetrics={showPerformanceMonitor}
+              onMetricsUpdate={(metrics) => {
+                // Log performance metrics for analytics
+                if (process.env.NODE_ENV === 'development') {
+                  console.log('Performance Metrics:', metrics);
+                }
+              }}
+            />
+            
+            {/* Performance Monitor Toggle Button (Development Only) */}
+            {process.env.NODE_ENV === 'development' && (
+              <button
+                onClick={() => setShowPerformanceMonitor(!showPerformanceMonitor)}
+                className="fixed bottom-4 left-4 z-50 p-3 bg-zion-cyan/20 border border-zion-cyan/30 text-zion-cyan rounded-full hover:bg-zion-cyan/30 transition-all duration-300"
+                title="Toggle Performance Monitor (Ctrl+Shift+P)"
+              >
+                📊
+              </button>
+            )}
           </div>
         </Router>
       </ThemeProvider>

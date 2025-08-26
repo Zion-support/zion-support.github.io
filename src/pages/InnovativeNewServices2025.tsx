@@ -88,13 +88,11 @@ const InnovativeNewServices2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       <SEOHead 
-        config={{
-          title: "Innovative New Services 2025 - Zion Tech Group",
-          description: "Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology.",
-          keywords: "AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group",
-          type: "website",
-          url: "https://ziontechgroup.com/innovative-new-services-2025"
-        }}
+        title="Innovative New Services 2025 - Zion Tech Group"
+        description="Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology."
+        keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group"
+        type="website"
+        url="https://ziontechgroup.com/innovative-new-services-2025"
       />
 
       {/* Hero Section */}
