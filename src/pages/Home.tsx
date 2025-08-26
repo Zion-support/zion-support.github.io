@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
+import TestimonialsSection from '../components/TestimonialsSection';
 
 const Home: React.FC = () => {
   const fadeInUp = {
@@ -219,6 +220,9 @@ const Home: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* Why Choose Us Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
