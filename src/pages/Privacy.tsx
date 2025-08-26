@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,11 @@ import { Link } from 'react-router-dom';
 =======
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
+=======
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { AppLayout } from "@/layout";
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
 
 const Privacy: React.FC = () => {
   return (
@@ -21,6 +27,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Privacy: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Privacy Policy — Zion Tech Group</title>
@@ -44,6 +51,16 @@ const Privacy: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
+=======
+    <AppLayout>
+      <SEO
+        title="Privacy Policy | Zion Tech Group"
+        description="Learn how Zion Tech Group handles your data and protects your privacy."
+        canonical="https://ziontechgroup.com/privacy"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
           <div className="text-center mb-16">
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -113,6 +130,7 @@ const Privacy: React.FC = () => {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Content */}
@@ -1270,6 +1288,10 @@ const Privacy: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-56af
+=======
+      </main>
+    </AppLayout>
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
   );
 };
 

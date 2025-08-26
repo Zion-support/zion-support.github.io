@@ -4,8 +4,20 @@ import SEO from '../SEO';
 =======
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
 const GreenIT: React.FC = () => {
   const greenSolutions = [
+=======
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Leaf, Server, Cloud } from "lucide-react";
+import { Link } from "react-router-dom";
+import { AppLayout } from "@/layout";
+
+export default function GreenIT() {
+  const greenITSolutions = [
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
     {
       title: "Energy-Efficient Infrastructure",
       description: "Sustainable IT infrastructure solutions that reduce energy consumption and carbon footprint.",
@@ -30,9 +42,22 @@ const GreenIT: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+=======
+    <>
+    <AppLayout>
+      <SEO
+        title="Green IT Solutions - Sustainable Technology | Zion Tech Group"
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
+        keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware, Zion Tech Group"
+        canonical="https://ziontechgroup.com/green-it"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Green
@@ -83,8 +108,13 @@ const GreenIT: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
     </div>
+=======
+      </main>
+    </AppLayout>
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
   );
 };
 

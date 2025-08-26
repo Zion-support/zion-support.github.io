@@ -20,6 +20,7 @@
   },
   "nav": {
     "home": "Home",
+    "services": "Services",
     "marketplace": "Marketplace",
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
@@ -28,6 +29,7 @@
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
+    "about": "About",
     "dashboard": "Dashboard",
     "messages": "Messages",
     "post_job": "Post Job",

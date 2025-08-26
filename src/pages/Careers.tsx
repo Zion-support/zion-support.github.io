@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,14 @@ import {
   SparklesIcon,
   RocketLaunchIcon
 } from '@heroicons/react/24/outline';
+=======
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AppLayout } from "@/layout";
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
 
 const Careers: React.FC = () => {
   const benefits = [
@@ -504,6 +513,7 @@ const Careers: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>Careers — Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group's innovative team. Explore career opportunities in AI, cloud, cybersecurity, and digital transformation." />
@@ -528,6 +538,17 @@ const Careers: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+=======
+    <AppLayout>
+      <SEO
+        title="Careers at Zion Tech Group - Join Our Team"
+        description="Join the team building the future of AI and technology. Explore career opportunities at Zion Tech Group's innovative marketplace platform."
+        keywords="Zion Tech Group careers, AI jobs, tech careers, remote work, startup jobs"
+        canonical="https://ziontechgroup.com/careers"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
           <div className="text-center mb-16">
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -1142,12 +1163,17 @@ const Careers: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
           </div>
         </div>
+<<<<<<< HEAD
       </section>
     </div>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-438b
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
+=======
+      </main>
+    </AppLayout>
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
   );
 };
 

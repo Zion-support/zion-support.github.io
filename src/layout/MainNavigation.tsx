@@ -26,12 +26,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'services',
       href: '/services',
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/micro-saas-services')
     },
     {
       key: 'ai-services',
       href: '/micro-saas-services',
       matches: (path: string) => path.startsWith('/micro-saas-services')
+=======
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services') || path.startsWith('/green-it')
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
     },
     {
       key: 'marketplace',
@@ -74,6 +78,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       key: 'about',
       href: '/about',
       matches: (path: string) => path === '/about'
@@ -82,6 +87,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/pricing',
       matches: (path: string) => path === '/pricing'
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
+=======
+      key: 'about',
+      href: '/about',
+      matches: (path: string) => path === '/about'
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
     }
   ];
 

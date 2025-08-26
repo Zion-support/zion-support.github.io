@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,6 +77,23 @@ export default function About() {
       {/* Company Values */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
+=======
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { AppLayout } from "@/layout";
+
+export default function About() {
+  return (
+    <AppLayout>
+      <SEO 
+        title="About Zion Tech Group - The Future of AI & Tech Marketplace" 
+        description="Learn about Zion Tech Group's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
+        keywords="about Zion Tech Group, AI marketplace, tech platform, mission, vision, team"
+        canonical="https://ziontechgroup.com/about"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -262,6 +280,7 @@ export default function About() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
@@ -306,6 +325,10 @@ export default function About() {
       <EnhancedAbout />
     </>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
+=======
+      </main>
+    </AppLayout>
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
   );
 }
 =======

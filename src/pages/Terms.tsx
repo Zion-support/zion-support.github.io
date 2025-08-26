@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,11 @@ import { Link } from 'react-router-dom';
 =======
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
+=======
+import { SEO } from "@/components/SEO";
+import TermsOfService from "@/legal/TermsOfService";
+import { AppLayout } from "@/layout";
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
 
 const Terms: React.FC = () => {
   return (
@@ -20,6 +26,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Terms: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Terms of Service — Zion Tech Group</title>
@@ -1076,6 +1083,20 @@ const Terms: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-56af
+=======
+    <AppLayout>
+      <SEO
+        title="Terms of Service | Zion Tech Group"
+        description="The terms and conditions for using the Zion Tech Group platform."
+        canonical="https://ziontechgroup.com/terms"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <TermsOfService />
+        </div>
+      </main>
+    </AppLayout>
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
   );
 };
 
