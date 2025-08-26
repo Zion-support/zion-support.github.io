@@ -207,6 +207,7 @@ export function FeatureCTAs() {
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     // NEW MICRO SAAS SERVICES - AI & Machine Learning
     {
@@ -573,6 +574,15 @@ export function FeatureCTAs() {
       badge: "Cloud",
       details: "Seamless migration to the cloud with cost optimization, security, and performance improvements."
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
+=======
+    {
+      title: "Comprehensive Services",
+      description: "Access our complete range of micro SAAS, IT services, and AI solutions in one platform.",
+      icon: <Settings className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />,
+      link: "/comprehensive-services",
+      badge: "New",
+      details: "Discover 30+ professional services including AI development, cloud migration, cybersecurity, and more."
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
     }
   };
 
