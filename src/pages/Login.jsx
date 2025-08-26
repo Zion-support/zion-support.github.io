@@ -1,50 +1,60 @@
 import { useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { safeStorage } from '@/utils/safeStorage';
+import { LoginForm } from '@/components/auth/login/LoginForm';
 import { ErrorBoundary } from 'react-error-boundary';
-import { LoginErrorFallback } from '@/components/auth/login/LoginErrorFallback';
+
 import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { useDispatch } from 'react-redux';
 import { setLoggedIn } from '@/store/authSlice';
 
 export default function Login() {
-  const dispatch = useDispatch();
-  const { clearCart } = useCart();
+  const { isAuthenticated, user, isLoading } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { dispatch } = useCart();
+  const reduxDispatch = useDispatch();
 
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const token = urlParams.get('token');
-
+    // This effect handles token processing (e.g., from magic link)
+    // It runs when component mounts or location.search changes
+    const queryString = location.search;
+    const params = new URLSearchParams(queryString);
+    const token = params.get('token');
     if (token) {
-      // Store token in localStorage for now
-      localStorage.setItem('zion_token', token);
+      safeStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing and clean up history
-      window.history.replaceState({}, document.title, window.location.pathname);
-      
-      // Set logged in state
-      dispatch(setLoggedIn({ token }));
-      
-      // Clear cart on login
-      clearCart();
-      
-      // Show success message
-      toast({
-        title: "Login Successful",
-        description: "Welcome to Zion Tech Group!",
-      });
-      
-      // Redirect to home page
-      window.location.href = '/';
+      // The actual authentication state will update via useAuth's listeners,
+      // which should trigger the other useEffect.
+      navigate(location.pathname, { replace: true });
     }
-  }, [dispatch, clearCart]);
+  }, [location.search, location.pathname, navigate]);
 
-  return (
-    <ErrorBoundary FallbackComponent={LoginErrorFallback}>
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Login</h1>
-          <p className="text-gray-600">Processing login...</p>
-        </div>
-      </div>
-    </ErrorBoundary>
-  );
+  useEffect(() => {
+    if (!isLoading && isAuthenticated) {
+      reduxDispatch(setLoggedIn(true));
+      const next = location.state?.next || '/dashboard';
+      navigate(next, { replace: true });
+    }
+  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
+
+  // Render LoginContent if not authenticated and auth is not loading
+  if (!isAuthenticated && !isLoading) {
+    return (
+      <ErrorBoundary>
+        <LoginForm />
+      </ErrorBoundary>
+    );
+  }
+
+  // Optional: Render a loading indicator while isLoading is true
+  if (isLoading) {
+    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
+  }
+
+  // If authenticated and isLoading is false, the useEffect above should have navigated.
+  // Return null or a minimal layout if needed, though direct navigation is preferred.
+  return null;
 }

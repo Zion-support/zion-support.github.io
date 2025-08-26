@@ -1,4 +1,240 @@
 
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { BlogPost } from "@/types/blog";
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { Search } from "lucide-react";
+
+// Categories for filtering
+const CATEGORIES = [
+  "All Categories",
+  "Trends",
+  "Marketing",
+  "Sustainability",
+  "Ethics",
+  "Recruitment",
+  "Infrastructure"
+];
+
+export default function Blog() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+  const [posts, setPosts] = useState<BlogPost[]>([...BLOG_POSTS]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPosts(prev => [...prev, generateRandomBlogPost()]);
+    }, 120000); // every 2 minutes
+    return () => clearInterval(interval);
+  }, []);
+
+  // Filter blog posts based on search and category
+  const filteredPosts = posts.filter(post => {
+    const matchesSearch = 
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      
+    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
+    
+    return matchesSearch && matchesCategory;
+  });
+  
+  // Get featured posts
+  const featuredPosts = posts.filter(post => post.isFeatured);
+  
+  return (
+    <>
+      <SEO 
+        title="Blog - AI & Tech Insights" 
+        description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." 
+        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
+        canonical="https://ziontechgroup.com/blog"
+      />
+      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <GradientHeading>AI & Tech Insights</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Expert perspectives on artificial intelligence, tech innovation, and digital transformation
+            </p>
+          </div>
+          
+          {/* Featured Post Section - Only show if there are featured posts */}
+          {featuredPosts.length > 0 && (
+            <div className="mb-16">
+              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <img
+                    src={featuredPosts[0].featuredImage}
+                    alt={featuredPosts[0].title}
+                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.src = "/images/blog-placeholder.svg";
+                    }}
+                  />
+                </div>
+                <div className="flex flex-col justify-center">
+                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
+                    {featuredPosts[0].category}
+                  </span>
+                  <h3 className="text-3xl font-bold text-white mb-4">
+                    {featuredPosts[0].title}
+                  </h3>
+                  <p className="text-zion-slate-light mb-6">
+                    {featuredPosts[0].excerpt}
+                  </p>
+                  <div className="flex items-center mb-6">
+                    <img
+                      src={featuredPosts[0].author.avatarUrl}
+                      alt={featuredPosts[0].author.name}
+                      className="w-10 h-10 rounded-full mr-3"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.src = "/images/blog-placeholder.svg";
+                      }}
+                    />
+                    <div>
+                      <p className="text-white font-medium">{featuredPosts[0].author.name}</p>
+                      <p className="text-sm text-zion-slate-light">
+                        {featuredPosts[0].publishedDate} • {featuredPosts[0].readTime}
+                      </p>
+                    </div>
+                  </div>
+                  <Button 
+                    asChild
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"
+                  >
+                    <Link to={`/blog/${featuredPosts[0].slug}`}>
+                      Read Article
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
+        
+          {/* Filters and Search */}
+          <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
+                <Input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
+                />
+              </div>
+              
+              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
+                  <SelectValue placeholder="Select Category" />
+                </SelectTrigger>
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
+                  {CATEGORIES.map((category) => (
+                    <SelectItem key={category} value={category} className="text-white">
+                      {category}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          {/* Blog Posts Grid */}
+          {filteredPosts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post) => (
+                <Card 
+                  key={post.id} 
+                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300"
+                >
+                  <div className="aspect-[16/9] relative overflow-hidden">
+                    <img
+                      src={post.featuredImage}
+                      alt={post.title}
+                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.src = "/images/blog-placeholder.svg";
+                      }}
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">
+                        {post.category}
+                      </span>
+                      <div className="text-xs text-zion-slate-light">
+                        {post.publishedDate} • {post.readTime}
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">
+                      {post.title}
+                    </h3>
+                    <p className="text-zion-slate-light mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        src={post.author.avatarUrl}
+                        alt={post.author.name}
+                        className="w-8 h-8 rounded-full mr-2"
+                        onError={(e) => {
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.src = "/images/blog-placeholder.svg";
+                        }}
+                      />
+                      <span className="text-sm text-white">{post.author.name}</span>
+                    </div>
+                  </CardContent>
+                  <CardFooter className="p-6 pt-0">
+                    <Button 
+                      variant="link" 
+                      className="text-zion-cyan p-0 hover:text-zion-purple"
+                      asChild
+                    >
+                      <Link to={`/blog/${post.slug}`}>
+                        Read More →
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16">
+              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
+              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
+              <Button 
+                variant="outline" 
+                onClick={() => {
+                  setSearchQuery("");
+                  setSelectedCategory("All Categories");
+                }}
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+              >
+                Clear all filters
+              </Button>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -10,336 +246,271 @@ import {
   ArrowRight,
   Clock,
   Eye,
-  Bookmark,
-  Share2
+  BookOpen
 } from 'lucide-react';
 
-export default function Blog() {
+const Blog: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Posts', count: 24 },
-    { id: 'ai', name: 'Artificial Intelligence', count: 8 },
-    { id: 'technology', name: 'Technology Trends', count: 6 },
-    { id: 'business', name: 'Business Insights', count: 5 },
-    { id: 'innovation', name: 'Innovation', count: 3 },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 2 }
+    { id: 'all', name: 'All Categories', count: 25 },
+    { id: 'ai', name: 'AI & Machine Learning', count: 8 },
+    { id: 'quantum', name: 'Quantum Computing', count: 5 },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 6 },
+    { id: 'cloud', name: 'Cloud & DevOps', count: 4 },
+    { id: 'business', name: 'Business & Strategy', count: 2 }
   ];
 
   const blogPosts = [
+export default function Blog() {
+  const [posts, setPosts] = useState<BlogPost[]>([
     {
       id: 1,
-      title: "The Future of AI in Business: 2024 Trends and Predictions",
-      excerpt: "Discover how artificial intelligence is transforming business operations and what to expect in the coming year.",
-      author: "Dr. Sarah Chen",
-      date: "2024-01-15",
-      readTime: "8 min read",
-      category: "ai",
-      tags: ["AI", "Business", "Trends", "2024"],
-      image: "AI-Business-Trends",
-      featured: true
+      title: 'The Future of AI: Autonomous Business Operations in 2025',
+      excerpt: 'Explore how autonomous AI systems are revolutionizing business operations and what this means for the future of work.',
+      category: 'ai',
+      author: 'Dr. Sarah Chen',
+      date: '2025-01-15',
+      readTime: '8 min read',
+      views: '2.4k',
+      tags: ['AI', 'Automation', 'Business', 'Future'],
+      featured: true,
+      image: '/api/placeholder/400/250'
     },
     {
       id: 2,
-      title: "Cybersecurity in the Age of AI: New Threats and Solutions",
-      excerpt: "Explore the evolving cybersecurity landscape and how AI is both creating and solving security challenges.",
-      author: "Michael Rodriguez",
-      date: "2024-01-12",
-      readTime: "6 min read",
-      category: "cybersecurity",
-      tags: ["Cybersecurity", "AI", "Security", "Threats"],
-      image: "AI-Cybersecurity",
-      featured: false
+      title: 'Quantum Computing: Breaking Down the Barriers to Enterprise Adoption',
+      excerpt: 'Understanding the practical applications of quantum computing and how businesses can start preparing for the quantum revolution.',
+      category: 'quantum',
+      author: 'Dr. James Kim',
+      date: '2025-01-12',
+      readTime: '12 min read',
+      views: '1.8k',
+      tags: ['Quantum Computing', 'Enterprise', 'Technology', 'Innovation'],
+      featured: false,
+      image: '/api/placeholder/400/250'
     },
     {
       id: 3,
-      title: "Digital Transformation: A Complete Guide for Enterprises",
-      excerpt: "Learn the essential steps and strategies for successful digital transformation in your organization.",
-      author: "Jennifer Kim",
-      date: "2024-01-10",
-      readTime: "12 min read",
-      category: "business",
-      tags: ["Digital Transformation", "Enterprise", "Strategy", "Technology"],
-      image: "Digital-Transformation",
-      featured: false
+      title: 'Zero-Trust Security: The New Standard for Enterprise Protection',
+      excerpt: 'Why zero-trust security architecture is becoming essential for modern enterprises and how to implement it effectively.',
+      category: 'cybersecurity',
+      author: 'Michael Rodriguez',
+      date: '2025-01-10',
+      readTime: '10 min read',
+      views: '3.1k',
+      tags: ['Cybersecurity', 'Zero-Trust', 'Enterprise', 'Security'],
+      featured: false,
+      image: '/api/placeholder/400/250'
     },
     {
       id: 4,
-      title: "Quantum Computing: Breaking Down the Hype vs. Reality",
-      excerpt: "Separate fact from fiction in the world of quantum computing and understand its real-world applications.",
-      author: "Dr. Alex Thompson",
-      date: "2024-01-08",
-      readTime: "10 min read",
-      category: "technology",
-      tags: ["Quantum Computing", "Technology", "Innovation", "Computing"],
-      image: "Quantum-Computing",
-      featured: false
+      title: 'DevOps Transformation: From Theory to Practice',
+      excerpt: 'Real-world strategies for implementing DevOps practices and achieving faster, more reliable software delivery.',
+      category: 'cloud',
+      author: 'Emily Watson',
+      date: '2025-01-08',
+      readTime: '15 min read',
+      views: '2.7k',
+      tags: ['DevOps', 'Cloud', 'Automation', 'Software Development'],
+      featured: false,
+      image: '/api/placeholder/400/250'
     },
     {
       id: 5,
-      title: "Building Sustainable Technology: Green IT Best Practices",
-      excerpt: "Discover how organizations can implement eco-friendly technology solutions without compromising performance.",
-      author: "Emma Wilson",
-      date: "2024-01-05",
-      readTime: "7 min read",
-      category: "innovation",
-      tags: ["Green IT", "Sustainability", "Technology", "Environment"],
-      image: "Green-IT",
-      featured: false
+      title: 'AI-Powered Decision Making: Transforming Business Intelligence',
+      excerpt: 'How artificial intelligence is enhancing business intelligence and enabling data-driven decision making at scale.',
+      category: 'ai',
+      author: 'Dr. Sarah Chen',
+      date: '2025-01-05',
+      readTime: '9 min read',
+      views: '1.9k',
+      tags: ['AI', 'Business Intelligence', 'Data', 'Decision Making'],
+      featured: false,
+      image: '/api/placeholder/400/250'
     },
     {
       id: 6,
-      title: "The Rise of Edge Computing: Why It Matters for AI",
-      excerpt: "Understand how edge computing is revolutionizing AI deployment and enabling real-time intelligence.",
-      author: "David Park",
-      date: "2024-01-03",
-      readTime: "9 min read",
-      category: "technology",
-      tags: ["Edge Computing", "AI", "Technology", "Real-time"],
-      image: "Edge-Computing",
-      featured: false
+      title: 'The Rise of Edge Computing: Bringing Intelligence Closer to Data',
+      excerpt: 'Exploring the benefits of edge computing and how it\'s reshaping the future of IoT and real-time applications.',
+      category: 'cloud',
+      author: 'David Chen',
+      date: '2025-01-03',
+      readTime: '11 min read',
+      views: '1.6k',
+      tags: ['Edge Computing', 'IoT', 'Cloud', 'Real-time'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 7,
+      title: 'Blockchain in Enterprise: Beyond Cryptocurrency',
+      excerpt: 'Practical applications of blockchain technology in enterprise environments and real-world use cases.',
+      category: 'business',
+      author: 'Alex Thompson',
+      date: '2025-01-01',
+      readTime: '13 min read',
+      views: '2.2k',
+      tags: ['Blockchain', 'Enterprise', 'Innovation', 'Technology'],
+      featured: false,
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 8,
+      title: 'Machine Learning in Healthcare: Improving Patient Outcomes',
+      excerpt: 'How machine learning is transforming healthcare delivery and improving patient care and outcomes.',
+      category: 'ai',
+      author: 'Dr. Lisa Park',
+      date: '2024-12-28',
+      readTime: '14 min read',
+      views: '3.5k',
+      tags: ['AI', 'Healthcare', 'Machine Learning', 'Patient Care'],
+      featured: false,
+      image: '/api/placeholder/400/250'
     }
   ];
 
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+  const featuredPost = blogPosts.find(post => post.featured);
+  const regularPosts = blogPosts.filter(post => !post.featured);
 
-      const formatDate = (dateString) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+  const filteredPosts = selectedCategory === 'all' 
+    ? regularPosts 
+    : regularPosts.filter(post => post.category === selectedCategory);
+
+  const searchFilteredPosts = filteredPosts.filter(post =>
+    post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+  );
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
     });
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Zion <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Blog</span>
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-              Insights, trends, and expert perspectives on AI, technology, and business innovation. 
-              Stay ahead with our latest articles and analysis.
-            </p>
-          </div>
-        </div>
-      </section>
+  const recentArticles = [
+    {
+      id: 4,
+      title: "Building Autonomous Business Operations: A Step-by-Step Guide",
+      excerpt: "Transform your business processes with AI-powered automation. Learn the key steps to implement autonomous operations that can reduce costs by 40% and improve efficiency by 60%.",
+      author: "David Kim",
+      authorAvatar: "DK",
+      publishDate: "2025-01-08",
+      readTime: "15 min read",
+      category: "ai",
+      tags: ["AI", "Automation", "Business Operations", "Digital Transformation"],
+      image: "/api/placeholder/400/250",
+      views: "5.8k",
+      likes: 312
+    },
+    {
+      id: 5,
+      title: "Quantum Neural Networks: The Next Frontier in AI",
+      excerpt: "Dive deep into quantum neural networks and discover how they're solving complex problems in cryptography, optimization, and scientific research that classical computers cannot handle.",
+      author: "Dr. Elena Petrov",
+      authorAvatar: "EP",
+      publishDate: "2025-01-06",
+      readTime: "18 min read",
+      category: "quantum",
+      tags: ["Quantum Computing", "Neural Networks", "AI", "Research"],
+      image: "/api/placeholder/400/250",
+      views: "4.6k",
+      likes: 289
+    },
+    {
+      id: 6,
+      title: "Micro SAAS Solutions: Scaling Your Business with Custom Software",
+      excerpt: "Discover how micro SAAS solutions can help small and medium businesses compete with enterprise-level technology while maintaining flexibility and cost-effectiveness.",
+      author: "Alex Johnson",
+      authorAvatar: "AJ",
+      publishDate: "2025-01-04",
+      readTime: "11 min read",
+      category: "industry",
+      tags: ["SAAS", "Business", "Software", "Scaling"],
+      image: "/api/placeholder/400/250",
+      views: "3.9k",
+      likes: 201
+    },
+    {
+      id: 7,
+      title: "Edge Computing in IoT: Reducing Latency for Real-Time Applications",
+      excerpt: "Learn how edge computing is revolutionizing IoT applications by bringing computation closer to data sources, enabling real-time decision making in autonomous vehicles and smart cities.",
+      author: "Rachel Green",
+      authorAvatar: "RG",
+      publishDate: "2025-01-02",
+      readTime: "9 min read",
+      category: "infrastructure",
+      tags: ["Edge Computing", "IoT", "Real-Time", "Infrastructure"],
+      image: "/api/placeholder/400/250",
+      views: "3.2k",
+      likes: 178
+    },
+    {
+      id: 8,
+      title: "AI-Powered IT Asset Management: Maximizing ROI on Technology Investments",
+      excerpt: "Discover how AI can transform your IT asset management, from predictive maintenance to cost optimization, helping you get more value from your technology investments.",
+      author: "Carlos Mendez",
+      authorAvatar: "CM",
+      publishDate: "2024-12-30",
+      readTime: "13 min read",
+      category: "ai",
+      tags: ["AI", "IT Management", "Asset Management", "ROI"],
+      image: "/api/placeholder/400/250",
+      views: "2.8k",
+      likes: 156
+    },
+    {
+      id: 9,
+      title: "The Rise of Quantum-Safe Cryptography: Preparing for the Future",
+      excerpt: "As quantum computers become more powerful, traditional encryption methods are at risk. Learn about quantum-safe cryptography and how to future-proof your security infrastructure.",
+      author: "Dr. James Wilson",
+      authorAvatar: "JW",
+      publishDate: "2024-12-28",
+      readTime: "16 min read",
+      category: "cybersecurity",
+      tags: ["Quantum", "Cryptography", "Security", "Future-Proofing"],
+      image: "/api/placeholder/400/250",
+      views: "2.5k",
+      likes: 134
+    }
+  ];
 
-      {/* Search and Filters */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search Bar */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search articles..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-            </div>
+  const allArticles = [...featuredArticles, ...recentArticles];
 
-            {/* Category Filter */}
-            <div className="flex items-center gap-2">
-              <Filter className="w-5 h-5 text-zion-cyan" />
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
-                {categories.map((category) => (
-                  <option key={category.id} value={category.id}>
-                    {category.name} ({category.count})
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </div>
-      </section>
+  const filteredArticles = allArticles.filter(article => {
+    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
+    const matchesSearch = 
+      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
 
-      {/* Featured Post */}
-      {filteredPosts.filter(post => post.featured).length > 0 && (
-        <section className="py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-white mb-8">Featured Article</h2>
-            {filteredPosts.filter(post => post.featured).map((post) => (
-              <div key={post.id} className="bg-zion-blue-light/10 rounded-2xl p-8 border border-zion-blue-light/20">
-                <div className="grid lg:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full font-medium">
-                        {categories.find(cat => cat.id === post.category)?.name}
-                      </span>
-                      <span className="text-zion-slate-light text-sm">{post.readTime}</span>
-                    </div>
-                    <h3 className="text-3xl font-bold text-white mb-4">{post.title}</h3>
-                    <p className="text-zion-slate-light text-lg mb-6">{post.excerpt}</p>
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="flex items-center gap-2 text-zion-slate-light">
-                        <User className="w-4 h-4" />
-                        <span className="text-sm">{post.author}</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-zion-slate-light">
-                        <Calendar className="w-4 h-4" />
-                        <span className="text-sm">{formatDate(post.date)}</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Link
-                        to={`/blog/${post.id}`}
-                        className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium flex items-center"
-                      >
-                        Read Article
-                        <ArrowRight className="w-5 h-5 ml-2" />
-                      </Link>
-                      <button className="p-3 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                        <Bookmark className="w-5 h-5" />
-                      </button>
-                      <button className="p-3 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                        <Share2 className="w-5 h-5" />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="bg-zion-blue-light/20 rounded-xl h-64 flex items-center justify-center">
-                    <span className="text-zion-slate-light text-lg">{post.image}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
+  const sortedArticles = filteredArticles.sort((a, b) => {
+    switch (sortBy) {
+      case 'latest':
+        return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
+      case 'popular':
+        return b.views.localeCompare(a.views, undefined, { numeric: true });
+      case 'trending':
+        return b.likes - a.likes;
+      default:
+        return 0;
+    }
+  });
 
-      {/* Blog Posts Grid */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-white">
-              Latest Articles
-              {searchTerm && (
-                <span className="text-zion-cyan text-xl ml-2">
-                  ({filteredPosts.length} results)
-                </span>
-              )}
-            </h2>
-          </div>
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
 
-          {filteredPosts.length === 0 ? (
-            <div className="text-center py-16">
-              <div className="w-24 h-24 bg-zion-blue-light/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Search className="w-12 h-12 text-zion-slate-light" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">No articles found</h3>
-              <p className="text-zion-slate-light mb-6">
-                Try adjusting your search terms or category filter.
-              </p>
-              <button
-                onClick={() => {
-                  setSearchTerm('');
-                  setSelectedCategory('all');
-                }}
-                className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-              >
-                Clear filters
-              </button>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.filter(post => !post.featured).map((post) => (
-                <article key={post.id} className="bg-zion-blue-light/10 rounded-xl overflow-hidden border border-zion-blue-light/20 hover:border-zion-cyan/40 transition-all duration-300">
-                  <div className="bg-zion-blue-light/20 h-48 flex items-center justify-center">
-                    <span className="text-zion-slate-light">{post.image}</span>
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full font-medium">
-                        {categories.find(cat => cat.id === post.category)?.name}
-                      </span>
-                      <div className="flex items-center gap-1 text-zion-slate-light text-xs">
-                        <Clock className="w-3 h-3" />
-                        {post.readTime}
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">
-                      {post.title}
-                    </h3>
-                    <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2 text-zion-slate-light text-xs">
-                        <User className="w-3 h-3" />
-                        {post.author}
-                      </div>
-                      <div className="flex items-center gap-2 text-zion-slate-light text-xs">
-                        <Calendar className="w-3 h-3" />
-                        {formatDate(post.date)}
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <Link
-                        to={`/blog/${post.id}`}
-                        className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center"
-                      >
-                        Read More
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </Link>
-                      <div className="flex items-center gap-2">
-                        <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                          <Bookmark className="w-4 h-4" />
-                        </button>
-                        <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                          <Share2 className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Stay Updated with Our Latest Insights
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Get the latest articles on AI, technology, and business innovation delivered 
-            directly to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-            />
-            <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-zion-slate-light text-sm mt-4">
-            No spam, unsubscribe at any time. We respect your privacy.
-          </p>
-        </div>
-      </section>
-    </div>
-  );
 }

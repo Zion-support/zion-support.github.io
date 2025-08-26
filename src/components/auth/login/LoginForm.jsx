@@ -84,7 +84,7 @@ export function LoginForm() {
           <div className="text-sm">
             <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
               Forgot your password?
-                         </Link>
+            </Link>
           </div>
         </div>
 
@@ -95,5 +95,3 @@ export function LoginForm() {
       <LoadingOverlay visible={isLoading || isSubmitting}/>
     </Form>);
 }
-
-export const LoginContent = LoginForm;

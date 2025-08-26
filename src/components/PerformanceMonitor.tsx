@@ -1,3 +1,6 @@
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
 
 interface PerformanceMetrics {
   fcp: number;
@@ -7,21 +10,102 @@ interface PerformanceMetrics {
   ttfb: number;
 }
 
-    }
-  }, [metrics]);
+export const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
+  useEffect(() => {
+    // Only show in development or when explicitly enabled
+    if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production') {
+      setIsVisible(true);
+    }
+
+    // Performance monitoring
+    if ('performance' in window && 'PerformanceObserver' in window) {
+      // First Contentful Paint (FCP)
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcp = entries[entries.length - 1];
+        if (fcp) {
+          setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
         }
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
-    }
+      // Largest Contentful Paint (LCP)
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lcp = entries[entries.length - 1];
+        if (lcp) {
+          setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
+        }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    if (logToConsole && Object.values(metrics).some(v => v !== null)) {
-      console.log('🚀 Performance Metrics:', metrics);
-    }
-  }, [metrics, onMetricsUpdate, logToConsole]);
+      // First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fid = entries[entries.length - 1];
+        if (fid) {
+          setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
+        }
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
 
-  if (!showMetrics) return null;
+      // Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      // Time to First Byte (TTFB)
+      const navigationObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const navigation = entries[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          setMetrics(prev => ({ ...prev, ttfb: navigation.responseStart - navigation.requestStart }));
+        }
+      });
+      navigationObserver.observe({ entryTypes: ['navigation'] });
+
+      return () => {
+        fcpObserver.disconnect();
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+        navigationObserver.disconnect();
+      };
+    }
+  }, []);
+
+  if (!isVisible) return null;
+
+  const getScore = (metric: keyof PerformanceMetrics, value: number): { score: number; color: string; label: string } => {
+    const thresholds: Record<string, { good: number; needsImprovement: number }> = {
+      fcp: { good: 1800, needsImprovement: 3000 },
+      lcp: { good: 2500, needsImprovement: 4000 },
+      fid: { good: 100, needsImprovement: 300 },
+      cls: { good: 0.1, needsImprovement: 0.25 },
+      ttfb: { good: 800, needsImprovement: 1800 }
+    };
+
+    const threshold = thresholds[metric];
+    if (!threshold) return { score: 0, color: 'text-gray-400', label: 'Unknown' };
+
+    if (value <= threshold.good) {
+      return { score: 100, color: 'text-green-400', label: 'Good' };
+    } else if (value <= threshold.needsImprovement) {
+      return { score: 50, color: 'text-yellow-400', label: 'Needs Improvement' };
+    } else {
+      return { score: 0, color: 'text-red-400', label: 'Poor' };
+    }
+  };
 
   const formatMetric = (metric: keyof PerformanceMetrics, value: number): string => {
     if (metric === 'cls') return value.toFixed(3);
@@ -38,6 +122,16 @@ interface PerformanceMetrics {
   ];
 
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="fixed bottom-4 right-4 z-50 bg-zinc-900/90 backdrop-blur-md border border-zinc-700/50 rounded-lg p-4 max-w-sm shadow-xl"
+    >
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
+        <div className="text-xs text-zinc-400">
+          {process.env.NODE_ENV === 'development' ? 'DEV' : 'PROD'}
         </div>
       </div>
       
