@@ -1,12 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { enhancedMicroSaasServices2025 } from '../data/comprehensiveServices2025';
+import { 
+  getAllServices, 
+  getMasterServicesStats, 
+  getMasterFeaturedServices,
+  getMasterTrendingServices 
+} from '../data/master-comprehensive-services-2025';
 
 const Services: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('name');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
+  // Get all services and stats
+  const allServices = getAllServices();
+  const stats = getMasterServicesStats();
+  const featuredServices = getMasterFeaturedServices(6);
+  const trendingServices = getMasterTrendingServices(6);
+
+  // Enhanced categories including all new service types
   const categories = [
     'all',
     'Productivity',
@@ -15,15 +28,51 @@ const Services: React.FC = () => {
     'CRM',
     'Analytics',
     'Scheduling',
+    'AI Development',
+    'Computer Vision',
+    'Emotional Intelligence',
+    'Quantum AI',
+    'Autonomous Systems',
+    'DeFi',
+    'NFT',
+    'Blockchain Infrastructure',
+    'Identity Management',
+    'Cybersecurity',
+    'Threat Intelligence',
+    'Security Operations',
+    'Cryptography',
+    'Cloud Management',
+    'DevOps',
+    'Healthcare AI',
+    'Genomics',
+    'IoT',
+    'Industrial IoT',
+    'Smart City',
     'Quantum Computing',
-    'AI Architecture',
-    'Edge Computing',
-    'Privacy AI',
-    'AI Governance',
-    'AI Ecosystem'
+    'Quantum ML',
+    'Space Tech',
+    'Space Operations',
+    'Sustainability',
+    'Circular Economy',
+    'Fintech',
+    'RegTech',
+    'EdTech',
+    'PropTech',
+    'Logistics',
+    'Media',
+    'Neuromorphic Computing',
+    'Brain-Computer Interface',
+    'Synthetic Biology',
+    'Advanced Robotics',
+    'Advanced Materials',
+    'Fusion Energy',
+    'Advanced Transportation',
+    'Quantum Communication',
+    '4D Manufacturing',
+    'Neural Gaming'
   ];
 
-  const filteredServices = enhancedMicroSaasServices2025
+  const filteredServices = allServices
     .filter(service => 
       selectedCategory === 'all' || service.category === selectedCategory
     )
@@ -35,7 +84,9 @@ const Services: React.FC = () => {
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return a.price - b.price;
+          if ('price' in a && 'price' in b) return a.price - b.price;
+          if ('hourlyRate' in a && 'hourlyRate' in b) return a.hourlyRate - b.hourlyRate;
+          return 0;
         case 'category':
           return a.category.localeCompare(b.category);
         case 'name':
@@ -44,13 +95,22 @@ const Services: React.FC = () => {
       }
     });
 
-  const formatPrice = (price: number, model: string) => {
-    if (model === 'monthly') {
-      return `$${price}/month`;
-    } else if (model === 'one-time') {
-      return `$${price.toLocaleString()}`;
+  const formatPrice = (service: any) => {
+    if ('price' in service) {
+      if (service.pricingModel === 'monthly') {
+        return `$${service.price}/month`;
+      } else if (service.pricingModel === 'one-time') {
+        return `$${service.price.toLocaleString()}`;
+      }
+      return `$${service.price}`;
     }
-    return `$${price}`;
+    if ('hourlyRate' in service) {
+      return `$${service.hourlyRate}/hour`;
+    }
+    if ('projectRate' in service) {
+      return `$${service.projectRate.toLocaleString()}/project`;
+    }
+    return 'Contact for pricing';
   };
 
   const getCategoryIcon = (category: string) => {
@@ -61,14 +121,56 @@ const Services: React.FC = () => {
       'CRM': '👥',
       'Analytics': '📊',
       'Scheduling': '📅',
-      'Quantum Computing': '🔮',
-      'AI Architecture': '🧠',
-      'Edge Computing': '🌐',
-      'Privacy AI': '🔒',
-      'AI Governance': '⚖️',
-      'AI Ecosystem': '🌍'
+      'AI Development': '🧠',
+      'Computer Vision': '👁️',
+      'Emotional Intelligence': '❤️',
+      'Quantum AI': '🔮',
+      'Autonomous Systems': '🤖',
+      'DeFi': '🏦',
+      'NFT': '🎨',
+      'Blockchain Infrastructure': '⛓️',
+      'Identity Management': '🆔',
+      'Cybersecurity': '🔒',
+      'Threat Intelligence': '🕵️',
+      'Security Operations': '🛡️',
+      'Cryptography': '🔐',
+      'Cloud Management': '☁️',
+      'DevOps': '⚙️',
+      'Healthcare AI': '🏥',
+      'Genomics': '🧬',
+      'IoT': '🌐',
+      'Industrial IoT': '🏭',
+      'Smart City': '🏙️',
+      'Quantum Computing': '⚛️',
+      'Quantum ML': '🔬',
+      'Space Tech': '🚀',
+      'Space Operations': '🛰️',
+      'Sustainability': '🌱',
+      'Circular Economy': '♻️',
+      'Fintech': '💳',
+      'RegTech': '📋',
+      'EdTech': '📚',
+      'PropTech': '🏠',
+      'Logistics': '📦',
+      'Media': '🎬',
+      'Neuromorphic Computing': '🧠',
+      'Brain-Computer Interface': '🧠',
+      'Synthetic Biology': '🧪',
+      'Advanced Robotics': '🤖',
+      'Advanced Materials': '🔬',
+      'Fusion Energy': '☢️',
+      'Advanced Transportation': '🚄',
+      'Quantum Communication': '📡',
+      '4D Manufacturing': '🖨️',
+      'Neural Gaming': '🎮'
     };
     return icons[category] || '🚀';
+  };
+
+  const getServiceType = (service: any) => {
+    if ('aiModels' in service) return 'AI Service';
+    if ('hourlyRate' in service) return 'IT Service';
+    return 'Micro SAAS';
   };
 
   return (
@@ -79,14 +181,34 @@ const Services: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Comprehensive
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Micro SAAS Services
+              {" "}Innovation Services
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Discover our cutting-edge collection of 35+ innovative micro SAAS solutions, 
-            from AI-powered productivity tools to revolutionary quantum computing platforms. 
-            Each service is designed to transform your business and drive innovation.
+            Discover our cutting-edge collection of {stats.totalServices}+ innovative services, 
+            from AI-powered productivity tools to revolutionary quantum computing platforms, 
+            brain-computer interfaces, and beyond. Each service is designed to transform your business and drive innovation.
           </p>
+          
+          {/* Stats Display */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+              <div className="text-2xl font-bold text-blue-400">{stats.totalServices}</div>
+              <div className="text-sm text-gray-300">Total Services</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+              <div className="text-2xl font-bold text-green-400">{stats.categories}</div>
+              <div className="text-sm text-gray-300">Categories</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+              <div className="text-2xl font-bold text-purple-400">{stats.byType.aiServices}</div>
+              <div className="text-sm text-gray-300">AI Services</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+              <div className="text-2xl font-bold text-cyan-400">{stats.byType.microSaas}</div>
+              <div className="text-sm text-gray-300">Micro SAAS</div>
+            </div>
+          </div>
           
           {/* Contact Info */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 max-w-2xl mx-auto">
@@ -101,6 +223,101 @@ const Services: React.FC = () => {
                 <p><span className="text-blue-400">Address:</span> 364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+            Featured Innovation Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredServices.map((service) => (
+              <div
+                key={service.id}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-3xl">{getCategoryIcon(service.category)}</div>
+                  <div className="text-right">
+                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-purple-500/20 text-purple-400">
+                      Featured
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-blue-400">
+                    {formatPrice(service)}
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    {getServiceType(service)} • {service.category}
+                  </div>
+                </div>
+                <a
+                  href={service.contactInfo.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                >
+                  Learn More
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trending Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+            Trending High-ROI Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {trendingServices.map((service) => (
+              <div
+                key={service.id}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-3xl">{getCategoryIcon(service.category)}</div>
+                  <div className="text-right">
+                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">
+                      Trending
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-blue-400">
+                    {formatPrice(service)}
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    {getServiceType(service)} • {service.category}
+                  </div>
+                </div>
+                {('roi' in service) && (
+                  <div className="mb-4">
+                    <div className="text-sm text-green-400 font-semibold">
+                      ROI: {service.roi}
+                    </div>
+                  </div>
+                )}
+                <a
+                  href={service.contactInfo.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
+                >
+                  Learn More
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -123,8 +340,45 @@ const Services: React.FC = () => {
               </svg>
             </div>
 
-            {/* Category Filter */}
-            <div className="flex gap-2 flex-wrap">
+            {/* View Mode Toggle */}
+            <div className="flex gap-2">
+              <button
+                onClick={() => setViewMode('grid')}
+                className={`p-2 rounded-lg transition-all duration-300 ${
+                  viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                </svg>
+              </button>
+              <button
+                onClick={() => setViewMode('list')}
+                className={`p-2 rounded-lg transition-all duration-300 ${
+                  viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Sort */}
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
+            >
+              <option value="name">Sort by Name</option>
+              <option value="price">Sort by Price</option>
+              <option value="category">Sort by Category</option>
+            </select>
+          </div>
+
+          {/* Category Filter */}
+          <div className="mt-6">
+            <div className="flex gap-2 flex-wrap justify-center">
               {categories.map(category => (
                 <button
                   key={category}
@@ -139,22 +393,11 @@ const Services: React.FC = () => {
                 </button>
               ))}
             </div>
-
-            {/* Sort */}
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
-            >
-              <option value="name">Sort by Name</option>
-              <option value="price">Sort by Price</option>
-              <option value="category">Sort by Category</option>
-            </select>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Grid/List */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -162,125 +405,186 @@ const Services: React.FC = () => {
               {filteredServices.length} Services Found
             </h2>
             <p className="text-gray-300">
-              Showing {filteredServices.length} of {enhancedMicroSaasServices2025.length} total services
+              Showing {filteredServices.length} of {stats.totalServices} total services
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <div
-                key={service.id}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                {/* Service Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-3xl">{getCategoryIcon(service.category)}</div>
-                  <div className="text-right">
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      service.pricing === 'Freemium' ? 'bg-green-500/20 text-green-400' :
-                      service.pricing === 'Professional' ? 'bg-blue-500/20 text-blue-400' :
-                      'bg-purple-500/20 text-purple-400'
-                    }`}>
-                      {service.pricing}
-                    </span>
+          {viewMode === 'grid' ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service) => (
+                <div
+                  key={service.id}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  {/* Service Header */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="text-3xl">{getCategoryIcon(service.category)}</div>
+                    <div className="text-right">
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                        'pricing' in service && service.pricing === 'Freemium' ? 'bg-green-500/20 text-green-400' :
+                        'pricing' in service && service.pricing === 'Professional' ? 'bg-blue-500/20 text-blue-400' :
+                        'bg-purple-500/20 text-purple-400'
+                      }`}>
+                        {getServiceType(service)}
+                      </span>
+                    </div>
                   </div>
-                </div>
 
-                {/* Service Title and Description */}
-                <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                  {/* Service Title and Description */}
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
 
-                {/* Pricing */}
-                <div className="mb-4">
-                  <div className="text-2xl font-bold text-blue-400">
-                    {formatPrice(service.price, service.pricingModel)}
+                  {/* Pricing */}
+                  <div className="mb-4">
+                    <div className="text-2xl font-bold text-blue-400">
+                      {formatPrice(service)}
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Category: {service.category}
+                    </div>
                   </div>
-                  <div className="text-sm text-gray-400">
-                    Market Price: {service.marketPrice}
-                  </div>
-                </div>
 
-                {/* Features */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
-                  <div className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-300">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                        {feature}
+                  {/* Features */}
+                  {'features' in service && service.features && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
+                      <div className="space-y-2">
+                        {service.features.slice(0, 4).map((feature, idx) => (
+                          <div key={idx} className="flex items-center text-sm text-gray-300">
+                            <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                            {feature}
+                          </div>
+                        ))}
+                        {service.features.length > 4 && (
+                          <div className="text-xs text-gray-500">
+                            +{service.features.length - 4} more features
+                          </div>
+                        )}
                       </div>
-                    ))}
-                    {service.features.length > 4 && (
-                      <div className="text-xs text-gray-500">
-                        +{service.features.length - 4} more features
+                    </div>
+                  )}
+
+                  {/* Benefits */}
+                  {'benefits' in service && service.benefits && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-green-400 mb-3">Benefits:</h4>
+                      <div className="space-y-1">
+                        {service.benefits.slice(0, 3).map((benefit, idx) => (
+                          <div key={idx} className="flex items-center text-sm text-gray-300">
+                            <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                            {benefit}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Additional Info */}
+                  <div className="mb-6 space-y-2 text-sm">
+                    {'setupTime' in service && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Setup Time:</span>
+                        <span className="text-white">{service.setupTime}</span>
+                      </div>
+                    )}
+                    {'roi' in service && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">ROI:</span>
+                        <span className="text-green-400">{service.roi}</span>
+                      </div>
+                    )}
+                    {'userLimit' in service && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Users:</span>
+                        <span className="text-white">{service.userLimit}</span>
                       </div>
                     )}
                   </div>
-                </div>
 
-                {/* Benefits */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-green-400 mb-3">Benefits:</h4>
-                  <div className="space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-300">
-                        <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-                        {benefit}
+                  {/* Tags */}
+                  <div className="mb-6">
+                    <div className="flex flex-wrap gap-2">
+                      {service.tags.slice(0, 4).map((tag, idx) => (
+                        <span
+                          key={idx}
+                          className="px-2 py-1 bg-white/10 rounded-full text-xs text-gray-300"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* CTA Buttons */}
+                  <div className="space-y-3">
+                    <a
+                      href={service.contactInfo.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full text-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+                    >
+                      Learn More
+                    </a>
+                    <a
+                      href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
+                      className="block w-full text-center px-4 py-2 bg-white/10 text-blue-400 font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
+                    >
+                      Contact Sales
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="space-y-4">
+              {filteredServices.map((service) => (
+                <div
+                  key={service.id}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="text-4xl">{getCategoryIcon(service.category)}</div>
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between mb-2">
+                        <h3 className="text-xl font-semibold text-white">{service.name}</h3>
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                          'pricing' in service && service.pricing === 'Freemium' ? 'bg-green-500/20 text-green-400' :
+                          'pricing' in service && service.pricing === 'Professional' ? 'bg-blue-500/20 text-blue-400' :
+                          'bg-purple-500/20 text-purple-400'
+                        }`}>
+                          {getServiceType(service)}
+                        </span>
                       </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Additional Info */}
-                <div className="mb-6 space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Setup Time:</span>
-                    <span className="text-white">{service.setupTime}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">ROI:</span>
-                    <span className="text-green-400">{service.roi}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Users:</span>
-                    <span className="text-white">{service.userLimit}</span>
-                  </div>
-                </div>
-
-                {/* Tags */}
-                <div className="mb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {service.tags.slice(0, 4).map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="px-2 py-1 bg-white/10 rounded-full text-xs text-gray-300"
+                      <p className="text-gray-300 mb-3">{service.description}</p>
+                      <div className="flex items-center gap-6 text-sm">
+                        <span className="text-blue-400 font-semibold">{formatPrice(service)}</span>
+                        <span className="text-gray-400">{service.category}</span>
+                        {'roi' in service && (
+                          <span className="text-green-400">ROI: {service.roi}</span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <a
+                        href={service.contactInfo.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-center"
                       >
-                        {tag}
-                      </span>
-                    ))}
+                        Learn More
+                      </a>
+                      <a
+                        href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
+                        className="px-4 py-2 bg-white/10 text-blue-400 font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 text-center"
+                      >
+                        Contact
+                      </a>
+                    </div>
                   </div>
                 </div>
-
-                {/* CTA Buttons */}
-                <div className="space-y-3">
-                  <a
-                    href={service.contactInfo.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                  >
-                    Learn More
-                  </a>
-                  <a
-                    href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
-                    className="block w-full text-center px-4 py-2 bg-white/10 text-blue-400 font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
-                  >
-                    Contact Sales
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
 
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
@@ -296,14 +600,14 @@ const Services: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+            Ready to Transform Your Business with Innovation?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Our team of experts is ready to help you implement the perfect solution for your needs
+            Our team of experts is ready to help you implement the perfect cutting-edge solution for your needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry"
+              href="mailto:kleber@ziontechgroup.com?subject=Innovation Service Inquiry"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
               Contact Us Today
