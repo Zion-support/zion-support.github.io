@@ -15,7 +15,7 @@ export function Select({
   onChange, 
   disabled = false 
 }: SelectProps) {
-  const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
+  const baseClasses = 'flex h-10 w-full rounded-md border border-zion-cyan/20 bg-zion-slate-dark px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50';
   
   return (
     <select
@@ -36,18 +36,7 @@ interface SelectItemProps {
 
 export function SelectItem({ children, value }: SelectItemProps) {
   return (
-    <div
-      className={`
-        flex h-10 w-full items-center justify-between rounded-md border 
-        border-zion-blue-light/30 bg-zion-blue-dark/50 px-3 py-2 text-sm 
-        text-white placeholder:text-zion-slate-light/50
-        focus:outline-none focus:ring-2 focus:ring-zion-cyan 
-        focus:border-transparent transition-colors cursor-pointer
-        ${className}
-      `}
-      {...props}
-    >
-    <option value={value}>
+    <option value={value} className="bg-zion-slate-dark text-white">
       {children}
     </option>
   );
@@ -55,14 +44,14 @@ export function SelectItem({ children, value }: SelectItemProps) {
 
 export function SelectTrigger({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}>
+    <div className={`flex h-10 w-full items-center justify-between rounded-md border border-zion-cyan/20 bg-zion-slate-dark px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent ${className}`}>
       {children}
     </div>
   );
 }
 
 export function SelectValue({ placeholder }: { placeholder?: string }) {
-  return <span className="text-sm">{placeholder || 'Select an option'}</span>;
+  return <span className="text-sm text-white">{placeholder || 'Select an option'}</span>;
 }
 
 export function SelectContent({ children }: { children: React.ReactNode }) {
