@@ -129,6 +129,45 @@ const Home: React.FC = () => {
               </Link>
             </div>
           </div>
+          
+          {/* Additional Innovative Services */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <div className="bg-gradient-to-br from-green-800/50 to-emerald-700/50 backdrop-blur-lg rounded-xl p-6 border border-green-600/30 hover:border-green-500/50 transition-all duration-300">
+              <div className="text-3xl mb-4">⚛️</div>
+              <h3 className="text-xl font-semibold text-white mb-3">QuantumAI Analytics</h3>
+              <p className="text-gray-300 mb-4">
+                Revolutionary quantum computing-powered analytics platform for complex optimization problems
+              </p>
+              <div className="text-sm text-green-400 mb-2">Starting at $5,000/month</div>
+              <Link to="/services" className="text-green-400 hover:text-green-300 text-sm">
+                Learn More →
+              </Link>
+            </div>
+            
+            <div className="bg-gradient-to-br from-orange-800/50 to-red-700/50 backdrop-blur-lg rounded-xl p-6 border border-orange-600/30 hover:border-orange-500/50 transition-all duration-300">
+              <div className="text-3xl mb-4">🔗</div>
+              <h3 className="text-xl font-semibold text-white mb-3">DeFi Pro Suite</h3>
+              <p className="text-gray-300 mb-4">
+                Comprehensive DeFi platform with yield farming, liquidity provision, and automated trading strategies
+              </p>
+              <div className="text-sm text-orange-400 mb-2">Starting at $1,200/month</div>
+              <Link to="/services" className="text-orange-400 hover:text-orange-300 text-sm">
+                Learn More →
+              </Link>
+            </div>
+            
+            <div className="bg-gradient-to-br from-teal-800/50 to-cyan-700/50 backdrop-blur-lg rounded-xl p-6 border border-teal-600/30 hover:border-teal-500/50 transition-all duration-300">
+              <div className="text-3xl mb-4">🏙️</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Smart City IoT Platform</h3>
+              <p className="text-gray-300 mb-4">
+                Comprehensive IoT platform for smart city management with real-time monitoring and analytics
+              </p>
+              <div className="text-sm text-teal-400 mb-2">Starting at $2,500/month</div>
+              <Link to="/services" className="text-teal-400 hover:text-teal-300 text-sm">
+                Learn More →
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
