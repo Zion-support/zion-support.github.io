@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowUp as ArrowUpIcon } from 'lucide-react';
+import { ArrowUp as ArrowUpIcon, Phone as PhoneIcon, Mail as EnvelopeIcon, MapPin as MapPinIcon } from 'lucide-react';
 
 function Footer() {
   const currentYear = new Date().getFullYear();

@@ -144,7 +144,7 @@ export default function AIFinancialTrading() {
     {
       icon: Zap,
       title: "Speed Advantage",
-      title: "Microsecond execution speed provides competitive edge in fast-moving markets"
+      description: "Microsecond execution speed provides competitive edge in fast-moving markets"
     },
     {
       icon: BarChart3,

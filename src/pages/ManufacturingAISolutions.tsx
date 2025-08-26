@@ -1,70 +1,71 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Handshake, Users, Target, Award, CheckCircle, Globe, TrendingUp, Lightbulb } from 'lucide-react';
+import { Cpu, Robot, BarChart3, Shield, Zap, CheckCircle, Factory, TrendingUp } from 'lucide-react';
 
-const Partners: React.FC = () => {
-  const partnershipTypes = [
+const ManufacturingAISolutions: React.FC = () => {
+  const features = [
     {
-      icon: Handshake,
-      title: 'Strategic Partnerships',
-      description: 'Long-term collaborations with industry leaders to deliver comprehensive solutions'
+      icon: Robot,
+      title: 'AI-Powered Robotics',
+      description: 'Intelligent automation systems that adapt and learn from production data'
     },
     {
-      icon: Users,
-      title: 'Technology Partners',
-      description: 'Integration with cutting-edge platforms and tools to enhance our offerings'
+      icon: BarChart3,
+      title: 'Predictive Maintenance',
+      description: 'AI algorithms that predict equipment failures before they occur'
     },
     {
-      icon: Target,
-      title: 'Channel Partners',
-      description: 'Distribution partnerships to expand our reach and market presence'
+      icon: Cpu,
+      title: 'Smart Manufacturing',
+      description: 'IoT-enabled production lines with real-time AI optimization'
     },
     {
-      icon: Award,
-      title: 'Certified Partners',
-      description: 'Authorized partners with specialized expertise and certifications'
+      icon: Shield,
+      title: 'Quality Control',
+      description: 'Computer vision and AI for automated quality inspection'
+    },
+    {
+      icon: Zap,
+      title: 'Energy Optimization',
+      description: 'AI-driven energy management for sustainable manufacturing'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Supply Chain AI',
+      description: 'Intelligent supply chain optimization and demand forecasting'
     }
   ];
 
-  const benefits = [
+  const solutions = [
     {
-      title: 'Access to Innovation',
-      description: 'Early access to cutting-edge technologies and emerging solutions',
-      features: ['Technology previews', 'Beta testing opportunities', 'Innovation workshops']
+      title: 'Smart Factory Platform',
+      description: 'Comprehensive IoT and AI platform for connected manufacturing operations',
+      benefits: ['Real-time monitoring', 'Predictive analytics', 'Automated optimization']
     },
     {
-      title: 'Revenue Growth',
-      description: 'Expanded market reach and new revenue streams through partnership',
-      features: ['Joint go-to-market', 'Revenue sharing', 'Market expansion support']
+      title: 'AI Quality Assurance',
+      description: 'Advanced computer vision and machine learning for automated quality control',
+      benefits: ['Defect detection', 'Consistent quality', 'Reduced waste']
     },
     {
-      title: 'Technical Support',
-      description: 'Comprehensive technical assistance and training for your team',
-      features: ['Technical training', 'Implementation support', '24/7 assistance']
+      title: 'Predictive Maintenance System',
+      description: 'AI-powered equipment monitoring and predictive maintenance scheduling',
+      benefits: ['Reduced downtime', 'Lower costs', 'Extended equipment life']
     },
     {
-      title: 'Marketing Support',
-      description: 'Co-marketing initiatives and brand collaboration opportunities',
-      features: ['Joint campaigns', 'Event participation', 'Content collaboration']
+      title: 'Supply Chain Intelligence',
+      description: 'AI-driven supply chain optimization and demand forecasting',
+      benefits: ['Inventory optimization', 'Demand prediction', 'Cost reduction']
     }
   ];
 
-  const currentPartners = [
-    {
-      name: 'Technology Leaders',
-      description: 'Leading AI and cloud technology providers',
-      category: 'Strategic'
-    },
-    {
-      name: 'Industry Experts',
-      description: 'Specialized consultants and domain experts',
-      category: 'Consulting'
-    },
-    {
-      name: 'Platform Providers',
-      description: 'Enterprise software and infrastructure platforms',
-      category: 'Technology'
-    }
+  const technologies = [
+    'Artificial Intelligence & Machine Learning',
+    'Internet of Things (IoT)',
+    'Computer Vision & Image Processing',
+    'Robotics & Automation',
+    'Big Data Analytics',
+    'Edge Computing & 5G'
   ];
 
   return (
@@ -79,22 +80,22 @@ const Partners: React.FC = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-blue/20 border border-zion-blue/30 text-zion-cyan mb-6">
-              <Handshake className="w-4 h-4 mr-2" />
-              Partnership Opportunities
+              <Factory className="w-4 h-4 mr-2" />
+              Manufacturing AI Solutions
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Partner with
+              Revolutionizing Manufacturing with
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-                {' '}Innovation Leaders
+                {' '}AI & IoT
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Join our network of strategic partners and together we'll transform industries 
-              through cutting-edge technology solutions and collaborative innovation.
+              Transform your manufacturing operations with cutting-edge AI solutions that enhance efficiency, 
+              improve quality, and reduce costs through intelligent automation and predictive analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                Become a Partner
+                Schedule Demo
               </button>
               <button className="px-8 py-4 border border-zion-blue text-zion-cyan font-semibold rounded-lg hover:bg-zion-blue/20 transition-all duration-300">
                 Learn More
@@ -104,7 +105,7 @@ const Partners: React.FC = () => {
         </div>
       </section>
 
-      {/* Partnership Types Section */}
+      {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -114,15 +115,15 @@ const Partners: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Partnership Opportunities
+              Advanced Manufacturing AI Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              We offer various partnership models to suit different business needs and objectives
+              Our manufacturing solutions combine AI, IoT, and robotics to create intelligent production systems
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {partnershipTypes.map((type, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -131,17 +132,17 @@ const Partners: React.FC = () => {
                 className="bg-zion-slate-dark/50 border border-zion-blue/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
-                  <type.icon className="w-6 h-6 text-white" />
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
-                <p className="text-zion-slate-light">{type.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Solutions Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -151,15 +152,15 @@ const Partners: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Partner Benefits
+              Comprehensive Manufacturing Solutions
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Discover the advantages of partnering with Zion Tech Group
+              From production optimization to quality control, we provide end-to-end manufacturing AI solutions
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+            {solutions.map((solution, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -167,13 +168,13 @@ const Partners: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/50 border border-zion-blue/30 rounded-xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
               >
-                <h3 className="text-2xl font-semibold text-white mb-4">{benefit.title}</h3>
-                <p className="text-zion-slate-light mb-6">{benefit.description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
+                <p className="text-zion-slate-light mb-6">{solution.description}</p>
                 <div className="space-y-2">
-                  {benefit.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center">
+                  {solution.benefits.map((benefit, benefitIndex) => (
+                    <div key={benefitIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
+                      <span className="text-zion-slate-light">{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -183,7 +184,7 @@ const Partners: React.FC = () => {
         </div>
       </section>
 
-      {/* Current Partners Section */}
+      {/* Technologies Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -193,28 +194,24 @@ const Partners: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Partner Network
+              Cutting-Edge Technologies
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              We work with industry leaders and technology innovators to deliver exceptional solutions
+              We leverage the latest advancements in AI, IoT, and robotics to deliver superior manufacturing solutions
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {currentPartners.map((partner, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {technologies.map((tech, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 border border-zion-blue/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
+                className="flex items-center p-4 bg-zion-slate-dark/30 border border-zion-blue/20 rounded-lg"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
-                <p className="text-zion-cyan font-medium mb-3">{partner.category}</p>
-                <p className="text-zion-slate-light">{partner.description}</p>
+                <div className="w-3 h-3 bg-zion-cyan rounded-full mr-4"></div>
+                <span className="text-zion-slate-light">{tech}</span>
               </motion.div>
             ))}
           </div>
@@ -231,17 +228,17 @@ const Partners: React.FC = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Partner with Us?
+              Ready to Transform Your Manufacturing Operations?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join our network of innovative partners and together we'll shape the future of technology
+              Join leading manufacturers who are already leveraging AI to improve efficiency, quality, and profitability
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                Start Partnership Discussion
+                Get Started Today
               </button>
               <button className="px-8 py-4 border border-zion-blue text-zion-cyan font-semibold rounded-lg hover:bg-zion-blue/20 transition-all duration-300">
-                Contact Partnership Team
+                Contact Sales
               </button>
             </div>
           </motion.div>
@@ -251,4 +248,4 @@ const Partners: React.FC = () => {
   );
 };
 
-export default Partners;
+export default ManufacturingAISolutions;
