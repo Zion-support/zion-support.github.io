@@ -20,8 +20,16 @@ import { serviceExpansions2025 } from '../data/service-expansions-2025';
 import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
 import { realOperationalServices } from '../data/real-operational-services';
 import { newOperationalServices2025 } from '../data/new-operational-services-2025';
+<<<<<<< HEAD
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
 import { revolutionary2025Services } from '../data/revolutionary-2025-services';
 import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
+import { newRealServices2025 } from '../data/new-real-services-2025';
+=======
+import { revolutionary2025Services } from '../data/revolutionary-2025-services';
+import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cef6
 
 export default function HomePage() {
   const heroStats = [
@@ -56,8 +64,17 @@ export default function HomePage() {
     ...serviceExpansions2025,
     ...realOperationalServices,
     ...newOperationalServices2025,
+<<<<<<< HEAD
+    ...verifiedRealServices2025Batch2,
+    ...innovative2025Services,
+    ...emergingTech2025Services,
+    ...revolutionary2025Services,
+    ...nextGenInnovations2025,
+    ...newRealServices2025
+=======
     ...revolutionary2025Services,
     ...nextGenInnovations2025
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cef6
   ];
 
   const featuredOffers = professionalServices.slice(0, 3);
@@ -82,6 +99,13 @@ export default function HomePage() {
       <EnhancedNavigation />
       <div className="min-h-screen pt-16">
         <Head>
+<<<<<<< HEAD
+          <title>Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions</title>
+          <meta name="description" content="Discover 500+ revolutionary micro SaaS services, quantum AI solutions, enterprise AI platforms, and cutting-edge technology. Transform your business with our innovative services." />
+          <meta name="keywords" content="micro SaaS, AI services, quantum computing, space technology, enterprise AI, supply chain optimization, customer experience, financial risk management, healthcare analytics, manufacturing intelligence, energy management, education AI, real estate AI, autonomous vehicles, robotics, cybersecurity" />
+          <meta property="og:title" content="Zion Tech Group - Revolutionary Micro SaaS Services" />
+          <meta property="og:description" content="500+ revolutionary micro SaaS services with quantum AI, enterprise AI, and cutting-edge technology" />
+=======
           <title>Zion Tech Group - Revolutionary AI, Quantum & IT Services | 1000+ Solutions</title>
           <meta name="description" content="Zion Tech Group offers 1000+ revolutionary AI, quantum computing, and IT services. Achieve 1000% ROI with our cutting-edge solutions. Contact: +1 302 464 0950" />
           <meta name="keywords" content="AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet, blockchain, metaverse, IoT, edge computing, AI consciousness, quantum bioinformatics" />
@@ -89,11 +113,16 @@ export default function HomePage() {
           <meta name="robots" content="index, follow" />
           <meta property="og:title" content="Zion Tech Group - Revolutionary AI, Quantum & IT Services" />
           <meta property="og:description" content="1000+ cutting-edge revolutionary services with 1000% ROI guarantee. Contact: +1 302 464 0950" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cef6
           <meta property="og:url" content="https://ziontechgroup.com" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com" />
         </Head>
 
+<<<<<<< HEAD
+        {/* Enhanced Navigation */}
+        <UltraFuturisticNavigation2029V2 />
+=======
         {/* Hero Section */}
         <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -141,6 +170,7 @@ export default function HomePage() {
             </motion.div>
           </div>
         </section>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cef6
 
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">

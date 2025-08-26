@@ -24,6 +24,10 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
+<<<<<<< HEAD
+import { nextGenInnovativeServices } from '../data/next-gen-innovative-services';
+import { enterpriseAIServices } from '../data/enterprise-ai-services';
+=======
 import { newRealServices } from '../data/new-real-services';
 import { industryRealServices } from '../data/industry-real-services';
 import { professionalServices } from '../data/professional-services';
@@ -41,6 +45,7 @@ import { serviceExpansions2025 } from '../data/service-expansions-2025';
 import { newOperationalServices2025 } from '../data/new-operational-services-2025';
 import { revolutionary2025Services } from '../data/revolutionary-2025-services';
 import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cef6
 
 // Import our new service data
 // Note: Removed non-existent data imports (2034 datasets) to prevent build errors.
@@ -56,6 +61,10 @@ import { real2029Q3Additions } from '../data/real-2029-q3-additions';
     ...innovativeMicroSaasServices,
     ...extraServices,
     ...additionalEnhancedServices,
+<<<<<<< HEAD
+    ...nextGenInnovativeServices,
+    ...enterpriseAIServices
+=======
     ...newRealServices,
     ...industryRealServices,
     ...professionalServices,
@@ -73,6 +82,7 @@ import { real2029Q3Additions } from '../data/real-2029-q3-additions';
     ...newOperationalServices2025,
     ...revolutionary2025Services,
     ...nextGenInnovations2025
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cef6
   ];
 
   // Dynamic category counts mapped to the same filter logic below
