@@ -7,7 +7,24 @@ import App from './App'
 import { AppWrapper } from './AppWrapper'
 import './index.css'
 
-// Create a client
+// Import i18n configuration
+import './i18n';
+import { LanguageProvider } from '@/context/LanguageContext';
+import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
+import { WhitelabelProvider } from '@/context/WhitelabelContext';
+import { AppLayout } from '@/layout/AppLayout';
+
+// Import auth and notification providers
+import { AuthProvider } from '@/context/auth/AuthProvider';
+import { NotificationProvider } from './context';
+
+// Import analytics provider
+import { AnalyticsProvider } from './context/AnalyticsContext';
+import { ViewModeProvider } from './context/ViewModeContext';
+import { CartProvider } from './context/CartContext';
+import { registerServiceWorker } from './serviceWorkerRegistration';
+
+// Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -17,11 +34,50 @@ const queryClient = new QueryClient({
   },
 })
 
-// Performance monitoring setup
-if (import.meta.env.DEV) {
-  console.log('🚀 Zion Tech Group - Development Mode')
-  console.log('📊 Performance monitoring enabled')
-  console.log('🔧 Accessibility controls available')
+try {
+  // Render the app with proper provider structure
+  ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <WhitelabelProvider>
+            <Router>
+              <AuthProvider>
+                <NotificationProvider>
+                  <AnalyticsProvider>
+                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                      <ViewModeProvider>
+                        <CartProvider>
+                          <AppLayout>
+                            <App />
+                          </AppLayout>
+                        </CartProvider>
+                      </ViewModeProvider>
+                      <LanguageDetectionPopup />
+                    </LanguageProvider>
+                  </AnalyticsProvider>
+                </NotificationProvider>
+              </AuthProvider>
+            </Router>
+          </WhitelabelProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
+    </React.StrictMode>,
+  );
+} catch (error) {
+  console.error("Global error caught in main.tsx:", error);
+  const rootElement = document.getElementById('root');
+  if (rootElement) {
+    rootElement.innerHTML = `
+      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
+        <h1>Application Error</h1>
+        <p>A critical error occurred while loading the application.</p>
+        <p>Error: ${(error as Error).message}</p>
+        <pre>${(error as Error).stack}</pre>
+        <p>Please check the console for more details.</p>
+      </div>
+    `;
+  }
 }
 
 // Error handling for unhandled promise rejections
