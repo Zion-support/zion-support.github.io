@@ -8,10 +8,15 @@ import {
 interface SidebarItem {
   name: string;
   href: string;
-  icon?: React.ReactNode;
+  icon: React.ReactNode;
   description?: string;
   children?: SidebarItem[];
   badge?: string;
+  color?: string;
+  isNew?: boolean;
+  isHot?: boolean;
+  isPremium?: boolean;
+  category?: string;
 }
 
     ]
@@ -138,10 +143,6 @@ const quickActions = [
               <X className="w-5 h-5" />
             </button>
           </div>
-
-            </div>
-          </div>
-        </div>
 
     </>
   );

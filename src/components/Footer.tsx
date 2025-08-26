@@ -1,39 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-    ],
-  },
-  company: {
-    title: 'Company',
-    description: 'About Zion Tech Group',
-    items: [
-    ],
-  },
-  support: {
-    title: 'Support & Resources',
-    description: 'Help and Documentation',
-    items: [
-    ],
-  },
-  legal: {
-    title: 'Legal & Privacy',
-    items: [
-      { name: 'Terms of Service', href: '/terms', icon: FileText, color: 'from-zion-orange to-zion-purple' },
-      { name: 'Privacy Policy', href: '/privacy', icon: Shield, color: 'from-zion-purple to-zion-red' },
-      { name: 'Cookie Policy', href: '/cookies', icon: FileText, color: 'from-zion-green to-zion-cyan' },
-      { name: 'GDPR Compliance', href: '/gdpr', icon: Award, color: 'from-zion-green to-zion-blue' },
-      { name: 'Data Processing', href: '/data-processing', icon: Database, color: 'from-zion-blue to-zion-green' },
-      { name: 'Security Policy', href: '/security-policy', icon: Shield, color: 'from-zion-purple to-zion-red' }
-    ],
-  }
-};
 
-const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'from-blue-400 to-blue-600' },
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-marketplace', icon: Linkedin, color: 'from-blue-600 to-blue-800' },
-  { name: 'Facebook', href: 'https://www.facebook.com/zionmarketplace', icon: Facebook, color: 'from-blue-600 to-blue-800' },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'from-pink-400 to-pink-600' },
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'from-gray-600 to-gray-800' },
-];
+  const socialLinks = [
+    { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
+    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
+    { name: "GitHub", url: "https://github.com/Zion-Holdings", icon: "💻", color: "hover:bg-gray-600/20" },
+    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
+    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
+  ];
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -66,12 +40,6 @@ const socialLinks = [
               <Link to="/sitemap" className="hover:text-zion-cyan transition-colors duration-200">
                 Sitemap
               </Link>
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <span className="text-sm text-zion-slate-light">Made with</span>
-              <Heart className="w-4 h-4 text-red-500 fill-current" />
-              <span className="text-sm text-zion-slate-light">in Delaware, USA</span>
             </div>
           </div>
         </div>

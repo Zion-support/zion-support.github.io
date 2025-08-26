@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cfe48932b28a257d437f4fe13cc84eb19b3b6179
 @layer base {
   :root {
     --background: 0 0% 7%;
@@ -29,5 +32,9 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
+<<<<<<< HEAD
 }
 >>>>>>> origin/website-improvements-2025
+=======
+}
+>>>>>>> cfe48932b28a257d437f4fe13cc84eb19b3b6179
