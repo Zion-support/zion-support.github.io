@@ -4,6 +4,8 @@ import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
 import LoadingSpinner from './components/LoadingSpinner';
+import { AppWrapper } from './AppWrapper';
+import { PerformanceMonitor } from './components/ui/performance-monitor';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -30,43 +32,46 @@ const AllServices2027 = React.lazy(() => import('./pages/AllServices2027'));
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-        <AppHeader />
-        
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/green-it" element={<GreenIT />} />
-              <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/micro-saas-services" element={<MicroSaasServices />} />
-              <Route path="/zion-hire-ai" element={<ZionHireAI />} />
-              <Route path="/hire-ai" element={<ZionHireAI />} />
-              <Route path="/innovative-services-2027" element={<InnovativeServices2027 />} />
-              <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricing2027 />} />
-              <Route path="/all-services-2027" element={<AllServices2027 />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </main>
-        
-        <Footer />
-        <ChatAssistant />
-      </div>
-    </Router>
+    <AppWrapper>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+          <AppHeader />
+          
+          <main className="flex-1">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/green-it" element={<GreenIT />} />
+                <Route path="/partners" element={<PartnersPage />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/micro-saas-services" element={<MicroSaasServices />} />
+                <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+                <Route path="/hire-ai" element={<ZionHireAI />} />
+                <Route path="/innovative-services-2027" element={<InnovativeServices2027 />} />
+                <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricing2027 />} />
+                <Route path="/all-services-2027" element={<AllServices2027 />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
+          <ChatAssistant />
+          <PerformanceMonitor enabled={true} autoRefresh={true} />
+        </div>
+      </Router>
+    </AppWrapper>
   );
 }
 
