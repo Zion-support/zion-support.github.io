@@ -35,6 +35,7 @@ import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
 import { realMarketServicesExtended } from '../../data/real-market-services-extended';
 import { real2026Additions } from '../../data/real-2026-additions';
 import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
+<<<<<<< HEAD
 import { real2026Q2Additions } from '../../data/real-2026-q2-additions';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7684
 =======
@@ -44,6 +45,14 @@ import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
 import { newRealServices } from '../../data/new-real-services';
 import { marketReadyServices } from '../../data/market-ready-services';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
+=======
+import { added2026Q2Services } from '../../data/added-2026-q2-services';
+import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
+import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
+import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
+import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
+import { newSaasItAiServices2025 } from '../../data/new-saas-it-ai-services-2025';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
 
 export default function ServiceSlugPage(props: { params?: { slug?: string } }) {
 	const slug = props?.params?.slug || 'service';
@@ -92,6 +101,7 @@ function getAllServices(): Service[] {
 		.concat(real2025Q4Additions as unknown as Service[])
 		.concat(realMarketServicesExtended as unknown as Service[])
 		.concat(real2026Q1Additions as unknown as Service[])
+<<<<<<< HEAD
 		.concat(real2026Q2Additions as unknown as Service[])
 		.concat(real2026Additions as unknown as Service[]);
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7684
@@ -106,6 +116,15 @@ function getAllServices(): Service[] {
 			marketReadyServices as Service[]
 		);
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
+=======
+		.concat(real2026Additions as unknown as Service[])
+		.concat(added2026Q2Services as unknown as Service[])
+		.concat(real2026Q3Additions as unknown as Service[])
+		.concat(real2026Q4Additions as unknown as Service[])
+		.concat(real2026Q4NewServices as unknown as Service[])
+		.concat(real2027Q1Additions as unknown as Service[])
+		.concat(newSaasItAiServices2025 as unknown as Service[]);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
 }
 
 function toSlug(value: string): string {

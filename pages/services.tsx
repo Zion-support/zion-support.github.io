@@ -45,6 +45,7 @@ import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-servi
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { emergingTechServices } from '../data/emerging-tech-services';
 import { newRealServices } from '../data/new-real-services';
+<<<<<<< HEAD
 import { realMarketServices } from '../data/real-market-services';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { realAdditions2025Q3 } from '../data/2025-q3-real-additions';
@@ -57,6 +58,13 @@ import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
 import { newRealServices2026 } from '../data/2025-2026-new-real-services';
 import { additionalRealMicroSaas2026 } from '../data/2026-additional-real-micro-saas';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78c2
+=======
+import { realOperationalServices } from '../data/real-operational-services';
+import { marketReadyServices } from '../data/market-ready-services';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { industryRealServices } from '../data/industry-real-services';
+import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
 
 // Import new 2024 real market services
 import { realMarketServices } from '../data/2024-real-market-services';
@@ -121,6 +129,7 @@ const allServices = [
   ...enterpriseITSolutions,
   ...innovativeMicroSaasSolutions,
   ...cuttingEdgeAIServices,
+<<<<<<< HEAD
   ...realMicroSaasServices2025,
   ...innovativeAIServices2025,
   ...innovativeITServices2025,
@@ -128,6 +137,18 @@ const allServices = [
   ...newRealServices2026,
   ...additionalRealMicroSaas2026
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78c2
+=======
+  ...realMicroSaasServices,
+  ...innovativeAIServices,
+  ...enterpriseITServices,
+  ...emergingTechServices,
+  ...newRealServices,
+  ...realOperationalServices,
+  ...marketReadyServices,
+  ...marketValidatedServices,
+  ...industryRealServices,
+  ...newSaasItAiServices2025
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
 ];
 
 const categories = [

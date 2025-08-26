@@ -100,7 +100,87 @@ export default function ServicesAdvertisingPage() {
         { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' },
         { name: 'New Relic', href: 'https://newrelic.com/pricing' }
       ],
+<<<<<<< HEAD
       note: 'SMB: $100–$2,000/mo based on ingest and hosts.'
+=======
+      note: 'SMB budgets: $100–$2,500/mo. Enterprise: $5k–$200k/yr depending on volume and retention.'
+    },
+    {
+      title: 'Affiliate & Partner Tools',
+      links: [
+        { name: 'Refersion', href: 'https://www.refersion.com/pricing' },
+        { name: 'LeadDyno', href: 'https://www.leaddyno.com/pricing' },
+        { name: 'Post Affiliate Pro', href: 'https://www.postaffiliatepro.com/pricing/' }
+      ],
+      note: 'SMB plans: $49–$199/mo typical.'
+    },
+    {
+      title: 'SEO Content Optimization',
+      links: [
+        { name: 'Surfer SEO', href: 'https://surferseo.com/pricing/' },
+        { name: 'Clearscope', href: 'https://www.clearscope.io/pricing' }
+      ],
+      note: 'Common plans: $59–$199/mo.'
+    },
+    {
+      title: 'Portfolio Builders',
+      links: [
+        { name: 'Webflow', href: 'https://webflow.com/pricing' },
+        { name: 'Carrd', href: 'https://carrd.co/pro' }
+      ],
+      note: 'Starter from $9–$29/mo typical.'
+    },
+    {
+      title: 'CRM (Starter Tiers)',
+      links: [
+        { name: 'HubSpot Starter', href: 'https://www.hubspot.com/pricing/marketing/compare' },
+        { name: 'Zoho Bigin', href: 'https://www.zoho.com/bigin/pricing/' }
+      ],
+      note: 'Entry CRM $9–$45/user/mo typical.'
+    }
+  ];
+
+  const extraRefs = [
+    {
+      title: 'Helpdesk & ITSM',
+      links: [
+        { name: 'Zendesk', href: 'https://www.zendesk.com/pricing/' },
+        { name: 'Freshdesk', href: 'https://freshdesk.com/pricing' }
+      ],
+      note: 'Per-agent pricing: $19–$99/agent/mo typical.'
+    },
+    {
+      title: 'E-commerce Returns',
+      links: [
+        { name: 'Loop Returns', href: 'https://www.loopreturns.com/pricing' },
+        { name: 'Returnly', href: 'https://www.affirmsolutions.com/platform/returns' }
+      ],
+      note: 'SMB plans: $50–$300/mo typical.'
+    },
+    {
+      title: 'Sales Engagement',
+      links: [
+        { name: 'Reply.io', href: 'https://reply.io/pricing' },
+        { name: 'Mixmax', href: 'https://mixmax.com/pricing' }
+      ],
+      note: 'Seats from $29–$99/mo typical.'
+    },
+    {
+      title: 'Transcription & Media',
+      links: [
+        { name: 'Rev', href: 'https://www.rev.com/pricing' },
+        { name: 'Descript', href: 'https://www.descript.com/pricing' }
+      ],
+      note: 'Per minute or per-seat pricing; $12–$30/seat/mo common.'
+    },
+    {
+      title: 'SMB Web Analytics',
+      links: [
+        { name: 'Plausible', href: 'https://plausible.io/#pricing' },
+        { name: 'Fathom Analytics', href: 'https://usefathom.com/pricing' }
+      ],
+      note: '$9–$50/mo typical for low-to-mid traffic.'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
     }
   ];
 
@@ -305,6 +385,7 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 				</section>
 
+<<<<<<< HEAD
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">TLS Certificate Monitor</h2>
 					<p className="text-slate-300">Expiry alerts, issuance auditing, and auto-renew guidance.</p>
@@ -313,6 +394,52 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://letsencrypt.org/')} , {ext('https://www.ssllabs.com/ssltest/')}</li>
 					</ul>
 				</section>
+=======
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Micro SaaS & IT Solutions</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { name: 'Affiliate Marketing Tracker Pro', price: '$99/mo', href: '/affiliate-marketing-tracker-pro', refs: [{ n: 'Refersion', u: 'https://www.refersion.com/pricing' }] },
+                { name: 'SMB Privacy Web Analytics', price: '$12/mo', href: '/smb-privacy-web-analytics', refs: [{ n: 'Plausible', u: 'https://plausible.io/#pricing' }] },
+                { name: 'MSP Helpdesk & ITSM', price: '$149/mo', href: '/msp-helpdesk-itsm', refs: [{ n: 'Freshdesk', u: 'https://freshdesk.com/pricing' }] },
+                { name: 'AI Content Creation Studio', price: '$39/mo', href: '/ai-content-creation-studio', refs: [{ n: 'Jasper', u: 'https://www.jasper.ai/pricing' }] },
+                { name: 'E-commerce Returns Manager', price: '$59/mo', href: '/ecommerce-returns-manager', refs: [{ n: 'Loop Returns', u: 'https://www.loopreturns.com/pricing' }] },
+                { name: 'Automated Email Follow-ups', price: '$29/mo', href: '/automated-email-followups', refs: [{ n: 'Reply.io', u: 'https://reply.io/pricing' }] },
+                { name: 'Podcast Transcription Pro', price: '$15/mo', href: '/podcast-transcription-pro', refs: [{ n: 'Rev', u: 'https://www.rev.com/pricing' }] },
+                { name: 'Freelancer Portfolio Builder', price: '$9/mo', href: '/freelancer-portfolio-builder', refs: [{ n: 'Webflow', u: 'https://webflow.com/pricing' }] },
+                { name: 'Micro CRM for Local Business', price: '$19/mo', href: '/micro-crm-local-business', refs: [{ n: 'Zoho Bigin', u: 'https://www.zoho.com/bigin/pricing/' }] },
+                { name: 'AI SEO Content Optimizer', price: '$59/mo', href: '/ai-seo-content-optimizer', refs: [{ n: 'Surfer SEO', u: 'https://surferseo.com/pricing/' }] }
+              ].map((o) => (
+                <div key={o.name} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                  <a href={o.href} className="block group">
+                    <div className="text-sm text-gray-400 mb-1">From</div>
+                    <div className="flex items-center justify-between">
+                      <div className="text-white font-semibold text-lg group-hover:text-cyan-300">{o.name}</div>
+                      <div className="text-cyan-300 font-medium">{o.price}</div>
+                    </div>
+                  </a>
+                  <div className="mt-3 text-sm text-gray-400 flex flex-wrap gap-3">
+                    {o.refs.map((r) => (
+                      <a key={r.n} href={r.u} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-gray-300 hover:text-white">
+                        <ExternalLink className="w-4 h-4" /> {r.n}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-cyan-700 text-white">
+                Get a Custom Quote <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <a href="tel:+13024640950" className="text-gray-300 hover:text-white">Call: +1 302 464 0950</a>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white">Email: kleber@ziontechgroup.com</a>
+            </div>
+          </section>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
 
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Domain & DNS Monitor</h2>
