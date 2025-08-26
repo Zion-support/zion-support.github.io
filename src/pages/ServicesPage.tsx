@@ -4,10 +4,11 @@ import { ProductListing } from "@/types/listings";
 import { SERVICES } from "@/data/servicesData";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { Globe, Zap } from "lucide-react";
+import { Globe, ArrowRight, Star } from "lucide-react";
 import { useEffect, useState } from "react";
-import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
+import { EXPANDED_SERVICES } from "@/data/expandedServices";
 
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -260,6 +261,11 @@ export default function ServicesPage() {
                 Micro SAAS Services
               </Button>
             </Link>
+            <Link to="/pricing">
+              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                View Pricing Guide
+              </Button>
+            </Link>
             <Link to="/request-quote">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                 Request a Quote
@@ -267,65 +273,133 @@ export default function ServicesPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </div>
+      <DynamicListingPage 
+        title="IT & AI Services"
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
+        categorySlug="services"
+        listings={listings}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min: 3000, max: 10000 }}
+      />
 
-      {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Core Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-8 rounded-xl bg-slate-800/50 hover:bg-slate-800/70 transition-all duration-300 border border-slate-700/50">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-white" />
+      {/* New Comprehensive Services Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Discover Our Complete Service Portfolio
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+              From AI chatbots to blockchain development, we offer 25+ specialized micro SAAS services and IT solutions
+            </p>
+            <Link to="/comprehensive-services">
+              <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">
+                View All Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+          </div>
+
+          {/* Featured Service Categories */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {[
+              {
+                title: "AI Services",
+                count: 3,
+                description: "Chatbots, Content Generation, Analytics",
+                icon: "🤖",
+                color: "from-purple-500 to-indigo-600"
+              },
+              {
+                title: "Cloud Services", 
+                count: 3,
+                description: "Migration, DevOps, Serverless",
+                icon: "☁️",
+                color: "from-cyan-500 to-blue-600"
+              },
+              {
+                title: "Cybersecurity",
+                count: 3,
+                description: "Audit, Zero Trust, Incident Response",
+                icon: "🛡️",
+                color: "from-red-500 to-pink-600"
+              },
+              {
+                title: "Emerging Tech",
+                count: 3,
+                description: "Blockchain, IoT, AR/VR",
+                icon: "🚀",
+                color: "from-green-500 to-emerald-600"
+              }
+            ].map((category) => (
+              <div key={category.title} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/20">
+                <div className="text-4xl mb-4">{category.icon}</div>
+                <h3 className="text-white text-xl font-bold mb-2">{category.title}</h3>
+                <p className="text-zion-slate-light text-sm mb-3">{category.description}</p>
+                <div className="text-zion-cyan font-semibold">{category.count} Services</div>
               </div>
-              <h3 className="text-2xl font-semibold text-white mb-4">AI & Machine Learning</h3>
-              <p className="text-gray-300 mb-6">
-                Cutting-edge artificial intelligence solutions including machine learning models, natural language processing, and predictive analytics.
-              </p>
-              <Link
-                to="/services/ai"
-                className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
-              >
-                Learn More →
-              </Link>
+            ))}
+          </div>
+
+          {/* Sample Featured Services */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-white text-center mb-8">Featured Services</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {EXPANDED_SERVICES.filter(s => s.featured).slice(0, 3).map((service) => (
+                <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <div className="flex items-center justify-between mb-3">
+                    <Badge className="bg-zion-cyan text-white text-xs">
+                      {service.category}
+                    </Badge>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <span className="text-white text-sm">{service.rating}</span>
+                    </div>
+                  </div>
+                  <h4 className="text-white font-semibold mb-2">{service.title}</h4>
+                  <p className="text-zion-slate-light text-sm mb-3 overflow-hidden text-ellipsis" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
+                    {service.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-cyan font-bold">${service.price?.toLocaleString()}</span>
+                    <Link to="/comprehensive-services">
+                      <Button size="sm" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                        Learn More
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              ))}
             </div>
+          </div>
 
-            <div className="p-8 rounded-xl bg-slate-800/50 hover:bg-slate-800/70 transition-all duration-300 border border-slate-700/50">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Cloud & DevOps</h3>
-              <p className="text-gray-300 mb-6">
-                Scalable cloud infrastructure, automated deployment pipelines, and comprehensive DevOps solutions.
+          {/* CTA Section */}
+          <div className="text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Need a Custom Solution?
+              </h3>
+              <p className="text-zion-slate-light mb-6">
+                Our expert team can tailor any service to your specific business requirements
               </p>
-              <Link
-                to="/services/cloud"
-                className="text-purple-400 hover:text-purple-300 transition-colors font-medium"
-              >
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="p-8 rounded-xl bg-slate-800/50 hover:bg-slate-800/70 transition-all duration-300 border border-slate-700/50">
-              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-white" />
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link to="/request-quote">
+                  <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">
+                    Request Custom Quote
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                    Contact Our Team
+                  </Button>
+                </Link>
               </div>
-              <h3 className="text-2xl font-semibold text-white mb-4">Cybersecurity</h3>
-              <p className="text-gray-300 mb-6">
-                Advanced security solutions protecting your digital assets from evolving cyber threats.
-              </p>
-              <Link
-                to="/services/cybersecurity"
-                className="text-red-400 hover:text-red-300 transition-colors font-medium"
-              >
-                Learn More →
-              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trusted By Section */}
       <TrustedBySection />
 
       {/* CTA Section */}
