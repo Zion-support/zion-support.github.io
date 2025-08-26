@@ -43,51 +43,51 @@ const Footer: React.FC = () => {
     }
   ];
 
-  const footerSections = [
-    {
-      title: 'Services',
-      links: [
-        { name: 'AI Solutions', href: '/services' },
-        { name: 'Cloud & DevOps', href: '/services' },
-        { name: 'Cybersecurity', href: '/services' },
-        { name: 'Digital Transformation', href: '/services' },
-        { name: 'Web Development', href: '/services' },
-        { name: 'Data Analytics', href: '/services' }
-      ]
-    },
-    {
-      title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/about' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'News', href: '/news' },
-        { name: 'Press Kit', href: '/press' }
-      ]
-    },
-    {
-      title: 'Support',
-      links: [
-        { name: 'Contact Us', href: '/contact' },
-        { name: 'Help Center', href: '/help' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Status Page', href: '/status' },
-        { name: 'Support Portal', href: '/support' }
-      ]
-    },
-    {
-      title: 'Legal',
-      links: [
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'GDPR Compliance', href: '/gdpr' },
-        { name: 'Security', href: '/security' },
-        { name: 'Compliance', href: '/compliance' }
-      ]
-    }
+        const footerSections = [
+        {
+          title: 'Services',
+          links: [
+            { name: 'AI Solutions', href: '/services/ai-services' },
+            { name: 'Cloud & DevOps', href: '/services' },
+            { name: 'Cybersecurity', href: '/services/cybersecurity' },
+            { name: 'Digital Transformation', href: '/services' },
+            { name: 'IT Solutions', href: '/services/it-solutions' },
+            { name: 'Data Analytics', href: '/services' }
+          ]
+        },
+            {
+          title: 'Company',
+          links: [
+            { name: 'About Us', href: '/about' },
+            { name: 'Our Team', href: '/about' },
+            { name: 'Careers', href: '/careers' },
+            { name: 'Blog', href: '/blog' },
+            { name: 'Partners', href: '/partners' },
+            { name: 'Contact', href: '/contact' }
+          ]
+        },
+            {
+          title: 'Support',
+          links: [
+            { name: 'Contact Us', href: '/contact' },
+            { name: 'Help Center', href: '/help-center' },
+            { name: 'FAQ', href: '/faq' },
+            { name: 'Support', href: '/support' },
+            { name: 'Request Quote', href: '/request-quote' },
+            { name: 'Get Started', href: '/contact' }
+          ]
+        },
+            {
+          title: 'Legal',
+          links: [
+            { name: 'Privacy Policy', href: '/privacy' },
+            { name: 'Terms of Service', href: '/terms' },
+            { name: 'Cookie Policy', href: '/cookies' },
+            { name: 'Pricing', href: '/pricing' },
+            { name: 'About Us', href: '/about' },
+            { name: 'Contact', href: '/contact' }
+          ]
+        }
   ];
 
   return (

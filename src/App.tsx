@@ -44,6 +44,11 @@ const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 
 const InnovativeNewServices2025 = React.lazy(() => import('./pages/InnovativeNewServices2025'));
+const About = React.lazy(() => import('./pages/About'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const ITSolutions = React.lazy(() => import('./pages/services/ITSolutions'));
+const AIServices = React.lazy(() => import('./pages/services/AIServices'));
+const Cybersecurity = React.lazy(() => import('./pages/services/Cybersecurity'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -69,6 +74,12 @@ const baseRoutes = [
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/innovative-new-services-2025', element: <InnovativeNewServices2025 /> },
+  // New routes for missing pages
+  { path: '/about', element: <About /> },
+  { path: '/pricing', element: <Pricing /> },
+  { path: '/services/it-solutions', element: <ITSolutions /> },
+  { path: '/services/ai-services', element: <AIServices /> },
+  { path: '/services/cybersecurity', element: <Cybersecurity /> },
 ];
 
 const App = () => {

@@ -37,9 +37,9 @@ export function Header() {
     ];
     const talentDropdownItems = [
         { name: 'Browse Talents', path: '/talents' },
-        { name: 'Talent Directory', path: '/talent-directory' },
-        { name: 'AI Matcher', path: '/ai-matcher' },
-        { name: 'Hire Now', path: '/hire-now' },
+        { name: 'Talent Directory', path: '/talent' },
+        { name: 'AI Matcher', path: '/match' },
+        { name: 'Hire Now', path: '/contact' },
     ];
     return (_jsxs("header", { className: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
             ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
