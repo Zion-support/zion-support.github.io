@@ -297,7 +297,7 @@ export function FeaturedListingsSection() {
                 </Link>
               </div>
             </div>))}
-        </></div>
+        </div>
         
         {/* Enhanced bottom CTA */}
         <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
@@ -313,8 +313,7 @@ export function FeaturedListingsSection() {
             </div>
           </div>
         </motion.div>
-      </div>);
-    section >
-    ;
-    ;
+      </div>
+    </section>
+  );
 }
