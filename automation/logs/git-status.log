@@ -8812,3 +8812,25 @@ M  src/pages/services/Consulting.tsx
 M  src/pages/services/Cybersecurity.tsx
 M  src/pages/services/Infrastructure.tsx
 M  src/pages/services/Transformation.tsx
+M  automation/data/analyzed-links.json
+MM automation/data/autonomous-state.json
+M  automation/data/health-report.json
+MM automation/data/performance-alerts.json
+MM automation/data/performance-metrics.json
+MM automation/logs/HEALTH.runtime.log
+MM automation/logs/SYSTEM.runtime.log
+M  automation/logs/autonomous-manager-coordinated.log
+M  automation/logs/autonomous-system-manager.runtime.log
+M  automation/logs/continuous-improvement.log
+MM automation/logs/error-recovery.log
+M  automation/logs/git-pull-rebase.log
+M  automation/logs/git-sync.log
+M  automation/logs/health-check.log
+M  automation/logs/link-health-scheduler-coordinated.log
+MM automation/logs/link-health-scheduler.runtime.log
+MM automation/logs/master-coordinator.log
+M  automation/logs/ml-link-intelligence.runtime.log
+ M automation/logs/performance-monitor-coordinated.log
+MM automation/logs/real-time-performance-monitor.runtime.log
+M  automation/logs/run-automation.log
+M  src/components/profile/HireNowCTA.tsx

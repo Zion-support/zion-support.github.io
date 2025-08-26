@@ -2264,3 +2264,113 @@
 [2025-08-26 07:00:04] Health check process completed
 [2025-08-26 07:00:04] Health report saved to automation/data/health-report.json
 [2025-08-26 07:00:04] Health check process completed
+[2025-08-26 07:10:01] Starting health check process...
+[2025-08-26 07:10:01] Checking system resources...
+[2025-08-26 07:10:03] CPU usage: 24.73%
+[2025-08-26 07:10:03] Memory usage: 96.00%
+[2025-08-26 07:10:03] Disk usage: 8%
+[2025-08-26 07:10:03] Checking automation services health...
+🔍 Checking Zion Automation Systems Status...
+
+🟢 Online autonomous-system-manager
+   Last Activity: 1s ago
+
+🟢 Online ml-link-intelligence
+   Last Activity: 1s ago
+
+🟢 Online link-health-scheduler
+   Last Activity: 1s ago
+
+🟢 Online real-time-performance-monitor
+   Last Activity: 1s ago
+
+📊 Log Files: 44 found
+   HEALTH.runtime.log: 17.14 KB
+   SYSTEM.runtime.log: 80.32 KB
+   ai-trends-cron.log: 0.13 KB
+   ai-trends-research.log: 0.25 KB
+   autonomous-manager-coordinated.log: 64.98 KB
+   autonomous-system-manager.log: 2.27 KB
+   autonomous-system-manager.runtime.log: 328.08 KB
+   backup.log: 1.47 KB
+   build.log: 5.82 KB
+   code-quality.log: 7.16 KB
+   config-sync.log: 3.46 KB
+   continuous-improvement.log: 10.73 KB
+   cron.log: 2.10 KB
+   data-sync.log: 3.95 KB
+   dependency.log: 11.83 KB
+   enhanced-automation-orchestrator.runtime.log: 12.20 KB
+   enhanced-autonomous-coordinated.log: 74.93 KB
+   enhanced-git-sync.log: 7.60 KB
+   error-recovery.log: 243.77 KB
+   file-sync.log: 2.84 KB
+   git-pull-rebase.log: 7.60 KB
+   git-status.log: 960.92 KB
+   git-sync.log: 260.14 KB
+   health-check.log: 99.62 KB
+   health.log: 15.07 KB
+   infinite-improvement.log: 14.03 KB
+   link-health-scheduler-coordinated.log: 37.28 KB
+   link-health-scheduler.log: 0.12 KB
+   link-health-scheduler.runtime.log: 184.97 KB
+   log-rotation.log: 0.39 KB
+   maintenance.log: 1.39 KB
+   master-coordinator.log: 71.58 KB
+   ml-link-intelligence-coordinated.log: 61.03 KB
+   ml-link-intelligence.log: 0.30 KB
+   ml-link-intelligence.runtime.log: 307.84 KB
+   performance-monitor-coordinated.log: 37.99 KB
+   real-time-performance-monitor.log: 1.36 KB
+   real-time-performance-monitor.runtime.log: 196.57 KB
+   run-automation.log: 78.45 KB
+   security.log: 2.54 KB
+   sitemap-keeper.log: 1.15 KB
+   sync-launcher.log: 1.37 KB
+   sync-orchestrator.log: 1.75 KB
+   test.log: 0.00 KB
+
+💾 Data Files: 9 found
+   ai-trends.json: 2.23 KB
+   analyzed-links.json: 2.17 KB
+   autonomous-config.json: 1.36 KB
+   autonomous-state.json: 0.82 KB
+   health-report.json: 0.40 KB
+   link-schedule.json: 0.45 KB
+   performance-alerts.json: 0.40 KB
+   performance-metrics.json: 5.04 KB
+   scheduled-links.json: 1.29 KB
+
+==================================================
+✅ All automation systems are healthy and running!
+==================================================
+[2025-08-26 07:10:03] Checking process counts...
+[2025-08-26 07:10:03] Process counts:
+[2025-08-26 07:10:03]   Autonomous System Manager:        0
+[2025-08-26 07:10:03]   ML Link Intelligence:        3
+[2025-08-26 07:10:03]   Link Health Scheduler:        2
+[2025-08-26 07:10:03]   Performance Monitor:        3
+[2025-08-26 07:10:03] WARNING: 16 zombie processes detected!
+[2025-08-26 07:10:03] Checking log file health...
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/ai-trends-cron.log is stale (age: 27694s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/ai-trends-research.log is stale (age: 27694s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/autonomous-system-manager.log is stale (age: 27694s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/backup.log is stale (age: 27694s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/build.log is stale (age: 9156s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/config-sync.log is stale (age: 67353s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/data-sync.log is stale (age: 67352s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/dependency.log is stale (age: 11127s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/enhanced-automation-orchestrator.runtime.log is stale (age: 45187s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/enhanced-git-sync.log is stale (age: 66719s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/file-sync.log is stale (age: 67350s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/link-health-scheduler.log is stale (age: 27694s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/log-rotation.log is stale (age: 14818s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/maintenance.log is stale (age: 27694s)
+[2025-08-26 07:10:04] WARNING: Log file automation/logs/ml-link-intelligence.log is stale (age: 27694s)
+[2025-08-26 07:10:05] WARNING: Log file automation/logs/real-time-performance-monitor.log is stale (age: 27695s)
+[2025-08-26 07:10:05] WARNING: Log file automation/logs/security.log is stale (age: 24699s)
+[2025-08-26 07:10:05] WARNING: Log file automation/logs/sitemap-keeper.log is stale (age: 27694s)
+[2025-08-26 07:10:05] WARNING: Log file automation/logs/sync-launcher.log is stale (age: 66956s)
+[2025-08-26 07:10:05] WARNING: Log file automation/logs/sync-orchestrator.log is stale (age: 67348s)
+[2025-08-26 07:10:05] Health report saved to automation/data/health-report.json
+[2025-08-26 07:10:05] Health check process completed

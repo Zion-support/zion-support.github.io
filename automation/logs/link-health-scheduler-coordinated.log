@@ -527,3 +527,10 @@
 [2025-08-26T10:08:01.978Z] Stopping Link Health Scheduler...
 [2025-08-26T10:08:01.978Z] Stopping Link Health Scheduler
 [2025-08-26T10:08:01.979Z] All scheduled jobs cleared
+[2025-08-26T10:10:09.649Z] Starting Link Health Scheduler
+[2025-08-26T10:10:09.654Z] Starting Link Health Scheduler
+[2025-08-26T10:10:09.654Z] Scheduled 4 links for health checks
+[2025-08-26T10:10:09.654Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T10:16:33.601Z] Stopping Link Health Scheduler...
+[2025-08-26T10:16:33.602Z] Stopping Link Health Scheduler
+[2025-08-26T10:16:33.602Z] All scheduled jobs cleared

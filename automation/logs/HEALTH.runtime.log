@@ -226,3 +226,6 @@
 [2025-08-26T10:06:34.251Z] [HEALTH] Health check issues found: Service real-time-performance-monitor is enabled but not running
 [2025-08-26T10:07:04.251Z] [HEALTH] All services healthy
 [2025-08-26T10:07:34.250Z] [HEALTH] All services healthy
+[2025-08-26T10:10:04.244Z] [HEALTH] Health check issues found: Service autonomous-system-manager is enabled but not running
+[2025-08-26T10:10:34.244Z] [HEALTH] All services healthy
+[2025-08-26T10:16:26.364Z] [HEALTH] All services healthy
