@@ -1,57 +1,46 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Services from './pages/Services';
-import InnovativeServices2025 from './pages/InnovativeServices2025';
-import ComprehensivePricing2025 from './pages/ComprehensivePricing2025';
-import Blog from './pages/Blog';
-import NotFound from './pages/NotFound';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import Cookies from './pages/Cookies';
-import HelpCenter from './pages/HelpCenter';
-import Careers from './pages/Careers';
-import News from './pages/News';
-import Press from './pages/Press';
-import Status from './pages/Status';
-import Support from './pages/Support';
+import ComprehensiveServicesShowcase from './components/ComprehensiveServicesShowcase';
 
-function App() {
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home'));
+const Services = lazy(() => import('./pages/Services'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const InnovativeServicesOverview = lazy(() => import('./pages/InnovativeServicesOverview'));
+
+// Loading spinner component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
+  </div>
+);
+
+const App: React.FC = () => {
   return (
     <Router>
-      <div className="App">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
         <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            {/* Temporarily disabled due to TypeScript errors
-            <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
-            <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricing2025 />} />
-            */}
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/cookies" element={<Cookies />} />
-            <Route path="/help" element={<HelpCenter />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/press" element={<Press />} />
-            <Route path="/status" element={<Status />} />
-            <Route path="/support" element={<Support />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+        
+        <main className="pt-20">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/comprehensive" element={<ComprehensiveServicesShowcase />} />
+              <Route path="/services/overview" element={<InnovativeServicesOverview />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
         </main>
+        
         <Footer />
       </div>
     </Router>
   );
-}
+};
 
 export default App;
