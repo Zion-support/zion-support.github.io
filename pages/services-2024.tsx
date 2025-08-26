@@ -6,9 +6,8 @@ import {
   Brain, Atom, Cpu, Shield, Database, Cloud,
   ArrowRight, CheckCircle, Zap, Sparkles
 } from 'lucide-react';
-import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
-import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
-import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
+import { ultimateInnovativeServices2026 } from '../data/2026-ultimate-innovative-services';
+import { enterpriseITInfrastructureServices2026 } from '../data/2026-enterprise-it-infrastructure-services';
 import Link from 'next/link';
 
 const Services2024Page: React.FC = () => {
@@ -18,7 +17,7 @@ const Services2024Page: React.FC = () => {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
   // Combine all services
-  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024];
+  const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026];
 
   // Filter and sort services
   const filteredServices = useMemo(() => {

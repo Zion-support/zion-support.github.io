@@ -52,6 +52,10 @@ const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'))
 const NextGenInnovativeServices2025 = lazy(() => import('./pages/NextGenInnovativeServices2025'));
 const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
 
+// Ultimate Innovative Services 2026
+const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
+const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
+
 // Additional innovative micro SAAS services
 const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
@@ -183,6 +187,12 @@ const routes = [
   { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
   { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
   { path: '/services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
+  
+  // Ultimate Innovative Services 2026
+  { path: '/ultimate-services-showcase-2026', element: <UltimateServicesShowcase2026 /> },
+  { path: '/ultimate-services-2026', element: <UltimateServicesShowcase2026 /> },
+  { path: '/comprehensive-pricing-2026', element: <ComprehensivePricing2026 /> },
+  { path: '/pricing-2026', element: <ComprehensivePricing2026 /> },
   
   // Other routes
   { path: '/match', element: <AIMatcherPage /> },

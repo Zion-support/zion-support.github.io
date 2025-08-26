@@ -397,6 +397,30 @@ const Home: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
+                  to="/ultimate-services-showcase-2026"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-purple-500/25 transition-all duration-300 border border-purple-500/30 hover:border-purple-500/60"
+                >
+                  <span className="text-xl">🔮</span>
+                  Ultimate Services 2026
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  to="/comprehensive-pricing-2026"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-green-500/25 transition-all duration-300 border border-green-500/30 hover:border-green-500/60"
+                >
+                  <span className="text-xl">💰</span>
+                  View Pricing
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
                   to="/services"
                   className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white font-semibold text-lg py-4 px-8 rounded-xl border border-white/30 hover:border-zion-cyan/50 hover:bg-white/20 transition-all duration-300 shadow-lg"
                 >
