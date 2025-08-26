@@ -150,27 +150,23 @@ const config: Config = {
         },
 =======
 =======
+        // Additional colors for enhanced components
         "zion-green": {
           DEFAULT: "#10b981",
           light: "#34d399",
           dark: "#059669",
         },
-        "zion-yellow": {
+        "zion-orange": {
           DEFAULT: "#f59e0b",
           light: "#fbbf24",
           dark: "#d97706",
         },
-        "zion-orange": {
-          DEFAULT: "#f97316",
-          light: "#fb923c",
-          dark: "#ea580c",
-        },
-        "zion-red": {
-          DEFAULT: "#ef4444",
-          light: "#f87171",
-          dark: "#dc2626",
-        },
 =======
+        "zion-pink": {
+          DEFAULT: "#ec4899",
+          light: "#f472b6",
+          dark: "#db2777",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
