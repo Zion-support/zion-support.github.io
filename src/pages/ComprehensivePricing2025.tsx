@@ -27,24 +27,24 @@ import {
   Smartphone,
   ArrowRight
 } from 'lucide-react';
-import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '../data/advancedInnovativeServices2025';
+import { advancedInnovativeServices2025 } from '../data/advancedInnovativeServices2025';
 
 const ComprehensivePricing2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricingModel, setSelectedPricingModel] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Services', count: ADVANCED_INNOVATIVE_SERVICES_2025.length },
-    { id: 'AI & FinTech', name: 'AI & FinTech', count: ADVANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'AI & FinTech').length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: ADVANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: ADVANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'AI & Healthcare').length },
-    { id: 'Blockchain', name: 'Blockchain', count: ADVANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'Blockchain').length },
-    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: ADVANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'IoT & Edge Computing').length },
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: ADVANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'AI & Legal Tech').length },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: ADVANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'AI & Marketing').length },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: ADVANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'Quantum Computing').length },
-    { id: 'AI & Sustainability', name: 'AI & Sustainability', count: ADVANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'AI & Sustainability').length },
-    { id: 'AI & DevOps', name: 'AI & DevOps', count: ADVANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'AI & DevOps').length }
+            { id: 'all', name: 'All Services', count: advancedInnovativeServices2025.length },
+        { id: 'AI & FinTech', name: 'AI & FinTech', count: advancedInnovativeServices2025.filter(s => s.category === 'AI & FinTech').length },
+        { id: 'Cybersecurity', name: 'Cybersecurity', count: advancedInnovativeServices2025.filter(s => s.category === 'Cybersecurity').length },
+        { id: 'AI & Healthcare', name: 'AI & Healthcare', count: advancedInnovativeServices2025.filter(s => s.category === 'AI & Healthcare').length },
+        { id: 'Blockchain', name: 'Blockchain', count: advancedInnovativeServices2025.filter(s => s.category === 'Blockchain').length },
+        { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: advancedInnovativeServices2025.filter(s => s.category === 'IoT & Edge Computing').length },
+        { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: advancedInnovativeServices2025.filter(s => s.category === 'AI & Legal Tech').length },
+        { id: 'AI & Marketing', name: 'AI & Marketing', count: advancedInnovativeServices2025.filter(s => s.category === 'AI & Marketing').length },
+        { id: 'Quantum Computing', name: 'Quantum Computing', count: advancedInnovativeServices2025.filter(s => s.category === 'Quantum Computing').length },
+        { id: 'AI & Sustainability', name: 'AI & Sustainability', count: advancedInnovativeServices2025.filter(s => s.category === 'AI & Sustainability').length },
+        { id: 'AI & DevOps', name: 'AI & DevOps', count: advancedInnovativeServices2025.filter(s => s.category === 'AI & DevOps').length }
   ];
 
   const pricingModels = [
@@ -54,7 +54,7 @@ const ComprehensivePricing2025: React.FC = () => {
     { id: 'enterprise', name: 'Enterprise Custom' }
   ];
 
-  const filteredServices = ADVANCED_INNOVATIVE_SERVICES_2025.filter(service => {
+  const filteredServices = advancedInnovativeServices2025.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesPricing = selectedPricingModel === 'all' || service.pricingModel === selectedPricingModel;
     return matchesCategory && matchesPricing;
@@ -253,7 +253,7 @@ const ComprehensivePricing2025: React.FC = () => {
                   </div>
                   
                   <h3 className="text-xl font-bold mb-3 leading-tight">
-                    {service.title}
+                    {service.name}
                   </h3>
                   
                   <div className="flex items-baseline gap-2">
@@ -315,7 +315,7 @@ const ComprehensivePricing2025: React.FC = () => {
                     </div>
                     <div className="text-center p-3 bg-gray-50 rounded-lg">
                       <div className="text-sm font-medium text-gray-500">Implementation</div>
-                      <div className="text-lg font-bold text-blue-600">{service.implementationTime}</div>
+                      <div className="text-lg font-bold text-blue-600">{service.setupTime}</div>
                     </div>
                   </div>
 
@@ -326,11 +326,11 @@ const ComprehensivePricing2025: React.FC = () => {
                     </div>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-500">Uptime:</span>
-                      <span className="font-semibold text-gray-900">{service.uptime}</span>
+                      <span className="font-semibold text-gray-900">{service.technicalSpecs?.uptime || '99.9%'}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-500">Support Level:</span>
-                      <span className="font-semibold text-gray-900 capitalize">{service.supportLevel}</span>
+                      <span className="font-semibold text-gray-900 capitalize">{service.pricing}</span>
                     </div>
                   </div>
                 </div>
@@ -340,56 +340,48 @@ const ComprehensivePricing2025: React.FC = () => {
                   <div className="mb-4">
                     <h5 className="text-sm font-medium text-gray-700 mb-2">Technology Stack:</h5>
                     <div className="flex flex-wrap gap-1">
-                      {service.technology.slice(0, 4).map((tech, idx) => (
+                      {service.technicalSpecs?.technology.slice(0, 4).map((tech, idx) => (
                         <span key={idx} className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
                           {tech}
                         </span>
                       ))}
-                      {service.technology.length > 4 && (
+                      {service.technicalSpecs?.technology && service.technicalSpecs.technology.length > 4 && (
                         <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
-                          +{service.technology.length - 4}
+                          +{service.technicalSpecs.technology.length - 4}
                         </span>
                       )}
                     </div>
                   </div>
 
                   <div className="mb-4 flex flex-wrap gap-2">
-                    {service.apiAccess && (
-                      <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded flex items-center gap-1">
-                        <CheckCircle className="w-3 h-3" />
-                        API Access
-                      </span>
-                    )}
-                    {service.mobileApp && (
-                      <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded flex items-center gap-1">
-                        <Smartphone className="w-3 h-3" />
-                        Mobile App
-                      </span>
-                    )}
-                    {service.whiteLabel && (
-                      <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded flex items-center gap-1">
-                        <Globe className="w-3 h-3" />
-                        White Label
-                      </span>
-                    )}
-                    {service.customBranding && (
-                      <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded flex items-center gap-1">
-                        <Target className="w-3 h-3" />
-                        Custom Branding
-                      </span>
-                    )}
+                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded flex items-center gap-1">
+                      <CheckCircle className="w-3 h-3" />
+                      API Access
+                    </span>
+                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded flex items-center gap-1">
+                      <Smartphone className="w-3 h-3" />
+                      Mobile App
+                    </span>
+                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded flex items-center gap-1">
+                      <Globe className="w-3 h-3" />
+                      White Label
+                    </span>
+                    <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded flex items-center gap-1">
+                      <Target className="w-3 h-3" />
+                      Custom Branding
+                    </span>
                   </div>
 
                   {/* CTA Button */}
                   <div className="space-y-3">
                     <a
-                      href={`mailto:${service.contactInfo.email}?subject=Pricing Inquiry for ${service.title}`}
+                      href={`mailto:${service.contactInfo.email}?subject=Pricing Inquiry for ${service.name}`}
                       className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 text-center block"
                     >
                       Get Custom Quote
                     </a>
                     <a
-                      href={`mailto:${service.contactInfo.email}?subject=Demo Request for ${service.title}`}
+                      href={`mailto:${service.contactInfo.email}?subject=Demo Request for ${service.name}`}
                       className="w-full bg-gray-100 text-gray-700 font-semibold py-3 px-4 rounded-lg hover:bg-gray-200 transition-all duration-200 text-center block"
                     >
                       Request Demo

@@ -24,7 +24,7 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '../data/advancedInnovativeServices2025';
+import { advancedInnovativeServices2025 } from '../data/advancedInnovativeServices2025';
 
 const AdvancedInnovativeServicesShowcase: React.FC = () => {
   const containerVariants = {
@@ -146,7 +146,7 @@ const AdvancedInnovativeServicesShowcase: React.FC = () => {
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {ADVANCED_INNOVATIVE_SERVICES_2025.map((service, index) => (
+            {advancedInnovativeServices2025.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -172,7 +172,7 @@ const AdvancedInnovativeServicesShowcase: React.FC = () => {
                   </div>
                   
                   <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
-                    {service.title}
+                    {service.name}
                   </h3>
                   
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -226,7 +226,7 @@ const AdvancedInnovativeServicesShowcase: React.FC = () => {
                     </div>
                     <div className="text-center p-3 bg-gray-50 rounded-lg">
                       <div className="text-sm font-medium text-gray-500">Implementation</div>
-                      <div className="text-lg font-bold text-blue-600">{service.implementationTime}</div>
+                      <div className="text-lg font-bold text-blue-600">{service.setupTime}</div>
                     </div>
                   </div>
 
@@ -237,11 +237,11 @@ const AdvancedInnovativeServicesShowcase: React.FC = () => {
                     </div>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-500">Uptime:</span>
-                      <span className="font-semibold text-gray-900">{service.uptime}</span>
+                      <span className="font-semibold text-gray-900">{service.technicalSpecs?.uptime || '99.9%'}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-500">Support Level:</span>
-                      <span className="font-semibold text-gray-900 capitalize">{service.supportLevel}</span>
+                      <span className="font-semibold text-gray-900 capitalize">{service.pricing}</span>
                     </div>
                   </div>
 
@@ -249,14 +249,14 @@ const AdvancedInnovativeServicesShowcase: React.FC = () => {
                   <div className="mt-4">
                     <h5 className="text-sm font-medium text-gray-700 mb-2">Technology Stack:</h5>
                     <div className="flex flex-wrap gap-1">
-                      {service.technology.slice(0, 4).map((tech, idx) => (
+                      {service.technicalSpecs?.technology.slice(0, 4).map((tech, idx) => (
                         <span key={idx} className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
                           {tech}
                         </span>
                       ))}
-                      {service.technology.length > 4 && (
+                      {service.technicalSpecs?.technology && service.technicalSpecs.technology.length > 4 && (
                         <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
-                          +{service.technology.length - 4}
+                          +{service.technicalSpecs.technology.length - 4}
                         </span>
                       )}
                     </div>
@@ -264,36 +264,28 @@ const AdvancedInnovativeServicesShowcase: React.FC = () => {
 
                   {/* Capabilities */}
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {service.apiAccess && (
-                      <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded flex items-center gap-1">
-                        <CheckCircle className="w-3 h-3" />
-                        API Access
-                      </span>
-                    )}
-                    {service.mobileApp && (
-                      <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded flex items-center gap-1">
-                        <Smartphone className="w-3 h-3" />
-                        Mobile App
-                      </span>
-                    )}
-                    {service.whiteLabel && (
-                      <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded flex items-center gap-1">
-                        <Globe className="w-3 h-3" />
-                        White Label
-                      </span>
-                    )}
-                    {service.customBranding && (
-                      <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded flex items-center gap-1">
-                        <Target className="w-3 h-3" />
-                        Custom Branding
-                      </span>
-                    )}
+                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded flex items-center gap-1">
+                      <CheckCircle className="w-3 h-3" />
+                      API Access
+                    </span>
+                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded flex items-center gap-1">
+                      <Smartphone className="w-3 h-3" />
+                      Mobile App
+                    </span>
+                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded flex items-center gap-1">
+                      <Globe className="w-3 h-3" />
+                      White Label
+                    </span>
+                    <span className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded flex items-center gap-1">
+                      <Target className="w-3 h-3" />
+                      Custom Branding
+                    </span>
                   </div>
 
                   {/* CTA Button */}
                   <div className="mt-6">
                     <a
-                      href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
+                      href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
                       className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 text-center block"
                     >
                       Get Started Today

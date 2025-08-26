@@ -62,6 +62,179 @@ const ServicesShowcase: React.FC = () => {
           pricing: "$1,500 - $12,000/month",
           features: ["Ethics framework", "Bias detection", "Compliance monitoring", "Audit trails"],
           benefits: ["Ethical AI", "Compliance assurance", "Risk mitigation"]
+        },
+        {
+          name: "Quantum AI Orchestrator",
+          description: "Revolutionary quantum computing orchestration with AI",
+          pricing: "$4,999 - $15,000/month",
+          features: ["Quantum resource orchestration", "AI problem decomposition", "Hybrid workflows", "Real-time simulation"],
+          benefits: ["1000x faster problem solving", "Cutting-edge technology", "Competitive advantage"]
+        },
+        {
+          name: "Edge AI Inference Platform",
+          description: "High-performance edge AI for IoT devices",
+          pricing: "$899 - $2,999/month",
+          features: ["Real-time inference", "Edge optimization", "Multi-device coordination", "Low-latency processing"],
+          benefits: ["10x faster inference", "Reduced cloud costs", "Offline AI processing"]
+        },
+        {
+          name: "AI Model Marketplace",
+          description: "One-click AI model deployment platform",
+          pricing: "$599 - $1,999/month",
+          features: ["Pre-trained models", "One-click deployment", "Model customization", "Performance monitoring"],
+          benefits: ["Instant AI deployment", "No ML expertise required", "Cost-effective adoption"]
+        }
+      ]
+    },
+    {
+      title: "Advanced AI Business Solutions",
+      description: "AI-powered business solutions that drive innovation and efficiency",
+      services: [
+        {
+          name: "AI Business Intelligence Suite",
+          description: "Next-generation BI with AI-powered insights",
+          pricing: "$799 - $2,499/month",
+          features: ["AI-powered insights", "Automated reporting", "Predictive analytics", "Natural language queries"],
+          benefits: ["10x faster insights", "Automated analysis", "Predictive capabilities"]
+        },
+        {
+          name: "AI Marketing Automation Suite",
+          description: "Comprehensive AI marketing automation platform",
+          pricing: "$699 - $2,999/month",
+          features: ["AI personalization", "Multi-channel automation", "Predictive analytics", "A/B testing automation"],
+          benefits: ["3x higher conversion rates", "Personalized experiences", "Automated optimization"]
+        },
+        {
+          name: "AI Customer Experience Platform",
+          description: "Intelligent customer experience optimization",
+          pricing: "$899 - $3,499/month",
+          features: ["AI personalization", "Predictive service", "Omnichannel support", "Sentiment analysis"],
+          benefits: ["40% higher satisfaction", "25% churn reduction", "Proactive service"]
+        },
+        {
+          name: "AI Supply Chain Optimization",
+          description: "Intelligent supply chain management platform",
+          pricing: "$1,999 - $6,000/month",
+          features: ["Demand forecasting", "Inventory optimization", "Route optimization", "Supplier management"],
+          benefits: ["30% inventory reduction", "25% cost savings", "Improved delivery times"]
+        },
+        {
+          name: "AI HR & Talent Platform",
+          description: "Intelligent HR and talent management",
+          pricing: "$599 - $2,499/month",
+          features: ["AI recruitment", "Candidate matching", "Performance analytics", "Employee engagement"],
+          benefits: ["50% faster hiring", "Better matches", "Improved retention"]
+        },
+        {
+          name: "AI Financial Advisory",
+          description: "Intelligent financial planning and investment",
+          pricing: "$299 - $999/month",
+          features: ["AI investment advice", "Portfolio optimization", "Risk assessment", "Financial planning"],
+          benefits: ["Professional advice", "Portfolio optimization", "Risk management"]
+        },
+        {
+          name: "AI Healthcare Analytics",
+          description: "Comprehensive healthcare analytics platform",
+          pricing: "$3,999 - $15,000/month",
+          features: ["Patient outcome prediction", "Clinical decision support", "Operational optimization", "Population health"],
+          benefits: ["Improved outcomes", "Reduced costs", "Operational efficiency"]
+        },
+        {
+          name: "AI Adaptive Learning",
+          description: "Intelligent adaptive learning platform",
+          pricing: "$399 - $1,499/month",
+          features: ["Personalized learning", "Adaptive content", "Progress tracking", "Performance analytics"],
+          benefits: ["Personalized learning", "Improved outcomes", "Engagement increase"]
+        },
+        {
+          name: "AI Legal Research",
+          description: "Intelligent legal research and analysis",
+          pricing: "$799 - $2,999/month",
+          features: ["AI case analysis", "Research automation", "Outcome prediction", "Document analysis"],
+          benefits: ["90% faster research", "Better outcomes", "Automated analysis"]
+        },
+        {
+          name: "AI Real Estate Analytics",
+          description: "Comprehensive real estate analytics platform",
+          pricing: "$599 - $2,499/month",
+          features: ["Market trend prediction", "Investment optimization", "Property valuation", "Risk assessment"],
+          benefits: ["Better decisions", "Market insights", "Risk mitigation"]
+        }
+      ]
+    },
+    {
+      title: "Emerging Technology Solutions",
+      description: "Cutting-edge technology solutions for the future",
+      services: [
+        {
+          name: "Metaverse Commerce Platform",
+          description: "Next-generation virtual shopping experiences",
+          pricing: "$1,299 - $4,999/month",
+          features: ["3D virtual stores", "Virtual product showcases", "Digital asset marketplace", "VR shopping"],
+          benefits: ["Immersive experiences", "24/7 access", "Reduced overhead"]
+        },
+        {
+          name: "Web3 Identity Management",
+          description: "Decentralized identity platform",
+          pricing: "$799 - $2,999/month",
+          features: ["Self-sovereign identity", "Verifiable credentials", "Zero-knowledge proofs", "Privacy-preserving auth"],
+          benefits: ["Privacy protection", "Fraud reduction", "Cross-platform portability"]
+        },
+        {
+          name: "AI Creative Studio",
+          description: "AI-powered content creation platform",
+          pricing: "$599 - $1,999/month",
+          features: ["AI image generation", "Video creation", "Music composition", "Text generation"],
+          benefits: ["10x faster creation", "Cost-effective production", "Consistent brand voice"]
+        },
+        {
+          name: "Smart City IoT Platform",
+          description: "Comprehensive smart city management",
+          pricing: "$4,999 - $25,000/month",
+          features: ["IoT sensor management", "Infrastructure monitoring", "Traffic optimization", "Energy management"],
+          benefits: ["Urban efficiency", "Cost reduction", "Better services"]
+        },
+        {
+          name: "AI Robotics & Automation",
+          description: "Intelligent industrial automation",
+          pricing: "$3,999 - $15,000/month",
+          features: ["AI-powered robotics", "Industrial automation", "Quality control", "Predictive maintenance"],
+          benefits: ["Increased productivity", "Improved quality", "Reduced downtime"]
+        },
+        {
+          name: "AI Biotechnology Research",
+          description: "Advanced biotech research platform",
+          pricing: "$8,999 - $50,000/month",
+          features: ["AI drug discovery", "Protein engineering", "Genetic analysis", "Molecular modeling"],
+          benefits: ["10x faster discovery", "Reduced costs", "Improved success rates"]
+        },
+        {
+          name: "Space Technology Analytics",
+          description: "Satellite operations and space analytics",
+          pricing: "$6,999 - $30,000/month",
+          features: ["Satellite operations", "Space data analytics", "Earth observation", "Orbital tracking"],
+          benefits: ["Real-time monitoring", "Global coverage", "Environmental insights"]
+        },
+        {
+          name: "AI Energy Optimization",
+          description: "Smart grid and energy management",
+          pricing: "$3,499 - $15,000/month",
+          features: ["Smart grid management", "Renewable integration", "Energy optimization", "Demand response"],
+          benefits: ["30% cost reduction", "Grid stability", "Renewable integration"]
+        },
+        {
+          name: "AI Transportation Optimization",
+          description: "Intelligent transportation management",
+          pricing: "$2,999 - $12,000/month",
+          features: ["Route optimization", "Traffic prediction", "Transit optimization", "Fleet management"],
+          benefits: ["25% time reduction", "Improved transit", "Reduced congestion"]
+        },
+        {
+          name: "AI Precision Agriculture",
+          description: "Smart farming and agriculture optimization",
+          pricing: "$899 - $3,999/month",
+          features: ["Precision farming", "Crop monitoring", "Soil analysis", "Weather prediction"],
+          benefits: ["20% yield increase", "30% water savings", "Reduced pesticide use"]
         }
       ]
     },
@@ -103,6 +276,27 @@ const ServicesShowcase: React.FC = () => {
           pricing: "$129 - $549/month",
           features: ["Smart scheduling", "Resource optimization", "Risk prediction", "Progress tracking"],
           benefits: ["20% faster delivery", "Resource optimization", "Risk mitigation"]
+        },
+        {
+          name: "AI Gaming Optimization",
+          description: "Advanced gaming platform optimization",
+          pricing: "$699 - $2,999/month",
+          features: ["Player behavior analysis", "Content personalization", "Real-time optimization", "Performance monitoring"],
+          benefits: ["Increased engagement", "Higher retention", "Better monetization"]
+        },
+        {
+          name: "AI Media Production",
+          description: "AI-powered media production automation",
+          pricing: "$799 - $3,999/month",
+          features: ["AI video editing", "Content generation", "Media optimization", "Automated workflows"],
+          benefits: ["90% faster production", "Reduced costs", "Consistent quality"]
+        },
+        {
+          name: "AI Security & Surveillance",
+          description: "Intelligent security and surveillance platform",
+          pricing: "$599 - $2,999/month",
+          features: ["AI threat detection", "Intelligent surveillance", "Facial recognition", "Behavioral analysis"],
+          benefits: ["24/7 monitoring", "Reduced false alarms", "Faster response"]
         }
       ]
     },
@@ -123,6 +317,20 @@ const ServicesShowcase: React.FC = () => {
           pricing: "$2,200 - $18,000/month",
           features: ["Network Management", "System Administration", "Data Center Operations", "Performance Optimization"],
           benefits: ["Proactive maintenance", "Performance optimization", "Scalable solutions"]
+        },
+        {
+          name: "Multi-Cloud Orchestration",
+          description: "Intelligent multi-cloud management platform",
+          pricing: "$3,499 - $12,000/month",
+          features: ["Multi-cloud management", "AI-powered optimization", "Cost optimization", "Unified monitoring"],
+          benefits: ["30% cost reduction", "99.9% uptime", "Vendor lock-in prevention"]
+        },
+        {
+          name: "Real-Time Streaming Analytics",
+          description: "High-performance streaming analytics platform",
+          pricing: "$2,499 - $8,000/month",
+          features: ["Real-time processing", "Streaming SQL", "Complex event processing", "Real-time dashboards"],
+          benefits: ["Instant insights", "Real-time decisions", "Scalable processing"]
         }
       ]
     },
@@ -150,6 +358,13 @@ const ServicesShowcase: React.FC = () => {
           pricing: "$800 - $5,000/month",
           features: ["Automated backups", "Cloud storage", "Recovery testing", "RTO optimization"],
           benefits: ["99.99% recovery success", "Automated testing", "Cloud redundancy"]
+        },
+        {
+          name: "AI Threat Hunting Platform",
+          description: "Next-generation AI-powered threat hunting",
+          pricing: "$3,999 - $12,000/month",
+          features: ["AI threat detection", "Behavioral analysis", "Zero-day prevention", "Automated response"],
+          benefits: ["99.9% detection rate", "Zero false positives", "Automated response"]
         }
       ]
     },
@@ -206,6 +421,40 @@ const ServicesShowcase: React.FC = () => {
           benefits: ["Expert guidance", "Strategic insights", "Risk mitigation"]
         }
       ]
+    },
+    {
+      title: "Specialized Industry Solutions",
+      description: "Industry-specific technology solutions and expertise",
+      services: [
+        {
+          name: "AI Autonomous Fleet Management",
+          description: "Next-generation autonomous fleet management",
+          pricing: "$2,999 - $8,000/month",
+          features: ["Real-time coordination", "AI route optimization", "Predictive maintenance", "Safety compliance"],
+          benefits: ["90% accident reduction", "40% fuel efficiency", "24/7 operation"]
+        },
+        {
+          name: "DeFi Yield Optimization",
+          description: "Advanced DeFi yield optimization platform",
+          pricing: "$199 - $599/month",
+          features: ["Multi-protocol farming", "AI strategy optimization", "Risk assessment", "Automated rebalancing"],
+          benefits: ["2-5x higher yields", "Automated risk management", "24/7 optimization"]
+        },
+        {
+          name: "AI FinTech Risk Management",
+          description: "Comprehensive fintech risk management platform",
+          pricing: "$3,999 - $15,000/month",
+          features: ["Real-time risk assessment", "Fraud detection", "Regulatory compliance", "Credit scoring"],
+          benefits: ["99.9% fraud detection", "Real-time monitoring", "Automated compliance"]
+        },
+        {
+          name: "AI Telecom Optimization",
+          description: "Intelligent telecommunications optimization",
+          pricing: "$4,499 - $20,000/month",
+          features: ["Network optimization", "Capacity planning", "Performance monitoring", "Predictive maintenance"],
+          benefits: ["Improved performance", "Reduced downtime", "Better capacity utilization"]
+        }
+      ]
     }
   ];
 
@@ -217,12 +466,16 @@ const ServicesShowcase: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Complete
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Services Portfolio
+              {" "}Innovative Services Portfolio
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Discover our comprehensive range of innovative technology solutions designed to transform your business
+            Discover our comprehensive range of cutting-edge technology solutions designed to transform your business and drive innovation across all industries
           </p>
+          <div className="mb-8 text-sm text-gray-400">
+            <p>🚀 80+ Innovative Services • 💡 AI-Powered Solutions • 🌐 Global Reach</p>
+            <p>💰 Competitive Pricing • ⚡ Rapid Deployment • 🔒 Enterprise Security</p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
@@ -311,10 +564,10 @@ const ServicesShowcase: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+            Ready to Transform Your Business with Innovation?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our innovative services can help drive your success
+            Let's discuss how our cutting-edge services can help drive your success and competitive advantage
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Link
