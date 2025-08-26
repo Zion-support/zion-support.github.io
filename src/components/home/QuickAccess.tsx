@@ -1,262 +1,87 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Search, Users, Briefcase, Settings, Sparkles, ArrowRight } from 'lucide-react';
 
 export function QuickAccess() {
-  const quickActions = [
-    {
-      title: 'Find Services',
-      description: 'Discover AI and tech services',
-      icon: Search,
-      href: '/services',
-      color: 'from-zion-cyan to-zion-blue',
-      gradient: 'from-zion-cyan/20 to-zion-blue/20'
-    },
-    {
-      title: 'Hire Talent',
-      description: 'Connect with tech experts',
-      icon: Users,
-      href: '/talent',
-      color: 'from-zion-purple to-zion-cyan',
-      gradient: 'from-zion-purple/20 to-zion-cyan/20'
-    },
-    {
-      title: 'Browse Equipment',
-      description: 'Find hardware and tools',
-      icon: Briefcase,
-      href: '/equipment',
-      color: 'from-zion-blue to-zion-purple',
-      gradient: 'from-zion-blue/20 to-zion-purple/20'
-    },
+  const quickLinks = [
     {
       title: 'AI Solutions',
-      description: 'Explore AI-powered tools',
-      icon: Sparkles,
-      href: '/ai-services',
-      color: 'from-zion-cyan to-zion-purple',
-      gradient: 'from-zion-cyan/20 to-zion-purple/20'
+      description: 'Machine Learning & AI Services',
+      href: '/services/ai',
+      icon: '🤖',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'Cloud & DevOps',
+      description: 'Cloud Migration & Automation',
+      href: '/services/cloud',
+      icon: '☁️',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Security & Threat Protection',
+      href: '/services/cybersecurity',
+      icon: '🔒',
+      color: 'from-red-500 to-orange-500'
+    },
+    {
+      title: 'IT Infrastructure',
+      description: 'Network & System Management',
+      href: '/services/infrastructure',
+      icon: '🏗️',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Business Process Optimization',
+      href: '/services/transformation',
+      icon: '🚀',
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      title: 'Consulting',
+      description: 'Technology Strategy & Advisory',
+      href: '/services/consulting',
+      icon: '💡',
+      color: 'from-yellow-500 to-orange-500'
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.95 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-  };
-
-  const headerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-  };
-
   return (
-    <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
-      {/* Enhanced Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div 
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-zion-cyan/5 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{ duration: 4, repeat: Infinity }}
-        ></motion.div>
-        <motion.div 
-          className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-zion-purple/5 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1.3, 1, 1.3],
-            opacity: [0.6, 0.3, 0.6]
-          }}
-          transition={{ duration: 5, repeat: Infinity }}
-        ></motion.div>
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Quick Access to Our Services
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Get instant access to our comprehensive range of technology services and solutions
+          </p>
+        </div>
         
-        {/* Additional floating elements */}
-        <motion.div 
-          className="absolute top-1/3 right-1/3 w-32 h-32 bg-zion-blue/5 rounded-full blur-2xl"
-          animate={{ 
-            y: [-20, 20, -20],
-            x: [-10, 10, -10]
-          }}
-          transition={{ duration: 6, repeat: Infinity }}
-        ></motion.div>
-        <motion.div 
-          className="absolute bottom-1/3 left-1/3 w-24 h-24 bg-zion-cyan/5 rounded-full blur-2xl"
-          animate={{ 
-            y: [20, -20, 20],
-            x: [10, -10, 10]
-          }}
-          transition={{ duration: 7, repeat: Infinity }}
-        ></motion.div>
-      </div>
-
-      <div className="container mx-auto px-4 relative">
-        <motion.div
-          variants={headerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <motion.h2 
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
-            whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.2 }}
-          >
-            Quick Access
-          </motion.h2>
-          <motion.p 
-            className="text-lg text-zion-slate-light max-w-2xl mx-auto"
-            whileHover={{ scale: 1.01 }}
-            transition={{ duration: 0.2 }}
-          >
-            Get started quickly with our most popular features and services
-          </motion.p>
-        </motion.div>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {quickActions.map((action, index) => (
-            <motion.div
-              key={action.title}
-              variants={itemVariants}
-              whileHover={{ 
-                y: -12, 
-                scale: 1.03,
-                transition: { duration: 0.3 }
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="group cursor-pointer"
-            >
-              <Link
-                to={action.href}
-                className="block bg-zion-blue-light/10 border border-zion-blue-light/20 rounded-2xl p-6 backdrop-blur-sm hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full"
-              >
-                {/* Enhanced Icon with animations */}
-                <motion.div 
-                  className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                  whileHover={{ 
-                    rotate: 360, 
-                    scale: 1.15,
-                    transition: { duration: 0.6 }
-                  }}
-                >
-                  <motion.div
-                    animate={{ 
-                      scale: [1, 1.1, 1],
-                      rotate: [0, 5, -5, 0]
-                    }}
-                    transition={{ 
-                      duration: 3, 
-                      repeat: Infinity,
-                      repeatDelay: 2
-                    }}
-                  >
-                    <action.icon className="w-8 h-8 text-white" />
-                  </motion.div>
-                </motion.div>
-
-                {/* Content with enhanced animations */}
-                <motion.h3 
-                  className="text-xl font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors"
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {action.title}
-                </motion.h3>
-                
-                <motion.p 
-                  className="text-zion-slate-light mb-4 text-sm leading-relaxed"
-                  whileHover={{ x: 3 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {action.description}
-                </motion.p>
-
-                {/* Enhanced CTA with continuous animation */}
-                <motion.div
-                  className="flex items-center justify-between"
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <span className="text-zion-cyan text-sm font-medium group-hover:text-zion-cyan-light transition-colors">
-                    Get Started
-                  </span>
-                  <motion.div
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
-                    <ArrowRight className="w-4 h-4 text-zion-cyan group-hover:text-zion-cyan-light transition-colors" />
-                  </motion.div>
-                </motion.div>
-
-                {/* Hover effect overlay */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                />
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Enhanced bottom CTA */}
-        <motion.div 
-          className="text-center mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {quickLinks.map((link, index) => (
             <Link
-              to="/services"
-              className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 shadow-lg hover:shadow-xl"
+              key={index}
+              to={link.href}
+              className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 hover:border-gray-300"
             >
-              Explore All Services
-              <motion.div
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </motion.div>
+              <div className="flex items-start space-x-4">
+                <div className={`w-12 h-12 bg-gradient-to-r ${link.color} rounded-lg flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300`}>
+                  {link.icon}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                    {link.title}
+                  </h3>
+                  <p className="text-gray-600 mt-1">
+                    {link.description}
+                  </p>
+                </div>
+              </div>
             </Link>
-          </motion.div>
-        </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

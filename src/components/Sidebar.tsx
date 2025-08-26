@@ -1,152 +1,153 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home, Brain, Bot, Server, Users, FileText, Settings, HelpCircle } from 'lucide-react';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+export function Sidebar() {
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const location = useLocation();
 
-  const navigationItems = [
+  const isActive = (path: string) => location.pathname === path;
+
+  const quickActions = [
     {
-      title: 'Main',
-      items: [
-        { label: 'Home', path: '/', icon: Home },
-        { label: 'About', path: '/about', icon: Users },
-        { label: 'Services', path: '/services', icon: Settings },
-        { label: 'Contact', path: '/contact', icon: HelpCircle }
-      ]
+      name: 'Get Quote',
+      href: '/contact',
+      icon: '💬',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'AI Platforms',
-      items: [
-        { label: 'Quantum Neural Network', path: '/quantum-neural-network-platform', icon: Brain },
-        { label: 'Autonomous Business Ops', path: '/autonomous-business-operations-platform', icon: Bot },
-        { label: 'IT Asset Management', path: '/ai-powered-it-asset-management', icon: Server },
-        { label: 'AI Business Intelligence', path: '/ai-business-intelligence', icon: Brain },
-        { label: 'AI Content Generation', path: '/ai-content-generator', icon: FileText },
-        { label: 'AI Code Review', path: '/ai-code-review', icon: FileText }
-      ]
+      name: 'Schedule Demo',
+      href: '/demo',
+      icon: '🎯',
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Resources',
-      items: [
-        { label: 'Case Studies', path: '/case-studies', icon: FileText },
-        { label: 'White Papers', path: '/white-papers', icon: FileText },
-        { label: 'News', path: '/news', icon: FileText },
-        { label: 'Blog', path: '/blog', icon: FileText },
-        { label: 'Documentation', path: '/docs', icon: FileText },
-        { label: 'Training', path: '/training', icon: Users }
-      ]
+      name: 'Support',
+      href: '/support',
+      icon: '🆘',
+      color: 'from-green-500 to-emerald-500'
     }
   ];
 
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
+  const recentServices = [
+    { name: 'AI Solutions', href: '/services/ai', icon: '🤖' },
+    { name: 'Cloud Services', href: '/services/cloud', icon: '☁️' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: '🔒' }
+  ];
+
+  const quickLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'White Papers', href: '/white-papers' }
+  ];
 
   return (
-    <>
-      {/* Overlay */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-          onClick={onClose}
-        />
-      )}
+    <aside className={`fixed left-0 top-16 h-full bg-white border-r border-gray-200 transition-all duration-300 z-40 ${
+      isCollapsed ? 'w-16' : 'w-64'
+    }`}>
+      {/* Toggle Button */}
+      <button
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        className="absolute -right-3 top-4 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-300"
+      >
+        <svg className={`w-4 h-4 transition-transform duration-300 ${isCollapsed ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
 
-      {/* Sidebar */}
-      <div className={`
-        fixed top-0 left-0 h-full w-64 bg-slate-800/95 backdrop-blur-lg border-r border-white/10 z-50
-        transform transition-transform duration-300 ease-in-out
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        lg:translate-x-0 lg:static lg:z-auto
-      `}>
-        <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-white/10">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Z</span>
-              </div>
-              <span className="text-white font-semibold">Navigation</span>
-            </div>
-            <button
-              onClick={onClose}
-              className="lg:hidden p-1 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
-            >
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Navigation */}
-          <nav className="flex-1 overflow-y-auto p-4 space-y-6">
-            {navigationItems.map((section) => (
-              <div key={section.title}>
-                <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                  {section.title}
-                </h3>
-                <div className="space-y-1">
-                  {section.items.map((item) => {
-                    const Icon = item.icon;
-                    return (
-                      <Link
-                        key={item.path}
-                        to={item.path}
-                        className={`
-                          flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200
-                          ${isActive(item.path) 
-                            ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' 
-                            : 'text-gray-300 hover:text-white hover:bg-white/10'
-                          }
-                        `}
-                        onClick={() => {
-                          if (window.innerWidth < 1024) {
-                            onClose();
-                          }
-                        }}
-                      >
-                        <Icon className="h-4 w-4 flex-shrink-0" />
-                        <span className="flex-1">{item.label}</span>
-                        {isActive(item.path) && (
-                          <ChevronRight className="h-4 w-4 text-blue-400" />
-                        )}
-                      </Link>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
-          </nav>
-
-          {/* Footer */}
-          <div className="p-4 border-t border-white/10">
-            <div className="text-center">
-              <p className="text-xs text-gray-400 mb-2">
-                Need Help?
-              </p>
+      <div className="p-4">
+        {/* Quick Actions */}
+        <div className="mb-6">
+          <h3 className={`font-semibold text-gray-900 mb-3 ${isCollapsed ? 'sr-only' : ''}`}>
+            Quick Actions
+          </h3>
+          <div className="space-y-2">
+            {quickActions.map((action, index) => (
               <Link
-                to="/contact"
-                className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
-                onClick={() => {
-                  if (window.innerWidth < 1024) {
-                    onClose();
-                  }
-                }}
+                key={index}
+                to={action.href}
+                className={`flex items-center p-2 rounded-lg hover:bg-gray-50 transition-colors duration-300 ${
+                  isCollapsed ? 'justify-center' : ''
+                }`}
               >
-                Contact Support
+                <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center text-lg ${
+                  isCollapsed ? 'mr-0' : 'mr-3'
+                }`}>
+                  {action.icon}
+                </div>
+                {!isCollapsed && (
+                  <span className="text-sm font-medium text-gray-700">{action.name}</span>
+                )}
               </Link>
-            </div>
+            ))}
           </div>
         </div>
-      </div>
-    </>
-  );
-};
 
-export default Sidebar;
+        {/* Recent Services */}
+        <div className="mb-6">
+          <h3 className={`font-semibold text-gray-900 mb-3 ${isCollapsed ? 'sr-only' : ''}`}>
+            Popular Services
+          </h3>
+          <div className="space-y-2">
+            {recentServices.map((service, index) => (
+              <Link
+                key={index}
+                to={service.href}
+                className={`flex items-center p-2 rounded-lg hover:bg-gray-50 transition-colors duration-300 ${
+                  isActive(service.href) ? 'bg-blue-50 text-blue-700' : 'text-gray-700'
+                } ${isCollapsed ? 'justify-center' : ''}`}
+              >
+                <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-lg ${
+                  isCollapsed ? 'mr-0' : 'mr-3'
+                }">
+                  {service.icon}
+                </div>
+                {!isCollapsed && (
+                  <span className="text-sm font-medium">{service.name}</span>
+                )}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Quick Links */}
+        <div className="mb-6">
+          <h3 className={`font-semibold text-gray-900 mb-3 ${isCollapsed ? 'sr-only' : ''}`}>
+            Quick Links
+          </h3>
+          <div className="space-y-1">
+            {quickLinks.map((link, index) => (
+              <Link
+                key={index}
+                to={link.href}
+                className={`block px-2 py-1 text-sm rounded hover:bg-gray-50 transition-colors duration-300 ${
+                  isActive(link.href) ? 'text-blue-600 font-medium' : 'text-gray-600'
+                } ${isCollapsed ? 'text-center' : ''}`}
+              >
+                {isCollapsed ? link.name.charAt(0) : link.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Contact Info */}
+        {!isCollapsed && (
+          <div className="bg-gray-50 rounded-lg p-4">
+            <h4 className="font-semibold text-gray-900 mb-2">Need Help?</h4>
+            <p className="text-sm text-gray-600 mb-3">
+              Our team is here to assist you with any questions or concerns.
+            </p>
+            <Link
+              to="/contact"
+              className="block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300"
+            >
+              Contact Us
+            </Link>
+          </div>
+        )}
+      </div>
+    </aside>
+  );
+}
