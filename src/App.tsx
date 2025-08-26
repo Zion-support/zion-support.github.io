@@ -17,6 +17,7 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Services = React.lazy(() => import('./pages/Services'));
 const Search = React.lazy(() => import('./pages/Search'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
               <Route path="/events" element={<Events />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/pricing" element={<Pricing />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/search" element={<Search />} />

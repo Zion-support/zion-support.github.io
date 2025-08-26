@@ -46,6 +46,14 @@ export function MainNavigation({ onNavigate }: MainNavigationProps) {
         </Link>
         
         <Link
+          to="/pricing"
+          className="flex items-center justify-between px-3 py-2 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
+          onClick={handleNavigate}
+        >
+          <span>Pricing</span>
+        </Link>
+        
+        <Link
           to="/case-studies"
           className="flex items-center justify-between px-3 py-2 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
           onClick={handleNavigate}

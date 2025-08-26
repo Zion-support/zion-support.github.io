@@ -134,6 +134,12 @@ export default function Home() {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
+              to="/pricing"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-all duration-300"
+            >
+              View Pricing
+            </Link>
+            <Link
               to="/case-studies"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-all duration-300"
             >

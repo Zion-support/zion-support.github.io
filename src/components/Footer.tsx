@@ -56,6 +56,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/pricing" className="text-zion-slate-light hover:text-white transition-colors text-sm">
+                  Pricing
+                </Link>
+              </li>
+              <li>
                 <Link to="/case-studies" className="text-zion-slate-light hover:text-white transition-colors text-sm">
                   Case Studies
                 </Link>

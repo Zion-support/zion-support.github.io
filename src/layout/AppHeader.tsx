@@ -61,6 +61,9 @@ export function AppHeader() {
             <Link to="/services" className="text-white/80 hover:text-white transition-colors">
               Services
             </Link>
+            <Link to="/pricing" className="text-white/80 hover:text-white transition-colors">
+              Pricing
+            </Link>
             <Link to="/about" className="text-white/80 hover:text-white transition-colors">
               About
             </Link>
@@ -129,6 +132,13 @@ export function AppHeader() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Services
+                </Link>
+                <Link
+                  to="/pricing"
+                  className="block px-4 py-2 text-white/80 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Pricing
                 </Link>
                 <Link
                   to="/about"
