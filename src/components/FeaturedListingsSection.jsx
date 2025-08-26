@@ -100,6 +100,7 @@ export default function FeaturedListingsSection() {
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue rounded-full"></div>
       </div>
 
+<<<<<<< HEAD
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <motion.div 
@@ -115,28 +116,58 @@ export default function FeaturedListingsSection() {
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Discover our most innovative and successful technology projects. Each solution is crafted with cutting-edge AI, 
             quantum computing, and advanced cybersecurity technologies.
+=======
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Section Header */}
+        <motion.div 
+          className="text-center mb-16" 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Services</span>
+          </h2>
+          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+            Discover our most popular and innovative technology solutions that are transforming businesses worldwide.
+>>>>>>> cursor/expand-services-and-deploy-updates-f909
           </p>
         </motion.div>
 
         {/* Featured Listings Grid */}
         <motion.div 
+<<<<<<< HEAD
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
+=======
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.6, delay: 0.3 }}
+>>>>>>> cursor/expand-services-and-deploy-updates-f909
         >
           {featuredListings.map((listing, index) => (
             <motion.div
               key={listing.id}
+<<<<<<< HEAD
               className="group bg-zion-blue-dark/80 backdrop-blur-sm rounded-2xl border border-zion-cyan/20 overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 transform hover:-translate-y-2"
               initial={{ opacity: 0, y: 30 }}
+=======
+              className="group relative bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> cursor/expand-services-and-deploy-updates-f909
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onMouseEnter={() => setHoveredListing(listing.id)}
               onMouseLeave={() => setHoveredListing(null)}
             >
+<<<<<<< HEAD
               {/* Header with image placeholder */}
               <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10"></div>
@@ -175,17 +206,38 @@ export default function FeaturedListingsSection() {
                     {listing.description}
                   </p>
                 </div>
+=======
+              {/* Card Header */}
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                      {listing.title}
+                    </h3>
+                    <p className="text-zion-slate-light text-sm leading-relaxed mb-4">
+                      {listing.description}
+                    </p>
+                  </div>
+                </div>
+>>>>>>> cursor/expand-services-and-deploy-updates-f909
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {listing.tags.slice(0, 3).map((tag, idx) => (
+<<<<<<< HEAD
                     <span
                       key={idx}
                       className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
+=======
+                    <span 
+                      key={idx} 
+                      className="px-3 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
+>>>>>>> cursor/expand-services-and-deploy-updates-f909
                     >
                       {tag}
                     </span>
                   ))}
+<<<<<<< HEAD
                   {listing.tags.length > 3 && (
                     <span className="px-2 py-1 bg-zion-purple/10 text-zion-purple text-xs rounded-full border border-zion-purple/30">
                       +{listing.tags.length - 3} more
@@ -222,6 +274,34 @@ export default function FeaturedListingsSection() {
                 <div className="flex items-center gap-2 mb-4 text-zion-slate-light">
                   <Users className="w-4 h-4" />
                   <span className="text-sm">{listing.team}</span>
+=======
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                    <Clock className="w-4 h-4 text-zion-cyan"/>
+                    <span>{listing.duration}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                    <Users className="w-4 h-4 text-zion-cyan"/>
+                    <span>{listing.team}</span>
+                  </div>
+                </div>
+
+                {/* Rating and Views */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1">
+                      {renderStars(listing.rating)}
+                    </div>
+                    <span className="text-zion-slate-light text-sm">({listing.reviews})</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                    <Eye className="w-4 h-4"/>
+                    <span>{listing.views}</span>
+                  </div>
+>>>>>>> cursor/expand-services-and-deploy-updates-f909
                 </div>
 
                 {/* Price and CTA */}
@@ -279,18 +359,31 @@ export default function FeaturedListingsSection() {
                   )}
                 </AnimatePresence>
               </div>
+<<<<<<< HEAD
               
               <div className="px-6 pb-6">
                 <Link to={`/project/${listing.id}`} className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg">
                   Get Started
                 </Link>
               </div>
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-f909
             </motion.div>
           ))}
         </motion.div>
         
         {/* Enhanced bottom CTA */}
+<<<<<<< HEAD
         <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+=======
+        <motion.div 
+          className="text-center" 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+>>>>>>> cursor/expand-services-and-deploy-updates-f909
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
               <p className="text-white text-lg mb-4">
@@ -300,7 +393,7 @@ export default function FeaturedListingsSection() {
                 to="/services"
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
               >
-                View All Projects
+                View All Services
                 <ArrowRight className="w-5 h-5"/>
               </Link>
             </div>

@@ -1,94 +1,111 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
-
-const steps = [
-  {
-    icon: <Search className="w-8 h-8"/>,
-    title: "Discover",
-    description: "Browse our comprehensive catalog of services, talent, and solutions",
-    color: "from-zion-cyan to-zion-cyan-dark",
-    bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
-    details: [
-      "AI-powered search and filtering",
-      "Curated service categories",
-      "Expert talent matching",
-      "Real-time availability"
-    ],
-    duration: "1-2 hours",
-    success: "95% match rate"
-  },
-  {
-    icon: <Users className="w-8 h-8"/>,
-    title: "Connect",
-    description: "Get matched with the perfect team or service for your project",
-    color: "from-zion-purple to-zion-purple-dark",
-    bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-    details: [
-      "Smart matching algorithm",
-      "Profile verification",
-      "Portfolio review",
-      "Direct communication"
-    ],
-    duration: "2-4 hours",
-    success: "98% satisfaction"
-  },
-  {
-    icon: <FileText className="w-8 h-8"/>,
-    title: "Plan",
-    description: "Collaborate on project requirements, timeline, and deliverables",
-    color: "from-zion-blue to-zion-blue-dark",
-    bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
-    details: [
-      "Interactive project planning",
-      "Timeline optimization",
-      "Resource allocation",
-      "Risk assessment"
-    ],
-    duration: "4-8 hours",
-    success: "90% on-time delivery"
-  },
-  {
-    icon: <Rocket className="w-8 h-8"/>,
-    title: "Execute",
-    description: "Watch your vision come to life with our expert execution",
-    color: "from-zion-cyan-light to-zion-cyan",
-    bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-    details: [
-      "Agile development process",
-      "Regular progress updates",
-      "Quality assurance",
-      "Performance monitoring"
-    ],
-    duration: "1-4 weeks",
-    success: "99% quality score"
-  },
-  {
-    icon: <CheckCircle className="w-8 h-8"/>,
-    title: "Deliver",
-    description: "Receive your completed project with ongoing support and maintenance",
-    color: "from-zion-purple-light to-zion-purple",
-    bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-    details: [
-      "Comprehensive testing",
-      "Documentation delivery",
-      "Training and handover",
-      "Post-launch support"
-    ],
-    duration: "Ongoing",
-    success: "100% client retention"
-  }
-];
-
-const stats = [
-  { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Project Delivery" },
-  { icon: <Target className="w-6 h-6"/>, value: "99.9%", label: "Success Rate" },
-  { icon: <TrendingUp className="w-6 h-6"/>, value: "50%", label: "Cost Reduction" },
-  { icon: <Award className="w-6 h-6"/>, value: "1000+", label: "Projects Completed" }
-];
+=======
+import { 
+  Search, 
+  Users, 
+  FileText, 
+  Rocket, 
+  CheckCircle, 
+  Clock, 
+  Target, 
+  TrendingUp, 
+  Award, 
+  Zap, 
+  Shield 
+} from 'lucide-react';
+>>>>>>> cursor/expand-services-and-deploy-updates-f909
 
 export default function HowItWorksSection() {
   const [hoveredStep, setHoveredStep] = useState(null);
+  const [activeStep, setActiveStep] = useState(0);
+
+  const steps = [
+    {
+      icon: <Search className="w-8 h-8"/>,
+      title: "Discover",
+      description: "Browse our comprehensive catalog of services, talent, and solutions",
+      color: "from-zion-cyan to-zion-cyan-dark",
+      bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
+      details: [
+        "AI-powered search and filtering",
+        "Curated service categories",
+        "Expert talent matching",
+        "Real-time availability"
+      ],
+      duration: "1-2 hours",
+      success: "95% match rate"
+    },
+    {
+      icon: <Users className="w-8 h-8"/>,
+      title: "Connect",
+      description: "Get matched with the perfect team or service for your project",
+      color: "from-zion-purple to-zion-purple-dark",
+      bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
+      details: [
+        "Smart matching algorithm",
+        "Profile verification",
+        "Portfolio review",
+        "Direct communication"
+      ],
+      duration: "2-4 hours",
+      success: "98% satisfaction"
+    },
+    {
+      icon: <FileText className="w-8 h-8"/>,
+      title: "Plan",
+      description: "Collaborate on project requirements, timeline, and deliverables",
+      color: "from-zion-blue to-zion-blue-dark",
+      bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
+      details: [
+        "Interactive project planning",
+        "Timeline optimization",
+        "Resource allocation",
+        "Risk assessment"
+      ],
+      duration: "4-8 hours",
+      success: "90% on-time delivery"
+    },
+    {
+      icon: <Rocket className="w-8 h-8"/>,
+      title: "Execute",
+      description: "Watch your vision come to life with our expert execution",
+      color: "from-zion-cyan-light to-zion-cyan",
+      bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
+      details: [
+        "Agile development process",
+        "Regular progress updates",
+        "Quality assurance",
+        "Performance monitoring"
+      ],
+      duration: "1-4 weeks",
+      success: "99% quality score"
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8"/>,
+      title: "Deliver",
+      description: "Receive your completed project with ongoing support and maintenance",
+      color: "from-zion-purple-light to-zion-purple",
+      bgColor: "from-zion-purple-light/20 to-zion-purple/20",
+      details: [
+        "Comprehensive testing",
+        "Documentation delivery",
+        "Training and handover",
+        "Post-launch support"
+      ],
+      duration: "Ongoing",
+      success: "100% client retention"
+    }
+  ];
+
+  const stats = [
+    { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Project Delivery" },
+    { icon: <Target className="w-6 h-6"/>, value: "99.9%", label: "Success Rate" },
+    { icon: <TrendingUp className="w-6 h-6"/>, value: "50%", label: "Cost Reduction" },
+    { icon: <Award className="w-6 h-6"/>, value: "1000+", label: "Projects Completed" }
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -101,40 +118,45 @@ export default function HowItWorksSection() {
     }
   };
 
-  const statsVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
     visible: {
+      y: 0,
       opacity: 1,
-      scale: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.8,
         ease: "easeOut"
       }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+  const statsVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
     visible: {
+      scale: 1,
       opacity: 1,
-      y: 0,
       transition: {
-        duration: 0.6
+        duration: 0.6,
+        ease: "easeOut"
       }
     }
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
-      {/* Enhanced background pattern */}
-      <div className="absolute inset-0 opacity-5">
+    <section className="relative py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
         <div 
           className="absolute inset-0" 
           style={{
             backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
             backgroundSize: '40px 40px'
+<<<<<<< HEAD
           }}
         />
+=======
+          }}/>
+>>>>>>> cursor/expand-services-and-deploy-updates-f909
       </div>
 
       {/* Floating decorative elements */}
@@ -216,47 +238,38 @@ export default function HowItWorksSection() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
             {steps.map((step, index) => (
-              <motion.div 
-                key={index} 
-                variants={itemVariants} 
-                className="relative group" 
-                onHoverStart={() => setHoveredStep(index)} 
-                onHoverEnd={() => setHoveredStep(null)} 
-                whileHover={{ y: -8 }} 
-                transition={{ type: "spring", stiffness: 300 }}
+              <motion.div
+                key={index}
+                className="relative text-center group"
+                variants={itemVariants}
+                onMouseEnter={() => setHoveredStep(index)}
+                onMouseLeave={() => setHoveredStep(null)}
               >
+<<<<<<< HEAD
                 <div className="text-center h-full">
                   {/* Step number with enhanced styling */}
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border-2 border-zion-cyan text-white font-bold text-xl mb-6 relative z-10 shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">
+=======
+                {/* Step Icon */}
+                <div className={`relative mb-6 mx-auto w-20 h-20 rounded-full bg-gradient-to-r ${step.bgColor} border-2 border-transparent group-hover:border-zion-cyan/50 transition-all duration-300 flex items-center justify-center`}>
+                  <div className={`text-white group-hover:scale-110 transition-transform duration-300`}>
+                    {step.icon}
+                  </div>
+                  {/* Step Number */}
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white text-sm font-bold border-2 border-zion-blue-dark">
+>>>>>>> cursor/expand-services-and-deploy-updates-f909
                     {index + 1}
                   </div>
-                  
-                  {/* Icon with enhanced background */}
-                  <div className={`inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br ${step.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
-                    <div className="text-white">
-                      {step.icon}
-                    </div>
-                  </div>
-                  
-                  {/* Title and description */}
+                </div>
+
+                {/* Step Content */}
+                <div className="relative">
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-zion-slate-light leading-relaxed text-sm mb-4">
+                  <p className="text-zion-slate-light text-sm leading-relaxed mb-4">
                     {step.description}
                   </p>
-
-                  {/* Duration and success rate */}
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center justify-center gap-2 text-zion-cyan/80 text-xs">
-                      <Clock className="w-3 h-3"/>
-                      <span>{step.duration}</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2 text-zion-purple/80 text-xs">
-                      <Target className="w-3 h-3"/>
-                      <span>{step.success}</span>
-                    </div>
-                  </div>
 
                   {/* Interactive details on hover */}
                   <AnimatePresence>
