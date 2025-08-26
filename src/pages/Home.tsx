@@ -26,6 +26,8 @@ import { SecurityComplianceSection } from "@/components/SecurityComplianceSectio
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
+import { ComprehensiveServicesShowcase2026 } from "@/components/ComprehensiveServicesShowcase2026";
+import { ComprehensivePricingGuide2026 } from "@/components/ComprehensivePricingGuide2026";
 import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
 
 // Enhanced loading component with better UX
@@ -446,6 +448,12 @@ export default function Home() {
 
       {/* Enhanced Innovative Services Showcase */}
       <EnhancedInnovativeServicesShowcase />
+
+      {/* Comprehensive Services Showcase 2026 */}
+      <ComprehensiveServicesShowcase2026 />
+
+      {/* Comprehensive Pricing Guide 2026 */}
+      <ComprehensivePricingGuide2026 />
 
       {/* Enhanced Pricing Comparison */}
       <EnhancedPricingComparison />
