@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+  const socialLinks = [
+    { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
+    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
+    { name: "GitHub", url: "https://github.com/ziontechgroup", icon: "💻", color: "hover:bg-gray-600/20" },
+    { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
+    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
+  ];
+
   const footerSections = [
     {
       title: "Services",
@@ -12,7 +20,8 @@ const Footer: React.FC = () => {
         { label: "Cloud & DevOps", path: "/services" },
         { label: "Cybersecurity", path: "/services" },
         { label: "Quantum Computing", path: "/services" },
-        { label: "Blockchain & Web3", path: "/services" }
+        { label: "Blockchain & Web3", path: "/services" },
+        { label: "Micro SAAS", path: "/micro-saas" }
       ]
     },
     {
@@ -20,38 +29,34 @@ const Footer: React.FC = () => {
       links: [
         { label: "About Us", path: "/about" },
         { label: "Our Team", path: "/about" },
-        { label: "Careers", path: "/about" },
+        { label: "Careers", path: "/careers" },
         { label: "News & Updates", path: "/blog" },
-        { label: "Case Studies", path: "/services" }
+        { label: "Case Studies", path: "/case-studies" },
+        { label: "Partners", path: "/partners" }
       ]
     },
     {
       title: "Resources",
       links: [
         { label: "Blog", path: "/blog" },
-        { label: "Documentation", path: "/services" },
-        { label: "White Papers", path: "/services" },
-        { label: "Webinars", path: "/services" },
-        { label: "Research", path: "/about" }
+        { label: "Documentation", path: "/docs" },
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "Research", path: "/research" },
+        { label: "Events", path: "/events" }
       ]
     },
     {
       title: "Support",
       links: [
         { label: "Contact Us", path: "/contact" },
-        { label: "Help Center", path: "/contact" },
-        { label: "Support Portal", path: "/contact" },
-        { label: "Training", path: "/services" },
-        { label: "Consulting", path: "/contact" }
+        { label: "Help Center", path: "/help" },
+        { label: "Support Portal", path: "/support" },
+        { label: "Training", path: "/training" },
+        { label: "Consulting", path: "/consulting" },
+        { label: "Request Quote", path: "/request-quote" }
       ]
     }
-  ];
-
-  const socialLinks = [
-    { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼" },
-    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦" },
-    { name: "GitHub", url: "https://github.com/ziontechgroup", icon: "💻" },
-    { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: "📺" }
   ];
 
   return (
@@ -80,7 +85,7 @@ const Footer: React.FC = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-lg hover:bg-blue-500/20 hover:scale-110 transition-all duration-300"
+                  className={`w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-lg ${social.color} hover:scale-110 transition-all duration-300`}
                   aria-label={`Follow us on ${social.name}`}
                 >
                   {social.icon}
