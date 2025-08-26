@@ -4,8 +4,8 @@ import { describe, it, expect } from 'vitest';
 import CartPage from '@/pages/Cart';
 import { CartProvider } from '@/context/CartContext';
 import { AuthContext } from '@/context/auth/AuthContext';
-import PrivateRoute from '@/components/PrivateRoute';
 import { safeStorage } from '@/utils/safeStorage';
+import { getCartKey } from '@/utils/cartUtils';
 
 vi.mock('next/router', () => ({
   useRouter: () => ({ push: vi.fn() })
@@ -19,7 +19,7 @@ function renderCart(user: any) {
       <CartProvider>
         <MemoryRouter initialEntries={['/cart']}>
           <Routes>
-            <Route path="/cart" element={<PrivateRoute><CartPage /></PrivateRoute>} />
+            <Route path="/cart" element={<CartPage />} />
             <Route path="/login" element={<div>Login Page</div>} />
           </Routes>
         </MemoryRouter>
@@ -30,16 +30,17 @@ function renderCart(user: any) {
 
 describe('cart persistence', () => {
   it('shows item added before login after logging in', () => {
-    safeStorage.setItem('zion_cart', JSON.stringify([item]));
-    const { rerender } = renderCart(false);
-    expect(screen.getByText('Login Page')).toBeInTheDocument();
+    safeStorage.setItem(getCartKey(), JSON.stringify([item]));
+    const { rerender } = renderCart(null);
+    expect(screen.getByText(/Shopping Cart/i)).toBeInTheDocument();
+    expect(screen.getByText('Login to Checkout')).toBeInTheDocument();
 
     rerender(
       <AuthContext.Provider value={{ user: { id: 'u1' }, isLoading: false } as any}>
         <CartProvider>
           <MemoryRouter initialEntries={['/cart']}>
             <Routes>
-              <Route path="/cart" element={<PrivateRoute><CartPage /></PrivateRoute>} />
+              <Route path="/cart" element={<CartPage />} />
               <Route path="/login" element={<div>Login Page</div>} />
             </Routes>
           </MemoryRouter>
@@ -48,5 +49,6 @@ describe('cart persistence', () => {
     );
 
     expect(screen.getByText(/Test Item/i)).toBeInTheDocument();
+    expect(screen.getByText('Checkout')).toBeInTheDocument();
   });
 });

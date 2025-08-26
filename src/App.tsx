@@ -95,10 +95,11 @@ const AIAutonomousCodeReview = lazy(() => import('./pages/ai-services/AIAutonomo
   { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/help', element: <HelpCenter /> },
-  { path: '/cookies', element: <Cookies /> },
-=======
   { path: '/faq', element: <FAQPage /> },
+=======
+  { path: '/wishlist', element: <WishlistPage /> },
+  { path: '/cart', element: <CartPage /> },
+  { path: '/checkout', element: <Checkout /> },
 ];
 
 // Loading Component

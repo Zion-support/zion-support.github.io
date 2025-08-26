@@ -1,19 +1,14 @@
 import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
-import apiClient from '@/services/apiClient';
-
-interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-}
+import { Link, useNavigate } from 'react-router-dom';
+import { useCart } from '@/context/CartContext';
+import { useAuth } from '@/hooks/useAuth';
+import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
 
 export default function CartPage() {
   const navigate = useNavigate();
-  const [items, setItems] = useState<CartItem[]>([]);
-  const [code, setCode] = useState('');
-  const [discount, setDiscount] = useState(0);
+  const { items, dispatch } = useCart();
+  const { user } = useAuth();
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
     const load = async () => {
@@ -137,18 +132,13 @@ export default function CartPage() {
         <span>Subtotal</span>
         <span>${subtotal.toFixed(2)}</span>
       </div>
-      {discount > 0 && (
-        <div className="flex justify-between font-semibold text-green-600">
-          <span>Discount</span>
-          <span>-${discount.toFixed(2)}</span>
-        </div>
-      )}
-      <div className="flex justify-between font-semibold">
-        <span>Total</span>
-        <span>${total.toFixed(2)}</span>
-      </div>
-      <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
-        Checkout
+      <Button
+        className="mt-4 w-full"
+        onClick={() =>
+          user ? navigate('/checkout') : navigate('/login?next=/checkout')
+        }
+      >
+        {user ? 'Checkout' : 'Login to Checkout'}
       </Button>
     </div>
   );

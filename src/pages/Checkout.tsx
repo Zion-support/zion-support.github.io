@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import { Input } from '@/components/ui/input';
+import { safeStorage } from '@/utils/safeStorage';
+import { getCartKey } from '@/utils/cartUtils';
 import { Button } from '@/components/ui/button';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
 import { useAuth } from '@/hooks/useAuth';
@@ -40,7 +43,7 @@ export default function CheckoutPage() {
       return;
     }
 
-    const stored = safeStorage.getItem('cart');
+    const stored = safeStorage.getItem(getCartKey(user?.id));
     if (stored) {
       try {
         setItems(JSON.parse(stored) as CartItem[]);
@@ -70,7 +73,18 @@ export default function CheckoutPage() {
           },
         });
         if (payment.error) throw payment.error;
-        safeStorage.removeItem('cart');
+        if (user?.id) {
+          try {
+            await fetch('/api/points/add', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
+            });
+          } catch (e) {
+            console.error('Failed to add points', e);
+          }
+        }
+        safeStorage.removeItem(getCartKey(user?.id));
         navigate(`/orders/${result.id}`);
       }
     } catch (err) {

@@ -9,6 +9,8 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
+import { useCart } from '@/context/CartContext';
+import { getCartKey } from '@/utils/cartUtils';
 import { getStripe } from "@/utils/getStripe";
 import { EQUIPMENT_DETAILS, EquipmentDetails } from "@/data/equipmentDetails";
 
@@ -16,7 +18,8 @@ import { EQUIPMENT_DETAILS, EquipmentDetails } from "@/data/equipmentDetails";
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string };
   const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, user } = useAuth();
+  const { dispatch } = useCart();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
@@ -47,6 +50,15 @@ export default function EquipmentDetail() {
     
     // Simulate API call
     setTimeout(() => {
+      const stored = safeStorage.getItem(getCartKey(user?.id));
+      let cart: { id: string; name: string; price: number; quantity: number }[] = [];
+      if (stored) {
+        try { cart = JSON.parse(stored); } catch { /* ignore */ }
+      }
+      const existing = cart.find(i => i.id === equipment.id);
+      if (existing) existing.quantity += quantity; else cart.push({ id: equipment.id, name: equipment.name, price: equipment.price, quantity });
+      safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
+      dispatch({ type: 'SET_ITEMS', payload: cart });
       setIsAdding(false);
       toast({
         title: "Added to cart",
