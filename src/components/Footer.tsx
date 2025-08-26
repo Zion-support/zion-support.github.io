@@ -5,10 +5,10 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
     { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
     { name: "GitHub", url: "https://github.com/ziontechgroup", icon: "💻", color: "hover:bg-gray-600/20" },
-    { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
+    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
     { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
   ];
 
@@ -16,11 +16,11 @@ const Footer: React.FC = () => {
     {
       title: "Services",
       links: [
-        { label: "AI Solutions", path: "/services" },
-        { label: "Cloud & DevOps", path: "/services" },
-        { label: "Cybersecurity", path: "/services" },
-        { label: "Quantum Computing", path: "/services" },
-        { label: "Blockchain & Web3", path: "/services" },
+        { label: "AI Solutions", path: "/services/ai" },
+        { label: "Cloud & DevOps", path: "/services/cloud" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "Quantum Technology", path: "/quantum-technology" },
+        { label: "IT Infrastructure", path: "/services/infrastructure" },
         { label: "Micro SAAS", path: "/micro-saas" }
       ]
     },
@@ -28,33 +28,33 @@ const Footer: React.FC = () => {
       title: "Company",
       links: [
         { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
+        { label: "Our Team", path: "/team" },
         { label: "Careers", path: "/careers" },
-        { label: "News & Updates", path: "/blog" },
+        { label: "Partners", path: "/partners" },
         { label: "Case Studies", path: "/case-studies" },
-        { label: "Partners", path: "/partners" }
+        { label: "Contact Us", path: "/contact" }
       ]
     },
     {
       title: "Resources",
       links: [
         { label: "Blog", path: "/blog" },
-        { label: "Documentation", path: "/docs" },
-        { label: "White Papers", path: "/white-papers" },
+        { label: "Events", path: "/events" },
         { label: "Webinars", path: "/webinars" },
-        { label: "Research", path: "/research" },
-        { label: "Events", path: "/events" }
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Tutorials", path: "/tutorials" },
+        { label: "Research & Development", path: "/research-development" }
       ]
     },
     {
       title: "Support",
       links: [
-        { label: "Contact Us", path: "/contact" },
         { label: "Help Center", path: "/help" },
         { label: "Support Portal", path: "/support" },
-        { label: "Training", path: "/training" },
-        { label: "Consulting", path: "/consulting" },
-        { label: "Request Quote", path: "/request-quote" }
+        { label: "FAQ", path: "/faq" },
+        { label: "Pricing", path: "/pricing" },
+        { label: "Request Quote", path: "/contact" },
+        { label: "Status", path: "/status" }
       ]
     }
   ];

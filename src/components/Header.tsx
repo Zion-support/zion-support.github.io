@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
 
   const services = [
     { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & AI Services' },
@@ -11,7 +13,27 @@ const Header: React.FC = () => {
     { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Threat Protection' },
     { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Network & System Management' },
     { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Process Optimization' },
-    { name: 'Consulting', href: '/services/consulting', description: 'Technology Strategy & Advisory' }
+    { name: 'Consulting', href: '/services/consulting', description: 'Technology Strategy & Advisory' },
+    { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-Gen Computing Solutions' },
+    { name: 'Space Tech', href: '/space-tech', description: 'Space Technology & Innovation' },
+    { name: 'Micro SAAS', href: '/micro-saas', description: 'Scalable Software Solutions' }
+  ];
+
+  const companyLinks = [
+    { name: 'About Us', href: '/about', description: 'Our Story & Mission' },
+    { name: 'Our Team', href: '/team', description: 'Meet Our Experts' },
+    { name: 'Careers', href: '/careers', description: 'Join Our Team' },
+    { name: 'Partners', href: '/partners', description: 'Strategic Partnerships' },
+    { name: 'Case Studies', href: '/case-studies', description: 'Success Stories' }
+  ];
+
+  const resourcesLinks = [
+    { name: 'Blog', href: '/blog', description: 'Latest Insights & News' },
+    { name: 'Events', href: '/events', description: 'Upcoming Events' },
+    { name: 'Webinars', href: '/webinars', description: 'Educational Content' },
+    { name: 'White Papers', href: '/white-papers', description: 'Research & Analysis' },
+    { name: 'Tutorials', href: '/tutorials', description: 'Learning Resources' },
+    { name: 'Research & Development', href: '/research-development', description: 'Innovation Hub' }
   ];
 
   return (
@@ -88,25 +110,100 @@ const Header: React.FC = () => {
                 </div>
               )}
             </div>
+
+            {/* Company Dropdown */}
+            <div className="relative group">
+              <button
+                onMouseEnter={() => setIsCompanyOpen(true)}
+                onMouseLeave={() => setIsCompanyOpen(false)}
+                className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center"
+              >
+                Company
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {isCompanyOpen && (
+                <div
+                  onMouseEnter={() => setIsCompanyOpen(true)}
+                  onMouseLeave={() => setIsCompanyOpen(false)}
+                  className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl"
+                >
+                  <div className="p-4">
+                    <div className="grid grid-cols-1 gap-2">
+                      {companyLinks.map((link) => (
+                        <Link
+                          key={link.name}
+                          to={link.href}
+                          className="flex items-start p-3 rounded-lg hover:bg-white/10 transition-all duration-200 group"
+                        >
+                          <div className="flex-1">
+                            <div className="text-white font-medium group-hover:text-blue-400 transition-colors duration-200">
+                              {link.name}
+                            </div>
+                            <div className="text-sm text-gray-400 mt-1">
+                              {link.description}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Resources Dropdown */}
+            <div className="relative group">
+              <button
+                onMouseEnter={() => setIsResourcesOpen(true)}
+                onMouseLeave={() => setIsResourcesOpen(false)}
+                className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center"
+              >
+                Resources
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {isResourcesOpen && (
+                <div
+                  onMouseEnter={() => setIsResourcesOpen(true)}
+                  onMouseLeave={() => setIsResourcesOpen(false)}
+                  className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl"
+                >
+                  <div className="p-4">
+                    <div className="grid grid-cols-1 gap-2">
+                      {resourcesLinks.map((link) => (
+                        <Link
+                          key={link.name}
+                          to={link.href}
+                          className="flex items-start p-3 rounded-lg hover:bg-white/10 transition-all duration-200 group"
+                        >
+                          <div className="flex-1">
+                            <div className="text-white font-medium group-hover:text-blue-400 transition-colors duration-200">
+                              {link.name}
+                            </div>
+                            <div className="text-sm text-gray-400 mt-1">
+                              {link.description}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
             
             <Link
-              to="/about"
+              to="/pricing"
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
-              About
+              Pricing
             </Link>
-            <Link
-              to="/blog"
-              className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
-              Blog
-            </Link>
-            <Link
-              to="/careers"
-              className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
-              Careers
-            </Link>
+            
             <Link
               to="/contact"
               className="text-gray-300 hover:text-white transition-colors duration-300"
@@ -175,28 +272,49 @@ const Header: React.FC = () => {
                   </Link>
                 </div>
               </div>
+
+              {/* Mobile Company Section */}
+              <div className="px-3 py-2">
+                <div className="text-sm font-medium text-gray-400 mb-2">Company</div>
+                <div className="space-y-1 ml-4">
+                  {companyLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile Resources Section */}
+              <div className="px-3 py-2">
+                <div className="text-sm font-medium text-gray-400 mb-2">Resources</div>
+                <div className="space-y-1 ml-4">
+                  {resourcesLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               
               <Link
-                to="/about"
+                to="/pricing"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                Pricing
               </Link>
-              <Link
-                to="/blog"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              <Link
-                to="/careers"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Careers
-              </Link>
+              
               <Link
                 to="/contact"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
