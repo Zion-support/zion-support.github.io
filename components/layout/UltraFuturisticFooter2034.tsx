@@ -160,7 +160,7 @@ const UltraFuturisticFooter2034: React.FC = () => {
           </div>
 
           {/* Service Categories */}
-          {serviceCategories.map((category, index) => (
+          {serviceCategories.map((section, index) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
@@ -173,14 +173,14 @@ const UltraFuturisticFooter2034: React.FC = () => {
                 <h4 className="text-lg font-semibold text-white">{category.title}</h4>
               </div>
               <ul className="space-y-2">
-                {category.services.map((service) => (
-                  <li key={service.href}>
+                {section.services.map((service) => (
+                  <li key={service.name}>
                     <Link
                       href={service.href}
-                      className="text-gray-300 hover:text-cyan-300 transition-colors duration-300 text-sm hover:translate-x-1 transform transition-transform duration-300 flex items-center group"
+                      className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
                     >
-                      <ArrowRight className="w-3 h-3 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" />
-                      {service.name}
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-200" />
+                      <span>{service.name}</span>
                     </Link>
                   </li>
                 ))}
@@ -189,20 +189,172 @@ const UltraFuturisticFooter2034: React.FC = () => {
           ))}
         </div>
 
-        {/* Quick Links & Social */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 pt-8 border-t border-cyan-500/20">
-          {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-              <Zap className="w-5 h-5 text-cyan-400 mr-2" />
-              Quick Links
-            </h4>
-            <div className="grid grid-cols-2 gap-2">
-              {quickLinks.map((link) => (
+        {/* Middle Section - Quick Links & Social */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="border-t border-gray-800 pt-8 mb-8"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Quick Links */}
+            <div className="lg:col-span-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
+                  <ul className="space-y-2">
+                    {companyLinks.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="text-gray-400 hover:text-cyan-300 transition-colors duration-200 flex items-center group"
+                        >
+                          <ArrowRight className="w-3 h-3 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform duration-200" />
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Resources</h4>
+                  <ul className="space-y-2">
+                    {serviceCategories.find(section => section.title === 'Resources')?.services.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="text-gray-400 hover:text-cyan-300 transition-colors duration-200 flex items-center group"
+                        >
+                          <ArrowRight className="w-3 h-3 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform duration-200" />
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced Contact Information */}
+          <div className="col-span-full lg:col-span-3">
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                  <MessageCircle className="w-6 h-6 mr-2 text-cyan-400" />
+                  Contact Information
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3 group">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Phone className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-300">Phone</p>
+                      <a 
+                        href={`tel:${contactInfo.mobile}`}
+                        className="text-white hover:text-cyan-400 transition-colors duration-300 font-medium"
+                      >
+                        {contactInfo.mobile}
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3 group">
+                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Mail className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-300">Email</p>
+                      <a 
+                        href={`mailto:${contactInfo.email}`}
+                        className="text-white hover:text-purple-400 transition-colors duration-300 font-medium"
+                      >
+                        {contactInfo.email}
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3 group">
+                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <MapPin className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-300">Address</p>
+                      <p className="text-white font-medium">
+                        {contactInfo.address}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3 group">
+                    <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Globe className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-300">Website</p>
+                      <a 
+                        href={contactInfo.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-orange-400 transition-colors duration-300 font-medium"
+                      >
+                        {contactInfo.website.replace('https://', '')}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Quick Contact Form */}
+              <div className="mt-6">
+                <h4 className="text-lg font-semibold text-white mb-3">Get Started Today</h4>
+                <div className="space-y-3">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
+                  />
+                  <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
+                    Contact Sales Team
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced Service Categories */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {serviceCategories.map((section, index) => (
+              <div key={index} className="space-y-4">
+                <h4 className="text-lg font-semibold text-white border-b border-cyan-500/30 pb-2">
+                  {section.title}
+                </h4>
+                <ul className="space-y-2">
+                  {section.services.map((service) => (
+                    <li key={service.name}>
+                      <Link
+                        href={service.href}
+                        className="text-gray-400 hover:text-cyan-300 transition-colors duration-200 flex items-center group"
+                      >
+                        <ArrowRight className="w-3 h-3 mr-2 text-cyan-400 group-hover:translate-x-1 transition-transform duration-200" />
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Solutions Section */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-center text-white mb-12">
+              Industry Solutions
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {serviceCategories.find(section => section.title === 'Industry Solutions')?.services.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -224,9 +376,28 @@ const UltraFuturisticFooter2034: React.FC = () => {
           >
             {/* Social Media */}
             <div>
-              <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                <Star className="w-5 h-5 text-cyan-400 mr-2" />
-                Connect With Us
+              <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
+                <Lightbulb className="w-5 h-5 text-yellow-400" />
+                <span>Quick Links</span>
+              </h4>
+              <div className="grid grid-cols-2 gap-2">
+                {socialLinks.map((social) => (
+                  <Link
+                    key={social.name}
+                    href={social.href}
+                    className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
+                  >
+                    {social.icon}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
+                <Users className="w-5 h-5 text-green-400" />
+                <span>Connect With Us</span>
               </h4>
               <div className="flex space-x-4">
                 {[
@@ -326,5 +497,3 @@ const UltraFuturisticFooter2034: React.FC = () => {
     </footer>
   );
 };
-
-export default UltraFuturisticFooter2034;

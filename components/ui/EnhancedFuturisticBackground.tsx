@@ -85,11 +85,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    const colors = colorSchemes[colorScheme];
-    const settings = intensitySettings[intensity];
-
-    // Enhanced particle system
-    class Particle {
+    // Particle system
+    const uiParticles: Array<{
       x: number;
       y: number;
       vx: number;
@@ -117,17 +114,18 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         this.y += this.vy;
         this.life--;
 
-        // Wrap around edges
-        if (this.x < 0) this.x = canvas.width;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
-
-        // Fade out near end of life
-        if (this.life < 20) {
-          this.opacity *= 0.95;
-        }
-      }
+    // Initialize particles
+    for (let i = 0; i < particleCount; i++) {
+      uiParticles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 3 + 1,
+        opacity: Math.random() * 0.8 + 0.2,
+        color: [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)]
+      });
+    }
 
       draw() {
         ctx.save();
@@ -225,7 +223,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     const drawMatrix = matrixRain();
 
     // Main animation loop
-    const animate = () => {
+    const animateMain = () => {
       // Clear canvas with fade effect
       ctx.fillStyle = colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -234,9 +232,51 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       drawMatrix();
 
       // Update and draw particles
-      particles.forEach(particle => {
-        particle.update();
-        particle.draw();
+      uiParticles.forEach((particle, index) => {
+        // Update position
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Bounce off edges
+        if (particle.x <= 0 || particle.x >= canvas.width) {
+          particle.vx *= -1;
+        }
+        if (particle.y <= 0 || particle.y >= canvas.height) {
+          particle.vy *= -1;
+        }
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+
+        // Draw particle
+        ctx.globalAlpha = particle.opacity;
+        ctx.fillStyle = particle.color;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Draw connections
+        uiParticles.forEach((otherParticle, otherIndex) => {
+          if (index === otherIndex) return;
+          
+          const distance = Math.sqrt(
+            Math.pow(particle.x - otherParticle.x, 2) + 
+            Math.pow(particle.y - otherParticle.y, 2)
+          );
+
+          if (distance < 100) {
+            ctx.globalAlpha = (100 - distance) / 100 * 0.3;
+            ctx.strokeStyle = colors.primary;
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.stroke();
+          }
+        });
       });
 
       // Remove dead particles and add new ones
@@ -294,14 +334,15 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       if (prefersReduced) {
         // Slow down updates
         setTimeout(() => {
-          animationRef.current = requestAnimationFrame(animate);
+          animationRef.current = requestAnimationFrame(animateMain);
         }, 100);
       } else {
-        animationRef.current = requestAnimationFrame(animate);
+        animationRef.current = requestAnimationFrame(animateMain);
       }
     };
 
     animate();
+    animateMain();
 
     return () => {
       if (animationRef.current) {
