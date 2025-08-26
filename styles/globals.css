@@ -2,174 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-/* Import Modern Design System */
-@import './modern-design-system.css';
+@import './animations.css';
 
-/* Enhanced Futuristic Design System with Superior Contrast */
+/* CSS Variables for modern theming */
 :root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #1f2937;
+  --secondary-foreground: #f9fafb;
+  --accent: #10b981;
+  --accent-foreground: #ffffff;
+  --muted: #374151;
+  --muted-foreground: #9ca3af;
+  --border: #374151;
+  --input: #374151;
+  --ring: #3b82f6;
+  --radius: 0.75rem;
+  --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
   --neon-pink: #ec4899;
   --neon-green: #10b981;
   --neon-orange: #f59e0b;
-  --neon-red: #ef4444;
+  --neon-cyan: #06b6d4;
   --neon-yellow: #eab308;
-  --holographic-gradient: linear-gradient(45deg, #00d4ff, #8b5cf6, #ec4899, #10b981);
-  --cyber-gradient: linear-gradient(135deg, #0f0f23, #1a1a2e, #16213e, #0f3460);
-  --neon-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-  --glow-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
-  
-  /* Enhanced High Contrast Colors - WCAG AA Compliant */
-  --text-primary: #ffffff;
-  --text-secondary: #f1f5f9;
-  --text-tertiary: #e2e8f0;
-  --text-muted: #cbd5e1;
-  --text-accent: #00d4ff;
-  --text-success: #10b981;
-  --text-warning: #f59e0b;
-  --text-error: #ef4444;
-  --text-info: #3b82f6;
-  
-  /* Enhanced High Contrast Backgrounds */
-  --bg-primary: #0a0a1a;
-  --bg-secondary: #0f0f23;
-  --bg-tertiary: #1a1a2e;
-  --bg-card: rgba(255, 255, 255, 0.12);
-  --bg-card-hover: rgba(255, 255, 255, 0.18);
-  --bg-overlay: rgba(0, 0, 0, 0.8);
-  
-  /* Enhanced High Contrast Borders */
-  --border-primary: rgba(255, 255, 255, 0.25);
-  --border-secondary: rgba(255, 255, 255, 0.15);
-  --border-accent: rgba(0, 212, 255, 0.4);
-  --border-success: rgba(16, 185, 129, 0.4);
-  --border-warning: rgba(245, 158, 11, 0.4);
-  --border-error: rgba(239, 68, 68, 0.4);
-  
-  /* Enhanced Focus States */
-  --focus-ring: rgba(0, 212, 255, 0.6);
-  --focus-ring-success: rgba(16, 185, 129, 0.6);
-  --focus-ring-warning: rgba(245, 158, 11, 0.6);
-  --focus-ring-error: rgba(239, 68, 68, 0.6);
-  
-  /* Enhanced Shadow System */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.6);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.7);
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.8);
-  --shadow-neon: 0 0 20px rgba(0, 212, 255, 0.5);
-  --shadow-glow: 0 0 30px rgba(139, 92, 246, 0.4);
+  --neon-red: #ef4444;
+  --quantum-glow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
-
-/* Enhanced High Contrast Text Utilities */
-.text-high-contrast {
-  color: var(--text-primary);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.text-high-contrast-secondary {
-  color: var(--text-secondary);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.text-high-contrast-tertiary {
-  color: var(--text-tertiary);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.text-high-contrast-muted {
-  color: var(--text-muted);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-.text-high-contrast-accent {
-  color: var(--text-accent);
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-}
-
-.text-high-contrast-success {
-  color: var(--text-success);
-  text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
-}
-
-.text-high-contrast-warning {
-  color: var(--text-warning);
-  text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
-}
-
-.text-high-contrast-error {
-  color: var(--text-error);
-  text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
-}
-
-.text-high-contrast-info {
-  color: var(--text-info);
-  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
-}
-
-/* Enhanced High Contrast Background Utilities */
-.bg-high-contrast-primary {
-  background-color: var(--bg-primary);
-}
-
-.bg-high-contrast-secondary {
-  background-color: var(--bg-secondary);
-}
-
-.bg-high-contrast-tertiary {
-  background-color: var(--bg-tertiary);
-}
-
-.bg-high-contrast-card {
-  background-color: var(--bg-card);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.bg-high-contrast-card-hover {
-  background-color: var(--bg-card-hover);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-}
-
-.bg-high-contrast-overlay {
-  background-color: var(--bg-overlay);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-/* Enhanced High Contrast Border Utilities */
-.border-high-contrast-primary {
-  border-color: var(--border-primary);
-}
-
-.border-high-contrast-secondary {
-  border-color: var(--border-secondary);
-}
-
-.border-high-contrast-accent {
-  border-color: var(--border-accent);
-}
-
-.border-high-contrast-success {
-  border-color: var(--border-success);
-}
-
-.border-high-contrast-warning {
-  border-color: var(--border-warning);
-}
-
-.border-high-contrast-error {
-  border-color: var(--border-error);
-}
-
-/* Enhanced Focus States */
-.focus-high-contrast {
-  outline: 2px solid var(--focus-ring);
-=======
-@import './animations.css';
-
 /* Custom radial gradients for futuristic backgrounds */
 .bg-radial-gradient-1 {
   background: radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
@@ -546,7 +409,6 @@ body {
   animation: matrix-scroll-2029 30s linear infinite;
 }
 
-<<<<<<< HEAD
 @keyframes matrix-scroll-2029 {
   0% { background-position: 0px 0px; }
   100% { background-position: 60px 60px; }
@@ -1030,7 +892,6 @@ td {
   animation: holographic-shift 3s ease infinite;
 }
 
-<<<<<<< HEAD
 .cyber-bg {
   background: var(--cyber-gradient);
   position: relative;
@@ -1301,7 +1162,7 @@ td {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: holographic-shift 3s ease infinite;
-=======
+}
 /* Animation Classes */
 .animate-float {
   animation: float 6s ease-in-out infinite;
@@ -1427,7 +1288,8 @@ td {
 /* Mobile-First Focus Visible */
 .focus-visible {
   outline: none;
-=======
+}
+
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
@@ -1566,7 +1428,6 @@ td {
   }
 }
 
-<<<<<<< HEAD
 /* Mobile-First Enhanced Card Styles */
 .card {
   background: rgba(255, 255, 255, 0.1);
@@ -1627,7 +1488,7 @@ td {
   background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
   color: white;
   box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
-=======
+}
 @media (max-width: 1024px) {
   .animate-float {
     animation-duration: 8s;
@@ -1637,7 +1498,6 @@ td {
     animation-duration: 12s;
   }
 }
-
 /* Enhanced Focus States */
 .focus-neon:focus {
   outline: none;
@@ -1808,36 +1668,6 @@ td {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-<<<<<<< HEAD
-  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
-}
-
-.btn-ghost {
-  background: transparent;
-  border: 1px solid transparent;
-  color: white;
-}
-
-.btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-} 
-=======
   box-shadow: 0 10px 20px rgba(34, 211, 238, 0.3);
 }
 
