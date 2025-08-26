@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { Sidebar } from './components/Sidebar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -11,6 +12,8 @@ import NotFound from './pages/NotFound';
 import Careers from './pages/Careers';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import Team from './pages/Team';
+import Partners from './pages/Partners';
 
 // Service Detail Pages
 import AISolutions from './pages/services/AISolutions';
@@ -25,7 +28,8 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <main>
+        <Sidebar />
+        <main className="ml-64 pt-16">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -33,6 +37,8 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/partners" element={<Partners />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             

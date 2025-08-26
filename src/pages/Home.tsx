@@ -22,8 +22,6 @@ export default function Home() {
         description="Transform your business with cutting-edge AI solutions, expert talent, and innovative services. Leading provider of technology solutions for startups to enterprises. Get started today!"
         keywords="AI solutions, technology services, digital transformation, AI consulting, cloud services, cybersecurity, enterprise solutions, micro SAAS, startup technology"
         canonical="https://ziontechgroup.com/"
-        ogType="website"
-        tags={["AI", "Technology", "Digital Transformation", "Cloud Services", "Cybersecurity"]}
       />
 
       <ITServiceRequestHero />

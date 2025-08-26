@@ -13,9 +13,25 @@ const Footer: React.FC = () => {
 
   const company = [
     { name: 'About Us', href: '/about' },
+    { name: 'Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Partners', href: '/partners' },
     { name: 'Contact', href: '/contact' }
+  ];
+
+  const resources = [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Tutorials', href: '/tutorials' }
+  ];
+
+  const support = [
+    { name: 'Help Center', href: '/help' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Support Portal', href: '/support' },
+    { name: 'Status Page', href: '/status' }
   ];
 
   const legal = [
@@ -56,9 +72,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-8">
           {/* Services */}
-          <div>
+          <div className="md:col-span-2">
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Services</h3>
             <ul className="space-y-2">
               {services.map((service, index) => (
@@ -79,6 +95,40 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Company</h3>
             <ul className="space-y-2">
               {company.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-300"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Resources</h3>
+            <ul className="space-y-2">
+              {resources.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-300"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Support</h3>
+            <ul className="space-y-2">
+              {support.map((item, index) => (
                 <li key={index}>
                   <Link
                     to={item.href}

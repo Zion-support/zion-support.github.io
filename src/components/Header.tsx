@@ -21,12 +21,26 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   const services = [
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & AI Services' },
-    { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Cloud Migration & Automation' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Threat Protection' },
-    { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Network & System Management' },
-    { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Process Optimization' },
-    { name: 'Consulting', href: '/services/consulting', description: 'Technology Strategy & Advisory' }
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & AI Services', icon: '🤖' },
+    { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Cloud Migration & Automation', icon: '☁️' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Threat Protection', icon: '🔒' },
+    { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Network & System Management', icon: '🏗️' },
+    { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Process Optimization', icon: '🚀' },
+    { name: 'Consulting', href: '/services/consulting', description: 'Technology Strategy & Advisory', icon: '💡' }
+  ];
+
+  const resources = [
+    { name: 'Blog', href: '/blog', description: 'Latest insights and updates' },
+    { name: 'Case Studies', href: '/case-studies', description: 'Success stories and results' },
+    { name: 'White Papers', href: '/white-papers', description: 'In-depth research and analysis' },
+    { name: 'Webinars', href: '/webinars', description: 'Educational content and training' }
+  ];
+
+  const company = [
+    { name: 'About Us', href: '/about', description: 'Our story and mission' },
+    { name: 'Team', href: '/team', description: 'Meet our experts' },
+    { name: 'Careers', href: '/careers', description: 'Join our team' },
+    { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
   ];
 
   return (
@@ -84,12 +98,16 @@ const Header: React.FC = () => {
               <div
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
-                className={`absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/20 rounded-xl shadow-xl transition-all duration-300 ${
+                className={`absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-lg border border-white/20 rounded-xl shadow-xl transition-all duration-300 ${
                   isServicesOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
                 }`}
               >
-                <div className="p-4">
-                  <div className="grid grid-cols-1 gap-2">
+                <div className="p-6">
+                  <div className="mb-4">
+                    <h3 className="text-lg font-semibold text-white mb-2">Our Services</h3>
+                    <p className="text-sm text-gray-400">Comprehensive technology solutions for your business</p>
+                  </div>
+                  <div className="grid grid-cols-1 gap-3">
                     {services.map((service, index) => (
                       <Link
                         key={index}
@@ -97,6 +115,9 @@ const Header: React.FC = () => {
                         className="flex items-start p-3 rounded-lg hover:bg-white/10 transition-all duration-300 group"
                         onClick={closeMenu}
                       >
+                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-lg mr-3 group-hover:scale-110 transition-transform duration-300">
+                          {service.icon}
+                        </div>
                         <div className="flex-1">
                           <div className="font-medium text-white group-hover:text-blue-400 transition-colors duration-300">
                             {service.name}
@@ -110,6 +131,18 @@ const Header: React.FC = () => {
                         </svg>
                       </Link>
                     ))}
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-white/10">
+                    <Link
+                      to="/services"
+                      className="flex items-center justify-center w-full px-4 py-2 bg-blue-600/20 text-blue-400 rounded-lg hover:bg-blue-600/30 transition-colors duration-300"
+                      onClick={closeMenu}
+                    >
+                      View All Services
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
                 </div>
               </div>
