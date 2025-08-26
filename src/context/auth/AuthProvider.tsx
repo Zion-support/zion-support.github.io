@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { supabase, getFromProfiles } from "../../integrations/supabase/client";
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '@/integrations/firebase/client';
 import { useAuthOperations } from "../../hooks/useAuthOperations";
 import { AuthContext } from "./AuthContext";
 import { cleanupAuthState } from "../../utils/authUtils";
@@ -181,8 +183,26 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       }
     );
 
+    // Firebase auth state listener
+    const unsubscribeFirebase = onAuthStateChanged(auth, (fbUser) => {
+      setUser(fbUser ? (fbUser as any) : null);
+      setIsLoading(false);
+    });
+
+    // Initial session check
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) {
+        setIsLoading(false);
+      }
+    }).catch(error => {
+      console.error("Error during initial Supabase getSession:", error);
+      setUser(null); // Explicitly set user to null on error
+      setIsLoading(false);
+    });
+
     return () => {
       subscription.unsubscribe();
+      unsubscribeFirebase();
     };
   }, [navigate]);
 
