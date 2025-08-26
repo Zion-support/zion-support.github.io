@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   FileText, 
@@ -378,3 +379,30 @@ export default function Terms() {
     </div>
   );
 }
+=======
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/Footer";
+import TermsOfService from "@/legal/TermsOfService";
+
+const Terms = () => {
+    return (
+        <>
+            <SEO 
+                title="Terms of Service" 
+                description="The terms and conditions for using the Zion platform." 
+                canonical="https://ziontechgroup.com/terms"
+            />
+            <Header />
+            <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+                <div className="container mx-auto px-4">
+                    <TermsOfService />
+                </div>
+            </main>
+            <Footer />
+        </>
+    );
+};
+
+export default Terms;
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a

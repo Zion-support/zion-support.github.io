@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Leaf, 
@@ -42,58 +43,102 @@ export default function GreenIT() {
       benefits: ["Carbon neutrality", "ESG compliance", "Brand reputation"]
     }
   ];
+=======
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/Button";
+import { Leaf, Server, Cloud } from "lucide-react";
+import { Link } from "react-router-dom";
 
-  const services = [
-    {
-      title: "Green IT Consulting",
-      description: "Expert guidance on implementing sustainable technology practices and reducing environmental impact.",
-      features: ["Energy audits", "Sustainability roadmaps", "ROI analysis"],
-      price: "Starting at $5,000"
-    },
-    {
-      title: "Sustainable Infrastructure",
-      description: "Design and implementation of eco-friendly IT infrastructure and data centers.",
-      features: ["Energy-efficient hardware", "Smart cooling systems", "Renewable energy integration"],
-      price: "Custom pricing"
-    },
-    {
-      title: "E-waste Management",
-      description: "Comprehensive electronic waste collection, recycling, and disposal services.",
-      features: ["Secure data destruction", "Certified recycling", "Compliance reporting"],
-      price: "Starting at $2,000"
-    },
-    {
-      title: "Carbon Footprint Analysis",
-      description: "Detailed assessment of your IT operations' environmental impact with actionable recommendations.",
-      features: ["Comprehensive analysis", "Reduction strategies", "Progress tracking"],
-      price: "Starting at $3,500"
-    }
-  ];
+export default function GreenIT() {
+    const greenITSolutions = [
+        {
+            title: "Energy-Efficient Hardware",
+            description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
+            icon: Server,
+        },
+        {
+            title: "Optimized Cooling Systems",
+            description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
+            icon: Cloud,
+        },
+        {
+            title: "Renewable Energy Integration",
+            description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
+            icon: Leaf,
+        }
+    ];
 
-  const caseStudies = [
-    {
-      company: "TechCorp Solutions",
-      industry: "Software Development",
-      challenge: "High energy costs and carbon footprint from legacy data centers",
-      solution: "Implemented energy-efficient infrastructure with renewable energy integration",
-      results: ["40% reduction in energy costs", "60% decrease in carbon emissions", "Improved system performance"]
-    },
-    {
-      company: "GreenStart Inc.",
-      industry: "E-commerce",
-      challenge: "Growing e-waste from hardware upgrades and replacements",
-      solution: "Established circular IT economy with refurbishment and recycling programs",
-      results: ["80% reduction in e-waste", "30% cost savings on hardware", "Enhanced sustainability credentials"]
-    },
-    {
-      company: "EcoTech Manufacturing",
-      industry: "Manufacturing",
-      challenge: "Need for sustainable IT operations to meet customer demands",
-      solution: "Comprehensive green IT transformation with carbon-neutral certification",
-      results: ["100% renewable energy usage", "Carbon-neutral operations", "Increased customer satisfaction"]
-    }
-  ];
+    return (
+        <>
+            <SEO 
+                title="Green IT Solutions - Sustainable Technology" 
+                description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
+                keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware" 
+                canonical="https://ziontechgroup.com/green-it" 
+            />
+            <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <GradientHeading>Green IT Solutions</GradientHeading>
+                        <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+                            Sustainable technology solutions that reduce environmental impact without compromising performance
+                        </p>
+                    </div>
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
 
+                    {/* Hero Section */}
+                    <div className="mb-16">
+                        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                                <div>
+                                    <h2 className="text-3xl font-bold text-white mb-6">
+                                        Sustainable IT for a Better Future
+                                    </h2>
+                                    <p className="text-zion-slate-light text-lg mb-6">
+                                        As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure while maintaining performance and reliability.
+                                    </p>
+                                    <p className="text-zion-slate-light text-lg mb-6">
+                                        From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions for reducing your carbon footprint.
+                                    </p>
+                                    <div className="mt-8">
+                                        <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+                                            Explore Green IT Solutions
+                                        </Button>
+                                    </div>
+                                </div>
+                                <div className="rounded-lg overflow-hidden">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600" 
+                                        alt="Green IT sustainability" 
+                                        className="object-cover w-full h-full" 
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Solutions Grid */}
+                    <div className="mb-16">
+                        <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {greenITSolutions.map((solution, index) => (
+                                <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
+                                    <div className="flex justify-center mb-4">
+                                        <solution.icon className="h-12 w-12 text-zion-cyan" />
+                                    </div>
+                                    <h3 className="text-white font-medium text-xl text-center mb-3">
+                                        {solution.title}
+                                    </h3>
+                                    <p className="text-zion-slate-light text-center">
+                                        {solution.description}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
       {/* Hero Section */}
@@ -317,3 +362,50 @@ export default function GreenIT() {
     </div>
   );
 }
+=======
+                    {/* Benefits Section */}
+                    <div className="mb-16">
+                        <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
+                                <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>
+                                <ul className="text-zion-slate-light space-y-2">
+                                    <li>• Reduced carbon footprint and greenhouse gas emissions</li>
+                                    <li>• Lower energy consumption and resource utilization</li>
+                                    <li>• Decreased electronic waste through better lifecycle management</li>
+                                    <li>• Support for renewable energy initiatives</li>
+                                </ul>
+                            </div>
+                            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
+                                <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
+                                <ul className="text-zion-slate-light space-y-2">
+                                    <li>• Significant cost savings on energy and cooling</li>
+                                    <li>• Enhanced brand reputation and stakeholder relations</li>
+                                    <li>• Compliance with emerging environmental regulations</li>
+                                    <li>• Improved operational efficiency and performance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* CTA Section */}
+                    <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
+                        <h2 className="text-3xl font-bold text-white mb-6">
+                            Ready to implement Green IT solutions?
+                        </h2>
+                        <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
+                            Connect with our experts to discuss how we can help you build a more sustainable IT infrastructure.
+                        </p>
+                        <Button 
+                            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" 
+                            asChild
+                        >
+                            <Link to="/contact">Contact Our Team</Link>
+                        </Button>
+                    </div>
+                </div>
+            </main>
+        </>
+    );
+}
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a

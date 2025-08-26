@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const Documentation: React.FC = () => {
-  return (
-    <>
+const Documentation = () => {
+    return (<>
       <Helmet>
         <title>Documentation - Zion Tech Group</title>
-        <meta name="description" content="Access comprehensive documentation for Zion Tech Group services, APIs, and tools." />
+        <meta name="description" content="Access comprehensive documentation for Zion Tech Group services, APIs, and tools."/>
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">
@@ -25,8 +23,6 @@ const Documentation: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default Documentation;

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
 
 /* Custom animations */
 @keyframes fade-in {
@@ -279,3 +280,5 @@
   transform: translateY(-20px);
   transition: opacity 300ms, transform 300ms;
 }
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a

@@ -1,23 +1,41 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+<<<<<<< HEAD
 import path from 'node:path'
+=======
+import { resolve } from 'path'
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
 
-// https://vitejs.dev/config/
 export default defineConfig({
   root: '.',
   publicDir: 'public',
   plugins: [react()],
   resolve: {
     alias: {
+<<<<<<< HEAD
       '@': path.resolve(__dirname, './src')
     }
+=======
+      '@': resolve(__dirname, './src'),
+      '@components': resolve(__dirname, './src/components'),
+      '@pages': resolve(__dirname, './src/pages'),
+      '@utils': resolve(__dirname, './src/utils'),
+      '@hooks': resolve(__dirname, './src/hooks'),
+      '@types': resolve(__dirname, './src/types'),
+      '@styles': resolve(__dirname, './src/styles'),
+      '@assets': resolve(__dirname, './src/assets'),
+    },
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
   },
   build: {
     target: 'esnext',
     minify: 'esbuild',
     sourcemap: false,
     rollupOptions: {
+<<<<<<< HEAD
       input: path.resolve(__dirname, 'index.html'),
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
@@ -28,7 +46,6 @@ export default defineConfig({
             '@radix-ui/react-avatar',
             '@radix-ui/react-checkbox',
             '@radix-ui/react-context-menu',
-            '@radix-ui/react-dialog',
             '@radix-ui/react-dropdown-menu',
             '@radix-ui/react-label',
             '@radix-ui/react-popover',
@@ -63,6 +80,17 @@ export default defineConfig({
       },
       external: [],
     },
+<<<<<<< HEAD
+=======
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+      },
+      mangle: { safari10: true },
+    },
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
     chunkSizeWarningLimit: 1000,
     outDir: 'dist',
     copyPublicDir: true,
@@ -95,4 +123,8 @@ export default defineConfig({
   esbuild: { drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [] },
   worker: { format: 'es' },
   envPrefix: ['VITE_', 'ZION_'],
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
