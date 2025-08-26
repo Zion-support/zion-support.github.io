@@ -15,15 +15,19 @@ interface ProductListingCardProps {
   listing: ProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
+  /**
+   * Base path for linking to the detail page. Defaults to
+   * `/marketplace/listing` to preserve existing behaviour.
+   */
   detailBasePath?: string;
 }
 
-const ProductListingCardComponent = ({
+export function ProductListingCard({
   listing,
   view = 'grid',
   onRequestQuote,
   detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
+}: ProductListingCardProps) {
   const isGrid = view === 'grid';
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -48,22 +52,6 @@ const ProductListingCardComponent = ({
   
   const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`);
-  };
-
-  const dispatch = useDispatch<AppDispatch>();
-
-  const addToCart = () => {
-    setLoading(true);
-    dispatch(
-      addItem({
-        id: listing.id,
-        title: listing.title,
-        price: listing.price ?? 0,
-        image: listing.images && listing.images.length > 0 ? listing.images[0] : undefined,
-      })
-    );
-    setLoading(false);
-    navigate('/cart');
   };
   
   const handleRequestQuote = (e: React.MouseEvent) => {
@@ -183,8 +171,8 @@ const ProductListingCardComponent = ({
               size="sm"
               className="bg-primary hover:bg-primary/80 text-primary-foreground"
               onClick={(e) => {
-                e.stopPropagation(); // Prevent card click event
-                addToCart();
+                e.stopPropagation();
+                navigate(`${detailBasePath}/${listing.id}`);
               }}
               disabled={loading}
             >

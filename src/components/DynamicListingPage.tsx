@@ -35,8 +35,6 @@ interface DynamicListingPageProps {
    * Base path for listing detail pages. Defaults to `/marketplace/listing`.
    */
   detailBasePath?: string;
-  /** Number of items to display per page. Default is all listings. */
-  itemsPerPage?: number;
 }
 
 export function DynamicListingPage({
@@ -46,8 +44,7 @@ export function DynamicListingPage({
   listings: allListings,
   categoryFilters,
   initialPrice = { min: 0, max: 10000 },
-  detailBasePath = '/marketplace/listing',
-  itemsPerPage,
+  detailBasePath = '/marketplace/listing'
 }: DynamicListingPageProps) {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");

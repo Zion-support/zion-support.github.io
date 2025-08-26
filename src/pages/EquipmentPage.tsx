@@ -465,6 +465,7 @@ export default function EquipmentPage() {
         listings={listings}
         categoryFilters={EQUIPMENT_FILTERS}
         initialPrice={{ min: 400, max: 50000 }}
+        detailBasePath="/equipment"
       />
     
   );
