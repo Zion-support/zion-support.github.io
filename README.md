@@ -718,6 +718,29 @@ Start the webhook server with:
 node scripts/codexWebhookServer.js
 ```
 
+This updates the dependency to a supported v5 release.
+
+To prevent memory leaks from the deprecated `inflight` package, the project pins
+`glob` to version `10.4.5` via the `resolutions` field in `package.json`. Run
+`npm install` to ensure this version is installed.
+
+### Whitelabel Tenant Errors
+
+If the app logs **"Error loading tenant"** during startup, the request to the
+Supabase edge function that provides whitelabel settings failed. Confirm that
+`VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are set in your environment and
+that you have network connectivity. The tenant hook will retry a few times
+before giving up.
+
+## Testing
+
+Run unit tests with:
+
+```sh
+npm run test
+```
+
+<<<<<<< HEAD
 Some Cypress tests rely on environment variables. Create a `cypress.env.json`
 file in the project root with values for variables like `TEST_USER_EMAIL` and
 `TEST_USER_PASSWORD` before running the end-to-end tests. An example file:
@@ -735,6 +758,9 @@ file in the project root with values for variables like `TEST_USER_EMAIL` and
 ```
 
 ## How it Works
+=======
+To watch tests during development:
+>>>>>>> origin/main
 
 
 ## API Endpoints

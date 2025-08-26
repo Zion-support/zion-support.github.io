@@ -1,9 +1,92 @@
+<<<<<<< HEAD
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'node:path'
+import { SAMPLE_SERVICES } from './src/data/sampleServices'
+=======
+import path from 'node:path'
+>>>>>>> origin/main
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+<<<<<<< HEAD
+    {
+      name: 'mock-api',
+      configureServer(server) {
+        server.middlewares.use('/api/services', (req, res) => {
+          const url = new URL(req.originalUrl || req.url, 'http://localhost')
+          const categoryId = url.searchParams.get('categoryId')
+          const data = SAMPLE_SERVICES.filter(
+            (item) => !categoryId || item.category === categoryId
+          )
+          res.setHeader('Content-Type', 'application/json')
+          res.end(JSON.stringify(data))
+        })
+      },
+    },
+  ],
+=======
+  ],
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      manifest: {
+        name: 'Zion Tech Group - Revolutionary Technology Solutions',
+        short_name: 'Zion Tech',
+        description: 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.',
+        theme_color: '#06b6d4',
+        background_color: '#0f172a',
+        display: 'standalone',
+        orientation: 'portrait-primary',
+        scope: '/',
+        start_url: '/',
+        icons: [
+          {
+            src: 'icon-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'maskable any'
+          },
+          {
+            src: 'icon-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable any'
+          }
+        ],
+        shortcuts: [
+          {
+            name: 'Services',
+            short_name: 'Services',
+            description: 'Explore our revolutionary technology services',
+            url: '/services'
+          },
+          {
+            name: 'Contact',
+            short_name: 'Contact',
+            description: 'Get in touch with our team',
+            url: '/contact'
+          },
+          {
+            name: 'About',
+            short_name: 'About',
+            description: 'Learn about Zion Tech Group',
+            url: '/about'
+          }
+        ]
+      }
+    })
+  ],
+>>>>>>> origin/main
   resolve: {
     alias: {
 <<<<<<< HEAD
@@ -16,14 +99,95 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: [
-        'framer-motion',
-        'lucide-react',
-        'clsx',
-        'class-variance-authority',
-        'tailwind-merge',
-      ],
+<<<<<<< HEAD
+      external: ['lucide-react']
+    }
+=======
+      output: {
+        manualChunks: {
+          // Vendor chunks for better caching
+          'react-vendor': ['react', 'react-dom'],
+          'ui-vendor': [
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-alert-dialog',
+            '@radix-ui/react-aspect-ratio',
+            '@radix-ui/react-avatar',
+            '@radix-ui/react-checkbox',
+            '@radix-ui/react-context-menu',
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-label',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-progress',
+            '@radix-ui/react-radio-group',
+            '@radix-ui/react-scroll-area',
+            '@radix-ui/react-select',
+            '@radix-ui/react-separator',
+            '@radix-ui/react-slider',
+            '@radix-ui/react-slot',
+            '@radix-ui/react-switch',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-toast',
+            '@radix-ui/react-tooltip',
+          ],
+          'animation-vendor': ['framer-motion'],
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          'icons-vendor': ['lucide-react', 'react-icons'],
+          'charts-vendor': ['recharts'],
+          'date-vendor': ['date-fns', 'react-day-picker'],
+        },
+        chunkFileNames: (chunkInfo) => {
+          const facadeModuleId = chunkInfo.facadeModuleId
+            ? chunkInfo.facadeModuleId.split('/').pop()?.replace('.tsx', '').replace('.ts', '')
+            : 'chunk'
+          return `js/[name]-[hash].js`
+        },
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name?.split('.') || []
+          const ext = info[info.length - 1]
+          if (/\.(css)$/.test(assetInfo.name || '')) {
+            return 'css/[name]-[hash].[ext]'
+          }
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) {
+            return 'images/[name]-[hash].[ext]'
+          }
+          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) {
+            return 'fonts/[name]-[hash].[ext]'
+          }
+          return 'assets/[name]-[hash].[ext]'
+        },
+      },
+      external: [],
     },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+      },
+      mangle: {
+        safari10: true,
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'framer-motion',
+      'lucide-react',
+      'clsx',
+      'tailwind-merge',
+    ],
+    exclude: ['@radix-ui/react-icons'],
+  },
+  css: {
+    devSourcemap: false,
+>>>>>>> origin/main
   },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   server: {

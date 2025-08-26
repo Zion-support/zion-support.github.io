@@ -1,4 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
+import type { GetStaticPaths, GetStaticProps } from 'next';
+import { SERVICES } from '@/data/servicesData';
+import { slugify } from '@/lib/slugify';
+import Custom404 from '../404';
+import type { ProductListing } from '@/types/listings';
+=======
 import Head from 'next/head';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 <<<<<<< HEAD
@@ -24,9 +31,7 @@ import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
 import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
 import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
 import { real2027Q4Additions } from '../../data/real-2027-q4-additions';
-import { innovativeMicroSaasServices2025 } from '../../src/data/innovativeMicroSaasServices2025';
-import { enhancedMicroSaasServices2025 } from '../../src/data/enhancedMicroSaasServices2025';
-import { ultimateInnovativeServices2026 } from '../../data/2026-ultimate-innovative-services';
+>>>>>>> origin/main
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 

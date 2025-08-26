@@ -22,11 +22,14 @@
     "home": "Home",
     "marketplace": "Marketplace",
 <<<<<<< HEAD
-<<<<<<< HEAD:public/locales/en-US/common.json
+    "services": "Services",
+=======
+<<<<<<< HEAD:dist/locales/en-US/common.json
     "micro-saas": "Micro SAAS",
 =======
     "services": "Services",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b:src/i18n/locales/en/translation.json
+>>>>>>> origin/main
     "categories": "Categories",
     "services": "Services",
     "micro-saas": "Micro SAAS",

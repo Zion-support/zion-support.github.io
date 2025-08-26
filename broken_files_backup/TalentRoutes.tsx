@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src/routes/TalentRoutes.tsx
+<<<<<<< HEAD
 import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
@@ -8,6 +8,12 @@ import TalentsPage from "../pages/TalentsPage";
 import SavedTalentsPage from "../pages/SavedTalentsPage";
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
+=======
+import React from 'react';
+// Next.js routing - no need for react-router-dom
+import TalentDirectory from '@/pages/TalentDirectory';
+import TalentsPage from '@/pages/TalentsPage';
+>>>>>>> origin/main
 
 const TalentProfilePage = React.lazy(() => import("../pages/TalentProfilePage"));
 
