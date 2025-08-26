@@ -192,3 +192,6 @@ export function BenefitsSection() {
       </div>
     </section>);
 }
+
+// Add default export
+export default BenefitsSection;

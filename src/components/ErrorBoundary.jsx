@@ -108,11 +108,17 @@ export function useErrorHandler() {
     }, []);
     return { error, handleError, clearError };
 }
+
 // Higher-order component for wrapping components with error handling
 export function withErrorBoundary(Component, errorBoundaryProps) {
     return function WithErrorBoundary(props) {
-        return (<ErrorBoundary {...errorBoundaryProps}>
-        <Component {...props}/>
-      </ErrorBoundary>);
+        return (
+            <ErrorBoundary {...errorBoundaryProps}>
+                <Component {...props}/>
+            </ErrorBoundary>
+        );
     };
 }
+
+// Add default export
+export default ErrorBoundary;
