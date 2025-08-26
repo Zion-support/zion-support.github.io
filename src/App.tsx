@@ -1,7 +1,8 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
 import { ThemeProvider } from './components/ThemeProvider';
 import { Toaster as SonnerToaster } from './components/ui/sonner';
 import { Toaster } from './components/ui/toaster';
@@ -17,6 +18,12 @@ const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
+
+// Critical missing pages (404 errors)
+const QuantumNeuralNetworkPlatform = React.lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
+const AutonomousBusinessOperationsPlatform = React.lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
+const AIPoweredITAssetManagement = React.lazy(() => import('./pages/AIPoweredITAssetManagement'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/AIBusinessIntelligence'));
 
 // Additional missing pages
 const Partners = React.lazy(() => import('./pages/Partners'));
@@ -42,10 +49,6 @@ const CybersecurityServices = React.lazy(() => import('./pages/services/Cybersec
 const InfrastructureServices = React.lazy(() => import('./pages/services/Infrastructure'));
 const DigitalTransformation = React.lazy(() => import('./pages/services/Transformation'));
 const ConsultingServices = React.lazy(() => import('./pages/services/Consulting'));
-const DataAnalyticsServices = React.lazy(() => import('./pages/services/DataAnalytics'));
-const IoTEdgeComputingServices = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
-const BlockchainWeb3Services = React.lazy(() => import('./pages/services/BlockchainWeb3'));
-const DevOpsCloudServices = React.lazy(() => import('./pages/services/DevOpsCloud'));
 
 // Additional service pages
 const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
@@ -53,8 +56,6 @@ const AdvancedServices2025 = React.lazy(() => import('./pages/AdvancedServices20
 const AdvancedServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedServicesShowcase2025'));
 const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025'));
 const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
-const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
-const CuttingEdgeInnovativeServices = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 
 // Other pages
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
@@ -91,6 +92,12 @@ const routes = [
   { path: '/privacy', element: <Privacy /> },
   { path: '/terms', element: <Terms /> },
   
+  // Critical missing routes (404 errors)
+  { path: '/quantum-neural-network-platform', element: <QuantumNeuralNetworkPlatform /> },
+  { path: '/autonomous-business-operations-platform', element: <AutonomousBusinessOperationsPlatform /> },
+  { path: '/ai-powered-it-asset-management', element: <AIPoweredITAssetManagement /> },
+  { path: '/ai-business-intelligence', element: <AIBusinessIntelligence /> },
+  
   // Additional missing pages
   { path: '/partners', element: <Partners /> },
   { path: '/docs', element: <Documentation /> },
@@ -115,10 +122,6 @@ const routes = [
   { path: '/services/infrastructure', element: <InfrastructureServices /> },
   { path: '/services/transformation', element: <DigitalTransformation /> },
   { path: '/services/consulting', element: <ConsultingServices /> },
-  { path: '/services/data-analytics', element: <DataAnalyticsServices /> },
-  { path: '/services/iot-edge-computing', element: <IoTEdgeComputingServices /> },
-  { path: '/services/blockchain-web3', element: <BlockchainWeb3Services /> },
-  { path: '/services/devops-cloud', element: <DevOpsCloudServices /> },
   
   // Additional service routes
   { path: '/innovative-services-2025', element: <InnovativeServices2025 /> },
@@ -126,8 +129,6 @@ const routes = [
   { path: '/advanced-services-showcase-2025', element: <AdvancedServicesShowcase2025 /> },
   { path: '/comprehensive-pricing-2025', element: <ComprehensivePricing2025 /> },
   { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
-  { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
-  { path: '/cutting-edge-innovative-services', element: <CuttingEdgeInnovativeServices /> },
   
   // Other routes
   { path: '/match', element: <AIMatcherPage /> },
@@ -162,21 +163,26 @@ const LoadingSpinner = () => (
 );
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <WhitelabelProvider>
       <ThemeProvider>
         <Router>
           <div className="App min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1 pt-16"> {/* Add padding-top to account for fixed header */}
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  {routes.map(({ path, element }) => (
-                    <Route key={path} path={path} element={element} />
-                  ))}
-                </Routes>
-              </Suspense>
-            </main>
+            <Header onMenuToggle={() => setIsSidebarOpen(!isSidebarOpen)} />
+            <div className="flex flex-1 pt-16">
+              <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+              <main className="flex-1 lg:ml-64">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    {routes.map(({ path, element }) => (
+                      <Route key={path} path={path} element={element} />
+                    ))}
+                  </Routes>
+                </Suspense>
+              </main>
+            </div>
             <Footer />
             <Toaster />
             <SonnerToaster />
