@@ -1,29 +1,76 @@
-import React, { Suspense, lazy, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './components/ThemeProvider';
-import { WhitelabelProvider } from './context/WhitelabelContext';
-import { Toaster } from './components/ui/toaster';
-import { Toaster as SonnerToaster } from './components/ui/sonner';
-import Footer from './components/Footer';
-import FloatingActionButton from './components/FloatingActionButton';
-import EnhancedScrollToTop from './components/EnhancedScrollToTop';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import React from 'react';
+import { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { useScrollToTop } from "./hooks";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import Footer from "./components/Footer";
+import {
+  AuthRoutes,
+  DashboardRoutes,
+  MarketplaceRoutes,
+  TalentRoutes,
+  AdminRoutes,
+  MobileAppRoutes,
+  ContentRoutes,
+  ErrorRoutes,
+  EnterpriseRoutes,
+  CommunityRoutes,
+  DeveloperRoutes
+} from './routes';
+const Home = React.lazy(() => import('./pages/Home'));
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
+const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
+const Analytics = React.lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
+const Categories = React.lazy(() => import('./pages/Categories'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PartnersPage = React.lazy(() => import('./pages/Partners'));
+const Login = React.lazy(() => import('./pages/Login'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+const CuttingEdgeServicesShowcase = React.lazy(() => import('./pages/CuttingEdgeServicesShowcase'));
+const InnovationServicesMarketing = React.lazy(() => import('./pages/InnovationServicesMarketing'));
 
-// Lazy load pages with better chunking
-const Home = lazy(() => import('./pages/Home'));
-const Services = lazy(() => import('./pages/Services'));
-const Team = lazy(() => import('./pages/Team'));
-const Leadership = lazy(() => import('./pages/Leadership'));
-const Careers = lazy(() => import('./pages/Careers'));
-const Partners = lazy(() => import('./pages/Partners'));
-const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const Blog = lazy(() => import('./pages/Blog'));
-const Careers = lazy(() => import('./pages/Careers'));
-const Privacy = lazy(() => import('./pages/Privacy'));
-const Terms = lazy(() => import('./pages/Terms'));
-const Cookies = lazy(() => import('./pages/Cookies'));
-const Sitemap = lazy(() => import('./pages/Sitemap'));
-const NotFound = lazy(() => import('./pages/NotFound'));
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/match', element: <AIMatcherPage /> },
+  { path: '/login', element: <Login /> },
+  { path: '/signup', element: <Signup /> },
+  { path: '/talent', element: <TalentDirectory /> },
+  { path: '/talents', element: <TalentsPage /> },
+  { path: '/services', element: <ServicesPage /> },
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/categories', element: <Categories /> },
+  { path: '/equipment', element: <EquipmentPage /> },
+  { path: '/equipment/:id', element: <EquipmentDetail /> },
+  { path: '/analytics', element: <Analytics /> },
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },
+  { path: '/open-app', element: <OpenAppRedirect /> },
+  { path: '/community', element: <CommunityPage /> },
+  { path: '/contact', element: <ContactPage /> },
+  { path: '/partners', element: <PartnersPage /> },
+  { path: '/zion-hire-ai', element: <ZionHireAI /> },
+  { path: '/hire-ai', element: <ZionHireAI /> },
+  { path: '/request-quote', element: <RequestQuotePage /> },
+  { path: '/cutting-edge-services', element: <CuttingEdgeServicesShowcase /> },
+  { path: '/innovation-services-marketing', element: <InnovationServicesMarketing /> },
+  { path: '/blog', element: <Blog /> },
+  { path: '/blog/:slug', element: <BlogPost /> },
+];
 
 // Enhanced loading spinner component with accessibility
 const LoadingSpinner = () => (
