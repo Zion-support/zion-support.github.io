@@ -107,7 +107,7 @@ export function ContentSkeleton() {
 // Card skeleton loading
 export function CardSkeleton() {
   return (
-    <div className="bg-card border border-gray-200 rounded-lg p-6 space-y-4 animate-pulse">
+    <div className="bg-white border border-gray-200 rounded-lg p-6 space-y-4 animate-pulse">
       <div className="h-6 bg-zion-slate-light/20 rounded w-1/2"></div>
       <div className="space-y-2">
         <div className="h-4 bg-zion-slate-light/20 rounded"></div>

@@ -55,13 +55,14 @@ const Sidebar = () => {
   };
 
   const services = [
-    { name: 'AI Services', href: '/services/ai', icon: Cpu, description: 'Machine Learning & AI' },
-    { name: 'Cloud', href: '/services/cloud', icon: Cloud, description: 'Cloud Migration & Automation' },
+    { name: 'AI Solutions', href: '/services/ai', icon: Cpu, description: 'Machine Learning & AI' },
+    { name: 'Cloud & DevOps', href: '/services/cloud', icon: Cloud, description: 'Cloud Migration & Automation' },
     { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Security & Protection' },
-    { name: 'Infrastructure', href: '/services/infrastructure', icon: Database, description: 'Network & Systems' },
-    { name: 'Consulting', href: '/services/consulting', icon: Briefcase, description: 'Advisory & Strategy' },
+    { name: 'IT Infrastructure', href: '/services/infrastructure', icon: Database, description: 'Network & Systems' },
     { name: 'Digital Transformation', href: '/services/transformation', icon: Zap, description: 'Business Optimization' },
-    { name: 'Quantum AI', href: '/services/quantum-ai', icon: Target, description: 'Next-Gen Computing' },
+    { name: 'Quantum Computing', href: '/services/quantum-ai', icon: Target, description: 'Next-Gen Computing' },
+    { name: 'Blockchain Solutions', href: '/blockchain-enterprise-solutions', icon: Building2, description: 'Distributed Ledger' },
+    { name: 'IoT & Data Analytics', href: '/iot-data-analytics', icon: TrendingUp, description: 'Connected Devices' }
   ];
 
   const talent = [
@@ -74,7 +75,7 @@ const Sidebar = () => {
   const company = [
     { name: 'About Us', href: '/about', icon: Building2, description: 'Our story and mission' },
     { name: 'Our Team', href: '/team', icon: Users, description: 'Leadership and experts' },
-    { name: 'Mission & Vision', href: '/mission', icon: Target, description: 'Our purpose and goals' },
+    { name: 'Mission & Vision', href: '/about', icon: Target, description: 'Our purpose and goals' },
     { name: 'Careers', href: '/careers', icon: Star, description: 'Join our team' },
     { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
     { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },

@@ -17,7 +17,7 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 
 // Enhanced lazy loading with preloading hints from incoming branch
 const Services = lazy(() => import('./pages/Services'));
-const AISolutions = lazy(() => import('./pages/AISolutions'));
+const AISolutions = lazy(() => import('./pages/services/AIServices'));
 const ServicesShowcase = lazy(() => import('./pages/ServicesShowcase'));
 const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
@@ -42,8 +42,7 @@ const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessInt
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 
 // Additional innovative services
-const IoTManagementPlatform = lazy(() => import('./pages/services/IoTManagementPlatform'));
-const BlockchainDeFiSolutions = lazy(() => import('./pages/services/BlockchainDeFiSolutions'));
+// Removed unavailable imports
 
 // New innovative service pages
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
@@ -139,6 +138,9 @@ const Accessibility = React.lazy(() => import('./pages/Accessibility'));
 const GDPR = React.lazy(() => import('./pages/GDPR'));
 const API = React.lazy(() => import('./pages/API'));
 const Status = React.lazy(() => import('./pages/Status'));
+
+const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+const APIDocs = React.lazy(() => import('./pages/APIDocs'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -273,7 +275,9 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/api-docs" element={<APIDocs />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/accessibility" element={<Accessibility />} />
