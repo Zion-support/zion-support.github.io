@@ -5,10 +5,142 @@ import { motion } from 'framer-motion';
 import {
   Search, Star, DollarSign, CheckCircle,
   ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,
-  ChevronDown, Sparkles
+  ChevronDown, Sparkles, Brain, Shield, Cpu, Database, Cloud
 } from 'lucide-react';
-import { enhancedRealMicroSaasServices as ultimate2026Services } from '../data/enhanced-real-micro-saas-services';
-import { enhancedRealMicroSaasServices as revolutionary2026Innovations } from '../data/enhanced-real-micro-saas-services';
+
+// Mock data for services
+const mockServices = [
+  {
+    id: 'ai-consciousness-2026',
+    name: 'AI Consciousness Simulation 2026',
+    description: 'Advanced AI consciousness simulation platform for research and development',
+    icon: '🧠',
+    category: 'AI',
+    price: '$2,999',
+    period: '/month',
+    rating: 4.9,
+    customers: 150,
+    popular: true,
+    link: '/services/ai-consciousness'
+  },
+  {
+    id: 'quantum-neural-2026',
+    name: 'Quantum Neural Interfaces 2026',
+    description: 'Next-generation quantum neural interface technology',
+    icon: '⚛️',
+    category: 'Quantum',
+    price: '$5,999',
+    period: '/month',
+    rating: 4.8,
+    customers: 75,
+    popular: true,
+    link: '/services/quantum-neural'
+  },
+  {
+    id: 'autonomous-ai-agents-2026',
+    name: 'Autonomous AI Agents 2026',
+    description: 'Fully autonomous AI agents for business automation',
+    icon: '🤖',
+    category: 'AI',
+    price: '$1,999',
+    period: '/month',
+    rating: 4.7,
+    customers: 200,
+    popular: true,
+    link: '/services/autonomous-ai'
+  },
+  {
+    id: 'metaverse-platform-2026',
+    name: 'Metaverse Development Platform 2026',
+    description: 'Complete metaverse development and deployment solution',
+    icon: '🌐',
+    category: 'Emerging',
+    price: '$3,999',
+    period: '/month',
+    rating: 4.6,
+    customers: 100,
+    popular: false,
+    link: '/services/metaverse'
+  },
+  {
+    id: 'space-tech-2026',
+    name: 'Space Technology Solutions 2026',
+    description: 'Cutting-edge space technology for commercial applications',
+    icon: '🚀',
+    category: 'Quantum',
+    price: '$8,999',
+    period: '/month',
+    rating: 4.9,
+    customers: 50,
+    popular: false,
+    link: '/services/space-tech'
+  },
+  {
+    id: 'edge-computing-2026',
+    name: 'Edge Computing Platform 2026',
+    description: 'Advanced edge computing infrastructure for IoT and AI',
+    icon: '🔌',
+    category: 'Enterprise',
+    price: '$1,499',
+    period: '/month',
+    rating: 4.5,
+    customers: 300,
+    popular: false,
+    link: '/services/edge-computing'
+  },
+  {
+    id: '5g-networks-2026',
+    name: '5G Network Solutions 2026',
+    description: 'Next-generation 5G network infrastructure and services',
+    icon: '📡',
+    category: 'Enterprise',
+    price: '$4,999',
+    period: '/month',
+    rating: 4.7,
+    customers: 120,
+    popular: false,
+    link: '/services/5g-networks'
+  },
+  {
+    id: 'cybersecurity-2026',
+    name: 'Advanced Cybersecurity 2026',
+    description: 'AI-powered cybersecurity with quantum encryption',
+    icon: '🔒',
+    category: 'Enterprise',
+    price: '$2,499',
+    period: '/month',
+    rating: 4.8,
+    customers: 250,
+    popular: true,
+    link: '/services/cybersecurity'
+  },
+  {
+    id: 'healthcare-ai-2026',
+    name: 'Healthcare AI Platform 2026',
+    description: 'Revolutionary AI solutions for healthcare and medical research',
+    icon: '🏥',
+    category: 'AI',
+    price: '$3,499',
+    period: '/month',
+    rating: 4.9,
+    customers: 80,
+    popular: false,
+    link: '/services/healthcare-ai'
+  },
+  {
+    id: 'climate-prediction-2026',
+    name: 'Climate Prediction AI 2026',
+    description: 'AI-powered climate modeling and prediction systems',
+    icon: '🌍',
+    category: 'Emerging',
+    price: '$1,999',
+    period: '/month',
+    rating: 4.6,
+    customers: 90,
+    popular: false,
+    link: '/services/climate-prediction'
+  }
+];
 
 export default function Ultimate2026ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -24,28 +156,14 @@ export default function Ultimate2026ServicesShowcase() {
     website: 'https://ziontechgroup.com'
   };
 
-  // Combine all services
-  const allServices = [
-    ...ultimate2026Services,
-    ...revolutionary2026Innovations
-  ];
-
   // Dynamic category counts
-  const aiCount = allServices.filter(service =>
-    service.category?.includes('AI') || service.category?.includes('Machine Learning')
-  ).length;
-  const quantumCount = allServices.filter(service =>
-    service.category?.includes('Quantum') || service.category?.includes('Space')
-  ).length;
-  const enterpriseCount = allServices.filter(service =>
-    service.category?.includes('Enterprise') || service.category?.includes('IT')
-  ).length;
-  const emergingCount = allServices.filter(service =>
-    service.category?.includes('Emerging') || service.category?.includes('Innovation')
-  ).length;
+  const aiCount = mockServices.filter(service => service.category === 'AI').length;
+  const quantumCount = mockServices.filter(service => service.category === 'Quantum').length;
+  const enterpriseCount = mockServices.filter(service => service.category === 'Enterprise').length;
+  const emergingCount = mockServices.filter(service => service.category === 'Emerging').length;
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'all', name: 'All Services', icon: '🚀', count: mockServices.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
     { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
@@ -62,22 +180,21 @@ export default function Ultimate2026ServicesShowcase() {
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {
+    let filtered = mockServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesCategory = selectedCategory === 'all' ||
-        (selectedCategory === 'ai' && service.category.includes('AI')) ||
-        (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
-        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
-        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation')));
+        (selectedCategory === 'ai' && service.category === 'AI') ||
+        (selectedCategory === 'quantum' && service.category === 'Quantum') ||
+        (selectedCategory === 'enterprise' && service.category === 'Enterprise') ||
+        (selectedCategory === 'emerging' && service.category === 'Emerging');
 
       const matchesPrice = selectedPriceRange === 'all' ||
-        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
-        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) ||
-        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) ||
-        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing');
+        (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
+        (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) ||
+        (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000);
 
       return matchesSearch && matchesCategory && matchesPrice;
     });
@@ -89,8 +206,8 @@ export default function Ultimate2026ServicesShowcase() {
         break;
       case 'price':
         filtered.sort((a, b) => {
-          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''));
-          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, ''));
+          const priceA = parseInt(a.price.replace(/[^0-9]/g, ''));
+          const priceB = parseInt(b.price.replace(/[^0-9]/g, ''));
           return priceA - priceB;
         });
         break;
@@ -105,12 +222,12 @@ export default function Ultimate2026ServicesShowcase() {
     }
 
     return filtered;
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
+  const featuredServices = mockServices.filter(service => service.popular).slice(0, 6);
 
   return (
-    <>
+    <div className="min-h-screen bg-black text-white">
       <Head>
         <title>Ultimate 2026 Services Showcase | Zion Tech Group</title>
         <meta name="description" content="Discover our revolutionary 2026 innovations including AI consciousness simulation, quantum neural interfaces, autonomous AI agents, and cutting-edge enterprise solutions. Transform your business with next-generation technology." />
@@ -150,7 +267,7 @@ export default function Ultimate2026ServicesShowcase() {
             {/* Service Statistics */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{mockServices.length}+</div>
                 <div className="text-gray-400">Revolutionary Services</div>
               </div>
               <div className="text-center">
@@ -218,7 +335,9 @@ export default function Ultimate2026ServicesShowcase() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }} className="text-center mb-16">
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Revolutionary Services</span>
             </h2>
@@ -233,7 +352,9 @@ export default function Ultimate2026ServicesShowcase() {
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }} className="group relative">
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group relative"
+              >
                 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -272,7 +393,9 @@ export default function Ultimate2026ServicesShowcase() {
                         {service.customers.toLocaleString()} customers
                       </div>
                       <Link
-                        href={service.link} className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform duration-200">
+                        href={service.link}
+                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform duration-200"
+                      >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </Link>
@@ -291,7 +414,9 @@ export default function Ultimate2026ServicesShowcase() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }} className="text-center mb-16">
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               All <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Revolutionary Services</span>
             </h2>
@@ -309,7 +434,8 @@ export default function Ultimate2026ServicesShowcase() {
                 type="text"
                 placeholder="Search revolutionary services..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
               />
             </div>
 
@@ -319,7 +445,9 @@ export default function Ultimate2026ServicesShowcase() {
               <div className="relative">
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
+                >
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
@@ -333,7 +461,9 @@ export default function Ultimate2026ServicesShowcase() {
               <div className="relative">
                 <select
                   value={selectedPriceRange}
-                  onChange={(e) => setSelectedPriceRange(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
+                  onChange={(e) => setSelectedPriceRange(e.target.value)}
+                  className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
+                >
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
                       {range.name}
@@ -347,7 +477,9 @@ export default function Ultimate2026ServicesShowcase() {
               <div className="relative">
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
+                >
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
                   <option value="popularity">Sort by Popularity</option>
@@ -366,7 +498,7 @@ export default function Ultimate2026ServicesShowcase() {
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
+                  className={`p-2 rounded ${viewMode === 'grid' ? 'text-gray-400 hover:text-white' : 'bg-cyan-500 text-white'}`}
                 >
                   <List className="w-4 h-4" />
                 </button>
@@ -423,7 +555,9 @@ export default function Ultimate2026ServicesShowcase() {
                           {service.customers.toLocaleString()} customers
                         </div>
                         <Link
-                          href={service.link} className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform duration-200">
+                          href={service.link}
+                          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform duration-200"
+                        >
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-1" />
                         </Link>
@@ -434,22 +568,14 @@ export default function Ultimate2026ServicesShowcase() {
                   <div className="flex items-center space-x-6">
                     <div className="text-4xl">{service.icon}</div>
                     <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                          {service.name}
-                        </h3>
-                        {service.popular && (
-                          <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
-                            <Star className="w-3 h-3 mr-1" />
-                            Popular
-                          </div>
-                        )}
-                      </div>
-                      <p className="text-gray-400 mb-3">{service.description}</p>
-                      <div className="flex items-center space-x-6 text-sm text-gray-500">
-                        <span>Category: {service.category}</span>
+                      <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                      <p className="text-gray-400 mb-2">{service.description}</p>
+                      <div className="flex items-center space-x-4 text-sm text-gray-500">
+                        <span>{service.category}</span>
+                        <span>•</span>
+                        <span>{service.rating} ★</span>
+                        <span>•</span>
                         <span>{service.customers.toLocaleString()} customers</span>
-                        <span>Rating: {service.rating}/5</span>
                       </div>
                     </div>
                     <div className="text-right">
@@ -458,7 +584,9 @@ export default function Ultimate2026ServicesShowcase() {
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
                       <Link
-                        href={service.link} className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform duration-200">
+                        href={service.link}
+                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                      >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </Link>
@@ -470,30 +598,38 @@ export default function Ultimate2026ServicesShowcase() {
           </div>
 
           {filteredServices.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }} className="text-center py-20">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-              <p className="text-gray-400">Try adjusting your search criteria or filters</p>
-            </motion.div>
+            <div className="text-center py-12">
+              <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                  setSelectedPriceRange('all');
+                }}
+                className="mt-4 px-6 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
+              >
+                Clear Filters
+              </button>
+            </div>
           )}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
+      <section className="py-20 bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business with 2026 Innovations?
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing,
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Join thousands of businesses already leveraging our revolutionary 2026 innovations
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
             </p>
 
@@ -591,6 +727,6 @@ export default function Ultimate2026ServicesShowcase() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

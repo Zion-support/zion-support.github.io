@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+=======
 import Head from 'next/head'
 
 export default function Contact() {
 	const title = 'Contact — Zion Tech Group'
 	const description = 'Contact Zion Tech Group for AI, cloud, cybersecurity, and micro SaaS solutions.'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bf5a
 
 export default function ContactPage() {
 	return (
