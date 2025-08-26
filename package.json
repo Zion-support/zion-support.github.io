@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next dev",
-    "build": "SKIP_TYPE_CHECK=true NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build && next export",
+    "build": "SKIP_TYPE_CHECK=true NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "type-check": "tsc --noEmit"
