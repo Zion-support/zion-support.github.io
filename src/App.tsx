@@ -7,13 +7,13 @@ import { ChatAssistant } from './components/ChatAssistant';
 
 
 // Lazy load pages - only import existing ones
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
+const Home = React.lazy(() => import('./pages/Home.jsx'));
+const About = React.lazy(() => import('./pages/About.jsx'));
+const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
+const Login = React.lazy(() => import('./pages/Login.jsx'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
@@ -26,6 +26,8 @@ const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025.tsx'));
+const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025.tsx'));
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -71,6 +73,8 @@ function App() {
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/enhanced-services" element={<EnhancedServices />} />
+              <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
+              <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
               
               {/* AI Services Routes */}
               <Route path="/ai-services" element={<AIServicesPage />} />
