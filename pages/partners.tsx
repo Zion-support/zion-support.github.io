@@ -1,1 +1,0 @@
-export default function Partners(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Partners</h1><p>Our technology and delivery partners.</p></main>);}
