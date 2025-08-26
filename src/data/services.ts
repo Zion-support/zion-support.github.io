@@ -254,6 +254,346 @@ export const ZION_SERVICES: UnifiedService[] = [
 			website: 'https://ziontechgroup.com/services/computer-vision-inspection',
 			address: '364 E Main St STE 1008 Middletown DE 19709'
 		}
+	},
+	{
+		id: 'ai-sales-call-coach',
+		title: 'AI Sales Call Coach',
+		description: 'Real-time sales call coaching with talk-time balance, objection detection, and next-best prompts.',
+		category: 'Micro SaaS',
+		price: { monthly: 79, yearly: 790, currency: 'USD', pricingModel: 'subscription' },
+		features: ['Live transcript + insights', 'Objection classifier', 'CRM auto-logging', 'Playbooks & scoring'],
+		benefits: ['Higher win rates', 'Shorter ramp time', 'Consistent messaging'],
+		useCases: ['Sales teams', 'SDR/AE enablement'],
+		tags: ['Speech-to-text', 'NLP', 'RevOps'],
+		marketPrice: '$59–$199/mo',
+		roi: '5–15% lift in conversion',
+		innovationLevel: 'Streaming LLM guidance',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/ai-sales-call-coach',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'vendor-risk-automation',
+		title: 'Vendor Risk Automation (VRM)',
+		description: 'Automate vendor intake, security questionnaire parsing, risk scoring, and continuous monitoring.',
+		category: 'Micro SaaS',
+		price: { monthly: 149, yearly: 1490, currency: 'USD', pricingModel: 'subscription' },
+		features: ['SIG/CAIQ parser', 'Auto-issues to Jira', 'Risk tiers & SLAs', 'External posture scans'],
+		benefits: ['Faster vendor onboarding', 'Reduced risk exposure', 'Audit-ready evidence'],
+		useCases: ['Procurement', 'Security', 'Compliance'],
+		tags: ['GRC', 'Security', 'Automation'],
+		marketPrice: '$99–$499/mo',
+		roi: '50–70% time saved per assessment',
+		innovationLevel: 'Questionnaire LLM + scanners',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/vendor-risk-automation',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'ecommerce-pricing-optimizer',
+		title: 'E-commerce Pricing Optimizer',
+		description: 'Dynamic pricing engine with competitor tracking, elasticity modeling, and MAP compliance.',
+		category: 'Micro SaaS',
+		price: { monthly: 129, yearly: 1290, currency: 'USD', pricingModel: 'subscription + usage' },
+		features: ['Competitor scraping', 'Price elasticity curves', 'MAP guardrails', 'Channel-specific strategies'],
+		benefits: ['Higher margins', 'Price confidence', 'Faster response to market'],
+		useCases: ['Retail', 'Marketplaces', 'D2C'],
+		tags: ['Pricing', 'Scraping', 'Optimization'],
+		marketPrice: '$99–$399/mo + usage',
+		roi: '2–5% gross margin increase',
+		innovationLevel: 'Elasticity + MAP aware engine',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/ecommerce-pricing-optimizer',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'ai-fraud-detection-payments',
+		title: 'AI Fraud Detection for Payments',
+		description: 'Behavioral analytics and graph-based anomaly detection to block fraud in real time.',
+		category: 'AI Solutions',
+		price: { oneTime: 12000, currency: 'USD', pricingModel: 'fixed + usage' },
+		features: ['Graph embeddings', 'Device fingerprinting', 'Adaptive thresholds', 'Case management'],
+		benefits: ['Lower chargebacks', 'Better approvals', 'Safer growth'],
+		useCases: ['Fintech', 'Marketplaces', 'Subscriptions'],
+		tags: ['Fraud', 'Graph AI', 'Risk'],
+		marketPrice: '$10k–$200k + usage',
+		roi: 'Reduce fraud loss 30–70%',
+		innovationLevel: 'Graph + streaming inference',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/ai-fraud-detection-payments',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'genai-product-copilot',
+		title: 'GenAI Product Management Copilot',
+		description: 'Requirements to roadmap copilot with PRD drafting, impact estimation, and stakeholder summaries.',
+		category: 'Micro SaaS',
+		price: { monthly: 49, yearly: 490, currency: 'USD', pricingModel: 'subscription' },
+		features: ['Idea clustering', 'PRD templates', 'ICE/RICE scoring', 'Executive digests'],
+		benefits: ['Faster discovery', 'Better prioritization', 'Clearer alignment'],
+		useCases: ['Product teams', 'Startups', 'Agencies'],
+		tags: ['GenAI', 'PM', 'Product Ops'],
+		marketPrice: '$29–$149/mo',
+		roi: 'Accelerate cycle time 20–40%',
+		innovationLevel: 'LLM-first product ops',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/genai-product-copilot',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'revops-data-pipeline',
+		title: 'RevOps Analytics Pipeline',
+		description: 'ELT pipeline and metrics store for leads-to-revenue with dbt models and dashboard templates.',
+		category: 'IT Services',
+		price: { oneTime: 9000, currency: 'USD', pricingModel: 'fixed' },
+		features: ['dbt metrics layer', 'Reverse ETL', 'Benchmarks & dashboards', 'Alerting rules'],
+		benefits: ['Unified truth for GTM', 'Faster insights', 'Operational alerts'],
+		useCases: ['B2B SaaS', 'RevOps', 'Analytics teams'],
+		tags: ['Data', 'ELT', 'dbt'],
+		marketPrice: '$8k–$50k',
+		roi: 'Accelerate growth decisions',
+		innovationLevel: 'Composable analytics stack',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/revops-data-pipeline',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'customer-360-cdp',
+		title: 'Customer 360 CDP Implementation',
+		description: 'Design and deploy event-based CDP for identity resolution, audiences, and omni-channel activation.',
+		category: 'IT Services',
+		price: { oneTime: 18000, currency: 'USD', pricingModel: 'fixed + retainer' },
+		features: ['Identity stitching', 'Traits & audiences', 'Privacy controls', 'Activation playbooks'],
+		benefits: ['Personalized CX', 'Higher LTV', 'Operational efficiency'],
+		useCases: ['E-commerce', 'SaaS', 'Media'],
+		tags: ['CDP', 'MarTech', 'Data'],
+		marketPrice: '$15k–$200k',
+		roi: '5–20% lift in revenue per user',
+		innovationLevel: 'Modern event schema + privacy by design',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/customer-360-cdp',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'ai-compliance-copilot',
+		title: 'AI Compliance Copilot',
+		description: 'Privacy and compliance assistant that drafts DPIAs, maps controls, and summarizes evidence.',
+		category: 'Micro SaaS',
+		price: { monthly: 69, yearly: 690, currency: 'USD', pricingModel: 'subscription' },
+		features: ['DPIA templates', 'Control mapping', 'Evidence summaries', 'Audit trail'],
+		benefits: ['Faster audits', 'Lower overhead', 'Consistent documentation'],
+		useCases: ['GRC teams', 'Security', 'Legal'],
+		tags: ['Compliance', 'LLM', 'GRC'],
+		marketPrice: '$49–$199/mo',
+		roi: '30–60% time savings',
+		innovationLevel: 'LLM drafting with review workflows',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/ai-compliance-copilot',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'ai-code-security-review',
+		title: 'AI Code Security Review',
+		description: 'Augmented SAST/DAST with LLM triage that de-duplicates, explains impact, and suggests secure fixes.',
+		category: 'AI Solutions',
+		price: { oneTime: 7000, currency: 'USD', pricingModel: 'fixed' },
+		features: ['Multi-engine scans', 'LLM triage', 'PR annotations', 'Compliance reports'],
+		benefits: ['Fewer false positives', 'Faster remediation', 'Developer-friendly'],
+		useCases: ['AppSec', 'Platform', 'Product teams'],
+		tags: ['Security', 'DevSecOps', 'LLM'],
+		marketPrice: '$5k–$80k',
+		roi: 'Reduce vulns backlog 30–60%',
+		innovationLevel: 'Triage + fix suggestions in PRs',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/ai-code-security-review',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'cloud-cost-optimizer',
+		title: 'Cloud Cost Optimizer (FinOps)',
+		description: 'Actionable cost insights with rightsizing, commitment planning, anomaly detection, and budgets.',
+		category: 'Micro SaaS',
+		price: { monthly: 99, yearly: 999, currency: 'USD', pricingModel: 'subscription' },
+		features: ['Kubernetes cost allocation', 'Savings Planner', 'Unit economics', 'Anomaly alerts'],
+		benefits: ['Lower cloud bills', 'Predictable spend', 'Team accountability'],
+		useCases: ['SaaS', 'Enterprises', 'Data platforms'],
+		tags: ['FinOps', 'Cloud', 'Kubernetes'],
+		marketPrice: '$79–$399/mo',
+		roi: '15–40% savings typical',
+		innovationLevel: 'Allocation + planning in one',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/cloud-cost-optimizer',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'iot-digital-twin-starter',
+		title: 'IoT Digital Twin Starter',
+		description: 'Blueprint and deploy an IoT data plane with device ingestion, twin modeling, and real-time dashboards.',
+		category: 'IT Services',
+		price: { oneTime: 20000, currency: 'USD', pricingModel: 'fixed' },
+		features: ['Device registry', 'Twin modeling', 'Stream processing', 'Operator dashboards'],
+		benefits: ['Operational visibility', 'Predictive maintenance', 'Faster incident response'],
+		useCases: ['Manufacturing', 'Logistics', 'Energy'],
+		tags: ['IoT', 'Streaming', 'Analytics'],
+		marketPrice: '$20k–$250k',
+		roi: 'Reduce downtime 10–30%',
+		innovationLevel: 'Edge to cloud reference design',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/iot-digital-twin-starter',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'ai-marketing-creative-studio',
+		title: 'AI Marketing Creative Studio',
+		description: 'Generate on-brand images, video scripts, and variations with collaborative approvals and usage tracking.',
+		category: 'Micro SaaS',
+		price: { monthly: 69, yearly: 690, currency: 'USD', pricingModel: 'subscription + usage' },
+		features: ['Brand guardrails', 'Asset variations', 'Usage rights tracking', 'Team workspace'],
+		benefits: ['Faster creative cycles', 'Lower costs', 'Brand consistency'],
+		useCases: ['Marketing teams', 'Agencies', 'Creators'],
+		tags: ['GenAI', 'Creative', 'Brand'],
+		marketPrice: '$49–$299/mo + usage',
+		roi: 'Cut production time 40–70%',
+		innovationLevel: 'Brand-aware generation',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/ai-marketing-creative-studio',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'ai-hr-copilot',
+		title: 'AI HR Copilot',
+		description: 'Job description drafting, candidate screening, interview question banks, and onboarding task automation.',
+		category: 'Micro SaaS',
+		price: { monthly: 59, yearly: 590, currency: 'USD', pricingModel: 'subscription' },
+		features: ['JD generator', 'Resume screening', 'Structured interviews', 'Onboarding checklists'],
+		benefits: ['Faster hiring', 'Better candidate fit', 'Consistent onboarding'],
+		useCases: ['People Ops', 'Recruiters', 'Startups'],
+		tags: ['HRTech', 'LLM', 'Automation'],
+		marketPrice: '$39–$199/mo',
+		roi: 'Reduce time-to-hire 20–40%',
+		innovationLevel: 'Talent + onboarding workflows',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/ai-hr-copilot',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'data-quality-observability',
+		title: 'Data Quality Observability',
+		description: 'Detect schema drift, null spikes, freshness issues, and PII leaks across data pipelines.',
+		category: 'Micro SaaS',
+		price: { monthly: 119, yearly: 1190, currency: 'USD', pricingModel: 'subscription' },
+		features: ['Great Expectations rules', 'Auto-lineage', 'Freshness SLAs', 'PII detection'],
+		benefits: ['Trustworthy data', 'Fewer incidents', 'Compliance-ready'],
+		useCases: ['Data platforms', 'Analytics', 'ML teams'],
+		tags: ['DataOps', 'Observability', 'Quality'],
+		marketPrice: '$99–$499/mo',
+		roi: 'Prevent costly data breaks',
+		innovationLevel: 'Lineage + anomaly detection',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/data-quality-observability',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'ai-legal-summarizer',
+		title: 'AI Legal Summarizer & Clause Extractor',
+		description: 'Summarize contracts, extract obligations, and compare clauses to playbooks with redline suggestions.',
+		category: 'AI Solutions',
+		price: { oneTime: 8000, currency: 'USD', pricingModel: 'fixed + subscription' },
+		features: ['Clause library', 'Risk flags', 'Playbook compare', 'Export to Word'],
+		benefits: ['Faster reviews', 'Lower legal spend', 'Consistent terms'],
+		useCases: ['Legal', 'Sales Ops', 'Procurement'],
+		tags: ['LegalTech', 'NLP', 'LLM'],
+		marketPrice: '$5k–$100k + seats',
+		roi: 'Reduce review time 40–70%',
+		innovationLevel: 'Contract-aware LLM with guidance',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/ai-legal-summarizer',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'security-data-lake',
+		title: 'Security Data Lake & SIEM Modernization',
+		description: 'Architect and implement a cloud-native security data lake with detections and dashboards.',
+		category: 'IT Services',
+		price: { oneTime: 25000, currency: 'USD', pricingModel: 'fixed + T&M' },
+		features: ['Ingestion pipelines', 'Detection-as-code', 'Threat intel enrichment', 'SOC dashboards'],
+		benefits: ['Lower SIEM costs', 'Better detections', 'Faster investigations'],
+		useCases: ['Security teams', 'Enterprises'],
+		tags: ['Security', 'SIEM', 'Data Lake'],
+		marketPrice: '$20k–$500k',
+		roi: 'Cost reduction vs legacy SIEM',
+		innovationLevel: 'Detection-as-code approach',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/security-data-lake',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
+	},
+	{
+		id: 'llm-evaluation-harness',
+		title: 'LLM Evaluation Harness & Red Teaming',
+		description: 'Design eval datasets, automatic scoring, and red teaming workflows to harden LLM apps.',
+		category: 'AI Solutions',
+		price: { oneTime: 14000, currency: 'USD', pricingModel: 'fixed' },
+		features: ['Golden sets', 'Bias/safety tests', 'Regression suite', 'Guardrail tuning'],
+		benefits: ['Reduced regressions', 'Safer outputs', 'Measurable quality'],
+		useCases: ['AI product teams', 'Enterprises'],
+		tags: ['LLM', 'Evaluation', 'Safety'],
+		marketPrice: '$10k–$200k',
+		roi: 'Prevent costly failures',
+		innovationLevel: 'Automated eval pipelines',
+		contactInfo: {
+			phone: '+1 302 464 0950',
+			email: 'kleber@ziontechgroup.com',
+			website: 'https://ziontechgroup.com/services/llm-evaluation-harness',
+			address: '364 E Main St STE 1008 Middletown DE 19709'
+		}
 	}
 ];
 
