@@ -8,6 +8,7 @@ import {
   Target, Microscope, Atom, Database,
   Lock, Cloud, BarChart3, Settings,
   Eye, Code, Palette, Layers,
+<<<<<<< HEAD
   Network, Server, ShieldCheck, ZapIcon,
   GlobeIcon, StarIcon, TrendingUpIcon, UsersIcon,
   CheckCircleIcon, ArrowRightIcon, CpuIcon,
@@ -18,6 +19,12 @@ import {
   PieChart, LineChart, Activity, TrendingUp,
   BarChart3 as BarChart3Icon, PieChart as PieChartIcon
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3ef
+=======
+  Network, Server, ShieldCheck,
+  DollarSign, Phone, ArrowRight, Mail, MapPin, Dna,
+  Heart, GraduationCap, Leaf, Pill, Coins,
+  Building2
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -28,10 +35,14 @@ interface NavigationItem {
   children?: NavigationItem[];
   badge?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   title?: string;
 =======
   color?: string;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3ef
+=======
+  title?: string;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
 }
 
 const contactInfo = {
@@ -70,6 +81,7 @@ const navigationItems: NavigationItem[] = [
 <<<<<<< HEAD
     isHot: true,
     children: [
+<<<<<<< HEAD
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution', description: 'Emotional intelligence and self-awareness' },
 =======
     children: [
@@ -149,10 +161,32 @@ const navigationItems: NavigationItem[] = [
       { name: 'Quantum Supply Chain Optimizer', href: '/quantum-supply-chain-optimizer', description: 'Quantum logistics optimization' },
       { name: 'Quantum Cybersecurity Suite', href: '/quantum-cybersecurity-suite', description: 'Quantum security solutions' },
       { name: 'Quantum Energy Optimization', href: '/quantum-energy-optimization', description: 'Quantum energy management' },
+=======
+      { name: 'AI Consciousness Evolution 2029', href: '/ai-consciousness-evolution-2029', description: 'Emotional intelligence and self-awareness' },
+      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion', description: 'Quantum-AI hybrid computing' },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem', description: 'Self-managing AI systems' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance', description: 'Ethical AI frameworks' },
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
+      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized AI learning' },
+      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Medical AI solutions' },
+      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' },
+      { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' },
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Human-AI emotional collaboration' }
+    ]
+  },
+  {
+    name: 'Quantum & Emerging Tech',
+    href: '/quantum-services',
+    icon: <Atom className="w-5 h-5" />,
+    description: 'Quantum computing and breakthrough technologies',
+    badge: 'Hot',
+    children: [
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
       { name: 'Space Mining Platform', href: '/space-mining-platform', description: 'Asteroid mining and space resources' },
       { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing', description: 'Quantum-biological hybrid processing' },
       { name: 'Brain-Computer Interface', href: '/brain-computer-interface', description: 'Neural interface technology' },
       { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' },
+<<<<<<< HEAD
       { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform', description: 'Self-driving AI systems' },
       { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', description: 'Materials science acceleration' },
       { name: 'Quantum Robotics', href: '/quantum-robotics-platform', description: 'Quantum-enhanced robotics' },
@@ -200,10 +234,32 @@ const navigationItems: NavigationItem[] = [
 <<<<<<< HEAD
       { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform', description: 'Advanced cybersecurity' },
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-757c
+=======
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai', description: 'Self-driving AI systems' },
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery', description: 'Materials science acceleration' },
+      { name: 'Quantum Robotics', href: '/quantum-robotics', description: 'Quantum-enhanced robotics' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security', description: 'Unbreakable encryption' },
+      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization', description: 'Route optimization' },
+      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform', description: 'Next-gen security' }
+    ]
+  },
+  {
+    name: 'Enterprise IT',
+    href: '/enterprise-it',
+    icon: <Shield className="w-5 h-5" />,
+    description: 'Enterprise solutions and infrastructure',
+    children: [
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Quantum-enhanced cloud computing' },
+      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Edge processing optimization' },
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture', description: 'Advanced cybersecurity' },
+      { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops', description: 'Intelligent development automation' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
       { name: 'Quantum Networking', href: '/quantum-networking', description: 'Quantum communication protocols' },
       { name: 'Autonomous IT Operations', href: '/autonomous-it-operations', description: 'Self-managing IT systems' },
       { name: 'Quantum Data Center', href: '/quantum-data-center', description: 'Next-gen data centers' },
       { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity', description: 'Quantum security solutions' },
+<<<<<<< HEAD
       { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration', description: 'Seamless cloud transitions' },
       { name: 'Quantum Security Platform', href: '/quantum-security-platform', description: 'Quantum encryption' },
       { name: 'Quantum Compliance', href: '/quantum-compliance-platform', description: 'Regulatory compliance' },
@@ -227,10 +283,18 @@ const navigationItems: NavigationItem[] = [
   },
   {
     name: '💻 Micro SAAS',
+=======
+      { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration', description: 'Seamless cloud migration' }
+    ]
+  },
+  {
+    name: 'Micro SAAS',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
     href: '/micro-saas',
     icon: <Rocket className="w-5 h-5" />,
     description: 'Innovative business solutions',
     children: [
+<<<<<<< HEAD
       { name: 'AI Decision Engine', href: '/ai-powered-decision-engine', description: 'Intelligent decision making' },
       { name: 'Content Automation', href: '/intelligent-content-automation-platform', description: 'AI content creation' },
       { name: 'Smart CRM Suite', href: '/smart-crm-intelligence-suite', description: 'AI-enhanced CRM' },
@@ -359,6 +423,18 @@ const navigationItems: NavigationItem[] = [
       { name: 'Space Research', href: '/space-research-platform', description: 'Space exploration tools' },
       { name: 'Space Mining Analytics', href: '/space-mining-analytics', description: 'Mining data analysis' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
+=======
+      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'AI-powered business decisions' },
+      { name: 'Quantum CRM Suite', href: '/quantum-crm-suite', description: 'Next-generation CRM' },
+      { name: 'AI Content Factory Pro', href: '/ai-content-factory-pro', description: 'AI content generation' },
+      { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' },
+      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial analytics platform' },
+      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Medical AI solutions' },
+      { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental management' },
+      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized learning' },
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform' },
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'Creative AI tools' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
     ]
   },
   {
@@ -371,11 +447,16 @@ const navigationItems: NavigationItem[] = [
       { name: 'Financial Services', href: '/financial-solutions', description: 'Fintech and banking solutions' },
       { name: 'Manufacturing', href: '/manufacturing-solutions', description: 'Industrial automation' },
       { name: 'Retail & E-commerce', href: '/retail-solutions', description: 'Digital commerce solutions' },
+<<<<<<< HEAD
       { name: 'Education', href: '/education-solutions', description: 'EdTech solutions' },
+=======
+      { name: 'Education', href: '/education-solutions', description: 'Learning technology platforms' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
       { name: 'Government', href: '/government-solutions', description: 'Public sector technology' }
     ]
   },
   {
+<<<<<<< HEAD
     name: 'Resources',
     href: '/resources',
     icon: <BookOpen className="w-5 h-5" />,
@@ -393,10 +474,16 @@ const navigationItems: NavigationItem[] = [
     name: 'Company',
     href: '/about',
     icon: <Building className="w-5 h-5" />,
+=======
+    name: 'Company',
+    href: '/about',
+    icon: <Building2 className="w-5 h-5" />,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
     description: 'About Zion Tech Group',
     children: [
       { name: 'About Us', href: '/about', description: 'Our mission and vision' },
       { name: 'Careers', href: '/careers', description: 'Join our team' },
+<<<<<<< HEAD
       { name: 'News', href: '/news', description: 'Company updates' },
       { name: 'Contact', href: '/contact', description: 'Get in touch' },
       { name: 'Partners', href: '/partners', description: 'Partnership opportunities' }
@@ -412,11 +499,27 @@ const navigationItems: NavigationItem[] = [
       { name: 'Orbital Mechanics', href: '/orbital-mechanics', description: 'Orbital calculations' },
       { name: 'Satellite Operations', href: '/satellite-operations', description: 'Satellite management' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3ef
+=======
+      { name: 'News & Updates', href: '/news', description: 'Latest company news' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+      { name: 'Resources', href: '/resources', description: 'Whitepapers and guides' },
+      { name: 'Blog', href: '/blog', description: 'Industry insights' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
     ]
   }
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const quickLinks = [
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'Contact', href: '/contact', icon: Phone },
+  { name: 'Support', href: '/support', icon: Shield },
+  { name: 'Documentation', href: '/docs', icon: Code }
+];
+
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
 export default function EnhancedNavigation2025() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -452,6 +555,7 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+<<<<<<< HEAD
       isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800/50' : 'bg-transparent'
     }`}>
       {/* Top Contact Bar */}
@@ -543,10 +647,41 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
       isScrolled 
         ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl shadow-black/50' 
         : 'bg-transparent'
+=======
+      isScrolled ? 'bg-black/95 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Top Contact Bar */}
+      <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 border-b border-cyan-500/20">
+        <div className="max-w-7xl mx-auto px-4 py-2">
+          <div className="flex flex-col sm:flex-row items-center justify-between text-sm">
+            <div className="flex items-center gap-4 text-cyan-300">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <span>{contactInfo.mobile}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <span>{contactInfo.email}</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <Link href="/contact" className="text-cyan-300 hover:text-white transition-colors">
+                Get Started Today
+              </Link>
+              <Link href="/support" className="text-cyan-300 hover:text-white transition-colors">
+                Support
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
+<<<<<<< HEAD
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <Star className="w-7 h-7 text-white" />
@@ -556,14 +691,33 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
                 Zion Tech Group
               </h1>
               <p className="text-xs text-gray-400">Future Technology Solutions</p>
+=======
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative">
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -inset-1 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 -z-10" />
+            </div>
+            <div>
+              <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                Zion Tech Group
+              </div>
+              <div className="text-xs text-cyan-400">Revolutionary Technology</div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
             </div>
           </Link>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-1">
+=======
+          <div className="hidden lg:flex items-center gap-8">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
             {navigationItems.map((item) => (
               <div key={item.name} className="relative">
                 <button
+<<<<<<< HEAD
                   onClick={() => handleDropdownToggle(item.name)}
                   className={`group px-4 py-2 rounded-xl font-medium transition-all duration-300 flex items-center space-x-2 ${
                     activeDropdown === item.name
@@ -571,12 +725,20 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
                       : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                   }`}
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3ef
+=======
+                  onClick={() => toggleDropdown(item.name)}
+                  className="flex items-center gap-2 px-4 py-2 text-white hover:text-cyan-400 transition-colors duration-200 group-hover:bg-white/5 rounded-lg"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
                 >
                   {item.icon}
-                  <span>{item.name}</span>
+                  <span className="font-medium">{item.name}</span>
                   {item.badge && (
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <span className="px-2 py-1 text-xs font-semibold bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-full">
+=======
+                    <span className="px-2 py-1 text-xs bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
                       {item.badge}
                     </span>
                   )}
@@ -604,10 +766,15 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
 =======
                       className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3ef
+=======
+                      className="absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-md border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
+                      onMouseLeave={closeDropdown}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
                     >
                       <div className="p-4">
                         <div className="mb-4">
@@ -617,6 +784,9 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
                         
                         <div className="space-y-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
                           {item.children?.map((child) => (
 =======
                           {item.children?.map((child, index) => (
@@ -625,12 +795,21 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
                               key={index}
                               href={child.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
                               onClick={closeAllDropdowns}
                               className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
                             >
                               <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>
                               <div className="flex-1">
                                 <div className="font-medium text-white group-hover:text-cyan-300 transition-colors duration-200">
+=======
+                              className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors group"
+                              onClick={closeDropdown}
+                            >
+                              <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform" />
+                              <div className="flex-1">
+                                <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
                                   {child.name}
                                 </div>
                                 <div className="text-sm text-gray-400">{child.description}</div>
@@ -650,7 +829,7 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
                                 </p>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a3ef
                               </div>
-                              <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-200" />
+                              <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors opacity-0 group-hover:opacity-100" />
                             </Link>
                           ))}
                         </div>
@@ -663,10 +842,31 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Link href="/contact">
               <button className="px-6 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
+=======
+          {/* Right Side Actions */}
+          <div className="hidden lg:flex items-center gap-4">
+            {/* Quick Links */}
+            <div className="flex items-center gap-2">
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="p-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200"
+                >
+                  <link.icon className="w-5 h-5" />
+                </Link>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <Link href="/contact">
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
                 Get Started
               </button>
             </Link>
@@ -715,6 +915,7 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
               )}
             </div>
 
+<<<<<<< HEAD
             {/* Contact Button */}
             <Link
               href="/contact"
@@ -741,6 +942,18 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
       </div>
 
 <<<<<<< HEAD
+=======
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 text-white hover:text-cyan-400 transition-colors"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -749,12 +962,17 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
+<<<<<<< HEAD
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50"
+=======
+            className="lg:hidden bg-black/95 backdrop-blur-md border-t border-white/10 overflow-hidden"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
           >
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <button
+<<<<<<< HEAD
                     onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
                     className="w-full flex items-center justify-between px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
                   >
@@ -791,10 +1009,44 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
                         </Link>
                       ))}
                     </motion.div>
+=======
+                    onClick={() => toggleDropdown(item.name)}
+                    className="flex items-center justify-between w-full p-3 text-left text-white hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors"
+                  >
+                    <div className="flex items-center gap-3">
+                      {item.icon}
+                      <span className="font-medium">{item.name}</span>
+                      {item.badge && (
+                        <span className="px-2 py-1 text-xs bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full">
+                          {item.badge}
+                        </span>
+                      )}
+                    </div>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''
+                    }`} />
+                  </button>
+
+                  {activeDropdown === item.name && (
+                    <div className="ml-6 mt-2 space-y-2">
+                      {item.children?.map((child) => (
+                        <Link
+                          key={child.name}
+                          href={child.href}
+                          className="block p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          <div className="font-medium">{child.name}</div>
+                          <div className="text-sm text-gray-500">{child.description}</div>
+                        </Link>
+                      ))}
+                    </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
                   )}
                 </div>
               ))}
 
+<<<<<<< HEAD
               {/* Mobile CTA */}
               <div className="pt-4">
                 <Link
@@ -802,6 +1054,27 @@ const EnhancedNavigation2025: React.FC<{ onMenuClick: () => void }> = ({ onMenuC
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
                 >
                   Get Started
+=======
+              <div className="pt-4 border-t border-white/10">
+                <div className="grid grid-cols-2 gap-4">
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="flex items-center gap-2 p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <link.icon className="w-5 h-5" />
+                      <span>{link.name}</span>
+                    </Link>
+                  ))}
+                </div>
+                
+                <Link href="/contact" className="block w-full mt-4">
+                  <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                    Get Started
+                  </button>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
                 </Link>
               </div>
             </div>

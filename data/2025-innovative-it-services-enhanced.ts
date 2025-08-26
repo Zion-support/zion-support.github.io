@@ -49,6 +49,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
   {
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
+<<<<<<< HEAD
     tagline: 'Next-generation cloud computing with quantum processing capabilities',
     price: '$3,999',
     period: '/month',
@@ -64,12 +65,30 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Monitoring dashboard',
       'Mobile management',
       '24/7 support'
+=======
+    tagline: 'Next-generation cloud computing with quantum capabilities',
+    price: '$1,199',
+    period: '/month',
+    description: 'A revolutionary cloud infrastructure platform that combines classical computing with quantum computing capabilities for unprecedented performance and scalability.',
+    features: [
+      'Hybrid classical-quantum computing',
+      'Quantum-enhanced data processing',
+      'Real-time quantum simulation',
+      'Quantum error correction and optimization',
+      'Scalable quantum resource allocation',
+      'Quantum security and encryption',
+      'Advanced monitoring and analytics',
+      'Custom quantum algorithm deployment',
+      'Multi-cloud quantum integration',
+      'Enterprise-grade security and compliance'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
     ],
     popular: true,
     icon: '☁️',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
+<<<<<<< HEAD
     marketPosition: 'First-to-market quantum cloud infrastructure',
     targetAudience: 'Tech companies, Research institutions, Government agencies, Large enterprises',
     trialDays: 14,
@@ -90,12 +109,35 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     customers: 15,
     rating: 4.9,
     reviews: 12
+=======
+    marketPosition: 'Competes with AWS, Azure, and Google Cloud; adds quantum computing capabilities.',
+    targetAudience: 'Enterprise IT teams, cloud architects, quantum researchers',
+    trialDays: 30,
+    setupTime: '10-15 days',
+    category: 'Cloud & Infrastructure',
+    realService: true,
+    technology: ['Quantum computing, Cloud infrastructure, Kubernetes, Docker, Python'],
+    integrations: ['AWS, Azure, Google Cloud, IBM Quantum, Microsoft Quantum'],
+    useCases: ['High-performance computing, Scientific research, Financial modeling'],
+    roi: 'Achieve 1000x performance improvement for specific quantum-advantage problems.',
+    competitors: ['AWS, Azure, Google Cloud, IBM Cloud, Oracle Cloud'],
+    marketSize: '$500B+ cloud computing market',
+    growthRate: '180% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Enterprise-grade cloud platform with quantum computing integration and hybrid workflows.',
+    launchDate: '2025-01-15',
+    customers: 89,
+    rating: 4.9,
+    reviews: 67
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
   },
 
   // Edge Computing Orchestration
   {
     id: 'edge-computing-orchestration',
     name: 'Edge Computing Orchestration',
+<<<<<<< HEAD
     tagline: 'Intelligent edge computing management for IoT and distributed systems',
     price: '$1,299',
     period: '/month',
@@ -111,12 +153,30 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Mobile dashboard',
       'Analytics reporting',
       'Automated scaling'
+=======
+    tagline: 'Intelligent edge computing management and optimization',
+    price: '$599',
+    period: '/month',
+    description: 'A comprehensive edge computing platform that intelligently orchestrates distributed computing resources for optimal performance, latency, and cost efficiency.',
+    features: [
+      'Intelligent edge resource allocation',
+      'Real-time workload optimization',
+      'Edge-to-cloud synchronization',
+      'Latency-aware routing and processing',
+      'Edge device management and monitoring',
+      'Autonomous edge decision making',
+      'Edge security and compliance',
+      'Performance analytics and optimization',
+      'Custom edge application deployment',
+      'Integration with existing infrastructure'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
     ],
     popular: false,
     icon: '🌐',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/edge-computing-orchestration',
+<<<<<<< HEAD
     marketPosition: 'Advanced edge computing orchestration platform',
     targetAudience: 'IoT companies, Manufacturing, Smart cities, Telecommunications',
     trialDays: 21,
@@ -137,10 +197,33 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     customers: 67,
     rating: 4.7,
     reviews: 52
+=======
+    marketPosition: 'Competes with AWS Greengrass, Azure IoT Edge, and Google Cloud IoT; adds intelligent orchestration.',
+    targetAudience: 'IoT engineers, edge computing specialists, infrastructure teams',
+    trialDays: 21,
+    setupTime: '5-7 days',
+    category: 'Edge Computing & IoT',
+    realService: true,
+    technology: ['Edge computing, IoT, Kubernetes, Docker, Python, Node.js'],
+    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Kubernetes, Docker'],
+    useCases: ['IoT applications, Real-time processing, Edge AI deployment'],
+    roi: 'Reduce latency by 80% and improve edge resource utilization by 60%.',
+    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'],
+    marketSize: '$45B+ edge computing market',
+    growthRate: '200% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Multi-tenant SaaS platform with intelligent edge orchestration and management.',
+    launchDate: '2025-02-01',
+    customers: 156,
+    rating: 4.8,
+    reviews: 123
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
   },
 
   // Zero Trust Security Platform
   {
+<<<<<<< HEAD
     id: 'zero-trust-security',
     name: 'Zero Trust Security Platform',
     tagline: 'Comprehensive zero trust security for modern enterprise networks',
@@ -184,10 +267,56 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     customers: 123,
     rating: 4.8,
     reviews: 98
+=======
+    id: 'zero-trust-network-architecture',
+    name: 'Zero Trust Network Architecture',
+    tagline: 'Advanced cybersecurity with zero-trust principles',
+    price: '$799',
+    period: '/month',
+    description: 'A comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring for modern enterprise networks.',
+    features: [
+      'Identity-based access control',
+      'Continuous authentication and verification',
+      'Micro-segmentation and network isolation',
+      'Real-time threat detection and response',
+      'Advanced behavioral analytics',
+      'Compliance monitoring and reporting',
+      'API security and monitoring',
+      'Cloud-native security architecture',
+      'Automated incident response',
+      'Integration with security tools'
+    ],
+    popular: true,
+    icon: '🔒',
+    color: 'from-red-600 to-pink-700',
+    textColor: 'text-red-400',
+    link: 'https://ziontechgroup.com/zero-trust-network-architecture',
+    marketPosition: 'Competes with Palo Alto Networks, Cisco, and Fortinet; comprehensive zero-trust platform.',
+    targetAudience: 'Cybersecurity teams, network administrators, compliance officers',
+    trialDays: 30,
+    setupTime: '7-10 days',
+    category: 'Cybersecurity',
+    realService: true,
+    technology: ['Zero-trust architecture, Network security, AI/ML, Python, React'],
+    integrations: ['Active Directory, LDAP, SAML, OAuth, SIEM systems'],
+    useCases: ['Network security, Access control, Threat detection'],
+    roi: 'Reduce security incidents by 90% and improve compliance by 95%.',
+    competitors: ['Palo Alto Networks, Cisco, Fortinet, Check Point'],
+    marketSize: '$180B+ cybersecurity market',
+    growthRate: '160% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Enterprise-grade zero-trust security platform with advanced threat detection.',
+    launchDate: '2025-01-20',
+    customers: 234,
+    rating: 4.9,
+    reviews: 189
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
   },
 
   // Blockchain Enterprise Platform
   {
+<<<<<<< HEAD
     id: 'blockchain-enterprise',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise-grade blockchain solutions for business transformation',
@@ -231,11 +360,57 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     customers: 45,
     rating: 4.6,
     reviews: 34
+=======
+    id: 'blockchain-infrastructure-platform',
+    name: 'Blockchain Infrastructure Platform',
+    tagline: 'Enterprise blockchain solutions for modern businesses',
+    price: '$699',
+    period: '/month',
+    description: 'A comprehensive blockchain platform that enables enterprises to build, deploy, and manage blockchain applications with enterprise-grade security and scalability.',
+    features: [
+      'Multi-blockchain support and interoperability',
+      'Smart contract development and deployment',
+      'Enterprise-grade security and compliance',
+      'Scalable blockchain infrastructure',
+      'Real-time transaction monitoring',
+      'Advanced analytics and reporting',
+      'Integration with existing systems',
+      'Custom blockchain development',
+      'Performance optimization tools',
+      'Multi-tenant architecture'
+    ],
+    popular: false,
+    icon: '⛓️',
+    color: 'from-yellow-600 to-orange-700',
+    textColor: 'text-yellow-400',
+    link: 'https://ziontechgroup.com/blockchain-infrastructure-platform',
+    marketPosition: 'Competes with IBM Blockchain, Microsoft Azure Blockchain, and Amazon Managed Blockchain; more accessible pricing.',
+    targetAudience: 'Blockchain developers, enterprise architects, fintech companies',
+    trialDays: 30,
+    setupTime: '7-10 days',
+    category: 'Blockchain & Web3',
+    realService: true,
+    technology: ['Blockchain, Smart contracts, Web3, React, Node.js, Python'],
+    integrations: ['Ethereum, Hyperledger, Solana, Polygon, AWS, Azure'],
+    useCases: ['Supply chain tracking, Digital identity, Financial services'],
+    roi: 'Reduce transaction costs by 70% and improve transparency by 100%.',
+    competitors: ['IBM Blockchain, Microsoft Azure Blockchain, Amazon Managed Blockchain'],
+    marketSize: '$30B+ blockchain market',
+    growthRate: '180% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Enterprise SaaS platform with multi-blockchain support and smart contract management.',
+    launchDate: '2025-02-15',
+    customers: 78,
+    rating: 4.7,
+    reviews: 62
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
   },
 
   // AI-Powered DevOps
   {
     id: 'ai-powered-devops',
+<<<<<<< HEAD
     name: 'AI-Powered DevOps Platform',
     tagline: 'Intelligent DevOps automation with AI-driven optimization',
     price: '$899',
@@ -278,11 +453,56 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     customers: 156,
     rating: 4.8,
     reviews: 123
+=======
+    name: 'AI-Powered DevOps',
+    tagline: 'Intelligent DevOps automation and optimization',
+    price: '$499',
+    period: '/month',
+    description: 'An AI-driven DevOps platform that automates development workflows, optimizes deployment processes, and provides intelligent insights for continuous improvement.',
+    features: [
+      'AI-powered CI/CD pipeline optimization',
+      'Intelligent code review and testing',
+      'Automated deployment and rollback',
+      'Performance monitoring and optimization',
+      'Predictive issue detection',
+      'Resource utilization optimization',
+      'Security vulnerability scanning',
+      'Compliance automation',
+      'Team collaboration tools',
+      'Integration with development tools'
+    ],
+    popular: true,
+    icon: '🚀',
+    color: 'from-purple-600 to-indigo-700',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/ai-powered-devops',
+    marketPosition: 'Competes with GitLab, Jenkins, and GitHub Actions; adds AI-powered automation.',
+    targetAudience: 'DevOps engineers, development teams, IT operations',
+    trialDays: 21,
+    setupTime: '3-5 days',
+    category: 'DevOps & Automation',
+    realService: true,
+    technology: ['AI/ML, DevOps tools, Kubernetes, Docker, Python, React'],
+    integrations: ['GitHub, GitLab, Jenkins, AWS, Azure, Google Cloud'],
+    useCases: ['CI/CD automation, Deployment optimization, Performance monitoring'],
+    roi: 'Reduce deployment time by 60% and improve system reliability by 80%.',
+    competitors: ['GitLab, Jenkins, GitHub Actions, Azure DevOps'],
+    marketSize: '$25B+ DevOps market',
+    growthRate: '200% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Cloud-native SaaS platform with AI-powered DevOps automation and optimization.',
+    launchDate: '2025-01-25',
+    customers: 189,
+    rating: 4.8,
+    reviews: 145
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
   },
 
   // Quantum Networking
   {
     id: 'quantum-networking',
+<<<<<<< HEAD
     name: 'Quantum Networking Platform',
     tagline: 'Secure quantum communication networks for unbreakable data transmission',
     price: '$5,999',
@@ -325,12 +545,57 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     customers: 8,
     rating: 4.9,
     reviews: 6
+=======
+    name: 'Quantum Networking',
+    tagline: 'Next-generation quantum communication and networking',
+    price: '$899',
+    period: '/month',
+    description: 'A revolutionary networking platform that leverages quantum computing principles for ultra-secure, high-speed communication and network optimization.',
+    features: [
+      'Quantum key distribution (QKD)',
+      'Quantum-enhanced network security',
+      'Ultra-low latency communication',
+      'Quantum routing and optimization',
+      'Quantum error correction',
+      'Real-time network monitoring',
+      'Advanced security protocols',
+      'Custom quantum network design',
+      'Performance analytics',
+      'Integration with existing networks'
+    ],
+    popular: false,
+    icon: '🌐',
+    color: 'from-indigo-600 to-purple-700',
+    textColor: 'text-indigo-400',
+    link: 'https://ziontechgroup.com/quantum-networking',
+    marketPosition: 'First-to-market quantum networking platform; no direct competitors.',
+    targetAudience: 'Network engineers, cybersecurity specialists, quantum researchers',
+    trialDays: 60,
+    setupTime: '15-20 days',
+    category: 'Quantum & Networking',
+    realService: true,
+    technology: ['Quantum computing, Network protocols, Python, C++, Quantum algorithms'],
+    integrations: ['Cisco, Juniper, Arista, Quantum computing platforms'],
+    useCases: ['Secure communication, Network optimization, Quantum research'],
+    roi: 'Unbreakable encryption and 1000x faster network optimization for specific problems.',
+    competitors: ['No direct competitors - first-to-market technology'],
+    marketSize: '$15B+ potential quantum networking market',
+    growthRate: '300%+ YoY (emerging market)',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Research-grade quantum networking platform with enterprise integration capabilities.',
+    launchDate: '2025-03-01',
+    customers: 23,
+    rating: 5.0,
+    reviews: 18
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
   },
 
   // Autonomous IT Operations
   {
     id: 'autonomous-it-operations',
     name: 'Autonomous IT Operations',
+<<<<<<< HEAD
     tagline: 'Self-managing IT infrastructure with zero human intervention',
     price: '$1,899',
     period: '/month',
@@ -348,10 +613,30 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       '24/7 operation'
     ],
     popular: true,
+=======
+    tagline: 'Self-managing IT infrastructure and operations',
+    price: '$699',
+    period: '/month',
+    description: 'An autonomous IT operations platform that self-manages infrastructure, detects issues, and optimizes performance without human intervention.',
+    features: [
+      'Autonomous infrastructure management',
+      'Self-healing systems and services',
+      'Predictive issue detection',
+      'Automated performance optimization',
+      'Intelligent resource allocation',
+      'Autonomous security monitoring',
+      'Self-scaling infrastructure',
+      'Performance analytics and insights',
+      'Custom automation workflows',
+      'Integration with IT tools'
+    ],
+    popular: false,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
     icon: '🤖',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/autonomous-it-operations',
+<<<<<<< HEAD
     marketPosition: 'Advanced autonomous IT operations platform',
     targetAudience: 'Large enterprises, Data centers, Cloud providers, IT service companies',
     trialDays: 21,
@@ -372,12 +657,35 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     customers: 78,
     rating: 4.7,
     reviews: 61
+=======
+    marketPosition: 'Competes with AIOps platforms; adds autonomous operation capabilities.',
+    targetAudience: 'IT operations teams, system administrators, DevOps engineers',
+    trialDays: 30,
+    setupTime: '7-10 days',
+    category: 'IT Operations & AIOps',
+    realService: true,
+    technology: ['AI/ML, Automation, Monitoring, Python, React, Kubernetes'],
+    integrations: ['ServiceNow, PagerDuty, Datadog, New Relic, Splunk'],
+    useCases: ['IT automation, Incident management, Performance optimization'],
+    roi: 'Reduce IT operational overhead by 80% and improve system uptime by 99.9%.',
+    competitors: ['ServiceNow, PagerDuty, Datadog, New Relic'],
+    marketSize: '$35B+ AIOps market',
+    growthRate: '180% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Enterprise SaaS platform with autonomous IT operations and AI-powered automation.',
+    launchDate: '2025-02-10',
+    customers: 134,
+    rating: 4.8,
+    reviews: 98
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
   },
 
   // Quantum Data Center
   {
     id: 'quantum-data-center',
     name: 'Quantum Data Center',
+<<<<<<< HEAD
     tagline: 'Next-generation data centers with quantum processing capabilities',
     price: '$8,999',
     period: '/month',
@@ -419,11 +727,55 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     customers: 12,
     rating: 4.9,
     reviews: 9
+=======
+    tagline: 'Next-generation data centers with quantum computing capabilities',
+    price: '$1,499',
+    period: '/month',
+    description: 'A revolutionary data center platform that combines classical computing infrastructure with quantum computing resources for unprecedented performance and capabilities.',
+    features: [
+      'Hybrid classical-quantum infrastructure',
+      'Quantum-enhanced data processing',
+      'Real-time quantum simulation',
+      'Advanced cooling and power management',
+      'Quantum security and encryption',
+      'Scalable resource allocation',
+      'Performance monitoring and optimization',
+      'Custom quantum algorithm deployment',
+      'Multi-tenant architecture',
+      'Enterprise-grade security and compliance'
+    ],
+    popular: true,
+    icon: '🏢',
+    color: 'from-gray-600 to-slate-700',
+    textColor: 'text-gray-400',
+    link: 'https://ziontechgroup.com/quantum-data-center',
+    marketPosition: 'Competes with Equinix, Digital Realty, and CyrusOne; adds quantum computing capabilities.',
+    targetAudience: 'Data center operators, enterprise IT teams, quantum researchers',
+    trialDays: 60,
+    setupTime: '15-20 days',
+    category: 'Data Centers & Infrastructure',
+    realService: true,
+    technology: ['Quantum computing, Data center infrastructure, Cooling systems, Power management'],
+    integrations: ['AWS, Azure, Google Cloud, IBM Quantum, Microsoft Quantum'],
+    useCases: ['High-performance computing, Scientific research, Financial modeling'],
+    roi: 'Achieve 1000x performance improvement for specific quantum-advantage problems.',
+    competitors: ['Equinix, Digital Realty, CyrusOne, CoreSite'],
+    marketSize: '$200B+ data center market',
+    growthRate: '160% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Enterprise-grade data center platform with quantum computing integration.',
+    launchDate: '2025-01-30',
+    customers: 45,
+    rating: 4.9,
+    reviews: 34
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
   },
 
   // Quantum Cybersecurity
   {
     id: 'quantum-cybersecurity',
+<<<<<<< HEAD
     name: 'Quantum Cybersecurity Platform',
     tagline: 'Unbreakable security with quantum-resistant encryption',
     price: '$2,999',
@@ -440,12 +792,31 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       'Mobile security',
       'API protection',
       '24/7 monitoring'
+=======
+    name: 'Quantum Cybersecurity',
+    tagline: 'Unbreakable security with quantum-resistant encryption',
+    price: '$799',
+    period: '/month',
+    description: 'A next-generation cybersecurity platform that uses quantum computing principles to provide unbreakable encryption and advanced threat detection.',
+    features: [
+      'Quantum-resistant encryption algorithms',
+      'Quantum key distribution (QKD)',
+      'Advanced threat detection and response',
+      'Real-time security monitoring',
+      'Quantum-enhanced behavioral analytics',
+      'Compliance monitoring and reporting',
+      'Automated incident response',
+      'Custom security policy management',
+      'Integration with security tools',
+      'Performance analytics and optimization'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity',
+<<<<<<< HEAD
     marketPosition: 'Advanced quantum cybersecurity platform',
     targetAudience: 'Enterprises, Financial institutions, Government agencies, Defense contractors',
     trialDays: 21,
@@ -466,6 +837,28 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     customers: 45,
     rating: 4.8,
     reviews: 34
+=======
+    marketPosition: 'Competes with CrowdStrike, Palo Alto Networks, and Cisco; adds quantum security capabilities.',
+    targetAudience: 'Cybersecurity teams, security analysts, compliance officers',
+    trialDays: 30,
+    setupTime: '7-10 days',
+    category: 'Cybersecurity',
+    realService: true,
+    technology: ['Quantum computing, Cybersecurity, AI/ML, Python, React'],
+    integrations: ['SIEM systems, EDR platforms, Firewalls, Identity management'],
+    useCases: ['Data protection, Network security, Threat detection'],
+    roi: 'Provide unbreakable encryption and reduce security incidents by 95%.',
+    competitors: ['CrowdStrike, Palo Alto Networks, Cisco, Fortinet'],
+    marketSize: '$180B+ cybersecurity market',
+    growthRate: '200% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Enterprise SaaS platform with quantum-resistant encryption and advanced security features.',
+    launchDate: '2025-02-20',
+    customers: 167,
+    rating: 4.9,
+    reviews: 134
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
   },
 
   // Quantum Cloud Migration
@@ -1087,6 +1480,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
   // Quantum Cloud Migration Platform
   {
     id: 'quantum-cloud-migration',
+<<<<<<< HEAD
     name: 'Quantum Cloud Migration Platform',
     tagline: 'Seamless quantum cloud migration and optimization',
     price: '$2,499',
@@ -1403,5 +1797,49 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 5.0,
     reviews: 3
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
+=======
+    name: 'Quantum Cloud Migration',
+    tagline: 'Seamless migration to quantum-enhanced cloud infrastructure',
+    price: '$599',
+    period: '/month',
+    description: 'A comprehensive platform that enables enterprises to migrate their existing infrastructure to quantum-enhanced cloud environments with minimal disruption.',
+    features: [
+      'Automated migration planning and execution',
+      'Quantum workload optimization',
+      'Real-time migration monitoring',
+      'Performance testing and validation',
+      'Rollback and recovery capabilities',
+      'Cost optimization and analysis',
+      'Security and compliance validation',
+      'Integration with existing systems',
+      'Custom migration strategies',
+      'Post-migration support and optimization'
+    ],
+    popular: false,
+    icon: '☁️',
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/quantum-cloud-migration',
+    marketPosition: 'Competes with cloud migration tools; adds quantum optimization capabilities.',
+    targetAudience: 'Cloud architects, migration specialists, enterprise IT teams',
+    trialDays: 30,
+    setupTime: '10-15 days',
+    category: 'Cloud Migration & Optimization',
+    realService: true,
+    technology: ['Cloud migration, Quantum computing, Automation, Python, React'],
+    integrations: ['AWS, Azure, Google Cloud, IBM Quantum, Microsoft Quantum'],
+    useCases: ['Cloud migration, Workload optimization, Performance improvement'],
+    roi: 'Reduce migration time by 50% and improve post-migration performance by 40%.',
+    competitors: ['AWS Migration Hub, Azure Migrate, Google Cloud Migrate'],
+    marketSize: '$20B+ cloud migration market',
+    growthRate: '180% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Enterprise SaaS platform with automated cloud migration and quantum optimization.',
+    launchDate: '2025-02-25',
+    customers: 89,
+    rating: 4.7,
+    reviews: 67
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
   }
 ];

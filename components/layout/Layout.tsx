@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +24,9 @@ import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraAdvancedFuturisticBackground from '../ui/UltraAdvancedFuturisticBackground';
 =======
 import React, { useState } from 'react';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
 import { motion } from 'framer-motion';
 import UltraFuturisticNavigation2035 from './UltraFuturisticNavigation2035';
 import UltraFuturisticFooter2035 from './UltraFuturisticFooter2035';
@@ -44,6 +48,7 @@ export default function Layout({ children }: SimpleLayoutProps) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<div className="min-h-screen bg-black text-white">
@@ -93,6 +98,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 export default Layout;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7cbf
 =======
+=======
+export default function Layout({ children }: LayoutProps) {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
 <<<<<<< HEAD
@@ -115,10 +123,7 @@ export default Layout;
         
         {/* Sidebar and Main Content */}
         <div className="flex">
-          <EnhancedSidebar2025 
-            isOpen={sidebarOpen} 
-            onClose={() => setSidebarOpen(false)} 
-          />
+          <EnhancedSidebar2025 />
           
           <main id="main" className="flex-1 pt-24 lg:pt-28">
             {children}
