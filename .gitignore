@@ -6,6 +6,7 @@ node_modules
 tsconfig.tsbuildinfo
 dist/
 dist/
+out/
 
 # Automation logs and data (continuously changing)
 automation/logs/*.log
