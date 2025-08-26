@@ -3,26 +3,17 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '.
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Check, X, Star, Clock, Globe, Phone, Mail } from 'lucide-react';
+import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES, CONTACT_INFO } from '@/data/comprehensiveServices';
-
 export function ServicesComparisonTable() {
-  const serviceCategories = ['AI Services', 'IT Services', 'Micro SAAS'];
-  
-  const getCategoryServices = (category: string) => {
-    return COMPREHENSIVE_SERVICES.filter(service => service.category === category);
-  };
-
-  const getFeatureIcon = (hasFeature: boolean) => {
-    return hasFeature ? (
-      <Check className="w-4 h-4 text-green-500" />
-    ) : (
-      <X className="w-4 h-4 text-red-500" />
-    );
-  };
-
-  return (
-    <div className="py-16 bg-slate-50 dark:bg-slate-900">
+    const serviceCategories = ['AI Services', 'IT Services', 'Micro SAAS'];
+    const getCategoryServices = (category) => {
+        return COMPREHENSIVE_SERVICES.filter(service => service.category === category);
+    };
+    const getFeatureIcon = (hasFeature) => {
+        return hasFeature ? (<Check className="w-4 h-4 text-green-500"/>) : (<X className="w-4 h-4 text-red-500"/>);
+    };
+    return (<div className="py-16 bg-slate-50 dark:bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
@@ -38,9 +29,7 @@ export function ServicesComparisonTable() {
           {serviceCategories.map((category) => {
             const services = getCategoryServices(category);
             const avgPrice = services.reduce((sum, service) => sum + (service.price || 0), 0) / services.length;
-            
-            return (
-              <Card key={category} className="border-2 border-slate-200 dark:border-slate-700">
+            return (<Card key={category} className="border-2 border-slate-200 dark:border-slate-700">
                 <CardHeader className="text-center">
                   <CardTitle className="text-slate-900 dark:text-white">{category}</CardTitle>
                   <CardDescription className="text-slate-600 dark:text-slate-300">
@@ -52,16 +41,12 @@ export function ServicesComparisonTable() {
                     ${Math.round(avgPrice).toLocaleString()}
                   </div>
                   <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">Average starting price</p>
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white"
-                  >
+                  <Button variant="outline" className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white">
                     View {category}
                   </Button>
                 </CardContent>
-              </Card>
-            );
-          })}
+              </Card>);
+        })}
         </div>
 
         {/* Detailed Comparison Table */}
@@ -143,17 +128,17 @@ export function ServicesComparisonTable() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div className="text-center">
-              <Phone className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2" />
+              <Phone className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2"/>
               <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Call Us</h4>
               <p className="text-blue-600 dark:text-blue-400">{CONTACT_INFO.mobile}</p>
             </div>
             <div className="text-center">
-              <Mail className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2" />
+              <Mail className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2"/>
               <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Email Us</h4>
               <p className="text-blue-600 dark:text-blue-400">{CONTACT_INFO.email}</p>
             </div>
             <div className="text-center">
-              <Clock className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2" />
+              <Clock className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2"/>
               <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Response Time</h4>
               <p className="text-blue-600 dark:text-blue-400">{CONTACT_INFO.responseTime}</p>
             </div>
@@ -161,7 +146,7 @@ export function ServicesComparisonTable() {
           
           <div className="text-center">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-              <Phone className="w-4 h-4 mr-2" />
+              <Phone className="w-4 h-4 mr-2"/>
               Schedule Free Consultation
             </Button>
           </div>
@@ -173,15 +158,14 @@ export function ServicesComparisonTable() {
             Service Highlights
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {COMPREHENSIVE_SERVICES.filter(service => service.featured).map((service) => (
-              <Card key={service.id} className="border-2 border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-colors">
+            {COMPREHENSIVE_SERVICES.filter(service => service.featured).map((service) => (<Card key={service.id} className="border-2 border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-colors">
                 <CardHeader className="pb-3">
                   <div className="flex items-center justify-between mb-2">
                     <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
                       Featured
                     </Badge>
                     <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-500 fill-current"/>
                       <span className="text-sm font-medium">{service.rating}</span>
                     </div>
                   </div>
@@ -203,11 +187,9 @@ export function ServicesComparisonTable() {
                     Learn More
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
 }

@@ -1,73 +1,50 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  Eye, 
-  Shield, 
-  CheckCircle, 
-  AlertTriangle, 
-  BarChart3, 
-  Users, 
-  Globe,
-  Zap,
-  Target,
-  Award,
-  ArrowRight,
-  Accessibility,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop
-} from 'lucide-react';
-
-const AccessibilityAuditor: React.FC = () => {
-  const features = [
-    {
-      title: "Automated Testing",
-      description: "Comprehensive automated accessibility testing for WCAG 2.1 AA compliance",
-      icon: "🔍"
-    },
-    {
-      title: "Manual Review",
-      description: "Expert manual accessibility audits by certified professionals",
-      icon: "👁️"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring and alerting for accessibility issues",
-      icon: "📊"
-    },
-    {
-      title: "Compliance Reporting",
-      description: "Detailed reports with actionable recommendations",
-      icon: "📋"
-    }
-  ];
-
-  const complianceStandards = [
-    "WCAG 2.1 AA",
-    "Section 508",
-    "ADA Title III",
-    "EN 301 549",
-    "ISO 9241-171"
-  ];
-
-  const testingAreas = [
-    {
-      category: "Visual Accessibility",
-      items: ["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
-    },
-    {
-      category: "Content Accessibility",
-      items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
-    },
-    {
-      category: "Technical Accessibility",
-      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+const AccessibilityAuditor = () => {
+    const features = [
+        {
+            title: "Automated Testing",
+            description: "Comprehensive automated accessibility testing for WCAG 2.1 AA compliance",
+            icon: "🔍"
+        },
+        {
+            title: "Manual Review",
+            description: "Expert manual accessibility audits by certified professionals",
+            icon: "👁️"
+        },
+        {
+            title: "Real-time Monitoring",
+            description: "Continuous monitoring and alerting for accessibility issues",
+            icon: "📊"
+        },
+        {
+            title: "Compliance Reporting",
+            description: "Detailed reports with actionable recommendations",
+            icon: "📋"
+        }
+    ];
+    const complianceStandards = [
+        "WCAG 2.1 AA",
+        "Section 508",
+        "ADA Title III",
+        "EN 301 549",
+        "ISO 9241-171"
+    ];
+    const testingAreas = [
+        {
+            category: "Visual Accessibility",
+            items: ["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
+        },
+        {
+            category: "Content Accessibility",
+            items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
+        },
+        {
+            category: "Technical Accessibility",
+            items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
+        }
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -88,13 +65,11 @@ const AccessibilityAuditor: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Accessibility Testing</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+              {features.map((feature, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 text-sm">{feature.description}</p>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -103,11 +78,9 @@ const AccessibilityAuditor: React.FC = () => {
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-center mb-8">Compliance Standards We Test</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                {complianceStandards.map((standard, index) => (
-                  <div key={index} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+                {complianceStandards.map((standard, index) => (<div key={index} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                     <span className="text-blue-400 font-semibold">{standard}</span>
-                  </div>
-                ))}
+                  </div>))}
               </div>
             </div>
           </div>
@@ -116,19 +89,15 @@ const AccessibilityAuditor: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Testing Areas</h2>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {testingAreas.map((area, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              {testingAreas.map((area, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.category}</h3>
                   <ul className="space-y-2">
-                    {area.items.map((item, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
+                    {area.items.map((item, idx) => (<li key={idx} className="flex items-center text-gray-300">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {item}
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -229,16 +198,10 @@ const AccessibilityAuditor: React.FC = () => {
                 inclusive for all users. Contact us today to get started.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
+                <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                   Get Accessibility Audit
                 </Link>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
+                <Link to="/services" className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                   View All Services
                 </Link>
               </div>
@@ -246,8 +209,6 @@ const AccessibilityAuditor: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default AccessibilityAuditor;

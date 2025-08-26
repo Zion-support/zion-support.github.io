@@ -16,7 +16,5 @@ const WhitelabelContext = createContext(defaultConfig);
 export const useWhitelabel = () => useContext(WhitelabelContext);
 export const WhitelabelProvider = ({ children, config = {} }) => {
     const mergedConfig = { ...defaultConfig, ...config };
-    return (<WhitelabelContext.Provider value={mergedConfig}>
-      {children}
-    </WhitelabelContext.Provider>);
+    return React.createElement(WhitelabelContext.Provider, { value: mergedConfig }, children);
 };

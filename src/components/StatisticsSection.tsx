@@ -1,36 +1,33 @@
 import React from 'react';
 import { Users, Globe, TrendingUp, Award } from 'lucide-react';
-
 const stats = [
-  {
-    icon: <Users className="w-8 h-8" />,
-    value: "10K+",
-    label: "Active Users",
-    description: "Trusted by professionals worldwide"
-  },
-  {
-    icon: <Globe className="w-8 h-8" />,
-    value: "150+",
-    label: "Countries",
-    description: "Global reach and availability"
-  },
-  {
-    icon: <TrendingUp className="w-8 h-8" />,
-    value: "95%",
-    label: "Success Rate",
-    description: "High customer satisfaction"
-  },
-  {
-    icon: <Award className="w-8 h-8" />,
-    value: "24/7",
-    label: "Support",
-    description: "Always here when you need us"
-  }
+    {
+        icon: <Users className="w-8 h-8"/>,
+        value: "10K+",
+        label: "Active Users",
+        description: "Trusted by professionals worldwide"
+    },
+    {
+        icon: <Globe className="w-8 h-8"/>,
+        value: "150+",
+        label: "Countries",
+        description: "Global reach and availability"
+    },
+    {
+        icon: <TrendingUp className="w-8 h-8"/>,
+        value: "95%",
+        label: "Success Rate",
+        description: "High customer satisfaction"
+    },
+    {
+        icon: <Award className="w-8 h-8"/>,
+        value: "24/7",
+        label: "Support",
+        description: "Always here when you need us"
+    }
 ];
-
 export function StatisticsSection() {
-  return (
-    <section className="py-20 bg-gradient-to-r from-zion-slate-dark via-zion-slate to-zion-blue-dark">
+    return (<section className="py-20 bg-gradient-to-r from-zion-slate-dark via-zion-slate to-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -42,11 +39,7 @@ export function StatisticsSection() {
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div 
-              key={index}
-              className="text-center group"
-            >
+          {stats.map((stat, index) => (<div key={index} className="text-center group">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-dark mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 <div className="text-white">
                   {stat.icon}
@@ -66,8 +59,7 @@ export function StatisticsSection() {
               <p className="text-zion-slate-light text-sm leading-relaxed">
                 {stat.description}
               </p>
-            </div>
-          ))}
+            </div>))}
         </div>
         
         {/* Call to action */}
@@ -80,6 +72,5 @@ export function StatisticsSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
 }

@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousOptimization: React.FC = () => {
-  return (
-    <>
+const AIAutonomousOptimization = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Optimization Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous optimization platform that continuously optimizes systems, processes, and performance with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI optimization, autonomous optimization, system optimization, performance optimization, autonomous operations, AI optimization platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-optimization" />
+        <meta name="description" content="Revolutionary AI autonomous optimization platform that continuously optimizes systems, processes, and performance with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI optimization, autonomous optimization, system optimization, performance optimization, autonomous operations, AI optimization platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-optimization"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousOptimization: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Optimization Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Performance Optimization', 'Process Optimization', 'Resource Optimization', 'Algorithm Optimization', 'System Optimization', 'Network Optimization', 'Database Optimization', 'Code Optimization'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Performance Optimization', 'Process Optimization', 'Resource Optimization', 'Algorithm Optimization', 'System Optimization', 'Network Optimization', 'Database Optimization', 'Code Optimization'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousOptimization: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousOptimization;

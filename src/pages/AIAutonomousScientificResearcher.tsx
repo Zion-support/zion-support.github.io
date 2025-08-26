@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousScientificResearcher: React.FC = () => {
-  return (
-    <>
+const AIAutonomousScientificResearcher = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Scientific Researcher | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous scientific researcher that conducts research, analyzes data, and generates scientific insights with advanced AI capabilities across all scientific domains." />
-        <meta name="keywords" content="AI scientific research, autonomous researcher, AI research, scientific AI, research automation, AI science" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-scientific-researcher" />
+        <meta name="description" content="Revolutionary AI autonomous scientific researcher that conducts research, analyzes data, and generates scientific insights with advanced AI capabilities across all scientific domains."/>
+        <meta name="keywords" content="AI scientific research, autonomous researcher, AI research, scientific AI, research automation, AI science"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-scientific-researcher"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousScientificResearcher: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Scientific Domains</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Physics', 'Chemistry', 'Biology', 'Medicine', 'Computer Science', 'Mathematics', 'Psychology', 'Economics'].map((domain) => (
-                <div key={domain} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Physics', 'Chemistry', 'Biology', 'Medicine', 'Computer Science', 'Mathematics', 'Psychology', 'Economics'].map((domain) => (<div key={domain} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{domain}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousScientificResearcher: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousScientificResearcher;

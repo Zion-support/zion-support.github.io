@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
 import SEO from '../SEO';
-import { DisputeDashboard } from '../DisputeDashboard';
-
 export default function DisputeManagement() {
-  const [activeTab, setActiveTab] = useState<'overview' | 'disputes' | 'resolutions' | 'settings'>('overview');
-
-  return (
-    <>
-      <SEO
-        title="Dispute Management | Zion Tech Group"
-        description="Admin dashboard for managing and resolving marketplace disputes and conflicts"
-        keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group"
-        canonical="https://ziontechgroup.com/admin/disputes"
-      />
+    const [activeTab, setActiveTab] = useState('overview');
+    return (<>
+      <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https://ziontechgroup.com/admin/disputes"/>
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
@@ -28,52 +19,31 @@ export default function DisputeManagement() {
           {/* Navigation Tabs */}
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-2 mb-8">
             <div className="flex flex-wrap gap-2">
-              <button
-                onClick={() => setActiveTab('overview')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
-                  activeTab === 'overview'
-                    ? 'bg-zion-cyan text-zion-blue-dark'
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'
-                }`}
-              >
+              <button onClick={() => setActiveTab('overview')} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${activeTab === 'overview'
+            ? 'bg-zion-cyan text-zion-blue-dark'
+            : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'}`}>
                 Overview
               </button>
-              <button
-                onClick={() => setActiveTab('disputes')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
-                  activeTab === 'disputes'
-                    ? 'bg-zion-cyan text-zion-blue-dark'
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'
-                }`}
-              >
+              <button onClick={() => setActiveTab('disputes')} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${activeTab === 'disputes'
+            ? 'bg-zion-cyan text-zion-blue-dark'
+            : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'}`}>
                 Active Disputes
               </button>
-              <button
-                onClick={() => setActiveTab('resolutions')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
-                  activeTab === 'resolutions'
-                    ? 'bg-zion-cyan text-zion-blue-dark'
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'
-                }`}
-              >
+              <button onClick={() => setActiveTab('resolutions')} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${activeTab === 'resolutions'
+            ? 'bg-zion-cyan text-zion-blue-dark'
+            : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'}`}>
                 Resolutions
               </button>
-              <button
-                onClick={() => setActiveTab('settings')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
-                  activeTab === 'settings'
-                    ? 'bg-zion-cyan text-zion-blue-dark'
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'
-                }`}
-              >
+              <button onClick={() => setActiveTab('settings')} className={`px-6 py-3 rounded-lg font-semibold transition-colors ${activeTab === 'settings'
+            ? 'bg-zion-cyan text-zion-blue-dark'
+            : 'text-zion-slate-light hover:text-white hover:bg-zion-blue'}`}>
                 Settings
               </button>
             </div>
           </div>
 
           {/* Tab Content */}
-          {activeTab === 'overview' && (
-            <div className="space-y-8">
+          {activeTab === 'overview' && (<div className="space-y-8">
               {/* Stats Cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">
@@ -84,7 +54,7 @@ export default function DisputeManagement() {
                     </div>
                     <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
                       <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                       </svg>
                     </div>
                   </div>
@@ -101,7 +71,7 @@ export default function DisputeManagement() {
                     </div>
                     <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center">
                       <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                       </svg>
                     </div>
                   </div>
@@ -118,7 +88,7 @@ export default function DisputeManagement() {
                     </div>
                     <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
                       <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                       </svg>
                     </div>
                   </div>
@@ -136,7 +106,7 @@ export default function DisputeManagement() {
                     </div>
                     <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
                       <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
                       </svg>
                     </div>
                   </div>
@@ -192,11 +162,9 @@ export default function DisputeManagement() {
                   </button>
                 </div>
               </div>
-            </div>
-          )}
+            </div>)}
 
-          {activeTab === 'disputes' && (
-            <div className="space-y-6">
+          {activeTab === 'disputes' && (<div className="space-y-6">
               <div className="flex justify-between items-center">
                 <h2 className="text-2xl font-bold text-white">Active Disputes</h2>
                 <div className="flex space-x-4">
@@ -293,32 +261,26 @@ export default function DisputeManagement() {
                   </table>
                 </div>
               </div>
-            </div>
-          )}
+            </div>)}
 
-          {activeTab === 'resolutions' && (
-            <div className="space-y-6">
+          {activeTab === 'resolutions' && (<div className="space-y-6">
               <h2 className="text-2xl font-bold text-white">Resolution History</h2>
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">
                 <p className="text-zion-slate-light text-center py-8">
                   Resolution history and analytics will be displayed here.
                 </p>
               </div>
-            </div>
-          )}
+            </div>)}
 
-          {activeTab === 'settings' && (
-            <div className="space-y-6">
+          {activeTab === 'settings' && (<div className="space-y-6">
               <h2 className="text-2xl font-bold text-white">Dispute Management Settings</h2>
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">
                 <p className="text-zion-slate-light text-center py-8">
                   Configuration and settings for dispute management will be displayed here.
                 </p>
               </div>
-            </div>
-          )}
+            </div>)}
         </div>
       </main>
-    </>
-  );
+    </>);
 }
