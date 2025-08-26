@@ -112,7 +112,9 @@ const footerSections = [
       { name: 'AI Market Research', href: '/ai-market-research' },
       { name: 'AI Sales Automation', href: '/ai-sales-automation' },
       { name: 'AI HR Recruitment', href: '/ai-hr-recruitment' },
-      { name: 'AI Customer Service', href: '/ai-customer-service' }
+      { name: 'AI Customer Service', href: '/ai-customer-service' },
+      { name: 'AI Sales Copilot', href: '/ai-sales-copilot' },
+      { name: 'AI Autonomous Marketing', href: '/ai-autonomous-marketing-platform' }
     ]
   },
   {
@@ -141,6 +143,8 @@ const footerSections = [
       { name: 'Webinars', href: '/webinars' },
       { name: 'Support Center', href: '/support' },
       { name: 'Training & Certification', href: '/training' },
+      { name: 'Developer Hub', href: '/developer' },
+      { name: 'Community', href: '/community' },
       { name: 'Market Pricing', href: '/market-pricing' },
       { name: 'Services Advertising', href: '/services-advertising' },
       { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab' },

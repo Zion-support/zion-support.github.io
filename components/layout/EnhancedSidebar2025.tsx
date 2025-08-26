@@ -230,13 +230,9 @@ const sidebarSections = [
       { name: 'AI Decision Engine', href: '/ai-powered-decision-engine' },
       { name: 'Content Automation', href: '/intelligent-content-automation-platform' },
       { name: 'Smart CRM Suite', href: '/smart-crm-intelligence-suite' },
-      { name: 'Financial Analytics', href: '/automated-financial-analytics-platform' },
-      { name: 'Project Management', href: '/intelligent-project-management-suite' },
-      { name: 'Business Intelligence', href: '/ai-business-intelligence-suite' },
-      { name: 'Marketing Automation', href: '/ai-autonomous-marketing-platform' },
       { name: 'Customer Service AI', href: '/ai-customer-service' },
-      { name: 'HR & Recruitment', href: '/ai-hr-recruitment' },
-      { name: 'Legal Contract Analysis', href: '/ai-legal-contract-analyzer' }
+      { name: 'AI Sales Copilot', href: '/ai-sales-copilot' },
+      { name: 'Autonomous Marketing', href: '/ai-autonomous-marketing-platform' }
     ]
   },
   {
@@ -272,7 +268,7 @@ const sidebarSections = [
       { name: 'Support Center', href: '/support' },
       { name: 'Training & Certification', href: '/training' },
       { name: 'Community Forum', href: '/community' },
-      { name: 'Developer Resources', href: '/developer-resources' },
+      { name: 'Developer Resources', href: '/developer' },
       { name: 'Research & Development', href: '/research-development' },
       { name: 'White Papers', href: '/white-papers' },
       { name: 'Performance Reports', href: '/reports' },

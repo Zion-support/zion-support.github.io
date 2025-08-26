@@ -22,6 +22,83 @@ interface NavigationItem {
 
 const navigationItems: NavigationItem[] = [
   {
+    name: 'Pricing',
+    href: '/pricing',
+    icon: <DollarSign className="w-5 h-5" />,
+    description: 'Plans and average market prices',
+    children: [
+      { name: 'Standard Pricing', href: '/pricing', description: 'Our plans' },
+      { name: 'Market Pricing', href: '/market-pricing', description: 'Compare market averages' }
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className="w-5 h-5" />,
+    description: 'Guides, reports and tools',
+    children: [
+      { name: 'Blog', href: '/blog', description: 'Insights and updates' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Proven results' },
+      { name: 'Developer', href: '/developer', description: 'Docs and SDKs' },
+      { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' }
+    ]
+  },
+  {
+    name: 'Contact',
+    href: '/contact',
+    icon: <Phone className="w-5 h-5" />,
+    description: 'Talk to our team',
+    featured: true,
+    children: [
+      { name: 'Contact Sales', href: '/contact', description: 'Get a quote' },
+      { name: 'Support', href: '/support', description: 'Help center' }
+    ]
+  },
+  {
+    name: 'Services',
+    href: '/services',
+    icon: <Grid className="w-5 h-5" />,
+    description: 'Browse by category',
+    badge: 'New',
+    children: [
+      { name: 'AI & Data', href: '/services#ai-consciousness', description: 'AI, data, ML services' },
+      { name: 'Cloud & FinOps', href: '/services#enterprise-it', description: 'Cloud, cost, platform' },
+      { name: 'Observability', href: '/services#enterprise-it', description: 'Monitoring & telemetry' },
+      { name: 'Developer Tools', href: '/services#enterprise-it', description: 'Developer productivity' },
+      { name: 'Training & Education', href: '/training', description: 'Learning and R&D' },
+      { name: 'SEO Automation Suite', href: '/seo-automation-suite', description: 'Technical SEO automation' },
+      { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent', description: 'Agentless discovery' },
+      { name: 'Managed Postgres HA', href: '/managed-postgres-ha', description: 'HA Postgres ops' },
+      { name: 'Micro SAAS', href: '/micro-saas', description: 'Business tools and automation' }
+    ]
+  },
+  {
+    name: 'All Services',
+    href: '/comprehensive-services-showcase-2025',
+    icon: <Globe className="w-5 h-5" />,
+    description: 'Complete portfolio of all technology services',
+    badge: 'Showcase',
+    featured: true,
+    children: [
+      { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
+      { name: 'Ultimate 2035 Futuristic', href: '/ultimate-2035-futuristic-services-showcase', description: 'Revolutionary future technology', featured: true },
+      { name: 'Ultimate 2025 Micro SAAS', href: '/ultimate-2025-micro-saas-showcase', description: 'Latest innovative services', featured: true },
+      { name: 'Service Categories', href: '/comprehensive-services-showcase-2025', description: 'Browse by category' },
+      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025', description: 'Compare service costs' },
+      { name: 'Service Search', href: '/comprehensive-services-showcase-2025', description: 'Find specific services' },
+      { name: 'Market Pricing', href: '/market-pricing', description: 'Average market prices & references' },
+      { name: 'Latest Innovations', href: '/revolutionary-2025-services-showcase', description: 'Cutting-edge solutions' },
+      { name: '2026 Services', href: '/revolutionary-2026-services', description: 'Next generation solutions' },
+      { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },
+      { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' },
+      { name: 'Enterprise Solutions', href: '/enterprise-solutions-showcase', description: 'Enterprise-grade solutions' },
+      { name: 'Innovative Business Solutions', href: '/innovative-business-solutions', description: 'Business transformation services' },
+      { name: 'AI Sales Copilot', href: '/ai-sales-copilot', description: 'Prospecting, outreach, scoring' },
+      { name: 'AI Autonomous Marketing', href: '/ai-autonomous-marketing-platform', description: 'Always-on marketing automation' },
+      { name: 'AI Customer Service', href: '/ai-customer-service', description: 'Omnichannel AI support' }
+    ]
+  },
+  {
     name: 'AI & Consciousness',
     href: '/ai-services',
     icon: <Brain className="w-5 h-5" />,
@@ -81,12 +158,14 @@ const navigationItems: NavigationItem[] = [
     description: 'Space exploration and virtual worlds',
     color: 'from-pink-500 to-rose-500',
     children: [
-      { name: 'Space Technology AI Platform', href: '/space-technology-ai-platform', description: 'AI-powered space operations' },
-      { name: 'Metaverse Development Studio', href: '/metaverse-development-studio-pro', description: '3D world building tools' },
-      { name: 'Virtual Event Hologram Platform', href: '/virtual-event-hologram-platform', description: 'Holographic events' },
-      { name: 'Space Colonization Services', href: '/space-colonization-services', description: 'Interplanetary infrastructure' },
-      { name: 'Orbital Mechanics Platform', href: '/orbital-mechanics', description: 'Trajectory optimization' },
-      { name: 'Satellite Operations Center', href: '/satellite-operations', description: 'Mission control systems' }
+      { name: 'Healthcare AI', href: '/healthcare-solutions', description: 'AI-powered healthcare' },
+      { name: 'Financial Technology', href: '/financial-solutions', description: 'Next-gen fintech' },
+      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions', description: 'Smart manufacturing' },
+      { name: 'Retail Technology', href: '/retail-technology-solutions', description: 'Digital retail transformation' },
+      { name: 'Education Technology', href: '/education-technology-solutions', description: 'AI-powered learning' },
+      { name: 'Government Solutions', href: '/enterprise-solutions-showcase', description: 'Public sector innovation' },
+      { name: 'Energy & Utilities', href: '/quantum-energy', description: 'Sustainable energy tech' },
+      { name: 'Biotech AI Research', href: '/biotech-ai', description: 'AI-driven biotech' }
     ]
   },
   {
@@ -99,12 +178,9 @@ const navigationItems: NavigationItem[] = [
     children: [
       { name: 'Blog', href: '/blog', description: 'Insights and updates' },
       { name: 'Case Studies', href: '/case-studies', description: 'Proven results' },
-      { name: 'Resources Hub', href: '/resources', description: 'Docs, SDKs, guides' },
-      { name: 'Events', href: '/events', description: 'Conferences and meetups' },
-      { name: 'Webinars', href: '/webinars', description: 'Live and on-demand sessions' },
-      { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' },
-      { name: 'Serverless Lakehouse Starter', href: '/services/serverless-lakehouse-starter', description: 'ELT + dbt + dashboards' },
-      { name: 'Data Contracts Hub', href: '/services/data-contracts-hub', description: 'Schema diffs & CI gates' }
+      { name: 'Developer', href: '/developer', description: 'Docs and SDKs' },
+      { name: 'Community', href: '/community', description: 'Forum and updates' },
+      { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' }
     ]
   }
 ];
