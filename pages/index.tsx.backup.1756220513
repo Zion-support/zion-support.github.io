@@ -30,11 +30,17 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+<<<<<<< HEAD
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { advancedITServices } from '../data/advanced-it-services';
+import { specializedAIServices } from '../data/specialized-ai-services';
+=======
 import { emergingTechServices } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
 import { comprehensiveITServices } from '../data/comprehensive-it-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { advancedCybersecurityServices } from '../data/advanced-cybersecurity-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7f29
 
 export default function HomePage() {
   const heroStats = [
@@ -140,6 +146,12 @@ const serviceCategories = [
 
   // Combine all services for display
   const allServices = [
+<<<<<<< HEAD
+    ...enhancedRealMicroSaasServices.slice(0, 12),
+    ...innovativeAIServices.slice(0, 8),
+    ...advancedITServices.slice(0, 8),
+    ...specializedAIServices.slice(0, 8)
+=======
     ...enhancedRealMicroSaasServices,
     ...innovativeMicroSaasServices,
     ...extraServices,
@@ -149,9 +161,23 @@ const serviceCategories = [
     ...comprehensiveITServices,
     ...nextGenerationAIServices,
     ...advancedCybersecurityServices
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7f29
   ];
 
   return (
+<<<<<<< HEAD
+    <UltraAdvancedFuturisticBackground variant="quantum-holographic-advanced" intensity="ultra">
+      <Head>
+        <title>Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions</title>
+        <meta name="description" content="Discover 500+ revolutionary micro SaaS services, AI solutions, and IT services. Quantum AI, Space Technology, Biotech AI, and more. Start your 30-day free trial today!" />
+        <meta name="keywords" content="micro SaaS, AI services, quantum computing, space technology, biotech AI, IT services, cloud computing, edge computing, cybersecurity" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions" />
+        <meta property="og:description" content="500+ revolutionary micro SaaS services with 1000% ROI guarantee. Quantum AI, Space Technology, Biotech AI, and more." />
+=======
     <>
       <UltraFuturisticNavigation />
       <UltraAdvancedFuturisticBackground intensity={1.5} variant="fusion">
@@ -163,6 +189,7 @@ const serviceCategories = [
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Zion Tech Group - Revolutionary AI, Quantum & IT Services" />
         <meta property="og:description" content="500+ cutting-edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7f29
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:type" content="website" />
         
@@ -538,7 +565,13 @@ const serviceCategories = [
           </div>
         </div>
       </footer>
+<<<<<<< HEAD
+    </UltraAdvancedFuturisticBackground>
+  );
+}
+=======
         </UltraAdvancedFuturisticBackground>
       </>
     );
   }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7f29
