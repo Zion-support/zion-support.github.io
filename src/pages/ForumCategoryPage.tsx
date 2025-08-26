@@ -68,17 +68,10 @@ const iconMap = {
   "Megaphone": Megaphone
 };
 
-function CategoryContent({
-  categoryId,
-  category,
-  IconComponent,
-  user,
-}: {
-  categoryId: string;
-  category: ForumCategoryInfo;
-  IconComponent: React.ComponentType<any>;
-  user: any;
-}) {
+export default function ForumCategoryPage() {
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { categoryId } = useParams() as { categoryId?: string };
+  const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState("");
   
   if (!categoryId || !categoriesInfo[categoryId]) {

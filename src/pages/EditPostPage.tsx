@@ -36,6 +36,7 @@ const mockPost: ForumPost = {
 };
 
 export default function EditPostPage() {
+  // Cast to specify the expected route param type since useParams may be untyped
   const { postId } = useParams() as { postId?: string };
   const navigate = useNavigate();
   const { toast } = useToast();

@@ -17,6 +17,7 @@ import {
 } from './components';
 
 export function ProjectMilestonesContent() {
+  // Cast to specify the expected route param type since useParams may be untyped
   const { projectId } = useParams() as { projectId?: string };
   const { user } = useAuth();
   const { getProjectById } = useProjects();

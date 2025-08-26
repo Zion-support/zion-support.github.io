@@ -9,6 +9,7 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 import { useWhitelabel } from "@/context/WhitelabelContext";
 
 export default function CompanyWorkspace() {
+  // Cast to specify the expected route param type since useParams may be untyped
   const { companySlug } = useParams() as { companySlug?: string };
   const { user } = useAuth();
   const { company, isLoading, error } = useCompanyWorkspace(companySlug);

@@ -53,7 +53,8 @@ import {
 } from "lucide-react";
 
 function ProjectDetailsContent() {
-  const { projectId } = useParams();
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { projectId } = useParams() as { projectId?: string };
   const { user } = useAuth();
   const { getProjectById, updateProjectStatus } = useProjects();
   

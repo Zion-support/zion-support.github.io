@@ -22,6 +22,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
 
 export function DisputeDetail() {
+  // Cast to specify the expected route param type since useParams may be untyped
   const { disputeId } = useParams() as { disputeId?: string };
   const navigate = useNavigate();
   const { user } = useAuth();

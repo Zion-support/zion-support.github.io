@@ -13,9 +13,8 @@ import { EQUIPMENT_DETAILS, EquipmentDetails } from "@/data/equipmentDetails";
 
 
 export default function EquipmentDetail() {
+  // Cast to specify the expected route param type since useParams may be untyped
   const { equipmentId } = useParams() as { equipmentId?: string };
-  const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);

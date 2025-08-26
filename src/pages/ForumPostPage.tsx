@@ -89,9 +89,7 @@ const mockReplies: ForumReply[] = [
 ];
 
 export default function ForumPostPage() {
-  // Using `useParams` without type arguments avoids issues when TypeScript
-  // can't determine the generic type for the helper from React Router.
-  // Cast the result instead to provide the expected shape.
+  // Cast to specify the expected route param type since useParams may be untyped
   const { postId } = useParams() as { postId?: string };
   const { user } = useAuth();
   const { toast } = useToast();
