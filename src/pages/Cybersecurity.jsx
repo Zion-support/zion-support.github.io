@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEOHead from "../components/SEOHead";
 import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
 const Cybersecurity = () => {
     const securityServices = [
@@ -69,7 +69,7 @@ const Cybersecurity = () => {
         }
     ];
     return (<div className="min-h-screen bg-background pt-20">
-      <SEO title="Cybersecurity Solutions - Zion Tech Group" description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group." keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection" canonical="https://ziontechgroup.com/cybersecurity"/>
+      <SEOHead title="Cybersecurity Solutions - Zion Tech Group" description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group." keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection" url="https://ziontechgroup.com/cybersecurity"/>
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
