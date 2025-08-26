@@ -157,7 +157,7 @@ const companyLinks = [
 const resourceLinks = [
   { name: '📖 Documentation', href: '/docs', icon: BookOpen },
   { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video },
-  { name: '💡 API Reference', href: '/api', icon: Code },
+  { name: '💡 API Reference', href: '/api-documentation', icon: Code },
   { name: '🛠️ Developer Tools', href: '/dev-tools', icon: Wrench },
   { name: '📱 Mobile Apps', href: '/mobile', icon: Smartphone },
   { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },

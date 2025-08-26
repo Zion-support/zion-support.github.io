@@ -130,72 +130,19 @@ const sidebarSections = [
     icon: Target,
     color: 'from-purple-500 to-pink-600',
     items: [
-      {
-        name: 'Healthcare',
-        href: '/healthcare-solutions',
-        icon: Heart,
-        description: 'AI-powered healthcare diagnostics and solutions',
-        subItems: [
-          { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' },
-          { name: 'Medical Imaging AI', href: '/medical-imaging-ai' },
-          { name: 'Drug Discovery Platform', href: '/drug-discovery-platform' }
-        ]
-      },
-      {
-        name: 'Financial Services',
-        href: '/financial-solutions',
-        icon: BarChart3,
-        description: 'Advanced financial intelligence and analytics',
-        subItems: [
-          { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
-          { name: 'Quantum Trading Platform', href: '/quantum-financial-trading' },
-          { name: 'Risk Assessment AI', href: '/risk-assessment-ai' }
-        ]
-      },
-      {
-        name: 'Manufacturing',
-        href: '/manufacturing-solutions',
-        icon: Settings,
-        description: 'Industry 4.0 and smart manufacturing',
-        subItems: [
-          { name: 'Smart Factory Platform', href: '/smart-factory-platform' },
-          { name: 'Predictive Maintenance AI', href: '/predictive-maintenance-ai' },
-          { name: 'Quality Control AI', href: '/quality-control-ai' }
-        ]
-      },
-      {
-        name: 'Retail & E-commerce',
-        href: '/retail-solutions',
-        icon: Eye,
-        description: 'E-commerce optimization and retail intelligence',
-        subItems: [
-          { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform' },
-          { name: 'Customer Behavior AI', href: '/customer-behavior-ai' },
-          { name: 'Inventory Management AI', href: '/inventory-management-ai' }
-        ]
-      },
-      {
-        name: 'Government & Defense',
-        href: '/government-solutions',
-        icon: Shield,
-        description: 'Secure government and defense solutions',
-        subItems: [
-          { name: 'Cybersecurity Platform', href: '/quantum-cybersecurity-platform' },
-          { name: 'Data Protection AI', href: '/data-protection-ai' },
-          { name: 'Threat Detection AI', href: '/threat-detection-ai' }
-        ]
-      },
-      {
-        name: 'Education',
-        href: '/education-solutions',
-        icon: Award,
-        description: 'AI-powered education and learning platforms',
-        subItems: [
-          { name: 'AI Education Platform', href: '/ai-education-platform' },
-          { name: 'Personalized Learning AI', href: '/personalized-learning-ai' },
-          { name: 'Student Performance AI', href: '/student-performance-ai' }
-        ]
-      }
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform', badge: 'Hot' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform', badge: 'New' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform', badge: 'New' },
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', badge: 'New' },
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform', badge: 'New' },
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform' },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
+      { name: 'Quantum Robotics', href: '/quantum-robotics' },
+      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform' },
+      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization' },
+      { name: 'Quantum Metaverse', href: '/quantum-metaverse' },
+      { name: 'Quantum IoT Platform', href: '/quantum-iot' },
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' }
     ]
   },
   {
@@ -299,17 +246,12 @@ const sidebarSections = [
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: <Home className="w-4 h-4" /> },
-  { name: 'All Services', href: '/comprehensive-services-showcase-2025', icon: <Star className="w-4 h-4" /> },
+  { name: 'All Services', href: '/services', icon: <Star className="w-4 h-4" /> },
   { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
   { name: 'Market Pricing', href: '/market-pricing', icon: <DollarSign className="w-4 h-4" /> },
   { name: 'Services Advertising', href: '/services-advertising', icon: <BookOpen className="w-4 h-4" /> },
-<<<<<<< HEAD
-  { name: 'Events', href: '/events', icon: <Calendar className="w-4 h-4" /> },
-  { name: 'Webinars', href: '/webinars', icon: <Video className="w-4 h-4" /> },
-=======
   { name: 'Events', href: '/events', icon: <Star className="w-4 h-4" /> },
   { name: 'Webinars', href: '/webinars', icon: <Star className="w-4 h-4" /> },
->>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
   { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
   { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> },
   { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }

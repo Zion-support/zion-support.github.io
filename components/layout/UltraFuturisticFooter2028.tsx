@@ -58,19 +58,27 @@ const serviceCategories = [
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
-  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: 'Careers', href: '/careers', icon: TrendingUp },
-  { name: 'Contact', href: '/contact', icon: MessageCircle },
-  { name: 'Support', href: '/support', icon: ShieldCheck }
+  { name: 'Blog', href: '/blog', icon: BookOpen },
+  { name: 'News', href: '/news', icon: Star },
+  { name: 'Press', href: '/news', icon: MessageCircle }
 ];
 
 const resourceLinks = [
   { name: 'Documentation', href: '/docs', icon: BookOpen },
-  { name: 'API Reference', href: '/api', icon: Cpu },
-  { name: 'Developer Tools', href: '/dev-tools', icon: Database },
-  { name: 'Mobile Apps', href: '/mobile', icon: Globe },
-  { name: 'Cloud Services', href: '/cloud', icon: Cloud },
-  { name: 'Security Center', href: '/security', icon: Shield }
+  { name: 'API Reference', href: '/api-documentation', icon: Cpu },
+  { name: 'Training', href: '/training', icon: GraduationCap },
+  { name: 'Support', href: '/support', icon: ShieldCheck },
+  { name: 'Community', href: '/community', icon: Users },
+  { name: 'Partners', href: '/partners', icon: Handshake }
+];
+
+const legalLinks = [
+  { name: 'Privacy Policy', href: '/privacy' },
+  { name: 'Terms of Service', href: '/terms' },
+  { name: 'Cookie Policy', href: '/cookies' },
+  { name: 'Security', href: '/security' },
+  { name: 'Compliance', href: '/compliance' },
+  { name: 'GDPR', href: '/gdpr' }
 ];
 
 const socialLinks = [
