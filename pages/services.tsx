@@ -1,280 +1,95 @@
+import Head from 'next/head'
+import Link from 'next/link'
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code } from 'lucide-react'
-import PageTransition from '../src/components/PageTransition'
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services'
+import { advancedITServices } from '../data/advanced-it-services'
+import { innovativeAIServices } from '../data/innovative-ai-services'
 
-export default function Services() {
-	const title = 'Services — Zion Tech Group'
-	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
+export default function Services(){
+	const microSaaS = innovativeRealMicroSaasServices2025.slice(0, 12)
+	const itServices = advancedITServices.slice(0, 12)
+	const aiServices = innovativeAIServices.slice(0, 12)
 
 	return (
-		<PageTransition>
-			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
-						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Our Services
-						</h1>
-						<p className="mt-6 text-lg leading-8 text-gray-600">
-							From strategy to production, we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.
-						</p>
-					</div>
+		<main style={{padding:20,fontFamily:'sans-serif', lineHeight:1.6}}>
+			<Head>
+				<title>Services | Zion Tech Group</title>
+				<meta name='description' content='Micro SaaS, IT, and AI services by Zion Tech Group. Real, production-ready solutions with transparent pricing.' />
+			</Head>
+			<h1 style={{marginBottom:8}}>Services</h1>
+			<p style={{marginTop:0, color:'#374151'}}>We deliver real, production-ready Micro SaaS, IT, and AI solutions. Explore highlights below or <Link href="/contact" style={{color:'#2563eb', textDecoration:'underline'}}>contact us</Link> for a tailored plan.</p>
+
+			<section style={{marginTop:24}}>
+				<h2 style={{marginBottom:8}}>Featured Micro SaaS</h2>
+				<div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(260px, 1fr))', gap:16}}>
+					{microSaaS.map(item => (
+						<article key={item.id} style={{border:'1px solid #e5e7eb', borderRadius:8, padding:16}}>
+							<div style={{fontSize:20, fontWeight:600}}>{item.icon} {item.name}</div>
+							<div style={{color:'#6b7280', marginTop:4}}>{item.tagline}</div>
+							<div style={{marginTop:8}}>
+								<span style={{fontWeight:700}}>{item.price}</span>
+								<span style={{color:'#6b7280'}}> {item.period}</span>
+							</div>
+							<ul style={{marginTop:8, paddingLeft:18}}>
+								{item.features.slice(0,3).map((f, idx) => (<li key={idx} style={{color:'#374151'}}>{f}</li>))}
+							</ul>
+							<a href={item.link} style={{display:'inline-block', marginTop:10, color:'#2563eb', textDecoration:'underline'}}>Learn more</a>
+						</article>
+					))}
 				</div>
 			</section>
 
-			{/* Services Grid */}
-			<section className="py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="grid gap-8 lg:grid-cols-2">
-						{/* AI Autonomous Systems */}
-						<div id="ai" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
-							<div className="flex items-center gap-x-3">
-								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-									<Brain className="h-6 w-6 text-white" />
-								</div>
-								<h2 className="text-xl font-semibold text-gray-900">AI Autonomous Systems</h2>
+			<section style={{marginTop:32}}>
+				<h2 style={{marginBottom:8}}>Advanced IT Services</h2>
+				<div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(260px, 1fr))', gap:16}}>
+					{itServices.map(item => (
+						<article key={item.id} style={{border:'1px solid #e5e7eb', borderRadius:8, padding:16}}>
+							<div style={{fontSize:20, fontWeight:600}}>{item.icon} {item.name}</div>
+							<div style={{color:'#6b7280', marginTop:4}}>{item.tagline}</div>
+							<div style={{marginTop:8}}>
+								<span style={{fontWeight:700}}>{item.price}</span>
+								<span style={{color:'#6b7280'}}> {item.period}</span>
 							</div>
-							<p className="mt-4 text-gray-600">
-								Transform your operations with intelligent automation and AI-powered decision making.
-							</p>
-							<ul className="mt-6 space-y-3">
-								<li className="flex items-center gap-x-3">
-									<Zap className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">Sales/CS multi-agent copilots</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Database className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">RAG and workflow orchestration</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<BarChart3 className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">Observability and guardrails</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Users className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">Intelligent process automation</span>
-								</li>
+							<ul style={{marginTop:8, paddingLeft:18}}>
+								{item.features.slice(0,3).map((f, idx) => (<li key={idx} style={{color:'#374151'}}>{f}</li>))}
 							</ul>
-							<div className="mt-8">
-								<Link
-									to="/contact"
-									className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors"
-								>
-									Get started with AI
-									<ArrowRight className="ml-2 h-4 w-4" />
-								</Link>
-							</div>
-						</div>
-
-						{/* Cloud Platforms */}
-						<div id="cloud" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
-							<div className="flex items-center gap-x-3">
-								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-									<Cloud className="h-6 w-6 text-white" />
-								</div>
-								<h2 className="text-xl font-semibold text-gray-900">Cloud Platforms</h2>
-							</div>
-							<p className="mt-4 text-gray-600">
-								Build scalable, resilient cloud infrastructure that grows with your business.
-							</p>
-							<ul className="mt-6 space-y-3">
-								<li className="flex items-center gap-x-3">
-									<Server className="h-4 w-4 text-green-600" />
-									<span className="text-sm text-gray-700">Serverless and Kubernetes</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Database className="h-4 w-4 text-green-600" />
-									<span className="text-sm text-gray-700">Data pipelines and ML ops</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<BarChart3 className="h-4 w-4 text-green-600" />
-									<span className="text-sm text-gray-700">FinOps and SRE practices</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Globe className="h-4 w-4 text-green-600" />
-									<span className="text-sm text-gray-700">Multi-cloud architecture</span>
-								</li>
-							</ul>
-							<div className="mt-8">
-								<Link
-									to="/contact"
-									className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors"
-								>
-									Build your cloud platform
-									<ArrowRight className="ml-2 h-4 w-4" />
-								</Link>
-							</div>
-						</div>
-
-						{/* Cybersecurity */}
-						<div id="cybersecurity" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
-							<div className="flex items-center gap-x-3">
-								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-600">
-									<Shield className="h-6 w-6 text-white" />
-								</div>
-								<h2 className="text-xl font-semibold text-gray-900">Cybersecurity</h2>
-							</div>
-							<p className="mt-4 text-gray-600">
-								Protect your business with enterprise-grade security frameworks and compliance.
-							</p>
-							<ul className="mt-6 space-y-3">
-								<li className="flex items-center gap-x-3">
-									<Lock className="h-4 w-4 text-red-600" />
-									<span className="text-sm text-gray-700">Zero-trust frameworks</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Shield className="h-4 w-4 text-red-600" />
-									<span className="text-sm text-gray-700">Compliance and threat modeling</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Zap className="h-4 w-4 text-red-600" />
-									<span className="text-sm text-gray-700">Incident response playbooks</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<BarChart3 className="h-4 w-4 text-red-600" />
-									<span className="text-sm text-gray-700">Security monitoring & analytics</span>
-								</li>
-							</ul>
-							<div className="mt-8">
-								<Link
-									to="/contact"
-									className="inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-500 transition-colors"
-								>
-									Secure your business
-									<ArrowRight className="ml-2 h-4 w-4" />
-								</Link>
-							</div>
-						</div>
-
-						{/* Micro SaaS */}
-						<div id="saas" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
-							<div className="flex items-center gap-x-3">
-								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
-									<Code className="h-6 w-6 text-white" />
-								</div>
-								<h2 className="text-xl font-semibold text-gray-900">Micro SaaS</h2>
-							</div>
-							<p className="mt-4 text-gray-600">
-								Rapidly build and deploy SaaS products with proven infrastructure patterns.
-							</p>
-							<ul className="mt-6 space-y-3">
-								<li className="flex items-center gap-x-3">
-									<Zap className="h-4 w-4 text-purple-600" />
-									<span className="text-sm text-gray-700">Rapid product delivery</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Database className="h-4 w-4 text-purple-600" />
-									<span className="text-sm text-gray-700">Billing, auth, and analytics</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<BarChart3 className="h-4 w-4 text-purple-600" />
-									<span className="text-sm text-gray-700">Growth experiments</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Users className="h-4 w-4 text-purple-600" />
-									<span className="text-sm text-gray-700">User onboarding & retention</span>
-								</li>
-							</ul>
-							<div className="mt-8">
-								<Link
-									to="/contact"
-									className="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors"
-								>
-									Build your SaaS
-									<ArrowRight className="ml-2 h-4 w-4" />
-								</Link>
-							</div>
-						</div>
-					</div>
+							<a href={item.link} style={{display:'inline-block', marginTop:10, color:'#2563eb', textDecoration:'underline'}}>Learn more</a>
+						</article>
+					))}
 				</div>
 			</section>
 
-			{/* Process Section */}
-			<section className="bg-white py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl lg:text-center">
-						<h2 className="text-base font-semibold leading-7 text-blue-600">Our Process</h2>
-						<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							How we deliver results
-						</p>
-						<p className="mt-6 text-lg leading-8 text-gray-600">
-							We follow a proven methodology that ensures successful delivery and measurable outcomes.
-						</p>
-					</div>
-					<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-						<dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
-							<div className="flex flex-col">
-								<dt className="text-lg font-semibold leading-7 text-gray-900">
-									<span className="mr-2 text-2xl font-bold text-blue-600">1</span>
-									Discovery
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										We analyze your current state, understand your goals, and design a roadmap for success.
-									</p>
-								</dd>
+			<section style={{marginTop:32}}>
+				<h2 style={{marginBottom:8}}>Innovative AI Services</h2>
+				<div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(260px, 1fr))', gap:16}}>
+					{aiServices.map(item => (
+						<article key={item.id} style={{border:'1px solid #e5e7eb', borderRadius:8, padding:16}}>
+							<div style={{fontSize:20, fontWeight:600}}>{item.icon} {item.name}</div>
+							<div style={{color:'#6b7280', marginTop:4}}>{item.tagline}</div>
+							<div style={{marginTop:8}}>
+								<span style={{fontWeight:700}}>{item.price}</span>
+								<span style={{color:'#6b7280'}}> {item.period}</span>
 							</div>
-							<div className="flex flex-col">
-								<dt className="text-lg font-semibold leading-7 text-gray-900">
-									<span className="mr-2 text-2xl font-bold text-blue-600">2</span>
-									Design
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										We architect solutions that align with your business objectives and technical requirements.
-									</p>
-								</dd>
-							</div>
-							<div className="flex flex-col">
-								<dt className="text-lg font-semibold leading-7 text-gray-900">
-									<span className="mr-2 text-2xl font-bold text-blue-600">3</span>
-									Develop
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										We build and test your solution using industry best practices and modern technologies.
-									</p>
-								</dd>
-							</div>
-							<div className="flex flex-col">
-								<dt className="text-lg font-semibold leading-7 text-gray-900">
-									<span className="mr-2 text-2xl font-bold text-blue-600">4</span>
-									Deploy
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										We launch your solution and provide ongoing support to ensure continued success.
-									</p>
-								</dd>
-							</div>
-						</dl>
-					</div>
+							<ul style={{marginTop:8, paddingLeft:18}}>
+								{item.features.slice(0,3).map((f, idx) => (<li key={idx} style={{color:'#374151'}}>{f}</li>))}
+							</ul>
+							<a href={item.link} style={{display:'inline-block', marginTop:10, color:'#2563eb', textDecoration:'underline'}}>Learn more</a>
+						</article>
+					))}
 				</div>
 			</section>
 
-			{/* CTA Section */}
-			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
-						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-							Ready to get started?
-						</h2>
-						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
-							Let's discuss your project and how we can help you achieve your goals.
-						</p>
-						<div className="mt-10 flex items-center justify-center gap-x-6">
-							<Link
-								to="/contact"
-								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
-							>
-								Get in touch
-								<ArrowRight className="ml-2 h-4 w-4 inline" />
-							</Link>
-						</div>
-					</div>
-				</div>
+			<section style={{marginTop:40, background:'#f9fafb', padding:16, borderRadius:8}}>
+				<h2 style={{marginBottom:6}}>Why Zion Tech Group</h2>
+				<ul style={{paddingLeft:18, color:'#374151'}}>
+					<li>Real, battle-tested implementations (no mockups)</li>
+					<li>Transparent pricing and fast onboarding</li>
+					<li>Enterprise-grade security and compliance</li>
+					<li>ROI-focused delivery and measurable outcomes</li>
+				</ul>
+				<p style={{marginTop:10}}>Average market prices (monthly): Micro SaaS $99–$999, AI Services $499–$4,999, Enterprise IT $2,000–$15,000. We price competitively based on scope.</p>
+				<p>Call <a href="tel:+13024640950" style={{color:'#2563eb', textDecoration:'underline'}}>+1 302 464 0950</a>, email <a href="mailto:kleber@ziontechgroup.com" style={{color:'#2563eb', textDecoration:'underline'}}>kleber@ziontechgroup.com</a>, or visit <a href="https://ziontechgroup.com" style={{color:'#2563eb', textDecoration:'underline'}}>ziontechgroup.com</a>.</p>
 			</section>
-		</PageTransition>
+		</main>
 	)
 }
