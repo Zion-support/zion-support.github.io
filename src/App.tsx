@@ -17,7 +17,7 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 
 // Enhanced lazy loading with preloading hints from incoming branch
 const Services = lazy(() => import('./pages/Services'));
-const AISolutions = lazy(() => import('./pages/AISolutions'));
+const AISolutions = lazy(() => import('./pages/services/AIServices'));
 const ServicesShowcase = lazy(() => import('./pages/ServicesShowcase'));
 const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
@@ -34,16 +34,15 @@ const PracticalMicroSaas2027 = lazy(() => import('./pages/PracticalMicroSaas2027
 const AllServices2027 = lazy(() => import('./pages/AllServices2027'));
 
 // Service pages
-const AIServices = lazy(() => import('./pages/AIServices'));
-const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
-const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
-const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
+const AIServices = lazy(() => import('./pages/services/AIServices'));
+const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
+const EnterpriseSolutionsPage = lazy(() => import('./pages/services/EnterpriseIT'));
+const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 
 // Additional innovative services
-const IoTManagementPlatform = lazy(() => import('./pages/services/IoTManagementPlatform'));
-const BlockchainDeFiSolutions = lazy(() => import('./pages/services/BlockchainDeFiSolutions'));
+// Removed unavailable imports
 
 // New innovative service pages
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
@@ -129,6 +128,9 @@ const ComprehensiveServicesPage = React.lazy(() => import('./pages/Comprehensive
 const Team = React.lazy(() => import('./pages/Team'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+
+const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+const APIDocs = React.lazy(() => import('./pages/APIDocs'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -262,7 +264,9 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/api-docs" element={<APIDocs />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
             </Routes>

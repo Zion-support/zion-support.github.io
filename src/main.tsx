@@ -47,9 +47,7 @@ function renderApp() {
               <AuthProvider>
                 <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                   <ViewModeProvider>
-                    <AppLayout>
-                      <App />
-                    </AppLayout>
+                    <App />
                   </ViewModeProvider>
                   {/* LanguageDetectionPopup removed */}
                 </LanguageProvider>
