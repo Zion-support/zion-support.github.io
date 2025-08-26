@@ -25,7 +25,6 @@ export interface EnhancedMicroSaasService {
   compliance: string[];
   roi: string;
 }
-
 export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   // AI-Powered Business Intelligence
   {
@@ -82,7 +81,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     compliance: ["GDPR", "SOC 2", "HIPAA", "ISO 27001"],
     roi: "300% within 12 months"
   },
-
   // AI-Powered Marketing Automation
   {
     id: "ai-marketing-automation-suite",
@@ -138,7 +136,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     compliance: ["GDPR", "CAN-SPAM", "CCPA", "SOC 2"],
     roi: "250% within 8 months"
   },
-
   // AI-Powered HR & Recruitment
   {
     id: "ai-hr-recruitment-platform",
@@ -194,7 +191,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     compliance: ["EEOC", "ADA", "FMLA", "SOC 2", "ISO 27001"],
     roi: "280% within 10 months"
   },
-
   // AI-Powered Legal Tech
   {
     id: "ai-legal-tech-platform",
@@ -250,7 +246,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     compliance: ["SOC 2", "ISO 27001", "HIPAA", "GDPR", "CCPA"],
     roi: "400% within 15 months"
   },
-
   // Quantum-Safe Cybersecurity Platform
   {
     id: "quantum-safe-cybersecurity",
@@ -306,7 +301,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     compliance: ["SOC 2", "ISO 27001", "NIST", "PCI DSS", "HIPAA", "FedRAMP"],
     roi: "350% within 18 months"
   },
-
   // Blockchain Supply Chain Platform
   {
     id: "blockchain-supply-chain",
@@ -362,7 +356,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     compliance: ["ISO 9001", "HACCP", "FDA", "EU regulations", "SOC 2"],
     roi: "320% within 14 months"
   },
-
   // IoT Edge Computing Platform
   {
     id: "iot-edge-computing-platform",
@@ -418,7 +411,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     compliance: ["ISO 27001", "SOC 2", "NIST", "Industry-specific standards"],
     roi: "380% within 16 months"
   },
-
   // AI-Powered Financial Analytics
   {
     id: "ai-financial-analytics",
@@ -474,7 +466,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     compliance: ["SOX", "Basel III", "Dodd-Frank", "SOC 2", "ISO 27001"],
     roi: "450% within 20 months"
   },
-
   // AI-Powered Healthcare Platform
   {
     id: "ai-healthcare-platform",
@@ -530,7 +521,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     compliance: ["HIPAA", "HITECH", "SOC 2", "ISO 27001", "FDA regulations"],
     roi: "400% within 18 months"
   },
-
   // AI-Powered Education Platform
   {
     id: "ai-education-platform",
@@ -587,15 +577,12 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     roi: "300% within 12 months"
   }
 ];
-
 export const getServiceById = (id: string) => {
   return ENHANCED_MICRO_SAAS_SERVICES.find(service => service.id === id);
 };
-
 export const getServicesByCategory = (category: string) => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.category === category);
 };
-
 export const getServicesByTag = (tag: string) => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.tags.includes(tag));
 };

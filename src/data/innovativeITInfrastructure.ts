@@ -26,7 +26,6 @@ export interface InnovativeITInfrastructureService {
   roi: string;
   competitors: string[];
 }
-
 export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureService[] = [
   // Green Computing Infrastructure
   {
@@ -84,7 +83,6 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     roi: "250% within 12 months",
     competitors: ["Dell Green Computing", "HP Sustainable IT", "IBM Green Data Centers", "Cisco Green IT"]
   },
-
   // Edge Computing Infrastructure
   {
     id: "edge-computing-infrastructure",
@@ -141,7 +139,6 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     roi: "300% within 8 months",
     competitors: ["AWS Edge", "Azure Edge", "Google Cloud Edge", "IBM Edge", "Cisco Edge"]
   },
-
   // Quantum-Ready Infrastructure
   {
     id: "quantum-ready-infrastructure",
@@ -198,7 +195,6 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     roi: "500% within 18 months",
     competitors: ["IBM Quantum Infrastructure", "Google Quantum Infrastructure", "Microsoft Quantum", "Amazon Braket"]
   },
-
   // Zero-Trust Security Infrastructure
   {
     id: "zero-trust-security-infrastructure",
@@ -255,7 +251,6 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     roi: "400% within 10 months",
     competitors: ["Cisco Zero Trust", "Microsoft Zero Trust", "Google BeyondCorp", "VMware Zero Trust"]
   },
-
   // AI-Optimized Infrastructure
   {
     id: "ai-optimized-infrastructure",

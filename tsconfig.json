@@ -28,6 +28,7 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./src/*"],
       "@/pages/*": ["./src/pages/*", "./pages/*"],
       "@/components/*": ["./src/components/*"],
@@ -41,6 +42,11 @@
       "react-router": ["./src/stubs/react-router-dom.tsx"],
       "next-cloudinary": ["./types/next-cloudinary.d.ts"],
       "types/*": ["./types/*"]
+=======
+      "@/*": [
+        "./src/*"
+      ]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7
     },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -55,20 +61,41 @@
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
     "incremental": true,
+<<<<<<< HEAD
     "typeRoots": ["./node_modules/@types", "./types"],
     "types": ["node"],
     "plugins": [ { "name": "next" } ]
   },
-  "include": ["src/main.tsx", "src/App.tsx", "src/pages/Home.tsx"],
-  "exclude": [
-    "src/**/.backup/**",
-    "src/**/*.disabled",
-    "src/**/*.backup.*",
-    "src/components/**",
-    "src/pages/**",
-    "!src/pages/Home.tsx",
-    "src/routes/**",
-    "src/data/**"
+  "include": [
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/index.css",
+    "src/components/ServicesOverview.tsx",
+    "src/components/ui/button.tsx",
+    "src/data/servicesData.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
+=======
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "src/components.disabled",
+    "src/components.disabled/**/*",
+    "src/pages.disabled",
+    "src/pages.disabled/**/*"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+>>>>>>> origin/main
 }

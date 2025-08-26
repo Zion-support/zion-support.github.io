@@ -21,8 +21,15 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
-<<<<<<< HEAD:public/locales/en-US/common.json
+<<<<<<< HEAD
+    "services": "Services",
+=======
+<<<<<<< HEAD:dist/locales/en-US/common.json
     "micro-saas": "Micro SAAS",
+=======
+    "services": "Services",
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b:src/i18n/locales/en/translation.json
+>>>>>>> origin/main
     "categories": "Categories",
     "services": "Services",
     "micro-saas": "Micro SAAS",

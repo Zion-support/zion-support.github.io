@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
@@ -161,6 +162,11 @@ const recentPosts: ForumPost[] = [
     authorRole: "Freelancer"
   }
 ];
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Users, MessageCircle, Calendar, BookOpen, Award, Globe, Lightbulb, Rocket, Heart, Star, Zap, Target } from 'lucide-react';
+>>>>>>> origin/main
 
 export default function CommunityPage() {
 

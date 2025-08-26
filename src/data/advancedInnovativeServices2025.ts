@@ -34,7 +34,6 @@ export interface AdvancedInnovativeService2025 {
   demoUrl?: string;
   caseStudies?: string[];
 }
-
 export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] = [
   // Advanced AI & Machine Learning Services
   {
@@ -102,7 +101,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     demoUrl: "https://ziontechgroup.com/demo/ai-multimodal",
     caseStudies: ["Media company 300% efficiency boost", "E-commerce 5x content output"]
   },
-
   // Blockchain & Web3 Services
   {
     id: "blockchain-enterprise-suite",
@@ -168,7 +166,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     competitors: ["ConsenSys", "Chainalysis", "Alchemy", "Infura"],
     demoUrl: "https://ziontechgroup.com/demo/blockchain-suite"
   },
-
   // Quantum Computing Services
   {
     id: "quantum-optimization-platform",
@@ -234,7 +231,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
     demoUrl: "https://ziontechgroup.com/demo/quantum-platform"
   },
-
   // Advanced Cybersecurity Services
   {
     id: "ai-threat-intelligence-platform",
@@ -300,7 +296,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "FireEye"],
     demoUrl: "https://ziontechgroup.com/demo/ai-threat-intelligence"
   },
-
   // Edge Computing & IoT Services
   {
     id: "edge-ai-orchestrator",
@@ -366,7 +361,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "NVIDIA Jetson"],
     demoUrl: "https://ziontechgroup.com/demo/edge-ai-orchestrator"
   },
-
   // Advanced Data Analytics Services
   {
     id: "real-time-data-fabric",
@@ -432,7 +426,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     competitors: ["Databricks", "Snowflake", "Confluent", "Apache Kafka"],
     demoUrl: "https://ziontechgroup.com/demo/real-time-data-fabric"
   },
-
   // Autonomous Systems Services
   {
     id: "autonomous-workflow-orchestrator",
@@ -498,7 +491,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
     demoUrl: "https://ziontechgroup.com/demo/autonomous-workflow"
   },
-
   // Digital Twin Services
   {
     id: "digital-twin-platform",
@@ -564,7 +556,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     competitors: ["Siemens", "GE Digital", "PTC", "Bentley Systems"],
     demoUrl: "https://ziontechgroup.com/demo/digital-twin-platform"
   },
-
   // Metaverse Development Services
   {
     id: "metaverse-development-platform",
@@ -630,7 +621,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     competitors: ["Roblox", "Decentraland", "Meta", "Unity", "Epic Games"],
     demoUrl: "https://ziontechgroup.com/demo/metaverse-platform"
   },
-
   // Green Technology Services
   {
     id: "sustainable-tech-optimizer",

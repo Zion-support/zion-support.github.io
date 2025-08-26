@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AdvancedRealService {
   id: string;
   name: string;
@@ -44,7 +43,6 @@ export interface AdvancedRealService {
   sla: string;
   support: string;
 }
-
 export const advancedRealServices2025: AdvancedRealService[] = [
   // AI-Powered Legal Document Analysis Platform
   {
@@ -102,7 +100,6 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     sla: '99.9% uptime guarantee',
     support: '24/7 technical support with dedicated account manager'
   },
-
   // Quantum-Safe Cybersecurity Platform
   {
     id: 'quantum-safe-cybersecurity',
@@ -159,7 +156,6 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     sla: '99.99% uptime guarantee',
     support: '24/7 security operations center with dedicated security engineers'
   },
-
   // AI-Powered Healthcare Analytics Platform
   {
     id: 'ai-healthcare-analytics',
@@ -216,7 +212,6 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     sla: '99.9% uptime guarantee',
     support: '24/7 clinical support with dedicated healthcare specialists'
   },
-
   // Blockchain Supply Chain Transparency Platform
   {
     id: 'blockchain-supply-chain',
@@ -273,7 +268,6 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     sla: '99.9% uptime guarantee',
     support: 'Business hours support with dedicated supply chain specialists'
   },
-
   // AI-Powered Financial Risk Management
   {
     id: 'ai-financial-risk-management',
@@ -330,7 +324,6 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     sla: '99.99% uptime guarantee',
     support: '24/7 financial support with dedicated risk specialists'
   },
-
   // Edge Computing IoT Platform
   {
     id: 'edge-computing-iot',
@@ -387,7 +380,6 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     sla: '99.9% uptime guarantee',
     support: 'Business hours support with dedicated IoT specialists'
   },
-
   // AI-Powered Marketing Automation Suite
   {
     id: 'ai-marketing-automation',
@@ -444,7 +436,6 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     sla: '99.9% uptime guarantee',
     support: 'Business hours support with dedicated marketing specialists'
   },
-
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning',
@@ -501,7 +492,6 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     sla: '99.5% uptime guarantee',
     support: 'Research hours support with dedicated quantum specialists'
   },
-
   // AI-Powered HR Analytics Platform
   {
     id: 'ai-hr-analytics',
@@ -558,7 +548,6 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     sla: '99.9% uptime guarantee',
     support: 'Business hours support with dedicated HR specialists'
   },
-
   // Sustainable Energy Management Platform
   {
     id: 'sustainable-energy-management',
@@ -616,5 +605,4 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     support: 'Business hours support with dedicated energy specialists'
   }
 ];
-
 export default advancedRealServices2025;

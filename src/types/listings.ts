@@ -9,8 +9,44 @@ export interface Listing {
   tags: string[];
   author: {
     name: string;
+<<<<<<< HEAD
     id: string;
     avatarUrl?: string;
+=======
+    avatar: string;
+    rating: number;
+    reviews: number;
+  };
+  location: {
+    city: string;
+    country: string;
+    coordinates?: [number, number];
+  };
+  status: 'active' | 'sold' | 'expired' | 'draft';
+  createdAt: Date;
+  updatedAt: Date;
+  views: number;
+  favorites: number;
+  condition: 'new' | 'like-new' | 'good' | 'fair' | 'poor';
+  specifications?: Record<string, any>;
+  shipping?: {
+    available: boolean;
+    cost: number;
+    method: string;
+    estimatedDays: number;
+  };
+  returns?: {
+    allowed: boolean;
+    days: number;
+    cost: number;
+  };
+}
+export interface ListingFilter {
+  category?: string;
+  priceRange?: {
+    min: number;
+    max: number;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   };
   images: string[];
   createdAt: string;
@@ -24,7 +60,6 @@ export interface Listing {
   sortBy?: 'price' | 'date' | 'rating' | 'views';
   sortOrder?: 'asc' | 'desc';
 }
-
 export interface ListingSearchResult {
   listings: Listing[];
   total: number;
@@ -32,7 +67,6 @@ export interface ListingSearchResult {
   limit: number;
   hasMore: boolean;
 }
-
 export interface ListingFormData {
   title: string;
   description: string;
@@ -55,7 +89,6 @@ export interface ListingFormData {
     cost: number;
   };
 }
-
 export interface ListingStats {
   totalListings: number;
   activeListings: number;

@@ -24,7 +24,6 @@ export interface CuttingEdgeAIService {
   demoUrl?: string;
   documentationUrl?: string;
 }
-
 export const CUTTING_EDGE_AI_SERVICES: CuttingEdgeAIService[] = [
   // Autonomous AI Research Assistant
   {
@@ -78,7 +77,6 @@ export const CUTTING_EDGE_AI_SERVICES: CuttingEdgeAIService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/autonomous-ai-research"
   },
-
   // AI Consciousness Evolution Platform
   {
     id: "ai-consciousness-evolution-platform",
@@ -131,7 +129,6 @@ export const CUTTING_EDGE_AI_SERVICES: CuttingEdgeAIService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution"
   },
-
   // AI Autonomous Business Manager
   {
     id: "ai-autonomous-business-manager",
@@ -184,7 +181,6 @@ export const CUTTING_EDGE_AI_SERVICES: CuttingEdgeAIService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/ai-business-manager"
   },
-
   // AI Autonomous Creative Director
   {
     id: "ai-autonomous-creative-director",
@@ -237,7 +233,6 @@ export const CUTTING_EDGE_AI_SERVICES: CuttingEdgeAIService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/ai-creative-director"
   },
-
   // AI Autonomous Code Review System
   {
     id: "ai-autonomous-code-review-system",

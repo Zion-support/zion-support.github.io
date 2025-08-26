@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import { createClient } from '@supabase/supabase-js';
 import { captureException } from '@/lib/sentry';
 
+=======
+// Mock Supabase client for development
+// In production, this would be the actual Supabase client
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 interface SupabaseClient {
   auth: {
     signUp: (credentials: any) => Promise<any>;
@@ -14,7 +19,6 @@ interface SupabaseClient {
     from: (bucket: string) => any;
   };
 }
-
 // Mock implementation
 const createMockSupabaseClient = (): SupabaseClient => ({
   auth: {
@@ -23,6 +27,7 @@ const createMockSupabaseClient = (): SupabaseClient => ({
     storage: supabaseStorageAdapter,
   },
 });
+<<<<<<< HEAD
 
 // Helper function to access profiles table
 export const getFromProfiles = () => supabase.from('profiles');
@@ -75,3 +80,6 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
   captureException(lastError);
   throw new Error('Failed to connect to Supabase');
 }
+=======
+export const supabase = createMockSupabaseClient();
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
