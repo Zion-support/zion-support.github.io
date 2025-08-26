@@ -1,8 +1,8 @@
 
-import { Prisma, PrismaClient } from '@prisma/client';
-import type { Product } from '@/types/product';
+import { Prisma, PrismaClient, type Product } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+type ProductModel = Product;
 const prisma = new PrismaClient();
 
 // Define the extended product type, same as in details.ts
