@@ -307,8 +307,11 @@ export function FeatureCTAs() {
   Settings as SettingsIcon,
   Link as LinkIcon
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-export function FeatureCTAs() {
+export interface FeatureCTAsProps extends React.HTMLAttributes<HTMLElement> {}
+
+export function FeatureCTAs({ className, style, ...props }: FeatureCTAsProps) {
   const features = [
     {
       title: "AI Services & Solutions",
@@ -1331,14 +1334,15 @@ export function FeatureCTAs() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-background to-background/90 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-zion-purple/5 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-zion-cyan/5 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section
+      className={cn(
+        "py-16 bg-gradient-to-b from-background to-background/90",
+        className
+      )}
+      style={style}
+      {...props}
+    >
+      <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight mb-3">Discover Zion's Powerful Features</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">

@@ -1,54 +1,46 @@
-import React from 'react';
 
-export function BenefitsSection() {
-  const benefits = [
-    {
-      title: 'Cost Efficiency',
-      description: 'Reduce operational costs by up to 40% through intelligent automation and optimized processes',
-      icon: '💰',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Time Savings',
-      description: 'Accelerate development cycles and deployment with streamlined DevOps practices',
-      icon: '⏰',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Enhanced Security',
-      description: 'Protect your business with enterprise-grade security and compliance solutions',
-      icon: '🛡️',
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      title: 'Scalability',
-      description: 'Build infrastructure that grows with your business needs and requirements',
-      icon: '📈',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Expert Support',
-      description: '24/7 technical support and guidance from certified professionals',
-      icon: '👥',
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      title: 'Innovation',
-      description: 'Stay ahead of the competition with cutting-edge AI and technology solutions',
-      icon: '🚀',
-      color: 'from-yellow-500 to-orange-500'
-    }
-  ];
+import { GradientHeading } from "./GradientHeading";
+import { FeatureCard } from "./FeatureCard";
+import { Bot, Clock, Globe, TrendingDown } from "lucide-react";
+import { cn } from "@/lib/utils";
 
+const benefits = [
+  {
+    title: "AI-Powered Matchmaking",
+    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
+    icon: <Bot className="w-8 h-8" />,
+  },
+  {
+    title: "Global Availability",
+    description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
+    icon: <Globe className="w-8 h-8" />,
+  },
+  {
+    title: "24/7 Support",
+    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
+    icon: <Clock className="w-8 h-8" />,
+  },
+  {
+    title: "Cost Reduction",
+    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",
+    icon: <TrendingDown className="w-8 h-8" />,
+  },
+];
+
+export interface BenefitsSectionProps extends React.HTMLAttributes<HTMLElement> {}
+
+export function BenefitsSection({ className, style, ...props }: BenefitsSectionProps) {
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why Choose Zion Tech Group?
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We deliver measurable results that transform your business operations and drive growth
+    <section
+      className={cn("py-20 bg-zion-blue-light", className)}
+      style={style}
+      {...props}
+    >
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <GradientHeading>Why Zion?</GradientHeading>
+          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
+            Experience the next generation of tech marketplace with features designed to maximize efficiency and value
           </p>
         </div>
         

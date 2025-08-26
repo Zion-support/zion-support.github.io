@@ -1,6 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+
+import React from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
 import { 
   CpuChipIcon, 
   CloudIcon, 
@@ -10,7 +12,10 @@ import {
   RocketLaunchIcon
 } from '@heroicons/react/24/outline';
 
-export function QuickAccess() {
+export interface QuickAccessProps extends React.HTMLAttributes<HTMLElement> {}
+
+export function QuickAccess({ className, style, ...props }: QuickAccessProps) {
+  const { t } = useTranslation();
   const quickLinks = [
     {
       id: 1,
@@ -90,18 +95,15 @@ export function QuickAccess() {
   };
 
   return (
-    <section className="py-16 bg-slate-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Quick Access to Our Services
+    <section
+      className={cn("py-12 bg-zion-blue-dark", className)}
+      style={style}
+      {...props}
+    >
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
+            Quick Access
           </h2>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             Explore our comprehensive range of technology solutions designed to drive your business forward

@@ -1,8 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export function FeaturedListingsSection() {
-  const featuredServices = [
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils";
+
+interface FeaturedListingsSectionProps extends React.HTMLAttributes<HTMLElement> {
+  showTitle?: boolean;
+}
+
+export function FeaturedListingsSection({ showTitle = true, className, style, ...props }: FeaturedListingsSectionProps) {
+  const featuredListings = [
     {
       title: 'AI-Powered Business Intelligence',
       description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
@@ -38,13 +48,24 @@ export function FeaturedListingsSection() {
     }
   ];
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
-        ★
-      </span>
-    ));
-  };
+  return (
+    <section
+      id="featured"
+      className={cn("py-12 px-4 bg-background", className)}
+      style={style}
+      {...props}
+    >
+      <div className="container mx-auto">
+        {showTitle && (
+          <div className="text-center mb-12">
+            <GradientHeading className="text-3xl md:text-4xl font-bold mb-4">
+              Featured Listings
+            </GradientHeading>
+            <p className="text-foreground/80 max-w-3xl mx-auto">
+              Discover our handpicked selection of top AI products and services
+            </p>
+          </div>
+        )}
 
   return (
     <section className="py-16 bg-white">

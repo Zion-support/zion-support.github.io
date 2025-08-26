@@ -1,16 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  CpuChipIcon, 
-  CloudIcon, 
-  ShieldCheckIcon, 
-  CubeIcon,
-  ChartBarIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline';
 
-export function FeatureHighlights() {
-  const highlights = [
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Check } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+export interface FeatureHighlightsProps extends React.HTMLAttributes<HTMLElement> {}
+
+export function FeatureHighlights({ className, style, ...props }: FeatureHighlightsProps) {
+  const highlightsData = [
     {
       id: 1,
       title: "Quantum AI Integration",
@@ -83,21 +80,16 @@ export function FeatureHighlights() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Technology Highlights
-          </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Discover the cutting-edge technologies and innovations that set Zion Tech Group apart in the industry
+    <section
+      className={cn("py-16 bg-zion-blue", className)}
+      style={style}
+      {...props}
+    >
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-3">Tailored Solutions for Everyone</h2>
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
         </motion.div>
 

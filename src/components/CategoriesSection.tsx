@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Star, Zap, Globe, Shield } from "lucide-react";
-import { motion } from "framer-motion";
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const categories = [
   {
@@ -352,18 +352,20 @@ const advancedCategories = [
   }
 ];
 
-interface CategoriesSectionProps {
+interface CategoriesSectionProps extends React.HTMLAttributes<HTMLElement> {
   showTitle?: boolean;
   className?: string;
 }
 
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-  const featuredCategories = categories.filter(cat => cat.featured);
-  const regularCategories = categories.filter(cat => !cat.featured);
-
-  return (
-=======
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-slate">
+=======
+export function CategoriesSection({ showTitle = true, className, style, ...props }: CategoriesSectionProps) {
+  return (
+    <section
+      className={cn("py-20 bg-zion-blue", className)}
+      style={style}
+      {...props}
+    >
       <div className="container mx-auto px-4">
         {showTitle && (
           <div className="text-center mb-16">
