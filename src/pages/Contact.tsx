@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -8,16 +7,6 @@ const Contact: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -25,19 +14,6 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    // Here you would typically send the data to your backend
-    alert('Thank you for your message! We\'ll get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
   };
 
   const contactInfo = [
@@ -312,6 +288,3 @@ const Contact: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default Contact;

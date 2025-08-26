@@ -11,9 +11,5 @@ export function AppHeader() {
     }
   };
 
-              </button>
-            </form>
-          </div>
-
   );
 }

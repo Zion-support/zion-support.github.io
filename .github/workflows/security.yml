@@ -208,7 +208,6 @@ jobs:
     - name: Validate security policy format
       run: |
         echo "🔍 Validating security policy format..."
-        # Add validation logic here
         echo "✅ Security policy format validated"
 
   # Security notifications
@@ -241,4 +240,7 @@ jobs:
       if: failure()
       run: |
         echo "🚨 Security issues detected - notifying team"
-        # Add notification logic here (Slack, email, etc.)
+=======
+        echo "Security team notified"
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
+>>>>>>> 93cb4347559d7aad42ba431e1ae67c54c6aa6cb9

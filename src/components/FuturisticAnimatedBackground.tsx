@@ -1,16 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-interface Particle {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  size: number;
-  opacity: number;
-  color: string;
-}
-
   const animationRef = useRef<number>();
 
   useEffect(() => {
@@ -20,6 +10,7 @@ interface Particle {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -27,50 +18,9 @@ interface Particle {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Initialize particles
-      }
-      gridNodesRef.current = nodes;
-    };
-
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
-        ctx.fill();
-
-    // Update particles
-    const updateParticles = () => {
-      particlesRef.current.forEach(particle => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        
-        // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
       });
     };
 
-    // Update grid nodes
-    const updateGridNodes = () => {
-      gridNodesRef.current.forEach(node => {
-        node.pulse += 0.02;
-      });
-    };
-
-    // Draw connecting lines between nearby particles
-    const drawConnections = () => {
-      ctx.strokeStyle = '#22ddd2';
-      ctx.lineWidth = 0.5;
-      ctx.globalAlpha = 0.1;
-      
-      for (let i = 0; i < particlesRef.current.length; i++) {
-        for (let j = i + 1; j < particlesRef.current.length; j++) {
-          const p1 = particlesRef.current[i];
-          const p2 = particlesRef.current[j];
-          const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
-          
-          if (distance < 100) {
       animationRef.current = requestAnimationFrame(animate);
     };
 
@@ -87,56 +37,29 @@ interface Particle {
   }, []);
 
   return (
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{ background: 'transparent' }}
-      />
-      
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full"
+          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-zion-cyan/30 to-transparent"
           animate={{
-            scale: [1, 1.2, 1],
           }}
           transition={{
-            duration: 8,
+            duration: 3,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         />
         
         <motion.div
-          }}
-          transition={{
-            duration: 10,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         />
 
-      {/* Floating neon orbs */}
-      <div className="absolute inset-0">
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-zion-cyan rounded-full shadow-lg shadow-zion-cyan/50"
-            style={{
-              left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 1, 0.3],
-              scale: [0.5, 1, 0.5]
-            }}
-            transition={{
-              duration: 3 + i,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: i * 0.5
-            }}
-          />
-        ))}
+      {/* Subtle noise texture */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="w-full h-full" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+          backgroundSize: '200px 200px'
+        }} />
       </div>
     </div>
   );

@@ -3,22 +3,23 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
+>>>>>>> 93cb4347559d7aad42ba431e1ae67c54c6aa6cb9
 } from 'lucide-react';
 
 interface SidebarItem {
   name: string;
   href: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   description?: string;
   children?: SidebarItem[];
   badge?: string;
-  color?: string;
-  isNew?: boolean;
-  isHot?: boolean;
-  isPremium?: boolean;
-  category?: string;
 }
 
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
+>>>>>>> 93cb4347559d7aad42ba431e1ae67c54c6aa6cb9
     ]
   }
 ];
@@ -30,6 +31,9 @@ const quickActions = [
   { name: 'Contact Support', href: '/support', icon: <HelpCircle className="w-4 h-4" />, color: 'from-orange-500 to-red-600' }
 ];
 
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
+>>>>>>> 93cb4347559d7aad42ba431e1ae67c54c6aa6cb9
 
   const filteredItems = navigationItems.filter(item =>
     item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -48,6 +52,9 @@ const quickActions = [
     return () => document.removeEventListener('keydown', handleEscape);
   }, []);
 
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
+>>>>>>> 93cb4347559d7aad42ba431e1ae67c54c6aa6cb9
 
   return (
     <>
@@ -144,6 +151,13 @@ const quickActions = [
             </button>
           </div>
 
+            </div>
+          </div>
+        </div>
+
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
+>>>>>>> 93cb4347559d7aad42ba431e1ae67c54c6aa6cb9
     </>
   );
 }

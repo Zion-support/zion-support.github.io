@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Target, Award, Globe, Zap, Shield } from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [
@@ -174,26 +173,12 @@ const About: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our innovative solutions can drive your success in the digital age.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
               Start a Conversation
             </Link>
-            <Link
-              to="/services"
-              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-            >
-              Explore Our Services
             </Link>
           </div>
         </div>
       </section>
     </div>
   );
-};
-
-export default About;

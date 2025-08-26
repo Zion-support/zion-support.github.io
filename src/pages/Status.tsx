@@ -1,65 +1,29 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  XCircle, 
-  AlertTriangle, 
-  Clock, 
-  Server, 
-  Database, 
-  Network, 
-  Shield,
-  Activity,
-  BarChart3,
   RefreshCw,
   ExternalLink
 } from 'lucide-react';
 
-const Status: React.FC = () => {
-  const currentTime = new Date().toLocaleString();
-  
-  const services = [
-    {
-      name: 'Website',
-      status: 'operational',
-      uptime: '99.99%',
-      responseTime: '45ms',
-      lastChecked: '2 minutes ago'
     },
     {
       name: 'API Services',
       status: 'operational',
-      uptime: '99.95%',
-      responseTime: '120ms',
-      lastChecked: '1 minute ago'
     },
     {
       name: 'Database',
       status: 'operational',
-      uptime: '99.98%',
-      responseTime: '15ms',
-      lastChecked: '30 seconds ago'
     },
     {
       name: 'Authentication',
       status: 'operational',
       uptime: '99.97%',
       responseTime: '85ms',
-      lastChecked: '1 minute ago'
     },
     {
       name: 'File Storage',
       status: 'operational',
-      uptime: '99.96%',
-      responseTime: '200ms',
-      lastChecked: '2 minutes ago'
     },
     {
       name: 'Email Services',
       status: 'operational',
-      uptime: '99.94%',
-      responseTime: '150ms',
-      lastChecked: '1 minute ago'
     }
   ];
 
@@ -73,76 +37,11 @@ const Status: React.FC = () => {
       endTime: '2024-01-15 04:00 UTC',
       description: 'Routine database maintenance and optimization completed successfully.'
     }
-  ];
-
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'operational':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
-      case 'degraded':
-        return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
-      case 'outage':
-        return <XCircle className="w-5 h-5 text-red-500" />;
-      default:
-        return <Clock className="w-5 h-5 text-gray-500" />;
-    }
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'operational':
-        return 'text-green-500';
-      case 'degraded':
-        return 'text-yellow-500';
-      case 'outage':
-        return 'text-red-500';
-      default:
-        return 'text-gray-500';
-    }
   };
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'low':
-        return 'bg-blue-100 text-blue-800';
-      case 'medium':
-        return 'bg-yellow-100 text-yellow-800';
-      case 'high':
-        return 'bg-red-100 text-red-800';
-      case 'critical':
-        return 'bg-red-200 text-red-900';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Activity className="w-4 h-4 mr-2" />
-              System Status
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent">
-              System Status
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Real-time status of all Zion Tech Group services and systems. Monitor uptime, performance, and incident reports.
-            </p>
-            
-            <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
-              <span>Last updated: {currentTime}</span>
-              <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
-                <RefreshCw className="w-4 h-4" />
-                <span>Refresh</span>
-              </button>
-            </div>
-          </div>
         </div>
       </section>
 

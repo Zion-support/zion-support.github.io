@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { LoginErrorFallback } from '@/components/auth/login/LoginErrorFallback';
 import { useCart } from '@/context/CartContext';
-import { toast } from '@/hooks/use-toast';
+// import { toast } from '@/hooks/use-toast';
 import { useDispatch } from 'react-redux';
 import { setLoggedIn } from '@/store/authSlice';
 
