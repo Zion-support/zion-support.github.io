@@ -11,13 +11,8 @@
   },
   {
     "route": "/comprehensive-2025-services-showcase",
-<<<<<<< HEAD
-    "title": "Comprehensive 2025 Services Showcase — Zion Tech Group",
-    "h1": "Comprehensive 2025 Services"
-=======
     "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
     "h1": "2025 Innovative Services Showcase"
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
   },
   {
     "route": "/",
@@ -25,8 +20,24 @@
     "h1": "Zion Tech Group"
   },
   {
+<<<<<<< HEAD
+    "route": "/portfolio",
+    "title": "Our Work - Zion Tech Group | Portfolio of Revolutionary Technology Solutions",
+    "h1": "Our Work"
+  },
+  {
     "route": "/pricing-2025",
     "title": "2025 Pricing & Services — Zion Tech Group",
     "h1": "2025 Pricing & Services"
+  },
+  {
+    "route": "/whitepapers",
+    "title": "",
+    "h1": ""
+=======
+    "route": "/pricing-2025",
+    "title": "2025 Pricing & Services — Zion Tech Group",
+    "h1": "2025 Pricing & Services"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2ab8
   }
 ]

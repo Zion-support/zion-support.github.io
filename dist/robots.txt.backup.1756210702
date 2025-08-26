@@ -1,17 +1,29 @@
+<<<<<<< HEAD
+
+# Allow all crawlers
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
 User-agent: *
 Allow: /
 
-<<<<<<< HEAD
-# Sitemap
-Sitemap: https://ziontechgroup.com/sitemap.xml
-=======
 # Sitemap location
 Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap
 =======
 =======
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
 
+<<<<<<< HEAD
+# Allow all crawlers
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blog
+Allow: /careers
+Allow: /faq
+Allow: /privacy
+Allow: /terms
+
+=======
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -37,4 +49,5 @@ Allow: /ai-powered-it-asset-management
 # Crawl delay
 =======
 # Crawl-delay
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
 Crawl-delay: 1

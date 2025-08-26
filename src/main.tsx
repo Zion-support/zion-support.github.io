@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 console.log("main.tsx: Start");
@@ -246,4 +247,17 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>,
+=======
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+	<React.StrictMode>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	</React.StrictMode>,
+>>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
 )
