@@ -121,330 +121,46 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  const baseLinks: NavigationLink[] = [
-    {
-      key: 'home',
-      href: '/',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services') || path.startsWith('/green-it')
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path.startsWith('/about')
-=======
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path === '/about'
-    },
-    {
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-=======
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-    },
-    {
-      key: 'ai-services',
-      href: '/ai-services',
-      matches: (path: string) => path.startsWith('/ai-services')
-    },
-    {
-      key: 'it-services',
-      href: '/it-services',
-      matches: (path: string) => path.startsWith('/it-services')
-    },
-    {
-      key: 'micro-saas',
-      href: '/micro-saas',
-      matches: (path: string) => path.startsWith('/micro-saas')
-    },
-    {
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path.startsWith('/about')
-    },
-    {
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services')
-=======
-=======
-      name: 'Home',
-      matches: (path: string) => path === '/'
-    },
-    {
-      key: 'services',
-      href: '/services',
-      name: 'Services',
-      matches: (path: string) => path.startsWith('/services')
-    },
-    {
-      key: 'services',
-      href: '/comprehensive-services',
-      matches: (path: string) => path.startsWith('/comprehensive-services') || path.startsWith('/services')
-    },
-    {
-      key: 'marketplace',
-      href: '/marketplace',
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-=======
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-=======
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services')
-    },
-    {
-      key: 'micro-saas',
-      href: '/micro-saas-services',
-      matches: (path: string) => path.startsWith('/micro-saas-services')
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-=======
-      matches: (path: string) => path === '/'
-    },
-    {
-      key: 'marketplace',
-      href: '/marketplace',
-      matches: (path: string) => path.startsWith('/marketplace')
-    },
-    {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-    },
-    {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      key: 'categories',
-      href: '/categories',
-      matches: (path: string) => path.startsWith('/categories')
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-=======
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-=======
-      matches: (path: string) => path.startsWith('/marketplace'),
-      name: t('nav.marketplace')
-=======
-      name: 'Marketplace',
-      matches: (path: string) => path.startsWith('/marketplace'),
-      dropdown: [
-        { href: '/marketplace', label: 'All Products' },
-        { href: '/categories', label: 'Categories' },
-        { href: '/equipment', label: 'Equipment' },
-        { href: '/green-it', label: 'Green IT' }
-      ]
-=======
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-=======
-      name: 'Marketplace',
-      matches: (path: string) => path.startsWith('/marketplace'),
-      dropdown: [
-        { href: '/services', name: 'Services' },
-        { href: '/equipment', name: 'Equipment' },
-        { href: '/categories', name: 'Categories' },
-        { href: '/green-it', name: 'Green IT' }
-      ]
-    },
-    {
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      key: 'talent',
-      href: '/talent',
-      key: 'ai-hiring',
-      href: '/zion-hire-ai',
-      matches: (path: string) => path.startsWith('/zion-hire-ai') || path.startsWith('/hire-ai')
+  const toggleDropdown = (dropdownName: string) => {
+    if (activeDropdown === dropdownName) {
+      setActiveDropdown(null);
+    } else {
+      setActiveDropdown(dropdownName);
     }
+  };
+
+  const isActive = (path: string) => location.pathname === path;
+
+  // Align to live site routes discovered in sitemap
+  const navigationItems = [
+    { key: 'home', href: '/', label: t('nav.home'), icon: null },
+    { key: 'about', href: '/about', label: t('nav.about'), icon: null },
+    { key: 'solutions', href: '/solutions', label: t('nav.solutions') ?? 'Solutions', icon: null },
+    { key: 'services', href: '/services', label: t('nav.services'), icon: <ChevronDown className="w-4 h-4 ml-1" />, hasDropdown: true, dropdownItems: [
+      { key: 'ai', href: '/services/ai', label: t('nav.aiServices') ?? 'AI', icon: <Brain className="w-4 h-4" />, description: t('nav.aiServicesDesc') },
+      { key: 'cloud', href: '/services/cloud', label: t('nav.cloud') ?? 'Cloud', icon: <Cloud className="w-4 h-4" />, description: t('nav.cloudDesc') },
+      { key: 'cybersecurity', href: '/services/cybersecurity', label: t('nav.cybersecurity') ?? 'Cybersecurity', icon: <Shield className="w-4 h-4" />, description: t('nav.cybersecurityDesc') },
+      { key: 'infrastructure', href: '/services/infrastructure', label: t('nav.infrastructure') ?? 'Infrastructure', icon: <Zap className="w-4 h-4" />, description: t('nav.infrastructureDesc') },
+      { key: 'transformation', href: '/services/transformation', label: t('nav.transformation') ?? 'Transformation', icon: <FileText className="w-4 h-4" />, description: t('nav.transformationDesc') },
+      { key: 'consulting', href: '/services/consulting', label: t('nav.consulting') ?? 'Consulting', icon: <FileText className="w-4 h-4" />, description: t('nav.consultingDesc') }
+    ]},
+    { key: 'research', href: '/research-development', label: t('nav.research') ?? 'R&D', icon: null },
+    { key: 'case-studies', href: '/case-studies', label: t('nav.caseStudies') ?? 'Case Studies', icon: null },
+    { key: 'news', href: '/news', label: t('nav.news') ?? 'News', icon: null },
+    { key: 'events', href: '/events', label: t('nav.events') ?? 'Events', icon: null },
+    { key: 'careers', href: '/careers', label: t('nav.careers') ?? 'Careers', icon: null },
+    { key: 'contact', href: '/contact', label: t('nav.contact'), icon: null }
   ];
 
-  const moreLinks = [
-    {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      key: 'categories',
-      href: '/categories',
-      icon: <FileText className="w-4 h-4" />,
-      description: 'Browse service categories'
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      matches: (path: string) => path.startsWith('/equipment'),
-      name: t('nav.equipment')
-    },
-    {
-      key: 'partners',
-      href: '/partners',
-      matches: (path: string) => path.startsWith('/partners')
-=======
-      name: 'Talent',
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
-      dropdown: [
-        { href: '/talent', label: 'Find Talent' },
-        { href: '/talent/apply', label: 'Apply as Talent' },
-        { href: '/zion-hire-ai', label: 'AI Hiring' }
-      ]
-    },
-    {
-      key: 'enterprise',
-      href: '/enterprise',
-      matches: (path: string) => path.startsWith('/enterprise')
-=======
-      name: 'Talent',
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
-      dropdown: [
-        { href: '/talent', name: 'Browse Talent' },
-        { href: '/talents', name: 'Talent Directory' },
-        { href: '/hire-ai', name: 'Hire AI' }
-      ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-=======
-      key: 'equipment',
-      href: '/equipment',
-      matches: (path: string) => path.startsWith('/equipment')
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-    },
-    {
-      key: 'community',
-      href: '/community',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      key: 'pricing',
-      href: '/pricing',
-      matches: (path: string) => path === '/pricing'
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path === '/about'
-=======
-      key: 'company',
-      href: '/about',
-      matches: (path: string) => path.startsWith('/about') || path.startsWith('/careers') || path.startsWith('/partners') || path.startsWith('/contact')
-=======
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
-      name: t('nav.community')
-=======
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path === '/about'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-=======
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-    },
-    {
-      key: 'blog',
-      href: '/blog',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      key: 'blog',
-      href: '/blog',
-      matches: (path: string) => path.startsWith('/blog')
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      key: 'contact',
-      href: '/contact',
-      matches: (path: string) => path === '/contact'
-=======
-      icon: <Users className="w-4 h-4" />,
-      description: 'Join our community'
-    },
-    {
-      key: 'help',
-      href: '/help-center',
-      icon: <HelpCircle className="w-4 h-4" />,
-      description: 'Get help and support'
-    },
-    {
-      key: 'faq',
-      href: '/faq',
-      icon: <HelpCircle className="w-4 h-4" />,
-      description: 'Frequently asked questions'
-=======
-      name: 'Community',
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
-      dropdown: [
-        { href: '/community', label: 'Forums' },
-        { href: '/blog', label: 'Blog' },
-        { href: '/partners', label: 'Partners' }
-      ]
-    },
-    {
-      key: 'about',
-      href: '/about',
-      key: 'blog',
-      href: '/blog',
-      matches: (path: string) => path.startsWith('/blog')
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-      matches: (path: string) => path.startsWith('/blog')
-    }
+  const adminItems = [
+    { key: 'dashboard', href: '/dashboard', label: t('nav.dashboard'), icon: <BarChart3 className="w-4 h-4" /> },
+    { key: 'admin', href: '/admin', label: t('nav.admin'), icon: <Settings className="w-4 h-4" /> }
+  ];
+
+  const userItems = [
+    { key: 'profile', href: '/dashboard/profile', label: t('nav.profile'), icon: <Users className="w-4 h-4" /> },
+    { key: 'projects', href: '/dashboard/projects', label: t('nav.projects'), icon: <Briefcase className="w-4 h-4" /> },
+    { key: 'help', href: '/help', label: t('nav.help'), icon: <HelpCircle className="w-4 h-4" /> }
   ];
 
   const serviceDropdowns = [
