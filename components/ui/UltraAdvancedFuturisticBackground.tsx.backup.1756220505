@@ -1,6 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 
 interface UltraAdvancedFuturisticBackgroundProps {
+<<<<<<< HEAD
+	children: React.ReactNode;
+	variant?: 'quantum' | 'holographic' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk';
+}
+
+export default function UltraAdvancedFuturisticBackground({ children, variant = 'quantum-holographic-advanced' }: UltraAdvancedFuturisticBackgroundProps) {
+	const canvasRef = useRef<HTMLCanvasElement | null>(null);
+=======
   children: React.ReactNode;
   variant?: 'quantum' | 'holographic' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk';
   intensity?: 'low' | 'medium' | 'high' | 'ultra';
@@ -15,6 +23,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | null>(null);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7e5c
 
 	useEffect(() => {
 		const canvas = canvasRef.current;
@@ -54,6 +63,20 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 		ctx.fillStyle = gradient;
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+<<<<<<< HEAD
+		return () => {
+			window.removeEventListener('resize', resize);
+		};
+	}, [variant]);
+
+	return (
+		<div className="relative min-h-screen overflow-hidden">
+			<canvas ref={canvasRef} className="fixed inset-0 w-full h-full pointer-events-none z-0" />
+			<div className="relative z-10">{children}</div>
+		</div>
+	);
+}
+=======
     const particles: Array<{
       x: number;
       y: number;
@@ -402,3 +425,4 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 };
 
 export default UltraAdvancedFuturisticBackground;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7e5c
