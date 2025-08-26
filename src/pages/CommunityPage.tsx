@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
@@ -94,6 +95,11 @@ const recentPosts: ForumPost[] = [
     isAnswered: true
   }
 ];
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Users, MessageCircle, Calendar, BookOpen, Award, Globe, Lightbulb, Rocket, Heart, Star, Zap, Target } from 'lucide-react';
+>>>>>>> origin/main
 
 export default function CommunityPage() {
 
@@ -159,12 +165,12 @@ export default function CommunityPage() {
   ];
 
   return (
-    
+    <>
       <SEO
         title="Community Forum | Zion AI Marketplace"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"
-        canonical="https://app.ziontechgroup.com/community"
+        canonical="https://ziontechgroup.com/community"
       />
       
       <div className="container py-8">
@@ -349,6 +355,6 @@ export default function CommunityPage() {
           </div>
         </div>
       </div>
-    
+    </div>
   );
 }

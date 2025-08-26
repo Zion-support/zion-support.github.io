@@ -728,4 +728,10 @@ export default function AdvancedServicesShowcase2027() {
       </div>
     </>
   );
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}
 }

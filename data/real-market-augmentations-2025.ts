@@ -1,92 +1,165 @@
 export interface RealMarketAugmentation2025 {
   id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
+<<<<<<< HEAD
+  title: string;
   description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
   category: string;
-  realService: boolean;
+  subcategory: string;
+  price: number;
+  currency: string;
+  pricingModel: string;
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
+  tags: string[];
+  estimatedDelivery: string;
+  supportLevel: string;
+  marketPrice: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
   technology: string[];
   integrations: string[];
-  useCases: string[];
+  compliance: string[];
   roi: string;
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+  fundingTrends: string;
+=======
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+>>>>>>> origin/main
 }
 
 export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
   {
-    id: 'market-intelligence-platform-2025',
-    name: 'Advanced Market Intelligence Platform',
-    tagline: 'Real-time market insights and predictive analytics for strategic decision making',
-    price: '$899',
-    period: '/month',
-    description: 'Comprehensive market intelligence platform that provides real-time data, predictive analytics, and competitive insights.',
+<<<<<<< HEAD
+    id: "ai-market-intelligence-platform",
+    title: "AI Market Intelligence Platform",
+    description: "Advanced market intelligence platform that uses AI to analyze market trends, competitor activities, and customer behavior to provide actionable insights.",
+    category: "AI & Analytics",
+    subcategory: "Market Intelligence",
+    price: 199,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Real-time market data feeds',
-      'Predictive market modeling',
-      'Competitive intelligence',
-      'Industry trend analysis',
-      'Custom market reports',
-      'Data visualization tools',
-      'API integration capabilities',
-      'Mobile app access',
-      'Automated alerts',
-      'Historical data analysis'
+      "Real-time market monitoring",
+      "AI-powered trend analysis",
+      "Competitor tracking",
+      "Customer behavior insights",
+      "Predictive analytics",
+      "Custom dashboards",
+      "API integration",
+      "Automated reporting"
     ],
-    popular: true,
-    icon: '📈',
-    color: 'from-green-600 to-emerald-600',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/market-intelligence',
-    marketPosition: 'Competes with Bloomberg Terminal ($24,000/year) and Thomson Reuters ($15,000/year) with affordable pricing.',
-    targetAudience: 'Business analysts, Marketing teams, Strategy consultants, Investment professionals',
-    trialDays: 21,
-    setupTime: '1 week',
-    category: 'Market Intelligence & Analytics',
-    realService: true,
-    technology: ['Python, React, Node.js, PostgreSQL, Redis, Apache Kafka'],
-    integrations: ['Google Analytics, Facebook Ads, LinkedIn, Twitter, Financial APIs'],
-    useCases: ['Market research, Competitive analysis, Investment decisions, Strategic planning'],
-    roi: 'Organizations report 50% faster market insights and 40% improvement in strategic decisions.',
-    competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
-    marketSize: '$25B market intelligence market',
-    growthRate: '22% YoY',
+    benefits: [
+      "Make data-driven decisions",
+      "Identify market opportunities early",
+      "Stay ahead of competitors",
+      "Optimize pricing strategies",
+      "Improve customer targeting"
+    ],
+    useCases: [
+      "Market research",
+      "Competitive analysis",
+      "Product development",
+      "Marketing strategy",
+      "Sales optimization"
+    ],
+    targetAudience: [
+      "Product managers",
+      "Marketing teams",
+      "Business analysts",
+      "Strategy consultants",
+      "Startup founders"
+    ],
+    tags: ["AI", "Market Intelligence", "Analytics", "Competitive Analysis", "Predictive Analytics"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$199 - $599/month",
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    realImplementation: true,
-    implementationDetails: 'Production market intelligence platform with real-time data processing, advanced analytics, and comprehensive reporting.',
-    launchDate: '2025-01-20',
-    customers: 78,
-    rating: 4.8,
-    reviews: 56
+    technology: ["GPT-4", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"],
+    integrations: ["Salesforce", "HubSpot", "Google Analytics", "Facebook Ads", "LinkedIn Ads"],
+    compliance: ["GDPR", "CCPA", "SOC 2"],
+    roi: "400% within 8 months",
+    competitors: ["Crayon", "Kompyte", "Brandwatch", "Mention"],
+    marketSize: "$2.1 billion",
+    growthRate: "18.5% annually",
+    fundingTrends: "Strong investor interest in AI-powered market intelligence"
+  },
+  {
+    id: "quantum-enhanced-data-analytics",
+    title: "Quantum-Enhanced Data Analytics",
+    description: "Next-generation data analytics platform that leverages quantum computing principles to process massive datasets and provide insights faster than traditional solutions.",
+    category: "Quantum Computing",
+    subcategory: "Data Analytics",
+    price: 299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Quantum-accelerated processing",
+      "Real-time data streaming",
+      "Advanced visualization",
+      "Predictive modeling",
+      "Natural language queries",
+      "Automated insights",
+      "Multi-cloud support",
+      "Enterprise security"
+    ],
+    benefits: [
+      "Process data 100x faster",
+      "Handle massive datasets",
+      "Real-time insights",
+      "Future-proof technology",
+      "Competitive advantage"
+    ],
+    useCases: [
+      "Big data analytics",
+      "Real-time monitoring",
+      "Predictive maintenance",
+      "Risk assessment",
+      "Performance optimization"
+    ],
+    targetAudience: [
+      "Data scientists",
+      "Business analysts",
+      "IT managers",
+      "Research institutions",
+      "Financial services"
+    ],
+    tags: ["Quantum Computing", "Big Data", "Analytics", "Real-time", "Predictive Modeling"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$299 - $999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Quantum algorithms", "Python", "TensorFlow", "Kubernetes", "Apache Kafka"],
+    integrations: ["AWS", "Azure", "Google Cloud", "Snowflake", "Databricks"],
+    compliance: ["ISO 27001", "SOC 2", "HIPAA", "GDPR"],
+    roi: "500% within 12 months",
+    competitors: ["Palantir", "Databricks", "Snowflake", "Tableau"],
+    marketSize: "$3.2 billion",
+    growthRate: "22.8% annually",
+    fundingTrends: "High interest in quantum computing applications"
+=======
+    id: 'market-augmentation-1',
+    name: 'Market Augmentation Service 1',
+    tagline: 'Enhance your market presence',
+    price: '$299',
+    features: ['Market analysis', 'Strategy development', 'Implementation support']
+>>>>>>> origin/main
   }
 ];

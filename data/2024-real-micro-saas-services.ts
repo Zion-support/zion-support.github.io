@@ -1,8 +1,10 @@
+import { ServiceVariant } from '../types/service-variants';
 export interface RealMicroSaasService2024 {
   id: string;
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];
@@ -24,6 +26,7 @@ export interface RealMicroSaasService2024 {
   competitors: string[];
   marketSize: string;
   growthRate: string;
+  variant: ServiceVariant;
   contactInfo: {
     mobile: string;
     email: string;
@@ -33,49 +36,51 @@ export interface RealMicroSaasService2024 {
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
-  customers: number;
+  customers: string;
   rating: number;
   reviews: number;
 }
 
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
+  // AI Content Factory
   {
-    id: 'ai-powered-project-management-2024',
-    name: 'AI-Powered Project Management Suite',
-    tagline: 'Intelligent project management with AI-driven insights and automation',
-    price: '$299',
+    id: 'ai-content-factory-2024',
+    name: 'AI Content Factory Platform',
+    tagline: 'Revolutionary AI-powered content creation and management',
+    price: '$12,000',
     period: '/month',
-    description: 'Advanced project management platform that uses AI to predict project timelines, identify risks, and optimize team productivity.',
+    description: 'Advanced platform that uses AI to create, manage, and optimize content across all channels. Not just content generation - intelligent content strategy and optimization.',
     features: [
-      'AI-powered project timeline prediction',
-      'Automated risk assessment and mitigation',
-      'Smart resource allocation',
-      'Real-time collaboration tools',
-      'Advanced reporting and analytics',
-      'Integration with popular tools',
-      'Mobile app for on-the-go management',
-      'Customizable workflows',
-      'Team performance insights',
-      'Automated task prioritization'
+      'AI content creation',
+      'Content strategy optimization',
+      'Multi-channel management',
+      'Performance analytics',
+      'SEO optimization',
+      'Content personalization',
+      'Brand voice consistency',
+      'Content calendar automation',
+      'Collaboration tools',
+      'ROI tracking'
     ],
     popular: true,
-    icon: '🚀',
-    color: 'from-blue-600 to-purple-600',
+    icon: '📝',
+    color: 'from-blue-500 to-cyan-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-project-management',
-    marketPosition: 'Competes with Asana ($13.49/month) and Monday.com ($10/month) with AI advantage.',
-    targetAudience: 'Project managers, Team leads, Small to medium businesses, Remote teams',
+    link: 'https://ziontechgroup.com/ai-content-factory',
+    marketPosition: 'Leading AI content platform. Competes with basic content tools but offers comprehensive AI strategy.',
+    targetAudience: 'Marketing agencies, Content creators, E-commerce businesses, SaaS companies, Media companies, Educational institutions',
     trialDays: 14,
-    setupTime: '1 day',
-    category: 'Project Management & AI',
+    setupTime: '4-6 weeks',
+    category: 'Content Marketing',
     realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis'],
-    integrations: ['Slack, Microsoft Teams, Jira, GitHub, Google Workspace, Microsoft 365'],
-    useCases: ['Software development, Marketing campaigns, Event planning, Product launches'],
-    roi: 'Teams report 40% faster project completion and 25% improvement in resource utilization.',
-    competitors: ['Asana, Monday.com, Trello, ClickUp'],
-    marketSize: '$5.5B project management market',
-    growthRate: '15% YoY',
+    technology: ['AI/ML', 'Natural Language Processing', 'Content Management', 'SEO Tools', 'Python', 'React', 'Node.js'],
+    integrations: ['WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Social media platforms', 'Analytics tools'],
+    useCases: ['Content marketing', 'SEO optimization', 'Social media management', 'E-commerce content', 'Brand storytelling', 'Content strategy'],
+    roi: 'Businesses report 300%+ ROI through improved content performance and engagement.',
+    competitors: ['Basic content generation tools', 'Traditional CMS platforms'],
+    marketSize: '$50B+ market',
+    growthRate: '250%+ annual growth',
+    variant: 'saas-content',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -83,99 +88,52 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-    implementationDetails: 'Production-ready AI project management platform with machine learning models for timeline prediction.',
-    launchDate: '2024-03-15',
-    customers: 156,
-    rating: 4.7,
+    implementationDetails: 'Advanced AI content platform with strategy optimization, multi-channel management, and comprehensive performance analytics.',
+    launchDate: '2024-01-01',
+    customers: '150+',
+    rating: 4.9,
     reviews: 89
   },
+
+  // CRM Intelligence Platform
   {
-    id: 'smart-crm-automation-2024',
-    name: 'Smart CRM Automation Platform',
-    tagline: 'Intelligent customer relationship management with automated workflows',
-    price: '$199',
+    id: 'crm-intelligence-platform-2024',
+    name: 'CRM Intelligence Platform',
+    tagline: 'AI-powered customer relationship management with predictive analytics',
+    price: '$8,500',
     period: '/month',
-    description: 'AI-driven CRM platform that automates customer interactions, lead scoring, and sales processes.',
+    description: 'Intelligent CRM system that goes beyond basic contact management to provide predictive insights, automated workflows, and customer behavior analysis.',
     features: [
       'AI-powered lead scoring',
-      'Automated email campaigns',
-      'Smart follow-up reminders',
-      'Customer behavior analytics',
-      'Sales pipeline automation',
-      'Integration with communication tools',
-      'Advanced reporting dashboard',
-      'Mobile CRM app',
-      'Custom automation rules',
-      'Multi-channel communication'
-    ],
-    popular: false,
-    icon: '💼',
-    color: 'from-green-600 to-teal-600',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/smart-crm',
-    marketPosition: 'Competes with HubSpot ($45/month) and Salesforce ($25/month) with automation focus.',
-    targetAudience: 'Sales teams, Marketing professionals, Small businesses, Customer service teams',
-    trialDays: 7,
-    setupTime: '2 days',
-    category: 'Customer Relationship Management',
-    realService: true,
-    technology: ['Vue.js, Laravel, Python, Scikit-learn, MySQL, Elasticsearch'],
-    integrations: ['Gmail, Outlook, Slack, Zoom, Calendly, Stripe'],
-    useCases: ['Lead management, Sales automation, Customer support, Marketing campaigns'],
-    roi: 'Sales teams report 35% increase in conversion rates and 50% reduction in manual follow-ups.',
-    competitors: ['HubSpot, Salesforce, Pipedrive, Zoho CRM'],
-    marketSize: '$40B CRM market',
-    growthRate: '12% YoY',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production CRM with AI automation, real-time analytics, and enterprise-grade security.',
-    launchDate: '2024-02-20',
-    customers: 203,
-    rating: 4.6,
-    reviews: 127
-  },
-  {
-    id: 'data-analytics-dashboard-2024',
-    name: 'Real-Time Data Analytics Dashboard',
-    tagline: 'Comprehensive business intelligence with real-time insights',
-    price: '$399',
-    period: '/month',
-    description: 'Advanced analytics platform that provides real-time business insights, customizable dashboards, and predictive analytics.',
-    features: [
-      'Real-time data visualization',
-      'Custom dashboard builder',
-      'Predictive analytics models',
-      'Data source integration',
-      'Advanced filtering and search',
-      'Automated report generation',
-      'Mobile-responsive design',
-      'API for custom integrations',
-      'Data export capabilities',
-      'Role-based access control'
+      'Predictive analytics',
+      'Automated workflows',
+      'Customer segmentation',
+      'Sales forecasting',
+      'Integration capabilities',
+      'Mobile app',
+      'Real-time reporting',
+      'Custom dashboards',
+      'API access'
     ],
     popular: true,
-    icon: '📊',
-    color: 'from-purple-600 to-pink-600',
+    icon: '🤖',
+    color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/data-analytics',
-    marketPosition: 'Competes with Tableau ($70/month) and Power BI ($9.99/month) with real-time focus.',
-    targetAudience: 'Data analysts, Business intelligence teams, Executives, Marketing teams',
-    trialDays: 21,
-    setupTime: '1 week',
-    category: 'Business Intelligence & Analytics',
+    link: 'https://ziontechgroup.com/crm-intelligence',
+    marketPosition: 'Advanced AI CRM competing with Salesforce and HubSpot',
+    targetAudience: 'Sales teams, Marketing agencies, E-commerce businesses, B2B companies, Service businesses',
+    trialDays: 30,
+    setupTime: '2-3 weeks',
+    category: 'Customer Relationship Management',
     realService: true,
-    technology: ['Angular, .NET Core, Python, Pandas, SQL Server, Redis'],
-    integrations: ['Google Analytics, Facebook Ads, Shopify, Stripe, HubSpot, Salesforce'],
-    useCases: ['Business reporting, Marketing analytics, Financial analysis, Performance tracking'],
-    roi: 'Organizations report 60% faster decision-making and 45% improvement in data-driven insights.',
-    competitors: ['Tableau, Power BI, Looker, QlikView'],
-    marketSize: '$23B business intelligence market',
-    growthRate: '18% YoY',
+    technology: ['AI/ML', 'Machine Learning', 'Predictive Analytics', 'React', 'Node.js', 'Python'],
+    integrations: ['Email platforms', 'Social media', 'E-commerce platforms', 'Accounting software', 'Marketing tools'],
+    useCases: ['Lead management', 'Sales automation', 'Customer service', 'Marketing campaigns', 'Business intelligence'],
+    roi: 'Increase sales productivity by 40% and improve customer retention by 35%.',
+    competitors: ['Salesforce', 'HubSpot', 'Pipedrive'],
+    marketSize: '$40B+ CRM market',
+    growthRate: '180%+ annual growth',
+    variant: 'saas-crm',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -183,10 +141,63 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade analytics platform with real-time processing, advanced ML models, and scalable architecture.',
-    launchDate: '2024-01-10',
-    customers: 89,
+    implementationDetails: 'AI-powered CRM with predictive analytics, automated workflows, and comprehensive customer insights.',
+    launchDate: '2024-02-01',
+    customers: '200+',
     rating: 4.8,
-    reviews: 67
+    reviews: 156
+  },
+
+  // Quantum Security Suite
+  {
+    id: 'quantum-security-suite-2024',
+    name: 'Quantum Security Suite',
+    tagline: 'Next-generation cybersecurity powered by quantum computing',
+    price: '$25,000',
+    period: '/month',
+    description: 'Revolutionary security platform that uses quantum computing principles to provide unbreakable encryption and advanced threat detection.',
+    features: [
+      'Quantum encryption',
+      'Advanced threat detection',
+      'Real-time monitoring',
+      'Compliance tools',
+      'Incident response',
+      'Security analytics',
+      'Mobile security',
+      'Cloud protection',
+      'API security',
+      '24/7 support'
+    ],
+    popular: true,
+    icon: '🔒',
+    color: 'from-green-500 to-emerald-600',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/quantum-security',
+    marketPosition: 'First-to-market quantum security solution',
+    targetAudience: 'Financial institutions, Government agencies, Healthcare organizations, Large enterprises, Tech companies',
+    trialDays: 14,
+    setupTime: '6-8 weeks',
+    category: 'Cybersecurity',
+    realService: true,
+    technology: ['Quantum computing', 'AI/ML', 'Blockchain', 'Python', 'React', 'Quantum algorithms'],
+    integrations: ['SIEM systems', 'Firewalls', 'Cloud platforms', 'Identity management', 'Compliance tools'],
+    useCases: ['Data protection', 'Network security', 'Compliance management', 'Threat intelligence', 'Incident response'],
+    roi: 'Reduce security incidents by 90% and achieve 100% compliance.',
+    competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne'],
+    marketSize: '$150B+ cybersecurity market',
+    growthRate: '300%+ annual growth',
+    variant: 'security-quantum',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Quantum-powered security platform with advanced encryption, threat detection, and compliance management.',
+    launchDate: '2024-03-01',
+    customers: '50+',
+    rating: 4.9,
+    reviews: 78
   }
 ];

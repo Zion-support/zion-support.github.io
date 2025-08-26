@@ -390,4 +390,10 @@ export default function Revolutionary2025ServicesShowcase() {
       </div>
     </UltraQuantumHolographicBackground>
   );
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}
 }

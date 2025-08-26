@@ -1,4 +1,6 @@
 
+
+import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { FloatingCTA } from "@/components/FloatingCTA";
@@ -10,7 +12,7 @@ import { WaitlistSection } from "@/components/WaitlistSection";
 import { BlogSection } from "@/components/BlogSection";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
 import { SocialShareSection } from "@/components/SocialShareSection";
@@ -65,8 +67,8 @@ export default function Index() {
       link: "/analytics"
     },
     {
-      title: t('home.tool_mobile_app'),
-      description: t('home.tool_mobile_app_desc'),
+      title: "Mobile App",
+      description: "Take Zion with you on the go with our mobile app for iOS and Android",
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
       link: "/mobile-launch"
     }
@@ -78,10 +80,9 @@ export default function Index() {
         title={t("home.seo_title")} 
         description={t("home.seo_description")} 
         keywords={t("home.seo_keywords")}
-        canonical="https://app.ziontechgroup.com/"
+        canonical="https://ziontechgroup.com/"
       />
-      
-      <HeroSection />
+              <HeroSection />
       
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
@@ -134,7 +135,7 @@ export default function Index() {
       
       <WaitlistSection />
       <FloatingCTA />
-      
+      <Footer />
     </div>
   );
 }

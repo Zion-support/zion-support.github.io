@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Building2, Shield, Brain, Globe, Zap, Users, BarChart3, Lock } from 'lucide-react';
 
 const EnterpriseSolutions = () => {

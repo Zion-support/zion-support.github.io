@@ -107,14 +107,12 @@ export default function ForumPostPage() {
   // For this demo, we'll assume the post is found
   if (!post) {
     return (
-      
-        <div className="container py-8">
-          <h1>Post not found</h1>
-          <Button asChild className="mt-4">
-            <Link to="/community">Back to Community</Link>
-          </Button>
-        </div>
-      
+      <div className="container py-8">
+        <h1>Post not found</h1>
+        <Button asChild className="mt-4">
+          <Link to="/community">Back to Community</Link>
+        </Button>
+      </div>
     );
   }
 
@@ -249,12 +247,16 @@ export default function ForumPostPage() {
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
   
   return (
+<<<<<<< HEAD
     <AppLayout>
+=======
+    <>
+>>>>>>> origin/main
       <SEO
         title={`${post.title} | Community Forum | Zion AI Marketplace`}
         description={post.content.substring(0, 160)}
         keywords={`community, forum, discussion, ${post.tags.join(', ')}`}
-        canonical={`https://app.ziontechgroup.com/community/post/${post.id}`}
+        canonical={`https://ziontechgroup.com/community/post/${post.id}`}
       />
       
       <div className="container py-8">
@@ -431,6 +433,6 @@ export default function ForumPostPage() {
           </div>
         </div>
       </div>
-    
+    </>
   );
 }

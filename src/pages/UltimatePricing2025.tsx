@@ -1,516 +1,480 @@
-import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Check, 
-  Star, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Rocket, 
-  Phone, 
-  Mail, 
-  MapPin,
-  TrendingUp,
-  Database,
-  Cloud,
-  Scale,
-  Briefcase,
-  Users,
-  Globe,
-  Lock,
-  ArrowRight,
-  ExternalLink
-} from 'lucide-react';
-import ultimateInnovativeServices2025 from '../../data/2025-ultimate-innovative-services-expansion';
 
-export default function UltimatePricing2025() {
-  const [selectedPlan, setSelectedPlan] = useState('all');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    'all',
-    'Financial Technology',
-    'Research & Development',
-    'IoT & Cybersecurity',
-    'Supply Chain & Logistics',
-    'Quantum Computing',
-    'Business Operations',
-    'Healthcare',
-    'Marketing',
-    'Cloud Infrastructure',
-    'Legal Technology'
+const UltimatePricing2025: React.FC = () => {
+  const pricingTiers = [
+    {
+      name: "Micro SAAS Solutions",
+      description: "Affordable, specialized software solutions for modern businesses",
+      plans: [
+        {
+          name: "AI-Powered HR Assistant",
+          price: "$199",
+          period: "/month",
+          description: "Intelligent HR automation for recruitment and management",
+          features: [
+            "AI-powered resume screening (95% accuracy)",
+            "Intelligent interview scheduling",
+            "Automated onboarding workflows",
+            "Performance tracking & analytics",
+            "Bias detection algorithms",
+            "Compliance automation",
+            "Email & chat support"
+          ],
+          benefits: ["70% faster hiring", "Reduced bias", "40% retention improvement"],
+          marketPosition: "Leading AI HR solution for mid-market",
+          competitors: ["BambooHR", "Workday", "Zenefits"],
+          competitiveAdvantage: "Advanced AI, comprehensive automation, bias-free processes"
+        },
+        {
+          name: "Smart Inventory Management",
+          price: "$149",
+          period: "/month",
+          description: "AI-driven inventory optimization and supply chain management",
+          features: [
+            "ML demand forecasting",
+            "Automated reorder points",
+            "Supplier performance analytics",
+            "Real-time tracking",
+            "Multi-location optimization",
+            "Compliance reporting",
+            "Priority support"
+          ],
+          benefits: ["30% inventory reduction", "Zero stockouts", "Cost optimization"],
+          marketPosition: "Next-gen inventory management",
+          competitors: ["TradeGecko", "Zoho Inventory", "Fishbowl"],
+          competitiveAdvantage: "AI forecasting, real-time optimization, ERP integration"
+        },
+        {
+          name: "AI Legal Document Analyzer",
+          price: "$299",
+          period: "/month",
+          description: "Automated legal document review and contract analysis",
+          features: [
+            "NLP legal document processing",
+            "Contract risk assessment",
+            "Compliance violation detection",
+            "Legal research automation",
+            "Audit trail & reporting",
+            "Multi-user access",
+            "24/7 support"
+          ],
+          benefits: ["90% faster review", "Risk identification", "Compliance assurance"],
+          marketPosition: "Cutting-edge legal AI",
+          competitors: ["Kira Systems", "Luminance", "eBrevia"],
+          competitiveAdvantage: "Advanced NLP, comprehensive risk assessment, workflow integration"
+        },
+        {
+          name: "Smart Financial Planning",
+          price: "$99",
+          period: "/month",
+          description: "AI-powered financial planning and investment advisory",
+          features: [
+            "Portfolio optimization",
+            "Risk assessment",
+            "Tax planning",
+            "Goal tracking",
+            "Investment recommendations",
+            "Performance analytics",
+            "Financial advisor support"
+          ],
+          benefits: ["Optimized returns", "Risk management", "Tax efficiency"],
+          marketPosition: "AI financial planning platform",
+          competitors: ["Personal Capital", "Betterment", "Wealthfront"],
+          competitiveAdvantage: "AI optimization, comprehensive planning, expert support"
+        }
+      ]
+    },
+    {
+      name: "Advanced AI & Machine Learning",
+      description: "Enterprise-grade artificial intelligence solutions for innovation and competitive advantage",
+      plans: [
+        {
+          name: "AI-Powered Fraud Detection",
+          price: "$3,000",
+          period: "/month",
+          description: "Next-generation fraud prevention using machine learning",
+          features: [
+            "Real-time transaction monitoring",
+            "Behavioral pattern recognition",
+            "ML risk scoring",
+            "Automated fraud alerts",
+            "Comprehensive analytics",
+            "API integration",
+            "Dedicated support team"
+          ],
+          benefits: ["99.9% detection accuracy", "Real-time prevention", "80% fewer false positives"],
+          marketPosition: "Leading AI fraud detection",
+          competitors: ["Sift", "Signifyd", "Forter"],
+          competitiveAdvantage: "Advanced ML algorithms, real-time processing, industry-leading accuracy"
+        },
+        {
+          name: "AI Supply Chain Optimization",
+          price: "$4,000",
+          period: "/month",
+          description: "Intelligent supply chain optimization and demand forecasting",
+          features: [
+            "Predictive demand forecasting",
+            "Route optimization algorithms",
+            "Supplier performance analytics",
+            "Real-time visibility",
+            "Risk assessment & mitigation",
+            "Custom integrations",
+            "Strategic consulting"
+          ],
+          benefits: ["25% cost reduction", "Improved delivery", "Enhanced relationships"],
+          marketPosition: "Advanced supply chain optimization",
+          competitors: ["Llamasoft", "AnyLogic", "FlexSim"],
+          competitiveAdvantage: "AI optimization, real-time visibility, comprehensive risk management"
+        },
+        {
+          name: "AI-Powered Healthcare",
+          price: "$8,000",
+          period: "/month",
+          description: "Healthcare AI for diagnosis, patient care, and operational efficiency",
+          features: [
+            "Medical imaging analysis",
+            "Diagnostic assistance",
+            "Patient monitoring systems",
+            "Drug discovery optimization",
+            "Healthcare analytics",
+            "HIPAA compliance",
+            "Medical team training"
+          ],
+          benefits: ["30% diagnostic accuracy", "Enhanced care quality", "Cost reduction"],
+          marketPosition: "Leading healthcare AI",
+          competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
+          competitiveAdvantage: "Advanced medical AI, healthcare integration, regulatory compliance"
+        }
+      ]
+    },
+    {
+      name: "Emerging Technology Solutions",
+      description: "Cutting-edge technology services for future-ready businesses",
+      plans: [
+        {
+          name: "Quantum Computing Consulting",
+          price: "$5,000",
+          period: "/month",
+          description: "Expert guidance on quantum computing strategy and implementation",
+          features: [
+            "Quantum strategy development",
+            "Use case identification",
+            "Vendor selection",
+            "Implementation roadmap",
+            "Workforce development",
+            "Ongoing support",
+            "Executive briefings"
+          ],
+          benefits: ["Future-ready strategy", "Competitive advantage", "Innovation leadership"],
+          marketPosition: "Premier quantum consulting",
+          competitors: ["McKinsey", "BCG", "Deloitte"],
+          competitiveAdvantage: "Deep quantum expertise, practical experience, strategic focus"
+        },
+        {
+          name: "Metaverse Development",
+          price: "$8,000",
+          period: "/month",
+          description: "Complete metaverse platform development and deployment",
+          features: [
+            "VR/AR platform development",
+            "3D modeling & design",
+            "Interactive experiences",
+            "Multi-user support",
+            "Platform integration",
+            "Content creation",
+            "Ongoing maintenance"
+          ],
+          benefits: ["Innovation leadership", "New revenue streams", "Enhanced engagement"],
+          marketPosition: "Leading metaverse development",
+          competitors: ["Meta", "Microsoft", "Unity"],
+          competitiveAdvantage: "Custom development, rapid prototyping, comprehensive solutions"
+        },
+        {
+          name: "Web3 Development",
+          price: "$6,000",
+          period: "/month",
+          description: "Complete Web3 development and blockchain integration services",
+          features: [
+            "DApp development",
+            "Smart contract development",
+            "DeFi platform creation",
+            "NFT marketplace",
+            "Blockchain integration",
+            "Security auditing",
+            "Ongoing support"
+          ],
+          benefits: ["Decentralized models", "Financial innovation", "Technology leadership"],
+          marketPosition: "Expert Web3 development",
+          competitors: ["Consensys", "Chainlink Labs", "Alchemy"],
+          competitiveAdvantage: "Full-stack development, rapid deployment, blockchain expertise"
+        }
+      ]
+    },
+    {
+      name: "Advanced Cybersecurity",
+      description: "Next-generation security solutions for evolving cyber threats",
+      plans: [
+        {
+          name: "Zero Trust Architecture",
+          price: "$4,500",
+          period: "/month",
+          description: "Modern security architecture implementation and management",
+          features: [
+            "Identity verification",
+            "Continuous monitoring",
+            "Network segmentation",
+            "Threat detection",
+            "Compliance support",
+            "Custom implementation",
+            "24/7 security team"
+          ],
+          benefits: ["Enhanced security", "Reduced attack surface", "Improved compliance"],
+          marketPosition: "Leading zero trust implementation",
+          competitors: ["Palo Alto Networks", "Cisco", "Microsoft"],
+          competitiveAdvantage: "Comprehensive implementation, rapid deployment, ongoing optimization"
+        },
+        {
+          name: "AI-Powered Cybersecurity",
+          price: "$5,000",
+          period: "/month",
+          description: "Next-generation cybersecurity using artificial intelligence",
+          features: [
+            "AI threat detection",
+            "Behavioral analysis",
+            "Automated response",
+            "Predictive analytics",
+            "Continuous learning",
+            "Custom AI models",
+            "Dedicated security experts"
+          ],
+          benefits: ["Proactive protection", "Zero-day prevention", "Automated response"],
+          marketPosition: "Advanced AI cybersecurity",
+          competitors: ["Darktrace", "CrowdStrike", "SentinelOne"],
+          competitiveAdvantage: "Advanced AI algorithms, real-time protection, comprehensive intelligence"
+        },
+        {
+          name: "Quantum-Safe Cryptography",
+          price: "$4,000",
+          period: "/month",
+          description: "Post-quantum cryptography implementation and migration",
+          features: [
+            "Algorithm selection",
+            "Implementation",
+            "Testing & validation",
+            "Migration planning",
+            "Performance optimization",
+            "Compliance assurance",
+            "Expert consultation"
+          ],
+          benefits: ["Future security", "Quantum resistance", "Compliance"],
+          marketPosition: "Quantum-safe cryptography leader",
+          competitors: ["Post-Quantum", "ISARA", "Cryptosense"],
+          competitiveAdvantage: "Quantum expertise, practical implementation, strategic planning"
+        }
+      ]
+    }
   ];
 
-  const filteredServices = ultimateInnovativeServices2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-    return matchesCategory;
-  });
-
-  const getCategoryIcon = (category: string) => {
-    if (category.includes('Financial')) return <TrendingUp className="w-6 h-6" />;
-    if (category.includes('Research')) return <Brain className="w-6 h-6" />;
-    if (category.includes('IoT')) return <Shield className="w-6 h-6" />;
-    if (category.includes('Supply Chain')) return <Database className="w-6 h-6" />;
-    if (category.includes('Quantum')) return <Zap className="w-6 h-6" />;
-    if (category.includes('Business')) return <Briefcase className="w-6 h-6" />;
-    if (category.includes('Healthcare')) return <Users className="w-6 h-6" />;
-    if (category.includes('Marketing')) return <Globe className="w-6 h-6" />;
-    if (category.includes('Cloud')) return <Cloud className="w-6 h-6" />;
-    if (category.includes('Legal')) return <Scale className="w-6 h-6" />;
-    return <Rocket className="w-6 h-6" />;
-  };
-
-  const getCategoryColor = (category: string) => {
-    if (category.includes('Financial')) return 'from-emerald-500 to-teal-500';
-    if (category.includes('Research')) return 'from-blue-500 to-cyan-500';
-    if (category.includes('IoT')) return 'from-green-500 to-emerald-500';
-    if (category.includes('Supply Chain')) return 'from-orange-500 to-red-500';
-    if (category.includes('Quantum')) return 'from-purple-500 to-indigo-500';
-    if (category.includes('Business')) return 'from-teal-500 to-cyan-500';
-    if (category.includes('Healthcare')) return 'from-red-500 to-pink-500';
-    if (category.includes('Marketing')) return 'from-yellow-500 to-orange-500';
-    if (category.includes('Cloud')) return 'from-gray-500 to-blue-500';
-    if (category.includes('Legal')) return 'from-indigo-500 to-purple-500';
-    return 'from-blue-500 to-purple-500';
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO 
-        title="Ultimate Pricing 2025 | Zion Tech Group"
-        description="Comprehensive pricing for our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Find the perfect plan for your business needs."
-        keywords="pricing, AI services, quantum computing, autonomous systems, business solutions, Zion Tech Group"
-      />
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Ultimate Pricing
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                2025
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              Transparent, competitive pricing for our revolutionary AI-powered, quantum-secure, and autonomous business solutions. 
-              Choose the perfect plan to transform your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                <Rocket className="w-5 h-5 mr-2" />
-                Get Custom Quote
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Speak with Sales
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Contact Information Banner */}
-      <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="flex items-center justify-center space-x-3">
-              <Phone className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-300">Phone</p>
-                <a href="tel:+13024640950" className="text-blue-400 font-semibold hover:text-blue-300">
-                  +1 302 464 0950
-                </a>
-              </div>
-            </div>
-            <div className="flex items-center justify-center space-x-3">
-              <Mail className="w-5 h-5 text-purple-400" />
-              <div>
-                <p className="text-sm text-gray-300">Email</p>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 font-semibold hover:text-purple-300">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-            </div>
-            <div className="flex items-center justify-center space-x-3">
-              <MapPin className="w-5 h-5 text-pink-400" />
-              <div>
-                <p className="text-sm text-gray-300">Address</p>
-                <p className="text-pink-400 font-semibold">
-                  364 E Main St STE 1008<br />Middletown DE 19709
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Pricing Tiers Overview */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Flexible Pricing Tiers
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Choose from our three flexible pricing tiers designed to meet businesses of all sizes. 
-            All plans include our core features with additional capabilities as you scale.
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Ultimate
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Pricing 2025
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Transparent, competitive pricing for our comprehensive portfolio of innovative technology solutions. 
+            Get enterprise-grade services at market-competitive rates with unmatched value and support.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {/* Starter Plan */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-blue-400 mb-2">$999</div>
-              <div className="text-gray-400">per month</div>
-              <p className="text-sm text-gray-300 mt-4">
-                Perfect for small businesses and startups
-              </p>
-            </div>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Core AI features</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Basic security</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Email support</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Standard integrations</span>
-              </li>
-            </ul>
-            <div className="text-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors w-full justify-center"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-
-          {/* Professional Plan */}
-          <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border-2 border-blue-400/50 relative transform scale-105">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <span className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold rounded-full">
-                Most Popular
-              </span>
-            </div>
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-blue-400 mb-2">$2,499</div>
-              <div className="text-gray-400">per month</div>
-              <p className="text-sm text-gray-300 mt-4">
-                Ideal for growing businesses and mid-market companies
-              </p>
-            </div>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Everything in Starter</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Advanced AI capabilities</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Quantum security</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Priority support</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Advanced integrations</span>
-              </li>
-            </ul>
-            <div className="text-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors w-full justify-center"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-
-          {/* Enterprise Plan */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-purple-400 mb-2">Custom</div>
-              <div className="text-gray-400">pricing</div>
-              <p className="text-sm text-gray-300 mt-4">
-                Tailored solutions for large enterprises
-              </p>
-            </div>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Everything in Professional</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Custom AI models</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Dedicated support</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">Custom integrations</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Check className="w-5 h-5 text-green-400" />
-                <span className="text-gray-300">SLA guarantees</span>
-              </li>
-            </ul>
-            <div className="text-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors w-full justify-center"
-              >
-                Contact Sales
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Category Filter */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Filter Services by Category
-            </h3>
-            <p className="text-gray-300">
-              Explore our services organized by industry and technology focus
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map(category => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
-                }`}
-              >
-                {category === 'all' ? 'All Categories' : category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Services Pricing Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {filteredServices.map((service) => (
-            <div
-              key={service.id}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105 group"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
-              {/* Service Header */}
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)}`}>
-                    <span className="text-2xl">{service.icon}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                      {service.name}
-                    </h3>
-                    <p className="text-sm text-gray-400">{service.category}</p>
-                  </div>
-                </div>
-                {service.popular && (
-                  <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-semibold rounded-full">
-                    Popular
-                  </span>
-                )}
-              </div>
-
-              {/* Tagline */}
-              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                {service.tagline}
-              </p>
-
-              {/* Pricing Tiers */}
-              <div className="mb-6 space-y-4">
-                <h4 className="text-white font-semibold mb-3 flex items-center">
-                  <Star className="w-4 h-4 mr-2 text-yellow-400" />
-                  Pricing Tiers
-                </h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg border border-white/10">
-                    <span className="text-gray-300">Starter</span>
-                    <span className="text-blue-400 font-semibold">{service.pricingTiers.starter}</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg border border-white/10">
-                    <span className="text-gray-300">Professional</span>
-                    <span className="text-purple-400 font-semibold">{service.pricingTiers.professional}</span>
-                  </div>
-                  <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg border border-white/10">
-                    <span className="text-gray-300">Enterprise</span>
-                    <span className="text-pink-400 font-semibold">{service.pricingTiers.enterprise}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* ROI and Market Info */}
-              <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
-                <p className="text-sm text-gray-300 mb-2">
-                  <strong>ROI:</strong> {service.roi}
-                </p>
-                <p className="text-xs text-gray-400">
-                  <strong>Market Size:</strong> {service.marketSize} | <strong>Growth:</strong> {service.growthRate}
-                </p>
-              </div>
-
-              {/* Key Features */}
-              <div className="mb-6">
-                <h4 className="text-white font-semibold mb-3">Key Features</h4>
-                <ul className="space-y-2">
-                  {service.features.slice(0, 3).map((feature, index) => (
-                    <li key={index} className="flex items-start space-x-2">
-                      <Check className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Special Features */}
-              <div className="mb-6">
-                <h4 className="text-white font-semibold mb-3">Special Features</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.specialFeatures.slice(0, 2).map((feature, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-md border border-purple-400/30"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link
-                  to="/contact"
-                  className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group"
-                >
-                  Get Quote
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <a
-                  href={service.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-
-              {/* Contact Information */}
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <div className="text-center">
-                  <p className="text-sm text-gray-400 mb-2">Need custom pricing?</p>
-                  <div className="flex flex-col sm:flex-row gap-2 text-sm">
-                    <a
-                      href="tel:+13024640950"
-                      className="inline-flex items-center justify-center px-3 py-2 bg-green-600/20 text-green-300 rounded-md border border-green-400/30 hover:bg-green-600/30 transition-colors"
-                    >
-                      <Phone className="w-3 h-3 mr-1" />
-                      Call Sales
-                    </a>
-                    <a
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="inline-flex items-center justify-center px-3 py-2 bg-blue-600/20 text-blue-300 rounded-md border border-blue-400/30 hover:bg-blue-600/30 transition-colors"
-                    >
-                      <Mail className="w-3 h-3 mr-1" />
-                      Email Sales
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* No Results Message */}
-        {filteredServices.length === 0 && (
-          <div className="text-center py-16">
-            <div className="text-gray-400 text-xl mb-4">
-              No services found in this category
-            </div>
-            <button
-              onClick={() => setSelectedCategory('all')}
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              Call for Custom Pricing
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
             >
-              View All Services
-            </button>
+              Request Quote
+            </a>
           </div>
-        )}
-      </div>
+          <div className="text-sm text-gray-400 space-y-1">
+            <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">ziontechgroup.com</a></p>
+            <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
+        </div>
+      </section>
 
-      {/* Call to Action Section */}
-      <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-blue-400/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Get Started?
+      {/* Pricing Tiers */}
+      {pricingTiers.map((tier, tierIndex) => (
+        <section key={tierIndex} className={`py-20 px-4 sm:px-6 lg:px-8 ${tierIndex % 2 === 0 ? 'bg-white/5' : ''}`}>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {tier.name}
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                {tier.description}
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+              {tier.plans.map((plan, planIndex) => (
+                <div
+                  key={planIndex}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="mb-4">
+                      <span className="text-4xl font-bold text-blue-400">{plan.price}</span>
+                      <span className="text-gray-400">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-green-400 mb-3">Features:</h4>
+                    <ul className="space-y-2">
+                      {plan.features.map((feature, idx) => (
+                        <li key={idx} className="text-gray-300 flex items-start">
+                          <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-yellow-400 mb-3">Key Benefits:</h4>
+                    <ul className="space-y-2">
+                      {plan.benefits.map((benefit, idx) => (
+                        <li key={idx} className="text-gray-300 flex items-start">
+                          <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-6 space-y-4">
+                    <div className="bg-white/5 rounded-lg p-4">
+                      <h4 className="text-sm font-semibold text-blue-400 mb-2">Market Position</h4>
+                      <p className="text-sm text-gray-300">{plan.marketPosition}</p>
+                    </div>
+                    
+                    <div className="bg-white/5 rounded-lg p-4">
+                      <h4 className="text-sm font-semibold text-purple-400 mb-2">Competitive Advantage</h4>
+                      <p className="text-sm text-gray-300">{plan.competitiveAdvantage}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 w-full justify-center"
+                    >
+                      Get Started
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
+
+      {/* Value Proposition Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Why Choose Zion Tech Group?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Contact our sales team today to discuss your specific needs and get a custom quote. 
-              We'll help you find the perfect solution for your business.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our competitive pricing combined with unmatched expertise and support delivers exceptional value
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                <Rocket className="w-5 h-5 mr-2" />
-                Get Custom Quote
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Speak with Sales
-              </a>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">💎</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Premium Quality</h3>
+              <p className="text-gray-300">Enterprise-grade solutions at competitive market rates with superior quality and performance</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Innovation Leadership</h3>
+              <p className="text-gray-300">Cutting-edge technology solutions that position your business ahead of the competition</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Custom Solutions</h3>
+              <p className="text-gray-300">Tailored implementations designed specifically for your business needs and objectives</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
+              <p className="text-gray-300">Dedicated support teams and ongoing optimization to ensure your success</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="text-xl font-semibold text-white mb-3">ROI Focused</h3>
+              <p className="text-gray-300">Solutions designed to deliver measurable business value and rapid return on investment</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">🌐</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Global Reach</h3>
+              <p className="text-gray-300">International expertise and support for businesses operating in global markets</p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Enhanced CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Contact us today to discuss your needs and get a customized quote for your business
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Contact Us Today
+            </Link>
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+            >
+              Call: +1 302 464 0950
+            </a>
+          </div>
+          <div className="text-sm text-gray-400 space-y-1">
+            <p>📧 Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a></p>
+            <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">ziontechgroup.com</a></p>
+            <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default UltimatePricing2025;

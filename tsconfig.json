@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
@@ -17,19 +21,9 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*", "./pages/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/api/*": ["./src/api/*"],
-      "@/types/*": ["./src/types/*", "./types/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/context/*": ["./src/context/*"],
-      "@/services/*": ["./src/services/*"],
-      "react-router-dom": ["./src/stubs/react-router-dom.tsx"],
-      "react-router": ["./src/stubs/react-router-dom.tsx"],
-      "next-cloudinary": ["./types/next-cloudinary.d.ts"],
-      "types/*": ["./types/*"]
+      "@/*": [
+        "./src/*"
+      ]
     },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -44,6 +38,7 @@
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
     "incremental": true,
+<<<<<<< HEAD
     "typeRoots": ["./node_modules/@types", "./types"],
     "types": ["node"],
     "plugins": [ { "name": "next" } ]
@@ -57,4 +52,27 @@
     "src/data/servicesData.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
+=======
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "src/components.disabled",
+    "src/components.disabled/**/*",
+    "src/pages.disabled",
+    "src/pages.disabled/**/*"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+>>>>>>> origin/main
 }

@@ -1,393 +1,334 @@
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Find answers to common questions about our AI solutions, services, and technology offerings.
-            Can't find what you're looking for? Our team is here to help.
-          </p>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Search and Filter */}
-        <div className="mb-12">
-          <div className="flex flex-col lg:flex-row gap-6">
-            {/* Search */}
-            <div className="flex-1">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search questions, topics, or keywords..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-            </div>
-
-            {/* Category Filter */}
-            <div className="lg:w-64">
-              <select
-                value={activeCategory}
-                onChange={(e) => setActiveCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                {categories.map(category => (
-                  <option key={category} value={category}>
-                    {category === 'all' ? 'All Categories' : category}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </div>
-
-        {/* FAQ Items */}
-        <div className="space-y-4">
-          {filteredFAQs.map((item, index) => (
-            <div
-              key={index}
-              className="bg-gray-800/50 border border-gray-700 rounded-lg overflow-hidden"
-            >
-              <button
-                onClick={() => toggleItem(index)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors duration-200"
-              >
-                <div className="flex items-start">
-                  <HelpCircle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-medium text-white">{item.question}</h3>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {item.tags.map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                {expandedItems.has(index) ? (
-                  <ChevronUp className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                )}
-              </button>
-              
-              {expandedItems.has(index) && (
-                <div className="px-6 pb-4 border-t border-gray-700">
-                  <p className="text-gray-300 leading-relaxed mt-4">{item.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* No Results */}
-        {filteredFAQs.length === 0 && (
-          <div className="text-center py-12">
-            <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-medium text-white mb-2">No questions found</h3>
-            <p className="text-gray-400 mb-6">
-              Try adjusting your search terms or category filter.
-            </p>
-            <button
-              onClick={() => {
-                setSearchQuery('');
-                setActiveCategory('all');
-              }}
-              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
-            >
-              Clear Filters
-            </button>
-          </div>
-        )}
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <Accordion key={index} className="bg-white/10 backdrop-blur-md border-white/20 rounded-lg">
-                <AccordionItem className="">
-                  <AccordionTrigger className="text-left px-6 py-4 text-lg font-semibold text-white hover:text-cyan-400 transition-colors">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 text-gray-300 leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <h2 className="text-3xl font-bold mb-6 text-white">Still Have Questions?</h2>
-            <p className="text-xl text-gray-300 mb-8">Can't find the answer you're looking for? Our team is here to help.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">Contact Us</a>
-              <a href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300">Call Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
-import { ChevronDown, ChevronUp } from 'lucide-react';
-
-const FAQ: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const faqItems = [
-    {
-      id: 1,
-      question: "What services does Zion Tech Group offer?",
-      answer: "Zion Tech Group offers a comprehensive range of technology services including AI & Machine Learning, Cloud & DevOps, Cybersecurity, Digital Transformation, Micro SAAS Services, and Enterprise Solutions. We also provide talent matching and equipment solutions."
-    },
-    {
-      id: 2,
-      question: "How do I get started with Zion Tech Group?",
-      answer: "Getting started is easy! You can contact us through our contact form, request a free quote, or schedule a consultation. Our team will assess your needs and recommend the best solutions for your business."
-    },
-    {
-      id: 3,
-      question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, and technology. Our solutions are adaptable to any industry that can benefit from digital transformation and AI integration."
-    },
-    {
-      id: 4,
-      question: "Do you provide ongoing support and maintenance?",
-      answer: "Yes, we provide 24/7 support and maintenance for all our solutions. We offer different support tiers to meet your specific needs, from basic maintenance to comprehensive managed services."
-    },
-    {
-      id: 5,
-      question: "What is your pricing structure?",
-      answer: "Our pricing varies based on the scope and complexity of your project. We offer flexible pricing models including project-based, subscription-based, and custom enterprise solutions. Contact us for a personalized quote."
-    },
-    {
-      id: 6,
-      question: "How long does a typical project take?",
-      answer: "Project timelines vary depending on complexity. Simple implementations can take 2-4 weeks, while complex enterprise solutions may take 3-6 months. We'll provide a detailed timeline during our initial consultation."
-    },
-    {
-      id: 7,
-      question: "Do you work with small businesses?",
-      answer: "Absolutely! We work with businesses of all sizes, from startups to Fortune 500 companies. Our Micro SAAS Services are specifically designed for small to medium businesses looking to scale efficiently."
-    },
-    {
-      id: 8,
-      question: "What makes Zion Tech Group different from other providers?",
-      answer: "We combine cutting-edge AI technology with deep industry expertise, offer personalized solutions rather than one-size-fits-all approaches, provide comprehensive end-to-end services, and maintain a strong focus on innovation and customer success."
-    }
-  ];
-
-  const toggleItem = (id: number) => {
-    setOpenItems(prev => 
-      prev.includes(id) 
-        ? prev.filter(item => item !== id)
-        : [...prev, id]
-    );
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <SEO 
-        title="FAQ - Zion Tech Group" 
-        description="Frequently asked questions about Zion's AI marketplace, IT services, and equipment solutions."
-        keywords="FAQ, frequently asked questions, Zion, AI marketplace, IT services, support"
-        canonical="https://ziontechgroup.com/faq"
-      />
-      
-      <main className="pt-16">
-        {/* Hero Section */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Find answers to common questions about our services, processes, and how we can help transform your business
-          </p>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-4">
-            {faqData.map((item, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg border border-white/10 overflow-hidden">
-                <button
-                  onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between text-white hover:bg-slate-700/50 transition-colors duration-300"
-                >
-                  <span className="text-lg font-medium">{item.question}</span>
-                  <svg
-                    className={`w-5 h-5 transition-transform duration-300 ${
-                      openItems.includes(index) ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {openItems.includes(index) && (
-                  <div className="px-6 pb-4">
-                    <p className="text-gray-300 leading-relaxed">{item.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Still Have Questions?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Can't find the answer you're looking for? Our team is here to help. 
-            Contact us for personalized assistance.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:contact@ziontechgroup.com"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Email Us
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Call Us
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default FAQ;
-=======
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-=======
-=======
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Footer } from '@/components/Footer';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-=======
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent } from "@/components/ui/card";
+import React from 'react';
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { HelpCircle, Users, ShoppingCart, Shield, Zap, Globe } from "lucide-react";
 
 export default function FAQ() {
-  const faqs = [
+  const faqCategories = [
     {
+import React from 'react';
+import { AppHeader } from '@/layout/AppHeader';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Search } from 'lucide-react';
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
+export default function FAQ() {
+  const faqData = [
+    {
+      title: "Getting Started",
+      icon: Zap,
+      questions: [
+        {
+          question: "How do I create an account on Zion?",
+          answer: "Creating an account is simple! Click the 'Sign Up' button in the top right corner and choose whether you're a client looking for services or talent offering your skills. Fill in your basic information and verify your email to get started."
+        },
+        {
+          question: "What types of accounts can I create?",
+          answer: "Zion offers two main account types: Client accounts for businesses and individuals seeking AI and tech services, and Talent accounts for professionals offering their expertise in AI, development, design, and other tech fields."
+        },
+        {
+          question: "Is Zion really free to use?",
+          answer: "Yes! Zion is completely free to use. We believe in democratizing access to AI and tech solutions, so there are no subscription fees or hidden costs for using our platform."
+        }
+      ]
+    },
+    {
+      category: "For Talent & Creators",
+      questions: [
+        {
+          question: "How do I create a talent profile?",
+          answer: "After signing up, navigate to your dashboard and click 'Create Profile'. You can add your skills, experience, portfolio, and set your rates. Make sure to include relevant certifications and examples of your work."
+        },
+        {
+          question: "What types of services can I offer?",
+          answer: "You can offer any tech-related service including AI development, software engineering, data science, IT consulting, cybersecurity, cloud services, and more. We support both technical and business services."
+        },
+        {
+          question: "How do I get hired?",
+          answer: "Optimize your profile with relevant keywords, showcase your best work, maintain a high rating, and respond promptly to client inquiries. You can also actively browse job postings and submit proposals."
+        }
+      ]
+    },
+    {
+      category: "For Clients & Employers",
+      questions: [
+        {
+          question: "How do I find the right talent?",
+          answer: "Use our advanced search and filtering system to find professionals based on skills, experience, location, and ratings. You can also post detailed job requirements and let qualified talent come to you."
+        },
+        {
+          question: "What payment methods are accepted?",
+          answer: "We support multiple payment methods including credit cards, bank transfers, and digital wallets. All payments are processed securely through our platform with escrow protection for your peace of mind."
+        },
+        {
+          question: "How do I ensure quality work?",
+          answer: "Review talent profiles, check ratings and reviews, request portfolios, and start with smaller projects to test the relationship. Our dispute resolution system also protects both parties."
+      title: "For Clients",
+      icon: Users,
+      questions: [
+        {
+          question: "How do I find the right talent for my project?",
+          answer: "You can search for talent using our AI-powered matching system, browse categories, or post a job listing. Our platform will suggest the best matches based on your requirements, budget, and timeline."
+        },
+        {
+          question: "What services can I find on Zion?",
+          answer: "Zion offers a wide range of services including AI development, web and mobile app development, data science, UI/UX design, IT consulting, equipment rentals, and specialized AI solutions for various industries."
+        },
+        {
+          question: "How do I ensure quality when hiring talent?",
+          answer: "All talent on Zion are verified professionals with portfolios, reviews, and ratings. You can review their work history, read client testimonials, and communicate directly before making a decision."
+        }
+      ]
+    },
+    {
+      title: "For Talent",
+      icon: Globe,
+      questions: [
+        {
+          question: "How do I showcase my skills and experience?",
+          answer: "Create a comprehensive profile highlighting your expertise, upload portfolio pieces, list your skills, and set your rates. You can also add certifications, education, and work samples to stand out."
+        },
+        {
+          question: "How do I get paid for my work?",
+          answer: "Zion offers secure payment processing with milestone-based payments. You can set up payment schedules, track project progress, and receive payments directly through our platform."
+        },
+        {
+          question: "Can I work with international clients?",
+          answer: "Absolutely! Zion is a global platform connecting talent and clients worldwide. You can work with clients from any country and expand your professional network internationally."
+        }
+      ]
+    },
+    {
+      category: "Marketplace & Services",
+      questions: [
+        {
+          question: "What can I buy in the marketplace?",
+          answer: "Our marketplace includes AI services, software development, IT consulting, equipment rentals, specialized hardware, and more. We're constantly expanding our categories to meet your needs."
+        },
+        {
+          question: "How do I request a quote?",
+          answer: "Navigate to the 'Request Quote' page, fill out the form with your project requirements, and we'll connect you with qualified professionals who can provide detailed proposals."
+        },
+        {
+          question: "Are there any guarantees on services?",
+          answer: "Yes, we offer satisfaction guarantees and our dispute resolution system ensures fair outcomes. Most professionals also offer revisions and support to ensure your complete satisfaction."
+      title: "Platform Features",
+      icon: ShoppingCart,
+      questions: [
+        {
+          question: "What is the AI Matcher feature?",
+          answer: "Our AI Matcher uses advanced algorithms to connect clients with the perfect talent based on project requirements, skills, availability, and budget. It saves time and ensures better matches."
+        },
+        {
+          question: "How does the marketplace work?",
+          answer: "The marketplace allows you to browse and purchase pre-built AI solutions, equipment, and services. You can also request custom quotes for specific projects or needs."
+        },
+        {
+          question: "What community features are available?",
+          answer: "Join our community forums to connect with other professionals, share knowledge, ask questions, and stay updated on the latest AI and tech trends."
+        }
+      ]
+    },
+    {
+      category: "Technical Support",
+      questions: [
+        {
+          question: "What if I encounter technical issues?",
+          answer: "Our support team is available 24/7. You can reach us through the contact form, email support@ziontechgroup.com, or use our live chat feature for immediate assistance."
+        },
+        {
+          question: "How secure is my data?",
+          answer: "We use enterprise-grade security measures including end-to-end encryption, secure payment processing, and strict data protection policies. Your privacy and security are our top priorities."
+        },
+        {
+          question: "Can I use Zion Tech Group on mobile devices?",
+          answer: "Absolutely! Our platform is fully responsive and works seamlessly on all devices. We also offer a dedicated mobile app for enhanced mobile experience."
+        }
+      ]
+    },
+    {
+      category: "Business & Enterprise",
+      questions: [
+        {
+          question: "Do you offer enterprise solutions?",
+          answer: "Yes! We provide customized enterprise solutions including dedicated account managers, bulk hiring, custom integrations, and enterprise-grade security features. Contact our sales team for details."
+        },
+        {
+          question: "Can I integrate Zion Tech Group with my existing systems?",
+          answer: "We offer comprehensive API access and integration options for enterprise clients. Our technical team can help you integrate our platform with your existing HR, project management, and billing systems."
+        },
+        {
+          question: "What about compliance and legal requirements?",
+          answer: "We maintain compliance with major regulations including GDPR, SOC 2, and industry-specific requirements. Our legal team ensures all contracts and terms meet your business needs."
+        }
+      ]
+      question: "What is Zion Tech Group?",
+      answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect businesses with top AI and tech talent, services, and equipment in one comprehensive platform."
+    },
+    {
+      question: "How does the AI talent matching work?",
+      answer: "Our AI-powered matching system analyzes your project requirements, budget, and timeline to connect you with the most suitable tech professionals. The system considers skills, experience, availability, and past performance to ensure optimal matches."
+    },
+    {
+      question: "What types of services do you offer?",
+      answer: "We offer a wide range of services including AI development, software engineering, IT consulting, equipment rental, green IT solutions, and specialized tech services. Our marketplace covers everything from individual freelancers to enterprise solutions."
+    },
+    {
+      question: "Is Zion Tech Group free to use?",
+      answer: "Yes! Our core marketplace platform is completely free to use. We believe in democratizing access to tech talent and services. Some premium features and enterprise solutions may have associated costs."
+    },
+    {
+      question: "How do I get started as a client?",
+      answer: "Simply create an account, post your project requirements, and our AI will match you with suitable talent. You can also browse our talent directory, equipment listings, and service categories to find what you need."
+    },
+    {
+      question: "How do I join as a tech professional?",
+      answer: "Create a profile highlighting your skills, experience, and portfolio. Our verification process ensures quality, and once approved, you'll start receiving project matches and can bid on opportunities."
+    },
+    {
+      question: "What makes Zion different from other platforms?",
+      answer: "Zion focuses exclusively on high-tech and AI, offering specialized matching algorithms, comprehensive equipment rentals, green IT solutions, and a community-driven approach that fosters innovation and collaboration."
+    },
+    {
+      question: "Do you offer enterprise solutions?",
+      answer: "Yes! We provide enterprise-grade solutions including team management, advanced analytics, custom integrations, and dedicated support for large organizations looking to scale their tech operations."
+    },
+    {
+      question: "How do you ensure quality and security?",
+      answer: "We implement rigorous verification processes, secure payment systems, dispute resolution mechanisms, and continuous monitoring to maintain high standards and protect all users."
+    },
+    {
+      question: "Can I rent equipment through Zion?",
+      answer: "Absolutely! Our equipment marketplace offers a wide range of tech equipment for rent, from development hardware to specialized AI computing resources, making it easier for businesses to access what they need without large capital investments."
+      title: "Security & Trust",
+      icon: Shield,
+      questions: [
+        {
+          question: "How does Zion protect my data and privacy?",
+          answer: "We implement enterprise-grade security measures including encryption, secure payment processing, and strict privacy policies. Your data is never shared with third parties without consent."
+        },
+        {
+          question: "What happens if there's a dispute with a client or talent?",
+          answer: "Zion provides dispute resolution services and mediation support. We have clear terms of service and can help resolve conflicts to ensure fair outcomes for all parties."
+        },
+        {
+          question: "Are payments secure on the platform?",
+          answer: "Yes, all payments are processed through secure, encrypted channels. We use industry-standard payment processors and never store your payment information on our servers."
+        }
+      ]
+    }
+  ];
+
+  const contactMethods = [
+    {
+      title: "Email Support",
+      description: "Get help via email",
+      contact: "support@ziontechgroup.com",
+      icon: HelpCircle
+    },
+    {
+      title: "Commercial Inquiries",
+      description: "For business partnerships",
+      contact: "commercial@ziontechgroup.com",
+      icon: Users
+    }
+  ];
+
+  return (
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+
+interface FAQItem {
+  question: string;
+  answer: string;
+  category: string;
 }
 
 const faqData: FAQItem[] = [
   {
     question: "What is Zion Tech Group?",
-    answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect talented AI specialists, innovative companies, and cutting-edge technological solutions in one seamless ecosystem.",
+    answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect businesses with AI specialists, tech talent, and cutting-edge equipment.",
     category: "General"
   },
   {
     question: "How does the marketplace work?",
-    answer: "Our marketplace allows businesses to find AI talent, services, and equipment, while professionals can showcase their skills and find opportunities. Users can browse categories, post requirements, and connect directly with providers.",
-    category: "Marketplace"
-  },
-  {
-    question: "Is it really free to use?",
-    answer: "Yes! Zion is completely free to use for both talent and clients. We believe in democratizing access to AI and technology solutions by removing financial barriers.",
-    category: "Pricing"
-  },
-  {
-    question: "What types of services are available?",
-    answer: "We offer a wide range of services including AI development, machine learning consulting, software development, IT support, data analysis, and specialized equipment rentals. Our categories cover everything from basic IT support to advanced AI solutions.",
-    category: "Services"
-  },
-  {
-    question: "How do I find the right talent for my project?",
-    answer: "You can browse our talent directory, use our AI matcher tool, or post a job listing. Our platform includes detailed profiles, reviews, and portfolio showcases to help you make informed decisions.",
-    category: "Talent"
-  },
-  {
-    question: "What qualifications do your talent have?",
-    answer: "All talent on our platform undergoes verification processes. We showcase verified professionals with proven track records, portfolios, and client testimonials to ensure quality.",
-    category: "Talent"
-  },
-  {
-    question: "How do payments work?",
-    answer: "We offer secure payment processing through our platform. Clients can pay for services using various methods, and we ensure secure transactions with escrow protection for larger projects.",
-    category: "Payments"
-  },
-  {
-    question: "What if I'm not satisfied with a service?",
-    answer: "We have a comprehensive dispute resolution system. If you're not satisfied, you can contact our support team, and we'll work to resolve the issue fairly for all parties involved.",
-    category: "Support"
-  },
-  {
-    question: "Do you offer enterprise solutions?",
-    answer: "Yes! We provide enterprise-grade solutions for larger organizations, including dedicated support, custom integrations, and specialized service packages tailored to enterprise needs.",
-    category: "Enterprise"
-  },
-  {
-    question: "How do I get started as a talent provider?",
-    answer: "Simply sign up for an account, complete your profile with your skills and experience, upload your portfolio, and start receiving project requests. Our onboarding process is designed to be quick and easy.",
-    category: "Talent"
-  },
-  {
-    question: "What security measures do you have?",
-    answer: "We implement enterprise-grade security including SSL encryption, secure authentication, and regular security audits. Your data and transactions are protected with industry-standard security protocols.",
-    category: "Security"
-  },
-  {
-    question: "Can I hire for long-term projects?",
-    answer: "Absolutely! We support both short-term and long-term engagements. Many of our clients hire talent for ongoing projects, and we provide tools to manage long-term relationships effectively.",
-    category: "Projects"
-  },
-  {
-    question: "Do you offer mobile access?",
-    answer: "Yes! We have a mobile app available for both iOS and Android, allowing you to manage projects, communicate with talent, and access the marketplace on the go.",
-    category: "Mobile"
-  },
-  {
-    question: "What makes Zion different from other platforms?",
-    answer: "Zion is unique because we're completely free, focus specifically on AI and high-tech, offer comprehensive verification, and provide an integrated ecosystem for talent, services, and equipment all in one place.",
+    answer: "Our marketplace allows businesses to browse and hire AI specialists, find tech services, and purchase equipment. Talented professionals can showcase their skills and connect with potential clients.",
     category: "General"
   },
   {
-    question: "How do I contact support?",
-    answer: "You can reach our support team through our contact page, email support, or live chat. We typically respond within 24 hours and offer priority support for enterprise clients.",
-    category: "Support"
+    question: "Is Zion really free to use?",
+    answer: "Yes! Zion is completely free to use for both businesses and talent. We believe in democratizing access to AI and technology solutions.",
+    category: "General"
+  },
+  {
+    question: "How do I get started as a talent/creator?",
+    answer: "Simply sign up for an account, complete your profile with your skills and experience, and start receiving job opportunities from businesses looking for your expertise.",
+    category: "Talent"
+  },
+  {
+    question: "How do I hire talent or services?",
+    answer: "Browse our marketplace, filter by skills, location, or budget, and connect with talented professionals. You can also post job listings to attract the right candidates.",
+    category: "Business"
+  },
+  {
+    question: "What types of services are available?",
+    answer: "We offer a wide range of services including AI development, web development, mobile apps, data science, cybersecurity, cloud services, and much more.",
+    category: "Services"
+  },
+  {
+    question: "How do you verify talent and services?",
+    answer: "We have a comprehensive verification process including skill assessments, portfolio reviews, and client feedback to ensure quality and reliability.",
+    category: "General"
+  },
+  {
+    question: "Can I work remotely?",
+    answer: "Absolutely! Many of our opportunities are remote-friendly, allowing you to work with clients from anywhere in the world.",
+    category: "Talent"
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer: "We support various payment methods including credit cards, bank transfers, and digital wallets. All payments are processed securely through our platform.",
+    category: "Business"
+  },
+  {
+    question: "How do disputes get resolved?",
+    answer: "We have a dedicated dispute resolution team that works to fairly resolve any issues between clients and talent. Our goal is to ensure satisfaction for all parties.",
+    category: "General"
+  },
+  {
+    question: "Do you offer support for enterprise clients?",
+    answer: "Yes! We have dedicated enterprise solutions with additional features, priority support, and custom integrations for larger organizations.",
+    category: "Business"
+  },
+  {
+    question: "How can I contact customer support?",
+    answer: "You can reach our support team through our contact page, email, or live chat. We're available 24/7 to help with any questions or issues.",
+    category: "General"
   }
 ];
 
-const categories = ["General", "Marketplace", "Services", "Talent", "Pricing", "Payments", "Projects", "Enterprise", "Security", "Support", "Mobile"];
-
 export default function FAQ() {
   const [openItems, setOpenItems] = useState<Set<number>>(new Set());
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+
+  const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
+  const filteredFAQ = selectedCategory === 'All' 
+    ? faqData 
+    : faqData.filter(item => item.category === selectedCategory);
 
   const toggleItem = (index: number) => {
     const newOpenItems = new Set(openItems);
@@ -399,243 +340,113 @@ export default function FAQ() {
     setOpenItems(newOpenItems);
   };
 
-  const filteredFAQs = selectedCategory === "All" 
-    ? faqData 
-    : faqData.filter(faq => faq.category === selectedCategory);
-=======
-      category: "General",
-      questions: [
-        {
-          question: "What is Zion Tech Group?",
-          answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect businesses with skilled AI professionals, tech services, and cutting-edge equipment."
-        },
-        {
-          question: "Is Zion really free to use?",
-          answer: "Yes! Zion is completely free to use. We don't charge any subscription fees or hidden costs. Our platform is designed to democratize access to AI and tech talent."
-        },
-        {
-          question: "How do I get started on Zion?",
-          answer: "Getting started is easy! Simply create an account, choose whether you're looking for services or offering them, and start exploring our marketplace. You can browse talent, post jobs, or list your services immediately."
-=======
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Search, MessageCircle, Users, Shield, CreditCard, Zap } from "lucide-react";
-
-export default function FAQ() {
-  const faqData = [
-    {
-      category: "General",
-      icon: Search,
-      questions: [
-        {
-          question: "What is Zion Tech Group?",
-          answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect businesses with top AI and tech talent, services, and equipment in one comprehensive platform."
-        },
-        {
-          question: "How does Zion work?",
-          answer: "Zion operates as a two-sided marketplace where businesses can find and hire AI/tech professionals, purchase services, and acquire equipment. Talented individuals can showcase their skills, offer services, and find opportunities."
-        },
-        {
-          question: "Is Zion really free to use?",
-          answer: "Yes! Zion is completely free for both businesses and talent. We believe in democratizing access to AI and tech resources, so there are no subscription fees or hidden costs."
-        }
-      ]
-    },
-    {
-      category: "For Businesses",
-      icon: Users,
-      questions: [
-        {
-          question: "How do I find the right talent for my project?",
-          answer: "You can browse our talent directory, use our AI-powered matching system, or post a job listing. Our platform includes detailed profiles, portfolios, and reviews to help you make informed decisions."
-        },
-        {
-          question: "What types of services can I find on Zion?",
-          answer: "Zion offers a wide range of services including AI development, software engineering, data science, IT consulting, equipment sales, and specialized tech solutions across various industries."
-        },
-        {
-          question: "How do I ensure quality when hiring through Zion?",
-          answer: "All talent on Zion undergoes verification processes. You can review portfolios, check ratings and reviews, conduct interviews, and use our milestone-based payment system for added security."
-        }
-      ]
-    },
-    {
-      category: "For Talent",
-      icon: Zap,
-      questions: [
-        {
-          question: "How do I create a profile on Zion?",
-          answer: "Sign up for free and complete your profile with your skills, experience, portfolio, and rates. You can also add certifications, previous work samples, and professional references."
-        },
-        {
-          question: "What are the payment terms?",
-          answer: "Zion uses milestone-based payments to ensure both parties are protected. Payments are released upon project completion or milestone approval, with secure escrow services available."
-        },
-        {
-          question: "Can I work with international clients?",
-          answer: "Yes! Zion is a global platform. You can work with clients from anywhere in the world, and our platform handles currency conversion and international payment processing."
-        }
-      ]
-    },
-    {
-      category: "Security & Trust",
-      icon: Shield,
-      questions: [
-        {
-          question: "How does Zion protect my data?",
-          answer: "We use enterprise-grade security measures including end-to-end encryption, secure payment processing, and strict data protection policies. Your information is never shared without consent."
-        },
-        {
-          question: "What happens if there's a dispute?",
-          answer: "Zion has a comprehensive dispute resolution system. Our support team mediates conflicts, and we offer arbitration services for complex cases to ensure fair outcomes for all parties."
-        },
-        {
-          question: "Is my payment information secure?",
-          answer: "Absolutely. We use industry-standard SSL encryption and PCI DSS compliance for all payment processing. We never store your full payment details on our servers."
-        }
-      ]
-    },
-    {
-      category: "Billing & Payments",
-      icon: CreditCard,
-      questions: [
-        {
-          question: "What payment methods does Zion accept?",
-          answer: "We accept major credit cards, bank transfers, and digital wallets. For enterprise clients, we also offer invoicing and payment terms."
-        },
-        {
-          question: "Are there any transaction fees?",
-          answer: "Zion charges a small percentage fee on completed transactions to maintain our platform. This fee is transparent and clearly displayed before any transaction."
-        },
-        {
-          question: "How quickly do I receive payments?",
-          answer: "Payments are typically processed within 1-3 business days after project completion or milestone approval, depending on your chosen payment method."
-        }
-      ]
-    },
-    {
-      category: "Support",
-      icon: MessageCircle,
-      questions: [
-        {
-          question: "How can I get help if I need support?",
-          answer: "Our support team is available 24/7 through live chat, email at support@ziontechgroup.com, and phone support. We also have an extensive help center with tutorials and guides."
-        },
-        {
-          question: "Does Zion offer training or onboarding?",
-          answer: "Yes! We provide comprehensive onboarding for new users, including video tutorials, best practices guides, and one-on-one sessions with our success team."
-        },
-        {
-          question: "Can I schedule a demo of Zion's features?",
-          answer: "Absolutely! We offer personalized demos for businesses and talent. Contact our sales team to schedule a walkthrough of our platform's capabilities."
-        }
-      ]
-    }
-  ];
-
-      question: "How does the AI matching work?",
-      answer: "Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results."
-    },
-    {
-      question: "How do I hire someone on Zion?",
-      answer: "To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement."
-    },
-    {
-      question: "What are the payment terms?",
-      answer: "Zion offers flexible payment options including milestone-based payments, hourly rates, or fixed project fees. Funds are held in escrow until deliverables are approved, ensuring security for both clients and talent."
-    },
-    {
-      question: "How do I contact support?",
-      answer: "You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup.com, or by scheduling a call with our team through our contact page."
-    },
-    {
-      question: "Is Zion really free to use?",
-      answer: "Yes! Zion is completely free for both talent and clients. We believe in democratizing access to AI and technology solutions, so there are no platform fees or hidden costs."
-    },
-    {
-      question: "How do I create a talent profile?",
-      answer: "Sign up for an account, choose 'Talent' during registration, and complete your profile with your skills, experience, portfolio, and availability. Our AI will help optimize your profile for better matches."
-    },
-    {
-      question: "What types of services can I find on Zion?",
-      answer: "Zion offers a wide range of AI and technology services including software development, AI consulting, data science, cloud infrastructure, cybersecurity, and specialized equipment. We cover the full spectrum of tech needs."
-    },
-    {
-      question: "How does the dispute resolution work?",
-      answer: "If there's a disagreement between parties, our dedicated support team will mediate the situation. We review all communications and deliverables to ensure fair resolution for both parties."
-    },
-    {
-      question: "Can I work with international clients/talent?",
-      answer: "Absolutely! Zion is a global platform. You can work with clients and talent from anywhere in the world, expanding your opportunities and access to diverse skill sets."
-    },
-    {
-      question: "How do I get paid as a talent?",
-      answer: "Once your work is approved by the client, funds are released from escrow to your Zion wallet. You can then withdraw to your bank account or use the funds for other services on the platform."
-    }
-  ];
-
   return (
-    <>
-      <SEO
-        title="FAQ - Frequently Asked Questions | Zion Tech Group"
-        description="Find answers to common questions about Zion Tech Group's AI and technology marketplace. Learn how our platform works, pricing, and how to get started."
-        keywords="FAQ, frequently asked questions, Zion Tech Group, AI marketplace, tech services, support"
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="FAQ - Zion Tech Group" 
+        description="Find answers to frequently asked questions about Zion Tech Group's AI marketplace and services."
+        keywords="FAQ, frequently asked questions, Zion Tech Group, AI marketplace, support"
         canonical="https://ziontechgroup.com/faq"
       />
-      <Header />
-=======
-        description="Find answers to common questions about Zion's AI and technology marketplace platform."
-        keywords="FAQ, frequently asked questions, Zion marketplace, AI platform, tech services"
-        canonical="https://ziontechgroup.com/faq"
-      />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Find answers to common questions about Zion Tech Group and our AI marketplace
+          </p>
+        </div>
+      </section>
+
+      {/* FAQ Content */}
+      <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <GradientHeading>Frequently Asked Questions</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Find answers to the most common questions about Zion Tech Group and our marketplace
-            </p>
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+                  selectedCategory === category
+                    ? 'bg-zion-cyan text-zion-blue-dark'
+                    : 'bg-zion-blue-light/20 text-white hover:bg-zion-purple/20'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
           </div>
 
-          {/* Category Filter */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-3">
-              <button
-                onClick={() => setSelectedCategory("All")}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedCategory === "All"
-                    ? "bg-zion-purple text-white"
-                    : "bg-zion-blue-dark text-zion-slate-light hover:bg-zion-purple/20 hover:text-zion-cyan"
-=======
-        description="Find answers to common questions about Zion Tech Group, the world's first free AI and tech marketplace. Learn how to use our platform, find talent, and get started."
-        keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services, questions, answers"
+          {/* FAQ Items */}
+          <div className="max-w-4xl mx-auto space-y-4">
+            {filteredFAQ.map((item, index) => (
+              <div
+                key={index}
+                className="bg-zion-blue-light/10 border border-zion-purple/20 rounded-lg overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleItem(index)}
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-zion-purple/10 transition-colors"
+                >
+                  <span className="text-white font-semibold text-lg">{item.question}</span>
+                  {openItems.has(index) ? (
+                    <ChevronUp className="w-5 h-5 text-zion-cyan" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-zion-cyan" />
+                  )}
+                </button>
+                
+                {openItems.has(index) && (
+                  <div className="px-6 pb-4">
+                    <p className="text-zion-slate-light leading-relaxed">{item.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Contact CTA */}
+          <div className="text-center mt-16">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Still have questions?
+            </h3>
+            <p className="text-zion-slate-light mb-8">
+              Can't find what you're looking for? Our support team is here to help.
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="FAQ - Zion Tech Group" 
+        description="Find answers to frequently asked questions about Zion Tech Group's AI and tech marketplace platform."
+        keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services"
         canonical="https://ziontechgroup.com/faq"
       />
       
-      <div className="min-h-screen bg-zion-blue-dark">
+      <AppHeader />
+      
+      <main className="pt-16 pb-20">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
+        <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Find answers to the most common questions about Zion Tech Group and our AI marketplace platform.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Find answers to common questions about Zion Tech Group's AI and tech marketplace platform
             </p>
             
             {/* Search Bar */}
-            <div className="max-w-2xl mx-auto relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search for answers..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
-              />
+            <div className="mt-8 max-w-md mx-auto">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search FAQ..."
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -643,145 +454,101 @@ export default function FAQ() {
         {/* FAQ Content */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-3 mb-12">
-              <button
-                onClick={() => setActiveCategory('all')}
-                className={`px-6 py-2 rounded-full transition-colors ${
-                  activeCategory === 'all'
-                    ? 'bg-zion-purple text-white'
-                    : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'
-                }`}
-              >
-                All Categories
-              </button>
-      question: "What is Zion Tech Group?",
-      answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect talented professionals with businesses and individuals seeking AI and tech services, equipment, and expertise."
-    },
-    {
-      question: "How do I get started on Zion?",
-      answer: "Getting started is easy! Simply create an account, choose whether you're a talent (service provider) or client (service seeker), complete your profile, and start exploring opportunities or posting projects."
-    },
-    {
-      question: "What services can I find on Zion?",
-      answer: "Zion offers a wide range of services including AI development, software engineering, data science, IT consulting, equipment rental, and specialized tech services. Our platform covers everything from basic IT support to cutting-edge AI solutions."
-    },
-    {
-      question: "How does the talent matching work?",
-      answer: "Our AI-powered matching system analyzes your project requirements and matches you with the most suitable talent based on skills, experience, availability, and past performance. You can also browse talent profiles directly."
-    },
-    {
-      question: "Is Zion really free to use?",
-      answer: "Yes! Zion is completely free for both talent and clients. We believe in democratizing access to tech talent and services. There are no hidden fees or subscription costs."
-    },
-    {
-      question: "How do I ensure quality of work?",
-      answer: "Zion features a comprehensive review and rating system, portfolio showcases, and verified profiles. You can review past work, check references, and communicate directly with talent before hiring."
-    },
-    {
-      question: "What payment methods are accepted?",
-      answer: "Zion supports multiple payment methods including credit cards, bank transfers, and digital wallets. All payments are processed securely through our platform with escrow protection for your peace of mind."
-    },
-    {
-      question: "Can I hire talent for long-term projects?",
-      answer: "Absolutely! Zion supports both short-term and long-term engagements. You can hire talent for one-time projects, ongoing work, or full-time positions depending on your needs."
-    },
-    {
-      question: "How do I protect my intellectual property?",
-      answer: "Zion includes built-in IP protection through our terms of service and contract templates. All agreements clearly define ownership rights, confidentiality requirements, and data protection measures."
-    },
-    {
-      question: "What if I'm not satisfied with the work?",
-      answer: "Zion has a dispute resolution system in place. If you're not satisfied with the work, our team will help mediate the situation and ensure fair resolution for all parties involved."
-    },
-    {
-      question: "Do you offer enterprise solutions?",
-      answer: "Yes! Zion provides enterprise-grade solutions for larger organizations, including dedicated account management, custom integrations, bulk hiring capabilities, and specialized support services."
-    },
-    {
-      question: "How can I stay updated with Zion news?",
-      answer: "Subscribe to our newsletter, follow us on social media, or check our blog regularly for updates on new features, success stories, and industry insights."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-zion-blue-dark">
-      <SEO 
-        title="FAQ - Zion Tech Group" 
-        description="Find answers to frequently asked questions about Zion Tech Group, the world's first free AI and tech marketplace."
-        keywords="FAQ, Zion Tech Group, AI marketplace, tech services, help, support"
-        canonical="https://ziontechgroup.com/faq"
-      />
-      
-      <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-xl text-zion-slate-light">
-              Everything you need to know about Zion Tech Group
-            </p>
-          </div>
-
-          <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-zion-blue-light">
-                  <AccordionTrigger className="text-left text-white hover:text-zion-cyan transition-colors">
-=======
-              Find answers to the most common questions about Zion's AI and technology marketplace
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto mb-16">
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-zion-blue-light">
-                  <AccordionTrigger className="text-left text-white hover:text-zion-cyan">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-zion-slate-light">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
+            <div className="grid gap-8">
+              {faqData.map((category, categoryIndex) => (
+                <Card key={categoryIndex} className="border-zion-purple/20">
+                  <CardHeader>
+                    <CardTitle className="text-2xl text-zion-cyan">
+                      {category.category}
+                    </CardTitle>
+                    <CardDescription>
+                      Common questions about {category.category.toLowerCase()}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Accordion type="single" collapsible className="w-full">
+                      {category.questions.map((item, questionIndex) => (
+                        <AccordionItem 
+                          key={questionIndex} 
+                          value={`item-${categoryIndex}-${questionIndex}`}
+                          className="border-zion-purple/10"
+                        >
+                          <AccordionTrigger className="text-left hover:text-zion-cyan transition-colors">
+                            {item.question}
+                          </AccordionTrigger>
+                          <AccordionContent className="text-zion-slate-light leading-relaxed">
+                            {item.answer}
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
+                  </CardContent>
+                </Card>
               ))}
-            </Accordion>
+            </div>
           </div>
-  return (
+        </section>
+
+        {/* Contact Support Section */}
+        <section className="bg-zion-blue-dark py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Still Have Questions?
+            </h2>
+            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Can't find what you're looking for? Our support team is here to help you with any questions or concerns.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 py-3 bg-zion-cyan text-zion-blue-dark font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors"
+              >
+                Contact Support
+              </a>
+              <a
+                href="/help-center"
+                className="inline-flex items-center justify-center px-6 py-3 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-colors"
+              >
+                Visit Help Center
+              </a>
+            </div>
+}
     <>
       <SEO
-        title="Frequently Asked Questions | Zion Tech Group"
-        description="Find answers to common questions about Zion Tech Group, the world's first free AI and tech marketplace."
-        keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services"
+        title="FAQ - Frequently Asked Questions | Zion Tech Group"
+        description="Find answers to common questions about Zion Tech Group's AI and technology marketplace platform."
+        keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech platform"
+    <>
+      <SEO
+        title="FAQ - Frequently Asked Questions | Zion Tech Group"
+        description="Find answers to common questions about Zion's AI and tech marketplace platform, services, and how to get started."
+        keywords="FAQ, help, support, Zion marketplace, AI services, tech talent"
         canonical="https://ziontechgroup.com/faq"
       />
-      
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
           <div className="text-center mb-16">
             <GradientHeading>Frequently Asked Questions</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Everything you need to know about Zion Tech Group, the world's premier AI and tech marketplace
+              Find answers to common questions about Zion's platform, services, and how to get started
             </p>
           </div>
 
           {/* FAQ Categories */}
-          <div className="space-y-12">
-            {faqData.map((category, categoryIndex) => (
+          <div className="space-y-12 mb-16">
+            {faqCategories.map((category, categoryIndex) => (
               <Card key={categoryIndex} className="bg-zion-blue-dark border-zion-blue-light">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-zion-cyan">
-                    <category.icon className="h-6 w-6" />
-                    {category.category}
-                  </CardTitle>
+                  <div className="flex items-center gap-3">
+                    <category.icon className="h-6 w-6 text-zion-cyan" />
+                    <CardTitle className="text-white text-2xl">{category.title}</CardTitle>
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <Accordion type="single" collapsible className="w-full">
-                    {category.questions.map((item, itemIndex) => (
-                      <AccordionItem key={itemIndex} value={`item-${categoryIndex}-${itemIndex}`}>
-                        <AccordionTrigger className="text-left text-white hover:text-zion-cyan">
+                    {category.questions.map((item, questionIndex) => (
+                      <AccordionItem key={questionIndex} value={`item-${categoryIndex}-${questionIndex}`}>
+                        <AccordionTrigger className="text-left text-zion-slate-light hover:text-zion-cyan">
                           {item.question}
                         </AccordionTrigger>
                         <AccordionContent className="text-zion-slate-light">
@@ -795,211 +562,160 @@ export default function FAQ() {
             ))}
           </div>
 
-          {/* Contact Support */}
-          <div className="mt-16 text-center">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>
-              <p className="text-zion-slate-light mb-6">
-                Our support team is here to help you get the most out of Zion Tech Group
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:support@ziontechgroup.com"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple hover:bg-zion-purple-light text-white font-medium rounded-lg transition-colors"
-                >
-                  <MessageCircle className="h-4 w-4 mr-2" />
-                  Email Support
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple hover:bg-zion-purple/10 font-medium rounded-lg transition-colors"
-                >
-          {/* FAQ Items */}
-          <div className="max-w-4xl mx-auto space-y-4">
-            {filteredFAQs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden"
-              >
-                <button
-                  onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-zion-blue-light/20 transition-colors"
-                >
-                  <span className="text-white font-medium text-lg">{faq.question}</span>
-                  {openItems.has(index) ? (
-                    <ChevronUp className="h-5 w-5 text-zion-cyan" />
-                  ) : (
-                    <ChevronDown className="h-5 w-5 text-zion-cyan" />
-                  )}
-                </button>
-                {openItems.has(index) && (
-                  <div className="px-6 pb-4">
-                    <p className="text-zion-slate-light leading-relaxed">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
           {/* Contact Section */}
-          <div className="mt-16 text-center">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-white mb-4">Still have questions?</h3>
-              <p className="text-zion-slate-light mb-6">
-                Can't find what you're looking for? Our support team is here to help.
-              </p>
-              <a
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors"
-              >
-                Contact Support
-              </a>
-=======
-          
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Still have questions?</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8">Still Need Help?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our support team is here to help you get the answers you need.
+              Can't find the answer you're looking for? Our support team is here to help you get the most out of Zion.
             </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
+              {contactMethods.map((method, index) => (
+                <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-2">
+                      <method.icon className="h-5 w-5 text-zion-cyan" />
+                      <CardTitle className="text-white">{method.title}</CardTitle>
+                    </div>
+                    <CardDescription className="text-zion-slate-light">
+                      {method.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <a 
+                      href={`mailto:${method.contact}`}
+                      className="text-zion-cyan hover:text-zion-purple transition-colors font-medium"
+                    >
+                      {method.contact}
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>
+              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                 <Link to="/contact">Contact Support</Link>
               </Button>
-              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white" asChild>
-                <Link to="/help">Help Center</Link>
+              <Button asChild variant="outline" className="border-zion-blue-light text-white hover:bg-zion-blue-light hover:text-zion-blue">
+                <Link to="/help-center">Visit Help Center</Link>
               </Button>
-=======
-                  Contact Us
-                </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">Quick Navigation</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <h4 className="text-white font-semibold mb-3">Getting Started</h4>
+                <div className="space-y-2">
+                  <Link to="/signup" className="block text-zion-cyan hover:text-zion-purple transition-colors">Create Account</Link>
+                  <Link to="/about" className="block text-zion-cyan hover:text-zion-purple transition-colors">About Zion</Link>
+                  <Link to="/how-it-works" className="block text-zion-cyan hover:text-zion-purple transition-colors">How It Works</Link>
+                </div>
+              </div>
+              <div className="text-center">
+                <h4 className="text-white font-semibold mb-3">Services</h4>
+                <div className="space-y-2">
+                  <Link to="/marketplace" className="block text-zion-cyan hover:text-zion-purple transition-colors">Marketplace</Link>
+                  <Link to="/services" className="block text-zion-cyan hover:text-zion-purple transition-colors">Services</Link>
+                  <Link to="/talent" className="block text-zion-cyan hover:text-zion-purple transition-colors">Find Talent</Link>
+                </div>
+              </div>
+              <div className="text-center">
+                <h4 className="text-white font-semibold mb-3">Support</h4>
+                <div className="space-y-2">
+                  <Link to="/contact" className="block text-zion-cyan hover:text-zion-purple transition-colors">Contact Us</Link>
+                  <Link to="/terms" className="block text-zion-cyan hover:text-zion-purple transition-colors">Terms of Service</Link>
+                  <Link to="/privacy" className="block text-zion-cyan hover:text-zion-purple transition-colors">Privacy Policy</Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
 }
-=======
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { FaqSection } from "@/components/FaqSection";
-import { Footer } from "@/components/Footer";
-
-export default function FAQ() {
-  return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Frequently Asked Questions - Zion Tech Group" 
-        description="Find answers to common questions about Zion Tech Group's AI and tech marketplace services."
-        keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services"
+        title="FAQ - Zion Tech Group" 
+        description="Find answers to frequently asked questions about Zion Tech Group's AI and tech marketplace services."
+        keywords="FAQ, Zion Tech Group, AI marketplace, tech services, support"
         canonical="https://ziontechgroup.com/faq"
       />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">
             Frequently Asked Questions
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Find answers to the most common questions about Zion Tech Group's marketplace, services, and platform.
+            Get answers to common questions about Zion Tech Group's AI and tech marketplace platform
           </p>
         </div>
 
-        <FaqSection />
-      </div>
+        <div className="max-w-4xl mx-auto">
+          <Card className="bg-zion-blue-dark border-zion-purple/20">
+            <CardHeader>
+              <CardTitle className="text-zion-cyan text-2xl">General Questions</CardTitle>
+              <CardDescription className="text-zion-slate-light">
+                Everything you need to know about our platform and services
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Accordion type="single" collapsible className="w-full">
+                {faqData.map((item, index) => (
+                  <AccordionItem key={index} value={`item-${index}`}>
+                    <AccordionTrigger className="text-left text-white hover:text-zion-cyan">
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-zion-slate-light">
+                      {item.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </CardContent>
+          </Card>
 
-      <Footer />
-    </div>
-  );
-}
-=======
-              {faqs.map((category) => (
-                <button
-                  key={category.category}
-                  onClick={() => setActiveCategory(category.category)}
-                  className={`px-6 py-2 rounded-full transition-colors ${
-                    activeCategory === category.category
-                      ? 'bg-zion-purple text-white'
-                      : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'
-                  }`}
-                >
-                  {category.category}
-                </button>
-              ))}
-            </div>
-
-            {/* FAQ Accordion */}
-            <div className="max-w-4xl mx-auto">
-              {filteredFaqs.map((category) => (
-                <div key={category.category} className="mb-12">
-                  <h2 className="text-2xl font-bold text-zion-cyan mb-6 text-center">
-                    {category.category}
-                  </h2>
-                  <Accordion type="single" collapsible className="space-y-4">
-                    {category.questions.map((faq, index) => (
-                      <AccordionItem
-                        key={index}
-                        value={`item-${category.category}-${index}`}
-                        className="bg-zion-blue-light/10 border border-zion-purple/20 rounded-lg px-6"
-                      >
-                        <AccordionTrigger className="text-left text-white hover:text-zion-cyan py-4">
-                          {faq.question}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-zion-slate-light pb-4">
-                          {faq.answer}
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </div>
-              ))}
-            </div>
-
-            {/* Still Have Questions */}
-            <div className="text-center mt-16">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Still have questions?
-              </h3>
-              <p className="text-zion-slate-light mb-6">
-                Can't find what you're looking for? Our support team is here to help.
-=======
           <div className="mt-12 text-center">
-            <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Still have questions?
-              </h2>
-              <p className="text-zion-slate-light mb-6">
-                Can't find the answer you're looking for? Our support team is here to help.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors"
-                >
-                  Contact Support
-                </a>
-                <a
-                  href="/blog"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple font-medium rounded-lg hover:bg-zion-purple/10 transition-colors"
-                >
-                  Visit Our Blog
-                </a>
-              </div>
-            </div>
+            <Card className="bg-zion-blue-dark border-zion-purple/20">
+              <CardContent className="pt-6">
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  Still have questions?
+                </h3>
+                <p className="text-zion-slate-light mb-6">
+                  Can't find what you're looking for? Our support team is here to help.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors"
+                  >
+                    Contact Support
+                  </a>
+                  <a
+                    href="/help"
+                    className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple font-medium rounded-lg hover:bg-zion-purple/10 transition-colors"
+                  >
+                    Help Center
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
-      </main>
-
-      <Footer />
+      </div>
     </div>
   );
 }
-=======
-    </>
-  );
-}
-=======
-    </>
-  );
 }

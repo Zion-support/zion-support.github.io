@@ -1,11 +1,57 @@
 import React from 'react';
+<<<<<<< HEAD
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import { SERVICES } from '@/data/servicesData';
 import { slugify } from '@/lib/slugify';
 import Custom404 from '../404';
 import type { ProductListing } from '@/types/listings';
+=======
+import Head from 'next/head';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+import Button from '../../components/ui/Button';
+import Card from '../../components/ui/Card';
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+<<<<<<< HEAD
+import { innovativeRealMicroSaasServices2025 } from '../../data/2025-innovative-micro-saas-services';
+import { innovativeITServicesEnhanced2025 } from '../../data/2025-innovative-it-services-enhanced';
 
-type Service = typeof enhancedRealMicroSaasServices[number];
+type Service = typeof innovativeRealMicroSaasServices2025[number];
+=======
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { extraServices } from '../../data/extra-services';
+import { additionalEnhancedServices } from '../../data/additional-real-services';
+import { newlyAddedServices } from '../../data/newly-added-services';
+import { curatedMarketServices } from '../../data/curated-market-services';
+import { new2025Services } from '../../data/new-2025-services';
+import { marketValidatedServices } from '../../data/market-validated-services';
+import { moreRealServices2025 } from '../../data/more-real-services-2025';
+import { verified2025Additions } from '../../data/verified-2025-additions';
+import { realServicesQ12025 } from '../../data/real-services-q1-2025';
+import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
+import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
+// import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
+// import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
+// import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
+// import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
+// import { realServicesQ22025 } from '../../data/real-services-q2-2025';
+// import { realServicesQ32025 } from '../../data/real-services-q3-2025';
+import { realQ4Services2025, } from '../../data/real-2025-q4-additions';
+import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
+// import { realMarketServicesExtended } from '../../data/real-market-services-extended';
+// import { real2026Additions } from '../../data/real-2026-additions';
+import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
+// import { added2026Q2Services } from '../../data/added-2026-q2-services';
+import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
+import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
+import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
+import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
+import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
+import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
+import { real2027Q4Additions } from '../../data/real-2027-q4-additions';
+>>>>>>> origin/main
+
+type Service = typeof ultimateInnovativeServices2026[number];
+>>>>>>> origin/main
 
 const contactInfo = {
 	mobile: '+1 302 464 0950',
@@ -15,6 +61,10 @@ const contactInfo = {
 };
 
 function getAllServices(): Service[] {
+<<<<<<< HEAD
+	return innovativeRealMicroSaasServices2025
+		.concat(innovativeITServicesEnhanced2025 as Service[]);
+=======
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
@@ -26,8 +76,26 @@ function getAllServices(): Service[] {
 		.concat(realServicesQ12025 as unknown as Service[])
 		.concat(realEnterpriseServices2025 as unknown as Service[])
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
-		.concat(realMarketAugmentations2025 as unknown as Service[])
-		.concat(augmentedRealServices2025 as unknown as Service[]);
+		// .concat(realMarketAugmentations2025 as unknown as Service[])
+		// .concat(additionalLiveServices2025 as unknown as Service[])
+		// .concat(real2025Q2Additions as unknown as Service[])
+		// .concat(augmentedServicesBatch3 as unknown as Service[])
+		// .concat(realServicesQ22025 as unknown as Service[])
+		// .concat(realServicesQ32025 as unknown as Service[])
+		.concat(realQ4Services2025 as unknown as Service[])
+		.concat(real2025Q4Additions as unknown as Service[])
+		// .concat(realMarketServicesExtended as unknown as Service[])
+		// .concat(real2026Additions as unknown as Service[])
+		.concat(real2026Q1Additions as unknown as Service[])
+		// .concat(added2026Q2Services as unknown as Service[])
+		.concat(real2026Q3Additions as unknown as Service[])
+		.concat(real2026Q4Additions as unknown as Service[])
+		.concat(real2026Q4NewServices as unknown as Service[])
+		.concat(real2027Q1Additions as unknown as Service[])
+		.concat(real2027Q2Additions as unknown as Service[])
+		.concat(real2027Q3Additions as unknown as Service[])
+		.concat(real2027Q4Additions as unknown as Service[]);
+>>>>>>> origin/main
 }
 
 const ServicePage: React.FC<ServiceProps> = ({ service }) => {

@@ -20,20 +20,38 @@
   },
   "nav": {
     "home": "Home",
-    "marketplace": "Marketplace",
     "services": "Services",
+    "marketplace": "Marketplace",
+<<<<<<< HEAD
+    "services": "Services",
+=======
+<<<<<<< HEAD:dist/locales/en-US/common.json
+    "micro-saas": "Micro SAAS",
+=======
+    "services": "Services",
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b:src/i18n/locales/en/translation.json
+>>>>>>> origin/main
     "categories": "Categories",
     "services": "Services",
     "micro-saas": "Micro SAAS",
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
+    "about": "About",
     "dashboard": "Dashboard",
     "messages": "Messages",
     "post_job": "Post Job",
     "analytics": "Analytics",
+<<<<<<< HEAD:dist/locales/en-US/common.json
     "faq": "FAQ",
     "help": "Help Center"
+=======
+    "ai-hiring": "AI Hiring",
+    "help": "Help Center",
+    "faq": "FAQ",
+    "about": "About",
+    "contact": "Contact"
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b:src/i18n/locales/en/translation.json
   },
   "auth": {
     "login": "Login",
