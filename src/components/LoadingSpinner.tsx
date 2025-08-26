@@ -1,101 +1,49 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'default' | 'dots' | 'pulse' | 'bars';
+  size?: 'small' | 'medium' | 'large';
+  color?: 'white' | 'blue' | 'gray';
   className?: string;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  variant = 'default',
-  className = '' 
+  size = 'medium', 
+  color = 'white',
+  className = ''
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    small: 'w-4 h-4',
+    medium: 'w-8 h-8',
+    large: 'w-12 h-12'
   };
 
-  const renderSpinner = () => {
-    switch (variant) {
-      case 'dots':
-        return (
-          <div className="flex space-x-1">
-            {[0, 1, 2].map((i) => (
-              <motion.div
-                key={i}
-                className={`${sizeClasses[size]} bg-blue-500 rounded-full`}
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.5, 1, 0.5]
-                }}
-                transition={{
-                  duration: 1.4,
-                  repeat: Infinity,
-                  delay: i * 0.2
-                }}
-              />
-            ))}
-          </div>
-        );
-
-      case 'pulse':
-        return (
-          <motion.div
-            className={`${sizeClasses[size]} bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full`}
-            animate={{
-              scale: [1, 1.1, 1],
-              opacity: [0.7, 1, 0.7]
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-        );
-
-      case 'bars':
-        return (
-          <div className="flex space-x-1">
-            {[0, 1, 2, 3].map((i) => (
-              <motion.div
-                key={i}
-                className={`w-1 ${size === 'sm' ? 'h-4' : size === 'md' ? 'h-8' : 'h-12'} bg-blue-500 rounded-full`}
-                animate={{
-                  scaleY: [1, 1.5, 1],
-                  opacity: [0.5, 1, 0.5]
-                }}
-                transition={{
-                  duration: 1.2,
-                  repeat: Infinity,
-                  delay: i * 0.1
-                }}
-              />
-            ))}
-          </div>
-        );
-
-      default:
-        return (
-          <motion.div
-            className={`${sizeClasses[size]} border-2 border-blue-200 border-t-blue-500 rounded-full`}
-            animate={{ rotate: 360 }}
-            transition={{
-              duration: 1,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-          />
-        );
-    }
+  const colorClasses = {
+    white: 'text-white',
+    blue: 'text-blue-500',
+    gray: 'text-gray-500'
   };
 
   return (
-    <div className={`flex items-center justify-center ${className}`}>
-      {renderSpinner()}
+    <div className={`inline-block animate-spin ${sizeClasses[size]} ${colorClasses[color]} ${className}`}>
+      <svg
+        className="w-full h-full"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          className="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          strokeWidth="4"
+        />
+        <path
+          className="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+        />
+      </svg>
     </div>
   );
 };

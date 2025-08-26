@@ -6,28 +6,22 @@ Allow: /
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# Allow all pages
+# Allow all crawlers
 Allow: /about
-Allow: /contact
 Allow: /services
-Allow: /services/
-Allow: /ai-autonomous-
+Allow: /contact
 Allow: /blog
 Allow: /careers
-Allow: /comprehensive-pricing
-Allow: /comprehensive-pricing-2025
-Allow: /innovative-services-2025
-Allow: /services-showcase
+Allow: /faq
 Allow: /privacy
 Allow: /terms
-Allow: /sitemap
 
-# Disallow admin and internal pages
+# Disallow admin and private areas
 Disallow: /admin/
-Disallow: /_next/
-Disallow: /api/
-Disallow: /dashboard/
 Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
 
-# Crawl delay
+# Crawl delay (optional)
 Crawl-delay: 1

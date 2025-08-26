@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Login from '@/pages/Login';
 import Signup from '@/pages/Signup';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { ProtectedRoute } from '../ProtectedRoute';
 
 const AuthRoutes = () => {
   return (
