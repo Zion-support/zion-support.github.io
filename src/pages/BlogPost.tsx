@@ -76,6 +76,7 @@ export default function BlogPost() {
         ogImage={post.featuredImage}
         canonical={`https://ziontechgroup.com/blog/${post.slug}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         keywords={post.tags?.join(', ') || ''}
         image={post.featuredImage}
@@ -87,6 +88,8 @@ export default function BlogPost() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-24ce
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
       />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">

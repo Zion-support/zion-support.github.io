@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
@@ -16,6 +17,20 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, Send, Building, Users } from
 import React from 'react';
 import ContactForm from '../components/ContactForm';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
+=======
+import { useState } from "react";
+
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card } from "@/components/ui/card";
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { ChatAssistant } from "@/components/ChatAssistant";
+import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({

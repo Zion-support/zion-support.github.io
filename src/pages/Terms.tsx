@@ -15,6 +15,10 @@ import { Helmet } from 'react-helmet-async';
 import { AppLayout } from "@/layout/AppLayout";
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 import { SEO } from "@/components/SEO";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
 import TermsOfService from "@/legal/TermsOfService";
 import { AppLayout } from "@/layout";
 >>>>>>> origin/cursor/website-audit-and-enhancement-50d5
@@ -1105,6 +1109,7 @@ const Terms: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
@@ -1118,6 +1123,8 @@ const Terms: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-45a9
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
         canonical="https://ziontechgroup.com/terms"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -1125,11 +1132,15 @@ const Terms: React.FC = () => {
           <TermsOfService />
         </div>
       </main>
+<<<<<<< HEAD
     </AppLayout>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-50d5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
+=======
+    </>
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
   );
 };
 

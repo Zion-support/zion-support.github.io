@@ -217,6 +217,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       key: 'services',
       href: '/services',
@@ -235,6 +236,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/micro-saas-services',
       matches: (path: string) => path.startsWith('/micro-saas-services')
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
+=======
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services')
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
     },
     {
       key: 'categories',
@@ -347,6 +353,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       key: 'about',
       href: '/about',
       matches: (path: string) => path === '/about'
@@ -368,10 +375,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
       name: t('nav.community')
 >>>>>>> origin/cursor/website-audit-and-enhancement-aa85
+=======
+      key: 'about',
+      href: '/about',
+      matches: (path: string) => path === '/about'
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
     },
     {
       key: 'blog',
       href: '/blog',
+<<<<<<< HEAD
 <<<<<<< HEAD
       matches: (path: string) => path.startsWith('/blog')
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
@@ -428,6 +441,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/blog',
       matches: (path: string) => path.startsWith('/blog')
 >>>>>>> origin/cursor/website-audit-and-enhancement-beb3
+=======
+      matches: (path: string) => path.startsWith('/blog')
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
     }
   ];
 

@@ -11,9 +11,12 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-45a9
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
 
 # Allow all crawlers
 Allow: /about

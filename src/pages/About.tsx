@@ -1,12 +1,16 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { AppLayout } from "@/layout/AppLayout";
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
+=======
+
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -108,6 +112,7 @@ export default function About() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
@@ -121,6 +126,8 @@ export default function About() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-45a9
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
         canonical="https://ziontechgroup.com/about"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -314,6 +321,7 @@ export default function About() {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
@@ -356,6 +364,9 @@ export default function About() {
       </Helmet>
       
       <EnhancedAbout />
+=======
+      </main>
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
     </>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 =======

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,9 @@ import { Helmet } from 'react-helmet-async';
 =======
 import { AppLayout } from "@/layout/AppLayout";
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
+=======
+
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { AppLayout } from "@/layout";
@@ -137,6 +141,7 @@ const Privacy: React.FC = () => {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       </section>
@@ -1195,6 +1200,9 @@ const Privacy: React.FC = () => {
           </div>
         </section>
       </div>
+=======
+      </main>
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
     </>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df

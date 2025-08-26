@@ -565,6 +565,7 @@ const Careers: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
@@ -585,6 +586,8 @@ export default function Careers() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-45a9
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
         canonical="https://ziontechgroup.com/careers"
       />
       <AppHeader />

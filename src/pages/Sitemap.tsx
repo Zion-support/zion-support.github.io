@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -201,6 +202,9 @@ import { AppLayout } from "@/layout/AppLayout";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 >>>>>>> origin/cursor/website-audit-and-enhancement-b91b
+=======
+
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
 import { SEO } from "@/components/SEO";
 import { completeSitemap } from "@/config/sitemap";
 import { Link } from "react-router-dom";
@@ -758,6 +762,7 @@ const Sitemap: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
@@ -771,6 +776,8 @@ const Sitemap: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-45a9
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
         canonical="https://ziontechgroup.com/sitemap"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -839,11 +846,15 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </main>
+<<<<<<< HEAD
     </AppLayout>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-50d5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
+=======
+    </>
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
   );
 };
 
