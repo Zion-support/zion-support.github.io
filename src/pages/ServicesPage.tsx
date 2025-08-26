@@ -38,7 +38,11 @@ import {
   Satellite
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
-import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { ADVANCED_ENTERPRISE_SOLUTIONS_2025 } from "@/data/advancedEnterpriseSolutions2025";
+import { NEXT_GEN_AI_SERVICES_2025 } from "@/data/nextGenAIServices2025";
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/specializedIndustrySolutions2025";
+import { IOT_EDGE_COMPUTING_SERVICES_2025 } from "@/data/iotEdgeComputingServices2025";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -80,8 +84,21 @@ export default function ServicesPage() {
     { id: 'popular', name: 'Most Popular' }
   ];
 
+  // Combine all services
+  const allServices = [
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...ADVANCED_ENTERPRISE_SOLUTIONS_2025,
+    ...NEXT_GEN_AI_SERVICES_2025,
+    ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025,
+    ...IOT_EDGE_COMPUTING_SERVICES_2025
+  ];
+
   // Filter and sort services
+<<<<<<< HEAD
   const filteredServices = ALL_INNOVATIVE_SERVICES.filter(service => {
+=======
+  const filteredServices = allServices.filter(service => {
+>>>>>>> cursor/add-new-services-2025
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -178,7 +195,11 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
+<<<<<<< HEAD
                 <div className="text-3xl font-bold text-zion-cyan mb-2">{ALL_INNOVATIVE_SERVICES.length}+</div>
+=======
+                <div className="text-3xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
+>>>>>>> cursor/add-new-services-2025
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               <motion.div 
@@ -268,7 +289,11 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-zion-slate-light">
+<<<<<<< HEAD
               Showing {sortedServices.length} of {ALL_INNOVATIVE_SERVICES.length} services
+=======
+              Showing {sortedServices.length} of {allServices.length} services
+>>>>>>> cursor/add-new-services-2025
             </div>
           </motion.div>
         </div>
@@ -404,6 +429,177 @@ export default function ServicesPage() {
               </motion.div>
             )}
           </AnimatePresence>
+        </div>
+      </section>
+
+      {/* Service Categories Overview */}
+      <section className="py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
+        <div className="container-responsive">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="heading-responsive font-bold mb-4">
+              <span className="text-gradient">Comprehensive Service Portfolio</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Explore our complete range of innovative technology solutions across multiple domains
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Micro SAAS Services */}
+            <motion.div
+              className="card-futuristic text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Rocket className="w-10 h-10 text-white" />
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                Micro SAAS Services
+              </h3>
+              
+              <p className="text-zion-slate-light mb-4 leading-relaxed">
+                {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} innovative micro SAAS solutions for modern businesses
+              </p>
+              
+              <div className="text-zion-cyan font-bold mb-4">
+                Starting from $99/month
+              </div>
+            </motion.div>
+
+            {/* Advanced Enterprise Solutions */}
+            <motion.div
+              className="card-futuristic text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-zion-purple to-zion-red rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Server className="w-10 h-10 text-white" />
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-purple transition-colors">
+                Enterprise Solutions
+              </h3>
+              
+              <p className="text-zion-slate-light mb-4 leading-relaxed">
+                {ADVANCED_ENTERPRISE_SOLUTIONS_2025.length} advanced enterprise-grade solutions for large organizations
+              </p>
+              
+              <div className="text-zion-purple font-bold mb-4">
+                Starting from $5,000/month
+              </div>
+            </motion.div>
+
+            {/* Next-Gen AI Services */}
+            <motion.div
+              className="card-futuristic text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-zion-green to-zion-cyan rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Brain className="w-10 h-10 text-white" />
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-green transition-colors">
+                Next-Gen AI Services
+              </h3>
+              
+              <p className="text-zion-slate-light mb-4 leading-relaxed">
+                {NEXT_GEN_AI_SERVICES_2025.length} cutting-edge AI and machine learning solutions
+              </p>
+              
+              <div className="text-zion-green font-bold mb-4">
+                Starting from $2,500/month
+              </div>
+            </motion.div>
+
+            {/* Specialized Industry Solutions */}
+            <motion.div
+              className="card-futuristic text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-zion-orange to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Globe className="w-10 h-10 text-white" />
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-orange transition-colors">
+                Industry Solutions
+              </h3>
+              
+              <p className="text-zion-slate-light mb-4 leading-relaxed">
+                {SPECIALIZED_INDUSTRY_SOLUTIONS_2025.length} specialized solutions for healthcare, finance, manufacturing, and retail
+              </p>
+              
+              <div className="text-zion-orange font-bold mb-4">
+                Starting from $3,000/month
+              </div>
+            </motion.div>
+
+            {/* IoT & Edge Computing */}
+            <motion.div
+              className="card-futuristic text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Cpu className="w-10 h-10 text-white" />
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-blue transition-colors">
+                IoT & Edge Computing
+              </h3>
+              
+              <p className="text-zion-slate-light mb-4 leading-relaxed">
+                {IOT_EDGE_COMPUTING_SERVICES_2025.length} IoT platforms and edge computing solutions for smart infrastructure
+              </p>
+              
+              <div className="text-zion-blue font-bold mb-4">
+                Starting from $1,500/month
+              </div>
+            </motion.div>
+
+            {/* Specialized Services */}
+            <motion.div
+              className="card-futuristic text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-zion-pink to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-10 h-10 text-white" />
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-pink transition-colors">
+                Specialized Services
+              </h3>
+              
+              <p className="text-zion-slate-light mb-4 leading-relaxed">
+                {SPECIALIZED_SERVICES.length} specialized technology solutions for unique business needs
+              </p>
+              
+              <div className="text-zion-pink font-bold mb-4">
+                Starting from $2,000/month
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
