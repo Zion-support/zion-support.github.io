@@ -44,15 +44,14 @@ import {
 } from 'lucide-react';
 import { ENHANCED_INNOVATIVE_SERVICES } from '@/data/enhancedInnovativeServices';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';
+
 import { motion } from 'framer-motion';
 import EnhancedSEO from '@/components/EnhancedSEO';
 
 // Combine all services
 const ALL_SERVICES = [
   ...ENHANCED_INNOVATIVE_SERVICES,
-  ...COMPREHENSIVE_SERVICES,
-  ...INNOVATIVE_MICRO_SAAS_SERVICES
+  ...COMPREHENSIVE_SERVICES
 ] as any[];
 
 const categoryIcons = {
@@ -216,6 +215,7 @@ export default function ComprehensiveServicesOverview() {
           title="Comprehensive Services Overview | Zion Tech Group"
           description="Explore our complete portfolio of AI-powered services, IT solutions, and innovative micro SAAS platforms. From legal tech to quantum computing, discover how we can transform your business."
           keywords="AI services, IT solutions, micro SAAS, cybersecurity, quantum computing, legal tech, fintech, healthcare AI, supply chain, energy management, comprehensive services"
+          type="website"
           image="/images/comprehensive-services-overview-og.jpg"
           url="https://ziontechgroup.com/comprehensive-services-overview"
         />

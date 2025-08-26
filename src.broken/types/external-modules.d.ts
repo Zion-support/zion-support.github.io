@@ -269,7 +269,7 @@ declare module 'clsx' {
   export type ClassValue = any;
   export default function clsx(...classes: ClassValue[]): string;
 }
-declare module 'embla-carousel-react';
+
 declare module 'framer-motion';
 declare module 'i18next';
 declare module 'i18next-browser-languagedetector';

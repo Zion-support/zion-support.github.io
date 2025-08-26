@@ -69,7 +69,7 @@ export default defineConfig({
           ],
           
           // Animation and motion libraries
-          'animation-vendor': ['framer-motion', 'embla-carousel-react'],
+          'animation-vendor': ['framer-motion'],
           
           // Form and validation libraries
           'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
@@ -154,7 +154,6 @@ export default defineConfig({
       '@radix-ui/react-toast',
       '@radix-ui/react-tooltip',
       'framer-motion',
-      'embla-carousel-react',
       'react-hook-form',
       '@hookform/resolvers',
       'zod',

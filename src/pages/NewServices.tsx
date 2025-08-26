@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
 import { ADVANCED_INNOVATIVE_SERVICES } from '../data/advancedInnovativeServices';
-import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
+
 
 export function NewServices() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -12,8 +12,7 @@ export function NewServices() {
   // Combine all services
   const allServices = [
     ...COMPREHENSIVE_SERVICES,
-    ...ADVANCED_INNOVATIVE_SERVICES,
-    ...EMERGING_TECH_SERVICES
+    ...ADVANCED_INNOVATIVE_SERVICES
   ];
   
   // Get unique categories
