@@ -54,7 +54,11 @@ jobs:
         run: npm ci
 
       - name: Run tests
-        run: npm test
+        run: npm run test:ci
+        continue-on-error: true
+
+      - name: Security scan
+        run: npm run security:scan
         continue-on-error: true
 
 

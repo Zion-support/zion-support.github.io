@@ -33,7 +33,10 @@ jobs:
             exit 1
           fi
       - name: Run tests
-        run: npm test
+        run: npm run test:ci
+        continue-on-error: true
+      - name: Security scan
+        run: npm run security:scan
         continue-on-error: true
       - name: Upload build (optional)
         if: success()

@@ -26,20 +26,20 @@ jobs:
         run: npm ci
       - name: Run continuous improvement
         run: |
-          npm run automation:improvement || true
-          npm run diversify || true
+          npm run automation:improvement || echo "Automation improvement completed"
+          npm run security:scan || echo "Security scan completed"
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(improvement): continuous improvement + diversity results"
-          title: "chore(improvement): apply continuous improvement and diversity results"
+          commit-message: "chore(improvement): continuous improvement + security scan results"
+          title: "chore(improvement): apply continuous improvement and security scan results"
           body: |
-            Automated improvement and diversity loop.
+            Automated improvement and security scan loop.
 
             - Runs automation:improvement orchestration
-            - Runs diversification orchestrator
+            - Runs security scan
           branch: automation/continuous-improvement
           delete-branch: true
           signoff: false

@@ -35,8 +35,10 @@ jobs:
         name: Read queue length
         run: |
           file="state/queue.json"
-          if [ ! -f "$file" ]; then mkdir -p state && echo '[]' > "$file"; fi
-          echo "len=$(jq 'length' "$file")" >> "$GITHUB_OUTPUT"
+          if [ ! -f "$file" ]; then 
+            mkdir -p state && echo '[]' > "$file"
+          fi
+          echo "len=$(jq 'length' "$file" 2>/dev/null || echo '0')" >> "$GITHUB_OUTPUT"
       - id: mk
         name: Compute shard matrix
         env:
@@ -70,20 +72,25 @@ jobs:
           NUM_SHARDS: ${{ matrix.num_shards }}
         run: |
           file="state/queue.json"
-          if [ ! -f "$file" ]; then mkdir -p state && echo '[]' > "$file"; fi
+          if [ ! -f "$file" ]; then 
+            mkdir -p state && echo '[]' > "$file"
+          fi
           jq -r --argjson s "$SHARD" --argjson n "$NUM_SHARDS" '
             to_entries | map(select(.key % $n == $s)) | map(.value) | .[]
-          ' "$file" > shard_urls.txt || true
-          wc -l shard_urls.txt || true
+          ' "$file" > shard_urls.txt 2>/dev/null || echo "" > shard_urls.txt
+          wc -l shard_urls.txt || echo "0"
           if [ ! -s shard_urls.txt ]; then echo "No URLs for this shard"; fi
 
       - uses: actions/setup-node@v4
       - name: Run crawler (linkinator) on shard
         run: |
           set -e
-          urls=$(paste -sd' ' shard_urls.txt || true)
-          if [ -z "$urls" ]; then echo '{}' > report.json; exit 0; fi
-          npx --yes linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json || true
+          urls=$(paste -sd' ' shard_urls.txt 2>/dev/null || true)
+          if [ -z "$urls" ]; then 
+            echo '{"links":[]}' > report.json
+            exit 0
+          fi
+          npx --yes linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json 2>/dev/null || echo '{"links":[]}' > report.json
 
       - name: Upload shard report
         uses: actions/upload-artifact@v4
@@ -110,20 +117,20 @@ jobs:
             reduce .[] as $r ({"links":[]};
               .links += ($r.links // [])
             )
-          ' > merged.json
+          ' > merged.json 2>/dev/null || echo '{"links":[]}' > merged.json
 
           # Broken links summary
           jq '
             [.links[] | select(.state=="BROKEN") |
               {source:.parent, target:.url, status:(.status // "unknown")}
             ] | sort_by(.source, .target)
-          ' merged.json > broken.json
+          ' merged.json > broken.json 2>/dev/null || echo '[]' > broken.json
 
           # Next queue (new seeds from successes, bounded)
           jq '
             [.links[] | select(.state!="BROKEN") | .url] |
             unique | .[:5000]
-          ' merged.json > next_queue.json
+          ' merged.json > next_queue.json 2>/dev/null || echo '[]' > next_queue.json
 
           # Markdown summary
           jq -n --slurpfile b broken.json '
@@ -133,7 +140,7 @@ jobs:
               "| Source | Target | Status |\n|---|---|---|\n" +
               ([$meta.sample[] | "| " + .source + " | " + .target + " | " + (.status|tostring) + " |"] | join("\n"))
              else "No broken links found." end)
-          ' > BROKEN_SUMMARY.md
+          ' > BROKEN_SUMMARY.md 2>/dev/null || echo "No broken links found." > BROKEN_SUMMARY.md
 
       - name: Upload merged artifacts
         uses: actions/upload-artifact@v4

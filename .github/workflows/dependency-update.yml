@@ -1,0 +1,83 @@
+name: Dependency Update
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'  # Every Monday at 2 AM
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-deps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check for outdated packages
+        id: outdated
+        run: |
+          outdated=$(npm outdated --json || echo '{}')
+          echo "outdated=$outdated" >> $GITHUB_OUTPUT
+          if [ "$outdated" != "{}" ]; then
+            echo "Found outdated packages"
+            npm outdated
+          else
+            echo "All packages are up to date"
+          fi
+
+      - name: Update dependencies
+        if: steps.outdated.outputs.outdated != '{}'
+        run: |
+          npm update
+          npm audit fix --audit-level moderate || true
+
+      - name: Install updated dependencies
+        if: steps.outdated.outputs.outdated != '{}'
+        run: npm ci
+
+      - name: Run tests
+        if: steps.outdated.outputs.outdated != '{}'
+        run: npm run test:ci
+        continue-on-error: true
+
+      - name: Build project
+        if: steps.outdated.outputs.outdated != '{}'
+        run: npm run build
+        continue-on-error: true
+
+      - name: Create Pull Request
+        if: steps.outdated.outputs.outdated != '{}'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(deps): update dependencies"
+          title: "chore(deps): update dependencies"
+          body: |
+            Automated dependency update.
+            
+            This PR updates outdated npm packages to their latest versions.
+            
+            - [ ] Tests pass
+            - [ ] Build succeeds
+            - [ ] No breaking changes
+          branch: chore/update-dependencies
+          delete-branch: true
+          signoff: false
+          labels: |
+            dependencies
+            automated
+            security
