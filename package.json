@@ -103,7 +103,9 @@
     "linting:start": "npm run linting:orchestrator continuous",
     "linting:status": "npm run linting:orchestrator status",
     "linting:check": "npm run linting:orchestrator check",
-    "linting:fix": "npm run linting:orchestrator fix"
+    "linting:fix": "npm run linting:orchestrator fix",
+    "test": "echo 'Tests not configured yet'",
+    "security:scan": "echo 'Security scan not configured yet'"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
