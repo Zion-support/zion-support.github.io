@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -7,7 +7,8 @@ import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { captureException } from "@/utils/sentry";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useDebounce } from "@/hooks/useDebounce";
-import { z } from "zod";
+import { useQuery } from "@tanstack/react-query";
+import { fetchServices } from "@/api/services";
 
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
@@ -28,57 +29,23 @@ const serviceListSchema = z.array(
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const debouncedQuery = useDebounce(searchQuery, 300);
-  const [listings, setListings] = useState<ListingItem[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const {
+    data: listings = [],
+    isPending: loading,
+    error,
+  } = useQuery({
+    queryKey: ['services', formData.serviceType, debouncedQuery],
+    queryFn: () =>
+      fetchServices(formData.serviceType, debouncedQuery),
+    enabled: !!formData.serviceType,
+    retry: 2,
+  });
 
-  // Fetch services when the service type or query changes
-  useEffect(() => {
-    if (!formData.serviceType) {
-      setListings([]);
-      return;
-    }
-
-    const fetchServices = async () => {
-      setLoading(true);
-      setError(null);
-      const url = `/api/public/services?category=${encodeURIComponent(
-        formData.serviceType
-      )}&q=${encodeURIComponent(debouncedQuery)}`;
-      const maxRetries = 3;
-
-      for (let attempt = 0; attempt < maxRetries; attempt++) {
-        try {
-          const response = await fetch(url);
-          if (!response.ok) throw new Error('Failed to fetch');
-          const data = await response.json();
-          const parsed = serviceListSchema.safeParse(data);
-          if (!parsed.success) {
-            throw new Error('Invalid service schema');
-          }
-          setListings(parsed.data);
-          setError(null);
-          setLoading(false);
-          return;
-        } catch (err) {
-          if (attempt === maxRetries - 1) {
-            if (process.env.NODE_ENV === 'development') {
-              console.error('Failed to load services:', err);
-            } else {
-              captureException(err);
-            }
-            setListings([]);
-            setError('Failed to load services');
-            setLoading(false);
-          } else {
-            await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
-          }
-        }
-      }
-    };
-
-    fetchServices();
-  }, [formData.serviceType, debouncedQuery]);
+  const fallbackListings = SAMPLE_SERVICES.filter(
+    (item) =>
+      item.category === formData.serviceType &&
+      item.title.toLowerCase().includes(debouncedQuery.toLowerCase())
+  );
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type });
@@ -92,7 +59,9 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     });
   };
   
-  const filteredListings = listings.filter(item => {
+  const sourceListings = error ? fallbackListings : listings.length > 0 ? listings : SAMPLE_SERVICES;
+
+  const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
       const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
@@ -162,7 +131,9 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </div>
 
           {error && (
-            <div className="text-center text-red-400 text-sm">{error}</div>
+            <div className="text-center text-red-400 text-sm">
+              {(error as Error).message || 'Failed to load services'}. Showing sample data.
+            </div>
           )}
           
           <div className="grid grid-cols-1 gap-4 mt-4">
