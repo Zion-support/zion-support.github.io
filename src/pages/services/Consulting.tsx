@@ -5,307 +5,334 @@ const Consulting: React.FC = () => {
   const consultingServices = [
     {
       title: "Technology Assessment",
-      description: "Comprehensive evaluation of your current technology landscape",
-      features: ["Infrastructure Review", "Technology Stack Analysis", "Gap Identification", "Recommendation Report"]
+      description: "Comprehensive evaluation of your current technology landscape and capabilities",
+      features: ["Infrastructure review", "Technology audit", "Gap analysis", "Recommendations"],
+      icon: "🔍"
     },
     {
       title: "Strategic Planning",
-      description: "Develop long-term technology roadmaps aligned with business goals",
-      features: ["Technology Strategy", "Roadmap Development", "Investment Planning", "Risk Assessment"]
+      description: "Develop technology roadmaps aligned with your business objectives",
+      features: ["Technology strategy", "Implementation planning", "Resource allocation", "Timeline development"],
+      icon: "🎯"
     },
     {
       title: "Vendor Selection",
-      description: "Expert guidance in choosing the right technology partners",
-      features: ["Requirements Analysis", "Vendor Evaluation", "RFP Development", "Contract Negotiation"]
+      description: "Expert guidance in selecting the right technology partners and solutions",
+      features: ["Requirements analysis", "Vendor evaluation", "RFP development", "Contract negotiation"],
+      icon: "🤝"
     },
     {
       title: "Project Management",
-      description: "Professional project management for technology initiatives",
-      features: ["Project Planning", "Resource Management", "Timeline Control", "Stakeholder Communication"]
+      description: "Professional project management for successful technology implementations",
+      features: ["Project planning", "Risk management", "Stakeholder communication", "Quality assurance"],
+      icon: "📊"
     }
   ];
 
-  const consultingApproach = [
+  const consultingAreas = [
     {
-      phase: "Discovery",
-      description: "Understand your business needs and current state",
-      activities: ["Stakeholder Interviews", "Current State Analysis", "Requirements Gathering", "Challenge Identification"]
+      area: "Enterprise Architecture",
+      services: ["Architecture design", "Technology standards", "Integration strategy", "Scalability planning"]
     },
     {
-      phase: "Analysis",
-      description: "Analyze findings and develop strategic insights",
-      activities: ["Data Analysis", "Gap Assessment", "Opportunity Identification", "Solution Research"]
+      area: "Digital Strategy",
+      services: ["Digital transformation", "Innovation strategy", "Technology trends", "Competitive analysis"]
     },
     {
-      phase: "Strategy",
-      description: "Develop comprehensive recommendations and roadmap",
-      activities: ["Strategy Development", "Roadmap Creation", "Implementation Planning", "Risk Mitigation"]
+      area: "Security & Compliance",
+      services: ["Security assessment", "Compliance planning", "Risk management", "Security strategy"]
     },
     {
-      phase: "Execution",
-      description: "Support implementation and measure success",
-      activities: ["Implementation Support", "Change Management", "Progress Monitoring", "Success Measurement"]
-    }
-  ];
-
-  const industryExpertise = [
-    {
-      industry: "Healthcare",
-      expertise: ["HIPAA Compliance", "Electronic Health Records", "Telemedicine Solutions", "Data Security"]
-    },
-    {
-      industry: "Finance",
-      expertise: ["Regulatory Compliance", "Risk Management", "Digital Banking", "Cybersecurity"]
-    },
-    {
-      industry: "Manufacturing",
-      expertise: ["Industry 4.0", "IoT Integration", "Supply Chain Optimization", "Quality Management"]
-    },
-    {
-      industry: "Retail",
-      expertise: ["E-commerce Platforms", "Customer Experience", "Inventory Management", "Omnichannel Strategy"]
+      area: "Cloud Strategy",
+      services: ["Cloud assessment", "Migration planning", "Multi-cloud strategy", "Cost optimization"]
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Technology
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Consulting
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Strategic technology consulting to help you make informed decisions and achieve your business goals
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Get Consultation
+            </Link>
+            <Link
+              to="/services"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Consulting Services Overview */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Consulting Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Expert guidance to help you navigate complex technology decisions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {consultingServices.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="text-sm text-gray-300 flex items-center">
+                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Consulting Areas */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Technology
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Consulting
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Strategic technology guidance to help you make informed decisions and achieve business objectives
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Consulting Areas
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Specialized expertise across key technology domains
             </p>
           </div>
-
-          {/* Hero Section */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 mb-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">Expert Technology Guidance</h2>
-                <p className="text-gray-300 mb-6">
-                  Make confident technology decisions with our experienced consultants. We help you navigate complex technology choices, optimize investments, and align technology with business strategy.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    <span className="text-gray-300">Industry expertise across multiple sectors</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    <span className="text-gray-300">Proven methodologies and frameworks</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    <span className="text-gray-300">Measurable business outcomes</span>
-                  </div>
-                </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {consultingAreas.map((area, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
+                <ul className="space-y-2">
+                  {area.services.map((service, idx) => (
+                    <li key={idx} className="text-gray-300 flex items-center">
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                      {service}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="text-center">
-                <div className="text-8xl mb-4">💡</div>
-                <p className="text-gray-300 text-lg">Strategic Technology Advisory</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Consulting Process */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Consulting Process
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Structured approach to delivering valuable insights and recommendations
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">1</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Discovery</h3>
+              <p className="text-gray-300 text-sm">Understand your business needs and challenges</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Analysis</h3>
+              <p className="text-gray-300 text-sm">Deep dive into current state and opportunities</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">3</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Strategy</h3>
+              <p className="text-gray-300 text-sm">Develop comprehensive recommendations</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">4</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Planning</h3>
+              <p className="text-gray-300 text-sm">Create detailed implementation roadmap</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">5</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Support</h3>
+              <p className="text-gray-300 text-sm">Ongoing guidance and implementation support</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Benefits of Technology Consulting
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Make informed decisions and avoid costly technology mistakes
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Risk Mitigation</h3>
+              <p className="text-gray-300">Avoid costly mistakes with expert guidance and proven methodologies</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Cost Optimization</h3>
+              <p className="text-gray-300">Maximize ROI with strategic technology investments and efficient implementations</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Expert Knowledge</h3>
+              <p className="text-gray-300">Access to industry expertise and best practices from experienced consultants</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Success Stories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Real results from our consulting engagements
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Financial Services Firm</h3>
+              <p className="text-gray-300 mb-4">
+                Technology assessment and strategic planning led to 40% reduction in IT costs and improved system reliability through cloud migration and infrastructure optimization.
+              </p>
+              <div className="text-blue-400 text-sm">
+                <strong>Results:</strong> 40% cost reduction, improved reliability
               </div>
             </div>
-          </div>
-
-          {/* Consulting Services */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Consulting Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology consulting solutions designed for your success
-              </p>
-            </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {consultingServices.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-                >
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="text-sm text-gray-300 flex items-center">
-                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Consulting Approach */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Consulting Approach</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                A proven methodology that delivers results and drives business value
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Healthcare Provider</h3>
+              <p className="text-gray-300 mb-4">
+                Security and compliance consulting resulted in successful SOC 2 certification and enhanced data protection measures, ensuring patient data security and regulatory compliance.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              {consultingApproach.map((phase, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center"
-                >
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold">{index + 1}</span>
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">{phase.phase}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{phase.description}</p>
-                  
-                  <div className="text-left">
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Activities:</h4>
-                    <ul className="space-y-1">
-                      {phase.activities.map((activity, idx) => (
-                        <li key={idx} className="text-xs text-gray-300 flex items-center">
-                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                          {activity}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Industry Expertise */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Industry Expertise</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Deep knowledge across multiple industries and technology domains
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {industryExpertise.map((industry, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
-                >
-                  <h3 className="text-xl font-semibold text-white mb-4">{industry.industry}</h3>
-                  
-                  <div>
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Areas of Expertise:</h4>
-                    <ul className="space-y-1">
-                      {industry.expertise.map((expertise, idx) => (
-                        <li key={idx} className="text-sm text-gray-300 flex items-center">
-                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                          {expertise}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Why Choose Us */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven track record and deep expertise in technology consulting
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-white mb-2">Proven Track Record</h3>
-                      <p className="text-gray-300 text-sm">Successfully delivered consulting projects across multiple industries</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-white mb-2">Expert Team</h3>
-                      <p className="text-gray-300 text-sm">Experienced consultants with deep technical and business knowledge</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-white mb-2">Fast Results</h3>
-                      <p className="text-gray-300 text-sm">Quick turnaround times and rapid implementation of recommendations</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-white mb-2">Measurable Outcomes</h3>
-                      <p className="text-gray-300 text-sm">Clear metrics and ROI tracking for all consulting engagements</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="text-blue-400 text-sm">
+                <strong>Results:</strong> SOC 2 certification, enhanced security
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* CTA Section */}
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
-              <h2 className="text-3xl font-bold mb-6">Ready for Expert Technology Guidance?</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how our consulting services can help you make the right technology decisions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
-                  Get Started
-                </Link>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
-                  View All Services
-                </Link>
-              </div>
-            </div>
+      {/* Technology Stack */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Technology Expertise
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Deep knowledge across leading technology platforms and solutions
+            </p>
           </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              "Cloud Platforms", "Security Solutions", "Data Analytics", "AI/ML",
+              "DevOps Tools", "Enterprise Software", "Integration Platforms", "Mobile Technologies",
+              "IoT Platforms", "Blockchain", "Edge Computing", "Quantum Computing"
+            ].map((tech, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center hover:border-white/40 transition-all duration-300"
+              >
+                <span className="text-gray-300 font-medium">{tech}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready for Expert Technology Guidance?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our consulting services can help you make the right technology decisions
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+          >
+            Schedule Consultation
+          </Link>
         </div>
       </section>
     </div>

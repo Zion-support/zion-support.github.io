@@ -1,50 +1,50 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Cybersecurity: React.FC = () => {
-  const securityServices = [
+const DigitalTransformation: React.FC = () => {
+  const transformationServices = [
     {
-      title: "Threat Detection & Response",
-      description: "Advanced monitoring and rapid response to security threats",
-      features: ["24/7 monitoring", "Real-time alerts", "Incident response", "Threat intelligence"],
-      icon: "🛡️"
+      title: "Process Automation",
+      description: "Streamline business processes with intelligent automation solutions",
+      features: ["Workflow automation", "RPA implementation", "Process optimization", "Efficiency improvement"],
+      icon: "⚙️"
     },
     {
-      title: "Vulnerability Assessment",
-      description: "Comprehensive security audits and penetration testing",
-      features: ["Security scanning", "Penetration testing", "Code review", "Risk assessment"],
-      icon: "🔍"
+      title: "Workflow Optimization",
+      description: "Redesign and optimize business workflows for maximum efficiency",
+      features: ["Process mapping", "Bottleneck identification", "Workflow redesign", "Performance measurement"],
+      icon: "🔄"
     },
     {
-      title: "Security Training",
-      description: "Employee cybersecurity awareness and training programs",
-      features: ["Phishing simulations", "Security best practices", "Compliance training", "Incident response drills"],
-      icon: "🎓"
+      title: "Change Management",
+      description: "Guide your organization through digital transformation with expert change management",
+      features: ["Stakeholder engagement", "Training programs", "Communication strategies", "Success measurement"],
+      icon: "👥"
     },
     {
-      title: "Compliance & Governance",
-      description: "Meet regulatory requirements and industry standards",
-      features: ["SOC 2 compliance", "GDPR compliance", "HIPAA compliance", "ISO 27001"],
-      icon: "📋"
+      title: "Technology Strategy",
+      description: "Develop comprehensive technology roadmaps aligned with business objectives",
+      features: ["Technology assessment", "Strategic planning", "Vendor selection", "Implementation roadmap"],
+      icon: "🎯"
     }
   ];
 
-  const securitySolutions = [
+  const transformationAreas = [
     {
-      category: "Network Security",
-      solutions: ["Firewall management", "Intrusion detection", "VPN solutions", "Network segmentation"]
+      area: "Customer Experience",
+      initiatives: ["Digital customer portals", "Omnichannel engagement", "Personalization", "Customer analytics"]
     },
     {
-      category: "Endpoint Security",
-      solutions: ["Antivirus protection", "Device management", "Data encryption", "Access control"]
+      area: "Operations",
+      initiatives: ["Process digitization", "Supply chain optimization", "Inventory management", "Quality control"]
     },
     {
-      category: "Application Security",
-      solutions: ["Secure coding", "API security", "Web application firewall", "Code analysis"]
+      area: "Data & Analytics",
+      initiatives: ["Data strategy", "Business intelligence", "Predictive analytics", "Data governance"]
     },
     {
-      category: "Data Protection",
-      solutions: ["Data encryption", "Backup & recovery", "Data classification", "Privacy compliance"]
+      area: "Technology Infrastructure",
+      initiatives: ["Cloud migration", "Legacy modernization", "Integration", "Security enhancement"]
     }
   ];
 
@@ -54,20 +54,20 @@ const Cybersecurity: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Cyber
+            Digital
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Security
+              {" "}Transformation
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Protect your digital assets with enterprise-grade security solutions and proactive threat defense
+            Transform your business for the digital age with strategic consulting and implementation services
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
-              Get Protected
+              Start Transformation
             </Link>
             <Link
               to="/services"
@@ -79,20 +79,20 @@ const Cybersecurity: React.FC = () => {
         </div>
       </section>
 
-      {/* Security Services Overview */}
+      {/* Transformation Services Overview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Cybersecurity Services
+              Our Transformation Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive security solutions to protect your business from evolving cyber threats
+              Comprehensive digital transformation solutions to modernize your business
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityServices.map((service, index) => (
+            {transformationServices.map((service, index) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
@@ -118,30 +118,30 @@ const Cybersecurity: React.FC = () => {
         </div>
       </section>
 
-      {/* Security Solutions */}
+      {/* Transformation Areas */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Solutions
+              Transformation Areas
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Multi-layered security approach to protect every aspect of your digital infrastructure
+              Holistic approach to transforming every aspect of your business
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securitySolutions.map((solution, index) => (
+            {transformationAreas.map((area, index) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">{solution.category}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
                 <ul className="space-y-2">
-                  {solution.solutions.map((item, idx) => (
+                  {area.initiatives.map((initiative, idx) => (
                     <li key={idx} className="text-gray-300 flex items-center">
                       <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
-                      {item}
+                      {initiative}
                     </li>
                   ))}
                 </ul>
@@ -151,63 +151,71 @@ const Cybersecurity: React.FC = () => {
         </div>
       </section>
 
-      {/* Security Process */}
+      {/* Transformation Process */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Security Approach
+              Our Transformation Process
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              A comprehensive methodology for building robust cybersecurity defenses
+              Proven methodology for successful digital transformation
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">1</span>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Assess</h3>
-              <p className="text-gray-300 text-sm">Evaluate current security posture and identify vulnerabilities</p>
+              <h3 className="text-lg font-semibold text-white mb-2">Discovery</h3>
+              <p className="text-gray-300 text-sm">Understand current state and transformation opportunities</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Protect</h3>
-              <p className="text-gray-300 text-sm">Implement security controls and protective measures</p>
+              <h3 className="text-lg font-semibold text-white mb-2">Strategy</h3>
+              <p className="text-gray-300 text-sm">Develop comprehensive transformation strategy</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">3</span>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Detect</h3>
-              <p className="text-gray-300 text-sm">Monitor for security events and potential threats</p>
+              <h3 className="text-lg font-semibold text-white mb-2">Planning</h3>
+              <p className="text-gray-300 text-sm">Create detailed implementation roadmap</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">4</span>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Respond</h3>
-              <p className="text-gray-300 text-sm">Rapid response and recovery from security incidents</p>
+              <h3 className="text-lg font-semibold text-white mb-2">Execution</h3>
+              <p className="text-gray-300 text-sm">Implement transformation initiatives</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">5</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Optimization</h3>
+              <p className="text-gray-300 text-sm">Continuous improvement and optimization</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Compliance & Standards */}
+      {/* Benefits */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Compliance & Standards
+              Benefits of Digital Transformation
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Meet industry standards and regulatory requirements with our compliance expertise
+              Transform your business for better efficiency, customer experience, and growth
             </p>
           </div>
           
@@ -215,11 +223,11 @@ const Cybersecurity: React.FC = () => {
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">SOC 2</h3>
-              <p className="text-gray-300">Service Organization Control 2 compliance for data security</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Improved Efficiency</h3>
+              <p className="text-gray-300">Streamlined processes and automated workflows for better productivity</p>
             </div>
             
             <div className="text-center">
@@ -228,56 +236,54 @@ const Cybersecurity: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">GDPR</h3>
-              <p className="text-gray-300">General Data Protection Regulation compliance</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Enhanced Customer Experience</h3>
+              <p className="text-gray-300">Digital-first customer interactions and personalized experiences</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">HIPAA</h3>
-              <p className="text-gray-300">Healthcare Information Privacy and Security compliance</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Data-Driven Insights</h3>
+              <p className="text-gray-300">Better decision making with advanced analytics and business intelligence</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Threat Landscape */}
+      {/* Success Stories */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Current Threat Landscape
+              Success Stories
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Stay informed about the latest cybersecurity threats and trends
+              Real results from our digital transformation projects
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Emerging Threats</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Ransomware attacks</li>
-                <li>• Phishing campaigns</li>
-                <li>• Supply chain attacks</li>
-                <li>• AI-powered threats</li>
-                <li>• Zero-day vulnerabilities</li>
-              </ul>
+              <h3 className="text-xl font-semibold text-white mb-4">Manufacturing Company</h3>
+              <p className="text-gray-300 mb-4">
+                Implemented IoT sensors and predictive analytics, resulting in 30% reduction in downtime and 25% improvement in production efficiency.
+              </p>
+              <div className="text-blue-400 text-sm">
+                <strong>Results:</strong> 30% downtime reduction, 25% efficiency improvement
+              </div>
             </div>
             
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Protection Strategies</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Multi-factor authentication</li>
-                <li>• Regular security updates</li>
-                <li>• Employee training</li>
-                <li>• Incident response planning</li>
-                <li>• Continuous monitoring</li>
-              </ul>
+              <h3 className="text-xl font-semibold text-white mb-4">Retail Chain</h3>
+              <p className="text-gray-300 mb-4">
+                Digital transformation of customer experience with omnichannel platforms, leading to 40% increase in customer satisfaction and 35% growth in online sales.
+              </p>
+              <div className="text-blue-400 text-sm">
+                <strong>Results:</strong> 40% customer satisfaction increase, 35% online sales growth
+              </div>
             </div>
           </div>
         </div>
@@ -288,18 +294,18 @@ const Cybersecurity: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Technology Stack
+              Technology Stack
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Industry-leading security tools and technologies
+              Cutting-edge technologies for digital transformation
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              "CrowdStrike", "SentinelOne", "Palo Alto", "Cisco",
-              "Splunk", "QRadar", "Nessus", "Burp Suite",
-              "Metasploit", "Wireshark", "Snort", "OSSEC"
+              "RPA Tools", "Workflow Engines", "API Platforms", "Cloud Services",
+              "Data Analytics", "Machine Learning", "IoT Platforms", "Mobile Solutions",
+              "Integration Tools", "Security Platforms", "Monitoring Tools", "Testing Frameworks"
             ].map((tech, index) => (
               <div
                 key={index}
@@ -316,16 +322,16 @@ const Cybersecurity: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Secure Your Business?
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our cybersecurity solutions can protect your digital assets and ensure compliance
+            Let's discuss how digital transformation can modernize your business and drive growth
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
           >
-            Get Security Assessment
+            Start Your Transformation
           </Link>
         </div>
       </section>
@@ -333,4 +339,4 @@ const Cybersecurity: React.FC = () => {
   );
 };
 
-export default Cybersecurity;
+export default DigitalTransformation;
