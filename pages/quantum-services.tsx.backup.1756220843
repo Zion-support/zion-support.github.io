@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export default function QuantumServices(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Quantum Services</h1><p>Explore our quantum networking, cybersecurity, and infrastructure offerings. Detailed briefs coming soon.</p></main>);}
+=======
 import React from 'react';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -74,3 +77,4 @@ export default function QuantumServicesPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cb67
