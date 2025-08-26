@@ -118,6 +118,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
+const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
 
 // Define all routes - combining both versions
 const routes = [
