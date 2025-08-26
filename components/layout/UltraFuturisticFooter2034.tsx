@@ -9,79 +9,78 @@ import {
   Rocket, Target, Microscope
 } from 'lucide-react';
 
-const UltraFuturisticFooter2034: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
 
-  const serviceCategories = [
-    {
-      title: '🧠 AI & Consciousness',
-      icon: Brain,
-      services: [
-        { name: 'AI Consciousness Evolution 2026', href: '/ai-consciousness-evolution-2026' },
-        { name: 'Quantum AI Fusion Platform', href: '/quantum-ai-fusion-platform' },
-        { name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator' },
-        { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
-        { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }
-      ]
-    },
-    {
-      title: '⚛️ Quantum & Emerging Tech',
-      icon: Atom,
-      services: [
-        { name: 'Space Mining Platform 2026', href: '/space-mining-platform-2026' },
-        { name: 'Quantum Bio-Computing 2026', href: '/quantum-bio-computing-2026' },
-        { name: 'Brain-Computer Interface 2026', href: '/brain-computer-interface-2026' },
-        { name: 'Quantum Energy Platform 2026', href: '/quantum-energy-platform-2026' },
-        { name: 'Autonomous Vehicle AI 2026', href: '/autonomous-vehicle-ai-2026' }
-      ]
-    },
-    {
-      title: '🏙️ Enterprise IT',
-      icon: Shield,
-      services: [
-        { name: 'Quantum Cloud Infrastructure 2026', href: '/quantum-cloud-infrastructure-2026' },
-        { name: 'Edge Computing Orchestrator 2026', href: '/edge-computing-orchestrator-2026' },
-        { name: 'Zero Trust Security Platform 2026', href: '/zero-trust-security-platform-2026' },
-        { name: 'Blockchain Enterprise Platform 2026', href: '/blockchain-enterprise-platform-2026' },
-        { name: 'AI-Powered DevOps 2026', href: '/ai-powered-devops-2026' }
-      ]
-    },
-    {
-      title: '🎯 Micro SAAS',
-      icon: Target,
-      services: [
-        { name: 'LegalAI Contract Analyzer Pro', href: '/legal-ai-contract-analyzer-pro' },
-        { name: 'QuantumRisk Financial Intelligence', href: '/quantum-risk-financial-platform' },
-        { name: 'HealthAI Diagnostics Pro', href: '/ai-powered-healthcare-diagnostics-pro' },
-        { name: 'QuantumChain Supply Optimizer', href: '/quantum-supply-chain-optimizer' },
-        { name: 'CreativeAI Studio Pro', href: '/ai-powered-creative-studio-pro' }
-      ]
-    }
-  ];
+const serviceCategories = [
+  {
+    title: '🧠 AI & Consciousness',
+    icon: Brain,
+    services: [
+      { name: 'AI Consciousness Evolution 2026', href: '/ai-consciousness-evolution-2026' },
+      { name: 'Quantum AI Fusion Platform', href: '/quantum-ai-fusion-platform' },
+      { name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator' },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }
+    ]
+  },
+  {
+    title: '⚛️ Quantum & Emerging Tech',
+    icon: Atom,
+    services: [
+      { name: 'Space Mining Platform 2026', href: '/space-mining-platform-2026' },
+      { name: 'Quantum Bio-Computing 2026', href: '/quantum-bio-computing-2026' },
+      { name: 'Brain-Computer Interface 2026', href: '/brain-computer-interface-2026' },
+      { name: 'Quantum Energy Platform 2026', href: '/quantum-energy-platform-2026' },
+      { name: 'Autonomous Vehicle AI 2026', href: '/autonomous-vehicle-ai-2026' }
+    ]
+  },
+  {
+    title: '🏙️ Enterprise IT',
+    icon: Shield,
+    services: [
+      { name: 'Quantum Cloud Infrastructure 2026', href: '/quantum-cloud-infrastructure-2026' },
+      { name: 'Edge Computing Orchestrator 2026', href: '/edge-computing-orchestrator-2026' },
+      { name: 'Zero Trust Security Platform 2026', href: '/zero-trust-security-platform-2026' },
+      { name: 'Blockchain Enterprise Platform 2026', href: '/blockchain-enterprise-platform-2026' },
+      { name: 'AI-Powered DevOps 2026', href: '/ai-powered-devops-2026' }
+    ]
+  },
+  {
+    title: '🎯 Micro SAAS',
+    icon: Target,
+    services: [
+      { name: 'LegalAI Contract Analyzer Pro', href: '/legal-ai-contract-analyzer-pro' },
+      { name: 'QuantumRisk Financial Intelligence', href: '/quantum-risk-financial-platform' },
+      { name: 'HealthAI Diagnostics Pro', href: '/ai-powered-healthcare-diagnostics-pro' },
+      { name: 'QuantumChain Supply Optimizer', href: '/quantum-supply-chain-optimizer' },
+      { name: 'CreativeAI Studio Pro', href: '/ai-powered-creative-studio-pro' }
+    ]
+  }
+];
 
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Support', href: '/support' }
-  ];
+const quickLinks = [
+  { name: 'About Us', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Contact', href: '/contact' },
+  { name: 'Support', href: '/support' }
+];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+const contactInfo = {
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
 
 const socialLinks = [
   { name: 'X', href: 'https://x.com/ziontechgroup', icon: Twitter },
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
 ];
 
 export default function UltraFuturisticFooter2034() {
@@ -318,6 +317,4 @@ export default function UltraFuturisticFooter2034() {
       </motion.div>
     </footer>
   );
-};
-
-export default UltraFuturisticFooter2034;
+}

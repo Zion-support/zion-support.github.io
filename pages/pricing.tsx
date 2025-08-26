@@ -3,9 +3,9 @@ import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Check, Zap, Shield, Rocket, Brain, Atom, Target } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-expansion';
 import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
-import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
+import { innovativeITServices2025 } from '../src/data/innovativeITServices2025';
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
 
 interface PricingTier {

@@ -5,7 +5,7 @@ import {
   Menu, X, ChevronDown, Rocket, Phone, Mail, MapPin,
   Brain, Cpu, Shield, Zap, Star, Users, TrendingUp,
   Globe, Database, Cloud, Lock, Palette, Target,
-  Layers, Sparkles, Atom, Microscope, Satellite
+  Layers, Sparkles, Atom, Microscope, Satellite, Building2, Monitor, DollarSign
 } from 'lucide-react';
 
 const contactInfo = {
@@ -118,47 +118,24 @@ const companyLinks = [
   { name: 'Resources', href: '/resources' }
 ];
 
-	const navigationItems: Array<{ name: string; href: string; icon?: React.ComponentType<any>; description?: string }>
-		= [
-			{ name: 'Home', href: '/' },
-			{ name: 'AI', href: '/ai-services', icon: Brain, description: 'AI & ML services' },
-			{ name: 'Quantum', href: '/quantum-cloud-infrastructure', icon: Atom, description: 'Quantum & space' },
-			{ name: 'Enterprise IT', href: '/it-services', icon: Building2, description: 'Cloud, DevOps, Security' },
-			{ name: 'Micro SaaS', href: '/micro-saas', icon: Monitor, description: 'Micro SaaS products' },
-			{ name: 'Services', href: '/services', icon: Monitor, description: 'Directory of services' },
-			{ name: 'Advertising', href: '/services-advertising', icon: DollarSign, description: 'Benefits & pricing references' },
-			{ name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Vendor references' },
-			{ name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent, market-aligned pricing' },
-			{ name: 'Contact', href: '/contact' }
-		];
-	return (
-		<nav
-			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-				isScrolled ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' : 'bg-transparent'
-			}`}
-			aria-label="Primary"
-		>
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="flex justify-between items-center h-20">
-					{/* Logo */}
-					<motion.div
-						initial="hidden"
-						animate="visible"
-						variants={navContainerVariants}
-						className="flex items-center"
-					>
-						<Link href="/" className="flex items-center space-x-3 group">
-							<div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-								<Zap className="w-6 h-6 text-white" />
-							</div>
-							<div className="hidden sm:block">
-								<div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-									Zion Tech Group
-								</div>
-								<div className="text-xs text-gray-400">AI • Quantum • IT</div>
-							</div>
-						</Link>
-					</motion.div>
+export default function UltraAdvancedNavigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const navigationItems: Array<{ name: string; href: string; icon?: React.ComponentType<any>; description?: string }>
+    = [
+      { name: 'Home', href: '/' },
+      { name: 'AI', href: '/ai-services', icon: Brain, description: 'AI & ML services' },
+      { name: 'Quantum', href: '/quantum-cloud-infrastructure', icon: Atom, description: 'Quantum & space' },
+      { name: 'Enterprise IT', href: '/it-services', icon: Building2, description: 'Cloud, DevOps, Security' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Monitor, description: 'Micro SaaS products' },
+      { name: 'Services', href: '/services', icon: Monitor, description: 'Directory of services' },
+      { name: 'Advertising', href: '/services-advertising', icon: DollarSign, description: 'Benefits & pricing references' },
+      { name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Vendor references' },
+      { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent, market-aligned pricing' },
+      { name: 'Contact', href: '/contact' }
+    ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -252,52 +229,40 @@ const companyLinks = [
                 <div key={category.title} className="relative group">
                   <button
                     onClick={() => toggleDropdown(category.title)}
-                    className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-800/50"
+                    className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
                   >
-                    <category.icon className="w-5 h-5" />
-                    <span className="font-medium">{category.title}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === category.title ? 'rotate-180' : ''
-                    }`} />
+                    <category.icon className="w-4 h-4" />
+                    <span>{category.title}</span>
+                    <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
                   </button>
-
-                  {/* Dropdown Menu */}
+                  
+                  {/* Dropdown */}
                   <AnimatePresence>
                     {activeDropdown === category.title && (
                       <motion.div
-                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-xl shadow-2xl shadow-black/50 z-50"
+                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-lg shadow-2xl shadow-black/50 z-50"
                       >
                         <div className="p-4">
-                          <div className="mb-3">
-                            <h3 className="text-lg font-semibold text-white mb-2">{category.title}</h3>
-                            <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full"></div>
-                          </div>
+                          <h3 className="text-lg font-semibold text-white mb-3">{category.title}</h3>
                           <div className="space-y-3">
                             {category.services.map((service) => (
                               <Link
                                 key={service.name}
                                 href={service.href}
-                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                                onClick={closeMenu}
+                                className="block p-3 hover:bg-gray-800/50 rounded-lg transition-colors duration-200 group"
                               >
                                 <div className="flex items-start justify-between">
                                   <div className="flex-1">
-                                    <h4 className="font-medium text-white group-hover:text-cyan-300 transition-colors">
+                                    <h4 className="text-white font-medium group-hover:text-cyan-400 transition-colors">
                                       {service.name}
                                     </h4>
-                                    <p className="text-sm text-gray-400 mt-1">
-                                      {service.description}
-                                    </p>
+                                    <p className="text-gray-400 text-sm mt-1">{service.description}</p>
                                   </div>
-                                  <div className="ml-3">
-                                    <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded-full">
-                                      {service.price}
-                                    </span>
-                                  </div>
+                                  <span className="text-cyan-400 text-sm font-medium">{service.price}</span>
                                 </div>
                               </Link>
                             ))}
@@ -308,121 +273,63 @@ const companyLinks = [
                   </AnimatePresence>
                 </div>
               ))}
-
-              {/* Company Links */}
-              <div className="flex items-center space-x-6">
-                {companyLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex items-center space-x-4">
-                <Link
-                  href="/contact"
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"
-                >
-                  Get Started
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="px-6 py-3 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
-                >
-                  View Pricing
-                </Link>
-              </div>
             </div>
 
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
+            {/* Right side actions */}
+            <div className="flex items-center space-x-4">
+              {/* Contact button */}
+              <Link
+                href="/contact"
+                className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+              >
+                <Phone className="w-4 h-4" />
+                <span>Get Started</span>
+              </Link>
+
+              {/* Mobile menu button */}
               <button
                 onClick={toggleMenu}
-                className="p-2 text-gray-300 hover:text-white transition-colors"
+                className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
               >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                <Menu className="w-6 h-6" />
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50"
           >
-            <div className="px-4 py-6 space-y-6">
-              {serviceCategories.map((category) => (
-                <div key={category.title}>
-                  <h3 className="text-lg font-semibold text-white mb-3 flex items-center space-x-2">
-                    <category.icon className="w-5 h-5 text-cyan-400" />
-                    <span>{category.title}</span>
-                  </h3>
-                  <div className="space-y-2 ml-6">
-                    {category.services.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200"
-                        onClick={closeMenu}
-                      >
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <h4 className="font-medium text-white">{service.name}</h4>
-                            <p className="text-sm text-gray-400 mt-1">
-                              {service.description}
-                            </p>
-                          </div>
-                          <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded-full ml-3">
-                            {service.price}
-                          </span>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+            <div className="px-4 py-6 space-y-4">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={closeMenu}
+                  className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200"
+                >
+                  {item.icon && <item.icon className="w-5 h-5" />}
+                  <span>{item.name}</span>
+                </Link>
               ))}
-
-              <div className="pt-6 border-t border-gray-700/50">
-                <div className="space-y-3">
-                  {companyLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-                      onClick={closeMenu}
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
-                </div>
-                <div className="mt-6 space-y-3">
-                  <Link
-                    href="/contact"
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl text-center hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                    onClick={closeMenu}
-                  >
-                    Get Started
-                  </Link>
-                  <Link
-                    href="/pricing"
-                    className="block w-full px-6 py-3 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl text-center hover:bg-cyan-500/10 transition-all duration-300"
-                    onClick={closeMenu}
-                  >
-                    View Pricing
-                  </Link>
-                </div>
+              
+              <div className="pt-4 border-t border-gray-700/50">
+                <Link
+                  href="/contact"
+                  onClick={closeMenu}
+                  className="flex items-center justify-center space-x-2 w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Contact Us</span>
+                </Link>
               </div>
             </div>
           </motion.div>

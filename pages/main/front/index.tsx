@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, CloudCog, Layers, Workflow } from 'lucide-react';
-
 export default function MainFrontIndex() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -18,28 +18,28 @@ export default function MainFrontIndex() {
       {/* Animated Background */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         {/* Aurora orbs */}
-        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
-        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
-        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />
+        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float"></div>
+        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow"></div>
+        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast"></div>
         {/* Subtle animated grid */}
-        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid" />
+        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid"></div>
         {/* Star field */}
         <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]">
-          <div className="twinkle-field absolute inset-0" />
+                      <div className="twinkle-field absolute inset-0"></div>
         </div>
-        <div className="absolute inset-0 bg-aurora opacity-[0.18]" />
+        <div className="absolute inset-0 bg-aurora opacity-[0.18]"></div>
         {/* Extra futuristic layers */}
         <div className="absolute inset-0 flex items-center justify-center opacity-30">
-          <div className="absolute h-[52rem] w-[52rem] rounded-full border border-cyan-400/10 animate-[spin_60s_linear_infinite]" />
-          <div className="absolute h-[36rem] w-[36rem] rounded-full border border-fuchsia-400/10 animate-[spin_80s_linear_infinite] [animation-direction:reverse]" />
-          <div className="absolute h-[24rem] w-[24rem] rounded-full border border-violet-400/10 animate-[spin_100s_linear_infinite]" />
+          <div className="absolute h-[52rem] w-[52rem] rounded-full border border-cyan-400/10 animate-[spin_60s_linear_infinite]"></div>
+          <div className="absolute h-[36rem] w-[36rem] rounded-full border border-fuchsia-400/10 animate-[spin_80s_linear_infinite] [animation-direction:reverse]"></div>
+          <div className="absolute h-[24rem] w-[24rem] rounded-full border border-violet-400/10 animate-[spin_100s_linear_infinite]"></div>
         </div>
-        <div className="absolute inset-0 mix-blend-soft-light opacity-[0.07] scanlines" />
+        <div className="absolute inset-0 mix-blend-soft-light opacity-[0.07] scanlines"></div>
         {/* Neural mesh lines */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_400px_at_10%_-10%,rgba(34,211,238,0.08),transparent),radial-gradient(600px_400px_at_110%_10%,rgba(168,85,247,0.08),transparent)]" />
-        <div className="pointer-events-none absolute inset-0 opacity-20 [background:repeating-linear-gradient(0deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px),repeating-linear-gradient(90deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px)] [mask-image:radial-gradient(ellipse_at_center,black,transparent_65%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_400px_at_10%_-10%,rgba(34,211,238,0.08),transparent),radial-gradient(600px_400px_at_110%_10%,rgba(168,85,247,0.08),transparent)]"></div>
+        <div className="pointer-events-none absolute inset-0 opacity-20 [background:repeating-linear-gradient(0deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px),repeating-linear-gradient(90deg,transparent,transparent_31px,rgba(255,255,255,.06)_32px)] [mask-image:radial-gradient(ellipse_at_center,black,transparent_65%)]"></div>
         {/* Cyber 3D grid */}
-        <div className="absolute inset-x-0 bottom-0 h-[40vh] cyber-grid" />
+        <div className="absolute inset-x-0 bottom-0 h-[40vh] cyber-grid"></div>
       </div>
 
       {/* Header */}
