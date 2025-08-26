@@ -61,6 +61,7 @@
   },
   "include": ["src/main.tsx", "src/App.tsx", "src/pages/Home.tsx"],
   "exclude": [
+<<<<<<< HEAD
     "src/**/.backup/**",
     "src/**/*.disabled",
     "src/**/*.backup.*",
@@ -69,6 +70,14 @@
     "!src/pages/Home.tsx",
     "src/routes/**",
     "src/data/**"
+=======
+    "src/components.disabled",
+    "src/components.disabled/**/*",
+    "src/pages.disabled",
+    "src/pages.disabled/**/*",
+    "src/pages/**/*",
+    "src/layout/MainNavigation.tsx"
+>>>>>>> origin/cursor/website-audit-and-enhancement-d607
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
