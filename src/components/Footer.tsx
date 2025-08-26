@@ -7,9 +7,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               Zion Tech Group
             </h3>
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://linkedin.com/company/ziontechgroup" 
+                href="https://www.linkedin.com/company/ziontechgroup" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-colors duration-300 p-2 hover:bg-gray-800 rounded-lg"
@@ -30,14 +30,14 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
               <a 
-                href="https://twitter.com/ziontechgroup" 
+                href="https://x.com/ziontechgroup" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-colors duration-300 p-2 hover:bg-gray-800 rounded-lg"
-                aria-label="Visit our Twitter page"
+                aria-label="Visit our X (Twitter) page"
               >
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
               </a>
               <a 
@@ -92,6 +92,16 @@ const Footer: React.FC = () => {
                   Digital Transformation
                 </Link>
               </li>
+              <li>
+                <Link to="/quantum-technology" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Quantum Technology
+                </Link>
+              </li>
+              <li>
+                <Link to="/green-it" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Green IT
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -105,13 +115,8 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
-                  Blog & Insights
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
-                  Contact
+                <Link to="/team" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Our Team
                 </Link>
               </li>
               <li>
@@ -120,8 +125,92 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
-                  Privacy Policy
+                <Link to="/partners" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link to="/research-development" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  R&D
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white">Resources</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/blog" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Blog & Insights
+                </Link>
+              </li>
+              <li>
+                <Link to="/tutorials" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Tutorials
+                </Link>
+              </li>
+              <li>
+                <Link to="/webinars" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Webinars
+                </Link>
+              </li>
+              <li>
+                <Link to="/white-papers" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  White Papers
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/documentation" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Documentation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white">Support</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/help-center" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link to="/support" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Support
+                </Link>
+              </li>
+              <li>
+                <Link to="/request-quote" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Request Quote
+                </Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link to="/sitemap" className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                  Sitemap
                 </Link>
               </li>
             </ul>
