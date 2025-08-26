@@ -1232,3 +1232,8 @@ h3 {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(168,85,247,.5), rgba(34,211,238,.5), transparent);
 }
+
+/* Anchor focus styles for better a11y */
+:target {
+  scroll-margin-top: 96px;
+}

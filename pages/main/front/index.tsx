@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Layers, Server, Bot, Sparkles } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, CloudCog, Layers, Workflow } from 'lucide-react';
 
 export default function MainFrontIndex() {
   return (
@@ -51,12 +50,15 @@ export default function MainFrontIndex() {
           <div className="text-2xl font-bold tracking-wide">
             <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
           </div>
-          <div className="hidden gap-6 md:flex">
+          <div className="hidden items-center gap-6 md:flex">
             <Link href="/"><a className="text-white/80 hover:text-white">Home</a></Link>
+            <a href="#features" className="text-white/80 hover:text-white">Features</a>
+            <a href="#capabilities" className="text-white/80 hover:text-white">Capabilities</a>
+            <a href="#benefits" className="text-white/80 hover:text-white">Benefits</a>
             <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a></Link>
             <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</a></Link>
             <Link href="/site-health"><a className="text-white/80 hover:text-white">Site Health</a></Link>
-            <Link href="/reports/seo"><a className="text-white/80 hover:text-white">Reports</a></Link>
+            <a href="https://github.com/Zion-Holdings/zion.app/tree/main/docs" target="_blank" rel="noopener" className="text-white/80 hover:text-white">Docs</a>
           </div>
         </nav>
       </header>
@@ -108,8 +110,8 @@ export default function MainFrontIndex() {
                     'Safety Guardrails',
                     'A11y + Performance',
                     'Observability',
-                    'A/B Experiments',
-                    'Realtime Content',
+                    'Design Evolution',
+                    'Marketing & SEO',
                   ].flatMap((label) => [label, label]).map((label, idx) => (
                     <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {label}
@@ -150,7 +152,7 @@ export default function MainFrontIndex() {
         </section>
 
         {/* Superpowers */}
-        <motion.section initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }} className="mx-auto max-w-7xl px-6 pb-14">
+        <section id="superpowers" className="mx-auto max-w-7xl px-6 pb-14">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Superpowers</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
@@ -187,29 +189,31 @@ export default function MainFrontIndex() {
           </div>
         </motion.section>
 
-        {/* Features */}
-        <motion.section initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }} className="mx-auto max-w-7xl px-6 pb-14">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
+        {/* Feature Suites */}
+        <section id="features" className="mx-auto max-w-7xl px-6 pb-14">
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Suites</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { Icon: Zap, title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.' },
-              { Icon: GitBranch, title: 'Repo Sync', desc: 'Changes are committed and pushed automatically to main.' },
-              { Icon: Cpu, title: 'Zero Ops', desc: 'Runs fully in the cloud—no servers or manual intervention.' },
-              { Icon: ShieldCheck, title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.' },
-              { Icon: Rocket, title: 'Scalable', desc: 'Generates domain‑specific factories on demand.' },
-              { Icon: Gauge, title: 'Observability', desc: 'Dashboards, reports, and GitHub Actions artifacts.' },
-              { Icon: Activity, title: 'Telemetry‑Driven', desc: 'Improves decisions with live analytics and signals.' },
-              { Icon: Layers, title: 'Composable', desc: 'Snap‑together workflows for bespoke outcomes.' },
-              { Icon: Server, title: 'Edge‑Ready', desc: 'Deploys globally with CDN‑friendly assets.' },
-            ].map(({ Icon, title, desc }) => (
-              <article key={title} className="group glow-card relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <div className="flex items-center gap-3">
-                  <Icon className="h-5 w-5 text-cyan-300" />
-                  <h3 className="text-lg font-semibold">{title}</h3>
-                </div>
-                <p className="mt-2 text-sm text-white/75">{desc}</p>
-              </article>
+              { Icon: Zap, title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.', href: '/automation' },
+              { Icon: GitBranch, title: 'Repo Sync', desc: 'Changes are committed and pushed automatically to main.', href: '/automation' },
+              { Icon: Cpu, title: 'Zero Ops', desc: 'Runs fully in the cloud—no servers or manual intervention.', href: '/automation' },
+              { Icon: ShieldCheck, title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.', href: '/site-health' },
+              { Icon: Rocket, title: 'Scalable', desc: 'Generates domain‑specific factories on demand.', href: '/automation' },
+              { Icon: Gauge, title: 'Observability', desc: 'Dashboards, reports, and GitHub Actions artifacts.', href: '/automation' },
+              { Icon: CloudCog, title: 'UX & Design Evolution', desc: 'Continuously beautifies UI with cohesive, modern visuals.', href: '/newsroom' },
+              { Icon: Layers, title: 'Content & SEO', desc: 'Curates content and optimizes metadata to grow reach.', href: '/newsroom' },
+              { Icon: Workflow, title: 'Experimentation', desc: 'Launches micro‑experiments and measures impact.', href: '/automation' },
+            ].map(({ Icon, title, desc, href }) => (
+              <Link key={title} href={href}>
+                <a className="group glow-card relative block overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <div className="flex items-center gap-3">
+                    <Icon className="h-5 w-5 text-cyan-300" />
+                    <h3 className="text-lg font-semibold">{title}</h3>
+                  </div>
+                  <p className="mt-2 text-sm text-white/75">{desc}</p>
+                </a>
+              </Link>
             ))}
           </div>
         </motion.section>
@@ -234,18 +238,18 @@ export default function MainFrontIndex() {
         </motion.section>
 
         {/* Capabilities */}
-        <motion.section initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }} className="mx-auto max-w-7xl px-6 pb-14">
+        <section id="capabilities" className="mx-auto max-w-7xl px-6 pb-14">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
-              { Icon: ShieldCheck, title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' },
-              { Icon: Activity, title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' },
-              { Icon: Sparkles, title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' },
-              { Icon: Bot, title: 'Agentic Workflows', desc: 'Chains specialized agents to deliver end‑to‑end outcomes.' },
-              { Icon: Layers, title: 'Pattern Libraries', desc: 'Promotes reusable UI + automation building blocks.' },
-              { Icon: Server, title: 'Infra‑Aware', desc: 'Integrates with CI/CD, edge, storage, and analytics.' },
-            ].map(({ Icon, title, desc }) => (
-              <article key={title} className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl">
+              { title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' },
+              { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' },
+              { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' },
+              { title: 'DevOps Guardrails', desc: 'Automated checks for links, builds, and regressions before merge.' },
+              { title: 'UX Fidelity', desc: 'Applies consistent design language and modern motion principles.' },
+              { title: 'Insights & Reports', desc: 'Publishes actionable reports with artifacts from CI runs.' },
+            ].map((c) => (
+              <article key={c.title} className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl">
                 <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl" />
                 <Icon className="h-6 w-6 text-cyan-300" />
                 <h3 className="mt-3 text-lg font-semibold">{title}</h3>
@@ -274,7 +278,7 @@ export default function MainFrontIndex() {
         </motion.section>
 
         {/* Benefits */}
-        <motion.section initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6 }} className="mx-auto max-w-7xl px-6 pb-20">
+        <section id="benefits" className="mx-auto max-w-7xl px-6 pb-20">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits</h2>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
             {[
@@ -282,8 +286,8 @@ export default function MainFrontIndex() {
               'Rapid feedback loop with safe, incremental edits',
               'Continuous delivery directly to main branch',
               'Fewer regressions via layered checks and reports',
-              'Lower costs with zero‑ops, serverless approach',
-              'Faster iteration with reusable patterns and agents',
+              'Consistent, modern design language across surfaces',
+              'Improved Core Web Vitals and accessibility scores',
             ].map((b) => (
               <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
@@ -353,6 +357,9 @@ export default function MainFrontIndex() {
                 <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
               </div>
               <div className="flex flex-wrap justify-center gap-4 text-sm text-white/70">
+                <a href="#features" className="hover:text-white">Features</a>
+                <a href="#capabilities" className="hover:text-white">Capabilities</a>
+                <a href="#benefits" className="hover:text-white">Benefits</a>
                 <Link href="/automation"><a>Automations</a></Link>
                 <Link href="/newsroom"><a>Newsroom</a></Link>
                 <Link href="/site-health"><a>Site Health</a></Link>
