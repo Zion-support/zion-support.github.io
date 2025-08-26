@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Brain, 
-  Rocket, 
-  Atom, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Cpu, 
-  Database,
   Search,
   Filter,
   Star,
@@ -21,55 +13,60 @@ import {
   Phone,
   Mail,
   MapPin,
-  ExternalLink
+  ExternalLink,
+  CheckCircle,
+  X,
+  ChevronDown,
+  ChevronUp,
+  Info,
+  Zap,
+  Shield,
+  Cpu,
+  Brain,
+  Rocket,
+  Atom,
+  Globe,
+  Database,
+  Eye,
+  Lightbulb,
+  Sparkles
 } from 'lucide-react';
-import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
 import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
 import { SEO } from '@/components/SEO';
 
 // Service category icons mapping
 const categoryIcons: Record<string, React.ReactNode> = {
-  'Quantum Computing & AI': <Atom className="w-6 h-6" />,
-  'Space Technology': <Rocket className="w-6 h-6" />,
-  'Neural Technology': <Brain className="w-6 h-6" />,
-  'Biotechnology': <Database className="w-6 h-6" />,
-  'Robotics & Automation': <Cpu className="w-6 h-6" />,
   'Quantum Technology': <Atom className="w-6 h-6" />,
   'Fusion Energy': <Zap className="w-6 h-6" />,
+  'Neural Technology': <Brain className="w-6 h-6" />,
   'Metaverse & VR': <Globe className="w-6 h-6" />,
   'Materials Science': <Shield className="w-6 h-6" />
 };
 
 // Service category colors
 const categoryColors: Record<string, string> = {
-  'Quantum Computing & AI': 'from-purple-500 to-cyan-500',
-  'Space Technology': 'from-blue-500 to-indigo-600',
-  'Neural Technology': 'from-pink-500 to-rose-500',
-  'Biotechnology': 'from-green-500 to-emerald-600',
-  'Robotics & Automation': 'from-orange-500 to-red-500',
   'Quantum Technology': 'from-purple-500 to-cyan-500',
   'Fusion Energy': 'from-yellow-500 to-orange-500',
+  'Neural Technology': 'from-pink-500 to-rose-500',
   'Metaverse & VR': 'from-indigo-500 to-purple-600',
   'Materials Science': 'from-teal-500 to-blue-600'
 };
 
-const InnovativeServicesShowcase2027: React.FC = () => {
+const EmergingTechServices2027: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
-
-  // Combine all services
-  const allServices = [...INNOVATIVE_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
+  const [expandedService, setExpandedService] = useState<string | null>(null);
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+  const categories = ['all', ...Array.from(new Set(EMERGING_TECH_SERVICES_2027.map(service => service.category)))];
 
   // Get unique innovation levels
-  const innovationLevels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];
+  const innovationLevels = ['all', ...Array.from(new Set(EMERGING_TECH_SERVICES_2027.map(service => service.innovationLevel)))];
 
   // Filter and sort services
-  const filteredServices = allServices
+  const filteredServices = EMERGING_TECH_SERVICES_2027
     .filter(service => {
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -102,12 +99,23 @@ const InnovativeServicesShowcase2027: React.FC = () => {
     setIsVisible(true);
   }, []);
 
+  const toggleServiceExpansion = (serviceId: string) => {
+    setExpandedService(expandedService === serviceId ? null : serviceId);
+  };
+
+  const getPriceRangeColor = (price: number) => {
+    if (price < 20000) return 'text-green-400';
+    if (price < 40000) return 'text-yellow-400';
+    if (price < 60000) return 'text-orange-400';
+    return 'text-red-400';
+  };
+
   return (
     <>
       <SEO 
-        title="Innovative Services Showcase 2027 | Zion Tech Group"
-        description="Discover our cutting-edge innovative services including Quantum AI Fusion, Space Tech Infrastructure, Neural Interfaces, and more breakthrough technologies."
-        keywords="innovative services, quantum computing, space technology, neural interfaces, fusion energy, metaverse, materials science"
+        title="Emerging Technology Services 2027 | Zion Tech Group"
+        description="Discover our cutting-edge emerging technology services including Quantum Internet, Fusion Energy, Neural Interfaces, Metaverse Development, and Advanced Materials Discovery."
+        keywords="emerging technology, quantum internet, fusion energy, neural interfaces, metaverse, materials science, breakthrough technology"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -120,31 +128,107 @@ const InnovativeServicesShowcase2027: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                  Innovative Services
-                </span>
-                <br />
-                <span className="text-4xl md:text-5xl">Showcase 2027</span>
-              </h1>
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Sparkles className="w-12 h-12 text-zion-cyan" />
+                <h1 className="text-5xl md:text-7xl font-bold text-white">
+                  <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                    Emerging
+                  </span>
+                  <br />
+                  <span className="text-4xl md:text-5xl">Technology Services</span>
+                </h1>
+                <Sparkles className="w-12 h-12 text-zion-cyan" />
+              </div>
               <p className="text-xl md:text-2xl text-zion-cyan/90 mb-8 max-w-4xl mx-auto">
-                Discover breakthrough technologies that will revolutionize industries and create the future
+                Pioneering the future with breakthrough technologies that will transform industries and redefine what's possible
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm text-zion-cyan/80">
                 <span className="flex items-center gap-2">
-                  <Star className="w-4 h-4" />
-                  {allServices.length}+ Revolutionary Services
+                  <Lightbulb className="w-4 h-4" />
+                  Future-Proof Solutions
                 </span>
                 <span className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4" />
-                  Cutting-Edge Innovation
+                  Breakthrough Innovation
                 </span>
                 <span className="flex items-center gap-2">
                   <Award className="w-4 h-4" />
-                  Industry-Leading Solutions
+                  Industry Leadership
                 </span>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Technology Overview Section */}
+        <section className="py-16 bg-black/30">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Revolutionary Technologies
+              </h2>
+              <p className="text-zion-cyan/80 text-lg">
+                Explore the cutting-edge technologies that will shape the future
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: <Atom className="w-12 h-12" />,
+                  title: "Quantum Technology",
+                  description: "Revolutionary quantum computing and communication systems",
+                  color: "from-purple-500 to-cyan-500"
+                },
+                {
+                  icon: <Zap className="w-12 h-12" />,
+                  title: "Fusion Energy",
+                  description: "Clean, unlimited energy for a sustainable future",
+                  color: "from-yellow-500 to-orange-500"
+                },
+                {
+                  icon: <Brain className="w-12 h-12" />,
+                  title: "Neural Technology",
+                  description: "Brain-computer interfaces and cognitive enhancement",
+                  color: "from-pink-500 to-rose-500"
+                },
+                {
+                  icon: <Globe className="w-12 h-12" />,
+                  title: "Metaverse & VR",
+                  description: "Immersive digital worlds and experiences",
+                  color: "from-indigo-500 to-purple-600"
+                },
+                {
+                  icon: <Shield className="w-12 h-12" />,
+                  title: "Materials Science",
+                  description: "AI-powered discovery of breakthrough materials",
+                  color: "from-teal-500 to-blue-600"
+                }
+              ].map((tech, index) => (
+                <motion.div
+                  key={tech.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-br from-zion-slate/80 to-zion-slate-dark/80 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 text-center"
+                >
+                  <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${tech.color} rounded-full mb-4 mx-auto`}>
+                    <div className="text-white">
+                      {tech.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{tech.title}</h3>
+                  <p className="text-zion-cyan/80 text-sm">{tech.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -208,7 +292,22 @@ const InnovativeServicesShowcase2027: React.FC = () => {
         {/* Services Grid */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Emerging Technology Services
+              </h2>
+              <p className="text-zion-cyan/80 text-lg">
+                Discover our revolutionary services that are shaping the future
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <AnimatePresence>
                 {filteredServices.map((service, index) => (
                   <motion.div
@@ -265,7 +364,7 @@ const InnovativeServicesShowcase2027: React.FC = () => {
                       {/* Pricing and ROI */}
                       <div className="grid grid-cols-2 gap-4 mb-4">
                         <div className="text-center p-3 bg-zion-slate/50 rounded-lg">
-                          <div className="text-lg font-bold text-zion-cyan">
+                          <div className={`text-lg font-bold ${getPriceRangeColor(service.price)}`}>
                             ${service.price.toLocaleString()}
                           </div>
                           <div className="text-xs text-zion-cyan/70">
@@ -346,10 +445,10 @@ const InnovativeServicesShowcase2027: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
+                Ready to Shape the Future?
               </h2>
               <p className="text-xl text-zion-cyan/90 mb-8">
-                Let's discuss how our innovative services can drive your success and create competitive advantages
+                Let's discuss how our emerging technologies can revolutionize your business and create unprecedented opportunities
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -370,7 +469,7 @@ const InnovativeServicesShowcase2027: React.FC = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:kleber@ziontechgroup.com?subject=Innovative Services Consultation"
+                  href="mailto:kleber@ziontechgroup.com?subject=Emerging Technology Consultation"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -394,4 +493,4 @@ const InnovativeServicesShowcase2027: React.FC = () => {
   );
 };
 
-export default InnovativeServicesShowcase2027;
+export default EmergingTechServices2027;
