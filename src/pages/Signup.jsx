@@ -6,12 +6,12 @@ import { z } from "zod";
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { register } from "@/services/auth";
-import { toast } from "@/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+// import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
 // Form validation schema
 const signupSchema = z
@@ -40,8 +40,9 @@ export default function Signup() {
     // Track confirm password locally to prevent it from clearing on blur
     const [confirmPasswordValue, setConfirmPasswordValue] = useState("");
     const passwordValue = form.watch("password");
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    // Initialize react-hook-form
+      const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  // Initialize react-hook-form
     const form = useForm({
         resolver: zodResolver(signupSchema),
         defaultValues: {
@@ -227,7 +228,7 @@ export default function Signup() {
                         <FormMessage className="text-red-400"/>
                       </FormItem>)}/>
 
-                  <PasswordStrengthMeter password={passwordValue}/>
+                  {/* <PasswordStrengthMeter password={passwordValue}/> */}
 
                   <FormField control={form.control} name="termsAccepted" render={({ field }) => (<FormItem className="flex flex-row items-start space-x-3 space-y-0">
                         <FormControl>

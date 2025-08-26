@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, ChevronDown, Users, Briefcase, Settings, BarChart3, Brain, Shield, Cloud, Zap, HelpCircle, FileText } from "lucide-react";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
 import {
   DropdownMenu,
@@ -30,7 +30,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
