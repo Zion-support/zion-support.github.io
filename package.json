@@ -15,7 +15,6 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-<<<<<<< HEAD
     "pm2:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.config.cjs --update-env",
     "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
     "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
