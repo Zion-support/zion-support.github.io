@@ -309,14 +309,14 @@ export default function Partners() {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/contact"
+								href="/contact"
 								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
 							>
 								Get in Touch
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
 							</Link>
 							<Link
-								to="/services"
+								href="/services"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 							>
 								View Services <span aria-hidden="true">→</span>

@@ -206,7 +206,7 @@ export default function Sitemap() {
 					<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
 						<div className="grid gap-6 lg:grid-cols-3">
 							<Link
-								to="/services"
+								href="/services"
 								className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-lg transition-all duration-300"
 							>
 								<div className="flex items-center gap-x-3">
@@ -226,7 +226,7 @@ export default function Sitemap() {
 							</Link>
 
 							<Link
-								to="/contact"
+								href="/contact"
 								className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-lg transition-all duration-300"
 							>
 								<div className="flex items-center gap-x-3">
@@ -246,7 +246,7 @@ export default function Sitemap() {
 							</Link>
 
 							<Link
-								to="/about"
+								href="/about"
 								className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-lg transition-all duration-300"
 							>
 								<div className="flex items-center gap-x-3">
@@ -281,14 +281,14 @@ export default function Sitemap() {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/contact"
+								href="/contact"
 								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
 							>
 								Get in Touch
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
 							</Link>
 							<Link
-								to="/services"
+								href="/services"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 							>
 								View Services <span aria-hidden="true">→</span>

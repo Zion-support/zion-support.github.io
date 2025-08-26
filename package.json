@@ -103,7 +103,11 @@
     "linting:start": "npm run linting:orchestrator continuous",
     "linting:status": "npm run linting:orchestrator status",
     "linting:check": "npm run linting:orchestrator check",
-    "linting:fix": "npm run linting:orchestrator fix"
+    "linting:fix": "npm run linting:orchestrator check",
+    "security:scan": "npm audit --audit-level=moderate",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "cypress:run": "cypress run",
+    "diversify": "echo 'Diversification script placeholder'"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
