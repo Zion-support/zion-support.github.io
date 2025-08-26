@@ -61,34 +61,73 @@ export function ITServiceRequestHero() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Professional
-              <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                IT Services
-              </span>
-              When You Need Them
-            </h1>
-            
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Get immediate access to certified IT professionals for on-site support, remote assistance, 
-              and comprehensive infrastructure solutions. Available 24/7 for emergency situations.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Link
-                to="/it-onsite-services"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl text-center"
+    <section
+      className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]"
+    >
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="md:h-full md:flex md:flex-col md:items-center md:justify-center">
+          <GradientHeading className="mb-6 text-4xl md:text-5xl text-center">
+            24x7 Global IT Onsite Services
+          </GradientHeading>
+          <p className="text-lg text-zion-slate-light mb-8 max-w-md text-center">
+            Worldwide coverage and rapid dispatch of certified technicians.
+          </p>
+        </div>
+        <div className="bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto">
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <Image
+              src="/logos/placeholder-logo.svg"
+              alt="Company logo"
+              width={200}
+              height={200}
+              className="w-full h-auto md:w-40"
+              loading="lazy"
+            />
+            <form onSubmit={handleSubmit} className="space-y-4 flex-1">
+              <Input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Your name"
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+                required
+              />
+              <Input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your email"
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+                required
+              />
+              <Input
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="Phone number"
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+              />
+              <Input
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+                placeholder="Company"
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+              />
+              <Input
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+                placeholder="Service location"
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+                required
+              />
+              <Textarea
+                value={details}
+                onChange={(e) => setDetails(e.target.value)}
+                placeholder="Describe the issue or service needed"
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]"
+              />
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105"
               >
                 Request On-Site Service
               </Link>
