@@ -14,14 +14,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -33,9 +35,28 @@
     "exactOptionalPropertyTypes": false,
     "noImplicitOverride": false,
     "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["src"],
-  "exclude": ["src/components.disabled", "src/components.disabled/**/*", "src/pages.disabled", "src/pages.disabled/**/*"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "src/components.disabled",
+    "src/components.disabled/**/*",
+    "src/pages.disabled",
+    "src/pages.disabled/**/*"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
