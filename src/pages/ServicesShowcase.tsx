@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '../data/advancedInnovativeServices2025';
@@ -42,8 +43,15 @@ const ServicesShowcase: React.FC = () => {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { EnhancedServicesShowcase } from '@/components/EnhancedServicesShowcase';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 
+export default function ServicesShowcase() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -356,7 +364,17 @@ const ServicesShowcase: React.FC = () => {
         </div>
       </section>
     </div>
+=======
+    <>
+      <Helmet>
+        <title>Services Showcase - Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive technology services portfolio including AI solutions, cloud services, cybersecurity, and digital transformation." />
+        <meta name="keywords" content="technology services, AI solutions, cloud services, cybersecurity, digital transformation, IT consulting" />
+        <link rel="canonical" href="https://ziontechgroup.com/services-showcase" />
+      </Helmet>
+      
+      <EnhancedServicesShowcase />
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
   );
-};
-
-export default ServicesShowcase;
+}

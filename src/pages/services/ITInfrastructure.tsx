@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Server, Network, Database, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
@@ -7,10 +8,15 @@ import { Server, Network, Database, Shield, Zap, TrendingUp, Users, Globe } from
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
+=======
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 
 const ITInfrastructure: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: Server,
       title: "Server Management",
@@ -81,6 +87,50 @@ const ITInfrastructure: React.FC = () => {
         keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
         canonical="https://ziontechgroup.com/services/infrastructure"
       />
+=======
+      title: "Network Infrastructure",
+      description: "Design, implement, and maintain robust network solutions",
+      features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
+      icon: "🌐"
+    },
+    {
+      title: "Server Management",
+      description: "Comprehensive server infrastructure and management services",
+      features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"],
+      icon: "🖥️"
+    },
+    {
+      title: "Storage Solutions",
+      description: "Scalable storage infrastructure for growing businesses",
+      features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"],
+      icon: "💾"
+    },
+    {
+      title: "Security Infrastructure",
+      description: "Multi-layered security infrastructure protection",
+      features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],
+      icon: "🔒"
+    }
+  ];
+
+  const infrastructureAreas = [
+    { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
+    { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
+    { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
+    { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>IT Infrastructure — Zion Tech Group | Network & System Management</title>
+        <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services." />
+        <meta property="og:title" content="IT Infrastructure — Zion Tech Group" />
+        <meta property="og:description" content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure." />
+        <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure" />
+      </Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 
 <<<<<<< HEAD
       {/* Hero Section */}
@@ -207,15 +257,15 @@ const ITInfrastructure: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build and maintain a robust, scalable IT infrastructure that supports your business growth. 
-              Our expert team ensures your systems run efficiently and reliably.
+              Build a solid foundation for your business with enterprise-grade IT infrastructure. 
+              Our comprehensive services ensure reliability, scalability, and security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
-                Get Infrastructure Assessment
+                Get Infrastructure Consultation
               </Link>
               <Link
                 to="/services"
@@ -227,42 +277,15 @@ const ITInfrastructure: React.FC = () => {
           </div>
         </section>
 
-        {/* Infrastructure Features */}
+        {/* Infrastructure Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Infrastructure Excellence
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Professional-grade infrastructure management and optimization
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {infrastructureFeatures.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center"
-                >
-                  <div className="text-4xl mb-4">{feature.icon}</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{feature.name}</h3>
-                  <p className="text-sm text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Infrastructure Services Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Infrastructure Services
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive solutions to build, maintain, and optimize your IT infrastructure
+                Comprehensive solutions to build and maintain your IT foundation
               </p>
             </div>
             
@@ -293,7 +316,40 @@ const ITInfrastructure: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Infrastructure Areas */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Infrastructure Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Multi-layered approach to building robust IT infrastructure
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {infrastructureAreas.map((area, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
+                >
+                  <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
+                  <ul className="space-y-2">
+                    {area.solutions.map((solution, idx) => (
+                      <li key={idx} className="text-gray-300 flex items-center">
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                        {solution}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -301,7 +357,7 @@ const ITInfrastructure: React.FC = () => {
                 Why Choose Our Infrastructure Services?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Proven expertise and best practices to maximize your infrastructure investment
+                Proven expertise and cutting-edge technology for reliable infrastructure
               </p>
             </div>
             
@@ -312,28 +368,28 @@ const ITInfrastructure: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Reliable Performance</h3>
-                <p className="text-gray-300">Optimized systems that deliver consistent, high-performance results</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Reliability</h3>
+                <p className="text-gray-300">99.9% uptime guarantee with redundant systems</p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 11l5-5m0 0l5 5m-5-5v12" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Cost Effective</h3>
-                <p className="text-gray-300">Optimize resources and reduce operational costs</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Scalability</h3>
+                <p className="text-gray-300">Grow your infrastructure as your business expands</p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Future Ready</h3>
-                <p className="text-gray-300">Scalable solutions that adapt to your growing business needs</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Security</h3>
+                <p className="text-gray-300">Multi-layered security for comprehensive protection</p>
               </div>
             </div>
           </div>
@@ -343,10 +399,10 @@ const ITInfrastructure: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Infrastructure?
+              Ready to Build Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our infrastructure services can improve your IT operations
+              Let's discuss how our infrastructure services can support your business growth
             </p>
             <Link
               to="/contact"
@@ -358,7 +414,10 @@ const ITInfrastructure: React.FC = () => {
         </section>
       </div>
     </>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
   );
 };
 

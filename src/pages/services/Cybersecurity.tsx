@@ -7,10 +7,13 @@ const Cybersecurity: React.FC = () => {
   const features = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Shield,
       title: "Threat Detection",
       description: "Advanced threat detection and response systems"
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
       title: "Threat Detection & Response",
       description: "Advanced threat detection and rapid incident response capabilities",
       features: ["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],
@@ -31,6 +34,7 @@ const Cybersecurity: React.FC = () => {
       icon: AlertTriangle,
       title: "Vulnerability Assessment",
 <<<<<<< HEAD
+<<<<<<< HEAD
       description: "Regular security audits and penetration testing"
     }
   ];
@@ -42,6 +46,8 @@ const Cybersecurity: React.FC = () => {
     "Enhanced customer trust and reputation",
     "Cost-effective security solutions"
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
       description: "Comprehensive security audits and vulnerability management",
       features: ["Penetration Testing", "Security Audits", "Risk Assessment", "Compliance Checks"],
       icon: "🔍"
@@ -353,7 +359,10 @@ const Cybersecurity: React.FC = () => {
         </section>
       </div>
     </>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
   );
 };
 

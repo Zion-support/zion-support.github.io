@@ -38,6 +38,7 @@ const Consulting: React.FC = () => {
       icon: Target,
       title: "Project Management",
 <<<<<<< HEAD
+<<<<<<< HEAD
       description: "Professional project management and delivery services"
     },
     {
@@ -54,6 +55,8 @@ const Consulting: React.FC = () => {
     "Ongoing support and consultation",
     "Measurable results and ROI"
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
       description: "Professional project management for successful technology implementations",
       features: ["Project Planning", "Team Coordination", "Timeline Management", "Quality Assurance"],
       icon: "📊"
@@ -66,6 +69,13 @@ const Consulting: React.FC = () => {
     { step: "Strategy", icon: "🎯", description: "Develop comprehensive recommendations" },
     { step: "Implementation", icon: "🚀", description: "Execute strategy with ongoing support" }
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
+  ];
+
+  const consultingAreas = [
+    { area: "Enterprise Architecture", solutions: ["Technology strategy", "System design", "Integration planning", "Scalability assessment"] },
+    { area: "Digital Strategy", solutions: ["Digital transformation", "Technology roadmap", "Innovation strategy", "Change management"] },
+    { area: "Security & Compliance", solutions: ["Security assessment", "Compliance audit", "Risk management", "Security strategy"] },
+    { area: "Cloud Strategy", solutions: ["Cloud assessment", "Migration planning", "Cost optimization", "Multi-cloud strategy"] }
   ];
 
   return (
@@ -230,7 +240,7 @@ const Consulting: React.FC = () => {
                 Our Consulting Approach
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                A proven methodology for delivering strategic technology guidance
+                A proven methodology for successful technology consulting
               </p>
             </div>
             
@@ -249,7 +259,7 @@ const Consulting: React.FC = () => {
           </div>
         </section>
 
-        {/* Consulting Services Grid */}
+        {/* Consulting Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -257,7 +267,7 @@ const Consulting: React.FC = () => {
                 Our Consulting Services
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive consulting solutions to guide your technology decisions
+                Comprehensive technology consulting to drive your business success
               </p>
             </div>
             
@@ -288,18 +298,19 @@ const Consulting: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Consulting Areas */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Consulting Services?
+                Consulting Areas
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Proven expertise and methodologies to maximize your technology success
+                Specialized expertise across key technology domains
               </p>
             </div>
             
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -332,6 +343,92 @@ const Consulting: React.FC = () => {
               </div>
             </div>
           </div>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {consultingAreas.map((area, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
+                >
+                  <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
+                  <ul className="space-y-2">
+                    {area.solutions.map((solution, idx) => (
+                      <li key={idx} className="text-gray-300 flex items-center">
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                        {solution}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Success Stories */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Success Stories
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Real results from our consulting projects
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white mb-4">Financial Services Firm</h3>
+                <p className="text-gray-300 mb-4">
+                  Technology assessment and strategic planning led to 40% reduction in IT costs and improved system reliability through cloud migration and infrastructure optimization.
+                </p>
+                <div className="text-blue-400 text-sm">
+                  <strong>Results:</strong> 40% cost reduction, improved reliability
+                </div>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white mb-4">Healthcare Provider</h3>
+                <p className="text-gray-300 mb-4">
+                  Security and compliance consulting resulted in successful SOC 2 certification and enhanced data protection measures, ensuring patient data security and regulatory compliance.
+                </p>
+                <div className="text-blue-400 text-sm">
+                  <strong>Results:</strong> SOC 2 certification, enhanced security
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Technology Stack */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Technology Expertise
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Deep knowledge across leading technology platforms and solutions
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                "Cloud Platforms", "Security Solutions", "Data Analytics", "AI/ML",
+                "DevOps Tools", "Enterprise Software", "Integration Platforms", "Mobile Technologies",
+                "IoT Platforms", "Blockchain", "Edge Computing", "Quantum Computing"
+              ].map((tech, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center hover:border-white/40 transition-all duration-300"
+                >
+                  <span className="text-gray-300 font-medium">{tech}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
         </section>
 
         {/* CTA Section */}
@@ -353,7 +450,10 @@ const Consulting: React.FC = () => {
         </section>
       </div>
     </>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
   );
 };
 

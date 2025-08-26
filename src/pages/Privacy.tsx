@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 =======
@@ -11,12 +12,33 @@ const Privacy: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
+=======
+import { Helmet } from 'react-helmet-async';
+
+const Privacy: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Privacy Policy — Zion Tech Group</title>
+        <meta name="description" content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information." />
+        <meta property="og:title" content="Privacy Policy — Zion Tech Group" />
+        <meta property="og:description" content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information." />
+        <meta property="og:url" content="https://ziontechgroup.com/privacy" />
+        <link rel="canonical" href="https://ziontechgroup.com/privacy" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Privacy
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {" "}Policy
               </span>
             </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               How we protect and handle your personal information
@@ -65,11 +87,10 @@ const Privacy: React.FC = () => {
                 </p>
               </div>
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Your privacy is our priority. Learn how we protect your data and respect your rights.
-            </p>
-            <p className="text-sm text-gray-400">
-              Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
             </p>
           </div>
         </section>
@@ -78,35 +99,45 @@ const Privacy: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">Our Commitment to Privacy</h2>
-              <p className="text-gray-300 mb-6">
-                At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. 
-                This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.
-              </p>
-              <p className="text-gray-300 mb-6">
-                If you have any questions about this Privacy Policy, please contact us at{' '}
-                <a href="mailto:privacy@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-                  privacy@ziontechgroup.com
-                </a>
-              </p>
+              <div className="prose prose-invert max-w-none">
+                <h2 className="text-2xl font-bold text-white mb-6">Information We Collect</h2>
+                <p className="text-gray-300 mb-6">
+                  We collect information you provide directly to us, such as when you:
+                </p>
+                <ul className="text-gray-300 mb-6 space-y-2">
+                  <li>• Contact us through our website or email</li>
+                  <li>• Request a quote or consultation</li>
+                  <li>• Sign up for our newsletter</li>
+                  <li>• Apply for employment</li>
+                  <li>• Use our services</li>
+                </ul>
 
-              <h3 className="text-2xl font-bold text-white mb-4 mt-8">Information We Collect</h3>
-              <p className="text-gray-300 mb-4">We collect information you provide directly to us, such as:</p>
-              <ul className="list-disc list-inside text-gray-300 mb-6 space-y-2">
-                <li>Contact information (name, email address, phone number)</li>
-                <li>Company information and job title</li>
-                <li>Service inquiries and project requirements</li>
-                <li>Communication preferences</li>
-              </ul>
+                <h3 className="text-2xl font-bold text-white mb-4 mt-8">Types of Information</h3>
+                <p className="text-gray-300 mb-6">
+                  The information we collect may include:
+                </p>
+                <ul className="text-gray-300 mb-6 space-y-2">
+                  <li>• Name and contact information (email, phone, address)</li>
+                  <li>• Company information and job title</li>
+                  <li>• Project requirements and technical specifications</li>
+                  <li>• Communication preferences</li>
+                  <li>• Resume and employment history (for job applicants)</li>
+                </ul>
 
-              <p className="text-gray-300 mb-4">We also automatically collect certain information when you visit our website:</p>
-              <ul className="list-disc list-inside text-gray-300 mb-6 space-y-2">
-                <li>Device information and IP address</li>
-                <li>Browser type and operating system</li>
-                <li>Pages visited and time spent</li>
-                <li>Referring website information</li>
-              </ul>
+                <h3 className="text-2xl font-bold text-white mb-4 mt-8">How We Use Your Information</h3>
+                <p className="text-gray-300 mb-6">
+                  We use the information we collect to:
+                </p>
+                <ul className="text-gray-300 mb-6 space-y-2">
+                  <li>• Provide and improve our services</li>
+                  <li>• Communicate with you about projects and services</li>
+                  <li>• Send newsletters and marketing communications (with your consent)</li>
+                  <li>• Process job applications</li>
+                  <li>• Comply with legal obligations</li>
+                  <li>• Protect our rights and prevent fraud</li>
+                </ul>
 
+<<<<<<< HEAD
               <h3 className="text-2xl font-bold text-white mb-4 mt-8">How We Use Your Information</h3>
               <p className="text-gray-300 mb-4">We use the information we collect to:</p>
               <ul className="list-disc list-inside text-gray-300 mb-6 space-y-2">
@@ -196,36 +227,75 @@ const Privacy: React.FC = () => {
                 privacy practices or content of these external sites. We encourage you to review their 
                 privacy policies before providing any personal information.
               </p>
+=======
+                <h3 className="text-2xl font-bold text-white mb-4 mt-8">Information Sharing</h3>
+                <p className="text-gray-300 mb-6">
+                  We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:
+                </p>
+                <ul className="text-gray-300 mb-6 space-y-2">
+                  <li>• With your explicit consent</li>
+                  <li>• With service providers who assist in our operations</li>
+                  <li>• To comply with legal requirements</li>
+                  <li>• To protect our rights and safety</li>
+                </ul>
 
-              <h3 className="text-2xl font-bold text-white mb-4 mt-8">Children's Privacy</h3>
-              <p className="text-gray-300 mb-6">
-                Our services are not intended for children under the age of 13. We do not knowingly 
-                collect personal information from children under 13. If you believe we have collected 
-                such information, please contact us immediately.
-              </p>
+                <h3 className="text-2xl font-bold text-white mb-4 mt-8">Data Security</h3>
+                <p className="text-gray-300 mb-6">
+                  We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+                </p>
 
-              <h3 className="text-2xl font-bold text-white mb-4 mt-8">International Transfers</h3>
-              <p className="text-gray-300 mb-6">
-                Your information may be transferred to and processed in countries other than your own. 
-                We ensure that such transfers comply with applicable data protection laws and implement 
-                appropriate safeguards to protect your information.
-              </p>
+                <h3 className="text-2xl font-bold text-white mb-4 mt-8">Data Retention</h3>
+                <p className="text-gray-300 mb-6">
+                  We retain your personal information only as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law.
+                </p>
 
-              <h3 className="text-2xl font-bold text-white mb-4 mt-8">Changes to This Policy</h3>
-              <p className="text-gray-300 mb-6">
-                We may update this Privacy Policy from time to time. We will notify you of any material 
-                changes by posting the new policy on our website and updating the "Last updated" date. 
-                Your continued use of our services after such changes constitutes acceptance of the updated policy.
-              </p>
+                <h3 className="text-2xl font-bold text-white mb-4 mt-8">Your Rights</h3>
+                <p className="text-gray-300 mb-6">
+                  You have the right to:
+                </p>
+                <ul className="text-gray-300 mb-6 space-y-2">
+                  <li>• Access your personal information</li>
+                  <li>• Correct inaccurate information</li>
+                  <li>• Request deletion of your information</li>
+                  <li>• Object to processing of your information</li>
+                  <li>• Withdraw consent for marketing communications</li>
+                </ul>
 
-              <h3 className="text-2xl font-bold text-white mb-4 mt-8">Contact Us</h3>
-              <p className="text-gray-300 mb-4">
-                If you have any questions about this Privacy Policy or our data practices, please contact us:
-              </p>
-              <div className="bg-white/5 rounded-lg p-4 mb-6">
-                <p className="text-gray-300"><strong>Email:</strong> privacy@ziontechgroup.com</p>
-                <p className="text-gray-300"><strong>Phone:</strong> +1 (555) 123-4567</p>
-                <p className="text-gray-300"><strong>Address:</strong> San Francisco, CA</p>
+                <h3 className="text-2xl font-bold text-white mb-4 mt-8">Cookies and Tracking</h3>
+                <p className="text-gray-300 mb-6">
+                  Our website uses cookies and similar technologies to improve user experience and analyze website traffic. You can control cookie settings through your browser preferences.
+                </p>
+
+                <h3 className="text-2xl font-bold text-white mb-4 mt-8">Third-Party Links</h3>
+                <p className="text-gray-300 mb-6">
+                  Our website may contain links to third-party websites. We are not responsible for the privacy practices of these external sites.
+                </p>
+
+                <h3 className="text-2xl font-bold text-white mb-4 mt-8">Children's Privacy</h3>
+                <p className="text-gray-300 mb-6">
+                  Our services are not intended for children under 13. We do not knowingly collect personal information from children under 13.
+                </p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
+
+                <h3 className="text-2xl font-bold text-white mb-4 mt-8">International Transfers</h3>
+                <p className="text-gray-300 mb-6">
+                  Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers.
+                </p>
+
+                <h3 className="text-2xl font-bold text-white mb-4 mt-8">Changes to This Policy</h3>
+                <p className="text-gray-300 mb-6">
+                  We may update this privacy policy from time to time. We will notify you of any material changes by posting the new policy on our website.
+                </p>
+
+                <h3 className="text-2xl font-bold text-white mb-4 mt-8">Contact Us</h3>
+                <p className="text-gray-300 mb-6">
+                  If you have questions about this privacy policy or our data practices, please contact us:
+                </p>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <p className="text-gray-300"><strong>Email:</strong> privacy@ziontechgroup.com</p>
+                  <p className="text-gray-300"><strong>Phone:</strong> +1 (555) 123-4567</p>
+                  <p className="text-gray-300"><strong>Address:</strong> San Francisco, CA</p>
+                </div>
               </div>
             </div>
           </div>
@@ -238,27 +308,22 @@ const Privacy: React.FC = () => {
               Questions About Privacy?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              We're here to help. Contact our privacy team for any questions or concerns about your data.
+              We're here to help. Contact us with any privacy-related questions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Contact Us
-              </Link>
-              <Link
-                to="/terms"
-                className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-              >
-                Terms of Service
-              </Link>
-            </div>
+            <a
+              href="mailto:privacy@ziontechgroup.com"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Contact Us
+            </a>
           </div>
         </section>
       </div>
     </>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
   );
 };
 

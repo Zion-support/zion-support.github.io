@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { RefreshCw, Target, Users, TrendingUp, Zap, Globe, ArrowRight, CheckCircle } from 'lucide-react';
@@ -7,10 +8,15 @@ import { RefreshCw, Target, Users, TrendingUp, Zap, Globe, ArrowRight, CheckCirc
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
+=======
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 
 const DigitalTransformation: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: RefreshCw,
       title: "Process Automation",
 <<<<<<< HEAD
@@ -60,10 +66,34 @@ const DigitalTransformation: React.FC = () => {
       title: "Technology Strategy",
       description: "Develop a comprehensive roadmap for your digital transformation journey",
       features: ["Technology Assessment", "Roadmap Planning", "Vendor Selection", "Implementation Strategy"],
+=======
+      title: "Business Process Optimization",
+      description: "Streamline operations and improve efficiency through digital workflows",
+      features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
+      icon: "⚡"
+    },
+    {
+      title: "Customer Experience Enhancement",
+      description: "Create seamless digital experiences that delight your customers",
+      features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
       icon: "🎯"
+    },
+    {
+      title: "Data & Analytics Strategy",
+      description: "Leverage data insights to drive informed business decisions",
+      features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
+      icon: "📊"
+    },
+    {
+      title: "Technology Infrastructure",
+      description: "Modernize your technology stack for scalability and performance",
+      features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
+      icon: "🏗️"
     }
   ];
 
+<<<<<<< HEAD
   const transformationPhases = [
     { phase: "Assessment", icon: "🔍", description: "Evaluate current state and identify opportunities" },
     { phase: "Strategy", icon: "📋", description: "Develop comprehensive transformation roadmap" },
@@ -80,6 +110,25 @@ const DigitalTransformation: React.FC = () => {
         keywords="digital transformation, process automation, digital strategy, change management, performance optimization"
         canonical="https://ziontechgroup.com/services/digital-transformation"
       />
+=======
+  const transformationApproach = [
+    { step: "Assessment", icon: "🔍", description: "Evaluate current state and identify opportunities" },
+    { step: "Strategy", icon: "📋", description: "Develop comprehensive transformation roadmap" },
+    { step: "Implementation", icon: "🚀", description: "Execute changes with agile methodology" },
+    { step: "Optimization", icon: "📈", description: "Continuous improvement and scaling" }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Digital Transformation — Zion Tech Group | Business Process Optimization</title>
+        <meta name="description" content="Transform your business with Zion Tech Group's digital transformation services. Process optimization, customer experience enhancement, and technology modernization." />
+        <meta property="og:title" content="Digital Transformation — Zion Tech Group" />
+        <meta property="og:description" content="Leading digital transformation services including process optimization, customer experience enhancement, and technology modernization." />
+        <meta property="og:url" content="https://ziontechgroup.com/services/digital-transformation" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/digital-transformation" />
+      </Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 
 <<<<<<< HEAD
       {/* Hero Section */}
@@ -206,15 +255,15 @@ const DigitalTransformation: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Navigate the digital future with confidence. Our comprehensive transformation services 
-              help you reimagine your business processes and unlock new opportunities for growth.
+              Transform your business for the digital age. Our comprehensive digital transformation 
+              services help you optimize processes, enhance customer experiences, and modernize technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
-                Start Transformation
+                Start Your Transformation
               </Link>
               <Link
                 to="/services"
@@ -226,7 +275,7 @@ const DigitalTransformation: React.FC = () => {
           </div>
         </section>
 
-        {/* Transformation Phases */}
+        {/* Transformation Approach */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -239,29 +288,29 @@ const DigitalTransformation: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {transformationPhases.map((phase, index) => (
+              {transformationApproach.map((step, index) => (
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center"
                 >
-                  <div className="text-4xl mb-4">{phase.icon}</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{phase.phase}</h3>
-                  <p className="text-sm text-gray-300">{phase.description}</p>
+                  <div className="text-4xl mb-4">{step.icon}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{step.step}</h3>
+                  <p className="text-sm text-gray-300">{step.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Transformation Services Grid */}
+        {/* Transformation Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Transformation Services
+                Digital Transformation Services
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive solutions to drive your digital transformation success
+                Comprehensive solutions to modernize every aspect of your business
               </p>
             </div>
             
@@ -292,15 +341,15 @@ const DigitalTransformation: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Transformation Services?
+                Benefits of Digital Transformation
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Proven expertise and methodologies to ensure transformation success
+                Unlock new opportunities and competitive advantages
               </p>
             </div>
             
@@ -311,28 +360,28 @@ const DigitalTransformation: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
-                <p className="text-gray-300">Track record of successful transformations across industries</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Increased Efficiency</h3>
+                <p className="text-gray-300">Streamlined processes and automated workflows</p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">ROI Focused</h3>
-                <p className="text-gray-300">Measurable outcomes and clear return on investment</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Better Customer Experience</h3>
+                <p className="text-gray-300">Enhanced engagement and satisfaction</p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Change Management</h3>
-                <p className="text-gray-300">Expert guidance through organizational change</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Data-Driven Insights</h3>
+                <p className="text-gray-300">Informed decision making and strategy</p>
               </div>
             </div>
           </div>
@@ -345,7 +394,7 @@ const DigitalTransformation: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our digital transformation services can drive your success
+              Let's discuss how digital transformation can drive your business forward
             </p>
             <Link
               to="/contact"
@@ -357,7 +406,10 @@ const DigitalTransformation: React.FC = () => {
         </section>
       </div>
     </>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
   );
 };
 
