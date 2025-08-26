@@ -1,7 +1,9 @@
 
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { NextSeo } from '@/components/NextSeo';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -10,18 +12,11 @@ import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
 
 export default function ProjectRoom() {
-  const { projectId } = useParams() as { projectId: string };
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { projectId } = useParams() as { projectId?: string };
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
-  const [callParticipants, setCallParticipants] = useState<Array<{
-    id: string;
-    name: string;
-    avatar?: string;
-    isMuted?: boolean;
-    isVideoEnabled?: boolean;
-    isScreenSharing?: boolean;
-    isHost?: boolean;
-  }>>([
+  const [callParticipants, setCallParticipants] = useState([
     {
       id: 'user-1',
       name: 'You',
@@ -29,7 +24,15 @@ export default function ProjectRoom() {
       isVideoEnabled: true,
       isMuted: false
     }
-  ]);
+  ] as Array<{
+    id: string;
+    name: string;
+    avatar?: string;
+    isMuted?: boolean;
+    isVideoEnabled?: boolean;
+    isScreenSharing?: boolean;
+    isHost?: boolean;
+  }>);
   
   const startVideoCall = () => {
     setIsInCall(true);
@@ -67,8 +70,8 @@ export default function ProjectRoom() {
   
   return (
     <>
-      <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />
-      
+      <NextSeo title={`Project Room - ${projectId}`} description="Collaborate on your project" />
+      <Header />
       <main className="container mx-auto py-8">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>

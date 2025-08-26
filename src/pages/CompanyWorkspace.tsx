@@ -5,12 +5,13 @@ import { Footer } from "@/components/Footer";
 import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate, useParams } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 import { useWhitelabel } from "@/context/WhitelabelContext";
 
 export default function CompanyWorkspace() {
+  // Cast to specify the expected route param type since useParams may be untyped
   const { companySlug } = useParams() as { companySlug?: string };
   const { user } = useAuth();
   const { company, isLoading, error } = useCompanyWorkspace(companySlug);
@@ -44,7 +45,7 @@ export default function CompanyWorkspace() {
 
   return (
     <ProtectedRoute>
-      <SEO 
+      <NextSeo 
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />

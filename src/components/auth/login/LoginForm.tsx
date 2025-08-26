@@ -26,6 +26,7 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters"),
+  rememberMe: z.boolean().default(false),
 });
 
 type LoginFormValues = z.infer<typeof loginSchema>;
@@ -55,6 +56,21 @@ export function LoginForm() {
         navigate('/dashboard');
       } else if (res.status >= 400 && res.status < 500) {
         toast.error(res.data?.error || 'Invalid credentials');
+      }
+
+      await login(data.email, data.password);
+
+      const next = searchParams.get('next') || '/';
+      if (next === '/checkout') {
+        const intended = sessionStorage.getItem('intendedProduct');
+        sessionStorage.removeItem('intendedProduct');
+        if (intended) {
+          navigate(`/checkout?product=${intended}`);
+        } else {
+          navigate('/checkout');
+        }
+      } else {
+        navigate(next);
       }
     } finally {
       setIsSubmitting(false);

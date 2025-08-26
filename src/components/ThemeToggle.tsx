@@ -1,45 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
+import React from "react";
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "@/context/ThemeContext";
 
-const ThemeToggle: React.FC = () => {
-  const [isDark, setIsDark] = useState(true);
-
-  useEffect(() => {
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('zion-theme');
-    if (savedTheme) {
-      setIsDark(savedTheme === 'dark');
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-    localStorage.setItem('zion-theme', newTheme ? 'dark' : 'light');
-    
-    // Apply theme to document
-    if (newTheme) {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    } else {
-      document.documentElement.classList.add('light');
-      document.documentElement.classList.remove('dark');
-    }
-  };
+export default function ThemeToggle(): JSX.Element {
+  const { mode, toggleTheme } = useTheme();
 
   return (
-    <button
+    <Button
+      aria-label="Toggle theme"
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+      variant="ghost"
+      size="icon"
     >
-      {isDark ? (
-        <SunIcon className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300" />
+      {mode === "dark" ? (
+        <Sun className="h-5 w-5" />
       ) : (
-        <MoonIcon className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
+        <Moon className="h-5 w-5" />
       )}
-    </button>
+      <span className="sr-only">Toggle theme</span>
+    </Button>
   );
-};
-
-export default ThemeToggle;
+}

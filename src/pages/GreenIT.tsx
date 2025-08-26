@@ -1,13 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { AppLayout } from "@/layout/AppLayout";
-=======
-import React from 'react';
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-=======
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Leaf, Server, Cloud } from "lucide-react";
@@ -124,28 +118,20 @@ export default function GreenIT() {
   ];
 
   return (
+=======
+=======
     <>
-    <AppLayout>
-      <SEO
-        title="Green IT Solutions - Sustainable Technology | Zion Tech Group"
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
+      <NextSeo
+        title="Green IT Solutions - Sustainable Technology"
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
-        canonical="https://ziontechgroup.com/green-it"
-=======
-        canonical="https://ziontechgroup.com/marketplace/category/green-it"
-=======
-        canonical="https://ziontechgroup.com/green-it"
-=======
-        canonical="https://ziontechgroup.com/green-it"
-=======
-        canonical="https://ziontechgroup.com/marketplace/category/green-it"
-=======
-        canonical="https://ziontechgroup.com/marketplace/category/green-it"
-      />
-      <AppHeader />
-      <main className="min-h-screen bg-background pt-16 pb-20">
-=======
-        canonical="https://ziontechgroup.com/marketplace/category/green-it"
+        canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
+        openGraph={{
+          title: "Green IT Solutions - Sustainable Technology",
+          description:
+            "Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance.",
+          url: "https://app.ziontechgroup.com/marketplace/category/green-it",
+        }}
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

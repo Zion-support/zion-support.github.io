@@ -96,34 +96,12 @@ export function useMarketplaceSearch() {
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-
-  // Search suggestions
-  const [searchSuggestions, setSearchSuggestions] = useState<SearchSuggestion[]>(staticSearchSuggestions);
-
-  useEffect(() => {
-    const fetchSuggestions = async () => {
-      try {
-        const res = await fetch('/api/search/suggest?q=');
-        if (res.ok) {
-          const data = await res.json();
-          if (Array.isArray(data)) {
-            setSearchSuggestions(data);
-          }
-        }
-      } catch (err) {
-        console.error('Failed to fetch search suggestions', err);
-      }
-    };
-
-    fetchSuggestions();
-  }, []);
-
-  const filterOptions: FilterOptions = useMemo(
-    () => staticFilterOptions,
-    [],
-  );
-
-  // Removed client-side filtering logic as the API now handles it.
+  
+  // Generate search suggestions and filter options
+  const searchSuggestions: SearchSuggestion[] = useMemo(() => generateSearchSuggestions(), []);
+  const filterOptions: FilterOptions = useMemo(() => generateFilterOptions(), []);
+  
+  // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
     return listings;
   }, [listings]);

@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -104,7 +104,8 @@ const userPosts: ForumPost[] = [
 ];
 
 export default function CommunityProfilePage() {
-  const { userId } = useParams();
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { userId } = useParams() as { userId?: string };
   const [user, setUser] = useState<CommunityUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState<ForumPost[]>([]);
@@ -143,12 +144,12 @@ export default function CommunityProfilePage() {
   }
 
   return (
-    
-      <SEO 
-        title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
-        description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
-        keywords={`community, forum, profile, user profile, ${user.name}`}
-      />
+    <>
+    <NextSeo
+      title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
+      description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
+      keywords={`community, forum, profile, user profile, ${user.name}`}
+    />
       
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">

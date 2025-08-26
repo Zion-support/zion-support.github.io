@@ -11,10 +11,8 @@ import { useAuthEventHandlers } from "./useAuthEventHandlers";
 import { mapProfileToUser } from "./profileMapper";
 import { loginUser, registerUser } from "@/services/authService";
 import { safeStorage } from "@/utils/safeStorage";
-import { toast } from "@/hooks/use-toast"; // Import toast
-import { useDispatch } from 'react-redux';
-import type { AppDispatch } from '@/store';
-import { addItem } from '@/store/cartSlice';
+import { toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const {
@@ -28,6 +26,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
   const dispatch = useDispatch<AppDispatch>();
   const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);
+  const { t } = useTranslation();
 
   const {
     login: loginImpl,
@@ -47,28 +46,32 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     // Check for specific "Email not confirmed" error first
     if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {
-      toast({
-        title: "Login Failed",
-        description: data.error || "Email not confirmed. Please check your inbox to verify your email.",
-        variant: "destructive",
-      });
-      return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
+      const message = data.error || t('auth.errors.generic');
+      toast.error(message);
+      return { error: message };
     }
 
     // Handle other errors from the API call
     if (res.status === 400) { // Bad request (e.g. missing fields)
-      toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });
-      return { error: data?.error || 'Missing email or password' };
+      const message = data?.error || t('auth.errors.generic');
+      toast.error(message);
+      return { error: message };
     }
     if (res.status === 401) { // Unauthorized (invalid credentials)
-      const message = data?.code === 'WRONG_PASSWORD' ? 'Incorrect password' : (data?.error || 'Invalid credentials');
-      toast({ title: 'Login Failed', description: message, variant: 'destructive' });
+      const codeMap: Record<string, string> = {
+        USER_NOT_FOUND: t('auth.errors.user_not_found'),
+        WRONG_PASSWORD: t('auth.errors.wrong_password'),
+        ACCOUNT_LOCKED: t('auth.errors.account_locked'),
+      };
+      const message = codeMap[data?.code as string] || data?.error || t('auth.errors.generic');
+      toast.error(message);
       return { error: message };
     }
     // Catch-all for other non-200 statuses from loginUser
     if (res.status !== 200) {
-      toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" });
-      return { error: data?.error || 'Login failed' };
+      const message = data?.error || t('auth.errors.generic');
+      toast.error(message);
+      return { error: message };
     }
 
     // At this point, loginUser call was successful (200 OK)
@@ -87,8 +90,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       // Potentially clear tokens if this state is problematic: await logout();
       return { error: (clientLoginResult.error as any)?.message || "Client-side login failed." };
     }
-    const params = new URLSearchParams(location.search);
-    const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
+    const next = new URLSearchParams(location.search).get('next') || '/equipment/recommendations';
     navigate(next, { replace: true });
 
     return { error: null }; // Successful login
@@ -111,21 +113,15 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   // Wrapper for signup to match the AuthContextType interface
-  const signup = async (email: string, password: string, userData?: any) => {
-    const result = await signupImpl({ email, password, display_name: userData });
-
-    if (!result?.error) {
-      const loginResult = await login(email, password);
-      if (!loginResult.error) {
-        const firstName = (userData?.name || userData || '').split(' ')[0];
-        toast({ title: `Welcome, ${firstName}!` });
-        const params = new URLSearchParams(location.search);
-        const next = params.get('redirectTo') || params.get('next') || '/dashboard';
-        navigate(next, { replace: true });
-      }
+  const signup = async (name: string, email: string, password: string) => {
+    const { res, data } = await registerUser(name, email, password);
+    if (res.ok && data.token && data.user) {
+      safeStorage.setItem('authToken', data.token);
+      setUser(data.user);
+      setTokens({ accessToken: data.token });
+      return { error: null };
     }
-
-    return result;
+    return { error: data?.message || 'Signup failed' };
   };
 
   useEffect(() => {
@@ -149,19 +145,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
               if (event === 'SIGNED_IN') {
                 handleSignedIn(mappedUser);
                 const params = new URLSearchParams(location.search);
-                const next = params.get('redirectTo') || params.get('next');
-                // --- BEGIN MODIFICATION ---
-                if (location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {
-                  const { id, title, price } = location.state.pendingActionArgs;
-                  dispatch(addItem({ id, title, price }));
-                  // Clear pending action from state first
-                  navigate(location.pathname, { state: {}, replace: true });
-                  // Navigate to checkout
-                  navigate('/checkout', { replace: true });
-                } else if (next) {
-                  navigate(decodeURIComponent(next), { replace: true });
+                const next = params.get('next');
+                if (next) {
+                  navigate(next, { replace: true });
                 }
-                // --- END MODIFICATION ---
               }
             } else if (error) {
               console.error("Error fetching user profile:", error);

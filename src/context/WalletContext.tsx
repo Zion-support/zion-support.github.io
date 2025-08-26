@@ -79,10 +79,7 @@ const targetNetwork = ZION_CHAIN_MAP[ZION_TOKEN_NETWORK_ID] || mainnet;
 const appKitInstance: ReownAppKit | null = typeof window !== 'undefined'
   ? (createAppKit({
       adapters: [
-        new EthersAdapter({
-          ethers, // pass the ethers library instance
-          // provider: undefined, // Optional: if you have a specific EIP-1193 provider to pre-configure
-        }),
+        new EthersAdapter(),
       ],
       networks: [targetNetwork], // Configure with the network ZION_TOKEN_NETWORK_ID maps to
       defaultNetwork: targetNetwork,
@@ -109,21 +106,15 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       const currentProvider = appKit.getWalletProvider();
 
       if (currentAddress && currentChainId && currentProvider) {
-        try {
-          const ethersProvider = new ethers.BrowserProvider(
-            currentProvider as ethers.Eip1193Provider
-          );
-          const ethersSigner = await ethersProvider.getSigner();
-          setWallet({
-            provider: ethersProvider,
-            signer: ethersSigner,
-            address: currentAddress,
-            chainId: Number(currentChainId), // Ensure chainId is a number
-            isConnected: true,
-          });
-        } catch (error) {
-          captureException(error);
-        }
+        const ethersProvider = new ethers.BrowserProvider(currentProvider as any);
+        const ethersSigner = await ethersProvider.getSigner();
+        setWallet({
+          provider: ethersProvider,
+          signer: ethersSigner,
+          address: currentAddress,
+          chainId: Number(currentChainId), // Ensure chainId is a number
+          isConnected: true,
+        });
       } else {
         setWallet(initialWalletState);
       }

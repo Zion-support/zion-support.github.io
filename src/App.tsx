@@ -1,42 +1,127 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import './App.css';
-import { ServicesOverview } from './components/ServicesOverview';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { useScrollToTop } from "./hooks";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { ConsentProvider } from "./context/ConsentContext";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import PwaInstallButton from "./components/PwaInstallButton";
+import { CookieBanner } from "./components/CookieBanner";
+import {
+  AuthRoutes,
+  DashboardRoutes,
+  MarketplaceRoutes,
+  TalentRoutes,
+  AdminRoutes,
+  MobileAppRoutes,
+  ContentRoutes,
+  ErrorRoutes,
+  EnterpriseRoutes,
+  CommunityRoutes,
+  DeveloperRoutes
+} from './routes';
+const FAQPage = React.lazy(() => import('./pages/FAQ'));
+=======
+const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices'));
+=======
+import Home from './pages/Home';
+import AIMatcherPage from './pages/AIMatcher';
+import TalentDirectory from './pages/TalentDirectory';
+import TalentsPage from './pages/TalentsPage';
+import MoreTalentsPage from './pages/MoreTalentsPage';
+import ServicesPage from './pages/ServicesPage';
+import EquipmentPage from './pages/EquipmentPage';
+import EquipmentDetail from './pages/EquipmentDetail';
+import Analytics from './pages/Analytics';
+import MobileLaunchPage from './pages/MobileLaunchPage';
+import CommunityPage from './pages/CommunityPage';
+import Categories from './pages/Categories';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import NewProductsPage from './pages/NewProductsPage';
+import MoreProductsPage from './pages/MoreProductsPage';
+import Sitemap from './pages/Sitemap';
+import PartnersPage from './pages/Partners';
+import Help from './pages/Help';
+import Login from './pages/Login';
+const Home = React.lazy(() => import('./pages/Home'));
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
+const Analytics = React.lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
+const Categories = React.lazy(() => import('./pages/Categories'));
+const Login = React.lazy(() => import('./pages/Login'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ThemeTest = React.lazy(() => import('./pages/ThemeTest'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+import Signup from './pages/Signup';
+import SimpleSignup from './pages/SimpleSignup';
+import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
+import OpenAppRedirect from './pages/OpenAppRedirect';
+import ContactPage from './pages/Contact';
+import ZionHireAI from './pages/ZionHireAI';
+import RequestQuotePage from './pages/RequestQuote';
+import Checkout from './pages/Checkout';
+import PrivacyPage from './pages/PrivacyPage';
+=======
+import Rewards from './pages/Rewards';
+import { SupportChatbot } from './components/SupportChatbot';
+import PrivateRoute from './components/PrivateRoute';
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+import RecommendationsPage from './pages/Recommendations';
+import withAuth from './components/withAuth';
 
-const Landing: React.FC = () => {
-	return (
-		<div className="min-h-screen bg-gray-50 text-gray-900">
-			<header className="bg-white shadow">
-				<div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex items-center justify-between">
-					<h1 className="text-2xl font-bold text-zion-cyan">Zion Tech Group</h1>
-					<nav className="space-x-4 text-sm">
-						<Link to="/" className="hover:text-zion-cyan">Home</Link>
-						<Link to="/services" className="hover:text-zion-cyan">Services</Link>
-						<a className="hover:text-zion-cyan" href="https://ziontechgroup.com" rel="noopener noreferrer">Website</a>
-					</nav>
-				</div>
-			</header>
-			<main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-				<section className="mb-10">
-					<h2 className="text-3xl font-semibold mb-3">AI, Micro-SaaS, and IT Solutions</h2>
-					<p className="text-gray-600">Productized services with clear pricing, fast delivery, and measurable ROI. Enterprise-grade execution for startups to Fortune 500.</p>
-					<div className="mt-6">
-						<Link to="/services" className="inline-block rounded bg-cyan-600 px-5 py-2 text-white hover:bg-cyan-700">Explore Services</Link>
-					</div>
-				</section>
-				<section>
-					<ServicesOverview />
-				</section>
-				<section className="mt-12 border-t pt-8">
-					<h3 className="text-xl font-semibold mb-2">Contact</h3>
-					<p className="text-gray-700">Mobile: <a href="tel:+13024640950" className="text-cyan-700 hover:underline">+1 302 464 0950</a></p>
-					<p className="text-gray-700">E-mail: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-700 hover:underline">kleber@ziontechgroup.com</a></p>
-					<p className="text-gray-700">Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-				</section>
-			</main>
-		</div>
-	);
-};
+const RecommendationsProtected = withAuth(RecommendationsPage);
+=======
+const CartPage = React.lazy(() => import('./pages/Cart'));
+const OrderSuccess = React.lazy(() => import('./pages/OrderSuccess'));
+
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/match', element: <AIMatcherPage /> },
+  { path: '/recommendations', element: <RecommendationsProtected /> },
+  { path: '/login', element: <Login /> },
+  { path: '/signup', element: <Signup /> },
+  { path: '/talent', element: <TalentDirectory /> },
+  { path: '/talents', element: <TalentsPage /> },
+  { path: '/services', element: <ServicesPage /> },
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/categories', element: <Categories /> },
+  { path: '/equipment', element: <EquipmentPage /> },
+  { path: '/equipment/:id', element: <EquipmentDetail /> },
+  { path: '/new-products', element: <NewProductsPage /> },
+  { path: '/product/:id', element: <ProductPage /> },
+  { path: '/analytics', element: <Analytics /> },
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },
+  { path: '/open-app', element: <OpenAppRedirect /> },
+  { path: '/community', element: <CommunityPage /> },
+  { path: '/contact', element: <ContactPage /> },
+  { path: '/partners', element: <PartnersPage /> },
+  { path: '/sitemap', element: <Sitemap /> },
+  { path: '/help', element: <Help /> },
+  { path: '/zion-hire-ai', element: <ZionHireAI /> },
+  { path: '/hire-ai', element: <ZionHireAI /> },
+  { path: '/request-quote', element: <RequestQuotePage /> },
+  { path: '/wishlist', element: <WishlistPage /> },
+  { path: '/blog', element: <Blog /> },
+  { path: '/blog/:slug', element: <BlogPost /> },
+  { path: '/theme-test', element: <ThemeTest /> },
+=======
+  { path: '/profile/privacy', element: <PrivacyPage /> },
+=======
+  { path: '/cart', element: <CartPage /> },
+  { path: '/order/success', element: <OrderSuccess /> },
+];
 
 const ServicesPage: React.FC = () => {
 	return (
@@ -47,15 +132,42 @@ const ServicesPage: React.FC = () => {
 	);
 };
 
-const App: React.FC = () => {
-	return (
-		<Router>
-			<Routes>
-				<Route path="/" element={<Landing />} />
-				<Route path="/services" element={<ServicesPage />} />
-			</Routes>
-		</Router>
-	);
+const App = () => {
+  // Ensure each navigation starts at the top of the page
+  useScrollToTop();
+  
+  return (
+    <WhitelabelProvider>
+      <ConsentProvider>
+        <ThemeProvider defaultTheme="dark">
+          <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+          <ErrorBoundary>
+          <Routes>
+            {baseRoutes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+            <Route path="/auth/*" element={<AuthRoutes />} />
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+            <Route path="/talent/*" element={<TalentRoutes />} />
+            <Route path="/admin/*" element={<AdminRoutes />} />
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />
+            <Route path="/content/*" element={<ContentRoutes />} />
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+            <Route path="/community/*" element={<CommunityRoutes />} />
+            <Route path="/developers/*" element={<DeveloperRoutes />} />
+            <Route path="*" element={<ErrorRoutes />} />
+          </Routes>
+          </ErrorBoundary>
+        </Suspense>
+        <Toaster />
+        <SonnerToaster position="top-right" />
+          <CookieBanner />
+          <PwaInstallButton />
+        </ThemeProvider>
+      </ConsentProvider>
+    </WhitelabelProvider>
+  );
 };
 
 export default App;

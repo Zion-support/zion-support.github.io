@@ -2,13 +2,13 @@
 import React, { useState } from "react";
 import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm";
 import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay";
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 
 export default function ServiceDescriptionGenerator() {
   const { isAuthenticated, isLoading } = useAuth();
-  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+  const [generatedDescription, setGeneratedDescription] = useState(null as string | null);
   
   // Show loading while checking authentication
   if (isLoading) {
@@ -33,7 +33,7 @@ export default function ServiceDescriptionGenerator() {
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
-      <SEO 
+      <NextSeo 
         title="Service Description Generator" 
         description="Generate professional service descriptions using AI"
         keywords="service description, AI content, professional description generator"

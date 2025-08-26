@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
 import type { BlogPost as BlogPostType } from "@/types/blog";
@@ -11,7 +11,8 @@ import { Separator } from "@/components/ui/separator";
 import { BLOG_POSTS } from "@/data/blog-posts";
 
 export default function BlogPost() {
-  const { slug } = useParams() as { slug: string };
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { slug } = useParams() as { slug?: string };
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
@@ -68,7 +69,7 @@ export default function BlogPost() {
   
   return (
     <>
-      <SEO
+      <NextSeo
         title={post.title}
         description={post.excerpt}
         keywords={post.tags.join(", ")}

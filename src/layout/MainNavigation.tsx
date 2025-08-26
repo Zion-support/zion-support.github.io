@@ -2,16 +2,14 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, ChevronDown, Users, Briefcase, Settings, BarChart3 } from "lucide-react";
-import { MessageSquare, ChevronDown, Brain, Shield, Cloud, Zap } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState, useRef, useEffect } from "react";
-=======
-import { MessageSquare, ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
 import { useState } from "react";
 =======
-import { MessageSquare, ChevronDown, Users, Settings, HelpCircle, FileText } from "lucide-react";
+import { MessageSquare, Sparkles, ChevronDown } from "lucide-react";
+=======
+import { MessageSquare, ShoppingCart } from "lucide-react";
+import { useCart } from "@/context/CartContext";
+import { useTranslation } from "react-i18next";
+import { MessageSquare, ChevronDown, Sparkles, Zap, Shield, Database, Cloud, Code, Users, HardDrive, Lightbulb } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
 =======
@@ -29,15 +27,15 @@ import { useState } from "react";
 =======
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 =======
-import { useTranslation } from "react-i18next";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { useFavorites } from "@/hooks/useFavorites";
+import { useSelector } from 'react-redux';
+import type { RootState } from '@/store';
+import { Heart, MessageSquare, ShoppingCart, CreditCard } from "lucide-react";
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';
+import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -58,23 +56,25 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-=======
 
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setDropdownOpen(false);
+        setActiveDropdown(null);
+=======
+  const [toolsOpen, setToolsOpen] = useState(false);
+  const toolsRef = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (toolsRef.current && !toolsRef.current.contains(event.target as Node)) {
+        setToolsOpen(false);
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
 =======
 =======
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -86,7 +86,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  const baseLinks: NavigationLink[] = [
+=======
+=======
+  const { items } = useCart();
+  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
+
+  const baseLinks = [
     {
       key: 'home',
       href: '/',
@@ -913,6 +918,167 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </Link>
           </li>
         ))}
+=======
+                {IconComponent && <IconComponent className="w-4 h-4 mr-2" />}
+                {link.name}
+              </Link>
+=======
+    <>
+      <button
+        className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-expanded={isMobileMenuOpen}
+        aria-controls="main-navbar-collapse"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <nav
+        className={cn("navbar", className)}
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <div
+          id="main-navbar-collapse"
+          className={cn(
+            "navbar-collapse",
+            { "open": isMobileMenuOpen },
+            "w-full md:flex md:w-auto", // Handles visibility and desktop layout
+            !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile
+          )}
+        >
+          <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
+            {links.map((link) => (
+              <li key={link.name} className="nav-item">
+                <Link href={link.href} legacyBehavior={false}>
+                  <a
+                    aria-label={link.name}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={cn(
+                      "nav-link",
+                      "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                      link.matches(router.pathname)
+                        ? "bg-zion-purple/20 text-zion-cyan"
+                        : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                    )}
+                  >
+                    {link.name}
+                  </a>
+                </Link>
+              </li>
+            ))}
+
+            {/* Wishlist link */}
+            {isAuthenticated && (
+              <li className="nav-item">
+                <Link href="/wishlist" legacyBehavior={false}>
+                  <a
+                    aria-label="Wishlist"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={cn(
+                      "nav-link",
+                      "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                      router.pathname === "/wishlist"
+                        ? "bg-zion-purple/20 text-zion-cyan"
+                        : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                    )}
+                  >
+                    <Heart aria-hidden="true" className="w-4 h-4" />
+                    {count > 0 && (
+                      <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                        {count}
+                      </span>
+                    )}
+                  </a>
+                </Link>
+              </li>
+            )}
+
+            {/* Wallet link */}
+            {isAuthenticated && (
+              <li className="nav-item">
+                <Link href="/wallet" legacyBehavior={false}>
+                  <a
+                    aria-label={t('nav.wallet')}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={cn(
+                      "nav-link",
+                      "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                      router.pathname === "/wallet"
+                        ? "bg-zion-purple/20 text-zion-cyan"
+                        : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                    )}
+                  >
+                    <CreditCard aria-hidden="true" className="w-4 h-4 mr-1" />
+                    {t('nav.wallet', 'Wallet')}
+                  </a>
+                </Link>
+              </li>
+            )}
+
+            {/* Messages link with unread counter */}
+            {isAuthenticated && (
+              <li className="nav-item">
+                <Link href="/messages" legacyBehavior={false}>
+                  <a
+                    aria-label={t('nav.messages')}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={cn(
+                      "nav-link",
+                      "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                      router.pathname === "/messages" || router.pathname === "/inbox"
+                        ? "bg-zion-purple/20 text-zion-cyan"
+                        : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                    )}
+                  >
+                    <MessageSquare aria-hidden="true" className="w-4 h-4 mr-1" />
+                    {t('nav.messages')}
+                    {unreadCount > 0 && (
+                      <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                        {unreadCount}
+                      </span>
+                    )}
+                  </a>
+                </Link>
+              </li>
+            )}
+
+            {/* Cart icon with badge */}
+            <li className="nav-item">
+              <Popover>
+                <PopoverTrigger asChild>
+                  <button
+                    aria-label={t('nav.cart')}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={cn(
+                      'nav-link',
+                      'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+                      router.pathname.startsWith('/cart')
+                        ? 'bg-zion-purple/20 text-zion-cyan'
+                        : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
+                    )}
+                  >
+                    <ShoppingCart className="w-4 h-4 mr-1" />
+                    {t('nav.cart', 'Cart')}
+                    {cartCount > 0 && (
+                      <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                        {cartCount}
+                      </span>
+                    )}
+                  </button>
+                </PopoverTrigger>
+                <PopoverContent className="w-56" align="end">
+                  <MiniCartPreview />
+                  <Link href="/cart" legacyBehavior={false}>
+                    <a className="mt-2 block text-sm text-primary hover:underline">
+                      {t('cart.view_cart', 'View Cart')}
+                    </a>
+                  </Link>
+                </PopoverContent>
+              </Popover>
+            </li>
+          );
+        })}
         
         {/* Resources Dropdown */}
         <li>

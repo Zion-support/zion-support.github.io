@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('auth/', include('authentication.urls')),
-    path('api/coupons/', include('promotions.urls')),
+    path('privacy/', include('privacy.urls')),
 ]

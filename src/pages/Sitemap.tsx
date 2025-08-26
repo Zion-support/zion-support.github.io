@@ -1,7 +1,429 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
+=======
+import { 
+  Brain, 
+  Shield, 
+=======
+import { SEO } from '../components/SEO';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js';
+import { Badge } from '../components/ui/badge.js';
+import { Phone, Mail } from 'lucide-react';
 
-const Sitemap: React.FC = () => {
+interface SitemapSection {
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  links: SitemapLink[];
+}
+
+interface SitemapLink {
+  title: string;
+  href: string;
+  description?: string;
+  isExternal?: boolean;
+  badge?: string;
+}
+
+const sitemapSections: SitemapSection[] = [
+  {
+    id: 'main',
+    title: 'Main Pages',
+    description: 'Core website pages and navigation',
+    icon: <Home className="w-6 h-6" />,
+    links: [
+      {
+        title: 'Home',
+        href: '/',
+        description: 'Welcome to Zion Tech Group'
+      },
+      {
+        title: 'About Us',
+        href: '/about',
+        description: 'Learn about our company and mission'
+      },
+      {
+        title: 'Contact',
+        href: '/contact',
+        description: 'Get in touch with our team'
+      }
+    ]
+  },
+  {
+    id: 'services',
+    title: 'Services & Solutions',
+    description: 'Our comprehensive range of technology services',
+    icon: <Zap className="w-6 h-6" />,
+    links: [
+      {
+        title: 'Comprehensive Services',
+        href: '/comprehensive-services',
+        description: 'Full-service technology solutions',
+        badge: 'Popular'
+      },
+      {
+        title: 'AI Services',
+        href: '/ai-services',
+        description: 'Artificial Intelligence solutions',
+        badge: 'New'
+      },
+      {
+        title: 'Micro SAAS',
+        href: '/micro-saas',
+        description: 'Custom software solutions'
+      },
+      {
+        title: 'Enterprise Solutions',
+        href: '/enterprise-solutions',
+        description: 'Large-scale business solutions'
+      },
+      {
+        title: 'Services Pricing',
+        href: '/services-pricing',
+        description: 'Transparent pricing plans'
+      }
+    ]
+  },
+  {
+    id: 'resources',
+    title: 'Resources & Support',
+    description: 'Help, documentation, and support resources',
+    icon: <BookOpen className="w-6 h-6" />,
+    links: [
+      {
+        title: 'Help Center',
+        href: '/help',
+        description: 'Find answers and support'
+      },
+      {
+        title: 'Cookie Policy',
+        href: '/cookies',
+        description: 'Learn about our cookie usage'
+      },
+      {
+        title: 'Privacy Policy',
+        href: '/privacy',
+        description: 'Data protection and privacy'
+      },
+      {
+        title: 'Terms of Service',
+        href: '/terms',
+        description: 'Service terms and conditions'
+      }
+    ]
+  },
+  {
+    id: 'company',
+    title: 'Company Information',
+    description: 'Corporate information and resources',
+    icon: <Globe className="w-6 h-6" />,
+    links: [
+      {
+        title: 'Careers',
+        href: '/careers',
+        description: 'Join our team',
+        isExternal: true
+      },
+      {
+        title: 'News & Updates',
+        href: '/news',
+        description: 'Latest company news'
+      },
+      {
+        title: 'Partnerships',
+        href: '/partners',
+        description: 'Strategic partnerships'
+      },
+      {
+        title: 'Sitemap',
+        href: '/sitemap',
+        description: 'Site structure overview'
+      }
+    ]
+  }
+];
+=======
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { NextSeo } from "@/components/NextSeo";
+import { completeSitemap } from "@/config/sitemap";
+import { Link } from "react-router-dom";
+
+export default function Sitemap() {
+  const sitemapStructure = [
+    {
+      title: 'Main Pages',
+      links: [
+        { name: 'Home', path: '/', description: 'Welcome to Zion Tech Group' },
+        { name: 'About Us', path: '/about', description: 'Learn about our company' },
+        { name: 'Our Mission', path: '/mission', description: 'Our vision and mission' },
+        { name: 'Team', path: '/team', description: 'Meet our team' },
+        { name: 'Contact', path: '/contact', description: 'Get in touch with us' },
+        { name: 'Careers', path: '/careers', description: 'Join our team' },
+        { name: 'Partners', path: '/partners', description: 'Our partnerships' },
+        { name: 'Blog', path: '/blog', description: 'Latest insights and news' },
+        { name: 'News', path: '/news', description: 'Company news and updates' },
+        { name: 'Pricing', path: '/pricing', description: 'Transparent pricing plans' },
+        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
+        { name: 'Testimonials', path: '/testimonials', description: 'Client success stories' },
+        { name: 'Case Studies', path: '/case-studies', description: 'Detailed case studies' },
+        { name: 'Events', path: '/events', description: 'Upcoming events and webinars' },
+        { name: 'Webinars', path: '/webinars', description: 'Educational webinars' },
+        { name: 'White Papers', path: '/white-papers', description: 'Industry insights' },
+        { name: 'Help Center', path: '/help-center', description: 'Support and documentation' },
+        { name: 'Privacy Policy', path: '/privacy', description: 'Privacy policy' },
+        { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
+        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' }
+      ]
+    },
+    {
+      title: 'AI & Technology Services',
+      links: [
+        { name: 'AI Services Overview', path: '/ai-services', description: 'Comprehensive AI solutions' },
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Autonomous AI systems' },
+        { name: 'AI Business Solutions', path: '/ai-business-solutions', description: 'AI for business transformation' },
+        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' },
+        { name: 'AI Marketing Automation', path: '/ai-marketing-automation', description: 'Marketing automation with AI' },
+        { name: 'AI HR & Recruitment', path: '/ai-hr-recruitment', description: 'AI-powered HR solutions' },
+        { name: 'AI Legal Tech', path: '/ai-legal-tech', description: 'Legal technology solutions' },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence', description: 'Business intelligence with AI' },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', description: 'IT asset management with AI' },
+        { name: 'Advanced AI Automation', path: '/advanced-ai-automation-services', description: 'Advanced automation services' },
+        { name: 'Research Automation', path: '/advanced-research-automation', description: 'Automated research processes' },
+        { name: 'Agentic RAG', path: '/agentic-rag', description: 'Retrieval-augmented generation' },
+        { name: 'Agentic RAG Helpdesk', path: '/agentic-rag-helpdesk', description: 'AI-powered helpdesk' },
+        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', description: 'Affiliate marketing tools' }
+      ]
+    },
+    {
+      title: 'Cybersecurity & Compliance',
+      links: [
+        { name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Comprehensive security solutions' },
+        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', description: 'Enterprise security suite' },
+        { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', description: 'Compliance automation' },
+        { name: 'Security Assessment', path: '/security-assessment', description: 'Security evaluation services' },
+        { name: 'Compliance & Audit', path: '/compliance-audit', description: 'Compliance services' },
+        { name: 'Data Protection', path: '/data-protection', description: 'Data security solutions' },
+        { name: 'Network Security', path: '/network-security', description: 'Network protection' }
+      ]
+    },
+    {
+      title: 'Cloud & Infrastructure',
+      links: [
+        { name: 'Cloud & DevOps', path: '/cloud-devops', description: 'Cloud and DevOps services' },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'IT infrastructure solutions' },
+        { name: 'Specialized IT Infrastructure', path: '/services/specialized-it-infrastructure', description: 'Specialized infrastructure' },
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration services' },
+        { name: 'Network Infrastructure', path: '/network-infrastructure', description: 'Network solutions' },
+        { name: 'Managed IT Services', path: '/managed-it-services', description: 'Managed IT support' },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', description: '5G enterprise solutions' },
+        { name: '5G Network Optimization', path: '/5g-network-optimization', description: '5G network optimization' },
+        { name: '5G Private Network Solutions', path: '/5g-private-network-solutions', description: 'Private 5G networks' }
+      ]
+    },
+    {
+      title: 'Quantum Technology',
+      links: [
+        { name: 'Quantum Technology', path: '/services/quantum-technology', description: 'Quantum computing solutions' },
+        { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', description: 'Quantum neural networks' },
+        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Quantum computing services' },
+        { name: 'Quantum-Safe Security', path: '/quantum-safe-security', description: 'Post-quantum cryptography' }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      links: [
+        { name: 'Industry Solutions', path: '/services/industry-solutions', description: 'Industry-specific solutions' },
+        { name: 'Enterprise Solutions', path: '/solutions/enterprise', description: 'Enterprise solutions' },
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Healthcare technology' },
+        { name: 'Financial Solutions', path: '/solutions/financial', description: 'Financial technology' },
+        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', description: 'Manufacturing technology' },
+        { name: 'Retail Solutions', path: '/solutions/retail', description: 'Retail technology' },
+        { name: 'Government Solutions', path: '/solutions/government', description: 'Government technology' },
+        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Digital transformation services' },
+        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', description: 'Business automation' }
+      ]
+    },
+    {
+      title: 'Micro SAAS & Innovation',
+      links: [
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', description: 'Micro software solutions' },
+        { name: 'Innovative New Services', path: '/services/innovative-new-services', description: 'Cutting-edge services' },
+        { name: 'Innovative Services Showcase', path: '/innovative-services-showcase', description: 'Service showcase' },
+        { name: 'Emerging Technology', path: '/emerging-tech', description: 'Emerging tech solutions' },
+        { name: 'Blockchain Solutions', path: '/blockchain-solutions', description: 'Blockchain technology' },
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'IoT solutions' },
+        { name: 'Space Technology', path: '/space-technology', description: 'Space tech solutions' },
+        { name: 'Green IT', path: '/green-it', description: 'Sustainable technology' }
+      ]
+    },
+    {
+      title: 'Talent & Resources',
+      links: [
+        { name: 'Talent Directory', path: '/talent', description: 'Find top talent' },
+        { name: 'AI Matcher', path: '/match', description: 'AI-powered matching' },
+        { name: 'Marketplace', path: '/marketplace', description: 'Technology marketplace' },
+        { name: 'Developer Portal', path: '/developer-portal', description: 'Developer resources' },
+        { name: 'Community', path: '/community', description: 'Community platform' },
+        { name: 'Leadership', path: '/leadership', description: 'Leadership insights' },
+        { name: 'Analytics', path: '/analytics', description: 'Analytics dashboard' }
+      ]
+    },
+    {
+      title: 'Support & Documentation',
+      links: [
+        { name: 'Help Center', path: '/help-center', description: 'Support center' },
+        { name: 'Documentation', path: '/docs', description: 'Technical documentation' },
+        { name: 'Support', path: '/support', description: 'Technical support' },
+        { name: 'Status Page', path: '/status', description: 'Service status' },
+        { name: 'Accessibility', path: '/accessibility', description: 'Accessibility information' },
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', description: 'Accessibility tools' },
+        { name: 'Accessibility Scanner', path: '/accessibility-scanner', description: 'Accessibility scanning' }
+=======
+  ShoppingCart, 
+  Building, 
+  FileText, 
+  HelpCircle, 
+  BarChart3,
+  Settings,
+  Zap,
+  Shield,
+  Globe,
+  Wrench,
+  Code,
+  MessageSquare,
+  Star,
+  Play
+} from 'lucide-react';
+
+export default function Sitemap() {
+  const sitemapSections = [
+    {
+      title: 'Main Pages',
+      icon: Home,
+      links: [
+        { name: 'Home', path: '/', description: 'Main landing page' },
+        { name: 'About Us', path: '/about', description: 'Company information and mission' },
+        { name: 'Contact', path: '/contact', description: 'Get in touch with us' },
+        { name: 'Careers', path: '/careers', description: 'Job opportunities' },
+        { name: 'Partners', path: '/partners', description: 'Partnership programs' },
+        { name: 'Sitemap', path: '/sitemap', description: 'Site navigation guide' },
+      ]
+    },
+    {
+      title: 'Services',
+      icon: Briefcase,
+      links: [
+        { name: 'IT Solutions', path: '/services/it-solutions', description: 'Infrastructure and IT services' },
+        { name: 'AI Services', path: '/services/ai-services', description: 'Artificial intelligence solutions' },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', description: 'Security and protection services' },
+        { name: 'Green IT', path: '/green-it', description: 'Sustainable technology solutions' },
+        { name: 'On-Site Support', path: '/it-onsite-services', description: 'Local technical support' },
+        { name: 'Request Quote', path: '/request-quote', description: 'Get a custom quote' },
+      ]
+    },
+    {
+      title: 'Talent & Recruitment',
+      icon: Users,
+      links: [
+        { name: 'Browse Talents', path: '/talents', description: 'Find skilled professionals' },
+        { name: 'Talent Directory', path: '/talent-directory', description: 'Comprehensive talent database' },
+        { name: 'AI Matcher', path: '/ai-matcher', description: 'AI-powered talent matching' },
+        { name: 'Hire Now', path: '/hire-now', description: 'Quick hiring process' },
+        { name: 'Post a Job', path: '/post-job', description: 'Create job listings' },
+        { name: 'Zion Hire AI', path: '/zion-hire-ai', description: 'AI recruitment platform' },
+      ]
+    },
+    {
+      title: 'Marketplace',
+      icon: ShoppingCart,
+      links: [
+        { name: 'Equipment', path: '/equipment', description: 'Tech equipment and hardware' },
+        { name: 'Equipment Details', path: '/equipment-detail', description: 'Detailed product information' },
+        { name: 'Categories', path: '/categories', description: 'Browse by category' },
+        { name: 'Featured', path: '/featured', description: 'Highlighted products' },
+        { name: 'Deals', path: '/deals', description: 'Special offers and discounts' },
+      ]
+    },
+    {
+      title: 'Company & Business',
+      icon: Building,
+      links: [
+        { name: 'About Us', path: '/about', description: 'Company overview' },
+        { name: 'Careers', path: '/careers', description: 'Employment opportunities' },
+        { name: 'Partners', path: '/partners', description: 'Business partnerships' },
+        { name: 'Press & Media', path: '/press', description: 'News and press releases' },
+        { name: 'Enterprise Solutions', path: '/enterprise', description: 'Large-scale business solutions' },
+      ]
+    },
+    {
+      title: 'Resources & Content',
+      icon: FileText,
+      links: [
+        { name: 'Blog', path: '/blog', description: 'Industry insights and articles' },
+        { name: 'Documentation', path: '/docs', description: 'Technical documentation' },
+        { name: 'API Reference', path: '/api', description: 'API documentation' },
+        { name: 'Tutorials', path: '/tutorials', description: 'Learning resources' },
+        { name: 'Case Studies', path: '/case-studies', description: 'Success stories' },
+        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
+      ]
+    },
+    {
+      title: 'Support & Help',
+      icon: HelpCircle,
+      links: [
+        { name: 'Help Center', path: '/help-center', description: 'Comprehensive help resources' },
+        { name: 'FAQ', path: '/faq', description: 'Common questions and answers' },
+        { name: 'Contact Support', path: '/contact', description: 'Get help from our team' },
+        { name: 'Live Chat', path: '/chat', description: 'Real-time support chat' },
+        { name: 'Status Page', path: '/status', description: 'Service status updates' },
+        { name: 'Support Ticket', path: '/support-ticket', description: 'Submit support requests' },
+      ]
+    },
+    {
+      title: 'Tools & Applications',
+      icon: Settings,
+      links: [
+        { name: 'Analytics Dashboard', path: '/analytics', description: 'Business analytics and insights' },
+        { name: 'Mobile App', path: '/mobile-launch', description: 'Mobile application' },
+        { name: 'Community Platform', path: '/community', description: 'User community and forums' },
+        { name: 'Developer Portal', path: '/developers', description: 'Developer resources and tools' },
+      ]
+    },
+    {
+      title: 'Legal & Compliance',
+      icon: Shield,
+      links: [
+        { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy' },
+        { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
+        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information' },
+        { name: 'GDPR Compliance', path: '/gdpr', description: 'Data protection compliance' },
+        { name: 'Accessibility', path: '/accessibility', description: 'Accessibility standards' },
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+import { 
+  Home, 
+  Users, 
+  Briefcase, 
+  ShoppingCart, 
+  Settings, 
+  FileText,
+  MessageSquare,
+  BarChart3,
+  Building,
+  Globe,
+  Code,
+  HelpCircle,
+  Shield,
+  Mail,
+  Phone,
+  MapPin
+} from "lucide-react";
+
+export default function Sitemap() {
   const sitemapSections = [
     {
       title: "Main Pages",
@@ -82,29 +504,24 @@ import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout";
 
   return (
-import { 
-  MapIcon, 
-  CogIcon, 
-  CubeIcon, 
-  ShieldCheckIcon,
-  RocketLaunchIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
-
-const Sitemap: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex justify-center mb-6">
-              <div className="p-3 bg-blue-600/20 rounded-full">
-                <MapIcon className="h-12 w-12 text-blue-400" />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Sitemap
+    <>
+      <NextSeo
+        title="Sitemap | Zion AI Marketplace"
+        description="Human readable sitemap for all public routes"
+        keywords="sitemap, navigation"
+        canonical="https://ziontechgroup.com/sitemap"
+=======
+=======
+      />
+      
+      <Header />
+      
+      <main className="pt-32 pb-20">
+        <div className="container mx-auto px-4">
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Site Navigation Guide
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Navigate through all the pages and services available on Zion Tech Group's website. 

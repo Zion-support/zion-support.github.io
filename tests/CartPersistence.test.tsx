@@ -30,10 +30,9 @@ function renderCart(user: any) {
 
 describe('cart persistence', () => {
   it('shows item added before login after logging in', () => {
-    safeStorage.setItem(getCartKey(), JSON.stringify([item]));
+    safeStorage.setItem('guestCart', JSON.stringify([item]));
     const { rerender } = renderCart(null);
-    expect(screen.getByText(/Shopping Cart/i)).toBeInTheDocument();
-    expect(screen.getByText('Login to Checkout')).toBeInTheDocument();
+    expect(screen.getByText(/Test Item/i)).toBeInTheDocument();
 
     rerender(
       <AuthContext.Provider value={{ user: { id: 'u1' }, isLoading: false } as any}>

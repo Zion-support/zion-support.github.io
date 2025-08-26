@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import { supabaseStorageAdapter } from './safeStorageAdapter';
+import { captureException } from '@/lib/sentry';
 
 interface SupabaseClient {
   auth: {
@@ -72,5 +72,6 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
     }
   }
 
-  throw lastError;
+  captureException(lastError);
+  throw new Error('Failed to connect to Supabase');
 }

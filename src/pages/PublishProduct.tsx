@@ -3,7 +3,7 @@ import React from "react";
 import { ProductSubmissionForm } from "@/components/ProductSubmissionForm";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 
 export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -26,7 +26,7 @@ export default function PublishProduct() {
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
-      <SEO 
+      <NextSeo 
         title="Publish Your Product" 
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
         keywords="publish product, sell online, digital marketplace, AI tools, tech services"

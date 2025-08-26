@@ -7,7 +7,20 @@ interface LanguageContextType {
   isRTL: boolean;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const supportedLanguages = [
+  { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' },
+  { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
+];
+
+const defaultLanguageContext: LanguageContextType = {
+  currentLanguage: 'en',
+  changeLanguage: async () => {},
+  isRTL: false,
+  supportedLanguages
+};
+
+export const useLanguage = () =>
+  useContext<LanguageContextType>(LanguageContext);
 
 interface LanguageProviderProps {
   children: ReactNode;
@@ -42,12 +55,4 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       {children}
     </LanguageContext.Provider>
   );
-}
-
-export function useLanguage(): LanguageContextType {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
-}
+};

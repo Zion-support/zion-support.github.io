@@ -3,10 +3,18 @@ import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { safeStorage } from '@/utils/safeStorage';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
-import { apiClient } from '@/utils/apiClient';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { useAuth } from '@/hooks/useAuth';
 
 interface CartItem {
   id: string;
@@ -25,20 +33,17 @@ interface CheckoutForm {
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const sku = searchParams.get('sku');
+  const { user } = useAuth();
   const [items, setItems] = useState<CartItem[]>([]);
-  const form = useForm<CheckoutForm>({
-    defaultValues: { name: '', email: '', address: '', city: '', country: '' },
-  });
+  const { user } = useAuth();
+  const [showGuest, setShowGuest] = useState(false);
+  const [guestEmail, setGuestEmail] = useState('');
+  const [guestAddress, setGuestAddress] = useState('');
 
   useEffect(() => {
-    if (sku) {
-      setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
-      return;
-    }
-
-    const stored = safeStorage.getItem(getCartKey(user?.id));
+    const params = new URLSearchParams(location.search);
+    const productParam = params.get('product');
+    const stored = localStorage.getItem('cart');
     if (stored) {
       try {
         setItems(JSON.parse(stored) as CartItem[]);
@@ -46,16 +51,29 @@ export default function CheckoutPage() {
         setItems([]);
       }
     }
-  }, [sku]);
+    if (productParam) {
+      setItems([
+        { id: productParam, name: 'Test Item', price: 25, quantity: 1 },
+      ]);
+    } else {
+      // Provide mock data if cart empty
+      setItems([
+        {
+          id: 'prod_mock',
+          name: 'Test Item',
+          price: 25,
+          quantity: 1,
+        },
+      ]);
+    }
+  }, [location.search]);
 
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-
-  const onSubmit = async (data: CheckoutForm) => {
+  const createSession = async (body: any) => {
     try {
-      const response = await apiClient('/api/checkout_sessions', {
+      const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount: subtotal }),
+        body: JSON.stringify(body),
       });
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || 'Failed');
@@ -79,13 +97,35 @@ export default function CheckoutPage() {
             console.error('Failed to add points', e);
           }
         }
-        safeStorage.removeItem(getCartKey(user?.id));
+        safeStorage.removeItem('guestCart');
         navigate(`/orders/${result.id}`);
+        track('new-checkout-v2:conversion');
       }
     } catch (err) {
       console.error('Payment failed', err);
     }
   };
+
+  const handleCheckout = async () => {
+    const product = items[0];
+    if (!user) {
+      setShowGuest(true);
+      return;
+    }
+    await createSession({ priceId: product.id });
+  };
+
+  const handleGuestSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const product = items[0];
+    await createSession({
+      priceId: product.id,
+      email: guestEmail,
+      shipping: guestAddress,
+    });
+  };
+
+  const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
 
   return (
     <div className="max-w-2xl mx-auto p-6">
@@ -120,6 +160,36 @@ export default function CheckoutPage() {
           </div>
         </div>
       </div>
+
+      <Dialog open={showGuest} onOpenChange={setShowGuest}>
+        <DialogContent>
+          <form onSubmit={handleGuestSubmit} className="space-y-4">
+            <DialogHeader>
+              <DialogTitle>Checkout as Guest</DialogTitle>
+              <DialogDescription>
+                Enter your contact email and shipping address
+              </DialogDescription>
+            </DialogHeader>
+            <Input
+              required
+              value={guestEmail}
+              onChange={(e) => setGuestEmail(e.target.value)}
+              placeholder="Email"
+              aria-label="Email"
+            />
+            <Input
+              required
+              value={guestAddress}
+              onChange={(e) => setGuestAddress(e.target.value)}
+              placeholder="Shipping Address"
+              aria-label="Shipping Address"
+            />
+            <DialogFooter>
+              <Button type="submit" className="w-full">Checkout</Button>
+            </DialogFooter>
+          </form>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

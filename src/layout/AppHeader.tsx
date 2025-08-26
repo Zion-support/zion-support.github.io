@@ -3,15 +3,14 @@ import { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
 import { Logo } from '@/components/header/Logo';
-import { ModeToggle } from '@/components/ModeToggle';
-import { Menu, X, Search, User, Bell, PanelLeft } from 'lucide-react';
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { CurrencySelector } from '@/components/header/CurrencySelector';
+import { useTranslation } from 'react-i18next';
+import { Menu, X } from 'lucide-react';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Sidebar } from '@/components/Sidebar';
-import { useAuth } from '@/hooks/useAuth';
-import { Link } from 'react-router-dom';
-import { MainNavigation } from './MainNavigation';
+import { CartIcon } from '@/components/CartIcon';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,7 +45,52 @@ export function AppHeader() {
               <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
             </Link>
           </div>
-          <MainNavigation />
+=======
+          
+          <Logo />
+          <div className="ml-6 flex-1 hidden md:block">
+            <MainNavigation unreadCount={unreadCount} />
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden ml-auto mr-4">
+            <motion.button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none focus:ring-2 focus:ring-zion-purple/50 transition-all duration-200"
+              aria-expanded={mobileMenuOpen}
+              aria-label="Toggle mobile menu"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="sr-only">Open main menu</span>
+              <AnimatePresence mode="wait">
+                {mobileMenuOpen ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <X className="block h-6 w-6" aria-hidden="true" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Menu className="block h-6 w-6" aria-hidden="true" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
+          </div>
+
+          <CurrencySelector />
+          <LanguageSelector />
         </div>
       </header>
       

@@ -30,8 +30,10 @@ const defaultConfig: WhitelabelConfig = {
 
 const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig);
 
+// Explicitly type the return value so consumers get accurate typings when
+// destructuring properties from the hook result.
 export const useWhitelabel = (): WhitelabelContextType =>
-  useContext<WhitelabelContextType>(WhitelabelContext);
+  useContext(WhitelabelContext);
 
 interface WhitelabelProviderProps {
   children: ReactNode;

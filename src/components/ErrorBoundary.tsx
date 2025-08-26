@@ -1,63 +1,43 @@
-import React, { Component, ReactNode } from "react";
-
-interface ErrorBoundaryProps {
-  fallback: ReactNode;
-}
+import React from 'react';
+import { AppLayout } from '@/layout/AppLayout';
 
 interface ErrorBoundaryState {
   hasError: boolean;
+  error: Error | null;
 }
 
-export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+export class ErrorBoundary extends React.Component<React.PropsWithChildren, ErrorBoundaryState> {
+  constructor(props: React.PropsWithChildren) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, error: null };
   }
 
-  static getDerivedStateFromError() {
-    return { hasError: true };
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error };
   }
 
-  componentDidCatch(error: unknown) {
-    console.error("ErrorBoundary caught an error", error);
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error', error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback;
+      return (
+        <AppLayout>
+          <div className="container py-8">
+            <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
+            <pre className="whitespace-pre-wrap text-red-500">
+              {this.state.error?.message}
+            </pre>
+          </div>
+        </AppLayout>
+      );
     }
+
     return this.props.children;
   }
 
   return <>{children}</>;
 }
 
-// Hook for functional components to handle errors
-export function useErrorHandler() {
-  const [error, setError] = useState<Error | null>(null);
-
-  const handleError = React.useCallback((error: Error) => {
-    setError(error);
-    console.error('Error caught by useErrorHandler:', error);
-  }, []);
-
-  const clearError = React.useCallback(() => {
-    setError(null);
-  }, []);
-
-  return { error, handleError, clearError };
-}
-
-// Higher-order component for wrapping components with error handling
-export function withErrorBoundary<P extends object>(
-  Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
-) {
-  return function WithErrorBoundary(props: P) {
-    return (
-      <ErrorBoundary {...errorBoundaryProps}>
-        <Component {...props} />
-      </ErrorBoundary>
-    );
-  };
-}
+export default ErrorBoundary;

@@ -4,17 +4,18 @@ import { useParams } from "react-router-dom";
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
 import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from "lucide-react";
 
 function HiringTrackerContent() {
+  // Cast to specify the expected route param type since useParams may be untyped
   const { jobId } = useParams() as { jobId?: string };
   const [activeTab, setActiveTab] = useState<string>("kanban");
 
   return (
     <>
-      <SEO 
+      <NextSeo 
         title="Hiring Tracker | Zion AI Marketplace" 
         description="Manage your candidate pipeline in the Zion AI Marketplace." 
       />

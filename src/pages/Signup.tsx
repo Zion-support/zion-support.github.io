@@ -7,13 +7,14 @@ import { z } from "zod";
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
 
 import { useAuth } from "@/hooks/useAuth";
-import { register } from "@/services/auth";
 import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import { mailchimpService } from "@/integrations/mailchimp";
+import { fireEvent } from '@/lib/analytics';
 import {
   Form,
   FormControl,
@@ -43,10 +44,10 @@ const signupSchema = z
     path: ["confirmPassword"],
   });
 
-type SignupFormValues = z.infer<typeof signupSchema>;
+type SignupFormValues = any;
 
 export default function Signup() {
-  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isAuthenticated, user, login, signup } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -73,55 +74,14 @@ export default function Signup() {
 
     setIsSubmitting(true);
     try {
-      const { res, data: resData } = await register(
-        data.displayName,
-        data.email,
-        data.password
-      );
-
-      // Handle duplicate email error from API
-      if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
-        form.setError('email', { message: resData.message });
-        toast.error('Email already registered – please login.');
-        return;
-      }
-
-      // Check for successful response
-      if (res.ok && resData.token && resData.user) {
-        // Successful registration
-        safeStorage.setItem('authToken', resData.token);
-        setUser(resData.user);
-        setTokens({ accessToken: resData.token, refreshToken: resData.refreshToken || null });
-
-      // Handle email verification required case
-      if (resData?.emailVerificationRequired) {
-        setShowVerificationMessage(true);
-        // Do not proceed to set session or navigate
-      } else if (resData?.session) {
-        // Set the session directly if verification is not required
-        const { error: sessionError } = await supabase.auth.setSession(resData.session);
-        if (sessionError) {
-          console.error("Error setting session:", sessionError);
-          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." });
-          toast.error(sessionError.message || "Failed to set session. Please try logging in.");
-          return;
-        }
-        // The onAuthStateChange listener in AuthProvider should now handle
-        // updating user state and navigating if necessary for other cases.
-        // For direct signup with session, we can navigate.
+      const { error } = await signup(data.displayName, data.email, data.password);
+      if (!error) {
         toast.success("Welcome to ZionAI 🎉");
-        navigate("/dashboard");
-      } else {
-        // This case might indicate an unexpected response from the API
-        console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
-        form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
-        toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
-        // Potentially navigate to login or show a more specific error
-        return;
+        navigate(location.state?.from || "/", { replace: true });
       }
 
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
-      if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
+      if (data.newsletterOptIn && mailchimpService) {
         try {
           await mailchimpService.addSubscriber({
             email: data.email,
@@ -133,8 +93,6 @@ export default function Signup() {
           // Non-critical error, don't block user flow
         }
       }
-      // Toast and navigation are handled above if session is present
-      // If emailVerificationRequired, no toast/navigation here, message is shown
     } catch (err: any) {
       const message = err.message ?? "Registration failed";
       form.setError("root", { message });

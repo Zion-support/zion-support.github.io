@@ -91,8 +91,7 @@ const Footer: React.FC = () => {
   ChevronUp,
 } from "lucide-react";
 import Link from "next/link"; // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
-import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
@@ -123,7 +122,29 @@ const GITHUB_URL = resolveUrl(
 );
 
 export function Footer() {
-  const { t } = useTranslation();
+  const [uptimePercent, setUptimePercent] = useState<number | null>(null);
+
+  useEffect(() => {
+    async function fetchUptime() {
+      try {
+        const res = await fetch('/api/status/summary');
+        if (!res.ok) return;
+        const data = await res.json();
+        const pct =
+          typeof data.uptime === 'number'
+            ? data.uptime
+            : typeof data.uptimePercent === 'number'
+            ? data.uptimePercent
+            : null;
+        if (typeof pct === 'number') {
+          setUptimePercent(pct);
+        }
+      } catch (err) {
+        console.warn('Failed to fetch uptime percentage', err);
+      }
+    }
+    fetchUptime();
+  }, []);
   return (
     <footer className="bg-card border-t border-primary/20 pt-12 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -1972,7 +1993,12 @@ function Footer() {
                 rel="noopener noreferrer"
                 className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors"
               >
-                {t('footer.bottom.api_status')}
+                API Status
+                {uptimePercent !== null && (
+                  <span className="ml-1 text-xs text-foreground/60">
+                    ({uptimePercent.toFixed(2)}% uptime)
+                  </span>
+                )}
               </Link>
             </div>
           </div>

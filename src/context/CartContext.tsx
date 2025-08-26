@@ -1,87 +1,64 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';
-import { CartContextType, CartItem, CartAction } from '@/types/cart';
-import { safeStorage } from '@/utils/safeStorage';
-import { useAuth } from '@/hooks/useAuth';
-import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-interface CartState { items: CartItem[]; }
-
-const initialState: CartState = { items: [] };
-
-function cartReducer(state: CartState, action: CartAction): CartState {
-  switch (action.type) {
-    case 'ADD_ITEM': {
-      const existing = state.items.find(i => i.id === action.payload.id);
-      let items;
-      if (existing) {
-        items = state.items.map(i =>
-          i.id === action.payload.id
-            ? { ...i, quantity: i.quantity + action.payload.quantity }
-            : i
-        );
-      } else {
-        items = [...state.items, action.payload];
-      }
-      return { items };
-    }
-    case 'REMOVE_ITEM':
-      return { items: state.items.filter(i => i.id !== action.payload) };
-    case 'CLEAR_CART':
-      return { items: [] };
-    default:
-      return state;
-  }
+export interface CartItem {
+  id: string;
+  quantity: number;
 }
 
-const CartContext = createContext<CartContextType | undefined>(undefined);
+export interface CartContextType {
+  items: CartItem[];
+  addItem: (item: CartItem) => void;
+  removeItem: (id: string) => void;
+  clear: () => void;
+}
+
+const CartContext = createContext<CartContextType>({
+  items: [],
+  addItem: () => {},
+  removeItem: () => {},
+  clear: () => {},
+});
 
 export function useCart(): CartContextType {
-  const ctx = useContext(CartContext) as CartContextType;
-  if (!ctx) throw new Error('useCart must be used within a CartProvider');
-  return ctx;
+  return useContext(CartContext);
 }
 
-export function CartProvider({ children }: { children: React.ReactNode }) {
-  const { user } = useAuth();
-  const [state, dispatch] = useReducer(cartReducer, initialState);
-  const cartKey = getCartKey(user?.id);
+export function CartProvider({ children }: { children: ReactNode }) {
+  const [items, setItems] = useState<CartItem[]>([]);
 
-  useEffect(() => {
-    let items: CartItem[] = [];
-    const stored = safeStorage.getItem(cartKey);
-    if (stored) {
-      try {
-        items = JSON.parse(stored) as CartItem[];
-      } catch {
-        items = [];
+  const addItem = (item: CartItem) => {
+    setItems(prev => {
+      const existing = prev.find(i => i.id === item.id);
+      if (existing) {
+        return prev.map(i => i.id === item.id ? { ...i, quantity: i.quantity + item.quantity } : i);
       }
-    }
-
-    // Merge guest cart when user logs in
-    if (user?.id) {
-      const guestStored = safeStorage.getItem(getCartKey());
-      if (guestStored) {
-        try {
-          const guestItems = JSON.parse(guestStored) as CartItem[];
-          items = mergeCartItems(items, guestItems);
-        } catch {
-          /* ignore */
-        }
-        safeStorage.removeItem(getCartKey());
-      }
-    }
-
-    dispatch({ type: 'SET_ITEMS', payload: items });
-  }, [cartKey]);
-
-  useEffect(() => {
-    safeStorage.setItem(cartKey, JSON.stringify(state.items));
-  }, [state.items, cartKey]);
-
-  const value: CartContextType = {
-    items: state.items,
-    dispatch,
+      return [...prev, item];
+    });
   };
 
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+  const removeItem = (id: string) => {
+    setItems(prev => prev.filter(i => i.id !== id));
+  };
+
+  // Rehydrate cart from localStorage on mount for guests
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const stored = safeStorage.getItem('zion_cart');
+      if (stored) {
+        const parsed = JSON.parse(stored) as CartItem[];
+        reduxDispatch(setItems(parsed));
+      }
+    } catch (error) {
+      console.error('[CartProvider] Failed to load cart from localStorage', error);
+    }
+  }, [reduxDispatch]);
+
+  // Persist updated items to localStorage so guests don't lose their cart
+
+  return (
+    <CartContext.Provider value={{ items, addItem, removeItem, clear }}>
+      {children}
+    </CartContext.Provider>
+  );
 }

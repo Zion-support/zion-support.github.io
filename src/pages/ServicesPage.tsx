@@ -1,12 +1,41 @@
-
+import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart, ExternalLink, Star, Clock, Database, Smartphone, Blockchain, Cpu, Phone, Mail, MapPin } from "lucide-react";
+import { 
+  Globe, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Database, 
+  Zap, 
+  Code, 
+  Users, 
+  HardDrive,
+  Sparkles,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
+  DollarSign
+} from "lucide-react";
+import Link2 from "lucide-react/dist/esm/icons/link-2";
+import Wifi from "lucide-react/dist/esm/icons/wifi";
+import { Globe, Zap } from "lucide-react";
+import { Globe, Brain, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
-import { SEO } from "@/components/SEO";
+import { Globe, Zap, Brain } from "lucide-react";
+import { useEffect, useState } from "react";
+import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
+import apiClient from "@/services/apiClient";
+import { toast } from "@/hooks/use-toast";
+import Link from "next/link";
+import { Globe } from "lucide-react";
+import ServicesList from '@/components/ServicesList';
+import { Globe, ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ENHANCED_SERVICES } from "@/data/enhancedServices";
 
-// Enhanced service listings with new micro SAAS services
+// Enhanced service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   // AI & Machine Learning Services
   {
@@ -174,8 +203,207 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["DevOps", "CI/CD", "Infrastructure as Code", "Automation"],
     author: {
-      name: "Zion DevOps",
-      id: "zion-devops",
+      name: "DevOps Dynamics",
+      id: "devops-dynamics",
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-22T16:30:00.000Z",
+    aiScore: 94,
+    rating: 4.8,
+    reviewCount: 167,
+  },
+
+  // Cybersecurity Services
+  {
+    id: "cybersecurity-assessment",
+    title: "Cybersecurity Assessment & Protection",
+    description: "Comprehensive security audits, penetration testing, and protection system implementation. We help organizations identify vulnerabilities and implement robust security measures.",
+    category: "Security Services",
+    price: 20000,
+    currency: "$",
+    tags: ["Cybersecurity", "Penetration Testing", "Security Audits", "Compliance", "Threat Protection"],
+    author: {
+      name: "SecureNet Team",
+      id: "secure-net-team",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-25T13:45:00.000Z",
+    aiScore: 97,
+    rating: 4.9,
+    reviewCount: 189,
+  },
+  {
+    id: "compliance-framework",
+    title: "Compliance Framework Setup",
+    description: "SOC 2, ISO 27001, GDPR, and other compliance framework implementation. We help organizations meet regulatory requirements and build trust with customers and partners.",
+    category: "Security Services",
+    price: 35000,
+    currency: "$",
+    tags: ["Compliance", "SOC 2", "ISO 27001", "GDPR", "Regulatory"],
+    author: {
+      name: "Compliance Experts",
+      id: "compliance-experts",
+      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-28T10:15:00.000Z",
+    aiScore: 93,
+    rating: 4.8,
+    reviewCount: 145,
+  },
+
+  // Data & Analytics Services
+  {
+    id: "big-data-engineering",
+    title: "Big Data Engineering",
+    description: "End-to-end big data solutions including data pipeline development, ETL processes, data warehousing, and real-time analytics. We handle petabytes of data with optimal performance.",
+    category: "Data Services",
+    price: 28000,
+    currency: "$",
+    tags: ["Big Data", "Data Engineering", "ETL", "Data Warehousing", "Real-time Analytics"],
+    author: {
+      name: "DataMind Solutions",
+      id: "data-mind-solutions",
+      avatarUrl: "https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-30T15:20:00.000Z",
+    aiScore: 95,
+    rating: 4.9,
+    reviewCount: 178,
+  },
+
+  // Development Services
+  {
+    id: "web-development",
+    title: "Custom Web Development",
+    description: "Full-stack web development services including frontend, backend, and database design. We build scalable, secure, and high-performance web applications for businesses of all sizes.",
+    category: "Development Services",
+    price: 15000,
+    currency: "$",
+    tags: ["Web Development", "Full-stack", "React", "Node.js", "Scalable"],
+    author: {
+      name: "WebCraft Studios",
+      id: "web-craft-studios",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-01T12:00:00.000Z",
+    aiScore: 91,
+    rating: 4.7,
+    reviewCount: 234,
+  },
+
+  // Blockchain Services
+  {
+    id: "blockchain-development",
+    title: "Blockchain Development",
+    description: "Custom blockchain solutions including smart contracts, DeFi protocols, and NFT marketplaces. We build on Ethereum, Polygon, and other leading blockchain platforms.",
+    category: "Blockchain Services",
+    price: 40000,
+    currency: "$",
+    tags: ["Blockchain", "Smart Contracts", "DeFi", "NFTs", "Ethereum"],
+    author: {
+      name: "Blockchain Builders",
+      id: "blockchain-builders",
+      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-05T14:30:00.000Z",
+    aiScore: 96,
+    rating: 4.8,
+    reviewCount: 89,
+  },
+  // New innovative micro SAAS services
+  {
+    id: "service-7",
+    title: "AI-Powered Content Generation",
+    description: "Automated content creation for blogs, social media, and marketing materials using advanced language models.",
+    category: "AI Services",
+    price: 299,
+    currency: "$",
+    tags: ["Content Creation", "AI Writing", "Marketing Automation"],
+    author: {
+      name: "ContentAI Pro",
+      id: "content-ai-pro",
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-15T12:00:00.000Z",
+    aiScore: 96,
+    rating: 4.9,
+    reviewCount: 156,
+  },
+  {
+    id: "service-8",
+    title: "Smart Contract Development",
+    description: "Blockchain smart contract development and auditing for DeFi, NFTs, and enterprise blockchain solutions.",
+    category: "Blockchain",
+    price: 3500,
+    currency: "$",
+    tags: ["Smart Contracts", "Blockchain", "DeFi", "NFTs"],
+    author: {
+      name: "BlockChain Solutions",
+      id: "blockchain-solutions",
+      avatarUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-10T14:30:00.000Z",
+    aiScore: 93,
+    rating: 4.8,
+    reviewCount: 89,
+  },
+  {
+    id: "service-9",
+    title: "IoT Device Management Platform",
+    description: "Complete IoT solution including device provisioning, monitoring, data collection, and analytics dashboard.",
+    category: "IoT",
+    price: 1200,
+    currency: "$",
+    tags: ["IoT", "Device Management", "Data Analytics", "Monitoring"],
+    author: {
+      name: "IoT Masters",
+      id: "iot-masters",
+      avatarUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-08T09:15:00.000Z",
+    aiScore: 91,
+    rating: 4.7,
+    reviewCount: 67,
+  },
+  {
+    id: "service-10",
+    title: "AI-Powered Customer Support Bot",
+    description: "Intelligent chatbot with natural language processing for 24/7 customer support and lead generation.",
+    category: "AI Services",
+    price: 450,
+    currency: "$",
+    tags: ["Chatbot", "Customer Support", "NLP", "Lead Generation"],
+    author: {
+      name: "BotGenius",
+      id: "bot-genius",
+      avatarUrl: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-12T11:45:00.000Z",
+    aiScore: 94,
+    rating: 4.8,
+    reviewCount: 123,
+  },
+  {
+    id: "service-11",
+    title: "Predictive Analytics Dashboard",
+    description: "Real-time business intelligence platform with predictive modeling for sales forecasting and trend analysis.",
+    category: "Analytics",
+    price: 800,
+    currency: "$",
+    tags: ["Predictive Analytics", "Business Intelligence", "Forecasting", "Real-time"],
+    author: {
+      name: "Predictive Insights",
+      id: "predictive-insights",
       avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],
@@ -231,7 +459,26 @@ const SERVICE_LISTINGS: ProductListing[] = [
     category: "Business Intelligence",
     price: 29,
     currency: "$",
-    tags: ["Process Automation", "Workflow Automation", "Business Integration", "Efficiency"],
+    tags: ["Edge Computing", "Real-time Processing", "IoT", "Low Latency"],
+    author: {
+      name: "EdgeTech Solutions",
+      id: "edgetech-solutions",
+      avatarUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-13T11:30:00.000Z",
+    aiScore: 90,
+    rating: 4.7,
+    reviewCount: 62,
+  },
+  {
+    id: "service-7",
+    title: "AI-Powered Customer Support Automation",
+    description: "Implement intelligent chatbots and automated customer service solutions that provide 24/7 support and improve customer satisfaction.",
+    category: "AI Services",
+    price: 2800,
+    currency: "$",
+    tags: ["Chatbots", "Customer Support", "Automation", "AI"],
     author: {
       name: "Zion Automation",
       id: "zion-automation",
@@ -798,60 +1045,18 @@ function getRandomItem<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-function generateRandomService(idNum: number): ProductListing {
-  const templates = [
-    {
-      title: "AI Automation Consulting",
-      category: "Consulting",
-      min: 4000,
-      max: 12000,
-      tags: ["Automation", "AI Strategy", "Optimization"],
-    },
-    {
-      title: "Cloud Migration & Support",
-      category: "Management",
-      min: 3000,
-      max: 9000,
-      tags: ["Cloud", "Migration", "DevOps"],
-    },
-    {
-      title: "Advanced Cybersecurity Suite",
-      category: "Security",
-      min: 5000,
-      max: 15000,
-      tags: ["Cybersecurity", "PenTesting", "Compliance"],
-    },
-    {
-      title: "Big Data Engineering",
-      category: "Analytics",
-      min: 3500,
-      max: 11000,
-      tags: ["Data Engineering", "Analytics", "ETL"],
-    },
-    {
-      title: "AI Model Training Service",
-      category: "Development",
-      min: 4500,
-      max: 13000,
-      tags: ["Machine Learning", "Model Training", "AI"],
-    },
-    {
-      title: "Digital Transformation Strategy",
-      category: "Strategy",
-      min: 6000,
-      max: 14000,
-      tags: ["Transformation", "Strategy", "Business"],
-    },
-  ];
+// Filter options for services
+const SERVICE_FILTERS = [
+  { label: 'AI Services', value: 'ai-services' },
+  { label: 'Blockchain', value: 'blockchain' },
+  { label: 'IoT', value: 'iot' },
+  { label: 'Infrastructure', value: 'infrastructure' },
+  { label: 'Sustainability', value: 'sustainability' },
+  { label: 'AI Services', value: 'ai services' },
+];
 
-  const authors = [
-    "Global AI Experts",
-    "InnovateTech",
-    "SecureFuture",
-    "CloudOps Partners",
-    "DataVisor",
-    "NexGen Solutions",
-  ];
+// Use comprehensive services instead of sample listings
+const SERVICE_LISTINGS: ProductListing[] = COMPREHENSIVE_SERVICES;
 
   const images = [
     "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500",
@@ -913,200 +1118,50 @@ export default function ServicesPage() {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-8 px-4 md:px-8 mb-8 border-b border-zion-purple/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent">
-              Zion Micro SAAS Services
-            </h1>
-            <p className="text-xl text-zion-cyan/80 max-w-4xl mx-auto mb-6">
-              Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform your business operations. 
-              From AI content generation to cybersecurity, we have the tools you need to succeed.
+      {/* Existing page content remains */}
+      {/* Marketing section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-zion-blue">Zion Tech Group Services</h2>
+            <p className="text-zion-slate max-w-3xl mx-auto mt-3">
+              We deliver practical Micro SAAS, IT, and AI solutions with fast time‑to‑value. Average market pricing is indicated on each service card; we benchmark against transparent ranges and tailor quotes per scope.
             </p>
-            <div className="bg-zion-purple/10 backdrop-blur-sm rounded-lg p-6 border border-zion-purple/20 max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <h3 className="text-zion-cyan font-semibold mb-2">Ready to Transform?</h3>
-                  <p className="text-zion-cyan/70 text-sm">Get started with our AI solutions today</p>
-                </div>
-                <div>
-                  <h3 className="text-zion-cyan font-semibold mb-2">Expert Support</h3>
-                  <p className="text-zion-cyan/70 text-sm">24/7 technical assistance & onboarding</p>
-                </div>
-                <div>
-                  <h3 className="text-zion-cyan font-semibold mb-2">Free Trials</h3>
-                  <p className="text-zion-cyan/70 text-sm">Test drive any service for 14 days</p>
-                </div>
-              </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-lg border border-zion-slate/20 bg-zion-blue/5">
+              <h3 className="font-semibold text-zion-blue mb-2">What you get</h3>
+              <ul className="list-disc pl-5 text-sm text-zion-slate">
+                <li>Clear outcomes, SLAs, and success metrics</li>
+                <li>Security‑first implementations and compliance support</li>
+                <li>Documentation, knowledge transfer, and training</li>
+              </ul>
+            </div>
+            <div className="p-6 rounded-lg border border-zion-slate/20 bg-zion-blue/5">
+              <h3 className="font-semibold text-zion-blue mb-2">Engagement models</h3>
+              <ul className="list-disc pl-5 text-sm text-zion-slate">
+                <li>Fixed‑scope projects and monthly subscriptions</li>
+                <li>Pilot/MVPs in 2–6 weeks</li>
+                <li>Enterprise support and 24×7 options</li>
+              </ul>
+            </div>
+            <div className="p-6 rounded-lg border border-zion-slate/20 bg-zion-blue/5">
+              <h3 className="font-semibold text-zion-blue mb-2">Contact us</h3>
+              <ul className="text-sm text-zion-slate space-y-1">
+                <li>Mobile: <a className="text-zion-cyan" href="tel:+13024640950">+1 302 464 0950</a></li>
+                <li>E‑mail: <a className="text-zion-cyan" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></li>
+                <li>Address: 364 E Main St STE 1008 Middletown DE 19709</li>
+                <li>Website: <a className="text-zion-cyan" href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a></li>
+              </ul>
             </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Brain className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">AI & ML Services</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $19/month</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Shield className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">Cybersecurity</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $99/month</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Cloud className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">Cloud Solutions</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $49/month</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Users className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">Business Tools</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $29/month</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/it-onsite-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10 backdrop-blur-sm">
-                <Globe className="h-4 w-4 mr-2" />
-                Global IT Onsite Services
-              </Button>
-            </Link>
-            <Link to="/services-pricing">
-              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
-                <BarChart3 className="h-4 w-4 mr-2" />
-                View Pricing
-              </Button>
-            </Link>
-            <Link to="/services-comparison">
-              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
-                <TrendingUp className="h-4 w-4 mr-2" />
-                Compare Services
-              </Button>
-            </Link>
-            <Link to="/request-quote">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white shadow-lg shadow-zion-purple/25">
-                Request a Quote
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                Request a Quote
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <DynamicListingPage 
-        title="Comprehensive Micro SAAS Solutions"
-        description="Find the perfect AI-powered tools and services to accelerate your business growth. All services include free trials and expert support."
-        categorySlug="services"
-        listings={listings}
-        categoryFilters={SERVICE_FILTERS}
-        initialPrice={{ min: 19, max: 5000 }}
-      />
-      
-      {/* Enhanced Contact & Sales Section */}
-      <section className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-16 px-4 md:px-8">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Accelerate Your Business with AI?
-          </h2>
-          <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto mb-8">
-            Our team of AI experts is ready to help you implement the perfect solutions for your business needs. 
-            Get personalized recommendations and expert guidance.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-6 border border-zion-purple/30">
-              <Phone className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-white font-semibold text-lg mb-2">Call Us Directly</h3>
-              <p className="text-zion-cyan/70 mb-3">Speak with our AI specialists</p>
-              <a href="tel:+13024640950" className="text-zion-cyan hover:text-zion-cyan-light font-semibold text-lg">
-                +1 (302) 464-0950
-              </a>
-            </div>
-            
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-6 border border-zion-purple/30">
-              <Mail className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-white font-semibold text-lg mb-2">Email Our Team</h3>
-              <p className="text-zion-cyan/70 mb-3">Get detailed proposals and quotes</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:text-zion-cyan-light font-semibold">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-6 border border-zion-purple/30">
-              <MapPin className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-white font-semibold text-lg mb-2">Visit Our Office</h3>
-              <p className="text-zion-cyan/70 mb-3">Schedule an in-person consultation</p>
-              <p className="text-zion-cyan font-semibold text-sm">
-                364 E Main St STE 1008<br />
-                Middletown, DE 19709
-              </p>
-            </div>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/request-quote">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white shadow-lg shadow-zion-purple/25 px-8 py-3 text-lg">
-                Get Free Consultation
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm px-8 py-3 text-lg">
-                Schedule Demo
-              </Button>
-            </Link>
-            <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10 backdrop-blur-sm px-8 py-3 text-lg">
-                <ExternalLink className="h-5 w-5 mr-2" />
-                Visit Website
-              </Button>
+          <div className="text-center mt-10">
+            <a className="inline-flex items-center px-6 py-3 rounded-lg bg-zion-cyan text-white" href="https://ziontechgroup.com/contact" target="_blank" rel="noreferrer">
+              Get a Free Consultation
             </a>
-          </div>
-          
-          <div className="mt-12 bg-zion-purple/10 backdrop-blur-sm rounded-lg p-6 border border-zion-purple/20 max-w-4xl mx-auto">
-            <h3 className="text-white font-semibold text-xl mb-4">Why Choose Zion Tech Group?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-              <div>
-                <h4 className="text-zion-cyan font-semibold mb-2">✓ Industry-Leading AI Technology</h4>
-                <p className="text-zion-cyan/70 text-sm">Cutting-edge AI models and algorithms</p>
-              </div>
-              <div>
-                <h4 className="text-zion-cyan font-semibold mb-2">✓ Enterprise-Grade Security</h4>
-                <p className="text-zion-cyan/70 text-sm">SOC 2 compliant with 99.9% uptime</p>
-              </div>
-              <div>
-                <h4 className="text-zion-cyan font-semibold mb-2">✓ 24/7 Expert Support</h4>
-                <p className="text-zion-cyan/70 text-sm">Dedicated technical account managers</p>
-              </div>
-              <div>
-                <h4 className="text-zion-cyan font-semibold mb-2">✓ Flexible Pricing Plans</h4>
-                <p className="text-zion-cyan/70 text-sm">Scale from startup to enterprise</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
-      
-      <TrustedBySection />
     </>
   );
 }

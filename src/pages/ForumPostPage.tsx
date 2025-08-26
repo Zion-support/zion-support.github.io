@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -116,9 +116,7 @@ const mockReplies: ForumReply[] = [
 ];
 
 export default function ForumPostPage() {
-  // Using `useParams` without type arguments avoids issues when TypeScript
-  // can't determine the generic type for the helper from React Router.
-  // Cast the result instead to provide the expected shape.
+  // Cast to specify the expected route param type since useParams may be untyped
   const { postId } = useParams() as { postId?: string };
   const { user } = useAuth();
   const { toast } = useToast();
@@ -278,8 +276,8 @@ export default function ForumPostPage() {
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
   
   return (
-    <AppLayout>
-      <SEO
+    <>
+      <NextSeo
         title={`${post.title} | Community Forum | Zion AI Marketplace`}
         description={post.content.substring(0, 160)}
         keywords={`community, forum, discussion, ${post.tags.join(', ')}`}

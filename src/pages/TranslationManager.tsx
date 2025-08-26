@@ -1,6 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { NextSeo } from "@/components/NextSeo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
@@ -21,10 +23,10 @@ export default function TranslationManager() {
   
   const [selectedNamespace, setSelectedNamespace] = useState("translation");
   const [searchQuery, setSearchQuery] = useState("");
-  const [translations, setTranslations] = useState<Record<string, any>>({});
-  const [filteredKeys, setFilteredKeys] = useState<string[]>([]);
-  const [editingKey, setEditingKey] = useState<string | null>(null);
-  const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
+  const [translations, setTranslations] = useState({} as Record<string, any>);
+  const [filteredKeys, setFilteredKeys] = useState([] as string[]);
+  const [editingKey, setEditingKey] = useState(null as string | null);
+  const [editedTranslations, setEditedTranslations] = useState({} as Record<string, Record<SupportedLanguage, string>>);
   const [isSaving, setIsSaving] = useState(false);
   
   // Simulated translation data - in a real app, this would come from your backend
@@ -214,7 +216,7 @@ export default function TranslationManager() {
   
   return (
     <>
-      <SEO 
+      <NextSeo 
         title={t('translation.manager_title')} 
         description={t('translation.manager_description')}
       />

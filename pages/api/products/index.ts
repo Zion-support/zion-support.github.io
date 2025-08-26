@@ -1,7 +1,8 @@
-
-import { Prisma, PrismaClient } from '@prisma/client';
-import type { Product } from '@/types/product';
+import { PrismaClient, Prisma } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+// Alias the Prisma generated Product model type.
+type ProductModel = Prisma.Product;
 
 const prisma = new PrismaClient();
 

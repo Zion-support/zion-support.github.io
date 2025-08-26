@@ -11,13 +11,14 @@ import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-reac
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
-import { EQUIPMENT_DETAILS, EquipmentDetails } from "@/data/equipmentDetails";
+import axios from 'axios';
+import { safeStorage } from '@/utils/safeStorage';
 
 
 export default function EquipmentDetail() {
-  const { equipmentId } = useParams() as { equipmentId?: string };
+  const { id } = useParams() as { id?: string };
   const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, user } = useAuth();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
@@ -43,35 +44,36 @@ export default function EquipmentDetail() {
     );
   }
 
+  const dispatch = useAppDispatch();
   const handleAddToCart = () => {
-    setIsAdding(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsAdding(false);
-      toast({
-        title: "Added to cart",
-        description: `${quantity}x ${equipment.name} added to your cart.`,
-      });
-    }, 800);
+    dispatch(addItem({
+      id: equipment.id,
+      name: equipment.name,
+      price: equipment.price,
+      quantity,
+    }));
+    toast({ title: 'Added to cart 🛒' });
   };
 
   const handleBuyNow = async () => {
     if (!isAuthenticated) {
-      navigate(`/login?next=/equipment/${equipmentId}`);
+      navigate(`/login?next=/checkout/${id}`);
       return;
     }
 
     setIsAdding(true);
     try {
-      const response = await fetch('/checkout/create-session', {
+      const response = await fetch('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId: equipmentId }),
+        body: JSON.stringify({
+          productId: id,
+          customerEmail: user?.email,
+        }),
       });
-      const { url } = await response.json();
-      if (url) {
-        window.location.href = url as string;
+      const stripe = await getStripe();
+      if (stripe && data.sessionId) {
+        await stripe.redirectToCheckout({ sessionId: data.sessionId });
       }
     } catch (err) {
       toast({ title: 'Payment error', description: 'Could not start checkout.' });
