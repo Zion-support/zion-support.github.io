@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { ChatWidget } from "@/components/ChatWidget";
-import { useRouter } from "next/router";
+import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Skeleton from "@/components/ui/skeleton";
