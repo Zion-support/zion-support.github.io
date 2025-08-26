@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { enhancedInnovativeMicroSaasServices2025, enhancedITServices2025, enhancedAIServices2025 } from '../data/enhancedInnovativeServices2025';
 import { nextGenInnovativeServices2025 } from '../data/nextGenInnovativeServices2025';
+import { specializedInnovativeServices2025 } from '../data/specializedInnovativeServices2025';
 
 interface ServiceContact {
   phone: string;
@@ -18,25 +19,36 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       ...service, 
       type: 'Micro SAAS',
       displayPrice: service.price,
-      displayPricingModel: service.pricingModel
+      displayPricingModel: service.pricingModel,
+      innovationScore: 8.5 // Default innovation score for Micro SAAS
     })),
     ...enhancedITServices2025.map(service => ({ 
       ...service, 
       type: 'IT Services',
       displayPrice: service.hourlyRate,
-      displayPricingModel: 'hourly'
+      displayPricingModel: 'hourly',
+      innovationScore: 8.8 // Default innovation score for IT Services
     })),
     ...enhancedAIServices2025.map(service => ({ 
       ...service, 
       type: 'AI Services',
       displayPrice: service.price,
-      displayPricingModel: service.pricingModel
+      displayPricingModel: service.pricingModel,
+      innovationScore: 9.0 // Default innovation score for AI Services
     })),
     ...nextGenInnovativeServices2025.map(service => ({ 
       ...service, 
       type: 'Next-Gen Services',
       displayPrice: service.price,
-      displayPricingModel: service.pricingModel
+      displayPricingModel: service.pricingModel,
+      innovationScore: service.innovationScore || 9.2 // Use existing or default
+    })),
+    ...specializedInnovativeServices2025.map(service => ({ 
+      ...service, 
+      type: 'Specialized Services',
+      displayPrice: service.price,
+      displayPricingModel: service.pricingModel,
+      innovationScore: service.innovationScore || 9.1 // Use existing or default
     }))
   ];
 
@@ -53,13 +65,40 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     { id: 'Micro SAAS', name: 'Micro SAAS', count: enhancedInnovativeMicroSaasServices2025.length },
     { id: 'IT Services', name: 'IT Services', count: enhancedITServices2025.length },
     { id: 'AI Services', name: 'AI Services', count: enhancedAIServices2025.length },
-    { id: 'Next-Gen Services', name: 'Next-Gen Services', count: nextGenInnovativeServices2025.length }
+    { id: 'Next-Gen Services', name: 'Next-Gen Services', count: nextGenInnovativeServices2025.length },
+    { id: 'Specialized Services', name: 'Specialized Services', count: specializedInnovativeServices2025.length }
   ];
 
   const formatPrice = (price: number, model: string) => {
     if (model === 'monthly') return `$${price.toLocaleString()}/month`;
     if (model === 'one-time') return `$${price.toLocaleString()}`;
+    if (model === 'hourly') return `$${price.toLocaleString()}/hour`;
+    if (model === 'per-transaction') return `$${price.toFixed(2)}/transaction`;
+    if (model === 'per-word') return `$${price.toFixed(2)}/word`;
+    if (model === 'per-character') return `$${price.toFixed(2)}/character`;
     return `$${price.toLocaleString()}`;
+  };
+
+  const getServiceIcon = (type: string) => {
+    switch (type) {
+      case 'Micro SAAS': return '🚀';
+      case 'IT Services': return '🖥️';
+      case 'AI Services': return '🤖';
+      case 'Next-Gen Services': return '⚡';
+      case 'Specialized Services': return '🔬';
+      default: return '💡';
+    }
+  };
+
+  const getServiceColor = (type: string) => {
+    switch (type) {
+      case 'Micro SAAS': return 'bg-blue-500/20 text-blue-400';
+      case 'IT Services': return 'bg-green-500/20 text-green-400';
+      case 'AI Services': return 'bg-purple-500/20 text-purple-400';
+      case 'Next-Gen Services': return 'bg-orange-500/20 text-orange-400';
+      case 'Specialized Services': return 'bg-pink-500/20 text-pink-400';
+      default: return 'bg-gray-500/20 text-gray-400';
+    }
   };
 
   return (
@@ -109,12 +148,79 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               </button>
             ))}
           </div>
+
+          {/* Service Statistics */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            <div className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/20">
+              <div className="text-3xl font-bold text-blue-400 mb-2">
+                {allServices.length}+
+              </div>
+              <div className="text-sm text-gray-300">Total Services</div>
+            </div>
+            <div className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/20">
+              <div className="text-3xl font-bold text-green-400 mb-2">
+                {allServices.filter(s => s.innovationScore && s.innovationScore >= 9.0).length}
+              </div>
+              <div className="text-sm text-gray-300">Premium Innovation</div>
+            </div>
+            <div className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/20">
+              <div className="text-3xl font-bold text-purple-400 mb-2">
+                {allServices.filter(s => s.type === 'AI Services').length}
+              </div>
+              <div className="text-sm text-gray-300">AI Solutions</div>
+            </div>
+            <div className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/20">
+              <div className="text-3xl font-bold text-orange-400 mb-2">
+                {allServices.filter(s => s.type === 'Next-Gen Services').length}
+              </div>
+              <div className="text-sm text-gray-300">Next-Gen Tech</div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+          {/* Innovation Highlights */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+                Most Innovative Services
+              </span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {allServices
+                .filter(service => service.innovationScore && service.innovationScore >= 9.0)
+                .sort((a, b) => (b.innovationScore || 0) - (a.innovationScore || 0))
+                .slice(0, 6)
+                .map((service, index) => (
+                  <div
+                    key={index}
+                    className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 backdrop-blur-lg rounded-xl p-4 border border-yellow-500/30"
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getServiceColor(service.type)}`}>
+                        {service.type}
+                      </span>
+                      <span className="text-yellow-400 text-sm font-bold">
+                        {service.innovationScore}/10
+                      </span>
+                    </div>
+                    <h4 className="text-lg font-semibold text-white mb-1">{service.name}</h4>
+                    <p className="text-gray-300 text-sm">{service.description.substring(0, 100)}...</p>
+                    <div className="mt-2 flex items-center justify-between">
+                      <span className="text-yellow-400 font-semibold">
+                        {formatPrice(service.displayPrice, service.displayPricingModel)}
+                      </span>
+                      <span className="text-2xl">{getServiceIcon(service.type)}</span>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+
+          {/* All Services Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <div
@@ -124,13 +230,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 {/* Service Header */}
                 <div className="mb-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full font-medium">
+                    <span className={`px-3 py-1 rounded-full font-medium ${getServiceColor(service.type)}`}>
                       {service.type}
                     </span>
                     <span className="text-2xl">
-                      {service.type === 'Micro SAAS' ? '🚀' : 
-                       service.type === 'IT Services' ? '🖥️' : 
-                       service.type === 'AI Services' ? '🤖' : '⚡'}
+                      {getServiceIcon(service.type)}
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
@@ -145,13 +249,39 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                     </span>
                     <span className="text-sm text-gray-400">
                       {service.displayPricingModel === 'monthly' ? 'per month' : 
-                       service.displayPricingModel === 'hourly' ? 'per hour' : 'one-time'}
+                       service.displayPricingModel === 'hourly' ? 'per hour' : 
+                       service.displayPricingModel === 'per-transaction' ? 'per transaction' :
+                       service.displayPricingModel === 'per-word' ? 'per word' :
+                       service.displayPricingModel === 'per-character' ? 'per character' :
+                       'one-time'}
                     </span>
                   </div>
                   {service.marketPrice && (
                     <p className="text-xs text-gray-400 mt-1">
                       Market: {service.marketPrice}
                     </p>
+                  )}
+                  {service.innovationScore && (
+                    <div className="flex items-center mt-2">
+                      <span className="text-xs text-yellow-400 mr-2">Innovation Score:</span>
+                      <div className="flex items-center">
+                        <span className="text-sm font-semibold text-yellow-400 mr-1">
+                          {service.innovationScore}/10
+                        </span>
+                        <div className="flex space-x-1">
+                          {[...Array(10)].map((_, i) => (
+                            <div
+                              key={i}
+                              className={`w-2 h-2 rounded-full ${
+                                i < Math.floor(service.innovationScore) 
+                                  ? 'bg-yellow-400' 
+                                  : 'bg-gray-600'
+                              }`}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   )}
                 </div>
 
