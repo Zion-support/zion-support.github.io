@@ -71,6 +71,7 @@ export function AppHeader() {
       href: '/services',
       icon: Zap,
       dropdown: [
+        { name: 'All Services', href: '/enhanced-services', icon: Zap },
         { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },

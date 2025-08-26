@@ -4,367 +4,586 @@ export interface ITService {
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
-    hourly: number;
-    daily: number;
-    monthly: number;
-    currency: string;
-    features: string[];
-  };
+  price: number;
+  currency: string;
+  pricingModel: string;
   features: string[];
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
-  technologies: string[];
-  support: string[];
-  website: string;
-  contactEmail: string;
-  phone: string;
-  address: string;
-  rating: number;
-  reviewCount: number;
-  experience: string;
   tags: string[];
-  image: string;
-  availability: string;
-  responseTime: string;
-  createdAt: string;
+  estimatedDelivery: string;
+  supportLevel: string;
+  marketPrice: string;
+  roi: string;
+  innovationLevel: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
 }
 
 export const IT_SERVICES: ITService[] = [
+  // Cloud Infrastructure & DevOps
   {
-    id: "ai-development-integration",
-    title: "AI Development & Integration Services",
-    description: "Full-stack AI development services including custom model training, API integration, and enterprise AI solutions deployment.",
-    category: "Development",
-    subcategory: "AI & Machine Learning",
-    pricing: {
-      hourly: 85,
-      daily: 680,
-      monthly: 13600,
-      currency: "$",
-      features: ["Custom AI model development", "API integration", "Data pipeline setup", "Model training & optimization", "Deployment & monitoring"]
-    },
+    id: "cloud-infrastructure-devops",
+    title: "Cloud Infrastructure & DevOps Services",
+    description: "Comprehensive cloud infrastructure and DevOps services that enable organizations to build, deploy, and manage scalable applications with modern cloud-native technologies.",
+    category: "Cloud & DevOps",
+    subcategory: "Infrastructure as Code",
+    price: 4500,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      "Custom AI model development and training",
-      "Natural language processing solutions",
-      "Computer vision and image recognition",
-      "Predictive analytics and forecasting",
-      "AI-powered automation workflows",
-      "Real-time data processing systems",
-      "Model deployment and scaling",
-      "Performance monitoring and optimization"
-    ],
-    benefits: [
-      "Reduce operational costs by 30-50% through automation",
-      "Improve decision-making with AI-powered insights",
-      "Scale operations without proportional headcount increase",
-      "Gain competitive advantage with cutting-edge AI capabilities",
-      "Enhance customer experience with intelligent interactions"
-    ],
-    useCases: [
-      "E-commerce recommendation engines",
-      "Customer service chatbots",
-      "Predictive maintenance systems",
-      "Fraud detection and prevention",
-      "Content generation and optimization"
-    ],
-    targetAudience: ["Enterprise businesses", "Tech startups", "E-commerce companies", "Financial institutions", "Healthcare organizations"],
-    technologies: ["Python", "TensorFlow", "PyTorch", "AWS SageMaker", "Google Cloud AI", "Azure ML", "Docker", "Kubernetes"],
-    support: ["24/7 technical support", "Dedicated project manager", "Training and documentation", "Ongoing maintenance", "Performance optimization"],
-    website: "https://ziontechgroup.com/ai-development",
-    contactEmail: "kleber@ziontechgroup.com",
-    phone: "+1 302 464 0950",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    rating: 4.9,
-    reviewCount: 156,
-    experience: "8+ years",
-    tags: ["AI Development", "Machine Learning", "API Integration", "Custom Solutions", "Enterprise AI"],
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format",
-    availability: "24/7",
-    responseTime: "2 hours",
-    createdAt: "2024-01-15T10:00:00.000Z"
-  },
-  {
-    id: "cloud-infrastructure-management",
-    title: "Cloud Infrastructure Management",
-    description: "Comprehensive cloud infrastructure management including migration, optimization, monitoring, and 24/7 support across all major cloud platforms.",
-    category: "Infrastructure",
-    subcategory: "Cloud Management",
-    pricing: {
-      hourly: 75,
-      daily: 600,
-      monthly: 12000,
-      currency: "$",
-      features: ["24/7 monitoring", "Performance optimization", "Cost management", "Security compliance", "Disaster recovery"]
-    },
-    features: [
-      "Multi-cloud infrastructure management",
-      "Automated scaling and load balancing",
-      "Cost optimization and resource management",
-      "Security and compliance monitoring",
-      "Backup and disaster recovery",
-      "Performance monitoring and alerting",
+      "Multi-cloud infrastructure design",
       "Infrastructure as Code (IaC)",
-      "Migration and modernization services"
+      "CI/CD pipeline automation",
+      "Container orchestration",
+      "Microservices architecture",
+      "Auto-scaling solutions",
+      "Monitoring and alerting",
+      "Security and compliance",
+      "Disaster recovery",
+      "Performance optimization"
     ],
     benefits: [
-      "Reduce cloud costs by 25-40% through optimization",
-      "Improve system reliability and uptime",
-      "Enhance security and compliance posture",
-      "Scale infrastructure automatically based on demand",
-      "Focus on core business while we manage IT infrastructure"
+      "Reduce infrastructure costs by 30%",
+      "Improve deployment speed by 80%",
+      "Enhanced scalability and reliability",
+      "Automated operations",
+      "Better security posture"
     ],
     useCases: [
-      "Cloud migration projects",
-      "Infrastructure modernization",
-      "Multi-cloud management",
-      "DevOps automation",
-      "Compliance and security management"
+      "Application modernization",
+      "Cloud migration",
+      "DevOps transformation",
+      "Microservices deployment",
+      "High-availability systems"
     ],
-    targetAudience: ["Medium to large businesses", "Tech companies", "Financial services", "Healthcare organizations", "E-commerce platforms"],
-    technologies: ["AWS", "Azure", "Google Cloud", "Terraform", "Ansible", "Docker", "Kubernetes", "Jenkins"],
-    support: ["24/7 infrastructure monitoring", "Emergency response team", "Monthly optimization reports", "Security audits", "Performance tuning"],
-    website: "https://ziontechgroup.com/cloud-management",
-    contactEmail: "kleber@ziontechgroup.com",
-    phone: "+1 302 464 0950",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    rating: 4.8,
-    reviewCount: 203,
-    experience: "10+ years",
-    tags: ["Cloud Management", "Infrastructure", "DevOps", "Cost Optimization", "Security"],
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format",
-    availability: "24/7",
-    responseTime: "1 hour",
-    createdAt: "2024-01-20T14:30:00.000Z"
+    targetAudience: [
+      "Technology companies",
+      "Enterprises",
+      "Startups",
+      "Digital agencies",
+      "IT departments"
+    ],
+    tags: ["Cloud", "DevOps", "Infrastructure", "Automation", "Microservices"],
+    estimatedDelivery: "8-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,500 - $15,000/month",
+    roi: "250-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   },
+
+  // Digital Transformation Consulting
   {
-    id: "cybersecurity-assessment",
-    title: "Cybersecurity Assessment & Protection",
-    description: "Comprehensive cybersecurity services including penetration testing, vulnerability assessments, compliance audits, and security implementation.",
-    category: "Security",
-    subcategory: "Cybersecurity",
-    pricing: {
-      hourly: 95,
-      daily: 760,
-      monthly: 15200,
-      currency: "$",
-      features: ["Penetration testing", "Vulnerability assessment", "Compliance reporting", "Security implementation", "Ongoing monitoring"]
-    },
+    id: "digital-transformation-consulting",
+    title: "Digital Transformation Consulting",
+    description: "Strategic digital transformation consulting services that help organizations modernize their business processes, technology stack, and organizational culture for the digital age.",
+    category: "Digital Transformation",
+    subcategory: "Strategic Consulting",
+    price: 8000,
+    currency: "$",
+    pricingModel: "project-based",
     features: [
-      "Comprehensive security assessments",
-      "Penetration testing and ethical hacking",
-      "Vulnerability scanning and remediation",
-      "Compliance audits (SOC2, ISO27001, HIPAA)",
-      "Security policy development",
-      "Incident response planning",
-      "Employee security training",
-      "Ongoing security monitoring"
+      "Digital maturity assessment",
+      "Technology roadmap planning",
+      "Process optimization",
+      "Change management",
+      "Digital strategy development",
+      "Technology selection",
+      "Implementation planning",
+      "Training and enablement",
+      "Performance measurement",
+      "Continuous improvement"
     ],
     benefits: [
-      "Protect against cyber threats and data breaches",
-      "Meet industry compliance requirements",
-      "Reduce security incident response time",
-      "Build customer trust and confidence",
-      "Avoid costly security breaches and fines"
+      "Accelerate digital transformation by 40%",
+      "Improve operational efficiency by 35%",
+      "Enhanced customer experience",
+      "Competitive advantage",
+      "Future-ready organization"
     ],
     useCases: [
-      "Security compliance audits",
+      "Business process modernization",
+      "Technology stack transformation",
+      "Organizational change management",
+      "Customer experience improvement",
+      "Operational efficiency optimization"
+    ],
+    targetAudience: [
+      "Enterprise organizations",
+      "Mid-market companies",
+      "Government agencies",
+      "Healthcare organizations",
+      "Financial institutions"
+    ],
+    tags: ["Digital Transformation", "Consulting", "Strategy", "Change Management", "Process Optimization"],
+    estimatedDelivery: "12-24 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$8,000 - $50,000/project",
+    roi: "300-600%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Cybersecurity Services
+  {
+    id: "cybersecurity-services",
+    title: "Comprehensive Cybersecurity Services",
+    description: "End-to-end cybersecurity services including security assessment, threat detection, incident response, and compliance management to protect organizations from evolving cyber threats.",
+    category: "Cybersecurity",
+    subcategory: "Security Services",
+    price: 3500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Security assessment and audit",
+      "Threat detection and response",
+      "Vulnerability management",
+      "Security monitoring",
+      "Incident response",
+      "Compliance management",
+      "Security training",
       "Penetration testing",
-      "Security policy development",
-      "Incident response planning",
-      "Employee security awareness"
+      "Security architecture design",
+      "24/7 security operations"
     ],
-    targetAudience: ["Healthcare organizations", "Financial institutions", "E-commerce businesses", "Educational institutions", "Government agencies"],
-    technologies: ["Nessus", "Metasploit", "Burp Suite", "Wireshark", "Nmap", "OpenVAS", "Qualys", "Rapid7"],
-    support: ["Emergency incident response", "Compliance consulting", "Security training", "Ongoing monitoring", "Regular security updates"],
-    website: "https://ziontechgroup.com/cybersecurity",
-    contactEmail: "kleber@ziontechgroup.com",
-    phone: "+1 302 464 0950",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    rating: 4.9,
-    reviewCount: 189,
-    experience: "12+ years",
-    tags: ["Cybersecurity", "Penetration Testing", "Compliance", "Security Audits", "Incident Response"],
-    image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=800&auto=format",
-    availability: "24/7",
-    responseTime: "30 minutes",
-    createdAt: "2024-01-10T09:15:00.000Z"
+    benefits: [
+      "Reduce security incidents by 70%",
+      "Improve threat detection by 90%",
+      "Ensure compliance",
+      "Protect business reputation",
+      "Minimize financial losses"
+    ],
+    useCases: [
+      "Security program development",
+      "Compliance management",
+      "Incident response",
+      "Security awareness training",
+      "Security architecture review"
+    ],
+    targetAudience: [
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies",
+      "Technology companies",
+      "Manufacturing companies"
+    ],
+    tags: ["Cybersecurity", "Security", "Compliance", "Threat Detection", "Incident Response"],
+    estimatedDelivery: "8-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,500 - $12,000/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   },
+
+  // Data Analytics & Business Intelligence
   {
-    id: "data-analytics-business-intelligence",
+    id: "data-analytics-bi",
     title: "Data Analytics & Business Intelligence",
-    description: "Advanced data analytics and business intelligence solutions to transform raw data into actionable insights for strategic decision-making.",
-    category: "Analytics",
+    description: "Advanced data analytics and business intelligence services that transform raw data into actionable insights for informed decision-making and business growth.",
+    category: "Data & Analytics",
     subcategory: "Business Intelligence",
-    pricing: {
-      hourly: 70,
-      daily: 560,
-      monthly: 11200,
-      currency: "$",
-      features: ["Data analysis", "Dashboard creation", "Report automation", "Predictive analytics", "Data visualization"]
-    },
+    price: 2800,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      "Data warehouse design and implementation",
+      "Data strategy development",
+      "Data warehouse design",
       "ETL pipeline development",
-      "Interactive dashboards and reports",
-      "Predictive analytics and forecasting",
-      "Data quality assessment and improvement",
-      "Real-time data processing",
-      "Advanced data visualization",
-      "Automated reporting and alerts"
+      "Dashboard creation",
+      "Predictive analytics",
+      "Data visualization",
+      "Report automation",
+      "Data quality management",
+      "Performance optimization",
+      "User training and support"
     ],
     benefits: [
-      "Make data-driven decisions with confidence",
-      "Identify trends and opportunities early",
-      "Improve operational efficiency",
-      "Enhance customer understanding",
-      "Automate reporting and save time"
+      "Improve decision-making by 60%",
+      "Increase operational efficiency by 25%",
+      "Data-driven insights",
+      "Automated reporting",
+      "Better resource allocation"
     ],
     useCases: [
-      "Sales and marketing analytics",
-      "Financial reporting and analysis",
-      "Customer behavior analysis",
-      "Operational performance tracking",
-      "Predictive maintenance"
+      "Business performance analysis",
+      "Customer behavior insights",
+      "Operational efficiency optimization",
+      "Financial reporting",
+      "Market trend analysis"
     ],
-    targetAudience: ["Business analysts", "Data scientists", "Marketing teams", "Operations managers", "Executive leadership"],
-    technologies: ["Power BI", "Tableau", "Python", "R", "SQL", "Apache Spark", "Hadoop", "AWS Redshift"],
-    support: ["Data analysis consulting", "Dashboard development", "Training and support", "Ongoing maintenance", "Performance optimization"],
-    website: "https://ziontechgroup.com/data-analytics",
-    contactEmail: "kleber@ziontechgroup.com",
-    phone: "+1 302 464 0950",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    rating: 4.7,
-    reviewCount: 134,
-    experience: "9+ years",
-    tags: ["Data Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics", "Reporting"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format",
-    availability: "Business hours",
-    responseTime: "4 hours",
-    createdAt: "2024-01-25T11:45:00.000Z"
+    targetAudience: [
+      "Business analysts",
+      "Data scientists",
+      "Executives",
+      "Marketing teams",
+      "Operations teams"
+    ],
+    tags: ["Data Analytics", "Business Intelligence", "Data Warehouse", "Reporting", "Predictive Analytics"],
+    estimatedDelivery: "8-16 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,800 - $9,500/month",
+    roi: "250-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   },
+
+  // IT Infrastructure Management
   {
-    id: "web-development-ecommerce",
-    title: "Web Development & E-commerce Solutions",
-    description: "Full-stack web development services including custom websites, e-commerce platforms, and web applications with modern technologies.",
-    category: "Development",
-    subcategory: "Web Development",
-    pricing: {
-      hourly: 65,
-      daily: 520,
-      monthly: 10400,
-      currency: "$",
-      features: ["Custom web development", "E-commerce integration", "Responsive design", "SEO optimization", "Performance optimization"]
-    },
+    id: "it-infrastructure-management",
+    title: "IT Infrastructure Management",
+    description: "Comprehensive IT infrastructure management services including network management, server administration, storage solutions, and IT operations optimization.",
+    category: "IT Infrastructure",
+    subcategory: "Infrastructure Management",
+    price: 2200,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      "Custom website development",
-      "E-commerce platform development",
-      "Responsive and mobile-first design",
-      "SEO optimization and performance",
-      "Content management systems",
-      "Payment gateway integration",
-      "Analytics and tracking setup",
-      "Ongoing maintenance and support"
+      "Network design and management",
+      "Server administration",
+      "Storage management",
+      "Backup and recovery",
+      "Performance monitoring",
+      "Capacity planning",
+      "Security management",
+      "Disaster recovery",
+      "IT operations automation",
+      "24/7 support and monitoring"
     ],
     benefits: [
-      "Increase online presence and visibility",
-      "Improve user experience and conversion rates",
-      "Scale your business online",
-      "Reduce development time and costs",
-      "Get ongoing support and maintenance"
+      "Reduce IT operational costs by 25%",
+      "Improve system availability by 99.9%",
+      "Enhanced security and compliance",
+      "Automated operations",
+      "Better resource utilization"
     ],
     useCases: [
-      "Business website development",
-      "E-commerce store creation",
+      "Infrastructure optimization",
+      "System administration",
+      "Network management",
+      "Storage optimization",
+      "IT operations improvement"
+    ],
+    targetAudience: [
+      "Small to medium businesses",
+      "Enterprises",
+      "Educational institutions",
+      "Healthcare organizations",
+      "Government agencies"
+    ],
+    tags: ["IT Infrastructure", "Network Management", "Server Administration", "Storage", "IT Operations"],
+    estimatedDelivery: "6-12 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,200 - $7,500/month",
+    roi: "200-350%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Application Development & Modernization
+  {
+    id: "app-development-modernization",
+    title: "Application Development & Modernization",
+    description: "Custom application development and legacy system modernization services that help organizations build scalable, secure, and user-friendly applications.",
+    category: "Application Development",
+    subcategory: "Custom Development",
+    price: 4000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Custom application development",
+      "Legacy system modernization",
+      "API development",
+      "Mobile app development",
       "Web application development",
-      "Website redesign and optimization",
-      "Performance improvement"
-    ],
-    targetAudience: ["Small businesses", "E-commerce startups", "Service companies", "Non-profit organizations", "Personal brands"],
-    technologies: ["React", "Vue.js", "Node.js", "PHP", "WordPress", "Shopify", "WooCommerce", "Laravel"],
-    support: ["Development consultation", "Design and development", "Testing and deployment", "Training and support", "Ongoing maintenance"],
-    website: "https://ziontechgroup.com/web-development",
-    contactEmail: "kleber@ziontechgroup.com",
-    phone: "+1 302 464 0950",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    rating: 4.8,
-    reviewCount: 178,
-    experience: "7+ years",
-    tags: ["Web Development", "E-commerce", "Responsive Design", "SEO", "Performance"],
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format",
-    availability: "Business hours",
-    responseTime: "8 hours",
-    createdAt: "2024-01-18T16:20:00.000Z"
-  },
-  {
-    id: "network-infrastructure-setup",
-    title: "Network Infrastructure Setup & Management",
-    description: "Complete network infrastructure services including design, implementation, security, and ongoing management for businesses of all sizes.",
-    category: "Infrastructure",
-    subcategory: "Network Management",
-    pricing: {
-      hourly: 80,
-      daily: 640,
-      monthly: 12800,
-      currency: "$",
-      features: ["Network design", "Implementation", "Security setup", "Monitoring", "Ongoing management"]
-    },
-    features: [
-      "Network architecture design",
-      "Hardware installation and configuration",
-      "Security implementation (firewalls, VPNs)",
-      "Wireless network setup",
-      "Network monitoring and alerting",
-      "Performance optimization",
-      "Disaster recovery planning",
-      "Ongoing maintenance and support"
+      "Database design",
+      "User experience design",
+      "Testing and quality assurance",
+      "Deployment and maintenance",
+      "Technical support"
     ],
     benefits: [
-      "Improve network performance and reliability",
-      "Enhance security and data protection",
-      "Reduce network downtime and issues",
-      "Scale network infrastructure as business grows",
-      "Get professional network management"
+      "Accelerate development by 40%",
+      "Improve user experience by 50%",
+      "Enhanced system performance",
+      "Better security and compliance",
+      "Reduced maintenance costs"
     ],
     useCases: [
-      "New office network setup",
-      "Network infrastructure upgrade",
-      "Security enhancement",
-      "Performance optimization",
-      "Disaster recovery planning"
+      "Custom business applications",
+      "Legacy system replacement",
+      "Mobile app development",
+      "API development",
+      "System integration"
     ],
-    targetAudience: ["Small to medium businesses", "Office environments", "Retail locations", "Healthcare facilities", "Educational institutions"],
-    technologies: ["Cisco", "Juniper", "Fortinet", "Ubiquiti", "Meraki", "VMware", "Hyper-V", "Windows Server"],
-    support: ["Network design consultation", "Implementation and setup", "Security configuration", "Ongoing monitoring", "Emergency support"],
-    website: "https://ziontechgroup.com/network-infrastructure",
-    contactEmail: "kleber@ziontechgroup.com",
-    phone: "+1 302 464 0950",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    rating: 4.7,
-    reviewCount: 145,
-    experience: "11+ years",
-    tags: ["Network Infrastructure", "Network Security", "Wireless Networks", "Performance", "Monitoring"],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format",
-    availability: "24/7",
-    responseTime: "2 hours",
-    createdAt: "2024-01-22T15:30:00.000Z"
+    targetAudience: [
+      "Technology companies",
+      "Enterprises",
+      "Startups",
+      "Digital agencies",
+      "Government agencies"
+    ],
+    tags: ["Application Development", "Custom Development", "Legacy Modernization", "Mobile Apps", "Web Development"],
+    estimatedDelivery: "12-24 weeks",
+    supportLevel: "premium",
+    marketPrice: "$4,000 - $15,000/month",
+    roi: "300-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // IT Consulting & Strategy
+  {
+    id: "it-consulting-strategy",
+    title: "IT Consulting & Strategy Services",
+    description: "Strategic IT consulting services that help organizations align technology with business objectives, optimize IT investments, and drive digital innovation.",
+    category: "IT Consulting",
+    subcategory: "Strategic Consulting",
+    price: 6000,
+    currency: "$",
+    pricingModel: "project-based",
+    features: [
+      "IT strategy development",
+      "Technology assessment",
+      "Architecture planning",
+      "Vendor selection",
+      "Project management",
+      "Change management",
+      "Performance optimization",
+      "Cost optimization",
+      "Risk assessment",
+      "Technology roadmap"
+    ],
+    benefits: [
+      "Optimize IT investments by 30%",
+      "Improve technology alignment by 50%",
+      "Enhanced operational efficiency",
+      "Better risk management",
+      "Strategic technology planning"
+    ],
+    useCases: [
+      "IT strategy development",
+      "Technology assessment",
+      "Architecture planning",
+      "Vendor selection",
+      "Project management"
+    ],
+    targetAudience: [
+      "Enterprise organizations",
+      "Mid-market companies",
+      "Government agencies",
+      "Healthcare organizations",
+      "Financial institutions"
+    ],
+    tags: ["IT Consulting", "Strategy", "Architecture", "Project Management", "Technology Planning"],
+    estimatedDelivery: "8-20 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$6,000 - $40,000/project",
+    roi: "250-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Managed IT Services
+  {
+    id: "managed-it-services",
+    title: "Managed IT Services",
+    description: "Comprehensive managed IT services that provide proactive monitoring, maintenance, and support for organizations' IT infrastructure and applications.",
+    category: "Managed Services",
+    subcategory: "IT Management",
+    price: 1800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "24/7 monitoring and support",
+      "Proactive maintenance",
+      "Help desk support",
+      "Security management",
+      "Backup and recovery",
+      "Performance optimization",
+      "Patch management",
+      "Asset management",
+      "Compliance monitoring",
+      "Regular reporting"
+    ],
+    benefits: [
+      "Reduce IT costs by 20%",
+      "Improve system uptime by 99.9%",
+      "Proactive issue resolution",
+      "Enhanced security",
+      "Predictable IT costs"
+    ],
+    useCases: [
+      "IT infrastructure management",
+      "Application support",
+      "Security management",
+      "Compliance monitoring",
+      "Performance optimization"
+    ],
+    targetAudience: [
+      "Small to medium businesses",
+      "Enterprises",
+      "Educational institutions",
+      "Healthcare organizations",
+      "Non-profit organizations"
+    ],
+    tags: ["Managed Services", "IT Management", "24/7 Support", "Proactive Maintenance", "Help Desk"],
+    estimatedDelivery: "4-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,800 - $6,500/month",
+    roi: "200-350%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Green IT Solutions
+  {
+    id: "green-it-solutions",
+    title: "Green IT Solutions",
+    description: "Sustainable IT solutions that help organizations reduce their environmental impact through energy-efficient technology, sustainable practices, and green computing initiatives.",
+    category: "Green IT",
+    subcategory: "Sustainability",
+    price: 2500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Energy-efficient infrastructure",
+      "Sustainable technology practices",
+      "Carbon footprint reduction",
+      "Green computing initiatives",
+      "Energy monitoring",
+      "Waste reduction",
+      "Sustainable procurement",
+      "Environmental reporting",
+      "Compliance management",
+      "Sustainability consulting"
+    ],
+    benefits: [
+      "Reduce energy costs by 25%",
+      "Improve environmental impact",
+      "Enhanced corporate social responsibility",
+      "Compliance with regulations",
+      "Cost savings through efficiency"
+    ],
+    useCases: [
+      "Energy optimization",
+      "Sustainable technology deployment",
+      "Environmental compliance",
+      "Green procurement",
+      "Sustainability reporting"
+    ],
+    targetAudience: [
+      "Sustainability officers",
+      "Facility managers",
+      "Corporate executives",
+      "Government agencies",
+      "Educational institutions"
+    ],
+    tags: ["Green IT", "Sustainability", "Energy Efficiency", "Environmental Compliance", "Green Computing"],
+    estimatedDelivery: "8-16 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,500 - $8,500/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // 5G & IoT Solutions
+  {
+    id: "5g-iot-solutions",
+    title: "5G & IoT Solutions",
+    description: "Advanced 5G and IoT solutions that enable organizations to leverage next-generation connectivity and smart device technologies for innovative business applications.",
+    category: "5G & IoT",
+    subcategory: "Connectivity Solutions",
+    price: 3800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "5G network planning",
+      "IoT device management",
+      "Edge computing solutions",
+      "Real-time data processing",
+      "Smart city solutions",
+      "Industrial IoT applications",
+      "Connectivity optimization",
+      "Security and privacy",
+      "Performance monitoring",
+      "Integration services"
+    ],
+    benefits: [
+      "Enable new business models",
+      "Improve operational efficiency by 40%",
+      "Real-time data insights",
+      "Enhanced connectivity",
+      "Future-ready infrastructure"
+    ],
+    useCases: [
+      "Smart city development",
+      "Industrial automation",
+      "Connected vehicles",
+      "Smart buildings",
+      "Healthcare monitoring"
+    ],
+    targetAudience: [
+      "Telecommunications companies",
+      "Manufacturing companies",
+      "Smart city planners",
+      "Healthcare providers",
+      "Transportation companies"
+    ],
+    tags: ["5G", "IoT", "Edge Computing", "Smart Cities", "Industrial IoT"],
+    estimatedDelivery: "12-20 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,800 - $15,000/month",
+    roi: "300-500%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   }
 ];
 
-export const getITServicesByCategory = (category: string) => {
-  return IT_SERVICES.filter(service => service.category === category);
-};
-
-export const getITServicesBySubcategory = (subcategory: string) => {
-  return IT_SERVICES.filter(service => service.subcategory === subcategory);
-};
-
-export const searchITServices = (query: string) => {
-  const lowercaseQuery = query.toLowerCase();
-  return IT_SERVICES.filter(service => 
-    service.title.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
-  );
-};
+export default IT_SERVICES;

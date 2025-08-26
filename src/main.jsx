@@ -1,7 +1,7 @@
 console.log("main.tsx: Start");
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
-import App from './App.js';
+import App from './App.tsx';
 import './index.css';
 // import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
