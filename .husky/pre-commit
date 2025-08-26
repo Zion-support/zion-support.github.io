@@ -2,18 +2,17 @@
 
 echo "🔍 Running pre-commit checks..."
 
-<<<<<<< HEAD
-# Temporarily disable ESLint due to Next.js installation issues
-# echo "📝 Running ESLint..."
-# npm run lint || {
-#     echo "❌ ESLint failed. Please fix the issues before committing."
-#     exit 1
-# }
-
 # Run type checking
 echo "🔍 Running TypeScript type check..."
 npm run type-check || {
     echo "❌ TypeScript type check failed. Please fix the issues before committing."
+    exit 1
+}
+
+# Run build check
+echo "🏗️ Running build check..."
+npm run build || {
+    echo "❌ Build failed. Please fix the issues before committing."
     exit 1
 }
 
@@ -31,21 +30,4 @@ if [ -f "automation/universal-automation-launcher.sh" ]; then
     }
 fi
 
-echo "✅ Pre-commit checks passed"
-=======
-# Run type checking
-echo "🔍 Running TypeScript type check..."
-npm run type-check || {
-  echo "❌ TypeScript type check failed. Please fix the issues before committing."
-  exit 1
-}
-
-# Run build check
-echo "🏗️ Running build check..."
-npm run build || {
-  echo "❌ Build failed. Please fix the issues before committing."
-  exit 1
-}
-
 echo "✅ All pre-commit checks passed!"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
