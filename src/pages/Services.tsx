@@ -323,7 +323,7 @@ const Services: React.FC = () => {
           </div>
           <div className="mb-6">
             <Link
-              to="/services-showcase"
+              to="/enhanced-services"
               className="inline-flex items-center px-6 py-2 text-blue-400 hover:text-blue-300 border border-blue-400 rounded-lg transition-all duration-300"
             >
               View Complete Services Portfolio →

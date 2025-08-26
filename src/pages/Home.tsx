@@ -6,13 +6,9 @@ import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { StatsSection } from "@/components/StatsSection";
-import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
+import { ITServiceRequestHero } from "@/components/ITServiceRequestHero";
 
 export default function Home() {
   return (
@@ -22,23 +18,13 @@ export default function Home() {
         description="Transform your business with cutting-edge AI solutions, expert talent, and innovative services. Leading provider of technology solutions for startups to enterprises. Get started today!"
         keywords="AI solutions, technology services, digital transformation, AI consulting, cloud services, cybersecurity, enterprise solutions, micro SAAS, startup technology"
         canonical="https://ziontechgroup.com/"
-        ogType="website"
-        tags={["AI", "Technology", "Digital Transformation", "Cloud Services", "Cybersecurity"]}
       />
 
       <ITServiceRequestHero />
 
       <HeroSection />
       
-      <QuickAccess />
-      
-      <FeatureCTAs />
-      
-      <FeatureHighlights />
-      
       <StatsSection />
-      
-      <TestimonialsSection />
       
       <CategoriesSection />
       <BenefitsSection />
