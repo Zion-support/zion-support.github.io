@@ -102,7 +102,7 @@ export default defineConfig({
 	},
 	esbuild: { 
 		drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-		loader: 'jsx',
+		loader: 'tsx',
 		include: /src\/.*\.[tj]sx?$/,
 		exclude: []
 	},

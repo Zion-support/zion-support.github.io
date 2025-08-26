@@ -2,7 +2,6 @@
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import React from 'react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -26,6 +25,7 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
+import { AnimatedBackground, FloatingParticles } from "@/components/ui/AnimatedBackground";
 
 export default function Home() {
   return (
@@ -354,7 +354,6 @@ export default function Home() {
       <ITServiceRequestHero />
       <FloatingCTA />
     </>
-import { AnimatedBackground, FloatingParticles } from "@/components/ui/AnimatedBackground";
 
 // Lazy load heavy components for better performance
 const InteractiveServiceShowcase = React.lazy(() => import('@/components/InteractiveServiceShowcase'));
