@@ -15,10 +15,8 @@ import ToastProvider from './components/ToastProvider';
 
 // Import i18n configuration
 import './i18n';
-import { LanguageProvider } from '@/context/LanguageContext';
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
-import { WhitelabelProvider } from '@/context/WhitelabelContext';
-import { AppLayout } from '@/layout/AppLayout';
+import { LanguageProvider } from './context/LanguageContext';
+import { LanguageDetectionPopup } from './components/LanguageDetectionPopup.tsx';
 
 // Import auth and notification providers
 import { AuthProvider } from './context/auth/AuthProvider';
