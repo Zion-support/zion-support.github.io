@@ -1,15 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface Futuristic2028Service {
 =======
 export interface FuturisticInnovation2028 {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
+=======
+import { ServiceVariant } from '../types/service-variants';
+
+export interface Futuristic2028Service {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
   id: string;
   name: string;
   tagline: string;
   price: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
   period: string;
   description: string;
   features: string[];
@@ -32,6 +41,7 @@ export interface FuturisticInnovation2028 {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
+<<<<<<< HEAD
 =======
   description: string;
   features: string[];
@@ -39,11 +49,16 @@ export interface FuturisticInnovation2028 {
   category: string;
   realImplementation: boolean;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
     website: string;
   };
   realImplementation: boolean;
@@ -411,7 +426,11 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     competitors: ['Coursera', 'Udemy', 'Khan Academy'],
     marketSize: '$18B AI education market',
     growthRate: '35% annual growth',
+<<<<<<< HEAD
     variant: 'ai-education',
+=======
+    variant: 'ai-futuristic',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -530,6 +549,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     customers: 180,
     rating: 4.9,
     reviews: 134
+<<<<<<< HEAD
 =======
   };
 }
@@ -557,5 +577,7 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
   }
 ];

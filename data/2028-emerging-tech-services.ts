@@ -1,15 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface EmergingTech2028Service {
 =======
 export interface EmergingTechService2028 {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
+=======
+import { ServiceVariant } from '../types/service-variants';
+
+export interface EmergingTech2028Service {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
   id: string;
   name: string;
   tagline: string;
   price: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
   period: string;
   description: string;
   features: string[];
@@ -32,6 +41,7 @@ export interface EmergingTechService2028 {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
+<<<<<<< HEAD
 =======
   description: string;
   features: string[];
@@ -39,11 +49,16 @@ export interface EmergingTechService2028 {
   category: string;
   realImplementation: boolean;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
     website: string;
   };
   realImplementation: boolean;
@@ -199,7 +214,11 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     competitors: ['Zendesk', 'Intercom', 'Freshdesk'],
     marketSize: '$12B customer service market',
     growthRate: '40% annual growth',
+<<<<<<< HEAD
     variant: 'ai-automation',
+=======
+    variant: 'ai-futuristic',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -411,7 +430,11 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     competitors: ['Jasper', 'Copy.ai', 'Writesonic'],
     marketSize: '$14B AI content creation market',
     growthRate: '35% annual growth',
+<<<<<<< HEAD
     variant: 'ai-automation',
+=======
+    variant: 'ai-futuristic',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -517,7 +540,11 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     competitors: ['Westlaw', 'LexisNexis', 'Bloomberg Law'],
     marketSize: '$18B legal technology market',
     growthRate: '30% annual growth',
+<<<<<<< HEAD
     variant: 'ai-automation',
+=======
+    variant: 'ai-futuristic',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -530,6 +557,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     customers: 180,
     rating: 4.8,
     reviews: 145
+<<<<<<< HEAD
 =======
   };
 }
@@ -557,5 +585,7 @@ export const emergingTech2028Services: EmergingTechService2028[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
   }
 ];
