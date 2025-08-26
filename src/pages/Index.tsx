@@ -1,10 +1,11 @@
 
 
+import React, { Suspense } from 'react';
 import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { FloatingCTA } from "@/components/FloatingCTA";
-import { HeroSection } from "@/components/HeroSection";
+import { PerformanceOptimizedHero } from "@/components/PerformanceOptimizedHero";
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -13,9 +14,9 @@ import { BlogSection } from "@/components/BlogSection";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
-import { SocialShareSection } from "@/components/SocialShareSection";
+import { EnhancedServicesShowcase } from "@/components/EnhancedServicesShowcase";
+import { EnhancedTestimonials } from "@/components/EnhancedTestimonials";
+import { EnhancedContactCTA } from "@/components/EnhancedContactCTA";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
 import { 
@@ -30,6 +31,9 @@ import {
   Smartphone
 } from "lucide-react";
 
+// Lazy load heavy components for better performance
+const InteractiveServiceShowcase = React.lazy(() => import('@/components/InteractiveServiceShowcase'));
+
 export default function Index() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
@@ -37,32 +41,32 @@ export default function Index() {
   // Tools and features showcase
   const toolsFeatures = [
     {
-      title: t("home.tool_ai_matcher"),
-      description: t("home.tool_ai_matcher_desc"),
+      title: t("home.tool_ai_matcher", "AI-Powered Matching"),
+      description: t("home.tool_ai_matcher_desc", "Find the perfect talent with our advanced AI algorithms"),
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
       link: "/match"
     },
     {
-      title: t("home.tool_talent"),
-      description: t("home.tool_talent_desc"),
+      title: t("home.tool_talent", "Global Talent Pool"),
+      description: t("home.tool_talent_desc", "Access verified professionals from around the world"),
       icon: <Users className="h-6 w-6 text-zion-purple" />,
       link: "/talent"
     },
     {
-      title: t("home.tool_services"),
-      description: t("home.tool_services_desc"),
+      title: t("home.tool_services", "Comprehensive Services"),
+      description: t("home.tool_services_desc", "Full range of technology solutions and consulting"),
       icon: <Zap className="h-6 w-6 text-zion-cyan" />,
       link: "/services"
     },
     {
-      title: t("home.tool_equipment"),
-      description: t("home.tool_equipment_desc"),
+      title: t("home.tool_equipment", "Advanced Equipment"),
+      description: t("home.tool_equipment_desc", "State-of-the-art technology and infrastructure"),
       icon: <Settings className="h-6 w-6 text-zion-purple" />,
       link: "/equipment"
     },
     {
-      title: t("home.tool_analytics"),
-      description: t("home.tool_analytics_desc"),
+      title: t("home.tool_analytics", "Performance Analytics"),
+      description: t("home.tool_analytics_desc", "Real-time insights and performance monitoring"),
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,
       link: "/analytics"
     },
@@ -77,22 +81,24 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-zion-blue text-white">
       <SEO 
-        title={t("home.seo_title")} 
-        description={t("home.seo_description")} 
-        keywords={t("home.seo_keywords")}
+        title={t("home.seo_title", "Zion Tech Group - Leading AI & Technology Solutions")} 
+        description={t("home.seo_description", "Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem.")} 
+        keywords={t("home.seo_keywords", "AI solutions, cloud computing, cybersecurity, digital transformation, technology consulting")}
         canonical="https://ziontechgroup.com/"
       />
-              <HeroSection />
+      
+      {/* Enhanced Hero Section */}
+      <PerformanceOptimizedHero />
       
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">
-              {t("home.explore_tools")}
+              {t("home.explore_tools", "Explore Our Tools & Services")}
             </h2>
             <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">
-              {t("home.tools_description")}
+              {t("home.tools_description", "Discover our comprehensive suite of technology tools and services designed to accelerate your business growth.")}
             </p>
           </div>
           
@@ -101,16 +107,16 @@ export default function Index() {
               <Link 
                 key={index} 
                 to={feature.link} 
-                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
+                className="group bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-zion-purple/20"
               >
-                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">{feature.title}</h3>
                 <p className="text-zion-slate-light mb-4">{feature.description}</p>
-                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
-                  <span>{t("general.explore")}</span>
-                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
+                <div className={`flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <span className="font-medium">{t("general.explore", "Explore")}</span>
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4 group-hover:translate-x-1 transition-transform duration-300`} />
                 </div>
               </Link>
             ))}
@@ -118,20 +124,34 @@ export default function Index() {
         </div>
       </section>
       
+      {/* Enhanced Services Showcase */}
+      <EnhancedServicesShowcase />
+      
       <CategoriesSection />
       <BenefitsSection />
       
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
+      {/* Interactive Service Showcase - Lazy Loaded */}
+      <Suspense fallback={
+        <div className="py-20 bg-zion-slate-dark">
+          <div className="container mx-auto px-4 text-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan mx-auto mb-8"></div>
+            <h3 className="text-2xl font-bold text-white">Loading Interactive Services...</h3>
+          </div>
+        </div>
+      }>
+        <InteractiveServiceShowcase />
+      </Suspense>
       
       <HowItWorksSection />
-      <FeaturedListingsSection />
-      <TestimonialCarousel />
+      
+      {/* Enhanced Testimonials */}
+      <EnhancedTestimonials />
+      
       <TrustedBySection />
       <BlogSection />
       
-      {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
+      {/* Enhanced Contact CTA Section */}
+      <EnhancedContactCTA />
       
       <WaitlistSection />
       <FloatingCTA />

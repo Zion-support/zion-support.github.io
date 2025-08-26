@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Globe } from 'lucide-react';
+import Link from 'next/link';
+import { Heart, Mail, Phone, MapPin, Globe, ArrowUp } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -93,15 +93,19 @@ const Footer: React.FC = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
       
       {/* Floating Elements */}
-      <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse" />
-      <div className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400/30 rounded-full animate-pulse" />
+      <div className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-purple-400/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-cyan-400/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
 
       {/* Main Footer Content */}
       <motion.div 
@@ -115,14 +119,14 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <motion.div className="lg:col-span-2" variants={itemVariants}>
             <div className="flex items-center mb-8">
-              <div className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mr-4 shadow-lg">
+              <div className="w-14 h-14 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center mr-4 shadow-lg">
                 <span className="text-white font-bold text-2xl">Z</span>
               </div>
-              <span className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
+              <span className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
             </div>
-            <p className="text-zion-slate-light mb-8 max-w-md leading-relaxed text-lg">
+            <p className="text-gray-300 mb-8 max-w-md leading-relaxed text-lg">
               Leading provider of innovative technology solutions, AI-powered services, 
               and digital transformation expertise. We help businesses navigate the future of technology.
             </p>
@@ -133,11 +137,11 @@ const Footer: React.FC = () => {
                 <motion.a
                   key={contact.label}
                   href={contact.href}
-                  className="flex items-center gap-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 group"
+                  className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 group"
                   variants={itemVariants}
                   whileHover={{ x: 5 }}
                 >
-                  <contact.icon className="w-4 h-4 text-zion-cyan group-hover:scale-110 transition-transform duration-300" />
+                  <contact.icon className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
                   <span className="text-sm">
                     <span className="font-medium text-white">{contact.label}:</span> {contact.value}
                   </span>
@@ -153,7 +157,7 @@ const Footer: React.FC = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center text-xl border border-white/20 hover:border-zion-cyan/50 ${social.color} hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-zion-cyan/25`}
+                  className={`w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center text-xl border border-white/20 hover:border-cyan-400/50 ${social.color} hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-cyan-400/25`}
                   aria-label={`Follow us on ${social.name}`}
                   variants={itemVariants}
                   whileHover={{ y: -5 }}
@@ -168,7 +172,7 @@ const Footer: React.FC = () => {
           {footerSections.map((section, sectionIndex) => (
             <motion.div key={section.title} variants={itemVariants}>
               <h3 className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
-                <span className="w-2 h-2 bg-zion-cyan rounded-full" />
+                <span className="w-2 h-2 bg-cyan-400 rounded-full" />
                 {section.title}
               </h3>
               <ul className="space-y-3">
@@ -180,10 +184,10 @@ const Footer: React.FC = () => {
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <Link
-                      to={link.path}
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm flex items-center gap-2 group"
+                      href={link.path}
+                      className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center gap-2 group"
                     >
-                      <span className="w-1 h-1 bg-zion-cyan/50 rounded-full group-hover:bg-zion-cyan transition-colors duration-300" />
+                      <span className="w-1 h-1 bg-cyan-400/50 rounded-full group-hover:bg-cyan-400 transition-colors duration-300" />
                       {link.label}
                     </Link>
                   </motion.li>
@@ -205,19 +209,19 @@ const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <h3 className="text-3xl font-bold text-white mb-4">
-              Stay Updated with Our Latest <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Insights</span>
+              Stay Updated with Our Latest <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">Insights</span>
             </h3>
-            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
               Get the latest technology trends, AI insights, and industry updates delivered to your inbox.
             </p>
             <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                className="flex-1 px-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
               />
               <motion.button 
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 shadow-lg hover:shadow-zion-cyan/25 border border-zion-cyan/30 hover:border-zion-cyan/60"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400/90 hover:to-blue-600/90 transition-all duration-300 shadow-lg hover:shadow-cyan-400/25 border border-cyan-400/30 hover:border-cyan-400/60"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -238,17 +242,17 @@ const Footer: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-4 text-zion-slate-light text-sm mb-4 md:mb-0">
+            <div className="flex items-center space-x-4 text-gray-300 text-sm mb-4 md:mb-0">
               <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
-              <span className="w-1 h-1 bg-zion-cyan rounded-full" />
-              <Link to="/privacy" className="hover:text-zion-cyan transition-colors duration-300">Privacy Policy</Link>
-              <span className="w-1 h-1 bg-zion-cyan rounded-full" />
-              <Link to="/terms" className="hover:text-zion-cyan transition-colors duration-300">Terms of Service</Link>
-              <span className="w-1 h-1 bg-zion-cyan rounded-full" />
-              <Link to="/cookies" className="hover:text-zion-cyan transition-colors duration-300">Cookie Policy</Link>
+              <span className="w-1 h-1 bg-cyan-400 rounded-full" />
+              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>
+              <span className="w-1 h-1 bg-cyan-400 rounded-full" />
+              <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300">Terms of Service</Link>
+              <span className="w-1 h-1 bg-cyan-400 rounded-full" />
+              <Link href="/cookies" className="hover:text-cyan-400 transition-colors duration-300">Cookie Policy</Link>
             </div>
             <motion.div 
-              className="flex items-center space-x-2 text-zion-slate-light text-sm"
+              className="flex items-center space-x-2 text-gray-300 text-sm"
               whileHover={{ scale: 1.05 }}
             >
               <span>Made with</span>
@@ -258,166 +262,21 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </motion.div>
+
+      {/* Scroll to top button */}
+      <motion.button
+        onClick={scrollToTop}
+        className="fixed bottom-6 left-6 bg-gradient-to-r from-cyan-400 to-blue-600 text-white p-3 rounded-full shadow-lg hover:shadow-cyan-400/25 transition-all duration-300 z-40"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1 }}
+      >
+        <ArrowUp className="w-5 h-5" />
+      </motion.button>
     </footer>
   );
 };
 
-const socialLinks = [
-	{ name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-	{ name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-marketplace', icon: Linkedin },
-	{ name: 'Facebook', href: 'https://www.facebook.com/zionmarketplace', icon: Facebook },
-	{ name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-	{ name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-];
-
-export function Footer() {
-	const scrollToTop = () => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	};
-
-	return (
-		<footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
-			{/* Background decorative elements */}
-			<div className="absolute inset-0 opacity-5">
-				<div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan rounded-full"></div>
-				<div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
-				<div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
-			</div>
-
-			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-					{/* Company info */}
-					<div className="lg:col-span-2">
-						<div className="mb-6">
-							<motion.span
-								className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
-								whileHover={{ scale: 1.05 }}
-								transition={{ type: 'spring', stiffness: 400 }}
-							>
-								ZION
-							</motion.span>
-						</div>
-						<p className="text-zion-slate-light mb-6 max-w-sm leading-relaxed">
-							The world's first free marketplace dedicated to high-tech and artificial intelligence.
-							Connecting innovators, talent, and cutting-edge technology worldwide.
-						</p>
-
-						{/* Contact info */}
-						<div className="space-y-3 mb-6">
-							<div className="flex items-center gap-3 text-zion-slate-light">
-								<Mail className="w-4 h-4 text-zion-cyan" />
-								<span className="text-sm">hello@ziontechgroup.com</span>
-							</div>
-							<div className="flex items-center gap-3 text-zion-slate-light">
-								<Phone className="w-4 h-4 text-zion-cyan" />
-								<span className="text-sm">+1 (555) 123-4567</span>
-							</div>
-							<div className="flex items-center gap-3 text-zion-slate-light">
-								<MapPin className="w-4 h-4 text-zion-cyan" />
-								<span className="text-sm">Global • Remote First</span>
-							</div>
-						</div>
-
-						{/* Social media */}
-						<div className="flex space-x-4">
-							{socialLinks.map(({ name, href, icon: Icon }) => (
-								<motion.a
-									key={name}
-									href={href}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full"
-									aria-label={name}
-									title={name}
-									whileHover={{ scale: 1.1 }}
-									whileTap={{ scale: 0.95 }}
-								>
-									<Icon className="h-5 w-5" aria-label={name} />
-								</motion.a>
-							))}
-						</div>
-					</div>
-
-					{/* Marketplace */}
-					{Object.entries(footerNavigation).map(([key, section]) => (
-						<div key={key}>
-							<h3 className="text-white font-semibold mb-4 text-lg">{section.title}</h3>
-							<ul className="space-y-3">
-								{section.items.map((item) => (
-									<li key={item.name}>
-										<Link to={item.href} className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">
-											{item.name}
-										</Link>
-									</li>
-								))}
-							</ul>
-						</div>
-					))}
-
-					{/* Newsletter */}
-					<div>
-						<h3 className="text-white font-semibold mb-4 text-lg">Stay Updated</h3>
-						<p className="text-zion-slate-light mb-4 text-sm leading-relaxed">
-							Get the latest news on tech, AI, and marketplace opportunities delivered to your inbox.
-						</p>
-						<FooterNewsletter />
-					</div>
-				</div>
-
-				{/* Bottom section */}
-				<div className="pt-8 border-t border-zion-blue-light">
-					<div className="flex flex-col md:flex-row justify-between items-center">
-						<div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
-							<p className="text-zion-slate-light text-sm">&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
-							<div className="flex items-center gap-2 text-zion-slate-light/60">
-								<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
-								<span className="text-xs">Live</span>
-							</div>
-						</div>
-
-						<div className="flex items-center gap-6">
-							<Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>
-							<Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
-							<Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Cookies</Link>
-							<Link to="/accessibility" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Accessibility</Link>
-						</div>
-
-						<motion.div className="flex items-center space-x-2 text-zion-slate-light text-sm" whileHover={{ scale: 1.05 }}>
-							<span>Made with</span>
-							<Heart className="w-4 h-4 text-red-400 animate-pulse" />
-							<span>for the future of technology</span>
-						</motion.div>
-					</div>
-
-					{/* Additional Links */}
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6, delay: 0.2 }}
-						viewport={{ once: true }}
-						className="flex flex-wrap items-center justify-center space-x-6 mt-6 text-zion-slate-light text-sm"
-					>
-						<Link to="/sitemap" className="hover:text-zion-cyan transition-colors duration-200">Sitemap</Link>
-						<a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan transition-colors duration-200 flex items-center space-x-1">
-							<Globe className="w-4 h-4" />
-							<span>Main Website</span>
-						</a>
-					</motion.div>
-				</div>
-			</div>
-
-			{/* Scroll to top button */}
-			<motion.button
-				onClick={scrollToTop}
-				className="fixed bottom-6 left-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 z-40"
-				whileHover={{ scale: 1.1 }}
-				whileTap={{ scale: 0.95 }}
-				initial={{ opacity: 0, y: 20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ delay: 1 }}
-			>
-				<ArrowUp className="w-5 h-5" />
-			</motion.button>
-		</footer>
-	);
-}
+export default Footer;

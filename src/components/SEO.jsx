@@ -73,4 +73,16 @@ export function SEO({ title, description, keywords, image, canonical, ogImage, u
 
   // This component doesn't render anything
   return null;
+      <meta name="twitter:description" content={description}/>
+      <meta name="twitter:image" content={imageUrl}/>
+      
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+      
+      {/* Additional meta tags */}
+      <meta name="robots" content="index, follow"/>
+      <meta name="author" content={siteName}/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </Helmet>);
+>>>>>>> main
 }
