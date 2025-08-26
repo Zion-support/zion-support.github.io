@@ -9,6 +9,7 @@ interface ServiceCardProps {
   price: string;
   category: string;
   features: string[];
+  isPopular?: boolean;
   isNew?: boolean;
   isPopular?: boolean;
   href?: string;
@@ -24,9 +25,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   price,
   category,
   features,
-  isNew = false,
   isPopular = false,
-  href = '#'
+  isNew = false,
+  href = '/services'
 }) => {
   const cardVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
@@ -50,10 +51,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   };
 
   const iconVariants: Variants = {
-    hidden: { scale: 0.8, rotate: -10 },
+    hidden: { scale: 0.8, opacity: 0 },
     visible: {
       scale: 1,
-      rotate: 0,
+      opacity: 1,
       transition: {
         duration: 0.5,
         ease: "easeOut"
@@ -93,108 +94,102 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     }
   };
 
+  const badgeVariants: Variants = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        ease: "backOut"
+      }
+    }
+  };
+
   return (
     <motion.div
-      className="group relative h-full"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
       whileHover="hover"
       viewport={{ once: true }}
+      className="group relative h-full"
     >
       <Link to={href} className="block h-full">
-        <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 h-full relative overflow-hidden group-hover:shadow-zion-glow">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          
-          {/* Floating Elements */}
-          <div className="absolute top-4 right-4 w-2 h-2 bg-zion-cyan/30 rounded-full animate-float" />
-          <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-float floating-delay-1" />
-          
+        <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25 h-full">
+          {/* Popular/New Badge */}
+          {(isPopular || isNew) && (
+            <motion.div
+              variants={badgeVariants}
+              className={`absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full text-xs font-bold text-white shadow-lg ${
+                isPopular 
+                  ? 'bg-gradient-to-r from-zion-orange to-zion-yellow' 
+                  : 'bg-gradient-to-r from-zion-purple to-zion-cyan'
+              }`}
+            >
+              {isPopular ? '🔥 Popular' : '✨ New'}
+            </motion.div>
+          )}
+
           {/* Service Icon */}
-          <motion.div 
-            className="relative z-10 w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg shadow-zion-cyan/25"
+          <motion.div
             variants={iconVariants}
+            className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-lg group-hover:shadow-zion-cyan/25"
           >
             <span className="text-3xl">{icon}</span>
           </motion.div>
 
-          {/* Badges */}
-          <div className="relative z-10 flex justify-center gap-2 mb-4">
-            {isNew && (
-              <motion.span 
-                className="inline-flex items-center px-3 py-1 rounded-full bg-zion-green/20 text-zion-green text-sm font-medium border border-zion-green/30"
-                variants={badgeVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
-                <span className="w-2 h-2 bg-zion-green rounded-full mr-2 animate-pulse" />
-                New
-              </motion.span>
-            )}
-            {isPopular && (
-              <motion.span 
-                className="inline-flex items-center px-3 py-1 rounded-full bg-zion-yellow/20 text-zion-yellow text-sm font-medium border border-zion-yellow/30"
-                variants={badgeVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-              >
-                <span className="w-2 h-2 bg-zion-yellow rounded-full mr-2 animate-pulse" />
-                Popular
-              </motion.span>
-            )}
-          </div>
-
           {/* Service Content */}
-          <div className="relative z-10">
-            {/* Category */}
-            <div className="text-center mb-3">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-zion-blue/20 text-zion-cyan text-xs font-medium border border-zion-blue/30">
-                {category}
-              </span>
+          <div className="text-center h-full flex flex-col">
+            {/* Category Tag */}
+            <div className="inline-flex items-center px-3 py-1 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full text-zion-cyan text-xs font-medium mb-4 self-center">
+              {category}
             </div>
 
             {/* Title */}
-            <h3 className="text-xl font-bold text-white mb-3 text-center group-hover:text-zion-cyan transition-colors duration-300 line-clamp-2">
+            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300 line-clamp-2">
               {title}
             </h3>
 
             {/* Description */}
-            <p className="text-zion-slate-light text-center mb-6 line-clamp-3 leading-relaxed">
+            <p className="text-zion-slate-light text-sm mb-6 leading-relaxed flex-grow line-clamp-3">
               {description}
             </p>
-
-            {/* Features */}
-            <div className="mb-6">
-              <div className="text-zion-cyan text-sm font-medium mb-3 text-center">Key Features</div>
-              <ul className="space-y-2">
-                {features.slice(0, 3).map((feature, index) => (
-                  <li key={index} className="text-zion-slate-light text-sm flex items-center gap-3">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full flex-shrink-0" />
-                    <span className="line-clamp-2">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+            
+            {/* Price */}
+            <div className="text-zion-cyan font-bold text-lg mb-6">
+              {price}
             </div>
 
-            {/* Price and CTA */}
-            <div className="text-center">
-              <div className="text-zion-cyan font-bold text-lg mb-4">{price}</div>
-              <div className="inline-flex items-center gap-2 text-zion-cyan group-hover:text-white transition-colors duration-300 font-medium">
-                <span>Learn More</span>
-                <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+            {/* Features */}
+            <div className="space-y-2 mb-6">
+              {features.slice(0, 3).map((feature, index) => (
+                <div key={index} className="flex items-center gap-2 text-zion-slate-light text-xs">
+                  <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full flex-shrink-0" />
+                  <span className="line-clamp-1">{feature}</span>
+                </div>
+              ))}
+              {features.length > 3 && (
+                <div className="text-zion-cyan/60 text-xs text-center">
+                  +{features.length - 3} more features
+                </div>
+              )}
+            </div>
+
+            {/* CTA Button */}
+            <div className="mt-auto">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/40 rounded-xl text-zion-cyan text-sm font-semibold group-hover:from-zion-cyan/30 group-hover:to-zion-blue/30 transition-all duration-300">
+                Learn More
+                <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
               </div>
             </div>
           </div>
 
-          {/* Hover Effects */}
-          <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          
-          {/* Glow Effect */}
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-zion-cyan/0 via-zion-cyan/5 to-zion-purple/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          {/* Hover Effect Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+          {/* Corner Accent */}
+          <div className="absolute top-4 right-4 w-2 h-2 bg-zion-cyan/60 rounded-full group-hover:bg-zion-cyan transition-colors duration-300" />
         </div>
       </Link>
     </motion.div>
