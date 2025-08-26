@@ -4,9 +4,16 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
 import { AuthProvider } from '@/context/auth/AuthProvider';
 import { Provider as ReduxProvider } from 'react-redux';
-import { store } from '@/store';
-import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
-
+import { store } from '@/store'; // Changed to named import
+import { WhitelabelProvider } from '@/context/WhitelabelContext'; // Added WhitelabelProvider
+import { WalletProvider } from '@/context/WalletContext'; // Added WalletProvider
+import { useAuth } from '@/hooks/useAuth';
+import { AnalyticsProvider } from '@/context/AnalyticsContext'; // Added AnalyticsProvider
+import { CartProvider } from '@/context/CartContext'; // Added CartProvider
+import { ErrorProvider } from '@/context/ErrorContext';
+import { FeedbackProvider } from '@/context/FeedbackContext'; // Added FeedbackProvider
+import { CommunityProvider } from '@/context/CommunityContext'; // Added CommunityProvider
+import ErrorResetOnRouteChange from '@/components/ErrorResetOnRouteChange';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '@/i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
@@ -270,12 +277,72 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-             <div>
-         <Component {...pageProps} />
-       </div>
-        </ProviderWrapper>
-      </QueryClientProvider>
-    </ProductionErrorBoundary>
+      <div className={`${inter.variable} ${poppins.variable}`}>
+        <ProductionErrorBoundary>
+          <RootErrorBoundary>
+            <HydrationErrorBoundary>
+              <React.Suspense
+                fallback={
+                  <div className="flex items-center justify-center min-h-screen">
+                    <div className="animate-pulse text-lg">Loading...</div>
+                  </div>
+                }
+              >
+                <GlobalErrorBoundary>
+                  <QueryClientProvider client={queryClient}>
+                    <ApiErrorBoundary>
+                      <ReduxProvider store={store}>
+                        <I18nextProvider i18n={i18n}>
+                          <ErrorProvider>
+                            <AuthProvider>
+                              <WhitelabelProvider>
+                                <LanguageProviderWrapper>
+                                  <WalletProvider>
+                                    <CartProvider>
+                                      <AnalyticsProvider>
+                                        <FeedbackProvider>
+                                          <CommunityProvider>
+                                            <ThemeProvider>
+                                              <AppLayout>
+                                              <RouteChangeHandler
+                                                resetScrollOnChange={true}
+                                                forceRerender={false}
+                                              />
+                                              <ErrorBoundary>
+                                                <Component
+                                                  key={router.asPath}
+                                                  {...pageProps}
+                                                />
+                                              </ErrorBoundary>
+                                              <ErrorResetOnRouteChange />
+                                              <ToastContainer />
+                                              <OfflineIndicator />
+                                              <IntercomChat />
+                                              <PerformanceMonitor />
+                                              <BundleAnalyzer />
+                                              <QuickActions />
+                                            </AppLayout>
+                                            </ThemeProvider>
+                                          </CommunityProvider>
+                                        </FeedbackProvider>
+                                      </AnalyticsProvider>
+                                    </CartProvider>
+                                  </WalletProvider>
+                                </LanguageProviderWrapper>
+                              </WhitelabelProvider>
+                            </AuthProvider>
+                          </ErrorProvider>
+                        </I18nextProvider>
+                      </ReduxProvider>
+                    </ApiErrorBoundary>
+                  </QueryClientProvider>
+                </GlobalErrorBoundary>
+              </React.Suspense>
+            </HydrationErrorBoundary>
+          </RootErrorBoundary>
+        </ProductionErrorBoundary>
+      </div>
+    </>
   );
 }
 
