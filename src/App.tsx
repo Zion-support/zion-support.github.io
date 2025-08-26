@@ -2,25 +2,24 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
+import { ChatAssistant } from './components/ChatAssistant';
+import { PerformanceMonitor } from './components/PerformanceOptimizer';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-futuristic">
-    <div className="relative">
-      <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
-      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold">
-        ZION
-      </div>
-    </div>
-  </div>
-);
+const ServicesAdvertising = React.lazy(() => import('./pages/ServicesAdvertising'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices.jsx'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const NotFound = React.lazy(() => import('./pages/404.jsx'));
+const InnovativeServices2027 = React.lazy(() => import('./pages/InnovativeServices2027'));
+const ComprehensivePricing2027 = React.lazy(() => import('./pages/ComprehensivePricing2027'));
+const AllServices2027 = React.lazy(() => import('./pages/AllServices2027'));
 
 function App() {
   return (
@@ -35,11 +34,23 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services-advertising" element={<ServicesAdvertising />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/micro-saas-services" element={<MicroSaasServices />} />
+              <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+              <Route path="/hire-ai" element={<ZionHireAI />} />
+              <Route path="/innovative-services-2027" element={<InnovativeServices2027 />} />
+              <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricing2027 />} />
+              <Route path="/all-services-2027" element={<AllServices2027 />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
         
         <Footer />
+        <ChatAssistant />
+        <PerformanceMonitor />
       </div>
     </Router>
   );
