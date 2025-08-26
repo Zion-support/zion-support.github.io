@@ -1,4 +1,11 @@
 export default function Services(){return (<main style={{padding:20,fontFamily:'sans-serif',lineHeight:1.6,maxWidth:1000,margin:'0 auto'}}>
+<link rel="canonical" href="https://ziontechgroup.com/services"/>
+<meta name="description" content="Zion Tech Group offers Micro SaaS, IT consulting, and applied AI services for startups, SMBs, and enterprises."/>
+<meta property="og:title" content="Services - Zion Tech Group"/>
+<meta property="og:description" content="End-to-end technology solutions: Micro SaaS, IT services, and applied AI."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://ziontechgroup.com/services"/>
+<meta property="og:image" content="/assets/og-default.jpg"/>
 <h1 style={{marginBottom:10}}>Services</h1>
 <p style={{color:'#374151'}}>We deliver end-to-end technology solutions: micro SaaS products, IT consulting, and applied AI—tailored for startups, SMBs, and enterprises.</p>
 
