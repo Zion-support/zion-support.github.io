@@ -451,7 +451,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/retail-ai-optimization-platform',
     marketPosition: 'Leading retail AI optimization platform. Our advantage: Comprehensive AI-powered retail optimization with personalized customer experiences.',
-    targetAudience: 'Retail chains', 'E-commerce companies', 'Department stores', 'Specialty retailers', 'Shopping centers',
+    targetAudience: ['Retail chains', 'E-commerce companies', 'Department stores', 'Specialty retailers', 'Shopping centers'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Retail AI & Customer Experience',
@@ -526,7 +526,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     customers: 28,
     rating: 4.7,
     reviews: 58
->>>>>>> origin/cursor/expand-services-and-deploy-updates-619a
   }
 ];
 
