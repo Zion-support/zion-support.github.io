@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 } from 'lucide-react';
-
 const Tutorials: React.FC = () => {
   const tutorialCategories = [
     {
@@ -29,7 +28,6 @@ const Tutorials: React.FC = () => {
       count: "5"
     }
   ];
-
   const featuredTutorials = [
     {
       title: "Building Your First AI Chatbot",
@@ -72,7 +70,6 @@ const Tutorials: React.FC = () => {
       thumbnail: "/images/tutorials/model-optimization.jpg"
     }
   ];
-
   const recentTutorials = [
     {
       title: "Data Pipeline Automation",
@@ -107,7 +104,6 @@ const Tutorials: React.FC = () => {
       students: "345"
     }
   ];
-
   const learningPaths = [
     {
       title: "AI Developer Path",
@@ -131,9 +127,7 @@ const Tutorials: React.FC = () => {
       level: "Advanced to Expert"
     }
   ];
-=======
 import { CogIcon } from '@heroicons/react/24/outline';
-
 const $page: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -161,5 +155,4 @@ const $page: React.FC = () => {
     </div>
   );
 };
-
 export default $page;

@@ -1,5 +1,4 @@
 export interface PracticalMicroSaas2027 {
-=======
 export interface PracticalMicroSaas2027 {
   id: string;
   name: string;
@@ -7,7 +6,6 @@ export interface PracticalMicroSaas2027 {
   price: string;
   category: string;
   technology: string[];
-=======
   description: string;
   features: string[];
   link: string;
@@ -19,7 +17,6 @@ export interface PracticalMicroSaas2027 {
     address: string;
   };
 }
-
 export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
   {
     id: "2027-practical-micro-saas",
@@ -42,7 +39,6 @@ export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-=======
 export interface Service {
   id: string;
   name: string;
@@ -60,7 +56,6 @@ export interface Service {
   link: string;
   tags: string[];
 }
-
 export const practicalMicroSaas2027: Service[] = [
   {
     id: 'ai-content-factory',

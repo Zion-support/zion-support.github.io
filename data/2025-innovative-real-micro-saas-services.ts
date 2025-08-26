@@ -37,14 +37,12 @@ export interface InnovativeMicroSaasService {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] = [
   {
     id: 'ai-autonomous-decision-engine',
@@ -91,7 +89,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.9,
     reviews: 89
   },
-
   // AI Content Generation Platform
   {
     id: 'quantum-crm-suite',
@@ -138,7 +135,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.8,
     reviews: 156
   },
-
   // Quantum-Secure Communication Platform
   {
     id: 'ai-content-factory-pro',
@@ -416,7 +412,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.9,
     reviews: 15
   },
-
   // Space Technology AI Platform
   {
     id: 'space-technology-ai-platform',
@@ -469,7 +464,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.9,
     reviews: 12
   },
-
   // Brain-Computer Interface Development Kit
   {
     id: 'brain-computer-interface-devkit',
@@ -522,7 +516,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.9,
     reviews: 8
   },
-
   // Autonomous Vehicle Fleet Management
   {
     id: 'autonomous-vehicle-fleet-management',
@@ -575,7 +568,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.7,
     reviews: 22
   },
-
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform',
@@ -628,7 +620,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.8,
     reviews: 19
   },
-
   // AI-Powered Healthcare Diagnostics
   {
     id: 'ai-powered-healthcare-diagnostics',
@@ -681,7 +672,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.9,
     reviews: 31
   },
-
   // AI-Powered Customer Success Platform
   {
     id: 'ai-customer-success-platform',
@@ -734,7 +724,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.8,
     reviews: 23
   },
-
   // Intelligent Supply Chain Optimization Platform
   {
     id: 'intelligent-supply-chain-optimization',
@@ -787,7 +776,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.9,
     reviews: 31
   },
-
   // AI Financial Planning Platform
   {
     id: 'ai-financial-planning-platform',
@@ -814,7 +802,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-financial-planning-platform',
     marketPosition: 'Innovative AI-powered financial planning platform with advanced predictive analytics and automated financial intelligence.',
-    targetAudience: 'Small businesses', 'Medium enterprises', 'Financial advisors', 'CFOs', 'Business consultants',
+    targetAudience: ['Small businesses', 'Medium enterprises', 'Financial advisors', 'CFOs', 'Business consultants'],
     trialDays: 30,
     setupTime: '1-2 weeks',
     category: 'Financial Technology',
@@ -840,7 +828,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.7,
     reviews: 28
   },
-
   // Intelligent HR Analytics Platform
   {
     id: 'intelligent-hr-analytics-platform',
@@ -867,7 +854,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/intelligent-hr-analytics-platform',
     marketPosition: 'Leading AI-powered HR analytics platform with advanced people intelligence and predictive workforce analytics.',
-    targetAudience: 'HR departments', 'People operations teams', 'CHROs', 'HR consultants', 'Recruitment agencies',
+    targetAudience: ['HR departments', 'People operations teams', 'CHROs', 'HR consultants', 'Recruitment agencies'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Human Resources',
@@ -893,7 +880,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.8,
     reviews: 26
   },
-
   // AI Sales Intelligence Platform
   {
     id: 'ai-sales-intelligence-platform',
@@ -920,7 +906,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
     marketPosition: 'Advanced AI-powered sales intelligence platform with predictive analytics and automated sales optimization capabilities.',
-    targetAudience: 'Sales teams', 'Sales managers', 'Revenue operations', 'Business development', 'Sales consultants',
+    targetAudience: ['Sales teams', 'Sales managers', 'Revenue operations', 'Business development', 'Sales consultants'],
     trialDays: 14,
     setupTime: '2-3 weeks',
     category: 'Sales & Revenue',
@@ -946,7 +932,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.9,
     reviews: 42
   },
-
   // AI Decision Engine
   {
     id: 'ai-powered-decision-engine',
@@ -973,7 +958,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-powered-decision-engine',
     marketPosition: 'Revolutionary AI decision engine with advanced machine learning algorithms and automated decision optimization capabilities.',
-    targetAudience: 'Executives', 'Business analysts', 'Operations managers', 'Strategic planners', 'Consultants',
+    targetAudience: ['Executives', 'Business analysts', 'Operations managers', 'Strategic planners', 'Consultants'],
     trialDays: 30,
     setupTime: '4-6 weeks',
     category: 'Business Intelligence',
@@ -999,7 +984,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 5.0,
     reviews: 18
   },
-
   // Intelligent Content Automation Platform
   {
     id: 'intelligent-content-automation-platform',
@@ -1026,7 +1010,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/intelligent-content-automation-platform',
     marketPosition: 'Innovative AI-powered content automation platform with advanced content generation and optimization capabilities.',
-    targetAudience: 'Marketing teams', 'Content creators', 'Social media managers', 'SEO specialists', 'Digital marketers',
+    targetAudience: ['Marketing teams', 'Content creators', 'Social media managers', 'SEO specialists', 'Digital marketers'],
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'Content Marketing',
@@ -1052,7 +1036,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     rating: 4.7,
     reviews: 51
   },
-
   // Smart CRM Intelligence Suite
   {
     id: 'smart-crm-intelligence-suite',
@@ -1079,7 +1062,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/smart-crm-intelligence-suite',
     marketPosition: 'Advanced AI-enhanced CRM platform with intelligent automation and predictive customer analytics.',
-    targetAudience: 'Sales teams', 'Customer success teams', 'Marketing teams', 'Business development', 'Customer service',
+    targetAudience: ['Sales teams', 'Customer success teams', 'Marketing teams', 'Business development', 'Customer service'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Customer Relationship Management',

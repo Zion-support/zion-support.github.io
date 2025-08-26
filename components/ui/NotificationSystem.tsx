@@ -1,18 +1,15 @@
 import React from 'react';
-
 interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
   message: string;
   title?: string;
 }
-
 interface NotificationSystemProps {
   notifications: Notification[];
   onDismiss?: (id: string) => void;
   className?: string;
 }
-
 const NotificationSystem: React.FC<NotificationSystemProps> = ({ 
   notifications, 
   onDismiss, 
@@ -32,7 +29,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
         return 'bg-gray-50 border-gray-200 text-gray-800';
     }
   };
-
   return (
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
       {notifications.map((notification) => (
@@ -63,5 +59,4 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
     </div>
   );
 };
-
 export default NotificationSystem;

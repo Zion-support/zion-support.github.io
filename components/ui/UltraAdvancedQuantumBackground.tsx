@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
 interface UltraAdvancedQuantumBackgroundProps {
   intensity?: 'low' | 'medium' | 'high';
   colorScheme?: 'quantum' | 'neural' | 'cyberpunk' | 'holographic';
   children: React.ReactNode;
 }
-
 const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({
   intensity = 'medium',
   colorScheme = 'quantum',
@@ -14,7 +12,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
-
   // Color schemes
   const colorSchemes = {
     quantum: {
@@ -46,26 +43,20 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       particles: ['#ff1493', '#00bfff', '#32cd32', '#ffd700', '#ff4500']
     }
   };
-
   const colors = colorSchemes[colorScheme];
   const intensityMultiplier = intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 1.5;
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Particle system
     class Particle {
       x: number;
@@ -77,7 +68,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       life: number;
       maxLife: number;
       type: 'quantum' | 'neural' | 'energy' | 'data';
-
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -89,36 +79,29 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         this.maxLife = 100;
         this.type = ['quantum', 'neural', 'energy', 'data'][Math.floor(Math.random() * 4)] as any;
       }
-
       update() {
         this.x += this.vx;
         this.y += this.vy;
         this.life--;
-
         // Bounce off edges
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
         // Add quantum tunneling effect
         if (Math.random() < 0.001 * intensityMultiplier) {
           this.x = Math.random() * canvas.width;
           this.y = Math.random() * canvas.height;
         }
-
         // Add neural network connections
         if (Math.random() < 0.005 * intensityMultiplier) {
           this.vx += (Math.random() - 0.5) * 0.5;
           this.vy += (Math.random() - 0.5) * 0.5;
         }
       }
-
       draw() {
         if (!ctx) return;
-
         const alpha = this.life / this.maxLife;
         ctx.save();
         ctx.globalAlpha = alpha;
-
         // Different particle types
         switch (this.type) {
           case 'quantum':
@@ -135,7 +118,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             ctx.globalAlpha = alpha * 0.3;
             ctx.stroke();
             break;
-
           case 'neural':
             // Neural network nodes
             ctx.beginPath();
@@ -151,7 +133,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             ctx.globalAlpha = alpha * 0.5;
             ctx.stroke();
             break;
-
           case 'energy':
             // Energy particles with glow effect
             ctx.shadowColor = this.color;
@@ -161,7 +142,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             ctx.fillStyle = this.color;
             ctx.fill();
             break;
-
           case 'data':
             // Data particles with binary effect
             ctx.fillStyle = this.color;
@@ -169,47 +149,38 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             ctx.fillText(Math.random() > 0.5 ? '1' : '0', this.x, this.y);
             break;
         }
-
         ctx.restore();
       }
     }
-
     // Create particle array
     const particles: Particle[] = [];
     const particleCount = Math.floor(100 * intensityMultiplier);
-
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }
-
     // Animation loop
     const animate = () => {
       // Clear canvas with fade effect
       ctx.fillStyle = colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.update();
         particle.draw();
-
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
           particles[index] = new Particle();
         }
       });
-
       // Draw quantum entanglement lines
       ctx.strokeStyle = colors.primary;
       ctx.globalAlpha = 0.1;
       ctx.lineWidth = 1;
-
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-
           if (distance < 100 && Math.random() < 0.01 * intensityMultiplier) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -218,12 +189,10 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           }
         }
       }
-
       // Draw neural network grid
       ctx.strokeStyle = colors.secondary;
       ctx.globalAlpha = 0.05;
       ctx.lineWidth = 0.5;
-
       const gridSize = 50;
       for (let x = 0; x < canvas.width; x += gridSize) {
         ctx.beginPath();
@@ -237,13 +206,11 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         ctx.lineTo(canvas.width, y);
         ctx.stroke();
       }
-
       // Add holographic effects
       if (colorScheme === 'holographic') {
         ctx.strokeStyle = colors.tertiary;
         ctx.globalAlpha = 0.1;
         ctx.lineWidth = 2;
-
         // Holographic rings
         const time = Date.now() * 0.001;
         for (let i = 0; i < 3; i++) {
@@ -253,12 +220,9 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           ctx.stroke();
         }
       }
-
       animationRef.current = requestAnimationFrame(animate);
     };
-
     animate();
-
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
@@ -266,7 +230,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       window.removeEventListener('resize', resizeCanvas);
     };
   }, [intensity, colorScheme, colors, intensityMultiplier]);
-
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Quantum Background Canvas */}
@@ -275,7 +238,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: colors.background }}
       />
-
       {/* Overlay Effects */}
       <div className="absolute inset-0 z-10">
         {/* Quantum Field Lines */}
@@ -295,7 +257,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             ease: "linear"
           }}
         />
-
         {/* Neural Network Overlay */}
         <motion.div
           className="absolute inset-0 opacity-10"
@@ -315,7 +276,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             ease: "linear"
           }}
         />
-
         {/* Quantum Entanglement Effect */}
         <motion.div
           className="absolute inset-0"
@@ -334,7 +294,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           }}
         />
       </div>
-
       {/* Content */}
       <div className="relative z-20">
         {children}
@@ -342,5 +301,4 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     </div>
   );
 };
-
 export default UltraAdvancedQuantumBackground;

@@ -1,18 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-=======
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-
 const AISolutions: React.FC = () => {
   const features = [
     {
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Target, TrendingUp, Shield, Users, Globe, Cpu, FileText } from 'lucide-react';
-=======
-import Head from 'next/head';
-
+import { Helmet } from 'react-helmet-async';
 const AISolutions: React.FC = () => {
   const aiServices = [
     {
@@ -58,7 +54,6 @@ const AISolutions: React.FC = () => {
       path: "/solutions/ai-business-intelligence"
     }
   ];
-
   const benefits = [
       title: "Machine Learning Solutions",
       description: "Custom ML models and algorithms tailored to your business needs",
@@ -69,7 +64,6 @@ const AISolutions: React.FC = () => {
       title: "Natural Language Processing",
       description: "Advanced text and speech processing capabilities",
       features: ["Chatbot Development", "Sentiment Analysis", "Document Processing", "Language Translation"],
-=======
       title: "Machine Learning",
       description: "Custom ML models and algorithms for your business needs",
       features: ["Predictive Analytics", "Pattern Recognition", "Data Modeling", "Model Training"],
@@ -94,16 +88,14 @@ const AISolutions: React.FC = () => {
       icon: "🎯"
     }
   ];
-
   const aiTechnologies = [
     { name: "TensorFlow", icon: "🧠", description: "Open-source ML framework" },
     { name: "PyTorch", icon: "🔥", description: "Deep learning platform" },
     { name: "OpenAI", icon: "🌟", description: "Advanced language models" },
     { name: "Computer Vision", icon: "📷", description: "Image recognition APIs" }
   ];
-
   return (
-    <>
+<>
       <Helmet>
         <title>AI Solutions — Zion Tech Group | Machine Learning & AI Services</title>
         <meta name="description" content="Transform your business with Zion Tech Group's AI solutions. Machine learning, natural language processing, computer vision, and AI consulting services." />
@@ -112,7 +104,6 @@ const AISolutions: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/ai-solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/services/ai-solutions" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -126,7 +117,6 @@ const AISolutions: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Harness the power of artificial intelligence to transform your business. 
               Our cutting-edge AI solutions drive innovation and competitive advantage.
-=======
     {
       icon: Zap,
       title: "Increased Efficiency",
@@ -148,7 +138,6 @@ const AISolutions: React.FC = () => {
       description: "Provide personalized, intelligent interactions that improve customer satisfaction and loyalty"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -184,7 +173,6 @@ const AISolutions: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* AI Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -231,7 +219,6 @@ const AISolutions: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
         {/* AI Technologies */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -259,7 +246,6 @@ const AISolutions: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* AI Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -271,7 +257,6 @@ const AISolutions: React.FC = () => {
                 Comprehensive AI solutions to meet your business challenges
               </p>
             </div>
-
             <div className="space-y-6">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -326,10 +311,8 @@ const AISolutions: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
         </section>
-
         {/* Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -375,7 +358,6 @@ const AISolutions: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
@@ -394,8 +376,7 @@ const AISolutions: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-=======
+</>
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -423,5 +404,4 @@ const AISolutions: React.FC = () => {
     </div>
   );
 };
-
 export default AISolutions;

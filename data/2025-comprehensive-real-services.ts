@@ -28,7 +28,6 @@ export interface ComprehensiveService {
   rating: number;
   reviews: number;
 }
-
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
@@ -78,7 +77,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 1250
   },
-
   // Customer Success & Support
   {
     id: 'ai-customer-success-platform',
@@ -127,7 +125,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9,
     reviews: 950
   },
-
   // Financial Technology
   {
     id: 'ai-financial-risk-manager',
@@ -176,7 +173,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.7,
     reviews: 680
   },
-
   // Healthcare & Biotech
   {
     id: 'ai-healthcare-diagnostics',
@@ -225,7 +221,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9,
     reviews: 420
   },
-
   // E-commerce & Retail
   {
     id: 'ai-ecommerce-optimizer',
@@ -274,7 +269,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 1680
   },
-
   // Cybersecurity & Compliance
   {
     id: 'ai-cybersecurity-suite',
@@ -323,7 +317,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9,
     reviews: 1100
   },
-
   // Data & Analytics
   {
     id: 'ai-data-pipeline-platform',
@@ -372,7 +365,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 1450
   },
-
   // Human Resources
   {
     id: 'ai-hr-recruitment-platform',
@@ -421,7 +413,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.7,
     reviews: 890
   },
-
   // Legal & Compliance
   {
     id: 'ai-legal-contract-analyzer',
@@ -470,7 +461,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 580
   },
-
   // Manufacturing & IoT
   {
     id: 'ai-manufacturing-optimizer',

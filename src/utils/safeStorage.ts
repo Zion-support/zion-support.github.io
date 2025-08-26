@@ -1,14 +1,10 @@
-import {logErrorToProduction} from '@/utils/productionLogger';
-
 // In-memory storage for fallback with optimizations
 const inMemoryStore: Record<string, string> = {};
 let localStorageAvailable: boolean | null = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
-
 // Recursion prevention for error logging
 let isLoggingError = false;
-
 function isLocalStorageAvailable(): boolean {
   const now = Date.now();
   
@@ -35,16 +31,14 @@ function isLocalStorageAvailable(): boolean {
     return false;
   }
 }
-
 function safeConsoleError(message: string, error?: any) {
   const env = (globalThis as any).process?.env?.NODE_ENV ?? 'production';
   // Prevent infinite recursion in console logging
   if (isLoggingError || env === 'production') return;
-
   isLoggingError = true;
   try {
     if (env === 'development') {
-      logErrorToProduction(message, error);
+      console.error(message, error);
     }
   } catch {
     // Silent fail if console.error causes recursion
@@ -52,7 +46,6 @@ function safeConsoleError(message: string, error?: any) {
     isLoggingError = false;
   }
 }
-
 export const safeStorage = {
   getItem: (key: string): string | null => {
     if (typeof window === 'undefined') return null;
@@ -117,10 +110,8 @@ export const safeStorage = {
     return isLocalStorageAvailable();
   }
 };
-
 // Simplified session storage without excessive logging
 const sessionMemoryStore: Record<string, string> = {};
-
 export const safeSessionStorage = {
   getItem: (key: string): string | null => {
     if (typeof window === 'undefined') return null;

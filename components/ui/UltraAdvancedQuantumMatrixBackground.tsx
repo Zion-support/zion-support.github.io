@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
 interface UltraAdvancedQuantumMatrixBackgroundProps {
   intensity?: number;
   variant?: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'matrix' | 'quantum-holographic';
   children: React.ReactNode;
 }
-
 const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixBackgroundProps> = ({
   intensity = 1.0,
   variant = 'quantum',
@@ -14,17 +12,13 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
     // Quantum particle system
     const particles: Array<{
       x: number;
@@ -36,7 +30,6 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
       color: string;
       type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk';
     }> = [];
-
     // Initialize particles based on variant
     const initParticles = () => {
       particles.length = 0;
@@ -61,7 +54,6 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
         });
       }
     };
-
     // Quantum entanglement effect
     const drawQuantumEntanglement = () => {
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
@@ -82,7 +74,6 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
         }
       }
     };
-
     // Holographic matrix effect
     const drawHolographicMatrix = () => {
       ctx.fillStyle = 'rgba(255, 0, 255, 0.05)';
@@ -95,7 +86,6 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
         }
       }
     };
-
     // Neural network effect
     const drawNeuralNetwork = () => {
       ctx.strokeStyle = 'rgba(0, 255, 0, 0.1)';
@@ -113,7 +103,6 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
         }
       });
     };
-
     // Cyberpunk grid effect
     const drawCyberpunkGrid = () => {
       ctx.strokeStyle = 'rgba(255, 102, 0, 0.1)';
@@ -134,7 +123,6 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
         ctx.stroke();
       }
     };
-
     // Main animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -185,19 +173,15 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
       
       animationRef.current = requestAnimationFrame(animate);
     };
-
     initParticles();
     animate();
-
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       initParticles();
     };
-
     window.addEventListener('resize', handleResize);
-
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
@@ -205,7 +189,6 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
       window.removeEventListener('resize', handleResize);
     };
   }, [intensity, variant]);
-
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Quantum Matrix Background */}
@@ -270,5 +253,4 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
     </div>
   );
 };
-
 export default UltraAdvancedQuantumMatrixBackground;

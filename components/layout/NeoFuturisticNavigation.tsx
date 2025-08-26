@@ -53,40 +53,32 @@ import {
 	Link as LinkIcon
 } from 'lucide-react';
 import Button from '../ui/Button';
-
 export default function NeoFuturisticNavigation() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 	const router = useRouter();
-
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
 	};
-
 	useEffect(() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 20);
 		};
-
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
-
 	const toggleDropdown = (dropdown: string) => {
 		setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
 	};
-
 	const closeMobileMenu = () => {
 		setIsOpen(false);
 		setActiveDropdown(null);
 	};
-
 	const isActive = (path: string) => router.pathname === path;
-
 	const serviceCategories = [
 		{
 			name: 'Quantum Computing',
@@ -199,14 +191,12 @@ export default function NeoFuturisticNavigation() {
 			]
 		}
 	];
-
 	const companyInfo = [
 		{ name: 'About Zion Tech Group', description: 'Leading the global micro SaaS revolution', icon: <Rocket className="w-5 h-5" />, link: '/about' },
 		{ name: 'Careers', description: 'Join our revolutionary team', icon: <Star className="w-5 h-5" />, link: '/careers' },
 		{ name: 'News & Updates', description: 'Latest announcements and releases', icon: <TrendingUp className="w-5 h-5" />, link: '/news' },
 		{ name: 'Contact', description: 'Talk to our team 24/7', icon: <Phone className="w-5 h-5" />, link: '/contact' }
 	];
-
 	const resources = [
 		{ name: 'Documentation', description: 'Comprehensive service guides', icon: <BookOpen className="w-5 h-5" />, link: '/docs' },
 		{ name: 'Blog & Insights', description: 'Latest technology trends', icon: <FileText className="w-5 h-5" />, link: '/blog' },
@@ -214,7 +204,6 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'Pricing', description: 'Transparent and flexible plans', icon: <CreditCard className="w-5 h-5" />, link: '/pricing' },
 		{ name: 'Reports', description: 'Live performance and audits', icon: <Activity className="w-5 h-5" />, link: '/reports' }
 	];
-
 	// Popular quick links to flagship services
 	const popularServiceLinks = [
 		{ name: 'AI Content Generator', href: '/ai-content-generator' },
@@ -227,7 +216,6 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'AI Sales Automation', href: '/ai-sales-automation' },
 		{ name: 'AI Market Research', href: '/ai-market-research' }
 	];
-
 	// Newly added real services quick links
 	const newServiceLinks = [
 		{ name: 'Email Deliverability Monitor', href: '/services/email-deliverability-monitor' },
@@ -237,7 +225,6 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'Error Budget Automation', href: '/services/error-budget-automation' },
 		{ name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
 	];
-
 	return (
 		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 			isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent'
@@ -266,7 +253,6 @@ export default function NeoFuturisticNavigation() {
 							<div className="text-xs text-gray-400">Revolutionary Technology</div>
 						</div>
 					</Link>
-
 					{/* Desktop Navigation */}
 					<div className="hidden lg:flex items-center space-x-8">
 						{/* Services Dropdown */}
@@ -324,7 +310,6 @@ export default function NeoFuturisticNavigation() {
 								</div>
 							)}
 						</div>
-
 						{/* Direct Links */}
 						<Link href="/it-services" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">IT Services</Link>
 						<Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">AI Services</Link>
@@ -340,7 +325,6 @@ export default function NeoFuturisticNavigation() {
 						<Link href="/data-pipeline-health" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">Data Pipeline Health</Link>
 						<Link href="/ai-code-review-copilot" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">AI Code Review</Link>
 						<Link href="/resources" className="text-gray-300 hover:text-white transition-colors duration-300 py-2">Resources</Link>
-
 						{/* Popular Dropdown */}
 						<div className="relative group">
 							<button
@@ -363,7 +347,6 @@ export default function NeoFuturisticNavigation() {
 								</div>
 							)}
 						</div>
-
 						{/* New Dropdown */}
 						<div className="relative group">
 							<button
@@ -387,14 +370,12 @@ export default function NeoFuturisticNavigation() {
 							)}
 						</div>
 					</div>
-
 					{/* Mobile Menu Button */}
 					<button className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors" onClick={() => setIsOpen(!isOpen)}>
 						{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 					</button>
 				</div>
 			</div>
-
 			{/* Mobile Menu */}
 			{isOpen && (
 				<div className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50">
@@ -406,7 +387,6 @@ export default function NeoFuturisticNavigation() {
 									<span>Services</span>
 									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}/>
 								</button>
-
 								{activeDropdown === 'mobile-services' && (
 									<div className="ml-4 space-y-3">
 										{serviceCategories.map((category, index) => (
@@ -429,14 +409,12 @@ export default function NeoFuturisticNavigation() {
 									</div>
 								)}
 							</div>
-
 							{/* Company Section */}
 							<div>
 								<button className="flex items-center justify-between w-full text-left text-white font-semibold mb-4" onClick={() => toggleDropdown('mobile-company')}>
 									<span>Company</span>
 									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}/>
 								</button>
-
 								{activeDropdown === 'mobile-company' && (
 									<div className="ml-4 space-y-3">
 										{companyInfo.map((item, index) => (
@@ -447,14 +425,12 @@ export default function NeoFuturisticNavigation() {
 									</div>
 								)}
 							</div>
-
 							{/* Resources Section */}
 							<div>
 								<button className="flex items-center justify-between w-full text-left text-white font-semibold mb-4" onClick={() => toggleDropdown('mobile-resources')}>
 									<span>Resources</span>
 									<ChevronRight className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}/>
 								</button>
-
 								{activeDropdown === 'mobile-resources' && (
 									<div className="ml-4 space-y-3">
 										{resources.map((item, index) => (
@@ -465,7 +441,6 @@ export default function NeoFuturisticNavigation() {
 									</div>
 								)}
 							</div>
-
 							{/* Contact Info */}
 							<div className="pt-6 border-t border-gray-700/50">
 								<div className="text-white font-semibold mb-4">Contact Information</div>
@@ -487,7 +462,6 @@ export default function NeoFuturisticNavigation() {
 										<span className="text-gray-300">{contactInfo.website}</span>
 									</div>
 								</div>
-
 								<div className="mt-6 space-y-3">
 									<Button href="/services" variant="quantum" size="lg" className="w-full">
 										Explore Services

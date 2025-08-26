@@ -1,15 +1,12 @@
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 import type { OrderDetail } from '@/hooks/useOrder';
-
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
-
 export async function generateInvoicePdf(order: OrderDetail): Promise<Blob> {
   const itemsTable = [
     ['Item', 'Qty', 'Price'],
     ...order.items.map(i => [i.name, String(i.quantity), `$${i.price.toFixed(2)}`])
   ];
-
   const docDef: any = {
     content: [
       { text: `Invoice #${order.orderId}`, style: 'header' },
@@ -25,7 +22,6 @@ export async function generateInvoicePdf(order: OrderDetail): Promise<Blob> {
       subheader: { fontSize: 14, bold: true }
     }
   };
-
   return new Promise((resolve) => {
     pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob));
   });

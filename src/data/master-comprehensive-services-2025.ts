@@ -1,6 +1,5 @@
 // Master Comprehensive Services 2025
 // This file combines all existing services with the new comprehensive expansion
-
 import { enhancedMicroSaasServices2025, enhancedITServices2025, enhancedAIServices2025 } from './comprehensiveServices2025';
 import { 
   allExpandedServices2025,
@@ -23,14 +22,12 @@ import {
   getCuttingEdgePopularServices,
   searchCuttingEdgeServices
 } from './comprehensive-services-expansion-2025-part3';
-
 // Union type for all services
 export type AnyService = 
   | typeof enhancedMicroSaasServices2025[0]
   | typeof enhancedITServices2025[0]
   | typeof enhancedAIServices2025[0]
   | any; // For the new services
-
 // Master services object combining all services
 export const masterComprehensiveServices2025 = {
   // Original services
@@ -46,7 +43,6 @@ export const masterComprehensiveServices2025 = {
   // Cutting-edge services
   cuttingEdge: allCuttingEdgeServices2025
 };
-
 // Get all services as a flat array
 export const getAllServices = (): AnyService[] => {
   const allServices = [
@@ -59,13 +55,11 @@ export const getAllServices = (): AnyService[] => {
   ];
   return allServices;
 };
-
 // Get services by category across all service types
 export const getMasterServicesByCategory = (category: string): AnyService[] => {
   const allServices = getAllServices();
   return allServices.filter(service => service.category === category);
 };
-
 // Get services by price range across all service types
 export const getMasterServicesByPriceRange = (minPrice: number, maxPrice: number): AnyService[] => {
   const allServices = getAllServices();
@@ -82,13 +76,11 @@ export const getMasterServicesByPriceRange = (minPrice: number, maxPrice: number
     return false;
   });
 };
-
 // Get popular services across all categories
 export const getMasterPopularServices = (limit: number = 20): AnyService[] => {
   const allServices = getAllServices();
   return allServices.slice(0, limit);
 };
-
 // Search services across all categories
 export const searchMasterServices = (query: string): AnyService[] => {
   const allServices = getAllServices();
@@ -99,7 +91,6 @@ export const searchMasterServices = (query: string): AnyService[] => {
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm))
   );
 };
-
 // Get services by technology/domain
 export const getMasterServicesByTechnology = (technology: string): AnyService[] => {
   const allServices = getAllServices();
@@ -110,7 +101,6 @@ export const getMasterServicesByTechnology = (technology: string): AnyService[] 
     service.name.toLowerCase().includes(techTerm)
   );
 };
-
 // Get services by target audience
 export const getMasterServicesByAudience = (audience: string): AnyService[] => {
   const allServices = getAllServices();
@@ -119,7 +109,6 @@ export const getMasterServicesByAudience = (audience: string): AnyService[] => {
     service.targetAudience.some(target => target.toLowerCase().includes(audienceTerm))
   );
 };
-
 // Get services by pricing tier
 export const getMasterServicesByPricing = (pricing: string): AnyService[] => {
   const allServices = getAllServices();
@@ -131,7 +120,6 @@ export const getMasterServicesByPricing = (pricing: string): AnyService[] => {
     return false;
   });
 };
-
 // Get services statistics
 export const getMasterServicesStats = () => {
   const allServices = getAllServices();
@@ -170,7 +158,6 @@ export const getMasterServicesStats = () => {
   
   return stats;
 };
-
 // Get featured services (high-value, innovative services)
 export const getMasterFeaturedServices = (limit: number = 10): AnyService[] => {
   const allServices = getAllServices();
@@ -219,7 +206,6 @@ export const getMasterFeaturedServices = (limit: number = 10): AnyService[] => {
     .sort((a, b) => (b as any).score - (a as any).score)
     .slice(0, limit);
 };
-
 // Get trending services (services with high ROI and innovation)
 export const getMasterTrendingServices = (limit: number = 10): AnyService[] => {
   const allServices = getAllServices();
@@ -237,7 +223,6 @@ export const getMasterTrendingServices = (limit: number = 10): AnyService[] => {
   
   return trendingServices.slice(0, limit);
 };
-
 // Export all helper functions
 export {
   getServicesByCategory,
@@ -253,6 +238,5 @@ export {
   getCuttingEdgePopularServices,
   searchCuttingEdgeServices
 };
-
 // Default export
 export default masterComprehensiveServices2025;

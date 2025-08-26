@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
 interface Particle {
   x: number;
   y: number;
@@ -10,27 +9,21 @@ interface Particle {
   opacity: number;
   color: string;
 }
-
 export default function UltraFuturisticBackground2025() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Initialize particles
     const initParticles = () => {
       const particles: Particle[] = [];
@@ -49,7 +42,6 @@ export default function UltraFuturisticBackground2025() {
       }
       particlesRef.current = particles;
     };
-
     const animateParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
@@ -94,10 +86,8 @@ export default function UltraFuturisticBackground2025() {
       
       animationRef.current = requestAnimationFrame(animateParticles);
     };
-
     initParticles();
     animateParticles();
-
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {
@@ -105,7 +95,6 @@ export default function UltraFuturisticBackground2025() {
       }
     };
   }, []);
-
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
       {/* Animated Canvas Background */}

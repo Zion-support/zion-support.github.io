@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-
 interface UltraAdvancedFuturisticBackgroundProps {
   children: React.ReactNode;
   intensity?: number;
   variant?: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'space' | 'matrix' | 'fusion';
   className?: string;
 }
-
 const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
   children,
   intensity = 1.0,
@@ -17,19 +15,16 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
-
   // Particle system for advanced effects
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
 		const resize = () => {
 			canvas.width = window.innerWidth;
 			canvas.height = window.innerHeight;
 		};
 		resize();
 		window.addEventListener('resize', resize);
-
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		const gradient = ctx.createRadialGradient(
 			canvas.width / 2,
@@ -54,7 +49,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 		}
 		ctx.fillStyle = gradient;
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
-
     let animationFrameId: number;
     let particles: Array<{
       x: number;
@@ -66,18 +60,15 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       color: string;
       type: string;
     }> = [];
-
     // Initialize particles based on variant
     const initParticles = () => {
       particles = [];
       const particleCount = Math.floor(100 * intensity);
-
       for (let i = 0; i < particleCount; i++) {
         const type = Math.random() > 0.5 ? 'quantum' : 'holographic';
         const color = type === 'quantum' 
           ? `hsl(${200 + Math.random() * 60}, 70%, 60%)`
           : `hsl(${280 + Math.random() * 80}, 70%, 60%)`;
-
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -90,17 +81,14 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         });
       }
     };
-
     // Update and draw particles
     const updateParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Create gradient background
       const gradient = ctx.createRadialGradient(
         mousePosition.x, mousePosition.y, 0,
         mousePosition.x, mousePosition.y, Math.max(canvas.width, canvas.height) / 2
       );
-
       if (variant === 'quantum') {
         gradient.addColorStop(0, 'rgba(0, 0, 0, 0.9)');
         gradient.addColorStop(0.3, 'rgba(25, 25, 50, 0.8)');
@@ -140,26 +128,21 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         gradient.addColorStop(0.8, 'rgba(25, 75, 50, 0.5)');
         gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
       }
-
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
-
         // Bounce off edges
         if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
         if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
-
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-
         // Mouse interaction
         const dx = mousePosition.x - particle.x;
         const dy = mousePosition.y - particle.y;
@@ -169,7 +152,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           particle.vx += dx * 0.001;
           particle.vy += dy * 0.001;
         }
-
         // Draw particle
         ctx.save();
         ctx.globalAlpha = particle.opacity;
@@ -209,7 +191,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         
         ctx.restore();
       });
-
       // Draw connecting lines between nearby particles
       ctx.strokeStyle = 'rgba(100, 150, 255, 0.1)';
       ctx.lineWidth = 1;
@@ -228,7 +209,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           }
         }
       }
-
       // Draw neural network connections for neural variant
       if (variant === 'neural' || variant === 'fusion') {
         ctx.strokeStyle = 'rgba(255, 100, 100, 0.2)';
@@ -246,7 +226,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           }
         });
       }
-
       // Draw matrix code for matrix variant
       if (variant === 'matrix' || variant === 'fusion') {
         ctx.fillStyle = 'rgba(0, 255, 0, 0.3)';
@@ -259,38 +238,30 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ctx.fillText(char, x, y);
         }
       }
-
       animationFrameId = requestAnimationFrame(updateParticles);
     };
-
     initParticles();
     updateParticles();
-
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
   }, [intensity, variant, mousePosition, isHovered]);
-
   // Handle mouse movement
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
-
     const handleMouseEnter = () => setIsHovered(true);
     const handleMouseLeave = () => setIsHovered(false);
-
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('mouseenter', handleMouseEnter);
     window.addEventListener('mouseleave', handleMouseLeave);
-
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseenter', handleMouseEnter);
       window.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
-
   // Handle window resize
   useEffect(() => {
     const handleResize = () => {
@@ -300,11 +271,9 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         canvas.height = window.innerHeight;
       }
     };
-
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
   const getBackgroundGradient = () => {
     switch (variant) {
       case 'quantum':
@@ -353,7 +322,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         return 'radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)';
     }
   };
-
   const getIntensityClass = () => {
     switch (intensity) {
       case 'low':
@@ -368,7 +336,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         return 'opacity-70';
     }
   };
-
   return (
     <div 
       className={`relative min-h-screen overflow-hidden ${className}`}
@@ -381,7 +348,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ filter: `blur(${isHovered ? 0 : 0.5}px)` }}
       />
-
       {/* Holographic Grid Overlay */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div 
@@ -395,7 +361,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           }}
         />
       </div>
-
       {/* Quantum Energy Field */}
       <motion.div
         className="fixed inset-0 z-0 pointer-events-none"
@@ -414,7 +379,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ease: "easeInOut"
         }}
       />
-
       {/* Neural Network Visualization */}
       {variant === 'neural' || variant === 'fusion' && (
         <motion.div
@@ -439,7 +403,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           </svg>
         </motion.div>
       )}
-
       {/* Cyberpunk Glitch Effect */}
       {variant === 'cyberpunk' || variant === 'fusion' && (
         <motion.div
@@ -462,7 +425,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           <div className="w-full h-full bg-gradient-to-r from-orange-500/20 to-red-500/20" />
         </motion.div>
       )}
-
       {/* Space Nebula Effect */}
       {variant === 'space' || variant === 'fusion' && (
         <motion.div
@@ -481,12 +443,10 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           }}
         />
       )}
-
       {/* Content */}
       <div className="relative z-10">
         {children}
       </div>
-
       {/* Floating Holographic Elements */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         {[...Array(5)].map((_, i) => (
@@ -511,7 +471,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           />
         ))}
       </div>
-
       {/* Quantum Entanglement Lines */}
       {variant === 'quantum' || variant === 'fusion' && (
         <svg className="fixed inset-0 z-0 pointer-events-none w-full h-full">
@@ -545,5 +504,4 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     </div>
   );
 };
-
 export default UltraAdvancedFuturisticBackground;

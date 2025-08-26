@@ -4,7 +4,6 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
-
 export interface SpecializedService {
   id: number;
   name: string;
@@ -27,7 +26,6 @@ export interface SpecializedService {
   supportLevel: string;
   innovationScore: number;
 }
-
 // Specialized Innovative Services for 2025
 export const specializedInnovativeServices2025: SpecializedService[] = [
   {
@@ -375,5 +373,4 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     innovationScore: 9.6
   }
 ];
-
 export default specializedInnovativeServices2025;

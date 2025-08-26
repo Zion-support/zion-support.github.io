@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-
 interface EnhancedQuantumMatrixBackgroundProps {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high' | 'extreme';
@@ -13,7 +12,6 @@ interface EnhancedQuantumMatrixBackgroundProps {
   enableParticleSwarm?: boolean;
   enableQuantumEntanglement?: boolean;
 }
-
 export default function EnhancedQuantumMatrixBackground({
   children,
   intensity = 'medium',
@@ -29,7 +27,6 @@ export default function EnhancedQuantumMatrixBackground({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [isVisible, setIsVisible] = useState(false);
-
   // Get color scheme
   const getColorScheme = () => {
     switch (colorScheme) {
@@ -63,7 +60,6 @@ export default function EnhancedQuantumMatrixBackground({
         };
     }
   };
-
   // Get intensity values
   const getIntensityValues = () => {
     switch (intensity) {
@@ -79,7 +75,6 @@ export default function EnhancedQuantumMatrixBackground({
         return { opacity: 0.5, blur: 1.5, scale: 1.0 };
     }
   };
-
   useEffect(() => {
     const handleResize = () => {
       setDimensions({
@@ -87,32 +82,24 @@ export default function EnhancedQuantumMatrixBackground({
         height: window.innerHeight
       });
     };
-
     handleResize();
     window.addEventListener('resize', handleResize);
     setIsVisible(true);
-
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
   useEffect(() => {
     if (!canvasRef.current || !isVisible) return;
-
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     canvas.width = dimensions.width;
     canvas.height = dimensions.height;
-
     const colors = getColorScheme();
     const intensityValues = getIntensityValues();
-
     // Matrix rain effect
     if (enableMatrixRain) {
       const matrixChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const matrixDrops: Array<{ x: number; y: number; speed: number; char: string; opacity: number }> = [];
-
       for (let i = 0; i < 100; i++) {
         matrixDrops.push({
           x: Math.random() * canvas.width,
@@ -122,14 +109,11 @@ export default function EnhancedQuantumMatrixBackground({
           opacity: Math.random() * 0.8 + 0.2
         });
       }
-
       const drawMatrixRain = () => {
         ctx.fillStyle = `rgba(0, 0, 0, 0.1)`;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-
         ctx.font = '16px monospace';
         ctx.fillStyle = colors.primary;
-
         matrixDrops.forEach((drop, index) => {
           ctx.globalAlpha = drop.opacity;
           ctx.fillText(drop.char, drop.x, drop.y);
@@ -141,18 +125,14 @@ export default function EnhancedQuantumMatrixBackground({
             drop.char = matrixChars[Math.floor(Math.random() * matrixChars.length)];
           }
         });
-
         ctx.globalAlpha = 1;
       };
-
       const matrixInterval = setInterval(drawMatrixRain, 100 / animationSpeed);
       return () => clearInterval(matrixInterval);
     }
-
     // Particle swarm effect
     if (enableParticleSwarm) {
       const particles: Array<{ x: number; y: number; vx: number; vy: number; size: number; life: number }> = [];
-
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
@@ -163,28 +143,23 @@ export default function EnhancedQuantumMatrixBackground({
           life: Math.random() * 100 + 50
         });
       }
-
       const drawParticleSwarm = () => {
         ctx.fillStyle = `rgba(0, 0, 0, 0.05)`;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-
         particles.forEach((particle, index) => {
           // Update particle position
           particle.x += particle.vx;
           particle.y += particle.vy;
           particle.life--;
-
           // Bounce off edges
           if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
           if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
-
           // Reset particle if it dies
           if (particle.life <= 0) {
             particle.x = Math.random() * canvas.width;
             particle.y = Math.random() * canvas.height;
             particle.life = Math.random() * 100 + 50;
           }
-
           // Draw particle
           const gradient = ctx.createRadialGradient(
             particle.x, particle.y, 0,
@@ -192,12 +167,10 @@ export default function EnhancedQuantumMatrixBackground({
           );
           gradient.addColorStop(0, colors.glow);
           gradient.addColorStop(1, 'transparent');
-
           ctx.fillStyle = gradient;
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fill();
-
           // Draw connections between nearby particles
           particles.forEach((otherParticle, otherIndex) => {
             if (index !== otherIndex) {
@@ -218,15 +191,12 @@ export default function EnhancedQuantumMatrixBackground({
           });
         });
       };
-
       const particleInterval = setInterval(drawParticleSwarm, 50 / animationSpeed);
       return () => clearInterval(particleInterval);
     }
-
     // Quantum entanglement effect
     if (enableQuantumEntanglement) {
       const quantumParticles: Array<{ x: number; y: number; phase: number; entangled: number }> = [];
-
       for (let i = 0; i < 20; i++) {
         quantumParticles.push({
           x: Math.random() * canvas.width,
@@ -235,7 +205,6 @@ export default function EnhancedQuantumMatrixBackground({
           entangled: Math.floor(Math.random() * 20)
         });
       }
-
       const drawQuantumEntanglement = () => {
         quantumParticles.forEach((particle, index) => {
           particle.phase += 0.02 * animationSpeed;
@@ -248,7 +217,6 @@ export default function EnhancedQuantumMatrixBackground({
           ctx.beginPath();
           ctx.arc(x, y, 4, 0, Math.PI * 2);
           ctx.fill();
-
           // Draw entanglement lines
           if (particle.entangled !== index) {
             const entangledParticle = quantumParticles[particle.entangled];
@@ -266,12 +234,10 @@ export default function EnhancedQuantumMatrixBackground({
           }
         });
       };
-
       const quantumInterval = setInterval(drawQuantumEntanglement, 100 / animationSpeed);
       return () => clearInterval(quantumInterval);
     }
   }, [dimensions, isVisible, intensity, colorScheme, particleCount, animationSpeed, enableMatrixRain, enableParticleSwarm, enableQuantumEntanglement]);
-
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Enhanced Background Canvas */}
@@ -284,7 +250,6 @@ export default function EnhancedQuantumMatrixBackground({
           transform: `scale(${getIntensityValues().scale})`
         }}
       />
-
       {/* Holographic Overlay */}
       {enableHolographic && (
         <div className="fixed inset-0 z-10 pointer-events-none">
@@ -313,7 +278,6 @@ export default function EnhancedQuantumMatrixBackground({
           </div>
         </div>
       )}
-
       {/* Quantum Effects Overlay */}
       {enableQuantumEffects && (
         <div className="fixed inset-0 z-20 pointer-events-none">
@@ -340,7 +304,6 @@ export default function EnhancedQuantumMatrixBackground({
               />
             ))}
           </div>
-
           {/* Quantum particles */}
           <div className="absolute inset-0">
             {[...Array(15)].map((_, i) => (
@@ -368,7 +331,6 @@ export default function EnhancedQuantumMatrixBackground({
           </div>
         </div>
       )}
-
       {/* Content */}
       <div className="relative z-30">
         {children}

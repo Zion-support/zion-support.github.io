@@ -22,8 +22,6 @@ import {
   Clock,
   Award
 } from 'lucide-react';
-=======
-=======
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
@@ -36,7 +34,6 @@ import {
   CogIcon,
   LightBulbIcon
 } from '@heroicons/react/24/outline';
-=======
 import { 
   Network, 
   Zap, 
@@ -49,7 +46,6 @@ import {
   ArrowRight,
   CheckCircle,
   Star,
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
   Network, 
@@ -90,7 +86,6 @@ import {
   Users2,
   Briefcase
 } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
   Network, 
@@ -121,7 +116,6 @@ import {
   Router,
   Satellite
 } from 'lucide-react';
-=======
   Users,
   TrendingUp,
   Award,
@@ -160,10 +154,8 @@ import {
   Smartphone,
   Car
 } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-
+import SEOHead from '../components/SEOHead.jsx';
 const FiveGEnterpriseSolutions = () => {
-=======
 import { 
   Wifi, 
   Shield, 
@@ -183,17 +175,14 @@ import {
   Clock,
   Target
 } from 'lucide-react';
-
 export default function FiveGEnterpriseSolutions() {
   const features = [
     {
       description: "Lightning-fast 5G networks with ultra-low latency for real-time applications"
-=======
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Shield, Users, TrendingUp, Globe, Lock, CheckCircle, Star, Cpu, Database, Building2, Network, Server, Monitor, Rocket, Code, Settings, Wifi, Signal, Smartphone, Cloud } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+import SEOHead from "../components/SEOHead.jsx";
 const FiveGEnterpriseSolutions = () => {
   const solutions = [
     {
@@ -236,7 +225,6 @@ const FiveGEnterpriseSolutions = () => {
       description: "Enterprise-grade security features built into 5G networks for data protection and compliance.",
       icon: Shield,
       description: "Advanced security protocols and private network solutions for enterprise needs"
-=======
       icon: Network,
       title: "Ultra-Fast Connectivity",
       description: "Lightning-fast 5G networks with speeds up to 10 Gbps for enterprise applications"
@@ -252,11 +240,8 @@ const FiveGEnterpriseSolutions = () => {
       icon: Shield,
       title: "Enterprise-Grade Security",
       description: "Advanced security protocols and encryption for sensitive business data"
-=======
       description: "Experience lightning-fast 5G speeds with ultra-low latency for seamless enterprise operations."
-=======
       description: "Ultra-low latency of less than 1ms for real-time applications and IoT devices"
-=======
       icon: Network,
       title: "Ultra-Fast Connectivity",
       description: "Lightning-fast 5G networks delivering unprecedented speed and low latency for enterprise applications."
@@ -270,7 +255,6 @@ const FiveGEnterpriseSolutions = () => {
       icon: Target,
       title: "Massive IoT Support",
       description: "Support for millions of connected devices with reliable, high-bandwidth connectivity."
-=======
       title: "Ultra-Fast Connectivity",
       description: "Lightning-fast 5G networks with ultra-low latency for enterprise applications",
       icon: Signal,
@@ -301,7 +285,6 @@ const FiveGEnterpriseSolutions = () => {
       icon: Database,
       title: "Massive IoT Support",
       description: "Support for millions of connected devices per square kilometer"
-=======
       description: "Advanced security protocols and network slicing for isolated, secure enterprise communications."
     },
     {
@@ -312,7 +295,6 @@ const FiveGEnterpriseSolutions = () => {
     {
       icon: Globe,
       title: "Global Coverage",
-=======
       icon: SignalIcon,
       title: "Ultra-Fast Connectivity",
       description: "Lightning-fast 5G networks with speeds up to 10 Gbps for enterprise applications and real-time operations."
@@ -341,7 +323,6 @@ const FiveGEnterpriseSolutions = () => {
       icon: ShieldCheckIcon,
       title: "Enhanced Security",
       description: "Enterprise-grade security with advanced encryption and threat protection for 5G networks."
-=======
       description: "Worldwide 5G network coverage with seamless roaming capabilities"
     },
     {
@@ -360,7 +341,6 @@ const FiveGEnterpriseSolutions = () => {
       description: "Seamless integration with existing enterprise infrastructure and systems"
     }
   ];
-
   const solutions = [
     {
       title: "5G Private Networks",
@@ -381,12 +361,10 @@ const FiveGEnterpriseSolutions = () => {
       title: "5G Network Optimization",
       description: "AI-powered network optimization for maximum performance and efficiency",
       features: ["Predictive maintenance", "Traffic optimization", "Resource allocation", "Performance monitoring"]
-=======
       features: ["End-to-end encryption", "Network authentication", "Zero trust architecture", "Compliance frameworks"],
       color: "from-yellow-500 to-orange-500"
     }
   ];
-
   const industries = [
     {
       name: "Manufacturing",
@@ -411,7 +389,6 @@ const FiveGEnterpriseSolutions = () => {
       description: "Smart grid management and renewable energy optimization",
       icon: Zap,
       applications: ["Grid monitoring", "Energy trading", "Predictive analytics", "Asset management"]
-=======
       description: "Worldwide 5G network coverage with seamless roaming and consistent performance."
     },
     {
@@ -423,13 +400,10 @@ const FiveGEnterpriseSolutions = () => {
       icon: Users,
       title: "Scalable Solutions",
       description: "Flexible infrastructure that grows with your business needs and user demands."
-=======
       description: "Worldwide 5G network coverage with seamless roaming capabilities"
-=======
   Clock,
   Target
 } from 'lucide-react';
-
 export default function FiveGEnterpriseSolutions() {
   const features = [
     {
@@ -451,15 +425,12 @@ export default function FiveGEnterpriseSolutions() {
       icon: Cpu,
       title: 'Edge Computing',
       description: 'Distributed edge computing for real-time data processing'
-=======
       description: "Worldwide 5G network coverage with seamless roaming and consistent performance."
-=======
       description: "Bank-grade security with advanced encryption and threat protection",
       icon: Shield,
       benefits: ["End-to-end encryption", "Threat detection", "Compliance ready"]
     }
   ];
-
   const solutions = [
     {
       title: "5G Private Networks",
@@ -484,7 +455,6 @@ export default function FiveGEnterpriseSolutions() {
       description: "Enterprise mobile solutions with 5G connectivity and security",
       icon: Smartphone,
       features: ["Mobile device management", "Secure connectivity", "App optimization", "Performance monitoring"]
-=======
       icon: Smartphone,
       title: "Mobile Workforce",
       description: "High-speed mobile connectivity for remote workers, field teams, and mobile applications."
@@ -515,9 +485,7 @@ export default function FiveGEnterpriseSolutions() {
       description: "High-speed interconnections between data centers and cloud infrastructure."
     }
   ];
-
   const benefits = [
-=======
     "Increase network speed by 100x compared to 4G",
     "Reduce latency by 90% for real-time applications",
     "Support 100x more connected devices per area",
@@ -525,7 +493,6 @@ export default function FiveGEnterpriseSolutions() {
     "Enable new enterprise applications and services",
     "Reduce infrastructure costs through virtualization"
   ];
-
   const useCases = [
     {
       description: "Worldwide 5G deployment with seamless roaming and connectivity"
@@ -534,7 +501,6 @@ export default function FiveGEnterpriseSolutions() {
       icon: BarChart3,
       title: "Network Analytics",
       description: "Advanced monitoring and analytics for optimal network performance"
-=======
       title: "Smart Manufacturing",
       description: "5G-powered smart factories with real-time monitoring, autonomous robots, and predictive maintenance."
     },
@@ -550,7 +516,6 @@ export default function FiveGEnterpriseSolutions() {
       title: "Smart Cities",
       description: "Intelligent city infrastructure with connected sensors, traffic management, and public safety systems."
     }
-=======
     "10x faster data transfer speeds",
     "99.9% network reliability",
     "50% reduction in operational costs",
@@ -558,7 +523,6 @@ export default function FiveGEnterpriseSolutions() {
     "Enhanced mobile workforce productivity",
     "Future-proof technology infrastructure"
   ];
-
   const solutions = [
     {
       metric: "Peak Data Rate",
@@ -583,7 +547,6 @@ export default function FiveGEnterpriseSolutions() {
     { icon: Cloud, title: "Edge Computing", description: "Process data closer to the source for faster insights" },
     { icon: Settings, title: "Network Flexibility", description: "Configurable network slices for different use cases" }
   ];
-
   const benefits = [
       title: "Smart Manufacturing",
       description: "5G-powered smart factories with real-time monitoring, autonomous robots, and predictive maintenance."
@@ -600,7 +563,6 @@ export default function FiveGEnterpriseSolutions() {
       title: "Smart Cities",
       description: "Intelligent city infrastructure with connected sensors, traffic management, and public safety systems."
     }
-=======
     "10x faster data transfer speeds compared to 4G",
     "99.9% network uptime guarantee",
     "24/7 enterprise support and monitoring",
@@ -608,7 +570,6 @@ export default function FiveGEnterpriseSolutions() {
     "Seamless integration with existing infrastructure",
     "Compliance with industry security standards"
   ];
-
   const networkMetrics = [
     {
       metric: "Peak Data Rate",
@@ -629,7 +590,6 @@ export default function FiveGEnterpriseSolutions() {
       metric: "Mobility",
       value: "500 km/h",
       description: "Maximum movement speed support"
-=======
       title: "Manufacturing",
       description: "Smart factories with real-time monitoring and automation",
       icon: Building,
@@ -652,7 +612,6 @@ export default function FiveGEnterpriseSolutions() {
       description: "Smart retail with personalized customer experiences",
       icon: ShoppingCart,
       benefits: ["Customer analytics", "Inventory management", "Personalized marketing", "Checkout optimization"]
-=======
       industry: 'Manufacturing',
       applications: ['Smart factories', 'Predictive maintenance', 'Quality control', 'Supply chain optimization']
     },
@@ -667,7 +626,6 @@ export default function FiveGEnterpriseSolutions() {
     {
       industry: 'Retail',
       applications: ['Smart stores', 'Inventory management', 'Customer analytics', 'Omnichannel experiences']
-=======
     "10x faster data transmission compared to 4G",
     "Ultra-low latency for real-time applications",
     "Massive IoT device support and management",
@@ -675,7 +633,6 @@ export default function FiveGEnterpriseSolutions() {
     "Scalable infrastructure for business growth",
     "Global coverage with seamless roaming"
   ];
-
   const capabilities = [
     {
       icon: Brain,
@@ -707,7 +664,6 @@ export default function FiveGEnterpriseSolutions() {
       title: "Performance Optimization",
       description: "Continuous optimization of network performance and user experience."
     }
-=======
       description: "Real-time monitoring and control of industrial IoT devices",
       icon: Settings,
       impact: "40% efficiency boost"
@@ -731,14 +687,12 @@ export default function FiveGEnterpriseSolutions() {
       impact: "30% cost reduction"
     }
   ];
-
   const stats = [
     { icon: Users, value: "500+", label: "Enterprise Clients", description: "Trusted by Fortune 500 companies" },
     { icon: TrendingUp, value: "10x", label: "Speed Increase", description: "Compared to 4G networks" },
     { icon: Award, value: "99.9%", label: "Uptime", description: "Enterprise-grade reliability" },
     { icon: Globe, value: "25+", label: "Countries", description: "Global 5G deployment" }
   ];
-
   const industries = [
     {
       title: "Manufacturing",
@@ -771,10 +725,8 @@ export default function FiveGEnterpriseSolutions() {
       description: "High-frequency trading and financial services"
     }
   ];
-=======
 import { Link } from 'react-router-dom';
 import { Network, Zap, Shield, ArrowRight, Users, Target, Clock, BarChart3, Globe, Cpu } from 'lucide-react';
-
   const solutions = [
     {
       title: "Private 5G Networks",
@@ -795,12 +747,10 @@ import { Network, Zap, Shield, ArrowRight, Users, Target, Clock, BarChart3, Glob
       title: "IoT Integration",
       description: "Seamless connectivity for smart devices",
       icon: Wifi
-=======
       metric: "Mobility",
       value: "500 km/h",
       description: "Maximum movement speed support"
     }
-=======
     "10x faster than 4G networks",
     "Ultra-low latency for real-time applications",
     "Massive IoT device connectivity",
@@ -808,7 +758,6 @@ import { Network, Zap, Shield, ArrowRight, Users, Target, Clock, BarChart3, Glob
     "Network slicing for different use cases",
     "Improved energy efficiency"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Helmet>
@@ -817,7 +766,6 @@ import { Network, Zap, Shield, ArrowRight, Users, Target, Clock, BarChart3, Glob
         <meta name="keywords" content="5G enterprise, 5G solutions, enterprise 5G, 5G networks, 5G private networks, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/5g-enterprise-solutions" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -836,7 +784,6 @@ import { Network, Zap, Shield, ArrowRight, Users, Target, Clock, BarChart3, Glob
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
               Transform your enterprise with cutting-edge 5G technology. Experience ultra-fast connectivity, 
               ultra-low latency, and massive IoT capabilities for the next generation of business operations.
-=======
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -851,12 +798,9 @@ import { Network, Zap, Shield, ArrowRight, Users, Target, Clock, BarChart3, Glob
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
               Transform your enterprise with cutting-edge 5G technology. Experience ultra-fast connectivity, 
               ultra-low latency, and massive IoT support for the next generation of business operations.
-=======
 import { Network, Zap, Shield, ArrowRight, Users, Target, Clock, BarChart3, Globe, Cpu } from 'lucide-react';
-
 export default function FiveGEnterpriseSolutions() {
   return (
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -892,7 +836,6 @@ export default function FiveGEnterpriseSolutions() {
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
               Transform your business with next-generation 5G connectivity. 
               Experience ultra-fast speeds, ultra-low latency, and enterprise-grade security.
-=======
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -907,14 +850,12 @@ export default function FiveGEnterpriseSolutions() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business with next-generation 5G technology. 
               Ultra-fast connectivity, enterprise-grade security, and seamless integration.
-=======
-import { SEOHead } from '../components/SEOHead';
+import SEOHead from '../components/SEOHead.jsx';
 import { Link } from 'react-router-dom';
 import { Network, Zap, Shield, Cpu, Globe, Users, Target, BarChart3, Cloud, Lock, Wifi, Smartphone } from 'lucide-react';
-
 const FiveGEnterpriseSolutions = () => {
   return (
-    <>
+<>
       <SEOHead 
         title="5G Enterprise Solutions - Zion Tech Group"
         description="Transform your enterprise with cutting-edge 5G technology solutions. High-speed connectivity, low latency, and massive IoT support for modern businesses."
@@ -958,7 +899,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* Key Benefits Section */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -971,7 +911,6 @@ const FiveGEnterpriseSolutions = () => {
                 how your business operates and serves customers.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
@@ -983,7 +922,6 @@ const FiveGEnterpriseSolutions = () => {
                   enabling instant file transfers and seamless streaming.
                 </p>
               </div>
-
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
                   <Target className="w-6 h-6 text-white" />
@@ -994,7 +932,6 @@ const FiveGEnterpriseSolutions = () => {
                   remote surgery, and instant gaming experiences.
                 </p>
               </div>
-
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <Globe className="w-6 h-6 text-white" />
@@ -1005,7 +942,6 @@ const FiveGEnterpriseSolutions = () => {
                   comprehensive smart city and industrial IoT deployments.
                 </p>
               </div>
-
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-yellow-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
                   <Shield className="w-6 h-6 text-white" />
@@ -1016,7 +952,6 @@ const FiveGEnterpriseSolutions = () => {
                   for sensitive business communications and data.
                 </p>
               </div>
-
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <Cpu className="w-6 h-6 text-white" />
@@ -1027,7 +962,6 @@ const FiveGEnterpriseSolutions = () => {
                   ensuring optimal performance for critical applications.
                 </p>
               </div>
-
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-indigo-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                   <BarChart3 className="w-6 h-6 text-white" />
@@ -1041,7 +975,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-16 bg-gray-800/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1054,7 +987,6 @@ const FiveGEnterpriseSolutions = () => {
                 new opportunities for business innovation and growth.
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -1069,7 +1001,6 @@ const FiveGEnterpriseSolutions = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Cloud className="w-4 h-4 text-white" />
@@ -1082,7 +1013,6 @@ const FiveGEnterpriseSolutions = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Users className="w-4 h-4 text-white" />
@@ -1096,7 +1026,6 @@ const FiveGEnterpriseSolutions = () => {
                   </div>
                 </div>
               </div>
-
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -1110,7 +1039,6 @@ const FiveGEnterpriseSolutions = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Lock className="w-4 h-4 text-white" />
@@ -1123,7 +1051,6 @@ const FiveGEnterpriseSolutions = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Network className="w-4 h-4 text-white" />
@@ -1140,7 +1067,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* Solutions Section */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1153,7 +1079,6 @@ const FiveGEnterpriseSolutions = () => {
                 from infrastructure deployment to application development.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 rounded-xl p-8 border border-blue-500/30">
                 <h3 className="text-2xl font-bold text-white mb-4">5G Infrastructure</h3>
@@ -1176,7 +1101,6 @@ const FiveGEnterpriseSolutions = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 rounded-xl p-8 border border-green-500/30">
                 <h3 className="text-2xl font-bold text-white mb-4">5G Applications</h3>
                 <ul className="space-y-3 text-gray-300">
@@ -1201,7 +1125,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 bg-gray-800/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -1211,15 +1134,13 @@ const FiveGEnterpriseSolutions = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join forward-thinking organizations that are already leveraging 5G technology 
               to gain competitive advantages and drive innovation.
-=======
-    <>
+<>
       <Helmet>
         <title>5G Enterprise Solutions - Zion Tech Group</title>
         <meta name="description" content="Revolutionary 5G enterprise solutions that deliver ultra-fast connectivity, ultra-low latency, and massive IoT support. Transform your business with next-generation 5G technology." />
         <meta name="keywords" content="5G enterprise, 5G solutions, enterprise connectivity, 5G networks, IoT connectivity, network infrastructure" />
         <link rel="canonical" href="https://ziontechgroup.com/5g-enterprise-solutions" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -1244,14 +1165,11 @@ const FiveGEnterpriseSolutions = () => {
               Experience the future of enterprise connectivity with our revolutionary 5G solutions. 
               Ultra-fast speeds, ultra-low latency, and massive IoT support for the next generation 
               of business applications.
-=======
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-=======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg text-white font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-200 transform hover:scale-105"
-=======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg text-white font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-200 transform hover:scale-105"
               >
                 Get Started
@@ -1263,8 +1181,6 @@ const FiveGEnterpriseSolutions = () => {
               >
                 View All Services
               </Link>
-=======
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       <Helmet>
         <title>5G Enterprise Solutions - Zion Tech Group</title>
@@ -1272,7 +1188,6 @@ const FiveGEnterpriseSolutions = () => {
         <meta name="keywords" content="5G enterprise, 5G solutions, network infrastructure, IoT connectivity, low latency, enterprise networking" />
         <link rel="canonical" href="https://ziontechgroup.com/5g-enterprise-solutions" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1292,7 +1207,6 @@ const FiveGEnterpriseSolutions = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Network Assessment
-=======
               <div className="p-3 bg-blue-500/20 rounded-full">
                 <Network className="h-12 w-12 text-blue-300" />
               </div>
@@ -1306,7 +1220,6 @@ const FiveGEnterpriseSolutions = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Get Started
-=======
               <button className="px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-teal-500/25">
                 Start Free Trial
               </button>
@@ -1330,8 +1243,6 @@ const FiveGEnterpriseSolutions = () => {
               >
                 Learn More
               </Link>
-=======
-=======
                 to="/services/it-infrastructure"
                 className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-200"
               >
@@ -1345,7 +1256,6 @@ const FiveGEnterpriseSolutions = () => {
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-zion-blue transition-all duration-300"
               >
                 Schedule Demo
-=======
               </Link>
             </div>
           </div>
@@ -1354,7 +1264,6 @@ const FiveGEnterpriseSolutions = () => {
         <div className="absolute top-20 left-10 w-20 h-20 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-zion-purple/20 rounded-full blur-xl animate-pulse delay-1000"></div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-4">
@@ -1369,8 +1278,8 @@ const FiveGEnterpriseSolutions = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <>
-      <SEO 
+<>
+      <SEOHead 
         title="5G Enterprise Solutions | Next-Generation Connectivity"
         description="Transform your business with Zion Tech Group's 5G enterprise solutions. Private networks, edge computing, IoT integration, and industrial automation."
         keywords="5G enterprise, private 5G networks, edge computing, industrial automation, network slicing, 5G security"
@@ -1437,11 +1346,9 @@ const FiveGEnterpriseSolutions = () => {
                   Request Demo
                 </Link>
               </motion.div>
-=======
             </div>
           </div>
         </motion.section>
-
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -1460,7 +1367,6 @@ const FiveGEnterpriseSolutions = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <Users className="w-4 h-4 text-white" />
@@ -1472,7 +1378,6 @@ const FiveGEnterpriseSolutions = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <Network className="w-4 h-4 text-white" />
@@ -1485,7 +1390,6 @@ const FiveGEnterpriseSolutions = () => {
                 </div>
               </div>
             </div>
-
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -1498,7 +1402,6 @@ const FiveGEnterpriseSolutions = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <Cpu className="w-4 h-4 text-white" />
@@ -1510,7 +1413,6 @@ const FiveGEnterpriseSolutions = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <Globe className="w-4 h-4 text-white" />
@@ -1526,7 +1428,6 @@ const FiveGEnterpriseSolutions = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1544,7 +1445,6 @@ const FiveGEnterpriseSolutions = () => {
               advanced enterprise features to deliver unprecedented connectivity and performance.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -1558,7 +1458,6 @@ const FiveGEnterpriseSolutions = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
-=======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Get Started
@@ -1574,7 +1473,6 @@ const FiveGEnterpriseSolutions = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1595,9 +1493,7 @@ const FiveGEnterpriseSolutions = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
-=======
         </section>
-
         {/* Features Section */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1629,7 +1525,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 relative bg-gray-900/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1661,7 +1556,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* Capabilities Section */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1693,7 +1587,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 relative bg-gray-900/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1736,7 +1629,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
         <div className="container mx-auto px-4">
@@ -1775,8 +1667,6 @@ const FiveGEnterpriseSolutions = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-=======
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -1794,7 +1684,6 @@ const FiveGEnterpriseSolutions = () => {
               enterprise solutions that enable the future of business.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -1811,7 +1700,6 @@ const FiveGEnterpriseSolutions = () => {
                 ))}
               </ul>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -1853,7 +1741,6 @@ const FiveGEnterpriseSolutions = () => {
                 <p className="text-gray-400">{feature.description}</p>
               </div>
             ))}
-=======
             {useCases.map((useCase, index) => {
               const Icon = useCase.icon;
               return (
@@ -1870,7 +1757,6 @@ const FiveGEnterpriseSolutions = () => {
                   <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
                     {useCase.description}
                   </p>
-=======
         
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 animate-float">
@@ -1883,7 +1769,6 @@ const FiveGEnterpriseSolutions = () => {
           <div className="w-3 h-3 bg-indigo-400 rounded-full opacity-60"></div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1904,7 +1789,6 @@ const FiveGEnterpriseSolutions = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-=======
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1934,7 +1818,6 @@ const FiveGEnterpriseSolutions = () => {
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1970,7 +1853,6 @@ const FiveGEnterpriseSolutions = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1999,12 +1881,10 @@ const FiveGEnterpriseSolutions = () => {
                   <p className="text-lg text-gray-700">{benefit}</p>
                 </div>
               ))}
-=======
             </div>
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -2022,7 +1902,6 @@ const FiveGEnterpriseSolutions = () => {
               enable revolutionary applications across all industries.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Solutions Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -2041,7 +1920,6 @@ const FiveGEnterpriseSolutions = () => {
                 Our enterprise 5G solutions are designed to meet the unique needs of modern businesses
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {solutions.map((solution, index) => {
                 const Icon = solution.icon;
@@ -2073,7 +1951,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -2091,7 +1968,6 @@ const FiveGEnterpriseSolutions = () => {
                 Discover the transformative advantages of 5G technology for your business
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => {
                 const Icon = benefit.icon;
@@ -2115,7 +1991,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* Industry Applications */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -2133,7 +2008,6 @@ const FiveGEnterpriseSolutions = () => {
                 5G technology is transforming industries across the board
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {industries.map((industry, index) => {
                 const Icon = industry.icon;
@@ -2169,7 +2043,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -2229,7 +2102,6 @@ const FiveGEnterpriseSolutions = () => {
                     </li>
                   ))}
                 </ul>
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -2252,11 +2124,9 @@ const FiveGEnterpriseSolutions = () => {
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
-=======
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -2277,7 +2147,6 @@ const FiveGEnterpriseSolutions = () => {
               >
                 <Star className="w-6 h-6 text-cyan-400 mr-3 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
-=======
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2307,8 +2176,6 @@ const FiveGEnterpriseSolutions = () => {
                   ))}
                 </div>
               </div>
-=======
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -2317,7 +2184,6 @@ const FiveGEnterpriseSolutions = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-=======
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2330,10 +2196,8 @@ const FiveGEnterpriseSolutions = () => {
               enable revolutionary applications across all industries.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             ))}
-=======
             <div className="bg-gradient-to-r from-blue-500/10 to-cyan-600/10 rounded-2xl p-8 border border-blue-500/20">
               <h3 className="text-2xl font-semibold text-white mb-4">Operational Excellence</h3>
               <ul className="space-y-3 text-gray-300">
@@ -2355,7 +2219,6 @@ const FiveGEnterpriseSolutions = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-r from-green-500/10 to-emerald-600/10 rounded-2xl p-8 border border-green-500/20">
               <h3 className="text-2xl font-semibold text-white mb-4">Competitive Advantage</h3>
               <ul className="space-y-3 text-gray-300">
@@ -2380,7 +2243,6 @@ const FiveGEnterpriseSolutions = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -2389,7 +2251,6 @@ const FiveGEnterpriseSolutions = () => {
           <p className="text-xl text-gray-300 mb-8">
             Join the 5G revolution and unlock unprecedented business opportunities. 
             Our expert team is ready to help you implement cutting-edge 5G solutions.
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -2426,7 +2287,6 @@ const FiveGEnterpriseSolutions = () => {
                 View Pricing
               </Link>
             </div>
-=======
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Schedule Consultation
@@ -2441,7 +2301,6 @@ const FiveGEnterpriseSolutions = () => {
           </div>
         </div>
       </section>
-=======
       {/* Industries Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2467,7 +2326,6 @@ const FiveGEnterpriseSolutions = () => {
           </div>
         </div>
       </section>
-=======
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -2492,8 +2350,7 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-=======
-    <>
+<>
       <SEOHead 
         customData={{
           title: "5G Enterprise Solutions - Zion Tech Group",
@@ -2547,7 +2404,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -2581,7 +2437,6 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
@@ -2614,13 +2469,11 @@ const FiveGEnterpriseSolutions = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform with 5G?
-=======
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2650,7 +2503,6 @@ const FiveGEnterpriseSolutions = () => {
         </div>
       </section>
     </div>
-=======
                 className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your 5G Journey
@@ -2665,13 +2517,12 @@ const FiveGEnterpriseSolutions = () => {
           </div>
         </section>
       </div>
-    </>
+</>
   );
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Consultation
               <ArrowRight className="ml-2 w-5 h-5" />
-=======
               to="/cybersecurity"
               className="group p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 dark:border-slate-600"
             >
@@ -2689,7 +2540,6 @@ const FiveGEnterpriseSolutions = () => {
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
-
             <Link
               to="/it-infrastructure"
               className="group p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 dark:border-slate-600"
@@ -2714,8 +2564,6 @@ const FiveGEnterpriseSolutions = () => {
             >
               Explore All Services
             </Link>
-=======
-=======
       {/* Technology Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -2733,7 +2581,6 @@ const FiveGEnterpriseSolutions = () => {
               reliability, and future-proof enterprise solutions.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -2745,7 +2592,6 @@ const FiveGEnterpriseSolutions = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Network Slicing</h3>
               <p className="text-gray-300">Customized network segments for different enterprise applications</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -2756,7 +2602,6 @@ const FiveGEnterpriseSolutions = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Edge Computing</h3>
               <p className="text-gray-300">Distributed computing for ultra-low latency applications</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -2778,7 +2623,6 @@ const FiveGEnterpriseSolutions = () => {
               Transform your business operations with 5G technology
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-r from-blue-500/10 to-cyan-600/10 rounded-2xl p-8 border border-blue-500/20">
               <h3 className="text-2xl font-semibold text-white mb-4">Operational Excellence</h3>
@@ -2801,7 +2645,6 @@ const FiveGEnterpriseSolutions = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-gradient-to-r from-green-500/10 to-emerald-600/10 rounded-2xl p-8 border border-green-500/20">
               <h3 className="text-2xl font-semibold text-white mb-4">Competitive Advantage</h3>
               <ul className="space-y-3 text-gray-300">
@@ -2823,7 +2666,6 @@ const FiveGEnterpriseSolutions = () => {
                 </li>
               </ul>
             </div>
-=======
           </div>
         </div>
       </section>
@@ -2836,7 +2678,6 @@ const FiveGEnterpriseSolutions = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join the future of enterprise connectivity. Our experts are ready to help you implement 
               cutting-edge 5G solutions that will drive your business forward.
-=======
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-blue-500/10 to-cyan-600/10 rounded-2xl p-12 text-center border border-blue-500/20">
@@ -2866,12 +2707,9 @@ const FiveGEnterpriseSolutions = () => {
         </div>
       </section>
     </div>
-=======
         </section>
       </div>
-    </>
-=======
+</>
     </div>
   );
-=======
 }

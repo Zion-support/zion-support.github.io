@@ -1,14 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { Search as SearchIcon, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
 interface SearchResult {
   title: string
   description: string
   url: string
   category: string
 }
-
 const searchData: SearchResult[] = [
   {
     title: 'AI Autonomous Systems',
@@ -35,24 +33,20 @@ const searchData: SearchResult[] = [
     category: 'Company'
   }
 ]
-
 export default function Search() {
   const [isOpen, setIsOpen] = useState(false)
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
   const searchRef = useRef<HTMLDivElement>(null)
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false)
       }
     }
-
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
-
   useEffect(() => {
     if (query.trim()) {
       const filtered = searchData.filter(item =>
@@ -65,20 +59,17 @@ export default function Search() {
       setResults([])
     }
   }, [query])
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
     if (query.trim()) {
       // Search logic is handled by useEffect
     }
   }
-
   const clearSearch = () => {
     setQuery('')
     setResults([])
     setIsOpen(false)
   }
-
   return (
     <div className="relative" ref={searchRef}>
       {/* Search Button */}
@@ -89,7 +80,6 @@ export default function Search() {
       >
         <SearchIcon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
       </button>
-
       {/* Search Modal */}
       {isOpen && (
         <div className="absolute right-0 top-12 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 z-50">
@@ -114,7 +104,6 @@ export default function Search() {
                 </button>
               )}
             </form>
-
             {/* Search Results */}
             {results.length > 0 && (
               <div className="mt-4 max-h-64 overflow-y-auto">
@@ -138,7 +127,6 @@ export default function Search() {
                 ))}
               </div>
             )}
-
             {query && results.length === 0 && (
               <div className="mt-4 text-center text-gray-500 dark:text-gray-400 py-4">
                 No results found for "{query}"

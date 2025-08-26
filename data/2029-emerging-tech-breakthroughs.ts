@@ -9,10 +9,8 @@ export interface EmergingTechBreakthrough2029 {
   category: string;
   technology: string[];
 }
-
 export const emergingTechBreakthroughs2029: EmergingTechBreakthrough2029[] = [
   {
-=======
   description: string;
   features: string[];
   link: string;
@@ -24,7 +22,6 @@ export const emergingTechBreakthroughs2029: EmergingTechBreakthrough2029[] = [
     address: string;
   };
 }
-
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
   {
     id: "2029-emerging-tech-breakthrough",

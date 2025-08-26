@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
+import SEOHead from "../components/SEOHead.jsx";
 import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
@@ -160,7 +160,7 @@ export default function CommunityPage() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("categories");
     return (<>
-      <SEO title="Community Forum | Zion AI Marketplace" description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals." keywords="community, forum, discussion, AI marketplace, questions, answers" canonical="https://ziontechgroup.com/community"/>
+      <SEOHead title="Community Forum | Zion AI Marketplace" description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals." keywords="community, forum, discussion, AI marketplace, questions, answers" canonical="https://ziontechgroup.com/community"/>
       
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">

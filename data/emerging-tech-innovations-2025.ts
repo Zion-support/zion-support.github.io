@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EmergingTechInnovation2025 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface EmergingTechInnovation2025 {
   rating: number;
   reviews: number;
 }
-
 export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
   // Neuromorphic Computing
   {

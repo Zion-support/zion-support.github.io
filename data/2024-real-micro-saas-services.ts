@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 export interface RealMicroSaasService2024 {
   id: string;
   name: string;
@@ -11,86 +9,11 @@ export interface RealMicroSaasService2024 {
   rating: number;
   customers: string;
 }
-
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
   {
-<<<<<<< HEAD
-    id: 'ai-content-generator-2024',
-    name: 'AI Content Generator 2024',
-    tagline: 'Generate high-quality content with AI',
-    price: '$99',
-    variant: 'ai',
-    features: ['AI-powered content creation', 'SEO optimization', 'Multi-language support'],
-    rating: 4.8,
-    customers: '500+'
-<<<<<<< HEAD
-=======
-=======
-    id: 'ai-business-intelligence-pro',
-    name: 'AI Business Intelligence Pro',
-    tagline: 'Transform data into actionable insights with AI',
-    price: '$299',
-    period: '/month',
-    description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.',
-    features: [
-      'AI-powered data analysis and insights',
-      'Real-time dashboard with 50+ customizable widgets',
-      'Predictive analytics and forecasting',
-      'Automated report generation and scheduling',
-      'Multi-source data integration (CRM, ERP, Analytics)',
-      'Natural language query interface',
-      'Mobile-responsive design',
-      'White-label solution for agencies',
-      'API access for custom integrations',
-      'Advanced security and compliance (SOC 2, GDPR)'
-    ],
-    popular: true,
-    icon: '📊',
-    color: 'from-blue-500 to-cyan-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-business-intelligence-pro',
-    marketPosition: 'Competitive with Tableau ($70/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI-powered insights, lower cost, and easier setup.',
-    targetAudience: 'Small to medium businesses, Marketing agencies, E-commerce companies, SaaS businesses, Consultants, Financial services',
-    trialDays: 14,
-    setupTime: '15 minutes',
-    category: 'Business Intelligence & Analytics',
-    realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS'],
-    integrations: ['Salesforce, HubSpot, Shopify, Google Analytics, Stripe, Zapier'],
-    useCases: ['Sales performance analysis, Marketing ROI tracking, Customer behavior insights, Financial forecasting, Operational efficiency optimization'],
-    roi: 'Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency.',
-    competitors: ['Tableau, Power BI, Looker, Sisense, Domo'],
-    marketSize: '$23.1B market',
-    growthRate: '12.3% annual growth',
-    variant: 'ai-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Fully functional SaaS platform with real-time data processing, AI models for predictive analytics, and comprehensive reporting capabilities.',
-    launchDate: '2024-03-15',
-    customers: 1800,
-    rating: 4.9,
-    reviews: 890
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   },
-
   // AI Customer Success Automation
   {
-<<<<<<< HEAD
-    id: 'quantum-security-2024',
-    name: 'Quantum Security Platform 2024',
-    tagline: 'Next-generation quantum security',
-    price: '$299',
-    variant: 'security',
-    features: ['Quantum encryption', 'Advanced threat detection', 'Compliance tools'],
-    rating: 4.9,
-    customers: '200+'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
     id: 'ai-customer-success-automation',
     name: 'AI Customer Success Automation',
     tagline: 'Automate customer success with intelligent workflows',
@@ -141,7 +64,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.7,
     reviews: 650
   },
-
   // Quantum-Secure Communication Platform
   {
     id: 'quantum-secure-communication',
@@ -194,7 +116,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.8,
     reviews: 420
   },
-
   // Blockchain Supply Chain Transparency
   {
     id: 'blockchain-supply-chain-transparency',
@@ -247,7 +168,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.6,
     reviews: 320
   },
-
   // AI-Powered SEO Automation
   {
     id: 'ai-seo-automation-pro',
@@ -300,7 +220,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.8,
     reviews: 1100
   },
-
   // AI-Powered Social Media Management
   {
     id: 'ai-social-media-manager',
@@ -353,7 +272,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.7,
     reviews: 950
   },
-
   // AI-Powered Email Marketing Automation
   {
     id: 'ai-email-marketing-automation',
@@ -406,7 +324,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.8,
     reviews: 1300
   },
-
   // AI-Powered Customer Support Automation
   {
     id: 'ai-customer-support-automation',
@@ -459,7 +376,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.7,
     reviews: 820
   },
-
   // AI-Powered Project Management
   {
     id: 'ai-project-management-pro',
@@ -511,6 +427,5 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     customers: 1900,
     rating: 4.8,
     reviews: 1050
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

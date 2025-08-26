@@ -14,7 +14,6 @@ export interface Innovative2025Service {
     address: string;
   };
 }
-
 export const innovative2025Services: Innovative2025Service[] = [
   {
     id: "ai-innovation-hub",

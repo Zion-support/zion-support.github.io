@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2026FintechBlockchainService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2026FintechBlockchainService {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2026FintechBlockchainServices: Revolutionary2026FintechBlockchainService[] = [
   // Autonomous Supply Chain Optimization AI
   {
@@ -94,7 +92,6 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     rating: 4.7,
     reviews: 234
   },
-
   // Autonomous Marketing AI Platform
   {
     id: 'autonomous-marketing-ai-platform',
@@ -147,7 +144,6 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     rating: 4.8,
     reviews: 456
   },
-
   // AI Cybersecurity Platform
   {
     id: 'ai-cybersecurity-platform',
@@ -200,7 +196,6 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     rating: 4.9,
     reviews: 234
   },
-
   // Autonomous Business Intelligence Network
   {
     id: 'autonomous-business-intelligence-network',
@@ -253,7 +248,6 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     rating: 4.7,
     reviews: 345
   },
-
   // Quantum Blockchain Infrastructure Platform
   {
     id: 'quantum-blockchain-infrastructure-platform',

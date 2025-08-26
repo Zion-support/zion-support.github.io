@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
-import { SEO } from "@/components/SEO";
+import SEOHead from "../components/SEOHead.jsx";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -68,7 +68,7 @@ export default function ProfileDetail() {
       </div>);
     }
     return (<>
-      <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
+      <SEOHead title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
       
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
@@ -107,7 +107,6 @@ export default function ProfileDetail() {
                 </div>
               </CardContent>
             </Card>
-
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -117,7 +116,6 @@ export default function ProfileDetail() {
                 <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
               </CardContent>
             </Card>
-
             {/* Skills Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -129,7 +127,6 @@ export default function ProfileDetail() {
                 </div>
               </CardContent>
             </Card>
-
             {/* Experience Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -144,7 +141,6 @@ export default function ProfileDetail() {
                     </div>))) : (<p className="text-zion-slate-light">No experience provided.</p>)}
               </CardContent>
             </Card>
-
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -160,7 +156,6 @@ export default function ProfileDetail() {
               </CardContent>
             </Card>
           </div>
-
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA talentProfile={{
@@ -189,7 +184,6 @@ export default function ProfileDetail() {
                   </div>)}
               </div>
             </div>
-
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>

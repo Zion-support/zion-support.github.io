@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Users, Globe, Cpu, Brain, Atom, Sparkles } from 'lucide-react';
 import Button from './Button';
-
 interface EnhancedFuturisticServiceCardProps {
   service: {
     id: string;
@@ -34,7 +33,6 @@ interface EnhancedFuturisticServiceCardProps {
     website: string;
   };
 }
-
 export default function EnhancedFuturisticServiceCard({ service, index, contactInfo }: EnhancedFuturisticServiceCardProps) {
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI')) return Brain;
@@ -45,9 +43,7 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
     if (category.includes('Cloud')) return Globe;
     return Zap;
   };
-
   const CategoryIcon = getCategoryIcon(service.category);
-
   const cardVariants = {
     hidden: { 
       opacity: 0, 
@@ -74,7 +70,6 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
       }
     }
   };
-
   const iconVariants = {
     hidden: { scale: 0, rotate: -180 },
     visible: { 
@@ -91,7 +86,6 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
       transition: { duration: 0.2 }
     }
   };
-
   const featureVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
@@ -103,7 +97,6 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
       }
     })
   };
-
   return (
     <motion.div
       variants={cardVariants}
@@ -121,7 +114,6 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]" />
         </div>
-
         {/* Service Icon */}
         <motion.div 
           variants={iconVariants}
@@ -144,7 +136,6 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
             </div>
           </motion.div>
         )}
-
         <div className="relative p-8 h-full flex flex-col">
           {/* Service Header */}
           <div className="mb-6">
@@ -173,12 +164,10 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
               <span className="text-gray-400 ml-2 text-lg">{service.period}</span>
             </div>
           </div>
-
           {/* Description */}
           <p className="text-gray-300 text-sm mb-6 leading-relaxed flex-grow">
             {service.description}
           </p>
-
           {/* Features */}
           <div className="mb-6">
             <h4 className="text-sm font-semibold text-white mb-4 flex items-center">
@@ -204,7 +193,6 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
               </p>
             )}
           </div>
-
           {/* Technology & Stats */}
           <div className="mb-6 space-y-3">
             <div className="flex items-center justify-between text-xs">
@@ -224,7 +212,6 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
                 <div className="text-blue-400 font-bold">{service.marketSize}</div>
               </div>
             </div>
-
             <div className="flex items-center justify-between text-xs">
               <div className="flex items-center">
                 <Users className="w-3 h-3 text-gray-400 mr-1" />
@@ -237,7 +224,6 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
               </div>
             </div>
           </div>
-
           {/* Action Buttons */}
           <div className="flex gap-3 mt-auto">
             <Button
@@ -260,7 +246,6 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
               <span className="sm:hidden">📧</span>
             </Button>
           </div>
-
           {/* Contact Info */}
           <div className="mt-4 pt-4 border-t border-gray-700/50">
             <div className="flex items-center justify-between text-xs text-gray-500">
@@ -272,7 +257,6 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
             </div>
           </div>
         </div>
-
         {/* Hover effects */}
         <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         

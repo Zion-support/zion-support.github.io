@@ -1,26 +1,26 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+    Calendar,
+    User,
+    Tag,
+    ArrowRight,
+    Search,
+    Filter,
+    Clock,
+    Eye,
+    ExternalLink,
+    TrendingUp,
+    Award,
+    Globe
+} from 'lucide-react';
+
 const News = () => {
     const fadeInUp = {
         initial: { opacity: 0, y: 60 },
         animate: { opacity: 1, y: 0 },
         transition: { duration: 0.6 }
     };
-    const categories = [
-        Calendar,
-        User,
-        Tag,
-        ArrowRight,
-        Search,
-        Filter,
-        Clock,
-        Eye,
-        ExternalLink,
-        TrendingUp,
-        Award,
-        Globe
-    ];
-}, from;
-'lucide-react';
-export default function News() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('All');
     const categories = [

@@ -1,155 +1,165 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
-  ArrowRight, 
-  ExternalLink, 
-  Home, 
-  Users, 
-  Briefcase, 
-  FileText, 
-  HelpCircle,
+  MapPin, 
+  Building, 
+  Cog, 
+  BookOpen, 
+  Shield, 
+  ArrowRight,
+  Search,
   Globe,
-  Shield,
-  Settings
+  Users,
+  Rocket
 } from 'lucide-react';
 
-export default function Sitemap() {
+const Sitemap: React.FC = () => {
   const sitemapSections = [
     {
-      title: "Main Pages",
-      icon: Home,
+      title: "Company",
+      icon: <Building className="w-6 h-6" />,
       links: [
-        { name: "Home", path: "/", description: "Main landing page" },
-        { name: "About Us", path: "/about", description: "Company information and mission" },
+        { name: "About Us", path: "/about", description: "Learn about Zion Tech Group" },
+        { name: "Our Team", path: "/team", description: "Meet our leadership team" },
+        { name: "Careers", path: "/careers", description: "Join our team" },
         { name: "Contact", path: "/contact", description: "Get in touch with us" },
-        { name: "Blog", path: "/blog", description: "Latest news and insights" }
+        { name: "Partners", path: "/partners", description: "Strategic partnerships" }
       ]
     },
     {
       title: "Services",
-      icon: Briefcase,
+      icon: <Cog className="w-6 h-6" />,
       links: [
-        { name: "AI Solutions", path: "/services/ai-solutions", description: "Artificial intelligence services" },
+        { name: "AI Services", path: "/services/ai", description: "Artificial Intelligence solutions" },
         { name: "Cloud Services", path: "/services/cloud", description: "Cloud computing solutions" },
         { name: "Cybersecurity", path: "/services/cybersecurity", description: "Security and compliance" },
         { name: "Digital Transformation", path: "/services/digital-transformation", description: "Business transformation" },
-        { name: "IT Infrastructure", path: "/services/it-infrastructure", description: "Infrastructure solutions" },
-        { name: "Consulting", path: "/services/consulting", description: "Strategic consulting services" }
-      ]
-    },
-    {
-      title: "Marketplace",
-      icon: Globe,
-      links: [
-        { name: "Find Talent", path: "/talent", description: "Browse AI and tech professionals" },
-        { name: "Browse Services", path: "/services", description: "Explore available services" },
-        { name: "Equipment Rental", path: "/equipment", description: "Rent tech equipment" },
-        { name: "Green IT", path: "/green-it", description: "Sustainable technology solutions" },
-        { name: "IT Onsite Services", path: "/it-onsite-services", description: "On-site IT support" }
-      ]
-    },
-    {
-      title: "Company",
-      icon: Users,
-      links: [
-        { name: "Partners", path: "/partners", description: "Strategic partnerships" },
-        { name: "Careers", path: "/careers", description: "Job opportunities" },
-        { name: "News", path: "/news", description: "Company updates" },
-        { name: "Press", path: "/press", description: "Press releases and media" }
+        { name: "Quantum Computing", path: "/services/quantum", description: "Next-gen computing" }
       ]
     },
     {
       title: "Resources",
-      icon: FileText,
+      icon: <BookOpen className="w-6 h-6" />,
       links: [
-        { name: "Help Center", path: "/help", description: "Support and documentation" },
-        { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
+        { name: "Blog", path: "/blog", description: "Latest insights and news" },
+        { name: "Case Studies", path: "/case-studies", description: "Success stories" },
         { name: "Documentation", path: "/docs", description: "Technical documentation" },
-        { name: "White Papers", path: "/white-papers", description: "Industry insights" },
-        { name: "Webinars", path: "/webinars", description: "Educational content" },
-        { name: "Training", path: "/training", description: "Learning resources" }
-      ]
-    },
-    {
-      title: "Support",
-      icon: HelpCircle,
-      links: [
-        { name: "Contact Support", path: "/support", description: "Get help from our team" },
-        { name: "System Status", path: "/status", description: "Platform status updates" },
-        { name: "Report Issue", path: "/report-issue", description: "Report bugs or problems" },
-        { name: "Feature Request", path: "/feature-request", description: "Suggest new features" }
+        { name: "Support", path: "/support", description: "Help and support" },
+        { name: "Training", path: "/training", description: "Professional development" }
       ]
     },
     {
       title: "Legal",
-      icon: Shield,
+      icon: <Shield className="w-6 h-6" />,
       links: [
         { name: "Privacy Policy", path: "/privacy", description: "Data protection and privacy" },
         { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
         { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" },
-        { name: "Accessibility", path: "/accessibility", description: "Accessibility statement" }
-      ]
-    },
-    {
-      title: "Settings",
-      icon: Settings,
-      links: [
-        { name: "Account Settings", path: "/account", description: "Manage your account" },
-        { name: "Profile", path: "/profile", description: "Update your profile" },
-        { name: "Preferences", path: "/preferences", description: "Customize your experience" },
-        { name: "Security", path: "/security", description: "Security settings" }
+        { name: "GDPR", path: "/gdpr", description: "Data protection compliance" }
       ]
     }
   ];
 
   const quickLinks = [
-    { name: "Get Started", path: "/contact", color: "from-zion-cyan to-zion-purple" },
-    { name: "View Services", path: "/services", color: "from-zion-blue-light to-zion-blue" },
-    { name: "Find Talent", path: "/talent", color: "from-zion-purple to-zion-purple-dark" },
-    { name: "About Us", path: "/about", color: "from-zion-slate to-zion-slate-dark" }
+    { name: "Home", path: "/", icon: <Globe className="w-4 h-4" /> },
+    { name: "Services", path: "/services", icon: <Cog className="w-4 h-4" /> },
+    { name: "About", path: "/about", icon: <Building className="w-4 h-4" /> },
+    { name: "Contact", path: "/contact", icon: <Users className="w-4 h-4" /> },
+    { name: "Blog", path: "/blog", icon: <BookOpen className="w-4 h-4" /> },
+    { name: "Careers", path: "/careers", icon: <Rocket className="w-4 h-4" /> },
+    { name: "Support", path: "/support", icon: <Shield className="w-4 h-4" /> },
+    { name: "Privacy", path: "/privacy", icon: <Shield className="w-4 h-4" /> }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <MapPin className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="futuristic-heading mb-6">
               Site <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Map</span>
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="futuristic-text text-xl mb-8 max-w-3xl mx-auto">
               Navigate through all our pages and services. Find everything you need about Zion Tech Group's 
               technology solutions, resources, and company information.
             </p>
-          </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => document.getElementById('quick-links')?.scrollIntoView({ behavior: 'smooth' })}
+                className="futuristic-button inline-flex items-center"
+              >
+                Quick Navigation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <a
+                href="/contact"
+                className="futuristic-button-outline inline-flex items-center"
+              >
+                Contact Us
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Sitemap Sections */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {sitemapSections.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="bg-zion-blue-light/10 rounded-xl p-6 border border-zion-blue-light/20">
-                <div className="flex items-center gap-3 mb-6 border-b border-zion-blue-light/20 pb-3">
-                  <div className="w-8 h-8 bg-zion-cyan/20 rounded-lg flex items-center justify-center">
-                    <section.icon className="w-4 h-4 text-zion-cyan" />
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="futuristic-heading text-3xl lg:text-4xl mb-4">
+              Complete Site Structure
+            </h2>
+            <p className="futuristic-text text-lg max-w-2xl mx-auto">
+              Explore our comprehensive site organization and find the information you need quickly and easily.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
+            {sitemapSections.map((section, index) => (
+              <motion.div
+                key={section.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="futuristic-card"
+              >
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="text-zion-cyan">
+                    {section.icon}
                   </div>
-                  <h2 className="text-2xl font-bold text-white">{section.title}</h2>
+                  <h2 className="text-2xl font-bold text-white">
+                    {section.title}
+                  </h2>
                 </div>
                 <div className="space-y-4">
-                  {section.links.map((link, linkIndex) => (
-                    <div key={linkIndex} className="group">
+                  {section.links.map((link) => (
+                    <div key={link.name} className="group">
                       <Link
                         to={link.path}
-                        className="block p-4 rounded-lg bg-zion-blue-light/5 hover:bg-zion-blue-light/10 transition-all duration-300 border border-transparent hover:border-zion-cyan/30"
+                        className="block p-4 rounded-lg bg-zion-slate-dark/50 hover:bg-zion-slate-dark/80 transition-all duration-300 border border-transparent hover:border-zion-cyan/30"
                       >
                         <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors duration-300 mb-2">
                           {link.name}
                         </h3>
-                        <p className="text-sm text-zion-slate-light group-hover:text-zion-slate-light/80 transition-colors duration-300">
+                        <p className="text-sm text-zion-slate-light group-hover:text-zion-slate-lighter transition-colors duration-300">
                           {link.description}
                         </p>
                         <div className="mt-3 flex items-center text-zion-cyan text-sm font-medium">
@@ -160,62 +170,134 @@ export default function Sitemap() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Quick Links Section */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Quick Navigation</h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Get to the most important pages quickly with these direct links.
+      <section id="quick-links" className="py-20 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="futuristic-heading text-3xl lg:text-4xl mb-4">
+              Quick Navigation
+            </h2>
+            <p className="futuristic-text text-lg max-w-2xl mx-auto">
+              Fast access to our most important pages and services.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {quickLinks.map((link, index) => (
-              <Link
-                key={index}
-                to={link.path}
-                className={`text-center p-4 bg-gradient-to-r ${link.color} rounded-lg text-white font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
-              >
-                {link.name}
-              </Link>
-            ))}
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="futuristic-card p-8"
+            >
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {quickLinks.map((link, index) => (
+                  <motion.div
+                    key={link.name}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <Link
+                      to={link.path}
+                      className="flex flex-col items-center p-4 rounded-lg bg-zion-slate-dark/30 hover:bg-zion-slate-dark/50 transition-all duration-300 border border-transparent hover:border-zion-cyan/30 group"
+                    >
+                      <div className="text-zion-cyan mb-2 group-hover:scale-110 transition-transform duration-300">
+                        {link.icon}
+                      </div>
+                      <span className="text-sm font-medium text-white group-hover:text-zion-cyan transition-colors duration-300 text-center">
+                        {link.name}
+                      </span>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Additional Resources */}
+      {/* Search Section */}
       <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Need Help Finding Something?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Can't find what you're looking for? Our team is here to help you navigate 
-            our platform and find the information you need.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
-            >
-              Contact Support
-            </Link>
-            <Link
-              to="/help"
-              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-medium"
-            >
-              Visit Help Center
-            </Link>
-          </div>
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center max-w-2xl mx-auto"
+          >
+            <h2 className="futuristic-heading text-3xl lg:text-4xl mb-6">
+              Can't Find What You're Looking For?
+            </h2>
+            <p className="futuristic-text text-lg mb-8">
+              Use our search functionality or contact our support team for assistance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="relative flex-1 max-w-md">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+                <input
+                  type="text"
+                  placeholder="Search our site..."
+                  className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark/50 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                />
+              </div>
+              <button className="futuristic-button px-8">
+                Search
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section py-20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Need Help Navigating?
+            </h2>
+            <p className="text-xl text-zion-slate-lighter mb-8 max-w-2xl mx-auto">
+              Our team is here to help you find the information you need and guide you through our services.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="futuristic-button inline-flex items-center"
+              >
+                Get in Touch
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/support"
+                className="futuristic-button-outline inline-flex items-center"
+              >
+                Support Center
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default Sitemap;

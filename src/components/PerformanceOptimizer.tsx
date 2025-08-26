@@ -1,306 +1,263 @@
-import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
-
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  const location = useLocation();
-
-  // Preload critical resources
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical CSS
-      const criticalCSS = document.createElement('link');
-      criticalCSS.rel = 'preload';
-      criticalCSS.as = 'style';
-      criticalCSS.href = '/src/index.css';
-      document.head.appendChild(criticalCSS);
-
-      // Preload critical fonts
-      const criticalFonts = document.createElement('link');
-      criticalFonts.rel = 'preload';
-      criticalFonts.as = 'font';
-      criticalFonts.href = '/fonts/inter-var.woff2';
-      criticalFonts.crossOrigin = 'anonymous';
-      document.head.appendChild(criticalFonts);
-    };
-
-    preloadCriticalResources();
-  }, []);
-
-  // Optimize images on route change
-  useEffect(() => {
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {
-        // Add loading="lazy" to images below the fold
-        if (img.getBoundingClientRect().top > window.innerHeight) {
-          img.loading = 'lazy';
-        }
-        
-        // Add decoding="async" for better performance
-        img.decoding = 'async';
-        
-        // Add error handling
-        img.onerror = () => {
-          img.style.display = 'none';
-        };
-      });
-    };
-
-    // Use requestIdleCallback for non-critical optimization
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(optimizeImages);
-    } else {
-      setTimeout(optimizeImages, 100);
-    }
-  }, [location.pathname]);
-
-  // Memoize expensive computations
-  const optimizedChildren = useMemo(() => children, [children]);
-
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events for better performance
-    if (!window.scrollTimeout) {
-      window.scrollTimeout = setTimeout(() => {
-        // Handle scroll-based optimizations here
-        window.scrollTimeout = null;
-      }, 16); // ~60fps
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
-  // Service Worker registration for caching
-  useEffect(() => {
-    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-      navigator.serviceWorker
-        .register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration);
-        })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
-        });
-    }
-  }, []);
-
-  // Intersection Observer for lazy loading
-  useEffect(() => {
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const target = entry.target as HTMLElement;
-              if (target.dataset.src) {
-                target.src = target.dataset.src;
-                target.removeAttribute('data-src');
-                observer.unobserve(target);
-              }
-            }
-          });
-        },
-        {
-          rootMargin: '50px',
-          threshold: 0.1,
-        }
-      );
-
-      // Observe all images with data-src
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach((img) => observer.observe(img));
-
-      return () => observer.disconnect();
-    }
-  }, [location.pathname]);
-
-  return <>{optimizedChildren}</>;
-};
-
-// Add global performance optimizations
-if (typeof window !== 'undefined') {
-  // Optimize long tasks
-  if ('scheduler' in window && 'postTask' in window.scheduler) {
-    window.scheduler.postTask(() => {
-      // Run non-critical tasks during idle time
-    }, { priority: 'background' });
-  }
-
-  // Optimize memory usage
-  if ('memory' in performance) {
-    const memoryThreshold = 50 * 1024 * 1024; // 50MB
-    if (performance.memory.usedJSHeapSize > memoryThreshold) {
-      // Trigger garbage collection if available
-      if ('gc' in window) {
-        (window as any).gc();
-      }
-    }
-  }
-}
-
-export default PerformanceOptimizer;
-import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { AlertTriangle, CheckCircle, Clock, Zap } from 'lucide-react';
-
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Zap, TrendingUp, AlertTriangle, CheckCircle, X } from 'lucide-react';
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  overall: number;
+  fcp: number; // First Contentful Paint
+  lcp: number; // Largest Contentful Paint
+  fid: number; // First Input Delay
+  cls: number; // Cumulative Layout Shift
+  ttfb: number; // Time to First Byte
 }
-
-export function PerformanceOptimizer() {
+interface PerformanceIssue {
+  id: string;
+  type: 'warning' | 'error' | 'info';
+  message: string;
+  metric?: keyof PerformanceMetrics;
+  value?: number;
+  threshold?: number;
+  suggestion?: string;
+}
+export function PerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [issues, setIssues] = useState<PerformanceIssue[]>([]);
   const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Only show in development or when explicitly enabled
-    if (import.meta.env.DEV || localStorage.getItem('showPerformance') === 'true') {
-      setIsVisible(true);
-      measurePerformance();
+  const [isExpanded, setIsExpanded] = useState(false);
+  const performanceThresholds = {
+    fcp: { good: 1800, poor: 3000 },
+    lcp: { good: 2500, poor: 4000 },
+    fid: { good: 100, poor: 300 },
+    cls: { good: 0.1, poor: 0.25 },
+    ttfb: { good: 800, poor: 1800 }
+  };
+  const getMetricScore = useCallback((metric: keyof PerformanceMetrics, value: number) => {
+    const thresholds = performanceThresholds[metric];
+    if (value <= thresholds.good) return 'good';
+    if (value <= thresholds.poor) return 'needs-improvement';
+    return 'poor';
+  }, []);
+  const getMetricColor = useCallback((score: string) => {
+    switch (score) {
+      case 'good': return 'text-green-500';
+      case 'needs-improvement': return 'text-yellow-500';
+      case 'poor': return 'text-red-500';
+      default: return 'text-gray-500';
     }
   }, []);
-
-  const measurePerformance = () => {
+  const getMetricIcon = useCallback((score: string) => {
+    switch (score) {
+      case 'good': return <CheckCircle className="w-4 h-4" />;
+      case 'needs-improvement': return <AlertTriangle className="w-4 h-4" />;
+      case 'poor': return <X className="w-4 h-4" />;
+      default: return null;
+    }
+  }, []);
+  const analyzePerformance = useCallback((metrics: PerformanceMetrics) => {
+    const newIssues: PerformanceIssue[] = [];
+    Object.entries(metrics).forEach(([metric, value]) => {
+      const score = getMetricScore(metric as keyof PerformanceMetrics, value);
+      const thresholds = performanceThresholds[metric as keyof PerformanceMetrics];
+      if (score === 'needs-improvement') {
+        newIssues({
+          id: `${metric}-warning`,
+          type: 'warning',
+          message: `${metric.toUpperCase()} is above recommended threshold`,
+          metric: metric as keyof PerformanceMetrics,
+          value,
+          threshold: thresholds.good,
+          suggestion: `Consider optimizing ${metric} to improve user experience`
+        });
+      } else if (score === 'poor') {
+        newIssues({
+          id: `${metric}-error`,
+          type: 'error',
+          message: `${metric.toUpperCase()} is significantly above recommended threshold`,
+          metric: metric as keyof PerformanceMetrics,
+          value,
+          threshold: thresholds.good,
+          suggestion: `Immediate action required: ${metric} needs optimization`
+        });
+      }
+    });
+    setIssues(newIssues);
+  }, [getMetricScore]);
+  const measurePerformance = useCallback(async () => {
     if ('PerformanceObserver' in window) {
-      // Measure Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            updateMetrics('lcp', entry.startTime);
-          } else if (entry.entryType === 'first-input') {
-            const firstInputEntry = entry as PerformanceEventTiming;
-            updateMetrics('fid', firstInputEntry.processingStart - firstInputEntry.startTime);
+      try {
+        // Measure FCP
+        const fcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const fcp = entries[entries.length - 1];
+          if (fcp) {
+            setMetrics(prev => ({ ...prev, fcp: fcp.startTime } as PerformanceMetrics));
           }
         });
-      });
-
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-
-      // Measure other metrics
-      setTimeout(() => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          updateMetrics('ttfb', navigation.responseStart - navigation.requestStart);
+        fcpObserver.observe({ entryTypes: ['paint'] });
+        // Measure LCP
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lcp = entries[entries.length - 1];
+          if (lcp) {
+            setMetrics(prev => ({ ...prev, lcp: lcp.startTime } as PerformanceMetrics));
+          }
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        // Measure FID
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const fid = entries[entries.length - 1];
+          if (fid) {
+            setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime } as PerformanceMetrics));
+          }
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+        // Measure CLS
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!entry.hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          }
+          setMetrics(prev => ({ ...prev, cls: clsValue } as PerformanceMetrics));
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        // Measure TTFB
+        const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigationEntry) {
+          const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+          setMetrics(prev => ({ ...prev, ttfb } as PerformanceMetrics));
         }
-      }, 1000);
+        // Cleanup observers after 10 seconds
+        setTimeout(() => {
+          fcpObserver.disconnect();
+          lcpObserver.disconnect();
+          fidObserver.disconnect();
+          clsObserver.disconnect();
+        }, 10000);
+      } catch (error) {
+        console.warn('Performance monitoring not available:', error);
+      }
     }
+  }, []);
+  useEffect(() => {
+    // Start measuring after a short delay to ensure page is loaded
+    const timer = setTimeout(measurePerformance, 1000);
+    return () => clearTimeout(timer);
+  }, [measurePerformance]);
+  useEffect(() => {
+    if (metrics) {
+      analyzePerformance(metrics);
+      setIsVisible(true);
+    }
+  }, [metrics, analyzePerformance]);
+  const formatMetric = (metric: string, value: number) => {
+    if (metric === 'cls') return value.toFixed(3);
+    if (metric === 'fid') return `${Math.round(value)}ms`;
+    return `${Math.round(value)}ms`;
   };
-
-  const updateMetrics = (key: keyof PerformanceMetrics, value: number) => {
-    setMetrics(prev => {
-      if (!prev) return null;
-      const newMetrics = { ...prev, [key]: value };
-      
-      // Calculate overall score
-      const scores = [
-        newMetrics.fcp < 1800 ? 100 : Math.max(0, 100 - (newMetrics.fcp - 1800) / 10),
-        newMetrics.lcp < 2500 ? 100 : Math.max(0, 100 - (newMetrics.lcp - 2500) / 25),
-        newMetrics.fid < 100 ? 100 : Math.max(0, 100 - (newMetrics.fid - 100) / 2),
-        newMetrics.cls < 0.1 ? 100 : Math.max(0, 100 - newMetrics.cls * 1000),
-        newMetrics.ttfb < 800 ? 100 : Math.max(0, 100 - (newMetrics.ttfb - 800) / 8)
-      ];
-      
-      newMetrics.overall = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
-      
-      return newMetrics;
-    });
-  };
-
-  const getScoreColor = (score: number) => {
-    if (score >= 90) return 'bg-green-500';
-    if (score >= 70) return 'bg-yellow-500';
-    return 'bg-red-500';
-  };
-
-  const getScoreIcon = (score: number) => {
-    if (score >= 90) return <CheckCircle className="h-4 w-4 text-green-500" />;
-    if (score >= 70) return <Clock className="h-4 w-4 text-yellow-500" />;
-    return <AlertTriangle className="h-4 w-4 text-red-500" />;
-  };
-
-  if (!isVisible || !metrics) return null;
-
+  if (!isVisible) return null;
   return (
-    <Card className="fixed bottom-4 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20">
-      <CardHeader className="pb-2">
-        <CardTitle className="flex items-center gap-2 text-sm">
-          <Zap className="h-4 w-4 text-zion-cyan" />
-          Performance Monitor
-          <Badge variant="outline" className="ml-auto">
-            {metrics.overall}/100
-          </Badge>
-        </CardTitle>
-        <CardDescription className="text-xs">
-          Core Web Vitals & Performance Metrics
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-3">
-        <div className="space-y-2">
-          <div className="flex justify-between text-xs">
-            <span>First Contentful Paint</span>
-            <span className="font-mono">{Math.round(metrics.fcp)}ms</span>
-          </div>
-          <Progress value={Math.min(100, (metrics.fcp / 1800) * 100)} className="h-1" />
-        </div>
-        
-        <div className="space-y-2">
-          <div className="flex justify-between text-xs">
-            <span>Largest Contentful Paint</span>
-            <span className="font-mono">{Math.round(metrics.lcp)}ms</span>
-          </div>
-          <Progress value={Math.min(100, (metrics.lcp / 2500) * 100)} className="h-1" />
-        </div>
-        
-        <div className="space-y-2">
-          <div className="flex justify-between text-xs">
-            <span>First Input Delay</span>
-            <span className="font-mono">{Math.round(metrics.fid)}ms</span>
-          </div>
-          <Progress value={Math.min(100, (metrics.fid / 100) * 100)} className="h-1" />
-        </div>
-        
-        <div className="space-y-2">
-          <div className="flex justify-between text-xs">
-            <span>Cumulative Layout Shift</span>
-            <span className="font-mono">{metrics.cls.toFixed(3)}</span>
-          </div>
-          <Progress value={Math.min(100, (metrics.cls / 0.1) * 100)} className="h-1" />
-        </div>
-        
-        <div className="space-y-2">
-          <div className="flex justify-between text-xs">
-            <span>Time to First Byte</span>
-            <span className="font-mono">{Math.round(metrics.ttfb)}ms</span>
-          </div>
-          <Progress value={Math.min(100, (metrics.ttfb / 800) * 100)} className="h-1" />
-        </div>
-        
-        <div className="pt-2 border-t border-border">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-medium">Overall Score</span>
-            <div className="flex items-center gap-2">
-              {getScoreIcon(metrics.overall)}
-              <span className={`text-sm font-bold ${getScoreColor(metrics.overall).replace('bg-', 'text-')}`}>
-                {metrics.overall}
-              </span>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, x: 300 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 300 }}
+        className="fixed bottom-4 right-4 z-50"
+      >
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 max-w-sm">
+          {/* Header */}
+          <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center space-x-2">
+              <Zap className="w-5 h-5 text-blue-600" />
+              <h3 className="font-semibold text-gray-900 dark:text-white">Performance</h3>
             </div>
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+            >
+              {isExpanded ? '−' : '+'}
+            </button>
           </div>
+          {/* Metrics Summary */}
+          <div className="p-4">
+            {metrics && (
+              <div className="space-y-3">
+                {Object.entries(metrics).map(([metric, value]) => {
+                  const score = getMetricScore(metric as keyof PerformanceMetrics, value);
+                  const color = getMetricColor(score);
+                  const icon = getMetricIcon(score);
+                  return (
+                    <div key={metric} className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2">
+                        <span className="text-sm font-medium text-gray-600 dark:text-gray-300 uppercase">
+                          {metric}
+                        </span>
+                        {icon && <span className={color}>{icon}</span>}
+                      </div>
+                      <span className={`text-sm font-mono ${color}`}>
+                        {formatMetric(metric, value)}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+            {/* Issues */}
+            {issues.length > 0 && (
+              <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2">
+                  Performance Issues ({issues.length})
+                </h4>
+                <div className="space-y-2">
+                  {issues.slice(0, 2).map((issue) => (
+                    <div
+                      key={issue.id}
+                      className={`p-2 rounded text-xs ${
+                        issue.type === 'error'
+                          ? 'bg-red-50 text-red-700 dark:bg-red-900/20 dark:text-red-400'
+                          : 'bg-yellow-50 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-400'
+                      }`}
+                    >
+                      {issue.message}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+          {/* Expanded View */}
+          <AnimatePresence>
+            {isExpanded && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                className="border-t border-gray-200 dark:border-gray-700"
+              >
+                <div className="p-4 space-y-3">
+                  <h4 className="font-medium text-gray-900 dark:text-white">Recommendations</h4>
+                  <div className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                    <p>• Optimize images and use WebP format</p>
+                    <p>• Implement lazy loading for below-the-fold content</p>
+                    <p>• Use CDN for static assets</p>
+                    <p>• Minimize JavaScript bundles</p>
+                    <p>• Enable compression and caching</p>
+                  </div>
+                  
+                  <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
+                    <button
+                      onClick={() => window.location.reload()}
+                      className="w-full px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm"
+                    >
+                      Refresh & Re-measure
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
-      </CardContent>
-    </Card>
+      </motion.div>
+    </AnimatePresence>
   );
 }

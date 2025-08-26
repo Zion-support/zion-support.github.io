@@ -9,28 +9,22 @@ import {
   Rocket, Star, TrendingUp, Users, Target, Award,
   Phone, Mail, MapPin, ExternalLink, Building
 } from 'lucide-react';
-
 const UltraFuturisticNavigation2027: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
-
   useEffect(() => {
     setIsClient(true);
   }, []);
-
   useEffect(() => {
     if (!isClient) return;
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isClient]);
-
   const navigation = [
     {
       name: 'AI & Machine Learning',
@@ -291,21 +285,18 @@ const UltraFuturisticNavigation2027: React.FC = () => {
       ]
     }
   ];
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   const quickLinks = [
     { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> },
     { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> },
     { name: 'Support', href: '/support', icon: <MessageSquare className="w-4 h-4" /> },
     { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> }
   ];
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
@@ -335,7 +326,6 @@ const UltraFuturisticNavigation2027: React.FC = () => {
               </div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center space-x-1">
             {navigation.map((item) => (
@@ -353,7 +343,6 @@ const UltraFuturisticNavigation2027: React.FC = () => {
                   <span className="font-medium">{item.name}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </motion.button>
-
                 {/* Dropdown Menu */}
                 <AnimatePresence>
                   {activeDropdown === item.name && (
@@ -403,7 +392,6 @@ const UltraFuturisticNavigation2027: React.FC = () => {
               </div>
             ))}
           </nav>
-
           {/* Right Side */}
           <div className="flex items-center space-x-4">
             {/* Contact Info */}
@@ -423,7 +411,6 @@ const UltraFuturisticNavigation2027: React.FC = () => {
                 <span>{contactInfo.email}</span>
               </a>
             </div>
-
             {/* CTA Button */}
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -437,7 +424,6 @@ const UltraFuturisticNavigation2027: React.FC = () => {
                 <span>Get Started</span>
               </Link>
             </motion.div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -448,7 +434,6 @@ const UltraFuturisticNavigation2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
@@ -483,7 +468,6 @@ const UltraFuturisticNavigation2027: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Quick Links & Contact */}
                 <div className="space-y-6">
                   <div>
@@ -501,7 +485,6 @@ const UltraFuturisticNavigation2027: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-4">Contact Info</h3>
                     <div className="space-y-3">
@@ -527,7 +510,6 @@ const UltraFuturisticNavigation2027: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Mobile CTA */}
               <div className="mt-6 pt-6 border-t border-gray-700/50">
                 <Link
@@ -545,5 +527,4 @@ const UltraFuturisticNavigation2027: React.FC = () => {
     </header>
   );
 };
-
 export default UltraFuturisticNavigation2027;

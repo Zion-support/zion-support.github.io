@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
 import { ForumPost } from '@/types/community';
-
 export function usePostsByCategory(categoryId: string) {
   const [posts, setPosts] = useState<ForumPost[]>([]);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     // Simulate API call
     setLoading(true);
@@ -44,6 +42,5 @@ export function usePostsByCategory(categoryId: string) {
       setLoading(false);
     }, 1000);
   }, [categoryId]);
-
   return { posts, loading };
 }

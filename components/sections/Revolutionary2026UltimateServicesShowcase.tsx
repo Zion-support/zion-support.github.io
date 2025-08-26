@@ -2,18 +2,15 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Search, Filter, Grid, List, Phone } from 'lucide-react';
 import Link from 'next/link';
-
 // Import all the new service data
 import { revolutionary2026AIAutomationServices } from '../../data/revolutionary-2026-ai-automation-services';
 import { revolutionary2026EmergingTechServices } from '../../data/revolutionary-2026-emerging-tech-services';
 import { revolutionary2026HealthcareBiotechServices } from '../../data/revolutionary-2026-healthcare-biotech-services';
 import { revolutionary2026FintechBlockchainServices } from '../../data/revolutionary-2026-fintech-blockchain-services';
-
 const Revolutionary2026UltimateServicesShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState('grid');
   const [searchTerm, setSearchTerm] = useState('');
-
   // Combine all services
   const allServices = [
     ...revolutionary2026AIAutomationServices,
@@ -21,7 +18,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
     ...revolutionary2026HealthcareBiotechServices,
     ...revolutionary2026FintechBlockchainServices
   ];
-
   // Filter services based on category and search
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
@@ -30,7 +26,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length, icon: Sparkles, color: 'from-purple-500 to-pink-500' },
     { id: 'AI', name: 'AI & Automation', count: revolutionary2026AIAutomationServices.length, icon: Brain, color: 'from-blue-500 to-cyan-500' },
@@ -38,7 +33,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
     { id: 'Healthcare', name: 'Healthcare & Biotech', count: revolutionary2026HealthcareBiotechServices.length, icon: Shield, color: 'from-teal-500 to-cyan-500' },
     { id: 'Fintech', name: 'Fintech & Blockchain', count: revolutionary2026FintechBlockchainServices.length, icon: Zap, color: 'from-yellow-500 to-orange-500' }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -48,7 +42,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -60,7 +53,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
       }
     }
   };
-
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Enhanced Background Effects */}
@@ -111,7 +103,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Search and Filter Controls */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -132,7 +123,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
                 className="w-full pl-10 pr-4 py-3 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
-
             {/* View Mode Toggle */}
             <div className="flex items-center gap-2 bg-gray-900/50 rounded-xl p-1 border border-gray-700">
               <button
@@ -157,7 +147,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
               </button>
             </div>
           </div>
-
           {/* Category Filters */}
           <div className="flex flex-wrap gap-3 mt-6 justify-center">
             {categories.map((category) => (
@@ -179,7 +168,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -218,7 +206,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
                       </div>
                     </div>
                   )}
-
                   {/* Service Content */}
                   <div className={`p-6 ${viewMode === 'list' ? 'flex items-center gap-6' : ''}`}>
                     {/* Icon and Header */}
@@ -227,7 +214,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
                         {service.icon}
                       </div>
                     </div>
-
                     <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
                       {/* Service Name and Tagline */}
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
@@ -236,7 +222,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
                       <p className="text-gray-400 mb-4 line-clamp-2">
                         {service.tagline}
                       </p>
-
                       {/* Price and Features */}
                       <div className="mb-4">
                         <div className="flex items-center gap-2 mb-3">
@@ -247,7 +232,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
                           {service.trialDays} days free trial • {service.setupTime} setup
                         </div>
                       </div>
-
                       {/* Features Preview */}
                       <div className="mb-6">
                         <div className="text-sm text-gray-400 mb-2">Key Features:</div>
@@ -265,7 +249,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
                           )}
                         </div>
                       </div>
-
                       {/* Market Position */}
                       <div className="mb-6 p-3 bg-gray-800/50 rounded-lg">
                         <div className="text-xs text-gray-400 mb-1">Market Position</div>
@@ -273,7 +256,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
                           {service.marketPosition}
                         </div>
                       </div>
-
                       {/* ROI and Stats */}
                       <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                         <div>
@@ -285,7 +267,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
                           <div className="text-white font-semibold">{service.customers.toLocaleString()}+</div>
                         </div>
                       </div>
-
                       {/* Action Button */}
                       <Link href={service.link}>
                         <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2">
@@ -295,7 +276,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
                       </Link>
                     </div>
                   </div>
-
                   {/* Hover Effects */}
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-purple-600/5 to-pink-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 </div>
@@ -303,7 +283,6 @@ const Revolutionary2026UltimateServicesShowcase = () => {
             ))}
           </AnimatePresence>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -340,5 +319,4 @@ const Revolutionary2026UltimateServicesShowcase = () => {
     </section>
   );
 };
-
 export default Revolutionary2026UltimateServicesShowcase;

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { Badge } from "../components/ui/badge";
 import { Link } from "react-router-dom";
 import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity } from "lucide-react";
-import { TrustedBySection } from "../TrustedBySection";
+import { TrustedBySection } from "../components/TrustedBySection";
 const iotServices = [
     {
         id: "iot-platform",
@@ -208,7 +208,6 @@ export default function IoTServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -231,7 +230,6 @@ export default function IoTServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -254,7 +252,6 @@ export default function IoTServicesPage() {
           </div>
         </div>
       </section>
-
       {/* IoT Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -314,7 +311,6 @@ export default function IoTServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
@@ -345,7 +341,6 @@ export default function IoTServicesPage() {
           </div>
         </div>
       </section>
-
       <TrustedBySection />
     </div>);
 }

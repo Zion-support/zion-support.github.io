@@ -1,6 +1,5 @@
 import { format } from 'date-fns';
 import { apiClient } from './apiClient';
-
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -18,7 +17,6 @@ export function formatDate(date: Date | string | undefined): string {
     return '-';
   }
 }
-
 /**
  * Stores referral code in localStorage when detected in URL
  */
@@ -38,7 +36,6 @@ export function checkUrlForReferralCode(): string | null {
   
   return localStorage.getItem('referral_code');
 }
-
 /**
  * Track referral when a user signs up
  */

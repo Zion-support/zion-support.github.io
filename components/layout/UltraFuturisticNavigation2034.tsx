@@ -20,14 +20,12 @@ import {
   TargetIcon, MicroscopeIcon, StarIcon, ArrowRight,
   Infinity, Crown, Gem, Sparkles as SparklesIcon2
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: '🧠 2034 Revolutionary AI Services',
@@ -102,7 +100,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -115,12 +112,10 @@ const mainNavigation = [
   { name: 'About', href: '/about', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-
 const UltraFuturisticNavigation2034: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -128,10 +123,8 @@ const UltraFuturisticNavigation2034: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   return (
     <>
       {/* Top Contact Bar */}
@@ -155,7 +148,6 @@ const UltraFuturisticNavigation2034: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
@@ -179,7 +171,6 @@ const UltraFuturisticNavigation2034: React.FC = () => {
                 <p className="text-xs text-gray-400">2034 Revolutionary Technology</p>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {mainNavigation.map((item) => (
@@ -194,7 +185,6 @@ const UltraFuturisticNavigation2034: React.FC = () => {
                 </Link>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <a
@@ -205,7 +195,6 @@ const UltraFuturisticNavigation2034: React.FC = () => {
                 <span>Call Now</span>
               </a>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -215,7 +204,6 @@ const UltraFuturisticNavigation2034: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Service Categories Dropdown */}
         <AnimatePresence>
           {activeCategory && (
@@ -269,7 +257,6 @@ const UltraFuturisticNavigation2034: React.FC = () => {
           )}
         </AnimatePresence>
       </nav>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -302,7 +289,6 @@ const UltraFuturisticNavigation2034: React.FC = () => {
                     </Link>
                   ))}
                 </div>
-
                 <div className="mt-8 pt-8 border-t border-gray-700/50">
                   <div className="space-y-4">
                     <a
@@ -330,11 +316,9 @@ const UltraFuturisticNavigation2034: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
   );
 };
-
 export default UltraFuturisticNavigation2034;

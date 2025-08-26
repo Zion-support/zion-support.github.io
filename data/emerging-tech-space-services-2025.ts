@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EmergingTechSpaceService2025 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface EmergingTechSpaceService2025 {
   rating: number;
   reviews: number;
 }
-
 export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
   // Space Technology & Mining
   {

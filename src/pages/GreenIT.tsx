@@ -1,319 +1,363 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Leaf, 
   Zap, 
-  Recycle, 
-  Globe, 
-  TrendingUp, 
   Shield, 
-  Lightbulb, 
-  Users,
-  CheckCircle,
+  TrendingUp, 
+  Users, 
+  Globe,
   ArrowRight,
+  CheckCircle,
+  Play,
+  BarChart3,
+  Cpu,
+  Eye,
+  MessageSquare,
+  Database,
+  Network,
+  Rocket,
+  Target,
   Award,
-  Clock
+  Clock,
+  Star,
+  Code,
+  Settings,
+  Cloud,
+  Lock,
+  RefreshCw,
+  Brain,
+  Sun,
+  Wind,
+  Battery,
+  Recycle,
+  TreePine,
+  Droplets,
+  Lightbulb
 } from 'lucide-react';
 
-export default function GreenIT() {
-  const greenSolutions = [
+const GreenIT: React.FC = () => {
+  const greenServices = [
     {
-      icon: Leaf,
-      title: "Sustainable Data Centers",
-      description: "Energy-efficient data centers powered by renewable energy sources with advanced cooling systems and waste heat recovery.",
-      benefits: ["Reduced carbon footprint", "Lower energy costs", "Improved efficiency"]
+      id: 1,
+      title: 'Sustainable Data Centers',
+      description: 'Energy-efficient data center solutions with renewable energy integration',
+      icon: Database,
+      features: ['Renewable Energy', 'Cooling Optimization', 'Energy Monitoring', 'Carbon Reduction'],
+      useCases: ['Enterprise Companies', 'Cloud Providers', 'Financial Services', 'Healthcare'],
+      pricing: 'Starting at $45,000',
+      timeline: '4-8 months'
     },
     {
-      icon: Zap,
-      title: "Renewable Energy Integration",
-      description: "Seamless integration of solar, wind, and hydroelectric power into IT infrastructure.",
-      benefits: ["100% renewable energy", "Grid independence", "Cost savings over time"]
+      id: 2,
+      title: 'Green Software Development',
+      description: 'Eco-friendly software solutions that minimize environmental impact',
+      icon: Code,
+      features: ['Energy-Efficient Code', 'Sustainable Architecture', 'Green Testing', 'Performance Optimization'],
+      useCases: ['Software Companies', 'Startups', 'Government Agencies', 'Educational Institutions'],
+      pricing: 'Starting at $25,000',
+      timeline: '2-4 months'
     },
     {
-      icon: Recycle,
-      title: "Circular IT Economy",
-      description: "Hardware recycling, refurbishment, and responsible disposal programs to minimize e-waste.",
-      benefits: ["Reduced e-waste", "Extended hardware lifecycle", "Environmental compliance"]
+      id: 3,
+      title: 'IoT Environmental Monitoring',
+      description: 'Smart sensors and systems for environmental data collection and analysis',
+      icon: Eye,
+      features: ['Air Quality Sensors', 'Water Monitoring', 'Waste Management', 'Real-time Analytics'],
+      useCases: ['Smart Cities', 'Manufacturing', 'Agriculture', 'Environmental Agencies'],
+      pricing: 'Starting at $35,000',
+      timeline: '3-6 months'
     },
     {
-      icon: Globe,
-      title: "Carbon-Neutral Operations",
-      description: "Comprehensive carbon offset programs and sustainable business practices across all operations.",
-      benefits: ["Carbon neutrality", "ESG compliance", "Brand reputation"]
+      id: 4,
+      title: 'Renewable Energy Management',
+      description: 'Intelligent systems for renewable energy optimization and grid integration',
+      icon: Sun,
+      features: ['Solar Optimization', 'Wind Integration', 'Battery Management', 'Grid Balancing'],
+      useCases: ['Energy Companies', 'Utilities', 'Commercial Buildings', 'Residential Communities'],
+      pricing: 'Starting at $40,000',
+      timeline: '3-5 months'
     }
   ];
 
-  const services = [
+  const sustainabilitySolutions = [
     {
-      title: "Green IT Consulting",
-      description: "Expert guidance on implementing sustainable technology practices and reducing environmental impact.",
-      features: ["Energy audits", "Sustainability roadmaps", "ROI analysis"],
-      price: "Starting at $5,000"
+      title: 'Carbon Footprint Tracking',
+      description: 'Comprehensive carbon emission monitoring and reduction strategies',
+      benefits: ['Real-time Monitoring', 'Automated Reporting', 'Reduction Strategies', 'Compliance Ready']
     },
     {
-      title: "Sustainable Infrastructure",
-      description: "Design and implementation of eco-friendly IT infrastructure and data centers.",
-      features: ["Energy-efficient hardware", "Smart cooling systems", "Renewable energy integration"],
-      price: "Custom pricing"
+      title: 'Green Cloud Migration',
+      description: 'Sustainable cloud infrastructure with renewable energy sources',
+      benefits: ['Energy Efficiency', 'Cost Reduction', 'Environmental Impact', 'Scalable Solutions']
     },
     {
-      title: "E-waste Management",
-      description: "Comprehensive electronic waste collection, recycling, and disposal services.",
-      features: ["Secure data destruction", "Certified recycling", "Compliance reporting"],
-      price: "Starting at $2,000"
-    },
-    {
-      title: "Carbon Footprint Analysis",
-      description: "Detailed assessment of your IT operations' environmental impact with actionable recommendations.",
-      features: ["Comprehensive analysis", "Reduction strategies", "Progress tracking"],
-      price: "Starting at $3,500"
+      title: 'Circular Economy Solutions',
+      description: 'Technology systems that support circular economy principles',
+      benefits: ['Waste Reduction', 'Resource Optimization', 'Sustainable Practices', 'Long-term Value']
     }
   ];
 
-  const caseStudies = [
-    {
-      company: "TechCorp Solutions",
-      industry: "Software Development",
-      challenge: "High energy costs and carbon footprint from legacy data centers",
-      solution: "Implemented energy-efficient infrastructure with renewable energy integration",
-      results: ["40% reduction in energy costs", "60% decrease in carbon emissions", "Improved system performance"]
-    },
-    {
-      company: "GreenStart Inc.",
-      industry: "E-commerce",
-      challenge: "Growing e-waste from hardware upgrades and replacements",
-      solution: "Established circular IT economy with refurbishment and recycling programs",
-      results: ["80% reduction in e-waste", "30% cost savings on hardware", "Enhanced sustainability credentials"]
-    },
-    {
-      company: "EcoTech Manufacturing",
-      industry: "Manufacturing",
-      challenge: "Need for sustainable IT operations to meet customer demands",
-      solution: "Comprehensive green IT transformation with carbon-neutral certification",
-      results: ["100% renewable energy usage", "Carbon-neutral operations", "Increased customer satisfaction"]
-    }
+  const environmentalMetrics = [
+    { metric: 'Energy Savings', value: '40-60%', icon: Zap },
+    { metric: 'Carbon Reduction', value: '50-70%', icon: Leaf },
+    { metric: 'Cost Savings', value: '30-45%', icon: TrendingUp },
+    { metric: 'ROI Timeline', value: '12-18 months', icon: Clock }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-green-500/20"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Green <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">IT Solutions</span>
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-teal-500/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Leaf className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="futuristic-heading mb-6">
+              Green <span className="bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">Technology</span>
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-              Sustainable technology solutions that reduce environmental impact while maintaining 
-              performance and driving business value.
+            <p className="futuristic-text text-xl mb-8 max-w-3xl mx-auto">
+              Sustainable IT solutions that reduce environmental impact while maintaining performance.
+              Join us in building a greener future through innovative technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 font-medium"
+                className="futuristic-button inline-flex items-center"
               >
-                Get Green IT Assessment
+                Start Your Green Journey
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <button className="border border-green-400 text-green-400 px-8 py-3 rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300 font-medium">
-                Download Sustainability Guide
-              </button>
+              <Link
+                to="/services"
+                className="futuristic-button-outline inline-flex items-center"
+              >
+                Explore Solutions
+              </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Green Solutions */}
+      {/* Environmental Impact Stats */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Sustainable Technology Solutions</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive green IT solutions help organizations reduce their environmental 
-              footprint while improving operational efficiency.
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="futuristic-heading text-3xl lg:text-4xl mb-4">
+              Environmental Impact
+            </h2>
+            <p className="futuristic-text text-lg max-w-2xl mx-auto">
+              Our green technology solutions deliver measurable environmental benefits
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {greenSolutions.map((solution, index) => (
-              <div key={index} className="bg-zion-blue-light/10 rounded-lg p-8 border border-zion-blue-light/20 hover:shadow-lg transition-shadow duration-300">
-                <div className="w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-green-400" />
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {environmentalMetrics.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="stats-card text-center"
+              >
+                <div className="text-zion-cyan mb-2">
+                  <item.icon className="w-8 h-8 mx-auto" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
-                <p className="text-zion-slate-light mb-6">{solution.description}</p>
-                <ul className="space-y-2">
-                  {solution.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center space-x-2 text-zion-slate-light">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <div className="text-2xl lg:text-3xl font-bold text-green-400 mb-2">
+                  {item.value}
+                </div>
+                <div className="text-zion-slate-light">{item.metric}</div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Green IT Services</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive services to help your organization implement sustainable 
-              technology practices and achieve environmental goals.
+      {/* Green Services */}
+      <section className="py-20 bg-gradient-to-r from-green-400/5 to-teal-500/5">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="futuristic-heading text-3xl lg:text-4xl mb-4">
+              Our Green Services
+            </h2>
+            <p className="futuristic-text text-lg max-w-2xl mx-auto">
+              Comprehensive sustainable technology solutions for modern businesses
             </p>
-          </div>
-          
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20">
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                  <span className="text-green-400 font-medium">{service.price}</span>
+            {greenServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="futuristic-card group hover:border-green-400/50 transition-all duration-300"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-teal-500 rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                    <p className="text-zion-slate-light mb-4">{service.description}</p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div>
+                        <h4 className="text-sm font-medium text-green-400 mb-2">Features</h4>
+                        <ul className="space-y-1">
+                          {service.features.slice(0, 2).map((feature, idx) => (
+                            <li key={idx} className="text-xs text-zion-slate-light flex items-center">
+                              <CheckCircle className="w-3 h-3 text-green-400 mr-2" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-medium text-green-400 mb-2">Use Cases</h4>
+                        <ul className="space-y-1">
+                          {service.useCases.slice(0, 2).map((useCase, idx) => (
+                            <li key={idx} className="text-xs text-zion-slate-light flex items-center">
+                              <Users className="w-3 h-3 text-green-400 mr-2" />
+                              {useCase}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-green-400 font-medium">{service.pricing}</span>
+                      <span className="text-zion-slate-light">{service.timeline}</span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-zion-slate-light mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-4">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2 text-zion-slate-light text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Case Studies */}
+      {/* Sustainability Solutions */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              See how organizations have successfully implemented green IT solutions 
-              and achieved significant environmental and business benefits.
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="futuristic-heading text-3xl lg:text-4xl mb-4">
+              Sustainability Solutions
+            </h2>
+            <p className="futuristic-text text-lg max-w-2xl mx-auto">
+              Comprehensive approaches to environmental responsibility and sustainable growth
             </p>
-          </div>
-          
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <div key={index} className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-white">{study.company}</h3>
-                  <span className="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded-full">
-                    {study.industry}
-                  </span>
-                </div>
-                <div className="space-y-3 mb-4">
-                  <div>
-                    <h4 className="text-sm font-medium text-zion-cyan mb-1">Challenge</h4>
-                    <p className="text-zion-slate-light text-sm">{study.challenge}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-medium text-zion-cyan mb-1">Solution</h4>
-                    <p className="text-zion-slate-light text-sm">{study.solution}</p>
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-sm font-medium text-green-400 mb-2">Results</h4>
-                  <ul className="space-y-1">
-                    {study.results.map((result, resultIndex) => (
-                      <li key={resultIndex} className="flex items-center space-x-2 text-zion-slate-light text-sm">
-                        <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
-                        <span>{result}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+            {sustainabilitySolutions.map((solution, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="futuristic-card text-center group hover:border-green-400/50 transition-all duration-300"
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>
+                <p className="text-zion-slate-light mb-4">{solution.description}</p>
+                <ul className="space-y-2">
+                  {solution.benefits.map((benefit, idx) => (
+                    <li key={idx} className="text-sm text-zion-slate-light flex items-center justify-center">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Environmental Impact */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Environmental Impact</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our green IT solutions have helped organizations make significant 
-              progress toward sustainability goals.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Leaf className="w-10 h-10 text-green-400" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">40%</h3>
-              <p className="text-zion-slate-light">Average energy cost reduction</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-10 h-10 text-blue-400" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">60%</h3>
-              <p className="text-zion-slate-light">Carbon emissions decrease</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Recycle className="w-10 h-10 text-purple-400" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">80%</h3>
-              <p className="text-zion-slate-light">E-waste reduction</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-10 h-10 text-yellow-400" />
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-2">25%</h3>
-              <p className="text-zion-slate-light">Operational efficiency improvement</p>
-            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Go Green?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Start your journey toward sustainable technology today. Our experts will 
-            help you implement green IT solutions that benefit both your business and the environment.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 font-medium flex items-center justify-center"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <button className="border border-green-400 text-green-400 px-8 py-3 rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300 font-medium">
-              Schedule Consultation
-            </button>
-          </div>
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to <span className="bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">Go Green</span>?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Let's build a sustainable future together with green technology solutions
+            </p>
+            
+            <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-green-400/20 rounded-xl p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="text-center">
+                  <Leaf className="w-16 h-16 text-green-400 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-3">Sustainability Assessment</h3>
+                  <p className="text-zion-slate-light mb-4">
+                    Evaluate your current environmental impact
+                  </p>
+                  <Link 
+                    to="/contact"
+                    className="inline-block px-6 py-3 bg-gradient-to-r from-green-400 to-teal-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-green-400/25 transition-all duration-300"
+                  >
+                    Start Assessment
+                  </Link>
+                </div>
+                
+                <div className="text-center">
+                  <Globe className="w-16 h-16 text-green-400 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-3">Green Consultation</h3>
+                  <p className="text-zion-slate-light mb-4">
+                    Discuss sustainable technology strategies
+                  </p>
+                  <Link 
+                    to="/contact"
+                    className="inline-block px-6 py-3 bg-zion-slate-dark/50 border border-green-400/20 text-green-400 font-semibold rounded-xl hover:bg-zion-slate-dark/70 transition-all duration-300"
+                  >
+                    Book Consultation
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default GreenIT;

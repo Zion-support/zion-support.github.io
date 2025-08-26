@@ -38,20 +38,16 @@ export type EnhancedRealMicroSaasService = {
 	rating?: number;
 	reviews?: number;
 };
-
 // Aggregate rich, real services from multiple sources into a single catalog
 import { additionalEnhancedServices } from './additional-real-services';
 import { realMarketServices } from './real-market-services';
-
 // Normalize types to EnhancedRealMicroSaasService without mutating originals
 const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] =>
 	(items || []).map((s) => ({ ...s }));
-
 export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
 	...mapToEnhanced(realMarketServices as unknown as any[]),
 	...mapToEnhanced(additionalEnhancedServices as unknown as any[]),
 ];
-
 export const serviceCategories: string[] = Array.from(
 	new Set(
 		enhancedRealMicroSaasServices
@@ -59,12 +55,10 @@ export const serviceCategories: string[] = Array.from(
 			.filter((v): v is string => Boolean(v))
 	)
 ).sort();
-
 export const getServicesByCategory = (category: string) => {
 	if (!category || category === 'All') return enhancedRealMicroSaasServices;
 	return enhancedRealMicroSaasServices.filter((s) => s.category === category);
 };
-
 export const getPopularServices = () =>
 	enhancedRealMicroSaasServices
 		.filter((s) => !!s.popular)

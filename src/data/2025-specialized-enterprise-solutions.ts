@@ -49,7 +49,6 @@ export interface SpecializedEnterpriseSolution {
   industryFocus: string[];
   complianceStandards: string[];
 }
-
 export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[] = [
   // FINTECH & DIGITAL BANKING SOLUTIONS
   {
@@ -114,7 +113,6 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
     industryFocus: ['Financial Services', 'Investment Banking', 'Asset Management', 'Trading'],
     complianceStandards: ['SOX', 'Basel III', 'MiFID II', 'Dodd-Frank']
   },
-
   // HEALTHCARE & BIOTECH INNOVATIONS
   {
     id: 'ai-powered-healthcare-analytics-platform',
@@ -178,7 +176,6 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
     industryFocus: ['Healthcare', 'Biotechnology', 'Pharmaceuticals', 'Medical Research'],
     complianceStandards: ['HIPAA', 'FDA', 'HITECH', 'SOC2', 'ISO 27001']
   },
-
   // SPACE TECHNOLOGY & SATELLITE SOLUTIONS
   {
     id: 'space-tech-orchestration-platform',
@@ -242,7 +239,6 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
     industryFocus: ['Space Technology', 'Satellite Operations', 'Space Research', 'Defense'],
     complianceStandards: ['ITAR', 'EAR', 'Space Debris Guidelines', 'Satellite Communication Standards']
   },
-
   // AUTOMOTIVE & TRANSPORTATION INNOVATIONS
   {
     id: 'autonomous-vehicle-intelligence-platform',
@@ -306,7 +302,6 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
     industryFocus: ['Automotive', 'Transportation', 'Logistics', 'Delivery Services'],
     complianceStandards: ['FMCSA', 'DOT', 'NHTSA', 'ISO 26262', 'SAE J3016']
   },
-
   // ENERGY & SUSTAINABILITY SOLUTIONS
   {
     id: 'smart-energy-grid-optimization-platform',
@@ -370,7 +365,6 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
     industryFocus: ['Energy', 'Utilities', 'Renewable Energy', 'Smart Grid'],
     complianceStandards: ['NERC CIP', 'FERC', 'IEEE Standards', 'ISO 27001']
   },
-
   // MANUFACTURING & INDUSTRIAL AUTOMATION
   {
     id: 'intelligent-manufacturing-automation-platform',
@@ -435,5 +429,4 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
     complianceStandards: ['ISO 9001', 'ISO 14001', 'ISO 45001', 'FDA GMP', 'IATF 16949']
   }
 ];
-
 export default specializedEnterpriseSolutions2025;

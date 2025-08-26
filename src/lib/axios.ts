@@ -1,8 +1,6 @@
 import axios from 'axios';
 import { showApiError } from '@/utils/apiErrorHandler';
-
 const api = axios.create();
-
 api.interceptors.response.use(
   response => response,
   (error) => {
@@ -11,5 +9,4 @@ api.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-
 export { api };

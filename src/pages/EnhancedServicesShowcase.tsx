@@ -29,17 +29,13 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { comprehensiveServices } from '../data/comprehensiveServices';
-
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const filteredServices = selectedCategory === 'all' 
     ? comprehensiveServices 
     : comprehensiveServices.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
-
   // Get unique categories
   const categories = [...new Set(comprehensiveServices.map(service => service.category))];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
@@ -89,7 +85,6 @@ export default function EnhancedServicesShowcase() {
           </div>
         </div>
       </div>
-
       {/* Services Overview */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -100,7 +95,6 @@ export default function EnhancedServicesShowcase() {
             From AI-powered automation to enterprise cybersecurity, we deliver cutting-edge solutions that drive business growth and digital transformation.
           </p>
         </div>
-
         {/* Category Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <Button
@@ -121,7 +115,6 @@ export default function EnhancedServicesShowcase() {
             </Button>
           ))}
         </div>
-
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => (
@@ -129,7 +122,6 @@ export default function EnhancedServicesShowcase() {
           ))}
         </div>
       </div>
-
       {/* Why Choose Us Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -140,7 +132,6 @@ export default function EnhancedServicesShowcase() {
             We combine cutting-edge technology with proven expertise to deliver exceptional results for our clients.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
@@ -151,7 +142,6 @@ export default function EnhancedServicesShowcase() {
               </p>
             </CardContent>
           </Card>
-
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
               <Shield className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
@@ -161,7 +151,6 @@ export default function EnhancedServicesShowcase() {
               </p>
             </CardContent>
           </Card>
-
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
               <Users className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
@@ -173,7 +162,6 @@ export default function EnhancedServicesShowcase() {
           </Card>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
         <div className="container mx-auto px-4 text-center">
@@ -195,7 +183,6 @@ export default function EnhancedServicesShowcase() {
           </div>
         </div>
       </div>
-
       {/* Footer */}
       <footer className="bg-zion-blue-dark py-12">
         <div className="container mx-auto px-4">
@@ -245,11 +232,9 @@ export default function EnhancedServicesShowcase() {
     </div>
   );
 }
-
 // Service Card Component
 function ServiceCard({ service }: { service: any }) {
   const [showDetails, setShowDetails] = useState(false);
-
   return (
     <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
       <CardHeader>
@@ -279,7 +264,6 @@ function ServiceCard({ service }: { service: any }) {
               <span className="text-zion-cyan-light">({service.reviewCount})</span>
             </div>
           </div>
-
           {/* AI Score */}
           <div className="flex items-center justify-between">
             <span className="text-zion-cyan-light">AI Score:</span>
@@ -293,7 +277,6 @@ function ServiceCard({ service }: { service: any }) {
               <span className="text-zion-cyan font-semibold">{service.aiScore}%</span>
             </div>
           </div>
-
           {/* Tags */}
           <div className="flex flex-wrap gap-2">
             {service.tags.slice(0, 3).map((tag: string) => (
@@ -302,13 +285,11 @@ function ServiceCard({ service }: { service: any }) {
               </Badge>
             ))}
           </div>
-
           {/* Delivery */}
           <div className="flex items-center gap-2 text-zion-cyan-light">
             <Clock className="h-4 w-4" />
             <span className="text-sm">Delivery: {service.estimatedDelivery}</span>
           </div>
-
           {/* Action Buttons */}
           <div className="flex gap-2">
             <Button 
@@ -322,7 +303,6 @@ function ServiceCard({ service }: { service: any }) {
               Contact
             </Button>
           </div>
-
           {/* Detailed Information */}
           {showDetails && (
             <div className="mt-4 p-4 bg-white/5 rounded-lg border border-zion-cyan/20">

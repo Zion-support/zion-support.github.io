@@ -1,5 +1,4 @@
 export interface CuttingEdgeInnovation2027 {
-=======
 export interface CuttingEdgeInnovation2027 {
   id: string;
   name: string;
@@ -16,11 +15,8 @@ export interface CuttingEdgeInnovation2027 {
     address: string;
   };
 }
-
 export const cuttingEdge2027Innovations: CuttingEdgeInnovation2027[] = [
   {
-=======
-=======
     id: "2027-cutting-edge-innovation",
     name: "2027 Cutting-Edge Innovation Platform",
     tagline: "Cutting-edge innovations for 2027",
@@ -41,9 +37,7 @@ export const cuttingEdge2027Innovations: CuttingEdgeInnovation2027[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-=======
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Service {
   id: string;
   name: string;
@@ -61,7 +55,6 @@ export interface Service {
   link: string;
   tags: string[];
 }
-
 export const cuttingEdge2027Innovations: Service[] = [
   {
     id: 'ai-consciousness-platform',

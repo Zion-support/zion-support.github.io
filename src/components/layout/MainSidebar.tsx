@@ -18,15 +18,12 @@ import {
   Phone,
   MapPin
 } from 'lucide-react';
-
 interface MainSidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
   const location = useLocation();
-
   const navigationItems = [
     {
       title: 'Main',
@@ -66,15 +63,13 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
       ]
     }
   ];
-
   const contactInfo = [
     { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
     { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
     { icon: MapPin, text: 'San Francisco, CA', href: '#location' },
   ];
-
   return (
-    <>
+<>
       {/* Overlay */}
       {isOpen && (
         <div 
@@ -105,7 +100,6 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
               </svg>
             </button>
           </div>
-
           {/* Navigation */}
           <nav className="flex-1 overflow-y-auto p-4 space-y-6">
             {navigationItems.map((section) => (
@@ -140,7 +134,6 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
               </div>
             ))}
           </nav>
-
           {/* Contact Info */}
           <div className="p-4 border-t border-zion-blue-light">
             <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3">
@@ -164,6 +157,6 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }

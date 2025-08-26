@@ -14,7 +14,6 @@ export interface ComprehensiveItSolution {
     address: string;
   };
 }
-
 export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
   {
     id: "full-stack-development",

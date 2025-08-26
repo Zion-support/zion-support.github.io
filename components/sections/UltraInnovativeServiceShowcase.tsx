@@ -2,12 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Globe, Rocket, Brain, Atom, Cpu } from 'lucide-react';
 import { innovative2025Services } from '../../data/innovative-2025-services';
-
 interface UltraInnovativeServiceShowcaseProps {
   className?: string;
   maxServices?: number;
 }
-
 export default function UltraInnovativeServiceShowcase({ 
   className = '', 
   maxServices = 6 
@@ -15,7 +13,6 @@ export default function UltraInnovativeServiceShowcase({
   const featuredServices = innovative2025Services
     .filter(service => service.popular)
     .slice(0, maxServices);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -26,7 +23,6 @@ export default function UltraInnovativeServiceShowcase({
       }
     }
   };
-
   const cardVariants = {
     hidden: { 
       opacity: 0, 
@@ -54,7 +50,6 @@ export default function UltraInnovativeServiceShowcase({
       }
     }
   };
-
   const getServiceIcon = (icon: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
       '🔮': <Brain className="w-8 h-8" />,
@@ -68,7 +63,6 @@ export default function UltraInnovativeServiceShowcase({
     };
     return iconMap[icon] || <Zap className="w-8 h-8" />;
   };
-
   const getCategoryColor = (category: string) => {
     const colorMap: { [key: string]: string } = {
       'AI & Machine Learning': 'from-purple-500 to-indigo-600',
@@ -83,7 +77,6 @@ export default function UltraInnovativeServiceShowcase({
     };
     return colorMap[category] || 'from-gray-500 to-gray-600';
   };
-
   return (
     <section className={`py-24 px-4 sm:px-6 lg:px-8 ${className}`}>
       <div className="max-w-7xl mx-auto">
@@ -148,7 +141,6 @@ export default function UltraInnovativeServiceShowcase({
             ))}
           </motion.div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -176,7 +168,6 @@ export default function UltraInnovativeServiceShowcase({
                   <div className="absolute bottom-6 left-6 w-1 h-1 bg-purple-400 rounded-full animate-ping" />
                   <div className="absolute top-1/2 left-4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce" />
                 </div>
-
                 {/* Header */}
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-6">
@@ -190,7 +181,6 @@ export default function UltraInnovativeServiceShowcase({
                       </div>
                     )}
                   </div>
-
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300 line-clamp-2">
                     {service.name}
                   </h3>
@@ -198,7 +188,6 @@ export default function UltraInnovativeServiceShowcase({
                   <p className="text-gray-300 text-sm mb-6 line-clamp-3 leading-relaxed">
                     {service.description}
                   </p>
-
                   {/* Price and Stats */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="text-3xl font-bold text-cyan-400">
@@ -210,7 +199,6 @@ export default function UltraInnovativeServiceShowcase({
                       <span>{service.customers}</span>
                     </div>
                   </div>
-
                   {/* Key Features */}
                   <div className="mb-6">
                     <div className="text-sm text-gray-400 mb-3 font-medium">Key Features:</div>
@@ -230,7 +218,6 @@ export default function UltraInnovativeServiceShowcase({
                       ))}
                     </ul>
                   </div>
-
                   {/* Market Position */}
                   <div className="mb-6 p-4 bg-gray-700/40 rounded-xl border border-gray-600/30">
                     <div className="text-xs text-gray-400 mb-2 font-medium">Market Position</div>
@@ -238,7 +225,6 @@ export default function UltraInnovativeServiceShowcase({
                       {service.marketPosition}
                     </div>
                   </div>
-
                   {/* ROI and Setup Time */}
                   <div className="flex items-center justify-between mb-6 text-sm">
                     <div className="flex items-center space-x-1 text-green-400">
@@ -250,7 +236,6 @@ export default function UltraInnovativeServiceShowcase({
                       <span>{service.setupTime}</span>
                     </div>
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex gap-3">
                     <a
@@ -269,7 +254,6 @@ export default function UltraInnovativeServiceShowcase({
                       Contact Us
                     </a>
                   </div>
-
                   {/* Contact Information */}
                   <div className="mt-6 pt-6 border-t border-gray-700/50">
                     <div className="text-xs text-gray-400 mb-2 font-medium">Contact Information:</div>
@@ -280,7 +264,6 @@ export default function UltraInnovativeServiceShowcase({
                     </div>
                   </div>
                 </div>
-
                 {/* Hover Glow Border */}
                 <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 blur-xl" />
@@ -289,7 +272,6 @@ export default function UltraInnovativeServiceShowcase({
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -317,20 +299,17 @@ export default function UltraInnovativeServiceShowcase({
     </section>
   );
 }
-
 // Missing icon components
 const Heart = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
   </svg>
 );
-
 const Link = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
   </svg>
 );
-
 const Activity = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />

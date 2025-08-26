@@ -1,6 +1,5 @@
 import React from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
 export function ChatMessage({ role, message, timestamp }) {
   const isUser = role === 'user';
   

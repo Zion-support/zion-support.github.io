@@ -13,8 +13,7 @@ import {
 import Wifi from 'lucide-react/dist/esm/icons/wifi';
 import Target from 'lucide-react/dist/esm/icons/target';
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
-import { SEO } from '@/components/SEO';
-
+import SEOHead from "../components/SEOHead.jsx";
 const categoryIcons = {
   "AI & Machine Learning": Brain,
   "Cybersecurity": Shield,
@@ -24,7 +23,6 @@ const categoryIcons = {
   "IoT & Smart Solutions": Wifi,
   "Blockchain & Web3": Link
 };
-
 const categoryColors = {
   "AI & Machine Learning": "from-purple-500 to-pink-500",
   "Cybersecurity": "from-red-500 to-orange-500",
@@ -34,19 +32,16 @@ const categoryColors = {
   "IoT & Smart Solutions": "from-yellow-500 to-orange-500",
   "Blockchain & Web3": "from-gray-500 to-blue-500"
 };
-
 export default function ServicesOverviewPage() {
   const getServicesByCategory = (category: string) => {
     return ENHANCED_SERVICES.filter(service => service.category === category);
   };
-
   const formatPrice = (price: number) => {
     if (price >= 1000) {
       return `$${(price / 1000).toFixed(1)}k`;
     }
     return `$${price}`;
   };
-
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -55,7 +50,6 @@ export default function ServicesOverviewPage() {
         keywords="AI services, cybersecurity, cloud solutions, digital transformation, IT consulting, blockchain, IoT, enterprise solutions"
         canonical="https://ziontechgroup.com/services-overview"
       />
-
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark text-white py-24">
         <div className="container mx-auto px-4 text-center">
@@ -78,7 +72,6 @@ export default function ServicesOverviewPage() {
           </div>
         </div>
       </div>
-
       {/* Contact Banner */}
       <div className="bg-zion-blue-dark py-6 px-4 md:px-8 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-white">
@@ -102,7 +95,6 @@ export default function ServicesOverviewPage() {
           </div>
         </div>
       </div>
-
       {/* Services Overview Tabs */}
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -114,7 +106,6 @@ export default function ServicesOverviewPage() {
               Explore our comprehensive range of technology services designed to meet every business need
             </p>
           </div>
-
           <Tabs defaultValue="ai-ml" className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-7 mb-8">
               {SERVICE_CATEGORIES.map((category) => {
@@ -131,12 +122,10 @@ export default function ServicesOverviewPage() {
                 );
               })}
             </TabsList>
-
             {SERVICE_CATEGORIES.map((category) => {
               const services = getServicesByCategory(category);
               const Icon = categoryIcons[category as keyof typeof categoryIcons];
               const gradient = categoryColors[category as keyof typeof categoryColors];
-
               return (
                 <TabsContent
                   key={category}
@@ -161,7 +150,6 @@ export default function ServicesOverviewPage() {
                       {category === "Blockchain & Web3" && "Embrace the future with blockchain solutions, DeFi applications, and Web3 innovation."}
                     </p>
                   </div>
-
                   {/* Services Grid */}
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service) => (
@@ -180,7 +168,6 @@ export default function ServicesOverviewPage() {
                             {service.description}
                           </CardDescription>
                         </CardHeader>
-
                         <CardContent className="pb-4">
                           {/* Key Benefits */}
                           <div className="mb-4">
@@ -197,7 +184,6 @@ export default function ServicesOverviewPage() {
                               ))}
                             </ul>
                           </div>
-
                           {/* Use Cases */}
                           <div className="mb-4">
                             <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
@@ -212,7 +198,6 @@ export default function ServicesOverviewPage() {
                               ))}
                             </div>
                           </div>
-
                           {/* Target Audience */}
                           <div className="mb-4">
                             <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
@@ -228,7 +213,6 @@ export default function ServicesOverviewPage() {
                             </div>
                           </div>
                         </CardContent>
-
                         <CardContent className="pt-0">
                           {/* Pricing & Metrics */}
                           <div className="bg-gray-50 rounded-lg p-4 mb-4">
@@ -250,7 +234,6 @@ export default function ServicesOverviewPage() {
                                 </div>
                               </div>
                             </div>
-
                             <div className="grid grid-cols-3 gap-2 text-center text-xs">
                               <div className="flex items-center gap-1 justify-center">
                                 <Star className="h-3 w-3 text-yellow-500" />
@@ -266,7 +249,6 @@ export default function ServicesOverviewPage() {
                               </div>
                             </div>
                           </div>
-
                           {/* Action Buttons */}
                           <div className="grid grid-cols-2 gap-3">
                             <Button className="w-full" size="sm">
@@ -282,7 +264,6 @@ export default function ServicesOverviewPage() {
                       </Card>
                     ))}
                   </div>
-
                   {/* Category CTA */}
                   <div className="text-center py-8">
                     <Button size="lg" className="bg-zion-blue hover:bg-zion-blue-dark text-white px-8 py-6">
@@ -296,7 +277,6 @@ export default function ServicesOverviewPage() {
           </Tabs>
         </div>
       </div>
-
       {/* Why Choose Zion Tech Section */}
       <div className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -308,7 +288,6 @@ export default function ServicesOverviewPage() {
               We combine cutting-edge technology with proven expertise to deliver exceptional results
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
@@ -319,7 +298,6 @@ export default function ServicesOverviewPage() {
                 Over 15 years of experience in delivering enterprise technology solutions across industries
               </p>
             </div>
-
             <div className="text-center">
               <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
                 <Zap className="h-10 w-10 text-white" />
@@ -329,7 +307,6 @@ export default function ServicesOverviewPage() {
                 Cutting-edge AI and machine learning technologies that deliver measurable business impact
               </p>
             </div>
-
             <div className="text-center">
               <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
                 <Globe className="h-10 w-10 text-white" />
@@ -339,7 +316,6 @@ export default function ServicesOverviewPage() {
                 Worldwide IT services with local expertise and 24/7 support across all time zones
               </p>
             </div>
-
             <div className="text-center">
               <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
                 <Heart className="h-10 w-10 text-white" />
@@ -352,7 +328,6 @@ export default function ServicesOverviewPage() {
           </div>
         </div>
       </div>
-
       {/* Contact CTA Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple py-20 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -363,7 +338,6 @@ export default function ServicesOverviewPage() {
             Our expert team is ready to help you implement cutting-edge technology solutions that drive growth,
             efficiency, and competitive advantage.
           </p>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
             <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
               <Phone className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
@@ -371,14 +345,12 @@ export default function ServicesOverviewPage() {
               <p className="text-zion-slate-light mb-4">Speak directly with our experts</p>
               <div className="text-2xl font-bold">+1 302 464 0950</div>
             </div>
-
             <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
               <Mail className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
               <p className="text-zion-slate-light mb-4">Get detailed information</p>
               <div className="text-lg font-semibold">kleber@ziontechgroup.com</div>
             </div>
-
             <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
               <Target className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
@@ -386,7 +358,6 @@ export default function ServicesOverviewPage() {
               <div className="text-sm font-semibold">364 E Main St STE 1008<br />Middletown, DE 19709</div>
             </div>
           </div>
-
           <div className="flex flex-wrap justify-center gap-6">
             <Button size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light text-lg px-8 py-6">
               <Rocket className="mr-3 h-6 w-6" />

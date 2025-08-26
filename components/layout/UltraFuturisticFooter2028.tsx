@@ -8,14 +8,12 @@ import {
   Users, Briefcase, BookOpen, MessageCircle,
   Star, Target, Layers, Database, ShieldCheck
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: '🚀 2028 Futuristic Innovations',
@@ -54,7 +52,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Careers', href: '/careers', icon: Briefcase },
@@ -66,7 +63,6 @@ const companyLinks = [
   { name: 'Terms', href: '/terms', icon: Shield },
   { name: 'Privacy', href: '/privacy', icon: LockKeyhole }
 ];
-
 const solutionCategories = [
   {
     title: '🔧 IT Solutions',
@@ -96,7 +92,6 @@ const solutionCategories = [
     ]
   }
 ];
-
 const quickLinks = [
   { name: 'AI Climate Prediction', href: '/ai-climate-prediction-platform', icon: Leaf, color: 'from-emerald-500 to-teal-500' },
   { name: 'Quantum Security', href: '/quantum-cybersecurity-firewall', icon: ShieldCheck, color: 'from-purple-500 to-indigo-500' },
@@ -105,7 +100,6 @@ const quickLinks = [
   { name: 'Smart Cities', href: '/smart-city-infrastructure-management', icon: Building2, color: 'from-gray-500 to-slate-500' },
   { name: '5G Optimization', href: '/5g-network-optimization-platform', icon: Wifi, color: 'from-green-500 to-emerald-500' }
 ];
-
 export default function UltraFuturisticFooter2028() {
   return (
     <footer className="bg-black text-white relative overflow-hidden">
@@ -140,7 +134,6 @@ export default function UltraFuturisticFooter2028() {
                   Leading the future of technology with cutting-edge AI, quantum computing, and autonomous systems. 
                   Transforming businesses through innovative solutions and unparalleled expertise.
                 </p>
-
                 {/* Contact Info */}
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3 text-purple-200">
@@ -157,7 +150,6 @@ export default function UltraFuturisticFooter2028() {
                   </div>
                 </div>
               </div>
-
               {/* Service Categories */}
               <div className="lg:col-span-3">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -184,7 +176,6 @@ export default function UltraFuturisticFooter2028() {
             </div>
           </div>
         </div>
-
         {/* Middle Section - Solutions */}
         <div className="border-b border-purple-500/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -194,7 +185,6 @@ export default function UltraFuturisticFooter2028() {
                 From cutting-edge AI to quantum computing, we provide end-to-end solutions that drive innovation and growth.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {solutionCategories.map((category) => (
                 <div key={category.title} className="bg-purple-900/20 border border-purple-500/30 rounded-2xl p-6 hover:bg-purple-800/30 transition-colors duration-300">
@@ -216,7 +206,6 @@ export default function UltraFuturisticFooter2028() {
             </div>
           </div>
         </div>
-
         {/* Quick Services Section */}
         <div className="border-b border-purple-500/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -226,7 +215,6 @@ export default function UltraFuturisticFooter2028() {
                 Our most requested futuristic solutions
               </p>
             </div>
-
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {quickLinks.map((service) => (
                 <Link
@@ -241,7 +229,6 @@ export default function UltraFuturisticFooter2028() {
             </div>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className="bg-purple-900/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -263,7 +250,6 @@ export default function UltraFuturisticFooter2028() {
                   ))}
                 </ul>
               </div>
-
               {/* Resources */}
               <div>
                 <h4 className="text-lg font-bold text-white mb-4">Resources</h4>
@@ -281,7 +267,6 @@ export default function UltraFuturisticFooter2028() {
                   ))}
                 </ul>
               </div>
-
               {/* Newsletter */}
               <div className="lg:col-span-2">
                 <h4 className="text-lg font-bold text-white mb-4">Stay Updated</h4>
@@ -302,7 +287,6 @@ export default function UltraFuturisticFooter2028() {
             </div>
           </div>
         </div>
-
         {/* Copyright */}
         <div className="bg-black/50 border-t border-purple-500/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -327,7 +311,6 @@ export default function UltraFuturisticFooter2028() {
           </div>
         </div>
       </div>
-
       {/* Floating Contact Button */}
       <div className="fixed bottom-6 left-6 z-40">
         <Link

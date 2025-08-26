@@ -344,7 +344,6 @@ export default function MicroSaasServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark/50 border-b border-zion-blue-light/20 py-4">
         <div className="container mx-auto px-4">
@@ -364,9 +363,14 @@ export default function MicroSaasServicesPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Filters and Search */}
       <div className="sticky top-16 z-40 bg-zion-slate-dark/80 backdrop-blur-md border-b border-zion-blue-light/20 py-4">
+=======
+      {/* Category Filter */}
+      <div className="py-8 bg-zion-blue-dark/50">
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-4 items-center">
             {/* Search */}
@@ -436,7 +440,6 @@ export default function MicroSaasServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="container mx-auto px-4 py-12">
         {filteredServices.length === 0 ? (
@@ -469,7 +472,6 @@ export default function MicroSaasServicesPage() {
           </>
         )}
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-20">
         <div className="container mx-auto px-4 text-center">

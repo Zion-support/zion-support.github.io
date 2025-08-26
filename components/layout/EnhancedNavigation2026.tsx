@@ -8,14 +8,12 @@ import {
   Layers, Sparkles, Atom, Microscope, Satellite,
   Search, Bell, User, Settings, LogOut, SparklesIcon
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: 'AI & Machine Learning 2026',
@@ -84,7 +82,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: '2026 Services', href: '/2026-revolutionary-services-showcase' },
@@ -95,30 +92,24 @@ const companyLinks = [
   { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' }
 ];
-
 const EnhancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleDropdown = (category: string) => {
     setActiveDropdown(activeDropdown === category ? null : category);
   };
-
   const closeDropdown = () => {
     setActiveDropdown(null);
   };
-
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -159,7 +150,6 @@ const EnhancedNavigation2026 = () => {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -181,7 +171,6 @@ const EnhancedNavigation2026 = () => {
               <p className="text-xs text-cyan-300 font-medium">Revolutionary 2026</p>
             </div>
           </motion.div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {/* Service Categories */}
@@ -198,7 +187,6 @@ const EnhancedNavigation2026 = () => {
                     activeDropdown === category.title ? 'rotate-180' : ''
                   }`} />
                 </motion.button>
-
                 {/* Dropdown Menu */}
                 <AnimatePresence>
                   {activeDropdown === category.title && (
@@ -241,7 +229,6 @@ const EnhancedNavigation2026 = () => {
                 </AnimatePresence>
               </div>
             ))}
-
             {/* Company Links */}
             {companyLinks.map((link) => (
               <motion.div
@@ -257,7 +244,6 @@ const EnhancedNavigation2026 = () => {
               </motion.div>
             ))}
           </div>
-
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
@@ -274,7 +260,6 @@ const EnhancedNavigation2026 = () => {
                 className="w-64 pl-10 pr-4 py-2 bg-white/10 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-transparent"
               />
             </motion.div>
-
             {/* Contact Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -284,7 +269,6 @@ const EnhancedNavigation2026 = () => {
               Get Started
             </motion.button>
           </div>
-
           {/* Mobile Menu Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -296,7 +280,6 @@ const EnhancedNavigation2026 = () => {
           </motion.button>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -319,7 +302,6 @@ const EnhancedNavigation2026 = () => {
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-transparent"
                 />
               </div>
-
               {/* Mobile Service Categories */}
               <div className="space-y-4">
                 {serviceCategories.map((category) => (
@@ -343,7 +325,6 @@ const EnhancedNavigation2026 = () => {
                   </div>
                 ))}
               </div>
-
               {/* Mobile Company Links */}
               <div className="space-y-3">
                 {companyLinks.map((link) => (
@@ -357,7 +338,6 @@ const EnhancedNavigation2026 = () => {
                   </Link>
                 ))}
               </div>
-
               {/* Mobile Contact Button */}
               <motion.button
                 whileHover={{ scale: 1.02 }}
@@ -370,7 +350,6 @@ const EnhancedNavigation2026 = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Click outside to close dropdown */}
       {activeDropdown && (
         <div
@@ -381,5 +360,4 @@ const EnhancedNavigation2026 = () => {
     </motion.nav>
   );
 };
-
 export default EnhancedNavigation2026;

@@ -31,7 +31,6 @@ export interface EmergingTechService {
   support: string;
   futurePotential: string;
 }
-
 export const emergingTechServices2025: EmergingTechService[] = [
   {
     id: 1,
@@ -664,5 +663,4 @@ export const emergingTechServices2025: EmergingTechService[] = [
     futurePotential: "General purpose robots, humanoid robots, swarm intelligence"
   }
 ];
-
 export default emergingTechServices2025;

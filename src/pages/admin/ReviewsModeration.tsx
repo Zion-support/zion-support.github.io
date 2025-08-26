@@ -1,5 +1,4 @@
-
-import { SEO } from "@/components/SEO";
+import SEOHead from "../components/SEOHead";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useState, useEffect } from "react";
@@ -7,45 +6,37 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, AlertTriangle } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
-
 function ReviewsModerationContent() {
-  const [activeTab, setActiveTab] = useState("pending");
-  const [reviews, setReviews] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  
-  const fetchReviews = async () => {
-    setIsLoading(true);
-    try {
-      // In a real application, you would fetch reviews from an API
-      // For now, let's simulate a delay and return empty data
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setReviews([]);
-      setIsLoading(false);
-    } catch (error) {
-      console.error("Error fetching reviews:", error);
-      toast({
-        title: "Error",
-        description: "Failed to load reviews. Please try again later.",
-        variant: "destructive",
-      });
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchReviews();
-  }, [activeTab]);
-
-  const handleRefresh = () => {
-    fetchReviews();
-  };
-  
-  return (
-    <>
-      <SEO
-        title="Review Moderation | Zion AI Marketplace"
-        description="Moderate and manage reviews in the Zion AI Marketplace"
-      />
+    const [activeTab, setActiveTab] = useState("pending");
+    const [reviews, setReviews] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const fetchReviews = async () => {
+        setIsLoading(true);
+        try {
+            // In a real application, you would fetch reviews from an API
+            // For now, let's simulate a delay and return empty data
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            setReviews([]);
+            setIsLoading(false);
+        }
+        catch (error) {
+            console.error("Error fetching reviews:", error);
+            toast({
+                title: "Error",
+                description: "Failed to load reviews. Please try again later.",
+                variant: "destructive",
+            });
+            setIsLoading(false);
+        }
+    };
+    useEffect(() => {
+        fetchReviews();
+    }, [activeTab]);
+    const handleRefresh = () => {
+        fetchReviews();
+    };
+    return (<>
+      <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"/>
       
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
@@ -58,7 +49,7 @@ function ReviewsModerationContent() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Star className="h-5 w-5" />
+              <Star className="h-5 w-5"/>
               Review Management
             </CardTitle>
             <CardDescription>
@@ -73,16 +64,12 @@ function ReviewsModerationContent() {
               </TabsList>
               
               <TabsContent value="pending" className="mt-0">
-                <ReviewsModerationTable 
-                  reviews={reviews}
-                  isLoading={isLoading}
-                  onRefresh={handleRefresh}
-                />
+                <ReviewsModerationTable reviews={reviews} isLoading={isLoading} onRefresh={handleRefresh}/>
               </TabsContent>
               
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
-                  <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
+                  <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2"/>
                   <h3 className="text-lg font-medium mb-2">Reported Reviews</h3>
                   <p className="text-muted-foreground">
                     This section will show reviews that have been reported by users.
@@ -94,14 +81,10 @@ function ReviewsModerationContent() {
         </Card>
       </main>
       
-    </>
-  );
+    </>);
 }
-
 export default function ReviewsModeration() {
-  return (
-    <ProtectedRoute>
+    return (<ProtectedRoute>
       <ReviewsModerationContent />
-    </ProtectedRoute>
-  );
+    </ProtectedRoute>);
 }

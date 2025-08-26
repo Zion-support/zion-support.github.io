@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousZeroTrustSecurity: React.FC = () => {
-  return (
-    <>
+const AIAutonomousZeroTrustSecurity = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Zero Trust Security Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous zero trust security platform that continuously secures zero trust environments, detects threats, and protects zero trust infrastructure with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI zero trust security, autonomous zero trust security, zero trust protection, threat detection, autonomous operations, AI zero trust security platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-zero-trust-security" />
+        <meta name="description" content="Revolutionary AI autonomous zero trust security platform that continuously secures zero trust environments, detects threats, and protects zero trust infrastructure with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI zero trust security, autonomous zero trust security, zero trust protection, threat detection, autonomous operations, AI zero trust security platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-zero-trust-security"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
@@ -22,7 +20,6 @@ const AIAutonomousZeroTrustSecurity: React.FC = () => {
               Your AI zero trust security partner that continuously secures zero trust environments, detects threats, and protects zero trust infrastructure with intelligent autonomous operation
             </p>
           </div>
-
           {/* Zero Trust Security Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -46,7 +43,6 @@ const AIAutonomousZeroTrustSecurity: React.FC = () => {
               <p className="text-gray-300">Analyze security</p>
             </div>
           </div>
-
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -85,7 +81,6 @@ const AIAutonomousZeroTrustSecurity: React.FC = () => {
               <p className="text-gray-300">Learns new threats</p>
             </div>
           </div>
-
           {/* Zero Trust Security Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Zero Trust Security Process</h2>
@@ -121,19 +116,15 @@ const AIAutonomousZeroTrustSecurity: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Zero Trust Security Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Zero Trust Security Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Identity Security', 'Device Security', 'Network Security', 'Application Security', 'Data Security', 'Infrastructure Security', 'Access Security', 'Verification Security'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Identity Security', 'Device Security', 'Network Security', 'Application Security', 'Data Security', 'Infrastructure Security', 'Access Security', 'Verification Security'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Zero Trust Security Applications</h2>
@@ -154,7 +145,6 @@ const AIAutonomousZeroTrustSecurity: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-red-600 to-pink-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Zero Trust Security?</h2>
@@ -172,8 +162,6 @@ const AIAutonomousZeroTrustSecurity: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousZeroTrustSecurity;

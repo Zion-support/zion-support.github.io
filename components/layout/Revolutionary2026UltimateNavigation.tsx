@@ -10,20 +10,17 @@ import {
   Home, Briefcase, BookOpen, Users as Team, MessageCircle,
   DollarSign, Grid, List, ArrowRight
 } from 'lucide-react';
-
 // Import all the new service data
 import { revolutionary2026AIAutomationServices } from '../../data/revolutionary-2026-ai-automation-services';
 import { revolutionary2026EmergingTechServices } from '../../data/revolutionary-2026-emerging-tech-services';
 import { revolutionary2026HealthcareBiotechServices } from '../../data/revolutionary-2026-healthcare-biotech-services';
 import { revolutionary2026FintechBlockchainServices } from '../../data/revolutionary-2026-fintech-blockchain-services';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: 'AI & Consciousness 2026',
@@ -82,7 +79,6 @@ const serviceCategories = [
     }))
   }
 ];
-
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'About Us', href: '/about', icon: Users },
@@ -91,30 +87,24 @@ const companyLinks = [
   { name: 'Resources', href: '/resources', icon: BookOpen },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-
 const Revolutionary2026UltimateNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleDropdown = (category: string) => {
     setActiveDropdown(activeDropdown === category ? null : category);
   };
-
   const closeAllDropdowns = () => {
     setActiveDropdown(null);
     setIsOpen(false);
   };
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -146,7 +136,6 @@ const Revolutionary2026UltimateNavigation = () => {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -160,7 +149,6 @@ const Revolutionary2026UltimateNavigation = () => {
               <div className="text-xs text-purple-400">Revolutionary 2026</div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {/* Services Dropdown */}
@@ -173,7 +161,6 @@ const Revolutionary2026UltimateNavigation = () => {
                 <span>Revolutionary Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </button>
-
               <AnimatePresence>
                 {activeDropdown === 'services' && (
                   <motion.div
@@ -235,7 +222,6 @@ const Revolutionary2026UltimateNavigation = () => {
                 )}
               </AnimatePresence>
             </div>
-
             {/* Company Links */}
             {companyLinks.map((link) => (
               <Link
@@ -248,7 +234,6 @@ const Revolutionary2026UltimateNavigation = () => {
               </Link>
             ))}
           </div>
-
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center gap-4">
             <button className="p-2 text-gray-400 hover:text-white transition-colors">
@@ -263,7 +248,6 @@ const Revolutionary2026UltimateNavigation = () => {
               </button>
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -273,7 +257,6 @@ const Revolutionary2026UltimateNavigation = () => {
           </button>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -311,7 +294,6 @@ const Revolutionary2026UltimateNavigation = () => {
                   ))}
                 </div>
               </div>
-
               {/* Mobile Company Links */}
               <div className="space-y-3">
                 {companyLinks.map((link) => (
@@ -326,7 +308,6 @@ const Revolutionary2026UltimateNavigation = () => {
                   </Link>
                 ))}
               </div>
-
               {/* Mobile Contact Info */}
               <div className="pt-6 border-t border-purple-500/20">
                 <div className="space-y-3 text-sm text-gray-400">
@@ -351,5 +332,4 @@ const Revolutionary2026UltimateNavigation = () => {
     </nav>
   );
 };
-
 export default Revolutionary2026UltimateNavigation;

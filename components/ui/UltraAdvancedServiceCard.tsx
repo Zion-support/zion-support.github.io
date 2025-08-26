@@ -5,7 +5,6 @@ import {
   Users, Zap, Shield, Clock, Check, Brain,
   Rocket, Dna, DollarSign, Lock, Globe
 } from 'lucide-react';
-
 interface UltraAdvancedServiceCardProps {
   service: {
     id: string;
@@ -48,11 +47,9 @@ interface UltraAdvancedServiceCardProps {
     reviews: number;
   };
 }
-
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI') || category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
     if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
@@ -63,7 +60,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     if (category.includes('Internet') || category.includes('Network')) return <Globe className="w-4 h-4" />;
     return <Zap className="w-4 h-4" />;
   };
-
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -82,7 +78,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       }
     }
   };
-
   const contentVariants = {
     hidden: { opacity: 0, height: 0 },
     visible: { 
@@ -94,7 +89,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       }
     }
   };
-
   return (
     <motion.div
       className="relative group"
@@ -148,12 +142,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               </motion.div>
             )}
           </div>
-
           {/* Tagline */}
           <p className="text-gray-300 text-sm mb-4 leading-relaxed">
             {service.tagline}
           </p>
-
           {/* Price */}
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-baseline space-x-1">
@@ -169,7 +161,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <span className="text-gray-400 text-sm">({service.reviews})</span>
             </div>
           </div>
-
           {/* Quick Stats */}
           <div className="grid grid-cols-2 gap-3 mb-4">
             <div className="flex items-center space-x-2 text-sm">
@@ -181,7 +172,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <span className="text-gray-300">{service.trialDays} day trial</span>
             </div>
           </div>
-
           {/* Market Data */}
           <div className="bg-gray-800/50 rounded-lg p-3 mb-4">
             <div className="flex items-center justify-between text-sm">
@@ -193,7 +183,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <span className="text-blue-400 font-semibold">{service.growthRate}</span>
             </div>
           </div>
-
           {/* Expandable Content */}
           <AnimatePresence>
             {isExpanded && (
@@ -211,7 +200,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                     {service.description}
                   </p>
                 </div>
-
                 {/* Features */}
                 <div>
                   <h4 className="text-white font-semibold mb-2">Key Features</h4>
@@ -224,13 +212,11 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                     ))}
                   </div>
                 </div>
-
                 {/* ROI */}
                 <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3">
                   <h4 className="text-white font-semibold mb-2">ROI Promise</h4>
                   <p className="text-gray-300 text-sm">{service.roi}</p>
                 </div>
-
                 {/* Contact Info */}
                 <div className="bg-gray-800/50 rounded-lg p-3">
                   <h4 className="text-white font-semibold mb-2">Contact Information</h4>
@@ -252,7 +238,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               </motion.div>
             )}
           </AnimatePresence>
-
           {/* Action Buttons */}
           <div className="flex space-x-3 mt-6">
             <motion.button
@@ -278,7 +263,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               {isExpanded ? 'Show Less' : 'Details'}
             </motion.button>
           </div>
-
           {/* Expand/Collapse Indicator */}
           <motion.div
             className="flex justify-center mt-4"
@@ -292,5 +276,4 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     </motion.div>
   );
 };
-
 export default UltraAdvancedServiceCard;

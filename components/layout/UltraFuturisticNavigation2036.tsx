@@ -13,7 +13,6 @@ import {
   Building, MessageCircle, Sparkles as SparklesIcon, Zap as ZapIcon,
   Target as TargetIcon, Atom as AtomIcon, Brain as BrainIcon
 } from 'lucide-react';
-
 interface NavigationItem {
   name: string;
   href: string;
@@ -25,14 +24,12 @@ interface NavigationItem {
   featured?: boolean;
   category?: string;
 }
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 function normalizeHref(href: string): string {
   if (!href) return href;
   if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
@@ -43,7 +40,6 @@ function normalizeHref(href: string): string {
   if (hasQueryOrHash) return href;
   return href.endsWith('/') ? href : href + '/';
 }
-
 const navigationItems: NavigationItem[] = [
   {
     name: 'Services',
@@ -196,30 +192,24 @@ const navigationItems: NavigationItem[] = [
     ]
   }
 ];
-
 export default function UltraFuturisticNavigation2036() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
-
   const closeAllDropdowns = () => {
     setActiveDropdown(null);
     setIsOpen(false);
   };
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -252,7 +242,6 @@ export default function UltraFuturisticNavigation2036() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -273,7 +262,6 @@ export default function UltraFuturisticNavigation2036() {
               <span className="text-xs text-white/60">Future Technology Solutions</span>
             </div>
           </motion.div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-1">
             {navigationItems.map((item) => (
@@ -297,7 +285,6 @@ export default function UltraFuturisticNavigation2036() {
                     activeDropdown === item.name ? 'rotate-180' : ''
                   }`} />
                 </button>
-
                 {/* Dropdown Menu */}
                 <AnimatePresence>
                   {activeDropdown === item.name && (
@@ -348,7 +335,6 @@ export default function UltraFuturisticNavigation2036() {
               </div>
             ))}
           </div>
-
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -358,7 +344,6 @@ export default function UltraFuturisticNavigation2036() {
               Get Started
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -368,7 +353,6 @@ export default function UltraFuturisticNavigation2036() {
           </button>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (

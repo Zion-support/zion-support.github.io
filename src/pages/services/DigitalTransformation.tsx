@@ -2,8 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, RefreshCw, Target, Users, Zap, Globe } from 'lucide-react';
 
+=======
+import { CheckCircle, ArrowRight, RefreshCw, Target, Users, Zap, Globe, Phone, Mail } from 'lucide-react';
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 const DigitalTransformation: React.FC = () => {
   const transformationServices = [
     {
@@ -55,7 +59,6 @@ const DigitalTransformation: React.FC = () => {
       icon: "🏗️"
     }
   ];
-
   const benefits = [
     "Increased operational efficiency by 50%",
     "Enhanced customer experience and satisfaction",
@@ -63,6 +66,7 @@ const DigitalTransformation: React.FC = () => {
     "Improved decision-making with real-time data",
     "Competitive advantage in the digital marketplace"
   ];
+<<<<<<< HEAD
 
   const transformationApproach = [
     { step: "Assessment", icon: "🔍", description: "Evaluate current state and identify opportunities" },
@@ -83,6 +87,8 @@ const DigitalTransformation: React.FC = () => {
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
           <motion.h1 
             className="text-4xl md:text-6xl font-bold mb-6"
             initial={{ opacity: 0, y: -20 }}
@@ -118,6 +124,7 @@ const DigitalTransformation: React.FC = () => {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -125,17 +132,72 @@ const DigitalTransformation: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Transformation Capabilities
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               End-to-end digital transformation solutions for modern businesses
             </p>
+<<<<<<< HEAD
           </div>
 
+=======
+          </motion.div>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {transformationServices.map((service, index) => (
               <motion.div
                 key={index}
+<<<<<<< HEAD
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
+=======
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Why Choose Digital Transformation?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Digital transformation is not just about technology—it's about fundamentally 
+              changing how your business operates and delivers value to customers.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -161,6 +223,7 @@ const DigitalTransformation: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -259,6 +322,8 @@ const DigitalTransformation: React.FC = () => {
         </div>
       </section>
 
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -280,7 +345,6 @@ const DigitalTransformation: React.FC = () => {
     </div>
   );
 };
-
 export default DigitalTransformation;
 };
 

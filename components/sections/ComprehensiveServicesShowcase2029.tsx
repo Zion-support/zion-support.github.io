@@ -10,14 +10,12 @@ import { innovativeMicroSaasServices2029V2 } from '../../data/2029-innovative-mi
 import { aiBreakthroughServices2029 } from '../../data/2029-ai-breakthrough-services';
 import { spaceTechBreakthroughServices2029 } from '../../data/2029-space-tech-breakthroughs';
 import { enterpriseITBreakthroughServices2029 } from '../../data/2029-enterprise-it-breakthroughs';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     id: 'micro-saas',
@@ -52,16 +50,13 @@ const serviceCategories = [
     services: enterpriseITBreakthroughServices2029
   }
 ];
-
 export default function ComprehensiveServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
   const allServices = serviceCategories.flatMap(category => 
     category.services.map(service => ({ ...service, category: category.id }))
   );
-
   const filteredServices = allServices.filter(service =>
     (selectedCategory === 'all' || service.category === selectedCategory) &&
     (searchTerm === '' || 
@@ -69,7 +64,6 @@ export default function ComprehensiveServicesShowcase2029() {
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.category.toLowerCase().includes(searchTerm.toLowerCase()))
   );
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -79,7 +73,6 @@ export default function ComprehensiveServicesShowcase2029() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -91,7 +84,6 @@ export default function ComprehensiveServicesShowcase2029() {
       }
     }
   };
-
   return (
     <section className="relative py-20 bg-black/95 overflow-hidden">
       {/* Animated Background Elements */}
@@ -100,7 +92,6 @@ export default function ComprehensiveServicesShowcase2029() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <motion.div
@@ -118,7 +109,6 @@ export default function ComprehensiveServicesShowcase2029() {
             Discover our comprehensive portfolio of cutting-edge micro SAAS, AI, space technology, and enterprise IT solutions
           </p>
         </motion.div>
-
         {/* Search and Filter Controls */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -138,7 +128,6 @@ export default function ComprehensiveServicesShowcase2029() {
                 className="w-full pl-10 pr-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent backdrop-blur-sm"
               />
             </div>
-
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               <button
@@ -165,7 +154,6 @@ export default function ComprehensiveServicesShowcase2029() {
                 </button>
               ))}
             </div>
-
             {/* View Mode Toggle */}
             <div className="flex gap-2">
               <button
@@ -191,7 +179,6 @@ export default function ComprehensiveServicesShowcase2029() {
             </div>
           </div>
         </motion.div>
-
         {/* Services Grid/List */}
         <motion.div
           variants={containerVariants}
@@ -228,7 +215,6 @@ export default function ComprehensiveServicesShowcase2029() {
                     {service.tagline}
                   </p>
                 </div>
-
                 {/* Service Details */}
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -240,11 +226,9 @@ export default function ComprehensiveServicesShowcase2029() {
                       <span className="text-sm font-medium">Premium</span>
                     </div>
                   </div>
-
                   <p className="text-gray-400 text-sm leading-relaxed">
                     {service.description}
                   </p>
-
                   {/* Key Features */}
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-white">Key Features:</h4>
@@ -257,7 +241,6 @@ export default function ComprehensiveServicesShowcase2029() {
                       ))}
                     </div>
                   </div>
-
                   {/* Market Info */}
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div className="bg-gray-800/50 rounded-lg p-2">
@@ -269,7 +252,6 @@ export default function ComprehensiveServicesShowcase2029() {
                       <div className="text-white font-medium">{service.growthRate}</div>
                     </div>
                   </div>
-
                   {/* ROI and Benefits */}
                   <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg p-3 border border-cyan-500/20">
                     <div className="text-sm text-cyan-400 font-medium mb-1">ROI: {service.roi}</div>
@@ -277,7 +259,6 @@ export default function ComprehensiveServicesShowcase2029() {
                       {service.benefits.slice(0, 2).join(' • ')}
                     </div>
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex gap-3 pt-2">
                     <a
@@ -301,7 +282,6 @@ export default function ComprehensiveServicesShowcase2029() {
             ))}
           </AnimatePresence>
         </motion.div>
-
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -331,7 +311,6 @@ export default function ComprehensiveServicesShowcase2029() {
                 <span className="text-sm">{contactInfo.address}</span>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Inquiry`}

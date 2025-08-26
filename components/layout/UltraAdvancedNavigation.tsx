@@ -8,21 +8,17 @@ import {
   FileText, Phone, Mail
 } from 'lucide-react';
 import Link from 'next/link';
-
 const UltraAdvancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const navigationItems = [
     {
       name: 'Home',
@@ -70,7 +66,6 @@ const UltraAdvancedNavigation: React.FC = () => {
       icon: <Phone className="w-4 h-4" />
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
@@ -82,7 +77,6 @@ const UltraAdvancedNavigation: React.FC = () => {
       }
     }
   };
-
   const dropdownVariants = {
     hidden: { opacity: 0, y: -10, scale: 0.95 },
     visible: {
@@ -95,7 +89,6 @@ const UltraAdvancedNavigation: React.FC = () => {
       }
     }
   };
-
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -127,7 +120,6 @@ const UltraAdvancedNavigation: React.FC = () => {
               </div>
             </Link>
           </motion.div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -186,7 +178,6 @@ const UltraAdvancedNavigation: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <motion.a
@@ -208,7 +199,6 @@ const UltraAdvancedNavigation: React.FC = () => {
               Explore Services
             </motion.a>
           </div>
-
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <motion.button
@@ -221,7 +211,6 @@ const UltraAdvancedNavigation: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -315,5 +304,4 @@ const UltraAdvancedNavigation: React.FC = () => {
     </motion.nav>
   );
 };
-
 export default UltraAdvancedNavigation;

@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface SiteLayoutProps {
 	children: React.ReactNode;
 }
-
 const SiteLayout: React.FC<SiteLayoutProps> = ({ children }) => {
 	return (
 		<div className="min-h-screen flex flex-col bg-gray-50">
@@ -17,5 +15,4 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children }) => {
 		</div>
 	);
 };
-
 export default SiteLayout;
