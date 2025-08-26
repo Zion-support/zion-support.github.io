@@ -8,6 +8,8 @@ const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
+const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
+const ServicesComparison = lazy(() => import('./pages/ServicesComparison'));
 
 // Loading spinner component
 const LoadingSpinner = () => (
@@ -41,6 +43,8 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
+              <Route path="/services-comparison" element={<ServicesComparison />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
