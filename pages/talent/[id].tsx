@@ -1,77 +1,75 @@
-import React, { useEffect } from 'react';
-import type { GetStaticPaths, GetStaticProps } from 'next';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-// Loader2 removed as TalentProfileSkeleton will be used
-import TalentProfileSkeleton from '@/components/talent/TalentProfileSkeleton';
+import { Skeleton } from '@/components/ui/skeleton';
+import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
+import type { TalentProfile } from '@/types/talent';
+import TalentDetails from '@/components/talent/TalentDetails';
 import NotFound from '@/components/NotFound';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 
-interface TalentProfileBasic {
-  id: string;
-  name: string;
-  bio?: string;
-  skills?: string[];
-  portfolio?: string[];
-}
-
-const TalentPage: React.FC<TalentPageProps> = ({ talent }) => {
-  const router = useRouter();
-  useEffect(() => {
-    if (!talent) {
-      console.log('TalentPage: talent prop is undefined');
-    }
-  }, [talent]);
-
 const TalentPage: React.FC = () => {
   const router = useRouter();
-  const { id } = router.query as { id?: string };
+  const { id } = router.query;
+  const [profile, setProfile] = useState<(TalentProfile & { social?: Record<string, string> }) | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const { data, error, isLoading } = useSWR<TalentProfileBasic>(
-    id ? `/api/talent/${id}` : null,
-    (url: string) => fetch(url).then(handleApiResponse)
-  );
+  useEffect(() => {
+    if (!id) return;
+    const fetchProfile = async () => {
+      try {
+        setLoading(true);
+        const res = await fetch(`/api/talent/${id}`);
+        if (!res.ok) throw new Error('Failed to load profile');
+        const data = await res.json();
+        setProfile(data.profile);
+        setError(null);
+      } catch (err) {
+        setError((err as Error).message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProfile();
+  }, [id]);
 
-  if (isLoading || !router.isReady || !id) {
-    return <TalentProfileSkeleton />;
-  }
-
-  // Specific 404 error from API
-  if (error && (error as any).status === 404) {
+  if (loading) {
     return (
-      <>
-        <NextSeo title="Talent Not Found" description="Talent profile unavailable" />
-        <NotFound />
-      </>
-    );
-  }
-
-  // Other errors (non-404)
-  if (error) {
-    const err: any = error;
-    return (
-      <div className="flex flex-col items-center justify-center py-20 text-center">
-        <h2 className="text-2xl font-semibold mb-2">Error</h2>
-        <p>Failed to load talent profile.</p>
-        {err.status && <p>Status: {err.status}</p>}
-        <p>Message: {err.info?.error || err.info?.message || err.message}</p>
+      <div className="p-4 space-y-2" data-testid="talent-loading">
+        <Skeleton className="h-8 w-1/3" />
+        <Skeleton className="h-4 w-full" />
+        <Skeleton className="h-4 w-2/3" />
       </div>
     );
   }
 
-  if (!talent) {
-    return <div className="p-4 text-center">Talent not found or unavailable</div>;
+  if (error) {
+    return (
+      <div className="p-4">
+        <Alert variant="destructive">
+          <AlertTitle>Error</AlertTitle>
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      </div>
+    );
+  }
+
+  if (!profile) {
+    return <NotFound />;
   }
 
   // If we reach here, talent data is available
   return (
     <>
       <Head>
-        <title>{talent.full_name}</title>
+        <title>{profile.full_name}</title>
+        <meta property="og:title" content={profile.full_name} />
+        {profile.profile_picture_url && (
+          <meta property="og:image" content={profile.profile_picture_url} />
+        )}
       </Head>
-      <ErrorBoundary>
-        <TalentDetails talent={talent} />
-      </ErrorBoundary>
+      <TalentDetails talent={profile} />
     </>
   );
 };
