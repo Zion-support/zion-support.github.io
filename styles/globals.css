@@ -1311,3 +1311,14 @@ h3 {
   opacity: 0.18;
   animation: scanline 8s linear infinite;
 }
+
+/* New subtle hover outline */
+.hover-outline:hover {
+  box-shadow: 0 0 0 1px rgba(34,211,238,0.3), 0 4px 24px rgba(34,211,238,0.12);
+}
+
+/* Highlight on focus-visible for accessibility */
+.focus-highlight:focus-visible {
+  outline: 2px solid rgba(34,211,238,0.7);
+  outline-offset: 2px;
+}

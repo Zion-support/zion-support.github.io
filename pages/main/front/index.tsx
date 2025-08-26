@@ -54,9 +54,8 @@ export default function MainFrontIndex() {
             <Link href="#features"><a className="text-white/80 hover:text-white">Features</a></Link>
             <Link href="#feature-map"><a className="text-white/80 hover:text-white">Map</a></Link>
             <Link href="#suites"><a className="text-white/80 hover:text-white">Suites</a></Link>
-            <Link href="#use-cases"><a className="text-white/80 hover:text-white">Use&nbsp;Cases</a></Link>
-            <Link href="#guardrails"><a className="text-white/80 hover:text-white">Guardrails</a></Link>
             <Link href="#capabilities"><a className="text-white/80 hover:text-white">Capabilities</a></Link>
+            <Link href="#guardrails"><a className="text-white/80 hover:text-white">Guardrails</a></Link>
             <Link href="#benefits"><a className="text-white/80 hover:text-white">Benefits</a></Link>
             <Link href="#reports"><a className="text-white/80 hover:text-white">Reports</a></Link>
             <Link href="#roadmap"><a className="text-white/80 hover:text-white">Docs</a></Link>
@@ -1085,80 +1084,41 @@ export default function MainFrontIndex() {
           </div>
         </footer>
 
-        {/* AI Agents Gallery */}
+        {/* Micro-Features */}
         <motion.section
-          id="agents"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-7xl px-6 pb-14"
         >
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">AI Agents Gallery</h2>
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Meet the autonomous agents powering your outcomes. Each card links to a live system.</p>
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Micro‑Features</h2>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Small, high‑impact automations that add up to big wins — each links to live artifacts or dashboards.</p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { Icon: Search, title: 'AI SEO Auditor', desc: 'Continuously improves on‑site SEO with safe diffs.', href: '/reports/seo' },
-              { Icon: Link2, title: 'Link Healer', desc: 'Finds and fixes broken links with dashboards.', href: '/site-health' },
-              { Icon: Palette, title: 'Design Beautifier', desc: 'Evolves UI with cohesive, futuristic patterns.', href: '/newsroom' },
-              { Icon: Gauge, title: 'Performance Tuner', desc: 'Optimizes bundles and runtime for speed.', href: '/site-health' },
-              { Icon: Layers, title: 'Factory Composer', desc: 'Chains automations into higher‑order workflows.', href: '/automation' },
-              { Icon: GitBranch, title: 'Main Sync', desc: 'Ships small, safe diffs to main continuously.', href: '/automation' },
-            ].map(({ Icon, title, desc, href }) => (
-              <Link key={title} href={href}>
-                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+              { label: 'Broken Link Killer', desc: 'Crawls and fixes dead links automatically', href: '/site-health' },
+              { label: 'Asset Optimizer', desc: 'Compresses images and tunes delivery', href: '/site-health' },
+              { label: 'Structured Data', desc: 'Schema.org + rich snippets upgrades', href: '/reports/seo' },
+              { label: 'OG Image Maker', desc: 'Auto‑generates Open Graph images', href: '/newsroom' },
+              { label: 'Sitemap Manager', desc: 'Maintains sitemaps and robots policies', href: '/automation' },
+              { label: 'Link Prefetcher', desc: 'Smarter prefetch for perceived speed', href: '/site-health' },
+              { label: 'Changelog Writer', desc: 'Summarized diffs and AI notes', href: 'https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md', external: true },
+              { label: 'Guardrail Enforcer', desc: 'Policy checks before shipping', href: '/site-health' },
+              { label: 'Design Beautifier', desc: 'Cohesive visual upgrades at scale', href: '/newsroom' },
+            ].map((f) => (
+              f.external ? (
+                <a key={f.label} href={f.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <div className="flex items-center gap-2">
-                    <Icon className="h-5 w-5 text-cyan-300" />
-                    <h3 className="text-lg font-semibold">{title}</h3>
-                  </div>
-                  <p className="mt-1 text-sm text-white/75">{desc}</p>
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-                </a>
-              </Link>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* Capabilities Matrix */}
-        <motion.section
-          id="capability-matrix"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-7xl px-6 pb-16"
-        >
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities Matrix</h2>
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore a broader catalog of Zion capabilities. Each tile links to a live hub, report, or workflow.</p>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {[
-              { title: 'Autonomous Agents', desc: 'Self‑improving cloud workers', href: '/automation' },
-              { title: 'Repo Sync to Main', desc: 'Safe, continuous delivery', href: '/automation' },
-              { title: 'AI SEO Auditor', desc: 'On‑site improvements daily', href: '/reports/seo' },
-              { title: 'AI Trends Radar', desc: 'Signals for new factories', href: '/reports/ai-trends' },
-              { title: 'Site Health', desc: 'A11y, performance, links', href: '/site-health' },
-              { title: 'Guardrails', desc: 'Defense‑in‑depth quality', href: '/site-health' },
-              { title: 'Design Evolution', desc: 'Cohesive futuristic UI', href: '/newsroom' },
-              { title: 'Observability', desc: 'Dashboards & artifacts', href: '/site-health' },
-              { title: 'Analytics', desc: 'Outcomes & insights', href: '/site-health' },
-              { title: 'Link Integrity', desc: 'Broken link healing', href: '/site-health' },
-              { title: 'Factory Composer', desc: 'Higher‑order workflows', href: '/automation' },
-              { title: 'Docs & Changelog', desc: 'Technical notes & AI log', href: 'https://github.com/Zion-Holdings/zion.app/tree/main/docs', external: true },
-            ].map((item) => (
-              item.external ? (
-                <a key={item.title} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <div className="text-base font-semibold">{item.title}</div>
-                  <div className="mt-1 text-sm text-white/75">{item.desc}</div>
+                  <div className="text-base font-semibold">{f.label}</div>
+                  <div className="mt-1 text-sm text-white/75">{f.desc}</div>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
                 </a>
               ) : (
-                <Link key={item.title} href={item.href as string}>
-                  <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+                <Link key={f.label} href={f.href as string}>
+                  <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                     <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                    <div className="text-base font-semibold">{item.title}</div>
-                    <div className="mt-1 text-sm text-white/75">{item.desc}</div>
+                    <div className="text-base font-semibold">{f.label}</div>
+                    <div className="mt-1 text-sm text-white/75">{f.desc}</div>
                     <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
                   </a>
                 </Link>
@@ -1167,58 +1127,44 @@ export default function MainFrontIndex() {
           </div>
         </motion.section>
 
-        {/* Quick Links */}
-        <section className="mx-auto max-w-7xl px-6 pb-12" id="quick-links">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <a href="/features" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-              <div className="text-base font-semibold">Features</div>
-              <div className="mt-1 text-sm text-white/75">What Zion offers at a glance</div>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-            </a>
-            <a href="/capabilities" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-              <div className="text-base font-semibold">Capabilities</div>
-              <div className="mt-1 text-sm text-white/75">End‑to‑end system capabilities</div>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-            </a>
-            <a href="/benefits" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-              <div className="text-base font-semibold">Benefits</div>
-              <div className="mt-1 text-sm text-white/75">Outcomes you can expect</div>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
-            </a>
-          </div>
-        </section>
-
-        {/* Benefits Directory */}
+        {/* Capabilities Matrix */}
         <motion.section
-          id="benefits-directory"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-          className="mx-auto max-w-7xl px-6 pb-16"
+          className="mx-auto max-w-7xl px-6 pb-14"
         >
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits Directory</h2>
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Outcome‑focused advantages with direct links to the systems that deliver them.</p>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities Matrix</h2>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A broader map of what the platform can do — jump straight to the relevant section.</p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { label: '24/7 Progress', desc: 'Always‑on autonomous delivery', href: '/automation' },
-              { label: 'Safe Incremental Diffs', desc: 'Small, reviewable changes', href: '/automation' },
-              { label: 'Zero‑Ops Cloud‑Native', desc: 'No servers to babysit', href: '/automation' },
-              { label: 'Layered Quality Checks', desc: 'Guardrails & audits', href: '/site-health' },
-              { label: 'Faster Iteration Loops', desc: 'Shorten idea‑to‑impact', href: '/newsroom' },
-              { label: 'SEO Visibility Gains', desc: 'Continuous improvements', href: '/reports/seo' },
-            ].map((b) => (
-              <Link key={b.label} href={b.href}>
-                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <div className="flex items-center gap-2">
-                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />
-                    <h3 className="text-base font-semibold">{b.label}</h3>
-                  </div>
-                  <p className="mt-1 text-sm text-white/75">{b.desc}</p>
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Explore <span aria-hidden>→</span></div>
+              { label: 'A11y Fixes', href: '/site-health' },
+              { label: 'Perf Budgets', href: '/site-health' },
+              { label: 'SEO Metadata', href: '/reports/seo' },
+              { label: 'Content Curation', href: '/newsroom' },
+              { label: 'Automated Refactors', href: '/automation' },
+              { label: 'Dependency Upgrades', href: '/automation' },
+              { label: 'Sitemaps & Robots', href: '/automation' },
+              { label: 'Main Sync Engine', href: '/automation' },
+              { label: 'Guardrails & Policy', href: '/site-health' },
+              { label: 'Live Pipelines', href: 'https://github.com/Zion-Holdings/zion.app/actions', external: true },
+              { label: 'AI Trends Radar', href: '/reports/ai-trends' },
+              { label: 'Changelog Automation', href: 'https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md', external: true },
+            ].map((c) => (
+              c.external ? (
+                <a key={c.label} href={c.href as string} target="_blank" rel="noopener" className="rounded-2xl border border-white/10 bg-white/5 p-5 text-left backdrop-blur-xl hover:border-cyan-400/30">
+                  <div className="text-sm font-semibold text-white">{c.label}</div>
+                  <div className="mt-1 text-xs text-cyan-300/90">Open ↗</div>
                 </a>
-              </Link>
+              ) : (
+                <Link key={c.label} href={c.href as string}>
+                  <a className="rounded-2xl border border-white/10 bg-white/5 p-5 text-left backdrop-blur-xl hover:border-cyan-400/30">
+                    <div className="text-sm font-semibold text-white">{c.label}</div>
+                    <div className="mt-1 text-xs text-cyan-300/90">Open →</div>
+                  </a>
+                </Link>
+              )
             ))}
           </div>
         </motion.section>
