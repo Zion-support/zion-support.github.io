@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ServiceCard from '../components/ServiceCard';
 import InteractiveServiceShowcase from '../components/InteractiveServiceShowcase';
@@ -9,58 +10,54 @@ import InteractiveServiceShowcase from '../components/InteractiveServiceShowcase
 const Home: React.FC = () => {
   const featuredServices = [
     {
-      title: "QuantumEdge AI Platform",
-      description: "Revolutionary platform combining quantum computing principles with AI for ultra-fast machine learning and optimization problems",
-      icon: "🔮",
+      title: "AI Strategy Consulting",
+      description: "Comprehensive AI strategy development and implementation consulting for enterprises",
+      icon: "🤖",
       price: "From $2,500",
-      category: "Quantum AI",
-      features: ["Quantum-inspired algorithms", "Hybrid quantum-classical processing", "Real-time optimization"],
+      category: "AI & Machine Learning",
+      features: ["Strategic Planning", "Implementation Roadmap", "ROI Analysis"],
+      isPopular: true
+    },
+    {
+      title: "Quantum AI Fusion Platform",
+      description: "Revolutionary platform combining quantum computing with artificial intelligence",
+      icon: "🔮",
+      price: "From $25,000",
+      category: "Quantum Computing",
+      features: ["Quantum Algorithms", "AI Integration", "Performance Optimization"],
       isNew: true
     },
     {
-      title: "NeuromorphicAI Studio",
-      description: "Brain-inspired AI development platform that mimics biological neural networks for ultra-efficient, low-power AI applications",
+      title: "Neuromorphic Computing Platform",
+      description: "Brain-inspired computing architecture for ultra-efficient AI processing",
       icon: "🧠",
-      price: "From $1,800",
-      category: "Neuromorphic Computing",
-      features: ["Spiking neural networks", "Event-driven processing", "Low-power AI models"],
-      isPopular: true
+      price: "From $35,000",
+      category: "AI Architecture",
+      features: ["Neural Networks", "Efficient Processing", "Scalable Architecture"]
     },
     {
-      title: "Zero-Trust Network Architecture",
-      description: "Comprehensive zero-trust network architecture implementation with continuous verification and micro-segmentation",
-      icon: "🛡️",
-      price: "From $4,500",
-      category: "Network Security",
-      features: ["Continuous identity verification", "Micro-segmentation", "Real-time threat detection"],
-      isPopular: true
+      title: "Edge AI Orchestration Platform",
+      description: "Intelligent orchestration of AI workloads across distributed edge computing",
+      icon: "🌐",
+      price: "From $15,000",
+      category: "Edge Computing",
+      features: ["Edge Deployment", "Load Balancing", "Real-time Processing"]
     },
     {
-      title: "5G Private Network Solutions",
-      description: "Enterprise-grade 5G private network solutions for industrial IoT, smart manufacturing, and autonomous operations",
-      icon: "📡",
-      price: "From $2,800",
-      category: "5G Networks",
-      features: ["Private 5G core network", "Ultra-low latency", "Massive IoT support"],
-      isNew: true
+      title: "Federated Learning Platform",
+      description: "Privacy-preserving AI training across distributed data sources",
+      icon: "🔒",
+      price: "From $20,000",
+      category: "Privacy AI",
+      features: ["Data Privacy", "Distributed Training", "Secure Communication"]
     },
     {
-      title: "SpaceTech AI Platform",
-      description: "AI-powered platform for space mission planning, satellite operations, and space data analytics",
-      icon: "🚀",
-      price: "From $3,500",
-      category: "Space Technology",
-      features: ["Mission planning AI", "Satellite operations", "Space data analytics"],
-      isNew: true
-    },
-    {
-      title: "GreenTech AI Solutions",
-      description: "AI-powered sustainability platform for environmental monitoring, carbon footprint reduction, and green energy optimization",
-      icon: "🌱",
-      price: "From $1,400",
-      category: "Green Technology",
-      features: ["Environmental monitoring", "Carbon footprint tracking", "Energy optimization"],
-      isPopular: true
+      title: "AI Ethics & Governance Platform",
+      description: "Comprehensive framework for ethical AI development and governance",
+      icon: "⚖️",
+      price: "From $18,000",
+      category: "AI Governance",
+      features: ["Ethical Guidelines", "Compliance Tools", "Audit Trails"]
     }
   ];
 
@@ -74,44 +71,44 @@ const Home: React.FC = () => {
       href: "/services/ai"
     },
     {
-      name: "Quantum Computing",
-      count: 3,
-      description: "Revolutionary quantum computing platforms",
-      icon: "🔮",
-      color: "from-zion-purple to-zion-cyan",
-      href: "/services/quantum"
+      name: "Data Analytics & BI",
+      count: 8,
+      description: "Transform data into actionable insights",
+      icon: "📊",
+      color: "from-zion-cyan to-zion-blue",
+      href: "/services/data-analytics"
     },
     {
-      name: "IT & Infrastructure",
+      name: "IoT & Edge Computing",
       count: 12,
-      description: "Enterprise-grade IT solutions",
-      icon: "🖥️",
-      color: "from-zion-cyan to-zion-green",
-      href: "/services/infrastructure"
+      description: "Connected ecosystems and edge processing",
+      icon: "🌐",
+      color: "from-zion-green to-zion-emerald",
+      href: "/services/iot-edge-computing"
+    },
+    {
+      name: "Blockchain & Web3",
+      count: 10,
+      description: "Decentralized applications and solutions",
+      icon: "🔗",
+      color: "from-zion-purple to-zion-indigo",
+      href: "/services/blockchain-web3"
+    },
+    {
+      name: "DevOps & Cloud",
+      count: 14,
+      description: "Modern software delivery and infrastructure",
+      icon: "☁️",
+      color: "from-zion-orange to-zion-red",
+      href: "/services/devops-cloud"
     },
     {
       name: "Cybersecurity",
       count: 8,
-      description: "Advanced security solutions",
+      description: "Advanced security and threat protection",
       icon: "🛡️",
-      color: "from-zion-red to-zion-purple",
+      color: "from-zion-red to-zion-pink",
       href: "/services/cybersecurity"
-    },
-    {
-      name: "Edge Computing",
-      count: 6,
-      description: "Distributed edge computing solutions",
-      icon: "🌐",
-      color: "from-zion-orange to-zion-red",
-      href: "/services/edge"
-    },
-    {
-      name: "Emerging Technologies",
-      count: 10,
-      description: "Next-generation technology solutions",
-      icon: "⚡",
-      color: "from-zion-yellow to-zion-orange",
-      href: "/innovative-services-2025"
     }
   ];
 
@@ -164,6 +161,15 @@ const Home: React.FC = () => {
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Explore our comprehensive range of technology solutions designed to transform your business
             </p>
+            <div className="mt-6">
+              <Link 
+                to="/services" 
+                className="inline-flex items-center px-6 py-3 bg-zion-cyan text-zion-blue-dark rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
+              >
+                View All Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </motion.div>
           
           <motion.div 
