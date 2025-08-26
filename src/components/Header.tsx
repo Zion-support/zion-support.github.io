@@ -18,48 +18,12 @@ export function Header() {
   }, []);
 
   const services = [
-    { 
-      name: 'AI Solutions', 
-      href: '/services/ai', 
-      description: 'Machine Learning & AI Services',
-      icon: Cpu,
-      color: 'from-zion-cyan to-zion-blue'
-    },
-    { 
-      name: 'Cloud & DevOps', 
-      href: '/services/cloud', 
-      description: 'Cloud Migration & Automation',
-      icon: Database,
-      color: 'from-zion-purple to-zion-purple-dark'
-    },
-    { 
-      name: 'Cybersecurity', 
-      href: '/services/cybersecurity', 
-      description: 'Security & Threat Protection',
-      icon: Shield,
-      color: 'from-zion-blue to-zion-blue-dark'
-    },
-    { 
-      name: 'IT Infrastructure', 
-      href: '/services/infrastructure', 
-      description: 'Network & System Management',
-      icon: Zap,
-      color: 'from-zion-cyan to-zion-purple'
-    },
-    { 
-      name: 'Digital Transformation', 
-      href: '/services/transformation', 
-      description: 'Business Process Optimization',
-      icon: Globe,
-      color: 'from-zion-purple to-zion-cyan'
-    },
-    { 
-      name: 'Consulting', 
-      href: '/services/consulting', 
-      description: 'Technology Strategy & Advisory',
-      icon: Users,
-      color: 'from-zion-blue to-zion-cyan'
-    }
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & AI Services' },
+    { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Cloud Migration & Automation' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Threat Protection' },
+    { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Network & System Management' },
+    { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Process Optimization' },
+    { name: 'Technology Consulting', href: '/services/consulting', description: 'Technology Strategy & Advisory' }
   ];
 
   const toggleMenu = () => {

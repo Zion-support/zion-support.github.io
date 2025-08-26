@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  Cpu, 
+  Server, 
+  Network, 
   Database, 
   Shield, 
   Zap, 
@@ -13,65 +13,80 @@ import {
   BarChart3,
   Target,
   Lightbulb,
-  Rocket
+  Rocket,
+  Monitor,
+  HardDrive,
+  Wifi,
+  Cpu
 } from 'lucide-react';
 
-const AIServices: React.FC = () => {
-  const aiServices = [
+const ITInfrastructure: React.FC = () => {
+  const infrastructureServices = [
     {
-      title: 'Machine Learning Solutions',
-      description: 'Custom ML models and algorithms tailored to your business needs',
-      icon: <Brain className="w-8 h-8" />,
-      features: ['Predictive Analytics', 'Pattern Recognition', 'Automated Decision Making', 'Real-time Learning']
+      title: 'Network Infrastructure',
+      description: 'Design, implementation, and management of enterprise network solutions',
+      icon: <Network className="w-8 h-8" />,
+      features: ['Network Design', 'Wireless Solutions', 'VPN Implementation', 'Network Security']
     },
     {
-      title: 'Natural Language Processing',
-      description: 'Advanced text and speech processing capabilities for enhanced communication',
-      icon: <Cpu className="w-8 h-8" />,
-      features: ['Sentiment Analysis', 'Language Translation', 'Chatbot Development', 'Document Processing']
+      title: 'Server Management',
+      description: 'Comprehensive server infrastructure and management services',
+      icon: <Server className="w-8 h-8" />,
+      features: ['Server Deployment', 'Performance Optimization', 'Backup & Recovery', '24/7 Monitoring']
     },
     {
-      title: 'Computer Vision',
-      description: 'Image and video analysis for automation and quality control',
-      icon: <Target className="w-8 h-8" />,
-      features: ['Object Detection', 'Facial Recognition', 'Quality Inspection', 'Autonomous Navigation']
+      title: 'Data Center Solutions',
+      description: 'Modern data center design and optimization strategies',
+      icon: <HardDrive className="w-8 h-8" />,
+      features: ['Data Center Design', 'Power & Cooling', 'Security Systems', 'Disaster Recovery']
     },
     {
-      title: 'AI-Powered Analytics',
-      description: 'Intelligent data analysis and business intelligence solutions',
-      icon: <BarChart3 className="w-8 h-8" />,
-      features: ['Predictive Modeling', 'Risk Assessment', 'Performance Optimization', 'Market Analysis']
+      title: 'Storage Solutions',
+      description: 'Scalable storage infrastructure and data management',
+      icon: <Database className="w-8 h-8" />,
+      features: ['SAN/NAS Implementation', 'Data Archiving', 'Backup Solutions', 'Storage Virtualization']
     }
   ];
 
-  const industries = [
-    { name: 'Healthcare', description: 'AI-powered diagnostics and patient care optimization' },
-    { name: 'Finance', description: 'Fraud detection and algorithmic trading systems' },
-    { name: 'Manufacturing', description: 'Predictive maintenance and quality control automation' },
-    { name: 'Retail', description: 'Personalized recommendations and inventory management' }
+  const infrastructureTypes = [
+    { name: 'On-Premises', description: 'Traditional infrastructure within your facilities' },
+    { name: 'Hybrid Cloud', description: 'Combination of on-premises and cloud solutions' },
+    { name: 'Cloud-Native', description: 'Modern cloud-first infrastructure approach' },
+    { name: 'Edge Computing', description: 'Distributed computing at the network edge' }
   ];
 
   const benefits = [
     {
-      title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and optimize business processes',
+      title: 'Improved Performance',
+      description: 'Optimized infrastructure for better system performance',
       icon: <Zap className="w-6 h-6" />
     },
     {
-      title: 'Better Decision Making',
-      description: 'Data-driven insights for strategic business decisions',
+      title: 'Enhanced Reliability',
+      description: 'Robust infrastructure with high availability',
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      title: 'Scalability',
+      description: 'Flexible infrastructure that grows with your business',
       icon: <TrendingUp className="w-6 h-6" />
     },
     {
-      title: 'Cost Reduction',
-      description: 'Lower operational costs through intelligent automation',
+      title: 'Cost Efficiency',
+      description: 'Optimized infrastructure reducing operational costs',
       icon: <BarChart3 className="w-6 h-6" />
-    },
-    {
-      title: 'Competitive Advantage',
-      description: 'Stay ahead with cutting-edge AI technology',
-      icon: <Rocket className="w-6 h-6" />
     }
+  ];
+
+  const technologies = [
+    { name: 'VMware', category: 'Virtualization' },
+    { name: 'Hyper-V', category: 'Virtualization' },
+    { name: 'Cisco', category: 'Networking' },
+    { name: 'Juniper', category: 'Networking' },
+    { name: 'Dell EMC', category: 'Storage' },
+    { name: 'NetApp', category: 'Storage' },
+    { name: 'Windows Server', category: 'Operating Systems' },
+    { name: 'Linux', category: 'Operating Systems' }
   ];
 
   return (
@@ -85,13 +100,13 @@ const AIServices: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-8">
-            AI
+            IT
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 block">
-              Solutions
+              Infrastructure
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-            Transform your business with cutting-edge artificial intelligence solutions designed for the future
+            Build a robust, scalable, and secure IT foundation that powers your business growth
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -110,7 +125,7 @@ const AIServices: React.FC = () => {
         </motion.div>
       </section>
 
-      {/* AI Services Grid */}
+      {/* Infrastructure Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -120,15 +135,15 @@ const AIServices: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our AI Services
+              Our IT Infrastructure Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive artificial intelligence solutions that drive innovation and growth
+              Comprehensive infrastructure solutions designed for modern business needs
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {aiServices.map((service, index) => (
+            {infrastructureServices.map((service, index) => (
               <motion.div
                 key={service.title}
                 className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
@@ -158,7 +173,7 @@ const AIServices: React.FC = () => {
         </div>
       </section>
 
-      {/* Industries Section */}
+      {/* Infrastructure Types Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -168,34 +183,34 @@ const AIServices: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Industries We Serve
+              Infrastructure Types
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI solutions are tailored for diverse industry needs
+              Flexible infrastructure solutions to meet your specific business requirements
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
+            {infrastructureTypes.map((type, index) => (
               <motion.div
-                key={industry.name}
+                key={type.name}
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
               >
                 <div className="bg-gradient-to-r from-blue-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
+                  <Server className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">{industry.name}</h3>
-                <p className="text-gray-300 text-sm">{industry.description}</p>
+                <h3 className="text-xl font-bold mb-2">{type.name}</h3>
+                <p className="text-gray-300 text-sm">{type.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Technologies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -205,10 +220,48 @@ const AIServices: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose Our AI Solutions?
+              Technologies & Platforms
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the transformative power of artificial intelligence
+              Industry-leading technologies and platforms we specialize in
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={tech.name}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 text-center border border-white/10 hover:border-blue-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.05 * index }}
+                whileHover={{ y: -3 }}
+              >
+                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Cpu className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold mb-1">{tech.name}</h3>
+                <p className="text-sm text-gray-400">{tech.category}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Why Choose Our IT Infrastructure Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience reliable, scalable, and secure infrastructure that drives business success
             </p>
           </motion.div>
 
@@ -239,13 +292,13 @@ const AIServices: React.FC = () => {
             className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-3xl p-12 text-center border border-white/10"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Business?
+              Ready to Build Your IT Foundation?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our AI solutions can drive innovation and growth for your organization
+              Let's discuss how our infrastructure solutions can support your business growth and digital transformation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -268,4 +321,4 @@ const AIServices: React.FC = () => {
   );
 };
 
-export default AIServices;
+export default ITInfrastructure;

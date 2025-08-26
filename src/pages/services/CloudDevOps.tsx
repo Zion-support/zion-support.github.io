@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  Cpu, 
+  Cloud, 
+  Server, 
   Database, 
   Shield, 
   Zap, 
@@ -13,65 +13,79 @@ import {
   BarChart3,
   Target,
   Lightbulb,
-  Rocket
+  Rocket,
+  GitBranch,
+  Monitor,
+  Lock
 } from 'lucide-react';
 
-const AIServices: React.FC = () => {
-  const aiServices = [
+const CloudDevOps: React.FC = () => {
+  const cloudServices = [
     {
-      title: 'Machine Learning Solutions',
-      description: 'Custom ML models and algorithms tailored to your business needs',
-      icon: <Brain className="w-8 h-8" />,
-      features: ['Predictive Analytics', 'Pattern Recognition', 'Automated Decision Making', 'Real-time Learning']
+      title: 'Cloud Migration',
+      description: 'Seamless migration of your infrastructure to modern cloud platforms',
+      icon: <Cloud className="w-8 h-8" />,
+      features: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Multi-Cloud Strategy']
     },
     {
-      title: 'Natural Language Processing',
-      description: 'Advanced text and speech processing capabilities for enhanced communication',
-      icon: <Cpu className="w-8 h-8" />,
-      features: ['Sentiment Analysis', 'Language Translation', 'Chatbot Development', 'Document Processing']
+      title: 'DevOps Automation',
+      description: 'Streamline development and operations with automated CI/CD pipelines',
+      icon: <GitBranch className="w-8 h-8" />,
+      features: ['CI/CD Implementation', 'Infrastructure as Code', 'Automated Testing', 'Deployment Automation']
     },
     {
-      title: 'Computer Vision',
-      description: 'Image and video analysis for automation and quality control',
-      icon: <Target className="w-8 h-8" />,
-      features: ['Object Detection', 'Facial Recognition', 'Quality Inspection', 'Autonomous Navigation']
+      title: 'Container Orchestration',
+      description: 'Manage and scale containerized applications with Kubernetes and Docker',
+      icon: <Server className="w-8 h-8" />,
+      features: ['Kubernetes Management', 'Docker Implementation', 'Microservices Architecture', 'Service Mesh']
     },
     {
-      title: 'AI-Powered Analytics',
-      description: 'Intelligent data analysis and business intelligence solutions',
-      icon: <BarChart3 className="w-8 h-8" />,
-      features: ['Predictive Modeling', 'Risk Assessment', 'Performance Optimization', 'Market Analysis']
+      title: 'Cloud Security',
+      description: 'Comprehensive security solutions for cloud environments',
+      icon: <Shield className="w-8 h-8" />,
+      features: ['Identity & Access Management', 'Data Encryption', 'Compliance & Governance', 'Threat Detection']
     }
   ];
 
-  const industries = [
-    { name: 'Healthcare', description: 'AI-powered diagnostics and patient care optimization' },
-    { name: 'Finance', description: 'Fraud detection and algorithmic trading systems' },
-    { name: 'Manufacturing', description: 'Predictive maintenance and quality control automation' },
-    { name: 'Retail', description: 'Personalized recommendations and inventory management' }
+  const platforms = [
+    { name: 'Amazon Web Services', description: 'Enterprise-grade cloud infrastructure and services' },
+    { name: 'Microsoft Azure', description: 'Hybrid cloud solutions and enterprise integration' },
+    { name: 'Google Cloud Platform', description: 'AI-powered cloud computing and analytics' },
+    { name: 'Multi-Cloud', description: 'Optimized solutions across multiple cloud providers' }
   ];
 
   const benefits = [
     {
-      title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and optimize business processes',
-      icon: <Zap className="w-6 h-6" />
-    },
-    {
-      title: 'Better Decision Making',
-      description: 'Data-driven insights for strategic business decisions',
+      title: 'Scalability',
+      description: 'Scale resources up or down based on demand',
       icon: <TrendingUp className="w-6 h-6" />
     },
     {
-      title: 'Cost Reduction',
-      description: 'Lower operational costs through intelligent automation',
+      title: 'Cost Optimization',
+      description: 'Reduce infrastructure costs with pay-as-you-use models',
       icon: <BarChart3 className="w-6 h-6" />
     },
     {
-      title: 'Competitive Advantage',
-      description: 'Stay ahead with cutting-edge AI technology',
-      icon: <Rocket className="w-6 h-6" />
+      title: 'Faster Deployment',
+      description: 'Accelerate development cycles with automated pipelines',
+      icon: <Zap className="w-6 h-6" />
+    },
+    {
+      title: 'Enhanced Security',
+      description: 'Advanced security features and compliance standards',
+      icon: <Lock className="w-6 h-6" />
     }
+  ];
+
+  const devOpsTools = [
+    { name: 'Jenkins', category: 'CI/CD' },
+    { name: 'GitLab CI', category: 'CI/CD' },
+    { name: 'Terraform', category: 'Infrastructure' },
+    { name: 'Ansible', category: 'Configuration' },
+    { name: 'Kubernetes', category: 'Orchestration' },
+    { name: 'Docker', category: 'Containerization' },
+    { name: 'Prometheus', category: 'Monitoring' },
+    { name: 'Grafana', category: 'Visualization' }
   ];
 
   return (
@@ -85,13 +99,13 @@ const AIServices: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-8">
-            AI
+            Cloud &
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 block">
-              Solutions
+              DevOps
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-            Transform your business with cutting-edge artificial intelligence solutions designed for the future
+            Accelerate your digital transformation with modern cloud infrastructure and DevOps practices
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -110,7 +124,7 @@ const AIServices: React.FC = () => {
         </motion.div>
       </section>
 
-      {/* AI Services Grid */}
+      {/* Cloud Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -120,15 +134,15 @@ const AIServices: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our AI Services
+              Our Cloud & DevOps Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive artificial intelligence solutions that drive innovation and growth
+              Comprehensive solutions for modern cloud infrastructure and development operations
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {aiServices.map((service, index) => (
+            {cloudServices.map((service, index) => (
               <motion.div
                 key={service.title}
                 className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
@@ -158,7 +172,7 @@ const AIServices: React.FC = () => {
         </div>
       </section>
 
-      {/* Industries Section */}
+      {/* Cloud Platforms Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -168,34 +182,34 @@ const AIServices: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Industries We Serve
+              Cloud Platforms We Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI solutions are tailored for diverse industry needs
+              Expertise across all major cloud providers and hybrid solutions
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
+            {platforms.map((platform, index) => (
               <motion.div
-                key={industry.name}
+                key={platform.name}
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
               >
                 <div className="bg-gradient-to-r from-blue-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
+                  <Globe className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">{industry.name}</h3>
-                <p className="text-gray-300 text-sm">{industry.description}</p>
+                <h3 className="text-xl font-bold mb-2">{platform.name}</h3>
+                <p className="text-gray-300 text-sm">{platform.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* DevOps Tools Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -205,10 +219,48 @@ const AIServices: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose Our AI Solutions?
+              DevOps Tools & Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the transformative power of artificial intelligence
+              Industry-leading tools and technologies for modern DevOps practices
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {devOpsTools.map((tool, index) => (
+              <motion.div
+                key={tool.name}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 text-center border border-white/10 hover:border-blue-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.05 * index }}
+                whileHover={{ y: -3 }}
+              >
+                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Monitor className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold mb-1">{tool.name}</h3>
+                <p className="text-sm text-gray-400">{tool.category}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Why Choose Our Cloud & DevOps Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of modern cloud infrastructure and DevOps practices
             </p>
           </motion.div>
 
@@ -239,13 +291,13 @@ const AIServices: React.FC = () => {
             className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-3xl p-12 text-center border border-white/10"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Business?
+              Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our AI solutions can drive innovation and growth for your organization
+              Let's discuss how our cloud and DevOps solutions can accelerate your digital transformation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -268,4 +320,4 @@ const AIServices: React.FC = () => {
   );
 };
 
-export default AIServices;
+export default CloudDevOps;
