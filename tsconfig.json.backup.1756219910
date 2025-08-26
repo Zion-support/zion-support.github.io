@@ -26,6 +26,15 @@
       ]
     },
     "allowSyntheticDefaultImports": true,
+<<<<<<< HEAD
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e367
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "noImplicitReturns": false,
@@ -41,16 +50,31 @@
       {
         "name": "next"
       }
+<<<<<<< HEAD
+    ]
+=======
     ],
     "noEmit": true,
     "isolatedModules": true,
     "jsx": "preserve"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e367
   },
   "include": [
     "src",
     ".next/types/**/*.ts"
   ],
   "exclude": [
+<<<<<<< HEAD
+    "src/components.disabled",
+    "src/components.disabled/**/*",
+    "src/pages.disabled",
+    "src/pages.disabled/**/*"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+=======
     "node_modules",
     ".next",
     "out",
@@ -71,5 +95,6 @@
     "src_disabled/**",
     "temp_components.disabled/**",
     "tests.disabled/**"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e367
   ]
 }
