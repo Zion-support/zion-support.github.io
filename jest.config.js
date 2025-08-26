@@ -6,7 +6,6 @@ export default {
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
     '^@/(.*)$': '<rootDir>/src/$1',
-    '^vitest$': '<rootDir>/tests/vitest-mock.ts',
   },
   roots: ['<rootDir>/tests', '<rootDir>/__tests__'],
   coverageThreshold: {

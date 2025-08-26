@@ -1,6 +1,5 @@
+import { jest } from '@jest/globals';
 import handler from '@/pages/api/auth/register';
-
-// Jest provides global expect and test functions
 
 const signUpMock = jest.fn();
 jest.mock('@supabase/supabase-js', () => ({

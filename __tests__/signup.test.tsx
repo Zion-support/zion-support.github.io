@@ -3,8 +3,8 @@ import { MemoryRouter } from 'react-router-dom';
 import Signup from '@/pages/Signup';
 import * as toastHook from '../src/hooks/use-toast';
 import * as router from 'react-router-dom';
+import { jest } from '@jest/globals';
 
-// Jest provides global expect and test functions
 
 jest.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({
@@ -18,10 +18,15 @@ jest.mock('@/hooks/useAuth', () => ({
 
 jest.mock('@/hooks/use-toast');
 
-jest.mock('react-router-dom', () => ({
-  ...(jest.requireActual('react-router-dom') as any),
-  useNavigate: jest.fn(),
-}));
+jest.mock('react-router-dom', () => {
+  const actual = jest.requireActual<typeof import('react-router-dom')>(
+    'react-router-dom'
+  );
+  return {
+    ...actual,
+    useNavigate: jest.fn(),
+  };
+});
 
 function mockFetch(response: any, status = 200) {
   global.fetch = jest.fn().mockResolvedValue({
