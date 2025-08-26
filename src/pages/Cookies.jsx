@@ -157,17 +157,11 @@ const Cookies: React.FC = () => {}
                 <p className="text-gray-300 text-sm">
                   Personalize content and improve functionality
                 </p>
-=======
-import {SEO} from "@/components/SEO";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-
-export default function Cookies() {}
+export default function Cookies() {
   return (
-    <div className="min-h-screen bg-zion-blue">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
       <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https://ziontechgroup.com/cookies"/>
-      <Header />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+      <main className="min-h-screen pt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl font-bold text-white mb-8">Cookie Policy</h1>

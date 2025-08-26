@@ -1,12 +1,10 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 export default function Privacy() {
-    return (<>
-      <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https://ziontechgroup.com/privacy"/>
-      <Header />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
+        <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https://ziontechgroup.com/privacy"/>
+        <main className="min-h-screen pt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <GradientHeading>Privacy Policy</GradientHeading>
@@ -39,6 +37,6 @@ export default function Privacy() {
           </div>
         </div>
       </main>
-      <Footer />
-    </>);
+    </div>
+  );
 }

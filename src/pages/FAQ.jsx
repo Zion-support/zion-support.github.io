@@ -2,8 +2,6 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 export default function FAQ() {
     const faqData = [
         {
@@ -57,8 +55,7 @@ export default function FAQ() {
     ];
     return (<>
       <SEO title="FAQ - Frequently Asked Questions" description="Find answers to common questions about Zion Tech Group's AI and tech marketplace platform." keywords="FAQ, Zion Tech Group, AI marketplace, tech platform, questions, support" canonical="https://ziontechgroup.com/faq"/>
-      <Header />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+      <main className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <GradientHeading>Frequently Asked Questions</GradientHeading>
