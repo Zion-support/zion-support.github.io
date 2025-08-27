@@ -26,7 +26,7 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-import { EnhancedServicesShowcase } from '../components/EnhancedServicesShowcase.tsx';
+import { EnhancedServicesShowcase } from '../components/EnhancedServicesShowcase';
 
 const Home: React.FC = () => {
   const features = [
@@ -121,7 +121,6 @@ const Home: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      </section>
 
         {/* Floating Elements */}
         <motion.div

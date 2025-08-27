@@ -61,7 +61,6 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
->>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
         console.log('Opened cache');
 <<<<<<< HEAD
         return cache.addAll(STATIC_FILES);
@@ -279,11 +278,6 @@ self.addEventListener('push', (event) => {
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-function doBackgroundSync() {
-  // Handle background sync logic
-  console.log('Background sync triggered');
-=======
 async function doBackgroundSync() {
   try {
     // Perform background sync operations
@@ -291,7 +285,6 @@ async function doBackgroundSync() {
   } catch (error) {
     console.error('Background sync failed:', error);
   }
->>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
 }
 
 // Push notification handling
