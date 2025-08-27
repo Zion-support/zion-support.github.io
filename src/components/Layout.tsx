@@ -355,12 +355,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     </Link>
                   )}
                 </div>
-                <span className="text-xl font-bold">Zion Tech Group</span>
+              ))}
+            </nav>
+
+            {/* Company Info */}
+            <div className="mt-8 pt-8 border-t border-slate-800">
+              <div className="text-center mb-6">
+                <span className="text-xl font-bold text-white">Zion Tech Group</span>
               </div>
-              <p className="text-slate-300 mb-4 max-w-md">
+              <p className="text-slate-300 mb-4 max-w-md text-sm">
                 Building autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business from startup to enterprise.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 justify-center mb-6">
                 <a href="#" className="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn">
                   <Linkedin className="w-6 h-6" />
                 </a>
@@ -374,34 +380,43 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <Youtube className="w-6 h-6" />
                 </a>
               </div>
-            </div>
 
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Services</h3>
-              <ul className="space-y-2">
-                <li><a href="/services#ai" className="text-slate-400 hover:text-white transition-colors flex items-center"><Brain className="w-4 h-4 mr-2" />AI Systems</a></li>
-                <li><a href="/services#cloud" className="text-slate-400 hover:text-white transition-colors flex items-center"><Cloud className="w-4 h-4 mr-2" />Cloud Platforms</a></li>
-                <li><a href="/services#cybersecurity" className="text-slate-400 hover:text-white transition-colors flex items-center"><Shield className="w-4 h-4 mr-2" />Cybersecurity</a></li>
-                <li><a href="/services#saas" className="text-slate-400 hover:text-white transition-colors flex items-center"><Code className="w-4 h-4 mr-2" />Micro SaaS</a></li>
-                <li><a href="/services" className="text-slate-400 hover:text-white transition-colors flex items-center"><Users className="w-4 h-4 mr-2" />Consulting</a></li>
-              </ul>
-            </div>
+              {/* Quick Links */}
+              <div>
+                <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Services</h3>
+                <ul className="space-y-2">
+                  <li><a href="/services#ai" className="text-slate-400 hover:text-white transition-colors flex items-center"><Brain className="w-4 h-4 mr-2" />AI Systems</a></li>
+                  <li><a href="/services#cloud" className="text-slate-400 hover:text-white transition-colors flex items-center"><Cloud className="w-4 h-4 mr-2" />Cloud Platforms</a></li>
+                  <li><a href="/services#cybersecurity" className="text-slate-400 hover:text-white transition-colors flex items-center"><Shield className="w-4 h-4 mr-2" />Cybersecurity</a></li>
+                  <li><a href="/services#saas" className="text-slate-400 hover:text-white transition-colors flex items-center"><Code className="w-4 h-4 mr-2" />Micro SaaS</a></li>
+                  <li><a href="/services" className="text-slate-400 hover:text-white transition-colors flex items-center"><Users className="w-4 h-4 mr-2" />Consulting</a></li>
+                </ul>
+              </div>
 
-            {/* Contact Info */}
-            <div>
-              <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Contact</h3>
-              <ul className="space-y-2">
-                <li><a href="/contact" className="text-slate-400 hover:text-white transition-colors flex items-center"><Phone className="w-4 h-4 mr-2" />Contact</a></li>
-                <li><a href="/privacy" className="text-slate-400 hover:text-white transition-colors flex items-center"><Shield className="w-4 h-4 mr-2" />Privacy</a></li>
-                <li><a href="/terms" className="text-slate-400 hover:text-white transition-colors flex items-center"><FileText className="w-4 h-4 mr-2" />Terms</a></li>
-                <li><a href="/" className="text-slate-400 hover:text-white transition-colors flex items-center"><Building className="w-4 h-4 mr-2" />About</a></li>
-                <li><a href="/" className="text-slate-400 hover:text-white transition-colors flex items-center"><Users className="w-4 h-4 mr-2" />Careers</a></li>
-              </ul>
+              {/* Contact Info */}
+              <div className="mt-6">
+                <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Contact</h3>
+                <ul className="space-y-2">
+                  <li><a href="/contact" className="text-slate-400 hover:text-white transition-colors flex items-center"><Phone className="w-4 h-4 mr-2" />Contact</a></li>
+                  <li><a href="/privacy" className="text-slate-400 hover:text-white transition-colors flex items-center"><Shield className="w-4 h-4 mr-2" />Privacy</a></li>
+                  <li><a href="/terms" className="text-slate-400 hover:text-white transition-colors flex items-center"><FileText className="w-4 h-4 mr-2" />Terms</a></li>
+                  <li><a href="/" className="text-slate-400 hover:text-white transition-colors flex items-center"><Building className="w-4 h-4 mr-2" />About</a></li>
+                  <li><a href="/" className="text-slate-400 hover:text-white transition-colors flex items-center"><Users className="w-4 h-4 mr-2" />Careers</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </aside>
 
+        {/* Main content area */}
+        <main className="flex-1 ml-0 md:ml-64">
+          {children}
+        </main>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white">
+        <div className="container mx-auto px-4 py-8">
           <div className="mt-8 pt-8 border-t border-slate-800">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-slate-400 text-sm text-center md:text-left">
