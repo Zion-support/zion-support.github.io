@@ -75,11 +75,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: '2026 Services',
+      title: 'Featured Services',
       featured: true,
       links: [
         { name: '2026 Services Overview', href: '/services2026', featured: true },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: '2027 Services Overview', href: '/services2027', featured: true },
+        { name: 'AI Solutions Hub', href: '/ai-solutions', featured: true },
         { name: 'Quantum Computing', href: '/services/quantum-computing' },
         { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
@@ -91,48 +92,63 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
-      title: 'Core Services',
+      title: 'AI & Machine Learning',
       links: [
-        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
-        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Data Analytics', href: '/services/data-analytics' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
         { name: 'AI SEO Optimizer', href: '/services/ai-seo' },
         { name: 'Interview Assessment AI', href: '/services/interview-assessment' },
-        { name: 'Helpdesk Platform', href: '/services/helpdesk' },
-        { name: 'Website Analytics', href: '/services/website-analytics' },
-        { name: 'DSR Privacy Portal', href: '/services/dsr-portal' },
-        { name: 'Security Headers & CSP', href: '/services/security-headers-csp' },
-        { name: 'AI Project Manager', href: '/services/ai-project-manager' },
         { name: 'AI Content Generator', href: '/services/ai-content-generator' },
         { name: 'AI Customer Support', href: '/services/ai-customer-support' },
         { name: 'AI Data Analytics', href: '/services/ai-data-analytics' },
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' }
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },
+        { name: 'AI Project Manager', href: '/services/ai-project-manager' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' }
       ]
     },
     {
-      title: 'AI Products',
+      title: 'Cloud & Infrastructure',
       links: [
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Returns Management', href: '/services/returns-management' },
-        { name: 'Email Sequencer', href: '/services/email-sequencer' },
-        { name: 'Podcast Transcription', href: '/services/podcast-transcription' },
-        { name: 'Micro CRM', href: '/services/micro-crm' }
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'IT Consulting', href: '/services/it-consulting' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'Business Intelligence', href: '/services/business-intelligence' }
+      ]
+    },
+    {
+      title: 'Cybersecurity & Privacy',
+      links: [
+        { name: 'Cybersecurity Services', href: '/services/cybersecurity' },
+        { name: 'Security Headers & CSP', href: '/services/security-headers-csp' },
+        { name: 'DSR Privacy Portal', href: '/services/dsr-portal' },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity' },
+        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access' },
+        { name: 'Privacy & Compliance', href: '/privacy' }
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      links: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain' },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform' },
+        { name: 'AI Autonomous Research', href: '/services/ai-autonomous-research-assistant' },
+        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform' }
       ]
     },
     {
       title: 'Business Solutions',
       links: [
+        { name: 'Micro SaaS Platform', href: '/services/micro-saas-solutions' },
+        { name: 'Micro CRM', href: '/services/micro-crm' },
+        { name: 'Helpdesk Platform', href: '/services/helpdesk' },
         { name: 'Affiliate Tracking', href: '/services/affiliate-tracking' },
         { name: 'IT Helpdesk', href: '/services/it-helpdesk' },
         { name: 'Green IT Solutions', href: '/services/green-it' },
@@ -146,33 +162,21 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
-      title: 'Company',
+      title: 'Company & Resources',
       links: [
         { name: 'About Us', href: '/about' },
-        { name: 'Team', href: '/team' },
-        { name: 'Leadership', href: '/leadership' },
+        { name: 'Contact', href: '/contact' },
+        { name: 'Blog', href: '/blog' },
         { name: 'News', href: '/news' },
         { name: 'Events', href: '/events' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'FAQ', href: '/faq' },
-        { name: 'Help Center', href: '/help' },
-        { name: 'Contact', href: '/contact' },
-        { name: 'Sitemap', href: '/sitemap' }
-      ]
-    },
-    {
-      title: 'Resources',
-      links: [
-        { name: 'Pricing', href: '/pricing' },
-        { name: 'Security', href: '/security' },
-        { name: 'Status', href: '/status' },
-        { name: 'Cookies', href: '/cookies' },
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
-        { name: 'Support', href: '/support' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'White Papers', href: '/white-papers' },
         { name: 'Documentation', href: '/docs' },
         { name: 'API Reference', href: '/api' },
-        { name: 'Developer Portal', href: '/developers' }
+        { name: 'Developer Portal', href: '/developers' },
+        { name: 'Help Center', href: '/help' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Support', href: '/support' }
       ]
     }
   ];

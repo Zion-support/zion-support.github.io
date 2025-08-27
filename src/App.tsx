@@ -13,6 +13,7 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 const Home = React.lazy(() => import('./pages/Home'));
 const Home2026 = React.lazy(() => import('./pages/Home2026'));
 const About = React.lazy(() => import('./pages/About'));
+const ApiDemo = React.lazy(() => import('./components/ApiDemo'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
@@ -139,6 +140,12 @@ const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILe
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
 const AIContentCreationSuite = React.lazy(() => import('./pages/services/AIContentCreationSuite'));
+
+// Comprehensive services showcase
+const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
+// Innovative services showcase
+const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -292,6 +299,8 @@ function App() {
               <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
               <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+              <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
+              <Route path="/services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
               
               {/* New 2026 service routes */}
               <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
@@ -323,6 +332,9 @@ function App() {
               {/* Additional routes */}
               <Route path="/api" element={<API />} />
               <Route path="/developers" element={<DeveloperPortal />} />
+              
+              {/* Hybrid App Demo */}
+              <Route path="/hybrid-demo" element={<ApiDemo />} />
               
               {/* Catch-all */}
               <Route path="*" element={<Home />} />

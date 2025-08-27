@@ -39,6 +39,7 @@ import {
   Zap as ZapIcon
 } from 'lucide-react';
 import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
+import ComprehensiveServicesShowcase2025 from '../components/ComprehensiveServicesShowcase2025';
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -581,6 +582,56 @@ export default function Home() {
 
         {/* Ultimate Services Showcase */}
         <UltimateServicesShowcase2025 />
+        
+        {/* Comprehensive Services Showcase Section */}
+        <section className="py-20 bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.05)_1px,transparent_1px)] bg-[size:100px_100px] animate-pulse" />
+            <div className="absolute inset-0 bg-gradient-to-br from-zion-purple/10 via-transparent to-zion-cyan/10" />
+          </div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">
+                Revolutionary Services 2025
+              </h2>
+              <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
+                Explore our comprehensive collection of AI-powered, quantum computing, blockchain, and emerging technology solutions
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 mb-12">
+                <div className="bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-6 py-3">
+                  <span className="text-zion-cyan font-semibold">🚀 100+ Services</span>
+                </div>
+                <div className="bg-zion-purple/20 border border-zion-purple/30 rounded-full px-6 py-3">
+                  <span className="text-zion-purple font-semibold">⚡ Cutting-edge Tech</span>
+                </div>
+                <div className="bg-zion-pink/20 border border-zion-pink/30 rounded-full px-6 py-3">
+                  <span className="text-zion-pink font-semibold">💎 Premium Quality</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/comprehensive-services-showcase-2025"
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Explore All Services
+                </a>
+                <a 
+                  href="/contact"
+                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan/10 transition-all duration-300"
+                >
+                  Get Started
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
         
         {/* Enhanced Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
