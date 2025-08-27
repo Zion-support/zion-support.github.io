@@ -1,68 +1,89 @@
-console.log("main.tsx: Start");
+console.log("main.jsx: Start");
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
-import App from './App.js';
+import App from './App.jsx';
 import './index.css';
-// import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter as Router } from 'react-router-dom';
-// import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-// import './utils/globalFetchInterceptor';
-// import './utils/consoleErrorToast';
-// Import i18n configuration
-// import './i18n';
-// import { LanguageProvider } from '@/context/LanguageContext';
-// import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
-// import { WhitelabelProvider } from '@/context/WhitelabelContext';
-// import { AppLayout } from '@/layout/AppLayout';
-// Import auth and notification providers
-// import { AuthProvider } from './context/auth/AuthProvider';
-// import { NotificationProvider } from './context/notifications/NotificationContext';
-// Import analytics provider
-// import { AnalyticsProvider } from './context/AnalyticsContext';
-// import { ViewModeProvider } from './context/ViewModeContext';
-// Initialize a React Query client with global error handling
-const queryClient = new QueryClient({
-    defaultOptions: {
-        queries: {
-            retry: 1,
-            refetchOnWindowFocus: false,
-        },
-    },
-});
+
+// Service Worker Registration
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('SW registered: ', registration);
+        
+        // Check for updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              // New version available
+              if (confirm('A new version is available! Reload to update?')) {
+                window.location.reload();
+              }
+            }
+          });
+        });
+      })
+      .catch((registrationError) => {
+        console.log('SW registration failed: ', registrationError);
+      });
+  });
+}
+
 const rootElement = document.getElementById('root');
+
 function renderApp() {
     const app = React.createElement(React.StrictMode, null,
-        React.createElement(Router, null,
-            React.createElement(App, null)
-        )
+        React.createElement(App, null)
     );
+    
     if (rootElement?.hasChildNodes()) {
+        // Hydrate if server-side rendered content exists
         hydrateRoot(rootElement, app);
-    }
-    else if (rootElement) {
+    } else if (rootElement) {
+        // Create new root if no existing content
         createRoot(rootElement).render(app);
     }
 }
+
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
-      <div style="padding:20px;text-align:center;font-family:sans-serif;">
+      <div style="padding:20px;text-align:center;font-family:sans-serif;color:#ef4444;">
         <h1>Application Error</h1>
         <p>${message}</p>
+        <button onclick="window.location.reload()" style="padding:10px 20px;background:#3b82f6;color:white;border:none;border-radius:5px;cursor:pointer;">
+          Reload Page
+        </button>
       </div>`;
     }
 }
+
+// Error handling and app initialization
 try {
     renderApp();
-}
-catch (error) {
-    console.error('Global error caught in main.tsx:', error);
+} catch (error) {
+    console.error('Global error caught in main.jsx:', error);
     displayFatalError(error.message);
 }
+
+// Global error event listeners
 window.addEventListener('error', (e) => {
     console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
 });
-// Render the app with proper provider structure
-// Note: This section was commented out as it was causing duplicate rendering
-// The main render function above handles the app rendering
+
+window.addEventListener('unhandledrejection', (e) => {
+    console.error('Unhandled promise rejection:', e.reason);
+    displayFatalError('An unexpected error occurred. Please try again.');
+});
+
+// Performance monitoring
+if ('performance' in window) {
+    window.addEventListener('load', () => {
+        const perfData = performance.getEntriesByType('navigation')[0];
+        if (perfData) {
+            console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+        }
+    });
+}

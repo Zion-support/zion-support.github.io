@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { format } from "date-fns";
 import { useAuth } from "@/hooks/useAuth";
 import { useProjects } from "@/hooks/useProjects";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
@@ -179,7 +179,7 @@ function ProjectDetailsContent() {
     const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
     return (<>
-      <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
+      <SEOHead title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">

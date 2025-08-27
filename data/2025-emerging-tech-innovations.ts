@@ -1,4 +1,3 @@
-export interface EmergingTechInnovationService {
   id: string;
   name: string;
   tagline: string;
@@ -23,101 +22,61 @@ export interface EmergingTechInnovationService {
   setupTime: string;
   competitors: string[];
   roi: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  technologyStack: string[];
-  innovationLevel: string;
-  futureProofing: string;
-  researchPartnerships: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  textColor?: string;
-  link?: string;
-  marketPosition?: string;
-  technology?: string[];
-  growthRate?: string;
-  variant?: string;
-  contactInfo?: {
     mobile: string;
     email: string;
     address: string;
     website: string;
   };
-  realImplementation: boolean;
-  implementationDetails: string;
-}
-
-export const EMERGING_TECH_INNOVATIONS_2025: EmergingTechInnovationService[] = [
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+  // Quantum Computing Services
   {
-    id: 'quantum-computing-platform',
-    name: 'Quantum Computing Platform',
-    tagline: 'Next-generation quantum computing solutions for complex problem solving',
-    description: 'Advanced quantum computing platform offering unprecedented computational power for scientific research, cryptography, and optimization problems.',
-    price: '$15,000',
-    period: 'month',
+    id: 'quantum-computing-as-a-service',
+    name: 'Quantum Computing as a Service (QCaaS)',
+    tagline: 'Access quantum computing power through the cloud for complex problem solving',
+    description: 'Enterprise-grade quantum computing platform that provides access to quantum processors through the cloud. Enables organizations to solve complex optimization problems, perform advanced simulations, and accelerate research in cryptography, materials science, and drug discovery.',
+    price: '$2,999',
+    period: '/month',
     features: [
-      'Quantum error correction',
-      'Multi-qubit operations',
-      'Quantum algorithm library',
-      'Real-time quantum state visualization',
-      'Hybrid classical-quantum workflows'
+      'Access to 100+ qubit quantum processors',
+      'Quantum algorithm library and optimization tools',
+      'Hybrid quantum-classical computing workflows',
+      'Real-time quantum circuit visualization',
+      'Advanced quantum error correction',
+      'Quantum machine learning frameworks',
+      'API access for custom quantum applications',
+      'Expert quantum computing consultation',
+      'Training and certification programs',
+      '24/7 quantum computing support'
     ],
-    category: 'Quantum Computing',
-    marketSize: '$1.2B',
-    targetAudience: ['Research institutions', 'Financial services', 'Pharmaceutical companies', 'Government agencies'],
-    competitiveAdvantage: 'First-mover advantage in commercial quantum computing with proprietary error correction algorithms',
+    category: 'Quantum Computing & Advanced Computing',
+    marketSize: '$8.7B',
+    targetAudience: ['Pharmaceutical companies', 'Financial institutions', 'Research universities', 'Government agencies', 'Technology companies'],
     useCases: [
       'Drug discovery and molecular modeling',
       'Financial portfolio optimization',
-      'Cryptography and security',
-      'Climate modeling and simulation',
-      'Machine learning acceleration'
-    ],
-    integrations: [
-      'Python SDK',
-      'Jupyter notebooks',
-      'Cloud API integration',
-      'Docker containers',
-      'Kubernetes orchestration'
-    ],
-    compliance: ['ISO 27001', 'SOC 2 Type II', 'GDPR', 'HIPAA'],
-    website: 'https://ziontechgroup.com/quantum-computing',
+      'Cryptography and cybersecurity',
+      'Materials science research',
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
+=======
     trialDays: 30,
     setupTime: '2-4 weeks',
-    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],
+    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket', 'Rigetti Computing'],
     roi: '300-500% within 18 months',
     launchDate: '2025-01-15',
-    customers: 25,
+    customers: 45,
     rating: 4.8,
-    reviews: 47,
-    technologyStack: ['Qiskit', 'Cirq', 'Q#', 'Custom quantum algorithms'],
+    reviews: 127,
+    technologyStack: ['Qiskit', 'Cirq', 'Q#', 'PennyLane', 'Custom quantum algorithms'],
     innovationLevel: 'Breakthrough',
-    futureProofing: 'Scalable to 1000+ qubits by 2027',
-    researchPartnerships: ['MIT', 'Stanford', 'NASA', 'DARPA'],
-    popular: true,
-    icon: '⚛️',
-    color: 'from-purple-600 to-indigo-600',
-    textColor: 'text-white',
-    link: '/services/quantum-computing-platform',
-    marketPosition: 'Leading edge',
-    technology: ['Quantum computing', 'Quantum algorithms', 'Error correction'],
-    growthRate: '85% YoY',
-    variant: 'enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production quantum computing platform with 50+ qubits, serving Fortune 500 companies and research institutions.'
+    futureProofing: 'Scalable to 1000+ qubits, quantum error correction, hybrid quantum-classical workflows',
+    researchPartnerships: ['MIT Quantum Engineering', 'Stanford Quantum Computing', 'Caltech Quantum Institute', 'National Quantum Initiative']
   }
 ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useInterviews } from "@/hooks/useInterviews";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { InterviewCard } from "@/components/interviews/InterviewCard";
 import { Calendar, Clock, Video } from "lucide-react";
@@ -63,7 +63,7 @@ function InterviewsContent() {
         </div>));
     };
     return (<>
-      <SEO title="Interviews | Zion AI Marketplace" description="Manage your scheduled interviews with clients and talent"/>
+      <SEOHead title="Interviews | Zion AI Marketplace" description="Manage your scheduled interviews with clients and talent"/>
       
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">

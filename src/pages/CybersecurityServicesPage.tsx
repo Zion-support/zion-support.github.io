@@ -1,6 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import React, { useState } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from "../components/SEOHead"';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -76,11 +77,398 @@ export default function CybersecurityServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
-      <SEO 
-        title="Cybersecurity Services - Zion Tech Group" 
-        description="Enterprise-grade cybersecurity solutions including zero trust architecture, threat detection, and compliance services." 
-        keywords="cybersecurity, zero trust, threat detection, security compliance, SOC2, enterprise security"
+          {/* Services Tab */}
+          <TabsContent value="services" className="space-y-12">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">Cybersecurity Service Portfolio</h2>
+              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+                Comprehensive security solutions designed to protect your business from modern cyber threats.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {CYBERSECURITY_SERVICES.map((service) => (
+                <SecurityServiceCard key={service.id} service={service} />
+              ))}
+            </div>
+
+            {/* Additional Security Services */}
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <Search className="h-6 w-6 text-zion-cyan" />
+                    Penetration Testing
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-zion-cyan-light mb-4">
+                    Comprehensive security assessments to identify vulnerabilities before attackers do.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-400" />
+                      <span className="text-sm text-zion-cyan-light">Network penetration testing</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-400" />
+                      <span className="text-sm text-zion-cyan-light">Web application testing</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-400" />
+                      <span className="text-sm text-zion-cyan-light">Social engineering assessments</span>
+                    </div>
+                  </div>
+                  <Button className="w-full mt-4 bg-zion-purple hover:bg-zion-purple-dark text-white">
+                    Learn More
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <Monitor className="h-6 w-6 text-zion-cyan" />
+                    Security Monitoring
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-zion-cyan-light mb-4">
+                    24/7 security monitoring and threat intelligence to detect and respond to incidents in real-time.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-400" />
+                      <span className="text-sm text-zion-cyan-light">SIEM implementation</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-400" />
+                      <span className="text-sm text-zion-cyan-light">Threat intelligence feeds</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-400" />
+                      <span className="text-sm text-zion-cyan-light">Incident response automation</span>
+                    </div>
+                  </div>
+                  <Button className="w-full mt-4 bg-zion-purple hover:bg-zion-purple-dark text-white">
+                    Learn More
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <FileText className="h-6 w-6 text-zion-cyan" />
+                    Security Training
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-zion-cyan-light mb-4">
+                    Employee security awareness training to create a human firewall against social engineering attacks.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-400" />
+                      <span className="text-sm text-zion-cyan-light">Phishing simulation</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-400" />
+                      <span className="text-sm text-zion-cyan-light">Security best practices</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-400" />
+                      <span className="text-sm text-zion-cyan-light">Compliance training</span>
+                    </div>
+                  </div>
+                  <Button className="w-full mt-4 bg-zion-purple hover:bg-zion-purple-dark text-white">
+                    Learn More
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </TabsContent>
+
+          {/* Compliance Tab */}
+          <TabsContent value="compliance" className="space-y-12">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">Compliance & Regulatory Standards</h2>
+              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+                Ensure your business meets industry standards and regulatory requirements with our comprehensive compliance solutions.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <ComplianceCard
+                icon={<FileText className="h-8 w-8" />}
+                title="GDPR Compliance"
+                description="European data protection regulation compliance with privacy-by-design principles."
+                requirements={["Data protection", "Privacy rights", "Breach notification", "Data processing"]}
+                industries={["All EU businesses", "Healthcare", "Finance", "E-commerce"]}
+              />
+              <ComplianceCard
+                icon={<Shield className="h-8 w-8" />}
+                title="SOC 2 Type II"
+                description="Service Organization Control 2 certification for security, availability, and confidentiality."
+                requirements={["Security controls", "Availability monitoring", "Confidentiality", "Processing integrity"]}
+                industries={["SaaS companies", "Cloud providers", "Data centers", "IT services"]}
+              />
+              <ComplianceCard
+                icon={<Lock className="h-8 w-8" />}
+                title="HIPAA Compliance"
+                description="Health Insurance Portability and Accountability Act compliance for healthcare organizations."
+                requirements={["Patient privacy", "Data security", "Access controls", "Audit trails"]}
+                industries={["Healthcare", "Medical devices", "Health insurance", "Telemedicine"]}
+              />
+              <ComplianceCard
+                icon={<CreditCard className="h-8 w-8" />}
+                title="PCI DSS"
+                description="Payment Card Industry Data Security Standard for payment processing security."
+                requirements={["Card data protection", "Network security", "Access control", "Regular testing"]}
+                industries={["Retail", "E-commerce", "Payment processing", "Financial services"]}
+              />
+              <ComplianceCard
+                icon={<Server className="h-8 w-8" />}
+                title="ISO 27001"
+                description="International standard for information security management systems."
+                requirements={["Risk assessment", "Security controls", "Management system", "Continuous improvement"]}
+                industries={["Technology", "Manufacturing", "Financial services", "Government"]}
+              />
+              <ComplianceCard
+                icon={<Database className="h-8 w-8" />}
+                title="CCPA Compliance"
+                description="California Consumer Privacy Act compliance for consumer data protection."
+                requirements={["Consumer rights", "Data transparency", "Opt-out mechanisms", "Data security"]}
+                industries={["California businesses", "Online services", "Data brokers", "Large corporations"]}
+              />
+            </div>
+          </TabsContent>
+
+          {/* Threats Tab */}
+          <TabsContent value="threats" className="space-y-12">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">Modern Cyber Threats</h2>
+              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+                Understanding the threat landscape is the first step in building effective cybersecurity defenses.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <ThreatCard
+                icon={<AlertTriangle className="h-8 w-8" />}
+                title="Ransomware Attacks"
+                description="Malicious software that encrypts files and demands payment for decryption."
+                impact="High - Data loss, business disruption, financial loss"
+                prevention={["Regular backups", "Email filtering", "User training", "Patch management"]}
+                trend="Increasing 150% annually"
+              />
+              <ThreatCard
+                icon={<Users className="h-8 w-8" />}
+                title="Social Engineering"
+                description="Manipulation tactics to trick users into revealing sensitive information."
+                impact="Medium - Data breaches, unauthorized access, reputation damage"
+                prevention={["Security training", "Multi-factor authentication", "Verification procedures", "Incident reporting"]}
+                trend="Most common attack vector"
+              />
+              <ThreatCard
+                icon={<Network className="h-8 w-8" />}
+                title="DDoS Attacks"
+                description="Distributed denial-of-service attacks that overwhelm systems with traffic."
+                impact="Medium - Service disruption, revenue loss, customer dissatisfaction"
+                prevention={["Traffic filtering", "CDN protection", "Rate limiting", "Incident response"]}
+                trend="Increasing in sophistication"
+              />
+              <ThreatCard
+                icon={<Database className="h-8 w-8" />}
+                title="Data Breaches"
+                description="Unauthorized access to sensitive information and intellectual property."
+                impact="High - Financial loss, legal consequences, brand damage"
+                prevention={["Access controls", "Encryption", "Monitoring", "Regular audits"]}
+                trend="Costing $4.35M average"
+              />
+              <ThreatCard
+                icon={<Smartphone className="h-8 w-8" />}
+                title="Mobile Threats"
+                description="Attacks targeting mobile devices and applications."
+                impact="Medium - Data theft, device compromise, privacy violations"
+                prevention={["Mobile device management", "App security", "User training", "Regular updates"]}
+                trend="Growing with mobile adoption"
+              />
+                             <ThreatCard
+                 icon={<Network className="h-8 w-8" />}
+                 title="Supply Chain Attacks"
+                 description="Compromising software or hardware through third-party vendors."
+                 impact="High - Widespread compromise, trust erosion, regulatory scrutiny"
+                 prevention={["Vendor assessment", "Code signing", "Supply chain monitoring", "Incident response"]}
+                 trend="Increasingly sophisticated"
+               />
+            </div>
+          </TabsContent>
+
+          {/* Pricing Tab */}
+          <TabsContent value="pricing" className="space-y-12">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">Cybersecurity Service Pricing</h2>
+              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+                Transparent pricing for comprehensive cybersecurity solutions that fit your business needs and budget.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <PricingCard
+                title="Essential Security"
+                price="$3,999"
+                description="Basic cybersecurity protection for small businesses"
+                features={[
+                  "Security assessment",
+                  "Basic monitoring",
+                  "Employee training",
+                  "Incident response",
+                  "Email support"
+                ]}
+                popular={false}
+              />
+              <PricingCard
+                title="Professional Security"
+                price="$9,999"
+                description="Comprehensive security solution for growing businesses"
+                features={[
+                  "Advanced threat detection",
+                  "24/7 monitoring",
+                  "Penetration testing",
+                  "Compliance support",
+                  "Priority support",
+                  "Security training"
+                ]}
+                popular={true}
+              />
+              <PricingCard
+                title="Enterprise Security"
+                price="$24,999"
+                description="Full-scale security transformation for large organizations"
+                features={[
+                  "Custom security architecture",
+                  "Advanced threat hunting",
+                  "Full compliance suite",
+                  "Dedicated security team",
+                  "24/7 support",
+                  "Custom training programs",
+                  "Ongoing optimization"
+                ]}
+                popular={false}
+              />
+            </div>
+
+            {/* ROI Calculator */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+              <h3 className="text-3xl font-bold text-white mb-8 text-center">Security Investment ROI</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-xl font-semibold text-white mb-4">Cost of Breach Prevention</h4>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <span className="text-zion-cyan-light">Average breach cost:</span>
+                      <span className="text-white font-semibold">$4.35M</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-zion-cyan-light">Security investment:</span>
+                      <span className="text-white font-semibold">$9,999</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-zion-cyan-light">ROI ratio:</span>
+                      <span className="text-white font-semibold">435:1</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-zion-cyan-light">Risk reduction:</span>
+                      <span className="text-white font-semibold">90%+</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-white mb-4">Additional Benefits</h4>
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <span className="text-zion-cyan-light">Compliance cost savings:</span>
+                      <span className="text-white font-semibold">$50K-200K</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-zion-cyan-light">Insurance premium reduction:</span>
+                      <span className="text-white font-semibold">20-40%</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-zion-cyan-light">Customer trust increase:</span>
+                      <span className="text-white font-semibold">Significant</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-zion-cyan-light">Competitive advantage:</span>
+                      <span className="text-white font-semibold">High</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+        </Tabs>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Secure Your Business Today
+          </h2>
+          <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
+            Don't wait until it's too late. Protect your business with enterprise-grade cybersecurity solutions.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan px-8 py-3">
+              <Shield className="mr-2 h-5 w-5" />
+              Security Assessment
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3">
+              <Phone className="mr-2 h-5 w-5" />
+              Schedule Consultation
+            </Button>
+          </div>
+        </section>
+
+      {/* Contact Section */}
+      <div className="bg-zion-blue-dark py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-6">Get in Touch</h2>
+            <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              Ready to strengthen your cybersecurity posture? Contact our security experts today.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <Phone className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
+              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+              <p className="text-zion-cyan-light">+1 302 464 0950</p>
+              <p className="text-sm text-zion-cyan-light">Mon-Fri 9AM-6PM EST</p>
+            </div>
+            <div className="text-center">
+              <Mail className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
+              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+              <p className="text-zion-cyan-light">kleber@ziontechgroup.com</p>
+              <p className="text-sm text-zion-cyan-light">24/7 Response</p>
+            </div>
+            <div className="text-center">
+              <MapPin className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+              <p className="text-zion-cyan-light">364 E Main St STE 1008</p>
+              <p className="text-sm text-zion-cyan-light">Middletown DE 19709</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <>
+      <SEOHead 
+        title="Cybersecurity Services & Solutions - Zion Tech Group" 
+        description="Protect your business with enterprise-grade cybersecurity solutions including threat detection, zero trust security, and compliance services. 24/7 monitoring and support."
       />
       
       {/* Hero Section */}

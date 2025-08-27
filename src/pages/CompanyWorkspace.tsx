@@ -2,7 +2,7 @@ import React from "react";
 import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate, useParams } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 import { useWhitelabel } from "@/context/WhitelabelContext";
@@ -38,12 +38,16 @@ export default function CompanyWorkspace() {
 
   return (
     <ProtectedRoute>
-      <SEO 
+      <SEOHead 
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
-      <main className="min-h-screen pt-20" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>
-        <CompanyDashboard company={company} />
+      <Header 
+        customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
+        customTheme={effectiveTheme}
+      />
+      <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>
+        <CompanyDashboard company={company}/>
       </main>
     </ProtectedRoute>
   );

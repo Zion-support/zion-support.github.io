@@ -38,8 +38,14 @@ const benefits = [
     "Gain competitive advantage"
 ];
 export default function AIAutonomousScientificResearcher() {
-    return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Autonomous Scientific Researcher - Zion Tech Group" description="AI-powered autonomous scientific researcher solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous scientific researcher, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomousscientificresearcher/"/>
+  return (
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <SEOHead 
+        title="Autonomous Scientific Researcher - Zion Tech Group" 
+        description="AI-powered autonomous scientific researcher solution that transforms your operations with intelligent automation and real-time insights."
+        keywords="AI autonomous scientific researcher, automation, intelligent systems, business optimization"
+        canonical="https://ziontechgroup.com/aiautonomousscientificresearcher/"
+      />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

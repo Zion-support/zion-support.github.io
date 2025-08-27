@@ -3,7 +3,7 @@ import { JobsList } from "@/components/jobs/JobsList";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
@@ -30,7 +30,7 @@ function ClientDashboardContent() {
         setSelectedJobTitle(jobTitle);
     };
     return (<>
-      <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
+      <SEOHead title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
       
       <main className="container mx-auto px-4 py-8">
         <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
