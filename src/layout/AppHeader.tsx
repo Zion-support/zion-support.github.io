@@ -72,6 +72,9 @@ export function AppHeader() {
     { name: 'AI DevOps Automation Platform', href: '/services/ai-devops-automation-platform', icon: GitFork, description: 'AI-driven DevOps automation', category: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
     { name: 'AI Customer Experience Support', href: '/services/ai-customer-experience-support', icon: MessageCircle, description: 'Enhanced customer experience', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
     { name: 'AI Marketing Automation Personalization', href: '/services/ai-marketing-automation-personalization', icon: Target, description: 'Personalized marketing automation', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
+    { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom, description: 'Quantum-AI integration platform', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain', icon: Truck, description: 'AI-powered supply chain automation', category: 'AI & ML', color: 'from-blue-500 to-green-500' },
+    { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', icon: Shield, description: 'AI-powered threat detection', category: 'AI & ML', color: 'from-red-500 to-orange-500' },
     
     // Cloud & DevOps
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps', color: 'from-blue-500 to-cyan-500' },
