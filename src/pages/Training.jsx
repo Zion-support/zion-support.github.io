@@ -29,4 +29,5 @@ const Training = () => {
       </section>
     </div>);
 };
+
 export default Training;

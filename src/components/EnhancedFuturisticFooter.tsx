@@ -101,7 +101,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
-        { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
