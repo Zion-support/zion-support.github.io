@@ -28,7 +28,24 @@ const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
-const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const AIBusinessIntelligenceService = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+
+// New service pages
+const AIAnalytics = React.lazy(() => import('./pages/services/AIAnalytics'));
+const Cybersecurity = React.lazy(() => import('./pages/services/Cybersecurity'));
+const IoTEdge = React.lazy(() => import('./pages/services/IoTEdge'));
+const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
+const Blockchain = React.lazy(() => import('./pages/services/Blockchain'));
+const Sustainability = React.lazy(() => import('./pages/services/Sustainability'));
+
+// Micro SAAS pages
+const AIBusinessIntelligence = React.lazy(() => import('./pages/micro-saas/AIBusinessIntelligence'));
+
+// IT Services pages
+const Infrastructure = React.lazy(() => import('./pages/it-services/Infrastructure'));
+
+// Marketplace pages
+const Products = React.lazy(() => import('./pages/marketplace/Products'));
 
 // Import the new pages
 const FAQ = React.lazy(() => import('./pages/FAQ'));
@@ -102,7 +119,24 @@ function App() {
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
               <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligenceService />} />
+              
+              {/* New Service Routes */}
+              <Route path="/services/ai-analytics" element={<AIAnalytics />} />
+              <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+              <Route path="/services/iot-edge" element={<IoTEdge />} />
+              <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+              <Route path="/services/blockchain" element={<Blockchain />} />
+              <Route path="/services/sustainability" element={<Sustainability />} />
+              
+              {/* Micro SAAS Routes */}
+              <Route path="/micro-saas/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+              
+              {/* IT Services Routes */}
+              <Route path="/it-services/infrastructure" element={<Infrastructure />} />
+              
+              {/* Marketplace Routes */}
+              <Route path="/marketplace/products" element={<Products />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
