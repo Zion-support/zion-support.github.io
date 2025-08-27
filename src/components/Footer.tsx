@@ -106,13 +106,12 @@ const footerSections = [
       { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
       { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', icon: TrendingUp },
       { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', icon: Users },
-      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
       { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle },
       { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
       { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
       { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
       { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
-              { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
+      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
       { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
       { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: Target }
     ]
@@ -134,8 +133,7 @@ const footerSections = [
     title: 'Cybersecurity & Privacy',
     icon: Shield,
     links: [
-      { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Lock },
-      { name: 'Security Headers & CSP', path: '/services/security-headers-csp', icon: Shield },
+      { name: 'Security Headers & CSP', path: '/services/security-headers-csp', icon: Lock },
       { name: 'DSR Privacy Portal', path: '/services/dsr-portal', icon: Eye },
       { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock },
       { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: CheckCircle }
@@ -198,13 +196,10 @@ const footerSections = [
     links: [
       { name: 'Help Center', path: '/help', icon: HelpCircle },
       { name: 'FAQ', path: '/faq', icon: HelpCircle },
-      { name: 'Blog', path: '/blog', icon: BookOpen },
-      { name: 'News', path: '/news', icon: Newspaper },
-      { name: 'Case Studies', path: '/case-studies', icon: FileText },
-      { name: 'Pricing', path: '/pricing', icon: DollarSign },
       { name: 'Contact Support', path: '/contact', icon: MessageCircle },
-      { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
-      { name: 'Sitemap', path: '/sitemap', icon: FileText }
+      { name: 'Documentation', path: '/help', icon: BookOpen },
+      { name: 'API Reference', path: '/help', icon: Code },
+      { name: 'Community Forum', path: '/help', icon: Users }
     ]
   }
 ];
