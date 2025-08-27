@@ -6,7 +6,8 @@ import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { ErrorBoundary } from './utils/errorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
 // Lazy load pages - only import existing ones
@@ -351,6 +352,7 @@ function App() {
         <ChatAssistant />
         <PerformanceOptimizer />
         <AccessibilityEnhancer enabled={true} showControls={false} />
+        <PerformanceMonitor />
       </div>
     </ErrorBoundary>
   );

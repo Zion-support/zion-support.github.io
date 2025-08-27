@@ -17,6 +17,84 @@
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
 
+# Fix MIME type issues
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Content-Type = "application/javascript"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Content-Type = "text/css"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Content-Type = "text/css"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Content-Type = "image/svg+xml"
+
+[[headers]]
+  for = "*.ico"
+  [headers.values]
+    Content-Type = "image/x-icon"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Content-Type = "image/png"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Content-Type = "image/jpeg"
+
+[[headers]]
+  for = "*.jpeg"
+  [headers.values]
+    Content-Type = "image/jpeg"
+
+[[headers]]
+  for = "*.gif"
+  [headers.values]
+    Content-Type = "image/gif"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Content-Type = "image/webp"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/service-worker.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
 # Removed Next.js plugin since this is a Vite project
 
 # Redirects for SEO/legacy URLs
@@ -154,160 +232,6 @@
 [[scheduled.functions]]
   name = "image-optimizer-runner"
   schedule = "23 */6 * * *"
-
-[[scheduled.functions]]
-  name = "ai-changelog-runner"
-  schedule = "41 */6 * * *"
-
-[[scheduled.functions]]
-  name = "newsroom-runner"
-  schedule = "37 */6 * * *"
-
-[[scheduled.functions]]
-  name = "todo-scanner-runner"
-  schedule = "13 */6 * * *"
-
-[[scheduled.functions]]
-  name = "broken-image-scanner-runner"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "external-link-check-runner"
-  schedule = "31 */6 * * *"
-
-[[scheduled.functions]]
-  name = "repo-radar-runner"
-  schedule = "43 */6 * * *"
-
-[[scheduled.functions]]
-  name = "og-image-update-runner"
-  schedule = "47 */6 * * *"
-
-[[scheduled.functions]]
-  name = "docs-search-index-runner"
-  schedule = "53 */6 * * *"
-
-[[scheduled.functions]]
-  name = "todo-summary-runner"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "netlify-auto-healer-runner"
-  schedule = "*/20 * * * *"
-
-# New intelligent cloud automations
-[[scheduled.functions]]
-  name = "innovation-lab"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "broken-image-scanner"
-  schedule = "0 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-  name = "auto-scheduler"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-# New autonomous cloud automations
-[[scheduled.functions]]
-  name = "edge-cache-warmer"
-  schedule = "*/3 * * * *" # every 3 minutes
-
-[[scheduled.functions]]
-  name = "og-meta-auditor"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "repo-fitness-score"
-  schedule = "*/5 * * * *" # every 5 minutes
-[[scheduled.functions]]
-  name = "marketing-and-features-promo"
-  schedule = "0 */2 * * *" # every 2 hours
-
-[[scheduled.functions]]
-  name = "link-and-health-scheduler"
-  schedule = "0 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-  name = "sitemap_runner"
-  schedule = "0 */12 * * *" # twice per day
-
-[[scheduled.functions]]
-  name = "fast-front-promoter"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-[[scheduled.functions]]
-  name = "fast-orchestrator"
-  schedule = "*/1 * * * *" # every minute
-
-[[scheduled.functions]]
-  name = "continuous-orchestrator"
-  schedule = "*/5 * * * *" # every 5 minutes
-
-[[scheduled.functions]]
-  name = "front-visionary-expander"
-  schedule = "*/3 * * * *" # fast refresh for front systems
-
-[[scheduled.functions]]
-  name = "home-visionary-expander"
-  schedule = "*/4 * * * *" # fast refresh for homepage
-
-[[scheduled.functions]]
-  name = "ultrafast-orchestrator"
-  schedule = "*/1 * * * *" # every minute
-
-[[scheduled.functions]]
-  name = "trigger-all-and-commit"
-  schedule = "*/1 * * * *" # every minute
-
-[[scheduled.functions]]
-  name = "front-maximizer"
-  schedule = "*/5 * * * *" # every 5 minutes
-
-[[scheduled.functions]]
-  name = "continuous-front-runner"
-  schedule = "*/3 * * * *" # every 3 minutes
-
-[[scheduled.functions]]
-  name = "readme-advertiser"
-  schedule = "13 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-  name = "front-ads-promoter"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "ultrafast-front-orchestrator"
-  schedule = "*/5 * * * *" # every 5 minutes
-
-# New ultra-fast tools
-[[scheduled.functions]]
-  name = "features-capabilities-benefits-advertiser"
-  schedule = "*/2 * * * *" # every 2 minutes
-
-[[scheduled.functions]]
-  name = "hyper-front-index-accelerator"
-  schedule = "*/1 * * * *" # every minute
-
-[[scheduled.functions]]
-  name = "dead-code-report"
-  schedule = "7 */6 * * *"
-
-[[scheduled.functions]]
-  name = "security-audit-runner"
-  schedule = "19 */6 * * *"
-
-[[scheduled.functions]]
-  name = "docs-index-runner"
-  schedule = "11 */4 * * *"
-
-[[scheduled.functions]]
-  name = "repo-knowledge-graph-runner"
-  schedule = "23 */6 * * *"
-
-[[scheduled.functions]]
-  name = "image-optimizer-runner"
-  schedule = "29 */6 * * *"
 
 [[scheduled.functions]]
   name = "ai-changelog-runner"
