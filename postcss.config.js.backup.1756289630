@@ -1,0 +1,9 @@
+export default {
+<<<<<<< HEAD
+=======
+	plugins: {
+		tailwindcss: {},
+		autoprefixer: {},
+	},
+>>>>>>> origin/cursor/website-audit-and-enhancement-11c0
+};

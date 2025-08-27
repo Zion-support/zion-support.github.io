@@ -1,46 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  User, 
-  Bell, 
-  ChevronDown,
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  TrendingUp,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  PanelLeft,
-  Building,
-  ShoppingCart,
-  Settings,
-  Target,
-  Palette,
-  Smartphone,
-  Server
-} from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-=======
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown, ChevronRight } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { MainNavigation } from './MainNavigation';
+import { Logo } from '@/components/header/Logo';
+import { ModeToggle } from '@/components/ModeToggle';
+import { Menu, X, Search, User, Bell, PanelLeft } from 'lucide-react';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { Sidebar } from '@/components/Sidebar';
+import { useAuth } from '@/hooks/useAuth';
+import { useMessaging } from '@/context/MessagingContext';
+
+export function AppHeader() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);

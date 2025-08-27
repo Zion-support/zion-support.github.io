@@ -2,20 +2,13 @@ import React from 'react';
 
 const TermsOfService = () => {
   return (
-    <div className="min-h-screen bg-slate-900 text-white py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Terms of Service</h1>
-          <p className="text-xl text-gray-300">Last updated: December 2024</p>
-        </div>
-        
-        <div className="space-y-8 text-gray-300">
-          <section>
-            <h2 className="text-2xl font-semibold text-white mb-4">1. Acceptance of Terms</h2>
-            <p className="text-gray-300 leading-relaxed">
-              By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to these terms, please do not use our services.
-            </p>
-          </section>
+    <div className="max-w-4xl mx-auto space-y-8">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
+        <p className="text-zion-slate-light text-lg">
+          Last updated: {new Date().toLocaleDateString()}
+        </p>
+      </div>
 
           <section>
             <h2 className="text-2xl font-semibold text-white mb-4">2. Description of Services</h2>
@@ -45,12 +38,12 @@ const TermsOfService = () => {
             </p>
           </section>
 
-          <section>
-            <h2 className="text-2xl font-semibold text-white mb-4">6. Payment Terms</h2>
-            <p className="text-gray-300 leading-relaxed">
-              Payment for services is due as specified in your service agreement. Late payments may result in service suspension or termination. All fees are non-refundable unless otherwise specified in writing.
-            </p>
-          </section>
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-4">5. Accuracy of Materials</h2>
+          <p>
+            The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete or current. Zion Tech Group may make changes to the materials contained on its website at any time without notice.
+          </p>
+        </section>
 
           <section>
             <h2 className="text-2xl font-semibold text-white mb-4">7. Service Level Agreements</h2>

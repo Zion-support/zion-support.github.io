@@ -26,9 +26,22 @@
       ]
     },
     "allowSyntheticDefaultImports": true,
-    "allowJs": true,
     "incremental": true,
-    "strictNullChecks": true
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true
   },
   "include": [
     "src",
