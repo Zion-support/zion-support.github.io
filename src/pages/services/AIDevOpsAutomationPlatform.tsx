@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, GitBranch, Cloud, Shield, CheckCircle, BarChart3, Sparkles, ArrowRight, Cpu, Database, Server } from 'lucide-react';
+import { Zap, GitFork, Cloud, Shield, CheckCircle, BarChart3, Sparkles, ArrowRight, Cpu, Database, Server } from 'lucide-react';
 
 export default function AIDevOpsAutomationPlatform() {
   const features = [
@@ -139,7 +139,7 @@ export default function AIDevOpsAutomationPlatform() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">
               <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">
-                <GitBranch className="h-6 w-6 text-white" />
+                <GitFork className="h-6 w-6 text-white" />
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">CI/CD Pipeline</h4>
               <p className="text-slate-300 text-sm">

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageSquare, BookOpen, Bot, GitBranch, Bell, DollarSign, ExternalLink } from 'lucide-react';
+import { MessageSquare, BookOpen, Bot, GitFork, Bell, DollarSign, ExternalLink } from 'lucide-react';
 
 const HelpdeskPlatform: React.FC = () => {
 	const capabilities = [
 		{ icon: MessageSquare, title: 'Omnichannel Tickets', desc: 'Email, chat, and social inbox with SLAs and macros.' },
 		{ icon: BookOpen, title: 'Knowledge Base', desc: 'SEO-friendly docs with feedback, search, and versioning.' },
 		{ icon: Bot, title: 'AI Assistant', desc: 'LLM-trained on your docs to suggest answers and draft replies.' },
-		  { icon: GitBranch, title: 'Automation', desc: 'Routing, escalations, and workflows integrating Slack/Teams/Jira.' },
+		  { icon: GitFork, title: 'Automation', desc: 'Routing, escalations, and workflows integrating Slack/Teams/Jira.' },
 		{ icon: Bell, title: 'Status & Incidents', desc: 'Public status page, maintenance windows, and postmortems.' }
 	];
 

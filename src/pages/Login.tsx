@@ -66,7 +66,7 @@ import {
   BarChart3
 } from 'lucide-react';
 
-export function Login() {
+export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

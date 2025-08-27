@@ -71,7 +71,7 @@ interface FAQItem {
   tags: string[];
 }
 
-export function FAQ() {
+export default function FAQ() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());

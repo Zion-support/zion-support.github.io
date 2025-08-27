@@ -191,7 +191,7 @@ export class ServiceWorkerManager {
 
   async getRegistration(): Promise<ServiceWorkerRegistration | null> {
     if (!this.isSupported) return null;
-    return navigator.serviceWorker.getRegistration();
+    return navigator.serviceWorker.getRegistration() || null;
   }
 
   async getController(): Promise<ServiceWorker | null> {
@@ -301,7 +301,7 @@ export class ServiceWorkerManager {
 
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
-        applicationServerKey: this.urlBase64ToUint8Array(process.env.REACT_APP_VAPID_PUBLIC_KEY || '')
+        applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '')
       });
 
       console.log('Push subscription created:', subscription);

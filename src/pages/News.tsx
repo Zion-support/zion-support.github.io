@@ -17,7 +17,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-export function News() {
+export default function News() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 

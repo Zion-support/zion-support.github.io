@@ -19,7 +19,7 @@ import {
   MapPin
 } from 'lucide-react';
 
-export function Partners() {
+export default function Partners() {
   const partnerCategories = [
     {
       title: 'Technology Partners',

@@ -23,7 +23,6 @@ import {
   Heart, 
   ShoppingCart, 
   MessageCircle, 
-  HelpCircle, 
   FileText, 
   Video, 
   TestTube, 
@@ -56,7 +55,7 @@ import {
   Mail, 
   MapPin, 
   ExternalLink, 
-  QuestionMark, 
+  HelpCircle, 
   Lightbulb, 
   Info, 
   AlertTriangle, 
@@ -83,7 +82,7 @@ interface SearchResult {
   featured?: boolean;
 }
 
-export function SearchPage() {
+export default function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [isSearching, setIsSearching] = useState(false);

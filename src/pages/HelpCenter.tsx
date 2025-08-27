@@ -44,10 +44,11 @@ import {
   Truck,
   BarChart3,
   Calendar,
-  MapPin
+  MapPin,
+  DollarSign
 } from 'lucide-react';
 
-export function HelpCenter() {
+export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());

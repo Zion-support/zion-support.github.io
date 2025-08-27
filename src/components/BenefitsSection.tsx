@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, Clock, Globe, TrendingDown, CheckCircle } from 'lucide-react';
-import { GradientHeading } from './GradientHeading';
+import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
+import { GradientHeading } from './ui/GradientHeading';
 
 interface Benefit {
   title: string;
@@ -100,6 +100,16 @@ export function BenefitsSection() {
     { value: "24/7", label: "Support Availability", icon: Clock }
   ];
 
+  const statsVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Background pattern */}
@@ -137,7 +147,7 @@ export function BenefitsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <GradientHeading className="mb-4">
+          <GradientHeading className="mb-4" customGradient="">
             Why Choose Zion?
           </GradientHeading>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
@@ -160,7 +170,7 @@ export function BenefitsSection() {
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
             >
               <div className="text-zion-cyan mb-2 flex justify-center">
-                {stat.icon}
+                {React.createElement(stat.icon, { className: "w-6 h-6" })}
               </div>
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
               <div className="text-zion-slate-light text-sm">{stat.label}</div>
@@ -270,7 +280,7 @@ export function BenefitsSection() {
                 className="text-center group"
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-10 h-10 text-white" />
+                  {React.createElement(stat.icon, { className: "w-10 h-10 text-white" })}
                 </div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-gray-300 font-medium">{stat.label}</div>
@@ -304,6 +314,6 @@ export function BenefitsSection() {
       </div>
     </section>
   );
-};
+}
 
-export default BenefitsSection;
+export default BenefitsSection
