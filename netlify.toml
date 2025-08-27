@@ -11,6 +11,8 @@
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max_old_space_size=4096"
   NPM_FLAGS = "--prefer-offline"
+  # Skip Netlify's Next.js plugin since this is a Vite static site
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # Removed Next.js plugin since this is a Vite project
 
