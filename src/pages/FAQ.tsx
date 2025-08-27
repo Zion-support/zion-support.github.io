@@ -1,112 +1,330 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Plus, 
-  Minus, 
-  Search, 
   HelpCircle, 
-  MessageCircle, 
-  Mail, 
-  Phone,
-  ChevronDown,
-  BookOpen,
+  Search, 
+  Plus, 
+  Minus,
+  Brain,
   Shield,
+  Cloud,
   Zap,
+  Rocket,
   Users,
-  Globe
+  Award,
+  TrendingUp,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  BarChart3,
+  FileImage,
+  MessageCircle,
+  Video,
+  FileText,
+  Heart,
+  ShoppingCart,
+  Settings,
+  BookOpen,
+  Briefcase,
+  Target,
+  Lightbulb,
+  ShieldCheck,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Atom,
+  Dna,
+  Microscope,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
+  Eye,
+  Ear,
+  Hand,
+  Foot,
+  Bone,
+  Tooth,
+  Pill,
+  Activity,
+  AlertTriangle,
+  CheckSquare,
+  Clock,
+  DollarSign,
+  Download,
+  EyeOff,
+  File,
+  FileCheck,
+  FileX,
+  Filter,
+  Flag,
+  Folder,
+  FolderOpen,
+  Gift,
+  GitBranch,
+  GitCommit,
+  GitMerge,
+  GitPullRequest,
+  Github,
+  Gitlab,
+  Globe2,
+  Hash,
+  Headphones,
+  HeartOff,
+  HelpCircle2,
+  Home,
+  Image,
+  Inbox,
+  Info,
+  Key,
+  Layers,
+  Layout,
+  LifeBuoy,
+  Link,
+  Link2,
+  List,
+  Loader,
+  Loader2,
+  Lock2,
+  Mail,
+  MapPin,
+  Maximize,
+  Maximize2,
+  Menu,
+  MessageSquare,
+  Mic,
+  MicOff,
+  Minimize,
+  Minimize2,
+  Monitor2,
+  Moon,
+  MoreHorizontal,
+  MoreVertical,
+  MousePointer,
+  Move,
+  Music,
+  Navigation,
+  Navigation2,
+  Package,
+  Paperclip,
+  Pause,
+  PauseCircle,
+  Phone,
+  PhoneCall,
+  PhoneForwarded,
+  PhoneIncoming,
+  PhoneMissed,
+  PhoneOff,
+  PhoneOutgoing,
+  PieChart,
+  Play,
+  PlayCircle,
+  PlusCircle,
+  PlusSquare,
+  Pocket,
+  Power,
+  Printer,
+  Radio,
+  RefreshCw,
+  RefreshCcw,
+  Repeat,
+  RotateCcw,
+  RotateCw,
+  Rss,
+  Save,
+  Scissors,
+  Send,
+  Server2,
+  Settings2,
+  Share,
+  Share2,
+  Shield2,
+  ShieldOff,
+  ShoppingBag,
+  ShoppingCart2,
+  Shuffle,
+  Sidebar,
+  SkipBack,
+  SkipForward,
+  Slash,
+  Sliders,
+  Smartphone2,
+  Smile,
+  Speaker,
+  Square,
+  Star2,
+  StopCircle,
+  Sun,
+  Sunrise,
+  Sunset,
+  Tablet,
+  Tag,
+  Target2,
+  Terminal,
+  Thermometer,
+  ThumbsDown,
+  ThumbsUp,
+  ToggleLeft,
+  ToggleRight,
+  Tool,
+  Trash,
+  Trash2,
+  TrendingDown,
+  TrendingUp2,
+  Truck,
+  Tv,
+  Type,
+  Umbrella,
+  Underline,
+  Unlock,
+  Upload,
+  User,
+  UserCheck,
+  UserMinus,
+  UserPlus,
+  UserX,
+  Users2,
+  Video2,
+  VideoOff,
+  Voicemail,
+  Volume,
+  Volume1,
+  Volume2,
+  VolumeX,
+  Watch,
+  Wifi2,
+  WifiOff,
+  Wind,
+  X,
+  XCircle,
+  XSquare,
+  Youtube,
+  Zap2,
+  ZoomIn,
+  ZoomOut
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const FAQ: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const faqCategories = [
+  const faqData = [
     {
-      id: 'general',
-      title: 'General Questions',
-      icon: HelpCircle,
+      id: 'ai-services',
+      title: 'AI & Machine Learning',
+      icon: Brain,
       questions: [
         {
           id: 1,
-          question: 'What is Zion Tech Group?',
-          answer: 'Zion Tech Group is a leading technology company specializing in AI services, micro SAAS solutions, IT services, and emerging technologies. We help businesses transform their digital operations through innovative technology solutions.'
+          question: 'What AI services does Zion Tech Group offer?',
+          answer: 'We offer comprehensive AI services including machine learning model development, natural language processing, computer vision, predictive analytics, and AI-powered business process automation. Our solutions are tailored to your specific industry and business needs.'
         },
         {
           id: 2,
-          question: 'Where is Zion Tech Group located?',
-          answer: 'We have offices in multiple locations worldwide, with our headquarters in San Francisco, California. We serve clients globally and have a distributed team of experts.'
+          question: 'How long does it take to implement AI solutions?',
+          answer: 'Implementation timelines vary based on complexity. Simple AI integrations can take 4-8 weeks, while complex enterprise AI systems may take 3-6 months. We provide detailed project timelines during our initial consultation.'
         },
         {
           id: 3,
-          question: 'How can I contact Zion Tech Group?',
-          answer: 'You can reach us through multiple channels: email at contact@ziontechgroup.com, phone at +1 (555) 123-4567, or through our contact form on the website. We typically respond within 24 hours.'
+          question: 'Do you provide ongoing AI model maintenance?',
+          answer: 'Yes, we offer comprehensive AI model maintenance including regular updates, performance monitoring, retraining, and optimization. This ensures your AI solutions continue to deliver optimal results as your business evolves.'
         }
       ]
     },
     {
-      id: 'services',
-      title: 'Our Services',
-      icon: Zap,
+      id: 'quantum-computing',
+      title: 'Quantum Computing',
+      icon: Atom,
       questions: [
         {
           id: 4,
-          question: 'What AI services do you offer?',
-          answer: 'We offer comprehensive AI services including machine learning model development, natural language processing, computer vision, predictive analytics, and AI consulting. Our solutions are tailored to specific industry needs.'
+          question: 'What quantum computing solutions do you provide?',
+          answer: 'We offer quantum algorithm development, quantum-classical hybrid systems, quantum simulation, and quantum machine learning solutions. Our team includes quantum physicists and engineers with expertise in current quantum technologies.'
         },
         {
           id: 5,
-          question: 'What is micro SAAS and how can it help my business?',
-          answer: 'Micro SAAS refers to specialized, focused software-as-a-service solutions that address specific business needs. These solutions are cost-effective, easy to implement, and provide immediate value without the complexity of enterprise software.'
-        },
+          question: 'Is quantum computing ready for business use?',
+          answer: 'While full-scale quantum computing is still emerging, we provide quantum-ready solutions and hybrid approaches that combine quantum and classical computing for specific business applications like optimization and cryptography.'
+        }
+      ]
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity',
+      icon: Shield,
+      questions: [
         {
           id: 6,
-          question: 'Do you provide IT consulting services?',
-          answer: 'Yes, we offer comprehensive IT consulting services including digital transformation, cloud migration, cybersecurity assessment, infrastructure optimization, and technology strategy development.'
+          question: 'What cybersecurity services do you offer?',
+          answer: 'Our cybersecurity services include threat assessment, penetration testing, security architecture design, incident response, compliance management, and ongoing security monitoring. We implement zero-trust security models and advanced threat protection.'
+        },
+        {
+          id: 7,
+          question: 'Do you help with compliance requirements?',
+          answer: 'Yes, we assist with various compliance frameworks including SOC 2, ISO 27001, GDPR, HIPAA, and industry-specific regulations. Our team ensures your security measures meet all necessary compliance standards.'
+        }
+      ]
+    },
+    {
+      id: 'cloud-solutions',
+      title: 'Cloud & Infrastructure',
+      icon: Cloud,
+      questions: [
+        {
+          id: 8,
+          question: 'Which cloud platforms do you work with?',
+          answer: 'We work with all major cloud platforms including AWS, Azure, Google Cloud, and hybrid cloud solutions. We help you choose the best platform for your needs and optimize your cloud infrastructure for cost and performance.'
+        },
+        {
+          id: 9,
+          question: 'Do you provide cloud migration services?',
+          answer: 'Yes, we offer comprehensive cloud migration services including assessment, planning, migration execution, and post-migration optimization. We ensure minimal downtime and risk during the migration process.'
         }
       ]
     },
     {
       id: 'pricing',
-      title: 'Pricing & Plans',
-      icon: Shield,
+      title: 'Pricing & Packages',
+      icon: DollarSign,
       questions: [
         {
-          id: 7,
+          id: 10,
           question: 'How do you structure your pricing?',
-          answer: 'Our pricing is project-based and depends on the scope, complexity, and timeline of your project. We offer flexible engagement models including fixed-price projects, time and materials, and ongoing support contracts.'
+          answer: 'We offer flexible pricing models including project-based pricing, retainer agreements, and subscription services. Pricing depends on project scope, complexity, and ongoing support requirements. We provide detailed quotes after understanding your needs.'
         },
         {
-          id: 8,
-          question: 'Do you offer free consultations?',
-          answer: 'Yes, we provide a free initial consultation to understand your needs and discuss potential solutions. This helps us provide accurate project estimates and recommendations.'
-        },
-        {
-          id: 9,
-          question: 'Are there ongoing costs after project completion?',
-          answer: 'This depends on the type of project. Some solutions require ongoing maintenance and support, while others are self-contained. We\'ll clearly outline all costs during the planning phase.'
+          id: 11,
+          question: 'Do you offer payment plans?',
+          answer: 'Yes, we offer flexible payment plans and can structure payments to align with project milestones. We also provide financing options for larger projects to help manage cash flow.'
         }
       ]
     },
     {
       id: 'support',
       title: 'Support & Maintenance',
-      icon: Users,
+      icon: LifeBuoy,
       questions: [
         {
-          id: 10,
-          question: 'What kind of support do you provide?',
-          answer: 'We offer comprehensive support including 24/7 technical support, regular maintenance updates, performance monitoring, and emergency response. Support levels can be customized based on your needs.'
-        },
-        {
-          id: 11,
-          question: 'How quickly do you respond to support requests?',
-          answer: 'Response times vary by support tier. Premium support clients receive responses within 2 hours, while standard support clients receive responses within 24 hours. Emergency issues are addressed immediately.'
-        },
-        {
           id: 12,
-          question: 'Do you provide training for your solutions?',
-          answer: 'Yes, we provide comprehensive training for all our solutions. This includes user training, administrator training, and ongoing education as new features are released.'
+          question: 'What support options do you provide?',
+          answer: 'We offer 24/7 technical support, regular maintenance schedules, performance monitoring, and proactive issue resolution. Our support team includes the same engineers who built your solutions for optimal problem resolution.'
+        },
+        {
+          id: 13,
+          question: 'Do you provide training for our team?',
+          answer: 'Yes, we provide comprehensive training for your team on all implemented solutions. This includes user training, administrator training, and ongoing support to ensure your team can effectively use and maintain the systems.'
         }
       ]
     }
@@ -120,14 +338,21 @@ const FAQ: React.FC = () => {
     );
   };
 
-  const filteredCategories = faqCategories.map(category => ({
-    ...category,
-    questions: category.questions.filter(q =>
-      q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      q.answer.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  })).filter(category => category.questions.length > 0);
+  const toggleCategory = (title: string) => {
+    setExpandedCategory(expandedCategory === title ? null : title);
+  };
 
+  const filteredCategories = useMemo(() => {
+    if (!searchQuery.trim()) return faqData;
+    
+    return faqData.map(category => ({
+      ...category,
+      questions: category.questions.filter(q =>
+        q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        q.answer.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    })).filter(category => category.questions.length > 0);
+  }, [searchQuery]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -219,13 +444,11 @@ const FAQ: React.FC = () => {
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <div className="px-6 pb-4">
-                            <p className="text-zion-slate-light leading-relaxed">
-                              {item.answer}
-                            </p>
+                          <div className="px-6 pb-4 text-zion-slate-light leading-relaxed">
+                            {item.answer}
                           </div>
                         </motion.div>
                       )}
@@ -235,92 +458,10 @@ const FAQ: React.FC = () => {
               </div>
             </motion.div>
           ))}
-
-          {/* No Results */}
-          {filteredCategories.length === 0 && searchQuery && (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center py-20"
-            >
-              <HelpCircle className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">No results found</h3>
-              <p className="text-zion-slate-light mb-6">
-                Try adjusting your search terms or browse our categories below
-              </p>
-              <button
-                onClick={() => setSearchQuery('')}
-                className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-              >
-                Clear Search
-              </button>
-            </motion.div>
-          )}
         </div>
       </section>
 
-      {/* Still Have Questions */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Still Have <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Questions</span>?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-12">
-              Can't find what you're looking for? Our team is here to help you get the answers you need.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <MessageCircle className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">Live Chat</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Chat with our support team in real-time
-                </p>
-                <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
-                  Start Chat
-                </button>
-              </div>
-              
-              <div className="text-center">
-                <Mail className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">Email Support</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Send us a detailed message
-                </p>
-                <Link 
-                  to="/contact"
-                  className="inline-block px-6 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 text-zion-cyan font-semibold rounded-xl hover:bg-zion-slate-dark/70 transition-all duration-300"
-                >
-                  Send Email
-                </Link>
-              </div>
-              
-              <div className="text-center">
-                <Phone className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">Phone Support</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Call us directly for immediate assistance
-                </p>
-                <a 
-                  href="tel:+15551234567"
-                  className="inline-block px-6 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 text-zion-cyan font-semibold rounded-xl hover:bg-zion-slate-dark/70 transition-all duration-300"
-                >
-                  Call Now
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Additional Resources */}
+      {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -328,42 +469,28 @@ const FAQ: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl p-12 text-center"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Additional <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Resources</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Still Have Questions?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-12">
-              Explore our knowledge base, documentation, and community resources
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+              Our team of experts is here to help. Get in touch with us for personalized assistance and detailed information about our services.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { icon: BookOpen, title: 'Documentation', description: 'Comprehensive guides and API references', link: '/docs' },
-                { icon: Globe, title: 'Knowledge Base', description: 'Articles, tutorials, and best practices', link: '/knowledge' },
-                { icon: Users, title: 'Community', description: 'Connect with other users and developers', link: '/community' },
-                { icon: Shield, title: 'Support Portal', description: 'Submit tickets and track requests', link: '/support' }
-              ].map((resource, index) => (
-                <motion.div
-                  key={resource.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                >
-                  <resource.icon className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-                  <h3 className="text-lg font-bold text-white mb-2">{resource.title}</h3>
-                  <p className="text-zion-slate-light text-sm mb-4">{resource.description}</p>
-                  <Link 
-                    to={resource.link}
-                    className="inline-flex items-center text-zion-cyan hover:text-zion-blue transition-colors text-sm font-medium"
-                  >
-                    Learn More
-                    <ChevronDown className="ml-1 w-4 h-4 rotate-[-90deg]" />
-                  </Link>
-                </motion.div>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-zion-slate-dark font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+              <a
+                href="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-slate-dark transition-all duration-300"
+              >
+                View Services
+              </a>
             </div>
           </motion.div>
         </div>
