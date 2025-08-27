@@ -1,144 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { AppLayout } from "@/layout/AppLayout";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-
-export default function Sitemap() {
-  const sitemapSections = [
-    {
-      title: "Company",
-      links: [
-        { name: "About Us", path: "/about", description: "Learn about Zion Tech Group" },
-        { name: "Our Team", path: "/team", description: "Meet our leadership team" },
-        { name: "Careers", path: "/careers", description: "Join our team" },
-        { name: "Contact", path: "/contact", description: "Get in touch with us" }
-      ]
-    },
-    {
-      title: "Services",
-      links: [
-        { name: "AI Services", path: "/services/ai", description: "Artificial Intelligence solutions" },
-        { name: "Cloud Services", path: "/services/cloud", description: "Cloud computing solutions" },
-        { name: "Cybersecurity", path: "/services/cybersecurity", description: "Security and compliance" },
-        { name: "Digital Transformation", path: "/services/digital-transformation", description: "Business transformation" }
-      ]
-    },
-    {
-      title: "Resources",
-      links: [
-        { name: "Blog", path: "/blog", description: "Latest insights and news" },
-        { name: "Case Studies", path: "/case-studies", description: "Success stories" },
-        { name: "Documentation", path: "/docs", description: "Technical documentation" },
-        { name: "Support", path: "/support", description: "Help and support" }
-      ]
-    },
-    {
-      title: "Legal",
-      links: [
-        { name: "Privacy Policy", path: "/privacy", description: "Data protection and privacy" },
-        { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
-        { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" }
-      ]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Sitemap
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Navigate through all our pages and services. Find everything you need about Zion Tech Group's 
-            technology solutions, resources, and company information.
-          </p>
-        </div>
-
-        {/* Sitemap Sections */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {sitemapSections.map((section) => (
-            <div key={section.title} className="bg-slate-800/50 rounded-xl p-6 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-6 border-b border-white/20 pb-3">
-                {section.title}
-              </h2>
-              <div className="space-y-4">
-                {section.links.map((link) => (
-                  <div key={link.name} className="group">
-                    <Link
-                      to={link.path}
-                      className="block p-4 rounded-lg bg-slate-700/50 hover:bg-slate-700/80 transition-all duration-300 border border-transparent hover:border-blue-500/30"
-                    >
-                      <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors duration-300 mb-2">
-                        {link.name}
-                      </h3>
-                      <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                        {link.description}
-                      </p>
-                      <div className="mt-3 flex items-center text-blue-400 text-sm font-medium">
-                        Visit Page
-                        <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Quick Links Section */}
-        <div className="mt-16 bg-slate-800/50 rounded-xl p-8 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">
-            Quick Navigation
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link
-              to="/contact"
-              className="text-center p-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg text-white font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-            >
-              Get Started
-            </Link>
-            <Link
-              to="/services"
-              className="text-center p-4 bg-slate-700 rounded-lg text-white font-semibold hover:bg-slate-600 transition-all duration-300"
-            >
-              View Services
-            </Link>
-            <Link
-              to="/pricing"
-              className="text-center p-4 bg-slate-700 rounded-lg text-white font-semibold hover:bg-slate-600 transition-all duration-300"
-            >
-              Pricing
-            </Link>
-            <Link
-              to="/about"
-              className="text-center p-4 bg-slate-700 rounded-lg text-white font-semibold hover:bg-slate-600 transition-all duration-300"
-            >
-              About Us
-            </Link>
-          </div>
-        </div>
-
-        {/* Contact Information */}
-        <div className="mt-16 text-center">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Need Help?
-          </h2>
-          <p className="text-gray-300 mb-8">
-            Can't find what you're looking for? Our team is here to help.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { Link } from 'react-router-dom';
 import { Header } from '@/components/header/Header';
@@ -146,6 +5,7 @@ import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Home, Briefcase, Users, ShoppingCart, Building, FileText, HelpCircle, Settings, Shield, Globe, MessageSquare, Star } from 'lucide-react';
+
 export default function Sitemap() {
     const sitemapSections = [
         {
@@ -234,100 +94,141 @@ export default function Sitemap() {
             title: 'Tools & Applications',
             icon: Settings,
             links: [
-                { name: 'Analytics Dashboard', path: '/analytics', description: 'Business analytics and insights' },
-                { name: 'Mobile App', path: '/mobile-launch', description: 'Mobile application' },
-                { name: 'Community Platform', path: '/community', description: 'User community and forums' },
-                { name: 'Developer Portal', path: '/developers', description: 'Developer resources and tools' },
+                { name: 'AI Tools', path: '/ai-tools', description: 'AI-powered applications' },
+                { name: 'Analytics Dashboard', path: '/analytics', description: 'Data insights and metrics' },
+                { name: 'Project Management', path: '/projects', description: 'Project tracking tools' },
+                { name: 'Time Tracking', path: '/time-tracking', description: 'Time management tools' },
+                { name: 'Reporting', path: '/reporting', description: 'Business intelligence reports' },
             ]
         },
         {
-            title: 'Legal & Compliance',
+            title: 'Security & Compliance',
             icon: Shield,
             links: [
-                { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy' },
-                { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
-                { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information' },
-                { name: 'GDPR Compliance', path: '/gdpr', description: 'Data protection compliance' },
-                { name: 'Accessibility', path: '/accessibility', description: 'Accessibility standards' },
+                { name: 'Security Overview', path: '/security', description: 'Security measures and policies' },
+                { name: 'Compliance', path: '/compliance', description: 'Regulatory compliance information' },
+                { name: 'Privacy Policy', path: '/privacy', description: 'Data protection policies' },
+                { name: 'Terms of Service', path: '/terms', description: 'Service terms and conditions' },
+                { name: 'GDPR', path: '/gdpr', description: 'Data protection regulations' },
+            ]
+        },
+        {
+            title: 'Global & Local',
+            icon: Globe,
+            links: [
+                { name: 'Global Services', path: '/global', description: 'Worldwide service coverage' },
+                { name: 'Local Support', path: '/local-support', description: 'Regional assistance' },
+                { name: 'International', path: '/international', description: 'Cross-border solutions' },
+                { name: 'Regional Offices', path: '/offices', description: 'Office locations worldwide' },
+            ]
+        },
+        {
+            title: 'Communication',
+            icon: MessageSquare,
+            links: [
+                { name: 'Contact Us', path: '/contact', description: 'Get in touch' },
+                { name: 'Support Chat', path: '/chat', description: 'Live chat support' },
+                { name: 'Newsletter', path: '/newsletter', description: 'Stay updated' },
+                { name: 'Social Media', path: '/social', description: 'Follow us online' },
+                { name: 'Feedback', path: '/feedback', description: 'Share your thoughts' },
+            ]
+        },
+        {
+            title: 'Featured & Special',
+            icon: Star,
+            links: [
+                { name: 'Featured Services', path: '/featured', description: 'Highlighted offerings' },
+                { name: 'Special Offers', path: '/offers', description: 'Limited-time deals' },
+                { name: 'Premium Solutions', path: '/premium', description: 'Advanced service tiers' },
+                { name: 'Custom Solutions', path: '/custom', description: 'Tailored services' },
             ]
         }
     ];
-    const quickLinks = [
-        { name: 'Get Started', path: '/get-started', icon: Star, color: 'bg-green-100 text-green-700' },
-        { name: 'Request Demo', path: '/demo', icon: Play, color: 'bg-blue-100 text-blue-700' },
-        { name: 'Contact Sales', path: '/contact-sales', icon: MessageSquare, color: 'bg-purple-100 text-purple-700' },
-        { name: 'Support', path: '/support', icon: HelpCircle, color: 'bg-orange-100 text-orange-700' },
-    ];
-    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Sitemap - Zion Tech Group", description: "Complete site navigation guide for Zion Tech Group. Find all pages, services, and resources organized by category.", keywords: "sitemap, navigation, site structure, pages, services, Zion Tech Group" }), _jsx(Header, {}), _jsx("main", { className: "pt-32 pb-20", children: _jsxs("div", { className: "container mx-auto px-4", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx("h1", { className: "text-4xl md:text-5xl font-bold text-gray-900 mb-6", children: "Site Navigation Guide" }), _jsx("p", { className: "text-xl text-gray-600 max-w-3xl mx-auto", children: "Explore our comprehensive website structure. Find all pages, services, and resources organized by category for easy navigation." })] }), _jsx("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-4 mb-16", children: quickLinks.map((link, index) => (_jsxs(Link, { to: link.path, className: `${link.color} p-4 rounded-lg text-center hover:scale-105 transition-transform duration-200`, children: [_jsx(link.icon, { className: "h-8 w-8 mx-auto mb-2" }), _jsx("div", { className: "font-semibold text-sm", children: link.name })] }, index))) }), _jsx("div", { className: "grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8", children: sitemapSections.map((section, index) => (_jsxs(Card, { className: "hover:shadow-lg transition-shadow duration-300", children: [_jsx(CardHeader, { children: _jsxs("div", { className: "flex items-center space-x-3 mb-4", children: [_jsx("div", { className: "w-10 h-10 bg-zion-blue/10 rounded-lg flex items-center justify-center", children: _jsx(section.icon, { className: "h-5 w-5 text-zion-blue" }) }), _jsx(CardTitle, { className: "text-xl", children: section.title })] }) }), _jsx(CardContent, { children: _jsx("div", { className: "space-y-3", children: section.links.map((link, linkIndex) => (_jsxs("div", { className: "border-l-2 border-gray-200 pl-4", children: [_jsx(Link, { to: link.path, className: "block text-zion-blue hover:text-zion-blue-dark font-medium mb-1 transition-colors", children: link.name }), _jsx("p", { className: "text-sm text-gray-600", children: link.description })] }, linkIndex))) }) })] }, index))) }), _jsxs("div", { className: "mt-16 grid grid-cols-1 md:grid-cols-2 gap-8", children: [_jsxs(Card, { children: [_jsx(CardHeader, { children: _jsxs(CardTitle, { className: "flex items-center space-x-2", children: [_jsx(Globe, { className: "h-5 w-5 text-zion-blue" }), _jsx("span", { children: "Site Information" })] }) }), _jsx(CardContent, { children: _jsxs("div", { className: "space-y-3 text-sm text-gray-600", children: [_jsxs("div", { className: "flex justify-between", children: [_jsx("span", { children: "Total Pages:" }), _jsx("span", { className: "font-medium", children: "50+" })] }), _jsxs("div", { className: "flex justify-between", children: [_jsx("span", { children: "Last Updated:" }), _jsx("span", { className: "font-medium", children: new Date().toLocaleDateString() })] }), _jsxs("div", { className: "flex justify-between", children: [_jsx("span", { children: "Site Version:" }), _jsx("span", { className: "font-medium", children: "2.0.0" })] })] }) })] }), _jsxs(Card, { children: [_jsx(CardHeader, { children: _jsxs(CardTitle, { className: "flex items-center space-x-2", children: [_jsx(MessageSquare, { className: "h-5 w-5 text-zion-blue" }), _jsx("span", { children: "Need Help?" })] }) }), _jsxs(CardContent, { children: [_jsx("p", { className: "text-sm text-gray-600 mb-4", children: "Can't find what you're looking for? Our support team is here to help." }), _jsxs("div", { className: "space-y-2", children: [_jsx(Link, { to: "/contact", className: "block text-zion-blue hover:text-zion-blue-dark text-sm font-medium", children: "Contact Support \u2192" }), _jsx(Link, { to: "/help-center", className: "block text-zion-blue hover:text-zion-blue-dark text-sm font-medium", children: "Visit Help Center \u2192" })] })] })] })] })] }) }), _jsx(Footer, {})] }));
+
+    return (
+        <>
+            <SEO 
+                title="Sitemap - Zion Tech Group" 
+                description="Complete navigation guide for Zion Tech Group's website. Find all pages, services, and resources." 
+                keywords="sitemap, navigation, Zion Tech Group, website structure" 
+                canonical="https://ziontechgroup.com/sitemap" 
+            />
+            <Header />
+            <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-24 pb-20">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    {/* Header */}
+                    <div className="text-center mb-16">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                            Sitemap
+                        </h1>
+                        <p className="text-xl text-slate-300 max-w-4xl mx-auto">
+                            Navigate through all our pages and services. Find everything you need about Zion Tech Group's 
+                            technology solutions, resources, and company information.
+                        </p>
+                    </div>
+
+                    {/* Sitemap Sections */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+                        {sitemapSections.map((section) => (
+                            <Card key={section.title} className="bg-slate-800/50 border-slate-700 hover:border-zion-cyan/30 transition-all duration-300">
+                                <CardHeader className="pb-3">
+                                    <div className="flex items-center space-x-3">
+                                        <div className="bg-zion-cyan/20 p-2 rounded-lg">
+                                            <section.icon className="h-5 w-5 text-zion-cyan" />
+                                        </div>
+                                        <CardTitle className="text-lg text-white">{section.title}</CardTitle>
+                                    </div>
+                                </CardHeader>
+                                <CardContent className="pt-0">
+                                    <div className="space-y-3">
+                                        {section.links.map((link) => (
+                                            <div key={link.name} className="group">
+                                                <Link
+                                                    to={link.path}
+                                                    className="block p-3 rounded-lg bg-slate-700/50 hover:bg-slate-700/80 transition-all duration-300 border border-transparent hover:border-zion-cyan/30"
+                                                >
+                                                    <h3 className="text-sm font-semibold text-white group-hover:text-zion-cyan transition-colors duration-300 mb-1">
+                                                        {link.name}
+                                                    </h3>
+                                                    <p className="text-xs text-slate-400 group-hover:text-slate-300 transition-colors duration-300">
+                                                        {link.description}
+                                                    </p>
+                                                </Link>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+
+                    {/* Quick Navigation */}
+                    <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+                        <h2 className="text-2xl font-bold text-white mb-6 text-center">
+                            Quick Navigation
+                        </h2>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <Link to="/" className="text-center p-4 rounded-lg bg-slate-700/50 hover:bg-slate-700/80 transition-all duration-300 border border-transparent hover:border-zion-cyan/30">
+                                <Home className="h-8 w-8 text-zion-cyan mx-auto mb-2" />
+                                <span className="text-sm text-white">Home</span>
+                            </Link>
+                            <Link to="/services" className="text-center p-4 rounded-lg bg-slate-700/50 hover:bg-slate-700/80 transition-all duration-300 border border-transparent hover:border-zion-cyan/30">
+                                <Briefcase className="h-8 w-8 text-zion-cyan mx-auto mb-2" />
+                                <span className="text-sm text-white">Services</span>
+                            </Link>
+                            <Link to="/contact" className="text-center p-4 rounded-lg bg-slate-700/50 hover:bg-slate-700/80 transition-all duration-300 border border-transparent hover:border-zion-cyan/30">
+                                <MessageSquare className="h-8 w-8 text-zion-cyan mx-auto mb-2" />
+                                <span className="text-sm text-white">Contact</span>
+                            </Link>
+                            <Link to="/about" className="text-center p-4 rounded-lg bg-slate-700/50 hover:bg-slate-700/80 transition-all duration-300 border border-transparent hover:border-zion-cyan/30">
+                                <Building className="h-8 w-8 text-zion-cyan mx-auto mb-2" />
+                                <span className="text-sm text-white">About</span>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <Footer />
+        </>
+    );
 }
-// Play icon component for demo link
-function Play({ className }) {
-    return (_jsx("svg", { className: className, fill: "currentColor", viewBox: "0 0 20 20", children: _jsx("path", { fillRule: "evenodd", d: "M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z", clipRule: "evenodd" }) }));
-}
-const Sitemap = () => {
-    const sitemapSections = [
-        {
-            title: "Main Pages",
-            links: [
-                { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
-                { name: "About Us", path: "/about", description: "Our story and mission" },
-                { name: "Contact", path: "/contact", description: "Get in touch with us" },
-                { name: "Pricing", path: "/pricing", description: "Our service pricing" },
-                { name: "Careers", path: "/careers", description: "Join our team" }
-            ]
-        },
-        {
-            title: "Services",
-            links: [
-                { name: "All Services", path: "/services", description: "Complete service overview" },
-                { name: "AI Solutions", path: "/services/ai", description: "Artificial Intelligence services" },
-                { name: "Cloud & DevOps", path: "/services/cloud", description: "Cloud infrastructure and automation" },
-                { name: "Cybersecurity", path: "/services/cybersecurity", description: "Security and threat protection" },
-                { name: "IT Infrastructure", path: "/services/infrastructure", description: "Network and system management" },
-                { name: "Digital Transformation", path: "/services/transformation", description: "Business process optimization" },
-                { name: "Consulting", path: "/services/consulting", description: "Technology strategy and advisory" },
-                { name: "Quantum Technology", path: "/quantum-technology", description: "Next-generation computing" },
-                { name: "Space Tech", path: "/space-tech", description: "Space technology solutions" },
-                { name: "Micro SAAS", path: "/micro-saas", description: "Scalable software solutions" }
-            ]
-        },
-        {
-            title: "Company",
-            links: [
-                { name: "Our Team", path: "/team", description: "Meet our experts" },
-                { name: "Partners", path: "/partners", description: "Strategic partnerships" },
-                { name: "Case Studies", path: "/case-studies", description: "Success stories" },
-                { name: "Research & Development", path: "/research-development", description: "Innovation hub" }
-            ]
-        },
-        {
-            title: "Resources",
-            links: [
-                { name: "Blog", path: "/blog", description: "Latest insights and news" },
-                { name: "Events", path: "/events", description: "Upcoming events" },
-                { name: "Webinars", path: "/webinars", description: "Educational content" },
-                { name: "White Papers", path: "/white-papers", description: "Research and analysis" },
-                { name: "Tutorials", path: "/tutorials", description: "Learning resources" }
-            ]
-        },
-        {
-            title: "Support",
-            links: [
-                { name: "Help Center", path: "/help", description: "Self-service support" },
-                { name: "Support Portal", path: "/support", description: "Technical support" },
-                { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
-                { name: "Status", path: "/status", description: "Service status" }
-            ]
-        },
-        {
-            title: "Legal",
-            links: [
-                { name: "Privacy Policy", path: "/privacy", description: "Data protection and privacy" },
-                { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
-                { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" }
-            ]
-        }
-    ];
-};
-export {};
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

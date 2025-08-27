@@ -136,7 +136,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    /* border-border class removed as it's not defined in current Tailwind config */
   }
 
   body {

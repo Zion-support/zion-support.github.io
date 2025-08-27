@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
-=======
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 export const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
@@ -57,9 +54,5 @@ export const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
     </div>
   );
 };
-<<<<<<< HEAD
 
 export default LoginErrorFallback;
-
-=======
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
