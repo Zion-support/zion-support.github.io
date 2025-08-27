@@ -77,14 +77,17 @@ const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateSe
 const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
 
+// New innovative services showcase and pricing guide
+const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
+
 // Sitemap-aligned pages
 const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -277,6 +280,11 @@ function App() {
               <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
               <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
               <Route path="/services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
+              
+              {/* New innovative services showcase and pricing guide routes */}
+              <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+              <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
               
               {/* New 2026 service routes */}
               <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
