@@ -1,0 +1,501 @@
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRight, 
+  Brain, 
+  Cloud, 
+  Server, 
+  Rocket, 
+  Shield, 
+  Zap, 
+  Users, 
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  Target,
+  Lightbulb,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+  Play,
+  Pause
+} from 'lucide-react';
+import { EnhancedServicesShowcase } from '../components/EnhancedServicesShowcase';
+// Enhanced loading component with better UX
+const EnhancedLoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="relative">
+      <div className="w-32 h-32 border-4 border-cyan-400/20 rounded-full"></div>
+      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-lg">
+        ZION
+      </div>
+      <div className="mt-4 text-center">
+        <div className="text-cyan-400 text-sm animate-pulse">Loading amazing experiences...</div>
+      </div>
+    </div>
+  </div>
+);
+// Performance-optimized stats section
+const StatsSection = React.memo(() => {
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    const element = document.getElementById('stats-section');
+    if (element) {
+      observer.observe(element);
+    }
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
+  const heroFeatures = [
+    { icon: Brain, title: 'AI-Powered Solutions', description: 'Cutting-edge artificial intelligence for modern businesses', gradient: 'from-zion-cyan to-zion-blue' },
+    { icon: Shield, title: 'Cybersecurity Excellence', description: 'Advanced protection for your digital assets', gradient: 'from-zion-purple to-zion-cyan' },
+    { icon: Cloud, title: 'Cloud Infrastructure', description: 'Scalable cloud solutions for growth', gradient: 'from-zion-blue to-zion-purple' },
+    { icon: Zap, title: 'Digital Transformation', description: 'Transform your business with innovative technology', gradient: 'from-zion-cyan to-zion-neon' }
+  ];
+  const services = [
+    {
+      title: "AI-Powered Business Solutions",
+      subtitle: "Transform your business with cutting-edge artificial intelligence",
+      description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
+      image: "/images/hero-ai-solutions.jpg",
+      cta: "Explore AI Solutions",
+      path: "/services/ai-analytics",
+      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
+      color: "zion-cyan"
+    },
+    {
+      title: "Cybersecurity & Compliance",
+      subtitle: "Protect your business with enterprise-grade security",
+      description: "Comprehensive cybersecurity solutions including threat detection, incident response, and compliance management. Stay ahead of evolving security challenges.",
+      image: "/images/hero-cybersecurity.jpg",
+      cta: "Secure Your Business",
+      path: "/services/cybersecurity",
+      features: ["Threat Detection", "Incident Response", "Compliance Management", "Security Audits"],
+      color: "zion-purple"
+    },
+    {
+      title: "Cloud & DevOps Excellence",
+      subtitle: "Accelerate development with modern cloud practices",
+      description: "Streamline your development workflow with automated CI/CD pipelines, infrastructure as code, and cloud-native solutions that scale with your business.",
+      image: "/images/hero-cloud-devops.jpg",
+      cta: "Optimize Your Workflow",
+      path: "/services/cloud-devops",
+      features: ["CI/CD Automation", "Infrastructure as Code", "Cloud Migration", "Performance Optimization"],
+      color: "zion-blue"
+    }
+  ];
+  // Enhanced services data for the overview section
+  const servicesOverview = [
+    {
+      category: "AI & Analytics",
+      icon: Brain,
+      color: "from-zion-cyan to-zion-blue",
+      items: ["Machine Learning", "Predictive Analytics", "Natural Language Processing", "Computer Vision"],
+      description: "Transform your data into actionable insights with cutting-edge AI technologies."
+    },
+    {
+      category: "Cybersecurity",
+      icon: Shield,
+      color: "from-zion-purple to-zion-cyan",
+      items: ["Threat Detection", "Incident Response", "Compliance Management", "Security Audits"],
+      description: "Protect your digital assets with enterprise-grade security solutions."
+    },
+    {
+      category: "Cloud & DevOps",
+      icon: Cloud,
+      color: "from-zion-blue to-zion-purple",
+      items: ["CI/CD Automation", "Infrastructure as Code", "Cloud Migration", "Performance Optimization"],
+      description: "Accelerate your development workflow with modern cloud practices."
+    },
+    {
+      category: "IoT & Edge",
+      icon: Cpu,
+      color: "from-zion-cyan to-zion-neon",
+      items: ["Device Management", "Edge Computing", "Data Collection", "Real-time Processing"],
+      description: "Connect and manage your IoT devices with intelligent edge solutions."
+    }
+  ];
+  const stats = [
+    { 
+      number: "500+", 
+      label: "Projects Delivered", 
+      description: "Successfully completed projects across industries", 
+      avatar: "🚀",
+      icon: TrendingUp,
+      color: "from-zion-cyan to-zion-blue"
+    },
+    { 
+      number: "99.9%", 
+      label: "Uptime Guarantee", 
+      description: "Reliable infrastructure you can count on", 
+      avatar: "⚡",
+      icon: Award,
+      color: "from-zion-purple to-zion-cyan"
+    },
+    { 
+      number: "24/7", 
+      label: "Support Available", 
+      description: "Round-the-clock technical assistance", 
+      avatar: "🛡️",
+      icon: Clock,
+      color: "from-zion-blue to-zion-purple"
+    },
+    { 
+      number: "50+", 
+      label: "Expert Engineers", 
+      description: "Skilled professionals at your service", 
+      avatar: "👨‍💻",
+      icon: Users,
+      color: "from-zion-cyan to-zion-neon"
+    }
+  ];
+  // Auto-rotate testimonials
+  useEffect(() => {
+    if (!isPlaying) return;
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isPlaying, testimonials.length]);
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+  return (
+    <section id="stats-section" className="py-20 bg-gradient-to-r from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan/10 rounded-full mb-4">
+                <stat.icon className="w-8 h-8 text-zion-cyan" />
+              </div>
+              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                {stat.number}
+              </div>
+              <div className="text-zion-cyan text-sm font-medium">
+                {stat.label}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+});
+StatsSection.displayName = 'StatsSection';
+const Home: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    // Simulate loading delay for better UX
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+  if (!isLoaded) {
+    return <EnhancedLoadingSpinner />;
+  }
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <motion.div 
+          style={{ y }}
+          className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light"
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <motion.div
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8"
+            >
+              <Star className="w-4 h-4 mr-2" />
+              Leading the Future of Technology
+            </motion.div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Welcome to the
+              <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+                Future of Technology
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed">
+              Empowering businesses with cutting-edge AI solutions, innovative micro SAAS platforms, 
+              and next-generation IT infrastructure that drives growth and transformation.
+            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <Link
+                to="/services"
+                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/80 hover:to-zion-blue/80 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/25"
+              >
+                Explore Our Services
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 hover:border-zion-cyan text-zion-cyan hover:text-white font-semibold rounded-xl transition-all duration-300 hover:bg-zion-cyan group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+        {/* Floating Elements */}
+        <div className="relative">
+          <motion.div
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-20 left-10 w-20 h-20 border border-zion-cyan/20 rounded-full"
+          />
+          <motion.div
+            animate={{ y: [0, 20, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-40 right-20 w-16 h-16 border border-zion-purple/20 rounded-full"
+          />
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute bottom-40 left-1/4 w-12 h-12 border border-zion-blue/20 rounded-full"
+          />
+        </div>
+      </section>
+      {/* Services Overview */}
+      <section className="py-20 bg-zion-slate">
+        <div className="container mx-auto px-4">
+          <Suspense fallback={<EnhancedLoadingSpinner />}>
+            <LazyServicesOverview services={servicesOverview} />
+          </Suspense>
+        </div>
+      </section>
+      {/* Stats Section */}
+      <StatsSection />
+      {/* Features Section */}
+      <section className="py-20 bg-white/5 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose <span className="text-zion-cyan">Zion Tech Group</span>?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              We combine innovation with reliability to deliver solutions that transform your business
+            </p>
+          </motion.div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {[
+              {
+                icon: Brain,
+                title: "AI-Powered Solutions",
+                description: "Cutting-edge artificial intelligence that transforms your business operations and decision-making processes.",
+                color: "from-purple-500 to-pink-500"
+              },
+              {
+                icon: Cloud,
+                title: "Micro SAAS Platform",
+                description: "Innovative software-as-a-service solutions designed for modern businesses and startups.",
+                color: "from-blue-500 to-cyan-500"
+              },
+              {
+                icon: Server,
+                title: "IT Infrastructure",
+                description: "Robust and scalable IT solutions that keep your business running smoothly and securely.",
+                color: "from-green-500 to-emerald-500"
+              },
+              {
+                icon: Rocket,
+                title: "Emerging Technologies",
+                description: "Next-generation technologies including quantum computing, blockchain, and edge computing.",
+                color: "from-orange-500 to-red-500"
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                variants={itemVariants}
+                className="group relative p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              What Our <span className="text-zion-cyan">Clients</span> Say
+            </h2>
+            <div className="flex items-center justify-center space-x-4">
+              <button
+                onClick={() => setIsPlaying(!isPlaying)}
+                className="flex items-center space-x-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-lg text-zion-cyan hover:bg-zion-cyan/20 transition-colors"
+              >
+                {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                <span>{isPlaying ? 'Pause' : 'Auto-play'}</span>
+              </button>
+            </div>
+          </motion.div>
+          <motion.div
+            key={currentTestimonial}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-zion-cyan/20 p-8 md:p-12">
+              <div className="flex items-center mb-6">
+                <img
+                  src={testimonials[currentTestimonial].avatar}
+                  alt={testimonials[currentTestimonial].name}
+                  className="w-16 h-16 rounded-full mr-4 border-2 border-zion-cyan/30"
+                />
+                <div>
+                  <h3 className="text-xl font-semibold text-white">{testimonials[currentTestimonial].name}</h3>
+                  <p className="text-zion-cyan">{testimonials[currentTestimonial].role}</p>
+                </div>
+              </div>
+              <blockquote className="text-xl text-zion-slate-light leading-relaxed mb-6">
+                "{testimonials[currentTestimonial].content}"
+              </blockquote>
+              <div className="flex items-center">
+                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+            </div>
+            <div className="flex justify-center mt-6 space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentTestimonial ? 'bg-zion-cyan' : 'bg-zion-slate/30'
+                  }`}
+                />
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Enhanced Services Showcase */}
+      <EnhancedServicesShowcase />
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your <span className="text-zion-cyan">Business</span>?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Join hundreds of companies that have already revolutionized their operations with our cutting-edge solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/contact"
+                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/80 hover:to-zion-blue/80 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/25"
+              >
+                Start Your Journey
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/about"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 hover:border-zion-cyan text-zion-cyan hover:text-white font-semibold rounded-xl transition-all duration-300 hover:bg-zion-cyan group"
+              >
+                Learn More
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+export default Home;

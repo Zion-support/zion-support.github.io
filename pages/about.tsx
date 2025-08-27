@@ -1,254 +1,369 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head'
+import { motion } from 'framer-motion'
+import {
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Users,
+  Target,
+  Award,
+  Globe,
+  Rocket,
+  Cpu,
+  Database,
+  Lock
+} from 'lucide-react'
 
-const About: NextPage = () => {
-  const expertise = [
-    {
-      category: "Artificial Intelligence & Machine Learning",
-      skills: ["Custom AI model development", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI integration consulting"]
-    },
-    {
-      category: "Cloud & Infrastructure",
-      skills: ["Multi-cloud architecture", "DevOps automation", "Microservices design", "Serverless computing", "Container orchestration"]
-    },
-    {
-      category: "Web & Mobile Development",
-      skills: ["Full-stack development", "Progressive Web Apps", "Cross-platform mobile apps", "UI/UX design", "Performance optimization"]
-    },
-    {
-      category: "Data & Analytics",
-      skills: ["Big data processing", "Real-time analytics", "Data visualization", "Business intelligence", "Machine learning pipelines"]
-    },
-    {
-      category: "Security & Compliance",
-      skills: ["Cybersecurity assessment", "Penetration testing", "Compliance automation", "Identity management", "Threat detection"]
-    },
-    {
-      category: "Emerging Technologies",
-      skills: ["Blockchain development", "IoT platforms", "AR/VR solutions", "Edge computing", "Quantum computing preparation"]
-    }
-  ];
-
-  const achievements = [
-    {
-      year: "2024",
-      title: "AI Innovation Award",
-      description: "Recognized for breakthrough AI solutions in business automation"
-    },
-    {
-      year: "2023",
-      title: "Cloud Excellence",
-      description: "Successfully migrated 50+ enterprise clients to cloud infrastructure"
-    },
-    {
-      year: "2022",
-      title: "Security Certification",
-      description: "Achieved SOC 2 Type II compliance for enterprise security standards"
-    },
-    {
-      year: "2021",
-      title: "Startup Success",
-      description: "Launched 3 successful SaaS products with 10,000+ active users"
-    }
-  ];
+export default function About() {
+  const title = 'About Zion Tech Group — AI, Cloud, and Cybersecurity Solutions'
+  const description = 'Learn about Zion Tech Group, our mission to revolutionize technology solutions, and our expertise in AI, cloud computing, and cybersecurity.'
 
   const values = [
     {
-      icon: "🚀",
-      title: "Innovation First",
-      description: "We constantly push the boundaries of what's possible with technology, staying ahead of industry trends and emerging technologies."
+      icon: Zap,
+      title: 'Innovation First',
+      description: 'We push the boundaries of what\'s possible with cutting-edge technology solutions.'
     },
     {
-      icon: "💼",
-      title: "Business Focused",
-      description: "Every solution we create is designed to drive measurable business value, improve efficiency, and generate positive ROI."
+      icon: Shield,
+      title: 'Security by Design',
+      description: 'Every solution we build incorporates enterprise-grade security from the ground up.'
     },
     {
-      icon: "🔒",
-      title: "Security & Trust",
-      description: "We maintain the highest security standards and build trust through transparent communication and reliable delivery."
+      icon: Cloud,
+      title: 'Cloud-Native',
+      description: 'We leverage the power of cloud computing to deliver scalable, reliable solutions.'
     },
     {
-      icon: "🤝",
-      title: "Partnership Approach",
-      description: "We work as an extension of your team, building long-term relationships based on mutual success and growth."
+      icon: Brain,
+      title: 'AI-Powered',
+      description: 'Artificial intelligence is at the core of our autonomous systems and intelligent workflows.'
     }
-  ];
+  ]
+
+  const expertise = [
+    {
+      icon: Rocket,
+      title: 'AI Autonomous Systems',
+      description: 'Multi-agent workflows, RAG systems, and intelligent automation platforms.'
+    },
+    {
+      icon: Cpu,
+      title: 'Cloud Infrastructure',
+      description: 'Serverless platforms, Kubernetes orchestration, and DevOps automation.'
+    },
+    {
+      icon: Database,
+      title: 'Data Engineering',
+      description: 'Data pipelines, ML ops, and real-time analytics solutions.'
+    },
+    {
+      icon: Lock,
+      title: 'Cybersecurity',
+      description: 'Zero-trust architecture, compliance frameworks, and threat intelligence.'
+    }
+  ]
+
+  const stats = [
+    { number: '50+', label: 'Enterprise Clients' },
+    { number: '100+', label: 'AI Systems Deployed' },
+    { number: '99.9%', label: 'Uptime SLA' },
+    { number: '24/7', label: 'Support Coverage' }
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    <>
       <Head>
-        <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission to transform businesses through innovative technology solutions. Discover our expertise in AI, cloud, cybersecurity, and emerging technologies." />
-        <meta name="keywords" content="about Zion Tech Group, technology company, AI experts, cloud specialists, cybersecurity professionals, innovation leaders" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com/about" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content="https://ziontechgroup.com/about" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
       </Head>
-      
-      <main className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center text-white mb-20">
-          <h1 className="text-6xl font-bold mb-6">
-            About Zion Tech Group
-          </h1>
-          <p className="text-xl mb-8 max-w-4xl mx-auto">
-            We are a forward-thinking technology company dedicated to transforming businesses 
-            through innovative solutions, cutting-edge AI, and world-class expertise.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Get In Touch
-            </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Our Services
-            </Link>
-          </div>
-        </div>
 
-        {/* Mission & Vision */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              To democratize access to cutting-edge technology solutions, enabling businesses of all sizes 
-              to leverage the power of AI, cloud computing, and emerging technologies to drive innovation, 
-              efficiency, and sustainable growth in an increasingly digital world.
-            </p>
+      <main className="min-h-screen bg-white text-gray-900">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white py-20">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan rounded-full"></div>
+            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              To be the global leader in innovative technology solutions, recognized for our ability to 
-              transform businesses through cutting-edge AI, secure cloud infrastructure, and forward-thinking 
-              digital strategies that shape the future of technology.
-            </p>
-          </div>
-        </div>
-
-        {/* Company Overview */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-20">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Company Overview</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-white mb-4">Who We Are</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Zion Tech Group is a dynamic technology company founded by passionate innovators and industry 
-                experts. We specialize in delivering cutting-edge technology solutions that address real-world 
-                business challenges. Our team combines deep technical expertise with business acumen to create 
-                solutions that not only work technically but drive measurable business outcomes.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white mb-4">What We Do</h3>
-              <p className="text-gray-300 leading-relaxed">
-                We provide end-to-end technology services including AI development, cloud migration, 
-                cybersecurity, web and mobile development, and emerging technology solutions. Our approach 
-                combines strategic consulting with hands-on implementation, ensuring our clients achieve 
-                their technology goals efficiently and effectively.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Core Values */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Core Values</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300 text-sm">{value.description}</p>
+          <div className="relative max-w-7xl mx-auto px-6 text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-6xl font-bold mb-6"
+            >
+              About Zion Tech Group
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
+            >
+              Pioneering the future of technology with autonomous AI systems, 
+              cloud-native platforms, and zero-trust cybersecurity solutions.
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-wrap justify-center gap-6"
+            >
+              <div className="flex items-center gap-3 text-zion-cyan">
+                <Brain className="w-6 h-6" />
+                <span className="text-lg">AI Innovation</span>
               </div>
-            ))}
+              <div className="flex items-center gap-3 text-zion-purple-light">
+                <Cloud className="w-6 h-6" />
+                <span className="text-lg">Cloud Native</span>
+              </div>
+              <div className="flex items-center gap-3 text-zion-cyan-light">
+                <Shield className="w-6 h-6" />
+                <span className="text-lg">Zero Trust</span>
+              </div>
+            </motion.div>
           </div>
-        </div>
+        </section>
 
-        {/* Areas of Expertise */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Areas of Expertise</h2>
-          <div className="grid lg:grid-cols-2 gap-8">
-            {expertise.map((area, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">{area.category}</h3>
-                <div className="space-y-2">
-                  {area.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="flex items-center">
-                      <span className="text-blue-400 mr-2">•</span>
-                      <span className="text-gray-300">{skill}</span>
-                    </div>
-                  ))}
+        {/* Mission Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Our Mission
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                To democratize access to enterprise-grade technology solutions, 
+                enabling businesses of all sizes to leverage the power of AI, 
+                cloud computing, and advanced cybersecurity.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                  Transforming Business Through Technology
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  We believe that every organization deserves access to cutting-edge technology 
+                  that can drive growth, improve efficiency, and protect against evolving threats. 
+                  Our solutions are designed to be accessible, scalable, and future-proof.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  From startups to Fortune 500 companies, we partner with organizations 
+                  to build intelligent, secure, and scalable technology foundations that 
+                  enable them to focus on what they do best.
+                </p>
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="bg-gradient-to-br from-zion-blue to-zion-purple rounded-2xl p-8 text-white">
+                  <div className="text-center">
+                    <Target className="w-16 h-16 mx-auto mb-4 text-zion-cyan-light" />
+                    <h4 className="text-xl font-semibold mb-2">Our Vision</h4>
+                    <p className="text-zion-slate-light">
+                      To be the leading provider of autonomous technology solutions 
+                      that empower businesses to thrive in the digital age.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              </motion.div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        {/* Key Achievements */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Key Achievements</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">{achievement.year}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}</h3>
-                <p className="text-gray-300 text-sm">{achievement.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Team & Culture */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-20">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Team & Culture</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-white mb-4">Expert Team</h3>
-              <p className="text-gray-300 leading-relaxed">
-                Our team consists of seasoned professionals with expertise across multiple technology domains. 
-                From AI researchers and cloud architects to cybersecurity experts and full-stack developers, 
-                we bring together diverse skills to deliver comprehensive solutions. Many of our team members 
-                have worked with Fortune 500 companies and have advanced degrees in computer science, 
-                engineering, and related fields.
+        {/* Values Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Our Core Values
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                The principles that guide everything we do and every solution we build.
               </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-white mb-4">Innovation Culture</h3>
-              <p className="text-gray-300 leading-relaxed">
-                We foster a culture of continuous learning and innovation. Our team regularly participates 
-                in industry conferences, contributes to open-source projects, and stays current with the 
-                latest technology trends. We encourage creative problem-solving and provide opportunities 
-                for professional growth and development.
-              </p>
-            </div>
-          </div>
-        </div>
+            </motion.div>
 
-        {/* Call to Action */}
-        <div className="text-center text-white">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Ready to Work With Us?</h2>
-            <p className="text-lg mb-8">
-              Let's discuss how Zion Tech Group can help transform your business with innovative 
-              technology solutions. We offer free consultations and custom solution design.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+13024640950" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-                📞 Call +1 (302) 464-0950
-              </a>
-              <a href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-                ✉️ Schedule Consultation
-              </a>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <motion.div 
+                  key={value.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center p-6"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {value.description}
+                  </p>
+                </motion.div>
+              ))}
             </div>
-            <p className="text-sm text-gray-400 mt-6">
-              Address: 364 E Main St STE 1008, Middletown DE 19709<br />
-              Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a>
-            </p>
           </div>
-        </div>
+        </section>
+
+        {/* Expertise Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Areas of Expertise
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We specialize in the technologies that are shaping the future of business.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {expertise.map((area, index) => (
+                <motion.div 
+                  key={area.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                    <area.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900 text-center">
+                    {area.title}
+                  </h3>
+                  <p className="text-gray-600 text-center">
+                    {area.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                By The Numbers
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our track record of delivering exceptional results for our clients.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div 
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="text-4xl md:text-5xl font-bold text-zion-blue mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-lg text-gray-600">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark text-white">
+          <div className="max-w-7xl mx-auto px-6 text-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+                Let's discuss how our AI, cloud, and cybersecurity solutions 
+                can help you achieve your technology goals.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-block"
+                >
+                  Get Started Today
+                </a>
+                <a
+                  href="/services"
+                  className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-block"
+                >
+                  Explore Our Services
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
       </main>
-    </div>
-  );
-};
-
-export default About;
+    </>
+  )
+}

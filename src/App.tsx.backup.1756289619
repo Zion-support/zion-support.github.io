@@ -1,0 +1,183 @@
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AppHeader } from './layout/AppHeader';
+import { Footer } from './components/Footer';
+import { ChatAssistant } from './components/ChatAssistant';
+import { ErrorBoundary } from 'react-error-boundary';
+// Import pages
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact.tsx';
+import ServicesPage from './pages/ServicesPage';
+import EnhancedServicesShowcase2025 from './pages/EnhancedServicesShowcase2025';
+import NotFound from './pages/NotFound';
+import Training from './pages/Training';
+import Webinars from './pages/Webinars';
+import WhitePapers from './pages/WhitePapers';
+import Research from './pages/Research';
+import Documentation from './pages/Documentation';
+import API from './pages/API';
+// Lazy load AI services
+const AIServices = React.lazy(() => import('./pages/AIServicesPage'));
+const AIAutonomousBusiness = React.lazy(() => import('./pages/AIServices/AIAutonomousBusinessPlatform'));
+const AIAutonomousResearch = React.lazy(() => import('./pages/AIServices/AIAutonomousResearch'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/AIServices/AIBusinessIntelligenceElite'));
+const AIComputerVision = React.lazy(() => import('./pages/AIServices/AIComputerVisionPlatform'));
+// Lazy load specialized services
+const Cybersecurity = React.lazy(() => import('./pages/Cybersecurity'));
+const CloudDevOps = React.lazy(() => import('./pages/CloudDevOpsServices'));
+const QuantumComputing = React.lazy(() => import('./pages/QuantumTechnology'));
+const IoTServices = React.lazy(() => import('./pages/IoTServicesPage'));
+const BlockchainServices = React.lazy(() => import('./pages/BlockchainServicesPage'));
+// Lazy load business solutions
+const BusinessSolutions = React.lazy(() => import('./pages/BusinessSolutionsPage'));
+const DigitalTransformation = React.lazy(() => import('./pages/DigitalTransformation'));
+const EnterpriseIT = React.lazy(() => import('./pages/EnterpriseIT'));
+// Lazy load additional pages
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Resources = React.lazy(() => import('./pages/Resources'));
+// Lazy load innovative services 2028
+const InnovativeServices2028 = React.lazy(() => import('./pages/InnovativeServices2028'));
+// Enhanced loading spinner with futuristic design
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="relative">
+      {/* Outer ring */}
+      <div className="w-32 h-32 border-4 border-transparent border-t-cyan-500 rounded-full animate-spin"></div>
+      {/* Inner ring */}
+      <div className="absolute top-4 left-4 w-24 h-24 border-4 border-transparent border-t-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
+      {/* Center dot */}
+      <div className="absolute top-8 left-8 w-16 h-16 border-4 border-transparent border-t-purple-500 rounded-full animate-pulse"></div>
+      {/* Glowing effect */}
+      <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full animate-pulse"></div>
+    </div>
+  </div>
+);
+// Enhanced 404 Not Found component with futuristic design
+const NotFound = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="text-center relative">
+      {/* Background glow */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
+      {/* Main content */}
+      <div className="relative z-10">
+        <h1 className="text-8xl md:text-9xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-4 animate-pulse">
+          404
+        </h1>
+        <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-light">
+          Page not found in the digital realm
+        </p>
+        <div className="space-y-4">
+          <a 
+            href="/" 
+            className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+          >
+            Return to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+function App() {
+  useEffect(() => {
+    // Add futuristic background animation
+    const addBackgroundAnimation = () => {
+      const body = document.body;
+      if (!body.querySelector('.futuristic-bg')) {
+        const bg = document.createElement('div');
+        bg.className = 'futuristic-bg fixed inset-0 pointer-events-none z-[-1]';
+        bg.innerHTML = `
+          <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.1),transparent_50%)]"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+        `;
+        body.appendChild(bg);
+      }
+    };
+    addBackgroundAnimation();
+  }, []);
+  return (
+    <Router>
+      <div className="App min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Futuristic animated background */}
+        <div className="fixed inset-0 pointer-events-none z-[-1]">
+          {/* Grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse-slow"></div>
+          {/* Floating particles */}
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-float opacity-60"></div>
+          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-float animation-delay-1000 opacity-40"></div>
+          <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-float animation-delay-2000 opacity-50"></div>
+          {/* Gradient orbs */}
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse-slow animation-delay-2000"></div>
+        </div>
+        <AppHeader />
+        {/* Enhanced Header */}
+        <EnhancedHeader />
+        {/* Main Content */}
+        <main className="pt-24">
+          <Routes>
+            {/* Home Route */}
+            <Route path="/" element={<Home />} />
+            {/* Main Pages */}
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
+            {/* Auth Pages */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            {/* Content Pages */}
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/request-quote" element={<RequestQuote />} />
+            {/* Legal Pages */}
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/faq" element={<FAQ />} />
+            {/* Service Detail Pages */}
+            <Route path="/services/:serviceId" element={<ServicesPage />} />
+            {/* AI Services Routes */}
+            <Route path="/ai-services" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/cloud-devops" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/emerging-tech" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions" element={<EnhancedServicesShowcase2025 />} />
+            {/* Company Routes */}
+            <Route path="/leadership" element={<About />} />
+            <Route path="/news" element={<Blog />} />
+            <Route path="/case-studies" element={<About />} />
+            <Route path="/partners" element={<About />} />
+            {/* Resources Routes */}
+            <Route path="/docs" element={<Documentation />} />
+            <Route path="/api" element={<API />} />
+            <Route path="/help" element={<FAQ />} />
+            <Route path="/training" element={<Training />} />
+            <Route path="/webinars" element={<Webinars />} />
+            <Route path="/white-papers" element={<WhitePapers />} />
+            <Route path="/research" element={<Research />} />
+            {/* Industry Solutions Routes */}
+            <Route path="/solutions/healthcare" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/financial" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/manufacturing" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/retail" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/transportation" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/energy" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/real-estate" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/agriculture" element={<EnhancedServicesShowcase2025 />} />
+            {/* 404 Route */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+        <ChatAssistant />
+      </div>
+    </Router>
+  );
+}
+export default App;

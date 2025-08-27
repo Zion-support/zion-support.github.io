@@ -1,11 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Users2, 
-=======
   Users, 
->>>>>>> d55a36bd8e1888949033367a1b7620593463887f
   Globe, 
   Award, 
   TrendingUp, 
@@ -17,7 +13,6 @@ import {
   Target,
   CheckCircle
 } from 'lucide-react';
-
 const PartnersPage: React.FC = () => {
   const partners = [
     {
@@ -48,7 +43,6 @@ const PartnersPage: React.FC = () => {
       tier: 'Gold'
     }
   ];
-
   const partnershipTiers = [
     {
       name: 'Platinum',
@@ -87,7 +81,6 @@ const PartnersPage: React.FC = () => {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -99,11 +92,7 @@ const PartnersPage: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-              <Users2 className="w-20 h-20 text-zion-cyan mx-auto mb-8" />
-=======
               <Users className="w-20 h-20 text-zion-cyan mx-auto mb-8" />
->>>>>>> d55a36bd8e1888949033367a1b7620593463887f
               <h1 className="text-5xl md:text-7xl font-bold mb-8">
                 Strategic <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
                   Partnerships
@@ -116,7 +105,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Partnership Benefits */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -131,7 +119,6 @@ const PartnersPage: React.FC = () => {
               Why <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Partner</span> With Us?
             </h2>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: Users, title: 'Global Network', description: 'Access to our worldwide network of clients and partners' },
@@ -157,7 +144,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Current Partners */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,7 +161,6 @@ const PartnersPage: React.FC = () => {
               Working with industry leaders to deliver exceptional value to our clients
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {partners.map((partner, index) => (
               <motion.div
@@ -195,9 +180,7 @@ const PartnersPage: React.FC = () => {
                     {partner.tier} Partner
                   </span>
                 </div>
-                
                 <p className="text-zion-slate-light text-center mb-6">{partner.description}</p>
-                
                 <div className="space-y-2">
                   <h4 className="font-semibold text-white mb-3">Key Benefits:</h4>
                   {partner.benefits.map((benefit, benefitIndex) => (
@@ -212,7 +195,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Partnership Tiers */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -230,7 +212,6 @@ const PartnersPage: React.FC = () => {
               Choose the partnership level that best fits your business goals
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {partnershipTiers.map((tier, index) => (
               <motion.div
@@ -247,7 +228,6 @@ const PartnersPage: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name} Partner</h3>
                 </div>
-                
                 <ul className="space-y-3">
                   {tier.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-start gap-3 text-zion-slate-light">
@@ -261,7 +241,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -278,7 +257,6 @@ const PartnersPage: React.FC = () => {
             <p className="text-xl text-zion-slate-light mb-8">
               Join our network of successful partnerships and unlock new opportunities for growth and innovation.
             </p>
-            
             <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="text-center">
@@ -291,7 +269,6 @@ const PartnersPage: React.FC = () => {
                     Get Started
                   </button>
                 </div>
-                
                 <div className="text-center">
                   <Target className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-3">Partner Resources</h3>
@@ -310,5 +287,4 @@ const PartnersPage: React.FC = () => {
     </div>
   );
 };
-
 export default PartnersPage;

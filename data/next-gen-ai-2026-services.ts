@@ -14,7 +14,6 @@ export interface NextGenAi2026Service {
     address: string;
   };
 }
-
 export const nextGenAI2026Services: NextGenAi2026Service[] = [
   {
     id: "2026-next-gen-ai",

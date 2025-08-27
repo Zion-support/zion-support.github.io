@@ -2,7 +2,6 @@ import { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
-
 const config: Config = {
   darkMode: ["class"],
   content: [
@@ -140,6 +139,7 @@ const config: Config = {
         "slide-in-from-bottom": "slide-in-from-bottom 0.3s ease-out",
         "slide-in-from-left": "slide-in-from-left 0.3s ease-out",
         "slide-in-from-right": "slide-in-from-right 0.3s ease-out",
+        "spin-slow": "spin 3s linear infinite",
       },
     },
   },

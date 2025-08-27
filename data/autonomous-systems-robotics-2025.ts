@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AutonomousSystemsRobotics2025 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface AutonomousSystemsRobotics2025 {
   rating: number;
   reviews: number;
 }
-
 export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
   // Autonomous Manufacturing
   {

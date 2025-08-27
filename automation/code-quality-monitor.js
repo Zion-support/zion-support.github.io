@@ -1,9 +1,7 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class CodeQualityMonitor {
   constructor() {
     this.metrics = {
@@ -15,14 +13,12 @@ class CodeQualityMonitor {
     };
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log');
   }
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   async analyzeCodeQuality() {
     try {
       this.log('Starting code quality analysis...');
@@ -43,7 +39,6 @@ class CodeQualityMonitor {
       return null;
     }
   }
-
   calculateComplexity() {
     // Enhanced complexity calculation based on file analysis
     try {
@@ -61,7 +56,6 @@ class CodeQualityMonitor {
       return Math.floor(Math.random() * 10) + 1;
     }
   }
-
   calculateMaintainability() {
     try {
       const files = this.getTypeScriptFiles();
@@ -77,17 +71,14 @@ class CodeQualityMonitor {
       return Math.floor(Math.random() * 100) + 50;
     }
   }
-
   calculateTestCoverage() {
     // Placeholder for test coverage calculation
     return Math.floor(Math.random() * 100);
   }
-
   calculatePerformance() {
     // Placeholder for performance calculation
     return Math.floor(Math.random() * 100) + 70;
   }
-
   getTypeScriptFiles() {
     const projectRoot = path.resolve(__dirname, '..');
     const files = [];
@@ -109,13 +100,11 @@ class CodeQualityMonitor {
     walkDir(projectRoot);
     return files;
   }
-
   saveMetrics() {
     const metricsFile = path.join(__dirname, 'logs', 'code-quality-metrics.json');
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
 }
-
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {

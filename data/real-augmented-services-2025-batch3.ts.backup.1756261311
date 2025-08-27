@@ -5,13 +5,8 @@ export interface RealAugmentedService2025Batch3 {
   price: string;
   features: string[];
 }
-
 export const augmentedServicesBatch3: RealAugmentedService2025Batch3[] = [
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
->>>>>>> f445b6a7679252c0e9e72d9ef6742d58c3d5bf3f
   {
     id: 'batch3-service-1',
     name: 'Batch 3 Service 1',

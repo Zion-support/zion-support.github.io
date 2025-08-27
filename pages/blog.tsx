@@ -1,253 +1,257 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
+import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react'
 
-export default function BlogPage() {
+export default function Blog() {
   const blogPosts = [
     {
-      title: 'The Future of AI in Business: 2025 and Beyond',
-      excerpt: 'Explore how artificial intelligence is reshaping business operations and what to expect in the coming years.',
-      category: 'AI & Machine Learning',
-      date: 'August 26, 2025',
-      readTime: '5 min read',
-      author: 'Zion Tech Group Team',
-      slug: 'future-of-ai-business-2025',
-      featured: true
-    },
-    {
-      title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
-      excerpt: 'Understanding what quantum computing can actually deliver today and what\'s still in the realm of science fiction.',
-      category: 'Quantum Computing',
-      date: 'August 24, 2025',
-      readTime: '7 min read',
-      author: 'Quantum Team',
-      slug: 'quantum-computing-hype-reality',
-      featured: false
-    },
-    {
-      title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
-      excerpt: 'How AI is both creating new security challenges and providing innovative solutions to protect businesses.',
-      category: 'Cybersecurity',
-      date: 'August 22, 2025',
-      readTime: '6 min read',
-      author: 'Security Team',
-      slug: 'cybersecurity-ai-threats-solutions',
-      featured: false
-    },
-    {
-      title: 'Cloud-Native Architecture: Best Practices for 2025',
-      excerpt: 'Essential strategies for building scalable, secure, and efficient cloud-native applications.',
-      category: 'Cloud & Infrastructure',
-      date: 'August 20, 2025',
+      id: 'ai-automation-trends-2025',
+      title: 'AI Automation Trends That Will Dominate 2025',
+      excerpt: 'Discover the top AI automation trends that will reshape business operations and drive innovation across industries.',
+      author: 'Zion Tech Team',
+      date: '2025-01-15',
       readTime: '8 min read',
-      author: 'Cloud Team',
-      slug: 'cloud-native-architecture-best-practices-2025',
-      featured: false
+      category: 'AI & Automation',
+      tags: ['AI', 'Automation', 'Trends', '2025'],
+      featured: true,
+      image: '/blog/ai-automation-trends.jpg'
     },
     {
-      title: 'The Rise of Edge Computing: Bringing AI Closer to Users',
-      excerpt: 'How edge computing is revolutionizing AI deployment and improving user experiences.',
-      category: 'Edge Computing',
-      date: 'August 18, 2025',
-      readTime: '4 min read',
-      author: 'Infrastructure Team',
-      slug: 'rise-edge-computing-ai-users',
-      featured: false
+      id: 'cloud-native-security',
+      title: 'Building Secure Cloud-Native Applications',
+      excerpt: 'Learn the essential security practices for developing and deploying cloud-native applications in today\'s threat landscape.',
+      author: 'Security Team',
+      date: '2025-01-10',
+      readTime: '12 min read',
+      category: 'Cybersecurity',
+      tags: ['Cloud', 'Security', 'DevOps', 'Best Practices'],
+      featured: false,
+      image: '/blog/cloud-security.jpg'
     },
     {
-      title: 'Sustainable Technology: Building Green AI Solutions',
-      excerpt: 'Strategies for developing environmentally conscious AI and technology solutions.',
-      category: 'Sustainability',
-      date: 'August 16, 2025',
-      readTime: '6 min read',
-      author: 'Innovation Team',
-      slug: 'sustainable-technology-green-ai-solutions',
-      featured: false
+      id: 'quantum-computing-future',
+      title: 'The Future of Quantum Computing in Enterprise',
+      excerpt: 'Explore how quantum computing will revolutionize enterprise applications and what businesses need to prepare for.',
+      author: 'Innovation Lab',
+      date: '2025-01-08',
+      readTime: '10 min read',
+      category: 'Emerging Tech',
+      tags: ['Quantum', 'Computing', 'Enterprise', 'Future'],
+      featured: false,
+      image: '/blog/quantum-computing.jpg'
+    },
+    {
+      id: 'devops-automation-best-practices',
+      title: 'DevOps Automation: Best Practices for 2025',
+      excerpt: 'Master the essential DevOps automation practices that will streamline your development and deployment processes.',
+      author: 'DevOps Team',
+      date: '2025-01-05',
+      readTime: '15 min read',
+      category: 'DevOps',
+      tags: ['DevOps', 'Automation', 'CI/CD', 'Best Practices'],
+      featured: false,
+      image: '/blog/devops-automation.jpg'
+    },
+    {
+      id: 'ai-ethics-governance',
+      title: 'AI Ethics and Governance: A Business Imperative',
+      excerpt: 'Understand why AI ethics and governance are critical for business success and how to implement them effectively.',
+      author: 'AI Ethics Team',
+      date: '2025-01-03',
+      readTime: '11 min read',
+      category: 'AI & Ethics',
+      tags: ['AI Ethics', 'Governance', 'Compliance', 'Business'],
+      featured: false,
+      image: '/blog/ai-ethics.jpg'
+    },
+    {
+      id: 'cybersecurity-threat-landscape',
+      title: '2025 Cybersecurity Threat Landscape Analysis',
+      excerpt: 'Stay ahead of emerging cyber threats with our comprehensive analysis of the 2025 threat landscape.',
+      author: 'Cybersecurity Team',
+      date: '2024-12-28',
+      readTime: '14 min read',
+      category: 'Cybersecurity',
+      tags: ['Cybersecurity', 'Threats', 'Analysis', '2025'],
+      featured: false,
+      image: '/blog/cyber-threats.jpg'
     }
-  ];
+  ]
 
   const categories = [
-    'All',
-    'AI & Machine Learning',
-    'Quantum Computing',
-    'Cybersecurity',
-    'Cloud & Infrastructure',
-    'Edge Computing',
-    'Sustainability',
-    'Industry Insights'
-  ];
-
-  const featuredPost = blogPosts.find(post => post.featured);
+    { name: 'All', count: blogPosts.length },
+    { name: 'AI & Automation', count: 2 },
+    { name: 'Cybersecurity', count: 2 },
+    { name: 'Cloud & DevOps', count: 2 },
+    { name: 'Emerging Tech', count: 1 },
+    { name: 'AI & Ethics', count: 1 }
+  ]
 
   return (
-    <>
-      <Head>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Insights & Thought Leadership
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Insights &{' '}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Industry Knowledge
+              </span>
             </h1>
-            <p className="text-xl sm:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
-              Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, and the future of technology.
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Stay ahead of the curve with expert insights, industry trends, and practical knowledge from our technology experts.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Featured Post */}
-        {featuredPost && (
-          <section className="py-16 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border border-white border-opacity-10">
-                <div className="mb-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    Featured
-                  </span>
-                </div>
-                <h2 className="text-3xl font-bold mb-4">{featuredPost.title}</h2>
-                <p className="text-lg text-gray-300 mb-6">{featuredPost.excerpt}</p>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-4 text-sm text-gray-400">
-                    <span>{featuredPost.author}</span>
-                    <span>•</span>
-                    <span>{featuredPost.date}</span>
-                    <span>•</span>
-                    <span>{featuredPost.readTime}</span>
-                  </div>
-                  <span className="bg-white bg-opacity-20 px-3 py-1 rounded text-sm">
-                    {featuredPost.category}
-                  </span>
-                </div>
-                <Link 
-                  href={`/blog/${featuredPost.slug}`}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
-                >
-                  Read Full Article
-                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Categories */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category, index) => (
-                <button
-                  key={index}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    category === 'All'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white bg-opacity-10 text-gray-300 hover:bg-opacity-20'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Blog Posts Grid */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.filter(post => !post.featured).map((post, index) => (
-                <article key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10 hover:bg-opacity-20 transition-all">
-                  <div className="mb-4">
-                    <span className="bg-white bg-opacity-20 px-2 py-1 rounded text-xs text-gray-300">
+      {/* Featured Post */}
+      <section className="py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            {blogPosts.filter(post => post.featured).map(post => (
+              <div key={post.id} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="p-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                      Featured
+                    </span>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
                       {post.category}
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-semibold mb-3 line-clamp-2">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-blue-400 transition-colors">
-                      {post.title}
-                    </Link>
-                  </h3>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">{post.title}</h2>
+                  <p className="text-lg text-gray-600 mb-6">{post.excerpt}</p>
                   
-                  <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <span>{post.author}</span>
-                    <span>{post.readTime}</span>
+                  <div className="flex items-center gap-6 text-sm text-gray-500 mb-6">
+                    <div className="flex items-center gap-2">
+                      <User className="h-4 w-4" />
+                      {post.author}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4" />
+                      {new Date(post.date).toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric' 
+                      })}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="h-4 w-4" />
+                      {post.readTime}
+                    </div>
                   </div>
                   
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">{post.date}</span>
-                    <Link 
-                      href={`/blog/${post.slug}`}
-                      className="text-blue-400 hover:text-blue-300 font-medium text-sm"
-                    >
-                      Read More →
-                    </Link>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {post.tags.map(tag => (
+                      <span key={tag} className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-800">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter Signup */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Stay Updated
-            </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Get the latest insights delivered to your inbox. No spam, just valuable content.
-            </p>
-            <div className="max-w-md mx-auto">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-                />
-                <button className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors">
-                  Subscribe
-                </button>
+                  
+                  <Link
+                    href={`/blog/${post.id}`}
+                    className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transition-all duration-200"
+                  >
+                    Read Full Article
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl mb-8 text-gray-300">
-              Let's discuss how our cutting-edge solutions can drive your success.
+      {/* Blog Posts Grid */}
+      <section className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center mb-16">
+            <h2 className="text-base font-semibold leading-7 text-blue-600">Latest Articles</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Stay informed with our latest insights
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link 
-                href="/services" 
-                className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Explore Services
-              </Link>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Explore our collection of articles covering the latest trends, best practices, and industry insights.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {blogPosts.filter(post => !post.featured).map((post, index) => (
+              <article key={post.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                      {post.category}
+                    </span>
+                    <span className="text-xs text-gray-500">{post.readTime}</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
+                  <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                  
+                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                    <div className="flex items-center gap-1">
+                      <User className="h-3 w-3" />
+                      {post.author}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="h-3 w-3" />
+                      {new Date(post.date).toLocaleDateString('en-US', { 
+                        month: 'short', 
+                        day: 'numeric' 
+                      })}
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {post.tags.slice(0, 3).map(tag => (
+                      <span key={tag} className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-50 text-blue-700">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <Link
+                    href={`/blog/${post.id}`}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
+                  >
+                    Read More
+                    <ArrowRight className="ml-1 h-3 w-3" />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-24 sm:py-32 bg-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+              Never miss an insight
+            </h2>
+            <p className="text-lg leading-8 text-gray-600 mb-8">
+              Subscribe to our newsletter and get the latest technology insights, industry trends, and expert advice delivered to your inbox.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200">
+                Subscribe
+              </button>
             </div>
           </div>
-        </section>
-      </main>
-    </>
-  );
+        </div>
+      </section>
+    </div>
+  )
 }

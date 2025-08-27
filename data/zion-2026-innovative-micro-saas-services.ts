@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Zion2026InnovativeMicroSAASService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Zion2026InnovativeMicroSAASService {
   rating: number;
   reviews: number;
 }
-
 export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASService[] = [
   // AI-Powered Autonomous Business Operations Platform
   {
@@ -94,7 +92,6 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     rating: 4.9,
     reviews: 420
   },
-
   // Quantum-Enhanced Cybersecurity Suite
   {
     id: 'quantum-enhanced-cybersecurity-suite-2026',
@@ -147,7 +144,6 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     rating: 4.8,
     reviews: 680
   },
-
   // AI-Powered Healthcare Analytics Platform
   {
     id: 'ai-powered-healthcare-analytics-platform-2026',
@@ -200,7 +196,6 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     rating: 4.9,
     reviews: 320
   },
-
   // Blockchain-Powered Supply Chain Transparency Platform
   {
     id: 'blockchain-powered-supply-chain-transparency-2026',
@@ -253,7 +248,6 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     rating: 4.7,
     reviews: 280
   },
-
   // AI-Powered Financial Trading Platform
   {
     id: 'ai-powered-financial-trading-platform-2026',
@@ -306,7 +300,6 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     rating: 4.8,
     reviews: 450
   },
-
   // IoT Edge Computing Platform
   {
     id: 'iot-edge-computing-platform-2026',
@@ -359,7 +352,6 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     rating: 4.7,
     reviews: 350
   },
-
   // AI-Powered Content Creation Suite
   {
     id: 'ai-powered-content-creation-suite-2026',
@@ -412,7 +404,6 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     rating: 4.9,
     reviews: 780
   },
-
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning-platform-2026',
@@ -465,7 +456,6 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     rating: 4.9,
     reviews: 180
   },
-
   // AI-Powered Customer Service Automation
   {
     id: 'ai-powered-customer-service-automation-2026',
@@ -518,7 +508,6 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     rating: 4.8,
     reviews: 520
   },
-
   // Space Technology Innovation Platform
   {
     id: 'space-technology-innovation-platform-2026',

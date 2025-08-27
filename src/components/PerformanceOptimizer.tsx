@@ -1,297 +1,348 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Zap, Clock, TrendingUp, Activity } from 'lucide-react';
+import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
+import { motion, useInView } from 'framer-motion';
+
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+  threshold?: number;
+  rootMargin?: string;
+  className?: string;
+  delay?: number;
+  duration?: number;
+  direction?: 'up' | 'down' | 'left' | 'right' | 'fade';
+  onVisible?: () => void;
+  onHidden?: () => void;
+  priority?: 'low' | 'medium' | 'high';
+  preload?: boolean;
+}
 
 interface PerformanceMetrics {
   loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
+  renderTime: number;
+  memoryUsage?: number;
+  fps: number;
 }
 
-export const PerformanceOptimizer: React.FC = () => {
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  children,
+  threshold = 0.1,
+  rootMargin = '50px',
+  className = '',
+  delay = 0,
+  duration = 0.6,
+  direction = 'fade',
+  onVisible,
+  onHidden,
+  priority = 'medium',
+  preload = false
+}) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isOptimizing, setIsOptimizing] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const loadStartTime = useRef<number>(Date.now());
+  const frameCount = useRef<number>(0);
+  const lastTime = useRef<number>(performance.now());
 
+  // Intersection Observer for visibility detection
+  const isInView = useInView(ref, {
+    threshold,
+    rootMargin,
+    once: priority === 'high' ? false : true
+  });
+
+  // Performance monitoring
   useEffect(() => {
-    // Measure performance metrics
-    const measurePerformance = () => {
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const measurePerformance = () => {
+        const now = performance.now();
+        const loadTime = now - loadStartTime.current;
         
-        const fcp = paint.find(entry => entry.name === 'first-contentful-paint');
-        const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-        
-        setMetrics({
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          firstContentfulPaint: fcp ? fcp.startTime : 0,
-          largestContentfulPaint: lcp ? lcp.startTime : 0,
-          cumulativeLayoutShift: 0, // Would need to implement CLS measurement
-        });
-      }
-    };
+        // Calculate FPS
+        frameCount.current++;
+        if (now - lastTime.current >= 1000) {
+          const fps = Math.round((frameCount.current * 1000) / (now - lastTime.current));
+          frameCount.current = 0;
+          lastTime.current = now;
+          
+          setMetrics(prev => ({
+            ...prev,
+            loadTime,
+            fps
+          }));
+        }
+      };
 
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-      return () => window.removeEventListener('load', measurePerformance);
+      const interval = setInterval(measurePerformance, 100);
+      return () => clearInterval(interval);
     }
   }, []);
 
-  const optimizePerformance = async () => {
-    setIsOptimizing(true);
-    
-    // Simulate optimization process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Preload critical resources
-    const criticalResources = [
-      '/src/components/FuturisticNavigation.tsx',
-      '/src/components/Home.tsx',
-    ];
-    
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = 'script';
-      document.head.appendChild(link);
-    });
-    
-    setIsOptimizing(false);
-  };
+  // Memory usage monitoring (if available)
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'memory' in performance) {
+      const memory = (performance as any).memory;
+      if (memory) {
+        const updateMemoryUsage = () => {
+          setMetrics(prev => ({
+            ...prev,
+            memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+          }));
+        };
+        
+        const interval = setInterval(updateMemoryUsage, 5000);
+        return () => clearInterval(interval);
+      }
+    }
+  }, []);
 
-  if (!metrics) return null;
+  // Handle visibility changes
+  useEffect(() => {
+    if (isInView && !isVisible) {
+      setIsVisible(true);
+      onVisible?.();
+      
+      // Measure render time
+      const renderStart = performance.now();
+      requestAnimationFrame(() => {
+        const renderTime = performance.now() - renderStart;
+        setMetrics(prev => ({
+          ...prev,
+          renderTime
+        }));
+      });
+    } else if (!isInView && isVisible) {
+      setIsVisible(false);
+      onHidden?.();
+    }
+  }, [isInView, isVisible, onVisible, onHidden]);
+
+  // Preloading logic
+  useEffect(() => {
+    if (preload && priority === 'high') {
+      setIsLoaded(true);
+    }
+  }, [preload, priority]);
+
+  // Animation variants based on direction
+  const animationVariants = useMemo(() => {
+    const baseVariants = {
+      hidden: { opacity: 0 },
+      visible: { 
+        opacity: 1,
+        transition: {
+          duration,
+          delay,
+          ease: "easeOut"
+        }
+      }
+    };
+
+    switch (direction) {
+      case 'up':
+        return {
+          ...baseVariants,
+          hidden: { ...baseVariants.hidden, y: 50 },
+          visible: { ...baseVariants.visible, y: 0 }
+        };
+      case 'down':
+        return {
+          ...baseVariants,
+          hidden: { ...baseVariants.hidden, y: -50 },
+          visible: { ...baseVariants.visible, y: 0 }
+        };
+      case 'left':
+        return {
+          ...baseVariants,
+          hidden: { ...baseVariants.hidden, x: 50 },
+          visible: { ...baseVariants.visible, x: 0 }
+        };
+      case 'right':
+        return {
+          ...baseVariants,
+          hidden: { ...baseVariants.hidden, x: -50 },
+          visible: { ...baseVariants.visible, x: 0 }
+        };
+      default:
+        return baseVariants;
+    }
+  }, [direction, duration, delay]);
+
+  // Lazy loading with priority
+  const shouldRender = useMemo(() => {
+    if (priority === 'high') return true;
+    if (priority === 'medium') return isInView;
+    return isVisible;
+  }, [priority, isInView, isVisible]);
+
+  // Performance optimization: debounced visibility update
+  const debouncedSetVisible = useCallback(
+    (() => {
+      let timeoutId: NodeJS.Timeout;
+      return (visible: boolean) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          setIsVisible(visible);
+        }, 100);
+      };
+    })(),
+    []
+  );
+
+  // Handle intersection observer manually for better control
+  useEffect(() => {
+    if (!ref.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            debouncedSetVisible(true);
+          } else if (priority !== 'high') {
+            debouncedSetVisible(false);
+          }
+        });
+      },
+      {
+        threshold,
+        rootMargin
+      }
+    );
+
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [threshold, rootMargin, priority, debouncedSetVisible]);
+
+  // Performance debugging (only in development)
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && metrics) {
+      console.log('Performance Metrics:', {
+        component: 'PerformanceOptimizer',
+        loadTime: `${metrics.loadTime.toFixed(2)}ms`,
+        renderTime: metrics.renderTime ? `${metrics.renderTime.toFixed(2)}ms` : 'N/A',
+        fps: metrics.fps || 'N/A',
+        memoryUsage: metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(2)}MB` : 'N/A'
+      });
+    }
+  }, [metrics]);
+
+  if (!shouldRender && priority !== 'high') {
+    return (
+      <div 
+        ref={ref} 
+        className={`performance-optimizer-placeholder ${className}`}
+        style={{ 
+          minHeight: '100px',
+          background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
+          backgroundSize: '200% 100%',
+          animation: 'loading 1.5s infinite'
+        }}
+      />
+    );
+  }
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="fixed bottom-4 right-4 bg-zion-slate-dark/90 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-4 max-w-sm z-50"
+      ref={ref}
+      className={`performance-optimizer ${className}`}
+      variants={animationVariants}
+      initial="hidden"
+      animate={isVisible ? "visible" : "hidden"}
+      onAnimationComplete={() => {
+        if (isVisible && !isLoaded) {
+          setIsLoaded(true);
+        }
+      }}
     >
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-zion-cyan font-semibold text-sm">Performance Monitor</h3>
-        <button
-          onClick={optimizePerformance}
-          disabled={isOptimizing}
-          className="text-xs bg-zion-cyan/20 hover:bg-zion-cyan/30 text-zion-cyan px-2 py-1 rounded transition-colors disabled:opacity-50"
-        >
-          {isOptimizing ? 'Optimizing...' : 'Optimize'}
-        </button>
-      </div>
+      {children}
       
-      <div className="space-y-2 text-xs">
-        <div className="flex items-center justify-between">
-          <span className="text-zion-slate-light">Load Time:</span>
-          <span className="text-white">{metrics.loadTime.toFixed(0)}ms</span>
+      {/* Performance overlay (development only) */}
+      {process.env.NODE_ENV === 'development' && metrics && (
+        <div className="performance-overlay">
+          <div className="performance-metrics">
+            <span>Load: {metrics.loadTime.toFixed(0)}ms</span>
+            {metrics.renderTime && (
+              <span>Render: {metrics.renderTime.toFixed(0)}ms</span>
+            )}
+            {metrics.fps && <span>FPS: {metrics.fps}</span>}
+            {metrics.memoryUsage && (
+              <span>Memory: {metrics.memoryUsage.toFixed(1)}MB</span>
+            )}
+          </div>
         </div>
-        <div className="flex items-center justify-between">
-          <span className="text-zion-slate-light">FCP:</span>
-          <span className="text-white">{metrics.firstContentfulPaint.toFixed(0)}ms</span>
-        </div>
-        <div className="flex items-center justify-between">
-          <span className="text-zion-slate-light">LCP:</span>
-          <span className="text-white">{metrics.largestContentfulPaint.toFixed(0)}ms</span>
-        </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-zion-slate/20">
-        <div className="flex items-center text-xs text-zion-cyan">
-          <Activity className="h-3 w-3 mr-1" />
-          Performance Score: {metrics.loadTime < 1000 ? 'Excellent' : metrics.loadTime < 2000 ? 'Good' : 'Needs Improvement'}
-        </div>
-      </div>
+      )}
     </motion.div>
   );
 };
 
-// Lazy loading wrapper for images
-export const LazyImage: React.FC<{
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-}> = ({ src, alt, className = '', placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzM0MTU2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2YzZjRmNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+' }) => {
-  const [imageSrc, setImageSrc] = useState(placeholder);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      setImageSrc(src);
-      setIsLoaded(true);
-    };
-  }, [src]);
-
-  return (
-    <img
-      src={imageSrc}
-      alt={alt}
-      className={`${className} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-60'}`}
-    />
-  );
-};
-
-// Intersection observer hook for performance
-export const useIntersectionObserver = (
-  options: IntersectionObserverInit = {}
+// HOC for performance optimization
+export const withPerformanceOptimization = <P extends object>(
+  Component: React.ComponentType<P>,
+  options: Omit<PerformanceOptimizerProps, 'children'> = {}
 ) => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const [ref, setRef] = useState<HTMLElement | null>(null);
-
-  useEffect(() => {
-    if (!ref) return;
-
-    const observer = new IntersectionObserver(([entry]) => {
-      setIsIntersecting(entry.isIntersecting);
-    }, options);
-
-    observer.observe(ref);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [ref, options]);
-
-  return [setRef, isIntersecting] as const;
+  return React.forwardRef<any, P>((props, ref) => (
+    <PerformanceOptimizer {...options}>
+      <Component {...props} ref={ref} />
+    </PerformanceOptimizer>
+  ));
 };
 
-// Performance monitoring component
-export const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0
-  });
+// Hook for performance monitoring
+export const usePerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isMonitoring, setIsMonitoring] = useState(false);
 
-  useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fid = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
-    }
+  const startMonitoring = useCallback(() => {
+    setIsMonitoring(true);
+    // Implementation for performance monitoring
   }, []);
 
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
+  const stopMonitoring = useCallback(() => {
+    setIsMonitoring(false);
+  }, []);
+
+  return {
+    metrics,
+    isMonitoring,
+    startMonitoring,
+    stopMonitoring
+  };
+};
+
+// CSS for loading animation
+const loadingStyles = `
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
   }
+  
+  .performance-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    z-index: 1000;
+  }
+  
+  .performance-metrics {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .performance-metrics span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+`;
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div>FCP: {metrics.fcp.toFixed(0)}ms</div>
-      <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
-      <div>FID: {metrics.fid.toFixed(0)}ms</div>
-      <div>CLS: {metrics.cls.toFixed(3)}</div>
-    </div>
-  );
-};
-
-// Virtual scrolling component for large lists
-export const VirtualList: React.FC<{
-  items: any[];
-  itemHeight: number;
-  containerHeight: number;
-  renderItem: (item: any, index: number) => React.ReactNode;
-}> = ({ items, itemHeight, containerHeight, renderItem }) => {
-  const [scrollTop, setScrollTop] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const visibleItemCount = Math.ceil(containerHeight / itemHeight);
-  const startIndex = Math.floor(scrollTop / itemHeight);
-  const endIndex = Math.min(startIndex + visibleItemCount + 1, items.length);
-
-  const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
-    setScrollTop(e.currentTarget.scrollTop);
-  }, []);
-
-  const totalHeight = items.length * itemHeight;
-  const offsetY = startIndex * itemHeight;
-
-  return (
-    <div
-      ref={containerRef}
-      style={{ height: containerHeight, overflow: 'auto' }}
-      onScroll={handleScroll}
-    >
-      <div style={{ height: totalHeight, position: 'relative' }}>
-        <div style={{ transform: `translateY(${offsetY}px)` }}>
-          {items.slice(startIndex, endIndex).map((item, index) =>
-            renderItem(item, startIndex + index)
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// Debounced input hook for search optimization
-export const useDebounce = (value: any, delay: number) => {
-  const [debouncedValue, setDebouncedValue] = useState(value);
-
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [value, delay]);
-
-  return debouncedValue;
-};
-
-// Memoized component wrapper for expensive computations
-export const MemoizedComponent = React.memo<{
-  children: React.ReactNode;
-  className?: string;
-}>(({ children, className = '' }) => (
-  <div className={className}>{children}</div>
-));
-
-MemoizedComponent.displayName = 'MemoizedComponent';
+// Inject styles
+if (typeof document !== 'undefined') {
+  const style = document.createElement('style');
+  style.textContent = loadingStyles;
+  document.head.appendChild(style);
+}

@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface InnovativeITInfrastructureService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface InnovativeITInfrastructureService {
   rating: number;
   reviews: number;
 }
-
 export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureService[] = [
   // Quantum-Secure Cloud Infrastructure
   {
@@ -94,7 +92,6 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     rating: 4.9,
     reviews: 8
   },
-
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration',
@@ -147,7 +144,6 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     rating: 4.8,
     reviews: 32
   },
-
   // Neuromorphic Computing Infrastructure
   {
     id: 'neuromorphic-computing-infrastructure',
@@ -200,7 +196,6 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     rating: 4.9,
     reviews: 6
   },
-
   // Hybrid Quantum-Classical Infrastructure
   {
     id: 'hybrid-quantum-classical-infrastructure',
@@ -253,7 +248,6 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     rating: 4.8,
     reviews: 12
   },
-
   // Autonomous Data Center Management
   {
     id: 'autonomous-data-center-management',
@@ -307,5 +301,4 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     reviews: 18
   }
 ];
-
 export default innovativeITInfrastructureServices2025;

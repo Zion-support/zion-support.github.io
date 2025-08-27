@@ -1,0 +1,64 @@
+User-agent: *
+Allow: /
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap
+=======
+=======
+=======
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap
+=======
+=======
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap
+=======
+=======
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /temp_components/
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /portfolio
+Allow: /pricing-2025
+Allow: /comprehensive-2025-services-showcase
+Allow: /whitepapers
+Allow: /quantum-neural-network-platform
+Allow: /autonomous-business-operations-platform
+Allow: /ai-powered-it-asset-management
+# Crawl delay
+=======
+# Crawl-delay
+Crawl-delay: 1
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+# Block AI training bots
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: anthropic-ai
+Disallow: /
+User-agent: Claude-Web
+Disallow: /
+User-agent: Omgilibot
+Disallow: /

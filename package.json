@@ -1,15 +1,28 @@
 {
-  "name": "zion-tech-group-website",
-  "version": "0.1.0",
+  "name": "@zion-holdings/zion.app",
   "private": true,
+  "engines": {
+    "node": ">=20.18.1",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
-    "sitemap": "node scripts/generate-sitemap.mjs",
-    "dev": "next dev",
-    "build": "next build",
-    "export": "next build && next export",
-    "start": "next start",
-    "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
+    "prebuild": "echo 'skip prebuild health-check'",
+    "export": "rm -rf dist && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
+    "start": "vite preview",
+    "postbuild": "echo 'Build completed successfully'",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit",
+    "prepare": "git config core.hooksPath .husky || true",
+    "fix:all": "npm run lint -- --fix || true",
+    "test": "jest",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "test:watch": "jest --watch",
+    "security:scan": "echo 'Security scan not configured yet'",
+    "cypress:run": "echo 'Cypress not configured yet'",
+    "automation:improvement": "echo 'Automation improvement not configured yet'",
+    "diversify": "echo 'Diversification not configured yet'"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

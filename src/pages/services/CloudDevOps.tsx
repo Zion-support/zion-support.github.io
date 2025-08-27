@@ -65,7 +65,6 @@ const CloudDevOps: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/cloud-devops"/>
         <link rel="canonical" href="https://ziontechgroup.com/services/cloud-devops"/>
       </Helmet>
-
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -102,7 +101,6 @@ const CloudDevOps: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -149,8 +147,29 @@ const CloudDevOps: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Cloud Platforms */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Cloud Platforms We Support
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Expertise across major cloud providers to give you flexibility and choice.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {platforms.map((platform, index) => (<div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                  {platform.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{platform.name}</h3>
+                <p className="text-gray-300">{platform.description}</p>
+              </div>))}
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -184,7 +203,6 @@ const CloudDevOps: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-400/10 to-blue-500/10">
         <div className="max-w-4xl mx-auto text-center">
@@ -221,5 +239,3 @@ const CloudDevOps: React.FC = () => {
     </div>
   );
 };
-
-export default CloudDevOps;

@@ -14,7 +14,6 @@ export interface PracticalBusinessSolution2028 {
     address: string;
   };
 }
-
 export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
   {
     id: "2028-practical-business-solution",

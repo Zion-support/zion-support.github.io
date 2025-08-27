@@ -1,37 +1,52 @@
 #!/bin/bash
 
-echo "🔧 Resolving ALL remaining merge conflicts..."
+echo "🔧 Resolving all merge conflicts in the codebase..."
 
 # Function to resolve conflicts in a file
 resolve_conflicts() {
     local file="$1"
-    echo "🔧 Resolving conflicts in: $file"
+    echo "Processing: $file"
     
-    # Remove all conflict markers and keep the newer version (after =======)
+    # Remove all merge conflict markers and keep the HEAD version
     sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
+    sed -i '/>>>>>>> .*/d' "$file"
+    
+    # Remove any empty lines that might be left
+    sed -i '/^[[:space:]]*$/d' "$file"
     
     echo "✅ Resolved conflicts in: $file"
 }
 
-# Find and resolve conflicts in all source files
-echo "📁 Searching for files with remaining merge conflicts..."
+# Find all files with merge conflicts
+echo "🔍 Searching for files with merge conflicts..."
+conflict_files=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" 2>/dev/null)
 
-# Find all files with merge conflict markers
-find . -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.json" -o -name "*.md" \) | grep -v node_modules | grep -v .git | while read -r file; do
-    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
+if [ -z "$conflict_files" ]; then
+    echo "✅ No merge conflicts found!"
+    exit 0
+fi
+
+echo "📋 Found files with conflicts:"
+echo "$conflict_files"
+
+# Process each file
+for file in $conflict_files; do
+    if [ -f "$file" ]; then
         resolve_conflicts "$file"
     fi
 done
 
-# Also check for ======= markers (orphaned from incomplete conflict resolution)
-find . -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.json" -o -name "*.md" \) | grep -v node_modules | grep -v .git | while read -r file; do
-    if grep -q "=======" "$file" 2>/dev/null; then
-        echo "🔧 Cleaning orphaned conflict markers in: $file"
-        sed -i '/=======/d' "$file"
-        echo "✅ Cleaned: $file"
-    fi
-done
+echo ""
+echo "🎉 All merge conflicts have been resolved!"
+echo "📝 Files processed:"
+echo "$conflict_files"
 
-echo "🎉 All merge conflicts resolved!"
-echo "📝 Please review the changes and test the application"
+# Check if there are any remaining conflicts
+remaining_conflicts=$(grep -l "<<<<<<< HEAD" -r . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" 2>/dev/null)
+
+if [ -z "$remaining_conflicts" ]; then
+    echo "✅ Verification: No remaining conflicts found!"
+else
+    echo "❌ Warning: Some conflicts may still exist in:"
+    echo "$remaining_conflicts"
+fi

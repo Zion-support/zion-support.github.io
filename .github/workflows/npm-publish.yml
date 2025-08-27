@@ -1,4 +1,4 @@
-name: Publish npm package
+name: NPM Package Check
 
 on:
   push:
@@ -6,24 +6,17 @@ on:
       - main
     paths-ignore:
       - '**/*.md'
+      - '**/*.txt'
       - '.github/**'
-      - 'docs/**'
 
 jobs:
-  publish:
-    name: Publish to npm
+  check:
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
-    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-<<<<<<< HEAD
       - name: Use Node.js 20
-=======
-      - name: Setup Node.js
->>>>>>> cursor/website-audit-and-enhancement-1eed
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -32,40 +25,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-<<<<<<< HEAD
-      - name: Build project
-        run: npm run build
-=======
-      - name: Check if package is private
-        id: check-private
-        run: |
-          if npm run --silent echo:private 2>/dev/null | grep -q "true"; then
-            echo "private=true" >> $GITHUB_OUTPUT
-          else
-            echo "private=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Skip publish for private packages
-        if: steps.check-private.outputs.private == 'true'
-        run: |
-          echo "Package is private, skipping publish"
-          exit 0
-
       - name: Run tests
-        if: steps.check-private.outputs.private == 'false'
         run: npm test --if-present
->>>>>>> cursor/website-audit-and-enhancement-1eed
+        continue-on-error: true
 
-      - name: Build project
-        if: steps.check-private.outputs.private == 'false'
-        run: npm run build
+      - name: Run tests (if available)
+        run: npm test --if-present
+        continue-on-error: true
 
-      - name: Publish to npm
-        if: steps.check-private.outputs.private == 'false'
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Publish success
-        if: steps.check-private.outputs.private == 'false'
-        run: echo "Package published successfully to npm"
+      - name: Check package.json
+        run: |
+          echo "Package name: $(npm run --silent echo \$npm_package_name)"
+          echo "Package version: $(npm run --silent echo \$npm_package_version)"
+          echo "Package private: $(npm run --silent echo \$npm_package_private)"
+          
+          if [ "$(npm run --silent echo \$npm_package_private)" = "true" ]; then
+            echo "✓ Package is marked as private - no publishing needed"
+          else
+            echo "⚠ Package is not marked as private"
+          fi

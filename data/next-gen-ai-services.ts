@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface NextGenAIService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface NextGenAIService {
   rating: number;
   reviews: number;
 }
-
 export const nextGenAIServices: NextGenAIService[] = [
   // Advanced AI & Neural Network Services
   {
@@ -94,7 +92,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 2
   },
-
   // Quantum AI Content Factory
   {
     id: 'quantum-ai-content-factory',
@@ -147,7 +144,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.8,
     reviews: 95
   },
-
   // AI Autonomous Research Platform
   {
     id: 'ai-autonomous-research-platform',
@@ -200,7 +196,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 6
   },
-
   // Quantum AI Video Production Studio
   {
     id: 'quantum-ai-video-studio',
@@ -253,7 +248,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.7,
     reviews: 23
   },
-
   // AI Quantum Computing Platform
   {
     id: 'ai-quantum-computing-platform',
@@ -306,7 +300,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.8,
     reviews: 4
   },
-
   // Neural Network Evolution Platform
   {
     id: 'neural-network-evolution',
@@ -359,7 +352,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 3
   },
-
   // Quantum AI Creativity Engine
   {
     id: 'quantum-ai-creativity-engine',
@@ -412,7 +404,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.6,
     reviews: 38
   },
-
   // New AI Services
   {
     id: 'ai-neural-interface-pro',
@@ -618,7 +609,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.7,
     reviews: 245
   },
-
   {
     id: 'ai-predictive-maintenance-platform',
     name: 'AI Predictive Maintenance Platform',
@@ -670,7 +660,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.8,
     reviews: 156
   },
-
   // AI-Powered Predictive Analytics Platform
   {
     id: 'ai-predictive-analytics-platform',
@@ -723,7 +712,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 67
   },
-
   // AI-Powered Customer Experience Platform
   {
     id: 'ai-customer-experience-platform',
@@ -776,7 +764,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.8,
     reviews: 289
   },
-
   // AI-Powered Supply Chain Optimization
   {
     id: 'ai-supply-chain-optimization',
@@ -829,7 +816,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 45
   },
-
   // AI-Powered Financial Trading Platform
   {
     id: 'ai-financial-trading-platform',
@@ -882,7 +868,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 18
   },
-
   // AI-Powered Healthcare Diagnostics
   {
     id: 'ai-healthcare-diagnostics',

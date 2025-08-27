@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-export interface RealMarketAugmentation2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
-=======
->>>>>>> f445b6a7679252c0e9e72d9ef6742d58c3d5bf3f
 }
-
 export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
   {
-<<<<<<< HEAD
-=======
     id: "ai-market-intelligence-platform",
     title: "AI Market Intelligence Platform",
     description: "Advanced market intelligence platform that uses AI to analyze market trends, competitor activities, and customer behavior to provide actionable insights.",
@@ -128,32 +116,11 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
     growthRate: "22.8% annually",
     fundingTrends: "High interest in quantum computing applications"
 =======
->>>>>>> f445b6a7679252c0e9e72d9ef6742d58c3d5bf3f
     id: 'market-augmentation-1',
     name: 'Market Augmentation Service 1',
     tagline: 'Enhance your market presence',
     price: '$299',
     features: ['Market analysis', 'Strategy development', 'Implementation support']
   }
-<<<<<<< HEAD
-export interface RealMarketAugmentation2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
-}
-
-export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
-  {
-    id: 'market-augmentation-1',
-    name: 'Market Augmentation Service 1',
-    tagline: 'Enhance your market presence',
-    price: '$299',
-    features: ['Market analysis', 'Strategy development', 'Implementation support']
-  }
-];
 =======
-=======
->>>>>>> f445b6a7679252c0e9e72d9ef6742d58c3d5bf3f
 ];

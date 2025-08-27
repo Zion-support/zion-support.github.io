@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2028IoTEdgeComputingService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2028IoTEdgeComputingService {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdgeComputingService[] = [
   // AI-Powered Smart City Platform
   {
@@ -94,7 +92,6 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     rating: 4.9,
     reviews: 35
   },
-
   // Industrial IoT Edge Computing Platform
   {
     id: 'industrial-iot-edge-computing-2028',
@@ -147,7 +144,6 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     rating: 4.8,
     reviews: 210
   },
-
   // AI-Powered Healthcare IoT Platform
   {
     id: 'ai-healthcare-iot-platform-2028',
@@ -200,7 +196,6 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     rating: 4.9,
     reviews: 140
   },
-
   // Smart Agriculture IoT Platform
   {
     id: 'smart-agriculture-iot-platform-2028',
@@ -253,7 +248,6 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     rating: 4.7,
     reviews: 380
   },
-
   // Edge AI Computing Infrastructure
   {
     id: 'edge-ai-computing-infrastructure-2028',

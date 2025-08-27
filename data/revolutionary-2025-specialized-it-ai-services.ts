@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2025SpecializedITAIService {
   id: string;
   name: string;
@@ -40,14 +39,12 @@ export interface Revolutionary2025SpecializedITAIService {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const revolutionary2025SpecializedITAIServices: Revolutionary2025SpecializedITAIService[] = [
   // AI-Powered Autonomous Network Security Platform
   {
@@ -96,7 +93,6 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     rating: 4.8,
     reviews: 298
   },
-
   // Quantum-Enhanced Data Analytics Platform
   {
     id: 'quantum-enhanced-data-analytics-platform-2025',
@@ -144,7 +140,6 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     rating: 4.9,
     reviews: 345
   },
-
   // AI-Powered Autonomous Cloud Migration Platform
   {
     id: 'ai-autonomous-cloud-migration-platform-2025',
@@ -192,7 +187,6 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     rating: 4.7,
     reviews: 234
   },
-
   // Quantum-Enhanced IoT Security Platform
   {
     id: 'quantum-enhanced-iot-security-platform-2025',
@@ -240,7 +234,6 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     rating: 4.8,
     reviews: 198
   },
-
   // AI-Powered Autonomous Database Management Platform
   {
     id: 'ai-autonomous-database-management-platform-2025',
@@ -288,7 +281,6 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     rating: 4.7,
     reviews: 312
   },
-
   // Quantum-Enhanced API Security Platform
   {
     id: 'quantum-enhanced-api-security-platform-2025',
@@ -336,7 +328,6 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     rating: 4.8,
     reviews: 178
   },
-
   // AI-Powered Autonomous Content Management Platform
   {
     id: 'ai-autonomous-content-management-platform-2025',
@@ -384,7 +375,6 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     rating: 4.7,
     reviews: 398
   },
-
   // Quantum-Enhanced Machine Learning Platform
   {
     id: 'quantum-enhanced-machine-learning-platform-2025',
@@ -432,7 +422,6 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     rating: 4.9,
     reviews: 156
   },
-
   // AI-Powered Autonomous Testing Platform
   {
     id: 'ai-autonomous-testing-platform-2025',
@@ -481,5 +470,4 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     reviews: 267
   }
 ];
-
 export default revolutionary2025SpecializedITAIServices;
