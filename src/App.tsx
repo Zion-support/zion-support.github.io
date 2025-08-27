@@ -108,6 +108,7 @@ const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinanci
 const AIHRTalentPlatform = React.lazy(() => import('./pages/services/AIHRTalentPlatform'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const InnovativeAIServicesShowcase = React.lazy(() => import('./pages/InnovativeAIServicesShowcase'));
+const InnovativeServicesShowcase2026 = React.lazy(() => import('./pages/InnovativeServicesShowcase2026'));
 
 // Innovative new services
 const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
@@ -247,6 +248,7 @@ function App() {
               
               {/* Showcase Pages */}
               <Route path="/innovative-ai-services" element={<InnovativeAIServicesShowcase />} />
+              <Route path="/innovative-services-2026" element={<InnovativeServicesShowcase2026 />} />
               
               {/* New Innovative Services */}
               <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />

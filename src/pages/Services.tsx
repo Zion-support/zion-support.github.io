@@ -1,50 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cpu, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Network, 
-  Zap, 
-  Users, 
-  BarChart3, 
-  Globe,
-  Rocket,
-  Target,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Bot,
-  Workflow,
-  Eye,
-  Lock,
-  Server,
-  Smartphone,
-  Code,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  Sparkles,
-  TrendingUp,
-  Award,
-  Handshake,
-  Lightbulb,
-  Chip,
-  Database as DatabaseIcon,
-  MessageSquare,
-  FileText,
-  ShoppingCart,
-  CreditCard,
-  Calendar,
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  DollarSign
-} from 'lucide-react';
+import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { NEW_SERVICES_2025 } from '../data/newServices2025';
 
 export default function Services() {
   const aiServices = [
@@ -442,15 +401,29 @@ export default function Services() {
             </p>
           </motion.div>
           
-          <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {aiServices.map((service, index) => (
-              <ServiceCard key={index} service={service} index={index} />
+          <div className="mt-8 text-center space-y-4">
+            <Link to="/innovative-ai-services" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 font-semibold">
+              <Sparkles className="w-5 h-5 mr-2" />
+              Explore Our Innovative AI Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <div>
+              <Link to="/innovative-services-2026" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 font-semibold">
+                <TrendingUp className="w-5 h-5 ml-2" />
+                Discover 2026 Revolutionary Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredCategories.map((c) => (
+              <Link key={c.title} to={c.href} className="block bg-slate-900/60 border border-cyan-400/15 hover:border-cyan-400/40 rounded-2xl p-6 text-left">
+                <div className="text-xs uppercase tracking-wide text-cyan-300/70">Featured</div>
+                <div className="mt-2 text-xl font-semibold">{c.title}</div>
+                <div className="mt-2 text-sm text-slate-300">{c.desc}</div>
+              </Link>
+            ))}
+          </div>
             ))}
           </motion.div>
         </div>
