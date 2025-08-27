@@ -4,7 +4,7 @@ echo "🔧 Resolving all merge conflicts systematically..."
 
 # Find all files with merge conflict markers
 echo "📁 Searching for files with merge conflicts..."
-conflict_files=$(grep -l "<<<<<<< HEAD" -r . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null)
+conflict_files=$(grep -l "<<<<<<< HEAD" -r . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" --include="*.yml" --include="*.yaml" 2>/dev/null)
 
 if [ -z "$conflict_files" ]; then
     echo "✅ No merge conflicts found!"
@@ -29,6 +29,9 @@ for file in $conflict_files; do
     sed -i '/^=======/d' "$file"
     sed -i '/^>>>>>>> /d' "$file"
     
+    # Clean up any remaining empty lines
+    sed -i '/^[[:space:]]*$/d' "$file"
+    
     echo "✅ Resolved conflicts in: $file"
 done
 
@@ -37,12 +40,14 @@ echo "📝 Files processed:"
 echo "$conflict_files"
 
 # Check if any conflicts remain
-remaining_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | wc -l)
+remaining_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" --include="*.yml" --include="*.yaml" 2>/dev/null | wc -l)
 
 if [ "$remaining_conflicts" -eq 0 ]; then
     echo "✅ No remaining conflicts found!"
 else
     echo "⚠️  $remaining_conflicts conflicts still remain"
     echo "🔍 Remaining conflicts:"
-    grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | head -10
+    grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" --include="*.yml" --include="*.yaml" 2>/dev/null | head -10
 fi
+
+echo "🚀 Ready to build and merge!"
