@@ -41,6 +41,7 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Improvements 2025', href: '/comprehensive-improvements-2025', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Careers', href: '/careers', current: false },

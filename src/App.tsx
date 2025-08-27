@@ -117,6 +117,7 @@ const AIBusinessIntelligenceAnalytics = lazy(() => import('./pages/services/AIBu
 const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustomerExperienceSupport'));
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
+const ComprehensiveImprovements2025 = lazy(() => import('./pages/ComprehensiveImprovements2025'));
 
 // 2029 Services Showcase
 const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
@@ -296,14 +297,8 @@ function App() {
                   <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
                   <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
                   <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
-                  <Route path="/new-innovative-services-2025" element={<NewServicesShowcase2025 />} />
-                  
                   {/* Additional innovative AI services */}
                   <Route path="/services/ai-quantum-financial-trading" element={<AIQuantumFinancialTrading />} />
-                  <Route path="/services/ai-autonomous-supply-chain" element={<AIAutonomousSupplyChain />} />
-                  <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
-                  
-                  {/* Additional innovative AI services */}
                   <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
                   <Route path="/services/ai-autonomous-supply-chain" element={<AIAutonomousSupplyChain />} />
                   <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
@@ -315,7 +310,10 @@ function App() {
                   <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
                   <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
                   <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                  
+                  {/* Service Showcase Pages */}
                   <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
+                  <Route path="/comprehensive-improvements-2025" element={<ComprehensiveImprovements2025 />} />
                   
                   {/* Additional innovative AI service routes */}
                   <Route path="/services/ai-code-review-security-scanner" element={<AICodeReviewSecurityScanner />} />
