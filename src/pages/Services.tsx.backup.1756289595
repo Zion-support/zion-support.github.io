@@ -1,9 +1,18 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/website-audit-and-enhancement-ddf2
 import { 
   Brain, 
   Cloud, 
+<<<<<<< HEAD
+  Server, 
+=======
   Code,
   Database,
   Network,
@@ -105,6 +114,7 @@ export default function Services() {
         "Smart City Solutions"
 =======
   Zap, 
+>>>>>>> origin/cursor/website-audit-and-enhancement-ddf2
   Rocket, 
   Shield, 
   Zap, 
@@ -143,6 +153,21 @@ import { NEXT_GEN_INNOVATIVE_SERVICES_2025 } from '../data/nextGenInnovativeServ
 import { ADVANCED_INNOVATIVE_SERVICES_2026 } from '../data/advancedInnovativeServices2026';
 
 const Services: React.FC = () => {
+<<<<<<< HEAD
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedYear, setSelectedYear] = useState<'all' | '2025' | '2026'>('all');
+
+  // Combine all services
+  const allServices = [...NEXT_GEN_INNOVATIVE_SERVICES_2025, ...ADVANCED_INNOVATIVE_SERVICES_2026];
+  
+  // Add year property to distinguish between 2025 and 2026 services
+  const servicesWithYear = allServices.map(service => ({
+    ...service,
+    year: NEXT_GEN_INNOVATIVE_SERVICES_2025.includes(service) ? '2025' : '2026'
+  }));
+=======
   const serviceCategories = [
     {
       name: 'AI Services',
@@ -344,6 +369,7 @@ const Services: React.FC = () => {
       link: "/services/cybersecurity-suite"
     }
   ];
+>>>>>>> origin/cursor/website-audit-and-enhancement-ddf2
 
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
 
@@ -611,6 +637,12 @@ const Services: React.FC = () => {
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="px-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 transition-colors duration-300"
                 >
+<<<<<<< HEAD
+                  {categories.map((category) => (
+                    <option key={category} value={category}>
+                      {category === 'all' ? 'All Categories' : category}
+                    </option>
+=======
                   Learn More →
                 </Link>
 =======
@@ -700,6 +732,7 @@ const Services: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-zion-slate-light text-sm">{benefit.description}</p>
+>>>>>>> cursor/website-audit-and-enhancement-96e5
               </motion.div>
             ))}
           </div>
@@ -740,6 +773,7 @@ const Services: React.FC = () => {
                       <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
                       {service}
                     </li>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ddf2
                   ))}
                 </select>
 
@@ -777,6 +811,12 @@ const Services: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
+        {/* Results Count */}
+        <div className="mb-8">
+          <div className="text-zion-slate-light">
+            Showing {filteredServices.length} of {allServices.length} services
+=======
       {/* Stats Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -861,9 +901,37 @@ const Services: React.FC = () => {
                 </div>
               </motion.div>
             ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-ddf2
           </div>
         </div>
 
+<<<<<<< HEAD
+        {/* Services Display */}
+        {filteredServices.length > 0 ? (
+          viewMode === 'grid' ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index) => (
+                <ServiceCard key={service.id} service={service} index={index} />
+              ))}
+            </div>
+          ) : (
+            <div className="space-y-6">
+              {filteredServices.map((service, index) => (
+                <ServiceListItem key={service.id} service={service} index={index} />
+              ))}
+            </div>
+          )
+        ) : (
+          <div className="text-center py-16">
+            <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria.</div>
+            <button
+              onClick={() => {
+                setSelectedCategory('all');
+                setSearchTerm('');
+                setSelectedYear('all');
+              }}
+              className="text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+=======
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -877,14 +945,55 @@ const Services: React.FC = () => {
             <Link 
               to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+>>>>>>> origin/cursor/website-audit-and-enhancement-ddf2
             >
               Clear filters
             </button>
           </div>
+<<<<<<< HEAD
+        )}
+
+        {/* CTA Section */}
+        <div className="text-center mt-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-gradient-to-r from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+              Our team of experts is ready to help you implement these cutting-edge solutions and drive innovation in your organization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 flex items-center justify-center"
+              >
+                Contact Us Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/about"
+                className="border border-zion-cyan/30 text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300"
+              >
+                Learn More About Us
+              </Link>
+            </div>
+          </motion.div>
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ddf2
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
+};
+=======
 }
+>>>>>>> origin/cursor/website-audit-and-enhancement-ddf2
 
 export default Services;

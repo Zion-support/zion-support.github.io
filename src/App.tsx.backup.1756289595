@@ -25,6 +25,15 @@ const Solutions = React.lazy(() => import('./pages/solutions'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const InnovativeServicesShowcase = React.lazy(() => import('./pages/InnovativeServicesShowcase'));
 
+<<<<<<< HEAD
+// Enhanced loading component with better UX
+const EnhancedLoadingSpinner = () => (
+  <EnhancedLoading
+    isLoading={true}
+    {...loadingConfigs.pageLoad}
+    autoComplete={false}
+  />
+=======
 // New service pages
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
@@ -62,6 +71,7 @@ const LoadingSpinner = () => (
       <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full animate-pulse"></div>
     </div>
   </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ddf2
 );
 
 function App() {
@@ -100,6 +110,24 @@ function App() {
                 </Routes>
               </Suspense>
               
+<<<<<<< HEAD
+              {/* Chat Assistant */}
+              <ChatAssistant />
+            </EnhancedLayout>
+            
+            {/* AI Chatbot System */}
+            <AIChatbotSystem />
+            
+            {/* Performance Optimizer */}
+            <PerformanceOptimizer />
+            
+            {/* Notification System */}
+            <NotificationSystem />
+          </Router>
+        </AccessibilityProvider>
+      </ErrorBoundary>
+    </HelmetProvider>
+=======
               {/* Service pages */}
               <Route path="/ai-services" element={<AIServicesPage />} />
               <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
@@ -133,6 +161,7 @@ function App() {
         <ChatAssistant />
       </div>
     </Router>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ddf2
   );
 }
 
