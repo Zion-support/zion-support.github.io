@@ -15,7 +15,6 @@ import {
   Rocket,
   Star
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
 
 export default function About() {
   const values = [
@@ -103,11 +102,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
-        title="About Zion Tech Group - Leading Technology Innovation"
-        description="Learn about Zion Tech Group's mission to democratize advanced technology, our team of experts, and our commitment to innovation in AI, cybersecurity, and emerging technologies."
-        keywords="about Zion Tech Group, technology company, AI innovation, cybersecurity, quantum computing, team"
-      />
+
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
