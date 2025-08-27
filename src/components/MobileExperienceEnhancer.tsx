@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Smartphone, 
@@ -9,11 +9,24 @@ import {
   Volume2,
   VolumeX,
   Wifi,
-  WifiOff
+  WifiOff,
+  MousePointer,
+  Touch,
+  Move,
+  X,
+  Settings,
+  Smartphone as PhoneIcon
 } from 'lucide-react';
 
 interface MobileExperienceEnhancerProps {
   enabled?: boolean;
+}
+
+interface TouchGesture {
+  type: 'swipe' | 'pinch' | 'rotate' | 'longpress' | 'doubletap';
+  direction?: 'left' | 'right' | 'up' | 'down';
+  distance?: number;
+  timestamp: number;
 }
 
 export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
@@ -23,339 +36,391 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   const [isLandscape, setIsLandscape] = useState(false);
   const [touchSupported, setTouchSupported] = useState(false);
   const [showControls, setShowControls] = useState(false);
-  const [gestureHistory, setGestureHistory] = useState<string[]>([]);
+  const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]);
+  const [mobileSettings, setMobileSettings] = useState({
+    enableGestures: true,
+    enableHapticFeedback: true,
+    enableOrientationLock: false,
+    enableTouchOptimization: true
+  });
 
-  // Detect mobile device and capabilities
+  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
+  const gestureTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const longPressTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Enhanced mobile detection
+  const checkMobile = useCallback(() => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isMobileDevice = /mobile|android|iphone|ipad|phone/i.test(userAgent);
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isSmallScreen = window.innerWidth <= 768;
+    
+    setIsMobile(isMobileDevice || isTouchDevice || isSmallScreen);
+    setTouchSupported(isTouchDevice);
+  }, []);
+
+  // Orientation handling with lock capability
+  const checkOrientation = useCallback(() => {
+    const isLandscapeMode = window.innerWidth > window.innerHeight;
+    setIsLandscape(isLandscapeMode);
+    
+    // Apply orientation-specific optimizations
+    if (mobileSettings.enableOrientationLock && isLandscapeMode) {
+      document.body.classList.add('landscape-optimized');
+    } else {
+      document.body.classList.remove('landscape-optimized');
+    }
+  }, [mobileSettings.enableOrientationLock]);
+
+  // Enhanced touch gesture handling
+  const handleTouchStart = useCallback((e: TouchEvent) => {
+    if (!mobileSettings.enableGestures) return;
+    
+    const touch = e.touches[0];
+    touchStartRef.current = {
+      x: touch.clientX,
+      y: touch.clientY,
+      time: Date.now()
+    };
+
+    // Long press detection
+    longPressTimeoutRef.current = setTimeout(() => {
+      if (touchStartRef.current) {
+        const gesture: TouchGesture = {
+          type: 'longpress',
+          timestamp: Date.now()
+        };
+        setGestureHistory(prev => [...prev.slice(-9), gesture]);
+        
+        // Haptic feedback
+        if (mobileSettings.enableHapticFeedback && 'vibrate' in navigator) {
+          navigator.vibrate(50);
+        }
+      }
+    }, 500);
+  }, [mobileSettings.enableGestures, mobileSettings.enableHapticFeedback]);
+
+  const handleTouchMove = useCallback((e: TouchEvent) => {
+    if (!touchStartRef.current || !mobileSettings.enableGestures) return;
+
+    const touch = e.touches[0];
+    const deltaX = touch.clientX - touchStartRef.current.x;
+    const deltaY = touch.clientY - touchStartRef.current.y;
+    const deltaTime = Date.now() - touchStartRef.current.time;
+
+    // Clear long press timeout if moving
+    if (longPressTimeoutRef.current) {
+      clearTimeout(longPressTimeoutRef.current);
+      longPressTimeoutRef.current = null;
+    }
+
+    // Detect scroll vs gesture
+    if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 10) {
+      return; // This is scrolling, not a gesture
+    }
+
+    // Prevent default for horizontal gestures
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+      e.preventDefault();
+    }
+  }, [mobileSettings.enableGestures]);
+
+  const handleTouchEnd = useCallback((e: TouchEvent) => {
+    if (!touchStartRef.current || !mobileSettings.enableGestures) return;
+
+    const touch = e.changedTouches[0];
+    const deltaX = touch.clientX - touchStartRef.current.x;
+    const deltaY = touch.clientY - touchStartRef.current.y;
+    const deltaTime = Date.now() - touchStartRef.current.time;
+
+    // Clear timeouts
+    if (longPressTimeoutRef.current) {
+      clearTimeout(longPressTimeoutRef.current);
+      longPressTimeoutRef.current = null;
+    }
+
+    // Detect swipe gestures
+    if (deltaTime < 300 && Math.abs(deltaX) > 50) {
+      const direction = deltaX > 0 ? 'right' : 'left';
+      const gesture: TouchGesture = {
+        type: 'swipe',
+        direction,
+        distance: Math.abs(deltaX),
+        timestamp: Date.now()
+      };
+      
+      setGestureHistory(prev => [...prev.slice(-9), gesture]);
+      
+      // Handle swipe actions
+      if (direction === 'right') {
+        // Navigate back or show sidebar
+        window.history.back();
+      } else if (direction === 'left') {
+        // Navigate forward or hide sidebar
+        // Could be used for navigation
+      }
+
+      // Haptic feedback
+      if (mobileSettings.enableHapticFeedback && 'vibrate' in navigator) {
+        navigator.vibrate(25);
+      }
+    }
+
+    // Detect vertical swipes
+    if (deltaTime < 300 && Math.abs(deltaY) > 50) {
+      const direction = deltaY > 0 ? 'down' : 'up';
+      const gesture: TouchGesture = {
+        type: 'swipe',
+        direction,
+        distance: Math.abs(deltaY),
+        timestamp: Date.now()
+      };
+      
+      setGestureHistory(prev => [...prev.slice(-9), gesture]);
+      
+      // Handle vertical swipes
+      if (direction === 'down') {
+        // Could trigger pull-to-refresh or show top navigation
+      } else if (direction === 'up') {
+        // Could hide bottom navigation or trigger actions
+      }
+    }
+
+    touchStartRef.current = null;
+  }, [mobileSettings.enableGestures, mobileSettings.enableHapticFeedback]);
+
+  // Pinch and rotate gesture handling
+  const handleMultiTouch = useCallback((e: TouchEvent) => {
+    if (!mobileSettings.enableGestures || e.touches.length !== 2) return;
+
+    const touch1 = e.touches[0];
+    const touch2 = e.touches[1];
+    
+    const distance = Math.sqrt(
+      Math.pow(touch2.clientX - touch1.clientX, 2) +
+      Math.pow(touch2.clientY - touch1.clientY, 2)
+    );
+
+    // Store initial distance for pinch detection
+    if (!gestureTimeoutRef.current) {
+      gestureTimeoutRef.current = setTimeout(() => {
+        // Pinch gesture detected
+        const gesture: TouchGesture = {
+          type: 'pinch',
+          distance: Math.round(distance),
+          timestamp: Date.now()
+        };
+        setGestureHistory(prev => [...prev.slice(-9), gesture]);
+      }, 100);
+    }
+  }, [mobileSettings.enableGestures]);
+
+  // Touch optimization for mobile
+  const applyTouchOptimizations = useCallback(() => {
+    if (!mobileSettings.enableTouchOptimization) return;
+
+    // Add touch-specific CSS classes
+    document.body.classList.add('touch-optimized');
+    
+    // Optimize touch targets
+    const touchTargets = document.querySelectorAll('button, a, input, select, textarea');
+    touchTargets.forEach(target => {
+      const element = target as HTMLElement;
+      const rect = element.getBoundingClientRect();
+      
+      // Ensure minimum touch target size (44px)
+      if (rect.width < 44 || rect.height < 44) {
+        element.classList.add('touch-target-optimized');
+      }
+    });
+
+    // Add touch feedback classes
+    document.addEventListener('touchstart', () => {
+      document.body.classList.add('touch-active');
+    }, { passive: true });
+
+    document.addEventListener('touchend', () => {
+      setTimeout(() => {
+        document.body.classList.remove('touch-active');
+      }, 150);
+    }, { passive: true });
+  }, [mobileSettings.enableTouchOptimization]);
+
+  // Initialize mobile experience
   useEffect(() => {
     if (!enabled) return;
 
-    const checkMobile = () => {
-      const userAgent = navigator.userAgent.toLowerCase();
-      const isMobileDevice = /mobile|android|iphone|ipad|phone/i.test(userAgent);
-      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-      
-      setIsMobile(isMobileDevice);
-      setTouchSupported(isTouchDevice);
-    };
-
-    const checkOrientation = () => {
-      setIsLandscape(window.innerWidth > window.innerHeight);
-    };
-
     checkMobile();
     checkOrientation();
+    applyTouchOptimizations();
 
+    // Event listeners
     window.addEventListener('resize', checkOrientation);
     window.addEventListener('orientationchange', checkOrientation);
+    
+    if (touchSupported) {
+      document.addEventListener('touchstart', handleTouchStart, { passive: false });
+      document.addEventListener('touchmove', handleTouchMove, { passive: false });
+      document.addEventListener('touchend', handleTouchEnd, { passive: true });
+      document.addEventListener('touchstart', handleMultiTouch, { passive: true });
+    }
 
     return () => {
       window.removeEventListener('resize', checkOrientation);
       window.removeEventListener('orientationchange', checkOrientation);
+      
+      if (touchSupported) {
+        document.removeEventListener('touchstart', handleTouchStart);
+        document.removeEventListener('touchmove', handleTouchMove);
+        document.removeEventListener('touchend', handleTouchEnd);
+        document.removeEventListener('touchstart', handleMultiTouch);
+      }
     };
-  }, [enabled]);
+  }, [
+    enabled, 
+    touchSupported, 
+    checkMobile, 
+    checkOrientation, 
+    applyTouchOptimizations,
+    handleTouchStart,
+    handleTouchMove,
+    handleTouchEnd,
+    handleMultiTouch
+  ]);
 
-  // Touch gesture handling
+  // Cleanup timeouts
   useEffect(() => {
-    if (!enabled || !isMobile || !touchSupported) return;
-
-    let startX = 0;
-    let startY = 0;
-    let startTime = 0;
-    let isScrolling = false;
-
-    const handleTouchStart = (e: TouchEvent) => {
-      startX = e.touches[0].clientX;
-      startY = e.touches[0].clientY;
-      startTime = Date.now();
-      isScrolling = false;
-    };
-
-    const handleTouchMove = (e: TouchEvent) => {
-      if (!startX || !startY) return;
-
-      const deltaX = e.touches[0].clientX - startX;
-      const deltaY = e.touches[0].clientY - startY;
-      const deltaTime = Date.now() - startTime;
-
-      // Detect scroll vs swipe
-      if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 10) {
-        isScrolling = true;
-      }
-
-      // Prevent default only for horizontal swipes when not scrolling
-      if (Math.abs(deltaX) > Math.abs(deltaY) && !isScrolling && Math.abs(deltaX) > 50) {
-        e.preventDefault();
-      }
-    };
-
-    const handleTouchEnd = (e: TouchEvent) => {
-      if (!startX || !startY || isScrolling) return;
-
-      const deltaX = e.changedTouches[0].clientX - startX;
-      const deltaY = e.changedTouches[0].clientY - startY;
-      const deltaTime = Date.now() - startTime;
-
-      // Detect swipe gestures
-      if (deltaTime < 300 && Math.abs(deltaX) > 50) {
-        if (deltaX > 0) {
-          handleSwipeRight();
-        } else {
-          handleSwipeLeft();
-        }
-      }
-
-      if (deltaTime < 300 && Math.abs(deltaY) > 50) {
-        if (deltaY > 0) {
-          handleSwipeDown();
-        } else {
-          handleSwipeUp();
-        }
-      }
-
-      // Reset
-      startX = 0;
-      startY = 0;
-      startTime = 0;
-    };
-
-    const handleSwipeRight = () => {
-      setGestureHistory(prev => [...prev.slice(-4), 'Swipe Right']);
-      // Navigate back or show previous content
-      if (window.history.length > 1) {
-        window.history.back();
-      }
-    };
-
-    const handleSwipeLeft = () => {
-      setGestureHistory(prev => [...prev.slice(-4), 'Swipe Left']);
-      // Navigate forward or show next content
-      const nextButton = document.querySelector('[data-next]') as HTMLElement;
-      if (nextButton) {
-        nextButton.click();
-      }
-    };
-
-    const handleSwipeUp = () => {
-      setGestureHistory(prev => [...prev.slice(-4), 'Swipe Up']);
-      // Scroll to top or show navigation
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    const handleSwipeDown = () => {
-      setGestureHistory(prev => [...prev.slice(-4), 'Swipe Down']);
-      // Refresh or show more content
-      const refreshButton = document.querySelector('[data-refresh]') as HTMLElement;
-      if (refreshButton) {
-        refreshButton.click();
-      }
-    };
-
-    // Add touch event listeners
-    document.addEventListener('touchstart', handleTouchStart, { passive: false });
-    document.addEventListener('touchmove', handleTouchMove, { passive: false });
-    document.addEventListener('touchend', handleTouchEnd, { passive: true });
-
     return () => {
-      document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchmove', handleTouchMove);
-      document.removeEventListener('touchend', handleTouchEnd);
-    };
-  }, [enabled, isMobile, touchSupported]);
-
-  // Mobile-specific optimizations
-  useEffect(() => {
-    if (!enabled || !isMobile) return;
-
-    // Optimize viewport for mobile
-    const viewport = document.querySelector('meta[name="viewport"]');
-    if (viewport) {
-      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');
-    }
-
-    // Add mobile-specific CSS classes
-    document.body.classList.add('mobile-device');
-    if (isLandscape) {
-      document.body.classList.add('landscape');
-    } else {
-      document.body.classList.add('portrait');
-    }
-
-    // Optimize images for mobile
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
+      if (gestureTimeoutRef.current) {
+        clearTimeout(gestureTimeoutRef.current);
       }
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
-      }
-    });
-
-    // Add mobile-specific event listeners
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        // Page is hidden, pause animations/videos
-        document.body.classList.add('page-hidden');
-      } else {
-        // Page is visible, resume animations/videos
-        document.body.classList.remove('page-hidden');
+      if (longPressTimeoutRef.current) {
+        clearTimeout(longPressTimeoutRef.current);
       }
     };
+  }, []);
 
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    return () => {
-      document.body.classList.remove('mobile-device', 'landscape', 'portrait');
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, [enabled, isMobile, isLandscape]);
-
-  // Mobile controls overlay
   if (!enabled || !isMobile) return null;
 
   return (
     <>
-      {/* Mobile Controls Button */}
-      <motion.button
-        onClick={() => setShowControls(!showControls)}
-        className="fixed bottom-4 left-4 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-300"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        aria-label="Mobile Controls"
-      >
-        <Smartphone size={20} />
-      </motion.button>
-
-      {/* Mobile Controls Panel */}
+      {/* Mobile Control Panel */}
       <AnimatePresence>
         {showControls && (
           <motion.div
-            className="fixed bottom-20 left-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-2xl p-4 w-72 z-50"
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 300 }}
+            className="fixed top-0 right-0 h-full w-80 bg-white dark:bg-gray-800 shadow-2xl z-50 p-6 overflow-y-auto"
           >
-            <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-3">
-              Mobile Controls
-            </h3>
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Mobile Controls</h3>
+              <button
+                onClick={() => setShowControls(false)}
+                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+              >
+                <X size={20} />
+              </button>
+            </div>
 
-            {/* Gesture History */}
-            <div className="mb-4">
-              <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                Recent Gestures
-              </h4>
-              <div className="space-y-1">
-                {gestureHistory.map((gesture, index) => (
-                  <div key={index} className="text-xs text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-700 px-2 py-1 rounded">
-                    {gesture}
-                  </div>
-                ))}
-                {gestureHistory.length === 0 && (
-                  <div className="text-xs text-gray-500 dark:text-gray-500 italic">
-                    No gestures yet
-                  </div>
-                )}
+            {/* Mobile Settings */}
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-700 dark:text-gray-300">Enable Gestures</span>
+                <input
+                  type="checkbox"
+                  checked={mobileSettings.enableGestures}
+                  onChange={(e) => setMobileSettings(prev => ({ ...prev, enableGestures: e.target.checked }))}
+                  className="toggle toggle-primary"
+                />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-700 dark:text-gray-300">Haptic Feedback</span>
+                <input
+                  type="checkbox"
+                  checked={mobileSettings.enableHapticFeedback}
+                  onChange={(e) => setMobileSettings(prev => ({ ...prev, enableHapticFeedback: e.target.checked }))}
+                  className="toggle toggle-primary"
+                />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-700 dark:text-gray-300">Orientation Lock</span>
+                <input
+                  type="checkbox"
+                  checked={mobileSettings.enableOrientationLock}
+                  onChange={(e) => setMobileSettings(prev => ({ ...prev, enableOrientationLock: e.target.checked }))}
+                  className="toggle toggle-primary"
+                />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-700 dark:text-gray-300">Touch Optimization</span>
+                <input
+                  type="checkbox"
+                  checked={mobileSettings.enableTouchOptimization}
+                  onChange={(e) => setMobileSettings(prev => ({ ...prev, enableTouchOptimization: e.target.checked }))}
+                  className="toggle toggle-primary"
+                />
               </div>
             </div>
 
+            {/* Gesture History */}
+            {gestureHistory.length > 0 && (
+              <div className="mt-6">
+                <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-3">Recent Gestures</h4>
+                <div className="space-y-2">
+                  {gestureHistory.slice(-5).reverse().map((gesture, index) => (
+                    <div key={index} className="flex items-center justify-between text-xs text-gray-600 dark:text-gray-400">
+                      <span className="flex items-center gap-2">
+                        <MousePointer size={14} />
+                        {gesture.type}
+                        {gesture.direction && ` (${gesture.direction})`}
+                      </span>
+                      <span>{new Date(gesture.timestamp).toLocaleTimeString()}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Quick Actions */}
-            <div className="space-y-2">
-              <button
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="w-full flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-2 px-3 rounded-lg transition-colors duration-200"
-              >
-                <RotateCcw size={16} />
-                <span className="text-sm">Scroll to Top</span>
-              </button>
-
-              <button
-                onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
-                className="w-full flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-2 px-3 rounded-lg transition-colors duration-200"
-              >
-                <Hand size={16} />
-                <span className="text-sm">Scroll to Bottom</span>
-              </button>
-
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full flex items-center justify-center space-x-2 bg-cyan-100 hover:bg-cyan-200 dark:bg-cyan-800 dark:hover:bg-cyan-700 text-cyan-700 dark:text-cyan-300 py-2 px-3 rounded-lg transition-colors duration-200"
-              >
-                <RotateCcw size={16} />
-                <span className="text-sm">Refresh Page</span>
-              </button>
-            </div>
-
-            {/* Device Info */}
-            <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-600">
-              <div className="text-xs text-gray-500 dark:text-gray-400 space-y-1">
-                <div>Device: {isMobile ? 'Mobile' : 'Desktop'}</div>
-                <div>Orientation: {isLandscape ? 'Landscape' : 'Portrait'}</div>
-                <div>Touch: {touchSupported ? 'Supported' : 'Not Supported'}</div>
-                <div>Screen: {window.innerWidth} × {window.innerHeight}</div>
+            <div className="mt-6">
+              <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-3">Quick Actions</h4>
+              <div className="grid grid-cols-2 gap-3">
+                <button className="p-3 bg-blue-100 dark:bg-blue-900/20 rounded-lg text-blue-700 dark:text-blue-300 text-sm">
+                  <RotateCcw size={16} className="mx-auto mb-1" />
+                  Reset
+                </button>
+                <button className="p-3 bg-green-100 dark:bg-green-900/20 rounded-lg text-green-700 dark:text-green-300 text-sm">
+                  <Settings size={16} className="mx-auto mb-1" />
+                  Settings
+                </button>
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Mobile-specific CSS */}
-      <style jsx>{`
-        .mobile-device {
-          -webkit-tap-highlight-color: transparent;
-          -webkit-touch-callout: none;
-          -webkit-user-select: none;
-          user-select: none;
-        }
-        
-        .mobile-device * {
-          -webkit-tap-highlight-color: transparent;
-        }
-        
-        .landscape .hero-section {
-          min-height: 60vh;
-        }
-        
-        .portrait .hero-section {
-          min-height: 100vh;
-        }
-        
-        .page-hidden * {
-          animation-play-state: paused !important;
-        }
-        
-        .page-hidden video {
-          pause();
-        }
-        
-        /* Mobile-specific touch targets */
-        .mobile-device button,
-        .mobile-device a,
-        .mobile-device [role="button"] {
-          min-height: 44px;
-          min-width: 44px;
-        }
-        
-        /* Mobile scrollbar */
-        .mobile-device ::-webkit-scrollbar {
-          width: 6px;
-        }
-        
-        .mobile-device ::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        
-        .mobile-device ::-webkit-scrollbar-thumb {
-          background: rgba(6, 182, 212, 0.3);
-          border-radius: 3px;
-        }
-        
-        /* Mobile focus styles */
-        .mobile-device *:focus {
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px;
-        }
-      `}</style>
+      {/* Mobile Control Button */}
+      <motion.button
+        onClick={() => setShowControls(!showControls)}
+        className="fixed bottom-4 left-4 z-40 bg-gradient-to-r from-blue-500 to-purple-500 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        title="Mobile Controls"
+      >
+        <PhoneIcon size={20} />
+      </motion.button>
+
+      {/* Mobile Status Indicator */}
+      <div className="fixed top-4 left-4 z-40 bg-black/80 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-medium">
+        <div className="flex items-center gap-2">
+          <Smartphone size={14} />
+          {isLandscape ? 'Landscape' : 'Portrait'}
+        </div>
+      </div>
     </>
   );
 };
