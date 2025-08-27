@@ -40,13 +40,18 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Pattern */}
+        {/* Enhanced Background Pattern */}
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-blue-600/5 to-purple-600/5"></div>
         
         {/* Hero Content */}
         <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-neon">
               Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -55,7 +60,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/services" 
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 animate-neon-glow"
               >
                 Explore Our Services
               </Link>
@@ -66,18 +71,26 @@ export default function Home() {
                 Get Started
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Floating Elements */}
+        {/* Enhanced Floating Elements */}
         <div className="absolute top-20 left-10 animate-float">
-          <div className="w-4 h-4 bg-cyan-400 rounded-full opacity-60"></div>
+          <div className="w-4 h-4 bg-cyan-400 rounded-full opacity-60 animate-pulse-glow"></div>
         </div>
         <div className="absolute top-40 right-20 animate-float-delayed">
-          <div className="w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
+          <div className="w-3 h-3 bg-blue-400 rounded-full opacity-60 animate-pulse-glow"></div>
         </div>
         <div className="absolute bottom-40 left-20 animate-float">
-          <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60"></div>
+          <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-pulse-glow"></div>
+        </div>
+        
+        {/* Additional floating elements */}
+        <div className="absolute top-60 left-1/4 animate-float-delayed">
+          <div className="w-2 h-2 bg-pink-400 rounded-full opacity-40 animate-pulse-glow"></div>
+        </div>
+        <div className="absolute bottom-60 right-1/4 animate-float">
+          <div className="w-3 h-3 bg-green-400 rounded-full opacity-40 animate-pulse-glow"></div>
         </div>
       </section>
 
@@ -86,14 +99,111 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+              <motion.div 
+                key={index} 
+                className="text-center group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300 animate-pulse-glow">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-lg font-semibold mb-2">{stat.label}</div>
                 <div className="text-sm text-gray-400">{stat.description}</div>
-              </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Innovative Services Showcase */}
+      <section className="py-20 bg-gradient-to-br from-slate-900/50 via-slate-800/50 to-slate-900/50">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Innovative AI Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our cutting-edge AI-powered solutions designed to transform your business operations
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'AI Project Manager',
+                description: 'Intelligent project management with AI-powered task prioritization and risk assessment',
+                href: '/services/ai-project-manager',
+                icon: '🎯',
+                color: 'from-cyan-500 to-blue-600'
+              },
+              {
+                title: 'AI Content Generator',
+                description: 'Create engaging content 10x faster with AI-powered writing and image generation',
+                href: '/services/ai-content-generator',
+                icon: '✍️',
+                color: 'from-purple-500 to-pink-600'
+              },
+              {
+                title: 'AI Customer Support',
+                description: '24/7 intelligent support with AI chatbots and smart ticket routing',
+                href: '/services/ai-customer-support',
+                icon: '🤖',
+                color: 'from-green-500 to-emerald-600'
+              },
+              {
+                title: 'AI Data Analytics',
+                description: 'Transform data into actionable insights with predictive analytics',
+                href: '/services/ai-data-analytics',
+                icon: '📊',
+                color: 'from-orange-500 to-red-600'
+              },
+              {
+                title: 'AI Marketing Automation',
+                description: 'Optimize campaigns with AI-powered targeting and personalization',
+                href: '/services/ai-marketing-automation',
+                icon: '🎯',
+                color: 'from-indigo-500 to-purple-600'
+              },
+              {
+                title: 'AI Sales Copilot',
+                description: 'Boost sales performance with intelligent lead scoring and automation',
+                href: '/services/ai-sales-copilot',
+                icon: '🚀',
+                color: 'from-blue-500 to-cyan-600'
+              }
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
+              >
+                <Link 
+                  to={service.href}
+                  className="block bg-glass-dark rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 border border-slate-700/50 hover:border-cyan-500/50"
+                >
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <div className={`inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors`}>
+                    Learn More
+                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
