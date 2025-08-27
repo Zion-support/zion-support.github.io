@@ -31,6 +31,7 @@ const Pricing = React.lazy(() => import('./pages/Pricing'));
 const Signup = React.lazy(() => import('./pages/Signup'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
+const ServicesAdvertising = React.lazy(() => import('./pages/ServicesAdvertising'));
 const Help = React.lazy(() => import('./pages/Help'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const GenericPage = React.lazy(() => import('./pages/[...slug]'));
@@ -102,6 +103,7 @@ function App() {
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services-advertising" element={<ServicesAdvertising />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
