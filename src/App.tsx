@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
-import LoadingSpinner from './components/ui/LoadingSpinner';
+import { EnhancedLoadingSpinner } from './components/ui/EnhancedLoadingSpinner';
+import { ErrorBoundary } from './components/error/ErrorBoundary';
+import { AccessibilityProvider } from './components/accessibility/AccessibilityProvider';
+import { SEOHead } from './components/seo/SEOHead';
 
 // Lazy load pages - comprehensive import list
 const Home = React.lazy(() => import('./pages/Home'));
@@ -57,32 +60,36 @@ const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/EquipmentPage'));
 
 // Enhanced loading component with better UX
-const EnhancedLoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="relative">
-      <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
-      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
-        ZION
-      </div>
-      <div className="mt-4 text-center">
-        <div className="text-zion-cyan text-sm animate-pulse">Loading amazing experiences...</div>
-      </div>
-    </div>
-  </div>
+const AppLoadingSpinner = () => (
+  <EnhancedLoadingSpinner 
+    size="xl" 
+    variant="default" 
+    text="Loading amazing experiences..." 
+    theme="zion"
+  />
 );
 
 function App() {
   return (
-    <Router>
-      <div className="App min-h-screen bg-zion-slate-dark">
-        {/* App Header */}
-        <AppHeader />
-        
-        {/* Main Content */}
-        <main className="pt-24">
-          <Suspense fallback={<EnhancedLoadingSpinner />}>
-            <Routes>
+    <ErrorBoundary>
+      <AccessibilityProvider>
+        <Router>
+          <div className="App min-h-screen bg-zion-slate-dark">
+            {/* SEO Head */}
+            <SEOHead 
+              title="Zion Tech Group - Future-Ready Technology Solutions"
+              description="Cutting-edge technology solutions including AI, cybersecurity, cloud infrastructure, and emerging technologies. Transform your business with Zion Tech Group."
+              keywords={['AI services', 'cybersecurity', 'cloud solutions', 'digital transformation']}
+              canonicalUrl="https://ziontechgroup.com"
+            />
+            
+            {/* App Header */}
+            <AppHeader />
+            
+            {/* Main Content */}
+            <main id="main-content" className="pt-24">
+              <Suspense fallback={<AppLoadingSpinner />}>
+                <Routes>
               {/* Main Routes */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -146,8 +153,10 @@ function App() {
         
         {/* Chat Assistant */}
         <ChatAssistant />
-      </div>
-    </Router>
+          </div>
+        </Router>
+      </AccessibilityProvider>
+    </ErrorBoundary>
   );
 }
 

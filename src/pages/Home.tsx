@@ -1,6 +1,8 @@
 import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { motion, LazyMotion, domAnimation } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { SEOHead } from '../components/seo/SEOHead';
+import { usePerformance } from '../hooks/usePerformance';
 import { 
   Brain, 
   Shield, 
@@ -108,23 +110,18 @@ const LazyTestimonials = lazy(() => import('../components/home/Testimonials'));
 const LazyCTASection = lazy(() => import('../components/home/CTASection'));
 
 // Enhanced loading spinner component
-const EnhancedLoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="relative">
-      <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
-      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
-        ZION
-      </div>
-      <div className="mt-4 text-center">
-        <div className="text-zion-cyan text-sm animate-pulse">Loading amazing experiences...</div>
-      </div>
-    </div>
-  </div>
+const HomeLoadingSpinner = () => (
+  <EnhancedLoadingSpinner 
+    size="lg" 
+    variant="default" 
+    text="Loading amazing experiences..." 
+    theme="zion"
+  />
 );
 
 const Home: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
+  const { performanceScore, insights } = usePerformance();
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -204,9 +201,24 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-zion-slate-dark">
-      {/* Hero Section with Parallax Effect */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <>
+      {/* SEO Head */}
+      <SEOHead 
+        title="Home"
+        description="Transform your business with Zion Tech Group's cutting-edge technology solutions. AI, cybersecurity, cloud infrastructure, and emerging technologies."
+        keywords={['technology solutions', 'AI services', 'cybersecurity', 'cloud infrastructure']}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Zion Tech Group Home",
+          "description": "Future-ready technology solutions",
+          "url": "https://ziontechgroup.com"
+        }}
+      />
+      
+      <div className="min-h-screen bg-zion-slate-dark">
+        {/* Hero Section with Parallax Effect */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div 
@@ -273,7 +285,7 @@ const Home: React.FC = () => {
       {/* Hero Features Section */}
       <section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate">
         <div className="container mx-auto px-4">
-          <Suspense fallback={<EnhancedLoadingSpinner />}>
+          <Suspense fallback={<HomeLoadingSpinner />}>
             <LazyHeroFeatures features={heroFeatures} />
           </Suspense>
         </div>
@@ -282,7 +294,7 @@ const Home: React.FC = () => {
       {/* Services Overview */}
       <section className="py-20 bg-zion-slate">
         <div className="container mx-auto px-4">
-          <Suspense fallback={<EnhancedLoadingSpinner />}>
+          <Suspense fallback={<HomeLoadingSpinner />}>
             <LazyServicesOverview services={services} />
           </Suspense>
         </div>
@@ -291,7 +303,7 @@ const Home: React.FC = () => {
       {/* Stats Section */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <Suspense fallback={<EnhancedLoadingSpinner />}>
+          <Suspense fallback={<HomeLoadingSpinner />}>
             <LazyStatsSection stats={stats} />
           </Suspense>
         </div>
@@ -300,7 +312,7 @@ const Home: React.FC = () => {
       {/* Testimonials */}
       <section className="py-20 bg-zion-slate">
         <div className="container mx-auto px-4">
-          <Suspense fallback={<EnhancedLoadingSpinner />}>
+          <Suspense fallback={<HomeLoadingSpinner />}>
             <LazyTestimonials />
           </Suspense>
         </div>
@@ -309,12 +321,13 @@ const Home: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <Suspense fallback={<EnhancedLoadingSpinner />}>
+          <Suspense fallback={<HomeLoadingSpinner />}>
             <LazyCTASection />
           </Suspense>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 
