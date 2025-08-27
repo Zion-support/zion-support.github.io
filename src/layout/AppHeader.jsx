@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -98,7 +97,6 @@ export function AppHeader() {
               <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
                 <Rocket className="w-6 h-6 text-white" />
               </div>
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-green rounded-full animate-pulse"></div>
             </motion.div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -113,18 +111,54 @@ export function AppHeader() {
             {navigationItems.map((item) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
-                  <div
-                    className="flex items-center space-x-1 cursor-pointer text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
-                    onMouseEnter={() => setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <span className="font-medium">{item.name}</span>
-                    <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                  <div className="relative">
+                    <button
+                      className="flex items-center space-x-1 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 py-2"
+                      onMouseEnter={() => setActiveDropdown(item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+                    
+                    {/* Dropdown Menu */}
+                    <AnimatePresence>
+                      {activeDropdown === item.name && (
+                        <motion.div
+                          className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/10 p-4"
+                          initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                          transition={{ duration: 0.2 }}
+                          onMouseEnter={() => setActiveDropdown(item.name)}
+                          onMouseLeave={() => setActiveDropdown(null)}
+                        >
+                          <div className="grid grid-cols-1 gap-2">
+                            {item.dropdown.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.name}
+                                to={dropdownItem.path}
+                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group/item"
+                              >
+                                <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}>
+                                  <dropdownItem.icon className="w-5 h-5 text-white" />
+                                </div>
+                                <div>
+                                  <div className="text-white font-medium group-hover/item:text-zion-cyan transition-colors duration-300">
+                                    {dropdownItem.name}
+                                  </div>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 ) : (
                   <Link
                     to={item.path}
-                    className={`font-medium transition-colors duration-300 ${
+                    className={`transition-colors duration-300 ${
                       isActiveRoute(item.path)
                         ? 'text-zion-cyan'
                         : 'text-zion-slate-light hover:text-zion-cyan'
@@ -133,66 +167,18 @@ export function AppHeader() {
                     {item.name}
                   </Link>
                 )}
-
-                {/* Dropdown Menu */}
-                {item.dropdown && activeDropdown === item.name && (
-                  <motion.div
-                    className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/20 p-4"
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <div className="grid grid-cols-1 gap-2">
-                      {item.dropdown.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.name}
-                          to={dropdownItem.path}
-                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group"
-                        >
-                          <div className={`w-10 h-10 bg-gradient-to-br ${dropdownItem.color} rounded-lg flex items-center justify-center`}>
-                            <dropdownItem.icon className="w-5 h-5 text-white" />
-                          </div>
-                          <div>
-                            <p className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">
-                              {dropdownItem.name}
-                            </p>
-                          </div>
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MainNavigation } from './MainNavigation.tsx';
-export function AppHeader() {
-    return (
-        <header className="bg-white shadow-sm border-b border-gray-200">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
-                    <div className="flex items-center">
-                        <Link to="/" className="flex-shrink-0">
-                            <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
->>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
-                        </Link>
-                    </div>
-<<<<<<< HEAD
-                  </motion.div>
-                )}
               </div>
             ))}
           </nav>
 
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
-            {/* Theme toggle */}
+            {/* Dark mode toggle */}
             <button
               onClick={toggleDarkMode}
-              className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 rounded-lg hover:bg-white/5"
+              className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
             >
               {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-
-            {/* Language selector */}
-            <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 rounded-lg hover:bg-white/5">
-              <Globe className="w-5 h-5" />
             </button>
 
             {/* CTA Button */}
@@ -278,21 +264,10 @@ export function AppHeader() {
                   </Link>
                 </div>
               </nav>
-=======
-                    <nav className="hidden md:flex space-x-8">
-                        <Link to="/services" className="text-gray-700 hover:text-zion-purple transition-colors">
-                            Services
-                        </Link>
-                        <Link to="/about" className="text-gray-700 hover:text-zion-purple transition-colors">
-                            About
-                        </Link>
-                        <Link to="/contact" className="text-gray-700 hover:text-zion-purple transition-colors">
-                            Contact
-                        </Link>
-                    </nav>
-                </div>
->>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
             </div>
-        </header>
-    );
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
+  );
 }
