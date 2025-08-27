@@ -107,30 +107,15 @@ export function ChatAssistant() {
 
   return (
     <>
-      {/* Chat Button */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8, y: 100 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        className="fixed bottom-6 left-6 z-50"
+      {/* Chat Toggle Button */}
+      <button
+        onClick={() => setIsOpen(true)}
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+        aria-label="Open chat assistant"
       >
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="group relative p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-110"
-        >
-          <MessageCircle className="w-6 h-6 text-white" />
-          
-          {/* Notification Badge */}
-          {messages.length > 1 && (
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center"
-            >
-              <span className="text-white text-xs font-bold">!</span>
-            </motion.div>
-          )}
-        </button>
-      </motion.div>
+        <MessageCircle className="w-7 h-7 text-white mx-auto" />
+        <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
+      </button>
 
       {/* Chat Window */}
       <AnimatePresence>
@@ -139,30 +124,27 @@ export function ChatAssistant() {
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="fixed bottom-24 left-6 w-96 h-[500px] bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-400/10 z-40 flex flex-col"
+            className="fixed bottom-24 right-6 z-50 w-96 h-[500px] bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl shadow-2xl border border-cyan-400/20 overflow-hidden"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-cyan-400/20">
+            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <Bot className="w-5 h-5 text-white" />
-                </div>
+                <Bot className="w-5 h-5 text-white" />
                 <div>
                   <h3 className="text-white font-semibold">AI Assistant</h3>
-                  <p className="text-cyan-400 text-sm">Powered by Zion Tech Group</p>
+                  <p className="text-cyan-100 text-xs">Zion Tech Group</p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-white hover:text-cyan-100 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div className="flex-1 p-4 overflow-y-auto space-y-3">
               {messages.map((message) => (
                 <motion.div
                   key={message.id}

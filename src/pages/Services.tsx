@@ -4,10 +4,11 @@ import { motion } from 'framer-motion';
 import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { NEW_SERVICES_2025 } from '../data/newServices2025';
 
 const Services: React.FC = () => {
   const [query, setQuery] = useState('');
-  const services = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+  const services = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025, ...NEW_SERVICES_2025];
   const featuredCategories = [
     { icon: Workflow, title: 'Process Automation', desc: 'Human + AI workflows across CRMs, ERPs and support.', href: '/ai-services' },
     { icon: MessageSquare, title: 'Helpdesk & Knowledge', desc: 'Tickets, KB, and chatbots trained on your docs.', href: '/micro-saas' },
