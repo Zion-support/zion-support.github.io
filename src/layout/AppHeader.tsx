@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
@@ -39,14 +39,20 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
-    { name: '2025 Services', href: '/comprehensive-services-showcase-2025', current: false, featured: true },
-    { name: '2026 Services', href: '/ultimate-services-showcase-2026', current: false, featured: true },
-    { name: '2027 Services', href: '/comprehensive-services-showcase-2027', current: false, featured: true },
+    { name: 'AI Services', href: '/ai-services', current: false },
+    { name: 'IT Services', href: '/it-services', current: false },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Careers', href: '/careers', current: false },
     { name: 'Partners', href: '/partners', current: false },
+    { name: 'News', href: '/news', current: false },
+    { name: 'Case Studies', href: '/case-studies', current: false },
+    { name: 'Help', href: '/help', current: false },
+    { name: 'FAQ', href: '/faq', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Marketplace', href: '/marketplace', current: false },
   ];
 
   // Enhanced services by category with better organization and working links
@@ -110,6 +116,8 @@ export function AppHeader() {
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Help Center', href: '/help', icon: HelpCircle },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'News', href: '/news', icon: BookOpen },
+    { name: 'Case Studies', href: '/case-studies', icon: FileText },
   ];
 
   // Enhanced futuristic background component
