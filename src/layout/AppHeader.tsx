@@ -383,9 +383,9 @@ export function AppHeader() {
                   Get Started
                 </Link>
               </div>
-            </div>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
