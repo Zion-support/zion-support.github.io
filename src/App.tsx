@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
@@ -88,6 +88,7 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
+              <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/services" element={<Services />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
@@ -114,7 +115,7 @@ function App() {
           </Suspense>
         </main>
         
-        <Footer />
+        <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
       </div>
