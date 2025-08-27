@@ -9,6 +9,7 @@ import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { PWAUpdater } from './components/PWAUpdater';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -45,14 +46,14 @@ const Training = React.lazy(() => import('./pages/Training'));
 const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
-
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+const SystemStatus = React.lazy(() => import('./pages/SystemStatus'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Security = React.lazy(() => import('./pages/Security'));
-const Cookies = React.lazy(() => import('./pages/Cookies'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/Equipment'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
@@ -150,7 +151,6 @@ const NotFound = () => (
 function App() {
   return (
     <ErrorBoundary>
-<<<<<<< HEAD
       <div className="min-h-screen bg-futuristic">
         <FuturisticAnimatedBackground />
         <AppHeader />
@@ -268,60 +268,6 @@ function App() {
         <AccessibilityEnhancer />
         <PWAUpdater />
       </div>
-=======
-      <Router>
-        <div className="min-h-screen bg-futuristic">
-          <AppHeader />
-          
-          <main className="flex-1">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/terms" element={<Terms />} />
-                <Route path="/cookies" element={<Cookies />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/solutions" element={<Solutions />} />
-                <Route path="/ai-services" element={<AIServices />} />
-                <Route path="/it-services" element={<ITServices />} />
-                <Route path="/micro-saas" element={<MicroSaaS />} />
-                <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
-                <Route path="/request-quote" element={<RequestQuote />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/marketplace" element={<Marketplace />} />
-                <Route path="/support" element={<Support />} />
-                <Route path="/status" element={<SystemStatus />} />
-                <Route path="/sitemap" element={<Sitemap />} />
-                
-                {/* Service Routes - only for existing pages */}
-                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-                <Route path="/services/digital-twin" element={<DigitalTwin />} />
-                <Route path="/services/data-analytics" element={<DataAnalytics />} />
-                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
-                <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
-                <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
-                
-                {/* Catch all route */}
-                <Route path="*" element={<Home />} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-          <ChatAssistant />
-          <PerformanceOptimizer />
-        </div>
-      </Router>
->>>>>>> chore/site-audit-links-nav
     </ErrorBoundary>
   );
 }
