@@ -21,19 +21,92 @@ import {
   Users,
   TrendingUp,
   Award,
-  Star
+  Star,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  Cloud,
+  Rocket,
+  Code,
+  Building
 } from 'lucide-react';
+
+const footerNavigation = {
+  services: {
+    title: 'Services',
+    items: [
+      { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, description: 'Machine learning and data insights' },
+      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Protect your digital assets' },
+      { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Scalable infrastructure solutions' },
+      { name: 'IoT & Edge', href: '/services/iot-edge', icon: Zap, description: 'Connected device management' },
+      { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket, description: 'Next-generation computing' },
+      { name: 'Blockchain', href: '/services/blockchain', icon: Code, description: 'Decentralized solutions' },
+      { name: 'Digital Twin', href: '/services/digital-twin', icon: Building, description: 'Virtual replica technology' },
+      { name: 'Sustainability', href: '/services/sustainability', icon: Heart, description: 'Green IT solutions' }
+    ],
+  },
+  microSaas: {
+    title: 'Micro SAAS',
+    items: [
+      { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', description: 'Smart analytics platform' },
+      { name: 'Customer Experience', href: '/micro-saas/customer-experience', description: 'Enhanced customer engagement' },
+      { name: 'Quantum Computing', href: '/micro-saas/quantum-computing', description: 'Quantum-powered solutions' },
+      { name: 'Supply Chain', href: '/micro-saas/supply-chain', description: 'Optimized logistics management' },
+      { name: 'Cybersecurity', href: '/micro-saas/cybersecurity', description: 'Advanced security tools' },
+      { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', description: 'Edge device solutions' },
+      { name: 'Content Creation', href: '/micro-saas/content-creation', description: 'AI-powered content tools' },
+      { name: 'HR Platform', href: '/micro-saas/hr-platform', description: 'Human resources automation' }
+    ],
+  },
+  marketplace: {
+    title: 'Marketplace',
+    items: [
+      { name: 'Products', href: '/marketplace/products', description: 'Browse tech products' },
+      { name: 'Services', href: '/services', description: 'Professional services' },
+      { name: 'Talent', href: '/talent', description: 'Find skilled professionals' },
+      { name: 'Equipment', href: '/equipment', description: 'High-tech hardware' },
+      { name: 'Categories', href: '/marketplace', description: 'Browse all categories' },
+      { name: 'Green IT', href: '/green-it', description: 'Eco-friendly solutions' },
+      { name: 'IT Onsite Services', href: '/it-onsite-services', description: 'Local technical support' },
+    ],
+  },
+  company: {
+    title: 'Company',
+    items: [
+      { name: 'About Us', href: '/about', description: 'Learn our story' },
+      { name: 'Blog', href: '/blog', description: 'Latest insights' },
+      { name: 'Partners', href: '/partners', description: 'Strategic alliances' },
+      { name: 'Careers', href: '/careers', description: 'Join our team' },
+      { name: 'Contact', href: '/contact', description: 'Get in touch' },
+      { name: 'FAQ', href: '/faq', description: 'Common questions' },
+      { name: 'Sitemap', href: '/sitemap', description: 'Site navigation' },
+    ],
+  },
+  support: {
+    title: 'Support & Resources',
+    items: [
+      { name: 'Help Center', href: '/help', description: 'Get help and support' },
+      { name: 'Contact Support', href: '/contact', description: 'Reach our team' },
+      { name: 'Terms of Service', href: '/terms', description: 'Legal terms' },
+      { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },
+      { name: 'Security', href: '/security', description: 'Security practices' },
+      { name: 'System Status', href: '/status', description: 'Service status' },
+    ],
+  },
+};
+
+const socialLinks = [
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-marketplace', icon: Linkedin, color: 'hover:text-blue-600' },
+  { name: 'Facebook', href: 'https://www.facebook.com/zionmarketplace', icon: Facebook, color: 'hover:text-blue-500' },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
+];
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
-  const socialLinks = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
-    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
-    { name: "GitHub", url: "https://github.com/Zion-Holdings", icon: "💻", color: "hover:bg-gray-600/20" },
-    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
-    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
-  ];
 
   const footerSections = [
     {
@@ -173,12 +246,12 @@ export const Footer: React.FC = () => {
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
-                    href={social.url}
+                    href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-12 h-12 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 flex items-center justify-center text-lg transition-all duration-300 ${social.color} hover:scale-110 border border-slate-700/50 hover:border-cyan-500/50`}
+                    className={`w-12 h-12 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 flex items-center justify-center text-lg transition-all duration-300 hover:scale-110 border border-slate-700/50 hover:border-cyan-500/50`}
                   >
-                    {social.icon}
+                    <social.icon className="w-6 h-6 text-white" />
                   </a>
                 ))}
               </div>

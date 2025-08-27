@@ -1,8 +1,12 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Brain, Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
+
+// Create a ZapIcon component since it's not exported from lucide-react
+const ZapIcon = Zap;
 
 import { GradientHeading } from "./GradientHeading";
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe } from "lucide-react";
-import { motion } from "framer-motion";
 
 const categories = [
   {
@@ -181,10 +185,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                     </span>
                     <ArrowRight className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan group-hover:translate-x-1 transition-all duration-300" />
                   </div>
+>>>>>>> origin/main
                 </div>
               </Link>
             </motion.div>
           ))}
+<<<<<<< HEAD
         </motion.div>
         
         <motion.div 
