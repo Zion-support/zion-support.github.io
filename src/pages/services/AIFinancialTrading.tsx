@@ -1,95 +1,95 @@
-import { Truck, BarChart3, Globe, Zap, Check, ArrowRight, ExternalLink, Phone, Mail, TrendingUp, Shield, Clock, MapPin } from 'lucide-react';
+import { TrendingUp, DollarSign, BarChart3, Shield, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AIFinancialTrading() {
   const features = [
-    'AI-powered demand forecasting and planning',
-    'Real-time inventory optimization and management',
-    'Automated supplier selection and evaluation',
-    'Route optimization and logistics planning',
-    'Supply chain risk assessment and mitigation',
-    'Cost optimization and budget management',
-    'Sustainability tracking and carbon footprint analysis',
-    'Multi-warehouse inventory distribution',
-    'Real-time shipment tracking and visibility',
-    'Predictive maintenance for logistics equipment'
+    'AI-powered market prediction and analysis',
+    'Real-time algorithmic trading execution',
+    'Portfolio optimization and risk management',
+    'Sentiment analysis and news impact assessment',
+    'Multi-asset class trading support',
+    'Advanced backtesting and strategy validation',
+    'Real-time market data and analytics',
+    'Automated risk controls and compliance',
+    'Custom trading strategy development',
+    'Performance analytics and reporting'
   ];
 
   const benefits = [
-    'Reduce supply chain costs by up to 25%',
-    'Improve inventory turnover by 40%',
-    'Reduce lead times by 30%',
-    'Increase on-time delivery to 98%',
-    'Minimize stockouts and overstock situations',
-    'Optimize warehouse space utilization by 35%'
+    'Increase trading returns by 25-40%',
+    'Reduce trading costs by 30%',
+    'Minimize emotional trading decisions',
+    '24/7 automated market monitoring',
+    'Advanced risk management and protection',
+    'Scalable trading across multiple markets'
   ];
 
   const useCases = [
-    'Retail and e-commerce optimization',
-    'Manufacturing supply chain management',
-    'Healthcare logistics and distribution',
-    'Food and beverage supply chains',
-    'Automotive parts distribution',
-    'Pharmaceutical supply chain compliance'
+    'Institutional trading and investment',
+    'Retail trading and wealth management',
+    'Hedge fund operations',
+    'Quantitative research and development',
+    'Risk management and compliance',
+    'Market making and liquidity provision'
   ];
 
   const tiers = [
     {
-      name: 'Starter',
-      price: '$499/mo',
+      name: 'Professional',
+      price: '$999/mo',
       details: [
-        'Up to 5 locations',
-        'Basic demand forecasting',
-        'Inventory optimization',
+        'Up to $100K trading volume',
+        'Basic AI trading signals',
+        'Standard market data',
         'Email support',
-        'Standard reporting'
+        'Basic risk management'
       ]
     },
     {
-      name: 'Professional',
-      price: '$1,299/mo',
+      name: 'Institutional',
+      price: '$2,999/mo',
       details: [
-        'Up to 25 locations',
-        'Advanced AI forecasting',
-        'Multi-warehouse optimization',
+        'Up to $1M trading volume',
+        'Advanced AI algorithms',
+        'Real-time market data',
         'Priority support',
-        'Custom integrations',
+        'Custom strategies',
         'Advanced analytics'
       ]
     },
     {
       name: 'Enterprise',
-      price: '$2,999/mo',
+      price: '$7,999/mo',
       details: [
-        'Unlimited locations',
-        'Full AI optimization suite',
-        'Custom algorithms',
+        'Unlimited trading volume',
+        'Full AI trading suite',
+        'Custom algorithm development',
         'Dedicated support',
-        'API access',
-        'White-label solutions'
+        'White-label solutions',
+        'Multi-exchange support'
       ]
     }
   ];
 
   const technicalSpecs = {
-    technology: ['Machine Learning', 'Deep Learning', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
-    integrations: ['SAP', 'Oracle', 'Salesforce', 'Shopify', 'WooCommerce', 'QuickBooks', 'FedEx', 'UPS'],
-    security: ['SOC 2 Type II', 'ISO 27001', 'GDPR', 'End-to-end encryption', 'Multi-factor authentication'],
-    uptime: '99.95%',
-    compliance: ['ISO 9001', 'ISO 14001', 'SOC 2', 'GDPR', 'CCPA']
+    technology: ['Deep Learning', 'Reinforcement Learning', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'Apache Kafka'],
+    integrations: ['Bloomberg', 'Reuters', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE', 'Fidelity', 'Charles Schwab'],
+    security: ['SOC 2 Type II', 'ISO 27001', 'PCI DSS', 'End-to-end encryption', 'Multi-factor authentication', 'Audit logging'],
+    uptime: '99.99%',
+    compliance: ['SEC', 'FINRA', 'SOC 2', 'ISO 27001', 'GDPR', 'CCPA']
   };
 
-  const industrySolutions = [
+  const tradingSolutions = [
     {
-      industry: 'Retail & E-commerce',
-      solutions: ['Omnichannel inventory management', 'Seasonal demand forecasting', 'Returns optimization']
+      market: 'Equities',
+      solutions: ['Stock trading', 'Options trading', 'ETF management', 'Dividend optimization']
     },
     {
-      industry: 'Manufacturing',
-      solutions: ['Just-in-time inventory', 'Supplier performance tracking', 'Quality control integration']
+      market: 'Forex',
+      solutions: ['Currency pairs', 'Cross-currency trading', 'Interest rate analysis', 'Economic calendar integration']
     },
     {
-      industry: 'Healthcare',
-      solutions: ['Cold chain management', 'Regulatory compliance', 'Patient safety protocols']
+      market: 'Cryptocurrency',
+      solutions: ['Digital asset trading', 'DeFi integration', 'Blockchain analytics', 'Smart contract monitoring']
     }
   ];
 
@@ -98,13 +98,13 @@ export default function AISupplyChainOptimization() {
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Truck className="w-4 h-4 mr-2" /> AI-Powered Supply Chain Optimization
+            <TrendingUp className="w-4 h-4 mr-2" /> AI-Powered Financial Trading
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            AI Supply Chain Optimization
+            AI Financial Trading Platform
           </h1>
           <p className="text-zion-slate-light text-xl">
-            Revolutionize your supply chain with AI-powered optimization, real-time visibility, and predictive analytics.
+            Revolutionize your trading with AI-powered market analysis, algorithmic execution, and intelligent risk management.
           </p>
         </div>
       </section>
@@ -123,7 +123,7 @@ export default function AISupplyChainOptimization() {
             </ul>
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Business Benefits</h2>
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Trading Benefits</h2>
             <ul className="space-y-3">
               {benefits.map((benefit) => (
                 <li key={benefit} className="flex items-start">
@@ -140,7 +140,7 @@ export default function AISupplyChainOptimization() {
           <div className="grid md:grid-cols-3 gap-6">
             {useCases.map((useCase) => (
               <div key={useCase} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
-                <Globe className="w-6 h-6 text-zion-cyan mb-3" />
+                <DollarSign className="w-6 h-6 text-zion-cyan mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{useCase}</div>
               </div>
             ))}
@@ -148,11 +148,11 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Industry Solutions</h2>
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Market Solutions</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {industrySolutions.map((solution) => (
-              <div key={solution.industry} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{solution.industry}</h3>
+            {tradingSolutions.map((solution) => (
+              <div key={solution.market} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{solution.market}</h3>
                 <ul className="space-y-2">
                   {solution.solutions.map((sol) => (
                     <li key={sol} className="flex items-start text-sm text-zion-slate-dark">
@@ -196,7 +196,7 @@ export default function AISupplyChainOptimization() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Integrations</h3>
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Broker Integrations</h3>
                 <div className="flex flex-wrap gap-2">
                   {technicalSpecs.integrations.map((integration) => (
                     <span key={integration} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm">
@@ -238,7 +238,7 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-14 text-center">
-          <div className="text-sm text-zion-slate-light mb-2">Ready to optimize your supply chain?</div>
+          <div className="text-sm text-zion-slate-light mb-2">Ready to revolutionize your trading?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950

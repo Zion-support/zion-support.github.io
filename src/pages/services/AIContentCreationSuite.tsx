@@ -1,68 +1,68 @@
-import { Truck, BarChart3, Globe, Zap, Check, ArrowRight, ExternalLink, Phone, Mail, TrendingUp, Shield, Clock, MapPin } from 'lucide-react';
+import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AIContentCreationSuite() {
   const features = [
-    'AI-powered demand forecasting and planning',
-    'Real-time inventory optimization and management',
-    'Automated supplier selection and evaluation',
-    'Route optimization and logistics planning',
-    'Supply chain risk assessment and mitigation',
-    'Cost optimization and budget management',
-    'Sustainability tracking and carbon footprint analysis',
-    'Multi-warehouse inventory distribution',
-    'Real-time shipment tracking and visibility',
-    'Predictive maintenance for logistics equipment'
+    'AI-powered text generation and editing',
+    'Automated image creation and editing',
+    'Video content generation and optimization',
+    'Multi-language content localization',
+    'SEO-optimized content creation',
+    'Brand voice consistency management',
+    'Content performance analytics',
+    'Automated content scheduling',
+    'Plagiarism detection and prevention',
+    'Content collaboration and workflow management'
   ];
 
   const benefits = [
-    'Reduce supply chain costs by up to 25%',
-    'Improve inventory turnover by 40%',
-    'Reduce lead times by 30%',
-    'Increase on-time delivery to 98%',
-    'Minimize stockouts and overstock situations',
-    'Optimize warehouse space utilization by 35%'
+    'Increase content production by 10x',
+    'Reduce content creation costs by 60%',
+    'Improve content engagement by 45%',
+    'Maintain consistent brand voice',
+    'Scale content across multiple channels',
+    'Optimize content for better SEO performance'
   ];
 
   const useCases = [
-    'Retail and e-commerce optimization',
-    'Manufacturing supply chain management',
-    'Healthcare logistics and distribution',
-    'Food and beverage supply chains',
-    'Automotive parts distribution',
-    'Pharmaceutical supply chain compliance'
+    'Marketing and advertising agencies',
+    'E-commerce and retail brands',
+    'Publishing and media companies',
+    'Educational institutions',
+    'Corporate communications',
+    'Social media management'
   ];
 
   const tiers = [
     {
-      name: 'Starter',
-      price: '$499/mo',
+      name: 'Creator',
+      price: '$199/mo',
       details: [
-        'Up to 5 locations',
-        'Basic demand forecasting',
-        'Inventory optimization',
+        'Up to 100 content pieces/month',
+        'Basic AI text generation',
+        'Standard image creation',
         'Email support',
-        'Standard reporting'
+        'Basic analytics'
       ]
     },
     {
       name: 'Professional',
-      price: '$1,299/mo',
+      price: '$499/mo',
       details: [
-        'Up to 25 locations',
-        'Advanced AI forecasting',
-        'Multi-warehouse optimization',
+        'Up to 500 content pieces/month',
+        'Advanced AI content creation',
+        'Video generation',
         'Priority support',
-        'Custom integrations',
+        'Multi-language support',
         'Advanced analytics'
       ]
     },
     {
       name: 'Enterprise',
-      price: '$2,999/mo',
+      price: '$1,299/mo',
       details: [
-        'Unlimited locations',
-        'Full AI optimization suite',
-        'Custom algorithms',
+        'Unlimited content creation',
+        'Full AI content suite',
+        'Custom AI models',
         'Dedicated support',
         'API access',
         'White-label solutions'
@@ -71,25 +71,25 @@ export default function AISupplyChainOptimization() {
   ];
 
   const technicalSpecs = {
-    technology: ['Machine Learning', 'Deep Learning', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
-    integrations: ['SAP', 'Oracle', 'Salesforce', 'Shopify', 'WooCommerce', 'QuickBooks', 'FedEx', 'UPS'],
+    technology: ['GPT-4', 'DALL-E', 'Stable Diffusion', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
+    integrations: ['WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer', 'Canva', 'Adobe Creative Suite'],
     security: ['SOC 2 Type II', 'ISO 27001', 'GDPR', 'End-to-end encryption', 'Multi-factor authentication'],
-    uptime: '99.95%',
-    compliance: ['ISO 9001', 'ISO 14001', 'SOC 2', 'GDPR', 'CCPA']
+    uptime: '99.9%',
+    compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'CCPA', 'COPPA']
   };
 
-  const industrySolutions = [
+  const contentTypes = [
     {
-      industry: 'Retail & E-commerce',
-      solutions: ['Omnichannel inventory management', 'Seasonal demand forecasting', 'Returns optimization']
+      type: 'Text Content',
+      solutions: ['Blog posts', 'Social media posts', 'Email campaigns', 'Product descriptions', 'Press releases']
     },
     {
-      industry: 'Manufacturing',
-      solutions: ['Just-in-time inventory', 'Supplier performance tracking', 'Quality control integration']
+      type: 'Visual Content',
+      solutions: ['Images and graphics', 'Infographics', 'Social media visuals', 'Product photos', 'Brand assets']
     },
     {
-      industry: 'Healthcare',
-      solutions: ['Cold chain management', 'Regulatory compliance', 'Patient safety protocols']
+      type: 'Video Content',
+      solutions: ['Product videos', 'Social media clips', 'Educational content', 'Marketing videos', 'Live streams']
     }
   ];
 
@@ -98,13 +98,13 @@ export default function AISupplyChainOptimization() {
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Truck className="w-4 h-4 mr-2" /> AI-Powered Supply Chain Optimization
+            <PenTool className="w-4 h-4 mr-2" /> AI-Powered Content Creation
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            AI Supply Chain Optimization
+            AI Content Creation Suite
           </h1>
           <p className="text-zion-slate-light text-xl">
-            Revolutionize your supply chain with AI-powered optimization, real-time visibility, and predictive analytics.
+            Transform your content strategy with AI-powered text, image, and video generation across all channels.
           </p>
         </div>
       </section>
@@ -123,7 +123,7 @@ export default function AISupplyChainOptimization() {
             </ul>
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Business Benefits</h2>
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Content Benefits</h2>
             <ul className="space-y-3">
               {benefits.map((benefit) => (
                 <li key={benefit} className="flex items-start">
@@ -140,7 +140,7 @@ export default function AISupplyChainOptimization() {
           <div className="grid md:grid-cols-3 gap-6">
             {useCases.map((useCase) => (
               <div key={useCase} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
-                <Globe className="w-6 h-6 text-zion-cyan mb-3" />
+                <FileText className="w-6 h-6 text-zion-cyan mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{useCase}</div>
               </div>
             ))}
@@ -148,13 +148,13 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Industry Solutions</h2>
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Content Types</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {industrySolutions.map((solution) => (
-              <div key={solution.industry} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{solution.industry}</h3>
+            {contentTypes.map((content) => (
+              <div key={content.type} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{content.type}</h3>
                 <ul className="space-y-2">
-                  {solution.solutions.map((sol) => (
+                  {content.solutions.map((sol) => (
                     <li key={sol} className="flex items-start text-sm text-zion-slate-dark">
                       <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />
                       {sol}
@@ -196,7 +196,7 @@ export default function AISupplyChainOptimization() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Integrations</h3>
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Platform Integrations</h3>
                 <div className="flex flex-wrap gap-2">
                   {technicalSpecs.integrations.map((integration) => (
                     <span key={integration} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm">
@@ -238,7 +238,7 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-14 text-center">
-          <div className="text-sm text-zion-slate-light mb-2">Ready to optimize your supply chain?</div>
+          <div className="text-sm text-zion-slate-light mb-2">Ready to revolutionize your content creation?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
