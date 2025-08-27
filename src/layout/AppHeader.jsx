@@ -98,9 +98,9 @@ export function AppHeader() {
                     <div>
                       <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Business</h3>
                       <ul className="space-y-2">
-                        <li><Link to="/financial-solutions" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Financial</Link></li>
-                        <li><Link to="/manufacturing-solutions" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Manufacturing</Link></li>
                         <li><Link to="/digital-transformation" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Digital Transformation</Link></li>
+                        <li><Link to="/it-consulting" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">IT Consulting</Link></li>
+                        <li><Link to="/custom-development" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Custom Development</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -123,77 +123,77 @@ export function AppHeader() {
                   onMouseEnter={() => setCompanyDropdownOpen(true)}
                   onMouseLeave={() => setCompanyDropdownOpen(false)}
                 >
-                  <ul className="space-y-2 px-4">
-                    <li><Link to="/about" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">About Us</Link></li>
-                    <li><Link to="/careers" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Careers</Link></li>
-                    <li><Link to="/partners" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Partners</Link></li>
-                    <li><Link to="/blog" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Blog</Link></li>
-                    <li><Link to="/events" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Events</Link></li>
-                  </ul>
+                  <div className="px-4 space-y-2">
+                    <Link to="/about" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors py-2">About Us</Link>
+                    <Link to="/careers" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors py-2">Careers</Link>
+                    <Link to="/partners" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors py-2">Partners</Link>
+                    <Link to="/blog" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors py-2">Blog</Link>
+                    <Link to="/contact" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors py-2">Contact</Link>
+                  </div>
                 </div>
               )}
             </div>
 
+            <Link to="/pricing" className="text-white hover:text-zion-cyan transition-colors duration-300">Pricing</Link>
             <Link to="/marketplace" className="text-white hover:text-zion-cyan transition-colors duration-300">Marketplace</Link>
-            <Link to="/contact" className="text-white hover:text-zion-cyan transition-colors duration-300">Contact</Link>
           </nav>
 
-          {/* Actions */}
+          {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link to="/login" className="text-white hover:text-zion-cyan transition-colors duration-300 font-medium">Login</Link>
-            <Link to="/contact" className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform">Get Started</Link>
+            <Link 
+              to="/login" 
+              className="text-zion-cyan hover:text-white transition-colors duration-300"
+            >
+              Sign In
+            </Link>
+            <Link 
+              to="/signup" 
+              className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
+            className="lg:hidden text-white hover:text-zion-cyan transition-colors duration-300"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors duration-300"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-zion-cyan/20">
-            <nav className="flex flex-col space-y-4">
-              <Link to="/" className="text-white hover:text-zion-cyan transition-colors duration-300">Home</Link>
-              
-              {/* Mobile Services Section */}
-              <div className="border-l-2 border-zion-cyan/30 pl-4">
-                <h3 className="text-zion-cyan font-semibold mb-2">Services</h3>
-                <div className="space-y-2 ml-4">
-                  <Link to="/ai-services" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">AI Services</Link>
-                  <Link to="/cybersecurity" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Cybersecurity</Link>
-                  <Link to="/cloud-services" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Cloud Services</Link>
-                  <Link to="/blockchain-services" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Blockchain</Link>
-                  <Link to="/quantum-services" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Quantum Computing</Link>
-                </div>
-              </div>
-
-              {/* Mobile Solutions Section */}
-              <div className="border-l-2 border-zion-cyan/30 pl-4">
-                <h3 className="text-zion-cyan font-semibold mb-2">Solutions</h3>
-                <div className="space-y-2 ml-4">
-                  <Link to="/enterprise-solutions" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Enterprise</Link>
-                  <Link to="/healthcare-solutions" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Healthcare</Link>
-                  <Link to="/government-solutions" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Government</Link>
-                  <Link to="/retail-solutions" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Retail</Link>
-                </div>
-              </div>
-
-              <Link to="/marketplace" className="text-white hover:text-zion-cyan transition-colors duration-300">Marketplace</Link>
-              <Link to="/about" className="text-white hover:text-zion-cyan transition-colors duration-300">About</Link>
-              <Link to="/contact" className="text-white hover:text-zion-cyan transition-colors duration-300">Contact</Link>
-              
-              <div className="pt-4 border-t border-zion-cyan/20">
-                <Link to="/login" className="block text-white hover:text-zion-cyan transition-colors duration-300 font-medium mb-2">Login</Link>
-                <Link to="/contact" className="block px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center">Get Started</Link>
-              </div>
-            </nav>
-          </div>
-        )}
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-zion-cyan/20">
+          <div className="px-4 py-6 space-y-4">
+            <Link to="/" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Home</Link>
+            <Link to="/services" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Services</Link>
+            <Link to="/solutions" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Solutions</Link>
+            <Link to="/about" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">About</Link>
+            <Link to="/pricing" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Pricing</Link>
+            <Link to="/marketplace" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Marketplace</Link>
+            <Link to="/blog" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Blog</Link>
+            <Link to="/contact" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Contact</Link>
+            
+            <div className="pt-4 border-t border-zion-cyan/20 space-y-3">
+              <Link 
+                to="/login" 
+                className="block text-zion-cyan hover:text-white transition-colors duration-300 py-2"
+              >
+                Sign In
+              </Link>
+              <Link 
+                to="/signup" 
+                className="block px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

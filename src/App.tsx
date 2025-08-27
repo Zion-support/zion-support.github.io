@@ -4,39 +4,39 @@ import { AppHeader } from './layout/AppHeader.jsx';
 import { Footer } from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant.jsx';
 
-// Lazy load pages
-const Home = React.lazy(() => import('./pages/Home.jsx'));
-const About = React.lazy(() => import('./pages/About.jsx'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
-const Contact = React.lazy(() => import('./pages/Contact.jsx'));
-const Login = React.lazy(() => import('./pages/Login.jsx'));
-
-// Additional pages
-const FAQ = React.lazy(() => import('./pages/FAQ.tsx'));
-const Blog = React.lazy(() => import('./pages/Blog.tsx'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost.tsx'));
-const Careers = React.lazy(() => import('./pages/Careers.tsx'));
-const Partners = React.lazy(() => import('./pages/Partners.tsx'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace.tsx'));
-const Talent = React.lazy(() => import('./pages/Talent.tsx'));
-const Equipment = React.lazy(() => import('./pages/EquipmentPage.tsx'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT.tsx'));
-const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServicesPage.tsx'));
-const HelpCenter = React.lazy(() => import('./pages/HelpCenter.tsx'));
-const Terms = React.lazy(() => import('./pages/Terms.tsx'));
-const Privacy = React.lazy(() => import('./pages/Privacy.tsx'));
-const Security = React.lazy(() => import('./pages/Security.tsx'));
-const Status = React.lazy(() => import('./pages/Status.tsx'));
-const Cookies = React.lazy(() => import('./pages/Cookies.tsx'));
-const Accessibility = React.lazy(() => import('./pages/Accessibility.tsx'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
-const Dashboard = React.lazy(() => import('./pages/Dashboard.tsx'));
-const Profile = React.lazy(() => import('./pages/Profile.tsx'));
-const Settings = React.lazy(() => import('./pages/Settings.tsx'));
-const Signup = React.lazy(() => import('./pages/Signup.tsx'));
-const ForgotPassword = React.lazy(() => import('./pages/ForgotPassword.tsx'));
-const ResetPassword = React.lazy(() => import('./pages/ResetPassword.tsx'));
-const NotFound = React.lazy(() => import('./pages/NotFound.tsx'));
+// Lazy load pages - comprehensive import list
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Login = React.lazy(() => import('./pages/Login'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const PartnersPage = React.lazy(() => import('./pages/PartnersPage'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+const Talent = React.lazy(() => import('./pages/Talent'));
+const Equipment = React.lazy(() => import('./pages/EquipmentPage'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Security = React.lazy(() => import('./pages/Security'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const Profile = React.lazy(() => import('./pages/Profile'));
+const Settings = React.lazy(() => import('./pages/Settings'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ForgotPassword = React.lazy(() => import('./pages/ForgotPassword'));
+const ResetPassword = React.lazy(() => import('./pages/ResetPassword'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
+const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 
 // Service pages
 const CybersecurityServices = React.lazy(() => import('./pages/CybersecurityServices.tsx'));
@@ -97,6 +97,7 @@ function App() {
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/partners" element={<Partners />} />
+              <Route path="/partners-page" element={<PartnersPage />} />
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/talent" element={<Talent />} />
               <Route path="/equipment" element={<Equipment />} />
@@ -110,6 +111,7 @@ function App() {
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/enhanced-services" element={<EnhancedServices />} />
               
               {/* User Dashboard */}
               <Route path="/dashboard" element={<Dashboard />} />
