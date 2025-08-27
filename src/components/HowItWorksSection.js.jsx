@@ -172,6 +172,7 @@ export function HowItWorksSection() {
                   {/* Interactive details on hover */}
                   <AnimatePresence>
                     {hoveredStep === index && (
+========
                       <motion.div className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Features:</h4>
                         <div className="space-y-2">

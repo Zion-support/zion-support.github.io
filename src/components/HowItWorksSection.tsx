@@ -191,58 +191,107 @@ export function HowItWorksSection() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {/* Connection line */}
-          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block" />
-          
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 relative">
+          {/* Enhanced connection line */}
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue opacity-20 blur-sm"></div>
+          </div>
+
+          {/* Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
-                className="relative text-center group"
-                variants={statsVariants}
-                onHoverStart={() => setHoveredStep(index)}
-                onHoverEnd={() => setHoveredStep(null)}
+                className="text-center group cursor-pointer"
+                onMouseEnter={() => setHoveredStep(index)}
+                onMouseLeave={() => setHoveredStep(null)}
                 onClick={() => setActiveStep(index)}
+                whileHover={{ y: -10 }}
+                transition={{ duration: 0.3 }}
               >
-                {/* Step icon */}
-                <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r ${step.bgColor} border-2 border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <div className={`text-white`}>
+                {/* Step circle */}
+                <div className="relative mb-6">
+                  <motion.div 
+                    className={`w-20 h-20 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center text-white shadow-lg mx-auto`}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     {step.icon}
+                  </motion.div>
+                  
+                  {/* Step number */}
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center text-white text-sm font-bold border-2 border-zion-slate-dark">
+                    {index + 1}
                   </div>
                 </div>
-                
-                {/* Step content */}
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-zion-slate-light text-sm mb-3">{step.description}</p>
-                
-                {/* Step details */}
+
+                {/* Step title */}
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                  {step.title}
+                </h3>
+
+                {/* Step description */}
+                <p className="text-zion-slate-light text-sm leading-relaxed mb-4">
+                  {step.description}
+                </p>
+
+                {/* Step details on hover */}
                 <AnimatePresence>
-                  {activeStep === index && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="text-left bg-zion-blue-dark/40 rounded-lg p-4 border border-zion-blue-light/20"
+                  {hoveredStep === index && (
+                    <motion.div 
+                      className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-4 shadow-xl backdrop-blur-sm z-20"
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
                     >
-                      <ul className="space-y-2 text-sm text-zion-slate-light">
-                        {step.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="flex items-center">
-                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                            {detail}
-                          </li>
-                        ))}
-                      </ul>
-                      <div className="mt-4 pt-4 border-t border-zion-blue-light/20">
-                        <div className="flex justify-between text-xs">
-                          <span className="text-zion-cyan">Duration: {step.duration}</span>
-                          <span className="text-zion-purple">Success: {step.success}</span>
+                      <div className="text-center mb-3">
+                        <div className="text-zion-cyan font-semibold mb-2">Key Features:</div>
+                        <ul className="text-zion-slate-light text-xs space-y-1">
+                          {step.details.map((detail, idx) => (
+                            <li key={idx} className="flex items-center gap-2">
+                              <CheckCircle className="w-3 h-3 text-zion-cyan flex-shrink-0" />
+                              <span>{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="border-t border-zion-cyan/20 pt-3">
+                        <div className="flex justify-between text-xs text-zion-slate-light">
+                          <span>Duration: {step.duration}</span>
+                          <span>Success: {step.success}</span>
                         </div>
                       </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
+
+                {/* Hover indicator */}
+                <div className="mt-4 text-zion-cyan/60 text-xs">
+                  {hoveredStep === index ? "Hover to see details" : "Hover for details"}
+                </div>
               </motion.div>
             ))}
+          </div>
+        </motion.div>
+
+        {/* Call to action */}
+        <motion.div 
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
+            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
+              <p className="text-white text-lg mb-4">
+                Ready to experience the Zion difference?
+              </p>
+              <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                Get Started Today
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

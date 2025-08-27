@@ -41,325 +41,17 @@ import {
   MapPin,
   Globe as GlobeIcon,
   Heart,
-  Gamepad2,
-  Music,
-  Building,
-  Truck
+  Home,
+  Truck,
+  Target,
+  Calendar,
+  Settings,
+  Bot
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from "@/components/SEO";
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
-import { ADVANCED_ENTERPRISE_SOLUTIONS_2025 } from "@/data/advancedEnterpriseSolutions2025";
-import { NEXT_GEN_AI_SERVICES_2025 } from "@/data/nextGenAIServices2025";
-import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/specializedIndustrySolutions2025";
-import { IOT_EDGE_COMPUTING_SERVICES_2025 } from "@/data/iotEdgeComputingServices2025";
-import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
-import { EMERGING_TECH_SERVICES_2030 } from "@/data/emergingTechServices2030";
-
-interface Service {
-  id: string;
-  title: string;
-  description: string;
-  longDescription: string;
-  icon: any;
-  color: string;
-  category: 'ai' | 'cloud' | 'security' | 'iot' | 'quantum' | 'infrastructure' | 'consulting' | 'transformation';
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  pricing: 'starter' | 'professional' | 'enterprise' | 'custom';
-  estimatedTime: string;
-  technologies: string[];
-  image?: string;
-}
-
-const services: Service[] = [
-  {
-    id: 'ai-machine-learning',
-    title: 'AI & Machine Learning',
-    description: 'Cutting-edge artificial intelligence solutions that transform business operations',
-    longDescription: 'Our AI and Machine Learning services leverage the latest advancements in artificial intelligence to help businesses automate processes, gain insights from data, and create intelligent systems that adapt and learn.',
-    icon: Brain,
-    color: 'from-purple-500 to-pink-600',
-    category: 'ai',
-    features: [
-      'Predictive Analytics & Forecasting',
-      'Natural Language Processing (NLP)',
-      'Computer Vision & Image Recognition',
-      'Machine Learning Model Development',
-      'AI-Powered Automation',
-      'Intelligent Chatbots & Virtual Assistants'
-    ],
-    benefits: [
-      'Increased operational efficiency through automation',
-      'Data-driven decision making with predictive insights',
-      'Enhanced customer experience with intelligent interactions',
-      'Cost reduction through process optimization',
-      'Competitive advantage with AI-first approach'
-    ],
-    useCases: [
-      'Customer behavior analysis and prediction',
-      'Fraud detection and risk assessment',
-      'Supply chain optimization',
-      'Content generation and personalization',
-      'Quality control and defect detection'
-    ],
-    pricing: 'custom',
-    estimatedTime: '4-12 weeks',
-    technologies: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenAI GPT', 'Computer Vision APIs', 'NLP Libraries']
-  },
-  {
-    id: 'cloud-devops',
-    title: 'Cloud & DevOps',
-    description: 'Scalable cloud infrastructure and streamlined development operations',
-    longDescription: 'We help organizations migrate to the cloud and implement DevOps practices to accelerate software delivery, improve reliability, and reduce operational costs.',
-    icon: Cloud,
-    color: 'from-blue-500 to-cyan-600',
-    category: 'cloud',
-    features: [
-      'Cloud Migration & Strategy',
-      'Container Orchestration (Kubernetes)',
-      'CI/CD Pipeline Implementation',
-      'Infrastructure as Code (IaC)',
-      'Cloud Security & Compliance',
-      'Performance Monitoring & Optimization'
-    ],
-    benefits: [
-      'Reduced infrastructure costs and improved scalability',
-      'Faster time to market with automated deployments',
-      'Enhanced reliability and disaster recovery',
-      'Improved collaboration between development and operations',
-      'Better resource utilization and cost optimization'
-    ],
-    useCases: [
-      'Legacy system modernization',
-      'Microservices architecture implementation',
-      'Multi-cloud strategy development',
-      'DevOps transformation',
-      'Cloud-native application development'
-    ],
-    pricing: 'custom',
-    estimatedTime: '6-16 weeks',
-    technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'GitLab CI']
-  },
-  {
-    id: 'cybersecurity',
-    title: 'Cybersecurity Solutions',
-    description: 'Comprehensive security solutions to protect your digital assets',
-    longDescription: 'Our cybersecurity services provide end-to-end protection for your organization, from threat detection and prevention to incident response and compliance management.',
-    icon: Shield,
-    color: 'from-green-500 to-emerald-600',
-    category: 'security',
-    features: [
-      'Threat Detection & Response',
-      'Vulnerability Assessment & Penetration Testing',
-      'Security Architecture Design',
-      'Compliance Management (SOC2, ISO27001)',
-      'Security Awareness Training',
-      'Incident Response Planning'
-    ],
-    benefits: [
-      'Protection against evolving cyber threats',
-      'Compliance with industry regulations',
-      'Reduced risk of data breaches',
-      'Enhanced customer trust and reputation',
-      'Cost savings through proactive security measures'
-    ],
-    useCases: [
-      'Security posture assessment',
-      'Compliance audit preparation',
-      'Incident response planning',
-      'Security architecture review',
-      'Employee security training programs'
-    ],
-    pricing: 'custom',
-    estimatedTime: '2-8 weeks',
-    technologies: ['SIEM Tools', 'EDR Solutions', 'Penetration Testing Tools', 'Compliance Frameworks', 'Security APIs']
-  },
-  {
-    id: 'iot-edge-computing',
-    title: 'IoT & Edge Computing',
-    description: 'Connected devices and edge computing solutions for the modern world',
-    longDescription: 'We design and implement IoT solutions that connect devices, collect data, and process information at the edge for real-time insights and automated decision-making.',
-    icon: Network,
-    color: 'from-orange-500 to-red-600',
-    category: 'iot',
-    features: [
-      'IoT Device Design & Development',
-      'Edge Computing Infrastructure',
-      'Real-time Data Processing',
-      'Sensor Network Implementation',
-      'IoT Security & Privacy',
-      'Data Analytics & Visualization'
-    ],
-    benefits: [
-      'Real-time monitoring and control capabilities',
-      'Reduced latency with edge processing',
-      'Improved operational efficiency',
-      'Enhanced data security and privacy',
-      'Scalable and flexible architecture'
-    ],
-    useCases: [
-      'Smart city infrastructure',
-      'Industrial IoT monitoring',
-      'Connected healthcare devices',
-      'Environmental monitoring systems',
-      'Smart home automation'
-    ],
-    pricing: 'custom',
-    estimatedTime: '8-20 weeks',
-    technologies: ['MQTT', 'CoAP', 'Edge Computing Platforms', 'IoT Frameworks', 'Sensor Technologies', '5G Networks']
-  },
-  {
-    id: 'quantum-computing',
-    title: 'Quantum Computing',
-    description: 'Next-generation quantum computing solutions for complex problem solving',
-    longDescription: 'We explore the frontier of quantum computing, developing solutions that leverage quantum mechanics to solve problems that are intractable for classical computers.',
-    icon: Cpu,
-    color: 'from-indigo-500 to-purple-600',
-    category: 'quantum',
-    features: [
-      'Quantum Algorithm Development',
-      'Quantum Machine Learning',
-      'Quantum Cryptography',
-      'Quantum Simulation',
-      'Hybrid Classical-Quantum Systems',
-      'Quantum Software Development'
-    ],
-    benefits: [
-      'Exponential speedup for specific problems',
-      'Enhanced security with quantum cryptography',
-      'Breakthrough capabilities in optimization',
-      'Future-proof technology investment',
-      'Competitive advantage in research and development'
-    ],
-    useCases: [
-      'Financial modeling and optimization',
-      'Drug discovery and molecular simulation',
-      'Cryptography and secure communications',
-      'Supply chain optimization',
-      'Climate modeling and prediction'
-    ],
-    pricing: 'custom',
-    estimatedTime: '12-32 weeks',
-    technologies: ['IBM Qiskit', 'Google Cirq', 'Microsoft Q#', 'Quantum Simulators', 'Quantum Hardware APIs']
-  },
-  {
-    id: 'digital-transformation',
-    title: 'Digital Transformation',
-    description: 'End-to-end digital transformation strategies and implementation',
-    longDescription: 'We guide organizations through comprehensive digital transformation, helping them modernize processes, adopt new technologies, and create digital-first business models.',
-    icon: Rocket,
-    color: 'from-yellow-500 to-orange-600',
-    category: 'transformation',
-    features: [
-      'Digital Strategy Development',
-      'Process Automation & Optimization',
-      'Change Management & Training',
-      'Technology Stack Modernization',
-      'Digital Culture Transformation',
-      'Performance Measurement & KPIs'
-    ],
-    benefits: [
-      'Improved operational efficiency and productivity',
-      'Enhanced customer experience and engagement',
-      'Increased agility and innovation capability',
-      'Better data-driven decision making',
-      'Competitive advantage in digital markets'
-    ],
-    useCases: [
-      'Legacy system modernization',
-      'Customer experience transformation',
-      'Operational process optimization',
-      'Digital product development',
-      'Organizational change management'
-    ],
-    pricing: 'custom',
-    estimatedTime: '16-40 weeks',
-    technologies: ['RPA Tools', 'Business Process Platforms', 'Digital Experience Platforms', 'Analytics Tools', 'Integration Platforms']
-  },
-  {
-    id: 'it-infrastructure',
-    title: 'IT Infrastructure',
-    description: 'Robust and scalable IT infrastructure solutions for modern businesses',
-    longDescription: 'We design, implement, and manage enterprise-grade IT infrastructure that provides the foundation for reliable, secure, and high-performance business operations.',
-    icon: Server,
-    color: 'from-gray-500 to-slate-600',
-    category: 'infrastructure',
-    features: [
-      'Network Design & Implementation',
-      'Data Center Solutions',
-      'Storage & Backup Systems',
-      'Virtualization & Containerization',
-      'High Availability & Disaster Recovery',
-      'Infrastructure Monitoring & Management'
-    ],
-    benefits: [
-      'Improved system reliability and uptime',
-      'Enhanced security and compliance',
-      'Better performance and scalability',
-      'Reduced operational costs',
-      'Simplified management and maintenance'
-    ],
-    useCases: [
-      'Infrastructure modernization',
-      'Data center consolidation',
-      'Business continuity planning',
-      'Performance optimization',
-      'Security hardening'
-    ],
-    pricing: 'custom',
-    estimatedTime: '8-24 weeks',
-    technologies: ['VMware', 'Hyper-V', 'Docker', 'Kubernetes', 'Storage Solutions', 'Network Equipment']
-  },
-  {
-    id: 'consulting-services',
-    title: 'Technology Consulting',
-    description: 'Strategic technology consulting to drive business innovation and growth',
-    longDescription: 'Our consulting services help organizations make informed technology decisions, develop strategic roadmaps, and implement best practices for sustainable growth.',
-    icon: Users,
-    color: 'from-teal-500 to-cyan-600',
-    category: 'consulting',
-    features: [
-      'Technology Strategy & Roadmapping',
-      'Architecture Review & Design',
-      'Technology Assessment & Selection',
-      'Best Practices Implementation',
-      'Performance Optimization',
-      'Technology Training & Knowledge Transfer'
-    ],
-    benefits: [
-      'Informed technology investment decisions',
-      'Reduced implementation risks',
-      'Improved technology ROI',
-      'Enhanced team capabilities',
-      'Strategic competitive advantage'
-    ],
-    useCases: [
-      'Technology strategy development',
-      'Architecture modernization',
-      'Technology vendor selection',
-      'Performance optimization',
-      'Team skill development'
-    ],
-    pricing: 'custom',
-    estimatedTime: '2-12 weeks',
-    technologies: ['Architecture Frameworks', 'Assessment Tools', 'Best Practice Guides', 'Training Materials', 'Consulting Methodologies']
-  }
-];
-
-const categories = [
-  { id: 'all', name: 'All Services', icon: Grid3X3 },
-  { id: 'ai', name: 'AI & ML', icon: Brain },
-  { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud },
-  { id: 'security', name: 'Security', icon: Shield },
-  { id: 'iot', name: 'IoT & Edge', icon: Network },
-  { id: 'quantum', name: 'Quantum', icon: Cpu },
-  { id: 'infrastructure', name: 'Infrastructure', icon: Server },
-  { id: 'transformation', name: 'Transformation', icon: Rocket },
-  { id: 'consulting', name: 'Consulting', icon: Users }
-];
+import { COMPREHENSIVE_SERVICES_CATALOG_2025, SERVICE_CATEGORIES, PRICING_TIERS, INNOVATION_LEVELS, SUPPORT_LEVELS, calculateServiceStats, getFeaturedServices, getTrendingServices } from "@/data/comprehensiveServicesCatalog2025";
 
 export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -370,25 +62,26 @@ export default function ServicesPage() {
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'ai-autonomous-systems', name: 'AI & Autonomous', icon: Rocket, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'ai-fintech', name: 'AI & FinTech', icon: DollarSign, color: 'from-zion-green to-zion-blue' },
-    { id: 'ai-metaverse', name: 'AI & Metaverse', icon: Globe, color: 'from-zion-purple to-zion-pink' },
-    { id: 'ai-space-tech', name: 'AI & Space Tech', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'ai-biotechnology', name: 'AI & Biotechnology', icon: Brain, color: 'from-zion-green to-zion-purple' },
+    { id: 'ai-fintech', name: 'AI & FinTech', icon: DollarSign, color: 'from-zion-green to-zion-cyan' },
+    { id: 'ai-healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-zion-red to-zion-pink' },
+    { id: 'ai-education', name: 'AI & Education', icon: BookOpen, color: 'from-zion-blue to-zion-purple' },
+    { id: 'ai-real-estate', name: 'AI & Real Estate', icon: Home, color: 'from-zion-orange to-zion-yellow' },
+    { id: 'ai-marketing', name: 'AI & Marketing', icon: TrendingUp, color: 'from-zion-purple to-zion-pink' },
+    { id: 'ai-supply-chain', name: 'AI & Supply Chain', icon: Truck, color: 'from-zion-blue to-zion-green' },
+    { id: 'ai-customer-service', name: 'AI & Customer Service', icon: MessageCircle, color: 'from-zion-cyan to-zion-blue' },
+    { id: 'ai-sales', name: 'AI & Sales', icon: Target, color: 'from-zion-green to-zion-blue' },
+    { id: 'ai-project-management', name: 'AI & Project Management', icon: Calendar, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'ai-business-automation', name: 'AI & Business Automation', icon: Settings, color: 'from-zion-slate to-zion-cyan' },
+    { id: 'ai-robotics', name: 'AI & Robotics', icon: Bot, color: 'from-zion-purple to-zion-red' },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
     { id: 'quantum-ml', name: 'Quantum ML', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
     { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
     { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
+    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-slate to-zion-cyan' },
     { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
     { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
-    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
-    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' },
-    { id: 'legal-tech', name: 'Legal Tech', icon: Shield, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'fintech', name: 'FinTech', icon: DollarSign, color: 'from-zion-green to-zion-blue' },
-    { id: 'healthcare-ai', name: 'Healthcare AI', icon: Heart, color: 'from-zion-pink to-zion-purple' },
-    { id: 'edtech', name: 'EdTech', icon: BookOpen, color: 'from-zion-orange to-zion-cyan' }
+    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' }
   ];
 
   const priceRanges = [
@@ -419,6 +112,7 @@ export default function ServicesPage() {
   ];
 
   // Filter and sort services
+  const filteredServices = COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -495,13 +189,8 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="relative p-6 rounded-xl bg-zion-slate-light/5 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:bg-zion-slate-light/10">
-                  <div className="text-4xl font-bold text-zion-cyan mb-2 group-hover:scale-110 transition-transform duration-300">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length}+</div>
-                  <div className="text-zion-slate-light group-hover:text-white transition-colors duration-300">Innovative Services</div>
-                  
-                  {/* Glow effect */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+                <div className="text-3xl font-bold text-zion-cyan mb-2">{COMPREHENSIVE_SERVICES_CATALOG_2025.length}+</div>
+                <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               
               <motion.div 
@@ -510,8 +199,8 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <div className="text-3xl font-bold text-zion-purple mb-2">15+</div>
-                <div className="text-zion-slate-light">Technology Categories</div>
+                            <div className="text-3xl font-bold text-zion-purple mb-2">{SERVICE_CATEGORIES.length}+</div>
+            <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
               
               <motion.div 
@@ -530,130 +219,83 @@ export default function ServicesPage() {
               </motion.div>
             </div>
 
-            {/* View Mode Toggle */}
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-zion-cyan/20 rounded-lg p-1">
-              <button
-                onClick={() => setViewMode('grid')}
-                className={`p-2 rounded-md transition-all duration-300 ${
-                  viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'
-                }`}
-              >
-                <Grid3X3 className="h-5 w-5" />
-              </button>
-              <button
-                onClick={() => setViewMode('list')}
-                className={`p-2 rounded-md transition-all duration-300 ${
-                  viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'
-                }`}
-              >
-                <List className="h-5 w-5" />
-              </button>
-            </div>
-          </div>
-        </motion.div>
+      {/* Services Statistics */}
+      <section className="py-16 bg-gradient-to-r from-zion-cyan/5 via-zion-purple/5 to-zion-blue/5">
+        <div className="container-responsive">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="heading-responsive font-bold mb-4">
+              <span className="text-gradient">Comprehensive Service Portfolio</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Discover our extensive range of innovative technology solutions across multiple industries and use cases
+            </p>
+          </motion.div>
 
-        {/* Services Grid/List */}
-        <motion.div 
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          {filteredServices.length === 0 ? (
-            <div className="text-center py-16">
-              <div className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Search className="w-12 h-12 text-zion-cyan" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <Rocket className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
-              <p className="text-zion-slate-light mb-6">
-                Try adjusting your search terms or category filter.
-              </p>
-              <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('all');
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
-              >
-                Clear Filters
-              </button>
-            </div>
-          ) : (
-            <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className={`bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 ${
-                    viewMode === 'list' ? 'flex items-start gap-6 p-6' : 'p-6'
-                  }`}
-                >
-                  {/* Service Header */}
-                  <div className={`${viewMode === 'list' ? 'flex-shrink-0' : ''}`}>
-                    <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-4`}>
-                      <service.icon className="h-8 w-8 text-white" />
-                    </div>
-                  </div>
+              <div className="text-3xl font-bold text-zion-cyan mb-2">{COMPREHENSIVE_SERVICES_CATALOG_2025.length}+</div>
+              <div className="text-zion-slate-light">Total Services</div>
+            </motion.div>
 
-                  {/* Service Content */}
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-white font-semibold text-xl mb-2">{service.title}</h3>
-                        <p className="text-zion-slate-light mb-4">{service.description}</p>
-                      </div>
-                      <button
-                        onClick={() => toggleServiceExpansion(service.id)}
-                        className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
-                      >
-                        {expandedService === service.id ? (
-                          <ChevronUp className="h-4 w-4 text-zion-cyan" />
-                        ) : (
-                          <ChevronDown className="h-4 w-4 text-zion-cyan" />
-                        )}
-                      </button>
-                    </div>
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-zion-purple mb-2">{SERVICE_CATEGORIES.length}+</div>
+              <div className="text-zion-slate-light">Technology Categories</div>
+            </motion.div>
 
-                    {/* Service Details */}
-                    <AnimatePresence>
-                      {expandedService === service.id && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="overflow-hidden"
-                        >
-                          <div className="border-t border-zion-cyan/20 pt-4 space-y-6">
-                            {/* Long Description */}
-                            <div>
-                              <h4 className="text-white font-medium mb-2">Overview</h4>
-                              <p className="text-zion-slate-light text-sm leading-relaxed">{service.longDescription}</p>
-                            </div>
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-zion-green to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-zion-green mb-2">200-600%</div>
+              <div className="text-zion-slate-light">Average ROI</div>
+            </motion.div>
 
-                            {/* Features */}
-                            <div>
-                              <h4 className="text-white font-medium mb-3">Key Features</h4>
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                                {service.features.map((feature, featureIndex) => (
-                                  <div key={featureIndex} className="flex items-center gap-2 text-sm">
-                                    <CheckCircle className="h-4 w-4 text-zion-cyan" />
-                                    <span className="text-zion-slate-light">{feature}</span>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-
-      {/* Market Trends & Innovation Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark relative overflow-hidden">
-        {/* Background effects */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="cyber-grid w-full h-full"></div>
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-zion-orange to-zion-red rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-zion-orange mb-2">99.9%</div>
+              <div className="text-zion-slate-light">Uptime Guarantee</div>
+            </motion.div>
+          </div>
         </div>
-        
-        <div className="container-responsive relative z-10">
+      </section>
+
+      {/* Filters and Categories */}
+      <section className="py-12 bg-zion-slate-dark/50">
+        <div className="container-responsive">
+          {/* Category Pills */}
           <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -668,20 +310,61 @@ export default function ServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {[
-              { title: "AI Market Growth", value: "$190B+", description: "Expected by 2025", color: "from-zion-cyan to-zion-blue" },
-              { title: "Quantum Computing", value: "$65B+", description: "Market potential", color: "from-zion-purple to-zion-pink" },
-              { title: "Blockchain Market", value: "$94B+", description: "By 2027", color: "from-zion-green to-zion-cyan" },
-              { title: "IoT Devices", value: "75B+", description: "Connected by 2025", color: "from-zion-orange to-zion-red" }
-            ].map((trend, index) => (
-              <motion.div
-                key={trend.title}
-                className="text-center group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
+          {/* Advanced Filters */}
+          <motion.div 
+            className="flex flex-col md:flex-row gap-4 items-center justify-between"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <div className="flex flex-wrap gap-4">
+              {/* Price Range Filter */}
+              <div className="flex items-center gap-2">
+                <Filter className="w-4 h-4 text-zion-cyan" />
+                <select
+                  value={selectedPriceRange}
+                  onChange={(e) => setSelectedPriceRange(e.target.value)}
+                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {priceRanges.map((range) => (
+                    <option key={range.id} value={range.id}>{range.name}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Sort Options */}
+              <div className="flex items-center gap-2">
+                <TrendingUp className="w-4 h-4 text-zion-cyan" />
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {sortOptions.map((option) => (
+                    <option key={option.id} value={option.id}>{option.name}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <div className="text-zion-slate-light">
+              Showing {sortedServices.length} of {COMPREHENSIVE_SERVICES_CATALOG_2025.length} services
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16 bg-zion-slate-dark">
+        <div className="container-responsive">
+          <AnimatePresence mode="wait">
+            {sortedServices.length > 0 ? (
+              <motion.div 
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
               >
                 {sortedServices.map((service, index) => (
                   <motion.div
@@ -800,6 +483,102 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Trending Services Section */}
+      <section className="py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
+        <div className="container-responsive">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="heading-responsive font-bold mb-4">
+              <span className="text-gradient">Trending Services</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Explore our most popular and cutting-edge technology solutions that are transforming industries
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {getTrendingServices(6).map((service, index) => (
+              <motion.div
+                key={service.id}
+                className="card-futuristic group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
+                      <Rocket className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-zion-cyan">${service.price.toLocaleString()}</div>
+                      <div className="text-sm text-zion-slate-light">per month</div>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-zion-slate-light leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-zion-cyan font-medium">{service.category}</span>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                      service.innovationLevel === 'Cutting-edge' 
+                        ? 'bg-zion-cyan/20 text-zion-cyan' 
+                        : 'bg-zion-purple/20 text-zion-purple'
+                    }`}>
+                      {service.innovationLevel}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between text-sm">
+                    <div className="flex items-center gap-1 text-zion-green">
+                      <TrendingUp className="w-4 h-4" />
+                      <span>ROI: {service.roi}</span>
+                    </div>
+                    <div className="text-zion-slate-light">
+                      Market: {service.marketPrice}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between pt-4 border-t border-zion-cyan/20">
+                  <div className="flex items-center gap-4 text-sm text-zion-slate-light">
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      <span>{service.estimatedDelivery}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Star className="w-4 h-4 text-zion-cyan" />
+                      <span>{service.supportLevel}</span>
+                    </div>
+                  </div>
+                  
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="btn-futuristic px-4 py-2 text-sm"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Specialized Services Section */}
       <section className="py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
         <div className="container-responsive">
@@ -810,15 +589,15 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="heading-responsive font-bold mb-4">
-              <span className="text-gradient">Specialized Solutions</span>
+              <span className="text-gradient">Featured Solutions</span>
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover our specialized technology solutions designed for specific industries and use cases
+              Discover our hand-picked technology solutions designed for specific industries and use cases
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SPECIALIZED_SERVICES.map((service, index) => (
+            {getFeaturedServices(8).map((service, index) => (
               <motion.div
                 key={service.id}
                 className="card-futuristic text-center group"

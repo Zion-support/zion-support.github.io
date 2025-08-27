@@ -153,89 +153,80 @@ export function FeatureCTAs() {
       description: "Discover innovative micro-SaaS solutions that can transform your business operations.",
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-yellow-100 text-yellow-700" />,
       link: "/micro-saas",
-      details: "Explore our curated collection of micro-SaaS tools designed to solve specific business challenges efficiently."
+      badge: "New",
+      details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank."
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
+          backgroundSize: '40px 40px'
+        }} />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Explore Our Services
+            Explore Our <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
           </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Discover comprehensive solutions designed to accelerate your digital transformation journey
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover comprehensive solutions designed to accelerate your business growth and digital transformation
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-white/10 backdrop-blur-md border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
+            <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-slate-600 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 group">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-4">
-                  {feature.icon}
+                  <div className="group-hover:scale-110 transition-transform duration-300">
+                    {feature.icon}
+                  </div>
                   {feature.badge && (
-                    <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
+                    <Badge variant="secondary" className="bg-blue-100 text-blue-800 hover:bg-blue-200">
                       {feature.badge}
                     </Badge>
                   )}
                 </div>
-                <CardTitle className="text-xl text-white">{feature.title}</CardTitle>
-                <CardDescription className="text-zion-slate-light">
+                <CardTitle className="text-xl text-white group-hover:text-blue-400 transition-colors">
+                  {feature.title}
+                </CardTitle>
+                <CardDescription className="text-gray-300 text-base">
                   {feature.description}
                 </CardDescription>
               </CardHeader>
               
               <CardContent className="pb-4">
-                <p className="text-sm text-zion-slate-light leading-relaxed">
+                <p className="text-gray-400 text-sm leading-relaxed">
                   {feature.details}
                 </p>
               </CardContent>
               
               <CardFooter>
-                <Link to={feature.link} className="w-full">
-                  <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-zion-blue-dark font-semibold">
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                <Link 
+                  to={feature.link}
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-600/25"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </CardFooter>
             </Card>
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h3>
-            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-              Join thousands of businesses that have already transformed their operations with Zion Tech Group's innovative solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 text-lg">
-                  Get Started Today
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-              <Link to="/services">
-                <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark font-semibold px-8 py-4 text-lg">
-                  View All Services
-                </Button>
-              </Link>
-            </div>
-          </div>
+        <div className="text-center mt-16">
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-600/25"
+          >
+            View All Services
+            <ArrowRight className="w-5 h-5" />
+          </Link>
         </div>
       </div>
     </section>

@@ -1,0 +1,112 @@
+import React from 'react';
+<<<<<<< HEAD
+
+export interface FormProps {
+  children: React.ReactNode;
+  onSubmit?: (e: React.FormEvent) => void;
+}
+
+export const Form: React.FC<FormProps> = ({ children, onSubmit }) => {
+  return (
+    <form onSubmit={onSubmit}>
+      {children}
+    </form>
+  );
+};
+
+export interface FormFieldProps {
+  control: any;
+  name: string;
+  render: (props: any) => React.ReactNode;
+}
+
+export const FormField: React.FC<FormFieldProps> = ({ control, name, render }) => {
+  return render({ field: { name, value: '', onChange: () => {} } });
+};
+
+export interface FormItemProps {
+  children: React.ReactNode;
+}
+
+export const FormItem: React.FC<FormItemProps> = ({ children }) => {
+  return <div className="form-item">{children}</div>;
+};
+
+export interface FormControlProps {
+  children: React.ReactNode;
+}
+
+export const FormControl: React.FC<FormControlProps> = ({ children }) => {
+  return <div className="form-control">{children}</div>;
+};
+
+export interface FormLabelProps {
+=======
+import { useFormContext } from 'react-hook-form';
+
+interface FormProps {
+  children: React.ReactNode;
+  [key: string]: any;
+}
+
+export function Form({ children, ...props }: FormProps) {
+  return <form {...props}>{children}</form>;
+}
+
+interface FormFieldProps {
+  name: string;
+  children: React.ReactNode;
+}
+
+export function FormField({ name, children }: FormFieldProps) {
+  return <>{children}</>;
+}
+
+interface FormItemProps {
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6c36
+  children: React.ReactNode;
+  className?: string;
+}
+
+<<<<<<< HEAD
+export const FormLabel: React.FC<FormLabelProps> = ({ children, className }) => {
+  return <label className={className}>{children}</label>;
+};
+
+export interface FormMessageProps {
+  className?: string;
+}
+
+export const FormMessage: React.FC<FormMessageProps> = ({ className }) => {
+  return <div className={className} />;
+};
+=======
+export function FormItem({ children, className = '' }: FormItemProps) {
+  return <div className={className}>{children}</div>;
+}
+
+interface FormLabelProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormLabel({ children, className = '' }: FormLabelProps) {
+  return <label className={className}>{children}</label>;
+}
+
+interface FormControlProps {
+  children: React.ReactNode;
+}
+
+export function FormControl({ children }: FormControlProps) {
+  return <>{children}</>;
+}
+
+interface FormMessageProps {
+  className?: string;
+}
+
+export function FormMessage({ className = '' }: FormMessageProps) {
+  return <span className={className}></span>;
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6c36

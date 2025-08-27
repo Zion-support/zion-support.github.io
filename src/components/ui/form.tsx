@@ -1,57 +1,54 @@
 import React from 'react';
+import { useFormContext } from 'react-hook-form';
 
-export interface FormProps {
+interface FormProps {
   children: React.ReactNode;
-  onSubmit?: (e: React.FormEvent) => void;
+  [key: string]: any;
 }
 
-export const Form: React.FC<FormProps> = ({ children, onSubmit }) => {
-  return (
-    <form onSubmit={onSubmit}>
-      {children}
-    </form>
-  );
-};
+export function Form({ children, ...props }: FormProps) {
+  return <form {...props}>{children}</form>;
+}
 
-export interface FormFieldProps {
-  control: any;
+interface FormFieldProps {
   name: string;
-  render: (props: any) => React.ReactNode;
-}
-
-export const FormField: React.FC<FormFieldProps> = ({ control, name, render }) => {
-  return render({ field: { name, value: '', onChange: () => {} } });
-};
-
-export interface FormItemProps {
   children: React.ReactNode;
 }
 
-export const FormItem: React.FC<FormItemProps> = ({ children }) => {
-  return <div className="form-item">{children}</div>;
-};
-
-export interface FormControlProps {
-  children: React.ReactNode;
+export function FormField({ name, children }: FormFieldProps) {
+  return <>{children}</>;
 }
 
-export const FormControl: React.FC<FormControlProps> = ({ children }) => {
-  return <div className="form-control">{children}</div>;
-};
-
-export interface FormLabelProps {
+interface FormItemProps {
   children: React.ReactNode;
   className?: string;
 }
 
-export const FormLabel: React.FC<FormLabelProps> = ({ children, className }) => {
+export function FormItem({ children, className = '' }: FormItemProps) {
+  return <div className={className}>{children}</div>;
+}
+
+interface FormLabelProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormLabel({ children, className = '' }: FormLabelProps) {
   return <label className={className}>{children}</label>;
-};
+}
 
-export interface FormMessageProps {
+interface FormControlProps {
+  children: React.ReactNode;
+}
+
+export function FormControl({ children }: FormControlProps) {
+  return <>{children}</>;
+}
+
+interface FormMessageProps {
   className?: string;
 }
 
-export const FormMessage: React.FC<FormMessageProps> = ({ className }) => {
-  return <div className={className} />;
-};
+export function FormMessage({ className = '' }: FormMessageProps) {
+  return <span className={className}></span>;
+}

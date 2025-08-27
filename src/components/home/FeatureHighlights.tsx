@@ -26,8 +26,8 @@ import {
   BookOpen,
   Briefcase,
   Award,
-  Heart,
-  Clock
+  Clock,
+  Heart
 } from 'lucide-react';
 
 const highlights = [
@@ -71,64 +71,13 @@ const technologies = [
   'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'
 ];
 
-const features = [
-  {
-    icon: Zap,
-    title: 'AI-Powered Matching',
-    description: 'Advanced algorithms connect you with the perfect talent and services',
-    color: 'from-zion-purple to-zion-purple-dark',
-    bgColor: 'bg-zion-purple/10',
-    iconColor: 'text-zion-purple'
-  },
-  {
-    icon: Users,
-    title: 'Global Talent Network',
-    description: 'Access skilled professionals from 150+ countries worldwide',
-    color: 'from-zion-cyan to-zion-blue',
-    bgColor: 'bg-zion-cyan/10',
-    iconColor: 'text-zion-cyan'
-  },
-  {
-    icon: Shield,
-    title: 'Verified & Secure',
-    description: 'All profiles and transactions are verified and secure',
-    color: 'from-zion-green to-zion-green-dark',
-    bgColor: 'bg-zion-green/10',
-    iconColor: 'text-zion-green'
-  },
-  {
-    icon: Globe,
-    title: '24/7 Global Support',
-    description: 'Round-the-clock support in multiple languages',
-    color: 'from-zion-blue to-zion-blue-dark',
-    bgColor: 'bg-zion-blue/10',
-    iconColor: 'text-zion-blue'
-  },
-  {
-    icon: Clock,
-    title: 'Instant Response',
-    description: 'Get responses within minutes, not days',
-    color: 'from-zion-orange to-zion-orange-dark',
-    bgColor: 'bg-zion-orange/10',
-    iconColor: 'text-zion-orange'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Performance Analytics',
-    description: 'Track your success with detailed insights and metrics',
-    color: 'from-zion-pink to-zion-pink-dark',
-    bgColor: 'bg-zion-pink/10',
-    iconColor: 'text-zion-pink'
-  }
-];
-
 export function FeatureHighlights() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
         delayChildren: 0.1
       }
     }
@@ -166,17 +115,48 @@ export function FeatureHighlights() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+
+      {/* Floating elements */}
+      <div className="absolute inset-0">
+        <motion.div 
+          className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
+          animate={{ rotate: -360 }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
-        <motion.div
-          className="text-center mb-16"
+        <motion.div 
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Why Choose <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Zion Tech Group</span>?
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience the next generation of technology solutions with features designed to maximize efficiency and value
+          </p>
+        </motion.div>
+
+        {/* Feature Highlights */}
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -208,10 +188,31 @@ export function FeatureHighlights() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
+              whileHover={{ y: -8, scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              className="group"
             >
-              <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
-                <feature.icon className={`w-8 h-8 ${feature.iconColor}`} />
+              <div className={`h-full p-8 rounded-2xl ${highlight.bgColor} border ${highlight.borderColor} backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20`}>
+                <div className={`w-16 h-16 bg-gradient-to-r ${highlight.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <highlight.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
+                  {highlight.title}
+                </h3>
+                
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {highlight.description}
+                </p>
+
+                <ul className="space-y-2">
+                  {highlight.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
               <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
@@ -219,29 +220,36 @@ export function FeatureHighlights() {
           ))}
         </motion.div>
 
-        {/* Achievements Section */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+        {/* Achievements */}
+        <motion.div 
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
         >
-          {achievements.map((achievement, index) => (
-            <motion.div
-              key={index}
-              variants={achievementVariants}
-              className="text-center"
-            >
-              <div className={`w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4`}>
-                <achievement.icon className={`w-8 h-8 ${achievement.color}`} />
-              </div>
-              <div className={`text-3xl font-bold ${achievement.color} mb-2`}>
-                {achievement.number}
-              </div>
-              <div className="text-zion-slate-light">{achievement.label}</div>
-            </motion.div>
-          ))}
+          <h3 className="text-3xl font-bold text-white mb-12">Our Achievements</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {achievements.map((achievement, index) => (
+              <motion.div
+                key={index}
+                variants={achievementVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-zion-slate-dark/50 rounded-full flex items-center justify-center mx-auto mb-4 border border-zion-cyan/20">
+                  <achievement.icon className={`w-10 h-10 ${achievement.color}`} />
+                </div>
+                <div className={`text-3xl font-bold ${achievement.color} mb-2`}>
+                  {achievement.number}
+                </div>
+                <div className="text-gray-300 text-sm">{achievement.label}</div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Technology Stack */}
@@ -251,27 +259,25 @@ export function FeatureHighlights() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <motion.h3
-            variants={itemVariants}
-            className="text-3xl font-bold text-white mb-8"
-          >
-            Cutting-Edge Technologies
-          </motion.h3>
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-wrap justify-center gap-4"
-          >
+          <h3 className="text-3xl font-bold text-white mb-8">Technologies We Master</h3>
+          <div className="flex flex-wrap justify-center gap-4">
             {technologies.map((tech, index) => (
               <motion.span
                 key={index}
                 variants={techVariants}
-                className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-zion-slate-light border border-white/20 hover:border-zion-cyan transition-colors duration-300"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {tech}
-              </motion.span>
+                <span className="px-6 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300">
+                  {tech}
+                </span>
+              </motion.div>
             ))}
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
