@@ -29,6 +29,7 @@ const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/Compr
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
 const EmergingTechServices2027 = React.lazy(() => import('./pages/EmergingTechServices2027'));
+const Zion2026CuttingEdgeServicesShowcase = React.lazy(() => import('./pages/Zion2026CuttingEdgeServicesShowcase'));
 
 // Enhanced loading spinner with futuristic design
 const LoadingSpinner = () => (
@@ -78,6 +79,7 @@ function App() {
               <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
               <Route path="/emerging-tech-services-2027" element={<EmergingTechServices2027 />} />
+              <Route path="/zion-2026-cutting-edge-services" element={<Zion2026CuttingEdgeServicesShowcase />} />
             </Routes>
           </Suspense>
         </main>
