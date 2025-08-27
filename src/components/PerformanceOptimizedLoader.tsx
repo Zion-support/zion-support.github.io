@@ -26,6 +26,9 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
     md: 'text-sm',
     lg: 'text-base'
   };
+
+  const showLogo = true; // Add this variable
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="relative">

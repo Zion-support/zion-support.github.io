@@ -243,6 +243,37 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </Button>
               </div>
             )}
+
+            {totalPages > 1 && (
+              <div className="mt-8">
+                <Pagination className="justify-center">
+                  <PaginationContent>
+                    <PaginationItem>
+                      <PaginationPrevious href="#" onClick={(e) => {
+                        e.preventDefault();
+                        setCurrentPage(Math.max(1, currentPage - 1));
+                      }}/>
+                    </PaginationItem>
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                      <PaginationItem key={page}>
+                        <PaginationLink href="#" isActive={page === currentPage} onClick={(e) => {
+                          e.preventDefault();
+                          setCurrentPage(page);
+                        }}>
+                          {page}
+                        </PaginationLink>
+                      </PaginationItem>
+                    ))}
+                    <PaginationItem>
+                      <PaginationNext href="#" onClick={(e) => {
+                        e.preventDefault();
+                        setCurrentPage(Math.min(totalPages, currentPage + 1));
+                      }}/>
+                    </PaginationItem>
+                  </PaginationContent>
+                </Pagination>
+              </div>
+            )}
           </div>
         </div>
       </div>
