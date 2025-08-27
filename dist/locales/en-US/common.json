@@ -19,14 +19,8 @@
   },
   "nav": {
     "home": "Home",
-    "categories": "Categories",
-    "services": "Services",
-    "micro-saas": "Micro SAAS",
-=======
     "marketplace": "Marketplace",
     "services": "Services",
-    "categories": "Categories",
-    "micro-saas": "Micro SAAS",
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
@@ -36,13 +30,6 @@
     "messages": "Messages",
     "post_job": "Post Job",
     "analytics": "Analytics",
-    "ai-hiring": "AI Hiring",
-    "help": "Help Center",
-    "developers": "Developer Portal",
-    "api-docs": "API Documentation",
-    "sitemap": "Sitemap"
-  },
-=======
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",
@@ -52,9 +39,8 @@
     "help": "Help Center",
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
-    "sitemap": "Sitemap",
-    "faq": "FAQ"
-  }
+    "sitemap": "Sitemap"
+  },
   "auth": {
     "login": "Login",
     "signup": "Sign Up",
@@ -64,13 +50,7 @@
     "forgot_password": "Forgot Password?",
     "remember_me": "Remember Me",
     "login_success": "Logged in successfully",
-    "logout_success": "Logged out successfully",
-    "errors": {
-      "user_not_found": "No account found with that email.",
-      "wrong_password": "Incorrect password. Please try again.",
-      "account_locked": "Your account is locked. Please contact support.",
-      "generic": "Login failed. Please try again."
-    }
+    "logout_success": "Logged out successfully"
   },
   "home": {
     "hero_title": "The Future of Tech & AI Marketplace",
