@@ -295,7 +295,7 @@ export default function ServicesPage() {
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-4">
                         <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
-                          <getCategoryIcon(service.category) className="w-6 h-6 text-white" />
+                          {getCategoryIcon(service.category) && <getCategoryIcon(service.category) className="w-6 h-6 text-white" />}
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-zion-cyan">${service.price.toLocaleString()}</div>
