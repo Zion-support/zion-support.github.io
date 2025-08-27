@@ -17,7 +17,8 @@ import {
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     company: '',
     phone: '',
@@ -50,7 +51,8 @@ export default function Contact() {
       setTimeout(() => {
         setSubmitStatus('idle');
         setFormData({
-          name: '',
+          firstName: '',
+          lastName: '',
           email: '',
           company: '',
           phone: '',
@@ -69,19 +71,19 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      details: "+1 (555) 123-4567",
+      details: "+1 302 464 0950",
       description: "Available 24/7 for urgent support"
     },
     {
       icon: Mail,
       title: "Email",
-      details: "info@ziontechgroup.com",
+      details: "kleber@ziontechgroup.com",
       description: "Get a response within 2 hours"
     },
     {
       icon: MapPin,
       title: "Office",
-      details: "123 Innovation Drive, Tech City, TC 12345",
+      details: "364 E Main St STE 1008 Middletown DE 19709",
       description: "Visit us for in-person consultations"
     },
     {
@@ -227,10 +229,6 @@ export default function Contact() {
                     />
                   </div>
                 </div>
-              </form>
-            </motion.div>
-          </div>
-        </section>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -343,47 +341,52 @@ export default function Contact() {
             >
               <div>
                 <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
-                <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-start space-x-4"
-                    >
-                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                        <info.icon className="h-6 w-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
-                        <p className="text-zion-cyan font-medium mb-1">{info.details}</p>
-                        <p className="text-zion-slate-light text-sm">{info.description}</p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
+                <p className="text-zion-slate-light mb-8">
+                  Get in touch with our team of experts. We're here to help you transform your business 
+                  with cutting-edge technology solutions.
+                </p>
               </div>
 
-              <div className="bg-zion-slate-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-zion-slate/20">
-                <h3 className="text-xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <Award className="h-5 w-5 text-zion-cyan" />
-                    <span className="text-zion-slate-light">Industry-leading expertise</span>
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start space-x-4"
+                  >
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
+                      <info.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
+                      <p className="text-zion-cyan font-medium mb-1">{info.details}</p>
+                      <p className="text-zion-slate-light text-sm">{info.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="bg-zion-slate-dark/30 rounded-xl p-6 border border-zion-slate/20">
+                <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    <span>Expert team with 15+ years of experience</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <Users className="h-5 w-5 text-zion-cyan" />
-                    <span className="text-zion-slate-light">Dedicated support team</span>
+                  <div className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    <span>Cutting-edge AI and quantum technology</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <Globe className="h-5 w-5 text-zion-cyan" />
-                    <span className="text-zion-slate-light">Global presence & availability</span>
+                  <div className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    <span>Global presence in 50+ countries</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <Building className="h-5 w-5 text-zion-cyan" />
-                    <span className="text-zion-slate-light">Enterprise-grade solutions</span>
+                  <div className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    <span>24/7 support and maintenance</span>
                   </div>
                 </div>
               </div>

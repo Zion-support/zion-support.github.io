@@ -243,7 +243,7 @@ export default function Home() {
     }
   ];
 
-  const stats = [
+  const serviceFeatures = [
     {
       icon: Brain,
       title: "AI & Machine Learning",
@@ -387,7 +387,7 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+            {serviceFeatures.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
