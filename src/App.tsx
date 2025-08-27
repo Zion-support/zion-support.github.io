@@ -76,7 +76,6 @@ const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHea
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 
 // Simple placeholder pages for missing ones
