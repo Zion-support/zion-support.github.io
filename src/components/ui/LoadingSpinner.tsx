@@ -1,63 +1,21 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
+import { cn } from '../../utils/cn';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white' | 'custom';
-  customColor?: string;
+  color?: 'primary' | 'white' | 'gray';
   className?: string;
-  text?: string;
   showText?: boolean;
+  text?: string;
 }
 
-export function LoadingSpinner({
-  size = 'md',
-  color = 'primary',
-  customColor,
-  className,
-  text = 'Loading...',
-  showText = false
-}: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
-  };
-
-  const colorClasses = {
-    primary: 'border-zion-purple',
-    secondary: 'border-zion-cyan',
-    white: 'border-white',
-    custom: ''
-  };
-
-  const borderColor = customColor || colorClasses[color];
-
-  return (
-    <div className={cn('flex flex-col items-center justify-center', className)}>
-      <motion.div
-        className={cn(
-          'border-2 border-t-transparent rounded-full animate-spin',
-          sizeClasses[size],
-          borderColor
-        )}
-        animate={{ rotate: 360 }}
-        transition={{
-          duration: 1,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        role="status"
-        aria-label="Loading"
-export function LoadingSpinner({ 
+export default function LoadingSpinner({ 
   size = 'md', 
-  color = 'primary', 
-  customColor,
+  color = 'primary',
   className = '',
-  text = 'Loading...',
-  showText = false 
+  showText = false,
+  text = 'Loading...'
 }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -67,40 +25,24 @@ export function LoadingSpinner({
   };
 
   const colorClasses = {
-    primary: 'border-zion-cyan border-t-transparent',
-    secondary: 'border-zion-blue border-t-transparent',
+    primary: 'border-cyan-400 border-t-transparent',
     white: 'border-white border-t-transparent',
-    custom: customColor ? `border-${customColor} border-t-transparent` : 'border-zion-cyan border-t-transparent'
-  };
-
-  const textSizes = {
-    sm: 'text-xs',
-    md: 'text-sm',
-    lg: 'text-base',
-    xl: 'text-lg'
+    gray: 'border-gray-400 border-t-transparent'
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <motion.div
-        className={`${sizeClasses[size]} ${colorClasses[color]} border-2 rounded-full animate-spin`}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-        style={{
-          borderTopColor: customColor && color === 'custom' ? customColor : undefined
-        }}
-      />
-      
+    <div className={cn('flex flex-col items-center justify-center', className)}>
+      <div className={cn(
+        'animate-spin rounded-full border-2',
+        sizeClasses[size],
+        colorClasses[color]
+      )} />
       {showText && (
         <motion.p
-          className="mt-3 text-sm text-zion-slate-light text-center"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.3 }}
-          className={`mt-3 text-zion-slate-light ${textSizes[size]} font-medium`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="mt-2 text-sm text-gray-500"
         >
           {text}
         </motion.p>
@@ -109,28 +51,6 @@ export function LoadingSpinner({
   );
 }
 
-// Skeleton loading component for content
-export function SkeletonLoader({
-  className,
-  lines = 3,
-  height = 'h-4'
-}: {
-  className?: string;
-  lines?: number;
-  height?: string;
-}) {
-  return (
-    <div className={cn('space-y-3', className)}>
-      {Array.from({ length: lines }).map((_, index) => (
-        <motion.div
-          key={index}
-          className={cn(
-            'bg-zion-slate-light/20 rounded animate-pulse',
-            height
-          )}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: index * 0.1 }}
 // Optimized skeleton loader
 export function SkeletonLoader({ 
   className = '', 
@@ -156,23 +76,6 @@ export function SkeletonLoader({
   );
 }
 
-// Page loading component
-export function PageLoader({
-  text = 'Loading page...',
-  className
-}: {
-  text?: string;
-  className?: string;
-}) {
-  return (
-    <div className={cn('min-h-screen flex items-center justify-center', className)}>
-      <div className="text-center">
-        <LoadingSpinner size="xl" color="primary" showText text={text} />
-      </div>
-    </div>
-  );
-}
-
 // Button loading state
 export function ButtonLoader({
   size = 'sm',
@@ -185,8 +88,12 @@ export function ButtonLoader({
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
       <span className="ml-2">Loading...</span>
+    </div>
+  );
+}
+
 // Page loading overlay
-export function PageLoader({ 
+export function PageLoaderOverlay({ 
   text = 'Loading page...',
   showSpinner = true 
 }: { 
@@ -206,7 +113,7 @@ export function PageLoader({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.3 }}
-          className="mt-4 text-lg text-zion-slate-light font-medium"
+          className="mt-4 text-lg text-gray-300 font-medium"
         >
           {text}
         </motion.p>
@@ -239,30 +146,26 @@ export function ContentPlaceholder({
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.3 }}
-            className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+            transition={{ delay: index * 0.1 }}
+            className="bg-white/5 rounded-lg p-6 border border-white/10"
           >
-            <div className="w-16 h-16 bg-white/10 rounded-xl mb-4 animate-pulse" />
-            <div className="h-6 bg-white/10 rounded-lg mb-3 animate-pulse" />
-            <div className="h-4 bg-white/10 rounded-lg mb-2 animate-pulse" />
-            <div className="h-4 bg-white/10 rounded-lg w-3/4 animate-pulse" />
+            <div className="h-4 bg-white/10 rounded mb-3 animate-pulse" />
+            <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
+            <div className="h-3 bg-white/10 rounded w-2/3 animate-pulse" />
           </motion.div>
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: 8 }).map((_, index) => (
+        Array.from({ length: 5 }).map((_, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.05, duration: 0.3 }}
-            className="flex items-center space-x-4"
+            transition={{ delay: index * 0.1 }}
+            className="flex items-center space-x-3"
           >
-            <div className="w-12 h-12 bg-white/10 rounded-full animate-pulse" />
-            <div className="flex-1 space-y-2">
-              <div className="h-4 bg-white/10 rounded-lg animate-pulse" />
-              <div className="h-3 bg-white/10 rounded-lg w-2/3 animate-pulse" />
-            </div>
+            <div className="w-4 h-4 bg-white/10 rounded-full animate-pulse" />
+            <div className="h-3 bg-white/10 rounded flex-1 animate-pulse" />
           </motion.div>
         ))
       ) : variant === 'grid' ? (
@@ -272,12 +175,11 @@ export function ContentPlaceholder({
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1, duration: 0.3 }}
-            className="bg-white/5 rounded-xl p-4 border border-white/10"
+            transition={{ delay: index * 0.1 }}
+            className="bg-white/5 rounded-lg p-4 border border-white/10"
           >
-            <div className="w-full h-24 bg-white/10 rounded-lg mb-3 animate-pulse" />
-            <div className="h-4 bg-white/10 rounded-lg mb-2 animate-pulse" />
-            <div className="h-3 bg-white/10 rounded-lg w-2/3 animate-pulse" />
+            <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
+            <div className="h-2 bg-white/10 rounded w-3/4 animate-pulse" />
           </motion.div>
         ))
       ) : (
@@ -287,8 +189,8 @@ export function ContentPlaceholder({
             key={index}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.3 }}
-            className="h-4 bg-white/10 rounded-lg animate-pulse"
+            transition={{ delay: index * 0.1 }}
+            className="h-4 bg-white/10 rounded animate-pulse"
           />
         ))
       )}
