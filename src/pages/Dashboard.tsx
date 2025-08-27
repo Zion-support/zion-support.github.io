@@ -51,7 +51,7 @@ import {
   MapPin
 } from 'lucide-react';
 
-export function Dashboard() {
+export default function Dashboard() {
   const stats = [
     { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },
     { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },

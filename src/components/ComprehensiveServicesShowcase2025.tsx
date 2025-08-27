@@ -34,7 +34,7 @@ import {
   ShieldCheck,
   Globe2,
   Bot,
-  Workflow,
+  GitBranch,
   Eye,
   Sparkles,
   Atom,

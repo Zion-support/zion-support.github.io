@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, GitBranch, Cloud, Shield, CheckCircle, BarChart3, Sparkles, ArrowRight, Cpu, Database, Server, Workflow } from 'lucide-react';
+import { Zap, GitBranch, Cloud, Shield, CheckCircle, BarChart3, Sparkles, ArrowRight, Cpu, Database, Server } from 'lucide-react';
 
 export default function AIDevOpsAutomationPlatform() {
   const features = [

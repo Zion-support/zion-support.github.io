@@ -48,6 +48,9 @@ const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
 // 2029 Cutting-Edge Services
 const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
 
+// 2026 AI Marketplace Services
+const Zion2026AIMarketplaceShowcase = lazy(() => import('./pages/Zion2026AIMarketplaceShowcase'));
+
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
@@ -127,7 +130,16 @@ const QuantumComputing = lazy(() => import('./pages/services/quantum-computing')
 const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
 const SustainableTechnology = lazy(() => import('./pages/services/sustainable-technology'));
 
-
+// Additional missing imports for routes
+const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTrading'));
+const AIContentCreationSuite = lazy(() => import('./pages/services/AIContentCreationSuite'));
+const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
+const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
+const DataAnalytics = lazy(() => import('./pages/services/DataAnalytics'));
+const DigitalTwin = lazy(() => import('./pages/services/DigitalTwin'));
 
 function App() {
   return (
@@ -244,6 +256,9 @@ function App() {
                     
                     {/* 2029 Cutting-Edge Services */}
                     <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
+                    
+                    {/* 2026 AI Marketplace Services */}
+                    <Route path="/zion-ai-marketplace-2026" element={<Zion2026AIMarketplaceShowcase />} />
                     
                     {/* Sitemap-aligned pages */}
                     <Route path="/ai-solutions" element={<AiSolutions />} />

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-  Workflow, 
+  GitBranch, 
   Shield, 
   Users, 
   BarChart3, 
@@ -21,7 +21,7 @@ import {
   Activity,
   Code,
   Server,
-  Chip,
+  Cpu,
   Wifi,
   ShieldCheck,
   Globe2,
@@ -39,7 +39,7 @@ import {
   Award,
   Rocket,
   Lightbulb,
-  Handshake,
+  Users,
   Target as TargetIcon,
   Users2,
   Briefcase,
@@ -59,7 +59,7 @@ import {
   AlertTriangle,
   Zap,
   Target,
-  Workflow as WorkflowIcon,
+  GitBranch as WorkflowIcon,
   BookOpen,
   FileCheck,
   UserCheck,
@@ -208,7 +208,7 @@ export default function ComprehensivePricingGuide2027() {
     },
     {
       name: "Business Process Automation",
-      icon: Workflow,
+              icon: WorkflowIcon,
       description: "Streamline operations with intelligent automation",
       color: "from-zion-purple to-zion-pink",
       services: [

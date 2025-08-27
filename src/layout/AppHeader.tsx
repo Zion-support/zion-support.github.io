@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, GitBranch, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, GitFork } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
@@ -55,7 +55,7 @@ export function AppHeader() {
     { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star, description: 'Future-ready Technology Solutions', category: 'Featured', featured: true, color: 'from-indigo-500 to-purple-500' },
     
     // AI & Machine Learning
-    { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'AI-powered workflow automation', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
+    { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: GitFork, description: 'AI-powered workflow automation', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
     { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered data governance', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
     { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Brain, description: 'AI-powered customer insights', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
     { name: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
@@ -69,7 +69,7 @@ export function AppHeader() {
     { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Intelligent financial insights', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
     { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, description: 'AI-powered financial risk assessment', category: 'AI & ML', color: 'from-red-500 to-orange-500' },
     { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', icon: Code, description: 'Automated code security analysis', category: 'AI & ML', color: 'from-red-500 to-pink-500' },
-    { name: 'AI DevOps Automation Platform', href: '/services/ai-devops-automation-platform', icon: Workflow, description: 'AI-driven DevOps automation', category: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
+    { name: 'AI DevOps Automation Platform', href: '/services/ai-devops-automation-platform', icon: GitFork, description: 'AI-driven DevOps automation', category: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
     { name: 'AI Customer Experience Support', href: '/services/ai-customer-experience-support', icon: MessageCircle, description: 'Enhanced customer experience', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
     { name: 'AI Marketing Automation Personalization', href: '/services/ai-marketing-automation-personalization', icon: Target, description: 'Personalized marketing automation', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
     
