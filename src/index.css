@@ -1091,3 +1091,355 @@
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(var(--zion-cyan-light), var(--zion-purple-light));
 }
+
+/* Futuristic Animations and Effects */
+@keyframes neon-glow {
+  0%, 100% { 
+    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  50% { 
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+}
+
+@keyframes cyber-pulse {
+  0% { 
+    box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7);
+  }
+  70% { 
+    box-shadow: 0 0 0 10px rgba(0, 255, 136, 0);
+  }
+  100% { 
+    box-shadow: 0 0 0 0 rgba(0, 255, 136, 0);
+  }
+}
+
+@keyframes matrix-rain {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes hologram-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+  75% { opacity: 0.9; }
+}
+
+@keyframes energy-field {
+  0% { 
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.1) 0%, transparent 70%);
+  }
+  50% { 
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+  }
+  100% { 
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.1) 0%, transparent 70%);
+  }
+}
+
+@keyframes quantum-shift {
+  0% { transform: translateX(0) scale(1); }
+  25% { transform: translateX(5px) scale(1.02); }
+  50% { transform: translateX(0) scale(1); }
+  75% { transform: translateX(-5px) scale(0.98); }
+  100% { transform: translateX(0) scale(1); }
+}
+
+@keyframes neural-network {
+  0% { 
+    background-image: 
+      radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  }
+  50% { 
+    background-image: 
+      radial-gradient(circle at 80% 20%, rgba(34, 211, 238, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  }
+  100% { 
+    background-image: 
+      radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  }
+}
+
+/* Futuristic Utility Classes */
+.neon-glow {
+  animation: neon-glow 2s ease-in-out infinite;
+}
+
+.cyber-pulse {
+  animation: cyber-pulse 2s infinite;
+}
+
+.matrix-rain {
+  animation: matrix-rain 20s linear infinite;
+}
+
+.hologram-flicker {
+  animation: hologram-flicker 3s ease-in-out infinite;
+}
+
+.energy-field {
+  animation: energy-field 8s ease-in-out infinite;
+}
+
+.quantum-shift {
+  animation: quantum-shift 4s ease-in-out infinite;
+}
+
+.neural-network {
+  animation: neural-network 10s ease-in-out infinite;
+}
+
+/* Enhanced Hover Effects */
+.hover-neon:hover {
+  text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  transition: text-shadow 0.3s ease;
+}
+
+.hover-cyber:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-quantum:hover {
+  transform: translateY(-2px) scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Futuristic Backgrounds */
+.bg-futuristic {
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+    linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+
+.bg-cyber-grid {
+  background-image: 
+    linear-gradient(rgba(34, 211, 238, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.bg-quantum-field {
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.1) 0%, transparent 70%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+}
+
+/* Enhanced Card Effects */
+.card-futuristic {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.card-futuristic:hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(34, 211, 238, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Enhanced Button Effects */
+.btn-futuristic {
+  background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-futuristic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-futuristic:hover::before {
+  left: 100%;
+}
+
+.btn-futuristic:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.3);
+}
+
+/* Enhanced Text Effects */
+.text-gradient-futuristic {
+  background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-neon {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor;
+}
+
+/* Enhanced Border Effects */
+.border-futuristic {
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, #22d3ee, #3b82f6) border-box;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* Enhanced Loading Effects */
+.loading-futuristic {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-futuristic::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.3), transparent);
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Enhanced Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #06b6d4, #2563eb);
+}
+
+/* Enhanced Selection */
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: #ffffff;
+}
+
+/* Enhanced Focus States */
+.focus-futuristic:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 3px rgba(34, 211, 238, 0.1),
+    0 0 0 1px rgba(34, 211, 238, 0.5);
+  transition: box-shadow 0.2s ease;
+}
+
+/* Enhanced Transitions */
+.transition-futuristic {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-futuristic-fast {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-futuristic-slow {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced Shadows */
+.shadow-futuristic {
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(34, 211, 238, 0.1);
+}
+
+.shadow-futuristic-hover:hover {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(34, 211, 238, 0.2);
+}
+
+/* Enhanced Gradients */
+.gradient-futuristic-primary {
+  background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 50%, #8b5cf6 100%);
+}
+
+.gradient-futuristic-secondary {
+  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+}
+
+.gradient-futuristic-accent {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+  .card-futuristic {
+    backdrop-filter: blur(10px);
+  }
+  
+  .btn-futuristic:hover {
+    transform: none;
+  }
+  
+  .hover-quantum:hover {
+    transform: none;
+  }
+}
+
+/* Enhanced Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .neon-glow,
+  .cyber-pulse,
+  .matrix-rain,
+  .hologram-flicker,
+  .energy-field,
+  .quantum-shift,
+  .neural-network {
+    animation: none;
+  }
+  
+  .btn-futuristic::before {
+    display: none;
+  }
+  
+  .loading-futuristic::after {
+    animation: none;
+  }
+}

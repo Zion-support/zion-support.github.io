@@ -144,6 +144,9 @@ const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealth
 const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
 const AIContentCreationSuite = React.lazy(() => import('./pages/services/AIContentCreationSuite'));
 
+// Enhanced services showcase
+const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025'));
+
 // Comprehensive services showcase
 const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
@@ -296,6 +299,9 @@ function App() {
               <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
               <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
               <Route path="/services/ai-content-creation-suite" element={<AIContentCreationSuite />} />
+              
+              {/* Enhanced services showcase */}
+              <Route path="/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />
               
               {/* New 2025 service routes */}
               <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
