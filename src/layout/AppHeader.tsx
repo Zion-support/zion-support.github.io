@@ -50,6 +50,13 @@ export function AppHeader() {
   ];
 
   const services = [
+    // Featured Micro SAAS Services
+    { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Brain, description: 'AI-powered project management & optimization', featured: true },
+    { name: 'AI Content Optimizer', href: '/services/ai-content-optimizer', icon: BookOpen, description: 'AI SEO & content performance analytics', featured: true },
+    { name: 'AI Customer Support', href: '/services/ai-customer-support', icon: MessageCircle, description: '24/7 AI chatbots & smart ticket routing', featured: true },
+    { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: Gauge, description: 'Predictive analytics & business intelligence', featured: true },
+    
+    // Core AI Services
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
     { name: 'Cybersecurity', href: '/services/ai-compliance-assistant', icon: Shield, description: 'AI-Powered Security' },
@@ -58,7 +65,9 @@ export function AppHeader() {
     { name: 'Blockchain', href: '/services', icon: Lock, description: 'DeFi & Smart Contracts' },
     { name: 'Healthcare Tech', href: '/services', icon: Heart, description: 'AI Medicine & Diagnostics' },
     { name: 'Sustainability', href: '/services/green-it', icon: Globe, description: 'Green IT Solutions' },
-    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
+    
+    // Additional Micro SaaS
+    { name: 'Micro SaaS Hub', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
     { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
     { name: 'Mobile Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
     { name: 'Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'SOC2/ISO evidence automation' },
@@ -144,29 +153,62 @@ export function AppHeader() {
                     onMouseLeave={() => setServicesDropdownOpen(false)}
                   >
                     <div className="p-6">
-                      <div className="grid grid-cols-1 gap-3">
-                        {services.map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
-                            className="flex items-center p-4 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group hover:scale-105"
-                          >
-                            <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
-                              <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
-                            </div>
-                            <div className="ml-4 flex-1">
-                              <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
-                                {service.name}
+                      {/* Featured Services Section */}
+                      <div className="mb-6">
+                        <h3 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider">Featured Micro SAAS</h3>
+                        <div className="grid grid-cols-1 gap-3 mb-4">
+                          {services.filter(service => service.featured).map((service) => (
+                            <Link
+                              key={service.name}
+                              to={service.href}
+                              className="flex items-center p-4 rounded-lg bg-gradient-to-r from-cyan-400/10 to-blue-500/10 border border-cyan-400/20 hover:bg-gradient-to-r hover:from-cyan-400/20 hover:to-blue-500/20 transition-all duration-200 group hover:scale-105"
+                            >
+                              <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-cyan-400/30 to-blue-500/30 rounded-lg flex items-center justify-center group-hover:from-cyan-400/50 group-hover:to-blue-500/50 transition-all duration-200">
+                                <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                               </div>
-                              <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                                {service.description}
+                              <div className="ml-4 flex-1">
+                                <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                                  {service.name}
+                                </div>
+                                <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                                  {service.description}
+                                </div>
                               </div>
-                            </div>
-                            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                              <ChevronDown className="w-4 h-4 text-cyan-400 rotate-[-90deg]" />
-                            </div>
-                          </Link>
-                        ))}
+                              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                <ChevronDown className="w-4 h-4 text-cyan-400 rotate-[-90deg]" />
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      {/* All Services Section */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">All Services</h3>
+                        <div className="grid grid-cols-1 gap-3">
+                          {services.filter(service => !service.featured).map((service) => (
+                            <Link
+                              key={service.name}
+                              to={service.href}
+                              className="flex items-center p-4 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group hover:scale-105"
+                            >
+                              <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
+                                <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                              </div>
+                              <div className="ml-4 flex-1">
+                                <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                                  {service.name}
+                                </div>
+                                <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                                  {service.description}
+                                </div>
+                              </div>
+                              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                <ChevronDown className="w-4 h-4 text-cyan-400 rotate-[-90deg]" />
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                       <div className="mt-6 pt-4 border-t border-slate-700/50">
                         <Link
