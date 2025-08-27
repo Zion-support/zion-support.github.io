@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
-import Footer from './components/Footer.jsx';
+import { Footer } from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant';
 
 // Lazy load all pages
