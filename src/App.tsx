@@ -39,6 +39,7 @@ const NotFound = React.lazy(() => import('./pages/NotFound'));
 const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
 const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025'));
+const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 
 // Service pages
@@ -151,6 +152,9 @@ function App() {
               <Route path="/cloud-devops" element={<EnhancedServicesShowcase2025 />} />
               <Route path="/emerging-tech" element={<EnhancedServicesShowcase2025 />} />
               <Route path="/solutions" element={<EnhancedServicesShowcase2025 />} />
+              
+              {/* Revolutionary Services Routes */}
+              <Route path="/revolutionary-services-2030" element={<RevolutionaryServicesShowcase2030 />} />
               
               {/* Company Routes */}
               <Route path="/leadership" element={<About />} />
