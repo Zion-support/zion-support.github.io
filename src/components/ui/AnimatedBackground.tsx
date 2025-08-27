@@ -33,93 +33,6 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
             const offset = (Date.now() * 0.001) % gridSize;
             ctx.strokeStyle = 'rgba(139, 21, 233, 0.1)';
             ctx.lineWidth = 1;
-<<<<<<< HEAD
-            ctx.stroke();
-          }
-        });
-      });
-    };
-
-    const drawWaves = () => {
-      const time = Date.now() * 0.001;
-      const amplitude = 50;
-      const frequency = 0.01;
-      
-      ctx.strokeStyle = 'rgba(34, 221, 210, 0.3)';
-      ctx.lineWidth = 2;
-      
-      // Draw multiple wave layers
-      for (let layer = 0; layer < 3; layer++) {
-        ctx.beginPath();
-        for (let x = 0; x < canvas.width; x++) {
-          const y = canvas.height / 2 + 
-            amplitude * Math.sin(x * frequency + time + layer) +
-            layer * 20;
-          ctx.lineTo(x, y);
-        }
-        ctx.stroke();
-      }
-    };
-
-    const drawMatrix = () => {
-      const time = Date.now() * 0.001;
-      const fontSize = 14;
-      const columns = Math.floor(canvas.width / fontSize);
-      
-      ctx.fillStyle = 'rgba(34, 221, 210, 0.8)';
-      ctx.font = `${fontSize}px monospace`;
-      
-      for (let i = 0; i < columns; i++) {
-        const x = i * fontSize;
-        const y = (Math.sin(time + i) * 0.5 + 0.5) * canvas.height;
-        const char = String.fromCharCode(0x30A0 + Math.random() * 96);
-        ctx.fillText(char, x, y);
-      }
-    };
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      switch (variant) {
-        case 'grid':
-          drawGrid();
-          break;
-        case 'particles':
-          drawParticles();
-          break;
-        case 'waves':
-          drawWaves();
-          break;
-        case 'matrix':
-          drawMatrix();
-          break;
-      }
-      
-      animationFrameId = requestAnimationFrame(animate);
-    };
-
-    resizeCanvas();
-    initParticles();
-    animate();
-
-    window.addEventListener('resize', resizeCanvas);
-
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, [variant]);
-
-  return (
-    <canvas
-      ref={canvasRef}
-      className={`fixed inset-0 pointer-events-none z-0 ${className}`}
-      style={{
-        background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)'
-      }}
-    />
-  );
-=======
             // Vertical lines
             for (let x = offset; x < canvas.width; x += gridSize) {
                 ctx.beginPath();
@@ -235,7 +148,6 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{
             background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)'
         }}/>);
->>>>>>> cursor/website-audit-and-enhancement-1eed
 }
 // Neon glow effect component
 export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
@@ -247,28 +159,6 @@ export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
     </div>);
 }
 // Floating particles component
-<<<<<<< HEAD
-export function FloatingParticles({ count = 20, className = '' }: {
-  count?: number;
-  className?: string;
-}) {
-  return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-      {Array.from({ length: count }).map((_, i) => (
-        <div
-          key={i}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 2}s`,
-            animationDuration: `${2 + Math.random() * 2}s`,
-          }}
-        />
-      ))}
-    </div>
-  );
-=======
 export function FloatingParticles({ count = 20, className = '' }) {
     return (<div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {Array.from({ length: count }).map((_, i) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style={{
@@ -278,26 +168,8 @@ export function FloatingParticles({ count = 20, className = '' }) {
                 animationDuration: `${2 + Math.random() * 2}s`,
             }}/>))}
     </div>);
->>>>>>> cursor/website-audit-and-enhancement-1eed
 }
 // Gradient border component
-<<<<<<< HEAD
-export function GradientBorder({ children, className = '', borderWidth = '2px' }: {
-  children: React.ReactNode;
-  className?: string;
-  borderWidth?: string;
-}) {
-  return (
-    <div
-      className={`relative ${className}`}
-      style={{
-        background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
-        padding: borderWidth,
-        borderRadius: 'inherit',
-      }}
-    >
-      <div className="bg-slate-800 rounded-[inherit] h-full w-full">
-=======
 export function GradientBorder({ children, className = '', borderWidth = '2px' }) {
     return (<div className={`relative ${className}`} style={{
             background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
@@ -305,7 +177,6 @@ export function GradientBorder({ children, className = '', borderWidth = '2px' }
             borderRadius: 'inherit',
         }}>
       <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
->>>>>>> cursor/website-audit-and-enhancement-1eed
         {children}
       </div>
     </div>);

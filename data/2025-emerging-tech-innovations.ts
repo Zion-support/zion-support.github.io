@@ -64,7 +64,6 @@
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-=======
     trialDays: 30,
     setupTime: '2-4 weeks',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket', 'Rigetti Computing'],
@@ -79,4 +78,3 @@
     researchPartnerships: ['MIT Quantum Engineering', 'Stanford Quantum Computing', 'Caltech Quantum Institute', 'National Quantum Initiative']
   }
 ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

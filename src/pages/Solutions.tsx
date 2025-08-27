@@ -1,25 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-
-export default function Solutions() {
-  return (
-    <>
-      <SEO 
-        title="Solutions - Zion Tech Group"
-        description="Explore our comprehensive technology solutions including AI systems, cloud platforms, and cybersecurity services."
-        canonical="/solutions"
-        url="https://ziontechgroup.com/solutions"
-      />
-=======
 const Solutions = () => {
     return (<>
       <Helmet>
         <title>Custom Solutions - Zion Tech Group</title>
         <meta name="description" content="Custom technology solutions tailored to your business needs. Zion Tech Group delivers innovative solutions that drive results."/>
       </Helmet>
->>>>>>> cursor/website-audit-and-enhancement-1eed
       
       <main className="min-h-screen bg-futuristic text-white">
         {/* Hero Section */}
@@ -135,42 +120,8 @@ const Solutions = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
-          <div className="max-w-4xl mx-auto text-center px-6">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our solutions can transform your business and drive innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Contact Us
-              </Link>
-              <Link 
-                to="/request-quote" 
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                Get a Quote
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
-  );
-}
-=======
         </div>
       </div>
     </>);
 };
 export default Solutions;
->>>>>>> cursor/website-audit-and-enhancement-1eed

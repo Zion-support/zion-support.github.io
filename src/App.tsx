@@ -5,33 +5,49 @@ import { FuturisticFooter } from './components/FuturisticFooter';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { ChatAssistant } from './components/ChatAssistant';
 
-// Lazy load pages - only import existing ones
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/PartnersPage'));
-const Login = React.lazy(() => import('./pages/Login'));
-const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Careers = React.lazy(() => import('./pages/Careers'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const Services = React.lazy(() => import('./pages/Services'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
+// Lazy load pages with better chunking
+const Home = React.lazy(() => import('./pages/Home.tsx'));
+const About = React.lazy(() => import('./pages/About.tsx'));
+const Contact = React.lazy(() => import('./pages/Contact.tsx'));
+const Blog = React.lazy(() => import('./pages/Blog.tsx'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost.tsx'));
+const PartnersPage = React.lazy(() => import('./pages/PartnersPage.tsx'));
+const Login = React.lazy(() => import('./pages/Login.tsx'));
+const FAQ = React.lazy(() => import('./pages/FAQ.tsx'));
+const Careers = React.lazy(() => import('./pages/Careers.tsx'));
+const Privacy = React.lazy(() => import('./pages/Privacy.tsx'));
+const Terms = React.lazy(() => import('./pages/Terms.tsx'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
+const Services = React.lazy(() => import('./pages/Services.tsx'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT.tsx'));
+const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices.tsx'));
 
-// New service pages
-const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
-const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
-const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
-const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
-const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
-const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
-const ComprehensiveServicesOverview = React.lazy(() => import('./pages/ComprehensiveServicesOverview'));
-const ComprehensivePricingGuide2027New = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+// Service pages
+const AIServicesPage = React.lazy(() => import('./pages/services/AIServicesPage.tsx'));
+const CybersecurityServicesPage = React.lazy(() => import('./pages/services/CybersecurityServicesPage.tsx'));
+const CloudSolutionsPage = React.lazy(() => import('./pages/services/CloudSolutionsPage.tsx'));
+const ITConsultingPage = React.lazy(() => import('./pages/services/ITConsultingPage.tsx'));
+const QuantumTechnologyPage = React.lazy(() => import('./pages/QuantumTechnologyPage.tsx'));
+const BlockchainServicesPage = React.lazy(() => import('./pages/BlockchainServicesPage.tsx'));
+const DigitalTransformationPage = React.lazy(() => import('./pages/DigitalTransformationPage.tsx'));
+const MicroSAASPage = React.lazy(() => import('./pages/MicroSAASPage.tsx'));
+const EnterprisePage = React.lazy(() => import('./pages/EnterprisePage.tsx'));
+
+// Company pages
+const TeamPage = React.lazy(() => import('./pages/TeamPage.tsx'));
+
+// Additional service pages
+const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage.tsx'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage.tsx'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027.tsx'));
+const ComprehensiveServicesOverview = React.lazy(() => import('./pages/ComprehensiveServicesOverview.tsx'));
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
+const EnhancedZionServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedZionServicesShowcase2025.tsx'));
+const ZionTechGroupMarketing2025 = React.lazy(() => import('./pages/ZionTechGroupMarketing2025.tsx'));
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -76,7 +92,22 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
+<<<<<<< HEAD
               <Route path="/enhanced-services" element={<EnhancedServices />} />
+              
+              {/* Service Routes */}
+              <Route path="/services/ai" element={<AIServicesPage />} />
+              <Route path="/services/cybersecurity" element={<CybersecurityServicesPage />} />
+              <Route path="/services/cloud" element={<CloudSolutionsPage />} />
+              <Route path="/services/consulting" element={<ITConsultingPage />} />
+              <Route path="/quantum-technology" element={<QuantumTechnologyPage />} />
+              <Route path="/blockchain-services" element={<BlockchainServicesPage />} />
+              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+              <Route path="/micro-saas" element={<MicroSAASPage />} />
+              <Route path="/enterprise" element={<EnterprisePage />} />
+              
+              {/* Company Routes */}
+              <Route path="/team" element={<TeamPage />} />
               
               {/* AI Services Routes */}
               <Route path="/ai-services" element={<AIServicesPage />} />
@@ -98,7 +129,16 @@ function App() {
               
               {/* New Comprehensive Routes */}
               <Route path="/services-overview" element={<ComprehensiveServicesOverview />} />
-              <Route path="/pricing-guide" element={<ComprehensivePricingGuide2027New />} />
+              <Route path="/pricing-guide" element={<ComprehensivePricingGuide2027 />} />
+              
+              {/* Legacy Routes */}
+              <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
+              <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
+              <Route path="/enhanced-zion-services-2025" element={<EnhancedZionServicesShowcase2025 />} />
+              <Route path="/zion-tech-group-marketing-2025" element={<ZionTechGroupMarketing2025 />} />
               
               {/* Emerging Tech Routes */}
               <Route path="/emerging-tech" element={<GreenIT />} />
