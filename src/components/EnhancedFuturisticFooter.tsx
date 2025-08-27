@@ -22,6 +22,7 @@ import {
   Crown,
   Sparkles,
   Flame,
+  Thunder,
   Sun,
   Moon,
   Infinity,

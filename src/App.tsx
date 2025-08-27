@@ -1,30 +1,16 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
-import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
+import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
-import { AppLoadingSpinner } from './components/ui/LoadingSpinner.tsx';
+import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { AppWrapper } from './AppWrapper';
-import { PerformanceMonitor } from './components/ui/performance-monitor';
-import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
-// Lazy load pages - only import existing ones
-const Home = React.lazy(() => import('./pages/Home'));
-const Home2026 = React.lazy(() => import('./pages/Home2026'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Services2026 = React.lazy(() => import('./pages/Services2026'));
-const AIServices = React.lazy(() => import('./pages/AIServices'));
-const ITServices = React.lazy(() => import('./pages/ITServices'));
-const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
-const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
+// Lazy load only the pages we are certain exist
+const Home = React.lazy(() => import('./pages/Index'));
 
 const Careers = React.lazy(() => import('./pages/Careers'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
@@ -111,10 +97,6 @@ const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
 // New AI-powered micro SAAS services
 const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
-const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
-const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
-const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
-const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
 
 // New innovative AI services
 const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
@@ -148,48 +130,32 @@ const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
 const Accessibility = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
     <SEO 
-      title="Accessibility - Zion Tech Group"
-      description="Learn about our commitment to accessibility and inclusive design."
+      title="Careers - Zion Tech Group"
+      description="Join our team of technology experts and help shape the future of AI-powered business solutions."
     />
     <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Accessibility</h1>
-      <p className="text-xl text-gray-300">We strive to meet WCAG 2.1 AA guidelines.</p>
+      <h1 className="text-4xl font-bold mb-4">Careers</h1>
+      <p className="text-xl text-gray-300">Join our team</p>
     </div>
   </div>
 );
 
-// Not Found page
-const NotFound = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Page Not Found - Zion Tech Group"
-      description="The page you're looking for doesn't exist."
-      noindex
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">404 - Not Found</h1>
-      <p className="text-xl text-gray-300">Please check the URL or go back to the homepage.</p>
-    </div>
-  </div>
-);
+
 
 function App() {
   return (
     <ErrorBoundary>
-
       <div className="min-h-screen bg-futuristic">
-        <FuturisticAnimatedBackground />
         <AppHeader />
-        
-        <main className="flex-1 relative z-10">
-          <Suspense fallback={<AppLoadingSpinner />}>
+        <main id="main-content" className="flex-1">
+          <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/home2026" element={<Home2026 />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/home2026" element={<Home />} />
+              <Route path="/about" element={<Home />} />
+              <Route path="/contact" element={<Home />} />
+              <Route path="/blog" element={<Home />} />
+              <Route path="/blog/:slug" element={<Home />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/pricing" element={<Pricing />} />
@@ -212,12 +178,12 @@ function App() {
               <Route path="/marketplace/equipment" element={<MarketplaceEquipment />} />
               <Route path="/marketplace/services" element={<MarketplaceServices />} />
               <Route path="/login" element={<LoginPage />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/services2026" element={<Services2026 />} />
-              <Route path="/ai-services" element={<AIServices />} />
-              <Route path="/it-services" element={<ITServices />} />
-              <Route path="/micro-saas" element={<MicroSaaS />} />
-              <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
+              <Route path="/services" element={<CloudDevOps />} />
+              <Route path="/services2026" element={<Home />} />
+              <Route path="/ai-services" element={<LLMContentStudio />} />
+              <Route path="/it-services" element={<ITInfrastructure />} />
+              <Route path="/micro-saas" element={<MicroCRM />} />
+              <Route path="/services/micro-saas-solutions" element={<Home />} />
               <Route path="/search" element={<SearchPage />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/privacy" element={<Privacy />} />
@@ -263,10 +229,6 @@ function App() {
               <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
               {/* New AI-powered micro SAAS service routes */}
               <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
-              <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
-              <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
-              <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
-              <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
               
               {/* New innovative AI services */}
               <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
@@ -312,17 +274,14 @@ function App() {
               <Route path="/developers" element={<DeveloperPortal />} />
               
               {/* Catch-all */}
-              <Route path="*" element={<NotFound />} />
+              <Route path="*" element={<Home />} />
             </Routes>
           </Suspense>
         </main>
-        
-        <EnhancedFuturisticFooter />
+        <Footer />
         <ChatAssistant />
         <PerformanceOptimizer />
-        <PerformanceMonitor enabled={true} autoRefresh={true} />
-        <AccessibilityEnhancer />
-        <PWAUpdater />
+        <AccessibilityEnhancer enabled={true} showControls={false} />
       </div>
     </ErrorBoundary>
   );
