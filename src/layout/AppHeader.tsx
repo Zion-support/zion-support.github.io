@@ -419,10 +419,7 @@ export function AppHeader() {
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
               </div>
->>>>>>> 4f7f8db2b715d72e56f3dda729a019814724e1f2
 
                 {/* Mobile CTA */}
                 <div className="mt-6 pt-6 border-t border-slate-700/50">
