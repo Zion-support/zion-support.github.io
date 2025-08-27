@@ -33,7 +33,8 @@ import {
   Sun,
   Moon,
   Infinity,
-  ArrowRight
+  ArrowRight,
+  Target
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -85,13 +86,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: TrendingUp },
-        { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users },
-        { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool },
-        { name: 'AI Customer Support', href: '/services/ai-customer-support', icon: MessageCircle },
-        { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: BarChart3 },
+        { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', icon: TrendingUp },
+        { name: 'Interview Assessment AI', href: '/services/interview-assessment-ai', icon: Users },
+        { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: PenTool },
+        { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', icon: MessageCircle },
         { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Rocket },
-        { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Settings },
+        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target },
       ]
     },
     {
@@ -106,7 +106,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {
       title: 'Cybersecurity',
       items: [
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield },
         { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },
         { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield },
         { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },
@@ -117,14 +117,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
-        { name: 'IT Consulting', href: '/services/it-consulting', icon: Cpu },
       ]
     },
     {
       title: 'Data & Analytics',
       items: [
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
-        { name: 'Business Intelligence', href: '/services/business-intelligence', icon: TrendingUp },
         { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
       ]
     },
@@ -133,7 +131,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Micro SaaS Platform', href: '/services/micro-saas-solutions', icon: ShoppingCart },
         { name: 'Micro CRM', href: '/services/micro-crm', icon: Users },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: MessageCircle },
+        { name: 'Customer Feedback Surveys', href: '/services/customer-feedback-surveys', icon: MessageCircle },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', icon: MessageCircle },
         { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle },
         { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: BookOpen },
@@ -149,7 +147,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
         { name: 'Talent Solutions', href: '/talent', icon: Users },
         { name: 'Equipment Services', href: '/equipment', icon: Server },
-        { name: 'Green IT Solutions', href: '/green-it', icon: Globe },
+        { name: 'Green IT Solutions', href: '/services/green-it', icon: Globe },
         { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
         { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
         { name: 'Partners', href: '/partners', icon: Users },
