@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar } from '../components/Sidebar';
+import { EnhancedSearch } from '../components/EnhancedSearch';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,13 +24,12 @@ export function AppHeader() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
+  const handleSearch = async (query: string) => {
+    if (query.trim()) {
       setIsSearching(true);
       try {
         await new Promise(resolve => setTimeout(resolve, 1000));
-        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+        window.location.href = `/search?q=${encodeURIComponent(query.trim())}`;
       } finally {
         setIsSearching(false);
       }
@@ -350,18 +350,14 @@ export function AppHeader() {
 
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
-            {/* Search */}
+            {/* Enhanced Search */}
             <div className="hidden md:block relative">
-              <form onSubmit={handleSearch} className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-64 pl-10 pr-4 py-2 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300"
-                />
-              </form>
+              <EnhancedSearch
+                variant="futuristic"
+                placeholder="Search AI services..."
+                onSearch={handleSearch}
+                className="w-64"
+              />
             </div>
 
             {/* Notifications */}
@@ -406,17 +402,13 @@ export function AppHeader() {
             className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-md border-t border-cyan-400/20"
           >
             <div className="px-4 py-6 space-y-4">
-              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300"
-                />
-              </form>
+              {/* Mobile Enhanced Search */}
+              <EnhancedSearch
+                variant="futuristic"
+                placeholder="Search AI services..."
+                onSearch={handleSearch}
+                className="w-full"
+              />
 
               {/* Mobile Navigation */}
               <nav className="space-y-2">
