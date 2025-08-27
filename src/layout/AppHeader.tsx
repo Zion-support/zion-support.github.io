@@ -36,10 +36,10 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Careers', href: '/careers', current: false },
   ];
 
   const services = [
@@ -201,10 +201,10 @@ export function AppHeader() {
 
               {/* CTA Button */}
               <Link
-                to="/contact"
+                to="/request-quote"
                 className="hidden md:inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
               >
-                Get Started
+                Request Quote
               </Link>
 
               {/* Mobile menu button */}
