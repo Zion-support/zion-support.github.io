@@ -1,98 +1,190 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
-  Heart, 
-  ArrowUp, 
+  Twitter, 
+  Linkedin, 
+  Facebook, 
+  Instagram, 
+  Github, 
   Mail, 
   Phone, 
   MapPin, 
-  Globe, 
-  Github, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
-  Instagram, 
-  Youtube,
-  ChevronDown,
-  ExternalLink,
-  Copyright,
+  ArrowUp,
+  Globe,
   Shield,
   Zap,
+  Brain,
+  Cloud,
+  Building,
   Users,
+  FileText,
+  Video,
+  TestTube,
+  TrendingUp,
+  CheckCircle,
+  Briefcase,
+  Newspaper,
+  Target,
+  Rocket,
+  Heart,
+  DollarSign,
+  HelpCircle,
+  Activity,
+  Cpu,
+  GraduationCap,
+  BarChart3,
+  Sparkles,
   Award,
-  TrendingUp
+  ArrowRight,
+  Star,
+  Lock,
+  Eye,
+  Atom,
+  Network,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  MessageCircle,
+  Server,
+  ShoppingCart,
+  Smartphone,
+  Database,
+  Clock,
+  Code,
+  BookOpen,
+  Truck,
+  ExternalLink,
+  ChevronDown,
+  Copyright
 } from 'lucide-react';
+import { AnimatePresence } from 'framer-motion';
 
 interface FooterLink {
-  title: string;
-  href: string;
+  name: string;
+  path: string;
+  icon: any;
   external?: boolean;
 }
 
 interface FooterSection {
   title: string;
+  icon: any;
   links: FooterLink[];
 }
 
-const footerSections: FooterSection[] = [
+const footerSections = [
   {
     title: 'Company',
+    icon: Globe,
     links: [
-      { title: 'About Us', href: '/about' },
-      { title: 'Our Mission', href: '/mission' },
-      { title: 'Leadership', href: '/leadership' },
-      { title: 'Careers', href: '/careers' },
-      { title: 'Press', href: '/press' },
-      { title: 'Contact', href: '/contact' }
+      { name: 'About Us', path: '/about', icon: Users },
+      { name: 'Partners', path: '/partners', icon: Users },
+      { name: 'Careers', path: '/careers', icon: Briefcase },
+      { name: 'Solutions', path: '/solutions', icon: Target },
+      { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
+      { name: 'Blog', path: '/blog', icon: Newspaper },
+      { name: 'Contact', path: '/contact', icon: Phone },
+      { name: 'Leadership', path: '/leadership', icon: Users },
+      { name: 'News', path: '/news', icon: Newspaper },
+      { name: 'Case Studies', path: '/case-studies', icon: FileText }
     ]
   },
   {
-    title: 'Services',
+    title: 'AI & Research Services',
+    icon: Brain,
     links: [
-      { title: 'AI Solutions', href: '/services/ai' },
-      { title: 'Quantum Computing', href: '/services/quantum' },
-      { title: 'Micro SAAS', href: '/services/saas' },
-      { title: 'Consulting', href: '/services/consulting' },
-      { title: 'Training', href: '/services/training' },
-      { title: 'Support', href: '/support' }
+      { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
+      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
+      { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
+      { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
+      { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
+      { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
+      { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
+      { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
+      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
+      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle }
     ]
   },
   {
-    title: 'Resources',
+    title: 'Advanced Technology',
+    icon: Cpu,
     links: [
-      { title: 'Documentation', href: '/docs' },
-      { title: 'API Reference', href: '/api' },
-      { title: 'Blog', href: '/blog' },
-      { title: 'Case Studies', href: '/case-studies' },
-      { title: 'Whitepapers', href: '/whitepapers' },
-      { title: 'Webinars', href: '/webinars' }
+      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
+      { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
+      { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
+      { name: 'Space Technology', path: '/space-tech', icon: Satellite },
+      { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
+      { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
+      { name: 'Green IT Solutions', path: '/green-it', icon: Leaf },
+      { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Lock },
+      { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Leaf },
+      { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance', icon: TrendingUp }
     ]
   },
   {
-    title: 'Legal',
+    title: 'Cloud & Infrastructure',
+    icon: Cloud,
     links: [
-      { title: 'Privacy Policy', href: '/privacy' },
-      { title: 'Terms of Service', href: '/terms' },
-      { title: 'Cookie Policy', href: '/cookies' },
-      { title: 'GDPR', href: '/gdpr' },
-      { title: 'Security', href: '/security' },
-      { title: 'Compliance', href: '/compliance' }
+      { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Cloud },
+      { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
+      { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
+      { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
+      { name: 'IT Consulting', path: '/it-consulting', icon: Cpu },
+      { name: 'Onsite IT Services', path: '/it-onsite-services', icon: Server },
+      { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
+      { name: 'Healthcare Solutions', path: '/healthcare-solutions', icon: Heart },
+      { name: 'Government Solutions', path: '/government-solutions', icon: Building },
+      { name: 'Manufacturing Solutions', path: '/manufacturing-solutions', icon: Truck }
+    ]
+  },
+  {
+    title: 'Micro SaaS Solutions',
+    icon: ShoppingCart,
+    links: [
+      { name: 'Micro SaaS Platform', path: '/micro-saas', icon: ShoppingCart },
+      { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
+      { name: 'Helpdesk Platform', path: '/services/helpdesk', icon: MessageCircle },
+      { name: 'Website Analytics', path: '/services/website-analytics', icon: BarChart3 },
+      { name: 'IT Helpdesk', path: '/services/it-helpdesk', icon: HelpCircle },
+      { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
+      { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone },
+      { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
+      { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: Video },
+      { name: 'Returns Management', path: '/services/returns-management', icon: Truck }
+    ]
+  },
+  {
+    title: 'Support & Resources',
+    icon: HelpCircle,
+    links: [
+      { name: 'Help Center', path: '/help', icon: HelpCircle },
+      { name: 'FAQ', path: '/faq', icon: HelpCircle },
+      { name: 'Documentation', path: '/docs', icon: FileText },
+      { name: 'API Reference', path: '/api', icon: Code },
+      { name: 'Community', path: '/community', icon: Users },
+      { name: 'Blog', path: '/blog', icon: BookOpen },
+      { name: 'News', path: '/news', icon: Newspaper },
+      { name: 'Case Studies', path: '/case-studies', icon: FileText },
+      { name: 'Pricing', path: '/pricing', icon: DollarSign },
+      { name: 'Contact Support', path: '/contact', icon: MessageCircle }
     ]
   }
 ];
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'hover:text-gray-900' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'hover:text-blue-600' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'hover:text-blue-500' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'hover:text-gray-400' },
   { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'hover:text-blue-400' },
   { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'hover:text-blue-600' },
   { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'hover:text-pink-500' },
-  { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/ziontechgroup', color: 'hover:text-red-600' }
+  { name: 'YouTube', icon: TestTube, href: 'https://youtube.com/ziontechgroup', color: 'hover:text-red-600' }
 ];
 
 export function Footer() {
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [expandedSections, setExpandedSections] = React.useState<Set<string>>(new Set());
+  const [showScrollTop, setShowScrollTop] = React.useState(false);
 
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
@@ -128,12 +220,18 @@ export function Footer() {
   // Handle link click
   const handleLinkClick = (link: FooterLink) => {
     if (link.external) {
-      window.open(link.href, '_blank', 'noopener,noreferrer');
+      window.open(link.path, '_blank', 'noopener,noreferrer');
     } else {
       // Handle internal navigation
-      console.log('Navigate to:', link.href);
+      console.log('Navigate to:', link.path);
     }
   };
+
+  const contactInfo = [
+    { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
+    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
+    { icon: MapPin, text: '123 Tech Street, Innovation City, IC 12345', href: '#' }
+  ];
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
@@ -173,24 +271,19 @@ export function Footer() {
 
                 {/* Contact Info */}
                 <div className="space-y-3">
-                  <div className="flex items-center gap-3 text-slate-300">
-                    <Mail className="w-4 h-4 text-blue-400" />
-                    <a href="mailto:info@ziontechgroup.com" className="hover:text-white transition-colors">
-                      info@ziontechgroup.com
-                    </a>
-                  </div>
-                  
-                  <div className="flex items-center gap-3 text-slate-300">
-                    <Phone className="w-4 h-4 text-blue-400" />
-                    <a href="tel:+1-555-0123" className="hover:text-white transition-colors">
-                      +1 (555) 012-3456
-                    </a>
-                  </div>
-                  
-                  <div className="flex items-center gap-3 text-slate-300">
-                    <MapPin className="w-4 h-4 text-blue-400" />
-                    <span>123 Innovation Drive, Tech Valley, CA 94000</span>
-                  </div>
+                  {contactInfo.map((item, index) => (
+                    <div key={index} className="flex items-center gap-3 text-slate-300">
+                      <item.icon className="w-4 h-4 text-blue-400" />
+                      <a 
+                        href={item.href} 
+                        target={item.href.startsWith('mailto:') || item.href.startsWith('tel:') ? '_self' : '_blank'}
+                        rel="noopener noreferrer"
+                        className="hover:text-white transition-colors"
+                      >
+                        {item.text}
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             </div>
@@ -228,7 +321,7 @@ export function Footer() {
                   }`}>
                     {section.links.map((link) => (
                       <motion.div
-                        key={link.title}
+                        key={link.name}
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3 }}
@@ -237,7 +330,8 @@ export function Footer() {
                           onClick={() => handleLinkClick(link)}
                           className="text-slate-300 hover:text-white transition-colors text-left flex items-center gap-2 group"
                         >
-                          <span>{link.title}</span>
+                          <link.icon className="w-4 h-4" />
+                          <span>{link.name}</span>
                           {link.external && (
                             <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                           )}
@@ -288,27 +382,23 @@ export function Footer() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="flex flex-col items-end space-y-4"
+              className="flex flex-col space-y-4"
             >
-              <div className="flex items-center gap-4">
-                {socialLinks.map((social) => (
+              <h3 className="text-lg font-semibold text-white">Follow Us</h3>
+              <div className="flex space-x-4">
+                {socialLinks.map((link) => (
                   <motion.a
-                    key={social.name}
-                    href={social.href}
+                    key={link.name}
+                    href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition-all duration-200 ${social.color}`}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    title={social.name}
+                    className={`w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-lg flex items-center justify-center text-slate-300 ${link.color} transition-all duration-200`}
                   >
-                    <social.icon className="w-5 h-5" />
+                    <link.icon className="w-5 h-5" />
                   </motion.a>
                 ))}
-              </div>
-              
-              <div className="text-right text-sm text-slate-400">
-                <p>Follow us for the latest updates</p>
               </div>
             </motion.div>
           </div>
@@ -346,6 +436,23 @@ export function Footer() {
             </p>
           </div>
         </motion.div>
+        {/* Copyright */}
+        <div className="border-t border-slate-700 mt-12 pt-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="flex items-center space-x-2 text-slate-400">
+                <Copyright className="w-4 h-4" />
+                <span>© 2024 Zion Tech Group. All rights reserved.</span>
+              </div>
+              <div className="flex space-x-6 text-sm text-slate-400">
+                <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+                <a href="/cookies" className="hover:text-white transition-colors">Cookie Policy</a>
+                <a href="/sitemap" className="hover:text-white transition-colors">Sitemap</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Scroll to Top Button */}
