@@ -375,51 +375,59 @@ export default function Sitemap() {
           ))}
         </div>
 
-        {/* No Results */}
-        {filteredSections.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="text-center py-12"
-          >
-            <Search className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
-            <h3 className="text-lg font-medium text-white mb-2">
-              No pages found
-            </h3>
-            <p className="text-gray-400">
-              Try adjusting your search terms or category filter.
-            </p>
-          </motion.div>
-        )}
-
-        {/* Quick Navigation */}
+        {/* Quick Actions */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl border border-zion-cyan/20 p-8 text-center"
+          className="mt-16 text-center"
         >
-          <h3 className="text-2xl font-bold text-white mb-4">Quick Navigation</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/"
-              className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300"
-            >
-              Go Home
-            </Link>
-            <Link
-              to="/services"
-              className="px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-zion-cyan/20"
-            >
-              View All Services
-            </Link>
-            <Link
-              to="/contact"
-              className="px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-zion-cyan/20"
-            >
-              Contact Us
-            </Link>
+          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
+            <p className="text-gray-300 mb-6">
+              Explore our services or get in touch to discuss how we can help transform your business.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Contact Us
+              </Link>
+              <Link
+                to="/request-quote"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105"
+              >
+                <DollarSign className="w-5 h-5 mr-2" />
+                Request Quote
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-teal-600 transition-all duration-200 hover:scale-105"
+              >
+                <Zap className="w-5 h-5 mr-2" />
+                View All Services
+              </Link>
+            </div>
           </div>
+        </motion.div>
+
+        {/* Footer */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          className="mt-16 text-center text-gray-400"
+        >
+          <p>&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
+          <p className="text-sm mt-2">
+            Last updated: {new Date().toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}
+          </p>
         </motion.div>
       </div>
     </div>

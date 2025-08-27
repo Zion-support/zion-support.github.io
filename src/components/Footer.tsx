@@ -14,7 +14,18 @@ import {
   Award,
   Shield,
   Zap,
-  Globe
+  Globe,
+  Users,
+  FileText,
+  Cpu,
+  Activity,
+  Cloud,
+  Building,
+  TrendingUp,
+  Rocket,
+  Brain,
+  Atom,
+  Sparkles
 } from 'lucide-react';
 
 export default function Footer() {
@@ -24,12 +35,11 @@ export default function Footer() {
     {
       title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'News & Updates', href: '/news' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Partners', href: '/partners' }
+        { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Contact', path: '/contact', icon: Phone },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe },
+        { name: 'Privacy Policy', path: '/privacy', icon: Shield },
+        { name: 'Terms of Service', path: '/terms', icon: FileText }
       ]
     },
     {
@@ -46,75 +56,78 @@ export default function Footer() {
     {
       title: 'Solutions',
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
-        { name: 'Financial Services', href: '/solutions/financial' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        { name: 'Retail & E-commerce', href: '/solutions/retail' },
-        { name: 'Education', href: '/solutions/education' }
+        { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
+        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
+        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Cpu },
+        { name: 'Digital Twin', path: '/services/quantum-computing', icon: Cpu },
+        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Shield }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Help Center', href: '/help' },
-        { name: 'FAQ', href: '/faq' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Community', href: '/community' }
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
+        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
+        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
+        { name: 'Micro SaaS Solutions', path: '/services/micro-saas-solutions', icon: Zap },
+        { name: 'All Services', path: '/services', icon: Zap }
+      ]
+    },
+    {
+      title: 'Innovation Hub',
+      icon: Sparkles,
+      links: [
+        { name: 'AI Solutions Hub', path: '/ai-solutions', icon: Brain },
+        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
+        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
+        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
+        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network }
       ]
     }
   ];
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      text: 'info@ziontechgroup.com',
-      href: 'mailto:info@ziontechgroup.com'
-    },
-    {
-      icon: Phone,
-      text: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
-    },
-    {
-      icon: MapPin,
-      text: '123 Innovation Drive, Tech City, TC 12345',
-      href: '#'
-    }
+  const legal = [
+    { name: "Privacy Policy", path: "/privacy" },
+    { name: "Terms of Service", path: "/terms" },
+    { name: "Cookie Policy", path: "/cookies" },
+    { name: "Sitemap", path: "/sitemap" }
   ];
 
   const socialLinks = [
     {
-      name: 'LinkedIn',
-      icon: LinkedIn,
-      href: 'https://linkedin.com/company/ziontechgroup'
+      name: "LinkedIn",
+      url: "https://linkedin.com/company/ziontechgroup",
+      icon: Linkedin,
+      color: "hover:text-blue-600"
     },
     {
-      name: 'Twitter',
+      name: "Twitter",
+      url: "https://twitter.com/ziontechgroup",
       icon: Twitter,
-      href: 'https://twitter.com/ziontechgroup'
+      color: "hover:text-blue-400"
     },
     {
-      name: 'Facebook',
+      name: "Facebook",
+      url: "https://facebook.com/ziontechgroup",
       icon: Facebook,
-      href: 'https://facebook.com/ziontechgroup'
+      color: "hover:text-blue-600"
     },
     {
-      name: 'Instagram',
+      name: "Instagram",
+      url: "https://instagram.com/ziontechgroup",
       icon: Instagram,
-      href: 'https://instagram.com/ziontechgroup'
+      color: "hover:text-pink-500"
     },
     {
-      name: 'YouTube',
-      icon: Youtube,
-      href: 'https://youtube.com/@ziontechgroup'
-    },
-    {
-      name: 'GitHub',
+      name: "GitHub",
+      url: "https://github.com/ziontechgroup",
       icon: Github,
-      href: 'https://github.com/ziontechgroup'
+      color: "hover:text-gray-400"
+    }
+  ];
     }
   ];
 
