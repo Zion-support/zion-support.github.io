@@ -126,6 +126,7 @@ const ComprehensiveImprovements2025 = React.lazy(() => import('./pages/Comprehen
 
 // New innovative AI services
 const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
+const QuantumAITradingPlatform = React.lazy(() => import('./pages/services/QuantumAITradingPlatform'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AIContentMarketingSuite = React.lazy(() => import('./pages/services/AIContentMarketingSuite'));
 const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
@@ -269,6 +270,7 @@ function App() {
               
               {/* New innovative AI services */}
               <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+              <Route path="/services/quantum-ai-trading-platform" element={<QuantumAITradingPlatform />} />
               <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
               <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
               <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
