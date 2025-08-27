@@ -40,6 +40,7 @@ import {
 } from 'lucide-react';
 import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
 import ComprehensiveServicesShowcase2025 from '../components/ComprehensiveServicesShowcase2025';
+import { InteractiveTestimonials } from '../components/InteractiveTestimonials';
 import { SEO } from '../components/SEO';
 
 // Enhanced loading component with better UX
@@ -684,6 +685,9 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+        
+        {/* Interactive Testimonials Section */}
+        <InteractiveTestimonials />
         
         {/* Enhanced Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative" aria-label="Why Choose Zion Tech Group">
