@@ -181,7 +181,12 @@ const Cookies = () => {
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
         </div>
         
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <motion.div 
+          className="container mx-auto px-4 text-center relative z-10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="flex justify-center mb-8">
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Cookie className="w-12 h-12 text-white" />
