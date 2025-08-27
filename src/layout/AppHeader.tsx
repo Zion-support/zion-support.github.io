@@ -54,6 +54,10 @@ export function AppHeader() {
     
     // AI & Machine Learning
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML' },
+    { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-powered project management & optimization', category: 'AI & ML' },
+    { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: '24/7 intelligent support automation', category: 'AI & ML' },
+    { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Predictive financial insights & analysis', category: 'AI & ML' },
+    { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Target, description: 'Personalized marketing campaigns & optimization', category: 'AI & ML' },
     { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'Automated regulatory compliance', category: 'AI & ML' },
     { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales optimization', category: 'AI & ML' },
     { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML' },
@@ -104,6 +108,10 @@ export function AppHeader() {
   const featuredServices = [
     { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
     { name: '2027 Services', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
+    { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-powered project management & optimization', category: 'AI & ML', featured: true },
+    { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: '24/7 intelligent support automation', category: 'AI & ML', featured: true },
+    { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Predictive financial insights & analysis', category: 'AI & ML', featured: true },
+    { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Target, description: 'Personalized marketing campaigns & optimization', category: 'AI & ML', featured: true },
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
     { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Zap, description: 'Next-generation quantum solutions', category: 'Quantum Computing', featured: true },
   ];
