@@ -73,6 +73,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: '2026 Services Overview', href: '/services2026', icon: Star, featured: true },
         { name: '2027 Services Overview', href: '/services2027', icon: Star, featured: true },
+        { name: '2028 Services Overview', href: '/innovative-services-showcase-2028', icon: Star, featured: true, new: true },
         { name: 'AI Solutions Hub', href: '/ai-solutions', icon: Brain, featured: true },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield },
@@ -98,6 +99,19 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Rocket },
         { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Settings },
         { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow },
+      ]
+    },
+    {
+      title: 'Emerging Technologies 2028',
+      items: [
+        { name: 'Space Technology & Satellites', href: '/services/space-technology-satellite-services-2028', icon: Satellite, new: true },
+        { name: 'Biotechnology & AI Drug Discovery', href: '/services/biotechnology-ai-drug-discovery-2028', icon: Dna, new: true },
+        { name: 'Nanotechnology Manufacturing', href: '/services/nanotechnology-manufacturing-platform-2028', icon: Microscope, new: true },
+        { name: 'Quantum Internet & Communications', href: '/services/quantum-internet-communications-2028', icon: Wifi, new: true },
+        { name: 'Brain-Computer Interface', href: '/services/brain-computer-interface-platform-2028', icon: Brain, new: true },
+        { name: 'Fusion Energy Management', href: '/services/fusion-energy-management-platform-2028', icon: Flame, new: true },
+        { name: 'Synthetic Biology Platform', href: '/services/synthetic-biology-platform-2028', icon: Dna, new: true },
+        { name: 'Quantum Sensing & Metrology', href: '/services/quantum-sensing-metrology-2028', icon: Atom, new: true },
       ]
     },
     {
@@ -272,6 +286,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                             }`} />
                             <span className="text-sm">{item.name}</span>
                             {item.featured && <Sparkles className="w-3 h-3 text-yellow-400 ml-auto" />}
+                            {item.new && (
+                              <span className="px-2 py-1 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs rounded-full animate-pulse ml-auto">
+                                NEW
+                              </span>
+                            )}
                             {isActive(item.href) && <ArrowRight className="w-3 h-3 text-cyan-400 ml-auto" />}
                           </Link>
                         ))}

@@ -46,6 +46,79 @@ export function Footer() {
 
   const currentYear = new Date().getFullYear();
 
+  // Enhanced footer sections with more services
+  const enhancedFooterSections = [
+    {
+      title: 'Company',
+      icon: Globe,
+      links: [
+        { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Partners', path: '/partners', icon: Users },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Solutions', path: '/solutions', icon: Target },
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
+        { name: 'Blog', path: '/blog', icon: Newspaper },
+        { name: 'Contact', path: '/contact', icon: Phone }
+      ]
+    },
+    {
+      title: 'AI & Research Services',
+      icon: Brain,
+      links: [
+        { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
+        { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
+        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
+        { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp }
+      ]
+    },
+    {
+      title: 'Advanced Technology',
+      icon: Cpu,
+      links: [
+        { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
+        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
+        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Cpu },
+        { name: 'Space Technology', path: '/services/space-tech', icon: Rocket },
+        { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
+        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Green IT Solutions', path: '/services/green-it', icon: Heart },
+        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Shield }
+      ]
+    },
+    {
+      title: 'Emerging Technologies 2028',
+      icon: Sparkles,
+      links: [
+        { name: '2028 Services Overview', path: '/innovative-services-showcase-2028', icon: Star, featured: true },
+        { name: 'Space Technology & Satellites', path: '/services/space-technology-satellite-services-2028', icon: Satellite },
+        { name: 'Biotechnology & AI Drug Discovery', path: '/services/biotechnology-ai-drug-discovery-2028', icon: Dna },
+        { name: 'Nanotechnology Manufacturing', path: '/services/nanotechnology-manufacturing-platform-2028', icon: Microscope },
+        { name: 'Quantum Internet & Communications', path: '/services/quantum-internet-communications-2028', icon: Wifi },
+        { name: 'Brain-Computer Interface', path: '/services/brain-computer-interface-platform-2028', icon: Brain },
+        { name: 'Fusion Energy Management', path: '/services/fusion-energy-management-platform-2028', icon: Flame },
+        { name: 'Synthetic Biology Platform', path: '/services/synthetic-biology-platform-2028', icon: Dna }
+      ]
+    },
+    {
+      title: 'Core Services',
+      icon: Zap,
+      links: [
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
+        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
+        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
+        { name: 'IT Services', path: '/it-services', icon: Building },
+        { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Zap },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield }
+      ]
+    }
+  ];
+
   const footerSections = [
     {
       title: 'Company',
@@ -219,11 +292,16 @@ export function Footer() {
           </div>
 
           {/* Navigation Sections */}
-          {footerSections.map((section) => (
+          {enhancedFooterSections.map((section) => (
             <div key={section.title}>
               <div className="flex items-center space-x-2 mb-4">
                 <section.icon className="w-5 h-5 text-zion-cyan" />
                 <h4 className="font-semibold text-white">{section.title}</h4>
+                {section.title.includes('2028') && (
+                  <span className="px-2 py-1 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs rounded-full animate-pulse">
+                    NEW
+                  </span>
+                )}
               </div>
               <ul className="space-y-2">
                 {section.links.map((link) => (
@@ -233,7 +311,12 @@ export function Footer() {
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 text-sm flex items-center space-x-2 group"
                     >
                       <link.icon className="w-3 h-3 text-zion-slate-light group-hover:text-zion-cyan transition-colors duration-200" />
-                      <span>{link.name}</span>
+                      <span className={link.featured ? 'font-semibold text-cyan-300' : ''}>
+                        {link.name}
+                      </span>
+                      {link.featured && (
+                        <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
+                      )}
                     </Link>
                   </li>
                 ))}

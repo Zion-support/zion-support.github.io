@@ -13,6 +13,7 @@ export function AppHeader() {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
+  const [hoveredNav, setHoveredNav] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +43,7 @@ export function AppHeader() {
     { name: '2025 Services', href: '/comprehensive-services-showcase-2025', current: false, featured: true },
     { name: '2026 Services', href: '/services2026', current: false, featured: true },
     { name: '2027 Services', href: '/services2027', current: false, featured: true },
+    { name: '2028 Services', href: '/innovative-services-showcase-2028', current: false, featured: true, new: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
@@ -119,10 +121,10 @@ export function AppHeader() {
 
   return (
     <>
-      <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-500 ${
         scrolled 
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
+          ? 'bg-gradient-to-r from-slate-900/95 via-purple-900/95 to-slate-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/25' 
+          : 'bg-gradient-to-r from-slate-900/80 via-purple-900/80 to-slate-900/80 backdrop-blur-lg border-b border-cyan-500/20'
       }`}>
         {/* Top contact bar */}
         <div className="hidden md:block border-b border-slate-700/40 bg-slate-900/60">
@@ -173,8 +175,12 @@ export function AppHeader() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group ${
-                    item.featured ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-400/30' : ''
+                  onMouseEnter={() => setHoveredNav(item.name)}
+                  onMouseLeave={() => setHoveredNav(null)}
+                  className={`text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-300 relative group ${
+                    item.featured ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg border border-cyan-400/30' : ''
+                  } ${
+                    item.new ? 'bg-gradient-to-r from-pink-500/20 to-purple-500/20 border-pink-400/30' : ''
                   }`}
                   aria-current={item.current ? 'page' : undefined}
                 >
@@ -182,7 +188,13 @@ export function AppHeader() {
                   {item.featured && (
                     <span className="absolute -top-1 -right-1 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
                   )}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                  {item.new && (
+                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-pink-400 rounded-full animate-bounce"></span>
+                  )}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
+                  {hoveredNav === item.name && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg animate-pulse"></div>
+                  )}
                 </Link>
               ))}
               
