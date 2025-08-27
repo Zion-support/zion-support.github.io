@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Atom, 
-  Brain, 
+  Truck, 
+  Globe, 
   Zap, 
   Shield, 
   TrendingUp, 
   Users, 
-  Globe, 
+  BarChart3, 
   Cpu, 
   Database, 
   Lock,
@@ -16,7 +16,6 @@ import {
   Star,
   Rocket,
   Target,
-  BarChart3,
   Cloud,
   Network,
   Eye,
@@ -26,107 +25,129 @@ import {
   Phone,
   Mail,
   MapPin,
-  TestTube
+  Package,
+  Factory,
+  Warehouse,
+  Route
 } from 'lucide-react';
 
-const AIQuantumHybridPlatform: React.FC = () => {
+const AIAutonomousSupplyChain: React.FC = () => {
   const features = [
     {
-      title: "Quantum-Classical Hybrid Processing",
-      description: "Seamlessly integrate quantum algorithms with classical AI models for unprecedented computational power",
-      icon: Atom,
-      color: "from-purple-500 to-indigo-500"
+      title: "Autonomous Decision Making",
+      description: "AI-powered systems that make real-time supply chain decisions without human intervention",
+      icon: Cpu,
+      color: "from-blue-500 to-indigo-500"
     },
     {
-      title: "Quantum Neural Networks",
-      description: "Advanced neural networks leveraging quantum superposition and entanglement for superior pattern recognition",
-      icon: Brain,
-      color: "from-cyan-500 to-blue-500"
-    },
-    {
-      title: "Quantum-Safe AI Security",
-      description: "Post-quantum cryptography integrated with AI-powered threat detection and response",
-      icon: Shield,
+      title: "Predictive Analytics",
+      description: "Advanced ML algorithms that forecast demand, supply disruptions, and optimize inventory levels",
+      icon: TrendingUp,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Quantum Machine Learning",
-      description: "Quantum-enhanced ML algorithms for complex optimization problems and predictive analytics",
-      icon: TrendingUp,
-      color: "from-orange-500 to-red-500"
+      title: "Real-time Optimization",
+      description: "Continuous optimization of routes, warehouse operations, and supplier selection",
+      icon: Zap,
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      title: "Blockchain Integration",
+      description: "Secure, transparent tracking of goods from source to destination with immutable records",
+      icon: Shield,
+      color: "from-purple-500 to-pink-500"
     }
   ];
 
   const useCases = [
     {
-      title: "Financial Modeling",
-      description: "Quantum-enhanced risk assessment and portfolio optimization",
-      icon: BarChart3
-    },
-          {
-        title: "Drug Discovery",
-        description: "Molecular simulation and protein folding optimization",
-        icon: TestTube
-      },
-    {
-      title: "Climate Modeling",
-      description: "Complex environmental simulations and prediction models",
-      icon: Globe
+      title: "E-commerce Fulfillment",
+      description: "Automated order processing, warehouse management, and last-mile delivery optimization",
+      icon: Package
     },
     {
-      title: "Supply Chain Optimization",
-      description: "Multi-dimensional logistics and inventory optimization",
-      icon: Network
+      title: "Manufacturing",
+      description: "Just-in-time inventory management and production scheduling optimization",
+      icon: Factory
+    },
+    {
+      title: "Retail Operations",
+      description: "Multi-store inventory synchronization and demand forecasting",
+      icon: Warehouse
+    },
+    {
+      title: "Logistics",
+      description: "Route optimization, fleet management, and real-time tracking",
+      icon: Route
     }
   ];
 
   const pricing = [
     {
       name: "Starter",
-      price: "$2,999",
+      price: "$1,499",
       period: "/month",
-      description: "Perfect for research institutions and startups",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Basic quantum-classical hybrid processing",
-        "Up to 100 qubits simulation",
-        "Standard AI model integration",
+        "Basic autonomous decision making",
+        "Up to 100 SKUs management",
+        "Standard analytics dashboard",
         "Email support",
-        "Basic documentation"
+        "Basic API access"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$7,999",
+      price: "$3,999",
       period: "/month",
-      description: "Ideal for growing enterprises and research teams",
+      description: "Ideal for growing enterprises and mid-size companies",
       features: [
-        "Advanced quantum algorithms",
-        "Up to 1000 qubits simulation",
-        "Custom AI model training",
+        "Advanced AI algorithms",
+        "Unlimited SKUs management",
+        "Custom analytics and reporting",
         "Priority support",
-        "API access",
-        "Advanced analytics"
+        "Full API access",
+        "Multi-warehouse support"
       ],
       cta: "Get Started",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$19,999",
+      price: "$9,999",
       period: "/month",
-      description: "For large organizations requiring maximum performance",
+      description: "For large organizations requiring maximum automation",
       features: [
-        "Full quantum advantage",
-        "Unlimited qubits simulation",
-        "Custom algorithm development",
+        "Full autonomous operation",
+        "Custom AI model training",
         "24/7 dedicated support",
         "On-premise deployment",
-        "Custom integrations"
+        "Custom integrations",
+        "White-label solutions"
       ],
       cta: "Contact Sales",
       popular: false
+    }
+  ];
+
+  const benefits = [
+    {
+      metric: "40%",
+      description: "Reduction in operational costs"
+    },
+    {
+      metric: "60%",
+      description: "Faster delivery times"
+    },
+    {
+      metric: "85%",
+      description: "Improvement in forecast accuracy"
+    },
+    {
+      metric: "99.9%",
+      description: "System uptime and reliability"
     }
   ];
 
@@ -134,7 +155,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-green-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -143,22 +164,22 @@ const AIQuantumHybridPlatform: React.FC = () => {
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
-              <div className="p-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full">
-                <Atom className="w-8 h-8 text-white" />
+              <div className="p-3 bg-gradient-to-r from-blue-500 to-green-500 rounded-full">
+                <Truck className="w-8 h-8 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI Quantum Hybrid Platform
+              AI Autonomous Supply Chain Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              The world's first platform combining quantum computing with artificial intelligence, 
-              delivering unprecedented computational power and breakthrough capabilities.
+              Revolutionize your supply chain with AI-powered autonomous decision making, 
+              predictive analytics, and real-time optimization for maximum efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 flex items-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 flex items-center gap-2"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />
@@ -166,7 +187,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
               >
                 Watch Demo
               </motion.button>
@@ -175,8 +196,44 @@ const AIQuantumHybridPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Benefits Section */}
       <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transform Your Supply Chain
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience unprecedented efficiency and cost savings with our AI-powered platform
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">{benefit.metric}</span>
+                </div>
+                <p className="text-gray-300 text-lg">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/10 to-green-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -188,7 +245,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
               Revolutionary Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of computing with our groundbreaking AI-Quantum hybrid technology
+              Discover the cutting-edge capabilities that make our platform the future of supply chain management
             </p>
           </motion.div>
 
@@ -215,7 +272,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/10 to-cyan-900/10">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -224,10 +281,10 @@ const AIQuantumHybridPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transformative Use Cases
+              Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how our AI-Quantum hybrid platform is revolutionizing industries worldwide
+              Our platform is transforming supply chains across multiple industries
             </p>
           </motion.div>
 
@@ -238,9 +295,9 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700 hover:border-purple-500/50 transition-all duration-300"
+                className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-xl flex items-center justify-center mb-4">
                   <useCase.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
@@ -252,7 +309,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-r from-blue-900/10 to-green-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -264,7 +321,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
               Competitive Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your organization's quantum AI journey
+              Choose the perfect plan for your organization's supply chain transformation
             </p>
           </motion.div>
 
@@ -277,13 +334,13 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative rounded-2xl p-8 ${
                   plan.popular 
-                    ? 'bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border-2 border-purple-500' 
+                    ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500' 
                     : 'bg-slate-800/50 border border-slate-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -312,7 +369,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
+                      ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
@@ -325,7 +382,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/10 to-cyan-900/10">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -334,10 +391,10 @@ const AIQuantumHybridPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Experience the Future?
+              Ready to Transform Your Supply Chain?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact our quantum AI experts to learn how our platform can transform your organization
+              Contact our supply chain experts to learn how our AI platform can revolutionize your operations
             </p>
           </motion.div>
 
@@ -346,15 +403,15 @@ const AIQuantumHybridPlatform: React.FC = () => {
               <h3 className="text-2xl font-semibold text-white mb-6">Get in Touch</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <Phone className="w-6 h-6 text-purple-400" />
+                  <Phone className="w-6 h-6 text-blue-400" />
                   <span className="text-gray-300">+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Mail className="w-6 h-6 text-purple-400" />
+                  <Mail className="w-6 h-6 text-blue-400" />
                   <span className="text-gray-300">kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <MapPin className="w-6 h-6 text-purple-400" />
+                  <MapPin className="w-6 h-6 text-blue-400" />
                   <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
@@ -366,22 +423,22 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Company Name"
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
                 />
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
                 />
                 <textarea
-                  placeholder="Tell us about your use case"
+                  placeholder="Tell us about your supply chain challenges"
                   rows={4}
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
+                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
                 ></textarea>
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300"
+                  className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300"
                 >
                   Request Demo
                 </motion.button>
@@ -394,4 +451,4 @@ const AIQuantumHybridPlatform: React.FC = () => {
   );
 };
 
-export default AIQuantumHybridPlatform;
+export default AIAutonomousSupplyChain;

@@ -98,6 +98,11 @@ const AIFinancialAnalytics = lazy(() => import('./pages/services/AIFinancialAnal
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
 
+// Additional innovative AI services
+const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
+const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
+const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
+
 // Additional innovative services
 const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
 const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
@@ -288,6 +293,11 @@ function App() {
                   <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
                   <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
                   <Route path="/new-innovative-services-2025" element={<NewServicesShowcase2025 />} />
+                  
+                  {/* Additional innovative AI services */}
+                  <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                  <Route path="/services/ai-autonomous-supply-chain" element={<AIAutonomousSupplyChain />} />
+                  <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
                   
                   {/* Additional innovative AI service routes */}
                   <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
