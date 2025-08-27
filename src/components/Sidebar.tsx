@@ -99,135 +99,66 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
         { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
         { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
         { name: 'Solutions', path: '/solutions', icon: Rocket, description: 'Industry solutions' },
-        { name: 'Pricing', path: '/pricing', icon: DollarSignIcon, description: 'Service plans and pricing' },
+        // Pricing page currently not implemented
         { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' },
         { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
       ]
     },
     {
-      title: 'AI & Autonomous Systems',
+      title: 'AI & Analytics',
       icon: Brain,
       items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain, description: 'Advanced AI solutions' },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain, description: 'AI-powered research' },
-        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Brain, description: 'Autonomous business management' },
-        { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', icon: Brain, description: 'Complete business platform' },
-        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Code, description: 'Automated code review' },
-        { name: 'AI Creative Director', path: '/ai-autonomous-creative-director', icon: Palette, description: 'AI creative solutions' },
-        { name: 'AI Data Management', path: '/ai-autonomous-data', icon: Database, description: 'Intelligent data handling' },
-        { name: 'AI Decision Engine', path: '/ai-autonomous-decision-engine', icon: Brain, description: 'Smart decision making' },
-        { name: 'AI DevOps', path: '/ai-autonomous-devops', icon: Server, description: 'Automated DevOps' },
-        { name: 'AI Education', path: '/ai-autonomous-education-professor', icon: Users, description: 'AI learning systems' },
-        { name: 'AI Healthcare', path: '/ai-autonomous-healthcare-physician', icon: Heart, description: 'Medical AI solutions' },
-        { name: 'AI Learning System', path: '/ai-autonomous-learning-system', icon: Lightbulb, description: 'Adaptive learning' },
-        { name: 'AI Legal Counsel', path: '/ai-autonomous-legal-counsel', icon: Shield, description: 'Legal AI assistance' },
-        { name: 'AI Logistics', path: '/ai-autonomous-logistics', icon: Truck, description: 'Smart logistics' },
-        { name: 'AI Manufacturing', path: '/ai-autonomous-manufacturing', icon: Building2, description: 'Smart manufacturing' },
-        { name: 'AI Research', path: '/ai-autonomous-research', icon: Brain, description: 'Research automation' },
-        { name: 'AI Robotics', path: '/ai-autonomous-robotics', icon: Cpu, description: 'Autonomous robotics' },
-        { name: 'AI Security', path: '/ai-autonomous-security', icon: Shield, description: 'Intelligent security' },
-        { name: 'AI Testing', path: '/ai-autonomous-testing', icon: Code, description: 'Automated testing' }
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' }
       ]
     },
     {
       title: 'Cloud & Infrastructure',
       icon: Cloud,
       items: [
-        { name: 'Cloud Infrastructure', path: '/services/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
-        { name: 'DevOps & Automation', path: '/services/devops-automation', icon: Cpu, description: 'Streamlined development processes' },
-        { name: 'Network Security', path: '/services/network-security', icon: Shield, description: 'Comprehensive network protection' },
-        { name: 'Data Center Solutions', path: '/services/data-center', icon: Database, description: 'Enterprise data center services' },
-        { name: 'Edge Computing', path: '/services/edge-computing', icon: Network, description: 'Distributed computing solutions' },
-        { name: 'Managed PostgreSQL HA', path: '/managed-postgres-ha', icon: Database, description: 'High-availability database' },
-        { name: 'Kubernetes RBAC Auditor', path: '/kubernetes-rbac-auditor', icon: Server, description: 'K8s security auditing' },
-        { name: 'Mobile Device Management', path: '/mobile-device-management', icon: Smartphone, description: 'Mobile device control' }
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud, description: 'Cloud migration and DevOps' },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building, description: 'Enterprise infrastructure' }
       ]
     },
     {
       title: 'Cybersecurity & Compliance',
       icon: Shield,
       items: [
-        { name: 'Threat Detection', path: '/services/threat-detection', icon: Shield, description: 'Advanced threat intelligence' },
-        { name: 'SOC2 Compliance Automation', path: '/soc2-evidence-automation', icon: Lock, description: 'Automated compliance management' },
-        { name: 'Zero Trust Security', path: '/zero-trust-network-architecture-2029', icon: Shield, description: 'Modern security architecture' },
-        { name: 'Security Analytics', path: '/services/security-analytics', icon: BarChart3, description: 'Security intelligence platform' },
-        { name: 'Vulnerability Assessment', path: '/vulnerability-assessment-penetration-testing', icon: AlertTriangle, description: 'Security testing services' },
-        { name: 'TLS Certificate Monitor', path: '/tls-certificate-monitor', icon: Lock, description: 'Certificate management' },
-        { name: 'SSO in a Box', path: '/sso-in-a-box', icon: Lock, description: 'Single sign-on solution' },
-        { name: 'SSO User Lifecycle', path: '/sso-user-lifecycle-automation', icon: Users, description: 'User management automation' }
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'AI-Powered Security' }
       ]
     },
     {
       title: 'Data & Analytics',
       icon: Database,
       items: [
-        { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3, description: 'Transform data into insights' },
-        { name: 'Vector Search Starter', path: '/vector-search-starter', icon: Search, description: 'AI-powered search' },
-        { name: 'LLM Gateway', path: '/llm-gateway', icon: Brain, description: 'Language model gateway' },
-        { name: 'PDF Render API', path: '/pdf-render-api', icon: FileText, description: 'Document processing' },
-        { name: 'Performance Optimization', path: '/performance-optimization', icon: TrendingUp, description: 'System optimization' }
+        { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3, description: 'Transform data into insights' }
       ]
     },
     {
       title: 'Monitoring & Observability',
       icon: Monitor,
-      items: [
-        { name: 'Domain DNS Monitor', path: '/domain-dns-monitor', icon: Globe, description: 'DNS monitoring' },
-        { name: 'Status Pages & SLO', path: '/status-pages-slo', icon: Activity, description: 'Service level monitoring' },
-        { name: 'Synthetic Monitor Recorder', path: '/synthetic-monitor-recorder', icon: Monitor, description: 'Synthetic monitoring' },
-        { name: 'Uptime SLO Monitor', path: '/uptime-slo-monitor', icon: Clock, description: 'Uptime monitoring' },
-        { name: 'Webhook Relay Replay', path: '/webhook-relay-replay', icon: Share2, description: 'Webhook management' }
-      ]
+      items: []
     },
     {
       title: 'Business Solutions',
       icon: Building,
-      items: [
-        { name: 'Sales Copilot', path: '/sales-copilot', icon: Users, description: 'AI sales assistant' },
-        { name: 'SEO Automation', path: '/seo-automation', icon: TrendingUp, description: 'Automated SEO' },
-        { name: 'Serverless Cron Manager', path: '/serverless-cron-manager', icon: Clock, description: 'Cron job management' },
-        { name: 'Smart CRM Intelligence', path: '/smart-crm-intelligence-suite', icon: Users, description: 'CRM enhancement' },
-        { name: 'Vendor Risk Automation', path: '/vendor-risk-automation', icon: AlertTriangle, description: 'Risk management' }
-      ]
+      items: []
     },
     {
       title: 'Quantum Technology',
       icon: Atom,
-      items: [
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Atom, description: 'Quantum computing solutions' },
-        { name: 'Quantum Blockchain', path: '/quantum-blockchain', icon: Lock, description: 'Quantum-secure blockchain' },
-        { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', icon: Cloud, description: 'Quantum cloud services' },
-        { name: 'Quantum Cybersecurity', path: '/quantum-cybersecurity', icon: Shield, description: 'Quantum security' },
-        { name: 'Quantum Energy', path: '/quantum-energy', icon: Zap, description: 'Quantum energy solutions' },
-        { name: 'Quantum Financial Trading', path: '/quantum-financial-trading-platform', icon: DollarSignIcon, description: 'Quantum trading' },
-        { name: 'Quantum IoT', path: '/quantum-iot', icon: Network, description: 'Quantum IoT networks' },
-        { name: 'Quantum Logistics', path: '/quantum-logistics', icon: Truck, description: 'Quantum logistics' },
-        { name: 'Quantum Metaverse', path: '/quantum-metaverse', icon: Globe, description: 'Quantum virtual worlds' },
-        { name: 'Quantum Robotics', path: '/quantum-robotics', icon: Cpu, description: 'Quantum robotics' },
-        { name: 'Quantum Secure Communication', path: '/quantum-secure-communication-network', icon: Lock, description: 'Quantum communication' }
-      ]
+      items: []
     },
     {
       title: 'Space Technology',
       icon: Rocket,
-      items: [
-        { name: 'Space Technology', path: '/space-technology', icon: Rocket, description: 'Space tech solutions' },
-        { name: 'Space Mining Platform', path: '/space-mining-autonomous-platform-2029', icon: Rocket, description: 'Space mining automation' },
-        { name: 'Space Tech AI Platform', path: '/space-technology-ai-platform', icon: Brain, description: 'AI space platform' }
-      ]
+      items: []
     },
     {
       title: 'Resources & Insights',
       icon: FileText,
       items: [
         { name: 'Blog', path: '/blog', icon: FileText, description: 'Latest insights and news' },
-        { name: 'Case Studies', path: '/case-studies', icon: CheckCircle, description: 'Success stories' },
-        { name: 'News', path: '/news', icon: Newspaper, description: 'Company updates' },
-        { name: 'Newsroom', path: '/newsroom', icon: Newspaper, description: 'Press releases' },
-        { name: 'Reports', path: '/reports', icon: FileText, description: 'Industry reports' },
-        { name: 'Research & Development', path: '/research-development', icon: TestTube, description: 'R&D projects' },
-        { name: 'Insights', path: '/insights', icon: TrendingUp, description: 'Industry insights' },
-        { name: 'Webinars', path: '/webinars', icon: Video, description: 'Educational content' }
+        { name: 'Research & Development', path: '/research-development', icon: TestTube, description: 'R&D projects' }
       ]
     },
     {
@@ -235,11 +166,8 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
       icon: Users,
       items: [
         { name: 'About Us', path: '/about', icon: Users, description: 'Our story and mission' },
-        { name: 'Our Team', path: '/team', icon: Users, description: 'Meet our experts' },
         { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' },
-        { name: 'Company', path: '/company', icon: Building, description: 'Company information' },
-        { name: 'Innovation', path: '/innovation', icon: Lightbulb, description: 'Innovation initiatives' },
-        { name: 'Talent', path: '/talent', icon: Users, description: 'Talent solutions' }
+        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
       ]
     }
   ];

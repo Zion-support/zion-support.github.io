@@ -29,10 +29,10 @@ const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Comprehen
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 
 // Service pages - only import existing ones
-const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
+const Cloud = React.lazy(() => import('./pages/services/Cloud'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
-const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
+const Infrastructure = React.lazy(() => import('./pages/services/Infrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 
 // Simple placeholder pages for missing ones
@@ -90,10 +90,10 @@ function App() {
                 <Route path="/marketplace" element={<Marketplace />} />
                 
                 {/* Service Routes - only for existing pages */}
-                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                <Route path="/services/cloud-devops" element={<Cloud />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
-                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                <Route path="/services/it-infrastructure" element={<Infrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                 
                 {/* Catch all route */}
