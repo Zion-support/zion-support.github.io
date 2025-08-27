@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2025Service {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2025Service {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   // Revolutionary AI Services 2025
   {

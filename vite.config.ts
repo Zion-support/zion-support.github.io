@@ -24,6 +24,7 @@ export default defineConfig({
 		minify: 'terser',
 		sourcemap: false,
 		// Enhanced chunk splitting for better caching
+		chunkSizeWarningLimit: 1000,
 		rollupOptions: {
 			output: {
 				manualChunks: {
@@ -94,7 +95,6 @@ export default defineConfig({
 				}
 			}
 		},
-		chunkSizeWarningLimit: 1000,
 		// Enhanced build options
 		reportCompressedSize: false,
 		emptyOutDir: true,

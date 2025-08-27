@@ -1,5 +1,4 @@
 export const metaverseDigitalRealityServices2026 = [] as any[];
-=======
 export interface MetaverseDigitalRealityService2026 {
   id: string;
   name: string;
@@ -16,7 +15,6 @@ export interface MetaverseDigitalRealityService2026 {
     address: string;
   };
 }
-
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] = [
   {
     id: "2026-metaverse-digital-reality",

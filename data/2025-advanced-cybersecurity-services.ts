@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AdvancedCybersecurityService {
   id: string;
   name: string;
@@ -14,7 +13,7 @@ export interface AdvancedCybersecurityService {
   textColor: string;
   link: string;
   marketPosition: string;
-  targetAudience: string;
+  targetAudience: string[];
   trialDays: number;
   setupTime: string;
   category: string;
@@ -39,14 +38,12 @@ export interface AdvancedCybersecurityService {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
   {
     id: 'ai-threat-hunting-platform',
@@ -73,7 +70,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-threat-hunting-platform',
     marketPosition: 'Leading AI-powered threat hunting platform. Our advantage: Proactive threat detection with 99.9% accuracy and automated response capabilities.',
-    targetAudience: 'Large enterprises, Financial institutions, Healthcare organizations, Government agencies, Critical infrastructure',
+    targetAudience: ['Large enterprises', 'Financial institutions', 'Healthcare organizations', 'Government agencies', 'Critical infrastructure'],
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'AI Cybersecurity & Threat Intelligence',
@@ -93,7 +90,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.9,
     reviews: 67
   },
-
   {
     id: 'quantum-resistant-encryption-suite',
     name: 'Quantum-Resistant Encryption Suite',
@@ -119,14 +115,14 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-resistant-encryption-suite',
     marketPosition: 'First comprehensive quantum-resistant encryption solution. Our advantage: Multiple post-quantum algorithms with hybrid approach for maximum security.',
-    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Critical infrastructure',
+    targetAudience: ['Government agencies', 'Financial institutions', 'Healthcare organizations', 'Defense contractors', 'Critical infrastructure'],
     trialDays: 45,
     setupTime: '4-6 weeks',
     category: 'Quantum-Safe Cryptography & Encryption',
     realService: true,
     technology: ['Post-Quantum Cryptography', 'Lattice-based Encryption', 'Code-based Cryptography', 'Quantum Key Distribution', 'Hybrid Encryption'],
     integrations: ['TLS/SSL libraries', 'VPN solutions', 'Database encryption', 'File encryption', 'API security'],
-    useCases: 'Government communications', 'Financial transactions', 'Healthcare data protection', 'Military communications', 'Critical infrastructure security',
+    useCases: ['Government communications', 'Financial transactions', 'Healthcare data protection', 'Military communications', 'Critical infrastructure security'],
     roi: 'Organizations secure 100% future-proof encryption with compliance to emerging quantum-resistant standards.',
     competitors: ['ISARA Corporation', 'PQShield', 'Cryptosense', 'Custom solutions'],
     marketSize: '$8.7B quantum-resistant cryptography market',
@@ -139,7 +135,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.8,
     reviews: 23
   },
-
   {
     id: 'zero-trust-security-framework',
     name: 'Zero Trust Security Framework',
@@ -165,7 +160,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/zero-trust-security-framework',
     marketPosition: 'Comprehensive zero trust implementation platform. Our advantage: End-to-end zero trust with advanced identity verification and continuous monitoring.',
-    targetAudience: 'Large enterprises, Government agencies, Healthcare organizations, Financial services, Educational institutions',
+    targetAudience: ['Large enterprises', 'Government agencies', 'Healthcare organizations', 'Financial services', 'Educational institutions'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Zero Trust Security & Identity Management',
@@ -185,7 +180,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.7,
     reviews: 89
   },
-
   {
     id: 'ai-powered-security-operations-center',
     name: 'AI-Powered Security Operations Center',
@@ -211,7 +205,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-powered-security-operations-center',
     marketPosition: 'Leading AI-powered SOC solution. Our advantage: 24/7 intelligent monitoring with automated response and expert security team support.',
-    targetAudience: 'Large enterprises, Critical infrastructure, Government agencies, Healthcare systems, Financial institutions',
+    targetAudience: ['Large enterprises', 'Critical infrastructure', 'Government agencies', 'Healthcare systems', 'Financial institutions'],
     trialDays: 45,
     setupTime: '4-6 weeks',
     category: 'Security Operations & Incident Response',
@@ -231,7 +225,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.9,
     reviews: 45
   },
-
   {
     id: 'blockchain-security-auditor',
     name: 'Blockchain Security Auditor',
@@ -257,7 +250,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/blockchain-security-auditor',
     marketPosition: 'Leading blockchain security auditing platform. Our advantage: Comprehensive smart contract analysis with automated and manual review capabilities.',
-    targetAudience: 'Blockchain companies', 'DeFi protocols', 'NFT platforms', 'Cryptocurrency exchanges', 'Web3 startups',
+    targetAudience: ['Blockchain companies', 'DeFi protocols', 'NFT platforms', 'Cryptocurrency exchanges', 'Web3 startups'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Blockchain Security & Smart Contract Auditing',
@@ -277,7 +270,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.6,
     reviews: 78
   },
-
   {
     id: 'iot-security-orchestrator',
     name: 'IoT Security Orchestrator',
@@ -303,7 +295,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/iot-security-orchestrator',
     marketPosition: 'Leading IoT security platform. Our advantage: Comprehensive device protection with behavioral monitoring and automated threat response.',
-    targetAudience: 'Manufacturing companies', 'Smart cities', 'Healthcare IoT', 'Connected homes', 'Industrial IoT',
+    targetAudience: ['Manufacturing companies', 'Smart cities', 'Healthcare IoT', 'Connected homes', 'Industrial IoT'],
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'IoT Security & Device Protection',

@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface RevolutionaryAI2025ServiceV2 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface RevolutionaryAI2025ServiceV2 {
   rating: number;
   reviews: number;
 }
-
 export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
   // AI Consciousness & Advanced Intelligence
   {

@@ -1,355 +1,326 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  domContentLoaded: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+}
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
-  className?: string;
-  threshold?: number;
-  rootMargin?: string;
-  delay?: number;
-  duration?: number;
-  y?: number;
-  scale?: number;
-  opacity?: number;
+  showMetrics?: boolean;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  className = '',
-  threshold = 0.1,
-  rootMargin = '0px',
-  delay = 0,
-  duration = 0.6,
-  y = 20,
-  scale = 1,
-  opacity = 1
-}) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { threshold, rootMargin });
-
-  return (
-    <motion.div
-      ref={ref}
-      className={className}
-      initial={{ opacity: 0, y, scale: scale === 1 ? 1 : 0.95 }}
-      animate={isInView ? { opacity, y: 0, scale: 1 } : { opacity: 0, y, scale: scale === 1 ? 1 : 0.95 }}
-      transition={{ duration, delay, ease: 'easeOut' }}
-    >
-      {children}
-    </motion.div>
-  );
-};
-
-// Lazy loading wrapper for images
-export const LazyImage: React.FC<{
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-}> = ({ src, alt, className = '', placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzM0MTU2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2YzZjRmNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+' }) => {
-  const [imageSrc, setImageSrc] = useState(placeholder);
+export function PerformanceOptimizer({ children, showMetrics = false }: PerformanceOptimizerProps) {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      setImageSrc(src);
-      setIsLoaded(true);
-    };
-  }, [src]);
+  const measurePerformance = useCallback(() => {
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const lcp = paintEntries.find(entry => entry.name === 'largest-contentful-paint');
 
-  return (
-    <img
-      src={imageSrc}
-      alt={alt}
-      className={`${className} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-60'}`}
-    />
-  );
-};
-
-// Intersection observer hook for performance
-export const useIntersectionObserver = (
-  options: IntersectionObserverInit = {}
-) => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const [ref, setRef] = useState<HTMLElement | null>(null);
-
-  useEffect(() => {
-    if (!ref) return;
-
-    const observer = new IntersectionObserver(([entry]) => {
-      setIsIntersecting(entry.isIntersecting);
-    }, options);
-
-    observer.observe(ref);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [ref, options]);
-
-  return [setRef, isIntersecting] as const;
-};
-
-// Performance monitoring component
-export const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0
-  });
-
-  useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fid = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
+      const performanceMetrics: PerformanceMetrics = {
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        firstContentfulPaint: fcp ? fcp.startTime : 0,
+        largestContentfulPaint: lcp ? lcp.startTime : 0,
+        cumulativeLayoutShift: 0, // Would need to be calculated from LayoutShift API
+        firstInputDelay: 0 // Would need to be calculated from FirstInput API
       };
+
+      setMetrics(performanceMetrics);
     }
   }, []);
 
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
+  const preloadCriticalResources = useCallback(() => {
+    // Preload critical CSS and fonts
+    const criticalResources = [
+      '/fonts/Orbitron-Regular.woff2',
+      '/fonts/Orbitron-Bold.woff2'
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = 'font';
+      link.type = 'font/woff2';
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  const optimizeImages = useCallback(() => {
+    // Add loading="lazy" to non-critical images
+    const images = document.querySelectorAll('img:not([data-critical])');
+    images.forEach(img => {
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+    });
+  }, []);
+
+  const enableIntersectionObserver = useCallback(() => {
+    // Lazy load components when they come into view
+    const observerOptions = {
+      root: null,
+      rootMargin: '50px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const lazyElements = document.querySelectorAll('[data-lazy]');
+    lazyElements.forEach(el => observer.observe(el));
+  }, []);
+
+  useEffect(() => {
+    // Optimize on mount
+    preloadCriticalResources();
+    optimizeImages();
+    enableIntersectionObserver();
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      setTimeout(measurePerformance, 100);
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(measurePerformance, 100);
+      });
+    }
+
+    setIsLoaded(true);
+
+    return () => {
+      // Cleanup
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [preloadCriticalResources, optimizeImages, enableIntersectionObserver, measurePerformance]);
+
+  const getPerformanceScore = (metrics: PerformanceMetrics): number => {
+    let score = 100;
+
+    // Deduct points based on performance metrics
+    if (metrics.firstContentfulPaint > 2000) score -= 20;
+    if (metrics.largestContentfulPaint > 4000) score -= 20;
+    if (metrics.loadTime > 3000) score -= 15;
+    if (metrics.cumulativeLayoutShift > 0.1) score -= 10;
+
+    return Math.max(0, score);
+  };
+
+  const getScoreColor = (score: number): string => {
+    if (score >= 90) return 'text-green-400';
+    if (score >= 70) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  if (showMetrics && metrics) {
+    const score = getPerformanceScore(metrics);
+    
+    return (
+      <>
+        <PerformanceMetricsDisplay metrics={metrics} score={score} />
+        {children}
+      </>
+    );
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div>FCP: {metrics.fcp.toFixed(0)}ms</div>
-      <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
-      <div>FID: {metrics.fid.toFixed(0)}ms</div>
-      <div>CLS: {metrics.cls.toFixed(3)}</div>
-    </div>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isLoaded ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
   );
-};
+}
 
-// Virtual scrolling component for large lists
-export const VirtualList: React.FC<{
-  items: any[];
-  itemHeight: number;
-  containerHeight: number;
-  renderItem: (item: any, index: number) => React.ReactNode;
-}> = ({ items, itemHeight, containerHeight, renderItem }) => {
-  const [scrollTop, setScrollTop] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
+interface PerformanceMetricsDisplayProps {
+  metrics: PerformanceMetrics;
+  score: number;
+}
 
-  const visibleItemCount = Math.ceil(containerHeight / itemHeight);
-  const startIndex = Math.floor(scrollTop / itemHeight);
-  const endIndex = Math.min(startIndex + visibleItemCount + 1, items.length);
-
-  const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
-    setScrollTop(e.currentTarget.scrollTop);
-  }, []);
-
-  const totalHeight = items.length * itemHeight;
-  const offsetY = startIndex * itemHeight;
-
-  return (
-    <div
-      ref={containerRef}
-      style={{ height: containerHeight, overflow: 'auto' }}
-      onScroll={handleScroll}
-    >
-      <div style={{ height: totalHeight, position: 'relative' }}>
-        <div style={{ transform: `translateY(${offsetY}px)` }}>
-          {items.slice(startIndex, endIndex).map((item, index) =>
-            renderItem(item, startIndex + index)
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// Debounced input hook for search optimization
-export const useDebounce = (value: any, delay: number) => {
-  const [debouncedValue, setDebouncedValue] = useState(value);
+function PerformanceMetricsDisplay({ metrics, score }: PerformanceMetricsDisplayProps) {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
+    const timer = setTimeout(() => setIsVisible(true), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [value, delay]);
+  if (!isVisible) return null;
 
-  return debouncedValue;
-};
-
-// Memoized component wrapper for expensive computations
-export const MemoizedComponent = React.memo<{
-  children: React.ReactNode;
-  className?: string;
-}>(({ children, className = '' }) => (
-  <div className={className}>{children}</div>
-));
-
-MemoizedComponent.displayName = 'MemoizedComponent';
-=======
-import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
-export const PerformanceOptimizer = ({ children }) => {
-    const location = useLocation();
-    // Preload critical resources
-    useEffect(() => {
-        const preloadCriticalResources = () => {
-            // Preload critical CSS
-            const criticalCSS = document.createElement('link');
-            criticalCSS.rel = 'preload';
-            criticalCSS.as = 'style';
-            criticalCSS.href = '/src/index.css';
-            document.head.appendChild(criticalCSS);
-            // Preload critical fonts
-            const criticalFonts = document.createElement('link');
-            criticalFonts.rel = 'preload';
-            criticalFonts.as = 'font';
-            criticalFonts.href = '/fonts/inter-var.woff2';
-            criticalFonts.crossOrigin = 'anonymous';
-            document.head.appendChild(criticalFonts);
-        };
-        preloadCriticalResources();
-    }, []);
-    // Optimize images on route change
-    useEffect(() => {
-        const optimizeImages = () => {
-            const images = document.querySelectorAll('img');
-            images.forEach((img) => {
-                // Add loading="lazy" to images below the fold
-                if (img.getBoundingClientRect().top > window.innerHeight) {
-                    img.loading = 'lazy';
-                }
-                // Add decoding="async" for better performance
-                img.decoding = 'async';
-                // Add error handling
-                img.onerror = () => {
-                    img.style.display = 'none';
-                };
-            });
-        };
-        // Use requestIdleCallback for non-critical optimization
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(optimizeImages);
-        }
-        else {
-            setTimeout(optimizeImages, 100);
-        }
-    }, [location.pathname]);
-    // Memoize expensive computations
-    const optimizedChildren = useMemo(() => children, [children]);
-    // Optimize scroll performance
-    const handleScroll = useCallback(() => {
-        // Throttle scroll events for better performance
-        if (!window.scrollTimeout) {
-            window.scrollTimeout = setTimeout(() => {
-                // Handle scroll-based optimizations here
-                window.scrollTimeout = null;
-            }, 16); // ~60fps
-        }
-    }, []);
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [handleScroll]);
-    // Service Worker registration for caching
-    useEffect(() => {
-        if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-            navigator.serviceWorker
-                .register('/sw.js')
-                .then((registration) => {
-                console.log('SW registered: ', registration);
-            })
-                .catch((registrationError) => {
-                console.log('SW registration failed: ', registrationError);
-            });
-        }
-    }, []);
-    // Intersection Observer for lazy loading
-    useEffect(() => {
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const target = entry.target;
-                        if (target.dataset.src) {
-                            target.src = target.dataset.src;
-                            target.removeAttribute('data-src');
-                            observer.unobserve(target);
-                        }
-                    }
-                });
-            }, {
-                rootMargin: '50px',
-                threshold: 0.1,
-            });
-            // Observe all images with data-src
-            const lazyImages = document.querySelectorAll('img[data-src]');
-            lazyImages.forEach((img) => observer.observe(img));
-            return () => observer.disconnect();
-        }
-    }, [location.pathname]);
-    return <>{optimizedChildren}</>;
-};
-// Add global performance optimizations
-if (typeof window !== 'undefined') {
-    // Optimize long tasks
-    if ('scheduler' in window && 'postTask' in window.scheduler) {
-        window.scheduler.postTask(() => {
-            // Run non-critical tasks during idle time
-        }, { priority: 'background' });
-    }
-    // Optimize memory usage
-    if ('memory' in performance) {
-        const memoryThreshold = 50 * 1024 * 1024; // 50MB
-        if (performance.memory.usedJSHeapSize > memoryThreshold) {
-            // Trigger garbage collection if available
-            if ('gc' in window) {
-                window.gc();
-            }
-        }
-    }
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="fixed top-4 right-4 bg-zion-slate-dark/90 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-4 text-white z-50 max-w-sm"
+    >
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-sm font-semibold">Performance Score</h3>
+        <span className={`text-lg font-bold ${getScoreColor(score)}`}>
+          {score}/100
+        </span>
+      </div>
+      
+      <div className="space-y-2 text-xs">
+        <div className="flex justify-between">
+          <span className="text-zion-slate-light">FCP:</span>
+          <span className={metrics.firstContentfulPaint < 2000 ? 'text-green-400' : 'text-red-400'}>
+            {Math.round(metrics.firstContentfulPaint)}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-zion-slate-light">LCP:</span>
+          <span className={metrics.largestContentfulPaint < 4000 ? 'text-green-400' : 'text-red-400'}>
+            {Math.round(metrics.largestContentfulPaint)}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-zion-slate-light">Load Time:</span>
+          <span className={metrics.loadTime < 3000 ? 'text-green-400' : 'text-red-400'}>
+            {Math.round(metrics.loadTime)}ms
+          </span>
+        </div>
+      </div>
+      
+      <div className="mt-3 pt-2 border-t border-zion-slate-light/20">
+        <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
+          <div 
+            className={`h-2 rounded-full transition-all duration-500 ${
+              score >= 90 ? 'bg-green-400' : score >= 70 ? 'bg-yellow-400' : 'bg-red-400'
+            }`}
+            style={{ width: `${score}%` }}
+          />
+        </div>
+      </div>
+    </motion.div>
+  );
 }
-export default PerformanceOptimizer;
->>>>>>> cursor/website-audit-and-enhancement-1eed
+
+// Lazy loading hook
+export function useLazyLoad<T>(
+  data: T[],
+  itemsPerPage: number = 10
+) {
+  const [displayedItems, setDisplayedItems] = useState<T[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+
+  useEffect(() => {
+    const startIndex = 0;
+    const endIndex = currentPage * itemsPerPage;
+    const newItems = data.slice(startIndex, endIndex);
+    
+    setDisplayedItems(newItems);
+    setHasMore(endIndex < data.length);
+  }, [data, currentPage, itemsPerPage]);
+
+  const loadMore = useCallback(() => {
+    if (hasMore) {
+      setCurrentPage(prev => prev + 1);
+    }
+  }, [hasMore]);
+
+  return {
+    displayedItems,
+    hasMore,
+    loadMore,
+    currentPage
+  };
+}
+
+// Image optimization component
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  critical?: boolean;
+  sizes?: string;
+  onLoad?: () => void;
+}
+
+export function OptimizedImage({
+  src,
+  alt,
+  className = '',
+  critical = false,
+  sizes = '100vw',
+  onLoad
+}: OptimizedImageProps) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+    onLoad?.();
+  };
+
+  const handleError = () => {
+    setHasError(true);
+  };
+
+  return (
+    <div className={`relative overflow-hidden ${className}`}>
+      {!isLoaded && !hasError && (
+        <div className="absolute inset-0 bg-zion-slate-light/20 animate-pulse rounded" />
+      )}
+      
+      {hasError ? (
+        <div className="absolute inset-0 bg-zion-slate-light/10 flex items-center justify-center">
+          <span className="text-zion-slate-light text-sm">Image failed to load</span>
+        </div>
+      ) : (
+        <img
+          src={src}
+          alt={alt}
+          sizes={sizes}
+          loading={critical ? 'eager' : 'lazy'}
+          data-critical={critical ? 'true' : undefined}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+      )}
+    </div>
+  );
+}
+
+// Code splitting wrapper
+interface LazyComponentProps {
+  fallback?: React.ReactNode;
+  children: React.ReactNode;
+}
+
+export function LazyComponent({ 
+  fallback = <div className="animate-pulse bg-zion-slate-light/20 h-32 rounded" />,
+  children 
+}: LazyComponentProps) {
+  return (
+    <React.Suspense fallback={fallback}>
+      {children}
+    </React.Suspense>
+  );
+}

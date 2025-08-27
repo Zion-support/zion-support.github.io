@@ -14,7 +14,6 @@ export interface AdditionalRealService {
     address: string;
   };
 }
-
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
     id: "ai-automation-suite",

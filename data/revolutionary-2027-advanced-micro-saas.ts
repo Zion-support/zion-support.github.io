@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2027AdvancedMicroSaasService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2027AdvancedMicroSaasService {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027AdvancedMicroSaasService[] = [
   // AI-Powered Content Creation & Marketing
   {
@@ -94,7 +92,6 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     rating: 4.8,
     reviews: 1850
   },
-
   // AI-Powered Customer Success Platform
   {
     id: 'ai-customer-success-hub-2027',
@@ -147,7 +144,6 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     rating: 4.9,
     reviews: 1200
   },
-
   // AI-Powered Financial Planning & Analysis
   {
     id: 'ai-financial-analyst-pro-2027',
@@ -200,7 +196,6 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     rating: 4.7,
     reviews: 680
   },
-
   // AI-Powered HR & Talent Management
   {
     id: 'ai-hr-talent-suite-2027',
@@ -253,7 +248,6 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     rating: 4.8,
     reviews: 1450
   },
-
   // AI-Powered Supply Chain Optimization
   {
     id: 'ai-supply-chain-optimizer-2027',

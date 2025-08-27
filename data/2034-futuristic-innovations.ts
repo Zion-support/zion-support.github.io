@@ -25,7 +25,6 @@ export interface Service2034 {
   contact: string;
   website: string;
 }
-
 export const futuristic2034Services: Service2034[] = [
   {
     id: 'ai-quantum-hybrid-brain',

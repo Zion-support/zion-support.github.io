@@ -38,7 +38,6 @@ export interface BiotechAIService {
   rating: number;
   reviews: number;
 }
-
 export const biotechAIServices: BiotechAIService[] = [
   {
     id: 'ai-drug-discovery-platform',

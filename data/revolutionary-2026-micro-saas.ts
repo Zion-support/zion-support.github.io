@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2026MicroSaasService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2026MicroSaasService {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [
   {
     id: 'ai-business-intelligence-pro',

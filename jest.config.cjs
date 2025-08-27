@@ -55,7 +55,7 @@ module.exports = {
     '^react-markdown$': '<rootDir>/tests/__mocks__/reactMarkdown.js',
     '^@/pages/(.*)\.jsx$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/pages/Signup$': '<rootDir>/tests/__mocks__/emptyModule.js',
-    '^@/pages/signup$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/pages/signup$': '<rootDir>/src/pages/Signup.tsx',
     '^@/utils/devtools$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^scripts/watchdog$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^scripts/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',

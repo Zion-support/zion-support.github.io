@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface NextGenAIService2026 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface NextGenAIService2026 {
   rating: number;
   reviews: number;
 }
-
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   // AI Creative Studio Platform
   {
@@ -94,7 +92,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.9,
     reviews: 950
   },
-
   // AI Autonomous Business Platform 2026
   {
     id: 'ai-autonomous-business-platform-2026',
@@ -147,7 +144,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.8,
     reviews: 280
   },
-
   // AI Emotional Intelligence Platform
   {
     id: 'ai-emotional-intelligence-platform',
@@ -200,7 +196,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.7,
     reviews: 320
   },
-
   // AI Multimodal Fusion Platform
   {
     id: 'ai-multimodal-fusion-platform',
@@ -253,7 +248,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.8,
     reviews: 150
   },
-
   // AI Quantum Hybrid Computing
   {
     id: 'ai-quantum-hybrid-computing',

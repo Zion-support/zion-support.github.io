@@ -39,7 +39,6 @@ export interface InnovativeMicroSaasService2029V2 {
     address: string;
   };
 }
-
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [
   {
     id: 'ai-emotion-based-marketing-platform',

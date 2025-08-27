@@ -98,25 +98,97 @@ import {
   MicOff,
   Volume2,
   VolumeX,
-  Building,
-  Leaf,
-  Space,
-  Handshake,
-  Calendar
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
+  Repeat1,
+  Shuffle2,
+  SkipBack2,
+  SkipForward2,
+  PlayCircle,
+  PauseCircle,
+  StopCircle,
+  SkipBackCircle,
+  SkipForwardCircle,
+  RewindCircle,
+  FastForwardCircle,
+  ShuffleCircle,
+  RepeatCircle,
+  Repeat1Circle,
+  Shuffle2Circle,
+  SkipBack2Circle,
+  SkipForward2Circle,
+  PlaySquare,
+  PauseSquare,
+  StopSquare,
+  SkipBackSquare,
+  SkipForwardSquare,
+  RewindSquare,
+  FastForwardSquare,
+  ShuffleSquare,
+  RepeatSquare,
+  Repeat1Square,
+  Shuffle2Square,
+  SkipBack2Square,
+  SkipForward2Square,
+  PlayTriangle,
+  PauseTriangle,
+  StopTriangle,
+  SkipBackTriangle,
+  SkipForwardTriangle,
+  RewindTriangle,
+  FastForwardTriangle,
+  ShuffleTriangle,
+  RepeatTriangle,
+  Repeat1Triangle,
+  Shuffle2Triangle,
+  SkipBack2Triangle,
+  SkipForward2Triangle,
+  PlayOctagon,
+  PauseOctagon,
+  StopOctagon,
+  SkipBackOctagon,
+  SkipForwardOctagon,
+  RewindOctagon,
+  FastForwardOctagon,
+  ShuffleOctagon,
+  RepeatOctagon,
+  Repeat1Octagon,
+  Shuffle2Octagon,
+  SkipBack2Octagon,
+  SkipForward2Octagon,
+  PlayDodecagon,
+  PauseDodecagon,
+  StopDodecagon,
+  SkipBackDodecagon,
+  SkipForwardDodecagon,
+  RewindDodecagon,
+  FastForwardDodecagon,
+  ShuffleDodecagon,
+  RepeatDodecagon,
+  Repeat1Dodecagon,
+  Shuffle2Dodecagon,
+  SkipBack2Dodecagon,
+  SkipForward2Dodecagon
 } from 'lucide-react';
 
 export const FuturisticNavigation: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -124,7 +196,7 @@ export const FuturisticNavigation: React.FC = () => {
   useEffect(() => {
     setMobileMenuOpen(false);
     setActiveDropdown(null);
-  }, [location]);
+  }, [location.pathname]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -137,89 +209,50 @@ export const FuturisticNavigation: React.FC = () => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
-  const navigationItems = [
+  // Enhanced service categories with better organization
+  const serviceCategories = [
     {
-      name: 'Cutting-Edge Innovations',
-      href: '/innovative-services',
-      icon: Zap,
-      color: 'from-zion-cyan to-zion-purple',
-      dropdown: [
-        { name: 'AI Business Automation', href: '/innovative-services#ai-automation', icon: Brain, description: 'AI-powered business process automation' },
-        { name: 'Quantum Computing Services', href: '/innovative-services#quantum-computing', icon: Atom, description: 'Quantum computing as a service' },
-        { name: 'Enterprise Blockchain', href: '/innovative-services#blockchain', icon: Lock, description: 'Enterprise blockchain solutions' },
-        { name: 'IoT Edge Computing', href: '/innovative-services#iot-edge', icon: Wifi, description: 'IoT and edge computing platform' },
-        { name: 'Zero Trust Security', href: '/innovative-services#cybersecurity', icon: Shield, description: 'Advanced cybersecurity platform' },
-        { name: 'Digital Twin Technology', href: '/innovative-services#digital-twin', icon: Eye, description: 'Digital twin and simulation platform' },
-        { name: 'Metaverse & VR', href: '/innovative-services#metaverse', icon: Globe2, description: 'Metaverse and virtual reality platform' },
-        { name: 'Green Tech Solutions', href: '/innovative-services#green-tech', icon: Leaf, description: 'Sustainability and green technology' }
-      ]
-    },
-    {
-      name: 'AI Services',
-      href: '/ai-services',
+      name: "AI & Machine Learning",
       icon: Brain,
-      color: 'from-zion-cyan to-zion-blue',
-      dropdown: [
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
-        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
-        { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
-        { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },
-        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
+      services: [
+        { name: "AI Services", href: "/ai-services" },
+        { name: "Machine Learning", href: "/ai-services/machine-learning" },
+        { name: "Computer Vision", href: "/ai-services/computer-vision" },
+        { name: "Natural Language Processing", href: "/ai-services/nlp" },
+        { name: "Autonomous AI Agents", href: "/ai-services/autonomous-agents" }
       ]
     },
     {
-      name: 'IT Services',
-      href: '/it-services',
-      icon: Network,
-      color: 'from-zion-blue to-zion-purple',
-      dropdown: [
-        { name: 'Infrastructure Management', href: '/services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' },
-        { name: 'IT Consulting', href: '/services/consulting', icon: Users, description: 'Expert IT consulting services' },
-        { name: 'Enterprise IT', href: '/services/enterprise-it', icon: Building, description: 'Enterprise-grade IT solutions' },
-        { name: 'Green IT Solutions', href: '/services/green-it', icon: Leaf, description: 'Sustainable IT infrastructure' },
-        { name: 'Space Technology', href: '/services/space-technology', icon: Space, description: 'Space tech solutions' }
+      name: "Micro SAAS Solutions",
+      icon: Cloud,
+      services: [
+        { name: "Micro SAAS Services", href: "/micro-saas" },
+        { name: "Business Tools", href: "/micro-saas/business-tools" },
+        { name: "Productivity Apps", href: "/micro-saas/productivity" },
+        { name: "Industry Solutions", href: "/micro-saas/industry" },
+        { name: "Custom Development", href: "/micro-saas/custom" }
       ]
     },
     {
-      name: 'Solutions',
-      href: '/solutions',
-      icon: Target,
-      color: 'from-zion-purple to-zion-cyan',
-      dropdown: [
-        { name: 'Business Solutions', href: '/solutions/business', icon: Briefcase, description: 'Comprehensive business solutions' },
-        { name: 'Technology Solutions', href: '/solutions/technology', icon: Cpu, description: 'Advanced technology solutions' },
-        { name: 'Industry Solutions', href: '/solutions/industry', icon: Building, description: 'Industry-specific solutions' },
-        { name: 'Innovation Hub', href: '/solutions/innovation', icon: Lightbulb, description: 'Innovation and R&D services' }
+      name: "IT Infrastructure",
+      icon: Server,
+      services: [
+        { name: "IT Services", href: "/it-services" },
+        { name: "Cloud Solutions", href: "/it-services/cloud" },
+        { name: "Cybersecurity", href: "/it-services/cybersecurity" },
+        { name: "DevOps & Automation", href: "/it-services/devops" },
+        { name: "Data Management", href: "/it-services/data" }
       ]
     },
     {
-      name: 'Company',
-      href: '/about',
-      icon: Building,
-      color: 'from-zion-cyan to-zion-purple',
-      dropdown: [
-        { name: 'About Us', href: '/about', icon: Building, description: 'Learn about our mission and values' },
-        { name: 'Team', href: '/team', icon: Users, description: 'Meet our expert team' },
-        { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-        { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
-        { name: 'News', href: '/news', icon: FileText, description: 'Latest company updates' },
-        { name: 'Events', href: '/events', icon: Calendar, description: 'Upcoming events' }
-      ]
-    },
-    {
-      name: 'Resources',
-      href: '/resources',
-      icon: BookOpen,
-      color: 'from-zion-purple to-zion-cyan',
-      dropdown: [
-        { name: 'Blog', href: '/blog', icon: FileText, description: 'Industry insights and articles' },
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories and results' },
-        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'In-depth research and analysis' },
-        { name: 'Webinars', href: '/webinars', icon: Video, description: 'Educational webinars' },
-        { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Frequently asked questions' },
-        { name: 'Support', href: '/support', icon: HelpCircle, description: 'Technical support and help' }
+      name: "Emerging Technologies",
+      icon: Rocket,
+      services: [
+        { name: "Quantum Computing", href: "/emerging-tech/quantum" },
+        { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },
+        { name: "Edge Computing", href: "/emerging-tech/edge" },
+        { name: "IoT Solutions", href: "/emerging-tech/iot" },
+        { name: "Green Technology", href: "/green-it" }
       ]
     }
   ];
@@ -259,29 +292,29 @@ export const FuturisticNavigation: React.FC = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">
-              {navigationItems.map((item, index) => (
-                <div key={item.name} className="relative">
+              {serviceCategories.map((category, index) => (
+                <div key={category.name} className="relative">
                   <motion.button
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    onClick={() => toggleDropdown(item.name)}
+                    onClick={() => toggleDropdown(category.name)}
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
-                      activeDropdown === item.name 
+                      activeDropdown === category.name 
                         ? 'text-zion-cyan bg-zion-cyan/10 shadow-lg shadow-zion-cyan/20' 
                         : 'hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10'
                     }`}
                   >
-                    <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                    <span className="font-medium">{item.name}</span>
+                    <category.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                    <span className="font-medium">{category.name}</span>
                     <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
+                      activeDropdown === category.name ? 'rotate-180' : ''
                     }`} />
                   </motion.button>
 
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>
-                    {activeDropdown === item.name && (
+                    {activeDropdown === category.name && (
                       <motion.div
                         initial={{ opacity: 0, y: -10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -291,31 +324,28 @@ export const FuturisticNavigation: React.FC = () => {
                       >
                         <div className="p-4">
                           <div className="mb-4">
-                            <h3 className="text-lg font-semibold text-zion-cyan mb-2">{item.name}</h3>
+                            <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>
                             <div className="w-16 h-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"></div>
                           </div>
                           <div className="space-y-2">
-                            {item.dropdown.map((subItem, subIndex) => (
+                            {category.services.map((service, subIndex) => (
                               <motion.div
-                                key={subItem.name}
+                                key={service.name}
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.3, delay: subIndex * 0.05 }}
                               >
                                 <Link
-                                  to={subItem.href}
+                                  to={service.href}
                                   className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 group"
                                 >
                                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                    <subItem.icon className="w-4 h-4 text-zion-cyan" />
+                                    <Brain className="w-4 h-4 text-zion-cyan" /> {/* Using Brain icon for consistency */}
                                   </div>
                                   <div className="flex-1">
                                     <h4 className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">
-                                      {subItem.name}
+                                      {service.name}
                                     </h4>
-                                    <p className="text-sm text-zion-slate-light mt-1">
-                                      {subItem.description}
-                                    </p>
                                   </div>
                                 </Link>
                               </motion.div>
@@ -410,23 +440,23 @@ export const FuturisticNavigation: React.FC = () => {
 
                 {/* Mobile Navigation Items */}
                 <div className="space-y-2">
-                  {navigationItems.map((item) => (
-                    <div key={item.name} className="border-b border-zion-cyan/10 pb-2">
+                  {serviceCategories.map((category) => (
+                    <div key={category.name} className="border-b border-zion-cyan/10 pb-2">
                       <Link
-                        to={item.href}
+                        to={category.services[0].href} // Link to the first service in the category
                         className="flex items-center space-x-3 p-3 text-white hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
                       >
-                        <item.icon className="w-5 h-5" />
-                        <span className="font-medium">{item.name}</span>
+                        <category.icon className="w-5 h-5" />
+                        <span className="font-medium">{category.name}</span>
                       </Link>
                       <div className="ml-8 mt-2 space-y-1">
-                        {item.dropdown.slice(0, 3).map((subItem) => (
+                        {category.services.slice(0, 3).map((service) => (
                           <Link
-                            key={subItem.name}
-                            to={subItem.href}
+                            key={service.name}
+                            to={service.href}
                             className="block p-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/5 rounded transition-all duration-300"
                           >
-                            {subItem.name}
+                            {service.name}
                           </Link>
                         ))}
                       </div>
