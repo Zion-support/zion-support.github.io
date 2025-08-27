@@ -50,6 +50,8 @@ export function Footer() {
       links: [
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Solutions', path: '/solutions', icon: Target },
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'Blog', path: '/blog', icon: Newspaper },
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
@@ -70,6 +72,10 @@ export function Footer() {
       title: 'Resources',
       icon: FileText,
       links: [
+        { name: 'Case Studies', path: '/case-studies', icon: FileText },
+        { name: 'Research & Development', path: '/research-development', icon: TestTube },
+        { name: 'Events', path: '/events', icon: Video },
+        { name: 'News', path: '/news', icon: Newspaper },
         { name: 'Blog', path: '/blog', icon: FileText },
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Request a Quote', path: '/request-quote', icon: FileText }
