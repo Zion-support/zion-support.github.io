@@ -22,7 +22,7 @@ export function Footer() {
   const footerNavigation = {
     marketplace: [
       { name: 'All Services', href: '/services' },
-      { name: 'AI Services', href: '/services/ai' },
+      { name: 'AI Services', href: '/ai-services' },
       { name: 'Cybersecurity', href: '/services/cybersecurity' },
       { name: 'Cloud Services', href: '/services/cloud' },
       { name: 'Blockchain', href: '/services/blockchain' },
@@ -42,15 +42,15 @@ export function Footer() {
       { name: 'Sitemap', href: '/sitemap' }
     ],
     resources: [
-      { name: 'Help Center', href: '/help' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Webinars', href: '/webinars' },
-      { name: 'Training', href: '/training' },
-      { name: 'Research & Development', href: '/research' }
+      { name: 'Help Center', href: '/help-center' },
+      { name: 'Enhanced Services', href: '/enhanced-services' },
+      { name: 'IT Services', href: '/it-services' },
+      { name: 'Micro SaaS Services', href: '/micro-saas-services' },
+      { name: 'Marketplace', href: '/marketplace' },
+      { name: 'Talent', href: '/talent' }
     ],
     support: [
-      { name: 'Contact Support', href: '/support' },
+      { name: 'Contact Support', href: '/contact' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Security', href: '/security' },
