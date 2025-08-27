@@ -1,388 +1,209 @@
+<<<<<<< HEAD
 export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
   address: string;
 }
+=======
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 export interface AdvancedCybersecurityService {
-  id: number;
-  name: string;
-  category: string;
+  id: string;
+  title: string;
   description: string;
-  pricing: string;
+  category: 'Threat Detection' | 'Incident Response' | 'Compliance' | 'Penetration Testing' | 'Security Training' | 'Zero Trust';
   price: number;
-  pricingModel: string;
+  currency: string;
+  pricingModel: 'monthly' | 'yearly' | 'one-time' | 'incident-based';
   features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  tags: string[];
-  contactInfo: ServiceContact;
-  marketPrice: string;
-  competitors: string[];
-  securityScore: number;
-  useCases: string[];
+  securityLevel: 'Basic' | 'Advanced' | 'Enterprise' | 'Military Grade';
   compliance: string[];
-  apiAccess: boolean;
-  whiteLabel: boolean;
-  customBranding: boolean;
-  prioritySupport: boolean;
-  trainingIncluded: boolean;
-  dataRetention: string;
-  uptime: string;
-  securityFeatures: string[];
-  integrationTime: string;
-  scalability: string;
-  realTimeProcessing: boolean;
-  multilingualSupport: boolean;
-  industrySpecific: boolean;
-  zeroTrust: boolean;
-  aiPowered: boolean;
-  quantumResistant: boolean;
-  threatIntelligence: boolean;
+  responseTime: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
 }
+<<<<<<< HEAD
 // Advanced Cybersecurity Services for 2025
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
+=======
+
+export const ADVANCED_CYBERSECURITY_SERVICES: AdvancedCybersecurityService[] = [
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   {
-    id: 1,
-    name: "Zero Trust Security Mesh",
-    category: "Zero Trust Security",
-    description: "Comprehensive zero-trust security platform with continuous verification, micro-segmentation, and adaptive access controls",
-    pricing: "Enterprise",
-    price: 2500,
-    pricingModel: "monthly",
+    id: 'zero-trust-security-architecture',
+    title: 'Zero Trust Security Architecture Implementation',
+    description: 'Complete zero trust security framework implementation including identity verification, device trust, network segmentation, and continuous monitoring.',
+    category: 'Zero Trust',
+    price: 15999,
+    currency: 'USD',
+    pricingModel: 'one-time',
     features: [
-      "Continuous verification",
-      "Micro-segmentation",
-      "Adaptive access controls",
-      "Identity verification",
-      "Device trust scoring",
-      "Behavioral analytics",
-      "Real-time monitoring",
-      "Automated response"
+      'Identity and access management (IAM)',
+      'Multi-factor authentication (MFA)',
+      'Device trust verification',
+      'Network micro-segmentation',
+      'Continuous security monitoring',
+      'Privileged access management',
+      'Security policy automation',
+      'Compliance reporting'
     ],
-    benefits: [
-      "Eliminate trust assumptions",
-      "Reduce attack surface",
-      "Continuous protection",
-      "Compliance adherence",
-      "Operational efficiency",
-      "Cost savings"
-    ],
-    targetAudience: ["Enterprises", "Financial institutions", "Healthcare providers", "Government agencies", "Critical infrastructure"],
-    tags: ["Zero Trust", "Security", "Access Control", "Identity", "Compliance", "Threat Protection"],
+    securityLevel: 'Enterprise',
+    compliance: ['SOC2', 'ISO27001', 'NIST', 'GDPR', 'HIPAA'],
+    responseTime: '<5 minutes',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/zero-trust-security-mesh",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$2,500-12,000/month",
-    competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"],
-    securityScore: 99,
-    useCases: ["Enterprise Security", "Cloud Security", "Remote Work", "IoT Security", "Compliance", "Threat Prevention"],
-    compliance: ["NIST", "ISO 27001", "SOC 2", "GDPR", "HIPAA", "PCI DSS"],
-    apiAccess: true,
-    whiteLabel: true,
-    customBranding: true,
-    prioritySupport: true,
-    trainingIncluded: true,
-    dataRetention: "10 years",
-    uptime: "99.99%",
-    securityFeatures: ["Zero-trust architecture", "Continuous monitoring", "Threat detection", "Automated response"],
-    integrationTime: "4-8 weeks",
-    scalability: "Enterprise-wide deployment",
-    realTimeProcessing: true,
-    multilingualSupport: true,
-    industrySpecific: true,
-    zeroTrust: true,
-    aiPowered: true,
-    quantumResistant: true,
-    threatIntelligence: true
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    }
   },
   {
-    id: 2,
-    name: "AI-Powered Threat Intelligence",
-    category: "Threat Intelligence",
-    description: "Advanced AI-driven threat intelligence platform with real-time threat detection, predictive analytics, and automated response",
-    pricing: "Professional",
-    price: 1800,
-    pricingModel: "monthly",
+    id: 'advanced-threat-hunting',
+    title: 'Advanced Threat Hunting & Intelligence',
+    description: 'Proactive threat hunting service using advanced analytics, machine learning, and threat intelligence to identify and eliminate hidden threats.',
+    category: 'Threat Detection',
+    price: 3499,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "Real-time threat detection",
-      "Predictive analytics",
-      "Behavioral analysis",
-      "Threat hunting",
-      "Vulnerability assessment",
-      "Incident response",
-      "Threat modeling",
-      "Risk scoring"
+      '24/7 threat monitoring',
+      'Advanced behavioral analytics',
+      'Threat intelligence feeds',
+      'Custom hunting rules',
+      'Incident investigation',
+      'Threat actor profiling',
+      'IOC management',
+      'Real-time alerts'
     ],
-    benefits: [
-      "Proactive threat prevention",
-      "Faster response times",
-      "Reduced false positives",
-      "Better risk assessment",
-      "Cost savings",
-      "Competitive advantage"
-    ],
-    targetAudience: ["Security operations centers", "CISOs", "Security analysts", "Enterprises", "Government agencies"],
-    tags: ["Threat Intelligence", "AI", "Security Analytics", "Threat Detection", "Incident Response", "Risk Management"],
+    securityLevel: 'Advanced',
+    compliance: ['SOC2', 'ISO27001', 'NIST'],
+    responseTime: '<15 minutes',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-threat-intelligence",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$1,800-8,000/month",
-    competitors: ["CrowdStrike", "SentinelOne", "Recorded Future", "ThreatConnect"],
-    securityScore: 98,
-    useCases: ["Threat Detection", "Incident Response", "Vulnerability Management", "Risk Assessment", "Security Operations", "Compliance"],
-    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "Industry standards"],
-    apiAccess: true,
-    whiteLabel: true,
-    customBranding: true,
-    prioritySupport: true,
-    trainingIncluded: true,
-    dataRetention: "7 years",
-    uptime: "99.9%",
-    securityFeatures: ["AI-powered detection", "Real-time monitoring", "Automated response", "Threat correlation"],
-    integrationTime: "3-6 weeks",
-    scalability: "Enterprise deployment",
-    realTimeProcessing: true,
-    multilingualSupport: true,
-    industrySpecific: true,
-    zeroTrust: false,
-    aiPowered: true,
-    quantumResistant: false,
-    threatIntelligence: true
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    }
   },
   {
-    id: 3,
-    name: "Quantum-Resistant Cryptography",
-    category: "Post-Quantum Security",
-    description: "Future-proof cryptography solutions resistant to quantum computing attacks with hybrid encryption and quantum key distribution",
-    pricing: "Enterprise",
-    price: 3000,
-    pricingModel: "monthly",
+    id: 'incident-response-platform',
+    title: 'AI-Powered Incident Response Platform',
+    description: 'Intelligent incident response platform that automates threat containment, investigation, and recovery processes.',
+    category: 'Incident Response',
+    price: 2499,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "Post-quantum algorithms",
-      "Quantum key distribution",
-      "Hybrid encryption",
-      "Quantum-resistant signatures",
-      "Lattice-based cryptography",
-      "Code-based encryption",
-      "Multivariate cryptography",
-      "Hash-based signatures"
+      'Automated threat containment',
+      'AI-powered investigation',
+      'Playbook automation',
+      'Forensic analysis tools',
+      'Recovery automation',
+      'Incident timeline tracking',
+      'Team collaboration tools',
+      'Post-incident reporting'
     ],
-    benefits: [
-      "Future-proof security",
-      "Quantum resistance",
-      "Long-term protection",
-      "Compliance readiness",
-      "Competitive advantage",
-      "Investment protection"
-    ],
-    targetAudience: ["Financial institutions", "Government agencies", "Healthcare providers", "Critical infrastructure", "Research institutions"],
-    tags: ["Post-Quantum", "Cryptography", "Quantum Security", "Encryption", "Future-Proof", "Advanced Security"],
+    securityLevel: 'Advanced',
+    compliance: ['SOC2', 'ISO27001', 'NIST'],
+    responseTime: '<2 minutes',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/quantum-resistant-cryptography",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$3,000-15,000/month",
-    competitors: ["ISARA", "PQShield", "Cryptosense", "Quantum Xchange"],
-    securityScore: 99,
-    useCases: ["Data Encryption", "Digital Signatures", "Key Management", "Secure Communication", "Long-term Storage", "Compliance"],
-    compliance: ["NIST", "ISO 27001", "FIPS", "Industry standards", "Future regulations"],
-    apiAccess: true,
-    whiteLabel: true,
-    customBranding: true,
-    prioritySupport: true,
-    trainingIncluded: true,
-    dataRetention: "20+ years",
-    uptime: "99.9%",
-    securityFeatures: ["Quantum-resistant algorithms", "Hybrid encryption", "Quantum key distribution", "Post-quantum signatures"],
-    integrationTime: "6-12 weeks",
-    scalability: "Enterprise deployment",
-    realTimeProcessing: true,
-    multilingualSupport: true,
-    industrySpecific: true,
-    zeroTrust: false,
-    aiPowered: false,
-    quantumResistant: true,
-    threatIntelligence: false
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    }
   },
   {
-    id: 4,
-    name: "Privacy-Preserving Analytics",
-    category: "Privacy Engineering",
-    description: "Advanced privacy-preserving analytics platform using differential privacy, federated learning, and secure multi-party computation",
-    pricing: "Professional",
-    price: 1200,
-    pricingModel: "monthly",
+    id: 'penetration-testing-suite',
+    title: 'Comprehensive Penetration Testing Suite',
+    description: 'Full-spectrum penetration testing including web applications, mobile apps, network infrastructure, and social engineering assessments.',
+    category: 'Penetration Testing',
+    price: 8999,
+    currency: 'USD',
+    pricingModel: 'one-time',
     features: [
-      "Differential privacy",
-      "Federated learning",
-      "Secure multi-party computation",
-      "Homomorphic encryption",
-      "Privacy-preserving ML",
-      "Data anonymization",
-      "Consent management",
-      "Privacy auditing"
+      'Web application testing',
+      'Mobile application testing',
+      'Network infrastructure testing',
+      'Social engineering assessment',
+      'Physical security testing',
+      'Wireless network testing',
+      'Detailed vulnerability reports',
+      'Remediation guidance'
     ],
-    benefits: [
-      "Data privacy protection",
-      "Regulatory compliance",
-      "Trust building",
-      "Innovation enablement",
-      "Risk reduction",
-      "Competitive advantage"
-    ],
-    targetAudience: ["Healthcare providers", "Financial institutions", "Research institutions", "Government agencies", "Tech companies"],
-    tags: ["Privacy Engineering", "Differential Privacy", "Federated Learning", "Data Protection", "Compliance", "Analytics"],
+    securityLevel: 'Enterprise',
+    compliance: ['OWASP', 'NIST', 'ISO27001'],
+    responseTime: '24-48 hours',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/privacy-preserving-analytics",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$1,200-6,000/month",
-    competitors: ["Privacera", "BigID", "OneTrust", "Collibra"],
-    securityScore: 97,
-    useCases: ["Healthcare Analytics", "Financial Analysis", "Research Collaboration", "Customer Insights", "Compliance", "Data Sharing"],
-    compliance: ["GDPR", "CCPA", "HIPAA", "GLBA", "Industry standards"],
-    apiAccess: true,
-    whiteLabel: true,
-    customBranding: true,
-    prioritySupport: true,
-    trainingIncluded: true,
-    dataRetention: "User-controlled",
-    uptime: "99.9%",
-    securityFeatures: ["Differential privacy", "Federated learning", "Secure computation", "Privacy auditing"],
-    integrationTime: "4-8 weeks",
-    scalability: "Enterprise deployment",
-    realTimeProcessing: true,
-    multilingualSupport: true,
-    industrySpecific: true,
-    zeroTrust: false,
-    aiPowered: true,
-    quantumResistant: false,
-    threatIntelligence: false
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    }
   },
   {
-    id: 5,
-    name: "Cloud Security Posture Management",
-    category: "Cloud Security",
-    description: "Comprehensive cloud security platform with continuous monitoring, compliance management, and automated remediation",
-    pricing: "Professional",
-    price: 1500,
-    pricingModel: "monthly",
+    id: 'security-awareness-training',
+    title: 'AI-Enhanced Security Awareness Training',
+    description: 'Interactive security training platform using AI to personalize learning paths and simulate real-world attack scenarios.',
+    category: 'Security Training',
+    price: 299,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "Continuous monitoring",
-      "Compliance management",
-      "Automated remediation",
-      "Risk assessment",
-      "Security scoring",
-      "Policy enforcement",
-      "Incident response",
-      "Reporting dashboard"
+      'Personalized learning paths',
+      'Phishing simulation campaigns',
+      'Interactive scenarios',
+      'Progress tracking',
+      'Compliance reporting',
+      'Mobile learning app',
+      'Gamification elements',
+      'Regular assessments'
     ],
-    benefits: [
-      "Reduced cloud risks",
-      "Compliance adherence",
-      "Automated security",
-      "Cost savings",
-      "Better visibility",
-      "Operational efficiency"
-    ],
-    targetAudience: ["Cloud users", "DevOps teams", "Security teams", "Compliance officers", "Enterprises"],
-    tags: ["Cloud Security", "Compliance", "Risk Management", "Automation", "Monitoring", "Security Posture"],
+    securityLevel: 'Basic',
+    compliance: ['SOC2', 'ISO27001', 'NIST'],
+    responseTime: 'Immediate access',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/cloud-security-posture",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$1,500-7,000/month",
-    competitors: ["Prisma Cloud", "AWS Security Hub", "Azure Security Center", "Google Cloud Security"],
-    securityScore: 96,
-    useCases: ["Cloud Security", "Compliance Management", "Risk Assessment", "Incident Response", "Policy Enforcement", "Security Monitoring"],
-    compliance: ["SOC 2", "ISO 27001", "NIST", "Cloud security standards", "Industry regulations"],
-    apiAccess: true,
-    whiteLabel: true,
-    customBranding: true,
-    prioritySupport: true,
-    trainingIncluded: true,
-    dataRetention: "7 years",
-    uptime: "99.9%",
-    securityFeatures: ["Continuous monitoring", "Automated remediation", "Risk scoring", "Policy enforcement"],
-    integrationTime: "2-4 weeks",
-    scalability: "Multi-cloud deployment",
-    realTimeProcessing: true,
-    multilingualSupport: true,
-    industrySpecific: true,
-    zeroTrust: true,
-    aiPowered: true,
-    quantumResistant: false,
-    threatIntelligence: true
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    }
   },
   {
-    id: 6,
-    name: "IoT Security Guardian",
-    category: "IoT Security",
-    description: "Comprehensive IoT security platform with device authentication, network segmentation, and behavioral monitoring",
-    pricing: "Professional",
-    price: 800,
-    pricingModel: "monthly",
+    id: 'compliance-automation-platform',
+    title: 'Automated Compliance Management Platform',
+    description: 'AI-powered platform that automates compliance monitoring, reporting, and audit preparation for major security frameworks.',
+    category: 'Compliance',
+    price: 1899,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "Device authentication",
-      "Network segmentation",
-      "Behavioral monitoring",
-      "Threat detection",
-      "Vulnerability scanning",
-      "Firmware updates",
-      "Access controls",
-      "Security analytics"
+      'Automated compliance monitoring',
+      'Real-time policy enforcement',
+      'Audit preparation automation',
+      'Compliance reporting',
+      'Policy management',
+      'Risk assessment tools',
+      'Integration with security tools',
+      'Expert consultation'
     ],
-    benefits: [
-      "IoT device protection",
-      "Network security",
-      "Threat prevention",
-      "Compliance adherence",
-      "Operational efficiency",
-      "Risk reduction"
-    ],
-    targetAudience: ["Manufacturing companies", "Healthcare providers", "Smart cities", "Retail chains", "Energy companies"],
-    tags: ["IoT Security", "Device Security", "Network Security", "Threat Detection", "Compliance", "Device Management"],
+    securityLevel: 'Advanced',
+    compliance: ['SOC2', 'ISO27001', 'NIST', 'GDPR', 'HIPAA', 'PCI-DSS'],
+    responseTime: '<1 hour',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/iot-security-guardian",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$800-4,000/month",
-    competitors: ["Armis", "Forescout", "Nozomi Networks", "Claroty"],
-    securityScore: 95,
-    useCases: ["Device Security", "Network Protection", "Threat Detection", "Compliance", "Device Management", "Security Monitoring"],
-    compliance: ["ISO 27001", "NIST", "Industry standards", "IoT security frameworks"],
-    apiAccess: true,
-    whiteLabel: true,
-    customBranding: true,
-    prioritySupport: true,
-    trainingIncluded: true,
-    dataRetention: "5 years",
-    uptime: "99.9%",
-    securityFeatures: ["Device authentication", "Network segmentation", "Behavioral monitoring", "Threat detection"],
-    integrationTime: "2-4 weeks",
-    scalability: "Large IoT deployments",
-    realTimeProcessing: true,
-    multilingualSupport: true,
-    industrySpecific: true,
-    zeroTrust: true,
-    aiPowered: true,
-    quantumResistant: false,
-    threatIntelligence: true
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    }
   }
+<<<<<<< HEAD
 ];
 export default advancedCybersecurityServices2025;
+=======
+];
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87

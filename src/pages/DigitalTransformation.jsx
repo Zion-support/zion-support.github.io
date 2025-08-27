@@ -102,10 +102,14 @@ const stats = [
 export default function DigitalTransformation() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <SEOHead title="Digital Transformation Services - Zion Tech Group" description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage." keywords="digital transformation, business modernization, process automation, technology modernization, change management" canonical="https://ziontechgroup.com/digital-transformation"/>
 =======
       <SEOHead title="Digital Transformation Services - Zion Tech Group" description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage." keywords="digital transformation, business modernization, process automation, technology modernization, change management" url="https://ziontechgroup.com/digital-transformation"/>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8afb
+=======
+      <SEOHead title="Digital Transformation Services - Zion Tech Group" description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage." keywords="digital transformation, business modernization, process automation, technology modernization, change management" url="https://ziontechgroup.com/digital-transformation"/>
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

@@ -77,10 +77,18 @@ export default function EnhancedAccessibility() {
     readingGuide: false,
     distractionFree: false
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   const [activeTab, setActiveTab] = useState('visual');
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [toastType, setToastType] = useState<'success' | 'error' | 'info'>('info');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
     setSettings(prev => ({ ...prev, [key]: value }));
     setToastMessage(`${key} updated`);
@@ -92,6 +100,10 @@ export default function EnhancedAccessibility() {
     
     setTimeout(() => setShowToast(false), 3000);
   }, []);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   const applySetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
     const root = document.documentElement;
     
@@ -449,6 +461,10 @@ export default function EnhancedAccessibility() {
                 )}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
             {/* Footer */}
             <div className="flex items-center justify-between p-6 border-t border-gray-200 dark:border-gray-700">
               <button

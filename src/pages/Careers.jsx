@@ -1,4 +1,8 @@
 import { useState } from "react";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 export default function Careers() {
   const [activeTab, setActiveTab] = useState("engineering");
   
@@ -76,6 +80,10 @@ export default function Careers() {
       }
     ]
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   // Benefits list
   const benefits = [
     {
@@ -99,6 +107,10 @@ export default function Careers() {
       icon: "💰"
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-32 pb-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

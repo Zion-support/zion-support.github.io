@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/seo/SEOHead';
@@ -8,6 +9,12 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import SEOHead from "../components/SEOHead.jsx";
 >>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
+=======
+import React, { useState } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from "../components/SEOHead"';
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -84,6 +91,7 @@ export default function CybersecurityServicesPage() {
   ];
 
   return (
+<<<<<<< HEAD
     <>
 =======
 import { ENHANCED_SERVICES } from '@/data/enhancedServices';
@@ -148,6 +156,8 @@ export default function CybersecurityServicesPage() {
     }
   };
   return (
+=======
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
           {/* Services Tab */}
           <TabsContent value="services" className="space-y-12">
             <div className="text-center">
@@ -526,6 +536,7 @@ export default function CybersecurityServicesPage() {
 <>
 >>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
       <SEOHead 
+<<<<<<< HEAD
         title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
         keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
@@ -540,6 +551,10 @@ export default function CybersecurityServicesPage() {
             "name": "Zion Tech Group"
           }
         }}
+=======
+        title="Cybersecurity Services & Solutions - Zion Tech Group" 
+        description="Protect your business with enterprise-grade cybersecurity solutions including threat detection, zero trust security, and compliance services. 24/7 monitoring and support."
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       />
       
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">

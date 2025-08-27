@@ -81,4 +81,8 @@ export default function Home() {
       </motion.section>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87

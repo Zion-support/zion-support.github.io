@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Search } from "lucide-react";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 // Mock blog data for now
 const MOCK_BLOG_POSTS = [
   {
@@ -40,6 +44,10 @@ const MOCK_BLOG_POSTS = [
     isFeatured: false
   }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 // Categories for filtering
 const CATEGORIES = [
   "All Categories",
@@ -49,10 +57,18 @@ const CATEGORIES = [
   "Cloud Computing",
   "Digital Transformation"
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [posts, setPosts] = useState([...MOCK_BLOG_POSTS]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   // Filter blog posts based on search and category
   const filteredPosts = posts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -61,8 +77,15 @@ export default function Blog() {
     const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
+<<<<<<< HEAD
   // Get featured posts
   const featuredPosts = posts.filter(post => post.isFeatured);
+=======
+
+  // Get featured posts
+  const featuredPosts = posts.filter(post => post.isFeatured);
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-32 pb-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -144,6 +167,10 @@ export default function Blog() {
             </select>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
         {/* Blog Posts Grid */}
         {filteredPosts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

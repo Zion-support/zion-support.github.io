@@ -9,6 +9,10 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 export default function Privacy() {
   const privacyPrinciples = [
     {
@@ -32,6 +36,10 @@ export default function Privacy() {
       description: "Privacy is built into everything we do, not added as an afterthought"
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   const dataCategories = [
     {
       category: "Personal Information",
@@ -49,6 +57,10 @@ export default function Privacy() {
       purpose: "To provide customer support and improve our services"
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   const yourRights = [
     "Access your personal data",
     "Correct inaccurate information",
@@ -57,6 +69,10 @@ export default function Privacy() {
     "Data portability",
     "Withdraw consent"
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -81,6 +97,10 @@ export default function Privacy() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       {/* Privacy Principles Section */}
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
@@ -115,6 +135,10 @@ export default function Privacy() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       {/* Data Collection Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -158,6 +182,10 @@ export default function Privacy() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       {/* Your Rights Section */}
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
@@ -189,6 +217,10 @@ export default function Privacy() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       {/* Data Security Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -252,6 +284,10 @@ export default function Privacy() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">

@@ -4,16 +4,24 @@ interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string;
+<<<<<<< HEAD
   canonical?: string;
+=======
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   image?: string;
   ogImage?: string;
   url?: string;
+<<<<<<< HEAD
   type?: string;
+=======
+  type?: 'website' | 'article' | 'product' | 'service';
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+<<<<<<< HEAD
   structuredData?: any;
 }
 export function SEO({ 
@@ -50,10 +58,39 @@ export function SEO({
       "https://linkedin.com/company/ziontechgroup",
       "https://facebook.com/ziontechgroup"
     ],
+=======
+}
+
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Leading AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation solutions. Expert IT consulting and innovative technology services.',
+  keywords = 'AI, artificial intelligence, cybersecurity, cloud computing, digital transformation, IT consulting, technology solutions, machine learning, blockchain, IoT, quantum computing',
+  image = '/og-image.svg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = []
+}) => {
+  const structuredData: any = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.svg",
+    "description": description,
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    },
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
+      "telephone": "+1-555-0123",
       "contactType": "customer service",
+<<<<<<< HEAD
       "areaServed": "US",
       "availableLanguage": "English"
     },
@@ -63,13 +100,52 @@ export function SEO({
     }
   };
   const finalStructuredData = structuredData || defaultStructuredData;
+=======
+      "email": "contact@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup",
+      "https://facebook.com/ziontechgroup"
+    ],
+    "foundingDate": "2020",
+    "numberOfEmployees": "50-100",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7128,
+        "longitude": -74.0060
+      },
+      "geoRadius": "50000"
+    }
+  };
+
+  if (type === 'article') {
+    structuredData["@type"] = "Article";
+    structuredData["headline"] = title;
+    structuredData["description"] = description;
+    structuredData["author"] = {
+      "@type": "Person",
+      "name": author
+    };
+    if (publishedTime) structuredData["datePublished"] = publishedTime;
+    if (modifiedTime) structuredData["dateModified"] = modifiedTime;
+    if (section) structuredData["articleSection"] = section;
+    if (tags.length > 0) structuredData["keywords"] = tags.join(', ');
+  }
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   return (
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content={author} />
+<<<<<<< HEAD
       <link rel="canonical" href={canonicalUrl} />
+=======
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       
       {/* Open Graph */}
       <meta property="og:type" content={type} />
@@ -92,20 +168,25 @@ export function SEO({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+<<<<<<< HEAD
       <meta name="twitter:image" content={imageUrl} />
       
       {/* Additional meta tags */}
+=======
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      
+      {/* Additional Meta Tags */}
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
       
+<<<<<<< HEAD
       {/* Favicons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
@@ -125,11 +206,14 @@ export function SEO({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://api.ziontechgroup.com" />
       
+=======
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
+        {JSON.stringify(structuredData)}
       </script>
       
+<<<<<<< HEAD
       {/* Website structured data */}
       {type === 'website' && (
         <script type="application/ld+json">
@@ -173,3 +257,34 @@ export function SEO({
     </Helmet>
   );
 }
+=======
+      {/* Additional SEO Meta Tags */}
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      
+      {/* Mobile Meta Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      
+      {/* Security Meta Tags */}
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="Content-Language" content="en" />
+      
+      {/* Performance Meta Tags */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+    </Helmet>
+  );
+};
+
+export default SEO;
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87

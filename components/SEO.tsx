@@ -15,7 +15,7 @@ export interface SEOProps {
 	author?: string;
 	section?: string;
 	tags?: string[];
-	structuredData?: unknown;
+	structuredData?: Record<string, any>;
 	noindex?: boolean;
 	nofollow?: boolean;
 }
@@ -104,12 +104,18 @@ export const SEO: React.FC<SEOProps> = ({
 			{type === 'article' && tags?.length
 				? tags.map((tag, index) => <meta key={index} property="article:tag" content={tag} />)
 				: null}
+<<<<<<< HEAD
 			{structuredData ? (
+=======
+
+			{structuredData && (
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
 				/>
-			) : (
+			)}
+			{!structuredData && (
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
@@ -138,7 +144,7 @@ export const SEO: React.FC<SEOProps> = ({
 								},
 							},
 						]),
-					}},
+					}}
 				/>
 			)}
 		</Head>

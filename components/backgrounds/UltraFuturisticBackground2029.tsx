@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface Particle {
   x: number;
@@ -11,6 +11,7 @@ interface Particle {
   type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk';
 }
 export default function UltraFuturisticBackground2029() {
+  const [isClient, setIsClient] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
@@ -41,6 +42,7 @@ export default function UltraFuturisticBackground2029() {
     }> = [];
     // Initialize particles with enhanced variety
     const initParticles = () => {
+<<<<<<< HEAD
       particles = [];
       for (let i = 0; i < 200; i++) {
         const type = Math.random() > 0.7 ? 'quantum' : Math.random() > 0.5 ? 'neon' : 'hologram';
@@ -64,6 +66,8 @@ export default function UltraFuturisticBackground2029() {
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles
     const initParticles = () => {
+=======
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       const particles: Particle[] = [];
       const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
       for (let i = 0; i < particleCount; i++) {
@@ -87,7 +91,22 @@ export default function UltraFuturisticBackground2029() {
       }
       particlesRef.current = particles;
     };
+<<<<<<< HEAD
     initParticles();
+=======
+
+    const resizeCanvas = () => {
+      if (canvas) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        initParticles();
+      }
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
