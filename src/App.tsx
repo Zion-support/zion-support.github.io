@@ -60,6 +60,10 @@ const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025.tsx'));
 const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025.tsx'));
 
+// 2026 Innovative Services
+const UltimateInnovativeServices2026 = React.lazy(() => import('./pages/UltimateInnovativeServices2026.tsx'));
+const ComprehensiveServicesOverview2026 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2026.tsx'));
+
 // Admin pages
 const Admin = React.lazy(() => import('./pages/Admin.tsx'));
 const AdminDashboard = React.lazy(() => import('./pages/AdminDashboard.tsx'));
@@ -140,6 +144,10 @@ function App() {
             <Route path="/it-services" element={<ITServicesPage />} />
             <Route path="/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />
             <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+            
+            {/* 2026 Innovative Services Routes */}
+            <Route path="/ultimate-innovative-services-2026" element={<UltimateInnovativeServices2026 />} />
+            <Route path="/comprehensive-services-overview-2026" element={<ComprehensiveServicesOverview2026 />} />
             
             {/* Admin Routes */}
             <Route path="/admin" element={<Admin />} />
