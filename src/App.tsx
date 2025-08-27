@@ -44,8 +44,6 @@ const Training = React.lazy(() => import('./pages/Training'));
 const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
-const Documentation = React.lazy(() => import('./pages/Documentation'));
-
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
 const Help = React.lazy(() => import('./pages/Help'));
@@ -54,9 +52,6 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/Equipment'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const MarketplaceProducts = React.lazy(() => import('./pages/marketplace/Products'));
 const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'));
 const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipment'));
@@ -93,7 +88,6 @@ const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHea
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 
 // Accessibility page
