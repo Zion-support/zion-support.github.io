@@ -96,7 +96,7 @@ const DashboardRoutes = () => {
         path="/messages"
         element={
           <ProtectedRoute>
-            <MessagingInbox />
+            <div>Messages Page</div>
           </ProtectedRoute>
         } 
       />
@@ -104,7 +104,7 @@ const DashboardRoutes = () => {
         path="/inbox" 
         element={
           <ProtectedRoute>
-            <MessagingInbox />
+            <div>Inbox Page</div>
           </ProtectedRoute>
         } 
       />
@@ -168,7 +168,7 @@ const DashboardRoutes = () => {
         path="/referrals" 
         element={
           <ProtectedRoute>
-            <Referrals />
+            <div>Referrals Page</div>
           </ProtectedRoute>
         } 
       />
@@ -184,7 +184,7 @@ const DashboardRoutes = () => {
         path="/wallet"
         element={
           <ProtectedRoute>
-            <WalletPage />
+            <div>Wallet Page</div>
           </ProtectedRoute>
         }
       />
