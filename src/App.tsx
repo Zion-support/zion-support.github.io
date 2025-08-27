@@ -24,6 +24,28 @@ const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 
+// Additional simple pages
+const News = React.lazy(() => import('./pages/News'));
+const Events = React.lazy(() => import('./pages/Events'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Help = React.lazy(() => import('./pages/Help'));
+const Security = React.lazy(() => import('./pages/Security'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Talent = React.lazy(() => import('./pages/Talent'));
+const Equipment = React.lazy(() => import('./pages/Equipment'));
+const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+const MarketplaceProducts = React.lazy(() => import('./pages/marketplace/Products'));
+const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'));
+const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipment'));
+const MarketplaceServices = React.lazy(() => import('./pages/marketplace/Services'));
+const LoginPage = React.lazy(() => import('./pages/Login'));
+
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
@@ -44,6 +66,18 @@ const WebsiteAnalytics = React.lazy(() => import('./pages/services/WebsiteAnalyt
 const ITHelpdesk = React.lazy(() => import('./pages/services/ITHelpdesk'));
 const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTracking'));
 const MobileSurvey = React.lazy(() => import('./pages/services/MobileSurvey'));
+// Additional new service pages
+const AIPoweredSEO = React.lazy(() => import('./pages/services/AIPoweredSEO'));
+const InterviewAssessmentAI = React.lazy(() => import('./pages/services/InterviewAssessmentAI'));
+const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatform'));
+const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
+const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
+// New AI-powered micro SAAS services
+const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
+const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
+const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
+const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -59,18 +93,7 @@ const Careers = () => (
   </div>
 );
 
-const Marketplace = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Marketplace - Zion Tech Group"
-      description="Explore our marketplace of AI-powered technology solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
-      <p className="text-xl text-gray-300">Explore our solutions</p>
-    </div>
-  </div>
-);
+// (Removed inline Marketplace placeholder; we now use the dedicated page component)
 
 const NotFound = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -103,6 +126,26 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/pricing" element={<Pricing />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/security" element={<Security />} />
+              <Route path="/status" element={<Status />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/talent" element={<Talent />} />
+              <Route path="/equipment" element={<Equipment />} />
+              <Route path="/request-quote" element={<RequestQuote />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/marketplace/products" element={<MarketplaceProducts />} />
+              <Route path="/marketplace/talent" element={<MarketplaceTalent />} />
+              <Route path="/marketplace/equipment" element={<MarketplaceEquipment />} />
+              <Route path="/marketplace/services" element={<MarketplaceServices />} />
+              <Route path="/login" element={<LoginPage />} />
               <Route path="/services" element={<Services />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
@@ -131,6 +174,18 @@ function App() {
               <Route path="/services/it-helpdesk" element={<ITHelpdesk />} />
               <Route path="/services/affiliate-tracking" element={<AffiliateTracking />} />
               <Route path="/services/mobile-survey" element={<MobileSurvey />} />
+              {/* Additional new service routes */}
+              <Route path="/services/ai-seo" element={<AIPoweredSEO />} />
+              <Route path="/services/interview-assessment" element={<InterviewAssessmentAI />} />
+              <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
+              <Route path="/services/dsr-portal" element={<DSRPortal />} />
+              <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+              {/* New AI-powered micro SAAS service routes */}
+              <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
+              <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
+              <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
+              <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+              <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
