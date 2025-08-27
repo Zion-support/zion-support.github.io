@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import Head from 'next/head';
+=======
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Star, Award, Globe, Rocket, Target, Lightbulb } from 'lucide-react'
@@ -6,9 +9,22 @@ import PageTransition from '../src/components/PageTransition'
 export default function Index() {
 	const title = 'Zion Tech Group — AI, Cloud, and Cybersecurity Solutions'
 	const description = 'We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business.'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8e43
 
 export default function Home() {
 	return (
+<<<<<<< HEAD
+		<div>
+			<Head>
+				<title>Zion Tech Group</title>
+			</Head>
+			<main className="container mx-auto p-6">
+				<h1 className="text-2xl font-semibold">Welcome to Zion Tech Group</h1>
+				<p className="mt-4 text-gray-600">Site is under maintenance. Please check back soon.</p>
+			</main>
+		</div>
+	);
+=======
 		<PageTransition>
 			{/* Hero Section */}
 			<section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm:py-32">
@@ -265,4 +281,5 @@ export default function Home() {
 			</section>
 		</PageTransition>
 	)
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8e43
 }
