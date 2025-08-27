@@ -117,6 +117,23 @@ export default function ServicesAdvertisingPage() {
       note: 'SMB budgets: $50–$2,000/mo.'
     }
   ];
+  const external = {
+    privacy: [
+      { name: 'OneTrust', href: 'https://www.onetrust.com/pricing/' },
+      { name: 'Transcend', href: 'https://transcend.io/pricing/' }
+    ],
+    finops: [
+      { name: 'CloudZero', href: 'https://www.cloudzero.com/pricing' },
+      { name: 'Vantage', href: 'https://www.vantage.sh/pricing' }
+    ],
+    devex: [
+      { name: 'BuildPulse', href: 'https://buildpulse.io/pricing' }
+    ],
+    seo: [
+      { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },
+      { name: 'Little Warden', href: 'https://littlewarden.com/pricing' }
+    ]
+  } as const;
   function ext(url: string) {
     return (
       <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
@@ -159,6 +176,55 @@ export default function ServicesAdvertisingPage() {
             </div>
           </section>
           <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Spotlight: New Expert Services</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">Developer Productivity Copilot</h3>
+                <p className="text-slate-300 mb-2">AI PR reviews, test generation, and CI insights.</p>
+                <div className="text-sm text-slate-400">Typical: $19–$39/dev/mo</div>
+                <ul className="text-slate-300 space-y-1 mt-2">
+                  <li><a className="text-cyan-400 underline" href="https://github.com/features/copilot#pricing" target="_blank" rel="noopener noreferrer">github.com/features/copilot#pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://codeium.com/pricing" target="_blank" rel="noopener noreferrer">codeium.com/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://buildpulse.io/pricing" target="_blank" rel="noopener noreferrer">buildpulse.io/pricing</a></li>
+                </ul>
+                <div className="mt-3"><a href="/services/developer-productivity-copilot" className="text-cyan-400 underline">Learn more</a></div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">AI Sales Assistant</h3>
+                <p className="text-slate-300 mb-2">Qualify leads, personalize outreach, schedule meetings.</p>
+                <div className="text-sm text-slate-400">Typical: $30–$150/user/mo</div>
+                <ul className="text-slate-300 space-y-1 mt-2">
+                  <li><a className="text-cyan-400 underline" href="https://www.apollo.io/pricing" target="_blank" rel="noopener noreferrer">apollo.io/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://www.lemlist.com/pricing" target="_blank" rel="noopener noreferrer">lemlist.com/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://www.hubspot.com/pricing/sales" target="_blank" rel="noopener noreferrer">hubspot.com/pricing/sales</a></li>
+                </ul>
+                <div className="mt-3"><a href="/services/ai-sales-assistant" className="text-cyan-400 underline">Learn more</a></div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">Security Posture Guardian</h3>
+                <p className="text-slate-300 mb-2">Misconfig and secret scanning with auto-fixes.</p>
+                <div className="text-sm text-slate-400">Typical: $100–$2,000/mo</div>
+                <ul className="text-slate-300 space-y-1 mt-2">
+                  <li><a className="text-cyan-400 underline" href="https://www.wiz.io/pricing" target="_blank" rel="noopener noreferrer">wiz.io/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://snyk.io/plans/" target="_blank" rel="noopener noreferrer">snyk.io/plans</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://www.paloaltonetworks.com/prisma/cloud/pricing" target="_blank" rel="noopener noreferrer">paloaltonetworks.com/prisma/cloud/pricing</a></li>
+                </ul>
+                <div className="mt-3"><a href="/services/security-posture-guardian" className="text-cyan-400 underline">Learn more</a></div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">AI Data Pipeline Optimizer</h3>
+                <p className="text-slate-300 mb-2">Optimize ETL/ELT and RAG cost/latency.</p>
+                <div className="text-sm text-slate-400">Typical: $200–$2,000/mo</div>
+                <ul className="text-slate-300 space-y-1 mt-2">
+                  <li><a className="text-cyan-400 underline" href="https://www.databricks.com/product/pricing" target="_blank" rel="noopener noreferrer">databricks.com/product/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://www.snowflake.com/pricing/" target="_blank" rel="noopener noreferrer">snowflake.com/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://www.getdbt.com/pricing" target="_blank" rel="noopener noreferrer">getdbt.com/pricing</a></li>
+                </ul>
+                <div className="mt-3"><a href="/services/ai-data-pipeline-optimizer" className="text-cyan-400 underline">Learn more</a></div>
+              </div>
+            </div>
+          </section>
+          <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New in Q2 2025</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
@@ -171,7 +237,16 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Secret Rotation Orchestrator', price: '$129/mo', href: '/services/secret-rotation-orchestrator' },
                 { name: 'SaaS Billing Anomaly Guard', price: '$119/mo', href: '/services/saas-billing-anomaly-guard' },
                 { name: 'ML Feature Store Starter', price: '$149/mo', href: '/services/ml-feature-store-starter' },
-                { name: 'Edge Cron Orchestrator', price: '$59/mo', href: '/services/edge-cron-orchestrator' }
+                { name: 'Edge Cron Orchestrator', price: '$59/mo', href: '/services/edge-cron-orchestrator' },
+                { name: 'GDPR DSAR Portal', price: '$99/mo', href: '/services/gdpr-dsar-portal' },
+                { name: 'SOC 2 Evidence Collector', price: '$149/mo', href: '/services/soc2-evidence-collector' },
+                { name: 'SEO Change Monitor', price: '$69/mo', href: '/services/seo-change-monitor' },
+                { name: 'CI/CD Flaky Test Detector', price: '$59/mo', href: '/services/cicd-flaky-test-detector' },
+                { name: 'Cloud Cost Anomaly Guard', price: '$79/mo', href: '/services/cloud-cost-anomaly-guard' },
+                { name: 'Data Pipeline SLA Tracker', price: '$89/mo', href: '/services/data-pipeline-sla-tracker' },
+                { name: 'Edge Image Optimizer', price: '$39/mo', href: '/services/edge-image-optimizer' },
+                { name: 'Managed Kubernetes SRE', price: '$2,500/mo', href: '/services/managed-kubernetes-sre' },
+                { name: 'Zero Trust Rollout Coaching', price: '$4,000/engagement', href: '/services/zero-trust-rollout-coaching' }
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
@@ -179,6 +254,47 @@ export default function ServicesAdvertisingPage() {
                   <div className="text-gray-200 mt-2">{o.name}</div>
                 </a>
               ))}
+            </div>
+          </section>
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Market References for New Offers</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">Privacy & DSAR</h3>
+                <ul className="text-slate-300 space-y-1">
+                  {external.privacy.map((l) => (
+                    <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{new URL(l.href).host}/pricing</a></li>
+                  ))}
+                </ul>
+                <div className="text-sm text-slate-400 mt-3">Typical: $50–$500/mo.</div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">FinOps</h3>
+                <ul className="text-slate-300 space-y-1">
+                  {external.finops.map((l) => (
+                    <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{new URL(l.href).host}/pricing</a></li>
+                  ))}
+                </ul>
+                <div className="text-sm text-slate-400 mt-3">Typical: $50–$500/mo.</div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">Developer Productivity</h3>
+                <ul className="text-slate-300 space-y-1">
+                  {external.devex.map((l) => (
+                    <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{new URL(l.href).host}/pricing</a></li>
+                  ))}
+                </ul>
+                <div className="text-sm text-slate-400 mt-3">Typical: $20–$200/mo.</div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">SEO Monitoring</h3>
+                <ul className="text-slate-300 space-y-1">
+                  {external.seo.map((l) => (
+                    <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{new URL(l.href).host}/pricing</a></li>
+                  ))}
+                </ul>
+                <div className="text-sm text-slate-400 mt-3">Typical: $20–$150/mo.</div>
+              </div>
             </div>
           </section>
           <section>

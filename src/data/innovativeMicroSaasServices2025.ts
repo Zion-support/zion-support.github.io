@@ -1761,6 +1761,104 @@ export const SPECIALIZED_SERVICES = [
     price: 3200,
     marketPrice: "$3,200 - $9,000/month"
   }
+  ,
+  // Newly added diversified, real offerings for 2025
+  {
+    id: "ai-compliance-copilot",
+    title: "AI Compliance Copilot",
+    description: "Automate evidence collection, policy mapping, and control testing for SOC 2, ISO 27001, HIPAA and GDPR with human-in-the-loop reviews.",
+    category: "Security & Compliance",
+    price: 2500,
+    marketPrice: "$2,500 - $10,000/month"
+  },
+  {
+    id: "finops-cost-optimizer",
+    title: "Cloud FinOps Cost Optimizer",
+    description: "Continuous cloud cost monitoring, anomaly detection, rightsizing, and commitment planning across AWS, Azure, and GCP.",
+    category: "Cloud & FinOps",
+    price: 1800,
+    marketPrice: "$1,800 - $8,000/month"
+  },
+  {
+    id: "data-pipeline-observability",
+    title: "Data Pipeline Observability",
+    description: "End-to-end lineage, data quality checks, SLAs, and incident routing for modern data stacks (dbt, Airflow, Snowflake).",
+    category: "Data & Analytics",
+    price: 2200,
+    marketPrice: "$2,200 - $6,500/month"
+  },
+  {
+    id: "mlops-platform-setup",
+    title: "MLOps Platform Setup",
+    description: "Production-ready MLOps stack with model registry, CI/CD, feature store, monitoring, and rollback playbooks.",
+    category: "AI & MLOps",
+    price: 12000,
+    marketPrice: "$8,000 - $40,000/project or $2,000 - $6,000/month"
+  },
+  {
+    id: "incident-response-retainer",
+    title: "Incident Response Retainer",
+    description: "24/7 on-call IR team, tabletop exercises, threat hunting, and post-incident forensics with guaranteed SLAs.",
+    category: "Cybersecurity",
+    price: 5000,
+    marketPrice: "$3,000 - $20,000/month"
+  },
+  {
+    id: "cloud-migration-factory",
+    title: "Cloud Migration Factory",
+    description: "Factory model for migrating workloads to AWS/Azure/GCP with automated discovery, TCO modeling, and landing zone setup.",
+    category: "Cloud & DevOps",
+    price: 25000,
+    marketPrice: "$10,000 - $75,000/project"
+  },
+  {
+    id: "ai-code-review-bot",
+    title: "AI Code Review Bot",
+    description: "Language-model based static review that detects security issues, performance antipatterns, and proposes diffs in pull requests.",
+    category: "Developer Productivity",
+    price: 15,
+    marketPrice: "$12 - $49/developer/month"
+  },
+  {
+    id: "automated-penetration-testing",
+    title: "Automated Penetration Testing",
+    description: "Continuous automated pen-testing with authenticated scans, attack path mapping, and prioritized remediation guidance.",
+    category: "Security Testing",
+    price: 3000,
+    marketPrice: "$2,000 - $12,000/month"
+  },
+  {
+    id: "ecommerce-personalization-engine",
+    title: "E-commerce Personalization Engine",
+    description: "Behavioral segmentation, real-time recommendations, bundles, and pricing personalization for Shopify and headless commerce.",
+    category: "E-commerce & Growth",
+    price: 2400,
+    marketPrice: "$2,400 - $9,000/month"
+  },
+  {
+    id: "vendor-risk-assessment-platform",
+    title: "Vendor Risk Assessment Platform",
+    description: "Automate third-party risk questionnaires, evidence reviews, SLA tracking, and continuous monitoring of vendor posture.",
+    category: "GRC & Risk",
+    price: 1900,
+    marketPrice: "$1,500 - $7,000/month"
+  },
+  {
+    id: "email-deliverability-optimizer",
+    title: "Email Deliverability Optimizer",
+    description: "Warm-up automation, DMARC/DKIM/SPF health, reputation monitoring, and content scoring to lift inbox placement.",
+    category: "Marketing Technology",
+    price: 700,
+    marketPrice: "$500 - $4,000/month"
+  },
+  {
+    id: "data-governance-catalog",
+    title: "Data Governance Catalog",
+    description: "Unified glossary, PII discovery, access policies, and stewardship workflows integrated with Snowflake/BigQuery and Lakehouse.",
+    category: "Data Governance",
+    price: 2100,
+    marketPrice: "$1,000 - $8,000/month"
+  }
 ];
 
 export default INNOVATIVE_MICRO_SAAS_SERVICES_2025;

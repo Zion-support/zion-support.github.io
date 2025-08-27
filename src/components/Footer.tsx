@@ -49,6 +49,7 @@ export function Footer() {
       icon: Globe,
       links: [
         { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Partners', path: '/partners', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Blog', path: '/blog', icon: Newspaper },
         { name: 'Contact', path: '/contact', icon: Phone }
@@ -63,7 +64,12 @@ export function Footer() {
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain },
-        { name: 'All Services', path: '/services', icon: Zap }
+        // Newly exposed landing pages
+        { name: 'AI Services', path: '/ai-services', icon: Brain },
+        { name: 'IT Services', path: '/it-services', icon: Building },
+        { name: 'Micro SaaS', path: '/micro-saas', icon: Zap },
+        { name: 'All Services', path: '/services', icon: Zap },
+        { name: 'Pricing', path: '/pricing', icon: DollarSign }
       ]
     },
     {
@@ -72,16 +78,19 @@ export function Footer() {
       links: [
         { name: 'Blog', path: '/blog', icon: FileText },
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
-        { name: 'Request a Quote', path: '/request-quote', icon: FileText }
+        { name: 'Request a Quote', path: '/request-quote', icon: FileText },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe }
       ]
     },
     {
       title: 'Support',
       icon: Shield,
       links: [
-        { name: 'Contact Us', path: '/contact', icon: Phone },
+        { name: 'Contact Us', path: '/contact', icon: Phone }, 
         { name: 'Dashboard', path: '/dashboard', icon: Activity },
-        { name: 'Login', path: '/login', icon: HelpCircle }
+        { name: 'Login', path: '/login', icon: HelpCircle },
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Support', path: '/support', icon: HelpCircle }
       ]
     }
   ];
@@ -128,20 +137,20 @@ export function Footer() {
   const contactInfo = [
     {
       name: "Email",
-      value: "info@ziontechgroup.com",
-      url: "mailto:info@ziontechgroup.com",
+      value: "kleber@ziontechgroup.com",
+      url: "mailto:kleber@ziontechgroup.com",
       icon: Mail
     },
     {
       name: "Phone",
-      value: "+1 (555) 123-4567",
-      url: "tel:+15551234567",
+      value: "+1 302 464 0950",
+      url: "tel:+13024640950",
       icon: Phone
     },
     {
       name: "Address",
-      value: "123 Innovation Drive, Tech City, TC 12345",
-      url: "https://maps.google.com",
+      value: "364 E Main St STE 1008 Middletown DE 19709",
+      url: "https://www.google.com/maps/search/?api=1&query=364+E+Main+St+STE+1008+Middletown+DE+19709",
       icon: MapPin
     }
   ];
@@ -258,9 +267,8 @@ export function Footer() {
           className="fixed bottom-8 right-8 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          aria-label="Scroll to top"
         >
-          <ArrowUp className="w-6 h-6" />
+          <ArrowUp className="w-5 h-5" />
         </motion.button>
       </div>
     </footer>

@@ -88,6 +88,133 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     }
   },
 
+  // RAG Search for Enterprise Knowledge
+  {
+    id: "enterprise-rag-knowledge-search",
+    title: "Enterprise RAG Knowledge Search",
+    description: "Secure retrieval‑augmented generation over your docs, wikis, tickets, and data lakes with granular ACLs and audit trails.",
+    category: "AI & Analytics",
+    subcategory: "Enterprise Search",
+    price: 1299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Connectors (Google Drive, Confluence, Jira, Slack, SharePoint)",
+      "SSO + row‑level permissions",
+      "Citations + sources",
+      "Query analytics",
+      "Prompt guardrails",
+      "Feedback loops",
+      "Vector + hybrid search",
+      "PII redaction",
+      "Air‑gapped option",
+      "Admin dashboard"
+    ],
+    benefits: [
+      "Faster answers for employees",
+      "Lower ticket volume",
+      "Reduced onboarding time",
+      "Improved knowledge reuse",
+      "Auditable responses"
+    ],
+    useCases: ["IT helpdesk", "Policy Q&A", "Onboarding", "Engineering runbooks"],
+    targetAudience: ["IT", "HR", "Support", "Engineering"],
+    tags: ["RAG", "Search", "Vector DB", "Security"],
+    estimatedDelivery: "2–3 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,000 – $4,000/month",
+    roi: "200–400%",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+  },
+
+  // Edge Computer Vision for Manufacturing QA
+  {
+    id: "edge-vision-quality-inspection",
+    title: "Edge Vision Quality Inspection",
+    description: "On‑prem/edge CV models detect defects in real‑time on production lines with sub‑100ms latency and offline operation.",
+    category: "IoT & Edge Computing",
+    subcategory: "Computer Vision",
+    price: 3999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Pretrained defect models",
+      "Active learning",
+      "Edge inference acceleration",
+      "Low‑light robustness",
+      "PLC/SCADA integration",
+      "Operator assist UI",
+      "Drift monitoring",
+      "Line‑side analytics",
+      "REST/OPC‑UA APIs",
+      "24/7 monitoring"
+    ],
+    benefits: [
+      "Scrap reduction",
+      "Higher first‑pass yield",
+      "Fewer line stoppages",
+      "Traceable quality data",
+      "Rapid model iteration"
+    ],
+    useCases: ["Electronics", "Automotive", "Food & Bev", "Pharma"],
+    targetAudience: ["Plant managers", "Quality engineers", "Ops"],
+    tags: ["Edge AI", "Computer Vision", "Manufacturing", "OPC‑UA"],
+    estimatedDelivery: "6–10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,000 – $12,000/month",
+    roi: "300–600%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology: ["ONNX Runtime", "TensorRT", "OpenVINO", "gRPC"],
+      integrations: ["Ignition", "Kepware", "Siemens"],
+      apiEndpoints: 27,
+      uptime: "99.95%",
+      security: ["Network isolation", "Offline mode"]
+    }
+  },
+
+  // LLM Content Compliance for Regulated Industries
+  {
+    id: "llm-content-compliance",
+    title: "LLM Content Compliance",
+    description: "Policy‑aware generation for regulated industries with automated review, redaction, and archiving for audits.",
+    category: "AI & Legal Tech",
+    subcategory: "Compliance",
+    price: 1599,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Custom policy definitions",
+      "PII/PHI detection",
+      "Redaction + templating",
+      "Holdouts + approvals",
+      "Immutable logs",
+      "DLP integrations",
+      "Watermarking",
+      "Human‑in‑the‑loop",
+      "Model choice controls",
+      "E‑discovery ready"
+    ],
+    benefits: [
+      "Safer AI adoption",
+      "Lower legal risk",
+      "Faster content review",
+      "Audit readiness",
+      "Consistent brand voice"
+    ],
+    useCases: ["Healthcare content", "Bank marketing", "Legal drafting"],
+    targetAudience: ["Compliance", "Legal", "Marketing Ops"],
+    tags: ["LLM", "Compliance", "DLP", "Audit"],
+    estimatedDelivery: "3–5 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,200 – $6,000/month",
+    roi: "200–300%",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+  }
+
   // AR/VR Enterprise Solutions
   {
     id: "ar-vr-enterprise-solutions",

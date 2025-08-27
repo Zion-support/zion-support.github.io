@@ -36,12 +36,13 @@ import {
   ChevronDown,
   Handshake,
   Atom,
-  Link,
+  Link as LinkIcon,
   Wifi,
   HeartPulse,
   DollarSign,
   Leaf,
-  Building
+  Building,
+  User
 } from 'lucide-react';
 
 export const EnhancedSidebar: React.FC = () => {
@@ -67,7 +68,9 @@ export const EnhancedSidebar: React.FC = () => {
       items: [
         { name: "Home", href: "/", icon: Home },
         { name: "Services", href: "/services", icon: Zap },
+        { name: "Pricing", href: "/pricing", icon: DollarSign },
         { name: "Blog", href: "/blog", icon: FileText },
+        { name: "Partners", href: "/partners", icon: Handshake },
         { name: "About", href: "/about", icon: Users },
         { name: "Contact", href: "/contact", icon: MessageCircle },
         { name: "Careers", href: "/careers", icon: Briefcase }
@@ -90,6 +93,9 @@ export const EnhancedSidebar: React.FC = () => {
       items: [
         { name: "FAQ", href: "/faq", icon: HelpCircle },
         { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },
+        { name: "Help Center", href: "/help", icon: HelpCircle },
+        { name: "Support", href: "/support", icon: HelpCircle },
+        { name: "Sitemap", href: "/sitemap", icon: Globe },
         { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
         { name: "Login", href: "/login", icon: User }
       ]
@@ -98,7 +104,7 @@ export const EnhancedSidebar: React.FC = () => {
 
   const quickActions = [
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
-    { name: "Book Demo", href: "/demo", icon: Calendar, variant: "secondary" },
+    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
   ];
 
