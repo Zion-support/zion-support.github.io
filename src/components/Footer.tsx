@@ -68,6 +68,8 @@ export function Footer() {
         { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
         { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
         { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Healthcare Diagnostics', path: '/services/ai-healthcare-diagnostics', icon: Heart },
+        { name: 'AI Legal Document Analyzer', path: '/services/ai-legal-document-analyzer', icon: FileText },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
         { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
         { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
@@ -192,7 +194,7 @@ export function Footer() {
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-white">
+                <h3 className="text-lg font-bold text-white futuristic-heading neon-text-cyan">
                   Zion Tech Group
                 </h3>
                 <p className="text-sm text-zion-slate-light">Innovating the future</p>

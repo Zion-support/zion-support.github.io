@@ -56,26 +56,30 @@ const EnhancedLoadingSpinner = () => (
   </div>
 );
 
-// Futuristic animated background component
+// Enhanced futuristic animated background component
 const FuturisticBackground = () => (
   <div className="fixed inset-0 overflow-hidden pointer-events-none">
-    {/* Animated grid with neon effect */}
-    <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+    {/* Enhanced animated grid with neon effect */}
+    <div className="absolute inset-0 futuristic-grid"></div>
     
     {/* Enhanced floating particles with neon glow */}
     <div className="absolute inset-0">
-      {[...Array(30)].map((_, i) => (
+      {[...Array(40)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
+          className={`absolute w-1 h-1 rounded-full opacity-80 ${
+            i % 3 === 0 ? 'bg-cyan-400 shadow-lg shadow-cyan-400/50' :
+            i % 3 === 1 ? 'bg-purple-400 shadow-lg shadow-purple-400/50' :
+            'bg-green-400 shadow-lg shadow-green-400/50'
+          }`}
           animate={{
-            x: [0, 150, 0],
-            y: [0, -150, 0],
-            opacity: [0.4, 1, 0.4],
-            scale: [0.5, 1.5, 0.5],
+            x: [0, 200, 0],
+            y: [0, -200, 0],
+            opacity: [0.3, 1, 0.3],
+            scale: [0.5, 1.8, 0.5],
           }}
           transition={{
-            duration: 4 + i * 0.3,
+            duration: 5 + i * 0.2,
             repeat: Infinity,
             delay: i * 0.1,
             ease: "easeInOut"
@@ -88,56 +92,19 @@ const FuturisticBackground = () => (
       ))}
     </div>
     
-    {/* Enhanced gradient orbs with neon glow */}
-    <motion.div 
-      className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full blur-3xl"
-      animate={{
-        scale: [1, 1.2, 1],
-        opacity: [0.3, 0.6, 0.3],
-      }}
-      transition={{
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }}
-    />
-    <motion.div 
-      className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl"
-      animate={{
-        scale: [1.2, 1, 1.2],
-        opacity: [0.6, 0.3, 0.6],
-      }}
-      transition={{
-        duration: 5,
-        repeat: Infinity,
-        ease: "easeInOut",
-        delay: 1
-      }}
-    />
+    {/* Enhanced floating orbs with CSS classes */}
+    <div className="floating-orb"></div>
+    <div className="floating-orb"></div>
+    <div className="floating-orb"></div>
     
-    {/* New neon accent orbs */}
-    <motion.div 
-      className="absolute top-1/2 left-1/4 w-48 h-48 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-2xl"
-      animate={{
-        scale: [1, 1.3, 1],
-        opacity: [0.2, 0.5, 0.2],
-      }}
-      transition={{
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut",
-        delay: 2
-      }}
-    />
-    
-    {/* Animated neon lines */}
+    {/* Animated neon lines with enhanced effects */}
     <div className="absolute inset-0">
-      {[...Array(5)].map((_, i) => (
+      {[...Array(7)].map((_, i) => (
         <motion.div
           key={`line-${i}`}
           className="absolute h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
           style={{
-            top: `${20 + i * 15}%`,
+            top: `${15 + i * 12}%`,
             left: '0%',
             right: '0%',
           }}
@@ -146,40 +113,45 @@ const FuturisticBackground = () => (
             scaleX: [0, 1, 0],
           }}
           transition={{
-            duration: 3,
+            duration: 4,
             repeat: Infinity,
-            delay: i * 0.5,
+            delay: i * 0.4,
             ease: "easeInOut"
           }}
         />
       ))}
     </div>
     
-    {/* Floating geometric shapes */}
+    {/* Enhanced floating geometric shapes with neon borders */}
     <div className="absolute inset-0">
-      {[...Array(8)].map((_, i) => (
+      {[...Array(12)].map((_, i) => (
         <motion.div
           key={`shape-${i}`}
-          className={`absolute border border-cyan-400/30 opacity-40 ${
-            i % 2 === 0 ? 'w-8 h-8' : 'w-6 h-6'
+          className={`absolute border-2 opacity-60 ${
+            i % 3 === 0 ? 'w-10 h-10 border-cyan-400/50' :
+            i % 3 === 1 ? 'w-8 h-8 border-purple-400/50' :
+            'w-6 h-6 border-green-400/50'
           }`}
           style={{
-            left: `${10 + i * 10}%`,
-            top: `${15 + i * 8}%`,
+            left: `${8 + i * 7}%`,
+            top: `${12 + i * 6}%`,
           }}
           animate={{
             rotate: [0, 360],
-            scale: [0.8, 1.2, 0.8],
-            opacity: [0.2, 0.6, 0.2],
+            scale: [0.8, 1.3, 0.8],
+            opacity: [0.3, 0.8, 0.3],
           }}
           transition={{
-            duration: 8 + i,
+            duration: 10 + i,
             repeat: Infinity,
             ease: "linear"
           }}
         />
       ))}
     </div>
+    
+    {/* Additional animated dots pattern */}
+    <div className="absolute inset-0 futuristic-dots"></div>
   </div>
 );
 
@@ -348,7 +320,7 @@ export default function Home() {
                   </motion.div>
                   
                   <motion.h1 
-                    className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight"
+                    className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight futuristic-heading neon-text-cyan"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
@@ -375,12 +347,12 @@ export default function Home() {
                   >
                     <Link 
                       to={heroSlides[currentSlide].path}
-                      className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+                      className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 futuristic-button neon-glow-cyan"
                     >
                       {heroSlides[currentSlide].cta}
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </Link>
-                    <button className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all duration-300 backdrop-blur-sm">
+                    <button className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all duration-300 backdrop-blur-sm futuristic-button">
                       <Play className="mr-2 w-5 h-5" />
                       Watch Demo
                     </button>
@@ -436,11 +408,11 @@ export default function Home() {
                   variants={itemVariants}
                   className="text-center group"
                 >
-                  <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm">
+                  <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm futuristic-card">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                       <stat.icon className="w-8 h-8 text-white" />
                     </div>
-                    <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors duration-300">
+                    <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors duration-300 neon-text-cyan">
                       {stat.value}
                     </div>
                     <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
@@ -485,11 +457,11 @@ export default function Home() {
                   variants={itemVariants}
                   className="group"
                 >
-                  <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
+                  <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full futuristic-card">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300 futuristic-heading">
                       {service.title}
                     </h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">

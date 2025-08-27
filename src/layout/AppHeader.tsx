@@ -58,6 +58,8 @@ export function AppHeader() {
     { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales optimization', category: 'AI & ML' },
     { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML' },
     { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML' },
+    { name: 'AI Legal Document Analyzer', href: '/services/ai-legal-document-analyzer', icon: FileText, description: 'Legal document analysis & compliance', category: 'AI & ML' },
+    { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics', icon: Heart, description: 'Medical image analysis & diagnostics', category: 'AI & ML' },
     
     // Cloud & DevOps
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps' },
@@ -118,7 +120,7 @@ export function AppHeader() {
         scrolled 
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
           : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
-      }`}>
+      } futuristic-header`}>
         {/* Top contact bar */}
         <div className="hidden md:block border-b border-slate-700/40 bg-slate-900/60">
           <div className="container-responsive py-2 flex items-center justify-between text-xs text-gray-300">
@@ -155,7 +157,7 @@ export function AppHeader() {
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                   </div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 futuristic-heading neon-text-cyan">
                     Zion Tech Group
                   </h1>
                 </div>
@@ -168,7 +170,7 @@ export function AppHeader() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group ${
+                  className={`text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group futuristic-nav-item ${
                     item.featured ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-400/30' : ''
                   }`}
                   aria-current={item.current ? 'page' : undefined}
