@@ -62,10 +62,7 @@ export default function Webinars() {
               best practices, and innovative solutions
             </p>
           </div>
-<<<<<<< HEAD
-=======
           
->>>>>>> cursor/expand-services-and-deploy-updates-6593
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {webinars.map((webinar, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <div className="mb-4">
@@ -73,10 +70,7 @@ export default function Webinars() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{webinar.title}</h3>
                 <p className="text-gray-300 mb-4">{webinar.description}</p>
-<<<<<<< HEAD
-=======
                 
->>>>>>> cursor/expand-services-and-deploy-updates-6593
                 <div className="space-y-2 mb-4">
                   <p className="text-gray-400 text-sm flex items-center">
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,10 +91,7 @@ export default function Webinars() {
                     {webinar.speaker}
                   </p>
                 </div>
-<<<<<<< HEAD
-=======
                 
->>>>>>> cursor/expand-services-and-deploy-updates-6593
                 <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
                   Register Now
                   <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,10 +100,7 @@ export default function Webinars() {
                 </Link>
               </div>))}
           </div>
-<<<<<<< HEAD
-=======
           
->>>>>>> cursor/expand-services-and-deploy-updates-6593
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Stay Informed</h3>

@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
-  Globe, 
-  Heart, 
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  MapPin,
-  Clock,
-  Briefcase,
-  GraduationCap
-} from 'lucide-react';
-
-=======
 import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe } from 'lucide-react';
->>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
 export default function Careers() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('all');
@@ -132,29 +113,6 @@ export default function Careers() {
       description: 'Regular team building, hackathons, and social events'
     }
   ];
-<<<<<<< HEAD
-
-  const companyValues = [
-    {
-      icon: Zap,
-      title: "Innovation",
-      description: "We push boundaries and embrace new technologies"
-    },
-    {
-      icon: Heart,
-      title: "Passion",
-      description: "We're driven by our mission to transform technology"
-    },
-    {
-      icon: Users,
-      title: "Collaboration",
-      description: "We believe in the power of teamwork and diversity"
-    },
-    {
-      icon: Globe,
-      title: "Impact",
-      description: "We create solutions that make a real difference"
-=======
   const values = [
     {
       title: 'Innovation First',
@@ -171,7 +129,6 @@ export default function Careers() {
     {
       title: 'Impact',
       description: 'We focus on creating meaningful solutions that make a real difference.'
->>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
     }
   };
   const contactInfo = [
@@ -180,121 +137,6 @@ export default function Careers() {
     { icon: MapPinIcon, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" }
   ];
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Users className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="futuristic-heading mb-6">
-              Join Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Team</span>
-            </h1>
-            <p className="futuristic-text text-xl mb-8 max-w-3xl mx-auto">
-              Help us build the future of AI and technology. Join a team of passionate innovators 
-              working to transform how businesses leverage cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="futuristic-button inline-flex items-center"
-              >
-                View Open Positions
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/about"
-                className="futuristic-button-outline inline-flex items-center"
-              >
-                Learn About Us
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Company Values */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="futuristic-heading text-3xl lg:text-4xl mb-4">
-              Our Values
-            </h2>
-            <p className="futuristic-text text-lg max-w-2xl mx-auto">
-              The principles that guide everything we do and every decision we make
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="futuristic-card text-center group hover:border-zion-cyan/50 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <value.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                <p className="text-zion-slate-light">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="futuristic-heading text-3xl lg:text-4xl mb-4">
-              Why Work With Us?
-            </h2>
-            <p className="futuristic-text text-lg max-w-2xl mx-auto">
-              We offer competitive benefits and a supportive environment for your growth
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="futuristic-card text-center group hover:border-zion-cyan/50 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-zion-slate-light">{benefit.description}</p>
-              </motion.div>
-=======
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20">
@@ -347,90 +189,10 @@ export default function Careers() {
                   {benefit.description}
                 </p>
               </div>
->>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-
-      {/* Open Positions */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="futuristic-heading text-3xl lg:text-4xl mb-4">
-              Open Positions
-            </h2>
-            <p className="futuristic-text text-lg max-w-2xl mx-auto">
-              Join our team and help shape the future of technology
-            </p>
-          </motion.div>
-
-          <div className="max-w-6xl mx-auto space-y-6">
-            {openPositions.map((position, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="futuristic-card group hover:border-zion-cyan/50 transition-all duration-300"
-              >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-2xl font-bold text-white mb-2">{position.title}</h3>
-                        <p className="text-zion-cyan font-medium mb-2">{position.department}</p>
-                      </div>
-                      <div className="text-right">
-                        <div className="flex items-center space-x-2 text-sm text-zion-slate-light mb-1">
-                          <MapPin className="w-4 h-4" />
-                          <span>{position.location}</span>
-                        </div>
-                        <div className="flex items-center space-x-2 text-sm text-zion-slate-light">
-                          <Clock className="w-4 h-4" />
-                          <span>{position.type}</span>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <p className="text-zion-slate-light mb-4">{position.description}</p>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-white font-semibold mb-2">Requirements:</h4>
-                      <ul className="space-y-1">
-                        {position.requirements.map((req, idx) => (
-                          <li key={idx} className="text-sm text-zion-slate-light flex items-center">
-                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-2" />
-                            {req}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  
-                  <div className="lg:text-right">
-                    <div className="text-sm text-zion-slate-light mb-2">
-                      Experience: {position.experience}
-                    </div>
-                    <Link
-                      to="/contact"
-                      className="futuristic-button inline-flex items-center"
-                    >
-                      Apply Now
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-=======
       {/* Our Values */}
       <section className="py-20 bg-zion-slate-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -515,7 +277,6 @@ export default function Careers() {
                   </ul>
                 </div>
               </div>
->>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
             ))}
           </div>
           <div className="text-center mt-12">
@@ -591,39 +352,6 @@ export default function Careers() {
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="cta-section py-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Don't see the right position?
-            </h2>
-            <p className="text-xl text-zion-slate-lighter mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals who are passionate about AI and technology. 
-              Send us your resume and let's start a conversation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="futuristic-button inline-flex items-center"
-              >
-                Send General Application
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/about"
-                className="futuristic-button-outline inline-flex items-center"
-              >
-                Learn More About Us
-              </Link>
-            </div>
-          </motion.div>
-=======
       <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-purple">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -648,7 +376,6 @@ export default function Careers() {
               Contact Recruiting
             </a>
           </div>
->>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
         </div>
       </section>
     </div>
