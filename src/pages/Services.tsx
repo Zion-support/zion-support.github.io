@@ -1,3 +1,150 @@
+import React from 'react';
+
+const services = [
+  {
+    category: 'Micro SaaS',
+    items: [
+      {
+        title: 'AI Website Copy Optimizer',
+        description: 'On-page SEO, A/B copy variants, tone optimization, and SERP monitoring.',
+        price: '$49–$299/mo',
+        cta: { label: 'Try Demo', href: '/request-quote' }
+      },
+      {
+        title: 'Lead Scoring & Enrichment',
+        description: 'Auto-enrich leads via public data, score intent, and route to sales.',
+        price: '$99–$499/mo',
+        cta: { label: 'Get Started', href: '/contact' }
+      },
+      {
+        title: 'Invoice OCR + Reconciliation',
+        description: 'Parse invoices, detect anomalies, sync with QuickBooks/Xero automatically.',
+        price: '$149–$799/mo',
+        cta: { label: 'Request Access', href: '/request-quote' }
+      }
+    ]
+  },
+  {
+    category: 'AI Solutions',
+    items: [
+      {
+        title: 'RAG Knowledge Assistants',
+        description: 'Enterprise chat over docs with secure vector search and audit trails.',
+        price: '$8k–$60k project + $500–$2k/mo',
+        cta: { label: 'See Use Cases', href: '/services' }
+      },
+      {
+        title: 'Autonomous Workflow Agents',
+        description: 'Multi-agent systems for ticket triage, QA automation, and ops runbooks.',
+        price: '$15k–$120k project',
+        cta: { label: 'Talk to Engineering', href: '/contact' }
+      },
+      {
+        title: 'Computer Vision Pipelines',
+        description: 'Defect detection, price tags reading, shelf analytics, and safety monitoring.',
+        price: '$20k–$150k project',
+        cta: { label: 'Book Assessment', href: '/request-quote' }
+      }
+    ]
+  },
+  {
+    category: 'Cloud & DevOps',
+    items: [
+      {
+        title: 'Kubernetes Platform Engineering',
+        description: 'GitOps, IaC, multi-cluster, golden paths, and internal developer platforms.',
+        price: '$25k–$200k project',
+        cta: { label: 'Platform Audit', href: '/services/cloud-devops' }
+      },
+      {
+        title: 'Serverless Data Platforms',
+        description: 'Event-driven pipelines, data contracts, and cost-optimized analytics.',
+        price: '$18k–$120k project',
+        cta: { label: 'Design Workshop', href: '/services/cloud-devops' }
+      },
+      {
+        title: 'Site Reliability Engineering',
+        description: 'SLOs, chaos testing, observability, incident response, and reliability reviews.',
+        price: '$8k–$40k engagement',
+        cta: { label: 'SRE Readiness', href: '/contact' }
+      }
+    ]
+  },
+  {
+    category: 'Cybersecurity',
+    items: [
+      {
+        title: 'Zero-Trust Architecture',
+        description: 'Identity-first networks, microsegmentation, and continuous verification.',
+        price: '$20k–$150k project',
+        cta: { label: 'Architecture Review', href: '/services' }
+      },
+      {
+        title: 'SOC 2 & ISO 27001 Readiness',
+        description: 'Gap analysis, policy automation, evidence collection, and auditor handoff.',
+        price: '$12k–$60k engagement',
+        cta: { label: 'Compliance Sprint', href: '/contact' }
+      },
+      {
+        title: 'Threat Detection & Response',
+        description: 'SIEM tuning, EDR rollout, playbooks, red/blue teaming, and MDR setup.',
+        price: '$10k–$90k + $1k–$5k/mo',
+        cta: { label: 'Schedule Briefing', href: '/request-quote' }
+      }
+    ]
+  }
+];
+
+const Services: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-futuristic">
+      <div className="container mx-auto px-4 py-24 text-white">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            Services that Deliver Outcomes
+          </h1>
+          <p className="text-lg md:text-xl mb-10 text-gray-300">
+            We build real, production-grade solutions across AI, micro SaaS, cloud, and cybersecurity. Transparent pricing, clear timelines, measurable ROI.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
+            <a href="tel:+13024640950" className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20">Call +1 302 464 0950</a>
+            <a href="mailto:kleber@ziontechgroup.com" className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20">Email kleber@ziontechgroup.com</a>
+            <a href="/request-quote" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold hover:from-cyan-300 hover:to-blue-400">Request a Quote</a>
+          </div>
+        </div>
+
+        <div className="mt-16 space-y-16">
+          {services.map((group) => (
+            <section key={group.category}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">{group.category}</h2>
+              <div className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                {group.items.map((item) => (
+                  <div key={item.title} className="glass-dark rounded-2xl p-6 border border-white/10 hover:border-cyan-400/40 transition-colors">
+                    <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
+                    <p className="text-gray-300 mb-4 min-h-[64px]">{item.description}</p>
+                    <p className="text-cyan-300 text-lg font-semibold mb-4">{item.price}</p>
+                    <a href={item.cta.href} className="inline-flex items-center px-4 py-2 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20">
+                      {item.cta.label}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+
+        <div className="mt-20 text-center">
+          <p className="text-gray-400 text-sm">
+            For full capabilities, visit our site at <a className="underline decoration-dotted hover:text-cyan-300" href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Services;
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';

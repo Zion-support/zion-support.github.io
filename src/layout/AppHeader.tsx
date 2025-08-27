@@ -36,10 +36,11 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'Pricing', href: '/services', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Careers', href: '/careers', current: false },
   ];
 
   const services = [
@@ -60,6 +61,8 @@ export function AppHeader() {
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+    { name: 'Call +1 302 464 0950', href: 'tel:+13024640950', icon: Phone },
+    { name: 'Email kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com', icon: Mail },
   ];
 
   return (
