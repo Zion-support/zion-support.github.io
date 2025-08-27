@@ -20,7 +20,6 @@ const Services2026 = React.lazy(() => import('./pages/Services2026'));
 const AIServices = React.lazy(() => import('./pages/AIServices'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
 const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
-const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
 const Solutions = React.lazy(() => import('./pages/solutions'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
@@ -44,7 +43,6 @@ const Training = React.lazy(() => import('./pages/Training'));
 const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
-const Documentation = React.lazy(() => import('./pages/Documentation'));
 
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
@@ -54,9 +52,7 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/Equipment'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+
 const MarketplaceProducts = React.lazy(() => import('./pages/marketplace/Products'));
 const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'));
 const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipment'));
@@ -78,28 +74,23 @@ const ReturnsManagement = React.lazy(() => import('./pages/services/ReturnsManag
 const EmailSequencer = React.lazy(() => import('./pages/services/EmailSequencer'));
 const PodcastTranscription = React.lazy(() => import('./pages/services/PodcastTranscription'));
 const MicroCRM = React.lazy(() => import('./pages/services/MicroCRM'));
-// New real service pages
 const WebsiteAnalytics = React.lazy(() => import('./pages/services/WebsiteAnalytics'));
 const ITHelpdesk = React.lazy(() => import('./pages/services/ITHelpdesk'));
 const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTracking'));
 const MobileSurvey = React.lazy(() => import('./pages/services/MobileSurvey'));
-// Additional new service pages
 const AIPoweredSEO = React.lazy(() => import('./pages/services/AIPoweredSEO'));
 const InterviewAssessmentAI = React.lazy(() => import('./pages/services/InterviewAssessmentAI'));
 const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatform'));
 const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
-
-// Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 
 // Accessibility page
 const Accessibility = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
+    <SEO
       title="Accessibility - Zion Tech Group"
       description="Learn about our commitment to accessibility and inclusive design."
     />
@@ -113,7 +104,7 @@ const Accessibility = () => (
 // Not Found page
 const NotFound = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
+    <SEO
       title="Page Not Found - Zion Tech Group"
       description="The page you're looking for doesn't exist."
       noindex
@@ -130,7 +121,7 @@ function App() {
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
         <AppHeader />
-        
+
         <main className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
@@ -167,7 +158,6 @@ function App() {
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
-              <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
               <Route path="/search" element={<SearchPage />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/privacy" element={<Privacy />} />
@@ -180,7 +170,7 @@ function App() {
               <Route path="/support" element={<Support />} />
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
-              
+
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
               <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
@@ -206,19 +196,19 @@ function App() {
               <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
               <Route path="/services/dsr-portal" element={<DSRPortal />} />
               <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
-              
+
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/green-it" element={<GreenIT />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
-              
+
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
-        
+
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />

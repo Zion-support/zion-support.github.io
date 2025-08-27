@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Cpu, 
-  Database, 
-  Eye, 
-  MessageSquare, 
-  TrendingUp, 
-  Zap, 
+import {
+  Brain,
+  Cpu,
+  Database,
+  Eye,
+  MessageSquare,
+  TrendingUp,
+  Zap,
   Shield,
   BarChart3,
   Target,
@@ -191,8 +191,8 @@ export default function AISolutions() {
     }
   };
 
-  const filteredSolutions = selectedIndustry === 'all' 
-    ? aiSolutions 
+  const filteredSolutions = selectedIndustry === 'all'
+    ? aiSolutions
     : aiSolutions.filter(solution => solution.industry === selectedIndustry);
 
   return (
@@ -203,7 +203,7 @@ export default function AISolutions() {
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -215,7 +215,7 @@ export default function AISolutions() {
                 <Brain className="w-12 h-12 text-white" />
               </div>
             </div>
-            
+
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               AI &{' '}
               <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -223,12 +223,12 @@ export default function AISolutions() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with cutting-edge artificial intelligence solutions. 
+              Transform your business with cutting-edge artificial intelligence solutions.
               From machine learning to predictive analytics, we deliver AI that drives real results.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button 
+              <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -246,7 +246,7 @@ export default function AISolutions() {
       {/* AI Services Overview */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -257,12 +257,12 @@ export default function AISolutions() {
               Comprehensive AI Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI solutions span the entire spectrum of artificial intelligence, 
+              Our AI solutions span the entire spectrum of artificial intelligence,
               from foundational machine learning to cutting-edge deep learning applications.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
@@ -270,7 +270,7 @@ export default function AISolutions() {
             viewport={{ once: true }}
           >
             {aiServices.map((service, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
@@ -279,10 +279,10 @@ export default function AISolutions() {
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
-                
+
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-zion-slate-light">
@@ -300,7 +300,7 @@ export default function AISolutions() {
       {/* Industry Solutions */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -316,7 +316,7 @@ export default function AISolutions() {
           </motion.div>
 
           {/* Industry Filter */}
-          <motion.div 
+          <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -343,7 +343,7 @@ export default function AISolutions() {
           </motion.div>
 
           {/* Solutions Grid */}
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
@@ -351,7 +351,7 @@ export default function AISolutions() {
             viewport={{ once: true }}
           >
             {filteredSolutions.map((solution, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 variants={itemVariants}
@@ -363,9 +363,9 @@ export default function AISolutions() {
                   </div>
                   <h3 className="text-xl font-bold text-white">{solution.title}</h3>
                 </div>
-                
+
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{solution.description}</p>
-                
+
                 <div className="space-y-2">
                   <h4 className="font-semibold text-zion-cyan text-sm">Key Benefits:</h4>
                   <ul className="space-y-1">
@@ -386,7 +386,7 @@ export default function AISolutions() {
       {/* AI Technologies */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -397,12 +397,12 @@ export default function AISolutions() {
               Cutting-Edge AI Technologies
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We leverage the latest advancements in artificial intelligence to deliver 
+              We leverage the latest advancements in artificial intelligence to deliver
               innovative solutions that give your business a competitive edge.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
@@ -410,7 +410,7 @@ export default function AISolutions() {
             viewport={{ once: true }}
           >
             {aiTechnologies.map((tech, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
@@ -419,10 +419,10 @@ export default function AISolutions() {
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{tech.name}</h3>
                 <p className="text-zion-slate-light mb-6 text-center leading-relaxed">{tech.description}</p>
-                
+
                 <div className="space-y-2">
                   <h4 className="font-semibold text-zion-cyan text-sm">Applications:</h4>
                   <ul className="space-y-1">
@@ -443,7 +443,7 @@ export default function AISolutions() {
       {/* Success Metrics */}
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -454,12 +454,12 @@ export default function AISolutions() {
               Proven Results
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI solutions deliver measurable impact and drive real business value 
+              Our AI solutions deliver measurable impact and drive real business value
               across industries and use cases.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
             initial="hidden"
@@ -467,7 +467,7 @@ export default function AISolutions() {
             viewport={{ once: true }}
           >
             {successMetrics.map((metric, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="text-center"
                 variants={itemVariants}
@@ -486,7 +486,7 @@ export default function AISolutions() {
       {/* Implementation Process */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -501,7 +501,7 @@ export default function AISolutions() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
             initial="hidden"
@@ -534,7 +534,7 @@ export default function AISolutions() {
                 icon: Rocket
               }
             ].map((phase, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="relative"
                 variants={itemVariants}
@@ -547,7 +547,7 @@ export default function AISolutions() {
                   <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>
                   <p className="text-zion-slate-light leading-relaxed">{phase.description}</p>
                 </div>
-                
+
                 {index < 3 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
                     <ArrowRight className="w-8 h-8 text-zion-cyan" />
@@ -572,12 +572,12 @@ export default function AISolutions() {
               Ready to Harness the Power of AI?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let's discuss how artificial intelligence can transform your business operations, 
+              Let's discuss how artificial intelligence can transform your business operations,
               improve efficiency, and drive growth.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button 
+              <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

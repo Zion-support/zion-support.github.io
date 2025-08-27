@@ -80,12 +80,12 @@ export function SEO({
   React.useEffect(() => {
     // Update document title
     document.title = fullTitle;
-    
+
     // Update or create meta tags
     const updateMetaTag = (name: string, content: string, property?: string) => {
       const selector = property ? `meta[property="${property}"]` : `meta[name="${name}"]`;
       let meta = document.querySelector(selector) as HTMLMetaElement;
-      
+
       if (!meta) {
         meta = document.createElement('meta');
         if (property) {
@@ -103,7 +103,7 @@ export function SEO({
     updateMetaTag('keywords', metaKeywords);
     updateMetaTag('author', author);
     updateMetaTag('robots', `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`);
-    
+
     // Open Graph meta tags
     updateMetaTag('og:title', fullTitle, 'og:title');
     updateMetaTag('og:description', description, 'og:description');
@@ -111,13 +111,13 @@ export function SEO({
     updateMetaTag('og:url', fullUrl, 'og:url');
     updateMetaTag('og:image', fullImage, 'og:image');
     updateMetaTag('og:site_name', 'Zion Tech Group', 'og:site_name');
-    
+
     // Twitter Card meta tags
     updateMetaTag('twitter:card', 'summary_large_image', 'twitter:card');
     updateMetaTag('twitter:title', fullTitle, 'twitter:title');
     updateMetaTag('twitter:description', description, 'twitter:description');
     updateMetaTag('twitter:image', fullImage, 'twitter:image');
-    
+
     // Canonical URL
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonicalLink) {
@@ -126,7 +126,7 @@ export function SEO({
       document.head.appendChild(canonicalLink);
     }
     canonicalLink.setAttribute('href', canonical || fullUrl);
-    
+
     // Structured data
     let script = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement;
     if (!script) {
@@ -135,7 +135,7 @@ export function SEO({
       document.head.appendChild(script);
     }
     script.textContent = JSON.stringify(finalStructuredData);
-    
+
     // Cleanup function
     return () => {
       // Reset title to default

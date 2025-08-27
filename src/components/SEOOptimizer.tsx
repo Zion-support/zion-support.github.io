@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  TrendingUp, 
-  Target, 
-  Zap, 
-  CheckCircle, 
+import {
+  Search,
+  TrendingUp,
+  Target,
+  Zap,
+  CheckCircle,
   AlertTriangle,
   Info,
   Settings,
@@ -155,10 +155,10 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   // Analyze SEO
   const analyzeSEO = useCallback(async () => {
     setIsAnalyzing(true);
-    
+
     // Simulate analysis delay
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     setAnalysis(mockAnalysis);
     setIsAnalyzing(false);
     onAnalysisComplete?.(mockAnalysis);
@@ -247,7 +247,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             <p className="text-sm text-zion-slate/60">Performance & optimization insights</p>
           </div>
         </div>
-        
+
         <div className="flex items-center space-x-2">
           <button
             onClick={() => setShowAdvanced(!showAdvanced)}
@@ -256,7 +256,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           >
             <Settings className="w-5 h-5 text-zion-slate" />
           </button>
-          
+
           <button
             onClick={analyzeSEO}
             disabled={isAnalyzing}
@@ -292,21 +292,21 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                 Last updated: {analysis.lastUpdated.toLocaleTimeString()}
               </span>
             </div>
-            
+
             <div className="flex items-center space-x-6">
               <div className={`w-24 h-24 rounded-full ${getScoreBackground(analysis.score)} flex items-center justify-center`}>
                 <span className={`text-3xl font-bold ${getScoreColor(analysis.score)}`}>
                   {analysis.score}
                 </span>
               </div>
-              
+
               <div className="flex-1">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-3 bg-zion-slate/5 rounded-lg">
                     <div className="text-2xl font-bold text-zion-cyan">{analysis.metrics.pageSpeed}</div>
                     <div className="text-xs text-zion-slate/60">Page Speed</div>
                   </div>
-                  
+
                   <div className="text-center p-3 bg-zion-slate/5 rounded-lg">
                     <div className="text-2xl font-bold text-zion-cyan">{analysis.metrics.mobileFriendliness}</div>
                     <div className="text-xs text-zion-slate/60">Mobile</div>
@@ -333,7 +333,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                   </div>
                 </div>
               </div>
-              
+
               <div className={`p-4 rounded-lg border ${
                 analysis.metrics.coreWebVitals.fid <= 100 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'
               }`}>
@@ -347,7 +347,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                   </div>
                 </div>
               </div>
-              
+
               <div className={`p-4 rounded-lg border ${
                 analysis.metrics.coreWebVitals.cls <= 0.1 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'
               }`}>
@@ -368,7 +368,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
               <h4 className="text-lg font-semibold text-zion-slate-dark">Issues Found</h4>
-              
+
               <div className="flex space-x-1">
                 {['all', 'content', 'technical', 'performance', 'accessibility'].map((category) => (
                   <button
@@ -385,7 +385,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                 ))}
               </div>
             </div>
-            
+
             <div className="space-y-3">
               <AnimatePresence>
                 {filteredIssues.map((issue) => (
@@ -408,7 +408,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                       ) : (
                         <Info className="w-5 h-5 text-blue-500 mt-0.5" />
                       )}
-                      
+
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-2">
                           <h5 className="font-medium text-zion-slate-dark">{issue.title}</h5>
@@ -451,7 +451,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                         <span>Impact: +{suggestion.estimatedImpact} points</span>
                       </div>
                     </div>
-                    
+
                     <button className="p-2 hover:bg-zion-cyan/10 rounded-lg transition-colors">
                       <ArrowUpRight className="w-4 h-4 text-zion-cyan" />
                     </button>
@@ -480,7 +480,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                       <option>Monthly</option>
                     </select>
                   </div>
-                  
+
                   <div className="p-4 bg-zion-slate/5 rounded-lg">
                     <h5 className="font-medium text-zion-slate-dark mb-2">Notification Level</h5>
                     <select className="w-full p-2 border border-zion-slate/20 rounded-lg text-sm">

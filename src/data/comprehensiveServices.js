@@ -327,9 +327,9 @@ export const getPopularServices = () => {
 export const calculateServiceCost = (serviceId, months = 1, customizations = []) => {
   const service = getServiceById(serviceId);
   if (!service) return 0;
-  
+
   let baseCost = service.basePrice * months;
-  
+
   // Add customization costs
   customizations.forEach(customization => {
     if (customization.type === 'addon') {
@@ -338,31 +338,31 @@ export const calculateServiceCost = (serviceId, months = 1, customizations = [])
       baseCost += customization.price;
     }
   });
-  
+
   return baseCost;
 };
 
 export const getServiceRecommendations = (businessSize, industry, budget) => {
   let recommendations = comprehensiveServices;
-  
+
   // Filter by business size
   if (businessSize === 'small') {
-    recommendations = recommendations.filter(service => 
+    recommendations = recommendations.filter(service =>
       ['Support', 'Data'].includes(service.category)
     );
   } else if (businessSize === 'medium') {
-    recommendations = recommendations.filter(service => 
+    recommendations = recommendations.filter(service =>
       ['Support', 'Data', 'Networking', 'Security'].includes(service.category)
     );
   }
-  
+
   // Filter by budget
   if (budget === 'low') {
     recommendations = recommendations.filter(service => service.basePrice <= 1500);
   } else if (budget === 'medium') {
     recommendations = recommendations.filter(service => service.basePrice <= 3000);
   }
-  
+
   return recommendations;
 };
 

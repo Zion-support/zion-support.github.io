@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  HelpCircle, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  BookOpen, 
-  Video, 
-  FileText, 
-  ChevronDown, 
+import {
+  Search,
+  HelpCircle,
+  MessageCircle,
+  Phone,
+  Mail,
+  BookOpen,
+  Video,
+  FileText,
+  ChevronDown,
   ChevronRight,
   Star,
   Users,
@@ -228,7 +228,7 @@ export default function HelpCenter() {
       return;
     }
 
-    const filtered = faqData.filter(faq => 
+    const filtered = faqData.filter(faq =>
       faq.question.toLowerCase().includes(query.toLowerCase()) ||
       faq.answer.toLowerCase().includes(query.toLowerCase()) ||
       faq.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
@@ -268,7 +268,7 @@ export default function HelpCenter() {
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
       <div className="container-responsive">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -281,7 +281,7 @@ export default function HelpCenter() {
         </motion.div>
 
         {/* Search Bar */}
-        <motion.div 
+        <motion.div
           className="max-w-2xl mx-auto mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -300,7 +300,7 @@ export default function HelpCenter() {
         </motion.div>
 
         {/* Help Categories */}
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -335,7 +335,7 @@ export default function HelpCenter() {
         </motion.div>
 
         {/* Support Options */}
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -369,7 +369,7 @@ export default function HelpCenter() {
         </motion.div>
 
         {/* FAQ Section */}
-        <motion.div 
+        <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -377,7 +377,7 @@ export default function HelpCenter() {
         >
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
-            
+
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               <button
@@ -508,7 +508,7 @@ export default function HelpCenter() {
         </motion.div>
 
         {/* Contact Support */}
-        <motion.div 
+        <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Atom, 
-  Rocket, 
-  Shield, 
-  Dna, 
+import {
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Dna,
   Microscope,
   Cpu,
   Zap,
@@ -78,8 +78,8 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  const filteredServices = selectedCategory === 'All' 
-    ? innovativeServices2027 
+  const filteredServices = selectedCategory === 'All'
+    ? innovativeServices2027
     : getServicesByCategory(selectedCategory);
 
   const toggleServiceExpansion = (serviceId: string) => {
@@ -113,7 +113,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
             <Star className="w-5 h-5 text-zion-cyan mr-2" />
             <span className="text-zion-cyan font-semibold">2027 Innovation Showcase</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
               Revolutionary
@@ -121,9 +121,9 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
             <br />
             <span className="text-white">Technology Services</span>
           </h2>
-          
+
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of technology with our cutting-edge 2027 services. 
+            Experience the future of technology with our cutting-edge 2027 services.
             From quantum computing to AI consciousness, we're pushing the boundaries of what's possible.
           </p>
         </motion.div>
@@ -316,10 +316,10 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our expert team is ready to help you implement these cutting-edge solutions. 
+              Our expert team is ready to help you implement these cutting-edge solutions.
               Get in touch to discuss your specific needs and discover how we can drive innovation in your organization.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center gap-3 text-zion-cyan">
                 <Phone className="w-5 h-5" />

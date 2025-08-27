@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/seo/SEOHead';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  Users, 
-  Globe, 
+import {
+  Shield,
+  Lock,
+  Eye,
+  AlertTriangle,
+  Users,
+  Globe,
   Phone,
   Mail,
   MapPin,
@@ -28,12 +28,12 @@ import {
 } from 'lucide-react';
 import { ENHANCED_SERVICES } from '@/data/enhancedServices';
 // Filter cybersecurity services
-const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service => 
-  service.category.includes('Cybersecurity') || 
+const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
+  service.category.includes('Cybersecurity') ||
   service.category.includes('Security') ||
   service.category.includes('Zero Trust')
-  AlertTriangle, 
-  CheckCircle, 
+  AlertTriangle,
+  CheckCircle,
   Star,
   Clock,
   TrendingUp,
@@ -53,7 +53,7 @@ const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
 } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
-const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service => 
+const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
 );
 const SECURITY_SERVICE_CATEGORIES = [
@@ -89,7 +89,7 @@ export default function CybersecurityServicesPage() {
   };
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
         keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
@@ -123,7 +123,7 @@ export default function CybersecurityServicesPage() {
               <span className="text-white">That Never Sleeps</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security 
+              Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security
               platform provides 24/7 protection against evolving cyber threats.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -402,13 +402,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { 
-  Search, 
-  Star, 
-  Clock, 
-  Users, 
-  Shield, 
-  Zap, 
+import {
+  Search,
+  Star,
+  Clock,
+  Users,
+  Shield,
+  Zap,
   Globe,
   Mail,
   Phone,
@@ -429,12 +429,11 @@ import {
 } from 'lucide-react';
 import { EXPANDED_SERVICES, type ExpandedService } from '@/data/expandedServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
-export default function CybersecurityServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
   const [priceRange, setPriceRange] = useState<string>('all');
   // Filter only security services
-  const securityServices = EXPANDED_SERVICES.filter(service => 
+  const securityServices = EXPANDED_SERVICES.filter(service =>
     service.category === 'Security Services'
   );
   const filteredServices = securityServices.filter(service => {
@@ -557,11 +556,11 @@ export default function CybersecurityServicesPage() {
             Learn More
           </Button>
         </div>
-  AlertTriangle, 
-  BarChart3, 
-  Star, 
-  Clock, 
-  ArrowRight, 
+  AlertTriangle,
+  BarChart3,
+  Star,
+  Clock,
+  ArrowRight,
   CheckCircle,
   Phone,
   Mail,
@@ -632,9 +631,9 @@ const CybersecurityServicesPage = () => {
             </div>
             <div className="flex items-center gap-2">
               <Globe className="h-4 w-4 text-red-600" />
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-red-600 hover:underline font-medium"
               >
@@ -702,8 +701,8 @@ const CybersecurityServicesPage = () => {
             {CYBERSECURITY_SERVICES.map((service) => (
               <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-red-500/20">
                 <div className="relative">
-                  <img 
-                    src={service.images[0]} 
+                  <img
+                    src={service.images[0]}
                     alt={service.title}
                     className="w-full h-64 object-cover rounded-t-lg"
                   />
@@ -813,7 +812,7 @@ const CybersecurityServicesPage = () => {
               Comprehensive Security Services
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Choose from our range of cybersecurity services designed to address specific 
+              Choose from our range of cybersecurity services designed to address specific
               security challenges and protect your business assets.
             </p>
           </div>
@@ -873,7 +872,7 @@ const CybersecurityServicesPage = () => {
               Advanced Security Technologies
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              We leverage cutting-edge security technologies and tools to deliver 
+              We leverage cutting-edge security technologies and tools to deliver
               comprehensive protection for your business.
             </p>
           </div>
@@ -897,7 +896,7 @@ const CybersecurityServicesPage = () => {
               Compliance & Standards
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our security solutions help you meet industry standards and regulatory 
+              Our security solutions help you meet industry standards and regulatory
               requirements across multiple sectors.
             </p>
           </div>
@@ -921,7 +920,7 @@ const CybersecurityServicesPage = () => {
               Threat Intelligence & Monitoring
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Stay ahead of emerging threats with our comprehensive threat intelligence 
+              Stay ahead of emerging threats with our comprehensive threat intelligence
               and 24/7 security monitoring services.
             </p>
           </div>
@@ -945,7 +944,7 @@ const CybersecurityServicesPage = () => {
               Why Choose ZionTech Group for Cybersecurity?
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              We combine deep security expertise with industry knowledge to deliver 
+              We combine deep security expertise with industry knowledge to deliver
               solutions that protect your business and build customer trust.
             </p>
           </div>
@@ -956,7 +955,7 @@ const CybersecurityServicesPage = () => {
               </div>
               <h3 className="text-white text-xl font-bold mb-3">Certified Experts</h3>
               <p className="text-zion-slate-light">
-                CISSP, CISM, and CEH certified security professionals with 
+                CISSP, CISM, and CEH certified security professionals with
                 extensive experience in enterprise security.
               </p>
             </div>
@@ -966,7 +965,7 @@ const CybersecurityServicesPage = () => {
               </div>
               <h3 className="text-white text-xl font-bold mb-3">Proven Track Record</h3>
               <p className="text-zion-slate-light">
-                Successfully protected over 500+ businesses from cyber threats 
+                Successfully protected over 500+ businesses from cyber threats
                 with zero major security breaches.
               </p>
             </div>
@@ -976,7 +975,7 @@ const CybersecurityServicesPage = () => {
               </div>
               <h3 className="text-white text-xl font-bold mb-3">24/7 Support</h3>
               <p className="text-zion-slate-light">
-                Round-the-clock security monitoring and incident response 
+                Round-the-clock security monitoring and incident response
                 to protect your business at all times.
               </p>
             </div>
@@ -991,7 +990,7 @@ const CybersecurityServicesPage = () => {
               Transparent Security Pricing
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Competitive pricing for enterprise-grade security solutions with 
+              Competitive pricing for enterprise-grade security solutions with
               flexible payment options and comprehensive protection.
             </p>
           </div>
@@ -1062,7 +1061,7 @@ const CybersecurityServicesPage = () => {
             Ready to Secure Your Business?
           </h2>
           <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-            Contact our cybersecurity experts today to discuss how we can help you 
+            Contact our cybersecurity experts today to discuss how we can help you
             protect your business from evolving threats.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
@@ -1368,7 +1367,7 @@ const CybersecurityServicesPage = () => {
             Secure Your Business Today
           </h2>
           <p className="text-xl mb-8 text-red-100 max-w-3xl mx-auto">
-            Don't wait until it's too late. Our cybersecurity experts are ready to help you build 
+            Don't wait until it's too late. Our cybersecurity experts are ready to help you build
             a robust security posture and protect your valuable assets.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1393,7 +1392,7 @@ const CybersecurityServicesPage = () => {
             <div>
               <h3 className="text-2xl font-bold mb-6 text-red-400">ZionTech Group</h3>
               <p className="text-gray-300 mb-6">
-                Your trusted cybersecurity partner. We help businesses protect their digital assets 
+                Your trusted cybersecurity partner. We help businesses protect their digital assets
                 with comprehensive security solutions and expert guidance.
               </p>
               <div className="flex space-x-4">

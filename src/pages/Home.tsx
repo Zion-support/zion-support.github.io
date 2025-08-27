@@ -6,7 +6,7 @@ import { CheckCircle } from 'lucide-react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
+import NewsletterSection from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
@@ -142,8 +142,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
-        title="Zion Tech Group - Leading AI & Technology Solutions" 
+      <SEO
+        title="Zion Tech Group - Leading AI & Technology Solutions"
         description="Transform your business with Zion's cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. Join the future of technology."
         keywords="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting, Zion Tech Group"
         canonical="https://ziontechgroup.com/"
@@ -168,9 +168,9 @@ export default function Home() {
 
       {/* Main Hero Section */}
       <HeroSection />
-      
+
       {/* Enhanced Service Categories Overview */}
-      <motion.section 
+      <motion.section
         className="py-24 bg-gradient-to-b from-white/5 to-white/10 backdrop-blur-sm relative"
         variants={containerVariants}
         initial="hidden"
@@ -179,7 +179,7 @@ export default function Home() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div className="text-center mb-20" variants={itemVariants}>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -189,8 +189,8 @@ export default function Home() {
               Explore our comprehensive range of technology solutions designed to transform your business and drive innovation
             </p>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
             variants={containerVariants}
             initial="hidden"
@@ -244,7 +244,7 @@ export default function Home() {
           </div>
         </div>
       }>
-        <motion.section 
+        <motion.section
           className="py-24 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm relative"
           variants={containerVariants}
           initial="hidden"
@@ -260,8 +260,8 @@ export default function Home() {
                 Discover our most popular and innovative technology solutions
               </p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="grid grid-cols-1 lg:grid-cols-2 gap-12"
               variants={containerVariants}
               initial="hidden"
@@ -283,8 +283,8 @@ export default function Home() {
                   <p className="text-zion-slate-light mb-6 leading-relaxed">
                     Leverage cutting-edge artificial intelligence to automate processes, gain insights, and transform your business operations with our comprehensive AI solutions.
                   </p>
-                  <Link 
-                    to="/ai-solutions" 
+                  <Link
+                    to="/ai-solutions"
                     className="btn-futuristic inline-flex items-center px-6 py-3 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 group-hover:scale-105"
                   >
                     Explore AI Solutions
@@ -310,8 +310,8 @@ export default function Home() {
                   <p className="text-zion-slate-light mb-6 leading-relaxed">
                     Build, deploy, and scale your applications with our enterprise-grade cloud infrastructure and automated DevOps practices.
                   </p>
-                  <Link 
-                    to="/services/cloud" 
+                  <Link
+                    to="/services/cloud"
                     className="btn-futuristic inline-flex items-center px-6 py-3 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-blue/25 transition-all duration-300 group-hover:scale-105"
                   >
                     Explore Cloud Services

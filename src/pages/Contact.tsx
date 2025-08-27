@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  MessageSquare, 
-  Send, 
-  CheckCircle, 
-  Globe, 
-  Users, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  MessageSquare,
+  Send,
+  CheckCircle,
+  Globe,
+  Users,
   Award,
   Star,
   ArrowRight,
@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for AI solutions, cybersecurity, and digital transformation services. Contact us today for a consultation."
         canonical="/contact"
@@ -164,7 +164,7 @@ const Contact: React.FC = () => {
 
         <div className="relative z-10">
           {/* Hero Section */}
-          <motion.section 
+          <motion.section
             className="py-20 text-center"
             variants={itemVariants}
             initial="hidden"
@@ -198,7 +198,7 @@ const Contact: React.FC = () => {
           </motion.section>
 
           {/* Contact Methods */}
-          <motion.section 
+          <motion.section
             className="py-20"
             variants={containerVariants}
             initial="hidden"
@@ -215,7 +215,7 @@ const Contact: React.FC = () => {
                 </p>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="grid grid-cols-1 md:grid-cols-3 gap-8"
                 variants={containerVariants}
                 initial="hidden"
@@ -248,7 +248,7 @@ const Contact: React.FC = () => {
           </motion.section>
 
           {/* Contact Form */}
-          <motion.section 
+          <motion.section
             className="py-20"
             variants={containerVariants}
             initial="hidden"
@@ -405,7 +405,7 @@ const Contact: React.FC = () => {
           </motion.section>
 
           {/* Contact Information */}
-          <motion.section 
+          <motion.section
             className="py-20"
             variants={containerVariants}
             initial="hidden"
@@ -422,7 +422,7 @@ const Contact: React.FC = () => {
                 </p>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
                 variants={containerVariants}
                 initial="hidden"
@@ -445,7 +445,7 @@ const Contact: React.FC = () => {
                 ))}
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12"
                 variants={containerVariants}
                 initial="hidden"
@@ -506,7 +506,7 @@ const Contact: React.FC = () => {
           </motion.section>
 
           {/* CTA Section */}
-          <motion.section 
+          <motion.section
             className="py-20"
             variants={containerVariants}
             initial="hidden"

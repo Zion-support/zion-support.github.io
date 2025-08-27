@@ -98,8 +98,8 @@ export function AppHeader() {
   return (
     <>
       <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled 
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
+        scrolled
+          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'
           : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
       }`}>
         <div className="container-responsive">
@@ -120,7 +120,7 @@ export function AppHeader() {
                 </div>
               </Link>
             </div>
-            
+
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8" aria-label="Primary">
               {navigation.map((item) => (
@@ -139,7 +139,7 @@ export function AppHeader() {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
-              
+
               {/* Services Dropdown */}
               <div className="relative" aria-haspopup="true" aria-expanded={servicesDropdownOpen}>
                 <button
@@ -153,9 +153,9 @@ export function AppHeader() {
                   <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
                 </button>
-                
+
                 {servicesDropdownOpen && (
-                  <div 
+                  <div
                     id="services-menu"
                     className="absolute top-full left-0 mt-2 w-[500px] bg-slate-800/95 border border-cyan-400/20 rounded-xl shadow-2xl backdrop-blur-xl animate-fade-in"
                     onMouseEnter={() => setServicesDropdownOpen(true)}
@@ -219,7 +219,7 @@ export function AppHeader() {
                           </Link>
                         ))}
                       </div>
-                      
+
                       <div className="mt-6 pt-4 border-t border-slate-700/50">
                         <div className="flex gap-3">
                           <Link
@@ -246,7 +246,7 @@ export function AppHeader() {
             <div className="flex items-center space-x-4">
               {/* Theme Toggle */}
               <ThemeToggle />
-              
+
               {/* Search */}
               <form onSubmit={handleSearch} className="hidden md:block relative">
                 <div className="relative">
@@ -308,8 +308,8 @@ export function AppHeader() {
                       to={item.href}
                       onClick={() => setMobileMenuOpen(false)}
                       className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
-                        item.featured 
-                          ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-300 border border-cyan-400/30' 
+                        item.featured
+                          ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-300 border border-cyan-400/30'
                           : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
                       }`}
                     >
@@ -319,7 +319,7 @@ export function AppHeader() {
                       )}
                     </Link>
                   ))}
-                  
+
                   {/* Mobile Services Section */}
                   <div className="pt-4 border-t border-slate-700/50">
                     <h3 className="px-4 text-sm font-semibold text-cyan-300 mb-3">Featured Services</h3>

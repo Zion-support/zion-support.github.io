@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Rocket, 
-  Cpu, 
-  Database, 
-  Cloud, 
-  Shield, 
-  Users, 
-  BarChart3, 
+import {
+  Rocket,
+  Cpu,
+  Database,
+  Cloud,
+  Shield,
+  Users,
+  BarChart3,
   Zap,
   ArrowRight,
   CheckCircle,
@@ -94,7 +94,7 @@ export default function DigitalTransformation() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -104,18 +104,18 @@ export default function DigitalTransformation() {
               Digital Transformation
             </h1>
             <p className="text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business for the digital age with comprehensive technology solutions that drive innovation, 
+              Transform your business for the digital age with comprehensive technology solutions that drive innovation,
               efficiency, and growth. Our expert team guides you through every step of your digital journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
               >
                 Start Your Transformation
               </Link>
-              <Link 
-                to="/solutions" 
+              <Link
+                to="/solutions"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
               >
                 View Solutions
@@ -127,7 +127,7 @@ export default function DigitalTransformation() {
       {/* Services Grid */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -137,13 +137,13 @@ export default function DigitalTransformation() {
               Our Transformation Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive digital transformation services designed to modernize your business operations 
+              Comprehensive digital transformation services designed to modernize your business operations
               and position you for future success.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
                 initial={{ opacity: 0, y: 30 }}
@@ -178,7 +178,7 @@ export default function DigitalTransformation() {
       {/* Benefits Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -193,7 +193,7 @@ export default function DigitalTransformation() {
           </motion.div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
@@ -213,7 +213,7 @@ export default function DigitalTransformation() {
       {/* Industries Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -223,13 +223,13 @@ export default function DigitalTransformation() {
               Industries We Serve
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our digital transformation expertise spans across multiple industries, 
+              Our digital transformation expertise spans across multiple industries,
               each with unique challenges and opportunities.
             </p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
                 initial={{ opacity: 0, y: 20 }}
@@ -245,7 +245,7 @@ export default function DigitalTransformation() {
       {/* Process Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -265,7 +265,7 @@ export default function DigitalTransformation() {
               { step: '03', title: 'Implementation', description: 'Execute transformation plan with expert guidance' },
               { step: '04', title: 'Optimization', description: 'Continuously improve and scale digital capabilities' }
             ].map((phase, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
@@ -285,7 +285,7 @@ export default function DigitalTransformation() {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -295,18 +295,18 @@ export default function DigitalTransformation() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let our digital transformation experts guide you through your journey to digital excellence. 
+              Let our digital transformation experts guide you through your journey to digital excellence.
               Get started with a free consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
               >
                 Schedule Consultation
               </Link>
-              <Link 
-                to="/solutions" 
+              <Link
+                to="/solutions"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
               >
                 Explore Solutions

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  X, 
-  ChevronDown, 
-  Check, 
+import {
+  Search,
+  Filter,
+  X,
+  ChevronDown,
+  Check,
   Star,
   Tag,
   MapPin,
@@ -89,7 +89,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   const filteredResults = useMemo(() => {
     let results = data.filter(item => {
       // Search query filter
-      const matchesSearch = searchQuery === '' || 
+      const matchesSearch = searchQuery === '' ||
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -98,9 +98,9 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
 
       // Active filters
-      const matchesFilters = activeFilters.size === 0 || 
-        Array.from(activeFilters).some(filter => 
-          item.tags.includes(filter) || 
+      const matchesFilters = activeFilters.size === 0 ||
+        Array.from(activeFilters).some(filter =>
+          item.tags.includes(filter) ||
           item.type === filter ||
           item.category === filter
         );
@@ -315,7 +315,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           >
             <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
               <h3 className="text-sm font-medium text-white mb-4">Advanced Filters</h3>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {/* Type Filters */}
                 <div>
@@ -398,7 +398,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
               <div className="flex-shrink-0 p-3 bg-zinc-800/50 rounded-lg text-zion-cyan group-hover:bg-zion-cyan/20 transition-colors">
                 {getTypeIcon(result.type)}
               </div>
-              
+
               <div className="flex-1 min-w-0">
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
@@ -416,9 +416,9 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                     </span>
                   </div>
                 </div>
-                
+
                 <p className="text-zinc-300 mb-3 line-clamp-2">{result.description}</p>
-                
+
                 <div className="flex items-center gap-4 text-sm text-zinc-400">
                   {result.location && (
                     <div className="flex items-center gap-1">

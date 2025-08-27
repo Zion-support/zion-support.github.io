@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { useEffect, useRef, useState } from 'react';
 interface PerformanceMetrics {
   fcp: number | null; // First Contentful Paint

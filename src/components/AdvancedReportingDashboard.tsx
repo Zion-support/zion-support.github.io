@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3, 
-  PieChart, 
-  TrendingUp, 
-  Download, 
-  Share2, 
-  Filter, 
+import {
+  BarChart3,
+  PieChart,
+  TrendingUp,
+  Download,
+  Share2,
+  Filter,
   Calendar,
   Users,
   DollarSign,
@@ -236,7 +236,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     }
 
     if (searchQuery) {
-      filtered = filtered.filter(r => 
+      filtered = filtered.filter(r =>
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
@@ -246,7 +246,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     // Sort reports
     filtered.sort((a, b) => {
       let aValue: any, bValue: any;
-      
+
       switch (sortBy) {
         case 'date':
           aValue = new Date(a.lastUpdated).getTime();
@@ -387,7 +387,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           <h1 className="text-4xl font-bold text-white mb-2">Advanced Reporting Dashboard</h1>
           <p className="text-zinc-400 text-lg">Comprehensive reporting and analytics for data-driven decision making</p>
         </div>
-        
+
         <div className="flex items-center gap-3 mt-4 lg:mt-0">
           {/* View Mode Toggle */}
           <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
@@ -639,7 +639,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                     <p className="text-zinc-400 text-sm">{report.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex flex-wrap items-center gap-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeDisplay(report.type).color}`}>
                     {report.type.charAt(0).toUpperCase() + report.type.slice(1)}
@@ -657,19 +657,19 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
               </div>
 
               <div className="flex items-center gap-2 ml-4">
-                <button 
+                <button
                   onClick={() => handleReportAction(report.id, 'view')}
                   className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                 >
                   <Eye className="w-4 h-4" />
                 </button>
-                <button 
+                <button
                   onClick={() => handleReportAction(report.id, 'download')}
                   className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors"
                 >
                   <Download className="w-4 h-4" />
                 </button>
-                <button 
+                <button
                   onClick={() => handleReportAction(report.id, 'share')}
                   className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors"
                 >
@@ -684,17 +684,17 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                 <div className="text-sm text-zinc-400 mb-1">Author</div>
                 <div className="text-white font-medium">{report.author}</div>
               </div>
-              
+
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Last Updated</div>
                 <div className="text-white font-medium">{new Date(report.lastUpdated).toLocaleDateString()}</div>
               </div>
-              
+
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Views</div>
                 <div className="text-white font-medium">{report.views.toLocaleString()}</div>
               </div>
-              
+
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Downloads</div>
                 <div className="text-white font-medium">{report.downloads.toLocaleString()}</div>
@@ -737,21 +737,21 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                   <span>Updated {new Date(report.lastUpdated).toLocaleDateString()}</span>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-2">
-                <button 
+                <button
                   onClick={() => exportReport(report, 'pdf')}
                   className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
                 >
                   PDF
                 </button>
-                <button 
+                <button
                   onClick={() => exportReport(report, 'excel')}
                   className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
                 >
                   Excel
                 </button>
-                <button 
+                <button
                   onClick={() => exportReport(report, 'csv')}
                   className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
                 >
@@ -810,13 +810,13 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                   <X className="w-6 h-6" />
                 </button>
               </div>
-              
+
               <div className="space-y-6">
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-3">Description</h3>
                   <p className="text-zinc-300">{selectedReport.description}</p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-3">Key Metrics</h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -827,7 +827,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="flex gap-3">
                   <button className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
                     Download Report

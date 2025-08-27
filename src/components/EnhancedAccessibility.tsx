@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Volume2, 
-  VolumeX, 
-  Eye, 
-  EyeOff, 
-  Keyboard, 
+import {
+  Volume2,
+  VolumeX,
+  Eye,
+  EyeOff,
+  Keyboard,
   MousePointer,
   Accessibility,
   Settings,
@@ -243,7 +243,7 @@ export const EnhancedAccessibility: React.FC = () => {
               {/* Help Text */}
               <div className="mt-6 p-4 bg-zion-cyan/10 border border-zion-cyan/20 rounded-lg">
                 <p className="text-sm text-zion-cyan">
-                  These accessibility features help make our website more usable for everyone. 
+                  These accessibility features help make our website more usable for everyone.
                   Changes are automatically saved and will persist across your visits.
                 </p>
               </div>

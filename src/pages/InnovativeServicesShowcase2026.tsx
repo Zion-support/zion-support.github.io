@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  Cloud, 
-  Lock, 
-  Globe, 
-  Cpu, 
+import {
+  Brain,
+  Shield,
+  Zap,
+  Cloud,
+  Lock,
+  Globe,
+  Cpu,
   Database,
   Network,
   Smartphone,
@@ -92,14 +92,14 @@ export default function InnovativeServicesShowcase2026() {
         </div>
       </div>
       {/* Header Section */}
-      <motion.div 
+      <motion.div
         className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
+          <motion.h1
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -107,17 +107,17 @@ export default function InnovativeServicesShowcase2026() {
           >
             Innovative Services 2026
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Discover cutting-edge micro SAAS solutions that transform industries and drive innovation. 
+            Discover cutting-edge micro SAAS solutions that transform industries and drive innovation.
             From AI-powered platforms to quantum-safe cybersecurity, we deliver the future of technology.
           </motion.p>
           {/* Contact Information */}
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ export default function InnovativeServicesShowcase2026() {
         </div>
       </motion.div>
       {/* Filters and Search */}
-      <motion.div 
+      <motion.div
         className="relative z-10 px-4 sm:px-6 lg:px-8 mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -188,7 +188,7 @@ export default function InnovativeServicesShowcase2026() {
         </div>
       </motion.div>
       {/* Services Grid */}
-      <motion.div 
+      <motion.div
         className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20"
         variants={containerVariants}
         initial="hidden"
@@ -205,8 +205,8 @@ export default function InnovativeServicesShowcase2026() {
                 {/* Innovation Level Badge */}
                 <div className="absolute top-4 right-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    service.innovationLevel === 'Cutting-edge' 
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white' 
+                    service.innovationLevel === 'Cutting-edge'
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
                       : service.innovationLevel === 'Advanced'
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white'
                       : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white'
@@ -284,7 +284,7 @@ export default function InnovativeServicesShowcase2026() {
         </div>
       </motion.div>
       {/* Call to Action */}
-      <motion.div 
+      <motion.div
         className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -296,7 +296,7 @@ export default function InnovativeServicesShowcase2026() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our innovative solutions can drive your success. 
+              Let's discuss how our innovative solutions can drive your success.
               Get in touch with our experts today.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

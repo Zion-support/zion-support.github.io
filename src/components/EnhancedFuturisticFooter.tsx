@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Facebook,
   Instagram,
   Youtube,
   Github,
@@ -195,9 +195,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   </h3>
                 </Link>
               </div>
-              
+
               <p className="text-slate-300 mb-6 leading-relaxed">
-                Revolutionizing the future with cutting-edge AI, Quantum Computing, and Micro SaaS solutions. 
+                Revolutionizing the future with cutting-edge AI, Quantum Computing, and Micro SaaS solutions.
                 Transform your business with our innovative technology platforms.
               </p>
 
@@ -262,8 +262,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                       <Link
                         to={link.href}
                         className={`text-sm transition-colors duration-200 ${
-                          link.featured 
-                            ? 'text-cyan-300 hover:text-cyan-200 font-medium' 
+                          link.featured
+                            ? 'text-cyan-300 hover:text-cyan-200 font-medium'
                             : 'text-slate-400 hover:text-white'
                         }`}
                       >
@@ -291,10 +291,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   Stay Ahead with Zion Tech Group
                 </h3>
                 <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-                  Get the latest insights on AI, Quantum Computing, and emerging technologies. 
+                  Get the latest insights on AI, Quantum Computing, and emerging technologies.
                   Be the first to know about our revolutionary new services.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                   <input
                     type="email"
@@ -315,10 +315,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           <div className="container mx-auto px-4 py-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-slate-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved. 
+                © {currentYear} Zion Tech Group. All rights reserved.
                 Revolutionizing technology, one innovation at a time.
               </div>
-              
+
               <div className="flex items-center space-x-6 text-sm text-slate-400">
                 <Link to="/privacy" className="hover:text-white transition-colors">
                   Privacy Policy
@@ -361,7 +361,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               ease: "easeInOut"
             }}
           >
-            {[Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8] && 
+            {[Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8] &&
               React.createElement([Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8], { size: 20 })
             }
           </motion.div>

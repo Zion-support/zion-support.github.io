@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Globe, 
-  Zap, 
+import {
+  Brain,
+  Shield,
+  Cloud,
+  Database,
+  Globe,
+  Zap,
   ArrowRight,
   Star,
   TrendingUp,
@@ -118,8 +118,8 @@ export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
-  const filteredServices = selectedCategory === 'All' 
-    ? services 
+  const filteredServices = selectedCategory === 'All'
+    ? services
     : services.filter(service => service.category === selectedCategory);
 
   return (
@@ -193,7 +193,7 @@ export default function EnhancedServicesShowcase() {
               >
                 <motion.div
                   className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 h-full overflow-hidden"
-                  whileHover={{ 
+                  whileHover={{
                     y: -10,
                     scale: 1.02,
                     borderColor: 'rgba(34, 221, 210, 0.5)'
@@ -202,7 +202,7 @@ export default function EnhancedServicesShowcase() {
                 >
                   {/* Background gradient overlay */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                  
+
                   {/* Icon */}
                   <motion.div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} bg-opacity-20 flex items-center justify-center mb-6 relative z-10`}

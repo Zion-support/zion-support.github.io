@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import {
   Calendar,
   Clock,
@@ -170,7 +170,7 @@ export default function Events() {
     const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          event.speakers.some(speaker => speaker.toLowerCase().includes(searchTerm.toLowerCase()));
-    
+
     return matchesType && matchesCategory && matchesStatus && matchesSearch;
   });
 
@@ -226,7 +226,7 @@ export default function Events() {
               Join Our Events
             </h1>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Discover the latest technology trends, learn from industry experts, and network with 
+              Discover the latest technology trends, learn from industry experts, and network with
               professionals at our comprehensive events, workshops, and webinars.
             </p>
           </motion.div>
@@ -508,7 +508,7 @@ export default function Events() {
               Want to Host an Event?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8">
-              Partner with Zion Tech Group to host technology events, workshops, or webinars. 
+              Partner with Zion Tech Group to host technology events, workshops, or webinars.
               Let's create valuable learning experiences together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

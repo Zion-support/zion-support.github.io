@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  Database, 
-  Users, 
-  Globe, 
+import {
+  Shield,
+  Lock,
+  Eye,
+  Database,
+  Users,
+  Globe,
   CheckCircle,
   AlertTriangle,
   FileText,
@@ -111,11 +111,11 @@ export default function Privacy() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Privacy Policy - Zion Tech Group"
         description="Learn how Zion Tech Group protects your privacy and handles your personal data. Our comprehensive privacy policy ensures transparency and data protection."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
@@ -135,7 +135,7 @@ export default function Privacy() {
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"> Policy</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Your privacy is important to us. This policy explains how we collect, use, 
+              Your privacy is important to us. This policy explains how we collect, use,
               and protect your personal information.
             </p>
             <div className="text-sm text-gray-400">
@@ -158,7 +158,7 @@ export default function Privacy() {
               Our Privacy Principles
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We are committed to protecting your privacy and ensuring transparency 
+              We are committed to protecting your privacy and ensuring transparency
               in how we handle your personal information.
             </p>
           </motion.div>
@@ -196,7 +196,7 @@ export default function Privacy() {
               Information We Collect
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We collect only the information necessary to provide our services 
+              We collect only the information necessary to provide our services
               and improve your experience.
             </p>
           </motion.div>
@@ -239,7 +239,7 @@ export default function Privacy() {
               How We Use Your Information
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We use your information only for legitimate business purposes 
+              We use your information only for legitimate business purposes
               and with your consent where required.
             </p>
           </motion.div>
@@ -274,7 +274,7 @@ export default function Privacy() {
               Your Privacy Rights
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              You have important rights regarding your personal data. 
+              You have important rights regarding your personal data.
               We are committed to honoring these rights.
             </p>
           </motion.div>
@@ -309,7 +309,7 @@ export default function Privacy() {
                 Data Security
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                We implement comprehensive security measures to protect your personal information 
+                We implement comprehensive security measures to protect your personal information
                 from unauthorized access, alteration, disclosure, or destruction.
               </p>
               <div className="space-y-4">
@@ -336,7 +336,7 @@ export default function Privacy() {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -381,7 +381,7 @@ export default function Privacy() {
               Contact Us
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              If you have questions about this privacy policy or want to exercise your rights, 
+              If you have questions about this privacy policy or want to exercise your rights,
               please contact our privacy team.
             </p>
           </motion.div>
@@ -420,7 +420,7 @@ export default function Privacy() {
               Questions About Privacy?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We're here to help. Contact our privacy team for any questions 
+              We're here to help. Contact our privacy team for any questions
               about your data or this privacy policy.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

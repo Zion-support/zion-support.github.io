@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ReactNode } from 'react';
 interface LayoutProps {
   children: ReactNode;
 }
 const navigation: NavItem[] = [
   { label: 'Home', href: '/' },
-  { 
-    label: 'Services', 
+  {
+    label: 'Services',
     href: '/services',
     children: [
       { label: 'AI & Machine Learning', href: '/services#ai' },
@@ -63,8 +63,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </a>
             </nav>
             <div className="flex items-center space-x-4">
-              <a 
-                href="tel:+13024640950" 
+              <a
+                href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
               >
                 📞 Call Us

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import {
   Brain,
   Shield,
@@ -296,7 +296,7 @@ export default function Solutions() {
     const matchesCategory = selectedCategory === 'All' || solution.category === selectedCategory;
     const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          solution.description.toLowerCase().includes(searchTerm.toLowerCase());
-    
+
     return matchesCategory && matchesSearch;
   });
 
@@ -319,7 +319,7 @@ export default function Solutions() {
               Innovative Solutions for Modern Businesses
             </h1>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Discover comprehensive technology solutions designed to transform your business operations, 
+              Discover comprehensive technology solutions designed to transform your business operations,
               enhance security, and drive growth through cutting-edge innovation.
             </p>
           </motion.div>
@@ -592,7 +592,7 @@ export default function Solutions() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8">
-              Let's discuss how our technology solutions can address your specific challenges 
+              Let's discuss how our technology solutions can address your specific challenges
               and drive measurable results for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

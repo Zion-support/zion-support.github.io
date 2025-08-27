@@ -1,199 +1,278 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { cn } from '../../utils/cn';
+import { Loader2, Zap, Brain, Shield, Cloud, Rocket } from 'lucide-react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'white' | 'gray';
-  className?: string;
-  showText?: boolean;
+  variant?: 'default' | 'pulse' | 'dots' | 'bars' | 'themed';
   text?: string;
+  className?: string;
+  fullScreen?: boolean;
 }
 
-export default function LoadingSpinner({ 
-  size = 'md', 
-  color = 'primary',
+const sizeClasses = {
+  sm: 'w-4 h-4',
+  md: 'w-6 h-6',
+  lg: 'w-8 h-8',
+  xl: 'w-12 h-12'
+};
+
+const textSizes = {
+  sm: 'text-sm',
+  md: 'text-base',
+  lg: 'text-lg',
+  xl: 'text-xl'
+};
+
+const themedIcons = {
+  ai: Brain,
+  security: Shield,
+  cloud: Cloud,
+  rocket: Rocket,
+  default: Zap
+};
+
+export function LoadingSpinner({
+  size = 'md',
+  variant = 'default',
+  text,
   className = '',
-  showText = false,
-  text = 'Loading...'
+  fullScreen = false
 }: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16'
+  const renderSpinner = () => {
+    switch (variant) {
+      case 'pulse':
+        return (
+          <div className={`${sizeClasses[size]} relative`}>
+            <motion.div
+              className="absolute inset-0 rounded-full bg-cyan-400"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 1, 0.5]
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            <motion.div
+              className="absolute inset-0 rounded-full bg-blue-500"
+              animate={{
+                scale: [1.2, 1, 1.2],
+                opacity: [1, 0.5, 1]
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5
+              }}
+            />
+          </div>
+        );
+
+      case 'dots':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={i}
+                className={`${sizeClasses[size]} rounded-full bg-gradient-to-r from-cyan-400 to-blue-500`}
+                animate={{
+                  y: [0, -10, 0],
+                  scale: [1, 1.2, 1]
+                }}
+                transition={{
+                  duration: 0.6,
+                  repeat: Infinity,
+                  delay: i * 0.2,
+                  ease: "easeInOut"
+                }}
+              />
+            ))}
+          </div>
+        );
+
+      case 'bars':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2, 3].map((i) => (
+              <motion.div
+                key={i}
+                className={`w-1 ${sizeClasses[size].split(' ')[1]} bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full`}
+                animate={{
+                  scaleY: [1, 2, 1]
+                }}
+                transition={{
+                  duration: 0.8,
+                  repeat: Infinity,
+                  delay: i * 0.1,
+                  ease: "easeInOut"
+                }}
+              />
+            ))}
+          </div>
+        );
+
+      case 'themed':
+        const ThemedIcon = themedIcons.ai; // You can make this dynamic based on context
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} text-cyan-400`}
+            animate={{
+              rotate: 360
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            <ThemedIcon className="w-full h-full" />
+          </motion.div>
+        );
+
+      default:
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} border-2 border-slate-300 border-t-cyan-400 rounded-full`}
+            animate={{
+              rotate: 360
+            }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+        );
+    }
   };
 
-  const colorClasses = {
-    primary: 'border-cyan-400 border-t-transparent',
-    white: 'border-white border-t-transparent',
-    gray: 'border-gray-400 border-t-transparent'
-  };
-
-  return (
-    <div className={cn('flex flex-col items-center justify-center', className)}>
-      <div className={cn(
-        'animate-spin rounded-full border-2',
-        sizeClasses[size],
-        colorClasses[color]
-      )} />
-      {showText && (
+  const content = (
+    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+      {renderSpinner()}
+      {text && (
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="mt-2 text-sm text-gray-500"
+          className={`text-slate-400 font-medium ${textSizes[size]}`}
         >
           {text}
         </motion.p>
       )}
     </div>
   );
+
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center z-50">
+        {content}
+      </div>
+    );
+  }
+
+  return content;
 }
 
-// Optimized skeleton loader
-export function SkeletonLoader({ 
-  className = '', 
-  lines = 3, 
-  height = 'h-4' 
-}: { 
-  className?: string; 
-  lines?: number; 
-  height?: string; 
+// Specialized loading components for common use cases
+export function PageLoader({ text = "Loading page..." }: { text?: string }) {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+      <LoadingSpinner size="xl" variant="themed" text={text} />
+    </div>
+  );
+}
+
+export function SectionLoader({ text = "Loading..." }: { text?: string }) {
+  return (
+    <div className="py-16 flex items-center justify-center">
+      <LoadingSpinner size="lg" variant="pulse" text={text} />
+    </div>
+  );
+}
+
+export function InlineLoader({ text, size = "sm" }: { text?: string; size?: 'sm' | 'md' | 'lg' }) {
+  return (
+    <div className="inline-flex items-center space-x-2">
+      <LoadingSpinner size={size} variant="dots" />
+      {text && <span className="text-slate-500 text-sm">{text}</span>}
+    </div>
+  );
+}
+
+export function ButtonLoader({ size = "sm" }: { size?: 'sm' | 'md' | 'lg' }) {
+  return (
+    <div className="inline-flex items-center space-x-2">
+      <LoadingSpinner size={size} variant="default" />
+      <span>Loading...</span>
+    </div>
+  );
+}
+
+// Skeleton loading components
+export function SkeletonLoader({
+  className = "",
+  lines = 3,
+  height = "h-4"
+}: {
+  className?: string;
+  lines?: number;
+  height?: string;
 }) {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: lines }).map((_, i) => (
         <motion.div
-          key={index}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: index * 0.1, duration: 0.3 }}
-          className={`${height} bg-white/10 rounded-lg animate-pulse`}
+          key={i}
+          className={`${height} bg-slate-700 rounded animate-pulse`}
+          style={{
+            width: `${Math.random() * 40 + 60}%`
+          }}
         />
       ))}
     </div>
   );
 }
 
-// Button loading state
-export function ButtonLoader({
-  size = 'sm',
-  className
-}: {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-}) {
+export function CardSkeleton() {
   return (
-    <div className={cn('inline-flex items-center', className)}>
-      <LoadingSpinner size={size} color="white" />
-      <span className="ml-2">Loading...</span>
+    <div className="bg-slate-800 rounded-lg p-6 space-y-4">
+      <div className="flex items-center space-x-4">
+        <div className="w-12 h-12 bg-slate-700 rounded-full animate-pulse" />
+        <div className="flex-1 space-y-2">
+          <div className="h-4 bg-slate-700 rounded w-3/4 animate-pulse" />
+          <div className="h-3 bg-slate-700 rounded w-1/2 animate-pulse" />
+        </div>
+      </div>
+      <div className="space-y-2">
+        <div className="h-4 bg-slate-700 rounded animate-pulse" />
+        <div className="h-4 bg-slate-700 rounded w-5/6 animate-pulse" />
+        <div className="h-4 bg-slate-700 rounded w-4/6 animate-pulse" />
+      </div>
     </div>
   );
 }
 
-// Page loading overlay
-export function PageLoaderOverlay({ 
-  text = 'Loading page...',
-  showSpinner = true 
-}: { 
-  text?: string; 
-  showSpinner?: boolean; 
-}) {
+export function TableSkeleton({ rows = 5 }: { rows?: number }) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 flex items-center justify-center"
-    >
-      <div className="text-center">
-        {showSpinner && <LoadingSpinner size="xl" color="primary" />}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.3 }}
-          className="mt-4 text-lg text-gray-300 font-medium"
-        >
-          {text}
-        </motion.p>
+    <div className="space-y-3">
+      {/* Header */}
+      <div className="grid grid-cols-4 gap-4">
+        {Array.from({ length: 4 }).map((_, i) => (
+          <div key={i} className="h-4 bg-slate-700 rounded animate-pulse" />
+        ))}
       </div>
-    </motion.div>
-  );
-}
-
-// Content loading placeholder
-export function ContentPlaceholder({ 
-  className = '',
-  variant = 'default'
-}: { 
-  className?: string; 
-  variant?: 'default' | 'card' | 'list' | 'grid'; 
-}) {
-  const variants = {
-    default: 'space-y-4',
-    card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
-    list: 'space-y-3',
-    grid: 'grid grid-cols-2 md:grid-cols-4 gap-4'
-  };
-
-  return (
-    <div className={`${variants[variant]} ${className}`}>
-      {variant === 'card' ? (
-        // Card placeholders
-        Array.from({ length: 6 }).map((_, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="bg-white/5 rounded-lg p-6 border border-white/10"
-          >
-            <div className="h-4 bg-white/10 rounded mb-3 animate-pulse" />
-            <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
-            <div className="h-3 bg-white/10 rounded w-2/3 animate-pulse" />
-          </motion.div>
-        ))
-      ) : variant === 'list' ? (
-        // List placeholders
-        Array.from({ length: 5 }).map((_, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="flex items-center space-x-3"
-          >
-            <div className="w-4 h-4 bg-white/10 rounded-full animate-pulse" />
-            <div className="h-3 bg-white/10 rounded flex-1 animate-pulse" />
-          </motion.div>
-        ))
-      ) : variant === 'grid' ? (
-        // Grid placeholders
-        Array.from({ length: 8 }).map((_, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1 }}
-            className="bg-white/5 rounded-lg p-4 border border-white/10"
-          >
-            <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
-            <div className="h-2 bg-white/10 rounded w-3/4 animate-pulse" />
-          </motion.div>
-        ))
-      ) : (
-        // Default placeholders
-        Array.from({ length: 4 }).map((_, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="h-4 bg-white/10 rounded animate-pulse"
-          />
-        ))
-      )}
+      {/* Rows */}
+      {Array.from({ length: rows }).map((_, i) => (
+        <div key={i} className="grid grid-cols-4 gap-4">
+          {Array.from({ length: 4 }).map((_, j) => (
+            <div key={j} className="h-4 bg-slate-700 rounded animate-pulse" />
+          ))}
+        </div>
+      ))}
     </div>
   );
 }

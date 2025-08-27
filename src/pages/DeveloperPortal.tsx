@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Code, 
-  BookOpen, 
-  Zap, 
-  Shield, 
-  Users, 
-  MessageSquare, 
-  Github, 
-  ExternalLink, 
-  Terminal, 
-  Webhook, 
-  Key, 
+import {
+  Code,
+  BookOpen,
+  Zap,
+  Shield,
+  Users,
+  MessageSquare,
+  Github,
+  ExternalLink,
+  Terminal,
+  Webhook,
+  Key,
   Mail,
   ArrowRight,
   Check,
@@ -198,14 +198,14 @@ print(data)`,
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="flex justify-center mb-8">
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Code className="w-12 h-12 text-white" />
             </div>
           </div>
-          
+
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Developer{' '}
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -213,10 +213,10 @@ print(data)`,
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            Build amazing applications with our powerful APIs, comprehensive documentation, 
+            Build amazing applications with our powerful APIs, comprehensive documentation,
             and developer tools. Everything you need to integrate Zion Tech Group's services.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Get Started
@@ -255,15 +255,15 @@ print(data)`,
                     {step.step}
                   </div>
                 </div>
-                
+
                 <div className="mt-4 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{step.description}</p>
-                  
+
                   <button className="bg-zion-cyan/20 text-zion-cyan border border-zion-cyan px-4 py-2 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-sm font-medium">
                     {step.action}
                   </button>
@@ -298,17 +298,17 @@ print(data)`,
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-lg font-bold text-white mb-3 text-center">{feature.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4 text-center leading-relaxed">{feature.description}</p>
-                
+
                 <div className="flex items-center justify-between">
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                     feature.status === 'Stable' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
                   }`}>
                     {feature.status}
                   </span>
-                  
+
                   <button className="text-zion-cyan hover:text-white transition-colors duration-300 text-sm">
                     View Docs
                   </button>
@@ -345,13 +345,13 @@ print(data)`,
                     <example.icon className="w-6 h-6 text-zion-cyan" />
                     <h3 className="text-lg font-bold text-white">{example.language}</h3>
                   </div>
-                  
+
                   <div className="bg-zion-slate-dark/80 rounded-lg p-4 mb-4">
                     <pre className="text-zion-slate-light text-sm overflow-x-auto">
                       <code>{example.code}</code>
                     </pre>
                   </div>
-                  
+
                   <button className="w-full bg-zion-cyan/20 text-zion-cyan border border-zion-cyan py-2 px-4 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-sm font-medium">
                     Copy Code
                   </button>
@@ -386,10 +386,10 @@ print(data)`,
                 <div className={`w-16 h-16 bg-gradient-to-r ${resource.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <resource.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-lg font-bold text-white mb-3 text-center">{resource.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4 text-center leading-relaxed">{resource.description}</p>
-                
+
                 <div className="flex items-center justify-between">
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                     resource.badge === 'Complete' ? 'bg-green-500/20 text-green-400' :
@@ -401,7 +401,7 @@ print(data)`,
                   }`}>
                     {resource.badge}
                   </span>
-                  
+
                   <button className="text-zion-cyan hover:text-white transition-colors duration-300 text-sm group-hover:translate-x-1 transition-transform duration-300">
                     View Resource
                   </button>
@@ -419,10 +419,10 @@ print(data)`,
             Ready to Build Something Amazing?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Join thousands of developers who are already building innovative applications 
+            Join thousands of developers who are already building innovative applications
             with our powerful APIs and services.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Get API Keys

@@ -65,17 +65,17 @@ export default function QuantumComputing() {
               <Rocket className="w-5 h-5 text-purple-400" />
               <span className="text-purple-400 font-medium">Quantum Computing</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               The Future of
               <span className="text-gradient"> Computing</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Harness the power of quantum mechanics to solve the world's most complex problems. 
+              Harness the power of quantum mechanics to solve the world's most complex problems.
               Experience computing beyond classical limitations.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Explore Quantum Solutions

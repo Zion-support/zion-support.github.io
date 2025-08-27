@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Brain, 
-  Server, 
-  Globe, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
+import {
+  CheckCircle,
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  Brain,
+  Server,
+  Globe,
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
   ExternalLink,
   DollarSign,
   CreditCard,
@@ -131,7 +131,7 @@ export default function ComprehensivePricingGuide2027() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEO
         title="Comprehensive Pricing Guide 2027 - Zion Tech Group"
         description="Explore our transparent pricing for AI, IT, and business solutions. Find the perfect plan for your business needs with competitive pricing and value."
         keywords="pricing, AI services pricing, IT solutions cost, business automation pricing, Zion Tech Group pricing"
@@ -153,7 +153,7 @@ export default function ComprehensivePricingGuide2027() {
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Transparent pricing for all our innovative solutions. Choose the perfect plan that fits your business needs and budget.
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="bg-zion-blue-dark/30 rounded-lg px-6 py-3 border border-zion-blue-light/20">
                 <div className="text-2xl font-bold text-zion-cyan">${getAveragePrice(MICRO_SAAS_SERVICES)}</div>
@@ -229,8 +229,8 @@ export default function ComprehensivePricingGuide2027() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative rounded-2xl p-8 ${
-                  tier.popular 
-                    ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' 
+                  tier.popular
+                    ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple'
                     : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'
                 }`}
               >
@@ -245,13 +245,13 @@ export default function ComprehensivePricingGuide2027() {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <p className="text-zion-slate-light mb-6">{tier.description}</p>
-                  
+
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-zion-cyan">${tier.price}</span>
                     <span className="text-zion-slate-light">/month</span>
                   </div>
 
-                  <Button 
+                  <Button
                     asChild
                     className={`w-full bg-gradient-to-r ${tier.color} text-white hover:opacity-90`}
                   >
@@ -331,7 +331,7 @@ export default function ComprehensivePricingGuide2027() {
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                   <p className="text-zion-slate-light text-sm mb-4">{service.description}</p>
-                  
+
                   <div className="flex items-center justify-between mb-4">
                     <Badge variant="outline" className="text-zion-cyan border-zion-cyan/30">
                       {service.category}
@@ -382,7 +382,7 @@ export default function ComprehensivePricingGuide2027() {
                         <span className="text-sm font-medium">Learn More</span>
                         <ExternalLink className="w-4 h-4" />
                       </Link>
-                      
+
                       <Link
                         to={`mailto:${service.contactEmail}?subject=Pricing Inquiry for ${service.title}`}
                         className="inline-flex items-center space-x-2 text-zion-purple hover:text-zion-purple-light transition-colors"
@@ -476,7 +476,7 @@ export default function ComprehensivePricingGuide2027() {
           <p className="text-xl text-zion-slate-light mb-8">
             Contact us today for a personalized consultation and custom pricing quote tailored to your specific needs.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-light hover:to-zion-blue-light">
               <Link to="/contact">

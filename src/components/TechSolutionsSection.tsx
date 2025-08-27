@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Zap, 
-  Globe, 
-  Rocket, 
-  Cpu, 
+import {
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Globe,
+  Rocket,
+  Cpu,
   Database,
   Lock,
   Network,
@@ -75,7 +75,7 @@ export const TechSolutionsSection: React.FC = () => {
             Technology Solutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to drive innovation, 
+            Comprehensive technology solutions designed to drive innovation,
             enhance security, and accelerate your digital transformation journey.
           </p>
         </motion.div>
@@ -136,7 +136,7 @@ export const TechSolutionsSection: React.FC = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Let's discuss how our technology solutions can help you achieve 
+              Let's discuss how our technology solutions can help you achieve
               your business goals and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -9,7 +9,7 @@ export default function About() {
             About <span className="text-zion-cyan">Zion Tech Group</span>
           </h1>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            We are a forward-thinking technology company dedicated to transforming businesses 
+            We are a forward-thinking technology company dedicated to transforming businesses
             through innovative AI solutions and cutting-edge technology services.
           </p>
         </div>
@@ -20,7 +20,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Our Mission</h2>
             <p className="text-lg text-zion-slate-light leading-relaxed">
-              To empower businesses with cutting-edge technology solutions that drive innovation, 
+              To empower businesses with cutting-edge technology solutions that drive innovation,
               efficiency, and growth in the digital age.
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

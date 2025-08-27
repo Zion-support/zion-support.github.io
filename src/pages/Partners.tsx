@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Users, 
-  Handshake, 
-  Globe, 
-  Award, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
+import {
+  Users,
+  Users,
+  Globe,
+  Award,
+  TrendingUp,
+  Shield,
+  Zap,
   Brain,
   Cloud,
   Lock,
@@ -103,11 +103,11 @@ export default function Partners() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Partners - Zion Tech Group"
         description="Join our network of technology partners and unlock new opportunities for growth, innovation, and market expansion."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
@@ -123,7 +123,7 @@ export default function Partners() {
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Partnerships</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join our network of technology leaders and unlock new opportunities for growth, 
+              Join our network of technology leaders and unlock new opportunities for growth,
               innovation, and market expansion in the digital transformation landscape.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -151,7 +151,7 @@ export default function Partners() {
               Why Partner With Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We offer comprehensive support, resources, and opportunities to help our partners 
+              We offer comprehensive support, resources, and opportunities to help our partners
               succeed in the rapidly evolving technology landscape.
             </p>
           </motion.div>
@@ -164,7 +164,7 @@ export default function Partners() {
                 description: 'Access our extensive customer base and market presence across multiple industries.'
               },
               {
-                icon: Handshake,
+                icon: Users,
                 title: 'Joint Go-to-Market',
                 description: 'Collaborate on marketing campaigns, events, and customer acquisition strategies.'
               },
@@ -232,15 +232,15 @@ export default function Partners() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                  index === 0 
-                    ? 'border-cyan-400/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20' 
+                  index === 0
+                    ? 'border-cyan-400/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20'
                     : 'border-slate-700/50 hover:border-cyan-400/50'
                 }`}
               >
                 <div className="text-center mb-6">
                   <div className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center ${
-                    index === 0 
-                      ? 'bg-gradient-to-br from-cyan-400 to-blue-500' 
+                    index === 0
+                      ? 'bg-gradient-to-br from-cyan-400 to-blue-500'
                       : 'bg-gradient-to-br from-slate-600 to-slate-700'
                   }`}>
                     <tier.icon className="w-10 h-10 text-white" />
@@ -282,7 +282,7 @@ export default function Partners() {
               Our Trusted Partners
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're proud to work with industry leaders who share our vision for 
+              We're proud to work with industry leaders who share our vision for
               innovation and digital transformation.
             </p>
           </motion.div>
@@ -330,7 +330,7 @@ export default function Partners() {
               Ready to Join Our Partner Network?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Let's explore how we can work together to drive innovation, 
+              Let's explore how we can work together to drive innovation,
               expand market reach, and deliver exceptional value to customers.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

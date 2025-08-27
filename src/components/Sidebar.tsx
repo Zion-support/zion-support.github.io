@@ -1,66 +1,66 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  X, 
-  Home, 
-  Briefcase, 
-  Users, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
-  Instagram, 
-  Shield, 
-  Handshake, 
-  ChevronDown, 
-  ChevronRight, 
-  Brain, 
-  Cpu, 
-  Database, 
-  Network, 
-  Code, 
-  Palette, 
-  Target, 
-  Rocket, 
-  Eye, 
-  DollarSign, 
-  ShoppingCart, 
-  Clock, 
-  Cloud, 
-  Search, 
-  Building, 
-  Zap, 
-  Heart, 
-  Lightbulb, 
-  TrendingUp, 
-  BarChart3, 
-  Lock, 
-  AlertTriangle, 
-  Server, 
-  CheckCircle, 
-  Truck, 
-  Car, 
-  TestTube, 
-  PenTool, 
-  Building2, 
-  Atom, 
-  FileText, 
-  Quote, 
-  Newspaper, 
-  Calendar, 
-  Video, 
-  HelpCircle, 
-  LifeBuoy, 
-  Store, 
-  PieChart, 
-  Share2, 
-  Monitor, 
+import {
+  X,
+  Home,
+  Briefcase,
+  Users,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Shield,
+  Handshake,
+  ChevronDown,
+  ChevronRight,
+  Brain,
+  Cpu,
+  Database,
+  Network,
+  Code,
+  Palette,
+  Target,
+  Rocket,
+  Eye,
+  DollarSign,
+  ShoppingCart,
+  Clock,
+  Cloud,
+  Search,
+  Building,
+  Zap,
+  Heart,
+  Lightbulb,
+  TrendingUp,
+  BarChart3,
+  Lock,
+  AlertTriangle,
+  Server,
+  CheckCircle,
+  Truck,
+  Car,
+  TestTube,
+  PenTool,
+  Building2,
+  Atom,
+  FileText,
+  Quote,
+  Newspaper,
+  Calendar,
+  Video,
+  HelpCircle,
+  LifeBuoy,
+  Store,
+  PieChart,
+  Share2,
+  Monitor,
   Smartphone,
-  Github, 
+  Github,
   Youtube,
   GraduationCap,
   Activity,
@@ -84,8 +84,8 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
   }, [location.pathname, onClose]);
 
   const toggleSection = (sectionTitle: string) => {
-    setExpandedSections(prev => 
-      prev.includes(sectionTitle) 
+    setExpandedSections(prev =>
+      prev.includes(sectionTitle)
         ? prev.filter(title => title !== sectionTitle)
         : [...prev, sectionTitle]
     );
@@ -256,7 +256,7 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             onClick={onClose}
           />
-          
+
           {/* Sidebar */}
           <motion.div
             initial={{ x: '-100%' }}
@@ -297,13 +297,13 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
                         {section.title}
                       </span>
                     </div>
-                    <ChevronDown 
+                    <ChevronDown
                       className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                         expandedSections.includes(section.title) ? 'rotate-180' : ''
-                      }`} 
+                      }`}
                     />
                   </button>
-                  
+
                   <AnimatePresence>
                     {expandedSections.includes(section.title) && (
                       <motion.div
@@ -347,7 +347,7 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
                   <p>© 2025 Zion Tech Group</p>
                   <p>Innovating the future</p>
                 </div>
-                
+
                 {/* Social Links */}
                 <div className="flex space-x-3">
                   <a

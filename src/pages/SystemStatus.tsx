@@ -226,7 +226,7 @@ export default function SystemStatus() {
                 {getStatusIcon(systemStatus.overall)}
                 <h2 className="text-3xl font-bold text-white">All Systems Operational</h2>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-zion-cyan mb-2">{systemStatus.uptime}</div>
@@ -279,9 +279,9 @@ export default function SystemStatus() {
                       <span className="text-sm text-zion-slate-light">Operational</span>
                     </div>
                   </div>
-                  
+
                   <h3 className="text-lg font-semibold text-white mb-3">{service.name}</h3>
-                  
+
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span className="text-zion-slate-light">Uptime:</span>

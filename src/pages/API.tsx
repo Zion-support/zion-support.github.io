@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Code, 
-  Search, 
+import {
+  Code,
+  Search,
   Filter,
   ArrowRight,
   Download,
@@ -109,12 +109,12 @@ const createInstance = async () => {
 def check_threat(ip_address):
     url = "https://api.ziontechgroup.com/v1/security/threat-check"
     headers = {"Authorization": "Bearer YOUR_API_KEY"}
-    
+
     response = requests.post(url, json={
         "ip": ip_address,
         "check_type": "comprehensive"
     })
-    
+
     return response.json()`,
     category: 'Security'
   }
@@ -130,7 +130,7 @@ export default function API() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,221,210,0.1),transparent_50%)]" />
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -144,7 +144,7 @@ export default function API() {
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Integrate Zion Tech Group's cutting-edge services into your applications 
+              Integrate Zion Tech Group's cutting-edge services into your applications
               with our comprehensive RESTful APIs. Build, deploy, and scale with confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -329,7 +329,7 @@ export default function API() {
               Ready to Start Building?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Get API access, explore our documentation, and start integrating 
+              Get API access, explore our documentation, and start integrating
               Zion Tech Group services into your applications today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

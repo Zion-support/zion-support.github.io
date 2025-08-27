@@ -1,14 +1,13 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Cpu, 
-  Eye, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  Globe, 
-  TrendingUp, 
+import {
+  Cpu,
+  Eye,
+  BarChart3,
+  Zap,
+  Shield,
+  Globe,
+  TrendingUp,
   Settings,
   Database,
   Network,
@@ -105,11 +104,11 @@ export default function DigitalTwin() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Digital Twin Services - Zion Tech Group"
         description="Transform your physical assets into intelligent digital replicas with our advanced Digital Twin technology. Real-time monitoring, predictive analytics, and automated optimization."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
@@ -129,7 +128,7 @@ export default function DigitalTwin() {
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your physical assets into intelligent digital replicas. Monitor, analyze, 
+              Transform your physical assets into intelligent digital replicas. Monitor, analyze,
               and optimize your operations in real-time with cutting-edge Digital Twin technology.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -157,8 +156,8 @@ export default function DigitalTwin() {
                 What is a Digital Twin?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                A Digital Twin is a virtual representation of a physical object, system, or process 
-                that mirrors its real-world counterpart in real-time. It combines IoT sensors, 
+                A Digital Twin is a virtual representation of a physical object, system, or process
+                that mirrors its real-world counterpart in real-time. It combines IoT sensors,
                 AI algorithms, and advanced analytics to provide unprecedented insights and control.
               </p>
               <div className="space-y-4">
@@ -185,7 +184,7 @@ export default function DigitalTwin() {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -240,7 +239,7 @@ export default function DigitalTwin() {
               Key Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our Digital Twin platform provides comprehensive capabilities for monitoring, 
+              Our Digital Twin platform provides comprehensive capabilities for monitoring,
               analyzing, and optimizing your physical assets.
             </p>
           </motion.div>
@@ -278,7 +277,7 @@ export default function DigitalTwin() {
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Digital Twin technology is transforming industries across the globe, 
+              Digital Twin technology is transforming industries across the globe,
               enabling unprecedented levels of efficiency and insight.
             </p>
           </motion.div>
@@ -415,7 +414,7 @@ export default function DigitalTwin() {
               Ready to Transform Your Operations?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how Digital Twin technology can revolutionize your business processes, 
+              Discover how Digital Twin technology can revolutionize your business processes,
               improve efficiency, and drive innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

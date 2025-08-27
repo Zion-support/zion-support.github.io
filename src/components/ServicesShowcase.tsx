@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Zap, 
-  Globe, 
-  Cpu, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Server,
+  Zap,
+  Globe,
+  Cpu,
   Database,
   Network,
   Lock,
@@ -43,7 +43,7 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025];
-  
+
   // Group services by category
   const servicesByCategory = allServices.reduce((acc, service) => {
     const category = service.category;
@@ -68,8 +68,8 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
   ];
 
   const toggleCategory = (category: string) => {
-    setExpandedCategories(prev => 
-      prev.includes(category) 
+    setExpandedCategories(prev =>
+      prev.includes(category)
         ? prev.filter(c => c !== category)
         : [...prev, category]
     );
@@ -85,9 +85,9 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
 
-  const filteredServices = selectedCategory === 'all' 
-    ? allServices 
-    : allServices.filter(service => 
+  const filteredServices = selectedCategory === 'all'
+    ? allServices
+    : allServices.filter(service =>
         service.category.toLowerCase().includes(selectedCategory.toLowerCase())
       );
 
@@ -95,7 +95,7 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
     <section className={`py-16 bg-zion-slate-dark/30 ${className}`}>
       <div className="container-responsive">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -107,13 +107,13 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
             <span className="text-white">Services Portfolio</span>
           </h2>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            Discover our extensive collection of cutting-edge micro SAAS solutions designed to transform your business. 
+            Discover our extensive collection of cutting-edge micro SAAS solutions designed to transform your business.
             From AI-powered analytics to quantum computing, we offer innovative solutions across all major technology domains.
           </p>
-          
+
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
               <div className="text-4xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
               <div className="text-zion-slate-light">Total Services</div>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
               <div className="text-4xl font-bold text-zion-purple mb-2">{categories.length}</div>
               <div className="text-zion-slate-light">Technology Categories</div>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -140,7 +140,7 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
               <div className="text-4xl font-bold text-zion-blue mb-2">99.9%</div>
               <div className="text-zion-slate-light">Uptime Guarantee</div>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -153,7 +153,7 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
         </motion.div>
 
         {/* Category Navigation */}
-        <motion.div 
+        <motion.div
           className="mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -203,11 +203,11 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
                     <div className="text-sm text-zion-slate-light">per month</div>
                   </div>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-zion-slate-light text-sm leading-relaxed">
                   {service.description}
                 </p>
@@ -314,7 +314,7 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
         </div>
 
         {/* Call to Action */}
-        <motion.div 
+        <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -325,18 +325,18 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
               Ready to Transform Your Business?
             </h3>
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-              Our team of experts is ready to help you implement the perfect solution for your business needs. 
+              Our team of experts is ready to help you implement the perfect solution for your business needs.
               Get in touch today to start your digital transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-xl font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 inline-flex items-center gap-2"
               >
                 <Mail className="w-5 h-5" />
                 Contact Us
               </a>
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-zion-slate-light/10 text-white px-8 py-4 rounded-xl font-medium hover:bg-zion-slate-light/20 transition-all duration-300 inline-flex items-center gap-2"
               >

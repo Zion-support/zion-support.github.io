@@ -118,8 +118,8 @@ export default function ForumCategories() {
         {/* Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category) => (
-            <div 
-              key={category.id} 
+            <div
+              key={category.id}
               className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 group cursor-pointer"
             >
               <div className="flex items-start justify-between mb-4">
@@ -132,22 +132,22 @@ export default function ForumCategories() {
                   </span>
                 )}
               </div>
-              
+
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
                 {category.name}
               </h3>
-              
+
               <p className="text-zion-slate-light mb-4 leading-relaxed">
                 {category.description}
               </p>
-              
+
               <div className="flex items-center justify-between text-sm text-zion-slate-light mb-4">
                 <span className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-zion-cyan rounded-full"></span>
                   {category.postCount} posts
                 </span>
               </div>
-              
+
               {category.lastPost && (
                 <div className="pt-4 border-t border-white/10">
                   <p className="text-xs text-zion-slate-light mb-1">Latest Post:</p>

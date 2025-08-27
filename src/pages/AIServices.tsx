@@ -5,7 +5,7 @@ let Impl: React.ComponentType | null = null
 try {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore
-	Impl = (await import('./services/AIServices')).default
+	Impl = (await import('./services/AI')).default
 } catch {}
 
 const Fallback: React.FC = () => (

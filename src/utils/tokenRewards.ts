@@ -1,5 +1,4 @@
 
-
 export async function rewardOnboarding(userId: string) {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',

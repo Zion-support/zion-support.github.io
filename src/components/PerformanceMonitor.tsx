@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  Zap, 
-  Clock, 
-  TrendingUp, 
-  AlertTriangle, 
+import {
+  Activity,
+  Zap,
+  Clock,
+  TrendingUp,
+  AlertTriangle,
   CheckCircle,
   X,
   Info,
@@ -99,8 +99,8 @@ export const PerformanceMonitor: React.FC = () => {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint' || 
-              entry.entryType === 'first-input-delay' || 
+          if (entry.entryType === 'largest-contentful-paint' ||
+              entry.entryType === 'first-input-delay' ||
               entry.entryType === 'layout-shift') {
             updateMetrics();
           }
@@ -196,7 +196,7 @@ export const PerformanceMonitor: React.FC = () => {
                     {formatMetric(metrics.fcp)}
                   </div>
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2 mt-2">
-                    <div 
+                    <div
                       className={`h-2 rounded-full transition-all duration-300 ${getMetricColor(scores.fcp)}`}
                       style={{ width: `${scores.fcp?.score || 0}%` }}
                     />
@@ -214,7 +214,7 @@ export const PerformanceMonitor: React.FC = () => {
                     {formatMetric(metrics.lcp)}
                   </div>
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2 mt-2">
-                    <div 
+                    <div
                       className={`h-2 rounded-full transition-all duration-300 ${getMetricColor(scores.lcp)}`}
                       style={{ width: `${scores.lcp?.score || 0}%` }}
                     />
@@ -232,7 +232,7 @@ export const PerformanceMonitor: React.FC = () => {
                     {formatMetric(metrics.fid)}
                   </div>
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2 mt-2">
-                    <div 
+                    <div
                       className={`h-2 rounded-full transition-all duration-300 ${getMetricColor(scores.fid)}`}
                       style={{ width: `${scores.fid?.score || 0}%` }}
                     />
@@ -250,7 +250,7 @@ export const PerformanceMonitor: React.FC = () => {
                     {formatMetric(metrics.cls, '')}
                   </div>
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2 mt-2">
-                    <div 
+                    <div
                       className={`h-2 rounded-full transition-all duration-300 ${getMetricColor(scores.cls)}`}
                       style={{ width: `${scores.cls?.score || 0}%` }}
                     />

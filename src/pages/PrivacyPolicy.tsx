@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  Database, 
-  Globe, 
-  Users, 
-  Mail, 
+import {
+  Shield,
+  Lock,
+  Eye,
+  Database,
+  Globe,
+  Users,
+  Mail,
   Phone,
   MapPin,
   Calendar,
@@ -101,7 +101,7 @@ const PrivacyPolicy: React.FC = () => {
                 <Database className="w-8 h-8 text-zion-cyan" />
                 Information We Collect
               </h2>
-              
+
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">Personal Information</h3>
@@ -188,11 +188,11 @@ const PrivacyPolicy: React.FC = () => {
                 <Eye className="w-8 h-8 text-zion-cyan" />
                 How We Use Your Information
               </h2>
-              
+
               <p className="text-zion-slate-light mb-4">
                 We use the information we collect for various purposes, including:
               </p>
-              
+
               <ul className="space-y-3 text-zion-slate-light ml-6">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -237,11 +237,11 @@ const PrivacyPolicy: React.FC = () => {
                 <Share className="w-8 h-8 text-zion-cyan" />
                 Information Sharing and Disclosure
               </h2>
-              
+
               <p className="text-zion-slate-light mb-4">
                 We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
               </p>
-              
+
               <ul className="space-y-3 text-zion-slate-light ml-6">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -274,7 +274,7 @@ const PrivacyPolicy: React.FC = () => {
                 <Lock className="w-8 h-8 text-zion-cyan" />
                 Data Security
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
@@ -318,11 +318,11 @@ const PrivacyPolicy: React.FC = () => {
                 <Users className="w-8 h-8 text-zion-cyan" />
                 Your Rights and Choices
               </h2>
-              
+
               <p className="text-zion-slate-light mb-4">
                 You have certain rights regarding your personal information:
               </p>
-              
+
               <ul className="space-y-3 text-zion-slate-light ml-6">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -349,7 +349,7 @@ const PrivacyPolicy: React.FC = () => {
                   <strong>Cookies:</strong> Manage cookie preferences through your browser settings
                 </li>
               </ul>
-              
+
               <p className="text-zion-slate-light mt-4">
                 To exercise these rights, please contact us using the information provided below.
               </p>
@@ -367,7 +367,7 @@ const PrivacyPolicy: React.FC = () => {
                 <Globe className="w-8 h-8 text-zion-cyan" />
                 International Data Transfers
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   Your personal information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.
@@ -390,7 +390,7 @@ const PrivacyPolicy: React.FC = () => {
                 <AlertTriangle className="w-8 h-8 text-zion-cyan" />
                 Children's Privacy
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   Our website and services are not intended for children under the age of 16. We do not knowingly collect personal information from children under 16.
@@ -413,7 +413,7 @@ const PrivacyPolicy: React.FC = () => {
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Changes to This Policy
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons.
@@ -452,11 +452,11 @@ const PrivacyPolicy: React.FC = () => {
                 <Mail className="w-8 h-8 text-zion-cyan" />
                 Contact Us
               </h2>
-              
+
               <p className="text-zion-slate-light mb-6">
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 text-zion-slate-light">
@@ -479,7 +479,7 @@ const PrivacyPolicy: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               <p className="text-zion-slate-light mt-6">
                 We will respond to your inquiry within 30 days of receipt.
               </p>

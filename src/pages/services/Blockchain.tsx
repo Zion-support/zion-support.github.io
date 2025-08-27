@@ -65,17 +65,17 @@ export default function Blockchain() {
               <Lock className="w-5 h-5 text-green-400" />
               <span className="text-green-400 font-medium">Blockchain Solutions</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Trust Through
               <span className="text-gradient"> Technology</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Build trust, transparency, and efficiency with blockchain technology. 
+              Build trust, transparency, and efficiency with blockchain technology.
               Transform your business with decentralized solutions.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Blockchain Project

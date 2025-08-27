@@ -69,7 +69,7 @@ export const PricingSection: React.FC = () => {
             Choose Your Plan
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Flexible pricing options designed to scale with your business. 
+            Flexible pricing options designed to scale with your business.
             Start small and grow with us.
           </p>
         </motion.div>

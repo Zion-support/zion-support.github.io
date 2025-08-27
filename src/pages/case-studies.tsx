@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import {
   CheckCircle,
   TrendingUp,
@@ -175,12 +175,12 @@ export default function CaseStudies() {
 
   const filteredCaseStudies = caseStudies.filter(study => {
     const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
-    const matchesTechnology = selectedTechnology === 'All' || 
+    const matchesTechnology = selectedTechnology === 'All' ||
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
     const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
-    
+
     return matchesIndustry && matchesTechnology && matchesSearch;
   });
 
@@ -203,8 +203,8 @@ export default function CaseStudies() {
               Real Results, Real Impact
             </h1>
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Discover how Zion Tech Group has transformed businesses across industries with 
-              cutting-edge technology solutions. Our case studies showcase measurable results 
+              Discover how Zion Tech Group has transformed businesses across industries with
+              cutting-edge technology solutions. Our case studies showcase measurable results
               and proven success stories.
             </p>
           </motion.div>
@@ -381,7 +381,7 @@ export default function CaseStudies() {
               Ready to Create Your Success Story?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8">
-              Let's discuss how Zion Tech Group can transform your business with 
+              Let's discuss how Zion Tech Group can transform your business with
               cutting-edge technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,12 +1,12 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Globe, 
-  Shield, 
-  Zap, 
-  Users, 
+import {
+  Brain,
+  Globe,
+  Shield,
+  Zap,
+  Users,
   TrendingUp,
   CheckCircle,
   ArrowRight,
@@ -172,13 +172,13 @@ export function FeatureHighlights() {
             <Award className="w-4 h-4" />
             <span>Why Choose Zion</span>
           </div>
-          
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Built for the Future of Work
           </h2>
-          
+
           <p className="text-lg md:text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Experience the next generation of talent marketplace with cutting-edge AI, 
+            Experience the next generation of talent marketplace with cutting-edge AI,
             global reach, and enterprise-grade security.
           </p>
         </motion.div>
@@ -195,8 +195,8 @@ export function FeatureHighlights() {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ 
-                y: -10, 
+              whileHover={{
+                y: -10,
                 scale: 1.02,
                 transition: { duration: 0.3 }
               }}
@@ -205,7 +205,7 @@ export function FeatureHighlights() {
               <div className={`h-full p-8 rounded-3xl ${highlight.bgColor} ${highlight.borderColor} border-2 hover:border-opacity-40 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
                 {/* Background gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${highlight.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                
+
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className={`inline-flex p-4 rounded-2xl bg-white/10 mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -216,7 +216,7 @@ export function FeatureHighlights() {
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-200">
                     {highlight.title}
                   </h3>
-                  
+
                   <p className="text-zion-slate-light leading-relaxed mb-6">
                     {highlight.description}
                   </p>
@@ -248,8 +248,8 @@ export function FeatureHighlights() {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ 
-                y: -5, 
+              whileHover={{
+                y: -5,
                 scale: 1.02,
                 transition: { duration: 0.3 }
               }}
@@ -259,11 +259,11 @@ export function FeatureHighlights() {
                 <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
                 </div>
-                
+
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                   {feature.title}
                 </h3>
-                
+
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                   {feature.description}
                 </p>
@@ -283,7 +283,7 @@ export function FeatureHighlights() {
           <h3 className="text-2xl font-bold text-white mb-12">
             Trusted by Industry Leaders
           </h3>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <motion.div
@@ -316,7 +316,7 @@ export function FeatureHighlights() {
           <h3 className="text-2xl font-bold text-white mb-8">
             Cutting-Edge Technology Stack
           </h3>
-          
+
           <motion.div
             variants={techVariants}
             className="flex flex-wrap justify-center gap-4"
@@ -361,3 +361,5 @@ export function FeatureHighlights() {
     </section>
   );
 }
+
+

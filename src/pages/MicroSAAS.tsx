@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Rocket, 
-  Lock, 
-  Globe, 
+import {
+  Brain,
+  Shield,
+  Cloud,
+  Cpu,
+  Rocket,
+  Lock,
+  Globe,
   Heart,
   Code,
   Users,
@@ -130,13 +130,13 @@ export default function MicroSAAS() {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
+          <motion.div
             className="text-center max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <motion.div 
+            <motion.div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zion-cyan/20 border border-zion-cyan/30 text-zion-cyan text-sm font-medium mb-6"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -155,13 +155,13 @@ export default function MicroSAAS() {
             </h1>
 
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business with our suite of specialized, AI-powered micro SAAS applications. 
+              Transform your business with our suite of specialized, AI-powered micro SAAS applications.
               Each solution is designed to solve specific business challenges with maximum efficiency.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
               >
                 Get Started
@@ -178,7 +178,7 @@ export default function MicroSAAS() {
       {/* Benefits Section */}
       <section className="py-20 bg-zion-blue-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -192,14 +192,14 @@ export default function MicroSAAS() {
               </span>
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our micro SAAS solutions are built for modern businesses that need powerful, 
+              Our micro SAAS solutions are built for modern businesses that need powerful,
               focused tools without the complexity of enterprise software.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
                 initial={{ opacity: 0, y: 20 }}
@@ -221,7 +221,7 @@ export default function MicroSAAS() {
       {/* Solutions Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -235,14 +235,14 @@ export default function MicroSAAS() {
               </span>
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover our comprehensive suite of micro SAAS applications designed to 
+              Discover our comprehensive suite of micro SAAS applications designed to
               address specific business challenges and drive growth.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSAASSolutions.map((solution, index) => (
-              <motion.div 
+              <motion.div
                 key={solution.id}
                 className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20"
                 initial={{ opacity: 0, y: 20 }}
@@ -272,7 +272,7 @@ export default function MicroSAAS() {
                     ))}
                   </div>
 
-                  <Link 
+                  <Link
                     to={solution.href}
                     className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light font-semibold transition-colors group-hover:gap-3"
                   >
@@ -305,13 +305,13 @@ export default function MicroSAAS() {
                       <span className="text-sm text-gray-400">({service.reviews})</span>
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  
+
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                   </div>
-                  
+
                   <div className="mb-6">
                     <h4 className="font-medium text-gray-900 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -323,7 +323,7 @@ export default function MicroSAAS() {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
                     Get Started
                     <ArrowRight className="h-4 w-4 ml-2" />
@@ -367,7 +367,7 @@ export default function MicroSAAS() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div 
+          <motion.div
             className="max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -378,12 +378,12 @@ export default function MicroSAAS() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join thousands of businesses that have already transformed their operations 
+              Join thousands of businesses that have already transformed their operations
               with our micro SAAS solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
               >
                 Start Your Journey

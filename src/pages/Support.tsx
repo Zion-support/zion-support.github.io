@@ -176,7 +176,7 @@ export default function Support() {
                 <div className="text-zion-cyan mb-4">{resource.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{resource.title}</h3>
                 <p className="text-zion-slate-light mb-4">{resource.description}</p>
-                <a 
+                <a
                   href={resource.href}
                   className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors"
                 >
@@ -199,13 +199,13 @@ export default function Support() {
             Our support team is ready to assist you with any questions or technical issues you may have.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="/contact"
               className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
             >
               Contact Support
             </a>
-            <a 
+            <a
               href="/help"
               className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
             >

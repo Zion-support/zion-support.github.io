@@ -198,7 +198,7 @@ const ComprehensiveServices: React.FC = () => {
     = ({ icon, title, description, items, gradient }) => (
     <section className="py-14">
       <div className="max-w-7xl mx-auto px-6">
-        <div className={`rounded-2xl p-8 border border-white/10 bg-gradient-to-br ${gradient} text-white`}> 
+        <div className={`rounded-2xl p-8 border border-white/10 bg-gradient-to-br ${gradient} text-white`}>
           <div className="flex items-center mb-6">
             <div className="mr-3">{icon}</div>
             <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
@@ -226,7 +226,7 @@ const ComprehensiveServices: React.FC = () => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Comprehensive Services - Zion Tech Group"
         description="Micro SaaS, IT services, and AI solutions with clear pricing, links, and rapid delivery."
         keywords="micro saas, it services, ai solutions, soc2 automation, kubernetes, rag platform"
@@ -259,28 +259,28 @@ const ComprehensiveServices: React.FC = () => {
         </header>
 
         {/* Sections */}
-        <Section 
-          icon={<Sparkles className="h-6 w-6" />} 
-          title="Micro SaaS Products" 
+        <Section
+          icon={<Sparkles className="h-6 w-6" />}
+          title="Micro SaaS Products"
           description="Subscription software for security, legal, revenue, and operations with fast time-to-value."
-          items={microSaaS} 
-          gradient="from-violet-900/60 to-indigo-900/40" 
+          items={microSaaS}
+          gradient="from-violet-900/60 to-indigo-900/40"
         />
 
-        <Section 
-          icon={<Cloud className="h-6 w-6" />} 
-          title="IT Services" 
+        <Section
+          icon={<Cloud className="h-6 w-6" />}
+          title="IT Services"
           description="Cloud, platform, and security engagements by seasoned architects and SREs."
-          items={itServices} 
-          gradient="from-sky-900/60 to-teal-900/40" 
+          items={itServices}
+          gradient="from-sky-900/60 to-teal-900/40"
         />
 
-        <Section 
-          icon={<Cpu className="h-6 w-6" />} 
-          title="AI Solutions" 
+        <Section
+          icon={<Cpu className="h-6 w-6" />}
+          title="AI Solutions"
           description="Applied AI with governance, privacy, and business outcomes at the core."
-          items={aiSolutions} 
-          gradient="from-fuchsia-900/60 to-rose-900/40" 
+          items={aiSolutions}
+          gradient="from-fuchsia-900/60 to-rose-900/40"
         />
 
         {/* Contact CTA */}

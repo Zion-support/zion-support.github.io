@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { 
-  Home, 
-  Briefcase, 
-  Users, 
-  Settings, 
-  BarChart3, 
-  FileText, 
-  MessageSquare, 
+import {
+  Home,
+  Briefcase,
+  Users,
+  Settings,
+  BarChart3,
+  FileText,
+  MessageSquare,
   HelpCircle,
   Code,
   Smartphone,
@@ -343,21 +343,21 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
   ];
 
   const contactInfo = [
-    { 
-      icon: Phone, 
-      text: '+1 302 464 0950', 
+    {
+      icon: Phone,
+      text: '+1 302 464 0950',
       href: 'tel:+13024640950',
       description: 'Call us anytime'
     },
-    { 
-      icon: Mail, 
-      text: 'kleber@ziontechgroup.com', 
+    {
+      icon: Mail,
+      text: 'kleber@ziontechgroup.com',
       href: 'mailto:kleber@ziontechgroup.com',
       description: 'Email us for support'
     },
-    { 
-      icon: MapPin, 
-      text: '364 E Main St STE 1008 Middletown DE 19709', 
+    {
+      icon: MapPin,
+      text: '364 E Main St STE 1008 Middletown DE 19709',
       href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
       description: 'Headquarters location'
     },
@@ -374,12 +374,12 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
     <>
       {/* Overlay */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-40 lg:hidden backdrop-blur-sm"
           onClick={onClose}
         />
       )}
-      
+
       {/* Sidebar */}
       <div className={cn(
         "fixed left-0 top-0 z-50 h-full w-80 bg-gradient-to-b from-zion-slate-dark via-zion-slate to-zion-slate-light border-r border-white/20 transform transition-all duration-300 ease-in-out lg:translate-x-0 shadow-2xl",
@@ -433,7 +433,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                   {section.items.map((item) => {
                     const IconComponent = item.icon;
                     const isActive = location.pathname === item.href;
-                    
+
                     return (
                       <li key={item.name}>
                         <Link
@@ -492,7 +492,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                 );
               })}
             </div>
-            
+
             {/* Website Link */}
             <div className="mt-4 pt-4 border-t border-white/20">
               <a

@@ -113,9 +113,9 @@ const UltimateServicesShowcase2025: React.FC = () => {
               Discover our revolutionary portfolio of cutting-edge micro SAAS solutions, AI-powered innovations, and quantum computing services designed to transform your business and drive competitive advantage in the digital age
             </p>
           </motion.div>
-          
+
           {/* Key Statistics */}
-          <motion.div 
+          <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12"
             variants={containerVariants}
             initial="hidden"
@@ -140,7 +140,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
           </motion.div>
 
           {/* Search and Filter */}
-          <motion.div 
+          <motion.div
             className="max-w-4xl mx-auto mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -172,7 +172,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
                   <option value="name">Name</option>
                 </select>
               </div>
-              
+
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setViewMode('grid')}
@@ -195,7 +195,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
           </motion.div>
 
           {/* Category Filter */}
-          <motion.div 
+          <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -224,8 +224,8 @@ const UltimateServicesShowcase2025: React.FC = () => {
       {/* Services Grid/List */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className={viewMode === 'grid' 
+          <motion.div
+            className={viewMode === 'grid'
               ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
             }
@@ -237,7 +237,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
               <motion.div
                 key={service.id}
                 variants={itemVariants}
-                className={viewMode === 'grid' 
+                className={viewMode === 'grid'
                   ? "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer group"
                   : "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 cursor-pointer group"
                 }
@@ -256,7 +256,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
 
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">{service.name}</h3>
                 <p className="text-gray-300 mb-4 line-clamp-3 leading-relaxed">{service.description}</p>
-                
+
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-zion-purple/20 text-zion-purple text-sm rounded-full border border-zion-purple/30">
                     {service.category}
@@ -307,7 +307,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
       {/* Why Choose Zion Tech Group */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -321,8 +321,8 @@ const UltimateServicesShowcase2025: React.FC = () => {
               We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results and competitive advantage
             </p>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
@@ -334,13 +334,13 @@ const UltimateServicesShowcase2025: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>
               <p className="text-gray-300">We stay ahead of the curve with the latest technologies and methodologies, ensuring your business always has a competitive edge.</p>
             </motion.div>
-            
+
             <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 group">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
               <h3 className="text-xl font-semibold text-white mb-3">Results Driven</h3>
               <p className="text-gray-300">Our solutions are designed to deliver measurable business outcomes, from increased efficiency to improved customer satisfaction.</p>
             </motion.div>
-            
+
             <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 group">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🤝</div>
               <h3 className="text-xl font-semibold text-white mb-3">Partnership Approach</h3>
@@ -394,7 +394,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div>
                   <h3 className="text-lg font-semibold text-zion-purple mb-3">Benefits</h3>
                   <ul className="space-y-2">

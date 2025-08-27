@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
-  Quote, 
-  ChevronLeft, 
-  ChevronRight, 
+import {
+  Star,
+  Quote,
+  ChevronLeft,
+  ChevronRight,
   Play,
   Pause,
   Users,
@@ -102,7 +102,7 @@ export const InteractiveTestimonials: React.FC = () => {
   // Auto-advance testimonials
   React.useEffect(() => {
     if (!isPlaying) return;
-    
+
     const interval = setInterval(() => {
       nextTestimonial();
     }, 5000);
@@ -125,7 +125,7 @@ export const InteractiveTestimonials: React.FC = () => {
             What Our Clients Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real stories from real clients. Discover how we've transformed businesses 
+            Real stories from real clients. Discover how we've transformed businesses
             across industries with our innovative technology solutions.
           </p>
         </motion.div>
@@ -249,7 +249,7 @@ export const InteractiveTestimonials: React.FC = () => {
               Ready to Join Our Success Stories?
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Let's discuss how we can transform your business with innovative 
+              Let's discuss how we can transform your business with innovative
               technology solutions tailored to your specific needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

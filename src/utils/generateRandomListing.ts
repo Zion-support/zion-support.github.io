@@ -77,7 +77,7 @@ export function generateRandomListing(): MarketplaceItem {
   const price = priceRanges[Math.floor(Math.random() * priceRanges.length)];
   const location = locations[Math.floor(Math.random() * locations.length)];
   const sellerName = sellerNames[Math.floor(Math.random() * sellerNames.length)];
-  
+
   return {
     id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
     title: sampleTitles[randomIndex],

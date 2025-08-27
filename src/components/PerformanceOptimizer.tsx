@@ -1,348 +1,245 @@
-import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useEffect, useRef, useCallback } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
+  className?: string;
   threshold?: number;
   rootMargin?: string;
-  className?: string;
-  delay?: number;
-  duration?: number;
-  direction?: 'up' | 'down' | 'left' | 'right' | 'fade';
-  onVisible?: () => void;
-  onHidden?: () => void;
-  priority?: 'low' | 'medium' | 'high';
-  preload?: boolean;
+  triggerOnce?: boolean;
 }
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage?: number;
-  fps: number;
-}
-
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+export function PerformanceOptimizer({
   children,
+  className = '',
   threshold = 0.1,
   rootMargin = '50px',
-  className = '',
-  delay = 0,
-  duration = 0.6,
-  direction = 'fade',
-  onVisible,
-  onHidden,
-  priority = 'medium',
-  preload = false
-}) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const ref = useRef<HTMLDivElement>(null);
-  const loadStartTime = useRef<number>(Date.now());
-  const frameCount = useRef<number>(0);
-  const lastTime = useRef<number>(performance.now());
-
-  // Intersection Observer for visibility detection
-  const isInView = useInView(ref, {
+  triggerOnce = true
+}: PerformanceOptimizerProps) {
+  const { ref, inView } = useInView({
     threshold,
     rootMargin,
-    once: priority === 'high' ? false : true
+    triggerOnce
   });
 
-  // Performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const measurePerformance = () => {
-        const now = performance.now();
-        const loadTime = now - loadStartTime.current;
-        
-        // Calculate FPS
-        frameCount.current++;
-        if (now - lastTime.current >= 1000) {
-          const fps = Math.round((frameCount.current * 1000) / (now - lastTime.current));
-          frameCount.current = 0;
-          lastTime.current = now;
-          
-          setMetrics(prev => ({
-            ...prev,
-            loadTime,
-            fps
-          }));
-        }
-      };
-
-      const interval = setInterval(measurePerformance, 100);
-      return () => clearInterval(interval);
-    }
-  }, []);
-
-  // Memory usage monitoring (if available)
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as any).memory;
-      if (memory) {
-        const updateMemoryUsage = () => {
-          setMetrics(prev => ({
-            ...prev,
-            memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-          }));
-        };
-        
-        const interval = setInterval(updateMemoryUsage, 5000);
-        return () => clearInterval(interval);
-      }
-    }
-  }, []);
-
-  // Handle visibility changes
-  useEffect(() => {
-    if (isInView && !isVisible) {
-      setIsVisible(true);
-      onVisible?.();
-      
-      // Measure render time
-      const renderStart = performance.now();
-      requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
-        setMetrics(prev => ({
-          ...prev,
-          renderTime
-        }));
-      });
-    } else if (!isInView && isVisible) {
-      setIsVisible(false);
-      onHidden?.();
-    }
-  }, [isInView, isVisible, onVisible, onHidden]);
-
-  // Preloading logic
-  useEffect(() => {
-    if (preload && priority === 'high') {
-      setIsLoaded(true);
-    }
-  }, [preload, priority]);
-
-  // Animation variants based on direction
-  const animationVariants = useMemo(() => {
-    const baseVariants = {
-      hidden: { opacity: 0 },
-      visible: { 
-        opacity: 1,
-        transition: {
-          duration,
-          delay,
-          ease: "easeOut"
-        }
-      }
-    };
-
-    switch (direction) {
-      case 'up':
-        return {
-          ...baseVariants,
-          hidden: { ...baseVariants.hidden, y: 50 },
-          visible: { ...baseVariants.visible, y: 0 }
-        };
-      case 'down':
-        return {
-          ...baseVariants,
-          hidden: { ...baseVariants.hidden, y: -50 },
-          visible: { ...baseVariants.visible, y: 0 }
-        };
-      case 'left':
-        return {
-          ...baseVariants,
-          hidden: { ...baseVariants.hidden, x: 50 },
-          visible: { ...baseVariants.visible, x: 0 }
-        };
-      case 'right':
-        return {
-          ...baseVariants,
-          hidden: { ...baseVariants.hidden, x: -50 },
-          visible: { ...baseVariants.visible, x: 0 }
-        };
-      default:
-        return baseVariants;
-    }
-  }, [direction, duration, delay]);
-
-  // Lazy loading with priority
-  const shouldRender = useMemo(() => {
-    if (priority === 'high') return true;
-    if (priority === 'medium') return isInView;
-    return isVisible;
-  }, [priority, isInView, isVisible]);
-
-  // Performance optimization: debounced visibility update
-  const debouncedSetVisible = useCallback(
-    (() => {
-      let timeoutId: NodeJS.Timeout;
-      return (visible: boolean) => {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          setIsVisible(visible);
-        }, 100);
-      };
-    })(),
-    []
+  return (
+    <div ref={ref} className={className}>
+      {inView ? children : <div className="h-32 bg-slate-800/20 rounded-lg animate-pulse" />}
+    </div>
   );
+}
 
-  // Handle intersection observer manually for better control
+// Image optimization component
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  placeholder?: string;
+  priority?: boolean;
+  sizes?: string;
+}
+
+export function OptimizedImage({
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzMzMzMzMyIvPjwvc3ZnPg==',
+  priority = false,
+  sizes = '100vw'
+}: OptimizedImageProps) {
+  const [isLoaded, setIsLoaded] = React.useState(false);
+  const [error, setError] = React.useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  const handleLoad = useCallback(() => {
+    setIsLoaded(true);
+  }, []);
+
+  const handleError = useCallback(() => {
+    setError(true);
+  }, []);
+
   useEffect(() => {
-    if (!ref.current) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            debouncedSetVisible(true);
-          } else if (priority !== 'high') {
-            debouncedSetVisible(false);
-          }
-        });
-      },
-      {
-        threshold,
-        rootMargin
-      }
-    );
-
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold, rootMargin, priority, debouncedSetVisible]);
-
-  // Performance debugging (only in development)
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && metrics) {
-      console.log('Performance Metrics:', {
-        component: 'PerformanceOptimizer',
-        loadTime: `${metrics.loadTime.toFixed(2)}ms`,
-        renderTime: metrics.renderTime ? `${metrics.renderTime.toFixed(2)}ms` : 'N/A',
-        fps: metrics.fps || 'N/A',
-        memoryUsage: metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(2)}MB` : 'N/A'
-      });
+    if (priority && imgRef.current) {
+      imgRef.current.loading = 'eager';
     }
-  }, [metrics]);
+  }, [priority]);
 
-  if (!shouldRender && priority !== 'high') {
+  if (error) {
     return (
-      <div 
-        ref={ref} 
-        className={`performance-optimizer-placeholder ${className}`}
-        style={{ 
-          minHeight: '100px',
-          background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
-          backgroundSize: '200% 100%',
-          animation: 'loading 1.5s infinite'
-        }}
-      />
+      <div className={`bg-slate-800 flex items-center justify-center ${className}`}>
+        <div className="text-slate-400 text-sm">Image failed to load</div>
+      </div>
     );
   }
 
   return (
-    <motion.div
-      ref={ref}
-      className={`performance-optimizer ${className}`}
-      variants={animationVariants}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      onAnimationComplete={() => {
-        if (isVisible && !isLoaded) {
-          setIsLoaded(true);
-        }
-      }}
-    >
-      {children}
-      
-      {/* Performance overlay (development only) */}
-      {process.env.NODE_ENV === 'development' && metrics && (
-        <div className="performance-overlay">
-          <div className="performance-metrics">
-            <span>Load: {metrics.loadTime.toFixed(0)}ms</span>
-            {metrics.renderTime && (
-              <span>Render: {metrics.renderTime.toFixed(0)}ms</span>
-            )}
-            {metrics.fps && <span>FPS: {metrics.fps}</span>}
-            {metrics.memoryUsage && (
-              <span>Memory: {metrics.memoryUsage.toFixed(1)}MB</span>
-            )}
-          </div>
-        </div>
+    <div className={`relative overflow-hidden ${className}`}>
+      {/* Placeholder */}
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-slate-800 animate-pulse" />
       )}
-    </motion.div>
+
+      {/* Actual Image */}
+      <img
+        ref={imgRef}
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        sizes={sizes}
+        loading={priority ? 'eager' : 'lazy'}
+        onLoad={handleLoad}
+        onError={handleError}
+        className={`transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{
+          width: width ? `${width}px` : '100%',
+          height: height ? `${height}px` : 'auto'
+        }}
+      />
+    </div>
   );
-};
+}
 
-// HOC for performance optimization
-export const withPerformanceOptimization = <P extends object>(
-  Component: React.ComponentType<P>,
-  options: Omit<PerformanceOptimizerProps, 'children'> = {}
-) => {
-  return React.forwardRef<any, P>((props, ref) => (
-    <PerformanceOptimizer {...options}>
-      <Component {...props} ref={ref} />
-    </PerformanceOptimizer>
-  ));
-};
+// Lazy loaded component wrapper
+interface LazyComponentProps {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+  className?: string;
+}
 
-// Hook for performance monitoring
-export const usePerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
+export function LazyComponent({
+  children,
+  fallback = <div className="h-32 bg-slate-800/20 rounded-lg animate-pulse" />,
+  className = ''
+}: LazyComponentProps) {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    rootMargin: '100px',
+    triggerOnce: true
+  });
 
-  const startMonitoring = useCallback(() => {
-    setIsMonitoring(true);
-    // Implementation for performance monitoring
-  }, []);
+  return (
+    <div ref={ref} className={className}>
+      {inView ? children : fallback}
+    </div>
+  );
+}
 
-  const stopMonitoring = useCallback(() => {
-    setIsMonitoring(false);
-  }, []);
+// Performance monitoring hook
+export function usePerformanceMonitor(componentName: string) {
+  const renderCount = useRef(0);
+  const startTime = useRef(performance.now());
+
+  useEffect(() => {
+    renderCount.current += 1;
+
+    if (process.env.NODE_ENV === 'development') {
+      const renderTime = performance.now() - startTime.current;
+      console.log(`[${componentName}] Render #${renderCount.current} took ${renderTime.toFixed(2)}ms`);
+    }
+
+    startTime.current = performance.now();
+  });
+
+  // Monitor memory usage in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && 'memory' in performance) {
+      const memory = (performance as any).memory;
+      if (memory.usedJSHeapSize > 50 * 1024 * 1024) { // 50MB threshold
+        console.warn(`[${componentName}] High memory usage: ${(memory.usedJSHeapSize / 1024 / 1024).toFixed(2)}MB`);
+      }
+    }
+  });
 
   return {
-    metrics,
-    isMonitoring,
-    startMonitoring,
-    stopMonitoring
+    renderCount: renderCount.current
   };
-};
-
-// CSS for loading animation
-const loadingStyles = `
-  @keyframes loading {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-  
-  .performance-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 8px;
-    font-size: 12px;
-    border-radius: 4px;
-    z-index: 1000;
-  }
-  
-  .performance-metrics {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  
-  .performance-metrics span {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2px 6px;
-    border-radius: 3px;
-  }
-`;
-
-// Inject styles
-if (typeof document !== 'undefined') {
-  const style = document.createElement('style');
-  style.textContent = loadingStyles;
-  document.head.appendChild(style);
 }
+
+// Debounced hook for performance optimization
+export function useDebounce<T>(value: T, delay: number): T {
+  const [debouncedValue, setDebouncedValue] = React.useState<T>(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+}
+
+// Throttled hook for performance optimization
+export function useThrottle<T>(value: T, limit: number): T {
+  const [throttledValue, setThrottledValue] = React.useState<T>(value);
+  const lastRan = useRef(Date.now());
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      if (Date.now() - lastRan.current >= limit) {
+        setThrottledValue(value);
+        lastRan.current = Date.now();
+      }
+    }, limit - (Date.now() - lastRan.current));
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, limit]);
+
+  return throttledValue;
+}
+
+// Virtual scrolling hook for large lists
+export function useVirtualScroll<T>(
+  items: T[],
+  itemHeight: number,
+  containerHeight: number,
+  overscan: number = 5
+) {
+  const [scrollTop, setScrollTop] = React.useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const visibleRange = React.useMemo(() => {
+    const start = Math.floor(scrollTop / itemHeight);
+    const end = Math.min(
+      start + Math.ceil(containerHeight / itemHeight) + overscan,
+      items.length
+    );
+
+    return {
+      start: Math.max(0, start - overscan),
+      end
+    };
+  }, [scrollTop, itemHeight, containerHeight, overscan, items.length]);
+
+  const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
+    setScrollTop(e.currentTarget.scrollTop);
+  }, []);
+
+  const totalHeight = items.length * itemHeight;
+  const offsetY = visibleRange.start * itemHeight;
+
+  return {
+    containerRef,
+    handleScroll,
+    totalHeight,
+    offsetY,
+    visibleItems: items.slice(visibleRange.start, visibleRange.end),
+    visibleRange
+  };
+}
+
+// Export the main component as default
+export default PerformanceOptimizer;

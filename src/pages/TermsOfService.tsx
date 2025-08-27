@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  Shield, 
-  Users, 
-  Globe, 
-  Mail, 
+import {
+  FileText,
+  Shield,
+  Users,
+  Globe,
+  Mail,
   Phone,
   MapPin,
   Calendar,
@@ -101,7 +101,7 @@ const TermsOfService: React.FC = () => {
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Description of Services
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   {companyName} provides technology consulting, software development, AI solutions, cybersecurity services, and related technology services. Our services include:
@@ -146,7 +146,7 @@ const TermsOfService: React.FC = () => {
                 <Users className="w-8 h-8 text-zion-cyan" />
                 User Accounts and Responsibilities
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   When you create an account with us, you must provide accurate, complete, and current information. You are responsible for:
@@ -187,7 +187,7 @@ const TermsOfService: React.FC = () => {
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Acceptable Use Policy
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   You agree not to use our website or services to:
@@ -236,7 +236,7 @@ const TermsOfService: React.FC = () => {
                 <Lock className="w-8 h-8 text-zion-cyan" />
                 Intellectual Property Rights
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   Our website and services contain content that is owned by {companyName} or its licensors, including but not limited to:
@@ -280,7 +280,7 @@ const TermsOfService: React.FC = () => {
                 <Eye className="w-8 h-8 text-zion-cyan" />
                 Privacy and Data Protection
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference.
@@ -306,7 +306,7 @@ const TermsOfService: React.FC = () => {
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Limitation of Liability
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   To the maximum extent permitted by law, {companyName} shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
@@ -347,7 +347,7 @@ const TermsOfService: React.FC = () => {
                 <Info className="w-8 h-8 text-zion-cyan" />
                 Disclaimers
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   Our services are provided "as is" and "as available" without any warranties of any kind, either express or implied.
@@ -391,7 +391,7 @@ const TermsOfService: React.FC = () => {
                 <Shield className="w-8 h-8 text-zion-cyan" />
                 Indemnification
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   You agree to indemnify, defend, and hold harmless {companyName} and its officers, directors, employees, agents, and affiliates from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from:
@@ -429,7 +429,7 @@ const TermsOfService: React.FC = () => {
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Termination
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms.
@@ -455,7 +455,7 @@ const TermsOfService: React.FC = () => {
                 <Globe className="w-8 h-8 text-zion-cyan" />
                 Governing Law and Dispute Resolution
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
@@ -481,7 +481,7 @@ const TermsOfService: React.FC = () => {
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Changes to These Terms
               </h2>
-              
+
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
                   We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.
@@ -506,11 +506,11 @@ const TermsOfService: React.FC = () => {
                 <Mail className="w-8 h-8 text-zion-cyan" />
                 Contact Information
               </h2>
-              
+
               <p className="text-zion-slate-light mb-6">
                 If you have any questions about these Terms of Service, please contact us:
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 text-zion-slate-light">
@@ -533,7 +533,7 @@ const TermsOfService: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               <p className="text-zion-slate-light mt-6">
                 We will respond to your inquiry within 30 days of receipt.
               </p>

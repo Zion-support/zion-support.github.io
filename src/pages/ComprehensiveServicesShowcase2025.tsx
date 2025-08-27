@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
+import {
+  Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
   Globe,
   ArrowRight,
   CheckCircle,
@@ -63,7 +63,7 @@ const ComprehensiveServicesShowcase2025 = () => {
   ];
 
   const filteredServices = COMPREHENSIVE_PRICING_GUIDE_2025
-    .filter(service => 
+    .filter(service =>
       service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -128,7 +128,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Showcase 2025</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Discover our cutting-edge micro SAAS, IT, and AI services that are revolutionizing industries. 
+              Discover our cutting-edge micro SAAS, IT, and AI services that are revolutionizing industries.
               Each service is designed with real-world applications, proven ROI, and market-leading innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -205,7 +205,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               Each service is designed with real-world applications, proven ROI, and market-leading innovation.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
@@ -332,10 +332,10 @@ const ComprehensiveServicesShowcase2025 = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Our team of experts is ready to help you implement these innovative solutions 
+            Our team of experts is ready to help you implement these innovative solutions
             and drive your business forward with cutting-edge technology.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -348,23 +348,23 @@ const ComprehensiveServicesShowcase2025 = () => {
                 <p>kleber@ziontechgroup.com</p>
               </div>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-white"/>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Visit Website</h3>
               <p className="text-gray-300">Explore our full range of services</p>
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 text-indigo-400 hover:text-indigo-300 transition-colors"
               >
                 ziontechgroup.com
               </a>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building className="w-8 h-8 text-white"/>
@@ -377,16 +377,16 @@ const ComprehensiveServicesShowcase2025 = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Start Your Journey
             </a>
-            <a 
-              href="tel:+13024640950" 
+            <a
+              href="tel:+13024640950"
               className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
               Call Now

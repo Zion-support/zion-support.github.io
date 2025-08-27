@@ -114,7 +114,7 @@ Crawl-delay: 1`;
     <div class="container">
         <h1>Zion Tech Group - Sitemap</h1>
         <p>Complete navigation guide for our website. Find all our services, solutions, and resources.</p>
-        
+
         <div class="sitemap-section">
             <h2>Main Pages</h2>
             <div class="sitemap-links">
@@ -127,7 +127,7 @@ Crawl-delay: 1`;
                   `).join('')}
             </div>
         </div>
-        
+
         <div class="sitemap-section">
             <h2>Services</h2>
             <div class="sitemap-links">
@@ -140,7 +140,7 @@ Crawl-delay: 1`;
                   `).join('')}
             </div>
         </div>
-        
+
         <div class="sitemap-section">
             <h2>Solutions</h2>
             <div class="sitemap-links">
@@ -153,7 +153,7 @@ Crawl-delay: 1`;
                   `).join('')}
             </div>
         </div>
-        
+
         <div class="sitemap-section">
             <h2>Other Pages</h2>
             <div class="sitemap-links">
@@ -166,7 +166,7 @@ Crawl-delay: 1`;
                   `).join('')}
             </div>
         </div>
-        
+
         <div class="sitemap-section">
             <p><strong>Total Pages:</strong> ${urls.length}</p>
             <p><strong>Last Updated:</strong> ${new Date().toLocaleDateString()}</p>

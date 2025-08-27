@@ -4,7 +4,7 @@ import { SEO } from '@/components/SEO';
 function MicroCRM() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
-      <SEO 
+      <SEO
         title="Micro CRM for Local Businesses"
         description="Lightweight customer tracking, reminders, invoices, and reviews for local SMBs."
       />

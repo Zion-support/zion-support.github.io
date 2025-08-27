@@ -14,7 +14,7 @@ const AuthRoutes = () => {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      
+
       {/* Protected routes that require authentication */}
       <Route
         path="/profile"
@@ -24,7 +24,7 @@ const AuthRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
+
       <Route
         path="/dashboard"
         element={
@@ -33,7 +33,7 @@ const AuthRoutes = () => {
           </ProtectedRoute>
         }
       />
-      
+
       <Route
         path="/settings"
         element={

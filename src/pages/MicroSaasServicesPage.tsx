@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
-import { 
-  Building, 
-  Users, 
-  BarChart3, 
-  MessageSquare, 
-  Calendar, 
-  FileText, 
-  CreditCard, 
+import {
+  Building,
+  Users,
+  BarChart3,
+  MessageSquare,
+  Calendar,
+  FileText,
+  CreditCard,
   Globe,
   Lock,
   Zap,
@@ -405,7 +405,7 @@ export default function MicroSAASServicesPage() {
             Micro SAAS Services
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Powerful, affordable software solutions designed for modern businesses. From CRM to project management, 
+            Powerful, affordable software solutions designed for modern businesses. From CRM to project management,
             our micro SAAS services help you grow without breaking the bank.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -545,7 +545,7 @@ export default function MicroSAASServicesPage() {
             Ready to Transform Your Business with Micro SAAS?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Start with a free trial and see how our micro SAAS solutions can streamline your operations, 
+            Start with a free trial and see how our micro SAAS solutions can streamline your operations,
             improve productivity, and drive growth. No long-term contracts, cancel anytime.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
