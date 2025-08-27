@@ -177,11 +177,11 @@ function App() {
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/home2026" element={<Home />} />
-              <Route path="/about" element={<Home />} />
-              <Route path="/contact" element={<Home />} />
-              <Route path="/blog" element={<Home />} />
-              <Route path="/blog/:slug" element={<Home />} />
+              <Route path="/home2026" element={<Home2026 />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/pricing" element={<Pricing />} />
