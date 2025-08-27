@@ -132,6 +132,7 @@ const FAQ: React.FC = () => {
     setExpandedItems(newExpanded);
   };
 
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header Section */}
