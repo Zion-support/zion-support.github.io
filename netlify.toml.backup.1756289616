@@ -3,6 +3,10 @@
 # No Next.js plugins or configurations are needed
 
 [build]
+<<<<<<< HEAD
+=======
+  # Use `npm ci` for deterministic installs, Vite builds to dist folder
+>>>>>>> origin/cursor/netlify-build-with-plugin-error-4c77
   command = "npm ci && npm run build"
   publish = "dist"
 
@@ -12,22 +16,10 @@
   NPM_FLAGS = "--prefer-offline"
 
 <<<<<<< HEAD
-# Explicitly disable Next.js plugin for Vite project
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-    skip = true
-
-# Cloudinary plugin for image optimization
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-  [plugins.inputs]
-    cloud_name = "${CLOUDINARY_CLOUD_NAME}"
-
-# Optional: a few redirects that were present
-=======
 # Redirects for legacy URLs
->>>>>>> origin/cursor/fix-nextjs-plugin-input-error-fa7d
+=======
+# Optional: a few redirects that were present
+>>>>>>> origin/cursor/netlify-build-with-plugin-error-4c77
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -73,7 +65,11 @@
   to = "/browser-automation-cloud"
   status = 301
 
+<<<<<<< HEAD
 # SPA fallback for client-side routing
+=======
+# Add SPA fallback for client-side routing
+>>>>>>> origin/cursor/netlify-build-with-plugin-error-4c77
 [[redirects]]
   from = "/*"
   to = "/index.html"
