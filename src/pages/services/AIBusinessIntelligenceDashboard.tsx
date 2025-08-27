@@ -1,81 +1,78 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Truck, 
-  Package, 
-  Globe, 
+  BarChart3, 
+  TrendingUp, 
   Brain, 
   Zap, 
   Shield, 
-  TrendingUp, 
-  BarChart3,
-  MapPin,
-  Clock,
-  DollarSign,
+  Globe, 
+  Users, 
+  Database,
+  PieChart,
+  LineChart,
+  Activity,
   Target,
   CheckCircle,
   Star,
   ArrowRight,
+  Eye,
+  Lock,
+  Cloud,
+  Smartphone,
+  Monitor,
   Play,
   Phone,
   Mail,
-  MapPin as MapPinIcon,
-  Warehouse,
-  Route,
-  AlertTriangle,
-  Gauge,
-  Network,
-  Database,
-  Cloud
+  MapPin
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-const AISupplyChainOptimization = () => {
+const AIBusinessIntelligenceDashboard = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Forecasting",
-      description: "Advanced machine learning algorithms predict demand patterns, supply disruptions, and optimize inventory levels with 95%+ accuracy"
-    },
-    {
-      icon: Route,
-      title: "Intelligent Route Optimization",
-      description: "AI-driven logistics optimization that reduces delivery times by up to 40% and cuts transportation costs by 25%"
-    },
-    {
-      icon: Warehouse,
-      title: "Smart Inventory Management",
-      description: "Real-time inventory tracking with automated reorder points, demand forecasting, and warehouse optimization"
-    },
-    {
-      icon: Globe,
-      title: "Global Supply Chain Visibility",
-      description: "End-to-end visibility across your entire supply chain with real-time tracking and predictive analytics"
-    },
-    {
-      icon: AlertTriangle,
-      title: "Risk Management & Alerts",
-      description: "Proactive risk detection and automated alerts for supply chain disruptions, delays, and quality issues"
+      title: "AI-Powered Insights",
+      description: "Advanced machine learning algorithms that automatically identify trends, anomalies, and opportunities in your data"
     },
     {
       icon: BarChart3,
-      title: "Performance Analytics",
-      description: "Comprehensive dashboards showing KPIs, cost analysis, and optimization recommendations in real-time"
+      title: "Real-time Analytics",
+      description: "Live dashboards with real-time data updates from multiple sources including CRM, ERP, and external APIs"
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Forecast future trends and outcomes using historical data and AI models with 95%+ accuracy"
+    },
+    {
+      icon: Zap,
+      title: "Automated Reporting",
+      description: "Intelligent report generation that adapts to your business needs and automatically highlights key insights"
+    },
+    {
+      icon: Shield,
+      title: "Enterprise Security",
+      description: "Bank-grade security with role-based access control, data encryption, and compliance with GDPR, HIPAA, and SOC 2"
+    },
+    {
+      icon: Globe,
+      title: "Multi-platform Access",
+      description: "Access your dashboards from anywhere - web, mobile apps, and integrate with existing business tools"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$499",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small to medium businesses",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 10 suppliers",
-        "Basic demand forecasting",
-        "Inventory tracking",
-        "Route optimization",
+        "Up to 5 data sources",
+        "Basic AI insights",
         "5 user licenses",
+        "Standard reports",
         "Email support",
         "Basic integrations"
       ],
@@ -83,33 +80,31 @@ const AISupplyChainOptimization = () => {
     },
     {
       name: "Professional",
-      price: "$1,299",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing businesses with complex supply chains",
+      description: "Ideal for growing businesses and teams",
       features: [
-        "Up to 50 suppliers",
-        "Advanced AI forecasting",
-        "Multi-warehouse management",
-        "Advanced route optimization",
+        "Up to 20 data sources",
+        "Advanced AI analytics",
         "25 user licenses",
+        "Custom dashboards",
         "Priority support",
         "API access",
-        "Custom dashboards",
-        "Advanced analytics"
+        "Advanced integrations",
+        "White-label options"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$3,999",
+      price: "$2,499",
       period: "/month",
-      description: "For large organizations with global supply chains",
+      description: "For large organizations with complex needs",
       features: [
-        "Unlimited suppliers",
+        "Unlimited data sources",
         "Custom AI models",
-        "Global logistics optimization",
-        "Advanced risk management",
         "Unlimited users",
+        "Advanced security",
         "Dedicated support",
         "Custom development",
         "On-premise options",
@@ -121,74 +116,47 @@ const AISupplyChainOptimization = () => {
 
   const useCases = [
     {
-      title: "E-commerce Fulfillment",
-      description: "Optimize order fulfillment, reduce delivery times, and improve customer satisfaction with AI-powered logistics",
-      icon: Package
+      title: "Sales Performance Analytics",
+      description: "Track sales metrics, pipeline analysis, and revenue forecasting with AI-powered insights",
+      icon: TrendingUp
     },
     {
-      title: "Manufacturing Supply Chain",
-      description: "Streamline raw material procurement, production planning, and distribution with predictive analytics",
-      icon: Warehouse
+      title: "Customer Behavior Analysis",
+      description: "Understand customer patterns, churn prediction, and lifetime value optimization",
+      icon: Users
     },
     {
-      title: "Retail Inventory Management",
-      description: "Prevent stockouts, reduce excess inventory, and optimize store replenishment with AI insights",
+      title: "Financial Performance Tracking",
+      description: "Monitor KPIs, budget vs actual, and financial forecasting with automated alerts",
       icon: BarChart3
     },
     {
-      title: "Global Logistics",
-      description: "Optimize international shipping routes, customs clearance, and multi-modal transportation",
-      icon: Globe
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      value: "25-40%",
-      description: "Reduce transportation, inventory, and operational costs"
-    },
-    {
-      icon: Clock,
-      title: "Faster Delivery",
-      value: "30-50%",
-      description: "Improve delivery times and customer satisfaction"
-    },
-    {
-      icon: Target,
-      title: "Better Accuracy",
-      value: "95%+",
-      description: "Improve demand forecasting and inventory accuracy"
-    },
-    {
-      icon: TrendingUp,
-      title: "Efficiency Gain",
-      value: "40-60%",
-      description: "Increase overall supply chain efficiency"
+      title: "Operational Efficiency",
+      description: "Identify bottlenecks, optimize processes, and improve productivity across teams",
+      icon: Activity
     }
   ];
 
   const testimonials = [
     {
-      name: "David Thompson",
-      role: "Supply Chain Director",
-      company: "Global Retail Corp",
-      content: "The AI optimization has transformed our supply chain. We've reduced costs by 35% and improved delivery times significantly.",
+      name: "Sarah Johnson",
+      role: "VP of Operations",
+      company: "TechFlow Solutions",
+      content: "The AI insights have transformed how we make decisions. We've increased efficiency by 40% and reduced costs significantly.",
       rating: 5
     },
     {
-      name: "Lisa Wang",
-      role: "Operations Manager",
-      company: "TechManufacturing Inc",
-      content: "The predictive analytics help us avoid stockouts and optimize our production schedule perfectly.",
+      name: "Michael Chen",
+      role: "Data Scientist",
+      company: "InnovateCorp",
+      content: "The predictive analytics capabilities are incredible. We can now forecast trends with remarkable accuracy.",
       rating: 5
     },
     {
-      name: "Robert Martinez",
-      role: "Logistics Coordinator",
-      company: "E-commerce Solutions",
-      content: "Route optimization has cut our delivery costs by 30% while improving customer satisfaction scores.",
+      name: "Emily Rodriguez",
+      role: "CEO",
+      company: "StartupXYZ",
+      content: "This dashboard has given us enterprise-level insights at a fraction of the cost. Game-changer for our business.",
       rating: 5
     }
   ];
@@ -196,8 +164,8 @@ const AISupplyChainOptimization = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
-        title="AI-Powered Supply Chain Optimization - Zion Tech Group"
-        description="Optimize your supply chain with AI-powered forecasting, route optimization, and inventory management. Reduce costs by 25-40%. Start from $499/month."
+        title="AI-Powered Business Intelligence Dashboard - Zion Tech Group"
+        description="Transform your business with AI-powered BI dashboards. Real-time analytics, predictive insights, and automated reporting. Start from $299/month."
       />
       
       {/* Hero Section */}
@@ -211,20 +179,20 @@ const AISupplyChainOptimization = () => {
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
               <Brain className="w-4 h-4 mr-2 text-cyan-400" />
-              AI-Powered Supply Chain
+              AI-Powered Business Intelligence
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Supply Chain
+                AI Business Intelligence
               </span>
               <br />
-              <span className="text-white">Optimization</span>
+              <span className="text-white">Dashboard</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your supply chain with AI-powered optimization that reduces costs by 25-40%, 
-              improves delivery times by 30-50%, and provides end-to-end visibility across your entire network.
+              Transform your business data into actionable insights with our AI-powered business intelligence platform. 
+              Get real-time analytics, predictive insights, and automated reporting that drives growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -253,52 +221,8 @@ const AISupplyChainOptimization = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Proven Results
-              </span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the measurable impact AI optimization can have on your supply chain
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group text-center"
-              >
-                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <benefit.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">{benefit.value}</div>
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
@@ -313,7 +237,7 @@ const AISupplyChainOptimization = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to optimize your supply chain with AI
+              Everything you need to transform your business data into actionable intelligence
             </p>
           </motion.div>
           
@@ -345,7 +269,7 @@ const AISupplyChainOptimization = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
@@ -360,7 +284,7 @@ const AISupplyChainOptimization = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how different industries are optimizing their supply chains with AI
+              See how businesses are using our AI BI platform to drive growth and efficiency
             </p>
           </motion.div>
           
@@ -392,7 +316,7 @@ const AISupplyChainOptimization = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
@@ -407,7 +331,7 @@ const AISupplyChainOptimization = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your supply chain complexity. All plans include a 14-day free trial.
+              Choose the plan that fits your business needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
           
@@ -470,7 +394,7 @@ const AISupplyChainOptimization = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
@@ -525,10 +449,10 @@ const AISupplyChainOptimization = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join leading companies that are already reducing costs and improving efficiency with AI-powered supply chain optimization.
+              Join thousands of businesses that are already using AI-powered insights to drive growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -570,7 +494,7 @@ const AISupplyChainOptimization = () => {
               </a>
             </div>
             <div className="flex flex-col items-center">
-              <MapPinIcon className="w-8 h-8 text-cyan-400 mb-4" />
+              <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
               <div className="text-white font-semibold">Address</div>
               <div className="text-gray-300 text-sm">
                 364 E Main St STE 1008<br />
@@ -584,4 +508,4 @@ const AISupplyChainOptimization = () => {
   );
 };
 
-export default AISupplyChainOptimization;
+export default AIBusinessIntelligenceDashboard;

@@ -240,34 +240,34 @@ export default function Home() {
 
   const featuredServices = [
     {
-      title: "AI Autonomous Business Operations",
-      description: "Next-generation autonomous business operations platform that uses advanced AI to automate complex business processes and make intelligent decisions in real-time.",
-      icon: Rocket,
-      path: "/services/ai-autonomous-research-assistant",
-      rating: 4.9,
-      reviewCount: 127,
-      highlights: ["24/7 Autonomous Operations", "AI Decision Making", "Process Optimization", "Real-time Analytics"],
-      price: "From $2,500/month"
-    },
-    {
-      title: "Quantum Neural Network Platform",
-      description: "Revolutionary quantum computing platform that combines quantum processing with neural networks to solve previously impossible computational challenges.",
-      icon: Cpu,
-      path: "/services/ai-quantum-hybrid-platform",
-      rating: 4.8,
-      reviewCount: 89,
-      highlights: ["Quantum Processing", "Neural Networks", "Advanced Algorithms", "Breakthrough Computing"],
-      price: "From $5,000/month"
-    },
-    {
-      title: "AI-Powered Cybersecurity Suite",
-      description: "Comprehensive cybersecurity solution that uses artificial intelligence to detect, prevent, and respond to threats in real-time.",
-      icon: Shield,
-      path: "/services/ai-cybersecurity-platform",
+      title: "AI Business Intelligence Dashboard",
+      description: "Transform your business data into actionable insights with AI-powered analytics, predictive insights, and automated reporting that drives growth.",
+      icon: BarChart3,
+      path: "/services/ai-business-intelligence-dashboard",
       rating: 4.9,
       reviewCount: 156,
-      highlights: ["AI Threat Detection", "Real-time Response", "Advanced Analytics", "Compliance Ready"],
-      price: "From $1,800/month"
+      highlights: ["AI-Powered Insights", "Real-time Analytics", "Predictive Analytics", "Automated Reporting"],
+      price: "From $299/month"
+    },
+    {
+      title: "AI Supply Chain Optimization",
+      description: "Optimize your supply chain with AI-powered forecasting, route optimization, and inventory management that reduces costs by 25-40%.",
+      icon: Truck,
+      path: "/services/ai-supply-chain-optimization",
+      rating: 4.8,
+      reviewCount: 134,
+      highlights: ["AI Forecasting", "Route Optimization", "Smart Inventory", "Global Visibility"],
+      price: "From $499/month"
+    },
+    {
+      title: "AI Customer Support Automation",
+      description: "Transform customer support with AI automation that provides 24/7 availability, instant responses, and reduces costs by 60-80%.",
+      icon: Bot,
+      path: "/services/ai-customer-support-automation",
+      rating: 4.9,
+      reviewCount: 189,
+      highlights: ["24/7 Availability", "Instant Responses", "Smart Routing", "Cost Reduction"],
+      price: "From $199/month"
     }
   ];
 
