@@ -1,10 +1,14 @@
-// Production logger utility
-export function logErrorToProduction(message, error) {
-  // In production, you might want to send errors to a logging service
-  // For now, we'll just use console.error as a fallback
+// Simple production logger utility
+export const logErrorToProduction = (message, error) => {
+  // In production, you might want to send this to a logging service
+  // For now, we'll just console.log in development
   if (process.env.NODE_ENV === 'development') {
-    console.error(message, error);
+    console.log('Production Logger:', message, error);
   }
-  // In production, this could send to a logging service
-  // For now, just console.error in development
+  
+  // In production, you could send to:
+  // - Sentry
+  // - LogRocket
+  // - Custom logging service
+  // - Analytics service
 };

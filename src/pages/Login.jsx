@@ -1,47 +1,45 @@
-import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Eye, EyeOff, Lock, Mail, Github, Twitter, Linkedin, AlertCircle } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { safeStorage } from '@/utils/safeStorage';
+import { LoginContent } from '@/components/auth/login';
+import { ErrorBoundary } from 'react-error-boundary';
+import LoginErrorFallback from '@/components/auth/login/LoginErrorFallback';
+import { useCart } from '@/context/CartContext';
+import { SAMPLE_EQUIPMENT } from './EquipmentDetail';
+import { toast } from '@/hooks/use-toast';
+import { useDispatch } from 'react-redux';
+import { setLoggedIn } from '@/store/authSlice';
 
 export default function Login() {
+  const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const [showPassword, setShowPassword] = useState(false);
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    rememberMe: false
-  });
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+  const { dispatch } = useCart();
+  const reduxDispatch = useDispatch();
 
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-    // Clear error when user starts typing
-    if (error) setError('');
-  };
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setError('');
-
-    // Basic validation
-    if (!formData.email || !formData.password) {
-      setError('Please fill in all required fields');
-      setIsLoading(false);
-      return;
+  useEffect(() => {
+    // This effect handles token processing (e.g., from magic link)
+    // It runs when component mounts or location.search changes
+    const queryString = location.search;
+    const params = new URLSearchParams(queryString);
+    const token = params.get('token');
+    if (token) {
+      safeStorage.setItem('zion_token', token);
+      // Clear token from URL to prevent re-processing and clean up history
+      // The actual authentication state will update via useAuth's listeners,
+      // which should trigger the other useEffect.
+      navigate(location.pathname, { replace: true });
     }
+  }, [location.search, location.pathname, navigate]);
 
-    if (!formData.email.includes('@')) {
-      setError('Please enter a valid email address');
-      setIsLoading(false);
-      return;
+  useEffect(() => {
+    if (!isLoading && isAuthenticated) {
+      reduxDispatch(setLoggedIn(true));
+      const next = new URLSearchParams(location.search).get('next') || '/dashboard';
+      navigate(next, { replace: true });
     }
+  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
 
     try {
       // Simulate login API call

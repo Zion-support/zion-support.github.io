@@ -5,7 +5,36 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const navigation: NavItem[] = [
+  { label: 'Home', href: '/' },
+  { 
+    label: 'Services', 
+    href: '/services',
+    children: [
+      { label: 'AI & Machine Learning', href: '/services#ai' },
+      { label: 'Quantum Technology', href: '/services#quantum' },
+      { label: 'Cybersecurity', href: '/services#cybersecurity' },
+      { label: 'Cloud & Infrastructure', href: '/services#cloud' },
+      { label: 'Blockchain & Web3', href: '/services#blockchain' },
+      { label: 'IoT & Edge Computing', href: '/services#iot' },
+      { label: 'Biotechnology & Healthcare', href: '/services#biotech' },
+      { label: 'Space Technology', href: '/services#space' },
+      { label: 'Manufacturing & Industry 4.0', href: '/services#manufacturing' },
+      { label: 'FinTech & Wealth Management', href: '/services#fintech' },
+      { label: 'Consulting & Strategy', href: '/services#consulting' },
+      { label: 'All Services', href: '/services' }
+    ]
+  },
+  { label: 'Contact', href: '/contact' }
+];
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
+  const location = useLocation();
+
+  const isActive = (href: string) => location.pathname === href;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Header */}
