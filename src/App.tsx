@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -217,8 +217,7 @@ function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
-        <Router>
-          <div className="App min-h-screen bg-white">
+        <div className="App min-h-screen bg-white">
             {/* SEO Component */}
             <SEO />
             
@@ -484,9 +483,8 @@ function App() {
               theme="auto"
               language="en"
             />
-          </div>
-        </Router>
-      </ErrorBoundary>
+                      </div>
+        </ErrorBoundary>
     </HelmetProvider>
   );
 }
