@@ -36,15 +36,8 @@ export function AppHeader() {
     }
   };
 
-  // Main navigation items
-  const mainNavigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Services', href: '/services', current: false },
-    { name: 'Contact', href: '/contact', current: false },
-    { name: 'Blog', href: '/blog', current: false },
-    { name: 'Careers', href: '/careers', current: false },
-  ];
+  // Main navigation items - using enhanced navigation structure
+  const mainNavigation = enhancedNavigation;
 
   // Enhanced services by category with better organization and working links
   const services = [
@@ -110,6 +103,30 @@ export function AppHeader() {
     { name: 'Case Studies', href: '/case-studies', icon: FileText },
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Help Center', href: '/help', icon: HelpCircle },
+  ];
+
+  // Enhanced navigation structure
+  const enhancedNavigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: '/about', current: false },
+    { 
+      name: 'Services', 
+      href: '/services', 
+      current: false,
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'AI & Machine Learning', href: '/ai-services', icon: Brain, description: 'Intelligent automation & insights' },
+        { name: 'Cloud & DevOps', href: '/it-services', icon: Cloud, description: 'Infrastructure & automation' },
+        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Advanced security solutions' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Strategic consulting' },
+        { name: 'Micro SaaS', href: '/micro-saas', icon: ShoppingCart, description: 'Niche software solutions' },
+        { name: 'View All Services', href: '/services', icon: ArrowRight, description: 'Complete service catalog' },
+      ]
+    },
+    { name: 'Solutions', href: '/solutions/enterprise', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Blog', href: '/blog', current: false },
+    { name: 'Careers', href: '/careers', current: false },
   ];
 
   // Enhanced futuristic background component

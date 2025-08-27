@@ -57,7 +57,10 @@ import {
   Truck,
   ExternalLink,
   ChevronDown,
-  Copyright
+  Copyright,
+  PenTool,
+  Gauge,
+  Search
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -87,7 +90,8 @@ const footerSections = [
       { name: 'Case Studies', path: '/case-studies', icon: FileText },
       { name: 'News', path: '/news', icon: Newspaper },
       { name: 'FAQ', path: '/faq', icon: HelpCircle },
-      { name: 'Help Center', path: '/help', icon: HelpCircle }
+      { name: 'Help Center', path: '/help', icon: HelpCircle },
+      { name: 'Sitemap', path: '/sitemap', icon: FileText }
     ]
   },
   {
@@ -105,10 +109,17 @@ const footerSections = [
       { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
       { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
       { name: 'AI-Powered SEO', path: '/services/ai-seo', icon: TrendingUp },
-      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
       { name: 'AI Customer Support', path: '/services/ai-customer-support-automation', icon: MessageCircle },
       { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
-      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign }
+      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
+      { name: 'AI Legal Document Automation', path: '/services/ai-legal-document-automation', icon: FileText },
+      { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Heart },
+      { name: 'AI Financial Trading', path: '/services/ai-financial-trading', icon: TrendingUp },
+      { name: 'AI Content Creation Suite', path: '/services/ai-content-creation-suite', icon: PenTool },
+      { name: 'AI Cybersecurity', path: '/services/ai-cybersecurity', icon: Shield },
+      { name: 'AI HR Platform', path: '/services/ai-hr-platform', icon: Users },
+      { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance', icon: Activity },
+      { name: 'AI Content Creation', path: '/services/ai-content-creation', icon: PenTool }
     ]
   },
   {
@@ -121,7 +132,10 @@ const footerSections = [
       { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
       { name: 'IT Consulting', path: '/it-consulting', icon: Cpu },
       { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart }
+      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
+      { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3 },
+      { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
+      { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap }
     ]
   },
   {
@@ -132,7 +146,10 @@ const footerSections = [
       { name: 'Security Headers & CSP', path: '/services/security-headers-csp', icon: Shield },
       { name: 'DSR Privacy Portal', path: '/services/dsr-portal', icon: Eye },
       { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock },
-      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: CheckCircle }
+      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: CheckCircle },
+      { name: 'AI Autonomous Forensics', path: '/ai-autonomous-forensics', icon: Shield },
+      { name: 'AI Autonomous Threat Intelligence', path: '/ai-autonomous-threat-intelligence', icon: Eye },
+      { name: 'AI Autonomous Mobile Security', path: '/ai-autonomous-mobile-security', icon: Smartphone }
     ]
   },
   {
@@ -143,8 +160,10 @@ const footerSections = [
       { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
       { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Brain },
       { name: 'Space Technology', path: '/space-tech', icon: Satellite },
-      { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
-      { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap }
+      { name: 'Quantum Machine Learning', path: '/services/quantum-machine-learning', icon: Atom },
+      { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Leaf },
+      { name: 'AI Autonomous Scientific Researcher', path: '/ai-autonomous-scientific-researcher', icon: TestTube },
+      { name: 'AI Autonomous Governance', path: '/ai-autonomous-governance', icon: Building }
     ]
   },
   {
@@ -158,7 +177,11 @@ const footerSections = [
       { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
       { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone },
       { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
-      { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: Video }
+      { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: Video },
+      { name: 'Returns Management', path: '/services/returns-management', icon: Truck },
+      { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: PenTool },
+      { name: 'Customer Feedback Surveys', path: '/services/customer-feedback-surveys', icon: MessageCircle },
+      { name: 'AI Auto Email Responder', path: '/services/ai-auto-email-responder', icon: Mail }
     ]
   },
   {
@@ -173,7 +196,10 @@ const footerSections = [
       { name: 'Pricing', path: '/pricing', icon: DollarSign },
       { name: 'Contact Support', path: '/contact', icon: MessageCircle },
       { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
-      { name: 'Sitemap', path: '/sitemap', icon: FileText }
+      { name: 'Sitemap', path: '/sitemap', icon: FileText },
+      { name: 'Dashboard', path: '/dashboard', icon: Gauge },
+      { name: 'Login', path: '/login', icon: Lock },
+      { name: 'Search', path: '/search', icon: Search }
     ]
   }
 ];
