@@ -41,6 +41,12 @@ const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusin
 const AISalesCopilot = React.lazy(() => import('./pages/services/AISalesCopilot'));
 const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
 const AIComplianceAssistant = React.lazy(() => import('./pages/services/AIComplianceAssistant'));
+// New real micro-SaaS service pages
+const AIEmailResponderPro = React.lazy(() => import('./pages/services/AIEmailResponderPro'));
+const AffiliateAnalyticsHub = React.lazy(() => import('./pages/services/AffiliateAnalyticsHub'));
+const ReturnManagementSaaS = React.lazy(() => import('./pages/services/ReturnManagementSaaS'));
+const SurveyStudioMobile = React.lazy(() => import('./pages/services/SurveyStudioMobile'));
+const WebsiteAnalyticsLite = React.lazy(() => import('./pages/services/WebsiteAnalyticsLite'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -108,6 +114,12 @@ function App() {
                 <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
                 <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
                 <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                {/* Newly added real micro-SaaS services */}
+                <Route path="/services/ai-email-responder-pro" element={<AIEmailResponderPro />} />
+                <Route path="/services/affiliate-analytics-hub" element={<AffiliateAnalyticsHub />} />
+                <Route path="/services/return-management-saas" element={<ReturnManagementSaaS />} />
+                <Route path="/services/survey-studio-mobile" element={<SurveyStudioMobile />} />
+                <Route path="/services/website-analytics-lite" element={<WebsiteAnalyticsLite />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
