@@ -1,118 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
-function ErrorFallback({ error, resetError }) {
-    const navigate = useNavigate();
-    return (<div className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4">
-      <div className="max-w-md w-full text-center">
-        <div className="mb-6">
-          <div className="w-20 h-20 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <AlertTriangle className="w-10 h-10 text-zion-purple"/>
-          </div>
-          <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>
-          <p className="text-zion-slate-light">
-            We encountered an unexpected error. Don't worry, our team has been notified.
-          </p>
-        </div>
+import React, { Component } from 'react'
+import { AlertTriangle, RefreshCw } from 'lucide-react'
 
-        {error && process.env.NODE_ENV === 'development' && (<details className="mb-6 text-left">
-            <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-2">
-              Error Details (Development)
-            </summary>
-            <div className="bg-zion-slate-dark p-3 rounded text-xs text-zion-slate-light overflow-auto">
-              <pre>{error.stack}</pre>
+export default class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { hasError: false }
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error }
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo)
+  }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined })
+  }
+
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback
+      }
+
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">
+          <div className="max-w-md mx-auto text-center px-6">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-red-100 mb-6">
+              <AlertTriangle className="h-8 w-8 text-red-600" />
             </div>
-          </details>)}
-
-        <div className="space-y-3">
-          <Button onClick={resetError} className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
-            <RefreshCw className="w-4 h-4 mr-2"/>
-            Try Again
-          </Button>
-          
-          <Button variant="outline" onClick={() => navigate(-1)} className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark">
-            <ArrowLeft className="w-4 h-4 mr-2"/>
-            Go Back
-          </Button>
-          
-          <Link to="/" className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-colors">
-            <Home className="w-4 h-4 inline mr-2"/>
-            Go Home
-          </Link>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Something went wrong
+            </h1>
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            <button
+              onClick={this.handleRetry}
+              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <RefreshCw className="w-4 h-4 mr-2" />
+              Try Again
+            </button>
+          </div>
         </div>
-
-        <div className="mt-6 text-xs text-zion-slate-light">
-          <p>If this problem persists, please contact our support team.</p>
-          <p className="mt-1">
-            Error ID: {error?.name || 'Unknown'} - {new Date().toISOString()}
-          </p>
-        </div>
-      </div>
-    </div>);
-}
-export function ErrorBoundary({ children, fallback, onError }) {
-    const [hasError, setHasError] = useState(false);
-    const [error, setError] = useState(null);
-    useEffect(() => {
-        const handleError = (event) => {
-            setHasError(true);
-            setError(event.error);
-            if (onError) {
-                onError(event.error, { componentStack: event.error?.stack });
-            }
-            // Log error to console in development
-            if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an error:', event.error);
-            }
-        };
-        const handleUnhandledRejection = (event) => {
-            setHasError(true);
-            setError(new Error(event.reason));
-            if (onError) {
-                onError(new Error(event.reason), { componentStack: event.reason?.stack });
-            }
-            // Log error to console in development
-            if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
-            }
-        };
-        window.addEventListener('error', handleError);
-        window.addEventListener('unhandledrejection', handleUnhandledRejection);
-        return () => {
-            window.removeEventListener('error', handleError);
-            window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-        };
-    }, [onError]);
-    const resetError = () => {
-        setHasError(false);
-        setError(null);
-    };
-    if (hasError) {
-        if (fallback) {
-            return fallback;
-        }
-        return (<ErrorFallback error={error || undefined} resetError={resetError}/>);
+      )
     }
-    return <>{children}</>;
-}
-// Hook for functional components to handle errors
-export function useErrorHandler() {
-    const [error, setError] = useState(null);
-    const handleError = React.useCallback((error) => {
-        setError(error);
-        console.error('Error caught by useErrorHandler:', error);
-    }, []);
-    const clearError = React.useCallback(() => {
-        setError(null);
-    }, []);
-    return { error, handleError, clearError };
-}
-// Higher-order component for wrapping components with error handling
-export function withErrorBoundary(Component, errorBoundaryProps) {
-    return function WithErrorBoundary(props) {
-        return (<ErrorBoundary {...errorBoundaryProps}>
-        <Component {...props}/>
-      </ErrorBoundary>);
-    };
+
+    return this.props.children
+  }
 }

@@ -16,7 +16,7 @@ interface SEOProps {
   structuredData?: object;
 }
 
-export function SEO({
+export const SEO: React.FC<SEOProps> = ({
   title,
   description,
   keywords,
@@ -29,11 +29,27 @@ export function SEO({
   section,
   tags = [],
   structuredData
-}: SEOProps) {
+}: SEOProps) => {
   const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;
   const fullDescription = `${description} Transform your business with cutting-edge AI, cybersecurity, cloud, and digital transformation services.`;
   
-  // Default structured data for organization
+  // Default keywords
+  const defaultKeywords = [
+    'AI solutions',
+    'quantum technology',
+    'cybersecurity',
+    'IT services',
+    'business transformation',
+    'intelligent automation',
+    'Zion Tech Group',
+    'technology consulting',
+    'digital innovation',
+    'enterprise solutions'
+  ];
+  
+  const allKeywords = [...new Set([...defaultKeywords, ...keywords])];
+
+  // Default structured data
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -51,34 +67,36 @@ export function SEO({
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
+      "telephone": "+1-302-555-0123",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "email": "info@ziontechgroup.com"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
+      "https://www.linkedin.com/company/zion-marketplace",
       "https://twitter.com/ziontechgroup",
-      "https://www.facebook.com/ziontechgroup"
+      "https://www.facebook.com/zionmarketplace"
     ]
   };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={keywords || "AI, Machine Learning, Cybersecurity, Cloud Computing, Digital Transformation, Technology Solutions, Zion Tech Group"} />
+      <meta name="keywords" content={allKeywords.join(', ')} />
       <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
-      <meta name="revisit-after" content="7 days" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
@@ -88,33 +106,34 @@ export function SEO({
       <meta name="twitter:description" content={fullDescription} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="theme-color" content="#1e40af" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-      {/* Favicon and App Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://images.unsplash.com" />
+      {/* Article-specific meta tags */}
+      {type === 'article' && publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {type === 'article' && modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
+      {type === 'article' && author && (
+        <meta property="article:author" content={author} />
+      )}
+      {type === 'article' && section && (
+        <meta property="article:section" content={section} />
+      )}
+      {type === 'article' && tags.length > 0 && (
+        tags.map((tag, index) => (
+          <meta key={index} property="article:tag" content={tag} />
+        ))
+      )}
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
+        {JSON.stringify(finalStructuredData)}
       </script>
       
       {/* Additional structured data for articles */}
@@ -127,7 +146,7 @@ export function SEO({
             "description": description,
             "image": image,
             "author": {
-              "@type": "Person",
+              "@type": "Organization",
               "name": author
             },
             "publisher": {
@@ -139,13 +158,11 @@ export function SEO({
               }
             },
             "datePublished": publishedTime,
-            "dateModified": modifiedTime,
+            "dateModified": modifiedTime || publishedTime,
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": url
-            },
-            "articleSection": section,
-            "keywords": tags.join(", ")
+            }
           })}
         </script>
       )}
@@ -173,4 +190,4 @@ export function SEO({
       )}
     </Helmet>
   );
-}
+};
