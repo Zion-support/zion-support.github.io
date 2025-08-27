@@ -3,7 +3,11 @@
 # No Next.js plugins or configurations are needed
 
 [build]
+<<<<<<< HEAD
+  # Use `npm ci` for deterministic installs, Vite builds to dist folder
+=======
   # Use `npm ci` for deterministic installs, Vite outputs to dist/
+>>>>>>> origin/cursor/fix-netlify-nextjs-build-output-directory-35ff
   command = "npm ci && npm run build"
   publish = "dist"
 
@@ -12,8 +16,11 @@
   NODE_OPTIONS = "--max_old_space_size=4096"
   NPM_FLAGS = "--prefer-offline"
 
+<<<<<<< HEAD
+=======
 # Note: Removed @netlify/plugin-nextjs since this is a Vite project
 
+>>>>>>> origin/cursor/fix-netlify-nextjs-build-output-directory-35ff
 # Optional: a few redirects that were present
 [[redirects]]
   from = "/ai-autonomous-ecosystem"

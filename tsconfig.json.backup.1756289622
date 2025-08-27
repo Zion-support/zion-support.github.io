@@ -35,7 +35,13 @@
     "pages",
     "components",
     "data",
+<<<<<<< HEAD
+    "types",
+    "vite.config.ts",
+    "tailwind.config.ts"
+=======
     "types"
+>>>>>>> origin/cursor/fix-netlify-nextjs-build-output-directory-35ff
   ],
   "exclude": [
     "node_modules",
