@@ -77,9 +77,8 @@ const AIServices = React.lazy(() => import('./pages/AIServicesPage.tsx'));
 const DigitalMarketingServices = React.lazy(() => import('./pages/DigitalMarketingServicesPage.tsx'));
 const FinancialSolutions = React.lazy(() => import('./pages/FinancialSolutions.tsx'));
 const ManufacturingSolutions = React.lazy(() => import('./pages/ManufacturingSolutions.tsx'));
-const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation.tsx'));
-const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting.tsx'));
-const CustomDevelopment = React.lazy(() => import('./pages/services/CustomDevelopment.tsx'));
+const UltimateInnovativeServices2026 = React.lazy(() => import('./pages/UltimateInnovativeServices2026.tsx'));
+const ComprehensiveServicesOverview2026 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2026.tsx'));
 const EnterpriseSolutions = React.lazy(() => import('./pages/solutions/EnterpriseSolutions.tsx'));
 const HealthcareSolutions = React.lazy(() => import('./pages/solutions/HealthcareSolutions.tsx'));
 const GovernmentSolutions = React.lazy(() => import('./pages/solutions/GovernmentSolutions.tsx'));
@@ -192,9 +191,8 @@ function App() {
               <Route path="/services/digital-marketing" element={<DigitalMarketingServices />} />
               <Route path="/services/financial" element={<FinancialSolutions />} />
               <Route path="/services/manufacturing" element={<ManufacturingSolutions />} />
-              <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
-              <Route path="/services/it-consulting" element={<ITConsulting />} />
-              <Route path="/services/custom-development" element={<CustomDevelopment />} />
+              <Route path="/ultimate-innovative-services-2026" element={<UltimateInnovativeServices2026 />} />
+              <Route path="/comprehensive-services-overview-2026" element={<ComprehensiveServicesOverview2026 />} />
               
               {/* Solution Routes */}
               <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
