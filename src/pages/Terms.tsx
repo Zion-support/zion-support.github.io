@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   FileText, 
@@ -38,6 +39,52 @@ const Terms: React.FC = () => {
       title: 'Cybersecurity',
       description: 'Security assessment and protection services',
       includes: ['Security audits', 'Threat detection', 'Incident response']
+    }
+  ];
+
+  const termsSections = [
+    {
+      icon: Users,
+      title: "Acceptance of Terms",
+      description: "By using our services, you agree to be bound by these terms and conditions",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Shield,
+      title: "Service Description",
+      description: "We provide technology consulting, AI solutions, and digital transformation services",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: Lock,
+      title: "Intellectual Property",
+      description: "All content and technology remain the property of Zion Tech Group",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Globe,
+      title: "Limitation of Liability",
+      description: "We provide services as-is with reasonable limitations on liability",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const keyTerms = [
+    {
+      term: "Services",
+      definition: "Technology consulting, AI solutions, cloud services, cybersecurity, and digital transformation services provided by Zion Tech Group"
+    },
+    {
+      term: "Client",
+      definition: "Any individual or organization that uses our services or enters into a service agreement with us"
+    },
+    {
+      term: "Confidential Information",
+      definition: "Any non-public information shared between parties during the course of business, including trade secrets and proprietary data"
+    },
+    {
+      term: "Intellectual Property",
+      definition: "All patents, copyrights, trademarks, trade secrets, and other intellectual property rights owned by Zion Tech Group"
     }
   ];
 
@@ -110,7 +157,7 @@ const Terms: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -594,8 +641,33 @@ const Terms: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Questions About Our Terms?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            If you have any questions about these terms or need clarification, 
+            please don't hesitate to contact our legal team.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Contact Us
+            </Link>
+            <Link 
+              to="/privacy"
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Privacy Policy
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
-};
-
-export default Terms;
+}

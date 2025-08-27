@@ -98,17 +98,60 @@ const socialLinks = [
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
 ];
 
-const contactInfo = {
-  phone: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+// Enhanced footer sections with comprehensive service links
+const footerSections = [
+  {
+    title: "Services",
+    links: [
+      { label: "AI Solutions", path: "/services/ai" },
+      { label: "Cloud & DevOps", path: "/services/cloud" },
+      { label: "Cybersecurity", path: "/services/cybersecurity" },
+      { label: "IT Infrastructure", path: "/services/infrastructure" },
+      { label: "Digital Transformation", path: "/services/transformation" },
+      { label: "IT Consulting", path: "/services/consulting" }
+    ]
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About Us", path: "/about" },
+      { label: "Our Team", path: "/about" },
+      { label: "Careers", path: "/careers" },
+      { label: "Contact", path: "/contact" }
+    ]
+  },
+  {
+    title: "Resources",
+    links: [
+      { label: "Services Overview", path: "/services" },
+      { label: "Contact Us", path: "/contact" },
+      { label: "Careers", path: "/careers" }
+    ]
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Privacy Policy", path: "/privacy" },
+      { label: "Terms of Service", path: "/terms" },
+      { label: "Contact Support", path: "/contact" }
+    ]
+  }
+];
+
+// Comprehensive contact information
+const contactInfo = [
+  { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
+  { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
+  { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
+  { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
+];
 
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-futuristic border-t border-zion-cyan/20 pt-20 pb-8 relative overflow-hidden">
@@ -148,42 +191,32 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              The world's first free marketplace dedicated to high-tech and artificial intelligence.
-              Connecting innovators, talent, and cutting-edge technology worldwide.
+              Empowering businesses with cutting-edge technology solutions. From AI and quantum computing to sustainable IT infrastructure.
             </motion.p>
 
-            {/* Contact info */}
+            {/* Contact Information */}
             <motion.div 
-              className="space-y-4 mb-8"
+              className="space-y-3 mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="flex items-center gap-3 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                <Phone className="w-4 h-4 text-zion-cyan" />
-                <a href={`tel:${contactInfo.phone}`} className="hover:text-zion-cyan">
-                  {contactInfo.phone}
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                <Mail className="w-4 h-4 text-zion-cyan" />
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-zion-cyan">
-                  {contactInfo.email}
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-zion-slate-light">
-                <MapPin className="w-4 h-4 text-zion-cyan" />
-                <span>{contactInfo.address}</span>
-              </div>
-              <div className="flex items-center gap-3 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                <Globe className="w-4 h-4 text-zion-cyan" />
-                <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
-                  {contactInfo.website}
-                </a>
-              </div>
+              {contactInfo.map((contact, index) => (
+                <div key={index} className="flex items-center space-x-3 text-zion-slate-light">
+                  <contact.icon className="w-4 h-4 text-zion-cyan" />
+                  <a 
+                    href={contact.href} 
+                    className="hover:text-zion-cyan transition-colors duration-200"
+                    target={contact.href.startsWith('http') ? '_blank' : undefined}
+                    rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  >
+                    {contact.value}
+                  </a>
+                </div>
+              ))}
             </motion.div>
 
-            {/* Social links */}
+            {/* Social Links */}
             <motion.div 
               className="flex space-x-4"
               initial={{ opacity: 0, y: 20 }}
@@ -196,7 +229,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:border-zion-cyan transition-all duration-300 hover:scale-110"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
@@ -206,7 +239,7 @@ export function Footer() {
 
           {/* Navigation sections */}
           {Object.entries(footerNavigation).map(([key, section], index) => (
-            <motion.div 
+            <motion.div
               key={key}
               className="space-y-4"
               initial={{ opacity: 0, y: 20 }}
@@ -246,7 +279,7 @@ export function Footer() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="flex items-center space-x-4 text-zion-slate-light text-sm">
-            <span>&copy; 2025 Zion Tech Group. All rights reserved.</span>
+            <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
             <span className="hidden sm:inline">•</span>
             <span className="hidden sm:inline">Made with <Heart className="w-4 h-4 inline text-zion-cyan" /> for innovation</span>
           </div>

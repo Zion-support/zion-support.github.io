@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Shield, 
-  Lock, 
   Eye, 
   Database, 
   Globe, 
@@ -10,7 +10,9 @@ import {
   Phone,
   Calendar,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Lock,
+  Trash
 } from 'lucide-react';
 
 const Privacy: React.FC = () => {
@@ -94,27 +96,17 @@ const Privacy: React.FC = () => {
     {
       right: 'Deletion',
       description: 'Request deletion of your personal data (with limitations)',
-      icon: Shield
+      icon: Trash
     },
     {
       right: 'Portability',
       description: 'Request transfer of your data to another service provider',
-      icon: Globe
-    },
-    {
-      right: 'Objection',
-      description: 'Object to processing of your data for specific purposes',
-      icon: Eye
-    },
-    {
-      right: 'Restriction',
-      description: 'Request restriction of processing in certain circumstances',
-      icon: Lock
+      icon: ArrowRight
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -473,8 +465,129 @@ const Privacy: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Your Rights Section */}
+      <section className="py-20 bg-black/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Your Privacy Rights
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              You have control over your personal information
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {userRights.map((right, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-center space-x-3"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  <span className="text-gray-300">{right.right}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Security Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                How We Protect Your Data
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We implement comprehensive security measures to keep your information safe
+              </p>
+            </div>
+            
+            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-4">Technical Safeguards</h3>
+                  <ul className="space-y-2">
+                    <li className="text-gray-300 flex items-center">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      Encryption in transit and at rest
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      Multi-factor authentication
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      Regular security audits
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      Access controls and monitoring
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-4">Organizational Measures</h3>
+                  <ul className="space-y-2">
+                    <li className="text-gray-300 flex items-center">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      Employee privacy training
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      Data minimization practices
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      Incident response procedures
+                    </li>
+                    <li className="text-gray-300 flex items-center">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      Regular policy reviews
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Questions About Privacy?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            If you have any questions about our privacy practices or want to exercise your rights, 
+            please don't hesitate to contact us.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Contact Us
+            </Link>
+            <Link 
+              to="/terms"
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Terms of Service
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
-};
-
-export default Privacy;
+}

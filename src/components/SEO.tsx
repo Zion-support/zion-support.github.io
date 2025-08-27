@@ -86,3 +86,5 @@ export function SEO({
     </Helmet>
   );
 }
+
+export default SEO;
