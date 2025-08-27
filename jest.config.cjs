@@ -4,7 +4,6 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-<<<<<<< HEAD
     // Handle image imports
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$':
       '<rootDir>/tests/__mocks__/fileMock.js',
@@ -75,9 +74,6 @@ module.exports = {
     '^@/components/search/(.*)$': '<rootDir>/src/components/talent/$1',
     // Retain original mocks for middleware to avoid heavy imports in Jest
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
-=======
-    '\\.(gif|ttf|eot|svg|png|jpg)$': '<rootDir>/__mocks__/fileMock.js'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
   testPathIgnorePatterns: ['/node_modules/', '/.next/', '/out/', '/tests.disabled/'],
   coverageDirectory: 'coverage',
