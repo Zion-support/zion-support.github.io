@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
-import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
+import { innovativeMicroSaasServices2025 } from '../data/innovativeMicroSaasServices2025';
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data/specializedIndustrySolutions2025';
 const EnhancedComprehensiveServicesShowcase = () => {
     const [activeCategory, setActiveCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedService, setSelectedService] = useState(null);
     const allServices = [
-        ...advancedInnovativeServicesExpansionV3.map(service => ({
+        ...innovativeMicroSaasServices2025.map(service => ({
             ...service,
             type: 'Advanced AI & Innovation',
             displayPrice: service.price
         })),
-        ...specializedEnterpriseSolutions2025.map(service => ({
+        ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => ({
             ...service,
             type: 'Specialized Enterprise',
             displayPrice: service.price
@@ -26,8 +26,8 @@ const EnhancedComprehensiveServicesShowcase = () => {
     });
     const categories = [
         { id: 'all', name: 'All Services', count: allServices.length },
-        { id: 'Advanced AI & Innovation', name: 'Advanced AI & Innovation', count: advancedInnovativeServicesExpansionV3.length },
-        { id: 'Specialized Enterprise', name: 'Specialized Enterprise', count: specializedEnterpriseSolutions2025.length }
+        { id: 'Advanced AI & Innovation', name: 'Advanced AI & Innovation', count: innovativeMicroSaasServices2025.length },
+        { id: 'Specialized Enterprise', name: 'Specialized Enterprise', count: SPECIALIZED_INDUSTRY_SOLUTIONS_2025.length }
     ];
     const handleServiceClick = (service) => {
         setSelectedService(service);
