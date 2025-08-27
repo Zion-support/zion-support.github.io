@@ -150,8 +150,8 @@ export function FeatureCTAs() {
     },
     {
       title: "Micro SAAS Hub",
-      description: "Discover innovative micro-SaaS solutions that can transform your business operations.",
-      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-yellow-100 text-yellow-700" />,
+      description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
       link: "/micro-saas",
       badge: "New",
       details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank."
@@ -159,74 +159,75 @@ export function FeatureCTAs() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Explore Our <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Explore Our Comprehensive Solutions
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover comprehensive solutions designed to accelerate your business growth and digital transformation
+            From AI services to IT infrastructure, discover the tools and expertise you need to transform your business
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-slate-600 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 group">
+            <Card key={index} className="bg-slate-800/50 border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
               <CardHeader className="pb-4">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
-                  </div>
+                <div className="flex items-center justify-between mb-2">
+                  {feature.icon}
                   {feature.badge && (
                     <Badge variant="secondary" className="bg-blue-100 text-blue-800 hover:bg-blue-200">
                       {feature.badge}
                     </Badge>
                   )}
                 </div>
-                <CardTitle className="text-xl text-white group-hover:text-blue-400 transition-colors">
-                  {feature.title}
-                </CardTitle>
-                <CardDescription className="text-gray-300 text-base">
+                <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
+                <CardDescription className="text-gray-400">
                   {feature.description}
                 </CardDescription>
               </CardHeader>
               
               <CardContent className="pb-4">
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-sm text-gray-300 leading-relaxed">
                   {feature.details}
                 </p>
               </CardContent>
               
               <CardFooter>
-                <Link 
-                  to={feature.link}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-600/25"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <Link to={feature.link} className="w-full">
+                  <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
                 </Link>
               </CardFooter>
             </Card>
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <Link
-            to="/services"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-600/25"
-          >
-            View All Services
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-600/10 to-cyan-600/10 border border-blue-500/20 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Contact our team to discuss your specific needs and discover how our solutions can help your business grow
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3">
+                  Contact Us
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
+              <Link to="/services">
+                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 px-8 py-3">
+                  View All Services
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
