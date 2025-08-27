@@ -85,6 +85,14 @@ const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusin
 const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 
+// Additional innovative AI services
+const AIProjectManager = React.lazy(() => import('./pages/services/AIProjectManager'));
+const AIContentMarketingSuite = React.lazy(() => import('./pages/services/AIContentMarketingSuite'));
+const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
+const AIHRTalentPlatform = React.lazy(() => import('./pages/services/AIHRTalentPlatform'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const InnovativeAIServicesShowcase = React.lazy(() => import('./pages/InnovativeAIServicesShowcase'));
+
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -198,6 +206,16 @@ function App() {
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/green-it" element={<GreenIT />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              
+              {/* Additional innovative AI service routes */}
+              <Route path="/services/ai-project-manager" element={<AIProjectManager />} />
+              <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
+              <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
+              <Route path="/services/ai-hr-talent-platform" element={<AIHRTalentPlatform />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              
+              {/* Showcase Pages */}
+              <Route path="/innovative-ai-services" element={<InnovativeAIServicesShowcase />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
