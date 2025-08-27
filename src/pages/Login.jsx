@@ -5,7 +5,7 @@ import { safeStorage } from '@/utils/safeStorage';
 import { LoginContent } from '@/components/auth/login';
 import { ErrorBoundary } from 'react-error-boundary';
 import { useCart } from '@/context/CartContext';
-import { SAMPLE_EQUIPMENT } from './EquipmentDetail';
+
 import { toast } from '@/hooks/use-toast';
 import { useDispatch } from 'react-redux';
 import { setLoggedIn } from '@/store/authSlice';
