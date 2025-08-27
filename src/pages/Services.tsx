@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe } from 'lucide-react';
+import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 import { NEW_SERVICES_2025 } from '../data/newServices2025';
@@ -74,12 +74,19 @@ const Services: React.FC = () => {
             See more at <a className="text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>.
           </div>
           
-          <div className="mt-8 text-center">
+          <div className="mt-8 text-center space-y-4">
             <Link to="/innovative-ai-services" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 font-semibold">
               <Sparkles className="w-5 h-5 mr-2" />
               Explore Our Innovative AI Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
+            <div>
+              <Link to="/innovative-services-2026" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 font-semibold">
+                <TrendingUp className="w-5 h-5 mr-2" />
+                Discover 2026 Revolutionary Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {featuredCategories.map((c) => (
