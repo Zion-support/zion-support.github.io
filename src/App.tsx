@@ -10,6 +10,9 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { PWAUpdater } from './components/PWAUpdater';
+import { ThemeToggle } from './components/ThemeToggle';
+import { ToastContainer } from './components/ui/Toast';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -267,6 +270,9 @@ function App() {
         <PerformanceOptimizer />
         <AccessibilityEnhancer />
         <PWAUpdater />
+        <ThemeToggle />
+        <ToastContainer />
+        <PerformanceMonitor />
       </div>
     </ErrorBoundary>
   );
