@@ -348,6 +348,8 @@ export function AppHeader() {
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                aria-label="Toggle mobile menu"
+                aria-expanded={mobileMenuOpen}
               >
                 {mobileMenuOpen ? (
                   <X className="w-6 h-6" />
@@ -424,7 +426,6 @@ export function AppHeader() {
                     ))}
                   </div>
                 </div>
-              </div>
 
                 {/* Mobile CTA */}
                 <div className="mt-6 pt-6 border-t border-slate-700/50">
