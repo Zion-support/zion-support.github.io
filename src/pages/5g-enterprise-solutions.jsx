@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, Rocket, Lock, Cpu, Settings } from 'lucide-react';
+import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, GitBranch, Target, Rocket, Lock, Cpu, Settings } from 'lucide-react';
 const FiveGEnterpriseSolutions = () => {
     const features = [
         {
@@ -198,7 +198,7 @@ const FiveGEnterpriseSolutions = () => {
             { icon: Network, name: "Core Network", description: "5G core infrastructure" },
             { icon: Cpu, name: "Edge Computing", description: "Distributed edge nodes" },
             { icon: Lock, name: "Security Layer", description: "Enterprise-grade security" },
-            { icon: Workflow, name: "Management", description: "Network orchestration" }
+            { icon: GitBranch, name: "Management", description: "Network orchestration" }
         ].map((tech, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: index * 0.1 }} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-teal-500/30">
                   <tech.icon className="w-10 h-10 text-teal-400"/>

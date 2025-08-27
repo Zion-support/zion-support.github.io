@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from 'lucide-react';
+import { Zap, GitBranch, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from 'lucide-react';
 const AIWorkflowAutomation = () => {
     const features = [
         {
@@ -11,7 +11,7 @@ const AIWorkflowAutomation = () => {
             benefits: ["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"]
         },
         {
-            icon: Workflow,
+            icon: GitBranch,
             title: "Intelligent Workflow Design",
             description: "AI-driven workflow design that adapts to business needs and automatically optimizes for performance",
             benefits: ["Dynamic workflows", "Conditional logic", "Exception handling", "Performance optimization"]
@@ -84,7 +84,7 @@ const AIWorkflowAutomation = () => {
         {
             name: "Robotic Process Automation",
             description: "RPA tools for repetitive task automation",
-            icon: Workflow
+            icon: GitBranch
         },
         {
             name: "Natural Language Processing",

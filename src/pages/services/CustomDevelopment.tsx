@@ -50,7 +50,7 @@ export default function CustomDevelopment() {
     {
       title: 'System Integration',
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
-      icon: Workflow,
+              icon: GitBranch,
       features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
     }
   ];

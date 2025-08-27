@@ -34,7 +34,7 @@ import {
   HelpCircle,
   DollarSign,
   Gauge,
-  Workflow,
+  GitBranch,
   Atom,
   Target,
   TrendingUp,

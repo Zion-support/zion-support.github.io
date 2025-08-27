@@ -1,22 +1,6 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-
-export default function DigitalTransformation() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO title="Digital Transformation - Zion Tech Group" description="Modernize processes with cloud-native platforms, automation, and data-driven operations." />
-      <section className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4">Digital Transformation</h1>
-        <p className="text-lg text-gray-300 max-w-3xl">
-          We partner with teams to reimagine workflows, build cloud-native systems, and scale data and AI capabilities across the enterprise.
-        </p>
-      </section>
-    </div>
-  );
-}
-
-import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   Rocket, 
   Cpu, 
@@ -34,17 +18,19 @@ import {
   Lightbulb,
   TrendingUp,
   Settings,
-  Workflow,
+  GitFork,
   FileText,
   Monitor,
   Smartphone
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+
 export default function DigitalTransformation() {
   const services = [
     {
       title: 'Process Automation',
       description: 'Streamline operations with intelligent automation solutions that reduce manual work and improve efficiency.',
-      icon: Workflow,
+      icon: GitFork,
       features: ['RPA Implementation', 'Workflow Optimization', 'Business Process Mapping', 'Performance Monitoring']
     },
     {
@@ -105,14 +91,24 @@ export default function DigitalTransformation() {
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008, Middletown DE 19709"
   };
+  const industries = [
+    'Healthcare',
+    'Finance',
+    'Manufacturing',
+    'Retail',
+    'Education',
+    'Government',
+    'Technology',
+    'Transportation'
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <SEO title="Digital Transformation - Zion Tech Group" description="Modernize processes with cloud-native platforms, automation, and data-driven operations." />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -335,4 +331,3 @@ export default function DigitalTransformation() {
     </div>
   );
 };
-export default DigitalTransformation;

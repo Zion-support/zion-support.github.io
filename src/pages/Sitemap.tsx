@@ -71,12 +71,12 @@ const sitemapSections: SitemapSection[] = [
     icon: Brain,
     description: 'Artificial intelligence and machine learning solutions',
     links: [
-      { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics & ML insights' },
+      { name: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics', description: 'Advanced analytics & ML insights' },
       { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
       { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
-      { name: 'AI-Powered SEO', href: '/services/ai-seo', description: 'Machine learning SEO optimization' },
+      { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', description: 'Machine learning SEO optimization' },
       { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', description: 'Automated content creation' },
-      { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
+      { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
       { name: 'AI Project Management', href: '/services/ai-project-management', description: 'AI-driven project optimization' },
       { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', description: 'Intelligent financial insights' },
       { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', description: 'Automated marketing workflows' },
@@ -93,7 +93,11 @@ const sitemapSections: SitemapSection[] = [
       { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Workflow automation' },
       { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', description: 'Data management solutions' },
       { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', description: 'Customer insights' },
-      { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', description: 'Risk assessment tools' }
+      { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', description: 'Risk assessment tools' },
+      { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', description: 'Automated code security analysis' },
+      { name: 'AI DevOps Automation Platform', href: '/services/ai-devops-automation-platform', description: 'AI-driven DevOps automation' },
+      { name: 'AI Customer Experience Support', href: '/services/ai-customer-experience-support', description: 'Enhanced customer experience' },
+      { name: 'AI Marketing Automation Personalization', href: '/services/ai-marketing-automation-personalization', description: 'Personalized marketing automation' }
     ]
   },
   {
@@ -150,12 +154,24 @@ const sitemapSections: SitemapSection[] = [
       { name: 'Email Sequencer', href: '/services/email-sequencer', description: 'Email automation tools' },
       { name: 'Podcast Transcription', href: '/services/podcast-transcription', description: 'Audio to text conversion' },
       { name: 'Returns Management', href: '/services/returns-management', description: 'Product returns handling' },
-      { name: 'Interview Assessment AI', href: '/services/interview-assessment', description: 'AI-powered candidate evaluation' },
+      { name: 'Interview Assessment AI', href: '/services/interview-assessment-ai', description: 'AI-powered candidate evaluation' },
       { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'Content creation tools' },
       { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Automated email responses' },
       { name: 'Customer Feedback Surveys', href: '/services/customer-feedback-surveys', description: 'Feedback collection tools' },
       { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'Compliance assistance' },
       { name: 'AI Autonomous Code Reviewer', href: '/services/ai-autonomous-code-reviewer', description: 'Code review automation' }
+    ]
+  },
+  {
+    title: '2029 Cutting-Edge Services',
+    icon: Star,
+    description: 'Future-ready technology solutions and innovations',
+    links: [
+      { name: 'Zion Cutting Edge Services 2029', href: '/zion-cutting-edge-services-2029', description: 'Comprehensive 2029 services overview' },
+      { name: 'Comprehensive Services Showcase 2029', href: '/comprehensive-services-showcase-2029', description: 'Complete 2029 services portfolio' },
+      { name: 'New Innovative Services 2025', href: '/new-innovative-services-2025', description: 'Latest innovative services' },
+      { name: 'Ultimate Services Showcase 2026', href: '/ultimate-services-showcase-2026', description: '2026 services overview' },
+      { name: 'Comprehensive Services Showcase 2027', href: '/comprehensive-services-showcase-2027', description: '2027 services overview' }
     ]
   },
   {
