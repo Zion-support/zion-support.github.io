@@ -2,14 +2,13 @@ const CACHE_NAME = 'zion-tech-group-v1.0.0';
 const STATIC_CACHE = 'zion-static-v1.0.0';
 const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 
-// Files to cache immediately
+// Files to cache immediately - updated for Vite build output
 const STATIC_FILES = [
   '/',
   '/index.html',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
   '/manifest.json',
   '/favicon.ico',
+  '/favicon.svg',
   '/offline.html'
 ];
 
@@ -100,7 +99,11 @@ async function cacheFirst(request, cacheName) {
     return networkResponse;
   } catch (error) {
     console.error('Cache first strategy failed:', error);
-    return new Response('Network error', { status: 503 });
+    // Return offline page for navigation requests
+    if (request.mode === 'navigate') {
+      return caches.match('/offline.html');
+    }
+    throw error;
   }
 }
 
@@ -114,37 +117,34 @@ async function networkFirst(request, cacheName) {
     }
     return networkResponse;
   } catch (error) {
-    console.log('Network failed, trying cache:', error);
-    
+    console.error('Network first strategy failed:', error);
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse;
     }
-    
     // Return offline page for navigation requests
     if (request.mode === 'navigate') {
       return caches.match('/offline.html');
     }
-    
-    return new Response('Offline', { status: 503 });
+    throw error;
   }
 }
 
 // Check if request is for a static file
 function isStaticFile(request) {
   const url = new URL(request.url);
-  const staticExtensions = ['.js', '.css', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico', '.woff', '.woff2', '.ttf'];
-  
-  return staticExtensions.some(ext => url.pathname.endsWith(ext)) ||
-         STATIC_FILES.includes(url.pathname);
+  const staticExtensions = ['.html', '.css', '.js', '.json', '.ico', '.svg', '.png', '.jpg', '.jpeg', '.gif', '.woff', '.woff2', '.ttf', '.eot'];
+  return staticExtensions.some(ext => url.pathname.endsWith(ext)) || 
+         url.pathname === '/' || 
+         url.pathname === '/index.html';
 }
 
 // Check if request is for an API
 function isAPIRequest(request) {
   const url = new URL(request.url);
   return url.pathname.startsWith('/api/') || 
-         url.pathname.startsWith('/services/') ||
-         url.hostname.includes('api.');
+         url.pathname.startsWith('/auth/') ||
+         url.hostname === 'api.ziontechgroup.com';
 }
 
 // Background sync for offline actions
@@ -198,20 +198,24 @@ self.addEventListener('push', (event) => {
   console.log('Push notification received:', event);
   
   if (event.data) {
-    const data = event.data.json();
-    const options = {
-      body: data.body || 'New notification from Zion Tech Group',
-      icon: '/favicon.ico',
-      badge: '/favicon.ico',
-      data: data.data || {},
-      actions: data.actions || [],
-      requireInteraction: data.requireInteraction || false,
-      tag: data.tag || 'default'
-    };
-    
-    event.waitUntil(
-      self.registration.showNotification(data.title || 'Zion Tech Group', options)
-    );
+    try {
+      const data = event.data.json();
+      const options = {
+        body: data.body || 'New notification from Zion Tech Group',
+        icon: '/favicon.ico',
+        badge: '/favicon.ico',
+        data: data.data || {},
+        actions: data.actions || [],
+        requireInteraction: data.requireInteraction || false,
+        tag: data.tag || 'default'
+      };
+      
+      event.waitUntil(
+        self.registration.showNotification(data.title || 'Zion Tech Group', options)
+      );
+    } catch (error) {
+      console.error('Error processing push notification:', error);
+    }
   }
 });
 
@@ -232,16 +236,23 @@ self.addEventListener('notificationclick', (event) => {
   }
 });
 
-// Message handling from main thread
+// Message handling from main thread with improved error handling
 self.addEventListener('message', (event) => {
-  console.log('Message received in service worker:', event.data);
-  
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-  
-  if (event.data && event.data.type === 'GET_VERSION') {
-    event.ports[0].postMessage({ version: CACHE_NAME });
+  try {
+    console.log('Message received in service worker:', event.data);
+    
+    if (event.data && event.data.type === 'SKIP_WAITING') {
+      self.skipWaiting();
+    }
+    
+    if (event.data && event.data.type === 'GET_VERSION') {
+      // Check if ports are available before posting message
+      if (event.ports && event.ports.length > 0) {
+        event.ports[0].postMessage({ version: CACHE_NAME });
+      }
+    }
+  } catch (error) {
+    console.error('Error handling service worker message:', error);
   }
 });
 
