@@ -8,9 +8,17 @@
   NODE_OPTIONS = "--max_old_space_size=4096"
   NPM_FLAGS = "--prefer-offline"
 
-# Remove Next.js plugin since this is a Vite project
-# [[plugins]]
-#   package = "@netlify/plugin-nextjs"
+# Explicitly disable Next.js plugin for Vite project
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    skip = true
+
+# Cloudinary plugin for image optimization
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+  [plugins.inputs]
+    cloud_name = "${CLOUDINARY_CLOUD_NAME}"
 
 # Optional: a few redirects that were present
 [[redirects]]
@@ -54,16 +62,12 @@
   status = 301
 
 [[redirects]]
-  from = "/autonomous-it-operations"
-  to = "/autonomous-it-operations-center"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-internet-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
   from = "/browser-automation-cloud/"
   to = "/browser-automation-cloud"
   status = 301
+
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
