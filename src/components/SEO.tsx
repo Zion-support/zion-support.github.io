@@ -2,61 +2,33 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string;
+  author?: string;
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'product';
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  type?: string;
   structuredData?: object;
 }
 
-export const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords,
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
+export default function SEO({
+  title = "Zion Tech Group - AI-Powered Technology Solutions",
+  description = "Leading provider of AI-powered business solutions, cloud infrastructure, cybersecurity services, and digital transformation consulting. Transform your business with cutting-edge technology.",
+  keywords = "AI solutions, artificial intelligence, cloud infrastructure, cybersecurity, digital transformation, IT consulting, machine learning, quantum computing, green IT",
+  author = "Zion Tech Group",
+  image = "/images/zion-tech-group-og.jpg",
+  url = "https://ziontechgroup.com",
+  type = "website",
   structuredData
-}: SEOProps) => {
-  const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;
-  const fullDescription = `${description} Transform your business with cutting-edge AI, cybersecurity, cloud, and digital transformation services.`;
-  
-  // Default keywords
-  const defaultKeywords = [
-    'AI solutions',
-    'quantum technology',
-    'cybersecurity',
-    'IT services',
-    'business transformation',
-    'intelligent automation',
-    'Zion Tech Group',
-    'technology consulting',
-    'digital innovation',
-    'enterprise solutions'
-  ];
-  
-  const allKeywords = [...new Set([...defaultKeywords, ...keywords])];
-
-  // Default structured data
+}: SEOProps) {
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Leading technology solutions provider offering comprehensive AI, cybersecurity, cloud, and digital transformation services.",
+    "logo": "https://ziontechgroup.com/images/zion-logo.png",
+    "description": "Leading provider of AI-powered technology solutions and digital transformation services",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -67,15 +39,56 @@ export const SEO: React.FC<SEOProps> = ({
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-302-555-0123",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "info@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/zion-marketplace",
+      "https://www.linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup",
-      "https://www.facebook.com/zionmarketplace"
-    ]
+      "https://www.facebook.com/ziontechgroup"
+    ],
+    "foundingDate": "2015",
+    "numberOfEmployees": "50-100",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.4496,
+        "longitude": -75.7163
+      },
+      "geoRadius": "50000"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Technology Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Business Intelligence",
+            "description": "AI-powered analytics and business intelligence solutions"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cloud Infrastructure",
+            "description": "Scalable cloud solutions and DevOps services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cybersecurity Services",
+            "description": "Enterprise-grade security and compliance solutions"
+          }
+        }
+      ]
+    }
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -83,17 +96,17 @@ export const SEO: React.FC<SEOProps> = ({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={allKeywords.join(', ')} />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
@@ -102,92 +115,77 @@ export const SEO: React.FC<SEOProps> = ({
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Additional Meta Tags */}
-      <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#1e40af" />
+      <meta name="theme-color" content="#22ddd2" />
+      <meta name="msapplication-TileColor" content="#22ddd2" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
-      {/* Article-specific meta tags */}
-      {type === 'article' && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === 'article' && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === 'article' && author && (
-        <meta property="article:author" content={author} />
-      )}
-      {type === 'article' && section && (
-        <meta property="article:section" content={section} />
-      )}
-      {type === 'article' && tags.length > 0 && (
-        tags.map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />
-        ))
-      )}
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/icon-180x180.png" />
+      <link rel="apple-touch-icon" sizes="152x152" href="/icon-152x152.png" />
+      <link rel="apple-touch-icon" sizes="144x144" href="/icon-144x144.png" />
+      <link rel="apple-touch-icon" sizes="120x120" href="/icon-120x120.png" />
+      <link rel="apple-touch-icon" sizes="114x114" href="/icon-114x114.png" />
+      <link rel="apple-touch-icon" sizes="76x76" href="/icon-76x76.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="/icon-72x72.png" />
+      <link rel="apple-touch-icon" sizes="60x60" href="/icon-60x60.png" />
+      <link rel="apple-touch-icon" sizes="57x57" href="/icon-57x57.png" />
+      
+      {/* Manifest */}
+      <link rel="manifest" href="/manifest.json" />
+      
+      {/* DNS Prefetch */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="dns-prefetch" href="//cdn.gpteng.co" />
+      
+      {/* Preconnect */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
       
-      {/* Additional structured data for articles */}
-      {type === 'article' && (
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": title,
-            "description": description,
-            "image": image,
-            "author": {
-              "@type": "Organization",
-              "name": author
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ziontechgroup.com/logo.png"
-              }
-            },
-            "datePublished": publishedTime,
-            "dateModified": modifiedTime || publishedTime,
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": url
-            }
-          })}
-        </script>
-      )}
+      {/* Additional SEO Meta Tags */}
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
+      <meta name="format-detection" content="telephone=no" />
       
-      {/* Additional structured data for products */}
-      {type === 'product' && (
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": title,
-            "description": description,
-            "image": image,
-            "brand": {
-              "@type": "Brand",
-              "name": "Zion Tech Group"
-            },
-            "offers": {
-              "@type": "Offer",
-              "url": url,
-              "availability": "https://schema.org/InStock"
-            }
-          })}
-        </script>
-      )}
+      {/* Social Media Meta Tags */}
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Zion Tech Group - AI-Powered Technology Solutions" />
+      
+      {/* Business Meta Tags */}
+      <meta name="business:contact_data:street_address" content="364 E Main St STE 1008" />
+      <meta name="business:contact_data:locality" content="Middletown" />
+      <meta name="business:contact_data:region" content="DE" />
+      <meta name="business:contact_data:postal_code" content="19709" />
+      <meta name="business:contact_data:country_name" content="United States" />
+      <meta name="business:contact_data:phone_number" content="+1-302-464-0950" />
+      <meta name="business:contact_data:email" content="kleber@ziontechgroup.com" />
+      
+      {/* Verification Meta Tags */}
+      <meta name="google-site-verification" content="your-google-verification-code" />
+      <meta name="msvalidate.01" content="your-bing-verification-code" />
+      <meta name="yandex-verification" content="your-yandex-verification-code" />
     </Helmet>
   );
-};
+}

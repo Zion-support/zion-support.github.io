@@ -7,7 +7,7 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  pageExtensions: ['page.tsx','page.ts','page.jsx','page.js'],
   typescript: {
     ignoreBuildErrors: true
   },
