@@ -33,7 +33,8 @@ import {
   HelpCircle,
   Activity,
   Cpu,
-  GraduationCap
+  GraduationCap,
+  ShoppingCart
 } from 'lucide-react';
 
 export function Footer() {
