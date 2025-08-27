@@ -16,7 +16,15 @@
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
 
-# Removed Next.js plugin since this is a Vite project
+# Explicitly disable Next.js plugin and configure only Vite-compatible plugins
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+  inputs = {}
+
+# Explicitly disable the Next.js plugin
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  enabled = false
 
 # Redirects for SEO/legacy URLs
 [[redirects]]
