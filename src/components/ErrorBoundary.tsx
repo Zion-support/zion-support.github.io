@@ -1,15 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  AlertTriangle, 
-  RefreshCw, 
-  Home, 
-  Bug, 
-  X, 
-  Info,
-  AlertCircle,
-  CheckCircle
-} from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home, Mail, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
@@ -20,324 +12,217 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  showDetails: boolean;
-  errorId: string;
-  recoveryAttempts: number;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      showDetails: false,
-      errorId: '',
-      recoveryAttempts: 0
-    };
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+      errorId: `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+    
+    // Log error to monitoring service (e.g., Sentry, LogRocket)
+    this.logErrorToService(error, errorInfo);
+    
     this.setState({
       errorInfo,
       recoveryAttempts: this.state.recoveryAttempts + 1
     });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Log error to external service (e.g., Sentry) in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
   }
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    try {
-      // Example: Log to external service
-      const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        errorId: this.state.errorId
-      };
+    // In a real application, you would send this to your error monitoring service
+    const errorData = {
+      errorId: this.state.errorId,
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
+    };
 
-      // In a real app, send this to your error tracking service
-      console.log('Error logged to service:', errorData);
-    } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
-    }
+    // Example: Send to monitoring service
+    // analytics.capture('error', errorData);
+    console.log('Error data for monitoring service:', errorData);
   };
 
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      showDetails: false
-    });
+  private handleReload = () => {
+    window.location.reload();
   };
 
   private handleGoHome = () => {
     window.location.href = '/';
   };
 
-  private handleReportIssue = () => {
-    const errorData = {
-      error: this.state.error?.message,
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      errorId: this.state.errorId,
-      url: window.location.href
-    };
-
-    // Create a mailto link with error details
+  private handleContactSupport = () => {
     const subject = encodeURIComponent(`Error Report - ${this.state.errorId}`);
     const body = encodeURIComponent(`
-Error Report
+Error Details:
+- Error ID: ${this.state.errorId}
+- URL: ${window.location.href}
+- User Agent: ${navigator.userAgent}
+- Error Message: ${this.state.error?.message}
+- Timestamp: ${new Date().toISOString()}
 
-Error ID: ${this.state.errorId}
-URL: ${window.location.href}
-Error: ${this.state.error?.message}
-
-Please describe what you were doing when this error occurred:
-
-Stack Trace:
-${this.state.error?.stack}
-
-Component Stack:
-${this.state.errorInfo?.componentStack}
+Please provide any additional context about what you were doing when this error occurred.
     `);
-
-    window.open(`mailto:support@ziontechgroup.com?subject=${subject}&body=${body}`);
-  };
-
-  private toggleDetails = () => {
-    this.setState(prev => ({ showDetails: !prev.showDetails }));
-  };
-
-  private getErrorType = (error: Error): 'runtime' | 'network' | 'validation' | 'unknown' => {
-    if (error.name === 'TypeError' || error.name === 'ReferenceError') {
-      return 'runtime';
-    }
-    if (error.message.includes('fetch') || error.message.includes('network')) {
-      return 'network';
-    }
-    if (error.message.includes('validation') || error.message.includes('invalid')) {
-      return 'validation';
-    }
-    return 'unknown';
-  };
-
-  private getErrorIcon = (errorType: ReturnType<typeof this.getErrorType>) => {
-    switch (errorType) {
-      case 'runtime':
-        return <Bug className="w-6 h-6 text-red-500" />;
-      case 'network':
-        return <AlertCircle className="w-6 h-6 text-yellow-500" />;
-      case 'validation':
-        return <Info className="w-6 h-6 text-blue-500" />;
-      default:
-        return <AlertTriangle className="w-6 h-6 text-red-500" />;
-    }
-  };
-
-  private getErrorMessage = (error: Error, errorType: ReturnType<typeof this.getErrorType>) => {
-    switch (errorType) {
-      case 'runtime':
-        return 'Something went wrong with the application. This might be a temporary issue.';
-      case 'network':
-        return 'There was a problem connecting to our servers. Please check your internet connection.';
-      case 'validation':
-        return 'The information provided is not valid. Please check your input and try again.';
-      default:
-        return 'An unexpected error occurred. Our team has been notified.';
-    }
-  };
-
-  private getRecoverySuggestion = (errorType: ReturnType<typeof this.getErrorType>) => {
-    switch (errorType) {
-      case 'runtime':
-        return 'Try refreshing the page or clearing your browser cache.';
-      case 'network':
-        return 'Check your internet connection and try again.';
-      case 'validation':
-        return 'Review the information you entered and ensure it meets the requirements.';
-      default:
-        return 'Try refreshing the page or contact support if the problem persists.';
-    }
+    
+    window.open(`mailto:kleber@ziontechgroup.com?subject=${subject}&body=${body}`);
   };
 
   render() {
     if (this.state.hasError) {
-      const errorType = this.getErrorType(this.state.error!);
-      const errorIcon = this.getErrorIcon(errorType);
-      const errorMessage = this.getErrorMessage(this.state.error!, errorType);
-      const recoverySuggestion = this.getRecoverySuggestion(errorType);
-
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
       return (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4"
-        >
-          <div className="max-w-2xl w-full bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-8">
-            {/* Header */}
-            <div className="text-center mb-8">
-              <div className="flex justify-center mb-4">
-                {errorIcon}
-              </div>
-              <h1 className="text-3xl font-bold text-zion-slate-dark mb-2">
-                Oops! Something went wrong
-              </h1>
-              <p className="text-zion-slate text-lg">
-                We're sorry for the inconvenience
-              </p>
-            </div>
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl w-full bg-zion-slate border border-zion-cyan/20 rounded-2xl p-8 text-center"
+          >
+            {/* Error Icon */}
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center justify-center w-20 h-20 bg-red-500/10 rounded-full mb-6"
+            >
+              <AlertTriangle className="w-10 h-10 text-red-400" />
+            </motion.div>
 
-            {/* Error Details */}
-            <div className="bg-zion-slate/5 rounded-xl p-6 mb-6">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-semibold text-zion-slate-dark">
-                  Error Details
-                </h2>
-                <button
-                  onClick={this.toggleDetails}
-                  className="text-zion-cyan hover:text-zion-cyan/80 transition-colors"
-                >
-                  {this.state.showDetails ? 'Hide' : 'Show'} Details
-                </button>
-              </div>
+            {/* Error Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-3xl font-bold text-white mb-4"
+            >
+              Oops! Something went wrong
+            </motion.h1>
 
-              <p className="text-zion-slate mb-4">{errorMessage}</p>
-              <p className="text-zion-slate/80 text-sm">{recoverySuggestion}</p>
-
-              {/* Error ID */}
-              <div className="mt-4 p-3 bg-zion-slate/10 rounded-lg">
-                <p className="text-xs text-zion-slate/60">
-                  Error ID: <span className="font-mono text-zion-cyan">{this.state.errorId}</span>
-                </p>
-              </div>
-
-              {/* Detailed Error Information */}
-              {this.state.showDetails && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="mt-4 space-y-3"
-                >
-                  {this.state.error && (
-                    <div>
-                      <h3 className="text-sm font-semibold text-zion-slate-dark mb-2">Error Message</h3>
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
-                        <p className="text-sm text-red-700 font-mono break-words">
-                          {this.state.error.message}
-                        </p>
-                      </div>
-                    </div>
-                  )}
-
-                  {this.state.errorInfo && (
-                    <div>
-                      <h3 className="text-sm font-semibold text-zion-slate-dark mb-2">Component Stack</h3>
-                      <div className="bg-zion-slate/10 border border-zion-slate/200 rounded-lg p-3 max-h-32 overflow-y-auto">
-                        <pre className="text-xs text-zion-slate/80 whitespace-pre-wrap">
-                          {this.state.errorInfo.componentStack}
-                        </pre>
-                      </div>
-                    </div>
-                  )}
-                </motion.div>
+            {/* Error Message */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-gray-400 mb-6 leading-relaxed"
+            >
+              We've encountered an unexpected error. Our team has been notified and is working to fix this issue.
+              {this.state.errorId && (
+                <span className="block mt-2 text-sm">
+                  Error ID: <code className="bg-zion-slate-light px-2 py-1 rounded text-zion-cyan">{this.state.errorId}</code>
+                </span>
               )}
-            </div>
+            </motion.p>
 
-            {/* Recovery Actions */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            {/* Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              {/* Reload Button */}
               <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center space-x-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/80 hover:to-zion-blue/80 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                onClick={this.handleReload}
+                className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 transform hover:scale-105"
               >
-                <RefreshCw className="w-5 h-5" />
-                <span>Try Again</span>
+                <RefreshCw className="w-5 h-5 mr-2" />
+                Try Again
               </button>
 
+              {/* Home Button */}
               <button
                 onClick={this.handleGoHome}
-                className="flex items-center justify-center space-x-2 px-6 py-3 border-2 border-zion-cyan/30 hover:border-zion-cyan text-zion-cyan hover:text-white font-semibold rounded-xl transition-all duration-300 hover:bg-zion-cyan"
+                className="flex items-center justify-center px-6 py-3 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
-                <Home className="w-5 h-5" />
-                <span>Go Home</span>
+                <Home className="w-5 h-5 mr-2" />
+                Go Home
               </button>
 
+              {/* Contact Support Button */}
               <button
-                onClick={this.handleReportIssue}
-                className="flex items-center justify-center space-x-2 px-6 py-3 bg-zion-slate/10 hover:bg-zion-slate/20 text-zion-slate-dark font-semibold rounded-xl transition-all duration-300"
+                onClick={this.handleContactSupport}
+                className="flex items-center justify-center px-6 py-3 border-2 border-zion-purple text-zion-purple rounded-lg font-semibold hover:bg-zion-purple hover:text-white transition-all duration-300"
               >
-                <AlertTriangle className="w-5 h-5" />
-                <span>Report Issue</span>
+                <Mail className="w-5 h-5 mr-2" />
+                Contact Support
               </button>
-            </div>
+            </motion.div>
 
-            {/* Additional Help */}
-            <div className="text-center">
-              <p className="text-zion-slate/80 text-sm mb-4">
-                If this problem continues, please contact our support team
+            {/* Contact Information */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="mt-8 pt-6 border-t border-zion-cyan/20"
+            >
+              <p className="text-sm text-gray-500 mb-2">
+                Need immediate assistance?
               </p>
-              <div className="flex items-center justify-center space-x-6 text-sm text-zion-slate/60">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span>Error logged</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Info className="w-4 h-4 text-blue-500" />
-                  <span>Support notified</span>
-                </div>
+              <div className="flex items-center justify-center gap-4 text-sm">
+                <a
+                  href="tel:+13024640950"
+                  className="flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                >
+                  <Phone className="w-4 h-4 mr-1" />
+                  +1 (302) 464-0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                >
+                  <Mail className="w-4 h-4 mr-1" />
+                  kleber@ziontechgroup.com
+                </a>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Recovery Attempts */}
-            {this.state.recoveryAttempts > 1 && (
-              <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                <div className="flex items-center space-x-2 text-yellow-800">
-                  <AlertTriangle className="w-4 h-4" />
-                  <span className="text-sm font-medium">
-                    Recovery attempt #{this.state.recoveryAttempts}
-                  </span>
+            {/* Debug Information (only in development) */}
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <motion.details
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="mt-6 text-left"
+              >
+                <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">
+                  Debug Information
+                </summary>
+                <div className="mt-4 p-4 bg-zion-slate-light rounded-lg text-xs text-gray-400 font-mono overflow-auto max-h-64">
+                  <div><strong>Error:</strong> {this.state.error.message}</div>
+                  <div><strong>Stack:</strong></div>
+                  <pre className="mt-2 whitespace-pre-wrap">{this.state.error.stack}</pre>
+                  {this.state.errorInfo && (
+                    <>
+                      <div className="mt-4"><strong>Component Stack:</strong></div>
+                      <pre className="mt-2 whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
+                    </>
+                  )}
                 </div>
-                <p className="text-sm text-yellow-700 mt-2">
-                  Multiple errors detected. Consider refreshing the page or clearing your browser cache.
-                </p>
-              </div>
+              </motion.details>
             )}
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       );
     }
 

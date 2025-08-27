@@ -30,7 +30,6 @@ import {
   Grid3X3,
   List,
   Atom,
-  Blockchain,
   Heart,
   Scale,
   Factory,
@@ -80,7 +79,7 @@ const Services: React.FC = () => {
         return <Server className="w-6 h-6" />;
       case 'blockchain & ai':
       case 'blockchain':
-        return <Blockchain className="w-6 h-6" />;
+        return <Network className="w-6 h-6" />;
       case 'cybersecurity':
         return <Shield className="w-6 h-6" />;
       case 'healthcare':

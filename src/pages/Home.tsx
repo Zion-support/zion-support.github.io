@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -30,68 +30,53 @@ import {
 } from 'lucide-react';
 import { EnhancedServicesShowcase } from '../components/EnhancedServicesShowcase';
 
-const Home: React.FC = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+// Enhanced loading component with better UX
+const EnhancedLoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="relative">
+      <div className="w-32 h-32 border-4 border-cyan-400/20 rounded-full"></div>
+      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-lg">
+        ZION
+      </div>
+      <div className="mt-4 text-center">
+        <div className="text-cyan-400 text-sm animate-pulse">Loading amazing experiences...</div>
+      </div>
+    </div>
+  </div>
+);
 
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence that transforms your business operations and decision-making processes.",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Cloud,
-      title: "Micro SAAS Platform",
-      description: "Innovative software-as-a-service solutions designed for modern businesses and startups.",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Server,
-      title: "IT Infrastructure",
-      description: "Robust and scalable IT solutions that keep your business running smoothly and securely.",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Rocket,
-      title: "Emerging Technologies",
-      description: "Next-generation technologies including quantum computing, blockchain, and edge computing.",
-      color: "from-orange-500 to-red-500"
+// Performance-optimized stats section
+const StatsSection = React.memo(() => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.getElementById('stats-section');
+    if (element) {
+      observer.observe(element);
     }
-  ];
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
 
   const stats = [
-    { number: "500+", label: "Services Delivered", icon: CheckCircle, delay: 0.1 },
-    { number: "99.9%", label: "Uptime Guarantee", icon: Shield, delay: 0.2 },
-    { number: "24/7", label: "Support Available", icon: Users, delay: 0.3 },
-    { number: "50+", label: "Expert Team Members", icon: Award, delay: 0.4 }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO, TechCorp",
-      content: "ZION TECH GROUP transformed our infrastructure with their AI solutions. Our efficiency increased by 300%.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      name: "Michael Chen",
-      role: "CEO, InnovateLab",
-      content: "The micro SAAS platform they built for us is revolutionary. It's exactly what we needed to scale.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Director of IT, GlobalTech",
-      content: "Outstanding cybersecurity solutions and 24/7 support. They're our trusted technology partner.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    }
+    { number: '500+', label: 'Happy Clients', icon: Users },
+    { number: '50+', label: 'Expert Team', icon: Award },
+    { number: '99.9%', label: 'Uptime SLA', icon: Shield },
+    { number: '24/7', label: 'Support', icon: Phone }
   ];
 
   // Auto-rotate testimonials
@@ -128,7 +113,59 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen">
+    <section id="stats-section" className="py-20 bg-gradient-to-r from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan/10 rounded-full mb-4">
+                <stat.icon className="w-8 h-8 text-zion-cyan" />
+              </div>
+              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
+                {stat.number}
+              </div>
+              <div className="text-zion-cyan text-sm font-medium">
+                {stat.label}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+});
+
+StatsSection.displayName = 'StatsSection';
+
+const Home: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Simulate loading delay for better UX
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isLoaded) {
+    return <EnhancedLoadingSpinner />;
+  }
+
+  return (
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <motion.div 
@@ -188,7 +225,32 @@ const Home: React.FC = () => {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Floating Elements */}
+        <div className="relative">
+          <motion.div
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-20 left-10 w-20 h-20 border border-zion-cyan/20 rounded-full"
+          />
+          <motion.div
+            animate={{ y: [0, 20, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-40 right-20 w-16 h-16 border border-zion-purple/20 rounded-full"
+          />
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute bottom-40 left-1/4 w-12 h-12 border border-zion-blue/20 rounded-full"
+          />
+        </div>
       </section>
+
+      {/* Enhanced Service Showcase */}
+      <EnhancedServicesShowcase />
+
+      {/* Stats Section */}
+      <StatsSection />
 
       {/* Features Section */}
       <section className="py-20 bg-white/5 backdrop-blur-sm">
@@ -208,14 +270,29 @@ const Home: React.FC = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: Brain,
+                title: "AI-Powered Solutions",
+                description: "Cutting-edge artificial intelligence that transforms your business operations and decision-making processes."
+              },
+              {
+                icon: Cloud,
+                title: "Micro SAAS Platform",
+                description: "Innovative software-as-a-service solutions designed for modern businesses and startups."
+              },
+              {
+                icon: Server,
+                title: "IT Infrastructure",
+                description: "Robust and scalable IT solutions that keep your business running smoothly and securely."
+              },
+              {
+                icon: Rocket,
+                title: "Emerging Technologies",
+                description: "Next-generation technologies including quantum computing, blockchain, and edge computing."
+              }
+            ].map((feature, index) => (
               <motion.div
                 key={feature.title}
                 variants={itemVariants}
@@ -232,62 +309,9 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our <span className="text-zion-cyan">Impact</span> in Numbers
-            </h2>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                variants={itemVariants}
-                className="text-center group"
-              >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: stat.delay }}
-                  className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
-                >
-                  <stat.icon className="w-10 h-10 text-white" />
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: stat.delay + 0.2 }}
-                  className="text-4xl font-bold text-zion-cyan mb-2"
-                >
-                  {stat.number}
-                </motion.div>
-                <p className="text-zion-slate-light font-medium">{stat.label}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-white/5 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* CTA Section */}
+      <section className="py-20 relative">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

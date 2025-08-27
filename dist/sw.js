@@ -143,6 +143,8 @@ self.addEventListener('sync', (event) => {
   }
 });
 
+=======
+
 async function doBackgroundSync() {
   try {
     // Perform background sync operations
