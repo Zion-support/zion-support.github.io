@@ -38,9 +38,9 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: true,
+    open: false,
   },
-  preview: { port: 4173, host: true, open: true },
+  preview: { port: 4173, host: true, open: false },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),

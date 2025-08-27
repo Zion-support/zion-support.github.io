@@ -11,6 +11,12 @@ import Contact from './pages/Contact.tsx';
 import ServicesPage from './pages/ServicesPage';
 import EnhancedServicesShowcase2025 from './pages/EnhancedServicesShowcase2025';
 import NotFound from './pages/NotFound';
+import Training from './pages/Training';
+import Webinars from './pages/Webinars';
+import WhitePapers from './pages/WhitePapers';
+import Research from './pages/Research';
+import Documentation from './pages/Documentation';
+import API from './pages/API';
 
 // Import other pages as needed
 import Login from './pages/Login';
@@ -76,13 +82,13 @@ function App() {
             <Route path="/partners" element={<About />} />
             
             {/* Resources Routes */}
-            <Route path="/docs" element={<About />} />
-            <Route path="/api" element={<About />} />
+            <Route path="/docs" element={<Documentation />} />
+            <Route path="/api" element={<API />} />
             <Route path="/help" element={<FAQ />} />
-            <Route path="/training" element={<About />} />
-            <Route path="/webinars" element={<About />} />
-            <Route path="/white-papers" element={<About />} />
-            <Route path="/research" element={<About />} />
+            <Route path="/training" element={<Training />} />
+            <Route path="/webinars" element={<Webinars />} />
+            <Route path="/white-papers" element={<WhitePapers />} />
+            <Route path="/research" element={<Research />} />
             
             {/* Industry Solutions Routes */}
             <Route path="/solutions/healthcare" element={<EnhancedServicesShowcase2025 />} />
