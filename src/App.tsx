@@ -11,8 +11,7 @@ const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/contact'));
 const Services = React.lazy(() => import('./pages/services'));
 const Products = React.lazy(() => import('./pages/products'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+
 const PartnersPage = React.lazy(() => import('./pages/Partners'));
 const Login = React.lazy(() => import('./pages/Login'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
@@ -55,8 +54,7 @@ function App() {
               <Route path="/solutions" element={<Solutions />} />
               
               {/* Content Routes */}
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
+
               <Route path="/news" element={<News />} />
 
               <Route path="/partners" element={<PartnersPage />} />
