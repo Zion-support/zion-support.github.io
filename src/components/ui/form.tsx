@@ -1,94 +1,77 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
 
-const Form = React.forwardRef<
-  HTMLFormElement,
-  React.FormHTMLAttributes<HTMLFormElement>
->(({ className, ...props }, ref) => {
+interface FormProps {
+  children: React.ReactNode;
+  onSubmit?: (e: React.FormEvent) => void;
+  className?: string;
+}
+
+export function Form({ children, onSubmit, className = '' }: FormProps) {
   return (
-    <form
-      ref={ref}
-      className={cn('space-y-4', className)}
-      {...props}
-    />
+    <form onSubmit={onSubmit} className={className}>
+      {children}
+    </form>
   );
-});
-Form.displayName = 'Form';
+}
 
-const FormField = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  return (
-    <div
-      ref={ref}
-      className={cn('space-y-2', className)}
-      {...props}
-    />
-  );
-});
-FormField.displayName = 'FormField';
+interface FormFieldProps {
+  children: React.ReactNode;
+  name: string;
+  control?: any;
+  render?: (props: any) => React.ReactNode;
+}
 
-const FormItem = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  return (
-    <div
-      ref={ref}
-      className={cn('space-y-2', className)}
-      {...props}
-    />
-  );
-});
-FormItem.displayName = 'FormItem';
-
-const FormLabel = React.forwardRef<
-  HTMLLabelElement,
-  React.LabelHTMLAttributes<HTMLLabelElement>
->(({ className, ...props }, ref) => {
-  return (
-    <label
-      ref={ref}
-      className={cn('text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70', className)}
-      {...props}
-    />
-  );
-});
-FormLabel.displayName = 'FormLabel';
-
-const FormControl = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  return (
-    <div
-      ref={ref}
-      className={cn('', className)}
-      {...props}
-    />
-  );
-});
-FormControl.displayName = 'FormControl';
-
-const FormMessage = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, children, ...props }, ref) => {
-  if (!children) {
-    return null;
+export function FormField({ children, name, control, render }: FormFieldProps) {
+  if (render) {
+    return render({ field: { name } });
   }
+  return <>{children}</>;
+}
 
+interface FormControlProps {
+  children: React.ReactNode;
+}
+
+export function FormControl({ children }: FormControlProps) {
+  return <>{children}</>;
+}
+
+interface FormItemProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormItem({ children, className = '' }: FormItemProps) {
   return (
-    <p
-      ref={ref}
-      className={cn('text-sm font-medium text-destructive', className)}
-      {...props}
-    >
+    <div className={className}>
+      {children}
+    </div>
+  );
+}
+
+interface FormLabelProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormLabel({ children, className = '' }: FormLabelProps) {
+  return (
+    <label className={className}>
+      {children}
+    </label>
+  );
+}
+
+interface FormMessageProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export function FormMessage({ children, className = '' }: FormMessageProps) {
+  if (!children) return null;
+  return (
+    <p className={className}>
       {children}
     </p>
   );
-});
-FormMessage.displayName = 'FormMessage';
-
-export { Form, FormField, FormItem, FormLabel, FormControl, FormMessage };
+}

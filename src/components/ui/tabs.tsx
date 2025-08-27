@@ -1,35 +1,17 @@
-<<<<<<< HEAD
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-
-interface TabsContextType {
-  value: string;
-  onValueChange: (value: string) => void;
-}
-
-const TabsContext = createContext<TabsContextType | undefined>(undefined);
-
-interface TabsProps {
-  children: ReactNode;
-  defaultValue?: string;
-  value?: string;
-  onValueChange?: (value: string) => void;
-  className?: string;
-}
-
-export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {
-  const [internalValue, setInternalValue] = useState(defaultValue || '');
+export function Tabs({ 
+  children, 
+  defaultValue, 
+  value: controlledValue, 
+  onValueChange: controlledOnValueChange,
+  className = '' 
+}: TabsProps) {
+  const [internalValue, setInternalValue] = useState(defaultValue);
   
-  const currentValue = value !== undefined ? value : internalValue;
-  const handleValueChange = (newValue: string) => {
-    if (onValueChange) {
-      onValueChange(newValue);
-    } else {
-      setInternalValue(newValue);
-    }
-  };
+  const value = controlledValue !== undefined ? controlledValue : internalValue;
+  const onValueChange = controlledOnValueChange || setInternalValue;
 
   return (
-    <TabsContext.Provider value={{ value: currentValue, onValueChange: handleValueChange }}>
+    <TabsContext.Provider value={{ value, onValueChange }}>
       <div className={className}>
         {children}
       </div>
@@ -91,31 +73,19 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
 ;
 export function TabsList({ children, className = '' }) {
     return (<div className={`flex border-b border-gray-200 ${className}`}>
->>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
       {children}
     </button>
   );
 }
-<<<<<<< HEAD
-
-interface TabsContentProps {
-  children: ReactNode;
-  value: string;
-  className?: string;
-}
-
-export function TabsContent({ children, value, className = '' }: TabsContentProps) {
-  const context = useContext(TabsContext);
-  if (!context) throw new Error('TabsContent must be used within Tabs');
-
-  if (context.value !== value) return null;
+  if (context.value !== value) {
+    return null;
+  }
 
   return (
     <div className={`mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${className}`}>
       {children}
     </div>
   );
-=======
 ;
 export function TabsTrigger({ children, value, className = '' }) {
     const context = useContext(TabsContext);
@@ -135,5 +105,5 @@ export function TabsContent({ children, value, className = '' }) {
     if (context.activeTab !== value)
         return null;
     return <div className={className}>{children}</div>;
->>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
+=======
 }

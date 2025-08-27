@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Badge = ({ children, className = '', variant = 'default' }) => {
+const Badge = ({ children, className = '', variant = 'default' }) => {
     const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
     const variantClasses = {
         default: 'border-transparent bg-primary text-primary-foreground',
@@ -9,12 +9,12 @@ export const Badge = ({ children, className = '', variant = 'default' }) => {
         outline: 'text-foreground'
     };
     return (
-        <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
-            {children}
-        </div>
+import { Badge } from './Badge.jsx';
+=======
+      <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+        {children}
+      </div>
     );
 };
-=======
-import { Badge } from './Badge.jsx';
 
 export { Badge };

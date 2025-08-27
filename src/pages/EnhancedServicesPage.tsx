@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { EnhancedServicesShowcase } from '@/components/EnhancedServicesShowcase';
-import { SEO } from '@/components/SEO';
-
-export default function EnhancedServicesPage() {
-  return (
-    <>
-      <SEO 
-        title="Enhanced Micro SAAS Services 2025 - Zion Tech Group"
-        description="Discover our comprehensive collection of cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with innovative technology services."
-        canonical="/enhanced-services"
-        url="https://ziontechgroup.com/enhanced-services"
-      />
-      
-      <EnhancedServicesShowcase />
-    </>
-  );
-}
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '@/components/header/Header';
@@ -33,12 +13,22 @@ export default function EnhancedServicesPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
 
-    const CONTACT_INFO = {
-        mobile: '+1 (555) 123-4567',
-        email: 'info@ziontechgroup.com',
-        address: '123 Tech Street, Innovation City, IC 12345',
-        website: 'https://ziontechgroup.com'
-    };
+  const filteredServices = ENHANCED_SERVICES.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'all' || 
+                           service.category.toLowerCase().includes(selectedCategory.toLowerCase());
+    
+    const matchesPrice = selectedPriceRange === 'all' || 
+                        (selectedPriceRange === 'basic' && service.price <= 2000) ||
+                        (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||
+                        (selectedPriceRange === 'enterprise' && service.price > 8000 && service.price <= 25000) ||
+                        (selectedPriceRange === 'premium' && service.price > 25000);
+    
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
 
     const serviceCategories = [
         { id: 'all', name: 'All Services', icon: Globe },
@@ -50,74 +40,12 @@ export default function EnhancedServicesPage() {
         { id: 'infrastructure', name: 'Infrastructure', icon: Zap }
     ];
 
-    const services = [
-        {
-            id: 'ai-content-generation',
-            name: 'AI Content Generation',
-            category: 'ai',
-            description: 'Advanced AI-powered content creation for marketing, blogs, and social media',
-            features: ['Multi-language support', 'SEO optimization', 'Brand voice consistency', 'Bulk generation'],
-            price: '$29/month',
-            rating: 4.8,
-            reviews: 156,
-            popular: true
-        },
-        {
-            id: 'cloud-migration',
-            name: 'Cloud Migration Services',
-            category: 'cloud',
-            description: 'Seamless migration to AWS, Azure, or Google Cloud with zero downtime',
-            features: ['Assessment & planning', 'Data migration', 'Performance optimization', '24/7 monitoring'],
-            price: 'Custom',
-            rating: 4.9,
-            reviews: 89,
-            popular: false
-        },
-        {
-            id: 'cybersecurity-audit',
-            name: 'Cybersecurity Audit',
-            category: 'security',
-            description: 'Comprehensive security assessment and compliance verification',
-            features: ['Vulnerability scanning', 'Penetration testing', 'Compliance reporting', 'Remediation guidance'],
-            price: '$1,999',
-            rating: 4.7,
-            reviews: 203,
-            popular: true
-        },
-        {
-            id: 'data-analytics-platform',
-            name: 'Data Analytics Platform',
-            category: 'data',
-            description: 'Real-time business intelligence and predictive analytics solutions',
-            features: ['Custom dashboards', 'Real-time insights', 'Predictive modeling', 'API integration'],
-            price: '$199/month',
-            rating: 4.6,
-            reviews: 78,
-            popular: false
-        },
-        {
-            id: 'custom-software',
-            name: 'Custom Software Development',
-            category: 'development',
-            description: 'Tailored software solutions built to your exact specifications',
-            features: ['Full-stack development', 'UI/UX design', 'Testing & QA', 'Deployment & support'],
-            price: 'Custom',
-            rating: 4.9,
-            reviews: 234,
-            popular: true
-        },
-        {
-            id: 'infrastructure-management',
-            name: 'Infrastructure Management',
-            category: 'infrastructure',
-            description: 'Comprehensive IT infrastructure management and optimization',
-            features: ['24/7 monitoring', 'Performance tuning', 'Capacity planning', 'Disaster recovery'],
-            price: '$299/month',
-            rating: 4.8,
-            reviews: 167,
-            popular: false
-        }
-    ];
+  const getPriceRange = (price: number) => {
+    if (price <= 2000) return 'basic';
+    if (price <= 8000) return 'professional';
+    if (price <= 25000) return 'enterprise';
+    return 'premium';
+  };
 
     const filteredServices = services.filter(service => {
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -152,38 +80,176 @@ export default function EnhancedServicesPage() {
                             </p>
                         </div>
 
-                        {/* Search and Filter */}
-                        <div className="max-w-4xl mx-auto mb-12">
-                            <div className="relative mb-6">
-                                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                                <Input
-                                    type="text"
-                                    placeholder="Search services..."
-                                    value={searchTerm}
-                                    onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-gray-400"
-                                />
-                            </div>
-                            
-                            <div className="flex flex-wrap justify-center gap-2">
-                                {serviceCategories.map((category) => (
-                                    <Button
-                                        key={category.id}
-                                        variant={selectedCategory === category.id ? "default" : "outline"}
-                                        size="sm"
-                                        onClick={() => setSelectedCategory(category.id)}
-                                        className={`${
-                                            selectedCategory === category.id
-                                                ? 'bg-zion-cyan text-zion-blue-dark'
-                                                : 'border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10'
-                                        }`}
-                                    >
-                                        <category.icon className="w-4 h-4 mr-2" />
-                                        {category.name}
-                                    </Button>
-                                ))}
-                            </div>
-                        </div>
+      {/* Pricing Tiers Overview */}
+      <section className="py-16 bg-zion-blue-dark">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Service Pricing Tiers
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {Object.entries(SERVICE_PRICING_TIERS).map(([tier, info]) => (
+              <Card key={tier} className="bg-zion-blue border-zion-blue-light">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-zion-cyan capitalize">{tier}</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    {info.range}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-white">{info.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Overview & Benefits */}
+      <section className="py-16 bg-zion-blue">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Why Choose Zion Tech Group Services?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Brain className="w-8 h-8 text-zion-blue-dark" />
+                </div>
+                <CardTitle className="text-zion-cyan">AI-Powered Solutions</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-white">Cutting-edge AI and machine learning services with proven results and continuous innovation.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Shield className="w-8 h-8 text-zion-blue-dark" />
+                </div>
+                <CardTitle className="text-zion-cyan">Enterprise Security</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-white">World-class cybersecurity solutions with compliance frameworks and 24/7 monitoring.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Cloud className="w-8 h-8 text-zion-blue-dark" />
+                </div>
+                <CardTitle className="text-zion-cyan">Cloud Excellence</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-white">Multi-cloud expertise with cost optimization and seamless hybrid solutions.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Database className="w-8 h-8 text-zion-blue-dark" />
+                </div>
+                <CardTitle className="text-zion-cyan">Data Intelligence</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-white">Advanced analytics and machine learning pipelines for actionable business insights.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Code className="w-8 h-8 text-zion-blue-dark" />
+                </div>
+                <CardTitle className="text-zion-cyan">DevOps Excellence</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-white">Modern development practices with automated CI/CD and microservices architecture.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Zap className="w-8 h-8 text-zion-blue-dark" />
+                </div>
+                <CardTitle className="text-zion-cyan">Innovation First</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-white">Pioneering emerging technologies like quantum computing, blockchain, and AR/VR.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Search and Filters */}
+      <section className="py-8 bg-zion-blue">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <Input
+                placeholder="Search services, technologies, or keywords..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light"
+              />
+            </div>
+            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+              <SelectTrigger className="w-full md:w-48 bg-zion-blue-dark border-zion-blue-light text-white">
+                <SelectValue placeholder="All Categories" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Categories</SelectItem>
+                {ENHANCED_SERVICE_CATEGORIES.map(category => (
+                  <SelectItem key={category.value} value={category.value}>
+                    {category.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <Select value={selectedPriceRange} onValueChange={setSelectedPriceRange}>
+              <SelectTrigger className="w-full md:w-48 bg-zion-blue-dark border-zion-blue-light text-white">
+                <SelectValue placeholder="All Prices" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Prices</SelectItem>
+                <SelectItem value="basic">Basic ($500 - $2,000)</SelectItem>
+                <SelectItem value="professional">Professional ($2,000 - $8,000)</SelectItem>
+                <SelectItem value="enterprise">Enterprise ($8,000 - $25,000)</SelectItem>
+                <SelectItem value="premium">Premium ($25,000+)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section id="services-grid" className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-zion-blue mb-4">
+              {filteredServices.length} Services Available
+            </h2>
+            <p className="text-zion-slate text-lg">
+              Find the perfect solution for your business needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <Card key={service.id} className="h-full hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      {getCategoryIcon(service.category)}
+                      <Badge variant={getPriceRange(service.price) === 'enterprise' ? 'default' : 'secondary'}>
+                        {getPriceRange(service.price)}
+                      </Badge>
                     </div>
                 </section>
 
@@ -372,4 +438,3 @@ export default function EnhancedServicesPage() {
         </>
     );
 }
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

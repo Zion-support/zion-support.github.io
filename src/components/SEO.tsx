@@ -1,12 +1,12 @@
 import React from 'react';
 
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  author?: string;
+interface SEOProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
   image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
+  type?: 'website' | 'article' | 'profile' | 'product';
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;

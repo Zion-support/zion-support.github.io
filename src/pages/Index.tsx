@@ -9,12 +9,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { WaitlistSection } from "@/components/WaitlistSection";
 import { BlogSection } from "@/components/BlogSection";
-<<<<<<< HEAD
-import { SEO } from "../components/SEOHead";
-import { Button } from "@/components/ui/button";
-=======
 import { SEO } from "@/components/SEO";
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 import { Link } from "react-router-dom";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
@@ -23,33 +18,14 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
 import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone } from "lucide-react";
 export default function Index() {
-<<<<<<< HEAD
-  const { t } = useTranslation();
-  const { isRTL } = useLanguage();
-  
-  // Tools and features showcase
-  const toolsFeatures = [
-    {
-      title: t("home.tool_ai_matcher", "AI-Powered Matching"),
-      description: t("home.tool_ai_matcher_desc", "Find the perfect talent with our advanced AI algorithms"),
-      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
-      link: "/match"
+      title: "Comprehensive Services",
+      description: "Explore our complete portfolio of innovative technology solutions and micro SAAS services",
+      icon: <Star className="h-6 w-6 text-zion-purple" />,
+      link: "/comprehensive-services"
     },
     {
-      title: t("home.tool_talent", "Global Talent Pool"),
-      description: t("home.tool_talent_desc", "Access verified professionals from around the world"),
-      icon: <Users className="h-6 w-6 text-zion-purple" />,
-      link: "/talent"
-    },
-    {
-      title: t("home.tool_services", "Comprehensive Services"),
-      description: t("home.tool_services_desc", "Full range of technology solutions and consulting"),
-      icon: <Zap className="h-6 w-6 text-zion-cyan" />,
-      link: "/services"
-    },
-    {
-      title: t("home.tool_equipment", "Advanced Equipment"),
-      description: t("home.tool_equipment_desc", "State-of-the-art technology and infrastructure"),
+      title: t("home.tool_equipment"),
+      description: t("home.tool_equipment_desc"),
       icon: <Settings className="h-6 w-6 text-zion-purple" />,
       link: "/equipment"
     },
@@ -124,7 +100,6 @@ export default function Index() {
       <SEO title={t("home.seo_title")} description={t("home.seo_description")} keywords={t("home.seo_keywords")} canonical="https://ziontechgroup.com/"/>
       <Header />
       <HeroSection />
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">

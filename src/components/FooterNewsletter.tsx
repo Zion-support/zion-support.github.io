@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Mail } from 'lucide-react';
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
 export function FooterNewsletter() {
   const [email, setEmail] = useState('');
@@ -61,7 +58,6 @@ export function FooterNewsletter() {
     </form>
   );
 }
-<<<<<<< HEAD
 import { Mail, Send, CheckCircle } from 'lucide-react';
 
 export const FooterNewsletter: React.FC = () => {
@@ -137,7 +133,7 @@ export const FooterNewsletter: React.FC = () => {
                   <Send className="w-4 h-4" />
                   Subscribe
                 </>
-              )}
+                )}
             </button>
           </form>
         )}
@@ -150,4 +146,3 @@ export const FooterNewsletter: React.FC = () => {
   );
 };
 =======
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

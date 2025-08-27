@@ -1,68 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ArrowUp,
-  Globe,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Lock,
-  Rocket,
-  Users,
-  Award,
-  Clock
-} from 'lucide-react';
+import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const footerNavigation = {
-    marketplace: [
-      { name: 'Products', href: '/marketplace' },
-      { name: 'Services', href: '/services' },
-      { name: 'Talent', href: '/talent' },
-      { name: 'Equipment', href: '/equipment' },
-      { name: 'Categories', href: '/categories' },
-      { name: 'Green IT', href: '/green-it' },
-      { name: 'IT Onsite Services', href: '/it-onsite-services' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'FAQ', href: '/faq' },
-      { name: 'Sitemap', href: '/sitemap' }
-    ],
-    resources: [
-      { name: 'Help Center', href: '/help' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Webinars', href: '/webinars' },
-      { name: 'Training', href: '/training' },
-      { name: 'Research & Development', href: '/research' }
-    ],
-    support: [
-      { name: 'Contact Support', href: '/support' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Security', href: '/security' },
-      { name: 'System Status', href: '/status' },
-      { name: 'Accessibility', href: '/accessibility' }
-    ]
   };
 
   return (
@@ -99,15 +42,15 @@ export function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 text-zion-slate-light">
                 <Mail className="w-4 h-4 text-zion-cyan"/>
-                <span className="text-sm">hello@ziontechgroup.com</span>
+                <span className="text-sm">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center gap-3 text-zion-slate-light">
                 <Phone className="w-4 h-4 text-zion-cyan"/>
-                <span className="text-sm">+1 (555) 123-4567</span>
+                <span className="text-sm">+1 302 464 0950</span>
               </div>
               <div className="flex items-center gap-3 text-zion-slate-light">
                 <MapPin className="w-4 h-4 text-zion-cyan"/>
-                <span className="text-sm">Global • Remote First</span>
+                <span className="text-sm">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
 
@@ -126,7 +69,7 @@ export function Footer() {
                 <Twitter className="h-5 w-5" aria-label="Twitter"/>
               </motion.a>
               <motion.a 
-                href="https://www.linkedin.com/company/zion-tech-group" 
+                href="https://www.linkedin.com/company/ziontechgroup" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full" 
@@ -180,16 +123,13 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Marketplace</h3>
             <ul className="space-y-3">
-              {footerNavigation.marketplace.map((item) => (
-                <li key={item.name}>
-                  <Link 
-                    to={item.href} 
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+              <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Products</Link></li>
+              <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Services</Link></li>
+              <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Talent</Link></li>
+              <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Equipment</Link></li>
+              <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Categories</Link></li>
+              <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Green IT</Link></li>
+              <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">IT Onsite Services</Link></li>
             </ul>
           </div>
 
@@ -197,10 +137,6 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
             <ul className="space-y-3">
-      {/* Bottom section */}
-      <div className="pt-8 border-t border-zion-blue-light">
-        <div className="container mx-auto px-4">
-=======
               {footerNavigation.company.map((item) => (
                 <li key={item.name}>
                   <Link 
@@ -258,9 +194,45 @@ export function Footer() {
             </div>
           </div>
         </motion.div>
+=======
+              <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">About Us</Link></li>
+              <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Blog</Link></li>
+              <li><Link to="/partners" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Partners</Link></li>
+              <li><Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Careers</Link></li>
+              <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Contact</Link></li>
+              <li><Link to="/faq" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">FAQ</Link></li>
+              <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Sitemap</Link></li>
+            </ul>
+          </div>
 
-        {/* Bottom section */}
-        <div className="pt-8 border-t border-zion-blue-light">
+          {/* Support & Resources */}
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-lg">Support & Resources</h3>
+            <ul className="space-y-3 mb-6">
+              <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Help Center</Link></li>
+              <li><Link to="/faq" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">FAQ</Link></li>
+              <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Contact Support</Link></li>
+              <li><Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Terms of Service</Link></li>
+              <li><Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Privacy Policy</Link></li>
+              <li><Link to="/security" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Security</Link></li>
+              <li><Link to="/status" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">System Status</Link></li>
+            </ul>
+          </div>
+          
+          {/* Newsletter */}
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-lg">Stay Updated</h3>
+            <p className="text-zion-slate-light mb-4 text-sm leading-relaxed">
+              Get the latest news on tech, AI, and marketplace opportunities delivered to your inbox.
+            </p>
+            <FooterNewsletter />
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom section */}
+      <div className="pt-8 border-t border-zion-blue-light">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
               <p className="text-zion-slate-light text-sm">
@@ -286,7 +258,7 @@ export function Footer() {
           </div>
           
           <motion.div 
-            className="flex items-center justify-center space-x-2 text-zion-slate-light text-sm mt-6" 
+            className="flex items-center justify-center space-x-2 text-zion-slate-light text-sm mt-4" 
             whileHover={{ scale: 1.05 }}
           >
             <span>Made with</span>
@@ -299,7 +271,7 @@ export function Footer() {
       {/* Scroll to top button */}
       <motion.button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 z-40"
+        className="fixed bottom-6 left-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 z-40"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 20 }}
