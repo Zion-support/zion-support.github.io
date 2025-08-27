@@ -38,10 +38,14 @@ export function AppHeader() {
 
   const navigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Solutions', href: '/solutions', current: false },
-    { name: 'AI Solutions', href: '/ai-solutions', current: false },
     { name: 'Services', href: '/services', current: false },
     { name: '2026 Services', href: '/services2026', current: false, featured: true },
+    { name: '2027 Services', href: '/services2027', current: false, featured: true },
+    { name: 'AI Services', href: '/ai-services', current: false },
+    { name: 'IT Services', href: '/it-services', current: false },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'AI Solutions', href: '/ai-solutions', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
@@ -94,6 +98,7 @@ export function AppHeader() {
 
   const featuredServices = [
     { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
+    { name: '2027 Services', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
     { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Zap, description: 'Next-generation quantum solutions', category: 'Quantum Computing', featured: true },
   ];
@@ -414,6 +419,10 @@ export function AppHeader() {
                     ))}
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+              </div>
+>>>>>>> 4f7f8db2b715d72e56f3dda729a019814724e1f2
 
                 {/* Mobile CTA */}
                 <div className="mt-6 pt-6 border-t border-slate-700/50">
