@@ -64,7 +64,10 @@
     "react": "^18.2.0",
     "react-day-picker": "^9.9.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
+=======
     "uuid": "^11.1.0",
+>>>>>>> origin/cursor/website-audit-and-enhancement-ddc2
     "react-helmet-async": "^2.0.5",
     "react-i18next": "^15.7.2",
     "react-redux": "^9.2.0",
