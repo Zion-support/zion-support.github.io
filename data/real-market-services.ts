@@ -14,7 +14,6 @@ export interface RealMarketService {
     address: string;
   };
 }
-
 export const realMarketServices: RealMarketService[] = [
   {
     id: "market-analysis-platform",

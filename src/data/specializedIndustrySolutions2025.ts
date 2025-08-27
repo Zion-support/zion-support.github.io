@@ -1,633 +1,468 @@
-export interface SpecializedIndustrySolution2025 {
+export interface IndustrySolution {
   id: string;
   title: string;
   description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
+  longDescription: string;
+  icon: string;
+  color: string;
+  industry: 'healthcare' | 'finance' | 'manufacturing' | 'retail' | 'education' | 'government' | 'energy' | 'transportation' | 'real-estate' | 'media' | 'logistics' | 'telecommunications';
   features: string[];
   benefits: string[];
   useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
+  pricing: {
+    starter: string;
+    professional: string;
+    enterprise: string;
+    custom: string;
+  };
+  estimatedTime: string;
+  technologies: string[];
+  image?: string;
+  industryScore: number;
   marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-    compliance: string[];
-  };
-  competitors: string[];
-  demoUrl?: string;
-  caseStudies?: string[];
+  contactLink: string;
+  status: 'active' | 'beta' | 'coming-soon';
+  compliance: string[];
+  certifications: string[];
 }
-
-export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution2025[] = [
-  // Healthcare & Life Sciences
+export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
   {
-    id: "ai-healthcare-diagnostic-platform",
-    title: "AI Healthcare Diagnostic Platform Pro",
-    description: "Advanced AI-powered diagnostic platform that analyzes medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
-    category: "Healthcare & Life Sciences",
-    subcategory: "AI Diagnostics",
-    price: 3999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'healthcare-ai-platform',
+    title: 'Healthcare AI Platform',
+    description: 'Comprehensive AI-powered healthcare solutions for hospitals and clinics',
+    longDescription: 'Transform healthcare delivery with our comprehensive AI platform. Features diagnostic assistance, patient monitoring, drug discovery, and personalized medicine.',
+    icon: 'Heart',
+    color: 'from-red-500 to-pink-600',
+    industry: 'healthcare',
     features: [
-      "AI-powered medical image analysis",
-      "Symptom assessment algorithms",
-      "Patient data integration",
-      "Treatment recommendation engine",
-      "Clinical decision support",
-      "EHR system integration",
-      "Compliance monitoring",
-      "Performance analytics",
-      "Custom model training",
-      "24/7 diagnostic support"
+      'Medical image analysis',
+      'Diagnostic assistance',
+      'Patient monitoring',
+      'Drug discovery',
+      'Personalized medicine',
+      'Clinical decision support'
     ],
     benefits: [
-      "95% diagnostic accuracy improvement",
-      "60% faster diagnosis",
-      "Reduced misdiagnosis rates",
-      "Enhanced patient outcomes",
-      "Improved clinical efficiency"
+      'Improved diagnostic accuracy',
+      'Reduced medical errors',
+      'Better patient outcomes',
+      'Cost-effective healthcare'
     ],
     useCases: [
-      "Hospitals and clinics",
-      "Radiology departments",
-      "Primary care practices",
-      "Specialty medical groups",
-      "Telemedicine platforms"
+      'Hospitals',
+      'Clinics',
+      'Medical imaging centers',
+      'Pharmaceutical companies'
     ],
-    targetAudience: [
-      "Healthcare administrators",
-      "Radiologists",
-      "Primary care physicians",
-      "Medical directors",
-      "IT managers"
-    ],
-    tags: ["Healthcare", "AI", "Diagnostics", "Medical Imaging", "Clinical Decision Support"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,999 - $15,000/month",
-    roi: "400-700%",
-    innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$2,999/month',
+      professional: '$7,999/month',
+      enterprise: '$19,999/month',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["Deep Learning", "Computer Vision", "Python", "React", "PostgreSQL", "DICOM"],
-      integrations: ["Epic", "Cerner", "PACS systems", "Lab systems", "Patient portals"],
-      apiEndpoints: 100,
-      uptime: "99.99%",
-      security: ["HIPAA compliance", "Data encryption", "Access controls"],
-      compliance: ["HIPAA", "HITECH", "FDA 21 CFR Part 11", "SOC 2"]
-    },
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare"],
-    demoUrl: "https://ziontechgroup.com/demo/ai-healthcare-diagnostics",
-    caseStudies: ["Hospital 40% faster diagnosis", "Clinic 95% accuracy improvement"]
+    estimatedTime: '8-16 weeks',
+    technologies: ['TensorFlow', 'PyTorch', 'DICOM', 'HL7', 'FHIR', 'Medical AI'],
+    industryScore: 97,
+    marketPrice: '$2,999-$19,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    compliance: ['HIPAA', 'FDA', 'CE Mark', 'GDPR'],
+    certifications: ['ISO 13485', 'ISO 27001', 'SOC 2 Type II']
   },
-
-  // Financial Services & Banking
   {
-    id: "ai-fraud-detection-suite",
-    title: "AI Fraud Detection Suite Elite",
-    description: "Comprehensive fraud detection platform that uses AI to identify and prevent financial fraud in real-time across multiple channels and transaction types.",
-    category: "Financial Services & Banking",
-    subcategory: "Fraud Detection",
-    price: 4999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'fintech-solutions',
+    title: 'FinTech Solutions Platform',
+    description: 'Advanced financial technology solutions for banks and financial institutions',
+    longDescription: 'Modernize your financial services with our comprehensive FinTech platform. Features fraud detection, risk assessment, automated trading, and regulatory compliance.',
+    icon: 'TrendingUp',
+    color: 'from-emerald-500 to-green-600',
+    industry: 'finance',
     features: [
-      "Real-time fraud detection",
-      "Multi-channel monitoring",
-      "Behavioral analysis",
-      "Risk scoring algorithms",
-      "Automated response systems",
-      "Compliance reporting",
-      "Performance analytics",
-      "Custom rule engine",
-      "API integration",
-      "24/7 fraud monitoring"
+      'Fraud detection',
+      'Risk assessment',
+      'Automated trading',
+      'Regulatory compliance',
+      'Portfolio optimization',
+      'Customer analytics'
     ],
     benefits: [
-      "99.9% fraud detection accuracy",
-      "90% reduction in false positives",
-      "Real-time threat response",
-      "Compliance automation",
-      "Cost savings optimization"
+      '99.9% fraud detection',
+      'Reduced risk exposure',
+      'Automated compliance',
+      'Improved customer experience'
     ],
     useCases: [
-      "Banks and credit unions",
-      "Payment processors",
-      "E-commerce platforms",
-      "Insurance companies",
-      "Investment firms"
+      'Banks',
+      'Credit unions',
+      'Investment firms',
+      'Insurance companies'
     ],
-    targetAudience: [
-      "Risk managers",
-      "Compliance officers",
-      "Security directors",
-      "Fraud analysts",
-      "IT managers"
-    ],
-    tags: ["Financial Services", "AI", "Fraud Detection", "Risk Management", "Compliance"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,999 - $20,000/month",
-    roi: "500-800%",
-    innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$3,999/month',
+      professional: '$9,999/month',
+      enterprise: '$24,999/month',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "NLP", "Python", "React", "PostgreSQL", "Redis"],
-      integrations: ["Core banking systems", "Payment gateways", "CRM platforms", "Analytics tools"],
-      apiEndpoints: 150,
-      uptime: "99.99%",
-      security: ["PCI DSS compliance", "Encryption", "Multi-factor authentication"],
-      compliance: ["PCI DSS", "SOC 2", "ISO 27001", "Financial regulations"]
-    },
-    competitors: ["FICO", "LexisNexis", "Experian", "TransUnion"],
-    demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection"
+    estimatedTime: '10-20 weeks',
+    technologies: ['Python', 'TensorFlow', 'Blockchain', 'APIs', 'Cloud Computing', 'AI/ML'],
+    industryScore: 98,
+    marketPrice: '$3,999-$24,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    compliance: ['PCI DSS', 'SOX', 'GLBA', 'GDPR', 'CCPA'],
+    certifications: ['ISO 27001', 'SOC 2 Type II', 'PCI DSS Level 1']
   },
-
-  // Manufacturing & Industry 4.0
   {
-    id: "smart-manufacturing-platform",
-    title: "Smart Manufacturing Platform Pro",
-    description: "Comprehensive Industry 4.0 platform that integrates IoT, AI, and automation to optimize manufacturing processes, predict maintenance, and improve quality control.",
-    category: "Manufacturing & Industry 4.0",
-    subcategory: "Smart Manufacturing",
-    price: 3499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'smart-manufacturing',
+    title: 'Smart Manufacturing Platform',
+    description: 'IoT and AI-powered manufacturing optimization and automation',
+    longDescription: 'Transform your manufacturing operations with our smart manufacturing platform. Features predictive maintenance, quality control, supply chain optimization, and real-time monitoring.',
+    icon: 'Factory',
+    color: 'from-blue-500 to-indigo-600',
+    industry: 'manufacturing',
     features: [
-      "IoT device integration",
-      "Real-time monitoring",
-      "Predictive maintenance",
-      "Quality control automation",
-      "Production optimization",
-      "Energy management",
-      "Supply chain integration",
-      "Performance analytics",
-      "Custom dashboards",
-      "24/7 operations support"
+      'Predictive maintenance',
+      'Quality control',
+      'Supply chain optimization',
+      'Real-time monitoring',
+      'Energy optimization',
+      'Automation integration'
     ],
     benefits: [
-      "25% reduction in downtime",
-      "30% improvement in quality",
-      "20% energy cost savings",
-      "Increased production efficiency",
-      "Real-time decision making"
+      '30% reduction in downtime',
+      'Improved product quality',
+      'Reduced operational costs',
+      'Increased efficiency'
     ],
     useCases: [
-      "Automotive manufacturing",
-      "Electronics production",
-      "Food and beverage",
-      "Pharmaceutical manufacturing",
-      "Aerospace industry"
+      'Automotive manufacturing',
+      'Electronics production',
+      'Food processing',
+      'Chemical manufacturing'
     ],
-    targetAudience: [
-      "Operations managers",
-      "Plant managers",
-      "Maintenance supervisors",
-      "Quality managers",
-      "IT directors"
-    ],
-    tags: ["Manufacturing", "Industry 4.0", "IoT", "AI", "Predictive Maintenance"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,499 - $15,000/month",
-    roi: "300-600%",
-    innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$4,999/month',
+      professional: '$12,999/month',
+      enterprise: '$29,999/month',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["IoT platforms", "Machine Learning", "Python", "React", "PostgreSQL", "MQTT"],
-      integrations: ["SCADA systems", "ERP platforms", "MES systems", "PLC controllers"],
-      apiEndpoints: 200,
-      uptime: "99.95%",
-      security: ["Industrial security", "Network segmentation", "Access controls"],
-      compliance: ["ISO 27001", "NIST", "Industry standards"]
-    },
-    competitors: ["Siemens", "GE Digital", "Rockwell Automation", "ABB"],
-    demoUrl: "https://ziontechgroup.com/demo/smart-manufacturing"
+    estimatedTime: '12-24 weeks',
+    technologies: ['IoT', 'AI/ML', 'Edge Computing', 'Cloud Computing', '5G', 'Robotics'],
+    industryScore: 96,
+    marketPrice: '$4,999-$29,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    compliance: ['ISO 9001', 'ISO 14001', 'OSHA', 'FDA'],
+    certifications: ['ISO 9001', 'ISO 14001', 'ISO 45001']
   },
-
-  // Retail & E-commerce
   {
-    id: "ai-retail-optimization-platform",
-    title: "AI Retail Optimization Platform Elite",
-    description: "Intelligent retail platform that uses AI to optimize inventory, personalize customer experiences, and predict demand for maximum profitability.",
-    category: "Retail & E-commerce",
-    subcategory: "Retail Optimization",
-    price: 2299,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'retail-ai-platform',
+    title: 'Retail AI Platform',
+    description: 'AI-powered retail solutions for customer experience and operations',
+    longDescription: 'Enhance your retail operations with our comprehensive AI platform. Features customer analytics, inventory optimization, personalized marketing, and fraud prevention.',
+    icon: 'ShoppingCart',
+    color: 'from-purple-500 to-pink-600',
+    industry: 'retail',
     features: [
-      "Demand forecasting",
-      "Inventory optimization",
-      "Customer segmentation",
-      "Personalized recommendations",
-      "Price optimization",
-      "Customer journey mapping",
-      "Performance analytics",
-      "Multi-channel integration",
-      "Custom dashboards",
-      "24/7 retail support"
+      'Customer analytics',
+      'Inventory optimization',
+      'Personalized marketing',
+      'Fraud prevention',
+      'Demand forecasting',
+      'Customer service automation'
     ],
     benefits: [
-      "20% increase in sales",
-      "30% reduction in inventory costs",
-      "Improved customer satisfaction",
-      "Better pricing strategies",
-      "Enhanced customer loyalty"
+      'Increased sales',
+      'Improved customer satisfaction',
+      'Reduced inventory costs',
+      'Better fraud prevention'
     ],
     useCases: [
-      "Retail chains",
-      "E-commerce platforms",
-      "Department stores",
-      "Specialty retailers",
-      "Online marketplaces"
+      'E-commerce platforms',
+      'Brick-and-mortar stores',
+      'Retail chains',
+      'Online marketplaces'
     ],
-    targetAudience: [
-      "Retail managers",
-      "E-commerce directors",
-      "Marketing managers",
-      "Operations directors",
-      "Business analysts"
-    ],
-    tags: ["Retail", "E-commerce", "AI", "Inventory Management", "Customer Experience"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,299 - $8,000/month",
-    roi: "350-600%",
-    innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$1,999/month',
+      professional: '$4,999/month',
+      enterprise: '$12,999/month',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations: ["POS systems", "E-commerce platforms", "CRM systems", "Analytics tools"],
-      apiEndpoints: 100,
-      uptime: "99.9%",
-      security: ["Data encryption", "Access controls", "PCI compliance"],
-      compliance: ["PCI DSS", "GDPR", "CCPA", "SOC 2"]
-    },
-    competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce", "Oracle Commerce"],
-    demoUrl: "https://ziontechgroup.com/demo/ai-retail-optimization"
+    estimatedTime: '6-12 weeks',
+    technologies: ['AI/ML', 'Big Data', 'Cloud Computing', 'APIs', 'Analytics', 'E-commerce'],
+    industryScore: 95,
+    marketPrice: '$1,999-$12,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    compliance: ['PCI DSS', 'GDPR', 'CCPA', 'SOX'],
+    certifications: ['PCI DSS Level 1', 'ISO 27001', 'SOC 2 Type II']
   },
-
-  // Transportation & Logistics
   {
-    id: "autonomous-logistics-platform",
-    title: "Autonomous Logistics Platform Pro",
-    description: "AI-powered logistics platform that optimizes routes, predicts demand, and automates supply chain operations for maximum efficiency and cost savings.",
-    category: "Transportation & Logistics",
-    subcategory: "Logistics Optimization",
-    price: 2799,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'education-technology',
+    title: 'Education Technology Platform',
+    description: 'Comprehensive edtech solutions for schools and universities',
+    longDescription: 'Transform education with our comprehensive edtech platform. Features personalized learning, student analytics, content management, and virtual classrooms.',
+    icon: 'BookOpen',
+    color: 'from-indigo-500 to-blue-600',
+    industry: 'education',
     features: [
-      "Route optimization",
-      "Demand forecasting",
-      "Fleet management",
-      "Real-time tracking",
-      "Automated scheduling",
-      "Performance analytics",
-      "Cost optimization",
-      "Sustainability monitoring",
-      "Custom dashboards",
-      "24/7 logistics support"
+      'Personalized learning',
+      'Student analytics',
+      'Content management',
+      'Virtual classrooms',
+      'Assessment tools',
+      'Learning management'
     ],
     benefits: [
-      "25% reduction in fuel costs",
-      "30% improvement in delivery times",
-      "20% increase in fleet utilization",
-      "Enhanced customer satisfaction",
-      "Reduced carbon footprint"
+      'Improved learning outcomes',
+      'Personalized education',
+      'Reduced administrative workload',
+      'Better student engagement'
     ],
     useCases: [
-      "Shipping companies",
-      "Trucking firms",
-      "E-commerce logistics",
-      "Manufacturing supply chains",
-      "Retail distribution"
+      'K-12 schools',
+      'Universities',
+      'Corporate training',
+      'Online education'
     ],
-    targetAudience: [
-      "Logistics managers",
-      "Fleet managers",
-      "Operations directors",
-      "Supply chain managers",
-      "Transportation directors"
-    ],
-    tags: ["Transportation", "Logistics", "AI", "Route Optimization", "Fleet Management"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,799 - $10,000/month",
-    roi: "300-500%",
-    innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$999/month',
+      professional: '$2,999/month',
+      enterprise: '$7,999/month',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations: ["GPS systems", "Fleet management", "WMS systems", "Analytics platforms"],
-      apiEndpoints: 125,
-      uptime: "99.9%",
-      security: ["Data encryption", "Access controls", "Real-time monitoring"],
-      compliance: ["Industry standards", "Data privacy", "Security protocols"]
-    },
-    competitors: ["Manhattan Associates", "Oracle Transportation", "SAP Transportation", "JDA Software"],
-    demoUrl: "https://ziontechgroup.com/demo/autonomous-logistics"
+    estimatedTime: '4-12 weeks',
+    technologies: ['AI/ML', 'Cloud Computing', 'Mobile Apps', 'Web Technologies', 'Analytics', 'LMS'],
+    industryScore: 94,
+    marketPrice: '$999-$7,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    compliance: ['FERPA', 'COPPA', 'GDPR', 'CCPA'],
+    certifications: ['ISO 27001', 'SOC 2 Type II', 'EdTech Certification']
   },
-
-  // Energy & Utilities
   {
-    id: "smart-energy-management-platform",
-    title: "Smart Energy Management Platform Elite",
-    description: "Intelligent energy management platform that optimizes power generation, distribution, and consumption using AI and IoT for maximum efficiency and sustainability.",
-    category: "Energy & Utilities",
-    subcategory: "Energy Management",
-    price: 3999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'government-solutions',
+    title: 'Government Technology Solutions',
+    description: 'Secure and compliant technology solutions for government agencies',
+    longDescription: 'Modernize government operations with our secure and compliant technology solutions. Features citizen services, data analytics, cybersecurity, and process automation.',
+    icon: 'Building',
+    color: 'from-slate-500 to-gray-600',
+    industry: 'government',
     features: [
-      "Energy consumption monitoring",
-      "Demand forecasting",
-      "Grid optimization",
-      "Renewable energy integration",
-      "Performance analytics",
-      "Predictive maintenance",
-      "Cost optimization",
-      "Sustainability reporting",
-      "Custom dashboards",
-      "24/7 energy support"
+      'Citizen services',
+      'Data analytics',
+      'Cybersecurity',
+      'Process automation',
+      'Compliance management',
+      'Digital transformation'
     ],
     benefits: [
-      "20% reduction in energy costs",
-      "30% improvement in grid efficiency",
-      "Enhanced sustainability metrics",
-      "Better demand management",
-      "Reduced carbon footprint"
+      'Improved citizen services',
+      'Enhanced security',
+      'Operational efficiency',
+      'Cost savings'
     ],
     useCases: [
-      "Power utilities",
-      "Energy companies",
-      "Industrial facilities",
-      "Commercial buildings",
-      "Smart cities"
+      'Federal agencies',
+      'State governments',
+      'Local municipalities',
+      'Government departments'
     ],
-    targetAudience: [
-      "Energy managers",
-      "Facility managers",
-      "Operations directors",
-      "Sustainability managers",
-      "IT directors"
-    ],
-    tags: ["Energy", "Utilities", "AI", "IoT", "Sustainability"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,999 - $15,000/month",
-    roi: "400-700%",
-    innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$5,999/month',
+      professional: '$15,999/month',
+      enterprise: '$39,999/month',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time-series DB"],
-      integrations: ["SCADA systems", "Smart meters", "Building management", "Analytics platforms"],
-      apiEndpoints: 150,
-      uptime: "99.99%",
-      security: ["Grid security", "Data encryption", "Access controls"],
-      compliance: ["NERC CIP", "ISO 27001", "Industry standards"]
-    },
-    competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
-    demoUrl: "https://ziontechgroup.com/demo/smart-energy-management"
+    estimatedTime: '16-32 weeks',
+    technologies: ['Cloud Computing', 'AI/ML', 'Cybersecurity', 'Blockchain', 'APIs', 'Analytics'],
+    industryScore: 99,
+    marketPrice: '$5,999-$39,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    compliance: ['FedRAMP', 'FISMA', 'NIST', 'CJIS', 'HIPAA'],
+    certifications: ['FedRAMP High', 'FISMA High', 'ISO 27001', 'SOC 2 Type II']
   },
-
-  // Education & EdTech
   {
-    id: "ai-education-platform",
-    title: "AI Education Platform Pro",
-    description: "Intelligent education platform that personalizes learning experiences, tracks student progress, and provides adaptive content for maximum educational outcomes.",
-    category: "Education & EdTech",
-    subcategory: "AI Learning",
-    price: 1899,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'energy-optimization',
+    title: 'Energy Optimization Platform',
+    description: 'AI-powered energy management and optimization solutions',
+    longDescription: 'Optimize your energy operations with our comprehensive platform. Features smart grid management, renewable energy integration, demand forecasting, and energy analytics.',
+    icon: 'Zap',
+    color: 'from-yellow-500 to-orange-600',
+    industry: 'energy',
     features: [
-      "Personalized learning paths",
-      "Adaptive content delivery",
-      "Student progress tracking",
-      "Performance analytics",
-      "Content recommendation",
-      "Assessment automation",
-      "Learning analytics",
-      "Custom dashboards",
-      "API integration",
-      "24/7 educational support"
+      'Smart grid management',
+      'Renewable energy integration',
+      'Demand forecasting',
+      'Energy analytics',
+      'Grid optimization',
+      'Sustainability monitoring'
     ],
     benefits: [
-      "30% improvement in learning outcomes",
-      "Personalized student experiences",
-      "Reduced administrative workload",
-      "Better student engagement",
-      "Data-driven insights"
+      'Reduced energy costs',
+      'Improved efficiency',
+      'Sustainability goals',
+      'Grid reliability'
     ],
     useCases: [
-      "K-12 schools",
-      "Universities",
-      "Corporate training",
-      "Online learning platforms",
-      "Educational institutions"
+      'Utility companies',
+      'Energy providers',
+      'Industrial facilities',
+      'Smart cities'
     ],
-    targetAudience: [
-      "Educators",
-      "Administrators",
-      "IT directors",
-      "Training managers",
-      "Curriculum developers"
-    ],
-    tags: ["Education", "EdTech", "AI", "Personalized Learning", "Analytics"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,899 - $6,000/month",
-    roi: "250-400%",
-    innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$3,999/month',
+      professional: '$9,999/month',
+      enterprise: '$24,999/month',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations: ["LMS platforms", "Student information systems", "Content management", "Analytics tools"],
-      apiEndpoints: 75,
-      uptime: "99.9%",
-      security: ["Data encryption", "Access controls", "Student privacy"],
-      compliance: ["FERPA", "COPPA", "GDPR", "Data privacy"]
-    },
-    competitors: ["Blackboard", "Canvas", "Moodle", "Google Classroom"],
-    demoUrl: "https://ziontechgroup.com/demo/ai-education-platform"
+    estimatedTime: '10-20 weeks',
+    technologies: ['IoT', 'AI/ML', 'Big Data', 'Cloud Computing', 'Smart Grid', 'Renewable Energy'],
+    industryScore: 95,
+    marketPrice: '$3,999-$24,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    compliance: ['NERC', 'FERC', 'ISO', 'Grid Standards'],
+    certifications: ['ISO 27001', 'SOC 2 Type II', 'Energy Management']
   },
-
-  // Real Estate & Property Management
   {
-    id: "smart-property-management-platform",
-    title: "Smart Property Management Platform Elite",
-    description: "Intelligent property management platform that automates operations, optimizes maintenance, and enhances tenant experiences using AI and IoT technology.",
-    category: "Real Estate & Property Management",
-    subcategory: "Smart Property",
-    price: 2499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'transportation-logistics',
+    title: 'Transportation & Logistics Platform',
+    description: 'Intelligent transportation and logistics optimization',
+    longDescription: 'Optimize your transportation and logistics operations with our intelligent platform. Features route optimization, fleet management, supply chain visibility, and predictive analytics.',
+    icon: 'Truck',
+    color: 'from-teal-500 to-cyan-600',
+    industry: 'transportation',
     features: [
-      "Property monitoring",
-      "Maintenance automation",
-      "Tenant portal",
-      "Performance analytics",
-      "Cost optimization",
-      "Sustainability monitoring",
-      "Custom dashboards",
-      "Mobile app support",
-      "API integration",
-      "24/7 property support"
+      'Route optimization',
+      'Fleet management',
+      'Supply chain visibility',
+      'Predictive analytics',
+      'Real-time tracking',
+      'Performance monitoring'
     ],
     benefits: [
-      "25% reduction in maintenance costs",
-      "Improved tenant satisfaction",
-      "Enhanced property value",
-      "Better operational efficiency",
-      "Real-time monitoring"
+      'Reduced transportation costs',
+      'Improved delivery times',
+      'Better fleet utilization',
+      'Enhanced customer satisfaction'
     ],
     useCases: [
-      "Commercial properties",
-      "Residential complexes",
-      "Office buildings",
-      "Retail centers",
-      "Industrial facilities"
+      'Logistics companies',
+      'Transportation providers',
+      'E-commerce delivery',
+      'Supply chain management'
     ],
-    targetAudience: [
-      "Property managers",
-      "Facility managers",
-      "Real estate investors",
-      "Building owners",
-      "Operations directors"
-    ],
-    tags: ["Real Estate", "Property Management", "IoT", "AI", "Maintenance"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,499 - $8,000/month",
-    roi: "300-500%",
-    innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$2,999/month',
+      professional: '$7,999/month',
+      enterprise: '$19,999/month',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["IoT sensors", "Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],
-      integrations: ["Building management systems", "IoT platforms", "Payment systems", "Analytics tools"],
-      apiEndpoints: 100,
-      uptime: "99.9%",
-      security: ["Data encryption", "Access controls", "Tenant privacy"],
-      compliance: ["Data privacy", "Industry standards", "Security protocols"]
-    },
-    competitors: ["Yardi", "RealPage", "AppFolio", "Buildium"],
-    demoUrl: "https://ziontechgroup.com/demo/smart-property-management"
+    estimatedTime: '8-16 weeks',
+    technologies: ['AI/ML', 'IoT', 'GPS', 'Cloud Computing', 'Mobile Apps', 'Analytics'],
+    industryScore: 94,
+    marketPrice: '$2,999-$19,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    compliance: ['DOT', 'FMCSA', 'OSHA', 'ISO'],
+    certifications: ['ISO 27001', 'SOC 2 Type II', 'Transportation Safety']
   },
-
-  // Legal & Compliance
   {
-    id: "ai-legal-compliance-platform",
-    title: "AI Legal Compliance Platform Pro",
-    description: "Intelligent legal compliance platform that automates regulatory monitoring, risk assessment, and compliance reporting using AI and machine learning.",
-    category: "Legal & Compliance",
-    subcategory: "AI Compliance",
-    price: 3299,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'real-estate-tech',
+    title: 'Real Estate Technology Platform',
+    description: 'Comprehensive real estate technology solutions',
+    longDescription: 'Transform your real estate operations with our comprehensive technology platform. Features property management, market analytics, virtual tours, and transaction management.',
+    icon: 'Home',
+    color: 'from-amber-500 to-yellow-600',
+    industry: 'real-estate',
     features: [
-      "Regulatory monitoring",
-      "Risk assessment",
-      "Compliance automation",
-      "Document analysis",
-      "Audit trail management",
-      "Performance analytics",
-      "Custom reporting",
-      "API integration",
-      "Mobile app support",
-      "24/7 compliance support"
+      'Property management',
+      'Market analytics',
+      'Virtual tours',
+      'Transaction management',
+      'Customer relationship management',
+      'Financial analytics'
     ],
     benefits: [
-      "90% reduction in compliance time",
-      "Improved risk management",
-      "Enhanced audit readiness",
-      "Cost savings optimization",
-      "Better regulatory insights"
+      'Improved property management',
+      'Better market insights',
+      'Enhanced customer experience',
+      'Increased sales efficiency'
     ],
     useCases: [
-      "Law firms",
-      "Corporate legal departments",
-      "Compliance teams",
-      "Risk management",
-      "Regulatory affairs"
+      'Real estate agencies',
+      'Property management companies',
+      'Real estate investors',
+      'Property developers'
     ],
-    targetAudience: [
-      "Legal professionals",
-      "Compliance officers",
-      "Risk managers",
-      "General counsel",
-      "IT directors"
+    pricing: {
+      starter: '$1,499/month',
+      professional: '$3,999/month',
+      enterprise: '$9,999/month',
+      custom: 'Contact us'
+    },
+    estimatedTime: '6-12 weeks',
+    technologies: ['AI/ML', 'VR/AR', 'Cloud Computing', 'Mobile Apps', 'Analytics', 'CRM'],
+    industryScore: 93,
+    marketPrice: '$1,499-$9,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    compliance: ['Real Estate Laws', 'Data Privacy', 'Financial Regulations', 'Local Compliance'],
+    certifications: ['ISO 27001', 'SOC 2 Type II', 'Real Estate Technology']
+  },
+  {
+    id: 'media-entertainment',
+    title: 'Media & Entertainment Platform',
+    description: 'AI-powered media and entertainment solutions',
+    longDescription: 'Revolutionize your media and entertainment operations with our AI-powered platform. Features content creation, audience analytics, recommendation engines, and content management.',
+    icon: 'Video',
+    color: 'from-pink-500 to-rose-600',
+    industry: 'media',
+    features: [
+      'Content creation',
+      'Audience analytics',
+      'Recommendation engines',
+      'Content management',
+      'Streaming optimization',
+      'Performance analytics'
     ],
-    tags: ["Legal", "Compliance", "AI", "Risk Management", "Regulatory"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium",
-    marketPrice: "$3,299 - $12,000/month",
-    roi: "400-700%",
-    innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    benefits: [
+      'Increased audience engagement',
+      'Better content performance',
+      'Improved monetization',
+      'Enhanced user experience'
+    ],
+    useCases: [
+      'Streaming platforms',
+      'Content creators',
+      'Media companies',
+      'Entertainment providers'
+    ],
+    pricing: {
+      starter: '$1,999/month',
+      professional: '$4,999/month',
+      enterprise: '$12,999/month',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "NLP", "Python", "React", "Node.js", "PostgreSQL"],
-      integrations: ["Legal databases", "Document management", "CRM systems", "Analytics tools"],
-      apiEndpoints: 75,
-      uptime: "99.9%",
-      security: ["Data encryption", "Access controls", "Audit logging"],
-      compliance: ["SOC 2", "ISO 27001", "Legal industry standards"]
-    },
-    competitors: ["Thomson Reuters", "LexisNexis", "Westlaw", "Bloomberg Law"],
-    demoUrl: "https://ziontechgroup.com/demo/ai-legal-compliance"
+    estimatedTime: '6-12 weeks',
+    technologies: ['AI/ML', 'Big Data', 'Cloud Computing', 'Streaming', 'Analytics', 'Content Management'],
+    industryScore: 94,
+    marketPrice: '$1,999-$12,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    compliance: ['Copyright Laws', 'Data Privacy', 'Content Regulations', 'Streaming Standards'],
+    certifications: ['ISO 27001', 'SOC 2 Type II', 'Content Management']
   }
 ];
+export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[] => {
+  if (industry === 'All') {
+    return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
+  }
+  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry);
+};
+export const getAllIndustrySolutions = (): IndustrySolution[] => {
+  return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
+};

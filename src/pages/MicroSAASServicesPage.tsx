@@ -32,7 +32,6 @@ import {
   Settings,
   BarChart
 } from "lucide-react";
-
 export default function MicroSAASServicesPage() {
   const microSAASServices = [
     {
@@ -372,7 +371,6 @@ export default function MicroSAASServicesPage() {
       reviewCount: 167
     }
   ];
-
   const categories = [
     "All Services",
     "Business Tools",
@@ -388,10 +386,8 @@ export default function MicroSAASServicesPage() {
     "E-commerce",
     "Education"
   ];
-
   const [selectedCategory, setSelectedCategory] = React.useState("All Services");
   const [filteredServices, setFilteredServices] = React.useState(microSAASServices);
-
   React.useEffect(() => {
     if (selectedCategory === "All Services") {
       setFilteredServices(microSAASServices);
@@ -399,7 +395,6 @@ export default function MicroSAASServicesPage() {
       setFilteredServices(microSAASServices.filter(service => service.category === selectedCategory));
     }
   }, [selectedCategory]);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Hero Section */}
@@ -425,7 +420,6 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark/80 border-b border-zion-blue-light">
         <div className="container mx-auto px-4 py-6">
@@ -445,7 +439,6 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="py-8 bg-zion-blue-dark/50">
         <div className="container mx-auto px-4">
@@ -466,7 +459,6 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="py-16">
         <div className="container mx-auto px-4">
@@ -546,7 +538,6 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
         <div className="container mx-auto px-4 text-center">

@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Innovative2030MicroSaasService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Innovative2030MicroSaasService {
   rating: number;
   reviews: number;
 }
-
 export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] = [
   // AI-Powered Business Intelligence
   {
@@ -94,7 +92,6 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     rating: 4.9,
     reviews: 950
   },
-
   // Quantum-Safe Cybersecurity Platform
   {
     id: 'quantum-safe-cybersecurity-platform',
@@ -147,7 +144,6 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     rating: 4.8,
     reviews: 680
   },
-
   // AI-Powered Customer Experience Platform
   {
     id: 'ai-customer-experience-platform',
@@ -200,7 +196,6 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     rating: 4.7,
     reviews: 1100
   },
-
   // Blockchain Supply Chain Transparency
   {
     id: 'blockchain-supply-chain-transparency',
@@ -253,7 +248,6 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     rating: 4.6,
     reviews: 420
   },
-
   // AI-Powered HR Automation Suite
   {
     id: 'ai-hr-automation-suite',
@@ -306,7 +300,6 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     rating: 4.8,
     reviews: 820
   },
-
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning-platform',
@@ -359,7 +352,6 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     rating: 4.9,
     reviews: 280
   },
-
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',

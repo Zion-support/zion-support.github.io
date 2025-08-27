@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface NextGenInnovation2025 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface NextGenInnovation2025 {
   rating: number;
   reviews: number;
 }
-
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
   // Next-Gen AI & Robotics
   {

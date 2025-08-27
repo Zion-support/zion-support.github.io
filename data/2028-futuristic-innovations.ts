@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Futuristic2028Service {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Futuristic2028Service {
   rating: number;
   reviews: number;
 }
-
 export const futuristic2028Services: Futuristic2028Service[] = [
   // AI-Powered Climate Prediction Platform
   {
@@ -94,7 +92,6 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     rating: 4.8,
     reviews: 89
   },
-
   // Quantum Cybersecurity Firewall
   {
     id: 'quantum-cybersecurity-firewall',
@@ -147,7 +144,6 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     rating: 4.9,
     reviews: 52
   },
-
   // Autonomous Drone Delivery Network
   {
     id: 'autonomous-drone-delivery-network',
@@ -200,7 +196,6 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     rating: 4.7,
     reviews: 156
   },
-
   // AI-Powered Healthcare Diagnosis
   {
     id: 'ai-healthcare-diagnosis-platform',
@@ -253,7 +248,6 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     rating: 4.9,
     reviews: 78
   },
-
   // Smart City Infrastructure Management
   {
     id: 'smart-city-infrastructure-management',
@@ -306,7 +300,6 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     rating: 4.8,
     reviews: 32
   },
-
   // Quantum Financial Trading Platform
   {
     id: 'quantum-financial-trading-platform',
@@ -359,7 +352,6 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     rating: 4.9,
     reviews: 67
   },
-
   // AI-Powered Education Platform
   {
     id: 'ai-education-platform',
@@ -412,7 +404,6 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     rating: 4.8,
     reviews: 245
   },
-
   // Autonomous Manufacturing AI
   {
     id: 'autonomous-manufacturing-ai',
@@ -465,7 +456,6 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     rating: 4.8,
     reviews: 73
   },
-
   // Quantum Internet Security Gateway
   {
     id: 'quantum-internet-security-gateway',

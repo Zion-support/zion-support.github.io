@@ -107,35 +107,24 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "AI-powered content generation",
       "SEO optimization tools",
       "Brand voice customization",
-      "Multi-format output (blog, social, email)",
-      "Plagiarism checker",
+      "Multi-format support",
+      "Plagiarism detection",
       "Content calendar",
       "Team collaboration",
-      "Analytics & performance tracking"
+      "Analytics dashboard"
     ],
     benefits: [
-      "Save 10+ hours per week on content creation",
-      "Improve SEO rankings by 40%",
-      "Increase engagement rates by 60%",
-      "Reduce content costs by 70%"
+      "Save 15+ hours per week on content creation",
+      "Improve SEO rankings by 45%",
+      "Increase engagement rates by 55%",
+      "Maintain consistent brand voice",
+      "Scale content production 10x"
     ],
-    useCases: [
-      "Blog content creation",
-      "Social media posts",
-      "Email marketing campaigns",
-      "Product descriptions",
-      "Landing page copy"
-    ],
-    targetAudience: ["Marketing teams", "Content creators", "Small businesses", "Agencies"],
-    integration: ["WordPress", "Shopify", "Mailchimp", "Buffer", "Hootsuite"],
-    support: ["24/7 chat support", "Video tutorials", "Live training sessions", "API documentation"],
-    link: "https://ziontechgroup.com/ai-content-generator",
-    badge: "Popular",
-    icon: "🤖",
+    targetAudience: ["Content creators", "Marketing teams", "Small businesses", "Digital agencies"],
     marketPrice: "$79-199/month",
     contactEmail: "kleber@ziontechgroup.com",
     tags: ["AI Content", "SEO", "Marketing", "Automation"],
-    aiScore: 94,
+    aiScore: 92,
     rating: 4.7,
     reviewCount: 203,
     featured: true,
@@ -147,16 +136,16 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-20T14:30:00.000Z"
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
-    id: "ai-customer-support",
-    title: "AI Customer Support Suite",
-    description: "Intelligent customer support platform with AI-powered ticket routing, automated responses, sentiment analysis, and customer satisfaction tracking.",
-    category: "Business Solutions",
-    subcategory: "Customer Support",
-    price: 89,
+    id: "ai-customer-service",
+    title: "AI Customer Service Platform",
+    description: "Intelligent customer service automation with AI-powered ticket routing, sentiment analysis, and automated responses for 24/7 support.",
+    category: "AI Services",
+    subcategory: "Customer Service",
+    price: 149,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -182,9 +171,9 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     targetAudience: ["Customer support teams", "E-commerce businesses", "SaaS companies", "Service providers"],
     integration: ["Zendesk", "Intercom", "Slack", "Email systems", "CRM platforms"],
     support: ["24/7 technical support", "Implementation assistance", "Training sessions", "API documentation"],
-    link: "https://ziontechgroup.com/ai-customer-support",
+    link: "https://ziontechgroup.com/ai-customer-service",
     icon: "🎧",
-    marketPrice: "$89-249/month",
+    marketPrice: "$149-399/month",
     contactEmail: "kleber@ziontechgroup.com",
     tags: ["AI Support", "Customer Service", "Automation", "Analytics"],
     aiScore: 93,
@@ -199,19 +188,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-02-15T12:00:00.000Z"
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-25T09:15:00.000Z"
   }
 ];
-
-export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
-  return MICRO_SAAS_SERVICES.find(service => service.id === id);
-};
-
-export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
-  return MICRO_SAAS_SERVICES.filter(service => service.category === category);
-};
-
-export const getMicroSaasCategories = (): string[] => {
-  return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
-};

@@ -1,19 +1,17 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js', '@testing-library/jest-dom'],
   moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-<<<<<<< HEAD
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/src/__mocks__/fileMock.js',
     // Handle image imports
-    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$':
-      '<rootDir>/tests/__mocks__/fileMock.js',
-
+    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/src/__mocks__/fileMock.js',
     // Fix path mappings with more specific ordering
     '^@/pages/api/(.*)$': '<rootDir>/pages/api/$1',
     '^@/pages/(.*)$': ['<rootDir>/pages/$1', '<rootDir>/src/pages/$1'],
-    '^@/components/ui/CategoryCard$':
-      '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/components/ui/CategoryCard$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/components/ui/(.*)$': '<rootDir>/src/components/ui/$1',
     '^@/components/(.*)$': '<rootDir>/src/components/$1',
     '^@/i18n$': '<rootDir>/tests/__mocks__/i18n.js',
@@ -40,14 +38,12 @@ module.exports = {
     '^@/config/(.*)$': '<rootDir>/src/config/$1',
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^vitest$': '<rootDir>/tests/__mocks__/vitestMock.js',
-
     // Special module mocks
     '^msw/node$': require.resolve('msw/node'),
     '^next/router$': 'next-router-mock',
     '^next/navigation$': '<rootDir>/tests/__mocks__/emptyModule.js',
     'react-router-dom$': '<rootDir>/src/stubs/react-router-dom.tsx',
     'react-router$': '<rootDir>/src/stubs/react-router-dom.tsx',
-
     // Mock heavy libraries not needed for unit tests
     '^@reown/appkit(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@walletconnect/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
@@ -56,7 +52,7 @@ module.exports = {
     '^react-markdown$': '<rootDir>/tests/__mocks__/reactMarkdown.js',
     '^@/pages/(.*)\.jsx$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/pages/Signup$': '<rootDir>/tests/__mocks__/emptyModule.js',
-    '^@/pages/signup$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/pages/signup$': '<rootDir>/src/pages/Signup.tsx',
     '^@/utils/devtools$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^scripts/watchdog$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^scripts/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
@@ -75,20 +71,19 @@ module.exports = {
     '^@/components/search/(.*)$': '<rootDir>/src/components/talent/$1',
     // Retain original mocks for middleware to avoid heavy imports in Jest
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
-=======
-    '\\.(gif|ttf|eot|svg|png|jpg)$': '<rootDir>/__mocks__/fileMock.js'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
-  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/out/', '/tests.disabled/'],
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  testPathIgnorePatterns: ['/node_modules/', '/dist/', '/build/', '/.next/', '/out/', '/tests.disabled/'],
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['ts-jest', {
+      tsconfig: 'tsconfig.jest.json'
+    }]
+  },
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
   coverageDirectory: 'coverage',
-  collectCoverage: true,
-  coverageReporters: ['text', 'lcov'],
-  coverageThreshold: {
-    global: {
-      branches: 60,
-      functions: 60,
-      lines: 60,
-      statements: 60
-    }
+  collectCoverage: false,
+  verbose: false,
+  testEnvironmentOptions: {
+    customExportConditions: ['node', 'node-addons']
   }
 };

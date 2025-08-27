@@ -2,48 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Zion Tech Group — AI, Cloud, and Cybersecurity Solutions. We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business." />
-    <meta name="keywords" content="AI, artificial intelligence, cloud computing, cybersecurity, autonomous systems, cloud platforms, Zion Tech Group" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Zion Tech Group - Cutting-Edge Technology Solutions & AI Services</title>
+    <meta name="title" content="Zion Tech Group - Cutting-Edge Technology Solutions & AI Services" />
+    <meta name="description" content="Transform your business with Zion Tech Group's innovative AI, cybersecurity, cloud solutions, and cutting-edge technology services. Expert consulting, development, and digital transformation." />
+    <meta name="keywords" content="AI services, cybersecurity, cloud solutions, digital transformation, technology consulting, software development, Zion Tech Group" />
     <meta name="author" content="Zion Tech Group" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#2e73ea" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ziontechgroup.com/" />
-    <meta property="og:title" content="Zion Tech Group — AI, Cloud, and Cybersecurity Solutions" />
-    <meta property="og:description" content="We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business." />
-    <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:title" content="Zion Tech Group - Cutting-Edge Technology Solutions & AI Services" />
+    <meta property="og:description" content="Transform your business with Zion Tech Group's innovative AI, cybersecurity, cloud solutions, and cutting-edge technology services." />
+    <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
     <meta property="og:site_name" content="Zion Tech Group" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://ziontechgroup.com/" />
-    <meta property="twitter:title" content="Zion Tech Group — AI, Cloud, and Cybersecurity Solutions" />
-    <meta property="twitter:description" content="We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business." />
-    <meta property="twitter:image" content="/og-image.svg" />
+    <meta property="twitter:title" content="Zion Tech Group - Cutting-Edge Technology Solutions & AI Services" />
+    <meta property="twitter:description" content="Transform your business with Zion Tech Group's innovative AI, cybersecurity, cloud solutions, and cutting-edge technology services." />
+    <meta property="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+    <meta name="twitter:site" content="@ziontechgroup" />
     
-    <title>Zion Tech Group — AI, Cloud, and Cybersecurity Solutions</title>
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="msapplication-TileColor" content="#0f172a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
     
-    <!-- Preload critical fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ziontechgroup.com/" />
     
-    <!-- Preload critical assets -->
-    <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml">
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Structured Data -->
+    <!-- DNS Prefetch for performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    
+    <!-- Structured Data for Rich Snippets -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/favicon.svg",
-      "description": "We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business.",
+      "logo": "https://ziontechgroup.com/og-image.svg",
+      "description": "Cutting-edge technology solutions and AI services for modern businesses",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "US"
@@ -51,32 +64,60 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "url": "https://ziontechgroup.com/contact"
+        "availableLanguage": "English"
       },
       "sameAs": [
-        "https://linkedin.com/company/ziontechgroup",
-        "https://twitter.com/ziontechgroup"
+        "https://twitter.com/ziontechgroup",
+        "https://linkedin.com/company/ziontechgroup"
       ]
     }
     </script>
+    
+    <!-- Performance and Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    
+    <!-- Manifest for PWA capabilities -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Favicon and App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      /* Critical CSS for initial render */
+      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .loading { display: flex; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+      .loading-spinner { width: 50px; height: 50px; border: 3px solid #3b82f6; border-top: 3px solid transparent; border-radius: 50%; animation: spin 1s linear infinite; }
+      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Loading state for better perceived performance -->
+      <div class="loading">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+    
+    <!-- Scripts -->
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- Service Worker Registration -->
+    <!-- Performance monitoring -->
     <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js')
-            .then((registration) => {
-              console.log('SW registered: ', registration);
-            })
-            .catch((registrationError) => {
-              console.log('SW registration failed: ', registrationError);
-            });
-        });
-      }
+      // Performance monitoring
+      window.addEventListener('load', () => {
+        if ('performance' in window) {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          if (perfData) {
+            console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+          }
+        }
+      });
     </script>
   </body>
 </html>

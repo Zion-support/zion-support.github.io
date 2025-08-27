@@ -29,5 +29,4 @@ const CardFooter = ({ children, className = '' }) => {
       {children}
     </div>);
 };
-
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };

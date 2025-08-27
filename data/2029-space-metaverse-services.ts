@@ -39,7 +39,6 @@ export interface SpaceMetaverseService2029 {
     address: string;
   };
 }
-
 export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
   {
     id: 'space-mining-automation-platform',

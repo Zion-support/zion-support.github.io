@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface UltimateRealMicroSaasService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface UltimateRealMicroSaasService {
   rating: number;
   reviews: number;
 }
-
 export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] = [
   // AI-Powered Customer Success Platform
   {
@@ -94,7 +92,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.9,
     reviews: 34
   },
-
   // Intelligent Supply Chain Optimization Platform
   {
     id: 'intelligent-supply-chain-optimization',
@@ -147,7 +144,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.8,
     reviews: 56
   },
-
   // AI Financial Planning Platform
   {
     id: 'ai-financial-planning-platform',
@@ -200,7 +196,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.7,
     reviews: 78
   },
-
   // Intelligent HR Analytics Platform
   {
     id: 'intelligent-hr-analytics-platform',
@@ -253,7 +248,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.8,
     reviews: 92
   },
-
   // AI Sales Intelligence Platform
   {
     id: 'ai-sales-intelligence-platform',
@@ -306,7 +300,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.9,
     reviews: 145
   },
-
   // AI Decision Engine
   {
     id: 'ai-powered-decision-engine',
@@ -359,7 +352,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.9,
     reviews: 45
   },
-
   // Intelligent Content Automation Platform
   {
     id: 'intelligent-content-automation-platform',
@@ -412,7 +404,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.7,
     reviews: 189
   },
-
   // Smart CRM Intelligence Suite
   {
     id: 'smart-crm-intelligence-suite',
@@ -465,7 +456,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.8,
     reviews: 234
   },
-
   // API Observability Starter
   {
     id: 'api-observability-starter',
@@ -518,7 +508,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.8,
     reviews: 118
   },
-
   // API Security Scanner
   {
     id: 'api-security-scanner',
@@ -571,7 +560,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.7,
     reviews: 92
   },
-
   // Email Deliverability Monitor
   {
     id: 'email-deliverability-monitor',
@@ -624,7 +612,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.6,
     reviews: 44
   },
-
   // Domain & DNS Monitor
   {
     id: 'domain-dns-monitor',
@@ -677,7 +664,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.5,
     reviews: 39
   },
-
   // Kubernetes RBAC Auditor
   {
     id: 'kubernetes-rbac-auditor',
@@ -730,7 +716,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.7,
     reviews: 41
   },
-
   // Cloud Cost Optimizer
   {
     id: 'cloud-cost-optimizer',
@@ -783,7 +768,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.8,
     reviews: 77
   },
-
   // Incident Automation Suite
   {
     id: 'incident-automation-suite',
@@ -836,7 +820,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.7,
     reviews: 51
   },
-
   // PDF Render API
   {
     id: 'pdf-render-api',
@@ -889,7 +872,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.6,
     reviews: 99
   },
-
   // API Latency SLO Tracker
   {
     id: 'api-latency-slo-tracker',
@@ -942,7 +924,6 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.7,
     reviews: 53
   },
-
   // Browser Performance Monitor
   {
     id: 'browser-performance-monitor',

@@ -142,36 +142,49 @@ export default function MicroSaasServices() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {Object.entries(PRICING_TIERS).map(([key, tier]) => (<Card key={key} className={`relative ${key === 'professional' ? 'border-zion-purple border-2 scale-105' : ''}`}>
-                {key === 'professional' && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            {[
+  {
+    key: 'starter',
+    name: 'Starter',
+    price: '$29',
+    features: ['Basic features', 'Email support', '1 user']
+  },
+  {
+    key: 'professional',
+    name: 'Professional',
+    price: '$99',
+    features: ['Advanced features', 'Priority support', '5 users']
+  },
+  {
+    key: 'enterprise',
+    name: 'Enterprise',
+    price: '$299',
+    features: ['Custom features', '24/7 support', 'Unlimited users']
+  }
+].map((tier) => (<Card key={tier.key} className={`relative ${tier.key === 'professional' ? 'border-zion-purple border-2 scale-105' : ''}`}>
+                {tier.key === 'professional' && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-zion-purple text-white px-4 py-2">Most Popular</Badge>
                   </div>)}
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-zion-blue">{tier.name}</CardTitle>
                   <CardDescription>
-                    Perfect for {key === 'basic' ? 'startups' : key === 'professional' ? 'growing businesses' : 'enterprises'}
+                    Perfect for {tier.key === 'starter' ? 'startups' : tier.key === 'professional' ? 'growing businesses' : 'enterprises'}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
                   <div className="mb-6">
-                    <span className="text-3xl font-bold text-zion-blue">{tier.multiplier}x</span>
-                    <span className="text-gray-600 ml-2">base pricing</span>
+                    <span className="text-3xl font-bold text-zion-blue">{tier.price}</span>
+                    <span className="text-gray-600 ml-2">per month</span>
                   </div>
                   <ul className="text-left space-y-2 mb-6">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2"/>
-                      All core features included
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2"/>
-                      {key === 'enterprise' ? 'Unlimited' : 'Standard'} support
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2"/>
-                      {key === 'enterprise' ? 'Custom' : 'Standard'} integrations
-                    </li>
+                    {tier.features.map((feature, index) => (
+                      <li key={index} className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2"/>
+                        {feature}
+                      </li>
+                    ))}
                   </ul>
-                  <Button className="w-full" variant={key === 'professional' ? 'default' : 'outline'}>
+                  <Button className="w-full" variant={tier.key === 'professional' ? 'default' : 'outline'}>
                     Get Started
                   </Button>
                 </CardContent>
@@ -195,7 +208,7 @@ export default function MicroSaasServices() {
           <Tabs defaultValue="all" className="w-full" onValueChange={(value) => setSelectedCategory(value)}>
             <TabsList className="grid w-full grid-cols-9 bg-zion-blue-dark border-zion-blue-light">
               <TabsTrigger value="all" className="text-white">All</TabsTrigger>
-              {MICRO_SAAS_CATEGORIES.map((category) => {
+              {getMicroSaasCategories().map((category) => {
             const IconComponent = categoryIcons[category.label];
             return (<TabsTrigger key={category.value} value={category.value} className="text-white">
                     {IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}

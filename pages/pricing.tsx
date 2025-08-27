@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function PricingPage() {
   const pricingTiers = [
     {
@@ -61,7 +60,6 @@ export default function PricingPage() {
       popular: false
     }
   ];
-
   const addOnServices = [
     {
       name: 'AI Model Training',
@@ -88,7 +86,6 @@ export default function PricingPage() {
       features: ['Architecture Design', 'Data Migration', 'Performance Optimization']
     }
   ];
-
   const faqs = [
     {
       question: 'What payment methods do you accept?',
@@ -115,7 +112,6 @@ export default function PricingPage() {
       answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.'
     }
   ];
-
   return (
     <>
       <Head>
@@ -124,7 +120,6 @@ export default function PricingPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -146,7 +141,6 @@ export default function PricingPage() {
             </div>
           </div>
         </section>
-
         {/* Pricing Tiers */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -176,7 +170,6 @@ export default function PricingPage() {
                       <span className="text-gray-400">{tier.period}</span>
                     </div>
                   </div>
-
                   <ul className="space-y-4 mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
@@ -187,7 +180,6 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
-
                   <Link 
                     href={tier.ctaLink}
                     className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
@@ -203,7 +195,6 @@ export default function PricingPage() {
             </div>
           </div>
         </section>
-
         {/* Add-on Services */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
           <div className="max-w-7xl mx-auto">
@@ -241,7 +232,6 @@ export default function PricingPage() {
             </div>
           </div>
         </section>
-
         {/* FAQ Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -262,7 +252,6 @@ export default function PricingPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">

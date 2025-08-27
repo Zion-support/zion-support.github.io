@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2026AIAutomationService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2026AIAutomationService {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomationService[] = [
   // AI Consciousness Orchestration Platform
   {
@@ -94,7 +92,6 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     rating: 4.9,
     reviews: 89
   },
-
   // Autonomous AI Business Ecosystem
   {
     id: 'autonomous-ai-business-ecosystem',
@@ -147,7 +144,6 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     rating: 4.8,
     reviews: 156
   },
-
   // Quantum AI Memory Fabric
   {
     id: 'quantum-ai-memory-fabric',
@@ -200,7 +196,6 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     rating: 4.9,
     reviews: 67
   },
-
   // AI Time Manipulation Platform
   {
     id: 'ai-time-manipulation-platform',
@@ -253,7 +248,6 @@ export const revolutionary2026AIAutomationServices: Revolutionary2026AIAutomatio
     rating: 4.9,
     reviews: 45
   },
-
   // Neural Interface Development Platform
   {
     id: 'neural-interface-development-platform',

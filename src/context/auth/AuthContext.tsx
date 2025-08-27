@@ -3,19 +3,30 @@ import React, { createContext, useContext } from 'react';
 interface User {
   id: string;
   email: string;
-  name?: string;
+  displayName?: string;
   avatar?: string;
+  role?: string;
+  isEmailVerified?: boolean;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+interface AuthTokens {
+  accessToken: string | null;
+  refreshToken: string | null;
 }
 
 interface AuthContextType {
   user: User | null;
   isLoading: boolean;
+  onboardingStep: number;
+  tokens: AuthTokens;
   login: (email: string, password: string) => Promise<{ error: string | null }>;
   register: (name: string, email: string, password: string) => Promise<{ error: string | null }>;
   signup: (email: string, password: string, userData: any) => Promise<any>;
   logout: () => Promise<void>;
   resetPassword: (email: string) => Promise<void>;
-  updateProfile: (data: any) => Promise<void>;
+  updateProfile: (updates: Partial<User>) => Promise<void>;
   loginWithGoogle: () => Promise<void>;
   loginWithFacebook: () => Promise<void>;
   loginWithTwitter: () => Promise<void>;
@@ -33,4 +44,4 @@ export const useAuth = () => {
 };
 
 export { AuthContext };
-export type { AuthContextType, User };
+export type { User, AuthTokens, AuthContextType };

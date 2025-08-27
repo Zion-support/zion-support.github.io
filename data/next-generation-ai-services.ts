@@ -38,7 +38,6 @@ export interface NextGenerationAIService {
   rating: number;
   reviews: number;
 }
-
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   {
     id: 'quantum-ai-brain-computer-interface',

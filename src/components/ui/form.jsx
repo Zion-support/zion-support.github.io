@@ -1,40 +1,25 @@
 import React from 'react';
-import { useFormContext } from 'react-hook-form';
 
-export function Form({ ...props }) {
-  return <form {...props} />;
-}
+export const Form = ({ children, ...props }) => {
+  return <div {...props}>{children}</div>;
+};
 
-export function FormField({ name, ...props }) {
-  const { register, formState: { errors } } = useFormContext();
-  const error = errors[name];
-  
-  return (
-    <div>
-      <input {...register(name)} {...props} />
-      {error && (
-        <p className="text-red-500 text-sm mt-1">{error.message}</p>
-      )}
-    </div>
-  );
-}
+export const FormField = ({ children, name }) => {
+  return <div data-field={name}>{children}</div>;
+};
 
-export function FormItem({ className = "", ...props }) {
-  return <div className={className} {...props} />;
-}
+export const FormItem = ({ children, className = '' }) => {
+  return <div className={className}>{children}</div>;
+};
 
-export function FormLabel({ className = "", ...props }) {
-  return <label className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${className}`} {...props} />;
-}
+export const FormLabel = ({ children, className = '' }) => {
+  return <label className={className}>{children}</label>;
+};
 
-export function FormControl({ ...props }) {
-  return <div {...props} />;
-}
+export const FormControl = ({ children }) => {
+  return <div>{children}</div>;
+};
 
-export function FormDescription({ className = "", ...props }) {
-  return <p className={`text-sm text-muted-foreground ${className}`} {...props} />;
-}
-
-export function FormMessage({ className = "", ...props }) {
-  return <p className={`text-sm font-medium text-destructive ${className}`} {...props} />;
-}
+export const FormMessage = ({ className = '' }) => {
+  return <div className={className}></div>;
+};

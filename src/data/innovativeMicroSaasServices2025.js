@@ -620,4 +620,6 @@ export const innovativeMicroSaasServices2025 = [
         support: "Customer experience expert support"
     }
 ];
+
+export const INNOVATIVE_MICRO_SAAS_SERVICES_2025 = innovativeMicroSaasServices2025;
 export default innovativeMicroSaasServices2025;

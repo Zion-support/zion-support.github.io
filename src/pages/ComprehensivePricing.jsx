@@ -121,7 +121,6 @@ const ComprehensivePricing = () => {
               {service.description}
             </CardDescription>
           </CardHeader>
-
           <CardContent className="space-y-4">
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">
@@ -131,7 +130,6 @@ const ComprehensivePricing = () => {
                 Market Price: {service.marketPrice}
               </div>
             </div>
-
             <div className="space-y-2">
               <h4 className="text-sm font-semibold text-slate-300">Key Features:</h4>
               <div className="space-y-1">
@@ -141,7 +139,6 @@ const ComprehensivePricing = () => {
                   </div>))}
               </div>
             </div>
-
             <div className="space-y-2">
               <h4 className="text-sm font-semibold text-slate-300">Benefits:</h4>
               <div className="space-y-1">
@@ -151,7 +148,6 @@ const ComprehensivePricing = () => {
                   </div>))}
               </div>
             </div>
-
             <div className="pt-4 border-t border-slate-600/30">
               <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
                 <div>
@@ -171,7 +167,6 @@ const ComprehensivePricing = () => {
                   <div className="text-green-400 font-semibold">{service.uptime}</div>
                 </div>
               </div>
-              
               <div className="flex gap-2">
                 <Button size="sm" className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold transition-all duration-300" onClick={() => window.open(service.contactInfo.website, '_blank')}>
                   Get Started
@@ -202,7 +197,6 @@ const ComprehensivePricing = () => {
               {service.description}
             </CardDescription>
           </CardHeader>
-
           <CardContent className="space-y-4">
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">
@@ -212,7 +206,6 @@ const ComprehensivePricing = () => {
                 Market Price: {service.marketPrice}
               </div>
             </div>
-
             <div className="space-y-2">
               <h4 className="text-sm font-semibold text-purple-200">Key Features:</h4>
               <div className="space-y-1">
@@ -222,7 +215,6 @@ const ComprehensivePricing = () => {
                   </div>))}
               </div>
             </div>
-
             <div className="space-y-2">
               <h4 className="text-sm font-semibold text-purple-200">AI Models:</h4>
               <div className="space-y-1">
@@ -232,7 +224,6 @@ const ComprehensivePricing = () => {
                   </div>))}
               </div>
             </div>
-
             <div className="pt-4 border-t border-purple-600/30">
               <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
                 <div>
@@ -256,7 +247,6 @@ const ComprehensivePricing = () => {
                   </div>
                 </div>
               </div>
-              
               <div className="flex gap-2">
                 <Button size="sm" className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold transition-all duration-300" onClick={() => window.open(service.contactInfo.website, '_blank')}>
                   Get Started
@@ -287,7 +277,6 @@ const ComprehensivePricing = () => {
               {service.description}
             </CardDescription>
           </CardHeader>
-
           <CardContent className="space-y-4">
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">
@@ -297,7 +286,6 @@ const ComprehensivePricing = () => {
                 Project Rate: ${service.projectRate.toLocaleString()}
               </div>
             </div>
-
             <div className="space-y-2">
               <h4 className="text-sm font-semibold text-blue-200">Key Features:</h4>
               <div className="space-y-1">
@@ -307,7 +295,6 @@ const ComprehensivePricing = () => {
                   </div>))}
               </div>
             </div>
-
             <div className="space-y-2">
               <h4 className="text-sm font-semibold text-blue-200">Technologies:</h4>
               <div className="space-y-1">
@@ -317,7 +304,6 @@ const ComprehensivePricing = () => {
                   </div>))}
               </div>
             </div>
-
             <div className="pt-4 border-t border-blue-600/30">
               <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
                 <div>
@@ -337,7 +323,6 @@ const ComprehensivePricing = () => {
                   <div className="text-green-400 font-semibold">{service.support}</div>
                 </div>
               </div>
-              
               <div className="flex gap-2">
                 <Button size="sm" className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold transition-all duration-300" onClick={() => window.open(service.contactInfo.website, '_blank')}>
                   Get Started
@@ -363,7 +348,6 @@ const ComprehensivePricing = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transparent pricing for all our micro SAAS, AI, and IT services. Choose the perfect solution for your business needs.
           </p>
-          
           {/* Billing Toggle */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className="text-gray-300">Billing Cycle:</span>
@@ -382,7 +366,6 @@ const ComprehensivePricing = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Tabs */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -401,22 +384,18 @@ const ComprehensivePricing = () => {
                 IT Services
               </TabsTrigger>
             </TabsList>
-
             <TabsContent value="microsaas">
               {renderMicroSaasPricing()}
             </TabsContent>
-
             <TabsContent value="ai">
               {renderAIPricing()}
             </TabsContent>
-
             <TabsContent value="it">
               {renderITPricing()}
             </TabsContent>
           </Tabs>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -426,7 +405,6 @@ const ComprehensivePricing = () => {
           <p className="text-xl text-gray-300 mb-8">
             Contact our team to discuss pricing, customization, and implementation for your business
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="flex items-center justify-center gap-3 text-slate-300">
               <Phone className="h-5 w-5 text-blue-400"/>
@@ -441,7 +419,6 @@ const ComprehensivePricing = () => {
               <span>364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
           </div>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-3" onClick={() => window.open('https://ziontechgroup.com', '_blank')}>
               Visit Our Website

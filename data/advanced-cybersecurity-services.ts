@@ -38,7 +38,6 @@ export interface AdvancedCybersecurityService {
   rating: number;
   reviews: number;
 }
-
 export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
   // Advanced Threat Intelligence Platform
   {
@@ -92,7 +91,6 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     rating: 4.8,
     reviews: 95
   },
-
   // Zero Trust Security Architecture
   {
     id: 'zero-trust-security-architecture',
@@ -145,7 +143,6 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     rating: 4.9,
     reviews: 58
   },
-
   // AI-Powered Security Operations Center
   {
     id: 'ai-powered-security-operations-center',
@@ -198,7 +195,6 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     rating: 4.8,
     reviews: 75
   },
-
   // Quantum-Resistant Cryptography
   {
     id: 'quantum-resistant-cryptography',
@@ -251,7 +247,6 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     rating: 4.7,
     reviews: 52
   },
-
   // AI-Powered Vulnerability Management
   {
     id: 'ai-powered-vulnerability-management',
@@ -304,7 +299,6 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     rating: 4.6,
     reviews: 88
   },
-
   // Cloud Security Posture Management
   {
     id: 'cloud-security-posture-management',
@@ -357,7 +351,6 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     rating: 4.7,
     reviews: 65
   },
-
   // AI-Powered Penetration Testing
   {
     id: 'ai-powered-penetration-testing',
@@ -410,7 +403,6 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     rating: 4.8,
     reviews: 58
   },
-
   // Blockchain Security Platform
   {
     id: 'blockchain-security-platform',
@@ -463,7 +455,6 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     rating: 4.7,
     reviews: 45
   },
-
   // IoT Security Platform
   {
     id: 'iot-security-platform',

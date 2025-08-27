@@ -14,7 +14,6 @@ export interface EmergingTechnologyService {
     address: string;
   };
 }
-
 export const emergingTechnologyServices: EmergingTechnologyService[] = [
   {
     id: "blockchain-platform",

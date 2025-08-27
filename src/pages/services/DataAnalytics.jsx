@@ -1,6 +1,6 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target } from 'lucide-react';
 export default function DataAnalyticsServices() {
     const analyticsServices = [

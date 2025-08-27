@@ -1,17 +1,43 @@
+# This is a VITE project, NOT a Next.js project
+# The build process uses Vite to create a static site in the 'dist' folder
+# No Next.js plugins or configurations are needed
+
 [build]
-  # Use `npm ci` for deterministic installs, Next.js plugin expects .next
+  # Use npm for dependency management and Vite builds to dist/
   command = "npm ci && npm run build"
-  publish = ".next"
+  publish = "dist"
+  # Force static site build (not Next.js)
+  functions = "netlify/functions"
+  edge_functions = "netlify/edge-functions"
+  # Explicitly specify this is a static site, not a framework
+  base = "."
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max_old_space_size=4096"
-  NPM_FLAGS = "--prefer-offline"
+  NODE_OPTIONS = "--max_old_space_size=6144"
+  # Use npm for dependency management
+  NPM_FLAGS = "--ignore-scripts"
+  # Skip Netlify's Next.js plugin since this is a Vite static site
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Force Vite/static site detection
+  NETLIFY_USE_YARN = "false"
+  NETLIFY_USE_NPM = "true"
+  # Disable framework detection
+  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
+  # Force static site build
+  NETLIFY_FORCE_STATIC_BUILD = "true"
+  # Skip all framework plugins
+  NETLIFY_SKIP_FRAMEWORK_PLUGINS = "true"
+  CANONICAL_URL = "https://ziontechgroup.com"
 
+# Explicitly disable Next.js plugin and configure only Vite-compatible plugins
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "netlify-plugin-cloudinary"
+  inputs = {}
 
-# Optional: a few redirects that were present
+# No Next.js plugin needed for Vite project
+
+# Redirects for SEO/legacy URLs
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -48,21 +74,168 @@
   status = 301
 
 [[redirects]]
-  from = "/ai-content-marketing-automation"
-  to = "/intelligent-content-automation-platform"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-it-operations"
-  to = "/autonomous-it-operations-center"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-internet-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
   from = "/browser-automation-cloud/"
   to = "/browser-automation-cloud"
   status = 301
+
+# Handle client-side routing for SPA (this is also in _redirects file)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[scheduled.functions]]
+  name = "marketing-and-features-promo"
+  schedule = "0 */2 * * *" # every 2 hours
+
+[[scheduled.functions]]
+  name = "link-and-health-scheduler"
+  schedule = "0 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "sitemap_runner"
+  schedule = "0 */12 * * *" # twice per day
+
+[[scheduled.functions]]
+  name = "fast-front-promoter"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "fast-orchestrator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "continuous-orchestrator"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "front-visionary-expander"
+  schedule = "*/3 * * * *" # fast refresh for front systems
+
+[[scheduled.functions]]
+  name = "home-visionary-expander"
+  schedule = "*/4 * * * *" # fast refresh for homepage
+
+[[scheduled.functions]]
+  name = "ultrafast-orchestrator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "trigger-all-and-commit"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "front-maximizer"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+[[scheduled.functions]]
+  name = "continuous-front-runner"
+  schedule = "*/3 * * * *" # every 3 minutes
+
+[[scheduled.functions]]
+  name = "readme-advertiser"
+  schedule = "13 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "front-ads-promoter"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "ultrafast-front-orchestrator"
+  schedule = "*/5 * * * *" # every 5 minutes
+
+# New ultra-fast tools
+[[scheduled.functions]]
+  name = "features-capabilities-benefits-advertiser"
+  schedule = "*/2 * * * *" # every 2 minutes
+
+[[scheduled.functions]]
+  name = "hyper-front-index-accelerator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "dead-code-report"
+  schedule = "7 */6 * * *"
+
+[[scheduled.functions]]
+  name = "security-audit-runner"
+  schedule = "19 */6 * * *"
+
+[[scheduled.functions]]
+  name = "docs-index-runner"
+  schedule = "11 */4 * * *"
+
+[[scheduled.functions]]
+  name = "repo-knowledge-graph-runner"
+  schedule = "23 */6 * * *"
+
+[[scheduled.functions]]
+  name = "image-optimizer-runner"
+  schedule = "23 */6 * * *"
+
+[[scheduled.functions]]
+  name = "ai-changelog-runner"
+  schedule = "41 */6 * * *"
+
+[[scheduled.functions]]
+  name = "newsroom-runner"
+  schedule = "37 */6 * * *"
+
+[[scheduled.functions]]
+  name = "todo-scanner-runner"
+  schedule = "13 */6 * * *"
+
+[[scheduled.functions]]
+  name = "broken-image-scanner-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "external-link-check-runner"
+  schedule = "31 */6 * * *"
+
+[[scheduled.functions]]
+  name = "repo-radar-runner"
+  schedule = "43 */6 * * *"
+
+[[scheduled.functions]]
+  name = "og-image-update-runner"
+  schedule = "47 */6 * * *"
+
+[[scheduled.functions]]
+  name = "docs-search-index-runner"
+  schedule = "53 */6 * * *"
+
+[[scheduled.functions]]
+  name = "todo-summary-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "netlify-auto-healer-runner"
+  schedule = "*/20 * * * *"
+
+# New intelligent cloud automations
+[[scheduled.functions]]
+  name = "innovation-lab"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "broken-image-scanner"
+  schedule = "0 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "auto-scheduler"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+# New autonomous cloud automations
+[[scheduled.functions]]
+  name = "edge-cache-warmer"
+  schedule = "*/3 * * * *" # every 3 minutes
+
+[[scheduled.functions]]
+  name = "og-meta-auditor"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "repo-fitness-score"
+  schedule = "*/5 * * * *" # every 5 minutes
+

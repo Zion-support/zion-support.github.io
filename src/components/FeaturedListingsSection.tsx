@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const featuredListings = [
   {
@@ -31,7 +32,7 @@ const featuredListings = [
     reviews: 89,
     views: 1956,
     likes: 134,
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     price: "$22,000",
     tags: ["React Native", "Security", "FinTech", "Biometrics"],
     duration: "4-5 months",
@@ -59,107 +60,45 @@ const featuredListings = [
     featured: true,
     technologies: ["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],
     highlights: ["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]
-  },
-  {
-    id: 4,
-    title: "Healthcare AI Diagnostic System",
-    category: "AI & Machine Learning",
-    description: "Advanced medical diagnostic platform using computer vision and machine learning for accurate disease detection",
-    rating: 4.9,
-    reviews: 203,
-    views: 4567,
-    likes: 278,
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    price: "$35,000",
-    tags: ["Python", "TensorFlow", "Computer Vision", "Healthcare"],
-    duration: "6-8 months",
-    team: "8 experts",
-    location: "Remote",
-    featured: true,
-    technologies: ["Python", "TensorFlow", "OpenCV", "Docker", "AWS"],
-    highlights: ["95% Accuracy", "Real-time Processing", "HIPAA Compliant", "API Integration"]
-  },
-  {
-    id: 5,
-    title: "Smart City IoT Platform",
-    category: "IoT Solutions",
-    description: "Comprehensive IoT platform for smart city management with real-time monitoring and analytics",
-    rating: 4.6,
-    reviews: 78,
-    views: 1890,
-    likes: 112,
-    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    price: "$28,000",
-    tags: ["IoT", "Big Data", "Analytics", "Smart Cities"],
-    duration: "5-6 months",
-    team: "7 experts",
-    location: "Hybrid",
-    featured: false,
-    technologies: ["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"],
-    highlights: ["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"]
-  },
-  {
-    id: 6,
-    title: "Enterprise Data Analytics Dashboard",
-    category: "Data Analytics",
-    description: "Comprehensive business intelligence platform with advanced reporting and predictive analytics",
-    rating: 4.8,
-    reviews: 145,
-    views: 3120,
-    likes: 167,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    price: "$25,000",
-    tags: ["Data Analytics", "Business Intelligence", "Dashboard", "Predictive"],
-    duration: "4-5 months",
-    team: "6 experts",
-    location: "Remote",
-    featured: false,
-    technologies: ["Python", "Tableau", "PostgreSQL", "Apache Spark", "React"],
-    highlights: ["Real-time Dashboards", "Predictive Models", "Data Integration", "Custom Reports"]
   }
 ];
 
-const categories = [
-  "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
+const featuredServices = [
+  {
+    title: 'AI-Powered Business Intelligence',
+    description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
+    category: 'AI Solutions',
+    rating: 4.9,
+    reviews: 127,
+    price: 'From $2,500',
+    image: '🤖',
+    link: '/services/ai',
+    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
+  },
+  {
+    title: 'Cloud Migration & Optimization',
+    description: 'Seamlessly migrate to the cloud with our proven methodology and expert guidance.',
+    category: 'Cloud & DevOps',
+    rating: 4.8,
+    reviews: 89,
+    price: 'From $5,000',
+    image: '☁️',
+    link: '/services/cloud',
+    features: ['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
+  },
+  {
+    title: 'Cybersecurity Assessment & Implementation',
+    description: 'Comprehensive security evaluation and implementation for enterprise-level protection.',
+    category: 'Cybersecurity',
+    rating: 4.9,
+    reviews: 156,
+    price: 'From $3,500',
+    image: '🔒',
+    link: '/services/cybersecurity',
+    features: ['Security Audits', 'Threat Detection', 'Incident Response']
+  }
 ];
 
-import React from 'react';
-import Link from 'next/link';
-
-export function FeaturedListingsSection() {
-  const featuredServices = [
-    {
-      title: 'AI-Powered Business Intelligence',
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-      category: 'AI Solutions',
-      rating: 4.9,
-      reviews: 127,
-      price: 'From $2,500',
-      image: '🤖',
-      link: '/services/ai',
-      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
-    },
-    {
-      title: 'Cloud Migration & Optimization',
-      description: 'Seamlessly migrate to the cloud with our proven methodology and expert guidance.',
-      category: 'Cloud & DevOps',
-      rating: 4.8,
-      reviews: 89,
-      price: 'From $5,000',
-      image: '☁️',
-      link: '/services/cloud',
-      features: ['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
-    },
-    {
-      title: 'Cybersecurity Assessment & Implementation',
-      description: 'Comprehensive security evaluation and implementation for enterprise-level protection.',
-      category: 'Cybersecurity',
-      rating: 4.9,
-      reviews: 156,
-      price: 'From $3,500',
-      image: '🔒',
-      link: '/services/cybersecurity',
-      features: ['Security Audits', 'Threat Detection', 'Incident Response']
 export function FeaturedListingsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<number | null>(null);
@@ -178,7 +117,7 @@ export function FeaturedListingsSection() {
         delayChildren: 0.1
       }
     }
-  ];
+  };
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -241,7 +180,7 @@ export function FeaturedListingsSection() {
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-gray-900">{service.price}</span>
                   <Link
-                    href={service.link}
+                    to={service.link}
                     className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
                   >
                     Learn More →
@@ -251,7 +190,7 @@ export function FeaturedListingsSection() {
               
               <div className="px-6 pb-6">
                 <Link
-                  href={service.link}
+                  to={service.link}
                   className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
                 >
                   Get Started
@@ -259,18 +198,6 @@ export function FeaturedListingsSection() {
               </div>
             </div>
           ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <Link
-            href="/services"
-            className="inline-flex items-center px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300"
-          >
-            View All Services
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
         </div>
       </div>
     </section>

@@ -2,7 +2,6 @@ import { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
-
 const config: Config = {
   darkMode: ["class"],
   content: [
@@ -88,6 +87,18 @@ const config: Config = {
           dark: "#530c8b",
           neon: "#b971f2",
         },
+        "zion-cyber": {
+          DEFAULT: "#00ff88",
+          light: "#66ffaa",
+          dark: "#00cc6a",
+          neon: "#00ff88",
+        },
+        "zion-matrix": {
+          DEFAULT: "#00ff41",
+          light: "#66ff7a",
+          dark: "#00cc33",
+          neon: "#00ff41",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -130,6 +141,22 @@ const config: Config = {
           from: { transform: "translateX(100%)" },
           to: { transform: "translateX(0)" },
         },
+        "glow-pulse": {
+          "0%, 100%": { 
+            boxShadow: "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor" 
+          },
+          "50%": { 
+            boxShadow: "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor" 
+          },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        "matrix-rain": {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100vh)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -140,6 +167,10 @@ const config: Config = {
         "slide-in-from-bottom": "slide-in-from-bottom 0.3s ease-out",
         "slide-in-from-left": "slide-in-from-left 0.3s ease-out",
         "slide-in-from-right": "slide-in-from-right 0.3s ease-out",
+        "spin-slow": "spin 3s linear infinite",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "float": "float 6s ease-in-out infinite",
+        "matrix-rain": "matrix-rain 20s linear infinite",
       },
     },
   },
