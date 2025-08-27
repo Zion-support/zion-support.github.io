@@ -1,3 +1,25 @@
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const AISolutions: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <SEO 
+        title="AI Solutions - Zion Tech Group" 
+        description="Explore our AI solutions including analytics, automation, and intelligent platforms."
+      />
+      <div className="container-responsive py-16">
+        <h1 className="text-4xl font-bold mb-4">AI Solutions</h1>
+        <p className="text-lg text-gray-300 max-w-3xl">
+          Discover our portfolio of AI-powered solutions spanning predictive analytics, automation, intelligent agents, and decision support.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default AISolutions;
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 

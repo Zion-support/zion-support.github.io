@@ -37,7 +37,9 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
     { name: 'AI Services', href: '/ai-services', current: false },
+    { name: 'AI Solutions', href: '/ai-solutions', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
     { name: 'Blog', href: '/blog', current: false },

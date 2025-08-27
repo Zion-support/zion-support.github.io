@@ -1,3 +1,27 @@
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { Link } from 'react-router-dom';
+
+const Solutions: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <SEO 
+        title="Solutions - Zion Tech Group" 
+        description="Explore industry and capability solutions including enterprise and healthcare."
+      />
+      <div className="container-responsive py-16">
+        <h1 className="text-4xl font-bold mb-6">Solutions</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Link to="/solutions/enterprise" className="p-6 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-cyan-400 transition">Enterprise</Link>
+          <Link to="/solutions/healthcare" className="p-6 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-cyan-400 transition">Healthcare</Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Solutions;
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 

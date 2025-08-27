@@ -14,7 +14,11 @@ const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const Services = React.lazy(() => import('./pages/ServicesPage'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const AISolutions = React.lazy(() => import('./pages/AISolutions'));
+const EnterpriseSolutions = React.lazy(() => import('./pages/EnterpriseSolutions'));
+const HealthcareSolutions = React.lazy(() => import('./pages/HealthcareSolutions'));
 const AIServices = React.lazy(() => import('./pages/AIServices'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
 const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
@@ -89,6 +93,10 @@ function App() {
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/ai-solutions" element={<AISolutions />} />
+              <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
+              <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
