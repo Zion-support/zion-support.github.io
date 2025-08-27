@@ -82,6 +82,16 @@ const SupplyChain = React.lazy(() => import('./pages/services/SupplyChain'));
 const ContentCreation = React.lazy(() => import('./pages/services/ContentCreation'));
 const HRPlatform = React.lazy(() => import('./pages/services/HRPlatform'));
 
+// Our new pages for fixing broken navigation
+const Team = React.lazy(() => import('./pages/Team'));
+const Cybersecurity = React.lazy(() => import('./pages/services/Cybersecurity'));
+const IoTEdge = React.lazy(() => import('./pages/services/IoTEdge'));
+const Blockchain = React.lazy(() => import('./pages/services/Blockchain'));
+const AIAnalytics = React.lazy(() => import('./pages/services/AIAnalytics'));
+const AIBusinessIntelligenceSAAS = React.lazy(() => import('./pages/micro-saas/AIBusinessIntelligence'));
+const Infrastructure = React.lazy(() => import('./pages/it-services/Infrastructure'));
+const Products = React.lazy(() => import('./pages/marketplace/Products'));
+
 // Enhanced loading component with better UX
 const AppLoadingSpinner = () => (
   <EnhancedLoadingSpinner 
@@ -158,12 +168,33 @@ function App() {
                   <Route path="/services/consulting" element={<ConsultingServices />} />
                   <Route path="/services/five-g" element={<FiveGSolutions />} />
                   
+                  {/* Additional Service Routes */}
+                  <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                  <Route path="/services/iot-edge" element={<IoTEdge />} />
+                  <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                  <Route path="/services/blockchain" element={<Blockchain />} />
+                  <Route path="/services/sustainability" element={<Sustainability />} />
+                  <Route path="/services/ai-analytics" element={<AIAnalytics />} />
+                  
                   {/* Micro SAAS Routes */}
                   <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                   <Route path="/services/customer-experience" element={<CustomerExperience />} />
                   <Route path="/services/supply-chain" element={<SupplyChain />} />
                   <Route path="/services/content-creation" element={<ContentCreation />} />
                   <Route path="/services/hr-platform" element={<HRPlatform />} />
+                  
+                  {/* New Micro SAAS Routes */}
+                  <Route path="/micro-saas/ai-business-intelligence" element={<AIBusinessIntelligenceSAAS />} />
+                  <Route path="/micro-saas/customer-experience" element={<CustomerExperience />} />
+                  
+                  {/* IT Services Routes */}
+                  <Route path="/it-services/infrastructure" element={<Infrastructure />} />
+                  
+                  {/* Marketplace Routes */}
+                  <Route path="/marketplace/products" element={<Products />} />
+                  
+                  {/* Team Route */}
+                  <Route path="/team" element={<Team />} />
                   
                   {/* Enhanced Services Routes */}
                   <Route path="/enhanced-services" element={<EnhancedServices />} />
