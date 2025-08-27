@@ -24,6 +24,9 @@ import {
   Database
 } from 'lucide-react';
 
+// Import the enhanced services showcase component
+import { EnhancedServicesShowcase } from '../components/home/EnhancedServicesShowcase';
+
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -479,6 +482,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Enhanced Services Showcase */}
+      <EnhancedServicesShowcase />
 
       {/* Testimonials Section */}
       <section className="py-16">
