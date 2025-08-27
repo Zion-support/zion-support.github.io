@@ -1,107 +1,69 @@
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
 
-interface LoaderProps {
+interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
-  color?: 'primary' | 'secondary' | 'white';
   text?: string;
-  fullScreen?: boolean;
+  showLogo?: boolean;
 }
 
-export function PerformanceOptimizedLoader({ 
+export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({ 
   size = 'md', 
-  color = 'primary', 
-  text,
-  fullScreen = false 
-}: LoaderProps) {
+  text = 'Loading amazing experiences...',
+  showLogo = true 
+}) => {
   const sizeClasses = {
-    sm: 'w-6 h-6',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16'
+    sm: 'w-16 h-16',
+    md: 'w-32 h-32',
+    lg: 'w-48 h-48'
   };
 
-  const colorClasses = {
-    primary: 'text-zion-purple',
-    secondary: 'text-zion-cyan',
-    white: 'text-white'
+  const textSizes = {
+    sm: 'text-xs',
+    md: 'text-sm',
+    lg: 'text-base'
   };
 
-  const spinnerVariants = {
-    animate: {
-      rotate: 360,
-      transition: {
-        duration: 1,
-        repeat: Infinity,
-        ease: "linear" as const
-      }
-    }
-  };
-
-  const pulseVariants = {
-    animate: {
-      scale: [1, 1.2, 1],
-      opacity: [0.5, 1, 0.5],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut" as const
-      }
-    }
-  };
-
-  const LoaderContent = () => (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <motion.div
-        variants={spinnerVariants}
-        animate="animate"
-        className={`${sizeClasses[size]} ${colorClasses[color]}`}
-      >
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeDasharray="31.416"
-            strokeDashoffset="31.416"
-            className="animate-dash"
-          />
-        </svg>
-      </motion.div>
-      
-      {text && (
-        <motion.p
-          variants={pulseVariants}
-          animate="animate"
-          className="text-zion-slate-light text-center font-medium"
-        >
-          {text}
-        </motion.p>
-      )}
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <div className="relative">
+        {/* Outer ring */}
+        <div className={`${sizeClasses[size]} border-4 border-zion-cyan/20 rounded-full`}></div>
+        
+        {/* Spinning ring */}
+        <motion.div
+          className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-zion-cyan border-t-transparent rounded-full`}
+          animate={{ rotate: 360 }}
+          transition={{ 
+            duration: 1, 
+            repeat: Infinity, 
+            ease: "linear" 
+          }}
+        />
+        
+        {/* Logo text */}
+        {showLogo && (
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
+            ZION
+          </div>
+        )}
+        
+        {/* Loading text */}
+        <div className="mt-4 text-center">
+          <motion.div 
+            className={`text-zion-cyan ${textSizes[size]} animate-pulse`}
+            animate={{ opacity: [0.5, 1, 0.5] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            {text}
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
+});
 
-  if (fullScreen) {
-    return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-zion-blue-dark/95 backdrop-blur-sm flex items-center justify-center z-50"
-      >
-        <LoaderContent />
-      </motion.div>
-    );
-  }
-
-  return <LoaderContent />;
-}
+PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 
 // Skeleton loader for content
 export function SkeletonLoader({ 

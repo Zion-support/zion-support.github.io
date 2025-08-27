@@ -1,15 +1,14 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Users, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function EnterpriseDemo() {
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Enterprise Demo - Zion Tech Group" 
         description="Schedule a personalized demo of Zion's enterprise solutions for AI hiring, talent management, and marketplace services."
         keywords="enterprise demo, AI hiring demo, talent management demo, Zion enterprise"
@@ -31,7 +30,7 @@ export default function EnterpriseDemo() {
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader className="text-center">
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-6 h-6 text-zion-cyan" />
+                  <Users className="w-6 h-6 text-zion-cyan"/>
                 </div>
                 <CardTitle className="text-white">Personalized Experience</CardTitle>
               </CardHeader>
@@ -45,7 +44,7 @@ export default function EnterpriseDemo() {
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader className="text-center">
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-6 h-6 text-zion-cyan" />
+                  <CheckCircle className="w-6 h-6 text-zion-cyan"/>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -58,7 +57,7 @@ export default function EnterpriseDemo() {
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader className="text-center">
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="w-6 h-6 text-zion-cyan" />
+                  <Star className="w-6 h-6 text-zion-cyan"/>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -81,21 +80,21 @@ export default function EnterpriseDemo() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center text-zion-slate-light">
-                  <Clock className="w-5 h-5 mr-3 text-zion-cyan" />
+                  <Clock className="w-5 h-5 mr-3 text-zion-cyan"/>
                   <span>45-60 minutes</span>
                 </div>
                 <div className="flex items-center text-zion-slate-light">
-                  <Calendar className="w-5 h-5 mr-3 text-zion-cyan" />
+                  <Calendar className="w-5 h-5 mr-3 text-zion-cyan"/>
                   <span>Flexible scheduling</span>
                 </div>
                 <div className="flex items-center text-zion-slate-light">
-                  <Users className="w-5 h-5 mr-3 text-zion-cyan" />
+                  <Users className="w-5 h-5 mr-3 text-zion-cyan"/>
                   <span>Up to 10 team members</span>
                 </div>
                 <Button className="w-full mt-6" asChild>
                   <Link to="/contact?type=demo">
                     Schedule Live Demo
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2"/>
                   </Link>
                 </Button>
               </CardContent>
@@ -111,21 +110,21 @@ export default function EnterpriseDemo() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center text-zion-slate-light">
-                  <Clock className="w-5 h-5 mr-3 text-zion-cyan" />
+                  <Clock className="w-5 h-5 mr-3 text-zion-cyan"/>
                   <span>Available 24/7</span>
                 </div>
                 <div className="flex items-center text-zion-slate-light">
-                  <CheckCircle className="w-5 h-5 mr-3 text-zion-cyan" />
+                  <CheckCircle className="w-5 h-5 mr-3 text-zion-cyan"/>
                   <span>No scheduling required</span>
                 </div>
                 <div className="flex items-center text-zion-slate-light">
-                  <Users className="w-5 h-5 mr-3 text-zion-cyan" />
+                  <Users className="w-5 h-5 mr-3 text-zion-cyan"/>
                   <span>Individual exploration</span>
                 </div>
                 <Button variant="outline" className="w-full mt-6" asChild>
                   <Link to="/zion-hire-ai">
                     Start Self-Guided Tour
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2"/>
                   </Link>
                 </Button>
               </CardContent>
@@ -176,7 +175,7 @@ export default function EnterpriseDemo() {
               <Button size="lg" asChild>
                 <Link to="/contact?type=demo">
                   Schedule Your Demo
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"/>
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
@@ -188,6 +187,5 @@ export default function EnterpriseDemo() {
           </div>
         </div>
       </main>
-    </>
-  );
+    </>);
 }

@@ -1,14 +1,12 @@
-
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react';
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
-
 export default function ProjectRoom() {
   const { projectId } = useParams() as { projectId: string };
   const [activeTab, setActiveTab] = useState('chat');
@@ -67,18 +65,16 @@ export default function ProjectRoom() {
   
   return (
     <>
-      <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />
+      <SEOHead title={`Project Room - ${projectId}`} description="Collaborate on your project" />
       
       <main className="container mx-auto py-8">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>
           <div className="flex gap-2">
-            {isInCall && (
-              <Button variant="destructive" className="flex items-center gap-2">
-                <X className="h-4 w-4" />
+            {isInCall && (<Button variant="destructive" className="flex items-center gap-2">
+                <X className="h-4 w-4"/>
                 End Call
-              </Button>
-            )}
+              </Button>)}
             <Button variant="outline">Invite Team Member</Button>
           </div>
         </div>
@@ -86,33 +82,31 @@ export default function ProjectRoom() {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
           <TabsList className="grid grid-cols-6 md:w-fit">
             <TabsTrigger value="chat" className="flex items-center gap-2">
-              <MessageSquare className="h-4 w-4" />
+              <MessageSquare className="h-4 w-4"/>
               <span className="hidden sm:inline">Chat</span>
             </TabsTrigger>
             <TabsTrigger value="files" className="flex items-center gap-2">
-              <FileText className="h-4 w-4" />
+              <FileText className="h-4 w-4"/>
               <span className="hidden sm:inline">Files</span>
             </TabsTrigger>
             <TabsTrigger value="video" className="flex items-center gap-2">
-              <Video className="h-4 w-4" />
+              <Video className="h-4 w-4"/>
               <span className="hidden sm:inline">Video</span>
-              {isInCall && (
-                <span className="relative flex h-2 w-2">
+              {isInCall && (<span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                </span>
-              )}
+                </span>)}
             </TabsTrigger>
             <TabsTrigger value="calendar" className="flex items-center gap-2">
-              <Calendar className="h-4 w-4" />
+              <Calendar className="h-4 w-4"/>
               <span className="hidden sm:inline">Calendar</span>
             </TabsTrigger>
             <TabsTrigger value="team" className="flex items-center gap-2">
-              <Users className="h-4 w-4" />
+              <Users className="h-4 w-4"/>
               <span className="hidden sm:inline">Team</span>
             </TabsTrigger>
             <TabsTrigger value="settings" className="flex items-center gap-2">
-              <Settings className="h-4 w-4" />
+              <Settings className="h-4 w-4"/>
               <span className="hidden sm:inline">Settings</span>
             </TabsTrigger>
           </TabsList>
@@ -152,13 +146,8 @@ export default function ProjectRoom() {
                 <CardDescription>Schedule and join video calls</CardDescription>
               </CardHeader>
               <CardContent className="min-h-[400px] p-4">
-                {isInCall ? (
-                  <div className="space-y-4">
-                    <VideoCallRoom 
-                      roomId={`project-${projectId}`}
-                      participants={callParticipants}
-                      onLeave={endVideoCall}
-                    />
+                {isInCall ? (<div className="space-y-4">
+                    <VideoCallRoom roomId={`project-${projectId}`} participants={callParticipants} onLeave={endVideoCall}/>
                     
                     {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">
@@ -166,13 +155,11 @@ export default function ProjectRoom() {
                         Simulate user joining (demo only)
                       </Button>
                     </div>
-                  </div>
-                ) : (
-                  <div className="flex flex-col items-center justify-center h-[400px] space-y-4">
+                  </div>) : (<div className="flex flex-col items-center justify-center h-[400px] space-y-4">
                     <p className="text-muted-foreground">Start a video call with your team</p>
                     <div className="flex gap-2">
                       <Button onClick={startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">
-                        <Video className="h-4 w-4" />
+                        <Video className="h-4 w-4"/>
                         Start Video Call
                       </Button>
                     </div>
@@ -180,8 +167,7 @@ export default function ProjectRoom() {
                       <p>Recent calls:</p>
                       <p>No recent calls for this project</p>
                     </div>
-                  </div>
-                )}
+                  </div>)}
               </CardContent>
             </Card>
           </TabsContent>
@@ -230,6 +216,5 @@ export default function ProjectRoom() {
         </Tabs>
       </main>
       
-    </>
-  );
+    </>);
 }
