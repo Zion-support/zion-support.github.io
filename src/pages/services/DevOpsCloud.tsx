@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from "../components/SEOHead.jsx";
+import SEOHead from "../../components/SEOHead.jsx";
 import { Link } from 'react-router-dom';
 import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from 'lucide-react';
 export default function DevOpsCloudServices() {

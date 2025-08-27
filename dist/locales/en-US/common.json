@@ -20,8 +20,6 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
-    "micro-saas": "Micro SAAS",
-    "categories": "Categories",
     "services": "Services",
     "talent": "Talent",
     "equipment": "Equipment",
@@ -41,8 +39,7 @@
     "help": "Help Center",
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
-    "sitemap": "Sitemap",
-    "faq": "FAQ"
+    "sitemap": "Sitemap"
   },
   "auth": {
     "login": "Login",

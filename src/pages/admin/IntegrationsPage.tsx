@@ -1,6 +1,6 @@
 import React from "react";
 import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";
-import SEOHead from "../components/SEOHead.jsx";
+import SEOHead from "../components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function IntegrationsPage() {
     return (<ProtectedRoute adminOnly={true}>

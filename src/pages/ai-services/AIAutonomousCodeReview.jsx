@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';
-import SEOHead from "../components/SEOHead.jsx";
+import SEOHead from "../components/SEOHead";
 const features = [
     {
         title: "Automated Code Analysis",

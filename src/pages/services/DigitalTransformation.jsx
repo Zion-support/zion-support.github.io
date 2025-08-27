@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEOHead from "../components/SEOHead";
+import SEOHead from "../../components/SEOHead.jsx";
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 const DigitalTransformation = () => {

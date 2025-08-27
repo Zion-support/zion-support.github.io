@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';
-import SEOHead from "../components/SEOHead.jsx";
+import SEOHead from "../components/SEOHead";
 const features = [
     {
         title: "Intelligent Decision Making",

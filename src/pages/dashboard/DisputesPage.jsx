@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from "../components/SEOHead.jsx";
+import SEOHead from "../components/SEOHead";
 import { DisputeDashboard } from '@/components/disputes';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 function DisputesPage() {

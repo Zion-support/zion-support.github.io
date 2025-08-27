@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import SEOHead from "../components/SEOHead.jsx";
+import SEOHead from "../components/SEOHead";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';

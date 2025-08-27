@@ -18,7 +18,7 @@ import {
   Cpu,
   Database
 } from 'lucide-react';
-import SEOHead from "../components/SEOHead.jsx";
+import SEOHead from "../components/SEOHead";
 const features = [
     {
         title: "Cloud-Native Architecture",

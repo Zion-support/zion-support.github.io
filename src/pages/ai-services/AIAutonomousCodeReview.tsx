@@ -19,7 +19,7 @@ import {
   Database,
   GitBranch
 } from 'lucide-react';
-import SEOHead from "../components/SEOHead.jsx";
+import SEOHead from "../components/SEOHead";
 const features = [
     {
         title: "Automated Code Analysis",
