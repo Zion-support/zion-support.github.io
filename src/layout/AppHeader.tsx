@@ -35,11 +35,11 @@ export function AppHeader() {
 
   const navigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
-    { name: 'Solutions', href: '/solutions', current: false },
-    { name: 'Research', href: '/research-development', current: false },
+    { name: 'Blog', href: '/blog', current: false },
+    { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
+    { name: 'Careers', href: '/careers', current: false },
   ];
 
   const services = [
@@ -58,9 +58,8 @@ export function AppHeader() {
   const quickLinks = [
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
     { name: 'Blog', href: '/blog', icon: BookOpen },
-    { name: 'Partners', href: '/partners', icon: Users },
-    { name: 'Careers', href: '/careers', icon: Users },
-    { name: 'Help Center', href: '/help-center', icon: MessageCircle },
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
   ];
 
   return (

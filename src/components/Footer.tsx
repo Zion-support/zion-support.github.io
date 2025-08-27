@@ -49,35 +49,21 @@ export function Footer() {
       icon: Globe,
       links: [
         { name: 'About Us', path: '/about', icon: Users },
-        { name: 'Our Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'News & Updates', path: '/news', icon: Newspaper },
-        { name: 'Case Studies', path: '/case-studies', icon: CheckCircle }
+        { name: 'Blog', path: '/blog', icon: Newspaper },
+        { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },
     {
       title: 'Services',
       icon: Zap,
       links: [
-        { name: 'AI Solutions', path: '/services/ai', icon: Brain },
-        { name: 'Cloud & DevOps', path: '/services/cloud', icon: Cloud },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Infrastructure', path: '/services/infrastructure', icon: Building },
-        { name: 'Digital Transformation', path: '/services/transformation', icon: Rocket },
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
-        { name: 'Space Technology', path: '/space-technology', icon: Rocket }
-      ]
-    },
-    {
-      title: 'Solutions',
-      icon: Shield,
-      links: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-        { name: 'SMB Solutions', path: '/solutions/smb', icon: Target },
-        { name: 'Startup Solutions', path: '/solutions/startup', icon: Rocket },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Shield },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign }
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+        { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
+        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'All Services', path: '/services', icon: Zap }
       ]
     },
     {
@@ -85,11 +71,8 @@ export function Footer() {
       icon: FileText,
       links: [
         { name: 'Blog', path: '/blog', icon: FileText },
-        { name: 'Documentation', path: '/docs', icon: FileText },
-        { name: 'White Papers', path: '/white-papers', icon: FileText },
-        { name: 'Webinars', path: '/webinars', icon: Video },
-        { name: 'Research & Development', path: '/research-development', icon: TestTube },
-        { name: 'Insights', path: '/insights', icon: TrendingUp }
+        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Request a Quote', path: '/request-quote', icon: FileText }
       ]
     },
     {
@@ -97,10 +80,8 @@ export function Footer() {
       icon: Shield,
       links: [
         { name: 'Contact Us', path: '/contact', icon: Phone },
-        { name: 'Help Center', path: '/help', icon: HelpCircle },
-        { name: 'Status Page', path: '/status', icon: Activity },
-        { name: 'Training', path: '/training', icon: GraduationCap },
-        { name: 'Community', path: '/community', icon: Users }
+        { name: 'Dashboard', path: '/dashboard', icon: Activity },
+        { name: 'Login', path: '/login', icon: HelpCircle }
       ]
     }
   ];
@@ -108,8 +89,7 @@ export function Footer() {
   const legal = [
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Service", path: "/terms" },
-    { name: "Cookie Policy", path: "/cookies" },
-    { name: "Accessibility", path: "/accessibility" }
+    { name: "Cookie Policy", path: "/cookies" }
   ];
 
   const socialLinks = [

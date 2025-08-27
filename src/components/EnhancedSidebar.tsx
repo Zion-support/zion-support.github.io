@@ -66,61 +66,32 @@ export const EnhancedSidebar: React.FC = () => {
       icon: Home,
       items: [
         { name: "Home", href: "/", icon: Home },
-        { name: "About Us", href: "/about", icon: Users },
+        { name: "Services", href: "/services", icon: Zap },
+        { name: "Blog", href: "/blog", icon: FileText },
+        { name: "About", href: "/about", icon: Users },
         { name: "Contact", href: "/contact", icon: MessageCircle },
-        { name: "Partners", href: "/partners", icon: Handshake },
         { name: "Careers", href: "/careers", icon: Briefcase }
       ]
     },
     {
-      title: "Services",
+      title: "Service Areas",
       icon: Zap,
       items: [
-        { name: "AI & Machine Learning", href: "/ai-services", icon: Brain },
-        { name: "Micro SAAS Solutions", href: "/micro-saas", icon: Cloud },
-        { name: "IT Infrastructure", href: "/it-services", icon: Server },
-        { name: "Emerging Technologies", href: "/emerging-tech", icon: Rocket },
-        { name: "Cybersecurity", href: "/it-services/cybersecurity", icon: Shield },
-        { name: "Cloud Solutions", href: "/it-services/cloud", icon: Cloud },
-        { name: "DevOps & Automation", href: "/it-services/devops", icon: Code },
-        { name: "Data Management", href: "/it-services/data", icon: Database }
-      ]
-    },
-    {
-      title: "Solutions",
-      icon: Target,
-      items: [
-        { name: "Quantum Computing", href: "/emerging-tech/quantum", icon: Atom },
-        { name: "Blockchain & Web3", href: "/emerging-tech/blockchain", icon: Link },
-        { name: "Edge Computing", href: "/emerging-tech/edge", icon: Network },
-        { name: "IoT Solutions", href: "/emerging-tech/iot", icon: Wifi },
-        { name: "Healthcare AI", href: "/ai-services/healthcare", icon: HeartPulse },
-        { name: "Financial AI", href: "/ai-services/financial", icon: DollarSign },
-        { name: "Green Technology", href: "/green-it", icon: Leaf }
+        { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
+        { name: "Digital Twin", href: "/services/digital-twin", icon: Cpu },
+        { name: "Data Analytics", href: "/services/data-analytics", icon: TrendingUp },
+        { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain }
       ]
     },
     {
       title: "Resources",
       icon: BookOpen,
       items: [
-        { name: "Documentation", href: "/docs", icon: FileText },
-        { name: "API Reference", href: "/api", icon: Code },
-        { name: "Developer Portal", href: "/developer", icon: Cpu },
-        { name: "Support Center", href: "/support", icon: HelpCircle },
         { name: "FAQ", href: "/faq", icon: HelpCircle },
-        { name: "Blog", href: "/blog", icon: FileText },
-        { name: "Case Studies", href: "/case-studies", icon: BarChart3 }
-      ]
-    },
-    {
-      title: "Company",
-      icon: Building,
-      items: [
-        { name: "Our Team", href: "/about#team", icon: Users },
-        { name: "Press Kit", href: "/press", icon: FileText },
-        { name: "News & Updates", href: "/news", icon: Calendar },
-        { name: "Investor Relations", href: "/investors", icon: TrendingUp },
-        { name: "Sustainability", href: "/sustainability", icon: Leaf }
+        { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },
+        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
+        { name: "Login", href: "/login", icon: User }
       ]
     }
   ];
