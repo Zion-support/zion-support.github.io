@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, BarChart3, GitBranch } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -65,6 +65,11 @@ export function AppHeader() {
     { name: 'Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'SOC2/ISO evidence automation' },
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'AI SEO Auditor', href: '/services/ai-seo-auditor', icon: Search, description: 'On-site audits and fixes' },
+    { name: 'Support Chatbot', href: '/services/customer-support-chatbot', icon: MessageCircle, description: 'Deflect tickets with RAG' },
+    { name: 'Landing Page Generator', href: '/services/landing-page-generator', icon: Globe, description: 'Generate and A/B test pages' },
+    { name: 'Price Intelligence', href: '/services/price-intelligence-service', icon: BarChart3, description: 'Competitor tracking + pricing' },
+    { name: 'Dev Productivity Copilot', href: '/services/developer-productivity-copilot', icon: GitBranch, description: 'PR review, tests, CI insights' },
   ];
 
   const quickLinks = [
