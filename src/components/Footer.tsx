@@ -98,6 +98,8 @@ const footerSections = [
       { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator', icon: TrendingUp },
       { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield },
       { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Brain },
+      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
+      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
       { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
       { name: 'AI Autonomous Supply Chain', path: '/services/ai-autonomous-supply-chain', icon: Truck },
       { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', icon: Shield },
@@ -167,6 +169,16 @@ const footerSections = [
       { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
       { name: 'Returns Management', path: '/services/returns-management', icon: Truck },
       { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: FileText }
+    ]
+  },
+  {
+    title: 'New AI Services 2025',
+    icon: Sparkles,
+    links: [
+      { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield },
+      { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Brain },
+      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
+      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
     ]
   },
   {

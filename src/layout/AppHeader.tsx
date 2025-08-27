@@ -41,6 +41,9 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'Marketplace', href: '/marketplace', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Careers', href: '/careers', current: false },
@@ -110,6 +113,12 @@ export function AppHeader() {
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
     { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
     { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Performance tracking & insights', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
+    
+    // New AI-Powered Services
+    { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered data governance', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Brain, description: 'AI-powered customer insights', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
+    { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, description: 'AI-powered financial risk assessment', category: 'AI & ML', color: 'from-red-500 to-orange-500' },
+    { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', icon: Code, description: 'Automated code security analysis', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
   ];
 
   // Quick links for easy access
@@ -142,7 +151,9 @@ export function AppHeader() {
         { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', description: 'AI-powered customer insights' },
         { name: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics', description: 'Advanced analytics & ML insights' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' }
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
+        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', description: 'AI-powered financial risk assessment' },
+        { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', description: 'Automated code security analysis' }
       ]
     },
     {
