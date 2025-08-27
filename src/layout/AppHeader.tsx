@@ -58,15 +58,20 @@ export function AppHeader() {
     { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'AI-powered workflow automation', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
     { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered data governance', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
     { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Brain, description: 'AI-powered customer insights', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
-    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
+    { name: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
     { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'Automated regulatory compliance', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
     { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales optimization', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
-    { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML', color: 'from-orange-500 to-red-500' },
-    { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
+    { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML', color: 'from-orange-500 to-red-500' },
+    { name: 'Interview Assessment AI', href: '/services/interview-assessment-ai', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
     { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: PenTool, description: 'Automated content creation', category: 'AI & ML', color: 'from-green-500 to-teal-500' },
-    { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Intelligent support automation', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Intelligent support automation', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
     { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
     { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Intelligent financial insights', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
+    { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, description: 'AI-powered financial risk assessment', category: 'AI & ML', color: 'from-red-500 to-orange-500' },
+    { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', icon: Code, description: 'Automated code security analysis', category: 'AI & ML', color: 'from-red-500 to-pink-500' },
+    { name: 'AI DevOps Automation Platform', href: '/services/ai-devops-automation-platform', icon: Workflow, description: 'AI-driven DevOps automation', category: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
+    { name: 'AI Customer Experience Support', href: '/services/ai-customer-experience-support', icon: MessageCircle, description: 'Enhanced customer experience', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI Marketing Automation Personalization', href: '/services/ai-marketing-automation-personalization', icon: Target, description: 'Personalized marketing automation', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
     
     // Cloud & DevOps
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps', color: 'from-blue-500 to-cyan-500' },
@@ -93,12 +98,12 @@ export function AppHeader() {
     
     // Data & Analytics
     { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business intelligence & insights', category: 'Data & Analytics', color: 'from-blue-500 to-indigo-500' },
-    { name: 'Business Intelligence', href: '/services/ai-business-intelligence', icon: TrendingUp, description: 'Performance metrics & reporting', category: 'Data & Analytics', color: 'from-green-500 to-teal-500' },
+    { name: 'Business Intelligence', href: '/services/ai-business-intelligence-analytics', icon: TrendingUp, description: 'Performance metrics & reporting', category: 'Data & Analytics', color: 'from-green-500 to-teal-500' },
     
     // Micro SaaS Solutions
     { name: 'Micro SaaS Platform', href: '/micro-saas', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
-    { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
+    { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
     { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Performance tracking & insights', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
   ];
 

@@ -97,18 +97,20 @@ const footerSections = [
       { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator', icon: TrendingUp },
       { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield },
       { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Brain },
-      { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
-      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
-      { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
-      { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
-      { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
+      { name: 'AI Business Intelligence Analytics', path: '/services/ai-business-intelligence-analytics', icon: BarChart3 },
       { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
       { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
-      { name: 'AI-Powered SEO', path: '/services/ai-seo', icon: TrendingUp },
+      { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', icon: TrendingUp },
+      { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', icon: Users },
       { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
-      { name: 'AI Customer Support', path: '/services/ai-customer-support-automation', icon: MessageCircle },
+      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle },
       { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
-      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign }
+      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
+      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
+      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
+      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: Workflow },
+      { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
+      { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: Target }
     ]
   },
   {
@@ -152,13 +154,28 @@ const footerSections = [
     icon: ShoppingCart,
     links: [
       { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
-      { name: 'Helpdesk Platform', path: '/services/helpdesk', icon: MessageCircle },
+      { name: 'Helpdesk Platform', path: '/services/helpdesk-platform', icon: MessageCircle },
       { name: 'Website Analytics', path: '/services/website-analytics', icon: BarChart3 },
       { name: 'IT Helpdesk', path: '/services/it-helpdesk', icon: HelpCircle },
       { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
       { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone },
+      { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: MessageCircle },
       { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
-      { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: Video }
+      { name: 'Returns Management', path: '/services/returns-management', icon: Truck },
+      { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: FileText }
+    ]
+  },
+  {
+    title: 'Additional Services',
+    icon: Star,
+    links: [
+      { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
+      { name: 'Pricing Guide', path: '/pricing', icon: DollarSign },
+      { name: 'Case Studies', path: '/case-studies', icon: FileText },
+      { name: 'News & Updates', path: '/news', icon: Newspaper },
+      { name: 'FAQ', path: '/faq', icon: HelpCircle },
+      { name: 'Help Center', path: '/help', icon: HelpCircle },
+      { name: 'Sitemap', path: '/sitemap', icon: Globe }
     ]
   },
   {
