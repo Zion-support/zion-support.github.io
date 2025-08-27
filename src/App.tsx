@@ -36,6 +36,7 @@ const Team = createLazyComponent(() => import('./pages/Team'));
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
+const ComprehensiveServices = createLazyComponent(() => import('./pages/ComprehensiveServices'));
 
 // Additional pages
 const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
@@ -91,6 +92,7 @@ function App() {
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
+              <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
               
               {/* Additional Routes */}
               <Route path="/dashboard" element={<Dashboard />} />

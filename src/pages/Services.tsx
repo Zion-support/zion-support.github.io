@@ -364,11 +364,11 @@ export default function Services() {
                 Get Started Today
               </Link>
               <Link
-                to="/request-quote"
+                to="/comprehensive-services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold text-lg rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
               >
-                <DollarSign className="w-5 h-5 mr-2" />
-                Request Custom Quote
+                <Globe className="w-5 h-5 mr-2" />
+                View All Services
               </Link>
             </div>
           </motion.div>
