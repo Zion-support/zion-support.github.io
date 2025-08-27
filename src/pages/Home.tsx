@@ -666,6 +666,5 @@ export default function Home() {
         </div>
       </section>
     </div>
->>>>>>> 00b3cc038c081fbd450e9ed2aa99a41a09359f75
   );
 }

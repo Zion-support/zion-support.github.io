@@ -4,20 +4,57 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
+
 export function ServicesShowcase() {
-    const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
-    return (<section className="py-20 relative">
+  const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
+  
+  // Mock data for emerging services since it's not imported
+  const emergingServices = [
+    {
+      title: "AI & Machine Learning",
+      description: "Advanced AI solutions for business automation",
+      category: "AI/ML",
+      price: "$299/month",
+      link: "/services/ai",
+      icon: "🤖"
+    },
+    {
+      title: "Blockchain Solutions",
+      description: "Secure blockchain infrastructure and smart contracts",
+      category: "Blockchain",
+      price: "$499/month",
+      link: "/services/blockchain",
+      icon: "🔗"
+    },
+    {
+      title: "IoT Platform",
+      description: "Internet of Things connectivity and management",
+      category: "IoT",
+      price: "$199/month",
+      link: "/services/iot",
+      icon: "🌐"
+    },
+    {
+      title: "Quantum Computing",
+      description: "Next-generation quantum computing solutions",
+      category: "Quantum",
+      price: "$999/month",
+      link: "/services/quantum",
+      icon: "⚛️"
+    }
+  ];
+
+  return (
+    <section className="py-20 relative">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent"/>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold tracking-tight mb-4">
-            <NeonText color="#00ffff" glowIntensity="high">
-              Micro SAAS Services
-            </NeonText>
+          <h2 className="text-4xl font-bold tracking-tight mb-4 text-cyan-400">
+            Micro SAAS Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Discover our comprehensive suite of micro SAAS solutions designed to accelerate your business growth and digital transformation.
@@ -26,7 +63,8 @@ export function ServicesShowcase() {
 
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {featuredServices.map((service, index) => (<FuturisticCard key={index} glowColor={service.glowColor} intensity="medium" className="h-full group hover:scale-105 transition-transform duration-300">
+          {featuredServices.map((service, index) => (
+            <Card key={index} className="h-full group hover:scale-105 transition-transform duration-300 border-zion-purple/20 hover:border-zion-purple/40">
               <CardHeader className="pb-4">
                 <div className="flex justify-between items-start mb-4">
                   <div className="p-3 rounded-lg bg-black/20 backdrop-blur-sm">
@@ -55,9 +93,11 @@ export function ServicesShowcase() {
                 {/* Tags */}
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
-                    {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs">
+                    {service.tags?.slice(0, 3).map((tag, index) => (
+                      <Badge key={index} variant="outline" className="text-xs">
                         {tag}
-                      </Badge>))}
+                      </Badge>
+                    ))}
                   </div>
                 </div>
 
@@ -81,17 +121,16 @@ export function ServicesShowcase() {
                       <ArrowRight className="w-4 h-4 ml-1"/>
                     </Button>
                   </Link>
-                </Button>
-              </div>
-            </FuturisticCard>))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Emerging Technologies */}
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold mb-4">
-            <NeonText color="#ff00ff" glowIntensity="medium">
-              Emerging Technologies
-            </NeonText>
+          <h3 className="text-2xl font-bold mb-4 text-pink-400">
+            Emerging Technologies
           </h3>
           <p className="text-muted-foreground">
             Stay ahead of the curve with cutting-edge technology solutions
@@ -99,11 +138,12 @@ export function ServicesShowcase() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {emergingServices.map((service, index) => (<Card key={index} className="group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+          {emergingServices.map((service, index) => (
+            <Card key={index} className="group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
               <CardHeader className="pb-3">
                 <div className="flex justify-center mb-3">
                   <div className="p-2 rounded-lg bg-black/20">
-                    {service.icon}
+                    <span className="text-2xl">{service.icon}</span>
                   </div>
                 </div>
                 <CardTitle className="text-lg text-center group-hover:text-primary transition-colors">
@@ -129,7 +169,8 @@ export function ServicesShowcase() {
                   </Link>
                 </Button>
               </CardContent>
-            </Card>))}
+            </Card>
+          ))}
         </div>
 
         {/* CTA Section */}
@@ -157,5 +198,6 @@ export function ServicesShowcase() {
           </div>
         </div>
       </div>
-    </section>);
+    </section>
+  );
 }
