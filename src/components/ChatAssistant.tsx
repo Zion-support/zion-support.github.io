@@ -1,37 +1,101 @@
-import React, { useState } from 'react';
-import { MessageCircle, X, Send } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MessageCircle, X, Send, Bot, User, Loader2, Sparkles } from 'lucide-react';
+
+interface Message {
+  id: string;
+  text: string;
+  sender: 'user' | 'bot';
+  timestamp: Date;
+  isLoading?: boolean;
+}
 
 export function ChatAssistant() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState([
+  const [messages, setMessages] = useState<Message[]>([
     {
-      id: 1,
-      type: 'bot',
-      content: 'Hello! I\'m your AI assistant. How can I help you today?'
+      id: '1',
+      text: "Hello! I'm Zion Tech Group's AI assistant. How can I help you today? I can assist with:\n\n• Service inquiries\n• Technical support\n• Pricing information\n• Project consultations\n• General questions",
+      sender: 'bot',
+      timestamp: new Date()
     }
   ]);
   const [inputValue, setInputValue] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleSendMessage = () => {
-    if (inputValue.trim()) {
-      const newMessage = {
-        id: messages.length + 1,
-        type: 'user',
-        content: inputValue
-      };
-      setMessages([...messages, newMessage]);
-      setInputValue('');
-      
-      // Simulate bot response
-      setTimeout(() => {
-        const botResponse = {
-          id: messages.length + 2,
-          type: 'bot',
-          content: 'Thank you for your message! Our team will get back to you soon. In the meantime, feel free to explore our services or contact us directly.'
-        };
-        setMessages(prev => [...prev, botResponse]);
-      }, 1000);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
     }
+  }, [isOpen]);
+
+  const handleSendMessage = async () => {
+    if (!inputValue.trim() || isTyping) return;
+
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      text: inputValue.trim(),
+      sender: 'user',
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setInputValue('');
+    setIsTyping(true);
+
+    // Simulate AI response
+    setTimeout(() => {
+      const botResponse = generateBotResponse(inputValue.trim());
+      const botMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: botResponse,
+        sender: 'bot',
+        timestamp: new Date()
+      };
+
+      setMessages(prev => [...prev, botMessage]);
+      setIsTyping(false);
+    }, 1500 + Math.random() * 1000);
+  };
+
+  const generateBotResponse = (userInput: string): string => {
+    const input = userInput.toLowerCase();
+    
+    if (input.includes('service') || input.includes('help')) {
+      return "I'd be happy to help you with our services! We offer:\n\n🤖 **AI & Analytics**: Machine learning, data science, and business intelligence\n☁️ **Cloud & DevOps**: Infrastructure automation and cloud solutions\n🛡️ **Cybersecurity**: AI-powered security and compliance\n📱 **Micro SaaS**: Specialized software solutions for niche markets\n\nWhich area interests you most?";
+    }
+    
+    if (input.includes('price') || input.includes('cost') || input.includes('pricing')) {
+      return "Our pricing varies based on the service and scope. We offer:\n\n• **Consultation**: Starting at $150/hour\n• **Project-based**: Custom quotes based on requirements\n• **Retainer**: Monthly packages starting at $2,500\n• **Micro SaaS**: Subscription models from $29/month\n\nWould you like me to connect you with our sales team for a detailed quote?";
+    }
+    
+    if (input.includes('contact') || input.includes('speak') || input.includes('call')) {
+      return "Absolutely! Here are the best ways to reach us:\n\n📧 **Email**: kleber@ziontechgroup.com\n📱 **Phone**: +1 (302) 464-0950\n📍 **Address**: 364 E Main St STE 1008, Middletown DE 19709\n\nI can also schedule a consultation call for you. When would be a good time?";
+    }
+    
+    if (input.includes('ai') || input.includes('artificial intelligence')) {
+      return "Our AI services are cutting-edge! We specialize in:\n\n🧠 **Machine Learning Models**: Custom algorithms for your data\n📊 **Predictive Analytics**: Future insights from historical data\n🤖 **Process Automation**: Streamline operations with AI\n📈 **Business Intelligence**: Data-driven decision making\n\nWhat specific AI challenge are you looking to solve?";
+    }
+    
+    if (input.includes('project') || input.includes('timeline') || input.includes('delivery')) {
+      return "Project timelines depend on complexity and scope:\n\n⚡ **Simple integrations**: 2-4 weeks\n🔄 **Custom development**: 8-16 weeks\n🚀 **Enterprise solutions**: 12-24 weeks\n\nWe always provide detailed project plans and regular updates. Would you like to discuss your specific project requirements?";
+    }
+    
+    if (input.includes('support') || input.includes('help desk') || input.includes('technical')) {
+      return "We provide comprehensive technical support:\n\n🆘 **24/7 Emergency Support**: Critical issues\n📞 **Business Hours**: 9 AM - 6 PM EST\n💬 **Live Chat**: Available on our website\n📧 **Email Support**: Response within 4 hours\n\nWhat technical issue are you experiencing?";
+    }
+    
+    return "That's an interesting question! While I can help with general information, for specific technical details or complex inquiries, I'd recommend speaking with one of our experts. Would you like me to:\n\n• Schedule a consultation call?\n• Connect you with our technical team?\n• Provide more information about a specific service?\n\nWhat would be most helpful for you?";
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -43,83 +107,133 @@ export function ChatAssistant() {
 
   return (
     <>
-      {/* Chat Button */}
+      {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white z-50"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+        aria-label="Open chat assistant"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-7 h-7 text-white mx-auto" />
+        <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
       </button>
 
-      {/* Chat Modal */}
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-end justify-end p-4">
-          <div className="absolute inset-0 bg-black/50" onClick={() => setIsOpen(false)} />
-          <div className="relative w-full max-w-md bg-white rounded-t-lg shadow-2xl">
+      {/* Chat Window */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            className="fixed bottom-24 right-6 z-50 w-96 h-[500px] bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl shadow-2xl border border-cyan-400/20 overflow-hidden"
+          >
             {/* Header */}
-            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-t-lg">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">Z</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Zion Tech Assistant</h3>
-                    <p className="text-xs text-white/80">Online • Ready to help</p>
-                  </div>
+            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 p-4 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Bot className="w-5 h-5 text-white" />
+                <div>
+                  <h3 className="text-white font-semibold">AI Assistant</h3>
+                  <p className="text-cyan-100 text-xs">Zion Tech Group</p>
                 </div>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="text-white/80 hover:text-white transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                </button>
               </div>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-white hover:text-cyan-100 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
             </div>
 
             {/* Messages */}
-            <div className="h-96 overflow-y-auto p-4 space-y-4">
+            <div className="flex-1 p-4 overflow-y-auto space-y-3">
               {messages.map((message) => (
-                <div
+                <motion.div
                   key={message.id}
-                  className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div
-                    className={`max-w-xs px-4 py-2 rounded-lg ${
-                      message.type === 'user'
-                        ? 'bg-zion-cyan text-white'
-                        : 'bg-zion-slate-light/10 text-zion-slate-dark'
+                    className={`max-w-[80%] p-3 rounded-2xl ${
+                      message.sender === 'user'
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                        : 'bg-white/10 text-white border border-white/20'
                     }`}
                   >
-                    {message.content}
+                    <div className="flex items-start gap-2">
+                      {message.sender === 'bot' && (
+                        <Bot className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />
+                      )}
+                      <div className="whitespace-pre-wrap text-sm">{message.text}</div>
+                    </div>
+                    <div className={`text-xs mt-2 ${
+                      message.sender === 'user' ? 'text-cyan-100' : 'text-gray-400'
+                    }`}>
+                      {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                    </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
+              
+              {/* Typing Indicator */}
+              {isTyping && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex justify-start"
+                >
+                  <div className="max-w-[80%] p-3 rounded-2xl bg-white/10 text-white border border-white/20">
+                    <div className="flex items-center gap-2">
+                      <Bot className="w-4 h-4 text-cyan-400" />
+                      <div className="flex items-center gap-1">
+                        <Loader2 className="w-4 h-4 animate-spin text-cyan-400" />
+                        <span className="text-sm">AI is typing...</span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+              
+              <div ref={messagesEndRef} />
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-zion-slate-light/20">
-              <div className="flex space-x-2">
+            <div className="p-4 border-t border-cyan-400/20">
+              <div className="flex gap-2">
                 <input
+                  ref={inputRef}
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Type your message..."
-                  className="flex-1 px-3 py-2 border border-zion-slate-light/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  className="flex-1 px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+                  disabled={isTyping}
                 />
                 <button
                   onClick={handleSendMessage}
-                  disabled={!inputValue.trim()}
-                  className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={!inputValue.trim() || isTyping}
+                  className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Send className="w-4 h-4" />
                 </button>
               </div>
+              
+              {/* Quick Actions */}
+              <div className="mt-3 flex flex-wrap gap-2">
+                {['Services', 'Pricing', 'Contact', 'Support'].map((action) => (
+                  <button
+                    key={action}
+                    onClick={() => setInputValue(action)}
+                    className="px-3 py-1 text-xs bg-white/5 hover:bg-white/10 text-cyan-400 rounded-full border border-cyan-400/20 transition-all duration-200 hover:border-cyan-400/40"
+                  >
+                    {action}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

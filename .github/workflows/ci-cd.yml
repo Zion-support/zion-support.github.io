@@ -35,17 +35,19 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
         cache: 'yarn'
         cache-dependency-path: yarn.lock
-    - name: Install dependencies
+    - name: Install dependencies (yarn)
       run: |
         corepack enable
-        yarn install --frozen-lockfile --prefer-offline
+        yarn --version
+        yarn install --frozen-lockfile --non-interactive
     - name: Run ESLint
-      run: yarn lint || echo "Linting issues found - continuing with build"
+      run: yarn run lint || echo "Linting issues found - continuing with build"
     - name: Type checking
-      run: yarn type-check || echo "Type checking issues found - continuing with build"
-    - name: Security audit (npm)
+      run: yarn run type-check || echo "Type checking issues found - continuing with build"
+    - name: Security audit
       run: |
-        npm audit --audit-level=moderate || true
+        npx npm@${{ env.NPM_VERSION }} audit --audit-level=moderate || true
+        npx npm@${{ env.NPM_VERSION }} audit fix --audit-level=moderate || true
     - name: Check for secrets
       uses: trufflesecurity/trufflehog@main
       with:
@@ -72,12 +74,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
         cache-dependency-path: yarn.lock
-    - name: Install dependencies
+    - name: Install dependencies (yarn)
       run: |
         corepack enable
-        yarn install --frozen-lockfile --prefer-offline
+        yarn install --frozen-lockfile --non-interactive
     - name: Build application
-      run: yarn build
+      run: yarn run build
       env:
         NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
     - name: Build size analysis
@@ -110,12 +112,13 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
         cache: 'yarn'
-    - name: Install dependencies
+        cache-dependency-path: yarn.lock
+    - name: Install dependencies (yarn)
       run: |
         corepack enable
-        yarn install --frozen-lockfile --prefer-offline
+        yarn install --frozen-lockfile --non-interactive
     - name: Build application
-      run: yarn build
+      run: yarn run build
     - name: Start application
       run: |
         yarn start &
@@ -148,12 +151,13 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
         cache: 'yarn'
-    - name: Install dependencies
+        cache-dependency-path: yarn.lock
+    - name: Install dependencies (yarn)
       run: |
         corepack enable
-        yarn install --frozen-lockfile --prefer-offline
+        yarn install --frozen-lockfile --non-interactive
     - name: Build application
-      run: yarn build
+      run: yarn run build
       env:
         NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
     - name: Deploy to GitHub Pages
