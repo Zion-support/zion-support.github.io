@@ -21,7 +21,7 @@ import {
   Phone,
   MapPin
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 export default function Leadership() {
   const leadershipTeam = [

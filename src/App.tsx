@@ -4,13 +4,13 @@ import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/loading-spinner';
-import { SEO } from './components/SEO';
+import SEO from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import MobileExperienceEnhancer from './components/MobileExperienceEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import { FloatingActionButton } from './components/FloatingActionButton';
+import FloatingActionButton from './components/FloatingActionButton';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));

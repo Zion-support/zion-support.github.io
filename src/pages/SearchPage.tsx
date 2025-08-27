@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SEO } from '@/components/SEO'
+import SEO from '@/components/SEO'
 
 const SearchPage: React.FC = () => {
 	const [query, setQuery] = useState('')

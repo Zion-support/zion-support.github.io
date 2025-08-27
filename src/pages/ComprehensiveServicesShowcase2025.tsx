@@ -1,6 +1,6 @@
 import React from 'react';
 import ComprehensiveServicesShowcase2025 from '../components/ComprehensiveServicesShowcase2025';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 const ComprehensiveServicesShowcase2025Page: React.FC = () => {
   return (

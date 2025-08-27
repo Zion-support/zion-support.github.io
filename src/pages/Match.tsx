@@ -39,7 +39,7 @@ import {
   Network,
   Settings as SettingsIcon
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 const Match: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

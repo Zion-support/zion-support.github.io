@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from "../components/SEOHead";
+import SEO from "../components/SEOHead";
 import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
 import { 
   Brain, 

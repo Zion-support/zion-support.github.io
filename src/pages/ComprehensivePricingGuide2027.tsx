@@ -40,7 +40,7 @@ import {
   MapPin,
   Globe as GlobeIcon
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025, InnovativeService2025 } from '../data/innovativeServices2025';
 
 const ComprehensivePricingGuide2027: React.FC = () => {

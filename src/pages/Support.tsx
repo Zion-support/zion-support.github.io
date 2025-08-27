@@ -19,7 +19,7 @@ import {
   Globe,
   ArrowRight
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 interface SupportChannel {
   id: string;

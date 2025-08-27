@@ -33,7 +33,7 @@ import {
   Wallet,
   Box
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025, InnovativeService2025 } from '../data/innovativeServices2025';
 
 const InnovativeServicesShowcase2025: React.FC = () => {

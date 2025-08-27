@@ -21,7 +21,7 @@ import {
   Server,
   Smartphone
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function IoTEdgeComputing() {
   const features = [

@@ -57,7 +57,7 @@ import {
   Monitor as Healthcare,
   Cpu as FinTech
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { 
   ALL_EXPANDED_SERVICES_2027, 
   EXPANDED_SERVICE_CATEGORIES,

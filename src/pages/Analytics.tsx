@@ -40,7 +40,7 @@ import {
   AreaChart,
   ScatterPlot
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 const Analytics: React.FC = () => {
   const analyticsFeatures = [

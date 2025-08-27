@@ -28,7 +28,7 @@ import {
   Award,
   TrendingUp
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 const ComprehensiveServices: React.FC = () => {
   const serviceCategories = [

@@ -1,5 +1,5 @@
 import React from 'react'
-import { SEO } from '@/components/SEO'
+import SEO from '@/components/SEO'
 
 const AIComplianceAssistant: React.FC = () => (
 	<div className="min-h-screen bg-slate-950 text-white py-16">

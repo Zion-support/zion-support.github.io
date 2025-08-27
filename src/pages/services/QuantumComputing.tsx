@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Atom, Zap, Brain, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Shield, Eye, Cpu, Network, Database, Lock } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Link } from 'react-router-dom';
 
 export default function QuantumComputing() {

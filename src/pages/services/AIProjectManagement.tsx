@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Calendar, Users, BarChart3, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Target, TrendingUp } from 'lucide-react';
 
 export default function AIProjectManagement() {

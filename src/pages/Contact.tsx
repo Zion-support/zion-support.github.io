@@ -17,7 +17,7 @@ import {
   Video,
   FileText
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Footer } from '@/components/Footer';
 
 const Contact: React.FC = () => {

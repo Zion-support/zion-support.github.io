@@ -1,230 +1,364 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState, useCallback, useEffect } from 'react';
 import { 
+  Plus, 
   MessageCircle, 
   Phone, 
   Mail, 
-  ArrowUp, 
-  X, 
-  Plus,
+  MapPin, 
+  ArrowUp,
+  X,
+  Settings,
   HelpCircle,
-  Calendar,
-  FileText,
-  Zap
+  Star,
+  Share2,
+  Bookmark,
+  Download,
+  Printer
 } from 'lucide-react';
 
-interface FloatingActionButtonProps {
-  className?: string;
+interface FloatingAction {
+  id: string;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
+  label: string;
+  action: () => void;
+  color: string;
+  priority: 'high' | 'medium' | 'low';
 }
 
-export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ 
-  className = '' 
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [showScrollTop, setShowScrollTop] = useState(false);
+interface FloatingActionButtonProps {
+  actions?: FloatingAction[];
+  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
+  theme?: 'light' | 'dark' | 'auto';
+  showScrollToTop?: boolean;
+  showContactActions?: boolean;
+  showUtilityActions?: boolean;
+}
 
+const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
+  actions = [],
+  position = 'bottom-right',
+  theme = 'auto',
+  showScrollToTop = true,
+  showContactActions = true,
+  showUtilityActions = true
+}) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
+
+  // Detect theme
+  useEffect(() => {
+    if (theme === 'auto') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
+      
+      const handleChange = (e: MediaQueryListEvent) => {
+        setCurrentTheme(e.matches ? 'dark' : 'light');
+      };
+      
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    } else {
+      setCurrentTheme(theme);
+    }
+  }, [theme]);
+
+  // Show scroll to top button when scrolled down
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300);
+      setShowScrollButton(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const quickActions = [
-    {
-      icon: MessageCircle,
-      label: 'Live Chat',
-      action: () => window.open('/support', '_blank'),
-      color: 'from-blue-500 to-cyan-500',
-      delay: 0.1
-    },
-    {
-      icon: Phone,
-      label: 'Call Us',
-      action: () => window.open('tel:+1-555-0123', '_blank'),
-      color: 'from-green-500 to-emerald-500',
-      delay: 0.2
-    },
-    {
-      icon: Mail,
-      label: 'Email',
-      action: () => window.open('mailto:info@ziontechgroup.com', '_blank'),
-      color: 'from-purple-500 to-pink-500',
-      delay: 0.3
-    },
-    {
-      icon: HelpCircle,
-      label: 'FAQ',
-      action: () => window.open('/faq', '_blank'),
-      color: 'from-orange-500 to-red-500',
-      delay: 0.4
-    },
-    {
-      icon: Calendar,
-      label: 'Schedule Demo',
-      action: () => window.open('/contact', '_blank'),
-      color: 'from-indigo-500 to-blue-500',
-      delay: 0.5
-    },
-    {
-      icon: FileText,
-      label: 'Get Quote',
-      action: () => window.open('/request-quote', '_blank'),
-      color: 'from-teal-500 to-green-500',
-      delay: 0.6
-    }
+  // Default actions
+  const defaultActions: FloatingAction[] = [
+    // Contact actions
+    ...(showContactActions ? [
+      {
+        id: 'contact',
+        icon: MessageCircle,
+        label: 'Contact Us',
+        action: () => {
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        },
+        color: 'bg-blue-500 hover:bg-blue-600',
+        priority: 'high' as const
+      },
+      {
+        id: 'phone',
+        icon: Phone,
+        label: 'Call Now',
+        action: () => {
+          window.location.href = 'tel:+1234567890';
+        },
+        color: 'bg-green-500 hover:bg-green-600',
+        priority: 'high' as const
+      },
+      {
+        id: 'email',
+        icon: Mail,
+        label: 'Send Email',
+        action: () => {
+          window.location.href = 'mailto:info@ziontechgroup.com';
+        },
+        color: 'bg-purple-500 hover:bg-purple-600',
+        priority: 'medium' as const
+      },
+      {
+        id: 'location',
+        icon: MapPin,
+        label: 'Get Directions',
+        action: () => {
+          window.open('https://maps.google.com/?q=Zion+Tech+Group', '_blank');
+        },
+        color: 'bg-red-500 hover:bg-red-600',
+        priority: 'medium' as const
+      }
+    ] : []),
+    
+    // Utility actions
+    ...(showUtilityActions ? [
+      {
+        id: 'bookmark',
+        icon: Bookmark,
+        label: 'Bookmark Page',
+        action: () => {
+          if (navigator.share) {
+            navigator.share({
+              title: document.title,
+              url: window.location.href
+            });
+          } else {
+            // Fallback for browsers without share API
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+              // Show success message
+              showNotification('Page URL copied to clipboard!');
+            });
+          }
+        },
+        color: 'bg-yellow-500 hover:bg-yellow-600',
+        priority: 'low' as const
+      },
+      {
+        id: 'share',
+        icon: Share2,
+        label: 'Share Page',
+        action: () => {
+          if (navigator.share) {
+            navigator.share({
+              title: document.title,
+              url: window.location.href
+            });
+          } else {
+            // Fallback for browsers without share API
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+              showNotification('Page URL copied to clipboard!');
+            });
+          }
+        },
+        color: 'bg-indigo-500 hover:bg-indigo-600',
+        priority: 'low' as const
+      },
+      {
+        id: 'download',
+        icon: Download,
+        label: 'Download Brochure',
+        action: () => {
+          // Create a temporary link to trigger download
+          const link = document.createElement('a');
+          link.href = '/brochure.pdf'; // Adjust path as needed
+          link.download = 'Zion-Tech-Group-Brochure.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        },
+        color: 'bg-teal-500 hover:bg-teal-600',
+        priority: 'low' as const
+      },
+      {
+        id: 'print',
+        icon: Printer,
+        label: 'Print Page',
+        action: () => {
+          window.print();
+        },
+        color: 'bg-gray-500 hover:bg-gray-600',
+        priority: 'low' as const
+      }
+    ] : []),
+    
+    // Custom actions
+    ...actions
   ];
+
+  // Sort actions by priority
+  const sortedActions = defaultActions.sort((a, b) => {
+    const priorityOrder = { high: 3, medium: 2, low: 1 };
+    return priorityOrder[b.priority] - priorityOrder[a.priority];
+  });
+
+  // Toggle expansion
+  const toggleExpansion = useCallback(() => {
+    setIsExpanded(prev => !prev);
+  }, []);
+
+  // Scroll to top
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  // Show notification
+  const showNotification = useCallback((message: string) => {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `
+      fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
+      transform translate-x-full transition-transform duration-300 ease-in-out
+    `;
+    notification.textContent = message;
+    
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+      notification.classList.remove('translate-x-full');
+    }, 100);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+      notification.classList.add('translate-x-full');
+      setTimeout(() => {
+        document.body.removeChild(notification);
+      }, 300);
+    }, 3000);
+  }, []);
+
+  // Get position classes
+  const getPositionClasses = () => {
+    switch (position) {
+      case 'bottom-left':
+        return 'bottom-6 left-6';
+      case 'top-right':
+        return 'top-6 right-6';
+      case 'top-left':
+        return 'top-6 left-6';
+      default:
+        return 'bottom-6 right-6';
+    }
+  };
+
+  // Get theme classes
+  const getThemeClasses = () => {
+    return currentTheme === 'dark' 
+      ? 'bg-zion-slate-dark text-zion-slate-light border-zion-slate/20' 
+      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20';
+  };
 
   return (
     <>
-      {/* Scroll to Top Button */}
-      <AnimatePresence>
-        {showScrollTop && (
-          <motion.button
-            onClick={scrollToTop}
-            className="fixed bottom-24 right-6 z-50 w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
-            initial={{ opacity: 0, scale: 0, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0, y: 20 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="Scroll to top"
-          >
-            <ArrowUp className="w-6 h-6" />
-          </motion.button>
-        )}
-      </AnimatePresence>
-
       {/* Main Floating Action Button */}
-      <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
-        {/* Quick Actions Menu */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              className="absolute bottom-20 right-0 mb-4"
-              initial={{ opacity: 0, scale: 0.8, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8, y: 20 }}
-              transition={{ duration: 0.2 }}
-            >
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-2xl">
-                <div className="grid grid-cols-2 gap-3">
-                  {quickActions.map((action, index) => (
-                    <motion.button
-                      key={action.label}
-                      onClick={action.action}
-                      className="group relative p-3 bg-white/5 hover:bg-white/10 rounded-xl border border-white/20 transition-all duration-300 hover:border-white/40"
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: action.delay }}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <div className={`w-10 h-10 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300`}>
-                        <action.icon className="w-5 h-5 text-white" />
-                      </div>
-                      <span className="text-xs text-white font-medium text-center block">
-                        {action.label}
-                      </span>
-                      
-                      {/* Hover effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </motion.button>
-                  ))}
-                </div>
-                
-                {/* Close button */}
-                <motion.button
-                  onClick={toggleMenu}
-                  className="absolute -top-2 -right-2 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  aria-label="Close menu"
+      <div className={`fixed ${getPositionClasses()} z-50`}>
+        {/* Action Buttons */}
+        <div className={`relative ${isExpanded ? 'mb-4' : ''}`}>
+          {isExpanded && (
+            <div className="absolute bottom-full mb-4 space-y-3">
+              {sortedActions.map((action, index) => (
+                <div
+                  key={action.id}
+                  className={`
+                    flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
+                    ${action.color} text-white transform opacity-0 scale-75
+                    hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50
+                  `}
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                    animation: 'slideInUp 0.3s ease-out forwards'
+                  }}
                 >
-                  <X className="w-4 h-4" />
-                </motion.button>
-              </div>
-            </motion.div>
+                  <action.icon size={20} />
+                  <span className="whitespace-nowrap text-sm font-medium">
+                    {action.label}
+                  </span>
+                </div>
+              ))}
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Main Button */}
-        <motion.button
-          onClick={toggleMenu}
-          className={`w-16 h-16 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center ${
-            isOpen 
-              ? 'bg-gradient-to-r from-red-500 to-pink-500' 
-              : 'bg-gradient-to-r from-cyan-500 to-blue-500'
-          }`}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          aria-label={isOpen ? "Close quick actions" : "Open quick actions"}
-        >
-          <AnimatePresence mode="wait">
-            {isOpen ? (
-              <motion.div
-                key="close"
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                <X className="w-8 h-8 text-white" />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="open"
-                initial={{ rotate: 90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: -90, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Plus className="w-8 h-8 text-white" />
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.button>
-
-        {/* Pulse effect */}
-        {!isOpen && (
-          <motion.div
-            className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.5, 0, 0.5],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-        )}
-      </div>
-
-      {/* Mobile-friendly alternative for small screens */}
-      <div className="md:hidden">
-        <div className="fixed bottom-6 left-6 z-40">
-          <Link
-            to="/contact"
-            className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center"
-            aria-label="Contact us"
+          
+          {/* Main Button */}
+          <button
+            onClick={toggleExpansion}
+            className={`
+              p-4 rounded-full shadow-lg transition-all duration-300
+              ${getThemeClasses()} border-2
+              hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30
+              ${isExpanded ? 'rotate-45' : ''}
+            `}
+            aria-label={isExpanded ? 'Close actions' : 'Open actions'}
+            aria-expanded={isExpanded}
           >
-            <MessageCircle className="w-6 h-6" />
-          </Link>
+            <Plus size={24} className="transition-transform duration-300" />
+          </button>
         </div>
       </div>
+
+      {/* Scroll to Top Button */}
+      {showScrollToTop && showScrollButton && (
+        <button
+          onClick={scrollToTop}
+          className={`
+            fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-300
+            ${getThemeClasses()} border-2
+            hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30
+            animate-bounce
+          `}
+          aria-label="Scroll to top"
+        >
+          <ArrowUp size={24} />
+        </button>
+      )}
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes slideInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px) scale(0.75);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+        
+        @keyframes bounce {
+          0%, 20%, 53%, 80%, 100% {
+            transform: translate3d(0,0,0);
+          }
+          40%, 43% {
+            transform: translate3d(0, -30px, 0);
+          }
+          70% {
+            transform: translate3d(0, -15px, 0);
+          }
+          90% {
+            transform: translate3d(0, -4px, 0);
+          }
+        }
+        
+        .animate-bounce {
+          animation: bounce 2s infinite;
+        }
+      `}</style>
     </>
   );
 };
+
+export default FloatingActionButton;
