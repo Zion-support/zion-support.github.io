@@ -135,7 +135,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'Affiliate Tracking', href: '/services/affiliate-tracking' },
         { name: 'IT Helpdesk', href: '/services/it-helpdesk' },
-        { name: 'Green IT Solutions', href: '/green-it' },
+        { name: 'Green IT Solutions', href: '/services/green-it' },
         { name: 'Marketplace', href: '/marketplace' },
         { name: 'Talent Solutions', href: '/talent' },
         { name: 'Equipment Services', href: '/equipment' },
