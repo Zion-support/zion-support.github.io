@@ -29,7 +29,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { EXPANDED_INNOVATIVE_SERVICES_2025 } from '../data/expandedInnovativeServices2025';
-import { emergingTechServices2025 } from '../data/emergingTechServices2025';
+import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 interface Service {
   id: string;
   title: string;
@@ -69,7 +69,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
   // Combine all services
   const allServices: Service[] = [
     ...EXPANDED_INNOVATIVE_SERVICES_2025,
-    ...emergingTechServices2025
+    ...EMERGING_TECH_SERVICES_2025
   ];
   // Get unique categories
   const categories = useMemo(() => {
