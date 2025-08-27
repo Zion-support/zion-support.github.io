@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
@@ -72,7 +72,6 @@ const Marketplace = () => (
 function App() {
   return (
     <ErrorBoundary>
-      <Router>
         <div className="min-h-screen bg-futuristic">
           <AppHeader />
           
@@ -119,7 +118,6 @@ function App() {
           <ChatAssistant />
           <PerformanceOptimizer />
         </div>
-      </Router>
     </ErrorBoundary>
   );
 }
