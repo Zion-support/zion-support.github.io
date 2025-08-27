@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, useInView } from 'framer-motion';
 
@@ -103,59 +102,58 @@ export const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+    // Monitor First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fcp = entries[0];
+      setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
+    });
 
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    // Monitor Largest Contentful Paint
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lcp = entries[entries.length - 1];
+      setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
+    });
 
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fid = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+    // Monitor First Input Delay
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fid = entries[0];
+      setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
+    });
 
-      // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
+    // Monitor Cumulative Layout Shift
+    const clsObserver = new PerformanceObserver((list) => {
+      let cls = 0;
+      for (const entry of list.getEntries()) {
+        if (!entry.hadRecentInput) {
+          cls += entry.value;
         }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }
+      setMetrics(prev => ({ ...prev, cls }));
+    });
 
-      return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+    try {
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    } catch (error) {
+      console.warn('Performance monitoring not supported:', error);
     }
+
+    return () => {
+      fcpObserver.disconnect();
+      lcpObserver.disconnect();
+      fidObserver.disconnect();
+      clsObserver.disconnect();
+    };
   }, []);
 
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
-
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
+    <div className="fixed bottom-4 right-4 bg-zion-slate-dark/90 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-4 text-white text-xs font-mono z-50">
+      <div className="mb-2 font-semibold text-zion-cyan">Performance Metrics</div>
       <div>FCP: {metrics.fcp.toFixed(0)}ms</div>
       <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
       <div>FID: {metrics.fid.toFixed(0)}ms</div>
@@ -193,163 +191,99 @@ export const VirtualList: React.FC<{
     >
       <div style={{ height: totalHeight, position: 'relative' }}>
         <div style={{ transform: `translateY(${offsetY}px)` }}>
-          {items.slice(startIndex, endIndex).map((item, index) =>
-            renderItem(item, startIndex + index)
-          )}
+          {items.slice(startIndex, endIndex).map((item, index) => (
+            <div key={startIndex + index} style={{ height: itemHeight }}>
+              {renderItem(item, startIndex + index)}
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-// Debounced input hook for search optimization
-export const useDebounce = (value: any, delay: number) => {
-  const [debouncedValue, setDebouncedValue] = useState(value);
+// Debounced input component
+export const DebouncedInput: React.FC<{
+  value: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+  className?: string;
+  delay?: number;
+}> = ({ value, onChange, placeholder = '', className = '', delay = 300 }) => {
+  const [inputValue, setInputValue] = useState(value);
+  const timeoutRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    timeoutRef.current = setTimeout(() => {
+      onChange(inputValue);
     }, delay);
 
     return () => {
-      clearTimeout(handler);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
     };
-  }, [value, delay]);
+  }, [inputValue, onChange, delay]);
 
-  return debouncedValue;
+  useEffect(() => {
+    setInputValue(value);
+  }, [value]);
+
+  return (
+    <input
+      type="text"
+      value={inputValue}
+      onChange={(e) => setInputValue(e.target.value)}
+      placeholder={placeholder}
+      className={`px-3 py-2 border border-zion-cyan/20 bg-zion-blue-dark/50 text-white placeholder-zion-slate-light rounded-md focus:outline-none focus:border-zion-cyan/40 transition-colors ${className}`}
+    />
+  );
 };
 
-// Memoized component wrapper for expensive computations
-export const MemoizedComponent = React.memo<{
+// Memoized component wrapper
+export const MemoizedComponent: React.FC<{
   children: React.ReactNode;
-  className?: string;
-}>(({ children, className = '' }) => (
-  <div className={className}>{children}</div>
-));
+  dependencies?: any[];
+}> = React.memo(({ children }) => <>{children}</>);
 
-MemoizedComponent.displayName = 'MemoizedComponent';
-=======
-import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
-export const PerformanceOptimizer = ({ children }) => {
-    const location = useLocation();
-    // Preload critical resources
-    useEffect(() => {
-        const preloadCriticalResources = () => {
-            // Preload critical CSS
-            const criticalCSS = document.createElement('link');
-            criticalCSS.rel = 'preload';
-            criticalCSS.as = 'style';
-            criticalCSS.href = '/src/index.css';
-            document.head.appendChild(criticalCSS);
-            // Preload critical fonts
-            const criticalFonts = document.createElement('link');
-            criticalFonts.rel = 'preload';
-            criticalFonts.as = 'font';
-            criticalFonts.href = '/fonts/inter-var.woff2';
-            criticalFonts.crossOrigin = 'anonymous';
-            document.head.appendChild(criticalFonts);
-        };
-        preloadCriticalResources();
-    }, []);
-    // Optimize images on route change
-    useEffect(() => {
-        const optimizeImages = () => {
-            const images = document.querySelectorAll('img');
-            images.forEach((img) => {
-                // Add loading="lazy" to images below the fold
-                if (img.getBoundingClientRect().top > window.innerHeight) {
-                    img.loading = 'lazy';
-                }
-                // Add decoding="async" for better performance
-                img.decoding = 'async';
-                // Add error handling
-                img.onerror = () => {
-                    img.style.display = 'none';
-                };
-            });
-        };
-        // Use requestIdleCallback for non-critical optimization
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(optimizeImages);
-        }
-        else {
-            setTimeout(optimizeImages, 100);
-        }
-    }, [location.pathname]);
-    // Memoize expensive computations
-    const optimizedChildren = useMemo(() => children, [children]);
-    // Optimize scroll performance
-    const handleScroll = useCallback(() => {
-        // Throttle scroll events for better performance
-        if (!window.scrollTimeout) {
-            window.scrollTimeout = setTimeout(() => {
-                // Handle scroll-based optimizations here
-                window.scrollTimeout = null;
-            }, 16); // ~60fps
-        }
-    }, []);
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [handleScroll]);
-    // Service Worker registration for caching
-    useEffect(() => {
-        if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-            navigator.serviceWorker
-                .register('/sw.js')
-                .then((registration) => {
-                console.log('SW registered: ', registration);
-            })
-                .catch((registrationError) => {
-                console.log('SW registration failed: ', registrationError);
-            });
-        }
-    }, []);
-    // Intersection Observer for lazy loading
-    useEffect(() => {
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const target = entry.target;
-                        if (target.dataset.src) {
-                            target.src = target.dataset.src;
-                            target.removeAttribute('data-src');
-                            observer.unobserve(target);
-                        }
-                    }
-                });
-            }, {
-                rootMargin: '50px',
-                threshold: 0.1,
-            });
-            // Observe all images with data-src
-            const lazyImages = document.querySelectorAll('img[data-src]');
-            lazyImages.forEach((img) => observer.observe(img));
-            return () => observer.disconnect();
-        }
-    }, [location.pathname]);
-    return <>{optimizedChildren}</>;
-};
-// Add global performance optimizations
-if (typeof window !== 'undefined') {
-    // Optimize long tasks
-    if ('scheduler' in window && 'postTask' in window.scheduler) {
-        window.scheduler.postTask(() => {
-            // Run non-critical tasks during idle time
-        }, { priority: 'background' });
+// Error boundary component
+export class ErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback?: React.ReactNode },
+  { hasError: boolean; error?: Error }
+> {
+  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400">
+          <h3 className="font-semibold mb-2">Something went wrong</h3>
+          <p className="text-sm">{this.state.error?.message}</p>
+          <button
+            onClick={() => this.setState({ hasError: false })}
+            className="mt-2 px-3 py-1 bg-red-500/20 hover:bg-red-500/30 rounded text-sm transition-colors"
+          >
+            Try again
+          </button>
+        </div>
+      );
     }
-    // Optimize memory usage
-    if ('memory' in performance) {
-        const memoryThreshold = 50 * 1024 * 1024; // 50MB
-        if (performance.memory.usedJSHeapSize > memoryThreshold) {
-            // Trigger garbage collection if available
-            if ('gc' in window) {
-                window.gc();
-            }
-        }
-    }
+
+    return this.props.children;
+  }
 }
-export default PerformanceOptimizer;
->>>>>>> cursor/website-audit-and-enhancement-1eed

@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-=======
->>>>>>> cursor/website-audit-and-enhancement-1eed
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -101,63 +98,80 @@ export default function Pricing() {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-            <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto text-center">
-                    <div className="flex justify-center mb-6">
-                        <div className="p-3 bg-blue-600/20 rounded-full">
-                            <Star className="h-12 w-12 text-blue-400"/>
-                        </div>
-                    </div>
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                        Pricing Plans
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate pt-20">
+            <div className="container mx-auto px-4 py-16">
+                {/* Header */}
+                <div className="text-center mb-16">
+                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                        Simple, Transparent{' '}
+                        <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                            Pricing
+                        </span>
                     </h1>
-                    <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
                         Choose the perfect plan for your business needs. All plans include a 14-day free trial.
                     </p>
                 </div>
-            </section>
 
-            <section className="pb-16 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {pricingTiers.map((tier, index) => (
-                            <Card key={index} className={`relative ${tier.popular ? 'border-blue-500 shadow-lg shadow-blue-500/25' : 'border-gray-700'}`}>
-                                {tier.popular && (
-                                    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white">
-                                        Most Popular
-                                    </Badge>
-                                )}
-                                <CardHeader>
-                                    <CardTitle className="text-xl text-white">{tier.name}</CardTitle>
-                                    <CardDescription className="text-gray-400">
-                                        {tier.description}
-                                    </CardDescription>
-                                    <div className="flex items-baseline">
-                                        <span className="text-3xl font-bold text-white">{tier.price}</span>
-                                        <span className="text-gray-400 ml-1">{tier.period}</span>
-                                    </div>
-                                </CardHeader>
-                                <CardContent>
-                                    <ul className="space-y-3">
-                                        {tier.features.map((feature, featureIndex) => (
-                                            <li key={featureIndex} className="flex items-start">
-                                                <Check className="h-5 w-5 text-green-400 mt-0.5 mr-2 flex-shrink-0" />
-                                                <span className="text-gray-300 text-sm">{feature}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </CardContent>
-                                <CardFooter>
-                                    <Button className="w-full" variant={tier.popular ? "default" : "outline"}>
+                {/* Pricing Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                    {pricingTiers.map((tier, index) => (
+                        <Card key={index} className={`relative ${tier.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-blue-light'}`}>
+                            {tier.popular && (
+                                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-zion-cyan text-white">
+                                    Most Popular
+                                </Badge>
+                            )}
+                            <CardHeader className="text-center">
+                                <CardTitle className="text-2xl font-bold text-white">{tier.name}</CardTitle>
+                                <CardDescription className="text-zion-slate-light">
+                                    {tier.description}
+                                </CardDescription>
+                                <div className="mt-4">
+                                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                                    <span className="text-zion-slate-light">{tier.period}</span>
+                                </div>
+                            </CardHeader>
+                            <CardContent>
+                                <ul className="space-y-3">
+                                    {tier.features.map((feature, featureIndex) => (
+                                        <li key={featureIndex} className="flex items-start gap-3">
+                                            <Check className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />
+                                            <span className="text-sm text-zion-slate-light">{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+                            <CardFooter>
+                                <Link to={tier.link} className="w-full">
+                                    <Button 
+                                        className={`w-full ${tier.popular ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'bg-zion-blue hover:bg-zion-blue-light'}`}
+                                    >
                                         {tier.cta}
                                     </Button>
-                                </CardFooter>
-                            </Card>
-                        ))}
+                                </Link>
+                            </CardFooter>
+                        </Card>
+                    ))}
+                </div>
+
+                {/* CTA Section */}
+                <div className="text-center">
+                    <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-2xl p-8 border border-zion-cyan/20">
+                        <h2 className="text-3xl font-bold text-white mb-4">
+                            Need a Custom Solution?
+                        </h2>
+                        <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+                            Our team can create tailored pricing plans for enterprise customers with specific requirements.
+                        </p>
+                        <Link to="/contact">
+                            <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light">
+                                Contact Sales Team
+                            </Button>
+                        </Link>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     );
 }
