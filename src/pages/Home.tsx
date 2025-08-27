@@ -121,6 +121,7 @@ const Home: React.FC = () => {
             </div>
           </motion.div>
         </div>
+      </section>
 
         {/* Floating Elements */}
         <motion.div
