@@ -1,54 +1,245 @@
-import React, { Component } from 'react'
-import { AlertTriangle, RefreshCw } from 'lucide-react'
+import React, { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
-export default class ErrorBoundary extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { hasError: false }
-  }
+function ErrorFallback({ error, resetError, retryCount = 0 }) {
+    const navigate = useNavigate();
+    const maxRetries = 3;
+    
+    const handleRetry = () => {
+        if (retryCount < maxRetries) {
+            resetError();
+        } else {
+            // After max retries, redirect to home
+            navigate('/');
+        }
+    };
 
-  static getDerivedStateFromError(error) {
-    return { hasError: true, error }
-  }
+    const getErrorType = (error) => {
+        if (error?.name === 'NetworkError' || error?.message?.includes('network')) {
+            return 'network';
+        }
+        if (error?.name === 'TypeError' || error?.message?.includes('undefined')) {
+            return 'runtime';
+        }
+        if (error?.name === 'ReferenceError') {
+            return 'reference';
+        }
+        return 'general';
+    };
 
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
-  }
+    const errorType = getErrorType(error);
+    
+    const errorMessages = {
+        network: {
+            title: 'Connection Error',
+            description: 'We\'re having trouble connecting to our servers. Please check your internet connection and try again.',
+            icon: Shield,
+            color: 'text-orange-400'
+        },
+        runtime: {
+            title: 'Runtime Error',
+            description: 'Something unexpected happened while processing your request. Our team has been notified.',
+            icon: Bug,
+            color: 'text-red-400'
+        },
+        reference: {
+            title: 'Reference Error',
+            description: 'There was an issue with the page resources. Please refresh and try again.',
+            icon: AlertTriangle,
+            color: 'text-yellow-400'
+        },
+        general: {
+            title: 'Something went wrong',
+            description: 'We encountered an unexpected error. Don\'t worry, our team has been notified.',
+            icon: AlertTriangle,
+            color: 'text-zion-purple'
+        }
+    };
 
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined })
-  }
+    const currentError = errorMessages[errorType];
+    const IconComponent = currentError.icon;
 
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback
-      }
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
+            <div className="max-w-md w-full text-center">
+                <div className="mb-8">
+                    <div className="w-24 h-24 bg-zion-purple/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <IconComponent className={`w-12 h-12 ${currentError.color}`} />
+                    </div>
+                    <h1 className="text-3xl font-bold text-white mb-3">{currentError.title}</h1>
+                    <p className="text-zion-slate-light leading-relaxed">
+                        {currentError.description}
+                    </p>
+                    
+                    {retryCount > 0 && (
+                        <div className="mt-4 p-3 bg-zion-slate-dark/50 rounded-lg">
+                            <p className="text-sm text-zion-slate-light">
+                                Retry attempt: {retryCount}/{maxRetries}
+                            </p>
+                        </div>
+                    )}
+                </div>
 
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">
-          <div className="max-w-md mx-auto text-center px-6">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-red-100 mb-6">
-              <AlertTriangle className="h-8 w-8 text-red-600" />
+                {error && process.env.NODE_ENV === 'development' && (
+                    <details className="mb-6 text-left">
+                        <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-3 flex items-center">
+                            <Bug className="w-4 h-4 mr-2" />
+                            Error Details (Development)
+                        </summary>
+                        <div className="bg-zion-slate-dark p-4 rounded-lg text-xs text-zion-slate-light overflow-auto max-h-40">
+                            <div className="mb-2">
+                                <strong>Error:</strong> {error.name || 'Unknown Error'}
+                            </div>
+                            <div className="mb-2">
+                                <strong>Message:</strong> {error.message || 'No message available'}
+                            </div>
+                            {error.stack && (
+                                <div>
+                                    <strong>Stack:</strong>
+                                    <pre className="mt-2 text-xs overflow-auto">{error.stack}</pre>
+                                </div>
+                            )}
+                        </div>
+                    </details>
+                )}
+
+                <div className="space-y-3">
+                    {retryCount < maxRetries ? (
+                        <Button 
+                            onClick={handleRetry} 
+                            className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white transition-all duration-200"
+                        >
+                            <RefreshCw className="w-4 h-4 mr-2" />
+                            Try Again
+                        </Button>
+                    ) : (
+                        <Button 
+                            onClick={() => window.location.reload()} 
+                            className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark transition-all duration-200"
+                        >
+                            <Zap className="w-4 h-4 mr-2" />
+                            Reload Page
+                        </Button>
+                    )}
+                    
+                    <Button 
+                        variant="outline" 
+                        onClick={() => navigate(-1)} 
+                        className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark transition-all duration-200"
+                    >
+                        <ArrowLeft className="w-4 h-4 mr-2" />
+                        Go Back
+                    </Button>
+                    
+                    <Link 
+                        to="/" 
+                        className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-all duration-200"
+                    >
+                        <Home className="w-4 h-4 inline mr-2" />
+                        Go Home
+                    </Link>
+                </div>
+
+                <div className="mt-8 text-xs text-zion-slate-light">
+                    <p>If this problem persists, please contact our support team.</p>
+                    <p className="mt-2">
+                        Error ID: {error?.name || 'Unknown'} - {new Date().toISOString()}
+                    </p>
+                    <p className="mt-1">
+                        Retry Count: {retryCount}/{maxRetries}
+                    </p>
+                </div>
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <button
-              onClick={this.handleRetry}
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              <RefreshCw className="w-4 h-4 mr-2" />
-              Try Again
-            </button>
-          </div>
         </div>
-      )
+    );
+}
+
+export function ErrorBoundary({ children, fallback, onError }) {
+    const [hasError, setHasError] = useState(false);
+    const [error, setError] = useState(null);
+    const [retryCount, setRetryCount] = useState(0);
+
+    useEffect(() => {
+        const handleError = (event) => {
+            setHasError(true);
+            setError(event.error);
+            if (onError) {
+                onError(event.error, { componentStack: event.error?.stack });
+            }
+            // Log error to console in development
+            if (process.env.NODE_ENV === 'development') {
+                console.error('ErrorBoundary caught an error:', event.error);
+            }
+        };
+
+        const handleUnhandledRejection = (event) => {
+            setHasError(true);
+            setError(new Error(event.reason));
+            if (onError) {
+                onError(new Error(event.reason), { componentStack: event.reason?.stack });
+            }
+            // Log error to console in development
+            if (process.env.NODE_ENV === 'development') {
+                console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
+            }
+        };
+
+        window.addEventListener('error', handleError);
+        window.addEventListener('unhandledrejection', handleUnhandledRejection);
+        
+        return () => {
+            window.removeEventListener('error', handleError);
+            window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+        };
+    }, [onError]);
+
+    const resetError = () => {
+        setHasError(false);
+        setError(null);
+        setRetryCount(prev => prev + 1);
+    };
+
+    if (hasError) {
+        if (fallback) {
+            return fallback;
+        }
+        return (
+            <ErrorFallback 
+                error={error || undefined} 
+                resetError={resetError}
+                retryCount={retryCount}
+            />
+        );
     }
 
-    return this.props.children
-  }
+    return <>{children}</>;
+}
+
+// Hook for functional components to handle errors
+export function useErrorHandler() {
+    const [error, setError] = useState(null);
+
+    const handleError = (error) => {
+        setError(error);
+        console.error('useErrorHandler caught an error:', error);
+    };
+
+    const clearError = () => {
+        setError(null);
+    };
+
+    return { error, handleError, clearError };
+}
+
+// Higher-order component for error handling
+export function withErrorBoundary(Component, fallback = null) {
+    return function WrappedComponent(props) {
+        return (
+            <ErrorBoundary fallback={fallback}>
+                <Component {...props} />
+            </ErrorBoundary>
+        );
+    };
 }

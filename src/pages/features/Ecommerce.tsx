@@ -1,22 +1,32 @@
 import React from "react";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
+
 export default function Ecommerce() {
-    const schema = {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "E-commerce Platform",
-        "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
-        "url": "https://app.ziontechgroup.com/features/e-commerce"
-    };
-    return (<>
-      <SEO title="E-commerce Platform" description="Buy and sell hardware, software and services in the Zion marketplace." keywords="tech marketplace, buy IT hardware, sell AI solutions" canonical="https://app.ziontechgroup.com/features/e-commerce"/>
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "E-commerce Platform",
+    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
+    "url": "https://app.ziontechgroup.com/features/e-commerce"
+  };
+
+  return (
+    <>
+      <SEO
+        title="E-commerce Platform"
+        description="Buy and sell hardware, software and services in the Zion marketplace."
+        keywords="tech marketplace, buy IT hardware, sell AI solutions"
+        canonical="https://app.ziontechgroup.com/features/e-commerce"
+      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      ></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
@@ -24,7 +34,13 @@ export default function Ecommerce() {
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Showcase your products with rich media listings and accept payments with Stripe-powered checkout.
           </p>
-          <img loading="lazy" src="https://placehold.co/800x400" alt="Screenshot of marketplace interface" className="rounded-lg shadow-xl mx-auto mb-12"/>
+          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+            <img
+              src="https://placehold.co/800x400"
+              alt="Screenshot of marketplace interface"
+              className="object-cover"
+            />
+          </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Support for videos and 3D models to highlight your offerings.</li>
@@ -49,6 +65,6 @@ export default function Ecommerce() {
           </div>
         </div>
       </main>
-      <Footer />
-    </>);
+    </>
+  );
 }

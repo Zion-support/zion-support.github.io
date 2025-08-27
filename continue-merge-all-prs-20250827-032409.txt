@@ -1,0 +1,94 @@
+2025-08-27 03:24:09 - 🔒 Creating backup branch: continue-merge-all-prs-backup-20250827-032409
+2025-08-27 03:24:11 - 📋 Getting list of cursor branches starting from branch 11...
+2025-08-27 03:24:11 - 🔄 Starting batch processing...
+2025-08-27 03:24:11 - 📋 Processing branch 1: cursor/add-and-advertise-new-services-then-build-1d5b
+2025-08-27 03:24:11 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-1d5b...
+2025-08-27 03:24:11 - 📁 Branch cursor/add-and-advertise-new-services-then-build-1d5b has 6892 files to merge
+2025-08-27 03:24:12 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-1d5b
+2025-08-27 03:24:12 - ✅ Branch cursor/add-and-advertise-new-services-then-build-1d5b processed successfully
+2025-08-27 03:24:12 - 📊 Progress: 1 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:12 - 📋 Processing branch 2: cursor/add-and-advertise-new-services-then-build-21f8
+2025-08-27 03:24:12 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-21f8...
+2025-08-27 03:24:12 - 📁 Branch cursor/add-and-advertise-new-services-then-build-21f8 has 6981 files to merge
+2025-08-27 03:24:12 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-21f8
+2025-08-27 03:24:12 - ✅ Branch cursor/add-and-advertise-new-services-then-build-21f8 processed successfully
+2025-08-27 03:24:12 - 📊 Progress: 2 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:12 - 📋 Processing branch 3: cursor/add-and-advertise-new-services-then-build-2b91
+2025-08-27 03:24:12 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-2b91...
+2025-08-27 03:24:12 - 📁 Branch cursor/add-and-advertise-new-services-then-build-2b91 has 6987 files to merge
+2025-08-27 03:24:13 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-2b91
+2025-08-27 03:24:13 - ✅ Branch cursor/add-and-advertise-new-services-then-build-2b91 processed successfully
+2025-08-27 03:24:13 - 📊 Progress: 3 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:13 - 📋 Processing branch 4: cursor/add-and-advertise-new-services-then-build-2c85
+2025-08-27 03:24:13 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-2c85...
+2025-08-27 03:24:13 - 📁 Branch cursor/add-and-advertise-new-services-then-build-2c85 has 6865 files to merge
+2025-08-27 03:24:13 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-2c85
+2025-08-27 03:24:13 - ✅ Branch cursor/add-and-advertise-new-services-then-build-2c85 processed successfully
+2025-08-27 03:24:13 - 📊 Progress: 4 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:13 - 📋 Processing branch 5: cursor/add-and-advertise-new-services-then-build-336c
+2025-08-27 03:24:13 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-336c...
+2025-08-27 03:24:13 - 📁 Branch cursor/add-and-advertise-new-services-then-build-336c has 6892 files to merge
+2025-08-27 03:24:14 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-336c
+2025-08-27 03:24:14 - ✅ Branch cursor/add-and-advertise-new-services-then-build-336c processed successfully
+2025-08-27 03:24:14 - 📊 Progress: 5 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:14 - 📋 Processing branch 6: cursor/add-and-advertise-new-services-then-build-359a
+2025-08-27 03:24:14 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-359a...
+2025-08-27 03:24:14 - 📁 Branch cursor/add-and-advertise-new-services-then-build-359a has 6875 files to merge
+2025-08-27 03:24:14 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-359a
+2025-08-27 03:24:14 - ✅ Branch cursor/add-and-advertise-new-services-then-build-359a processed successfully
+2025-08-27 03:24:14 - 📊 Progress: 6 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:14 - 📋 Processing branch 7: cursor/add-and-advertise-new-services-then-build-39d5
+2025-08-27 03:24:14 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-39d5...
+2025-08-27 03:24:14 - 📁 Branch cursor/add-and-advertise-new-services-then-build-39d5 has 6986 files to merge
+2025-08-27 03:24:15 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-39d5
+2025-08-27 03:24:15 - ✅ Branch cursor/add-and-advertise-new-services-then-build-39d5 processed successfully
+2025-08-27 03:24:15 - 📊 Progress: 7 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:15 - 📋 Processing branch 8: cursor/add-and-advertise-new-services-then-build-3ac9
+2025-08-27 03:24:15 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-3ac9...
+2025-08-27 03:24:15 - 📁 Branch cursor/add-and-advertise-new-services-then-build-3ac9 has 31276 files to merge
+2025-08-27 03:24:16 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-3ac9
+2025-08-27 03:24:16 - ✅ Branch cursor/add-and-advertise-new-services-then-build-3ac9 processed successfully
+2025-08-27 03:24:16 - 📊 Progress: 8 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:16 - 📋 Processing branch 9: cursor/add-and-advertise-new-services-then-build-3bf4
+2025-08-27 03:24:16 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-3bf4...
+2025-08-27 03:24:16 - 📁 Branch cursor/add-and-advertise-new-services-then-build-3bf4 has 6900 files to merge
+2025-08-27 03:24:16 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-3bf4
+2025-08-27 03:24:16 - ✅ Branch cursor/add-and-advertise-new-services-then-build-3bf4 processed successfully
+2025-08-27 03:24:16 - 📊 Progress: 9 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:16 - 📋 Processing branch 10: cursor/add-and-advertise-new-services-then-build-3f02
+2025-08-27 03:24:16 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-3f02...
+2025-08-27 03:24:16 - 📁 Branch cursor/add-and-advertise-new-services-then-build-3f02 has 6996 files to merge
+2025-08-27 03:24:17 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-3f02
+2025-08-27 03:24:17 - ✅ Branch cursor/add-and-advertise-new-services-then-build-3f02 processed successfully
+2025-08-27 03:24:17 - 📊 Progress: 10 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:17 - 📋 Processing branch 11: cursor/add-and-advertise-new-services-then-build-3f57
+2025-08-27 03:24:17 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-3f57...
+2025-08-27 03:24:17 - 📁 Branch cursor/add-and-advertise-new-services-then-build-3f57 has 31276 files to merge
+2025-08-27 03:24:17 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-3f57
+2025-08-27 03:24:17 - ✅ Branch cursor/add-and-advertise-new-services-then-build-3f57 processed successfully
+2025-08-27 03:24:17 - 📊 Progress: 11 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:17 - 📋 Processing branch 12: cursor/add-and-advertise-new-services-then-build-4074
+2025-08-27 03:24:17 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-4074...
+2025-08-27 03:24:18 - 📁 Branch cursor/add-and-advertise-new-services-then-build-4074 has 6925 files to merge
+2025-08-27 03:24:18 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-4074
+2025-08-27 03:24:18 - ✅ Branch cursor/add-and-advertise-new-services-then-build-4074 processed successfully
+2025-08-27 03:24:18 - 📊 Progress: 12 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:18 - 📋 Processing branch 13: cursor/add-and-advertise-new-services-then-build-4798
+2025-08-27 03:24:18 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-4798...
+2025-08-27 03:24:18 - 📁 Branch cursor/add-and-advertise-new-services-then-build-4798 has 6891 files to merge
+2025-08-27 03:24:18 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-4798
+2025-08-27 03:24:18 - ✅ Branch cursor/add-and-advertise-new-services-then-build-4798 processed successfully
+2025-08-27 03:24:18 - 📊 Progress: 13 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:18 - 📋 Processing branch 14: cursor/add-and-advertise-new-services-then-build-4941
+2025-08-27 03:24:18 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-4941...
+2025-08-27 03:24:19 - 📁 Branch cursor/add-and-advertise-new-services-then-build-4941 has 6834 files to merge
+2025-08-27 03:24:19 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-4941
+2025-08-27 03:24:19 - ✅ Branch cursor/add-and-advertise-new-services-then-build-4941 processed successfully
+2025-08-27 03:24:19 - 📊 Progress: 14 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:19 - 📋 Processing branch 15: cursor/add-and-advertise-new-services-then-build-49c1
+2025-08-27 03:24:19 - 🔄 Attempting to merge cursor/add-and-advertise-new-services-then-build-49c1...
+2025-08-27 03:24:19 - 📁 Branch cursor/add-and-advertise-new-services-then-build-49c1 has 6856 files to merge
+2025-08-27 03:24:19 - ✅ Successfully merged cursor/add-and-advertise-new-services-then-build-49c1
+2025-08-27 03:24:19 - ✅ Branch cursor/add-and-advertise-new-services-then-build-49c1 processed successfully
+2025-08-27 03:24:19 - 📊 Progress: 15 successful, 0 failed, 0 conflicts resolved, 0 skipped
+2025-08-27 03:24:19 - 💾 Pushing progress to remote...

@@ -1,52 +1,141 @@
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 import { cn } from "@/lib/utils";
-export function LoadingSkeleton({ className, count = 1, height = "h-4", width = "w-full", rounded = true }) {
-    return (<>
-      {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className={cn("bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark", height, width, rounded && "rounded", className)} animate={{
-                background: [
-                    "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 50%, hsl(var(--zion-slate-dark)) 100%)",
-                    "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 100%, hsl(var(--zion-slate-dark)) 0%)",
-                    "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 50%, hsl(var(--zion-slate-dark)) 100%)"
-                ]
-            }} transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut"
-            }} style={{
-                backgroundSize: "200% 100%"
-            }}/>))}
-    </>);
+
+interface SkeletonProps {
+  className?: string;
+  width?: string | number;
+  height?: string | number;
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';
+  animate?: boolean;
 }
-export function CardSkeleton({ className }) {
-    return (<div className={cn("p-6 border border-zion-blue-light/20 rounded-xl bg-zion-blue-dark/50", className)}>
-      <div className="flex items-center space-x-4 mb-4">
-        <LoadingSkeleton className="w-12 h-12 rounded-full"/>
-        <div className="space-y-2 flex-1">
-          <LoadingSkeleton height="h-4" width="w-3/4"/>
-          <LoadingSkeleton height="h-3" width="w-1/2"/>
+
+const Skeleton: React.FC<SkeletonProps> = ({ 
+  className = '', 
+  width = '100%', 
+  height = '20px', 
+  rounded = 'md',
+  animate = true 
+}) => {
+  const baseClasses = `bg-zion-slate-dark/50 ${rounded !== 'none' ? `rounded-${rounded}` : ''}`;
+  const finalClasses = `${baseClasses} ${className}`;
+  
+  const skeleton = (
+    <div 
+      className={finalClasses}
+      style={{ width, height }}
+    />
+  );
+
+  if (!animate) return skeleton;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0.3 }}
+      animate={{ opacity: [0.3, 0.7, 0.3] }}
+      transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+      className={finalClasses}
+      style={{ width, height }}
+    />
+  );
+};
+
+// Predefined skeleton components
+export const CardSkeleton: React.FC = () => (
+  <div className="bg-zion-slate-dark/20 backdrop-blur-sm rounded-lg p-6 border border-zion-cyan/20">
+    <div className="flex items-center space-x-4 mb-4">
+      <Skeleton width={48} height={48} rounded="full" />
+      <div className="flex-1">
+        <Skeleton height={20} className="mb-2" />
+        <Skeleton height={16} width="60%" />
+      </div>
+    </div>
+    <Skeleton height={16} className="mb-2" />
+    <Skeleton height={16} width="80%" />
+  </div>
+);
+
+export const TableSkeleton: React.FC = () => (
+  <div className="bg-zion-slate-dark/20 backdrop-blur-sm rounded-lg border border-zion-cyan/20 overflow-hidden">
+    <div className="p-4 border-b border-zion-cyan/20">
+      <Skeleton height={24} width="30%" />
+    </div>
+    <div className="p-4 space-y-3">
+      {[...Array(5)].map((_, i) => (
+        <div key={i} className="flex space-x-4">
+          <Skeleton height={16} width="20%" />
+          <Skeleton height={16} width="40%" />
+          <Skeleton height={16} width="25%" />
+          <Skeleton height={16} width="15%" />
         </div>
+      ))}
+    </div>
+  </div>
+);
+
+export const ListSkeleton: React.FC = () => (
+  <div className="space-y-3">
+    {[...Array(6)].map((_, i) => (
+      <div key={i} className="flex items-center space-x-3">
+        <Skeleton width={16} height={16} rounded="full" />
+        <Skeleton height={16} width="70%" />
       </div>
-      <div className="space-y-2">
-        <LoadingSkeleton height="h-3" width="w-full"/>
-        <LoadingSkeleton height="h-3" width="w-5/6"/>
-        <LoadingSkeleton height="h-3" width="w-4/6"/>
-      </div>
-    </div>);
-}
-export function GridSkeleton({ columns = 3, className }) {
-    return (<div className={cn("grid gap-6", columns === 1 && "grid-cols-1", columns === 2 && "grid-cols-1 sm:grid-cols-2", columns === 3 && "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3", columns === 4 && "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4", className)}>
-      {Array.from({ length: columns }).map((_, index) => (<CardSkeleton key={index}/>))}
-    </div>);
-}
-export function HeroSkeleton({ className }) {
-    return (<div className={cn("py-20 md:py-32 min-h-screen flex items-center", className)}>
-      <div className="container mx-auto px-4 text-center space-y-8">
-        <LoadingSkeleton height="h-16 md:h-20" width="w-3/4" className="mx-auto"/>
-        <LoadingSkeleton height="h-6 md:h-8" width="w-2/3" className="mx-auto"/>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <LoadingSkeleton height="h-14" width="w-32" className="rounded-md"/>
-          <LoadingSkeleton height="h-14" width="w-40" className="rounded-md"/>
+    ))}
+  </div>
+);
+
+export const GridSkeleton: React.FC<{ cols?: number; rows?: number }> = ({ 
+  cols = 3, 
+  rows = 3 
+}) => (
+  <div className={`grid grid-cols-1 md:grid-cols-${cols} gap-6`}>
+    {[...Array(cols * rows)].map((_, i) => (
+      <CardSkeleton key={i} />
+    ))}
+  </div>
+);
+
+export const HeroSkeleton: React.FC = () => (
+  <div className="text-center py-20">
+    <Skeleton height={64} width="80%" className="mx-auto mb-6" />
+    <Skeleton height={32} width="60%" className="mx-auto mb-8" />
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <Skeleton width={160} height={48} rounded="lg" />
+      <Skeleton width={160} height={48} rounded="lg" />
+    </div>
+  </div>
+);
+
+export const SidebarSkeleton: React.FC = () => (
+  <div className="w-64 bg-zion-slate-dark/20 backdrop-blur-sm border-r border-zion-cyan/20 p-4">
+    <Skeleton height={32} width="80%" className="mb-6" />
+    <div className="space-y-3">
+      {[...Array(8)].map((_, i) => (
+        <div key={i} className="flex items-center space-x-3">
+          <Skeleton width={20} height={20} />
+          <Skeleton height={16} width="70%" />
         </div>
-      </div>
-    </div>);
-}
+      ))}
+    </div>
+  </div>
+);
+
+export const FormSkeleton: React.FC = () => (
+  <div className="space-y-6">
+    <div>
+      <Skeleton height={16} width="30%" className="mb-2" />
+      <Skeleton height={40} rounded="md" />
+    </div>
+    <div>
+      <Skeleton height={16} width="25%" className="mb-2" />
+      <Skeleton height={40} rounded="md" />
+    </div>
+    <div>
+      <Skeleton height={16} width="40%" className="mb-2" />
+      <Skeleton height={100} rounded="md" />
+    </div>
+    <Skeleton width={120} height={40} rounded="md" />
+  </div>
+);
+
+export default Skeleton;

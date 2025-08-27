@@ -1,11 +1,13 @@
 {
   "name": "Zion Tech Group - AI-Powered Technology Solutions",
   "short_name": "Zion Tech",
-  "description": "Leading provider of AI-powered business solutions, cloud infrastructure, and cybersecurity services",
+  "theme_color": "#22ddd2",
+=======
+  "description": "Leading-edge technology solutions and autonomous innovation platform",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#17072b",
-  "theme_color": "#22ddd2",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
@@ -42,14 +44,9 @@
       "purpose": "maskable any"
     },
     {
+=======
       "src": "/icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icon-384x384.png",
-      "sizes": "384x384",
       "type": "image/png",
       "purpose": "maskable any"
     },
@@ -58,9 +55,28 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+=======
     }
   ],
   "shortcuts": [
+    {
+=======
+      "name": "Launch Economy",
+      "short_name": "Launch",
+      "description": "Quick access to launch your digital economy",
+      "url": "/multiverse/launch",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
     {
       "name": "Services",
       "short_name": "Services",
@@ -68,8 +84,8 @@
       "url": "/services",
       "icons": [
         {
-          "src": "/icon-96x96.png",
-          "sizes": "96x96"
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
         }
       ]
     },
@@ -80,20 +96,8 @@
       "url": "/contact",
       "icons": [
         {
-          "src": "/icon-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "AI Solutions",
-      "short_name": "AI",
-      "description": "Explore AI-powered solutions",
-      "url": "/services/ai-business-intelligence",
-      "icons": [
-        {
-          "src": "/icon-96x96.png",
-          "sizes": "96x96"
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
         }
       ]
     }
@@ -111,10 +115,5 @@
       "type": "image/png",
       "form_factor": "narrow"
     }
-  ],
-  "related_applications": [],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
-  }
+  ]
 }

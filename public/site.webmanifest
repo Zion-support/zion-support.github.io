@@ -1,68 +1,72 @@
 {
-  "name": "Zion Tech Group - Leading AI & Technology Solutions",
+  "name": "Zion Tech Group",
   "short_name": "Zion Tech",
-  "description": "Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services. Transform your business with cutting-edge technology.",
+  "description": "Leading provider of AI-powered technology solutions and digital transformation services",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
-  "theme_color": "#0891b2",
+  "theme_color": "#22ddd2",
   "orientation": "portrait-primary",
   "scope": "/",
-  "lang": "en",
+  "lang": "en-US",
   "categories": ["business", "productivity", "technology"],
   "icons": [
     {
-      "src": "/images/zion-logo-192.png",
+      "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/images/zion-logo-512.png",
+      "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/images/zion-logo-1024.png",
-      "sizes": "1024x1024",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
     }
   ],
   "shortcuts": [
     {
-      "name": "AI Services",
-      "short_name": "AI",
-      "description": "Explore our AI-powered solutions",
-      "url": "/ai-services",
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our technology services",
+      "url": "/services",
       "icons": [
         {
-          "src": "/images/ai-icon-96.png",
+          "src": "/icons/services-icon.png",
           "sizes": "96x96"
         }
       ]
     },
     {
-      "name": "Contact Us",
+      "name": "Contact",
       "short_name": "Contact",
-      "description": "Get in touch with our team",
+      "description": "Get in touch with us",
       "url": "/contact",
       "icons": [
         {
-          "src": "/images/contact-icon-96.png",
+          "src": "/icons/contact-icon.png",
           "sizes": "96x96"
         }
       ]
     },
     {
-      "name": "About Us",
-      "short_name": "About",
-      "description": "Learn more about Zion Tech Group",
-      "url": "/about",
+      "name": "AI Services",
+      "short_name": "AI",
+      "description": "Explore AI solutions",
+      "url": "/ai-services",
       "icons": [
         {
-          "src": "/images/about-icon-96.png",
+          "src": "/icons/ai-icon.png",
           "sizes": "96x96"
         }
       ]
@@ -70,18 +74,18 @@
   ],
   "screenshots": [
     {
-      "src": "/images/screenshot-desktop.png",
+      "src": "/screenshots/desktop-home.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Zion Tech Group Desktop Experience"
+      "label": "Homepage on desktop"
     },
     {
-      "src": "/images/screenshot-mobile.png",
+      "src": "/screenshots/mobile-home.png",
       "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile Experience"
+      "label": "Homepage on mobile"
     }
   ],
   "related_applications": [
@@ -96,12 +100,5 @@
   },
   "launch_handler": {
     "client_mode": "navigate-existing"
-  },
-  "handle_links": "preferred",
-  "protocol_handlers": [
-    {
-      "protocol": "web+zion",
-      "url": "/?protocol=%s"
-    }
-  ]
+  }
 } 

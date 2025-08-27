@@ -1,0 +1,73 @@
+name: Test
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build project
+        run: npm run build
+        
+      - name: Verify build output
+        run: |
+          if [ ! -d out ]; then
+            echo "Build failed: out folder not found"
+            exit 1
+          fi
+<<<<<<< HEAD
+      - name: Run Tests
+        run: npm test -- --run
+        continue-on-error: true
+      - name: Run Cypress Tests (if available)
+        run: npm run cypress:run
+        env:
+          TEST_USER_EMAIL: ${{ secrets.CYPRESS_TEST_USER_EMAIL }}
+          TEST_USER_PASSWORD: ${{ secrets.CYPRESS_TEST_USER_PASSWORD }}
+          TEST_USER_DISPLAY_NAME: ${{ secrets.CYPRESS_TEST_USER_DISPLAY_NAME }}
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+=======
+      - name: Verify asset paths
+        run: |
+          npx http-server dist -p 5000 -s >/dev/null 2>&1 &
+          SERVER_PID=$!
+          sleep 3
+          kill $SERVER_PID || true
+      - name: Run tests (if available)
+        run: npm test --if-present
+        continue-on-error: true
+      - name: Upload build artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
+        with:
+          name: build
+          path: dist
+        if: success()
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true

@@ -1,120 +1,3 @@
-import React from 'react';
-<<<<<<< HEAD
-import { Code, BookOpen, Zap, Shield, Users, MessageSquare, Github, ExternalLink, Terminal, Webhook, Key, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
-export default function DeveloperPortal() {
-  const apiFeatures = [
-    {
-      title: 'RESTful APIs',
-      description: 'Clean, intuitive REST APIs for all major platform features',
-      icon: Code,
-      status: 'Stable',
-      docs: '/api-docs'
-    },
-    {
-      title: 'Webhooks',
-      description: 'Real-time notifications for platform events and updates',
-      icon: Webhook,
-      status: 'Beta',
-      docs: '/api-docs/webhooks'
-    },
-    {
-      title: 'Authentication',
-      description: 'Secure OAuth 2.0 and API key authentication',
-      icon: Key,
-      status: 'Stable',
-      docs: '/api-docs/auth'
-    },
-    {
-      title: 'SDKs & Libraries',
-      description: 'Official SDKs for JavaScript, Python, and more',
-      icon: Terminal,
-      status: 'Stable',
-      docs: '/api-docs/sdks'
-    }
-  ];
-
-  const quickStartSteps = [
-    {
-      step: 1,
-      title: 'Get API Keys',
-      description: 'Sign up and generate your API keys from the dashboard',
-      action: 'Get Started'
-    },
-    {
-      step: 2,
-      title: 'Read Documentation',
-      description: 'Explore our comprehensive API documentation and guides',
-      action: 'View Docs'
-    },
-    {
-      step: 3,
-      title: 'Test Endpoints',
-      description: 'Use our interactive API playground to test endpoints',
-      action: 'Try API'
-    },
-    {
-      step: 4,
-      title: 'Build & Deploy',
-      description: 'Integrate our APIs into your applications',
-      action: 'View Examples'
-    }
-  ];
-
-  const resources = [
-    {
-      title: 'API Reference',
-      description: 'Complete API endpoint documentation with examples',
-      icon: BookOpen,
-      href: '/api-docs',
-      badge: 'Complete'
-    },
-    {
-      title: 'Getting Started Guide',
-      description: 'Step-by-step tutorial for new developers',
-      icon: Zap,
-      href: '/api-docs/getting-started',
-      badge: 'Beginner'
-    },
-    {
-      title: 'Code Samples',
-      description: 'Ready-to-use code examples in multiple languages',
-      icon: Code,
-      href: '/api-docs/samples',
-      badge: 'Examples'
-    },
-    {
-      title: 'SDK Downloads',
-      description: 'Official SDKs and client libraries',
-      icon: Terminal,
-      href: '/api-docs/sdks',
-      badge: 'Download'
-    },
-    {
-      title: 'Community Forum',
-      description: 'Connect with other developers and get help',
-      icon: Users,
-      href: '/community',
-      badge: 'Community'
-    },
-    {
-      title: 'Support & Help',
-      description: 'Technical support and troubleshooting guides',
-      icon: MessageSquare,
-      href: '/help',
-      badge: 'Support'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="Developer Portal | Zion Tech Group" 
-        description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools."
-        keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers"
-        canonical="https://ziontechgroup.com/developers"
-      />
-=======
 import SEO from '../SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
@@ -224,7 +107,6 @@ export default function DeveloperPortal() {
     ];
     return (<div className="min-h-screen bg-background">
       <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https://ziontechgroup.com/developers"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
@@ -237,16 +119,6 @@ export default function DeveloperPortal() {
             Build powerful applications and integrations with our comprehensive APIs, SDKs, and developer tools.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-            <a href="/api-docs" className="bg-zion-purple hover:bg-zion-purple/90 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center">
-              <BookOpen className="h-5 w-5 mr-2"/>
-              View API Documentation
-            </a>
-            <a href="https://github.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="border border-zion-purple text-zion-purple hover:bg-zion-purple/10 font-bold py-3 px-6 rounded-lg flex items-center justify-center">
-              <Github className="h-5 w-5 mr-2"/>
-              View on GitHub
-            </a>
-=======
             <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple/90">
               <Link to="/api-docs">
                 <BookOpen className="h-5 w-5 mr-2"/>
@@ -259,7 +131,6 @@ export default function DeveloperPortal() {
                 View on GitHub
               </a>
             </Button>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
           </div>
         </div>
 
@@ -269,22 +140,6 @@ export default function DeveloperPortal() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {apiFeatures.map((feature) => {
             const IconComponent = feature.icon;
-<<<<<<< HEAD
-            return (<div key={feature.title} className="border border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors p-6 rounded-lg">
-                  <div className="flex items-center justify-between mb-3">
-                    <IconComponent className="h-8 w-8 text-zion-cyan"/>
-                    <span className="bg-zion-purple/20 text-zion-purple text-xs font-bold px-2 py-1 rounded-full">
-                        {feature.status}
-                    </span>
-                  </div>
-                  <h3 className="text-white text-lg font-bold mb-2">{feature.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{feature.description}</p>
-                  <a href={feature.docs} className="text-zion-cyan hover:underline text-sm flex items-center">
-                    View Docs
-                    <ExternalLink className="h-4 w-4 ml-2"/>
-                  </a>
-                </div>);
-=======
             return (<Card key={feature.title} className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
@@ -307,7 +162,6 @@ export default function DeveloperPortal() {
                     </Button>
                   </CardContent>
                 </Card>);
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
         })}
           </div>
         </div>
@@ -316,28 +170,18 @@ export default function DeveloperPortal() {
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Started in 4 Steps</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-            {quickStartSteps.map((step) => (<div key={step.step} className="border border-zion-blue-light text-center p-6 rounded-lg">
-                <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-=======
             {quickStartSteps.map((step) => (<Card key={step.step} className="border-zion-blue-light text-center">
                 <CardHeader>
                   <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
                     <span className="text-white font-bold text-lg">{step.step}</span>
                 </div>
                 <h3 className="text-white text-lg font-bold mb-2">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4">{step.description}</p>
                 <a href="#" className="text-zion-cyan hover:underline text-sm">
                     {step.action}
-<<<<<<< HEAD
-                </a>
-              </div>))}
-=======
                   </Button>
                 </CardContent>
               </Card>))}
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
           </div>
         </div>
 
@@ -347,22 +191,6 @@ export default function DeveloperPortal() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {resources.map((resource) => {
             const IconComponent = resource.icon;
-<<<<<<< HEAD
-            return (<div key={resource.title} className="border border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors p-6 rounded-lg">
-                  <div className="flex items-center justify-between mb-3">
-                    <IconComponent className="h-6 w-6 text-zion-cyan"/>
-                    <span className="bg-zion-purple/20 text-zion-purple text-xs font-bold px-2 py-1 rounded-full">
-                        {resource.badge}
-                    </span>
-                  </div>
-                  <h3 className="text-white text-lg font-bold mb-2">{resource.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{resource.description}</p>
-                  <a href={resource.href} className="text-zion-cyan hover:underline text-sm flex items-center">
-                    {resource.badge === 'Download' ? 'Download' : 'Learn More'}
-                    <ExternalLink className="h-4 w-4 ml-2"/>
-                  </a>
-                </div>);
-=======
             return (<Card key={resource.title} className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
@@ -385,25 +213,11 @@ export default function DeveloperPortal() {
                     </Button>
                   </CardContent>
                 </Card>);
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
         })}
           </div>
         </div>
 
         {/* API Status */}
-<<<<<<< HEAD
-        <div className="mb-16 border border-zion-blue-light p-6 rounded-lg">
-          <h2 className="text-2xl font-bold text-white mb-4 text-center">API Status & Performance</h2>
-          <p className="text-zion-slate-light text-center mb-4">Real-time status of our APIs and services</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div>
-              <div className="text-3xl font-bold text-zion-cyan mb-2">99.9%</div>
-              <div className="text-zion-slate-light">Uptime</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-zion-cyan mb-2">&lt;100ms</div>
-              <div className="text-zion-slate-light">Average Response Time</div>
-=======
         <Card className="mb-16 border-zion-blue-light">
           <CardHeader>
             <CardTitle className="text-white text-2xl flex items-center">
@@ -436,7 +250,6 @@ export default function DeveloperPortal() {
                   <ExternalLink className="h-4 w-4 ml-2"/>
                 </a>
               </Button>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
             </div>
             <div>
               <div className="text-3xl font-bold text-zion-cyan mb-2">24/7</div>
@@ -452,25 +265,6 @@ export default function DeveloperPortal() {
         </div>
 
         {/* Get Help */}
-<<<<<<< HEAD
-        <div className="border border-zion-blue-light bg-zion-blue-dark/50 p-6 rounded-lg">
-          <h2 className="text-2xl font-bold text-white mb-4 text-center">Need Developer Support?</h2>
-          <p className="text-zion-slate-light text-center mb-4">Our developer support team is here to help you build amazing applications.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
-            <a href="/contact" className="bg-zion-purple hover:bg-zion-purple/90 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center">
-              <MessageSquare className="h-5 w-5 mr-2"/>
-              Contact Developer Support
-            </a>
-            <a href="mailto:dev-support@ziontechgroup.com" className="border border-zion-purple text-zion-purple hover:bg-zion-purple/10 font-bold py-3 px-6 rounded-lg flex items-center justify-center">
-              <Mail className="h-5 w-5 mr-2"/>
-              Email Support
-            </a>
-          </div>
-          <p className="text-zion-slate-light text-sm text-center">
-            Response time: Usually within 4 hours for developer inquiries
-          </p>
-        </div>
-=======
         <Card className="border-zion-blue-light bg-zion-blue-dark/50">
           <CardHeader className="text-center">
             <CardTitle className="text-white text-2xl">Need Developer Support?</CardTitle>
@@ -498,7 +292,88 @@ export default function DeveloperPortal() {
             </p>
           </CardContent>
         </Card>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       </div>
     </div>);
+=======
+
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
+
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
+import { WebhooksManager } from "@/components/developers/WebhooksManager";
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
+import { ApiLogs } from "@/components/developers/ApiLogs";
+
+interface TabDefinition {
+  id: string;
+  label: string;
+  icon: LucideIcon;
+}
+
+export function DeveloperPortal() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+  
+  // Define the tabs
+  const tabs: TabDefinition[] = [
+    { id: "documentation", label: "Documentation", icon: BookOpen },
+    { id: "api-keys", label: "API Keys", icon: Key },
+    { id: "webhooks", label: "Webhooks", icon: Webhook },
+    { id: "logs", label: "Logs", icon: List },
+  ];
+
+  return (
+    <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-white flex items-center">
+          <Terminal className="mr-3" size={32} />
+          Developer Portal
+        </h1>
+        <p className="text-zinc-400 mt-2">
+          Access the Zion API, manage your API keys, and set up webhooks.
+        </p>
+      </div>
+      
+      {/* Tabs */}
+      <div className="border-b border-zinc-800 mb-8">
+        <div className="flex flex-wrap -mb-px">
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <button
+                key={tab.id}
+                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
+                  activeTab === tab.id
+                    ? "text-white border-zion-purple"
+                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
+                }`}
+                onClick={() => setActiveTab(tab.id)}
+              >
+                <Icon size={16} className="mr-2" />
+                {tab.label}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+      
+      {/* Tab content */}
+      <div>
+        {activeTab === "documentation" && <ApiDocumentation />}
+        {activeTab === "api-keys" && <ApiKeysManager />}
+        {activeTab === "webhooks" && <WebhooksManager />}
+        {activeTab === "logs" && <ApiLogs />}
+      </div>
+    </div>
+  );
+}
+
+export default function ProtectedDeveloperPortal() {
+  return (
+    <ProtectedRoute>
+      <DeveloperPortal />
+    </ProtectedRoute>
+  );
 }

@@ -1,270 +1,958 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-
-export default function SignUp() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await axios.post('/auth/register', { email, password });
-    navigate('/marketplace');
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className="p-4 space-y-2">
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-        className="border px-2 py-1 w-full"
-      />
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
-        className="border px-2 py-1 w-full"
-      />
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2">
-        Sign Up
-      </button>
-    </form>
-  );
-=======
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useAuth } from '@/hooks/useAuth';
-import { Mail, Lock, User, Eye, EyeOff, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  User, 
+  Mail, 
+  Lock, 
+  Building, 
+  Phone, 
+  Globe, 
+  CheckCircle, 
+  Eye,
+  EyeOff,
+  Shield,
+  Zap,
+  Brain,
+  Rocket
+} from 'lucide-react';
+
+const accountTypes = [
+  {
+    id: 'individual',
+    title: 'Individual',
+    description: 'Personal account for freelancers and individual professionals',
+    icon: User,
+    features: ['Personal projects', 'Basic features', 'Community access', 'Free tier available']
+  },
+  {
+    id: 'business',
+    title: 'Business',
+    description: 'Company account for teams and organizations',
+    icon: Building,
+    features: ['Team collaboration', 'Advanced features', 'Priority support', 'Custom integrations']
+  },
+  {
+    id: 'enterprise',
+    title: 'Enterprise',
+    description: 'Large organization account with custom solutions',
+    icon: Building,
+    features: ['Custom solutions', 'Dedicated support', 'SLA guarantees', 'On-premise options']
+  }
+];
+
+const benefits = [
+  {
+    icon: Zap,
+    title: 'Instant Access',
+    description: 'Get started immediately with our platform and services'
+  },
+  {
+    icon: Shield,
+    title: 'Secure & Private',
+    description: 'Enterprise-grade security with SOC2 compliance'
+  },
+  {
+    icon: Brain,
+    title: 'AI-Powered',
+    description: 'Access to cutting-edge AI and machine learning tools'
+  },
+  {
+    icon: Rocket,
+    title: 'Scalable Growth',
+    description: 'Scale your business with our flexible solutions'
+  }
+];
 
 export default function Signup() {
-    const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: '',
-        confirmPassword: ''
-    });
-    const [showPassword, setShowPassword] = useState(false);
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState('');
-    const [success, setSuccess] = useState(false);
-    
-    const { signup } = useAuth();
-    const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    company: '',
+    phone: '',
+    website: '',
+    accountType: 'individual',
+    agreeToTerms: false,
+    marketingEmails: false
+  });
 
-    const handleChange = (e) => {
-        setFormData(prev => ({
-            ...prev,
-            [e.target.name]: e.target.value
-        }));
-    };
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [step, setStep] = useState(1);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (step < 3) {
+      setStep(step + 1);
+    } else {
+      // Handle final submission
+      console.log('Form submitted:', formData);
+    }
+  };
+
+  const nextStep = () => {
+    if (step < 3) {
+      setStep(step + 1);
+    }
+  };
+
+  const prevStep = () => {
+    if (step > 1) {
+      setStep(step - 1);
+    }
+  };
+
+  const onInvalid = (errors: any) => {
+    const firstError = Object.keys(errors)[0] as keyof SignupFormValues;
+    if (firstError) {
+      form.setFocus(firstError);
+=======
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'; // Changed from react-router-dom
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import axios from 'axios';
+import Link from 'next/link';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
+import { AuthButtons } from '@/components/AuthButtons';
+import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
+import { toast } from '@/hooks/use-toast';
+import { AuthLayout } from '@/layout';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+
+
+const SignupSchema = Yup.object({
+  name: Yup.string().required('Name is required'),
+  email: Yup.string().email('Invalid email').required('Email is required'),
+  password: Yup.string()
+    .min(8, 'Password must be at least 8 characters')
+    .matches(/[A-Z]/, 'Password must include an uppercase letter')
+    .matches(/[a-z]/, 'Password must include a lowercase letter')
+    .matches(/[0-9]/, 'Password must include a number')
+    .required('Password is required'),
+  confirm: Yup.string()
+    .oneOf([Yup.ref('password')], 'Passwords must match')
+    .required('Confirm password is required'),
+  terms: Yup.boolean().oneOf([true], 'You must accept the terms and conditions')
+});
+
+export default function Signup() {
+  const router = useRouter(); // Changed from navigate
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  const [emailVerificationRequired, setEmailVerificationRequired] = useState(false);
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
+  const [healthCheckLoading, setHealthCheckLoading] = useState(true);
+  const [healthCheckError, setHealthCheckError] = useState<string | null>(null);
+  
+  // Check if this is a partner signup
+  const isPartnerSignup = router.query.type === 'partner';
+  const signupSource = router.query.source as string || 'direct';
+
+  const performHealthCheck = async () => {
+    setHealthCheckLoading(true);
+    setHealthCheckError(null);
+    try {
+      const res = await axios.get('/api/auth/health');
+      setAuthServiceAvailable(res.status === 200);
+      if (res.status !== 200) {
+        setHealthCheckError('Authentication service is experiencing issues');
+      }
+    } catch (err: any) {
+      logErrorToProduction('Auth service health check failed', { data: err });
+      setAuthServiceAvailable(false);
+      // Set a more specific error message based on the error type
+      if (err.code === 'NETWORK_ERROR' || err.message?.includes('Network Error')) {
+        setHealthCheckError('Network connection issues detected');
+      } else if (err.response?.status === 500) {
+        setHealthCheckError('Authentication service is temporarily unavailable');
+      } else {
+        setHealthCheckError('Unable to verify authentication service status');
+      }
+    } finally {
+      setHealthCheckLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    performHealthCheck();
+  }, []);
+
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      password: '',
+      confirm: '',
+      terms: false
+    },
+    validationSchema: SignupSchema,
+    onSubmit: async (values, { setErrors }) => {
+      logInfo('Form submission started with:', { 
+        name: values.name, 
+        email: values.email,
+        hasPassword: !!values.password,
+        isPartnerSignup 
+      });
+      
+      setLoading(true);
+      setErrorMessage(''); // Clear any previous error
+      setSuccessMessage(''); // Clear any previous success message
+      setEmailVerificationRequired(false);
+      
+      try {
+        const requestData = {
+          name: values.name,
+          email: values.email,
+          password: values.password,
+          ...(isPartnerSignup && {
+            userType: 'partner',
+            source: signupSource,
+            metadata: {
+              partnerProgram: true,
+              signupType: 'partner'
+            }
+          })
+        };
         
-        if (formData.password !== formData.confirmPassword) {
-            setError('Passwords do not match');
-            return;
-        }
-
-        setIsLoading(true);
-        setError('');
-
-        try {
-            await signup({
-                firstName: formData.firstName,
-                lastName: formData.lastName,
-                email: formData.email,
-                password: formData.password
+        logInfo('Making API request to /api/auth/register with:', { 
+          ...requestData, 
+          password: '[REDACTED]' 
+        });
+        
+        const res = await axios.post('/api/auth/register', requestData);
+        
+        logInfo('API response received:', { 
+          status: res.status, 
+          data: res.data 
+        });
+        
+        if (res.status === 201) {
+          const data = res.data;
+          
+          if (data.emailVerificationRequired) {
+            // Email verification is required
+            setEmailVerificationRequired(true);
+            const message = isPartnerSignup 
+              ? 'Partner application submitted! Please check your email to verify your account. Once verified, your partner application will be reviewed.'
+              : 'Account created! Please check your email to verify your account.';
+            setSuccessMessage(data.message || message);
+            
+            toast({
+              title: isPartnerSignup ? 'Partner application submitted!' : 'Account created!',
+              description: isPartnerSignup 
+                ? 'Please verify your email. Your partner application will be reviewed after verification.'
+                : 'Please check your email to verify your account before logging in.',
+            });
+          } else {
+            // Account created and ready to use
+            const message = isPartnerSignup 
+              ? 'Partner application submitted successfully! You can now log in and your application will be reviewed.'
+              : 'Account created successfully!';
+            setSuccessMessage(data.message || message);
+            
+            toast({
+              title: isPartnerSignup ? 'Partner application submitted!' : 'Account created successfully!',
+              description: isPartnerSignup 
+                ? 'Welcome to the partner program. You can now log in.'
+                : 'Welcome to the platform. You can now log in.',
             });
             
-            setSuccess(true);
+            // Redirect to appropriate page after a short delay
             setTimeout(() => {
-                navigate('/dashboard');
+              router.push(isPartnerSignup ? '/partners' : '/login');
             }, 2000);
-        } catch (error) {
-            setError('Failed to create account. Please try again.');
-        } finally {
-            setIsLoading(false);
+          }
         }
-    };
-
-    if (success) {
-        return (
-            <div className="min-h-screen bg-zion-blue flex items-center justify-center">
-                <div className="max-w-md w-full mx-auto p-6 text-center">
-                    <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
-                    <h1 className="text-2xl font-bold text-white mb-4">Account Created!</h1>
-                    <p className="text-zion-slate-light">
-                        Your account has been successfully created. Redirecting to dashboard...
-                    </p>
-                </div>
-            </div>
-        );
+      } catch (err: any) {
+        logErrorToProduction('Signup error details:', {
+          message: err.message,
+          response: err.response ? {
+            status: err.response.status,
+            statusText: err.response.statusText,
+            data: err.response.data
+          } : 'No response',
+          request: err.request ? 'Request made but no response' : 'No request',
+          config: err.config ? {
+            url: err.config.url,
+            method: err.config.method
+          } : 'No config'
+        });
+        
+        const status = err.response?.status;
+        // Try both 'error' and 'message' fields for compatibility
+        const errorMsg = err.response?.data?.error || err.response?.data?.message || 'Signup failed. Please try again.';
+        
+        logInfo('Processed error message:', { data: errorMsg });
+        
+        if (status === 409) {
+          // Handle duplicate email specifically
+          setErrorMessage(errorMsg);
+          setErrors({ email: errorMsg });
+          
+          // Show toast notification
+          toast({
+            title: 'Signup failed',
+            description: errorMsg,
+            variant: 'destructive',
+          });
+        } else if (status === 400) {
+          // Handle validation errors (weak password, etc.)
+          setErrorMessage(errorMsg);
+          
+          // Set the error on password field if it's password-related
+          if (errorMsg.toLowerCase().includes('password')) {
+            setErrors({ password: errorMsg });
+          } else {
+            setErrors({ confirm: errorMsg });
+          }
+          
+          toast({
+            title: 'Signup failed',
+            description: errorMsg,
+            variant: 'destructive',
+          });
+        } else {
+          // Handle other errors (network, server, etc.)
+          setErrorMessage(errorMsg);
+          setErrors({ confirm: errorMsg });
+          
+          // Show toast notification for other errors
+          toast({
+            title: 'Signup failed',
+            description: errorMsg,
+            variant: 'destructive',
+          });
+        }
+      } finally {
+        logInfo('Form submission completed, setting loading to false');
+        setLoading(false);
+      }
     }
+  });
 
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    formik.setTouched({
+      name: true,
+      email: true,
+      password: true,
+      confirm: true,
+      terms: true
+    });
+    await formik.handleSubmit(e);
+  };
+
+  // After successful registration, guide the user to the verification screen
+  useEffect(() => {
+    if (emailVerificationRequired && formik.values.email) {
+      const timer = setTimeout(() => {
+        router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+    return undefined;
+  }, [emailVerificationRequired, formik.values.email, router]);
+
+  // Show loading state only during initial health check
+  if (healthCheckLoading) {
     return (
-        <>
-            <SEO 
-                title="Sign Up - Zion Tech Group" 
-                description="Create your Zion Tech Group account to access the marketplace." 
-                canonical="https://ziontechgroup.com/signup" 
-            />
-            <div className="min-h-screen bg-zion-blue flex items-center justify-center">
-                <div className="max-w-md w-full mx-auto p-6">
-                    <div className="text-center mb-8">
-                        <GradientHeading>Create Account</GradientHeading>
-                        <p className="text-zion-slate-light mt-4">
-                            Join Zion Tech Group and start your journey
-                        </p>
-                    </div>
-
-                    {error && (
-                        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
-                            <p className="text-red-400 text-sm">{error}</p>
-                        </div>
-                    )}
-
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                        <div className="grid grid-cols-2 gap-4">
-                            <div>
-                                <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
-                                    First Name
-                                </label>
-                                <div className="relative">
-                                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-                                    <Input
-                                        id="firstName"
-                                        name="firstName"
-                                        type="text"
-                                        value={formData.firstName}
-                                        onChange={handleChange}
-                                        placeholder="First name"
-                                        className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <div>
-                                <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
-                                    Last Name
-                                </label>
-                                <Input
-                                    id="lastName"
-                                    name="lastName"
-                                    type="text"
-                                    value={formData.lastName}
-                                    onChange={handleChange}
-                                    placeholder="Last name"
-                                    className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
-                                    required
-                                />
-                            </div>
-                        </div>
-
-                        <div>
-                            <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                                Email Address
-                            </label>
-                            <div className="relative">
-                                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-                                <Input
-                                    id="email"
-                                    name="email"
-                                    type="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    placeholder="Enter your email"
-                                    className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
-                                    required
-                                />
-                            </div>
-                        </div>
-
-                        <div>
-                            <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
-                                Password
-                            </label>
-                            <div className="relative">
-                                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-                                <Input
-                                    id="password"
-                                    name="password"
-                                    type={showPassword ? 'text' : 'password'}
-                                    value={formData.password}
-                                    onChange={handleChange}
-                                    placeholder="Create a password"
-                                    className="pl-10 pr-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
-                                    required
-                                />
-                                <button
-                                    type="button"
-                                    onClick={() => setShowPassword(!showPassword)}
-                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-                                    aria-label={showPassword ? 'Hide password' : 'Show password'}
-                                >
-                                    {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                                </button>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label htmlFor="confirmPassword" className="block text-sm font-medium text-white mb-2">
-                                Confirm Password
-                            </label>
-                            <div className="relative">
-                                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-                                <Input
-                                    id="confirmPassword"
-                                    name="confirmPassword"
-                                    type={showConfirmPassword ? 'text' : 'password'}
-                                    value={formData.confirmPassword}
-                                    onChange={handleChange}
-                                    placeholder="Confirm your password"
-                                    className="pl-10 pr-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
-                                    required
-                                />
-                                <button
-                                    type="button"
-                                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-                                    aria-label={showConfirmPassword ? 'Hide password' : 'Show password'}
-                                >
-                                    {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                                </button>
-                            </div>
-                        </div>
-
-                        <Button
-                            type="submit"
-                            disabled={isLoading || !formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() || !formData.password.trim() || !formData.confirmPassword.trim()}
-                            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple disabled:opacity-50 disabled:cursor-not-allowed"
-                        >
-                            {isLoading ? 'Creating Account...' : 'Create Account'}
-                        </Button>
-                    </form>
-
-                    <div className="mt-8 text-center">
-                        <p className="text-zion-slate-light text-sm">
-                            Already have an account?{' '}
-                            <Link to="/login" className="text-zion-cyan hover:underline">
-                                Sign in
-                            </Link>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </>
+      <AuthLayout>
+        <div className="flex min-h-screen items-center justify-center p-4">
+          <div className="text-center space-y-4">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+            <p className="text-muted-foreground">Initializing signup...</p>
+          </div>
+        </div>
+      </AuthLayout>
     );
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+  }
+
+  return (
+    <AuthLayout>
+      <div className="flex min-h-screen items-center justify-center p-4">
+        <div className="w-full max-w-sm space-y-4">
+          {isPartnerSignup && (
+            <div className="text-center mb-6">
+              <h1 className="text-2xl font-bold text-foreground">Partner Application</h1>
+              <p className="text-sm text-muted-foreground mt-2">
+                Join the Zion AI Partner Program and start earning rewards
+              </p>
+            </div>
+          )}
+          <form onSubmit={handleFormSubmit} className="space-y-4" noValidate>
+          {/* Show Health Check Warning */}
+          {healthCheckError && (
+            <Alert variant="destructive" className="border-yellow-500 bg-yellow-50 text-yellow-900">
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription className="flex items-center justify-between">
+                <span>{healthCheckError}. You can still try to sign up, but it may fail.</span>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={performHealthCheck}
+                  disabled={healthCheckLoading}
+                  className="ml-2 text-xs"
+                >
+                  {healthCheckLoading ? 'Checking...' : 'Retry'}
+                </Button>
+              </AlertDescription>
+            </Alert>
+          )}
+          
+          {/* Show Success message */}
+          {successMessage && (
+            <Alert className="border-green-500 bg-green-50 text-green-900" data-testid="success-alert">
+              {emailVerificationRequired ? <Mail className="h-4 w-4" /> : <CheckCircle className="h-4 w-4" />}
+              <AlertDescription>{successMessage}</AlertDescription>
+            </Alert>
+          )}
+          
+          {/* Show Error message */}
+          {errorMessage && (
+            <Alert variant="destructive" data-testid="error-alert">
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription>{errorMessage}</AlertDescription>
+            </Alert>
+          )}
+          
+          {emailVerificationRequired && (
+            <Alert className="border-blue-500 bg-blue-50 text-blue-900">
+              <Mail className="h-4 w-4" />
+              <AlertDescription>
+                Before you can log in, please click the verification link in the email we sent to <strong>{formik.values.email}</strong>.
+              </AlertDescription>
+            </Alert>
+          )}
+          
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium">
+              Full Name
+            </label>
+            <Input
+              id="name"
+              name="name"
+              data-testid="name-input"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              disabled={loading || emailVerificationRequired}
+            />
+            {formik.touched.name && formik.errors.name && (
+              <div className="text-red-500 text-sm">{formik.errors.name}</div>
+            )}
+          </div>
+          
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium">
+              Email address
+            </label>
+            <Input
+              id="email"
+              type="email"
+              name="email"
+              data-testid="email-input"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              disabled={loading || emailVerificationRequired}
+            />
+            {formik.touched.email && formik.errors.email && (
+              <div className="text-red-500 text-sm">{formik.errors.email}</div>
+            )}
+          </div>
+          
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium">
+              Password
+            </label>
+          <Input
+            id="password"
+            type="password"
+            name="password"
+            data-testid="password-input"
+            value={formik.values.password}
+            onChange={formik.handleChange}
+            disabled={loading || emailVerificationRequired}
+          />
+          <PasswordStrengthMeter password={formik.values.password} />
+          {formik.touched.password && formik.errors.password && (
+            <div className="text-red-500 text-sm">{formik.errors.password}</div>
+          )}
+        </div>
+          
+          <div>
+            <label htmlFor="confirm" className="block text-sm font-medium">
+              Confirm Password
+            </label>
+            <Input
+              id="confirm"
+              type="password"
+              name="confirm"
+              data-testid="confirm-password-input"
+              value={formik.values.confirm}
+              onChange={formik.handleChange}
+              disabled={loading || emailVerificationRequired}
+            />
+            {formik.touched.confirm && formik.errors.confirm && (
+              <div className="text-red-500 text-sm">{formik.errors.confirm}</div>
+            )}
+          </div>
+          
+          <div className="flex items-center space-x-2">
+            <input
+              id="terms"
+              name="terms"
+              type="checkbox"
+              data-testid="terms-checkbox"
+              checked={formik.values.terms}
+              onChange={formik.handleChange}
+              disabled={loading || emailVerificationRequired}
+            />
+            <label htmlFor="terms" className="text-sm">
+              I agree to the{' '}
+              <Link href="/terms" className="underline">Terms of Service</Link>{' '}
+              and{' '}
+              <Link href="/privacy" className="underline">Privacy Policy</Link>
+            </label>
+          </div>
+          {formik.touched.terms && formik.errors.terms && (
+            <div className="text-red-500 text-sm">{formik.errors.terms}</div>
+          )}
+          
+          {!emailVerificationRequired ? (
+            <Button 
+              type="submit" 
+              disabled={loading} 
+              data-testid="signup-submit"
+              className={healthCheckError ? 'bg-yellow-600 hover:bg-yellow-700' : ''}
+            >
+              {loading ? (
+                <>
+                  <LoadingSpinner size="sm" className="mr-2" />
+                  Creating Account...
+                </>
+              ) : (
+                healthCheckError ? 'Try Creating Account' : 'Create Account'
+              )}
+            </Button>
+          ) : (
+            <div className="space-y-2">
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full"
+                onClick={() => router.push('/login')}
+              >
+                Go to Login
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full"
+                onClick={() =>
+                  router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
+                }
+              >
+                Check Verification Status
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                className="w-full text-sm"
+                onClick={() => {
+                  setEmailVerificationRequired(false);
+                  setSuccessMessage('');
+                }}
+              >
+                Try Different Email
+              </Button>
+            </div>
+          )}
+          
+          {/* Additional help text when service issues are detected */}
+          {healthCheckError && (
+            <div className="text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded">
+              <p>⚠️ We detected some authentication service issues.</p>
+              <p>If signup fails, please try again in a few minutes or contact support.</p>
+            </div>
+          )}
+          </form>
+          {!emailVerificationRequired && (
+            <div className="mt-6">
+              <AuthButtons providers={["google", "github"]} />
+            </div>
+          )}
+        </div>
+      </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto"
+        >
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Join <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Zion Tech Group</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Create your account and unlock access to cutting-edge AI solutions, micro SAAS platforms, and enterprise IT services.
+            </p>
+          </div>
+
+          {/* Benefits Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+          >
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                className="text-center p-6 bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl border border-slate-600"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Account Type Selection */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mb-12"
+          >
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">Choose Your Account Type</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {accountTypes.map((type) => (
+                <div
+                  key={type.id}
+                  className={`p-6 rounded-2xl border-2 cursor-pointer transition-all duration-300 ${
+                    formData.accountType === type.id
+                      ? 'border-cyan-500 bg-cyan-500/10'
+                      : 'border-slate-600 bg-slate-800/50 hover:border-slate-500'
+                  }`}
+                  onClick={() => setFormData(prev => ({ ...prev, accountType: type.id }))}
+                >
+                  <div className="text-center">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mb-4">
+                      <type.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{type.title}</h3>
+                    <p className="text-gray-300 text-sm mb-4">{type.description}</p>
+                    <ul className="space-y-2">
+                      {type.features.map((feature, index) => (
+                        <li key={index} className="flex items-center gap-2 text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-cyan-400" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Multi-step Form */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl border border-slate-600 p-8"
+          >
+            {/* Progress Bar */}
+            <div className="mb-8">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-white font-medium">Step {step} of 3</span>
+                <span className="text-cyan-400 font-medium">{Math.round((step / 3) * 100)}% Complete</span>
+              </div>
+              <div className="w-full bg-slate-600 rounded-full h-2">
+                <div
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full transition-all duration-300"
+                  style={{ width: `${(step / 3) * 100}%` }}
+                ></div>
+              </div>
+            </div>
+
+            <form onSubmit={handleSubmit}>
+              {step === 1 && (
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  className="space-y-6"
+                >
+                  <h3 className="text-2xl font-bold text-white mb-6">Personal Information</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-white font-medium mb-2">First Name</label>
+                      <input
+                        type="text"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                        placeholder="Enter your first name"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-white font-medium mb-2">Last Name</label>
+                      <input
+                        type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                        placeholder="Enter your last name"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-white font-medium mb-2">Email Address</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                      placeholder="Enter your email address"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-white font-medium mb-2">Phone Number</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+                </motion.div>
+              )}
+
+              {step === 2 && (
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  className="space-y-6"
+                >
+                  <h3 className="text-2xl font-bold text-white mb-6">Company Information</h3>
+                  
+                  <div>
+                    <label className="block text-white font-medium mb-2">Company Name</label>
+                    <input
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                      placeholder="Enter your company name"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-white font-medium mb-2">Website</label>
+                    <input
+                      type="url"
+                      name="website"
+                      value={formData.website}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                      placeholder="https://yourcompany.com"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-white font-medium mb-2">Password</label>
+                      <div className="relative">
+                        <input
+                          type={showPassword ? 'text' : 'password'}
+                          name="password"
+                          value={formData.password}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 pr-12"
+                          placeholder="Create a strong password"
+                          required
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowPassword(!showPassword)}
+                          className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                        >
+                          {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                        </button>
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-white font-medium mb-2">Confirm Password</label>
+                      <div className="relative">
+                        <input
+                          type={showConfirmPassword ? 'text' : 'password'}
+                          name="confirmPassword"
+                          value={formData.confirmPassword}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 pr-12"
+                          placeholder="Confirm your password"
+                          required
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                          className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                        >
+                          {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+
+              {step === 3 && (
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  className="space-y-6"
+                >
+                  <h3 className="text-2xl font-bold text-white mb-6">Terms & Preferences</h3>
+                  
+                  <div className="space-y-4">
+                    <label className="flex items-start gap-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="agreeToTerms"
+                        checked={formData.agreeToTerms}
+                        onChange={handleInputChange}
+                        className="mt-1 w-5 h-5 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
+                        required
+                      />
+                      <span className="text-gray-300 text-sm">
+                        I agree to the{' '}
+                        <a href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
+                          Terms of Service
+                        </a>{' '}
+                        and{' '}
+                        <a href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
+                          Privacy Policy
+                        </a>
+                      </span>
+                    </label>
+
+                    <label className="flex items-start gap-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="marketingEmails"
+                        checked={formData.marketingEmails}
+                        onChange={handleInputChange}
+                        className="mt-1 w-5 h-5 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
+                      />
+                      <span className="text-gray-300 text-sm">
+                        I would like to receive updates about new features, services, and industry insights
+                      </span>
+                    </label>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-xl p-4">
+                    <h4 className="text-white font-semibold mb-2">What happens next?</h4>
+                    <ul className="text-gray-300 text-sm space-y-1">
+                      <li>• Verify your email address</li>
+                      <li>• Complete your profile setup</li>
+                      <li>• Access our platform and services</li>
+                      <li>• Connect with our support team</li>
+                    </ul>
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Navigation Buttons */}
+              <div className="flex justify-between mt-8">
+                {step > 1 && (
+                  <button
+                    type="button"
+                    onClick={prevStep}
+                    className="px-6 py-3 border border-slate-600 text-white rounded-xl hover:border-slate-500 transition-colors"
+                  >
+                    Previous
+                  </button>
+                )}
+                
+                <div className="ml-auto">
+                  {step < 3 ? (
+                    <button
+                      type="button"
+                      onClick={nextStep}
+                      className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105"
+                    >
+                      Next Step
+                    </button>
+                  ) : (
+                    <button
+                      type="submit"
+                      className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105"
+                    >
+                      Create Account
+                    </button>
+                  )}
+                </div>
+              </div>
+            </form>
+          </motion.div>
+
+          {/* Login Link */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="text-center mt-8"
+          >
+            <p className="text-gray-300">
+              Already have an account?{' '}
+              <a href="/login" className="text-cyan-400 hover:text-cyan-300 underline font-medium">
+                Sign in here
+              </a>
+            </p>
+          </motion.div>
+        </motion.div>
+      </div>
+    </div>
+=======
+    </AuthLayout>
+  );
 }

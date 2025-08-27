@@ -1,12 +1,7 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react'
 
-type ContactInfo = { phone: string; email: string; address: string };
-<<<<<<< HEAD
-export type WhitelabelConfig = {
-=======
 
 type WhitelabelConfig = {
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 	companyName: string;
 	logo: string;
 	primaryColor: string;
@@ -15,6 +10,20 @@ type WhitelabelConfig = {
 	isWhitelabel: boolean;
 	contactInfo: ContactInfo;
 };
+=======
+export type WhitelabelConfig = {
+	companyName: string
+	logo: string
+	primaryColor: string
+	secondaryColor: string
+	domain: string
+	isWhitelabel: boolean
+	contactInfo: {
+		phone: string
+		email: string
+		address: string
+	}
+}
 
 const defaultConfig: WhitelabelConfig = {
 	companyName: 'Zion Tech Group',
@@ -28,19 +37,22 @@ const defaultConfig: WhitelabelConfig = {
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 	},
-};
-
-const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig);
-export const useWhitelabel = () => useContext(WhitelabelContext);
-
-<<<<<<< HEAD
-export function WhitelabelProvider({ children, config = {} as Partial<WhitelabelConfig> }: { children: ReactNode; config?: Partial<WhitelabelConfig> }) {
-	const mergedConfig: WhitelabelConfig = { ...defaultConfig, ...config, contactInfo: { ...defaultConfig.contactInfo, ...config.contactInfo } } as WhitelabelConfig;
-	return <WhitelabelContext.Provider value={mergedConfig}>{children}</WhitelabelContext.Provider>;
-}
-=======
 export const WhitelabelProvider = ({ children, config = {} as Partial<WhitelabelConfig> }: { children: ReactNode; config?: Partial<WhitelabelConfig> }) => {
 	const mergedConfig: WhitelabelConfig = { ...defaultConfig, ...config } as WhitelabelConfig;
 	return <WhitelabelContext.Provider value={mergedConfig}>{children}</WhitelabelContext.Provider>;
 };
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+}
+
+const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig)
+
+export const useWhitelabel = () => useContext(WhitelabelContext)
+
+export function WhitelabelProvider({ children, config }: { children: ReactNode; config?: Partial<WhitelabelConfig> }) {
+	const mergedConfig = { ...defaultConfig, ...(config || {}) }
+	return (
+		<WhitelabelContext.Provider value={mergedConfig}>
+			{children}
+		</WhitelabelContext.Provider>
+	)
+}

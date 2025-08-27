@@ -15,10 +15,18 @@ interface PerformanceOptimizerProps {
   className?: string;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    cumulativeLayoutShift: 0,
+    firstInputDelay: 0,
+    timeToInteractive: 0
+  });
   const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationComplete, setOptimizationComplete] = useState(false);
+  const [optimizationStatus, setOptimizationStatus] = useState<string>('idle');
+  const [showMetrics, setShowMetrics] = useState(false);
 
   // Performance monitoring
   const measurePerformance = useCallback(() => {
@@ -80,6 +88,12 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
   const registerServiceWorker = useCallback(async () => {
     if ('serviceWorker' in navigator) {
       try {
+        // Unregister any existing service workers first
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        for (const registration of registrations) {
+          await registration.unregister();
+        }
+        
         const registration = await navigator.serviceWorker.register('/sw.js');
         console.log('Service Worker registered:', registration);
       } catch (error) {
@@ -136,7 +150,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
     registerServiceWorker();
   }, [measurePerformance, implementLazyLoading, registerServiceWorker]);
 
-  const getPerformanceScore = (metrics: PerformanceMetrics) => {
+  const getPerformanceScore = (): number => {
     let score = 100;
     
     if (metrics.loadTime > 3000) score -= 20;
@@ -153,6 +167,9 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
     if (score >= 60) return { grade: 'D', color: 'text-orange-600', bg: 'bg-orange-100' };
     return { grade: 'F', color: 'text-red-600', bg: 'bg-red-100' };
   };
+
+  const performanceScore = getPerformanceScore();
+  const performanceGrade = getPerformanceGrade(performanceScore);
 
   return (
     <div className={`space-y-6 ${className}`}>

@@ -1,0 +1,186 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+<<<<<<< HEAD
+=======
+    branches: [main]
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
+  workflow_dispatch:
+
+permissions:
+  contents: read
+<<<<<<< HEAD
+=======
+  deployments: write
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+<<<<<<< HEAD
+    needs: [ci]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+=======
+=======
+    environment: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+<<<<<<< HEAD
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build project
+        run: npm run build
+      
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
+
+      - name: Install dependencies
+        run: npm ci
+
+<<<<<<< HEAD
+      - name: Run linting
+        run: npm run lint
+        continue-on-error: true
+
+      - name: Run type checking
+        run: npm run type-check
+
+      - name: Build project
+        run: npm run build
+
+      - name: Verify build output
+=======
+      - name: Run tests
+        run: npm run test:ci
+        continue-on-error: true
+
+      - name: Build project
+        run: npm run build
+
+      - name: Verify build
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
+        run: |
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
+          fi
+<<<<<<< HEAD
+          echo "Build successful - dist folder created"
+          
+          # Check for essential files
+          if [ -f dist/index.html ]; then
+            echo "✓ index.html found"
+          else
+            echo "✗ index.html not found"
+            exit 1
+          fi
+          
+          if [ -d dist/assets ]; then
+            echo "✓ assets folder found"
+          else
+            echo "✗ assets folder not found"
+            exit 1
+          fi
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-build
+          path: dist/
+          retention-days: 30
+=======
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-files
+          path: dist/
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true
+
+      - name: Deploy to Netlify (if configured)
+        if: env.NETLIFY_SITE_ID != ''
+        uses: nwtgck/actions-netlify@v2.0
+        with:
+          publish-dir: './dist'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+      - name: Deploy to Vercel (if configured)
+        if: env.VERCEL_TOKEN != ''
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: ./
+          vercel-args: '--prod'
+
+      - name: Deploy success notification
+        run: |
+          echo "🚀 Deployment completed successfully!"
+          echo "Build artifacts uploaded and ready for deployment"
+          echo "Configure deployment platforms (Netlify, Vercel, etc.) for automatic deployment"
+=======
+          echo "Build completed successfully"
+          ls -la dist/
+
+      - name: Deploy to production
+        run: |
+          echo "Deployment completed successfully"
+          echo "Build artifacts are ready in the dist/ directory"
+        # Add your deployment commands here
+        # Examples:
+        # - AWS S3: aws s3 sync dist/ s3://your-bucket
+        # - Vercel: npx vercel --prod
+        # - Netlify: npx netlify-cli deploy --prod --dir=dist
+
+      - name: Create deployment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const deployment = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.sha,
+              environment: 'production',
+              description: 'Production deployment',
+              auto_merge: false,
+              required_contexts: []
+            });
+            console.log('Deployment created:', deployment.data.id);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15

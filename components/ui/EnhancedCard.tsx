@@ -1,13 +1,8 @@
 import { ReactNode } from "react";
 
-interface EnhancedCardProps {
-  children: ReactNode;
-  className?: string;
-}
-
-export default function EnhancedCard({ children, className = "bg-white rounded-lg shadow-md p-6" }: EnhancedCardProps) {
+export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={className}>
+    <div className={["card-base p-4", className].join(' ')}>
       {children}
     </div>
   );

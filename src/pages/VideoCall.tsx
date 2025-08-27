@@ -5,74 +5,6 @@ import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 export default function VideoCall() {
-<<<<<<< HEAD
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
-  const { roomId } = useParams();
-  const navigate = useNavigate();
-  const [isJoining, setIsJoining] = useState(false);
-  const [hasJoined, setHasJoined] = useState(false);
-  const [participants, setParticipants] = useState<Array<{
-    id: string;
-    name: string;
-    avatar?: string;
-    isMuted?: boolean;
-    isVideoEnabled?: boolean;
-    isScreenSharing?: boolean;
-    isHost?: boolean;
-  }>>([
-    {
-      id: 'user-1',
-      name: 'You',
-      isVideoEnabled: true,
-      isMuted: false
-    }
-  ]);
-
-  const handleJoinCall = () => {
-    setIsJoining(true);
-    // Simulate connection delay
-    setTimeout(() => {
-      setHasJoined(true);
-      setIsJoining(false);
-      toast.success("Call joined", {
-        description: `You have joined meeting room ${roomId}`
-      });
-    }, 1500);
-  };
-
-  const handleLeaveCall = () => {
-    setHasJoined(false);
-    toast.info("Call ended", {
-      description: "You have left the meeting"
-    });
-    
-    // Navigate back after a short delay
-    setTimeout(() => {
-      navigate(-1);
-    }, 1500);
-  };
-  
-  const simulateUserJoining = () => {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service
-    const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ];
-    
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    
-    if (!participants.find(p => p.id === randomUser.id)) {
-      setParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`);
-    }
-  };
-
-  return (
-    <>
-      <SEOHead title={`Video Call - Room ${roomId}`} description="Zion video call" />
-=======
     // useParams is typed as `any` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
     const { roomId } = useParams();
@@ -123,7 +55,6 @@ export default function VideoCall() {
     };
     return (<>
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
         {!hasJoined ? (<div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">

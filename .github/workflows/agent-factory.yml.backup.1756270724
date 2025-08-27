@@ -1,0 +1,180 @@
+name: Link Checker
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: link-checker
+  cancel-in-progress: false
+
+jobs:
+  check-links:
+    name: Check External Links
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+<<<<<<< HEAD
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+=======
+      - uses: actions/checkout@v4
+      - id: queue
+        name: Read queue length
+        run: |
+          file="state/queue.json"
+          if [ ! -f "$file" ]; then 
+            mkdir -p state && echo '[]' > "$file"
+          fi
+          echo "len=$(jq 'length' "$file")" >> "$GITHUB_OUTPUT"
+      - id: mk
+        name: Compute shard matrix
+        env:
+          LEN: ${{ steps.queue.outputs.len }}
+          MAX: ${{ github.event.inputs.max_shards || '16' }}
+        run: |
+          length=${LEN:-0}
+          cap=${MAX:-8}
+          if [ "$length" -lt 50 ]; then k=0; elif [ "$length" -lt 200 ]; then k=1; elif [ "$length" -lt 800 ]; then k=2; elif [ "$length" -lt 2000 ]; then k=3; else k=4; fi
+          shards=$(( 1<<k ))
+          if [ "$shards" -lt 1 ]; then shards=1; fi
+          if [ "$shards" -gt "$cap" ]; then shards=$cap; fi
+          jq -n --argjson shards "$shards" '{include: [range(0; $shards) | {shard: ., num_shards: $shards}]}' | tee matrix.json
+          echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
+      - id: depth
+        run: echo "depth=${{ github.event.inputs.max_depth || '3' }}" >> "$GITHUB_OUTPUT"
+
+  agent:
+    needs: [generate-matrix]
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 16
+      matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix).include }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Partition queue for this shard
+        id: part
+        env:
+          SHARD: ${{ matrix.shard }}
+          NUM_SHARDS: ${{ matrix.num_shards }}
+        run: |
+          file="state/queue.json"
+          if [ ! -f "$file" ]; then 
+            mkdir -p state && echo '[]' > "$file"
+          fi
+          jq -r --argjson s "$SHARD" --argjson n "$NUM_SHARDS" '
+            to_entries | map(select(.key % $n == $s)) | map(.value) | .[]
+          ' "$file" > shard_urls.txt || true
+          wc -l shard_urls.txt || true
+          if [ ! -s shard_urls.txt ]; then 
+            echo "No URLs for this shard"
+            echo '{}' > report.json
+            exit 0
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install linkinator
+        run: npm install -g linkinator
+      
+      - name: Run crawler (linkinator) on shard
+        run: |
+          set -e
+          urls=$(paste -sd' ' shard_urls.txt || true)
+          if [ -z "$urls" ]; then 
+            echo '{}' > report.json
+            exit 0
+          fi
+          npx linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json || true
+
+      - name: Upload shard report
+        uses: actions/upload-artifact@v4
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install linkinator
+        run: npm install -g linkinator
+
+      - name: Check external links
+        run: |
+          # Create a simple list of external links to check
+          cat > external_links.txt << EOF
+          https://ziontechgroup.com
+          https://github.com/ziontechgroup
+          https://www.linkedin.com/company/zion-marketplace
+          https://www.facebook.com/zionmarketplace
+          https://instagram.com/ziontechgroup
+          https://twitter.com/ziontechgroup
+          EOF
+          
+          # Run linkinator on the external links
+          linkinator external_links.txt --format json > link_report.json || true
+
+      - name: Analyze results
+        run: |
+          if [ -f link_report.json ]; then
+            # Count broken links
+            broken_count=$(jq '.links[] | select(.state=="BROKEN") | length' link_report.json 2>/dev/null || echo "0")
+            echo "Broken links found: $broken_count"
+            
+            # Create summary
+            echo "# Link Check Report" > LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "Generated on: $(date)" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "## Summary" >> LINK_REPORT.md
+            echo "- Total links checked: $(jq '.links | length' link_report.json 2>/dev/null || echo "0")" >> LINK_REPORT.md
+            echo "- Broken links: $broken_count" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            
+            if [ "$broken_count" -gt 0 ]; then
+              echo "## Broken Links" >> LINK_REPORT.md
+              echo "| URL | Status |" >> LINK_REPORT.md
+              echo "|-----|--------|" >> LINK_REPORT.md
+              jq -r '.links[] | select(.state=="BROKEN") | "| \(.url) | \(.status // "unknown") |"' link_report.json >> LINK_REPORT.md 2>/dev/null || echo "| Error parsing results | |" >> LINK_REPORT.md
+            else
+              echo "## Status" >> LINK_REPORT.md
+              echo "✅ All external links are working correctly!" >> LINK_REPORT.md
+            fi
+          else
+            echo "# Link Check Report" > LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "Generated on: $(date)" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            echo "## Error" >> LINK_REPORT.md
+            echo "❌ Failed to generate link report" >> LINK_REPORT.md
+          fi
+
+      - name: Create issue for broken links
+        if: failure()
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "External link check failed - broken links detected"
+          content-filepath: LINK_REPORT.md
+          labels: link-check, automated, broken-links
+          assignees: ''
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-report
+          path: |
+            LINK_REPORT.md
+            link_report.json
+            external_links.txt
+          retention-days: 30

@@ -1,7 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { SEO } from '../../components/SEO';
 import { Server, Network, Database, Shield, Zap, Monitor, Wifi, Cloud } from 'lucide-react';
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 
 const ITInfrastructure: React.FC = () => {
   const infrastructureServices = [
@@ -53,6 +63,48 @@ const ITInfrastructure: React.FC = () => {
         keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
         canonical="https://ziontechgroup.com/services/infrastructure"
       />
+<<<<<<< HEAD
+=======
+      title: "Network Infrastructure",
+      description: "Design, implement, and maintain robust network solutions",
+      features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
+      icon: "🌐"
+    },
+    {title}: "Server Management",
+      description: "Comprehensive server infrastructure and management services",
+      features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"],
+      icon: "🖥️"
+    },
+    {title}: "Storage Solutions",
+      description: "Scalable storage infrastructure for growing businesses",
+      features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"],
+      icon: "💾"
+    },
+    {title}: "Security Infrastructure",
+      description: "Multi-layered security infrastructure protection",
+      features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],
+      icon: "🔒"
+    }
+  ];
+
+  const infrastructureAreas = [
+    {area}: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
+    {area}: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
+    {area}: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
+    {area}: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>IT Infrastructure — Zion Tech Group | Network & System Management</title>
+        <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."/>
+        <meta property="og:title" content="IT Infrastructure — Zion Tech Group"/>
+        <meta property="og:description" content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure."/>
+        <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure"/>
+        <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure"/>
+      </Helmet>
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}

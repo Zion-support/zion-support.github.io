@@ -1,40 +1,45 @@
 import React from "react";
 import { useProjects } from "@/hooks/useProjects";
-import { SEO } from "../components/SEOHead";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { Clock, Briefcase } from "lucide-react";
+import Link from "next/link";
+import { Clock, Briefcase } from 'lucide-react'
+
 function ProjectsContent() {
-<<<<<<< HEAD
   const { projects, isLoading } = useProjects();
 
   return (
     <>
-      <SEOHead title="My Projects | Zion AI Marketplace" description="View and manage your projects." />
-=======
     const { projects, isLoading } = useProjects();
     return (<>
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
+=======
+      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">My Projects</h1>
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>
         </div>
-        {isLoading ? (<p>Loading projects...</p>) : projects.length === 0 ? (<p>You don't have any projects yet.</p>) : (<div className="grid gap-6">
-            {projects.map((project) => (<Card key={project.id}>
+        {isLoading ? (
+          <p>Loading projects...</p>
+        ) : projects.length === 0 ? (
+          <p>You don't have any projects yet.</p>
+        ) : (
+          <div className="grid gap-6">
+            {projects.map((project) => (
+              <Card key={project.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Briefcase className="h-5 w-5 text-primary"/>
+                    <Briefcase className="h-5 w-5 text-primary" />
                     <span>{project.job?.title || "Project"}</span>
                   </CardTitle>
                   <CardDescription className="flex items-center gap-2 mt-1">
                     <Badge variant="outline">{project.status}</Badge>
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                      <Clock className="h-3 w-3"/>
+                      <Clock className="h-3 w-3" />
                       Started {new Date(project.start_date).toLocaleDateString()}
                     </span>
                   </CardDescription>
@@ -46,15 +51,18 @@ function ProjectsContent() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant="outline" className="w-full">
-                    <Link to={`/project/${project.id}`}>View Details</Link>
+                    <Link href={`/project/${project.id}`}>View Details</Link>
                   </Button>
                 </CardFooter>
-              </Card>))}
-          </div>)}
+              </Card>
+            ))}
+          </div>
+        )}
       </main>
-      
-    </>);
+    </>
+  );
 }
+
 export default function Projects() {
-    return <ProjectsContent />;
+  return <ProjectsContent />;
 }

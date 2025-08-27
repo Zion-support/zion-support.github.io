@@ -2,35 +2,43 @@ import { useState, useEffect } from "react";
 import { JobsList } from "@/components/jobs/JobsList";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { JobStatus } from "@/types/jobs";
-import { SEO } from "../components/SEOHead";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react";
-=======
 import { SEO } from "@/components/SEO";
 import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+import Link from "next/link";
+import { JobStatus } from "@/types/jobs";
+import { SEO } from "@/components/SEO";
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from 'lucide-react'
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
 import { useJobs } from "@/hooks/useJobs";
 import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
+import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { useIsMobile } from "@/hooks/use-mobile";
+
 function ClientDashboardContent() {
-<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
+  const onboardingStatus = useOnboardingStatus();
+  const showAdvanced =
+    onboardingStatus.jobPosted &&
+    onboardingStatus.inviteSent &&
+    onboardingStatus.responseReceived;
 
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
-      setSelectedJobId(jobs[0].id);
-      setSelectedJobTitle(jobs[0].title);
+      const firstJob = jobs[0];
+      if (firstJob) {
+        setSelectedJobId(firstJob.id);
+        setSelectedJobTitle(firstJob.title);
+      }
     }
   }, [jobs, selectedJobId]);
 
@@ -41,11 +49,6 @@ function ClientDashboardContent() {
 
   return (
     <>
-      <SEOHead 
-        title="Client Dashboard | Zion AI Marketplace" 
-        description="Manage your jobs and talent requests in the Zion AI Marketplace." 
-      />
-=======
     const [activeTab, setActiveTab] = useState("all");
     const { jobs, isLoading } = useJobs();
     const [selectedJobId, setSelectedJobId] = useState(null);
@@ -64,8 +67,12 @@ function ClientDashboardContent() {
     };
     return (<>
       <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
+=======
+      <SEO 
+        title="Client Dashboard | Zion AI Marketplace" 
+        description="Manage your jobs and talent requests in the Zion AI Marketplace." 
+      />
       <main className="container mx-auto px-4 py-8">
         <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
           <div>
@@ -74,13 +81,13 @@ function ClientDashboardContent() {
           </div>
           <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>
-              <Link to="/hiring-tracker">
-                <Kanban className="h-4 w-4 mr-2"/> Hiring Pipeline
+              <Link href="/hiring-tracker">
+                <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline
               </Link>
             </Button>
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>
-              <Link to="/post-job">
-                <PlusCircle className="h-4 w-4 mr-2"/> Post New Job
+              <Link href="/post-job">
+                <PlusCircle className="h-4 w-4 mr-2" /> Post New Job
               </Link>
             </Button>
           </div>
@@ -89,11 +96,16 @@ function ClientDashboardContent() {
         {/* New Onboarding Steps */}
         <div className="mb-8">
           <ClientOnboardingSteps />
+          {showAdvanced && (
+            <div className="mt-6">
+              <AdvancedOnboardingSteps />
+            </div>
+          )}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value)}>
+            <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>
               <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>
                 <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>
                 <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>
@@ -103,19 +115,19 @@ function ClientDashboardContent() {
               </TabsList>
               
               <TabsContent value="all" className="mt-0">
-                <JobsList onSelectJob={handleJobSelect}/>
+                <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
               <TabsContent value="new" className="mt-0">
-                <JobsList filter="new" onSelectJob={handleJobSelect}/>
+                <JobsList filter="new" onSelectJob={handleJobSelect} />
               </TabsContent>
               <TabsContent value="in_progress" className="mt-0">
-                <JobsList filter="in_progress" onSelectJob={handleJobSelect}/>
+                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />
               </TabsContent>
               <TabsContent value="filled" className="mt-0">
-                <JobsList filter="filled" onSelectJob={handleJobSelect}/>
+                <JobsList filter="filled" onSelectJob={handleJobSelect} />
               </TabsContent>
               <TabsContent value="closed" className="mt-0">
-                <JobsList filter="closed" onSelectJob={handleJobSelect}/>
+                <JobsList filter="closed" onSelectJob={handleJobSelect} />
               </TabsContent>
             </Tabs>
           </div>
@@ -131,25 +143,32 @@ function ClientDashboardContent() {
               {/* AI Talent Suggestions */}
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
-                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary"/>
+                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />
                   AI Talent Suggestions
                 </h2>
                 
-                {selectedJobId ? (<SuggestedTalents jobId={selectedJobId}/>) : (<div className="bg-muted/30 border rounded-lg p-6 text-center">
+                {selectedJobId ? (
+                  <SuggestedTalents jobId={selectedJobId} />
+                ) : (
+                  <div className="bg-muted/30 border rounded-lg p-6 text-center">
                     <p className="text-muted-foreground">
                       Select a job to see AI-matched talent suggestions
                     </p>
-                  </div>)}
+                  </div>
+                )}
               </div>
             </div>
           </div>
         </div>
       </main>
-      
-    </>);
+    </>
+  );
 }
+
 export default function ClientDashboard() {
-    return (<ProtectedRoute>
+  return (
+    <ProtectedRoute>
       <ClientDashboardContent />
-    </ProtectedRoute>);
+    </ProtectedRoute>
+  );
 }

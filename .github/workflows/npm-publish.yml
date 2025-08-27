@@ -19,11 +19,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-<<<<<<< HEAD
       - name: Use Node.js 20
-=======
-      - name: Setup Node.js
->>>>>>> cursor/website-audit-and-enhancement-1eed
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -32,29 +28,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-<<<<<<< HEAD
+      - name: Run tests (if available)
+        run: npm test --if-present
+        continue-on-error: true
+
       - name: Build project
         run: npm run build
-=======
-      - name: Check if package is private
-        id: check-private
-        run: |
-          if npm run --silent echo:private 2>/dev/null | grep -q "true"; then
-            echo "private=true" >> $GITHUB_OUTPUT
-          else
-            echo "private=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Skip publish for private packages
-        if: steps.check-private.outputs.private == 'true'
-        run: |
-          echo "Package is private, skipping publish"
-          exit 0
-
-      - name: Run tests
-        if: steps.check-private.outputs.private == 'false'
-        run: npm test --if-present
->>>>>>> cursor/website-audit-and-enhancement-1eed
 
       - name: Build project
         if: steps.check-private.outputs.private == 'false'

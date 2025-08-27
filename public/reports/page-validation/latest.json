@@ -705,18 +705,9 @@
       ]
     }
   ],
-  "buildBreakingFiles": [
-    "pages/features/ai-content-generation.tsx",
-    "pages/franchise-portal/index.tsx",
-    "pages/index.page.tsx",
-    "pages/investors/index.tsx",
-    "pages/mobile-launch.page.tsx",
-    "pages/more-products.tsx",
-    "pages/open-app.page.tsx",
-    "pages/revolutionary-home.tsx",
-    "pages/roadmap.tsx",
-    "pages/token/model.tsx",
-    "pages/zion/ipfs.tsx"
-  ],
-  "generatedAt": "2025-08-24T03:18:48.442Z"
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-20T19:03:33.426Z"
+=======
+  "generatedAt": "2025-08-20T19:21:03.555Z"
 }

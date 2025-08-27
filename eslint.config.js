@@ -1,5 +1,4 @@
 import js from '@eslint/js';
-import globals from 'globals';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -9,45 +8,7 @@ import tsparser from '@typescript-eslint/parser';
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        React: 'readonly',
-        process: 'readonly',
-        console: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly'
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
-    },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
@@ -58,19 +19,62 @@ export default [
         }
       },
       globals: {
-        ...globals.browser,
-        ...globals.node,
-        React: 'readonly',
-        process: 'readonly',
+        // Browser globals
+        window: 'readonly',
+        document: 'readonly',
         console: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        fetch: 'readonly',
         setTimeout: 'readonly',
         setInterval: 'readonly',
         clearTimeout: 'readonly',
-        clearInterval: 'readonly'
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        performance: 'readonly',
+        navigator: 'readonly',
+        URL: 'readonly',
+        Blob: 'readonly',
+        File: 'readonly',
+        CustomEvent: 'readonly',
+        Event: 'readonly',
+        MouseEvent: 'readonly',
+        KeyboardEvent: 'readonly',
+        Node: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+        HTMLButtonElement: 'readonly',
+        HTMLImageElement: 'readonly',
+        HTMLCanvasElement: 'readonly',
+        HTMLHeadingElement: 'readonly',
+        HTMLParagraphElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        IntersectionObserver: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        PerformanceEventTiming: 'readonly',
+        WebSocket: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        Notification: 'readonly',
+        NotificationOptions: 'readonly',
+        MessageChannel: 'readonly',
+        caches: 'readonly',
+        AbortSignal: 'readonly',
+        // Node.js globals
+        process: 'readonly',
+        __dirname: 'readonly',
+        NodeJS: 'readonly',
+        // React globals
+        React: 'readonly',
+        // Additional browser globals
+        MediaQueryListEvent: 'readonly',
+        EventListener: 'readonly',
+        FileReader: 'readonly',
+        Image: 'readonly'
       }
     },
     plugins: {

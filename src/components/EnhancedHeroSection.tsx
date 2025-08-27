@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -26,11 +26,11 @@ interface HeroSlide {
   icon: React.ComponentType<any>;
 }
 
-export default function EnhancedHeroSection() {
+const EnhancedHeroSection = React.memo(() => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const heroSlides: HeroSlide[] = [
+  const heroSlides: HeroSlide[] = useMemo(() => [
     {
       title: "AI-Powered Business Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
@@ -64,7 +64,7 @@ export default function EnhancedHeroSection() {
       gradient: "from-zion-cyan via-zion-blue to-zion-purple",
       icon: Globe
     }
-  ];
+  ], []);
 
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -76,22 +76,22 @@ export default function EnhancedHeroSection() {
     return () => clearInterval(interval);
   }, [isAutoPlaying, heroSlides.length]);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     setIsAutoPlaying(false);
-  };
+  }, [heroSlides.length]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false);
-  };
+  }, [heroSlides.length]);
 
-  const goToSlide = (index: number) => {
+  const goToSlide = useCallback((index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
-  };
+  }, []);
 
-  const currentSlideData = heroSlides[currentSlide];
+  const currentSlideData = useMemo(() => heroSlides[currentSlide], [heroSlides, currentSlide]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -277,4 +277,6 @@ export default function EnhancedHeroSection() {
       </motion.div>
     </section>
   );
-}
+});
+
+export default EnhancedHeroSection;

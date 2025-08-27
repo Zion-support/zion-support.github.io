@@ -1,244 +1,251 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
-import { Button } from '../ui/button';
-const AccessibilityContext = createContext(undefined);
-export const useAccessibility = () => {
-    const context = useContext(AccessibilityContext);
-    if (!context) {
-        throw new Error('useAccessibility must be used within an AccessibilityProvider');
+import { 
+  SkipForward, 
+  Volume2, 
+  VolumeX, 
+  Eye, 
+  EyeOff, 
+  Sun, 
+  Moon,
+  Accessibility,
+  X
+} from 'lucide-react';
+
+export function AccessibilityProvider({ children }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [highContrast, setHighContrast] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState('normal');
+  const [muted, setMuted] = useState(false);
+
+  useEffect(() => {
+    // Check user preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setReducedMotion(prefersReducedMotion);
+
+    // Apply accessibility settings
+    if (highContrast) {
+      document.documentElement.classList.add('high-contrast');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
     }
-    return context;
-};
-// Accessibility Provider Component
-export const AccessibilityProvider = ({ children }) => {
-    const [highContrast, setHighContrast] = useState(false);
-    const [reducedMotion, setReducedMotion] = useState(false);
-    const [fontSize, setFontSize] = useState('medium');
-    const [colorBlindMode, setColorBlindMode] = useState('none');
-    // Load settings from localStorage
-    useEffect(() => {
-        const savedSettings = localStorage.getItem('zion-accessibility-settings');
-        if (savedSettings) {
-            const settings = JSON.parse(savedSettings);
-            setHighContrast(settings.highContrast || false);
-            setReducedMotion(settings.reducedMotion || false);
-            setFontSize(settings.fontSize || 'medium');
-            setColorBlindMode(settings.colorBlindMode || 'none');
-        }
-    }, []);
-    // Save settings to localStorage
-    useEffect(() => {
-        const settings = {
-            highContrast,
-            reducedMotion,
-            fontSize,
-            colorBlindMode
-        };
-        localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
-    }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-    // Apply accessibility settings to document
-    useEffect(() => {
-        const root = document.documentElement;
-        // High contrast mode
-        if (highContrast) {
-            root.classList.add('high-contrast');
-        }
-        else {
-            root.classList.remove('high-contrast');
-        }
-        // Reduced motion
-        if (reducedMotion) {
-            root.classList.add('reduced-motion');
-        }
-        else {
-            root.classList.remove('reduced-motion');
-        }
-        // Font size
-        root.style.fontSize = fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';
-        // Color blind mode
-        root.style.filter = colorBlindMode === 'none' ? 'none' :
-            colorBlindMode === 'protanopia' ? 'url(#protanopia)' :
-                colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :
-                    'url(#tritanopia)';
-    }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-    const toggleHighContrast = () => setHighContrast(!highContrast);
-    const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-    const value = {
-        highContrast,
-        reducedMotion,
-        fontSize,
-        colorBlindMode,
-        toggleHighContrast,
-        toggleReducedMotion,
-        setFontSize,
-        setColorBlindMode
-    };
-    return (<AccessibilityContext.Provider value={value}>
-      {children}
-    </AccessibilityContext.Provider>);
-};
-// Accessibility Panel Component
-export const AccessibilityPanel = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility();
-    // Keyboard shortcuts
-    useEffect(() => {
-        const handleKeyDown = (event) => {
-            // Ctrl/Cmd + Shift + A to open accessibility panel
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-                event.preventDefault();
-                setIsOpen(!isOpen);
-            }
-            // Ctrl/Cmd + Shift + H to toggle high contrast
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
-                event.preventDefault();
-                toggleHighContrast();
-            }
-            // Ctrl/Cmd + Shift + M to toggle reduced motion
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-                event.preventDefault();
-                toggleReducedMotion();
-            }
-        };
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [isOpen, toggleHighContrast, toggleReducedMotion]);
-    return (<>
-      {/* Floating Accessibility Button */}
-      <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label="Open Accessibility Settings">
-        <Accessibility className="w-6 h-6"/>
-      </motion.button>
 
-      {/* Accessibility Panel */}
-      <AnimatePresence>
-        {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>
-            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-              {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                  <Accessibility className="w-5 h-5 text-zion-cyan"/>
-                  Accessibility Settings
-                </h2>
-                <Button variant="ghost" size="sm" onClick={() => setIsOpen(false)} className="text-zion-slate-light hover:text-white">
-                  <X className="w-4 h-4"/>
-                </Button>
-              </div>
+    if (reducedMotion) {
+      document.documentElement.classList.add('reduced-motion');
+    } else {
+      document.documentElement.classList.remove('reduced-motion');
+    }
 
-              {/* Settings */}
-              <div className="space-y-6">
-                {/* High Contrast */}
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-white font-medium mb-1">High Contrast</h3>
-                    <p className="text-sm text-zion-slate-light">Increase contrast for better visibility</p>
-                  </div>
-                  <Button variant={highContrast ? "default" : "outline"} size="sm" onClick={toggleHighContrast} className={highContrast ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>
-                    {highContrast ? <Eye className="w-4 h-4"/> : <EyeOff className="w-4 h-4"/>}
-                  </Button>
+    // Apply font size
+    document.documentElement.style.fontSize = fontSize === 'large' ? '18px' : 
+                                           fontSize === 'xlarge' ? '20px' : '16px';
+  }, [highContrast, reducedMotion, fontSize]);
+
+  const toggleHighContrast = () => {
+    setHighContrast(!highContrast);
+  };
+
+  const toggleReducedMotion = () => {
+    setReducedMotion(!reducedMotion);
+  };
+
+  const increaseFontSize = () => {
+    if (fontSize === 'normal') setFontSize('large');
+    else if (fontSize === 'large') setFontSize('xlarge');
+  };
+
+  const decreaseFontSize = () => {
+    if (fontSize === 'xlarge') setFontSize('large');
+    else if (fontSize === 'large') setFontSize('normal');
+  };
+
+  const resetSettings = () => {
+    setHighContrast(false);
+    setReducedMotion(false);
+    setFontSize('normal');
+    setMuted(false);
+  };
+
+  return (
+    <>
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-zion-cyan focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2"
+      >
+        Skip to main content
+      </a>
+
+      {/* Accessibility toolbar */}
+      <div className="fixed top-4 right-4 z-50">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="p-3 bg-zion-cyan text-white rounded-full shadow-lg hover:bg-zion-cyan-dark transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2"
+          aria-label="Accessibility settings"
+          aria-expanded={isOpen}
+        >
+          <Accessibility className="w-5 h-5" />
+        </button>
+
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="absolute top-16 right-0 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-xl"
+            >
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-semibold text-white">Accessibility</h3>
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="text-zion-slate-light hover:text-white transition-colors"
+                    aria-label="Close accessibility panel"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
                 </div>
 
-                {/* Reduced Motion */}
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-white font-medium mb-1">Reduced Motion</h3>
-                    <p className="text-sm text-zion-slate-light">Minimize animations and transitions</p>
-                  </div>
-                  <Button variant={reducedMotion ? "default" : "outline"} size="sm" onClick={toggleReducedMotion} className={reducedMotion ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>
-                    {reducedMotion ? <VolumeX className="w-4 h-4"/> : <Volume2 className="w-4 h-4"/>}
-                  </Button>
-                </div>
-
-                {/* Font Size */}
-                <div>
-                  <h3 className="text-white font-medium mb-3">Font Size</h3>
-                  <div className="flex gap-2">
-                    {['small', 'medium', 'large'].map((size) => (<Button key={size} variant={fontSize === size ? "default" : "outline"} size="sm" onClick={() => setFontSize(size)} className={fontSize === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>
-                        {size.charAt(0).toUpperCase() + size.slice(1)}
-                      </Button>))}
-                  </div>
-                </div>
-
-                {/* Color Blind Mode */}
-                <div>
-                  <h3 className="text-white font-medium mb-3">Color Blind Support</h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    {['none', 'protanopia', 'deuteranopia', 'tritanopia'].map((mode) => (<Button key={mode} variant={colorBlindMode === mode ? "default" : "outline"} size="sm" onClick={() => setColorBlindMode(mode)} className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>
-                        {mode.charAt(0).toUpperCase() + mode.slice(1)}
-                      </Button>))}
-                  </div>
-                </div>
-
-                {/* Keyboard Shortcuts */}
-                <div className="bg-zion-blue-dark/50 rounded-lg p-4">
-                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">
-                    <Keyboard className="w-4 h-4 text-zion-cyan"/>
-                    Keyboard Shortcuts
-                  </h3>
-                  <div className="space-y-2 text-sm text-zion-slate-light">
-                    <div className="flex justify-between">
-                      <span>Open Panel:</span>
-                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + A</kbd>
+                <div className="space-y-4">
+                  {/* High Contrast */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <Eye className="w-5 h-5 text-zion-cyan" />
+                      <span className="text-white">High Contrast</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>High Contrast:</span>
-                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + H</kbd>
+                    <button
+                      onClick={toggleHighContrast}
+                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                        highContrast ? 'bg-zion-cyan' : 'bg-zion-slate'
+                      }`}
+                      aria-pressed={highContrast}
+                    >
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          highContrast ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
+                    </button>
+                  </div>
+
+                  {/* Reduced Motion */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <SkipForward className="w-5 h-5 text-zion-cyan" />
+                      <span className="text-white">Reduced Motion</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Reduced Motion:</span>
-                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>
+                    <button
+                      onClick={toggleReducedMotion}
+                      className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                        reducedMotion ? 'bg-zion-cyan' : 'bg-zion-slate'
+                      }`}
+                      aria-pressed={reducedMotion}
+                    >
+                      <span
+                        className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                          reducedMotion ? 'translate-x-6' : 'translate-x-1'
+                        }`}
+                      />
+                    </button>
+                  </div>
+
+                  {/* Font Size */}
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-3">
+                      <Eye className="w-5 h-5 text-zion-cyan" />
+                      <span className="text-white">Font Size</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <button
+                        onClick={decreaseFontSize}
+                        disabled={fontSize === 'normal'}
+                        className="px-3 py-1 bg-zion-slate rounded text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-zion-slate-light transition-colors"
+                        aria-label="Decrease font size"
+                      >
+                        A-
+                      </button>
+                      <span className="text-zion-slate-light text-sm min-w-[3rem] text-center">
+                        {fontSize === 'normal' ? 'Normal' : fontSize === 'large' ? 'Large' : 'X-Large'}
+                      </span>
+                      <button
+                        onClick={increaseFontSize}
+                        disabled={fontSize === 'xlarge'}
+                        className="px-3 py-1 bg-zion-slate rounded text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-zion-slate-light transition-colors"
+                        aria-label="Increase font size"
+                      >
+                        A+
+                      </button>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Footer */}
-              <div className="mt-6 pt-4 border-t border-zion-cyan/20">
-                <p className="text-xs text-zion-slate-light text-center">
-                  These settings are saved locally and will persist across sessions.
-                </p>
+                  {/* Reset Button */}
+                  <button
+                    onClick={resetSettings}
+                    className="w-full px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-lg hover:bg-zion-cyan/30 transition-colors duration-300"
+                  >
+                    Reset to Defaults
+                  </button>
+                </div>
               </div>
             </motion.div>
-          </motion.div>)}
-      </AnimatePresence>
-    </>);
-};
-// Skip to Content Link
-export const SkipToContent = () => (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">
-    Skip to main content
-  </a>);
-// Focus Trap Hook
-export const useFocusTrap = (isActive) => {
-    useEffect(() => {
-        if (!isActive)
-            return;
-        const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-        const container = document.activeElement?.closest('[data-focus-trap]');
-        if (!container)
-            return;
-        const focusableContent = container.querySelectorAll(focusableElements);
-        const firstFocusableElement = focusableContent[0];
-        const lastFocusableElement = focusableContent[focusableContent.length - 1];
-        const handleTabKey = (e) => {
-            if (e.key === 'Tab') {
-                if (e.shiftKey) {
-                    if (document.activeElement === firstFocusableElement) {
-                        e.preventDefault();
-                        lastFocusableElement.focus();
-                    }
-                }
-                else {
-                    if (document.activeElement === lastFocusableElement) {
-                        e.preventDefault();
-                        firstFocusableElement.focus();
-                    }
-                }
-            }
-        };
-        document.addEventListener('keydown', handleTabKey);
-        return () => document.removeEventListener('keydown', handleTabKey);
-    }, [isActive]);
-};
-// Screen Reader Only Text
-export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);
-export default AccessibilityPanel;
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Main content wrapper with ID for skip link */}
+      <main id="main-content">
+        {children}
+      </main>
+    </>
+  );
+}
+
+export function SkipLink({ href, children }) {
+  return (
+    <a
+      href={href}
+      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-zion-cyan focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2"
+    >
+      {children}
+    </a>
+  );
+}
+
+export function FocusTrap({ children, isActive = false }) {
+  useEffect(() => {
+    if (!isActive) return;
+
+    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const firstFocusableElement = document.querySelector(focusableElements);
+    const focusableContent = document.querySelectorAll(focusableElements);
+    const lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+    const handleTabKey = (e) => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstFocusableElement) {
+            lastFocusableElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastFocusableElement) {
+            firstFocusableElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleTabKey);
+    firstFocusableElement?.focus();
+
+    return () => {
+      document.removeEventListener('keydown', handleTabKey);
+    };
+  }, [isActive]);
+
+  return children;
+}

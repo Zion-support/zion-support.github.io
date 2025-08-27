@@ -18,55 +18,15 @@ export default function UltraFuturisticBackground2029() {
   const animationRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isClient) return;
-    
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    let animationFrameId: number;
-    let particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      opacity: number;
-      type: 'quantum' | 'neon' | 'hologram';
-      life: number;
-      maxLife: number;
-    }> = [];
-
-    // Initialize particles with enhanced variety
-    const initParticles = () => {
-      particles = [];
-      for (let i = 0; i < 200; i++) {
-        const type = Math.random() > 0.7 ? 'quantum' : Math.random() > 0.5 ? 'neon' : 'hologram';
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.8,
-          vy: (Math.random() - 0.5) * 0.8,
-          size: Math.random() * 3 + 1,
-          color: type === 'quantum' ? ['#00ffff', '#ff00ff', '#ffff00'][Math.floor(Math.random() * 3)] :
-                 type === 'neon' ? ['#ff0080', '#8000ff', '#00ff80'][Math.floor(Math.random() * 3)] :
-                 ['#ffffff', '#00ffff', '#ff8000'][Math.floor(Math.random() * 3)],
-          opacity: Math.random() * 0.9 + 0.1,
-          type,
-          life: Math.random() * 100,
-          maxLife: 100
-        });
-      }
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     };
 
     resizeCanvas();
@@ -238,15 +198,6 @@ export default function UltraFuturisticBackground2029() {
       animationRef.current = requestAnimationFrame(animate);
     };
 
-    // Handle window resize
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initParticles();
-    };
-
-    window.addEventListener('resize', handleResize);
-    initParticles();
     animate();
 
     return () => {
@@ -383,7 +334,6 @@ export default function UltraFuturisticBackground2029() {
         <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
           animate={{
-            rotate: 360,
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1]
           }}
