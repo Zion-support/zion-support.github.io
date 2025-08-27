@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
+import { MainSidebar } from './components/layout/MainSidebar';
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
@@ -44,7 +45,12 @@ const Training = React.lazy(() => import('./pages/Training'));
 const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
-const Documentation = React.lazy(() => import('./pages/Documentation'));
+
+// New service page imports
+const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
+const AICybersecurity = React.lazy(() => import('./pages/services/AICybersecurity'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
+const AIContentCreation = React.lazy(() => import('./pages/services/AIContentCreation'));
 
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
@@ -54,9 +60,6 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/Equipment'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const MarketplaceProducts = React.lazy(() => import('./pages/marketplace/Products'));
 const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'));
 const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipment'));
@@ -131,9 +134,12 @@ function App() {
       <div className="min-h-screen bg-futuristic">
         <AppHeader />
         
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+        <div className="flex">
+          <MainSidebar />
+          
+          <main className="flex-1 lg:ml-80">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home2026" element={<Home2026 />} />
               <Route path="/about" element={<About />} />
@@ -213,11 +219,18 @@ function App() {
               <Route path="/services/green-it" element={<GreenIT />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
               
+              {/* New service routes for missing pages */}
+              <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+              <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+              <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+              <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+              
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
+        </div>
         
         <EnhancedFuturisticFooter />
         <ChatAssistant />

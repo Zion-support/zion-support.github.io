@@ -1,14 +1,7 @@
 import React from 'react'
 import { SEO } from '@/components/SEO'
-// Prefer the existing implementation if present
-let Impl: React.ComponentType | null = null
-try {
-	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-	// @ts-ignore
-	Impl = (await import('./services/AIServices')).default
-} catch {}
 
-const Fallback: React.FC = () => (
+const AIServices: React.FC = () => (
 	<div className="min-h-screen bg-slate-950 text-white py-16">
 		<SEO title="AI Services" description="Explore our AI-powered services and solutions." />
 		<div className="container mx-auto max-w-3xl px-6">
@@ -18,5 +11,5 @@ const Fallback: React.FC = () => (
 	</div>
 )
 
-export default (Impl || Fallback)
+export default AIServices
 
