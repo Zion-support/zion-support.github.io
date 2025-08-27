@@ -104,12 +104,13 @@
     --accent: 228 12% 92%;
     --accent-foreground: 0 0% 7%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 142 71% 45%;
 
     --border: 0 0% 68%;
     --input: 0 0% 68%;
     --ring: 216 84% 53%;
+
     --sidebar-background: 228 12% 92%;
     --sidebar-foreground: 0 0% 7%;
     --sidebar-primary: 216 84% 53%;
@@ -119,241 +120,54 @@
     --sidebar-border: 0 0% 68%;
     --sidebar-ring: 216 84% 53%;
   }
-
-  .light {
-    --background: 0 0% 100%;
-    --foreground: 224 71% 4%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 224 71% 4%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71% 4%;
-
-    --primary: 262 83% 58%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 262 83% 58%;
-  }
-
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-rajdhani font-semibold;
-  }
 }
 
 @layer components {
-  /* Futuristic Neon Effects */
-  .neon-glow {
-    box-shadow: 
-      0 0 5px currentColor,
-      0 0 10px currentColor,
-      0 0 15px currentColor,
-      0 0 20px currentColor;
+  .btn-primary {
+    @apply bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold py-3 px-6 rounded-lg 
+           hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 
+           focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-opacity-50;
   }
 
-  .neon-cyan {
-    color: #22ddd2;
-    text-shadow: 
-      0 0 5px #22ddd2,
-      0 0 10px #22ddd2,
-      0 0 15px #22ddd2,
-      0 0 20px #22ddd2;
+  .btn-secondary {
+    @apply bg-transparent border-2 border-zion-cyan text-zion-cyan font-semibold py-3 px-6 rounded-lg 
+           hover:bg-zion-cyan hover:text-white transition-all duration-300 transform hover:scale-105 
+           focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-opacity-50;
   }
 
-  .neon-purple {
-    color: #8c15e9;
-    text-shadow: 
-      0 0 5px #8c15e9,
-      0 0 10px #8c15e9,
-      0 0 15px #8c15e9,
-      0 0 20px #8c15e9;
+  .card {
+    @apply bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-blue/20 rounded-xl p-6 
+           hover:border-zion-blue/40 transition-all duration-300;
   }
 
-  .neon-blue {
-    color: #2e73ea;
-    text-shadow: 
-      0 0 5px #2e73ea,
-      0 0 10px #2e73ea,
-      0 0 15px #2e73ea,
-      0 0 20px #2e73ea;
+  .input {
+    @apply bg-zion-slate-dark/50 border border-zion-blue/20 rounded-lg px-4 py-3 text-white 
+           placeholder-zion-blue/50 focus:border-zion-cyan focus:outline-none focus:ring-2 
+           focus:ring-zion-cyan/20 transition-all duration-300;
   }
 
-  /* Animated Backgrounds */
-  .bg-futuristic {
-    background: 
-      radial-gradient(circle at 20% 80%, rgba(34, 221, 210, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(140, 21, 233, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(46, 115, 234, 0.1) 0%, transparent 50%),
-      linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-    background-size: 100% 100%;
-    animation: gradient-shift 15s ease infinite;
+  .heading {
+    @apply font-orbitron text-white font-bold;
   }
 
-  .bg-mesh-gradient {
-    background: linear-gradient(45deg, #8c15e9, #22ddd2, #2e73ea, #8c15e9);
-    background-size: 400% 400%;
-    animation: gradient-shift 3s ease infinite;
-  }
-
-  /* Glass Morphism */
-  .glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  }
-
-  .glass-dark {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  }
-
-  /* Floating Elements */
-  .float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .float-delayed {
-    animation: float 6s ease-in-out infinite;
-    animation-delay: 2s;
-  }
-
-  .float-slow {
-    animation: float 8s ease-in-out infinite;
-  }
-
-  /* Hover Effects */
-  .hover-lift {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
-
-  .hover-glow:hover {
-    box-shadow: 0 0 30px rgba(34, 221, 210, 0.6);
-  }
-
-  /* Text Gradients */
   .text-gradient {
-    background: linear-gradient(45deg, #22ddd2, #8c15e9, #2e73ea);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
+    @apply bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent;
   }
 
-  .text-gradient-cyan {
-    background: linear-gradient(45deg, #22ddd2, #7aeae4);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .neon-glow {
+    @apply shadow-[0_0_20px_rgba(56,189,248,0.5)] shadow-zion-cyan/50;
   }
 
-  .text-gradient-purple {
-    background: linear-gradient(45deg, #8c15e9, #b971f2);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .neon-glow-purple {
+    @apply shadow-[0_0_20px_rgba(168,85,247,0.5)] shadow-zion-purple/50;
   }
+}
 
-  /* Button Styles */
-  .btn-futuristic {
-    @apply relative overflow-hidden px-6 py-3 rounded-lg font-medium transition-all duration-300;
-    background: linear-gradient(45deg, #22ddd2, #8c15e9);
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
-  }
-
-  .btn-futuristic:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(34, 221, 210, 0.4);
-  }
-
-  .btn-neon {
-    @apply relative px-6 py-3 rounded-lg font-medium transition-all duration-300;
-    background: transparent;
-    border: 2px solid #22ddd2;
-    color: #22ddd2;
-  }
-
-  .btn-neon:hover {
-    background: #22ddd2;
-    color: #000;
-    box-shadow: 0 0 20px rgba(34, 221, 210, 0.6);
-  }
-
-  /* Card Styles */
-  .card-futuristic {
-    @apply relative overflow-hidden rounded-xl p-6 transition-all duration-300;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .card-futuristic:hover {
-    transform: translateY(-5px);
-    border-color: rgba(34, 221, 210, 0.5);
-    box-shadow: 0 20px 40px rgba(34, 221, 210, 0.2);
-  }
-
-  /* Navigation Styles */
-  .nav-link {
-    @apply relative px-4 py-2 text-sm font-medium transition-all duration-300;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  .nav-link:hover {
-    color: #22ddd2;
-  }
-
-  .nav-link::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-zion-cyan to-zion-purple transition-all duration-300;
-  }
-
-  .nav-link:hover::after {
-    width: 100%;
-  }
-
-  /* Responsive Grid */
-  .grid-futuristic {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  /* Loading Animations */
-  .loading-dots {
-    display: inline-block;
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .loading-dots::after {
@@ -444,5 +258,23 @@
 
   .heading-responsive {
     @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+  }
+
+  /* Additional animation utilities from feature branch */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
   }
 }

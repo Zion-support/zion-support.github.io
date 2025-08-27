@@ -46,6 +46,11 @@ const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipm
 const MarketplaceServices = React.lazy(() => import('./pages/marketplace/Services'));
 const LoginPage = React.lazy(() => import('./pages/Login'));
 
+// New 2025 service imports
+const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
+const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
+const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
+
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
@@ -186,6 +191,16 @@ function App() {
               <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
               <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
               <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
+              
+              {/* New 2025 service routes */}
+              <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
+              <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
+              
+              {/* New 2026 service routes */}
+              <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
+              <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
+              <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
+              <Route path="/pricing-2026" element={<ComprehensivePricing2026 />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
