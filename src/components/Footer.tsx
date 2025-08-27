@@ -36,7 +36,14 @@ import {
   GraduationCap,
   BarChart3,
   Sparkles,
-  Award
+  Award,
+  Calendar,
+  Star,
+  ShoppingCart,
+  Smartphone,
+  Package,
+  Server,
+  Code
 } from 'lucide-react';
 
 export function Footer() {
@@ -57,7 +64,25 @@ export function Footer() {
         { name: 'Solutions', path: '/solutions', icon: Target },
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'Blog', path: '/blog', icon: Newspaper },
-        { name: 'Contact', path: '/contact', icon: Phone }
+        { name: 'Contact', path: '/contact', icon: Phone },
+        { name: 'Team', path: '/team', icon: Users },
+        { name: 'News', path: '/news', icon: Newspaper },
+        { name: 'Events', path: '/events', icon: Calendar }
+      ]
+    },
+    {
+      title: 'Core Services',
+      icon: Zap,
+      links: [
+        { name: 'Services Overview', path: '/services', icon: Zap },
+        { name: '2026 Services', path: '/services2026', icon: Star },
+        { name: '2027 Services', path: '/services2027', icon: Star },
+        { name: 'AI Services', path: '/ai-services', icon: Brain },
+        { name: 'IT Services', path: '/it-services', icon: Building },
+        { name: 'Micro SaaS', path: '/micro-saas', icon: ShoppingCart },
+        { name: 'Comprehensive Services', path: '/comprehensive-services', icon: Zap },
+        { name: 'Mobile Launch', path: '/mobile-launch', icon: Smartphone },
+        { name: 'Analytics', path: '/analytics', icon: BarChart3 }
       ]
     },
     {
@@ -71,7 +96,9 @@ export function Footer() {
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
         { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
         { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp }
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
+        { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
+        { name: 'AI Content Generator', path: '/services/ai-content-generator', icon: PenTool }
       ]
     },
     {
@@ -81,38 +108,43 @@ export function Footer() {
         { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
         { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
         { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Cpu },
-        { name: 'Space Technology', path: '/services/space-tech', icon: Rocket },
-        { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
         { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
         { name: 'Green IT Solutions', path: '/services/green-it', icon: Heart },
-        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Shield }
-      ]
-    },
-    {
-      title: 'Core Services',
-      icon: Zap,
-      links: [
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Shield },
+        { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Cloud },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
-        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
-        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
-        { name: 'IT Services', path: '/it-services', icon: Building },
-        { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Zap },
-        { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
-        { name: 'All Services', path: '/services', icon: Zap }
+        { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3 }
       ]
     },
     {
-      title: 'Innovation Hub',
-      icon: Sparkles,
+      title: 'Industry Solutions',
+      icon: Building,
       links: [
-        { name: 'Innovative Services 2028', path: '/innovative-services-showcase-2028', icon: Sparkles },
-        { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: DollarSign },
-        { name: 'Ultimate Services 2026', path: '/ultimate-services-showcase-2026', icon: Rocket },
-        { name: 'Services 2026', path: '/services-2026', icon: Target },
-        { name: 'New Services 2025', path: '/new-services-showcase-2025', icon: TrendingUp },
-        { name: 'Ultimate Services 2025', path: '/ultimate-services-showcase-2025', icon: Award },
-        { name: 'Comprehensive Services 2025', path: '/comprehensive-services-landing-2025', icon: Globe }
+        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
+        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
+        { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign },
+        { name: 'Government Solutions', path: '/solutions/government', icon: Building },
+        { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart },
+        { name: 'Education Solutions', path: '/solutions/education', icon: GraduationCap },
+        { name: 'Space Technology', path: '/services/space-tech', icon: Rocket }
+      ]
+    },
+    {
+      title: 'Marketplace & Resources',
+      icon: ShoppingCart,
+      links: [
+        { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
+        { name: 'Products', path: '/marketplace/products', icon: Package },
+        { name: 'Talent', path: '/marketplace/talent', icon: Users },
+        { name: 'Equipment', path: '/marketplace/equipment', icon: Server },
+        { name: 'Services', path: '/marketplace/services', icon: Zap },
+        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'Developers', path: '/developers', icon: Code },
+        { name: 'White Papers', path: '/white-papers', icon: FileText },
+        { name: 'Webinars', path: '/webinars', icon: Video },
+        { name: 'Training', path: '/training', icon: GraduationCap }
       ]
     }
   ];
