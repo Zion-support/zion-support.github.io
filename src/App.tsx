@@ -36,6 +36,9 @@ const Team = createLazyComponent(() => import('./pages/Team'));
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
+const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const Services2026 = createLazyComponent(() => import('./pages/Services2026'));
+const Services2027 = createLazyComponent(() => import('./pages/Services2027'));
 
 // Additional pages
 const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
@@ -46,6 +49,10 @@ const Partners = createLazyComponent(() => import('./pages/Partners'));
 const News = createLazyComponent(() => import('./pages/News'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 const HelpCenter = createLazyComponent(() => import('./pages/HelpCenter'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
 
 // Enhanced loading component
 const EnhancedLoadingSpinner = () => (
@@ -91,6 +98,9 @@ function App() {
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
+              <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+              <Route path="/services2026" element={<Services2026 />} />
+              <Route path="/services2027" element={<Services2027 />} />
               
               {/* Additional Routes */}
               <Route path="/dashboard" element={<Dashboard />} />
@@ -101,6 +111,10 @@ function App() {
               <Route path="/news" element={<News />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/help" element={<HelpCenter />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/accessibility" element={<Accessibility />} />
               
               {/* Catch-all route */}
               <Route path="*" element={<Home />} />
