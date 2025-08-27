@@ -3,32 +3,7 @@ Allow: /
 
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
-<<<<<<< HEAD
-Sitemap: https://ziontechgroup.com/sitemap
 
-# Allow all crawlers
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /careers
-Allow: /faq
-Allow: /privacy
-Allow: /terms
-=======
->>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
-
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /private/
-Disallow: /temp/
-
-<<<<<<< HEAD
-# Crawl delay (optional)
-Crawl-delay: 1
-=======
 # Allow important pages
 Allow: /services/
 Allow: /solutions/
@@ -36,6 +11,16 @@ Allow: /about/
 Allow: /contact/
 Allow: /blog/
 Allow: /careers/
+Allow: /faq/
+Allow: /privacy/
+Allow: /terms/
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /temp/
 
 # Crawl delay (optional)
 Crawl-delay: 1
@@ -71,4 +56,3 @@ Disallow: /
 
 User-agent: Omgilibot
 Disallow: /
->>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7

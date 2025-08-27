@@ -8,6 +8,8 @@ import LoadingSpinner from './components/ui/LoadingSpinner';
 import SEO from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import Analytics from './components/Analytics';
 
 // Lazy load pages with enhanced services
 const Home = React.lazy(() => import('./pages/Home'));
@@ -145,6 +147,7 @@ function App() {
           <div className="min-h-screen bg-futuristic">
             <SEO />
             <AppHeader />
+            <Analytics />
             
             <main className="flex-1">
               <Suspense fallback={<LoadingSpinner />}>
@@ -200,6 +203,7 @@ function App() {
             <Footer />
             <ChatAssistant />
             <PerformanceOptimizer />
+            <PerformanceMonitor />
           </div>
         </Router>
       </HelmetProvider>
