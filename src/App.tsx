@@ -59,6 +59,7 @@ const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServices
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025.tsx'));
 const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025.tsx'));
+const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025.tsx'));
 
 // Admin pages
 const Admin = React.lazy(() => import('./pages/Admin.tsx'));
@@ -140,6 +141,7 @@ function App() {
             <Route path="/it-services" element={<ITServicesPage />} />
             <Route path="/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />
             <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+            <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
             
             {/* Admin Routes */}
             <Route path="/admin" element={<Admin />} />
