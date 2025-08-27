@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import Footer from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
+
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
@@ -17,10 +18,16 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+
+// Enhanced Service Pages - only the ones we created and know work
+const Q42025CuttingEdgeServicesShowcase = React.lazy(() => import('./pages/Q42025CuttingEdgeServicesShowcase'));
+const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/Zion2026InnovativeServicesShowcase'));
+
 // Loading component
 const LoadingSpinner = () => (<div className="flex items-center justify-center min-h-screen">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"></div>
   </div>);
+
 function App() {
     return (<Router>
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -42,6 +49,10 @@ function App() {
               <Route path="/green-it" element={<GreenIT />}/>
               <Route path="/partners" element={<PartnersPage />}/>
               <Route path="/login" element={<Login />}/>
+              
+              {/* Enhanced Service Routes - only the working ones */}
+              <Route path="/q4-2025-cutting-edge-services" element={<Q42025CuttingEdgeServicesShowcase />} />
+              <Route path="/zion-2026-innovative-services" element={<Zion2026InnovativeServicesShowcase />} />
             </Routes>
           </Suspense>
         </main>
@@ -51,4 +62,5 @@ function App() {
       </div>
     </Router>);
 }
+
 export default App;
