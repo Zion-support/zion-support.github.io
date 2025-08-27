@@ -1,292 +1,208 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
+  Users, 
+  TrendingUp, 
   Shield, 
-  Eye, 
-  Lock, 
-  Users,
+  Zap, 
   CheckCircle,
-  ArrowRight
+  BarChart3,
+  Globe,
+  Rocket,
+  Star,
+  Heart
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export default function Privacy() {
-  const privacyPrinciples = [
-    {
-      icon: Shield,
-      title: "Data Protection",
-      description: "We implement industry-standard security measures to protect your personal information"
-    },
-    {
-      icon: Eye,
-      title: "Transparency",
-      description: "We are clear about what data we collect and how we use it"
-    },
-    {
-      icon: Lock,
-      title: "Control",
-      description: "You have control over your personal data and can request changes or deletion"
-    },
+  const features = [
     {
       icon: Users,
-      title: "Privacy First",
-      description: "Privacy is built into everything we do, not added as an afterthought"
+      title: "Professional Excellence",
+      description: "Connect with top-tier professionals and cutting-edge solutions."
+    },
+    {
+      icon: Shield,
+      title: "Trusted Platform",
+      description: "Secure, reliable, and transparent marketplace operations."
+    },
+    {
+      icon: Zap,
+      title: "Fast & Efficient",
+      description: "Streamlined processes that save you time and money."
+    },
+    {
+      icon: Star,
+      title: "Quality Assured",
+      description: "Vetted professionals and verified service providers."
     }
   ];
 
-  const dataCategories = [
-    {
-      category: "Personal Information",
-      examples: ["Name, email address, phone number", "Company information", "Job title and role"],
-      purpose: "To provide our services and communicate with you"
-    },
-    {
-      category: "Technical Data",
-      examples: ["IP address, browser type", "Device information", "Usage analytics"],
-      purpose: "To improve our services and ensure security"
-    },
-    {
-      category: "Communication Data",
-      examples: ["Email correspondence", "Support tickets", "Feedback and surveys"],
-      purpose: "To provide customer support and improve our services"
-    }
-  ];
-
-  const yourRights = [
-    "Access your personal data",
-    "Correct inaccurate information",
-    "Request deletion of your data",
-    "Object to data processing",
-    "Data portability",
-    "Withdraw consent"
+  const benefits = [
+    "Access to top tech talent worldwide",
+    "Secure and transparent transactions",
+    "24/7 platform availability",
+    "Comprehensive service coverage",
+    "Competitive pricing and value"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="pt-24 pb-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Privacy Policy
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Your privacy is important to us. Learn how we protect and handle your information.
-            </p>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              This Privacy Policy explains how Zion Tech Group collects, uses, and protects your personal information 
-              when you use our services or visit our website.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <>
+      <SEO 
+        title="Privacy Policy | Zion Tech Group"
+        description="How we protect and handle your personal information. Experience the future of technology services and solutions."
+        keywords="privacy policy, technology, services, solutions, innovation, Zion Tech Group"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                {title}
+              </h1>
+              <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
+                How we protect and handle your personal information. Our platform connects you with the best technology 
+                solutions and professionals to drive your business forward.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300"
+                >
+                  Get Started
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-zinc-400 text-zinc-300 rounded-lg font-semibold text-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-300"
+                >
+                  Learn More
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
-      {/* Privacy Principles Section */}
-      <section className="py-20 bg-black/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Privacy Principles
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The fundamental principles that guide how we handle your personal information
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {privacyPrinciples.map((principle, index) => (
-              <motion.div
-                key={index}
-                className="text-center group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <principle.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{principle.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {principle.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+        {/* Features Section */}
+        <section className="py-20 bg-zinc-800/50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Us
+              </h2>
+              <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+                Our platform delivers exceptional value and results for businesses 
+                of all sizes and industries.
+              </p>
+            </motion.div>
 
-      {/* Data Collection Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What Data We Collect
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We collect only the information necessary to provide our services
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {dataCategories.map((category, index) => (
-              <motion.div
-                key={index}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-bold text-cyan-400 mb-4">{category.category}</h3>
-                <div className="mb-4">
-                  <h4 className="text-white font-semibold mb-2">Examples:</h4>
-                  <ul className="space-y-1">
-                    {category.examples.map((example, idx) => (
-                      <li key={idx} className="text-sm text-gray-300 flex items-center">
-                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-                        {example}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold mb-2">Purpose:</h4>
-                  <p className="text-sm text-gray-300">{category.purpose}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Your Rights Section */}
-      <section className="py-20 bg-black/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Your Privacy Rights
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              You have control over your personal information
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {yourRights.map((right, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center space-x-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700 hover:border-indigo-500/50 transition-all duration-300 group"
                 >
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-300">{right}</span>
+                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-zinc-400 leading-relaxed">
+                    {feature.description}
+                  </p>
                 </motion.div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Data Security Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                How We Protect Your Data
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Platform Benefits
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We implement comprehensive security measures to keep your information safe
+              <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+                Experience the advantages of our comprehensive technology platform.
               </p>
-            </div>
-            
-            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Technical Safeguards</h3>
-                  <ul className="space-y-2">
-                    <li className="text-gray-300 flex items-center">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                      Encryption in transit and at rest
-                    </li>
-                    <li className="text-gray-300 flex items-center">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                      Multi-factor authentication
-                    </li>
-                    <li className="text-gray-300 flex items-center">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                      Regular security audits
-                    </li>
-                    <li className="text-gray-300 flex items-center">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                      Access controls and monitoring
-                    </li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Organizational Measures</h3>
-                  <ul className="space-y-2">
-                    <li className="text-gray-300 flex items-center">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                      Employee privacy training
-                    </li>
-                    <li className="text-gray-300 flex items-center">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                      Data minimization practices
-                    </li>
-                    <li className="text-gray-300 flex items-center">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                      Incident response procedures
-                    </li>
-                    <li className="text-gray-300 flex items-center">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                      Regular policy reviews
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            </motion.div>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Questions About Privacy?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            If you have any questions about our privacy practices or want to exercise your rights, 
-            please don't hesitate to contact us.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Contact Us
-            </Link>
-            <Link 
-              to="/terms"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-            >
-              Terms of Service
-            </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex items-start space-x-4"
+                >
+                  <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
+                  <p className="text-zinc-300 text-lg">{benefit}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-12 text-center border border-indigo-500/20"
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
+                Join thousands of businesses already using our platform to succeed.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300"
+                >
+                  Start Today
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-zinc-400 text-zinc-300 rounded-lg font-semibold text-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-300"
+                >
+                  Contact Us
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

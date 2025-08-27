@@ -14,7 +14,22 @@ import {
   Users, 
   Code, 
   Lock, 
-  Rocket 
+  Rocket,
+  Cpu,
+  Network,
+  Link as LinkIcon,
+  Settings,
+  BarChart3,
+  FileText,
+  HelpCircle,
+  ShieldCheck,
+  Globe2,
+  Building2,
+  Briefcase,
+  UserCheck,
+  Server,
+  Leaf,
+  Handshake
 } from 'lucide-react';
 
 export function AppHeader() {
@@ -45,17 +60,68 @@ export function AppHeader() {
       path: '/services', 
       icon: null,
       dropdown: [
-        { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500' },
-        { name: 'Quantum Computing', path: '/services?category=quantum', icon: Zap, color: 'from-blue-500 to-cyan-500' },
-        { name: 'Blockchain & Web3', path: '/services?category=blockchain', icon: Lock, color: 'from-green-500 to-emerald-500' },
-        { name: 'IoT & Edge Computing', path: '/services?category=iot', icon: Cloud, color: 'from-orange-500 to-red-500' },
-        { name: 'AR/VR Development', path: '/services?category=ar-vr', icon: Users, color: 'from-indigo-500 to-purple-500' },
+        // AI Services
+        { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500', submenu: [
+          { name: 'Customer Success Automation', path: '/ai-customer-success-automation' },
+          { name: 'Content Marketing Automation', path: '/ai-content-marketing-automation' },
+          { name: 'Business Process Automation', path: '/ai-autonomous-business-process-automation' },
+          { name: 'Financial Fraud Detection', path: '/ai-financial-fraud-detection' },
+          { name: 'Customer Intelligence Platform', path: '/ai-customer-intelligence-platform' },
+          { name: 'Autonomous Vehicle AI', path: '/autonomous-vehicle-ai' }
+        ]},
+        { name: 'Quantum Computing', path: '/services?category=quantum', icon: Zap, color: 'from-blue-500 to-cyan-500', submenu: [
+          { name: 'Encryption Gateway', path: '/quantum-encryption-gateway' },
+          { name: 'Threat Detection', path: '/quantum-threat-detection' },
+          { name: 'Network Security', path: '/quantum-network-security' },
+          { name: 'Data Center', path: '/quantum-data-center' },
+          { name: 'Materials Discovery', path: '/quantum-materials-discovery' }
+        ]},
+        { name: 'Blockchain & Web3', path: '/services?category=blockchain', icon: LinkIcon, color: 'from-green-500 to-emerald-500', submenu: [
+          { name: 'Enterprise Platform', path: '/blockchain-enterprise-platform' }
+        ]},
+        { name: 'Autonomous IT', path: '/services?category=autonomous', icon: Settings, color: 'from-orange-500 to-red-500', submenu: [
+          { name: 'IT Operations', path: '/autonomous-it-operations' }
+        ]},
+        { name: 'IoT & Edge Computing', path: '/services?category=iot', icon: Cloud, color: 'from-indigo-500 to-purple-500' },
+        { name: 'AR/VR Development', path: '/services?category=ar-vr', icon: Users, color: 'from-pink-500 to-rose-500' },
         { name: 'FinTech Solutions', path: '/services?category=fintech', icon: Database, color: 'from-yellow-500 to-orange-500' },
-        { name: 'Green Technology', path: '/services?category=green-tech', icon: Shield, color: 'from-green-400 to-teal-500' },
-        { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' },
+        { name: 'Green Technology', path: '/services?category=green-tech', icon: Leaf, color: 'from-green-400 to-teal-500' },
+        { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Shield, color: 'from-red-500 to-pink-500' },
       ]
     },
-    { name: 'About', path: '/about', icon: null },
+    { 
+      name: 'Marketplace', 
+      path: '/marketplace', 
+      icon: null,
+      dropdown: [
+        { name: 'Talent', path: '/talent', icon: UserCheck, color: 'from-blue-500 to-cyan-500' },
+        { name: 'Equipment', path: '/equipment', icon: Server, color: 'from-green-500 to-emerald-500' },
+        { name: 'Services', path: '/services', icon: Code, color: 'from-purple-500 to-pink-500' },
+        { name: 'Green IT Solutions', path: '/green-it', icon: Leaf, color: 'from-green-400 to-teal-500' }
+      ]
+    },
+    { 
+      name: 'Company', 
+      path: '/about', 
+      icon: null,
+      dropdown: [
+        { name: 'About Us', path: '/about', icon: Building2, color: 'from-blue-500 to-cyan-500' },
+        { name: 'Partners', path: '/partners', icon: Briefcase, color: 'from-green-500 to-emerald-500' },
+        { name: 'Careers', path: '/careers', icon: Briefcase, color: 'from-purple-500 to-pink-500' },
+        { name: 'Blog', path: '/blog', icon: FileText, color: 'from-orange-500 to-red-500' }
+      ]
+    },
+    { 
+      name: 'Support', 
+      path: '/help', 
+      icon: null,
+      dropdown: [
+        { name: 'Help Center', path: '/help', icon: HelpCircle, color: 'from-blue-500 to-cyan-500' },
+        { name: 'FAQ', path: '/faq', icon: FileText, color: 'from-green-500 to-emerald-500' },
+        { name: 'System Status', path: '/status', icon: BarChart3, color: 'from-purple-500 to-pink-500' },
+        { name: 'Contact Support', path: '/contact', icon: Users, color: 'from-orange-500 to-red-500' }
+      ]
+    },
     { name: 'Contact', path: '/contact', icon: null },
   ];
 
@@ -121,25 +187,39 @@ export function AppHeader() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: -10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
+                          className="absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-xl border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
                         >
                           <div className="p-4">
                             <div className="grid grid-cols-1 gap-2">
                               {item.dropdown.map((dropdownItem) => {
                                 const Icon = dropdownItem.icon;
                                 return (
-                                  <Link
-                                    key={dropdownItem.name}
-                                    to={dropdownItem.path}
-                                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-200 group"
-                                  >
-                                    <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center flex-shrink-0`}>
-                                      <Icon className="w-4 h-4 text-white" />
-                                    </div>
-                                    <span className="text-white group-hover:text-zion-cyan transition-colors duration-200">
-                                      {dropdownItem.name}
-                                    </span>
-                                  </Link>
+                                  <div key={dropdownItem.name}>
+                                    <Link
+                                      to={dropdownItem.path}
+                                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-200 group"
+                                    >
+                                      <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center flex-shrink-0`}>
+                                        <Icon className="w-4 h-4 text-white" />
+                                      </div>
+                                      <span className="text-white group-hover:text-zion-cyan transition-colors duration-200">
+                                        {dropdownItem.name}
+                                      </span>
+                                    </Link>
+                                    {dropdownItem.submenu && (
+                                      <div className="ml-8 mt-2 space-y-1">
+                                        {dropdownItem.submenu.map((subItem) => (
+                                          <Link
+                                            key={subItem.name}
+                                            to={subItem.path}
+                                            className="block text-sm text-zinc-400 hover:text-zion-cyan transition-colors duration-200 py-1 px-3 rounded hover:bg-zion-cyan/5"
+                                          >
+                                            {subItem.name}
+                                          </Link>
+                                        ))}
+                                      </div>
+                                    )}
+                                  </div>
                                 );
                               })}
                             </div>
@@ -266,18 +346,32 @@ export function AppHeader() {
                               {item.dropdown.map((dropdownItem) => {
                                 const Icon = dropdownItem.icon;
                                 return (
-                                  <Link
-                                    key={dropdownItem.name}
-                                    to={dropdownItem.path}
-                                    className="flex items-center space-x-3 p-2 rounded-lg hover:bg-zion-cyan/10 transition-all duration-200 group"
-                                  >
-                                    <div className={`w-6 h-6 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}>
-                                      <Icon className="w-3 h-3 text-white" />
-                                    </div>
-                                    <span className="text-zion-slate-light group-hover:text-zion-cyan transition-colors duration-200 text-sm">
-                                      {dropdownItem.name}
-                                    </span>
-                                  </Link>
+                                  <div key={dropdownItem.name}>
+                                    <Link
+                                      to={dropdownItem.path}
+                                      className="flex items-center space-x-3 p-2 rounded-lg hover:bg-zion-cyan/10 transition-all duration-200 group"
+                                    >
+                                      <div className={`w-6 h-6 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}>
+                                        <Icon className="w-3 h-3 text-white" />
+                                      </div>
+                                      <span className="text-zion-slate-light group-hover:text-zion-cyan transition-colors duration-200 text-sm">
+                                        {dropdownItem.name}
+                                      </span>
+                                    </Link>
+                                    {dropdownItem.submenu && (
+                                      <div className="ml-6 mt-1 space-y-1">
+                                        {dropdownItem.submenu.map((subItem) => (
+                                          <Link
+                                            key={subItem.name}
+                                            to={subItem.path}
+                                            className="block text-xs text-zinc-500 hover:text-zion-cyan transition-colors duration-200 py-1 px-3 rounded hover:bg-zion-cyan/5"
+                                          >
+                                            {subItem.name}
+                                          </Link>
+                                        ))}
+                                      </div>
+                                    )}
+                                  </div>
                                 );
                               })}
                             </motion.div>

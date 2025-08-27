@@ -1,274 +1,208 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  FileText, 
-  Shield, 
   Users, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
   CheckCircle,
-  ArrowRight,
-  AlertTriangle,
-  Lock,
-  Globe
+  BarChart3,
+  Globe,
+  Rocket,
+  Star,
+  Heart
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export default function Terms() {
-  const termsSections = [
+  const features = [
     {
       icon: Users,
-      title: "Acceptance of Terms",
-      description: "By using our services, you agree to be bound by these terms and conditions",
-      color: "from-blue-500 to-cyan-500"
+      title: "Professional Excellence",
+      description: "Connect with top-tier professionals and cutting-edge solutions."
     },
     {
       icon: Shield,
-      title: "Service Description",
-      description: "We provide technology consulting, AI solutions, and digital transformation services",
-      color: "from-green-500 to-emerald-500"
+      title: "Trusted Platform",
+      description: "Secure, reliable, and transparent marketplace operations."
     },
     {
-      icon: Lock,
-      title: "Intellectual Property",
-      description: "All content and technology remain the property of Zion Tech Group",
-      color: "from-purple-500 to-pink-500"
+      icon: Zap,
+      title: "Fast & Efficient",
+      description: "Streamlined processes that save you time and money."
     },
     {
-      icon: Globe,
-      title: "Limitation of Liability",
-      description: "We provide services as-is with reasonable limitations on liability",
-      color: "from-orange-500 to-red-500"
+      icon: Star,
+      title: "Quality Assured",
+      description: "Vetted professionals and verified service providers."
     }
   ];
 
-  const keyTerms = [
-    {
-      term: "Services",
-      definition: "Technology consulting, AI solutions, cloud services, cybersecurity, and digital transformation services provided by Zion Tech Group"
-    },
-    {
-      term: "Client",
-      definition: "Any individual or organization that uses our services or enters into a service agreement with us"
-    },
-    {
-      term: "Confidential Information",
-      definition: "Any non-public information shared between parties during the course of business, including trade secrets and proprietary data"
-    },
-    {
-      term: "Intellectual Property",
-      definition: "All patents, copyrights, trademarks, trade secrets, and other intellectual property rights owned by Zion Tech Group"
-    }
-  ];
-
-  const userObligations = [
-    "Provide accurate and complete information",
-    "Use services only for lawful purposes",
-    "Maintain the security of your account",
-    "Respect intellectual property rights",
-    "Comply with applicable laws and regulations",
-    "Pay for services as agreed"
+  const benefits = [
+    "Access to top tech talent worldwide",
+    "Secure and transparent transactions",
+    "24/7 platform availability",
+    "Comprehensive service coverage",
+    "Competitive pricing and value"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="pt-24 pb-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Terms of Service
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Please read these terms carefully before using our services
-            </p>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              These Terms of Service govern your use of Zion Tech Group's services and website. 
-              By using our services, you agree to be bound by these terms.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Terms Overview Section */}
-      <section className="py-20 bg-black/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Terms Overview
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Key aspects of our terms and conditions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {termsSections.map((section, index) => (
-              <motion.div
-                key={index}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className={`inline-flex p-4 rounded-full mb-6 bg-gradient-to-r ${section.color}`}>
-                  <section.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
-                <p className="text-gray-300">{section.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Key Terms Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Terms & Definitions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Important terms you should understand
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {keyTerms.map((term, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <h3 className="text-xl font-bold text-cyan-400 mb-3">{term.term}</h3>
-                  <p className="text-gray-300 text-sm">{term.definition}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* User Obligations Section */}
-      <section className="py-20 bg-black/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Your Obligations
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              What we expect from you when using our services
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {userObligations.map((obligation, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-center space-x-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-300">{obligation}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Important Disclaimers Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Important Disclaimers
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Please note these important limitations and disclaimers
+    <>
+      <SEO 
+        title="Terms of Service | Zion Tech Group"
+        description="Our terms and conditions for using our platform. Experience the future of technology services and solutions."
+        keywords="terms of service, technology, services, solutions, innovation, Zion Tech Group"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                {title}
+              </h1>
+              <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
+                Our terms and conditions for using our platform. Our platform connects you with the best technology 
+                solutions and professionals to drive your business forward.
               </p>
-            </div>
-            
-            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <AlertTriangle className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-2">Service Availability</h3>
-                    <p className="text-gray-300 text-sm">
-                      We strive to provide reliable services but cannot guarantee 100% uptime. 
-                      Services are provided "as-is" without warranties of any kind.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <Shield className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-2">Limitation of Liability</h3>
-                    <p className="text-gray-300 text-sm">
-                      Zion Tech Group's liability is limited to the amount paid for services. 
-                      We are not liable for indirect, incidental, or consequential damages.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <FileText className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-bold text-white mb-2">Changes to Terms</h3>
-                    <p className="text-gray-300 text-sm">
-                      We may update these terms from time to time. Continued use of services 
-                      after changes constitutes acceptance of the updated terms.
-                    </p>
-                  </div>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300"
+                >
+                  Get Started
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-zinc-400 text-zinc-300 rounded-lg font-semibold text-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-300"
+                >
+                  Learn More
+                </motion.button>
               </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 bg-zinc-800/50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Us
+              </h2>
+              <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+                Our platform delivers exceptional value and results for businesses 
+                of all sizes and industries.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700 hover:border-indigo-500/50 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-zinc-400 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Questions About Our Terms?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            If you have any questions about these terms or need clarification, 
-            please don't hesitate to contact our legal team.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
             >
-              Contact Us
-            </Link>
-            <Link 
-              to="/privacy"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-            >
-              Privacy Policy
-            </Link>
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Platform Benefits
+              </h2>
+              <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+                Experience the advantages of our comprehensive technology platform.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex items-start space-x-4"
+                >
+                  <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
+                  <p className="text-zinc-300 text-lg">{benefit}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-12 text-center border border-indigo-500/20"
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
+                Join thousands of businesses already using our platform to succeed.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300"
+                >
+                  Start Today
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-zinc-400 text-zinc-300 rounded-lg font-semibold text-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-300"
+                >
+                  Contact Us
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
