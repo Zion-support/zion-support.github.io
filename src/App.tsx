@@ -7,6 +7,7 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
 // Lazy load only the pages we are certain exist
 const Home = React.lazy(() => import('./pages/Index'));
@@ -43,7 +44,7 @@ function App() {
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
         <AppHeader />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -55,6 +56,7 @@ function App() {
         <Footer />
         <ChatAssistant />
         <PerformanceOptimizer />
+        <AccessibilityEnhancer enabled={true} showControls={false} />
       </div>
     </ErrorBoundary>
   );
