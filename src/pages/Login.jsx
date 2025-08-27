@@ -14,13 +14,8 @@ export default function Login() {
   const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-<<<<<<< HEAD
-  const { dispatch } = useCart();
-  const reduxDispatch = useDispatch();
-=======
   const { clearCart } = useCart();
   const dispatch = useDispatch();
->>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
@@ -31,13 +26,6 @@ export default function Login() {
     if (token) {
       // Store token in localStorage for now
       localStorage.setItem('zion_token', token);
-<<<<<<< HEAD
-      // The actual authentication state will update via useAuth's listeners,
-      // which should trigger the other useEffect.
-      navigate(location.pathname, { replace: true });
-    }
-  }, [location.search, location.pathname, navigate]);
-=======
       
       // Clear token from URL to prevent re-processing and clean up history
       navigate(location.pathname, { replace: true });
@@ -55,18 +43,13 @@ export default function Login() {
       });
     }
   }, [location.search, location.pathname, navigate, dispatch, clearCart]);
->>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       const next = new URLSearchParams(location.search).get('next') || '/dashboard';
       navigate(next, { replace: true });
     }
-<<<<<<< HEAD
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
-=======
   }, [isAuthenticated, isLoading, navigate, location.search]);
->>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
 
   // Render LoginForm if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {

@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-<<<<<<< HEAD
 
-=======
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 export default function FAQ() {
     const faqData = [
         {
@@ -56,71 +51,9 @@ export default function FAQ() {
             answer: "Getting started is simple! Create a free account, complete your profile, and start exploring the marketplace. You can immediately browse listings, connect with professionals, or showcase your own services and expertise."
         }
     ];
-<<<<<<< HEAD
 
     return (
-        <>
-            <SEO 
-                title="FAQ - Frequently Asked Questions" 
-                description="Find answers to common questions about Zion Tech Group's AI and tech marketplace platform." 
-                keywords="FAQ, Zion Tech Group, AI marketplace, tech platform, questions, support" 
-                canonical="https://ziontechgroup.com/faq"
-            />
-            <main className="min-h-screen bg-zion-slate-dark pt-24 pb-20">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <GradientHeading>Frequently Asked Questions</GradientHeading>
-                        <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-                            Find answers to the most common questions about Zion Tech Group and our marketplace platform
-                        </p>
-                    </div>
-                    
-                    <div className="max-w-4xl mx-auto">
-                        <Accordion type="single" collapsible className="w-full">
-                            {faqData.map((item, index) => (
-                                <AccordionItem key={index} value={`item-${index}`} className="border-zion-cyan/20">
-                                    <AccordionTrigger className="text-left text-white hover:text-zion-cyan px-6 py-4">
-                                        <span className="text-lg font-medium">{item.question}</span>
-                                    </AccordionTrigger>
-                                    <AccordionContent className="px-6 pb-4">
-                                        <p className="text-zion-slate-light leading-relaxed">
-                                            {item.answer}
-                                        </p>
-                                    </AccordionContent>
-                                </AccordionItem>
-                            ))}
-                        </Accordion>
-                    </div>
-                    
-                    <div className="mt-16 text-center">
-                        <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8">
-                            <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>
-                            <p className="text-zion-slate-light mb-6">
-                                Can't find what you're looking for? Our support team is here to help.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a 
-                                    href="/contact" 
-                                    className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105"
-                                >
-                                    Contact Support
-                                </a>
-                                <a 
-                                    href="/help-center" 
-                                    className="inline-flex items-center justify-center px-6 py-3 border border-zion-cyan hover:bg-zion-cyan hover:text-white text-zion-cyan font-medium rounded-lg transition-all duration-300"
-                                >
-                                    Help Center
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </>
-=======
-    
-    return (
-        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-32 pb-20">
+        <main className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-32 pb-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h1 className="text-5xl md:text-7xl font-bold mb-8">
@@ -132,20 +65,30 @@ export default function FAQ() {
                 </div>
                 
                 <div className="max-w-4xl mx-auto">
-                    <Accordion type="single" collapsible className="w-full">
+                    <div className="space-y-4">
                         {faqData.map((item, index) => (
-                            <AccordionItem key={index} value={`item-${index}`} className="border-zion-cyan/20 bg-zion-slate-dark/50 backdrop-blur-xl rounded-xl mb-4">
-                                <AccordionTrigger className="text-left text-white hover:text-zion-cyan px-6 py-4">
-                                    <span className="text-lg font-medium">{item.question}</span>
-                                </AccordionTrigger>
-                                <AccordionContent className="px-6 pb-4">
-                                    <p className="text-zion-slate-light leading-relaxed">
-                                        {item.answer}
-                                    </p>
-                                </AccordionContent>
-                            </AccordionItem>
+                            <div key={index} className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl overflow-hidden">
+                                <details className="group">
+                                    <summary className="flex items-center justify-between p-6 cursor-pointer text-left text-white hover:text-zion-cyan transition-colors duration-300">
+                                        <span className="text-lg font-medium">{item.question}</span>
+                                        <svg 
+                                            className="w-5 h-5 transform transition-transform duration-300 group-open:rotate-180" 
+                                            fill="none" 
+                                            stroke="currentColor" 
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </summary>
+                                    <div className="px-6 pb-6">
+                                        <p className="text-zion-slate-light leading-relaxed">
+                                            {item.answer}
+                                        </p>
+                                    </div>
+                                </details>
+                            </div>
                         ))}
-                    </Accordion>
+                    </div>
                 </div>
                 
                 <div className="mt-16 text-center">
@@ -155,72 +98,53 @@ export default function FAQ() {
                             Can't find what you're looking for? Our support team is here to help.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue hover:shadow-lg hover:shadow-zion-cyan/25 text-white font-medium rounded-lg transition-all duration-300">
+                            <a 
+                                href="/contact" 
+                                className="px-6 py-3 bg-zion-cyan text-white font-medium rounded-lg hover:bg-zion-cyan/90 transition-all duration-300 transform hover:scale-105"
+                            >
                                 Contact Support
                             </a>
-                            <a href="/help" className="inline-flex items-center justify-center px-6 py-3 border border-zion-cyan/20 hover:border-zion-cyan/40 text-zion-cyan font-medium rounded-lg transition-all duration-300">
-                                Help Center
+                            <a 
+                                href="/help" 
+                                className="px-6 py-3 border border-zion-cyan/20 text-zion-cyan font-medium rounded-lg hover:bg-zion-cyan/10 transition-all duration-300"
+                            >
+                                Visit Help Center
                             </a>
                         </div>
                     </div>
                 </div>
+
+                {/* Additional Resources */}
+                <div className="mt-16 text-center">
+                    <h2 className="text-2xl font-bold text-white mb-8">Additional Resources</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                        <a 
+                            href="/docs" 
+                            className="p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 hover:shadow-xl hover:shadow-zion-cyan/20 transition-all duration-300 group"
+                        >
+                            <div className="text-zion-cyan text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">📚</div>
+                            <h3 className="text-lg font-bold text-white mb-2">Documentation</h3>
+                            <p className="text-zion-slate-light text-sm">Comprehensive guides and technical documentation</p>
+                        </a>
+                        <a 
+                            href="/training" 
+                            className="p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 hover:shadow-xl hover:shadow-zion-cyan/20 transition-all duration-300 group"
+                        >
+                            <div className="text-zion-cyan text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎓</div>
+                            <h3 className="text-lg font-bold text-white mb-2">Training</h3>
+                            <p className="text-zion-slate-light text-sm">Learn how to use our platform effectively</p>
+                        </a>
+                        <a 
+                            href="/community" 
+                            className="p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 hover:shadow-xl hover:shadow-zion-cyan/20 transition-all duration-300 group"
+                        >
+                            <div className="text-zion-cyan text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">👥</div>
+                            <h3 className="text-lg font-bold text-white mb-2">Community</h3>
+                            <p className="text-zion-slate-light text-sm">Connect with other users and share experiences</p>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
+        </main>
     );
 }
-=======
-
-export default function FAQ() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl md:text-6xl font-bold text-white text-center mb-12">
-          Frequently Asked Questions
-        </h1>
-        <div className="max-w-4xl mx-auto space-y-6">
-          <div className="bg-zion-slate-dark/50 p-6 rounded-lg border border-zion-cyan/20">
-            <h3 className="text-xl font-semibold text-white mb-3">What services does Zion Tech Group offer?</h3>
-            <p className="text-zion-slate-light">
-              We offer comprehensive technology solutions including AI services, cybersecurity, cloud infrastructure, 
-              digital transformation, quantum computing, blockchain solutions, and more.
-            </p>
-          </div>
-          
-          <div className="bg-zion-slate-dark/50 p-6 rounded-lg border border-zion-cyan/20">
-            <h3 className="text-xl font-semibold text-white mb-3">How can I get started with your services?</h3>
-            <p className="text-zion-slate-light">
-              Contact us through our contact form or call us at +1 302 464 0950. Our team will schedule a 
-              consultation to understand your needs and provide a customized solution.
-            </p>
-          </div>
-          
-          <div className="bg-zion-slate-dark/50 p-6 rounded-lg border border-zion-cyan/20">
-            <h3 className="text-xl font-semibold text-white mb-3">What are your pricing models?</h3>
-            <p className="text-zion-slate-light">
-              We offer flexible pricing models including project-based, subscription, and custom enterprise solutions. 
-              Pricing varies based on the scope and complexity of your requirements.
-            </p>
-          </div>
-          
-          <div className="bg-zion-slate-dark/50 p-6 rounded-lg border border-zion-cyan/20">
-            <h3 className="text-xl font-semibold text-white mb-3">Do you provide ongoing support?</h3>
-            <p className="text-zion-slate-light">
-              Yes, we provide comprehensive ongoing support including 24/7 monitoring, maintenance, updates, 
-              and technical assistance for all our solutions.
-            </p>
-          </div>
-          
-          <div className="bg-zion-slate-dark/50 p-6 rounded-lg border border-zion-cyan/20">
-            <h3 className="text-xl font-semibold text-white mb-3">What industries do you serve?</h3>
-            <p className="text-zion-slate-light">
-              We serve a wide range of industries including healthcare, finance, manufacturing, retail, 
-              education, government, and more. Our solutions are adaptable to any sector.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
