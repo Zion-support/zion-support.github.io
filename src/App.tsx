@@ -8,7 +8,7 @@ import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import MobileExperienceEnhancer from './components/MobileExperienceEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import { FloatingActionButton } from './components/FloatingActionButton';
 

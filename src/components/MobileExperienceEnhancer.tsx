@@ -1,361 +1,624 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Smartphone, 
+  Tablet, 
+  Monitor, 
+  Wifi, 
+  Battery, 
   Hand, 
-  RotateCcw, 
-  ZoomIn, 
+  Move,
+  RotateCw,
+  ZoomIn,
   ZoomOut,
-  Volume2,
-  VolumeX,
-  Wifi,
-  WifiOff
+  X,
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  Settings,
+  Smartphone as MobileIcon
 } from 'lucide-react';
+
+interface MobileSettings {
+  touchOptimization: boolean;
+  gestureSupport: boolean;
+  mobileOptimized: boolean;
+  responsiveImages: boolean;
+  touchFeedback: boolean;
+  swipeNavigation: boolean;
+  mobileMenu: boolean;
+  autoRotate: boolean;
+}
 
 interface MobileExperienceEnhancerProps {
   enabled?: boolean;
+  showControls?: boolean;
 }
 
-export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
-  enabled = true
+const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
+  enabled = true,
+  showControls = true
 }) => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isLandscape, setIsLandscape] = useState(false);
-  const [touchSupported, setTouchSupported] = useState(false);
-  const [showControls, setShowControls] = useState(false);
-  const [gestureHistory, setGestureHistory] = useState<string[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [deviceType, setDeviceType] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
+  const [settings, setSettings] = useState<MobileSettings>({
+    touchOptimization: true,
+    gestureSupport: true,
+    mobileOptimized: true,
+    responsiveImages: true,
+    touchFeedback: true,
+    swipeNavigation: true,
+    mobileMenu: true,
+    autoRotate: false
+  });
 
-  // Detect mobile device and capabilities
+  const [mobileIssues, setMobileIssues] = useState<string[]>([]);
+  const [mobileScore, setMobileScore] = useState(0);
+  const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
+
+  // Detect device type and orientation
   useEffect(() => {
     if (!enabled) return;
 
-    const checkMobile = () => {
+    const detectDevice = () => {
       const userAgent = navigator.userAgent.toLowerCase();
-      const isMobileDevice = /mobile|android|iphone|ipad|phone/i.test(userAgent);
-      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      const isMobile = /mobile|android|iphone|ipad|phone/i.test(userAgent);
+      const isTablet = /tablet|ipad/i.test(userAgent);
       
-      setIsMobile(isMobileDevice);
-      setTouchSupported(isTouchDevice);
+      if (isMobile && !isTablet) {
+        setDeviceType('mobile');
+      } else if (isTablet) {
+        setDeviceType('tablet');
+      } else {
+        setDeviceType('desktop');
+      }
     };
 
-    const checkOrientation = () => {
-      setIsLandscape(window.innerWidth > window.innerHeight);
+    const detectOrientation = () => {
+      if (window.innerHeight > window.innerWidth) {
+        setOrientation('portrait');
+      } else {
+        setOrientation('landscape');
+      }
     };
 
-    checkMobile();
-    checkOrientation();
+    detectDevice();
+    detectOrientation();
 
-    window.addEventListener('resize', checkOrientation);
-    window.addEventListener('orientationchange', checkOrientation);
+    window.addEventListener('resize', detectOrientation);
+    window.addEventListener('orientationchange', detectOrientation);
 
     return () => {
-      window.removeEventListener('resize', checkOrientation);
-      window.removeEventListener('orientationchange', checkOrientation);
+      window.removeEventListener('resize', detectOrientation);
+      window.removeEventListener('orientationchange', detectOrientation);
     };
   }, [enabled]);
 
-  // Touch gesture handling
+  // Apply mobile settings
+  const applySettings = useCallback((newSettings: MobileSettings) => {
+    const root = document.documentElement;
+    
+    // Touch optimization
+    if (newSettings.touchOptimization) {
+      root.classList.add('touch-optimized');
+      root.style.setProperty('--touch-target-size', '44px');
+    } else {
+      root.classList.remove('touch-optimized');
+      root.style.removeProperty('--touch-target-size');
+    }
+
+    // Gesture support
+    if (newSettings.gestureSupport) {
+      root.classList.add('gesture-enabled');
+    } else {
+      root.classList.remove('gesture-enabled');
+    }
+
+    // Mobile optimization
+    if (newSettings.mobileOptimized) {
+      root.classList.add('mobile-optimized');
+    } else {
+      root.classList.remove('mobile-optimized');
+    }
+
+    // Responsive images
+    if (newSettings.responsiveImages) {
+      root.classList.add('responsive-images');
+    } else {
+      root.classList.remove('responsive-images');
+    }
+
+    // Touch feedback
+    if (newSettings.touchFeedback) {
+      root.classList.add('touch-feedback');
+    } else {
+      root.classList.remove('touch-feedback');
+    }
+
+    // Swipe navigation
+    if (newSettings.swipeNavigation) {
+      root.classList.add('swipe-navigation');
+    } else {
+      root.classList.remove('swipe-navigation');
+    }
+
+    // Mobile menu
+    if (newSettings.mobileMenu) {
+      root.classList.add('mobile-menu-enabled');
+    } else {
+      root.classList.remove('mobile-menu-enabled');
+    }
+
+    setSettings(newSettings);
+    localStorage.setItem('zion-mobile-settings', JSON.stringify(newSettings));
+  }, []);
+
+  // Load saved settings
   useEffect(() => {
-    if (!enabled || !isMobile || !touchSupported) return;
+    if (!enabled) return;
+
+    const savedSettings = localStorage.getItem('zion-mobile-settings');
+    if (savedSettings) {
+      try {
+        const parsed = JSON.parse(savedSettings);
+        applySettings({ ...settings, ...parsed });
+      } catch (error) {
+        console.warn('Failed to load mobile settings:', error);
+      }
+    }
+  }, [enabled, applySettings]);
+
+  // Mobile experience audit
+  const runMobileAudit = useCallback(() => {
+    const issues: string[] = [];
+    let score = 100;
+
+    // Check viewport meta tag
+    const viewport = document.querySelector('meta[name="viewport"]');
+    if (!viewport) {
+      issues.push('Missing viewport meta tag');
+      score -= 15;
+    }
+
+    // Check for responsive images
+    const images = document.querySelectorAll('img');
+    let responsiveImageCount = 0;
+    images.forEach((img) => {
+      if (img.srcset || img.sizes || img.classList.contains('responsive')) {
+        responsiveImageCount++;
+      }
+    });
+    if (responsiveImageCount < images.length * 0.5) {
+      issues.push('Many images lack responsive attributes');
+      score -= 10;
+    }
+
+    // Check touch target sizes
+    const touchTargets = document.querySelectorAll('button, a, input, select, textarea');
+    let smallTouchTargets = 0;
+    touchTargets.forEach((target) => {
+      const rect = target.getBoundingClientRect();
+      if (rect.width < 44 || rect.height < 44) {
+        smallTouchTargets++;
+      }
+    });
+    if (smallTouchTargets > touchTargets.length * 0.3) {
+      issues.push('Many touch targets are too small');
+      score -= 10;
+    }
+
+    // Check for mobile-friendly navigation
+    const nav = document.querySelector('nav');
+    if (!nav || !nav.classList.contains('mobile-friendly')) {
+      issues.push('Navigation may not be mobile-friendly');
+      score -= 8;
+    }
+
+    // Check for proper spacing on mobile
+    const body = document.body;
+    const computedStyle = window.getComputedStyle(body);
+    const fontSize = parseFloat(computedStyle.fontSize);
+    if (fontSize < 16) {
+      issues.push('Font size may be too small on mobile');
+      score -= 5;
+    }
+
+    // Check for touch-friendly forms
+    const formInputs = document.querySelectorAll('input, select, textarea');
+    let touchUnfriendlyInputs = 0;
+    formInputs.forEach((input) => {
+      if (input.type === 'file' && !input.classList.contains('touch-friendly')) {
+        touchUnfriendlyInputs++;
+      }
+    });
+    if (touchUnfriendlyInputs > 0) {
+      issues.push('Some form inputs may not be touch-friendly');
+      score -= 5;
+    }
+
+    setMobileIssues(issues);
+    setMobileScore(Math.max(0, score));
+  }, []);
+
+  // Run audit on mount and when settings change
+  useEffect(() => {
+    if (!enabled) return;
+    
+    const timer = setTimeout(runMobileAudit, 2000);
+    return () => clearTimeout(timer);
+  }, [enabled, runMobileAudit, settings]);
+
+  // Touch gesture handlers
+  useEffect(() => {
+    if (!enabled || !settings.gestureSupport || deviceType === 'desktop') return;
 
     let startX = 0;
     let startY = 0;
     let startTime = 0;
-    let isScrolling = false;
 
     const handleTouchStart = (e: TouchEvent) => {
       startX = e.touches[0].clientX;
       startY = e.touches[0].clientY;
       startTime = Date.now();
-      isScrolling = false;
-    };
-
-    const handleTouchMove = (e: TouchEvent) => {
-      if (!startX || !startY) return;
-
-      const deltaX = e.touches[0].clientX - startX;
-      const deltaY = e.touches[0].clientY - startY;
-      const deltaTime = Date.now() - startTime;
-
-      // Detect scroll vs swipe
-      if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 10) {
-        isScrolling = true;
-      }
-
-      // Prevent default only for horizontal swipes when not scrolling
-      if (Math.abs(deltaX) > Math.abs(deltaY) && !isScrolling && Math.abs(deltaX) > 50) {
-        e.preventDefault();
-      }
     };
 
     const handleTouchEnd = (e: TouchEvent) => {
-      if (!startX || !startY || isScrolling) return;
-
-      const deltaX = e.changedTouches[0].clientX - startX;
-      const deltaY = e.changedTouches[0].clientY - startY;
-      const deltaTime = Date.now() - startTime;
-
+      const endX = e.changedTouches[0].clientX;
+      const endY = e.changedTouches[0].clientY;
+      const endTime = Date.now();
+      
+      const deltaX = endX - startX;
+      const deltaY = endY - startY;
+      const deltaTime = endTime - startTime;
+      
       // Detect swipe gestures
-      if (deltaTime < 300 && Math.abs(deltaX) > 50) {
+      if (deltaTime < 500 && Math.abs(deltaX) > 50 && Math.abs(deltaY) < 100) {
         if (deltaX > 0) {
-          handleSwipeRight();
+          // Swipe right - go back
+          if (settings.swipeNavigation) {
+            window.history.back();
+          }
         } else {
-          handleSwipeLeft();
+          // Swipe left - go forward
+          if (settings.swipeNavigation) {
+            window.history.forward();
+          }
         }
       }
-
-      if (deltaTime < 300 && Math.abs(deltaY) > 50) {
-        if (deltaY > 0) {
-          handleSwipeDown();
-        } else {
-          handleSwipeUp();
-        }
-      }
-
-      // Reset
-      startX = 0;
-      startY = 0;
-      startTime = 0;
     };
 
-    const handleSwipeRight = () => {
-      setGestureHistory(prev => [...prev.slice(-4), 'Swipe Right']);
-      // Navigate back or show previous content
-      if (window.history.length > 1) {
-        window.history.back();
-      }
-    };
-
-    const handleSwipeLeft = () => {
-      setGestureHistory(prev => [...prev.slice(-4), 'Swipe Left']);
-      // Navigate forward or show next content
-      const nextButton = document.querySelector('[data-next]') as HTMLElement;
-      if (nextButton) {
-        nextButton.click();
-      }
-    };
-
-    const handleSwipeUp = () => {
-      setGestureHistory(prev => [...prev.slice(-4), 'Swipe Up']);
-      // Scroll to top or show navigation
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    const handleSwipeDown = () => {
-      setGestureHistory(prev => [...prev.slice(-4), 'Swipe Down']);
-      // Refresh or show more content
-      const refreshButton = document.querySelector('[data-refresh]') as HTMLElement;
-      if (refreshButton) {
-        refreshButton.click();
-      }
-    };
-
-    // Add touch event listeners
-    document.addEventListener('touchstart', handleTouchStart, { passive: false });
-    document.addEventListener('touchmove', handleTouchMove, { passive: false });
-    document.addEventListener('touchend', handleTouchEnd, { passive: true });
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchend', handleTouchEnd);
 
     return () => {
       document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [enabled, isMobile, touchSupported]);
+  }, [enabled, settings.gestureSupport, settings.swipeNavigation, deviceType]);
 
-  // Mobile-specific optimizations
+  // Auto-rotate handling
   useEffect(() => {
-    if (!enabled || !isMobile) return;
+    if (!enabled || !settings.autoRotate || deviceType === 'desktop') return;
 
-    // Optimize viewport for mobile
-    const viewport = document.querySelector('meta[name="viewport"]');
-    if (viewport) {
-      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');
-    }
-
-    // Add mobile-specific CSS classes
-    document.body.classList.add('mobile-device');
-    if (isLandscape) {
-      document.body.classList.add('landscape');
-    } else {
-      document.body.classList.add('portrait');
-    }
-
-    // Optimize images for mobile
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
-      }
-      if (!img.hasAttribute('decoding')) {
-        img.setAttribute('decoding', 'async');
-      }
-    });
-
-    // Add mobile-specific event listeners
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        // Page is hidden, pause animations/videos
-        document.body.classList.add('page-hidden');
-      } else {
-        // Page is visible, resume animations/videos
-        document.body.classList.remove('page-hidden');
+    const handleOrientationChange = () => {
+      if (window.screen && window.screen.orientation) {
+        const currentOrientation = window.screen.orientation.type;
+        if (currentOrientation.includes('portrait')) {
+          // Suggest landscape for better experience
+          console.log('Consider rotating to landscape for better experience');
+        }
       }
     };
 
-    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('orientationchange', handleOrientationChange);
+    return () => window.removeEventListener('orientationchange', handleOrientationChange);
+  }, [enabled, settings.autoRotate, deviceType]);
 
-    return () => {
-      document.body.classList.remove('mobile-device', 'landscape', 'portrait');
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, [enabled, isMobile, isLandscape]);
-
-  // Mobile controls overlay
-  if (!enabled || !isMobile) return null;
+  if (!enabled || !showControls) return null;
 
   return (
     <>
-      {/* Mobile Controls Button */}
+      {/* Floating Mobile Button */}
       <motion.button
-        onClick={() => setShowControls(!showControls)}
-        className="fixed bottom-4 left-4 bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg z-50 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-300"
+        onClick={() => setIsVisible(!isVisible)}
+        className="fixed bottom-6 left-24 z-50 p-3 bg-gradient-to-r from-zion-matrix to-zion-cyber rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        aria-label="Mobile Controls"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 3 }}
+        aria-label="Mobile Experience Settings"
       >
-        <Smartphone size={20} />
+        <MobileIcon className="w-6 h-6 text-white" />
+        <div className="absolute -top-2 -right-2 w-3 h-3 bg-zion-neon rounded-full animate-pulse"></div>
       </motion.button>
 
-      {/* Mobile Controls Panel */}
+      {/* Mobile Experience Panel */}
       <AnimatePresence>
-        {showControls && (
+        {isVisible && (
           <motion.div
-            className="fixed bottom-20 left-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-2xl p-4 w-72 z-50"
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="fixed bottom-24 left-24 z-40 w-80 bg-zion-slate-dark/95 backdrop-blur-md rounded-2xl shadow-2xl border border-zion-matrix/20"
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            role="dialog"
+            aria-labelledby="mobile-panel-title"
           >
-            <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-3">
-              Mobile Controls
-            </h3>
-
-            {/* Gesture History */}
-            <div className="mb-4">
-              <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                Recent Gestures
-              </h4>
-              <div className="space-y-1">
-                {gestureHistory.map((gesture, index) => (
-                  <div key={index} className="text-xs text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-700 px-2 py-1 rounded">
-                    {gesture}
-                  </div>
-                ))}
-                {gestureHistory.length === 0 && (
-                  <div className="text-xs text-gray-500 dark:text-gray-500 italic">
-                    No gestures yet
-                  </div>
-                )}
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b border-zion-matrix/20">
+              <div className="flex items-center space-x-2">
+                <MobileIcon className="w-5 h-5 text-zion-matrix" />
+                <h3 id="mobile-panel-title" className="text-white font-semibold">
+                  Mobile Experience
+                </h3>
               </div>
-            </div>
-
-            {/* Quick Actions */}
-            <div className="space-y-2">
               <button
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="w-full flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-2 px-3 rounded-lg transition-colors duration-200"
+                onClick={() => setIsVisible(false)}
+                className="text-zion-matrix/60 hover:text-zion-matrix transition-colors"
+                aria-label="Close mobile experience panel"
               >
-                <RotateCcw size={16} />
-                <span className="text-sm">Scroll to Top</span>
-              </button>
-
-              <button
-                onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
-                className="w-full flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-2 px-3 rounded-lg transition-colors duration-200"
-              >
-                <Hand size={16} />
-                <span className="text-sm">Scroll to Bottom</span>
-              </button>
-
-              <button
-                onClick={() => window.location.reload()}
-                className="w-full flex items-center justify-center space-x-2 bg-cyan-100 hover:bg-cyan-200 dark:bg-cyan-800 dark:hover:bg-cyan-700 text-cyan-700 dark:text-cyan-300 py-2 px-3 rounded-lg transition-colors duration-200"
-              >
-                <RotateCcw size={16} />
-                <span className="text-sm">Refresh Page</span>
+                <X className="w-4 h-4" />
               </button>
             </div>
 
             {/* Device Info */}
-            <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-600">
-              <div className="text-xs text-gray-500 dark:text-gray-400 space-y-1">
-                <div>Device: {isMobile ? 'Mobile' : 'Desktop'}</div>
-                <div>Orientation: {isLandscape ? 'Landscape' : 'Portrait'}</div>
-                <div>Touch: {touchSupported ? 'Supported' : 'Not Supported'}</div>
-                <div>Screen: {window.innerWidth} × {window.innerHeight}</div>
+            <div className="p-4 border-b border-zion-matrix/20">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-zion-matrix text-sm font-medium">Device Type</span>
+                <div className="flex items-center space-x-2">
+                  {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-zion-matrix" />}
+                  {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-zion-matrix" />}
+                  {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-zion-matrix" />}
+                  <span className="text-white text-sm capitalize">{deviceType}</span>
+                </div>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <span className="text-zion-matrix text-sm font-medium">Orientation</span>
+                <span className="text-white text-sm capitalize">{orientation}</span>
+              </div>
+            </div>
+
+            {/* Settings */}
+            <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
+              {/* Touch Settings */}
+              <div className="space-y-3">
+                <h4 className="text-zion-matrix text-sm font-medium">Touch & Gestures</h4>
+                
+                {/* Touch Optimization */}
+                <label className="flex items-center space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={settings.touchOptimization}
+                    onChange={(e) => applySettings({ ...settings, touchOptimization: e.target.checked })}
+                    className="w-4 h-4 text-zion-matrix bg-zion-slate border-zion-matrix/30 rounded focus:ring-zion-matrix focus:ring-2"
+                  />
+                  <Hand className="w-4 h-4 text-zion-matrix/60" />
+                  <span className="text-white text-sm">Touch Optimization</span>
+                </label>
+
+                {/* Gesture Support */}
+                <label className="flex items-center space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={settings.gestureSupport}
+                    onChange={(e) => applySettings({ ...settings, gestureSupport: e.target.checked })}
+                    className="w-4 h-4 text-zion-matrix bg-zion-slate border-zion-matrix/30 rounded focus:ring-zion-matrix focus:ring-2"
+                  />
+                  <Move className="w-4 h-4 text-zion-matrix/60" />
+                  <span className="text-white text-sm">Gesture Support</span>
+                </label>
+
+                {/* Touch Feedback */}
+                <label className="flex items-center space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={settings.touchFeedback}
+                    onChange={(e) => applySettings({ ...settings, touchFeedback: e.target.checked })}
+                    className="w-4 h-4 text-zion-matrix bg-zion-slate border-zion-matrix/30 rounded focus:ring-zion-matrix focus:ring-2"
+                  />
+                  <Hand className="w-4 h-4 text-zion-matrix/60" />
+                  <span className="text-white text-sm">Touch Feedback</span>
+                </label>
+
+                {/* Swipe Navigation */}
+                <label className="flex items-center space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={settings.swipeNavigation}
+                    onChange={(e) => applySettings({ ...settings, swipeNavigation: e.target.checked })}
+                    className="w-4 h-4 text-zion-matrix bg-zion-slate border-zion-matrix/30 rounded focus:ring-zion-matrix focus:ring-2"
+                  />
+                  <Move className="w-4 h-4 text-zion-matrix/60" />
+                  <span className="text-white text-sm">Swipe Navigation</span>
+                </label>
+              </div>
+
+              {/* Mobile Optimization */}
+              <div className="space-y-3">
+                <h4 className="text-zion-matrix text-sm font-medium">Optimization</h4>
+                
+                {/* Mobile Optimized */}
+                <label className="flex items-center space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={settings.mobileOptimized}
+                    onChange={(e) => applySettings({ ...settings, mobileOptimized: e.target.checked })}
+                    className="w-4 h-4 text-zion-matrix bg-zion-slate border-zion-matrix/30 rounded focus:ring-zion-matrix focus:ring-2"
+                  />
+                  <MobileIcon className="w-4 h-4 text-zion-matrix/60" />
+                  <span className="text-white text-sm">Mobile Optimized</span>
+                </label>
+
+                {/* Responsive Images */}
+                <label className="flex items-center space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={settings.responsiveImages}
+                    onChange={(e) => applySettings({ ...settings, responsiveImages: e.target.checked })}
+                    className="w-4 h-4 text-zion-matrix bg-zion-slate border-zion-matrix/30 rounded focus:ring-zion-matrix focus:ring-2"
+                  />
+                  <ZoomIn className="w-4 h-4 text-zion-matrix/60" />
+                  <span className="text-white text-sm">Responsive Images</span>
+                </label>
+
+                {/* Mobile Menu */}
+                <label className="flex items-center space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={settings.mobileMenu}
+                    onChange={(e) => applySettings({ ...settings, mobileMenu: e.target.checked })}
+                    className="w-4 h-4 text-zion-matrix bg-zion-slate border-zion-matrix/30 rounded focus:ring-zion-matrix focus:ring-2"
+                  />
+                  <Settings className="w-4 h-4 text-zion-matrix/60" />
+                  <span className="text-white text-sm">Mobile Menu</span>
+                </label>
+
+                {/* Auto Rotate */}
+                <label className="flex items-center space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={settings.autoRotate}
+                    onChange={(e) => applySettings({ ...settings, autoRotate: e.target.checked })}
+                    className="w-4 h-4 text-zion-matrix bg-zion-slate border-zion-matrix/30 rounded focus:ring-zion-matrix focus:ring-2"
+                  />
+                  <RotateCw className="w-4 h-4 text-zion-matrix/60" />
+                  <span className="text-white text-sm">Auto Rotate</span>
+                </label>
+              </div>
+
+              {/* Mobile Experience Score */}
+              <div className="space-y-3 pt-3 border-t border-zion-matrix/20">
+                <div className="flex items-center justify-between">
+                  <h4 className="text-zion-matrix text-sm font-medium">Mobile Experience Score</h4>
+                  <span className={`text-sm font-bold ${
+                    mobileScore >= 90 ? 'text-green-500' : 
+                    mobileScore >= 70 ? 'text-yellow-500' : 'text-red-500'
+                  }`}>
+                    {mobileScore}/100
+                  </span>
+                </div>
+                
+                {mobileIssues.length > 0 && (
+                  <div className="space-y-2">
+                    <h5 className="text-zion-matrix/80 text-xs font-medium">Issues Found:</h5>
+                    <div className="space-y-1">
+                      {mobileIssues.slice(0, 3).map((issue, index) => (
+                        <div key={index} className="text-white/80 text-xs bg-zion-slate/30 p-2 rounded-lg flex items-start space-x-2">
+                          <AlertTriangle className="w-3 h-3 text-yellow-500 mt-0.5 flex-shrink-0" />
+                          <span>{issue}</span>
+                        </div>
+                      ))}
+                      {mobileIssues.length > 3 && (
+                        <div className="text-white/60 text-xs text-center">
+                          +{mobileIssues.length - 3} more issues
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                <button
+                  onClick={runMobileAudit}
+                  className="w-full bg-zion-matrix/20 hover:bg-zion-matrix/30 text-zion-matrix text-sm py-2 rounded-lg transition-colors"
+                >
+                  Run Mobile Audit
+                </button>
+              </div>
+
+              {/* Mobile Tips */}
+              <div className="space-y-3 pt-3 border-t border-zion-matrix/20">
+                <h4 className="text-zion-matrix text-sm font-medium">Mobile Tips</h4>
+                <div className="space-y-2 text-xs">
+                  <div className="text-white/80 bg-zion-slate/30 p-2 rounded-lg">
+                    <strong>Touch Targets:</strong> Ensure buttons are at least 44x44px
+                  </div>
+                  <div className="text-white/80 bg-zion-slate/30 p-2 rounded-lg">
+                    <strong>Responsive Images:</strong> Use srcset and sizes for optimal loading
+                  </div>
+                  <div className="text-white/80 bg-zion-slate/30 p-2 rounded-lg">
+                    <strong>Viewport:</strong> Include proper viewport meta tag
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="p-3 bg-zion-slate/30 rounded-b-2xl">
+              <div className="flex items-center justify-between text-xs">
+                <span className="text-white/60">Settings saved automatically</span>
+                <CheckCircle className="w-4 h-4 text-green-500" />
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Mobile-specific CSS */}
-      <style jsx>{`
-        .mobile-device {
-          -webkit-tap-highlight-color: transparent;
-          -webkit-touch-callout: none;
-          -webkit-user-select: none;
-          user-select: none;
+      {/* Global CSS for mobile features */}
+      <style jsx global>{`
+        .touch-optimized button,
+        .touch-optimized a,
+        .touch-optimized input,
+        .touch-optimized select,
+        .touch-optimized textarea {
+          min-height: var(--touch-target-size, 44px);
+          min-width: var(--touch-target-size, 44px);
         }
         
-        .mobile-device * {
-          -webkit-tap-highlight-color: transparent;
+        .gesture-enabled {
+          touch-action: pan-x pan-y;
         }
         
-        .landscape .hero-section {
-          min-height: 60vh;
+        .mobile-optimized {
+          --mobile-spacing: 1rem;
+          --mobile-font-size: 16px;
         }
         
-        .portrait .hero-section {
-          min-height: 100vh;
+        .mobile-optimized * {
+          font-size: var(--mobile-font-size, 16px);
         }
         
-        .page-hidden * {
-          animation-play-state: paused !important;
+        .mobile-optimized .container {
+          padding-left: var(--mobile-spacing, 1rem);
+          padding-right: var(--mobile-spacing, 1rem);
         }
         
-        .page-hidden video {
-          pause();
+        .responsive-images img {
+          max-width: 100%;
+          height: auto;
         }
         
-        /* Mobile-specific touch targets */
-        .mobile-device button,
-        .mobile-device a,
-        .mobile-device [role="button"] {
-          min-height: 44px;
-          min-width: 44px;
+        .touch-feedback *:active {
+          transform: scale(0.98);
+          transition: transform 0.1s ease;
         }
         
-        /* Mobile scrollbar */
-        .mobile-device ::-webkit-scrollbar {
-          width: 6px;
+        .swipe-navigation {
+          overflow-x: hidden;
         }
         
-        .mobile-device ::-webkit-scrollbar-track {
-          background: transparent;
+        .mobile-menu-enabled .mobile-menu {
+          display: block;
         }
         
-        .mobile-device ::-webkit-scrollbar-thumb {
-          background: rgba(6, 182, 212, 0.3);
-          border-radius: 3px;
+        @media (max-width: 768px) {
+          .mobile-optimized {
+            --mobile-spacing: 0.75rem;
+            --mobile-font-size: 14px;
+          }
         }
         
-        /* Mobile focus styles */
-        .mobile-device *:focus {
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px;
+        @media (max-width: 480px) {
+          .mobile-optimized {
+            --mobile-spacing: 0.5rem;
+            --mobile-font-size: 13px;
+          }
         }
       `}</style>
     </>
   );
 };
+
+export default MobileExperienceEnhancer;
