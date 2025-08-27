@@ -221,6 +221,18 @@ export const FuturisticNavigation: React.FC = () => {
         { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Frequently asked questions' },
         { name: 'Support', href: '/support', icon: HelpCircle, description: 'Technical support and help' }
       ]
+    },
+    {
+      name: 'Comprehensive',
+      href: '/services-overview',
+      icon: BarChart3,
+      color: 'from-zion-green to-zion-emerald',
+      dropdown: [
+        { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' },
+        { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' },
+        { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' },
+        { name: 'Innovative Services', href: '/innovative-services-2027', icon: Lightbulb, description: 'Cutting-edge innovative solutions' }
+      ]
     }
   ];
 
