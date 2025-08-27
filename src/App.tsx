@@ -84,7 +84,7 @@ const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcar
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -304,6 +304,13 @@ function App() {
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
               <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
               <Route path="/services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
+              
+              {/* Enhanced 2028 routes */}
+              <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
+              <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
+              <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+              <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
+              <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
               
               {/* New 2026 service routes */}
               <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
