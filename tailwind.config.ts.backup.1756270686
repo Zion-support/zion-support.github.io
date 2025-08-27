@@ -7,6 +7,8 @@ export default {
     './src/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
   ],
+<<<<<<< HEAD
+=======
   safelist: [
     'border-border',
     'text-zion-cyan',
@@ -24,6 +26,7 @@ export default {
     'focus:ring-zion-cyan',
     'focus:border-zion-cyan'
   ],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8e93
   theme: {
     extend: {
       colors: {
@@ -41,6 +44,33 @@ export default {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",
         },
+<<<<<<< HEAD
+        secondary: {
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
+        },
+        muted: {
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)",
+        },
+        destructive: {
+          DEFAULT: "var(--destructive)",
+          foreground: "var(--destructive-foreground)",
+        },
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
+        chart: {
+          "1": "var(--chart-1)",
+          "2": "var(--chart-2)",
+          "3": "var(--chart-3)",
+          "4": "var(--chart-4)",
+          "5": "var(--chart-5)",
+=======
         // Enhanced Zion Tech Group color palette
         "zion-blue": {
           50: "#eff6ff",
@@ -158,6 +188,7 @@ export default {
           800: "#3730a3",
           900: "#312e81",
           950: "#1e1b4b",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8e93
         },
       },
       borderRadius: {
@@ -169,6 +200,59 @@ export default {
         "3xl": "calc(var(--radius) + 8px)",
       },
       fontFamily: {
+<<<<<<< HEAD
+        sans: ["Inter", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
+      animation: {
+        "fade-in": "fadeIn 0.5s ease-in-out",
+        "fade-in-up": "fadeInUp 0.5s ease-out",
+        "fade-in-down": "fadeInDown 0.5s ease-out",
+        "slide-in-left": "slideInLeft 0.5s ease-out",
+        "slide-in-right": "slideInRight 0.5s ease-out",
+        "scale-in": "scaleIn 0.3s ease-out",
+        "bounce-gentle": "bounceGentle 2s infinite",
+        "float": "float 6s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeInDown: {
+          "0%": { opacity: "0", transform: "translateY(-20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        slideInLeft: {
+          "0%": { opacity: "0", transform: "translateX(-20px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        slideInRight: {
+          "0%": { opacity: "0", transform: "translateX(20px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        scaleIn: {
+          "0%": { opacity: "0", transform: "scale(0.9)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        bounceGentle: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        glow: {
+          "0%": { boxShadow: "0 0 5px rgba(59, 130, 246, 0.5)" },
+          "100%": { boxShadow: "0 0 20px rgba(59, 130, 246, 0.8)" },
+        },
+=======
         sans: ["var(--font-sans)", ...fontFamily.sans],
         rajdhani: ["var(--font-rajdhani)", ...fontFamily.sans],
         mono: ["JetBrains Mono", "Fira Code", "Monaco", "Consolas", "Liberation Mono", "Courier New", ...fontFamily.mono],
@@ -339,11 +423,38 @@ export default {
         "32": "8rem",
         "64": "16rem",
         "128": "32rem",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8e93
       },
       backdropBlur: {
         xs: "2px",
       },
       boxShadow: {
+<<<<<<< HEAD
+        "inner-glow": "inset 0 0 20px rgba(59, 130, 246, 0.1)",
+        "outer-glow": "0 0 20px rgba(59, 130, 246, 0.3)",
+        "neon": "0 0 5px rgba(59, 130, 246, 0.5), 0 0 10px rgba(59, 130, 246, 0.3), 0 0 15px rgba(59, 130, 246, 0.1)",
+      },
+      gradientColorStops: {
+        "gradient-1": "var(--gradient-1)",
+        "gradient-2": "var(--gradient-2)",
+        "gradient-3": "var(--gradient-3)",
+      },
+    },
+  },
+	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', './components/**/*.{ts,tsx}', './pages/**/*.{ts,tsx}'],
+	theme: {
+		extend: {
+			colors: {
+				'zion-blue': { DEFAULT: '#1e3a8a', dark: '#172554', light: '#3b82f6' },
+				'zion-purple': { DEFAULT: '#8c15e9', dark: '#6b21a8', light: '#a855f7' },
+				'zion-cyan': { DEFAULT: '#22ddd2', dark: '#14b8a6', light: '#5fe8e0' },
+				'zion-slate': { DEFAULT: '#64748b', dark: '#334155', light: '#94a3b8' },
+			},
+		},
+	},
+	plugins: [],
+}
+=======
         "zion": "0 0 20px rgba(34, 221, 210, 0.3)",
         "zion-lg": "0 0 40px rgba(34, 221, 210, 0.4)",
         "zion-xl": "0 0 60px rgba(34, 221, 210, 0.5)",
@@ -652,6 +763,7 @@ export default {
     }),
   ],
 };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8e93
 
 export default config
 =======
