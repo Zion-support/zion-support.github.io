@@ -19,32 +19,14 @@ const AIServices = React.lazy(() => import('./pages/AIServices'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
 const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
 const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
-const Dashboard = React.lazy(() => import('./pages/Dashboard'));
-const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
-const Signup = React.lazy(() => import('./pages/Signup'));
-const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
-const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
-const Help = React.lazy(() => import('./pages/Help'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
-const GenericPage = React.lazy(() => import('./pages/[...slug]'));
-
-// Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
-const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
-const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
-const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AISalesCopilot = React.lazy(() => import('./pages/services/AISalesCopilot'));
 const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
 const AIComplianceAssistant = React.lazy(() => import('./pages/services/AIComplianceAssistant'));
@@ -90,6 +72,20 @@ const Marketplace = () => (
   </div>
 );
 
+const NotFound = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <SEO 
+      title="Page Not Found - Zion Tech Group"
+      description="The page you're looking for doesn't exist."
+      noindex
+    />
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">404 - Not Found</h1>
+      <p className="text-xl text-gray-300">Please check the URL or go back to the homepage.</p>
+    </div>
+  </div>
+);
+
 function App() {
   return (
     <ErrorBoundary>
@@ -106,32 +102,19 @@ function App() {
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/cookies" element={<Cookies />} />
-              <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/pricing" element={<Pricing />} />
               <Route path="/services" element={<Services />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
               <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
-              <Route path="/request-quote" element={<RequestQuote />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/login" element={<Login />} />
               <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/zion-hire-ai" element={<ZionHireAI />} />
-              <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
-              <Route path="/help" element={<Help />} />
+              <Route path="/search" element={<SearchPage />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-              <Route path="/services/digital-twin" element={<DigitalTwin />} />
-              <Route path="/services/data-analytics" element={<DataAnalytics />} />
               <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
               <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
               <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
@@ -149,8 +132,8 @@ function App() {
               <Route path="/services/affiliate-tracking" element={<AffiliateTracking />} />
               <Route path="/services/mobile-survey" element={<MobileSurvey />} />
               
-              {/* Catch all route to generic page (covers docs, webinars, training, enterprise, etc.) */}
-              <Route path="*" element={<GenericPage />} />
+              {/* Catch-all */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
