@@ -184,7 +184,11 @@ const Accessibility = () => (
 
 function App() {
   return (
-    <ErrorBoundary>
+    <ErrorBoundary 
+      enableReporting={true}
+      recoveryOptions={true}
+      showDetails={process.env.NODE_ENV === 'development'}
+    >
       <div className="min-h-screen bg-futuristic">
         <AppHeader />
         <main id="main-content" className="flex-1">
@@ -344,9 +348,9 @@ function App() {
         </main>
         <Footer />
         <ChatAssistant />
-        <PerformanceOptimizer />
+        <PerformanceOptimizer enabled={true} showControls={true} autoOptimize={true} />
         <AccessibilityEnhancer enabled={true} showControls={true} />
-        <MobileExperienceEnhancer enabled={true} />
+        <MobileExperienceEnhancer enabled={true} showControls={true} autoOptimize={true} />
       </div>
     </ErrorBoundary>
   );
