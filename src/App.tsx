@@ -1,48 +1,61 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader.jsx';
-import { Footer } from './components/Footer.jsx';
-import { ChatAssistant } from './components/ChatAssistant.jsx';
+import { AppHeader } from './layout/AppHeader';
+import { Footer } from './components/Footer';
+import { ChatAssistant } from './components/ChatAssistant';
+import LoadingSpinner from './components/ui/LoadingSpinner';
 
-// Lazy load pages with better chunking
-const Home = lazy(() => import('./pages/Home.jsx'));
-const About = lazy(() => import('./pages/About.jsx'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage.jsx'));
-const ComprehensiveServices = lazy(() => import('./pages/ComprehensiveServices.jsx'));
-const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing.jsx'));
-const Contact = lazy(() => import('./pages/Contact.jsx'));
-const Login = lazy(() => import('./pages/Login.jsx'));
-
-// New pages
-const Marketplace = React.lazy(() => import('./pages/Marketplace.jsx'));
-const Blog = React.lazy(() => import('./pages/Blog.jsx'));
-const Partners = React.lazy(() => import('./pages/Partners.jsx'));
-const Careers = React.lazy(() => import('./pages/Careers.jsx'));
-const FAQ = React.lazy(() => import('./pages/FAQ.tsx'));
-const Privacy = React.lazy(() => import('./pages/Privacy.jsx'));
-const Terms = React.lazy(() => import('./pages/Terms.jsx'));
-const Help = React.lazy(() => import('./pages/Help.jsx'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap.jsx'));
-
-// Additional service pages
+// Lazy load pages - only import existing ones
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/PartnersPage'));
-const Services = React.lazy(() => import('./pages/Services'));
+const PartnersPage = React.lazy(() => import('./pages/Partners'));
+const Login = React.lazy(() => import('./pages/Login'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
-const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
-const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
-const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
+const News = React.lazy(() => import('./pages/News'));
+const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 
-const LoadingSpinner = () => (
-  <div className="min-h-screen bg-futuristic flex items-center justify-center">
-    <div className="text-center">
-      <div className="relative">
-        <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-        <div className="absolute inset-0 w-16 h-16 border-4 border-zion-purple border-t-transparent rounded-full animate-spin mx-auto mb-4" style={{ animationDelay: '-0.5s' }}></div>
-      </div>
-      <p className="text-zion-cyan text-lg font-medium">Loading Zion Tech Group...</p>
-      <p className="text-zion-slate-light text-sm mt-2">Preparing your experience</p>
+// Service pages - only import existing ones
+const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
+const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
+const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
+const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+
+// Import the new pages
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
+const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
+const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/ComprehensivePricingGuide2026'));
+
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+
+const Signup = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">Sign Up</h1>
+      <p className="text-xl text-gray-300">Create your account</p>
+    </div>
+  </div>
+);
+
+const Marketplace = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
+      <p className="text-xl text-gray-300">Browse our services and solutions</p>
     </div>
   </div>
 );
@@ -50,69 +63,53 @@ const LoadingSpinner = () => (
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+      <div className="min-h-screen bg-futuristic">
         <AppHeader />
-        <main className="flex-1 pt-16 lg:pt-20">
+        
+        <main className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
-              <Route path="/comprehensive-pricing" element={<ComprehensivePricing />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/login" element={<Login />} />
-              
-              {/* New routes */}
-              <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/partners" element={<Partners />} />
-              <Route path="/careers" element={<Careers />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
-              <Route path="/help" element={<Help />} />
+              <Route path="/cookies" element={<Cookies />} />
               <Route path="/sitemap" element={<Sitemap />} />
-              
-              {/* Additional Routes */}
               <Route path="/green-it" element={<GreenIT />} />
-              <Route path="/enhanced-services" element={<EnhancedServices />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/search" element={<SearchPage />} />
+              <Route path="/help-center" element={<HelpCenter />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/request-quote" element={<RequestQuote />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
+              <Route path="/revolutionary-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
+              <Route path="/pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
               
-              {/* AI Services Routes */}
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/ai-services/:service" element={<AIServicesPage />} />
+              {/* Service Routes - only for existing pages */}
+              <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+              <Route path="/services/digital-twin" element={<DigitalTwin />} />
+              <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               
-              {/* Micro SAAS Routes */}
-              <Route path="/micro-saas" element={<MicroSAASServicesPage />} />
-              <Route path="/micro-saas/:service" element={<MicroSAASServicesPage />} />
-              
-              {/* IT Services Routes */}
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/it-services/:service" element={<ITServicesPage />} />
-              
-              {/* Emerging Tech Routes */}
-              <Route path="/emerging-tech" element={<GreenIT />} />
-              <Route path="/emerging-tech/:service" element={<GreenIT />} />
-              
-              {/* 404 route */}
-              <Route path="*" element={
-                <div className="min-h-screen bg-futuristic flex items-center justify-center">
-                  <div className="text-center">
-                    <h1 className="text-6xl font-bold text-zion-cyan mb-4">404</h1>
-                    <p className="text-xl text-zion-slate-light mb-8">Page not found</p>
-                    <button
-                      onClick={() => window.history.back()}
-                      className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform"
-                    >
-                      Go Back
-                    </button>
-                  </div>
-                </div>
-              } />
+              {/* Catch all route */}
+              <Route path="*" element={<Home />} />
             </Routes>
           </Suspense>
         </main>
+        
         <Footer />
         <ChatAssistant />
       </div>

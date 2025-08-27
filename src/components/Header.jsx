@@ -1,8 +1,11 @@
 import React from 'react';
-import { EnhancedHeader } from './header/EnhancedHeader';
 
 export const Header = () => {
-  return <EnhancedHeader />;
+  return (
+    <header className="bg-slate-800 text-white p-4">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-xl font-bold">Zion Tech Group</h1>
+      </div>
+    </header>
+  );
 };
-
-export default Header;

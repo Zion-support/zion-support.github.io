@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 name: Dependency Management
 
 on:
@@ -322,6 +324,7 @@ jobs:
         echo "📢 Sending team notifications..."
         # Add notification logic here (Slack, email, etc.)
 =======
+>>>>>>> 985affa06de218d8d67ebe889423015c74851017
 name: Dependencies
 
 on:
@@ -394,5 +397,9 @@ jobs:
           labels: |
             dependencies
             automation
+<<<<<<< HEAD
+            security
+=======
             security
 >>>>>>> origin/cursor/add-new-services-2025
+>>>>>>> 985affa06de218d8d67ebe889423015c74851017
