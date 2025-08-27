@@ -100,7 +100,6 @@ const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusin
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 
 // Additional innovative AI services
-const AIProjectManager = React.lazy(() => import('./pages/services/AIProjectManager'));
 const AIContentMarketingSuite = React.lazy(() => import('./pages/services/AIContentMarketingSuite'));
 const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
 const AIHRTalentPlatform = React.lazy(() => import('./pages/services/AIHRTalentPlatform'));
