@@ -1,155 +1,227 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useCallback, useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  memoryUsage: number;
-  cpuUsage: number;
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
 }
 
-export const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0
+interface PerformanceOptimizerProps {
+  enabled?: boolean;
+  showMetrics?: boolean;
+  optimizeImages?: boolean;
+  preloadCritical?: boolean;
+}
+
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enabled = true,
+  showMetrics = false,
+  optimizeImages = true,
+  preloadCritical = true
+}) => {
+  const metricsRef = useRef<PerformanceMetrics>({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0
   });
 
-  useEffect(() => {
-    // Performance monitoring
-    const measurePerformance = () => {
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-        
-        setMetrics(prev => ({
-          ...prev,
-          loadTime: Math.round(loadTime)
-        }));
-      }
-    };
+  const { ref: observerRef, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true
+  });
 
-    // Memory usage monitoring
-    const measureMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        setMetrics(prev => ({
-          ...prev,
-          memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024)
-        }));
-      }
-    };
+  // Performance monitoring
+  const measurePerformance = useCallback(() => {
+    if (!enabled || !('PerformanceObserver' in window)) return;
 
-    // CPU usage monitoring
-    const measureCPU = () => {
-      if ('getEntriesByType' in performance) {
-        const paintEntries = performance.getEntriesByType('paint');
-        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-        if (fcp) {
-          setMetrics(prev => ({
-            ...prev,
-            cpuUsage: Math.round(fcp.startTime)
-          }));
-        }
-      }
-    };
-
-    // Run measurements after page load
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        measurePerformance();
-        measureMemory();
-        measureCPU();
-      }, 100);
-    });
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
-
-  // Performance optimization features
-  useEffect(() => {
-    // Lazy load images
-    const lazyImages = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
+    try {
+      // First Contentful Paint
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          metricsRef.current.fcp = fcpEntry.startTime;
         }
       });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+
+      // Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lcpEntry = entries[entries.length - 1];
+        if (lcpEntry) {
+          metricsRef.current.lcp = lcpEntry.startTime;
+        }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fidEntry = entries[0];
+        if (fidEntry) {
+          metricsRef.current.fid = fidEntry.processingStart - fidEntry.startTime;
+        }
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Cumulative Layout Shift
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        for (const entry of list.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        metricsRef.current.cls = clsValue;
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      // Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        metricsRef.current.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      }
+    } catch (error) {
+      console.warn('Performance monitoring failed:', error);
+    }
+  }, [enabled]);
+
+  // Image optimization
+  const optimizeImagesInView = useCallback(() => {
+    if (!optimizeImages || !inView) return;
+
+    const images = document.querySelectorAll('img[data-src]');
+    images.forEach((img) => {
+      const imgElement = img as HTMLImageElement;
+      if (imgElement.dataset.src) {
+        imgElement.src = imgElement.dataset.src;
+        imgElement.classList.add('optimized');
+        imgElement.removeAttribute('data-src');
+      }
     });
+  }, [optimizeImages, inView]);
 
-    lazyImages.forEach(img => imageObserver.observe(img));
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    if (!preloadCritical) return;
 
-    // Preload critical resources
-    const preloadLinks = [
-      { rel: 'preload', href: '/fonts/orbitron-v16-latin-400.woff2', as: 'font', type: 'font/woff2' },
-      { rel: 'preload', href: '/fonts/orbitron-v16-latin-600.woff2', as: 'font', type: 'font/woff2' }
+    const criticalResources = [
+      '/fonts/orbitron-v28-latin-700.woff2',
+      '/images/hero-ai-solutions.jpg',
+      '/images/zion-logo.png'
     ];
 
-    preloadLinks.forEach(link => {
-      const linkElement = document.createElement('link');
-      Object.assign(linkElement, link);
-      document.head.appendChild(linkElement);
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      if (resource.endsWith('.woff2')) {
+        link.as = 'font';
+        link.type = 'font/woff2';
+        link.crossOrigin = 'anonymous';
+      } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
+        link.as = 'image';
+      }
+      document.head.appendChild(link);
     });
+  }, [preloadCritical]);
+
+  // Intersection Observer for lazy loading
+  const setupIntersectionObserver = useCallback(() => {
+    if (!enabled) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '50px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target as HTMLElement;
+          
+          // Lazy load images
+          if (target.tagName === 'IMG' && target.dataset.src) {
+            target.src = target.dataset.src;
+            target.classList.add('lazy-loaded');
+            observer.unobserve(target);
+          }
+
+          // Lazy load components
+          if (target.dataset.lazy) {
+            target.classList.add('lazy-loaded');
+            observer.unobserve(target);
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observe all lazy elements
+    const lazyElements = document.querySelectorAll('[data-src], [data-lazy]');
+    lazyElements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [enabled]);
+
+  // Memory management
+  const optimizeMemory = useCallback(() => {
+    if (!enabled) return;
+
+    // Clean up event listeners
+    const cleanup = () => {
+      // Remove unused event listeners
+      const elements = document.querySelectorAll('[data-event-cleanup]');
+      elements.forEach((el) => {
+        const element = el as HTMLElement;
+        if (element.dataset.eventCleanup) {
+          element.removeEventListener('click', () => {});
+          element.removeAttribute('data-event-cleanup');
+        }
+      });
+    };
+
+    // Run cleanup periodically
+    const interval = setInterval(cleanup, 30000);
+    return () => clearInterval(interval);
+  }, [enabled]);
+
+  useEffect(() => {
+    measurePerformance();
+    preloadCriticalResources();
+    setupIntersectionObserver();
+    const memoryCleanup = optimizeMemory();
 
     return () => {
-      imageObserver.disconnect();
+      memoryCleanup?.();
     };
-  }, []);
+  }, [measurePerformance, preloadCriticalResources, setupIntersectionObserver, optimizeMemory]);
 
-  // Only show in development or when explicitly enabled
-  if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
+  useEffect(() => {
+    optimizeImagesInView();
+  }, [optimizeImagesInView]);
+
+  // Performance metrics display
+  if (!showMetrics) return null;
 
   return (
-    <motion.div
-      className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm text-white p-4 rounded-lg shadow-2xl border border-cyan-400/50 z-50"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <div 
+      ref={observerRef}
+      className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm text-white p-4 rounded-lg text-xs z-50"
     >
-      <h3 className="text-sm font-bold text-cyan-400 mb-2">Performance Monitor</h3>
-      <div className="space-y-1 text-xs">
-        <div className="flex justify-between">
-          <span>Load Time:</span>
-          <span className={metrics.loadTime > 3000 ? 'text-red-400' : 'text-green-400'}>
-            {metrics.loadTime}ms
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>Memory:</span>
-          <span className={metrics.memoryUsage > 100 ? 'text-yellow-400' : 'text-green-400'}>
-            {metrics.memoryUsage}MB
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>FCP:</span>
-          <span className={metrics.cpuUsage > 2000 ? 'text-red-400' : 'text-green-400'}>
-            {metrics.cpuUsage}ms
-          </span>
-        </div>
+      <div className="font-mono space-y-1">
+        <div>FCP: {metricsRef.current.fcp.toFixed(0)}ms</div>
+        <div>LCP: {metricsRef.current.lcp.toFixed(0)}ms</div>
+        <div>FID: {metricsRef.current.fid.toFixed(0)}ms</div>
+        <div>CLS: {metricsRef.current.cls.toFixed(3)}</div>
+        <div>TTFB: {metricsRef.current.ttfb.toFixed(0)}ms</div>
       </div>
-      
-      {/* Performance tips */}
-      <div className="mt-3 pt-2 border-t border-cyan-400/30">
-        <div className="text-xs text-cyan-300">
-          {metrics.loadTime > 3000 && (
-            <div className="mb-1">⚠️ Consider code splitting</div>
-          )}
-          {metrics.memoryUsage > 100 && (
-            <div className="mb-1">⚠️ Memory usage high</div>
-          )}
-          {metrics.cpuUsage > 2000 && (
-            <div>⚠️ Optimize rendering</div>
-          )}
-        </div>
-      </div>
-    </motion.div>
+    </div>
   );
 };
