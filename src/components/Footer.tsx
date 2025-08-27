@@ -46,7 +46,12 @@ import {
   Leaf,
   Gamepad2,
   Coins,
-  Satellite
+  Satellite,
+  Server,
+  ShoppingCart,
+  MessageCircle,
+  Code,
+  Smartphone
 } from 'lucide-react';
 
 export function Footer() {
@@ -95,35 +100,77 @@ export function Footer() {
         { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
         { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
         { name: 'Green IT Solutions', path: '/services/green-it', icon: Leaf },
-        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Lock }
+        { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock }
       ]
     },
     {
-      title: 'Core Services',
-      icon: Zap,
+      title: 'Cloud & Infrastructure',
+      icon: Cloud,
       links: [
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
-        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
-        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
-        { name: 'IT Services', path: '/it-services', icon: Building },
-        { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Zap },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Blockchain Solutions', path: '/services/blockchain', icon: Coins }
+        { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Cloud },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
+        { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
+        { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
+        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap },
+        { name: 'IT Consulting', path: '/services/it-consulting', icon: Cpu },
+        { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3 },
+        { name: 'Business Intelligence', path: '/services/business-intelligence', icon: TrendingUp }
       ]
     },
     {
-      title: 'Emerging Tech',
-      icon: Rocket,
+      title: 'Micro SaaS Solutions',
+      icon: ShoppingCart,
       links: [
-        { name: 'Metaverse Development', path: '/services/metaverse-development', icon: Gamepad2 },
-        { name: 'AI Content Creation', path: '/services/ai-content-creation', icon: FileText },
-        { name: 'AI HR Platform', path: '/services/ai-hr-platform', icon: Users },
-        { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Leaf },
-        { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance', icon: Activity },
-        { name: 'Quantum Machine Learning', path: '/services/quantum-machine-learning', icon: Atom },
-        { name: 'Edge Computing', path: '/services/edge-computing', icon: Network },
-        { name: 'Green Computing', path: '/services/green-computing', icon: Leaf }
+        { name: 'Micro SaaS Platform', path: '/services/micro-saas-solutions', icon: ShoppingCart },
+        { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
+        { name: 'Helpdesk Platform', path: '/services/helpdesk', icon: MessageCircle },
+        { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
+        { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: FileText },
+        { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone },
+        { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
+        { name: 'Website Analytics', path: '/services/website-analytics', icon: BarChart3 }
+      ]
+    },
+    {
+      title: 'Support & Resources',
+      icon: HelpCircle,
+      links: [
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'Developers', path: '/developers', icon: Code },
+        { name: 'Training', path: '/training', icon: GraduationCap },
+        { name: 'Support', path: '/support', icon: MessageCircle },
+        { name: 'Status', path: '/status', icon: Activity },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe }
+      ]
+    },
+    {
+      title: 'Marketplace',
+      icon: ShoppingCart,
+      links: [
+        { name: 'Marketplace Home', path: '/marketplace', icon: ShoppingCart },
+        { name: 'Products', path: '/marketplace/products', icon: ShoppingCart },
+        { name: 'Talent', path: '/marketplace/talent', icon: Users },
+        { name: 'Equipment', path: '/marketplace/equipment', icon: Server },
+        { name: 'Services', path: '/marketplace/services', icon: Zap },
+        { name: 'Request Quote', path: '/request-quote', icon: MessageCircle },
+        { name: 'Pricing', path: '/pricing', icon: DollarSign },
+        { name: 'Case Studies', path: '/case-studies', icon: FileText }
+      ]
+    },
+    {
+      title: 'Legal & Privacy',
+      icon: Shield,
+      links: [
+        { name: 'Privacy Policy', path: '/privacy', icon: Shield },
+        { name: 'Terms of Service', path: '/terms', icon: FileText },
+        { name: 'Cookies Policy', path: '/cookies', icon: Shield },
+        { name: 'Security', path: '/security', icon: Lock },
+        { name: 'Accessibility', path: '/accessibility', icon: Eye },
+        { name: 'GDPR Compliance', path: '/services/dsr-portal', icon: Shield },
+        { name: 'Data Protection', path: '/privacy', icon: Lock },
+        { name: 'Trust Center', path: '/security', icon: CheckCircle }
       ]
     }
   ];
