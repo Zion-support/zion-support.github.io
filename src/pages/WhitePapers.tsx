@@ -1,20 +1,6 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-
-export default function WhitePapers() {
-	return (
-		<div className="min-h-screen bg-slate-900 text-white py-16">
-			<SEO title="White Papers - Zion Tech Group" description="Technical white papers and insights." />
-			<div className="container mx-auto px-4 max-w-4xl">
-				<h1 className="text-4xl font-bold mb-4">White Papers</h1>
-				<p className="text-zinc-300">Download our research and technical insights.</p>
-			</div>
-		</div>
-	);
-}
-
 import React, { useState } from 'react';
 import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 export default function WhitePapers() {
   const [searchQuery, setSearchQuery] = useState('');
