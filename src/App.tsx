@@ -10,11 +10,13 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
+const Home2026 = React.lazy(() => import('./pages/Home2026'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
+const Services2026 = React.lazy(() => import('./pages/Services2026'));
 const AIServices = React.lazy(() => import('./pages/AIServices'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
 const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
@@ -113,6 +115,7 @@ function App() {
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/home2026" element={<Home2026 />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
@@ -141,6 +144,7 @@ function App() {
               <Route path="/marketplace/services" element={<MarketplaceServices />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services2026" element={<Services2026 />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
