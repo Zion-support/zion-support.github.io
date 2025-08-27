@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 
 export const Form = ({ children, ...props }) => (
     <form {...props}>
@@ -86,3 +88,4 @@ export const FormDescription = ({ children, className = '', ...props }) => {
     </p>
   );
 };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-45bd

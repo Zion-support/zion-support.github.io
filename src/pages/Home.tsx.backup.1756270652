@@ -1,3 +1,108 @@
+<<<<<<< HEAD
+import React from 'react';
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { NewsletterSection } from "@/components/NewsletterSection";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { SEO } from "@/components/SEO";
+import { HeroSection } from "@/components/HeroSection";
+import { QuickAccess } from "@/components/home/QuickAccess";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
+import { FloatingCTA } from "@/components/FloatingCTA";
+import { PricingSection } from "@/components/PricingSection";
+import { TechSolutionsSection } from "@/components/TechSolutionsSection";
+import { CaseStudiesSection } from "@/components/CaseStudiesSection";
+import { TeamExpertiseSection } from "@/components/TeamExpertiseSection";
+import { GlobalPresenceSection } from "@/components/GlobalPresenceSection";
+import { InnovationResearchSection } from "@/components/InnovationResearchSection";
+import { ClientSuccessStoriesSection } from "@/components/ClientSuccessStoriesSection";
+import { TechnologyStackSection } from "@/components/TechnologyStackSection";
+import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
+import { AIServicesShowcase } from "@/components/AIServicesShowcase";
+import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
+import { PerformanceOptimizations } from "@/components/PerformanceOptimizations";
+
+export default function Home() {
+  const stats = [
+    {
+      icon: Users,
+      value: "500+",
+      label: "Global Clients",
+      description: "Serving businesses worldwide"
+    },
+    {
+      icon: Globe,
+      value: "25+",
+      label: "Countries",
+      description: "Global presence"
+    },
+    {
+      icon: Code,
+      value: "1000+",
+      label: "Projects",
+      description: "Successfully delivered"
+    },
+    {
+      icon: Shield,
+      value: "99.9%",
+      label: "Uptime",
+      description: "Reliable service"
+    }
+  ];
+
+  const services = [
+    {
+      icon: Brain,
+      title: "AI & Machine Learning",
+      description: "Cutting-edge artificial intelligence solutions for your business",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",
+      description: "Advanced security solutions to protect your digital assets",
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure and migration services",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Zap,
+      title: "Digital Transformation",
+      description: "Modernize your business with innovative technology",
+      color: "from-yellow-500 to-green-500"
+    }
+  ];
+
+  const features = [
+    {
+      icon: Rocket,
+      title: "Fast Implementation",
+      description: "Get your solutions up and running in weeks, not months"
+    },
+    {
+      icon: Award,
+      title: "Proven Excellence",
+      description: "Trusted by Fortune 500 companies worldwide"
+    },
+    {
+      icon: TrendingUp,
+      title: "Scalable Growth",
+      description: "Solutions that grow with your business needs"
+    },
+    {
+      icon: CheckCircle,
+      title: "24/7 Support",
+      description: "Round-the-clock technical support and maintenance"
+    }
+  ];
+=======
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -524,6 +629,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-45bd
     </div>
   );
 }

@@ -19,7 +19,11 @@ export default function Login() {
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
+<<<<<<< HEAD:src/components/disabled/Login.jsx
+    // It runs when component mounts or location.search (containing query) changes
+=======
     // It runs when component mounts or location.search changes
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-45bd:src/pages/Login.jsx
     const queryString = location.search;
     const params = new URLSearchParams(queryString);
     const token = params.get('token');
@@ -36,10 +40,17 @@ export default function Login() {
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
+<<<<<<< HEAD:src/components/disabled/Login.jsx
+      const next = new URLSearchParams(location.search).get('next') || '/dashboard';
+      navigate(next, { replace: true });
+    }
+  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
+=======
       const next = location.state?.from?.pathname || '/dashboard';
       navigate(next, { replace: true });
     }
   }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-45bd:src/pages/Login.jsx
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
