@@ -54,24 +54,23 @@ export function Footer() {
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Partners', path: '/partners', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Solutions', path: '/solutions', icon: Target },
-        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
-        { name: 'Blog', path: '/blog', icon: Newspaper },
+        { name: 'Team', path: '/team', icon: Users },
+        { name: 'News', path: '/news', icon: Newspaper },
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },
     {
-      title: 'AI & Research Services',
+      title: 'Solutions & AI Services',
       icon: Brain,
       links: [
-        { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
-        { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
-        { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
-        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'Solutions Overview', path: '/solutions', icon: Target },
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
+        { name: 'AI Services', path: '/ai-services', icon: Brain },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
-        { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
         { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp }
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
+        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target }
       ]
     },
     {

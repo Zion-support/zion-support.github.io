@@ -60,8 +60,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Home', href: '/', icon: Home },
         { name: 'About', href: '/about', icon: Users },
         { name: 'Contact', href: '/contact', icon: MessageCircle },
-        { name: 'Blog', href: '/blog', icon: BookOpen },
+        { name: 'Team', href: '/team', icon: Users },
+        { name: 'News', href: '/news', icon: BookOpen },
         { name: 'FAQ', href: '/faq', icon: HelpCircle },
+      ]
+    },
+    {
+      title: 'Solutions & AI',
+      items: [
+        { name: 'Solutions Overview', href: '/solutions', icon: Target },
+        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+        { name: 'AI Services', href: '/ai-services', icon: Brain },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: TrendingUp },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target }
       ]
     },
     {
@@ -88,7 +102,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: TrendingUp },
         { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users },
         { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool },
-        { name: 'AI Customer Support', href: '/services/ai-customer-support', icon: MessageCircle },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle },
         { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: BarChart3 },
         { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Rocket },
         { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Settings },
