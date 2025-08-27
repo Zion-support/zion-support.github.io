@@ -7,8 +7,7 @@ import { AppLoadingSpinner } from './components/ui/LoadingSpinner.tsx';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { PWAUpdater } from './components/PWAUpdater';
-import { Accessibility } from './components/Accessibility';
+import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -91,11 +90,30 @@ const InterviewAssessmentAI = React.lazy(() => import('./pages/services/Intervie
 const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatform'));
 const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
+// New innovative AI services
+const AIProjectManager = React.lazy(() => import('./pages/services/AIProjectManager'));
+const AIContentGenerator = React.lazy(() => import('./pages/services/AIContentGenerator'));
+const AICustomerSupport = React.lazy(() => import('./pages/services/AICustomerSupport'));
+const AIDataAnalytics = React.lazy(() => import('./pages/services/AIDataAnalytics'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
+
+// Additional innovative AI services
+const AIContentMarketingSuite = React.lazy(() => import('./pages/services/AIContentMarketingSuite'));
+const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
+const AIHRTalentPlatform = React.lazy(() => import('./pages/services/AIHRTalentPlatform'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const InnovativeAIServicesShowcase = React.lazy(() => import('./pages/InnovativeAIServicesShowcase'));
+
+// Innovative new services
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AICybersecurity = React.lazy(() => import('./pages/services/AICybersecurity'));
+const QuantumComputingSolutions = React.lazy(() => import('./pages/services/QuantumComputingSolutions'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
 
 // Accessibility page
 const Accessibility = () => (
@@ -130,14 +148,11 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
-        {/* Skip to content link for accessibility */}
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
+        <FuturisticAnimatedBackground />
         <AppHeader />
         
-        <main id="main-content" className="flex-1">
-          <Suspense fallback={<AppLoadingSpinner />}>
+        <main className="flex-1 relative z-10">
+          <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home2026" element={<Home2026 />} />
@@ -211,14 +226,33 @@ function App() {
               <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
               <Route path="/services/dsr-portal" element={<DSRPortal />} />
               <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
-              {/* Additional innovative service routes */}
-              <Route path="/services/ai-autonomous-code-reviewer" element={<AIAutonomousCodeReviewer />} />
-              <Route path="/services/zero-trust-network-access" element={<ZeroTrustNetworkAccess />} />
+              {/* New innovative AI service routes */}
+              <Route path="/services/ai-project-manager" element={<AIProjectManager />} />
+              <Route path="/services/ai-content-generator" element={<AIContentGenerator />} />
+              <Route path="/services/ai-customer-support" element={<AICustomerSupport />} />
+              <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+              <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
               
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              
+              {/* Additional innovative AI service routes */}
+              <Route path="/services/ai-project-manager" element={<AIProjectManager />} />
+              <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
+              <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
+              <Route path="/services/ai-hr-talent-platform" element={<AIHRTalentPlatform />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              
+              {/* Showcase Pages */}
+              <Route path="/innovative-ai-services" element={<InnovativeAIServicesShowcase />} />
+              
+              {/* New Innovative Services */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+              <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+              <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
+              <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />

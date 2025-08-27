@@ -73,6 +73,14 @@ const Services: React.FC = () => {
             Our office: 364 E Main St STE 1008 Middletown DE 19709.
             See more at <a className="text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>.
           </div>
+          
+          <div className="mt-8 text-center">
+            <Link to="/innovative-ai-services" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 font-semibold">
+              <Sparkles className="w-5 h-5 mr-2" />
+              Explore Our Innovative AI Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {featuredCategories.map((c) => (
               <Link key={c.title} to={c.href} className="block bg-slate-900/60 border border-cyan-400/15 hover:border-cyan-400/40 rounded-2xl p-6 text-left">
