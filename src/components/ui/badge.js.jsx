@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/expand-services-and-deploy-updates-6593
 const Badge = ({ children, className = '', variant = 'default' }) => {
     const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
     const variantClasses = {
@@ -15,8 +11,6 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
         <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
             {children}
         </div>
-<<<<<<< HEAD
-========
     return (
       <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
         {children}
@@ -24,8 +18,6 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
     );
 };
 
-=======
     );
 };
->>>>>>> cursor/expand-services-and-deploy-updates-6593
 export { Badge };

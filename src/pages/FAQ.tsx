@@ -240,5 +240,4 @@ const FAQ: React.FC = () => {
       </div>
     </div>
   );
-};
-export default FAQ;
+}

@@ -30,6 +30,7 @@ const queryClient = new QueryClient({
     },
 });
 const rootElement = document.getElementById('root');
+
 function renderApp() {
     const app = (<React.StrictMode>
       <HelmetProvider>
@@ -62,6 +63,7 @@ function renderApp() {
         createRoot(rootElement).render(app);
     }
 }
+
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `

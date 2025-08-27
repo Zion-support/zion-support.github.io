@@ -322,7 +322,7 @@ export default function Partners() {
                 </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       {/* CTA Section */}

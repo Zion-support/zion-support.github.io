@@ -26,7 +26,7 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
-import { ServicesShowcase } from "@/components/ServicesShowcase";
+import { ServicesShowcase } from "@/components/ServicesShowcase.tsx";
 
 export default function Home() {
   return (

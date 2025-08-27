@@ -61,10 +61,6 @@ function LoginForm() {
               </FormControl>
               <FormMessage className="text-red-400"/>
             </FormItem>)}/>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/expand-services-and-deploy-updates-6593
         <FormField control={form.control} name="password" render={({ field }) => (<FormItem>
               <FormLabel className="text-zion-slate-light">Password</FormLabel>
               <FormControl>
@@ -82,10 +78,6 @@ function LoginForm() {
               </FormControl>
               <FormMessage className="text-red-400"/>
             </FormItem>)}/>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/expand-services-and-deploy-updates-6593
         <div className="flex items-center justify-between">
           <div className="text-sm">
             <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
@@ -93,10 +85,6 @@ function LoginForm() {
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/expand-services-and-deploy-updates-6593
         <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading || isSubmitting}>
           {isLoading || isSubmitting ? "Logging in..." : "Login"}
         </Button>
@@ -104,8 +92,4 @@ function LoginForm() {
       <LoadingOverlay visible={isLoading || isSubmitting}/>
     </Form>);
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/expand-services-and-deploy-updates-6593
 export default LoginForm;
