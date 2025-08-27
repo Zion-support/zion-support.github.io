@@ -8,6 +8,7 @@ import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -153,7 +154,7 @@ function App() {
         <AppHeader />
         
         <main className="flex-1 relative z-10">
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<AppLoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home2026" element={<Home2026 />} />
@@ -262,6 +263,7 @@ function App() {
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
+        <AccessibilityEnhancer />
         <PWAUpdater />
       </div>
     </ErrorBoundary>
