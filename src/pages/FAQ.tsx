@@ -307,6 +307,10 @@ const FAQ: React.FC = () => {
     )
   })).filter(category => category.questions.length > 0);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}

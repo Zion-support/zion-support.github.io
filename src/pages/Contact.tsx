@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
+=======
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
 import { 
   Mail, 
   Phone, 
   MapPin, 
   Clock, 
+<<<<<<< HEAD
   MessageCircle,
   Send,
   CheckCircle,
@@ -13,16 +17,27 @@ import {
   Globe,
   Building,
   ArrowRight
+=======
+  Send, 
+  MessageCircle, 
+  Globe, 
+  Users,
+  Building,
+  Zap,
+  Shield,
+  CheckCircle
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
-const Contact: React.FC = () => {
+export default function Contact() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
+<<<<<<< HEAD
     message: '',
     budget: '',
     timeline: ''
@@ -32,6 +47,15 @@ const Contact: React.FC = () => {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+=======
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const handleInputChange = (e) => {
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -39,12 +63,23 @@ const Contact: React.FC = () => {
     }));
   };
 
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
+=======
+  const handleSubmit = async (e) => {
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
     e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setSubmitSuccess(true);
+    
+    // Reset form after success
     setTimeout(() => {
+<<<<<<< HEAD
       setIsSubmitting(false);
       setSubmitStatus('success');
       
@@ -64,10 +99,23 @@ const Contact: React.FC = () => {
         });
       }, 3000);
     }, 2000);
+=======
+      setSubmitSuccess(false);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    }, 5000);
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
   };
 
   const contactInfo = [
     {
+<<<<<<< HEAD
       icon: Phone,
       title: 'Phone',
       value: '+1 (302) 464-0950',
@@ -87,18 +135,42 @@ const Contact: React.FC = () => {
       value: '364 E Main St STE 1008, Middletown DE 19709',
       description: 'Visit our office',
       href: '#'
+=======
+      icon: <Mail className="w-6 h-6 text-zion-cyan" />,
+      title: 'Email Us',
+      details: 'contact@ziontechgroup.com',
+      description: 'Get in touch via email for general inquiries'
     },
     {
-      icon: Clock,
+      icon: <Phone className="w-6 h-6 text-zion-cyan" />,
+      title: 'Call Us',
+      details: '+1 (555) 123-4567',
+      description: 'Speak directly with our team'
+    },
+    {
+      icon: <MapPin className="w-6 h-6 text-zion-cyan" />,
+      title: 'Visit Us',
+      details: 'San Francisco, CA',
+      description: 'Schedule an in-person meeting'
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-zion-cyan" />,
       title: 'Business Hours',
+<<<<<<< HEAD
       value: 'Monday - Friday: 9:00 AM - 6:00 PM EST',
       description: 'We\'re here to help',
       href: '#'
+=======
+      details: 'Mon-Fri 9AM-6PM PST',
+      description: 'We\'re here when you need us'
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
     }
   ];
 
   const services = [
     'AI & Machine Learning',
+<<<<<<< HEAD
     'Cybersecurity',
     'Cloud Infrastructure',
     'Digital Transformation',
@@ -136,6 +208,27 @@ const Contact: React.FC = () => {
       />
       
       <main className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-32 pb-20">
+=======
+    'Cybersecurity Solutions',
+    'Cloud & DevOps',
+    'IT Consulting',
+    'Micro SAAS Development',
+    'Digital Transformation',
+    'Quantum Computing',
+    'Blockchain Services'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEO 
+        title="Contact Zion Tech Group - Get In Touch"
+        description="Contact Zion Tech Group for AI services, cybersecurity solutions, cloud consulting, and technology expertise. Get in touch with our team of experts."
+        keywords="contact, Zion Tech Group, AI services, cybersecurity, cloud consulting, IT services"
+      />
+
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
           <section className="text-center mb-20">
@@ -145,8 +238,13 @@ const Contact: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
               <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
                 Let's Build
+=======
+              Let's <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+                Connect
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
               </span>
               <br />
               <span className="text-white">Something Amazing</span>
@@ -158,11 +256,17 @@ const Contact: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
+<<<<<<< HEAD
               Ready to transform your business with cutting-edge technology? Our team of experts is here to help 
               you navigate the future of AI, cybersecurity, and digital innovation.
+=======
+              Ready to transform your business with cutting-edge technology? 
+              Get in touch with our team of experts and let's discuss how we can help.
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
             </motion.p>
           </section>
 
+<<<<<<< HEAD
           {/* Contact Information */}
           <section className="mb-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -207,19 +311,108 @@ const Contact: React.FC = () => {
                     <div>
                       <label htmlFor="firstName" className="block text-white font-medium mb-2">
                         First Name *
+=======
+      {/* Contact Information */}
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Get in <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Touch</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {contactInfo.map((info, index) => (
+              <motion.div
+                key={index}
+                className="text-center p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex justify-center mb-4">
+                  {info.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{info.title}</h3>
+                <p className="text-zion-cyan font-medium mb-2">{info.details}</p>
+                <p className="text-zion-slate-light text-sm">{info.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Send us a <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Message</span>
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+                Tell us about your project or inquiry. We'll get back to you within 24 hours.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-zion-slate-dark/50 rounded-2xl p-8 border border-zion-cyan/20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              {submitSuccess ? (
+                <motion.div
+                  className="text-center py-12"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
+                  <p className="text-zion-slate-light">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                </motion.div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-white font-medium mb-2">
+                        Full Name *
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
                       </label>
                       <input
                         type="text"
-                        id="firstName"
-                        name="firstName"
-                        value={formData.firstName}
+                        id="name"
+                        name="name"
+                        value={formData.name}
                         onChange={handleInputChange}
                         required
+<<<<<<< HEAD
                         className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
                         placeholder="Enter your first name"
+=======
+                        className="w-full px-4 py-3 bg-zion-slate-dark/70 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                        placeholder="Enter your full name"
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
                       />
                     </div>
+                    
                     <div>
+<<<<<<< HEAD
                       <label htmlFor="lastName" className="block text-white font-medium mb-2">
                         Last Name *
                       </label>
@@ -240,6 +433,10 @@ const Contact: React.FC = () => {
                     <div>
                       <label htmlFor="email" className="block text-white font-medium mb-2">
                         Email *
+=======
+                      <label htmlFor="email" className="block text-white font-medium mb-2">
+                        Email Address *
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
                       </label>
                       <input
                         type="email"
@@ -248,6 +445,7 @@ const Contact: React.FC = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
+<<<<<<< HEAD
                         className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
                         placeholder="Enter your email"
                       />
@@ -266,6 +464,12 @@ const Contact: React.FC = () => {
                         placeholder="Enter your phone number"
                       />
                     </div>
+=======
+                        className="w-full px-4 py-3 bg-zion-slate-dark/70 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                        placeholder="Enter your email address"
+                      />
+                    </div>
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
                   </div>
 
                   <div>
@@ -285,14 +489,36 @@ const Contact: React.FC = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
+<<<<<<< HEAD
                       <label htmlFor="service" className="block text-white font-medium mb-2">
                         Service Interest *
+=======
+                      <label htmlFor="company" className="block text-white font-medium mb-2">
+                        Company
                       </label>
-                      <select
-                        id="service"
-                        name="service"
-                        value={formData.service}
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
                         onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-zion-slate-dark/70 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                        placeholder="Enter your company name"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="phone" className="block text-white font-medium mb-2">
+                        Phone Number
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+<<<<<<< HEAD
                         required
                         className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
                       >
@@ -301,6 +527,11 @@ const Contact: React.FC = () => {
                           <option key={service} value={service}>{service}</option>
                         ))}
                       </select>
+=======
+                        className="w-full px-4 py-3 bg-zion-slate-dark/70 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                        placeholder="Enter your phone number"
+                      />
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
                     </div>
                     <div>
                       <label htmlFor="budget" className="block text-white font-medium mb-2">
@@ -322,6 +553,7 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div>
+<<<<<<< HEAD
                     <label htmlFor="timeline" className="block text-white font-medium mb-2">
                       Project Timeline
                     </label>
@@ -335,6 +567,21 @@ const Contact: React.FC = () => {
                       <option value="">Select timeline</option>
                       {timelineOptions.map((timeline) => (
                         <option key={timeline} value={timeline}>{timeline}</option>
+=======
+                    <label htmlFor="service" className="block text-white font-medium mb-2">
+                      Service of Interest
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-zion-slate-dark/70 border border-zion-cyan/20 rounded-lg text-white focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                    >
+                      <option value="">Select a service</option>
+                      {services.map((service, index) => (
+                        <option key={index} value={service}>{service}</option>
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
                       ))}
                     </select>
                   </div>
@@ -350,6 +597,7 @@ const Contact: React.FC = () => {
                       onChange={handleInputChange}
                       required
                       rows={6}
+<<<<<<< HEAD
                       className="w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 resize-none"
                       placeholder="Tell us about your project, goals, and how we can help..."
                     />
@@ -486,7 +734,90 @@ const Contact: React.FC = () => {
         </div>
       </main>
     </>
-  );
-};
+=======
+                      className="w-full px-4 py-3 bg-zion-slate-dark/70 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300 resize-none"
+                      placeholder="Tell us about your project, requirements, or any questions you have..."
+                    />
+                  </div>
 
-export default Contact;
+                  <div className="text-center">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="mr-2 w-5 h-5" />
+                          Send Message
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </form>
+              )}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Zion Tech Group</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Zap className="w-12 h-12 text-zion-cyan" />,
+                title: 'Innovation First',
+                description: 'We stay ahead of the curve with cutting-edge technologies and forward-thinking solutions.'
+              },
+              {
+                icon: <Shield className="w-12 h-12 text-zion-cyan" />,
+                title: 'Proven Expertise',
+                description: 'Our team brings years of experience and deep technical knowledge to every project.'
+              },
+              {
+                icon: <Users className="w-12 h-12 text-zion-cyan" />,
+                title: 'Client Partnership',
+                description: 'We work closely with you to understand your needs and deliver solutions that drive results.'
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                className="text-center p-8 bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex justify-center mb-6">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-zion-slate-light">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+>>>>>>> d55a36bd8e1888949033367a1b7620593463887f
+  );
+}

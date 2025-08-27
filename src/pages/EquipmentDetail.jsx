@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -83,18 +81,16 @@ export default function EquipmentDetail() {
     // In a real app, this would fetch from an API
     const equipment = equipmentId ? EQUIPMENT_DETAILS[equipmentId] : undefined;
     if (!equipment) {
-        return (<>
-        <Header />
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
+        return (
+        <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20 py-12 px-4">
           <div className="container mx-auto">
             <div className="text-center py-20">
               <h1 className="text-3xl font-bold text-white mb-4">Equipment Not Found</h1>
-              <p className="text-zion-slate-light mb-8">The equipment you're looking for doesn't exist or has been removed.</p>
+              <p className="text-gray-300 mb-8">The equipment you're looking for doesn't exist or has been removed.</p>
             </div>
           </div>
         </div>
-        <Footer />
-      </>);
+      );
     }
     const handleAddToCart = () => {
         setIsAdding(true);
