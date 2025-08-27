@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, LineChart, Bot, Database, Shield, DollarSign, ExternalLink } from 'lucide-react';
+import { Brain, LineChart, Bot, Database, Shield, DollarSign, ExternalLink, Image as ImageIcon, FileText, Workflow, Globe, Video } from 'lucide-react';
 
 const AIServices: React.FC = () => {
   const offerings = [
@@ -27,6 +27,37 @@ const AIServices: React.FC = () => {
       title: 'Responsible AI & Governance',
       desc: 'Policy, guardrails, red-teaming, PII detection, SOC2/ISO-aligned controls, and observability for AI in production.',
       price: '$2,500 - $20,000+'
+    },
+    // New AI services
+    {
+      icon: ImageIcon,
+      title: 'Vision AI & Document Intelligence',
+      desc: 'OCR, form extraction, document classification, and image/video understanding for inspections and compliance.',
+      price: '$4,000 - $45,000+'
+    },
+    {
+      icon: FileText,
+      title: 'AI Content & Brand Copilots',
+      desc: 'On-brand generation for blogs, ads, and product copy with approval workflows and tone control.',
+      price: '$2,500 - $30,000+'
+    },
+    {
+      icon: Workflow,
+      title: 'Process Automation with LLMs',
+      desc: 'Orchestrate multi-step processes across CRMs, ERPs, and ticketing systems using LLM planning and tools.',
+      price: '$6,000 - $55,000+'
+    },
+    {
+      icon: Globe,
+      title: 'Multilingual CX & Localization AI',
+      desc: 'Real-time translation, NLU for 50+ languages, sentiment, and locale-aware responses across channels.',
+      price: '$3,000 - $25,000+'
+    },
+    {
+      icon: Video,
+      title: 'Speech & Video Intelligence',
+      desc: 'Transcription, speaker diarization, topic extraction, and highlight reels for calls, webinars, and support.',
+      price: '$4,000 - $35,000+'
     }
   ];
 
@@ -98,6 +129,9 @@ const AIServices: React.FC = () => {
           <a className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">
             View live services on our site <ExternalLink className="ml-1 h-3 w-3" />
           </a>
+          <div className="mt-6 text-xs text-slate-400">
+            Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709
+          </div>
         </div>
       </section>
     </div>
