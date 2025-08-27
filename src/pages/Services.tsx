@@ -1,16 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-=======
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/website-audit-and-enhancement-96e5
 import { 
   Brain, 
   Shield, 
   Cloud, 
-<<<<<<< HEAD
   Code,
   Database,
   Network,
@@ -430,12 +424,9 @@ const Services: React.FC = () => {
           features: ['Content creation', 'Platform development', 'Hardware integration', 'User experience design'],
           price: 'Starting at $45,000/month'
         }
->>>>>>> cursor/website-audit-and-enhancement-96e5
       ]
     }
   ];
-
-<<<<<<< HEAD
   const featuredServices = [
     {
       title: "AI Autonomous Business Platform",
@@ -630,7 +621,6 @@ const Services: React.FC = () => {
       </section>
 
       {/* Service Categories */}
-<<<<<<< HEAD
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -688,7 +678,6 @@ const Services: React.FC = () => {
                 <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
                 <div className="text-sm text-gray-400">{stat.description}</div>
-=======
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -755,7 +744,6 @@ const Services: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
->>>>>>> cursor/website-audit-and-enhancement-96e5
               </motion.div>
             ))}
           </div>
@@ -763,7 +751,6 @@ const Services: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -786,47 +773,10 @@ const Services: React.FC = () => {
               Learn More
             </Link>
           </div>
-=======
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Business?</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Let's discuss how our services can help you achieve your technology goals and drive business growth
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Free Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link 
-                to="/about"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
-                Learn More About Us
-              </Link>
-            </div>
-          </motion.div>
->>>>>>> cursor/website-audit-and-enhancement-96e5
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-};
 
 export default Services;
->>>>>>> cursor/website-audit-and-enhancement-96e5

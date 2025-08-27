@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 import { 
   CheckCircle, 
   AlertTriangle, 
@@ -7,413 +6,260 @@ import {
   Clock, 
   Server, 
   Database, 
-  Cloud, 
   Globe,
   Zap,
   Shield,
-  Users,
-  BarChart3,
-  Activity,
-  RefreshCw,
-  ExternalLink
+  Activity
 } from 'lucide-react';
 
-const Status = () => {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
-
-  // Mock status data - in a real app, this would come from an API
+const Status: React.FC = () => {
   const systemStatus = {
     overall: 'operational',
-    uptime: '99.99%',
+    uptime: '99.9%',
     lastIncident: '2024-01-15',
     responseTime: '45ms'
   };
 
   const services = [
     {
-      name: 'Website & Frontend',
+      name: 'Website',
       status: 'operational',
-      uptime: '99.99%',
+      uptime: '99.9%',
       responseTime: '45ms',
       lastCheck: '2 minutes ago'
     },
     {
       name: 'API Services',
       status: 'operational',
-      uptime: '99.98%',
+      uptime: '99.8%',
       responseTime: '120ms',
       lastCheck: '1 minute ago'
     },
     {
       name: 'Database',
       status: 'operational',
-      uptime: '99.99%',
+      uptime: '99.9%',
       responseTime: '15ms',
       lastCheck: '30 seconds ago'
     },
     {
       name: 'Authentication',
       status: 'operational',
-      uptime: '99.97%',
-      responseTime: '85ms',
+      uptime: '99.9%',
+      responseTime: '80ms',
       lastCheck: '1 minute ago'
     },
     {
       name: 'File Storage',
       status: 'operational',
-      uptime: '99.99%',
+      uptime: '99.7%',
       responseTime: '200ms',
       lastCheck: '2 minutes ago'
     },
     {
       name: 'Email Services',
       status: 'operational',
-      uptime: '99.95%',
+      uptime: '99.8%',
       responseTime: '150ms',
-      lastCheck: '3 minutes ago'
-    },
-    {
-      name: 'Payment Processing',
-      status: 'operational',
-      uptime: '99.99%',
-      responseTime: '300ms',
       lastCheck: '1 minute ago'
-    },
-    {
-      name: 'Analytics',
-      status: 'operational',
-      uptime: '99.90%',
-      responseTime: '500ms',
-      lastCheck: '5 minutes ago'
     }
   ];
 
   const incidents = [
     {
-      id: 'INC-001',
-      title: 'Scheduled Maintenance - Database Optimization',
+      date: '2024-01-15',
+      title: 'Scheduled Maintenance',
+      description: 'Database maintenance completed successfully',
       status: 'resolved',
-      severity: 'low',
-      startTime: '2024-01-15 02:00 UTC',
-      endTime: '2024-01-15 04:00 UTC',
-      description: 'Routine database maintenance and optimization completed successfully.'
+      duration: '2 hours'
     },
     {
-      id: 'INC-002',
-      title: 'API Response Time Degradation',
+      date: '2024-01-10',
+      title: 'API Performance Issue',
+      description: 'Increased response times due to high traffic',
       status: 'resolved',
-      severity: 'medium',
-      startTime: '2024-01-10 14:30 UTC',
-      endTime: '2024-01-10 16:45 UTC',
-      description: 'Increased API response times due to high traffic load. Resolved by scaling resources.'
+      duration: '45 minutes'
+    },
+    {
+      date: '2024-01-05',
+      title: 'Email Service Interruption',
+      description: 'Temporary email delivery delays',
+      status: 'resolved',
+      duration: '1 hour'
     }
   ];
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'operational':
-        return 'text-green-400';
-      case 'degraded':
-        return 'text-yellow-400';
-      case 'outage':
-        return 'text-red-400';
-      default:
-        return 'text-gray-400';
-    }
-  };
 
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
-        return <CheckCircle className="w-5 h-5 text-green-400" />;
+        return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'degraded':
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+        return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
       case 'outage':
-        return <XCircle className="w-5 h-5 text-red-400" />;
+        return <XCircle className="w-5 h-5 text-red-500" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-400" />;
+        return <Clock className="w-5 h-5 text-gray-500" />;
     }
   };
 
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'low':
-        return 'bg-blue-500';
-      case 'medium':
-        return 'bg-yellow-500';
-      case 'high':
-        return 'bg-red-500';
-      case 'critical':
-        return 'bg-red-600';
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'operational':
+        return 'text-green-500';
+      case 'degraded':
+        return 'text-yellow-500';
+      case 'outage':
+        return 'text-red-500';
       default:
-        return 'bg-gray-500';
+        return 'text-gray-500';
     }
-  };
-
-  const refreshStatus = () => {
-    setIsRefreshing(true);
-    setTimeout(() => {
-      setLastUpdated(new Date());
-      setIsRefreshing(false);
-    }, 1000);
   };
 
   return (
-    <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
-        <div className="container-responsive relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mr-4">
-                <Activity className="w-8 h-8 text-white" />
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gradient">
-                System Status
-              </h1>
-            </div>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Real-time monitoring of Zion Tech Group's services and infrastructure. 
-              Stay informed about system performance and any ongoing issues.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              System
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                {" "}Status
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Real-time status of Zion Tech Group's services and infrastructure
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button 
-                onClick={refreshStatus}
-                disabled={isRefreshing}
-                className="btn-futuristic px-8 py-3 text-lg flex items-center gap-2"
-              >
-                <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
-                {isRefreshing ? 'Refreshing...' : 'Refresh Status'}
-              </button>
-              <button className="btn-neon px-8 py-3 text-lg">
-                Subscribe to Updates
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Overall Status Section */}
-      <section className="py-20 bg-zion-slate-dark/50">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Overall System Status
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Current operational status and key performance metrics for all Zion Tech Group services.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 text-center hover:border-zion-cyan/40 transition-all duration-300"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">All Systems Operational</h3>
-              <p className="text-zion-slate-light">No active incidents</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 text-center hover:border-zion-cyan/40 transition-all duration-300"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6">
-                <BarChart3 className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">{systemStatus.uptime}</h3>
-              <p className="text-zion-slate-light">Uptime</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 text-center hover:border-zion-cyan/40 transition-all duration-300"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">{systemStatus.responseTime}</h3>
-              <p className="text-zion-slate-light">Avg Response Time</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 text-center hover:border-zion-cyan/40 transition-all duration-300"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-blue to-zion-cyan rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Clock className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">2 Days</h3>
-              <p className="text-zion-slate-light">Since Last Incident</p>
-            </motion.div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center mt-8 text-zion-slate-light"
-          >
-            <p>Last updated: {lastUpdated.toLocaleString()}</p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Service Status Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Service Status
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Detailed status of individual services and their performance metrics.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                  {getStatusIcon(service.status)}
+          {/* Overall Status */}
+          <div className="mb-16">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">
+                    {systemStatus.uptime}
+                  </div>
+                  <div className="text-gray-300">Uptime</div>
                 </div>
-                <div className="grid grid-cols-3 gap-4 text-sm">
-                  <div>
-                    <p className="text-zion-slate-light">Uptime</p>
-                    <p className="text-white font-medium">{service.uptime}</p>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">
+                    {systemStatus.responseTime}
                   </div>
-                  <div>
-                    <p className="text-zion-slate-light">Response</p>
-                    <p className="text-white font-medium">{service.responseTime}</p>
+                  <div className="text-gray-300">Response Time</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">
+                    {systemStatus.lastIncident}
                   </div>
-                  <div>
-                    <p className="text-zion-slate-light">Last Check</p>
-                    <p className="text-white font-medium">{service.lastCheck}</p>
+                  <div className="text-gray-300">Last Incident</div>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center mb-2">
+                    {getStatusIcon(systemStatus.overall)}
+                  </div>
+                  <div className={`font-semibold ${getStatusColor(systemStatus.overall)}`}>
+                    {systemStatus.overall.charAt(0).toUpperCase() + systemStatus.overall.slice(1)}
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Recent Incidents Section */}
-      <section className="py-20 bg-zion-slate-dark/50">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Recent Incidents
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              History of recent incidents and their resolution status.
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto space-y-6">
-            {incidents.map((incident, index) => (
-              <motion.div
-                key={incident.id}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getSeverityColor(incident.severity)}`}>
-                      {incident.severity.toUpperCase()}
-                    </span>
-                    <span className="text-zion-cyan font-mono">{incident.id}</span>
-                  </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    incident.status === 'resolved' ? 'bg-green-500 text-white' : 'bg-yellow-500 text-white'
-                  }`}>
-                    {incident.status.toUpperCase()}
-                  </span>
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{incident.title}</h3>
-                <p className="text-zion-slate-light mb-4">{incident.description}</p>
-                <div className="flex items-center justify-between text-sm text-zion-slate-light">
-                  <div className="flex items-center gap-4">
-                    <span>Started: {incident.startTime}</span>
-                    <span>Resolved: {incident.endTime}</span>
-                  </div>
-                  <button className="text-zion-cyan hover:text-zion-cyan/80 transition-colors flex items-center gap-2">
-                    <ExternalLink className="w-4 h-4" />
-                    View Details
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Stay Informed
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Get real-time updates about system status, maintenance windows, and incident reports 
-              to ensure you're always in the know.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="btn-futuristic px-8 py-3 text-lg">
-                Subscribe to Status Updates
-              </button>
-              <button className="btn-neon px-8 py-3 text-lg">
-                View Status History
-              </button>
+              </div>
             </div>
-          </motion.div>
+          </div>
+
+          {/* Services Status */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Service Status</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
+                    {getStatusIcon(service.status)}
+                  </div>
+                  <div className="space-y-2 text-sm text-gray-300">
+                    <div className="flex justify-between">
+                      <span>Uptime:</span>
+                      <span className="text-green-400">{service.uptime}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Response:</span>
+                      <span className="text-blue-400">{service.responseTime}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Last Check:</span>
+                      <span className="text-gray-400">{service.lastCheck}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Recent Incidents */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Recent Incidents</h2>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              {incidents.length === 0 ? (
+                <div className="text-center text-gray-300">
+                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                  <p className="text-xl">No recent incidents</p>
+                  <p className="text-sm">All systems are operating normally</p>
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  {incidents.map((incident, index) => (
+                    <div key={index} className="flex items-start space-x-4 p-4 bg-white/5 rounded-lg">
+                      <div className="flex-shrink-0">
+                        {incident.status === 'resolved' ? (
+                          <CheckCircle className="w-6 h-6 text-green-500" />
+                        ) : (
+                          <AlertTriangle className="w-6 h-6 text-yellow-500" />
+                        )}
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between mb-2">
+                          <h3 className="font-semibold text-white">{incident.title}</h3>
+                          <span className="text-sm text-gray-400">{incident.date}</span>
+                        </div>
+                        <p className="text-gray-300 text-sm mb-2">{incident.description}</p>
+                        <div className="flex items-center space-x-4 text-xs text-gray-400">
+                          <span className={`px-2 py-1 rounded ${
+                            incident.status === 'resolved' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
+                          }`}>
+                            {incident.status}
+                          </span>
+                          <span>Duration: {incident.duration}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Status Legend */}
+          <div className="text-center">
+            <h3 className="text-xl font-semibold mb-4">Status Legend</h3>
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span className="text-gray-300">Operational</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <AlertTriangle className="w-4 h-4 text-yellow-500" />
+                <span className="text-gray-300">Degraded Performance</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <XCircle className="w-4 h-4 text-red-500" />
+                <span className="text-gray-300">Outage</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Clock className="w-4 h-4 text-gray-500" />
+                <span className="text-gray-300">Maintenance</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

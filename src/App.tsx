@@ -30,6 +30,19 @@ const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Comprehen
 const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
 const EmergingTechServices2027 = React.lazy(() => import('./pages/EmergingTechServices2027'));
 
+// Additional important pages
+const Services = React.lazy(() => import('./pages/Services'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ForgotPassword = React.lazy(() => import('./pages/ForgotPassword'));
+const HelpCenter = React.lazy(() => import('./pages/HelpCenterPage'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+const Accessibility = React.lazy(() => import('./pages/accessibility-auditor'));
+const Security = React.lazy(() => import('./pages/Security'));
+const Status = React.lazy(() => import('./pages/Status'));
+
 // Enhanced loading spinner with futuristic design
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -78,6 +91,23 @@ function App() {
               <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
               <Route path="/emerging-tech-services-2027" element={<EmergingTechServices2027 />} />
+              
+              {/* Additional important routes */}
+              <Route path="/services" element={<Services />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/help" element={<HelpCenter />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/security" element={<Security />} />
+              <Route path="/status" element={<Status />} />
+              
+              {/* Comprehensive services routes */}
+              <Route path="/comprehensive-services" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/comprehensive-pricing" element={<ComprehensivePricingGuide2027 />} />
             </Routes>
           </Suspense>
         </main>
