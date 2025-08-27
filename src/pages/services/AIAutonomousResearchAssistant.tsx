@@ -1,361 +1,371 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Search, 
-  BookOpen, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Database,
-  BarChart3,
-  FileText,
-  Lightbulb,
-  Target,
-  Award,
-  Rocket,
-  Sparkles
-} from 'lucide-react';
+import { Brain, Search, TrendingUp, Target, Users, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Clock, Globe, Database, FileText, MessageSquare, BarChart3, BookOpen, Lightbulb, Network, Eye, Share2, Calendar, Phone } from 'lucide-react';
 
-const AIAutonomousResearchAssistant = () => {
+const AIAutonomousResearchAssistant: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Research",
-      description: "Advanced AI algorithms that autonomously conduct comprehensive research across multiple sources and databases."
+      title: "Autonomous Research",
+      description: "AI that independently conducts research and generates insights",
+      icon: Brain,
+      benefits: ["24/7 research capability", "Multi-source analysis", "Real-time updates"]
     },
     {
-      icon: <Search className="w-6 h-6" />,
-      title: "Multi-Source Analysis",
-      description: "Automatically gather, analyze, and synthesize information from academic papers, industry reports, and real-time data."
+      title: "Intelligent Data Mining",
+      description: "Advanced algorithms to extract valuable information from vast datasets",
+      icon: Search,
+      benefits: ["Pattern recognition", "Anomaly detection", "Trend identification"]
     },
     {
-      icon: <BookOpen className="w-6 h-6" />,
-      title: "Academic Integration",
-      description: "Seamless integration with academic databases, research repositories, and peer-reviewed sources."
+      title: "Automated Report Generation",
+      description: "Create comprehensive research reports in minutes, not days",
+      icon: FileText,
+      benefits: ["Custom templates", "Multiple formats", "Brand consistency"]
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Trend Analysis",
-      description: "Identify emerging trends, patterns, and insights from vast amounts of research data."
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Updates",
-      description: "Continuous monitoring and updates on research topics with automated alerts and notifications."
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Data Security",
-      description: "Enterprise-grade security with encryption, access controls, and compliance with research ethics standards."
+      title: "Predictive Analytics",
+      description: "Forecast trends and outcomes based on historical data analysis",
+      icon: TrendingUp,
+      benefits: ["Risk assessment", "Opportunity identification", "Scenario modeling"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "Researcher",
+      price: "$399",
       period: "/month",
-      description: "Perfect for individual researchers and small teams",
+      description: "Perfect for individual researchers",
       features: [
         "Up to 100 research queries/month",
-        "Basic AI analysis",
-        "Standard academic database access",
+        "Basic AI models",
+        "Standard report templates",
         "Email support",
-        "Basic reporting"
+        "Basic analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$899",
       period: "/month",
-      description: "Ideal for research institutions and growing organizations",
+      description: "Ideal for research teams",
       features: [
         "Up to 500 research queries/month",
-        "Advanced AI algorithms",
-        "Premium database access",
+        "Advanced AI models",
+        "Custom report templates",
         "Priority support",
         "Advanced analytics",
-        "Custom research templates"
+        "API access",
+        "White-label options"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$2,499",
       period: "/month",
-      description: "For large organizations with complex research needs",
+      description: "For large organizations",
       features: [
         "Unlimited research queries",
-        "Custom AI model training",
-        "Full database access",
-        "Dedicated support team",
-        "Advanced reporting & insights",
-        "API access",
-        "Custom integrations"
+        "Custom AI models",
+        "Dedicated account manager",
+        "24/7 support",
+        "Advanced security",
+        "Custom training",
+        "SLA guarantees"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const researchAreas = [
     {
-      title: "Academic Research",
-      description: "Accelerate literature reviews, identify research gaps, and discover relevant studies across disciplines.",
-      icon: <BookOpen className="w-8 h-8 text-blue-500" />
+      area: "Market Research",
+      description: "Comprehensive market analysis and competitive intelligence",
+      icon: BarChart3,
+      features: ["Competitor analysis", "Market sizing", "Trend forecasting"]
     },
     {
-      title: "Market Intelligence",
-      description: "Monitor industry trends, competitor analysis, and market opportunities with automated research.",
-      icon: <TrendingUp className="w-8 h-8 text-green-500" />
+      area: "Academic Research",
+      description: "Literature reviews and academic paper analysis",
+      icon: BookOpen,
+      features: ["Citation analysis", "Gap identification", "Methodology review"]
     },
     {
-      title: "Product Development",
-      description: "Research user needs, market requirements, and technical feasibility for new product ideas.",
-      icon: <Lightbulb className="w-8 h-8 text-yellow-500" />
+      area: "Business Intelligence",
+      description: "Strategic business insights and decision support",
+      icon: Lightbulb,
+      features: ["Performance analysis", "Risk assessment", "Opportunity mapping"]
     },
     {
-      title: "Policy Research",
-      description: "Analyze policy implications, stakeholder perspectives, and implementation strategies.",
-      icon: <Target className="w-8 h-8 text-purple-500" />
+      area: "Scientific Research",
+      description: "Data analysis and hypothesis testing",
+      icon: Network,
+      features: ["Statistical analysis", "Data validation", "Result interpretation"]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-purple-dark">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <div className="relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+          <motion.div 
+            className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full blur-3xl"
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.1, 0.3, 0.1],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+        </div>
+
+        <div className="relative container mx-auto px-4 py-24 text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Research
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mr-4">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                AI Autonomous Research Assistant
+              </h1>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Autonomous Research
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                {" "}Assistant
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your research process with AI that autonomously discovers, analyzes, and synthesizes information from thousands of sources in real-time.
+            <p className="text-xl lg:text-2xl mb-8 max-w-4xl mx-auto text-zion-slate-light">
+              Revolutionize your research with AI that works autonomously 24/7. 
+              Get comprehensive insights, automated reports, and predictive analytics.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="https://ziontechgroup.com/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center"
               >
-                Watch Demo
-              </motion.button>
+                <Phone className="mr-2 w-5 h-5" />
+                +1 302 464 0950
+              </a>
             </div>
           </motion.div>
         </div>
-      </section>
+      </div>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <div className="relative py-24">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Revolutionary Research Capabilities
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Advanced Research Capabilities
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI research assistant goes beyond simple search to provide comprehensive, intelligent research solutions.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Leverage cutting-edge AI to transform how you conduct research and gather insights
             </p>
           </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white mb-4">
-                  {feature.icon}
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-zion-slate-light mb-6">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-zion-cyan">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
+      {/* Research Areas Section */}
+      <div className="relative py-24">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Research Process
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Research Across All Domains
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover how AI-powered research can revolutionize your workflow across different domains.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              From market research to scientific analysis, our AI handles any research challenge
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {researchAreas.map((area, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/30 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
               >
-                <div className="flex items-start space-x-4">
-                  {useCase.icon}
-                  <div>
-                    <h3 className="text-2xl font-semibold text-white mb-3">{useCase.title}</h3>
-                    <p className="text-gray-300 text-lg">{useCase.description}</p>
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mr-4">
+                    <area.icon className="w-8 h-8 text-white" />
                   </div>
+                  <h3 className="text-2xl font-bold text-white">{area.area}</h3>
                 </div>
+                <p className="text-zion-slate-light mb-6">{area.description}</p>
+                <ul className="space-y-2">
+                  {area.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-zion-cyan">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <div className="relative py-24">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Choose Your Research Plan
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your research needs and budget.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Choose the plan that fits your research needs. All plans include our core AI features.
             </p>
           </motion.div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+                className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
-                    : 'border-slate-700/50'
+                    ? 'border-zion-cyan/40 scale-105 shadow-lg shadow-zion-cyan/25' 
+                    : 'border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
-                    </span>
+                    </div>
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-4">
+                  <p className="text-zion-slate-light mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
                   </div>
-                  <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-zion-slate-light">
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
-                
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
+                <a 
+                  href="https://ziontechgroup.com/contact" 
+                  className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'
+                      : 'border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
                   }`}
                 >
                   Get Started
-                </motion.button>
+                </a>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="relative py-24">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12"
+            className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-sm rounded-3xl p-12 border border-zion-cyan/20 text-center"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Revolutionize Your Research?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of researchers who are already using AI to accelerate their discoveries and insights.
+            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Research?
+            </h3>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Join thousands of researchers using AI to accelerate discoveries and insights. 
+              Start your free trial today or schedule a personalized demo.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="https://ziontechgroup.com/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
               >
                 Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
-                Contact Sales
-              </motion.button>
+                Schedule Demo
+              </a>
+            </div>
+            <div className="mt-8 text-zion-slate-light">
+              <p>Questions? Call us at <a href="tel:+13024640950" className="text-zion-cyan hover:underline">+1 302 464 0950</a></p>
+              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a></p>
             </div>
           </motion.div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
