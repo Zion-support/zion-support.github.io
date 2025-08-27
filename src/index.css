@@ -136,11 +136,12 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
     font-family: var(--font-sans);
     overflow-x: hidden;
@@ -386,15 +387,57 @@
 
   /* Responsive utilities */
   .container-responsive {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .text-responsive {
-    @apply text-sm sm:text-base lg:text-lg;
+    font-size: 0.875rem;
   }
 
   .heading-responsive {
-    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-responsive {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    .text-responsive {
+      font-size: 1rem;
+    }
+    .heading-responsive {
+      font-size: 1.875rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-responsive {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .text-responsive {
+      font-size: 1.125rem;
+    }
+    .heading-responsive {
+      font-size: 2.25rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .heading-responsive {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .heading-responsive {
+      font-size: 3.75rem;
+    }
   }
 
   /* Glass morphism */
@@ -572,17 +615,36 @@
   }
 
   /* Focus states */
-  .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900;
+  .focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #22d3ee, 0 0 0 4px #0f172a;
   }
 
   /* Responsive spacing */
   .space-responsive {
-    @apply space-y-4 sm:space-y-6 lg:space-y-8;
+    margin-top: 1rem;
   }
 
   .gap-responsive {
-    @apply gap-4 sm:gap-6 lg:gap-8;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .space-responsive {
+      margin-top: 1.5rem;
+    }
+    .gap-responsive {
+      gap: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .space-responsive {
+      margin-top: 2rem;
+    }
+    .gap-responsive {
+      gap: 2rem;
+    }
   }
 
   /* Typography scale */
