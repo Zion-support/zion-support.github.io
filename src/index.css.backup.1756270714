@@ -3,6 +3,9 @@
 
 @tailwind base;
 @tailwind components;
+<<<<<<< HEAD
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+=======
 @tailwind utilities;
 
 @layer base {
@@ -48,6 +51,7 @@
     --sidebar-accent-foreground: 0 0% 7%;
     --sidebar-border: 0 0% 68%;
     --sidebar-ring: 216 84% 53%;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
   }
 
   .hover-glow {

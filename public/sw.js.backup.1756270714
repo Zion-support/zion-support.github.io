@@ -7,15 +7,23 @@ const urlsToCache = [
 ];
 
 // Install event - cache resources
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
+<<<<<<< HEAD
+=======
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
@@ -42,13 +50,21 @@ self.addEventListener('fetch', (event) => {
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
+<<<<<<< HEAD
+<<<<<<< HEAD
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+=======
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cacheName => {
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 =======
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
           if (cacheName !== CACHE_NAME) {
             console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
@@ -57,9 +73,29 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
+<<<<<<< HEAD
+});
+
+// Background sync for offline actions
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
+  }
+});
+
+<<<<<<< HEAD
+async function doBackgroundSync() {
+  try {
+    // Perform background sync operations
+    console.log('Background sync completed');
+  } catch (error) {
+    console.error('Background sync failed:', error);
+  }
+=======
 function doBackgroundSync() {
   // Handle background sync logic
   console.log('Background sync triggered');
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 }
 
 // Push notification handling
@@ -102,4 +138,5 @@ self.addEventListener('notificationclick', (event) => {
     );
   }
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
 });

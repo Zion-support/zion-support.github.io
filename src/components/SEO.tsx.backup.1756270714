@@ -7,7 +7,10 @@ import React from 'react';
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'service';
+<<<<<<< HEAD
+=======
   author?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
@@ -20,6 +23,12 @@ import React from 'react';
   facebookAppId?: string;
 }
 
+<<<<<<< HEAD
+  // Merge custom structured data with default
+  const finalStructuredData = structuredData 
+    ? { ...defaultStructuredData, ...structuredData }
+    : defaultStructuredData;
+=======
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading AI & Technology Solutions',
   description = 'Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation solutions. Expert IT consulting and innovative technology services.',
@@ -81,6 +90,7 @@ const SEO: React.FC<SEOProps> = ({
     if (section) structuredData.articleSection = section;
     if (tags.length > 0) structuredData.keywords = tags.join(', ');
   }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
 
   return (
     <Helmet>
@@ -105,6 +115,11 @@ export interface SEOProps {
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
+<<<<<<< HEAD
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:image" content={fullImage} />
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={fullImage} />
@@ -114,13 +129,42 @@ export interface SEOProps {
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
+<<<<<<< HEAD
+      <meta name="twitter:card" content={twitterCard} />
+=======
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />
       
+<<<<<<< HEAD
+      {/* Article specific meta tags */}
+      {type === 'article' && publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {type === 'article' && modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
+      {type === 'article' && author && (
+        <meta property="article:author" content={author} />
+      )}
+      {type === 'article' && section && (
+        <meta property="article:section" content={section} />
+      )}
+      {type === 'article' && tags.length > 0 && (
+        tags.map((tag, index) => (
+          <meta key={index} property="article:tag" content={tag} />
+        ))
+      )}
+      
+      {/* Robots Meta Tags */}
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
+      {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
+=======
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - AI-Powered Business Solutions & IT Services',
   description = 'Transform your business with Zion Tech Group\'s cutting-edge AI solutions, comprehensive IT services, and sustainable Green IT practices. Drive innovation and digital transformation.',
@@ -279,6 +323,7 @@ export function SEO({ title, description, keywords, canonical, url }: SEOProps) 
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
       
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -291,7 +336,14 @@ export function SEO({ title, description, keywords, canonical, url }: SEOProps) 
       
       {/* Structured Data */}
       <script type="application/ld+json">
+<<<<<<< HEAD
+        {JSON.stringify(organizationSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(websiteSchema)}
+=======
         {JSON.stringify(structuredData)}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-be39
       </script>
       
       {/* Additional Meta Tags for Business */}
