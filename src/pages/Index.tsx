@@ -57,7 +57,7 @@ export default function Index() {
     {
       title: "Comprehensive Services",
       description: "Explore our complete portfolio of innovative technology solutions and micro SAAS services",
-      icon: <Star className="h-6 w-6 text-zion-purple" />,
+      icon: <Sparkles className="h-6 w-6 text-zion-purple" />,
       link: "/comprehensive-services"
     },
     {
