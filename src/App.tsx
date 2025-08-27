@@ -116,6 +116,12 @@ const AICybersecurity = React.lazy(() => import('./pages/services/AICybersecurit
 const QuantumComputingSolutions = React.lazy(() => import('./pages/services/QuantumComputingSolutions'));
 const IoTEdgeComputing = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
 
+// Additional Innovative Services
+const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
+const NewInnovativeServicesShowcase = React.lazy(() => import('./pages/NewInnovativeServicesShowcase'));
+
 // Accessibility page
 const Accessibility = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -255,6 +261,14 @@ function App() {
               <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
               <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
               <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+              
+              {/* Additional Innovative Services */}
+              <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+              <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+              <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+              
+              {/* Showcase Pages */}
+              <Route path="/new-innovative-services" element={<NewInnovativeServicesShowcase />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />

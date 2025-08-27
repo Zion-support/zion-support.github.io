@@ -1,84 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles } from 'lucide-react';
+import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, Rocket } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 import { NEW_SERVICES_2025 } from '../data/newServices2025';
+import { NEW_INNOVATIVE_SERVICES_2025 } from '../data/newInnovativeServices2025';
 
-export default function Services() {
-  const aiServices = [
-    {
-      title: "AI Autonomous Business Operations",
-      description: "Next-generation autonomous business operations platform that uses advanced AI to automate complex business processes and make intelligent decisions in real-time.",
-      icon: Bot,
-      price: "From $2,500/month",
-      features: ["24/7 Autonomous Operations", "AI Decision Making", "Process Optimization", "Real-time Analytics", "Predictive Maintenance", "Resource Allocation"],
-      benefits: ["Reduce operational costs by up to 40%", "Improve process efficiency by 60%", "Eliminate manual errors and delays", "24/7 automated operations"],
-      path: "/services/autonomous",
-      rating: 4.9,
-      reviewCount: 127,
-      category: "AI & Automation"
-    },
-    {
-      title: "AI-Powered Cybersecurity Suite",
-      description: "Comprehensive cybersecurity solution that uses artificial intelligence to detect, prevent, and respond to threats in real-time.",
-      icon: Shield,
-      price: "From $1,800/month",
-      features: ["AI Threat Detection", "Real-time Response", "Advanced Analytics", "Compliance Ready", "Behavioral Analysis", "Automated Incident Response"],
-      benefits: ["99.9% threat detection rate", "Reduce response time by 90%", "Automated compliance reporting", "24/7 security monitoring"],
-      path: "/services/cybersecurity",
-      rating: 4.9,
-      reviewCount: 156,
-      category: "AI & Security"
-    },
-    {
-      title: "AI Content Marketing Suite",
-      description: "End-to-end AI-powered content creation and marketing automation platform that generates engaging content across all channels.",
-      icon: FileText,
-      price: "From $800/month",
-      features: ["AI Content Generation", "Multi-channel Publishing", "SEO Optimization", "Performance Analytics", "Brand Voice Consistency", "A/B Testing"],
-      benefits: ["10x faster content creation", "Improve engagement by 45%", "Reduce marketing costs by 30%", "24/7 content optimization"],
-      path: "/services/ai-content",
-      rating: 4.8,
-      reviewCount: 89,
-      category: "AI & Marketing"
-    },
-    {
-      title: "AI Sales Copilot",
-      description: "Intelligent sales assistant that automates lead qualification, follow-ups, and sales process optimization using advanced AI.",
-      icon: Users,
-      price: "From $1,200/month",
-      features: ["Lead Qualification", "Automated Follow-ups", "Sales Process Optimization", "Performance Analytics", "CRM Integration", "Predictive Lead Scoring"],
-      benefits: ["Increase conversion rates by 35%", "Reduce follow-up time by 70%", "Improve lead quality by 50%", "Automated sales reporting"],
-      path: "/services/ai-sales",
-      rating: 4.7,
-      reviewCount: 203,
-      category: "AI & Sales"
-    },
-    {
-      title: "AI Customer Support Platform",
-      description: "Intelligent customer support solution that provides instant responses, ticket routing, and customer satisfaction optimization.",
-      icon: MessageSquare,
-      price: "From $600/month",
-      features: ["AI Chatbots", "Intelligent Ticket Routing", "Sentiment Analysis", "Knowledge Base", "Multi-language Support", "Performance Analytics"],
-      benefits: ["Reduce response time by 80%", "Improve customer satisfaction by 40%", "Handle 10x more inquiries", "24/7 customer support"],
-      path: "/services/ai-support",
-      rating: 4.8,
-      reviewCount: 167,
-      category: "AI & Support"
-    },
-    {
-      title: "AI Data Analytics & BI",
-      description: "Advanced business intelligence platform that uses AI to transform raw data into actionable insights and predictive analytics.",
-      icon: BarChart3,
-      price: "From $1,500/month",
-      features: ["Predictive Analytics", "Real-time Dashboards", "Data Visualization", "Automated Reporting", "Machine Learning Models", "Data Integration"],
-      benefits: ["Uncover hidden insights", "Make data-driven decisions", "Predict future trends", "Automate reporting processes"],
-      path: "/services/ai-analytics",
-      rating: 4.9,
-      reviewCount: 134,
-      category: "AI & Analytics"
-    }
+const Services: React.FC = () => {
+  const [query, setQuery] = useState('');
+  const services = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025, ...NEW_SERVICES_2025, ...NEW_INNOVATIVE_SERVICES_2025];
+  const featuredCategories = [
+    { icon: Workflow, title: 'Process Automation', desc: 'Human + AI workflows across CRMs, ERPs and support.', href: '/ai-services' },
+    { icon: MessageSquare, title: 'Helpdesk & Knowledge', desc: 'Tickets, KB, and chatbots trained on your docs.', href: '/micro-saas' },
+    { icon: Globe, title: 'Localization & Multilingual', desc: '50+ languages, locale-aware UX, translation QA pipelines.', href: '/micro-saas' }
+  ];
   ];
 
   const itServices = [
@@ -408,9 +343,9 @@ export default function Services() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <div>
-              <Link to="/innovative-services-2026" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 font-semibold">
-                <TrendingUp className="w-5 h-5 ml-2" />
-                Discover 2026 Revolutionary Services
+              <Link to="/new-innovative-services" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg hover:from-green-400 hover:to-blue-400 transition-all duration-300 font-semibold">
+                <Rocket className="w-5 h-5 mr-2" />
+                Discover New Services 2025
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
