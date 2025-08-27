@@ -1,67 +1,92 @@
 {
-  "name": "Zion Tech Group",
+  "name": "Zion Tech Group - AI-Powered Business Solutions",
   "short_name": "Zion Tech",
-  "description": "Cutting-edge technology solutions and AI services for modern businesses",
+  "description": "Leading provider of cutting-edge AI solutions, quantum computing platforms, and autonomous business operations. Transform your business with next-generation technology services.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
-  "theme_color": "#0f172a",
+  "theme_color": "#22ddd2",
   "orientation": "portrait-primary",
   "scope": "/",
-  "lang": "en",
-  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "categories": ["business", "productivity", "technology", "utilities"],
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "/images/zion-logo-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any maskable"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "/images/zion-logo-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any maskable"
     },
     {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshot-wide.png",
-      "sizes": "1280x720",
+      "src": "/images/zion-logo-72.png",
+      "sizes": "72x72",
       "type": "image/png",
-      "form_factor": "wide"
+      "purpose": "any"
     },
     {
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
+      "src": "/images/zion-logo-96.png",
+      "sizes": "96x96",
       "type": "image/png",
-      "form_factor": "narrow"
+      "purpose": "any"
+    },
+    {
+      "src": "/images/zion-logo-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/zion-logo-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/zion-logo-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/zion-logo-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/zion-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "shortcuts": [
     {
+      "name": "AI Solutions",
+      "short_name": "AI Solutions",
+      "description": "Explore our AI-powered business solutions",
+      "url": "/ai-solutions",
+      "icons": [
+        {
+          "src": "/images/ai-solutions-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
       "name": "Services",
       "short_name": "Services",
-      "description": "View our technology services",
+      "description": "Browse our comprehensive service offerings",
       "url": "/services",
       "icons": [
         {
-          "src": "/icon-services.png",
+          "src": "/images/services-icon.png",
           "sizes": "96x96"
         }
       ]
@@ -69,16 +94,158 @@
     {
       "name": "Contact",
       "short_name": "Contact",
-      "description": "Get in touch with us",
+      "description": "Get in touch with our team",
       "url": "/contact",
       "icons": [
         {
-          "src": "/icon-contact.png",
+          "src": "/images/contact-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "About",
+      "short_name": "About",
+      "description": "Learn more about Zion Tech Group",
+      "url": "/about",
+      "icons": [
+        {
+          "src": "/images/about-icon.png",
           "sizes": "96x96"
         }
       ]
     }
   ],
-  "related_applications": [],
-  "prefer_related_applications": false
+  "screenshots": [
+    {
+      "src": "/images/screenshot-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Homepage showcasing AI solutions and services"
+    },
+    {
+      "src": "/images/screenshot-services.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Services page with detailed offerings"
+    },
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile-optimized interface"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://ziontechgroup.com"
+    }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "handle_links": "preferred",
+  "protocol_handlers": [
+    {
+      "protocol": "web+zion",
+      "url": "/protocol-handler?url=%s"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/file-handler",
+      "accept": {
+        "text/*": [".txt", ".md", ".json"],
+        "application/pdf": [".pdf"],
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
+      }
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "files",
+          "accept": ["image/*", "text/*", "application/pdf"]
+        }
+      ]
+    }
+  },
+  "permissions": [
+    "notifications",
+    "background-sync",
+    "storage"
+  ],
+  "features": [
+    "Cross Platform",
+    "fast",
+    "simple",
+    "AI-Powered",
+    "Quantum Computing",
+    "Business Solutions"
+  ],
+  "developer": {
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com"
+  },
+  "homepage_url": "https://ziontechgroup.com",
+  "author": "Zion Tech Group",
+  "version": "1.0.0",
+  "minimum_version": "1.0.0",
+  "offline_enabled": true,
+  "background": {
+    "service_worker": "/sw.js",
+    "type": "module"
+  },
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "display_override_standalone": "standalone",
+  "display_override_minimal_ui": "minimal-ui",
+  "display_override_browser": "browser",
+  "display_override_fullscreen": "fullscreen",
+  "display_override_window_controls_overlay": "window-controls-overlay",
+  "display_override_tabbed": "tabbed",
+  "display_override_minimal_ui_standalone": "minimal-ui",
+  "display_override_standalone_minimal_ui": "standalone",
+  "display_override_standalone_browser": "standalone",
+  "display_override_browser_standalone": "browser",
+  "display_override_standalone_fullscreen": "standalone",
+  "display_override_fullscreen_standalone": "fullscreen",
+  "display_override_standalone_window_controls_overlay": "standalone",
+  "display_override_window_controls_overlay_standalone": "window-controls-overlay",
+  "display_override_standalone_tabbed": "standalone",
+  "display_override_tabbed_standalone": "tabbed",
+  "display_override_minimal_ui_browser": "minimal-ui",
+  "display_override_browser_minimal_ui": "browser",
+  "display_override_minimal_ui_fullscreen": "minimal-ui",
+  "display_override_fullscreen_minimal_ui": "fullscreen",
+  "display_override_minimal_ui_window_controls_overlay": "minimal-ui",
+  "display_override_window_controls_overlay_minimal_ui": "window-controls-overlay",
+  "display_override_minimal_ui_tabbed": "minimal-ui",
+  "display_override_tabbed_minimal_ui": "tabbed",
+  "display_override_browser_fullscreen": "browser",
+  "display_override_fullscreen_browser": "fullscreen",
+  "display_override_browser_window_controls_overlay": "browser",
+  "display_override_window_controls_overlay_browser": "window-controls-overlay",
+  "display_override_browser_tabbed": "browser",
+  "display_override_tabbed_browser": "tabbed",
+  "display_override_fullscreen_window_controls_overlay": "fullscreen",
+  "display_override_window_controls_overlay_fullscreen": "window-controls-overlay",
+  "display_override_fullscreen_tabbed": "fullscreen",
+  "display_override_tabbed_fullscreen": "tabbed",
+  "display_override_window_controls_overlay_tabbed": "window-controls-overlay",
+  "display_override_tabbed_window_controls_overlay": "tabbed"
 }
