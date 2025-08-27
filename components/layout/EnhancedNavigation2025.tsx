@@ -8,17 +8,9 @@ import {
   Target, Microscope, Atom, Database,
   Lock, Cloud, BarChart3, Settings,
   Eye, Code, Palette, Layers,
-<<<<<<< HEAD
-  Network, Server, ShieldCheck, ZapIcon,
-  GlobeIcon, StarIcon, TrendingUpIcon, UsersIcon,
-  CheckCircleIcon, ArrowRightIcon, CpuIcon,
-  DollarSign, Phone, ArrowRight, Mail, MapPin, Dna, BookOpen, Building, Sparkles
-=======
   Network, Server, ShieldCheck,
   DollarSign, Phone, ArrowRight, Mail, MapPin, Dna, BookOpen, Building
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 } from 'lucide-react';
-
 interface NavigationItem {
   name: string;
   href: string;
@@ -29,7 +21,6 @@ interface NavigationItem {
   title?: string;
   submenu?: NavigationItem[];
 }
-
 const navigationItems: NavigationItem[] = [
   {
     name: '🚀 All Services',
@@ -60,8 +51,6 @@ const navigationItems: NavigationItem[] = [
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution', description: 'Emotional intelligence and self-awareness' },
       { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion', description: 'Quantum-AI hybrid computing' },
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem', description: 'Self-managing AI systems' },
-<<<<<<< HEAD
-=======
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance', description: 'Ethical AI frameworks' },
       { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
       { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized AI learning' },
@@ -72,7 +61,6 @@ const navigationItems: NavigationItem[] = [
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution', description: 'Emotional intelligence and self-awareness' },
       { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion', description: 'Quantum-AI hybrid computing' },
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem', description: 'Self-managing AI systems' },
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance', description: 'Ethical AI frameworks' }
     ]
   },
@@ -86,9 +74,6 @@ const navigationItems: NavigationItem[] = [
       { name: 'Space Mining Platform', href: '/space-mining-platform', description: 'Asteroid mining and space resources' },
       { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing', description: 'Quantum-biological hybrid processing' },
       { name: 'Brain-Computer Interface', href: '/brain-computer-interface', description: 'Neural interface technology' },
-<<<<<<< HEAD
-      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' }
-=======
       { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' },
       { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery', description: 'Advanced material science' },
       { name: 'Quantum Robotics', href: '/quantum-robotics', description: 'Quantum-enhanced robotics' },
@@ -144,44 +129,23 @@ const navigationItems: NavigationItem[] = [
       { name: 'CRM Intelligence & Automation', href: '/crm-intelligence-automation', description: 'Smart customer management' },
       { name: 'AI Decision Engine Platform', href: '/ai-decision-engine', description: 'Intelligent decision support' },
       { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform', description: 'AI-powered e-commerce' }
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
     ]
   }
 ];
-
 export default function EnhancedNavigation2025() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-<<<<<<< HEAD
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  // Close dropdowns when clicking outside
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-=======
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
-
   const closeAllDropdowns = () => {
     setActiveDropdown(null);
   };
-
   const closeMenu = () => {
     setIsOpen(false);
     setActiveSubmenu(null);
   };
-
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -189,11 +153,9 @@ export default function EnhancedNavigation2025() {
         setActiveDropdown(null);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [activeDropdown]);
-
   return (
     <nav className="bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 sticky top-0 z-50">
       {/* Top Bar */}
@@ -217,15 +179,10 @@ export default function EnhancedNavigation2025() {
               </div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
-<<<<<<< HEAD
-              <div key={item.name} className="relative group">
-=======
               <div key={item.name} className="relative dropdown-container">
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
                 <button
                   onClick={() => toggleDropdown(item.name)}
                   className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/5"
@@ -260,7 +217,6 @@ export default function EnhancedNavigation2025() {
               </div>
             ))}
           </div>
-
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link href="/contact" onClick={closeAllDropdowns}>
@@ -274,7 +230,6 @@ export default function EnhancedNavigation2025() {
               </button>
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -284,7 +239,6 @@ export default function EnhancedNavigation2025() {
           </button>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -357,7 +311,6 @@ export default function EnhancedNavigation2025() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Click outside to close dropdowns */}
       {activeDropdown && (
         <div

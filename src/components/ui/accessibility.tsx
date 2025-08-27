@@ -111,7 +111,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
       <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 right-4 z-50 p-3 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings">
         <Accessibility className="w-6 h-6"/>
       </motion.button>
-
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div className="fixed inset-0 z-40" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
@@ -127,7 +126,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   <X className="w-5 h-5 text-zinc-400"/>
                 </button>
               </div>
-
               {/* Visual Settings */}
               <div className="space-y-4">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Visual</h3>
@@ -142,7 +140,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                     {settings.highContrast ? 'On' : 'Off'}
                   </Button>
                 </div>
-
                 {/* Large Text */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -153,7 +150,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                     {settings.largeText ? 'On' : 'Off'}
                   </Button>
                 </div>
-
                 {/* Font Size Control */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
@@ -169,7 +165,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                     </Button>
                   </div>
                 </div>
-
                 {/* Color Blind Mode */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
@@ -184,7 +179,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   </select>
                 </div>
               </div>
-
               {/* Motion Settings */}
               <div className="space-y-4 mt-6">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Motion</h3>
@@ -199,7 +193,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   </Button>
                 </div>
               </div>
-
               {/* Audio Settings */}
               <div className="space-y-4 mt-6">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Audio</h3>
@@ -214,7 +207,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   </Button>
                 </div>
               </div>
-
               {/* Test Announcement */}
               {settings.screenReader && (<div className="mt-4 p-3 bg-zion-blue/20 rounded-lg">
                   <p className="text-zinc-300 text-sm mb-2">Test screen reader announcement:</p>
@@ -222,14 +214,12 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                     Test Announcement
                   </Button>
                 </div>)}
-
               {/* Reset Button */}
               <div className="mt-6 pt-6 border-t border-zion-blue-light/20">
                 <Button onClick={resetSettings} variant="outline" className="w-full border-zinc-500 text-zinc-300 hover:bg-zinc-500/20">
                   Reset to Defaults
                 </Button>
               </div>
-
               {/* Help Text */}
               <div className="mt-4 text-xs text-zinc-400 text-center">
                 <p>These settings are saved locally and will persist across sessions.</p>
@@ -238,7 +228,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-
       {/* Screen Reader Only Class */}
       <style dangerouslySetInnerHTML={{
             __html: `
@@ -253,7 +242,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             white-space: nowrap;
             border: 0;
           }
-
           .high-contrast {
             --zion-cyan: #00ffff;
             --zion-blue: #0066ff;
@@ -264,28 +252,22 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             --zion-purple-dark: #6600cc;
             --zion-purple-light: #cc33ff;
           }
-
           [data-color-blind="protanopia"] {
             filter: url('#protanopia-filter');
           }
-
           [data-color-blind="deuteranopia"] {
             filter: url('#deuteranopia-filter');
           }
-
           [data-color-blind="tritanopia"] {
             filter: url('#tritanopia-filter');
           }
-
           :root {
             --font-size: 16px;
             --reduced-motion: no-preference;
           }
-
           * {
             font-size: var(--font-size);
           }
-
           @media (prefers-reduced-motion: reduce) {
             * {
               animation-duration: 0.01ms !important;
@@ -293,7 +275,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
               transition-duration: 0.01ms !important;
             }
           }
-
           [style*="--reduced-motion: reduce"] * {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
@@ -301,7 +282,6 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
           }
         `
         }}/>
-
       {/* SVG Filters for Color Blind Modes */}
       <svg style={{ position: 'absolute', width: 0, height: 0 }}>
         <defs>

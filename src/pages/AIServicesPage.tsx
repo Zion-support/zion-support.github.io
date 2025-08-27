@@ -1,11 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 import { Link } from 'react-router-dom';
 import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
 const AIServices = [
@@ -122,212 +118,6 @@ const AIServices = [
     }
 ];
 const categories = [
-<<<<<<< HEAD
-const AIServicesPage: React.FC = () => {
-  const aiServices = [
-    {
-      id: 1,
-      title: 'Machine Learning Development',
-      description: 'Custom ML models tailored to your business needs',
-      icon: Brain,
-      features: ['Predictive Analytics', 'Pattern Recognition', 'Automated Decision Making'],
-      useCases: ['Customer Segmentation', 'Risk Assessment', 'Demand Forecasting'],
-      pricing: 'Starting at $15,000'
-    },
-    {
-      id: 2,
-      title: 'Natural Language Processing',
-      description: 'Advanced text and speech processing solutions',
-      icon: MessageSquare,
-      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation'],
-      useCases: ['Chatbots', 'Document Processing', 'Content Moderation'],
-      pricing: 'Starting at $12,000'
-    },
-    {
-      id: 3,
-      title: 'Computer Vision',
-      description: 'Image and video analysis for automation',
-      icon: Eye,
-      features: ['Object Detection', 'Image Classification', 'Facial Recognition'],
-      useCases: ['Quality Control', 'Security Systems', 'Medical Imaging'],
-      pricing: 'Starting at $18,000'
-    },
-    {
-      id: 4,
-      title: 'Predictive Analytics',
-      description: 'Data-driven insights for strategic decision making',
-      icon: BarChart3,
-      features: ['Trend Analysis', 'Risk Modeling', 'Performance Optimization'],
-      useCases: ['Financial Planning', 'Inventory Management', 'Maintenance Scheduling'],
-      pricing: 'Starting at $10,000'
-    }
-  ];
-
-  const aiSolutions = [
-    {
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent customer service automation',
-      benefits: ['24/7 Availability', 'Multi-language Support', 'Seamless Integration']
-    },
-    {
-      title: 'Intelligent Document Processing',
-      description: 'Automated data extraction and analysis',
-      benefits: ['Faster Processing', 'Reduced Errors', 'Cost Savings']
-    },
-    {
-      title: 'Predictive Maintenance',
-      description: 'Prevent equipment failures with AI insights',
-      benefits: ['Reduced Downtime', 'Lower Costs', 'Improved Safety']
-    },
-    {
-      title: 'AI-Driven Marketing',
-      description: 'Personalized campaigns and customer insights',
-      benefits: ['Higher Conversion', 'Better Targeting', 'ROI Optimization']
-    }
-  ];
-
-  const caseStudies = [
-    {
-      company: 'TechCorp Industries',
-      industry: 'Manufacturing',
-      challenge: 'Quality control inefficiencies',
-      solution: 'Computer vision system for defect detection',
-      results: ['99.2% accuracy', '40% faster inspection', '30% cost reduction']
-    },
-    {
-      company: 'Global Finance Ltd',
-      industry: 'Financial Services',
-      challenge: 'Fraud detection complexity',
-      solution: 'ML-powered risk assessment',
-      results: ['95% fraud detection rate', '60% faster processing', '25% false positive reduction']
-    },
-    {
-      company: 'HealthTech Solutions',
-      industry: 'Healthcare',
-      challenge: 'Patient data analysis',
-      solution: 'NLP for medical records',
-      results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes']
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <Brain className="w-20 h-20 text-zion-cyan mx-auto mb-8" />
-              <h1 className="text-5xl md:text-7xl font-bold mb-8">
-                AI <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                  Services
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto">
-                Transform your business with cutting-edge artificial intelligence solutions. 
-                From machine learning to computer vision, we bring the future of technology to your doorstep.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5 inline" />
-                </Link>
-                <button className="px-8 py-4 bg-zion-slate-dark/50 border border-zion-cyan/20 text-zion-cyan font-semibold rounded-xl hover:bg-zion-slate-dark/70 transition-all duration-300">
-                  <Play className="w-5 h-5 inline mr-2" />
-                  Watch Demo
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Services Grid */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">AI Solutions</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive artificial intelligence services designed to drive innovation and growth
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {aiServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                    <p className="text-zion-slate-light">{service.description}</p>
-                  </div>
-                </div>
-
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <h4 className="font-semibold text-white mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">
-                          <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-white mb-2">Use Cases:</h4>
-                    <ul className="space-y-1">
-                      {service.useCases.map((useCase, useCaseIndex) => (
-                        <li key={useCaseIndex} className="flex items-center gap-2 text-zion-slate-light">
-                          <Target className="w-4 h-4 text-zion-purple" />
-                          <span className="text-sm">{useCase}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-zion-cyan font-semibold">{service.pricing}</span>
-                  <Link 
-                    to="/contact"
-                    className="text-zion-cyan hover:text-zion-blue transition-colors font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-1 w-4 h-4 inline" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-=======
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
     { name: "Strategy", value: "strategy", icon: <CheckCircle className="h-4 w-4"/> },
     { name: "Development", value: "development", icon: <Code className="h-4 w-4"/> },
@@ -371,7 +161,6 @@ export default function AIServicesPage() {
           </div>
         </div>
       </section>
-
       {/* AI Solutions Overview */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -389,7 +178,6 @@ export default function AIServicesPage() {
               Ready-to-deploy AI solutions that deliver immediate business value
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {aiSolutions.map((solution, index) => (
               <motion.div
@@ -419,7 +207,6 @@ export default function AIServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Case Studies */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -437,7 +224,6 @@ export default function AIServicesPage() {
               Real-world examples of how our AI solutions transform businesses
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
@@ -454,7 +240,6 @@ export default function AIServicesPage() {
                     {study.industry}
                   </span>
                 </div>
-
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold text-white mb-2">Challenge:</h4>
@@ -470,7 +255,6 @@ export default function AIServicesPage() {
               {category.name}
             </Button>))}
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {filteredServices.map((service, index) => (<Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-zion-purple/20 hover:border-zion-purple/50 bg-zion-blue-dark/50 backdrop-blur-sm">
@@ -483,35 +267,23 @@ export default function AIServicesPage() {
                       {service.badge}
                     </Badge>)}
                 </div>
-
                 {/* Service Info */}
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
                   {service.name}
                 </h3>
                 <p className="text-zion-slate-light mb-4 line-clamp-2">
                   {service.description}
-<<<<<<< HEAD
-                </p>
-
-                {/* Pricing */}
-                <div className="flex items-baseline mb-4">
-                  <span className="text-3xl font-bold text-zion-cyan">{service.price}</span>
-                  <span className="text-zion-slate-light ml-1">{service.period}</span>
-=======
                 </CardDescription>
               </CardHeader>
               <CardContent className="pb-4">
                 <div className="mb-4">
                   <p className="text-2xl font-bold text-zion-cyan mb-2">{service.price}</p>
                   <p className="text-sm text-zion-slate-light">Starting price</p>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
                 </div>
-
                   <div>
                     <h4 className="font-semibold text-white mb-2">Solution:</h4>
                     <p className="text-zion-slate-light text-sm">{study.solution}</p>
                   </div>
-
                   <div>
                     <h4 className="font-semibold text-white mb-2">Results:</h4>
                     <ul className="space-y-1">
@@ -529,7 +301,6 @@ export default function AIServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Our AI Services */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -547,7 +318,6 @@ export default function AIServicesPage() {
               Expertise, innovation, and proven results in artificial intelligence
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: Award, title: 'Expert Team', description: 'Certified AI specialists with years of experience' },
@@ -573,7 +343,6 @@ export default function AIServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -644,7 +413,6 @@ export default function AIServicesPage() {
               </div>
             </Card>))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center py-12">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -667,8 +435,3 @@ export default function AIServicesPage() {
       </div>
     </div>);
 }
-<<<<<<< HEAD
-
-export default AIServicesPage;
-=======
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

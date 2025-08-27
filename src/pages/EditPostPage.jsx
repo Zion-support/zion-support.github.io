@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Button } from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";

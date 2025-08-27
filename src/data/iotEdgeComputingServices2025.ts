@@ -40,9 +40,14 @@ export interface IoTEdgeComputingService {
   aiIntegration: boolean;
   predictiveAnalytics: boolean;
 }
+<<<<<<< HEAD
 
 // IoT & Edge Computing Services for 2025
 export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
+=======
+export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeComputingService2025[] = [
+  // Smart City IoT Platform
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 1,
     name: "Smart City IoT Platform",
@@ -99,6 +104,10 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     aiIntegration: true,
     predictiveAnalytics: true
   },
+<<<<<<< HEAD
+=======
+  // Industrial IoT Edge Computing Platform
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 2,
     name: "Industrial IoT Edge AI",
@@ -155,9 +164,147 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     aiIntegration: true,
     predictiveAnalytics: true
   },
+<<<<<<< HEAD
   {
     id: 3,
     name: "Healthcare IoT Monitor",
+=======
+  // Edge AI Computing Service
+  {
+    id: "edge-ai-computing-service",
+    title: "Edge AI Computing Service",
+    description: "Distributed AI computing service that brings machine learning capabilities to edge devices for real-time inference, reduced latency, and improved privacy.",
+    category: "AI & Edge Computing",
+    subcategory: "Edge AI",
+    price: 5999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Edge AI inference",
+      "Model optimization",
+      "Real-time processing",
+      "Privacy preservation",
+      "Device management",
+      "Performance monitoring",
+      "Custom model deployment",
+      "API integration",
+      "Scalable infrastructure",
+      "Security features"
+    ],
+    benefits: [
+      "Reduce latency by 80%",
+      "Improve privacy",
+      "Lower bandwidth costs",
+      "Real-time AI processing",
+      "Enhanced user experience"
+    ],
+    useCases: [
+      "Autonomous vehicles",
+      "Smart cameras",
+      "Mobile devices",
+      "IoT sensors",
+      "Edge servers"
+    ],
+    targetAudience: [
+      "AI engineers",
+      "IoT developers",
+      "Product managers",
+      "Technology companies",
+      "Research institutions"
+    ],
+    tags: ["Edge AI", "Machine Learning", "IoT", "Real-time", "Privacy"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "premium",
+    marketPrice: "$5,999 - $18,000/month",
+    roi: "300-450%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["TensorFlow Lite", "ONNX", "Python", "Edge Devices", "Kubernetes", "Docker"],
+      integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Edge devices", "Cloud platforms"],
+      apiEndpoints: 400,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "Data encryption", "Model security"]
+    },
+    competitors: ["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "Intel OpenVINO"],
+    marketSize: "$15.7 billion by 2025",
+    compliance: ["SOC 2", "ISO 27001", "GDPR", "AI safety standards"]
+  },
+  // IoT Security & Threat Detection Platform
+  {
+    id: "iot-security-threat-detection",
+    title: "IoT Security & Threat Detection Platform",
+    description: "Comprehensive security platform for IoT devices that provides real-time threat detection, device authentication, and security monitoring across distributed networks.",
+    category: "IoT & Security",
+    subcategory: "IoT Security",
+    price: 6999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Device authentication",
+      "Threat detection",
+      "Security monitoring",
+      "Vulnerability assessment",
+      "Incident response",
+      "Compliance management",
+      "Security analytics",
+      "Mobile dashboard",
+      "API integration",
+      "Custom reporting"
+    ],
+    benefits: [
+      "Prevent IoT attacks",
+      "Improve device security",
+      "Compliance automation",
+      "Real-time threat response",
+      "Enhanced network protection"
+    ],
+    useCases: [
+      "Smart homes",
+      "Industrial IoT",
+      "Healthcare IoT",
+      "Connected vehicles",
+      "Smart buildings"
+    ],
+    targetAudience: [
+      "Security managers",
+      "IoT architects",
+      "Network administrators",
+      "Compliance officers",
+      "Technology companies"
+    ],
+    tags: ["IoT Security", "Threat Detection", "Device Authentication", "Network Security", "Compliance"],
+    estimatedDelivery: "10-14 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$6,999 - $20,000/month",
+    roi: "350-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["AI/ML", "Blockchain", "Zero-Trust", "Python", "React", "Node.js"],
+      integrations: ["IoT platforms", "Security tools", "Network devices", "Cloud platforms"],
+      apiEndpoints: 500,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "Zero-Trust", "Data encryption", "Blockchain security"]
+    },
+    competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point", "Trend Micro"],
+    marketSize: "$59.2 billion by 2025",
+    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "IoT security standards"]
+  },
+  // Connected Healthcare IoT Platform
+  {
+    id: "connected-healthcare-iot",
+    title: "Connected Healthcare IoT Platform",
+    description: "Comprehensive IoT platform for healthcare that connects medical devices, monitors patient health, and provides real-time insights for improved care delivery.",
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     category: "Healthcare IoT",
     description: "Comprehensive healthcare IoT monitoring platform with patient tracking, medical device management, and health analytics",
     pricing: "Professional",

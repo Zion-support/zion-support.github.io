@@ -110,7 +110,6 @@ export default function TenantOnboarding() {
               Create a new white-label instance of Zion Hire AI for a company.
             </p>
           </div>
-
           <Card>
             <CardHeader>
               <CardTitle>New Tenant Setup</CardTitle>

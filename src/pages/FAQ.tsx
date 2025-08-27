@@ -2,18 +2,15 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, Search, MessageCircle, Phone, Mail, HelpCircle, BookOpen, Video, Users2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 interface FAQItem {
   question: string;
   answer: string;
   category: string;
 }
-
 const FAQ: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set());
   const [activeCategory, setActiveCategory] = useState<string>('all');
-
   const faqData: FAQItem[] = [
     // General Questions
     {
@@ -31,7 +28,6 @@ const FAQ: React.FC = () => {
       answer: "You can contact us through multiple channels: Email at info@ziontechgroup.com, phone at +1 (302) 464-0950, or through our contact form on the website. We also offer live chat support during business hours.",
       category: "general"
     },
-
     // Services Questions
     {
       question: "What services does Zion Tech Group offer?",
@@ -53,7 +49,6 @@ const FAQ: React.FC = () => {
       answer: "Yes, we offer comprehensive cloud migration services including assessment, planning, migration execution, and post-migration optimization. We work with AWS, Azure, Google Cloud, and other major cloud providers.",
       category: "services"
     },
-
     // Pricing & Billing
     {
       question: "How does Zion Tech Group pricing work?",
@@ -70,7 +65,6 @@ const FAQ: React.FC = () => {
       answer: "We accept major credit cards, bank transfers, and digital payments. For enterprise clients, we offer net payment terms and can accommodate various billing cycles.",
       category: "pricing"
     },
-
     // Technical Support
     {
       question: "What kind of technical support do you provide?",
@@ -87,7 +81,6 @@ const FAQ: React.FC = () => {
       answer: "Our response times vary by priority level: Critical issues (P1) - 1 hour, High priority (P2) - 4 hours, Medium priority (P3) - 24 hours, Low priority (P4) - 48 hours. Enterprise clients receive priority support.",
       category: "support"
     },
-
     // Partnership & Careers
     {
       question: "How can I become a partner with Zion Tech Group?",
@@ -105,7 +98,6 @@ const FAQ: React.FC = () => {
       category: "partnership"
     }
   ];
-
   const categories = [
     { id: 'all', name: 'All Questions', count: faqData.length },
     { id: 'general', name: 'General', count: faqData.filter(item => item.category === 'general').length },
@@ -114,14 +106,12 @@ const FAQ: React.FC = () => {
     { id: 'support', name: 'Technical Support', count: faqData.filter(item => item.category === 'support').length },
     { id: 'partnership', name: 'Partnership & Careers', count: faqData.filter(item => item.category === 'partnership').length },
   ];
-
   const filteredFAQ = faqData.filter(item => {
     const matchesSearch = item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          item.answer.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
     return matchesSearch && matchesCategory;
   });
-
   const toggleItem = (index: number) => {
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(index)) {
@@ -131,7 +121,10 @@ const FAQ: React.FC = () => {
     }
     setExpandedItems(newExpanded);
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header Section */}
@@ -153,7 +146,6 @@ const FAQ: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Search and Filter Section */}
         <motion.div
@@ -173,7 +165,6 @@ const FAQ: React.FC = () => {
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
             />
           </div>
-
           {/* Category Filters */}
           <div className="flex flex-wrap justify-center gap-2">
             {categories.map((category) => (
@@ -191,7 +182,6 @@ const FAQ: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* FAQ Items */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -249,7 +239,6 @@ const FAQ: React.FC = () => {
             </div>
           )}
         </motion.div>
-
         {/* Contact Support Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -289,7 +278,6 @@ const FAQ: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Additional Resources */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -312,7 +300,6 @@ const FAQ: React.FC = () => {
               View Documentation →
             </Link>
           </div>
-
           <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
             <div className="w-12 h-12 bg-zion-purple/10 rounded-lg flex items-center justify-center mb-4">
               <Video className="w-6 h-6 text-zion-purple" />
@@ -328,7 +315,6 @@ const FAQ: React.FC = () => {
               Watch Videos →
             </Link>
           </div>
-
           <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
             <div className="w-12 h-12 bg-zion-cyan/10 rounded-lg flex items-center justify-center mb-4">
               <Users2 className="w-6 h-6 text-zion-cyan" />
@@ -349,5 +335,4 @@ const FAQ: React.FC = () => {
     </div>
   );
 };
-
 export default FAQ;

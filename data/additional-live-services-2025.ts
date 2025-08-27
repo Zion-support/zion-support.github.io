@@ -5,7 +5,6 @@ export interface AdditionalLiveService2025 {
   price: string;
   features: string[];
 }
-
 export const additionalLiveServices2025: AdditionalLiveService2025[] = [
   {
     id: 'live-service-1',

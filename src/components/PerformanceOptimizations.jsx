@@ -90,7 +90,6 @@ export function PerformanceOptimizations() {
           Advanced performance features for better user experience
         </p>
       </div>
-
       {/* Memoized Data Grid */}
       <div>
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
@@ -103,7 +102,6 @@ export function PerformanceOptimizations() {
         </div>
         <MemoizedDataGrid data={data} onItemClick={handleItemClick}/>
       </div>
-
       {/* Virtual Scrolling */}
       <div>
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
@@ -115,7 +113,6 @@ export function PerformanceOptimizations() {
             value: Math.floor(Math.random() * 1000)
         }))} itemHeight={60} containerHeight={400}/>
       </div>
-
       {/* Lazy Loading */}
       <div>
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
@@ -131,7 +128,6 @@ export function PerformanceOptimizations() {
             </div>
           </Suspense>)}
       </div>
-
       {/* Performance Metrics */}
       <div>
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">

@@ -44,7 +44,6 @@ export interface ComprehensiveService2027 {
     caseStudies?: string[];
   };
 }
-
 export const COMPREHENSIVE_SERVICES_2027: ComprehensiveService2027[] = [
   // AI-Powered Autonomous DevOps Platform
   {
@@ -130,7 +129,6 @@ export const COMPREHENSIVE_SERVICES_2027: ComprehensiveService2027[] = [
       ]
     }
   },
-
   // Quantum-Secure Blockchain Platform
   {
     id: "quantum-secure-blockchain-platform",
@@ -216,5 +214,4 @@ export const COMPREHENSIVE_SERVICES_2027: ComprehensiveService2027[] = [
     }
   }
 ];
-
 export default COMPREHENSIVE_SERVICES_2027;

@@ -14,14 +14,12 @@ export type EnhancedServiceItem = {
 	marketTrend: string;
 	competitiveAdvantage: string;
 };
-
 export type EnhancedServiceCategory = {
 	name: string;
 	slug: string;
 	description: string;
 	items: EnhancedServiceItem[];
 };
-
 export const enhancedZionServices2025: EnhancedServiceCategory[] = [
 	{
 		name: 'Advanced AI & Autonomous Systems',
@@ -983,22 +981,18 @@ export const enhancedZionServices2025: EnhancedServiceCategory[] = [
 		]
 	}
 ];
-
 export const getEnhancedServiceById = (id: string): EnhancedServiceItem | undefined => {
 	return enhancedZionServices2025
 		.flatMap(category => category.items)
 		.find(service => service.id === id);
 };
-
 export const getEnhancedServicesByCategory = (categorySlug: string): EnhancedServiceItem[] => {
 	const category = enhancedZionServices2025.find(cat => cat.slug === categorySlug);
 	return category ? category.items : [];
 };
-
 export const getAllEnhancedServices = (): EnhancedServiceItem[] => {
 	return enhancedZionServices2025.flatMap(category => category.items);
 };
-
 export const searchEnhancedServices = (query: string): EnhancedServiceItem[] => {
 	const searchTerm = query.toLowerCase();
 	return getAllEnhancedServices().filter(service =>

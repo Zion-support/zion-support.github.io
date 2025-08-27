@@ -30,7 +30,6 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
-
       {/* What is Quantum Computing Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -71,7 +70,6 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
-
       {/* Quantum Services Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -88,7 +86,6 @@ const QuantumTechnology = () => {
                 Advanced quantum machine learning algorithms for pattern recognition and data analysis.
               </p>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">
               <div className="p-3 bg-blue-600/20 rounded-lg w-fit mb-4">
                 <BoltIcon className="h-8 w-8 text-blue-400"/>
@@ -98,7 +95,6 @@ const QuantumTechnology = () => {
                 Distributed quantum computing solutions for real-time processing at the edge.
               </p>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">
               <div className="p-3 bg-green-600/20 rounded-lg w-fit mb-4">
                 <GlobeAltIcon className="h-8 w-8 text-green-400"/>
@@ -108,7 +104,6 @@ const QuantumTechnology = () => {
                 Scalable quantum computing resources accessible through cloud platforms.
               </p>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">
               <div className="p-3 bg-orange-600/20 rounded-lg w-fit mb-4">
                 <RocketLaunchIcon className="h-8 w-8 text-orange-400"/>
@@ -118,7 +113,6 @@ const QuantumTechnology = () => {
                 High-frequency trading algorithms powered by quantum computing for market advantage.
               </p>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">
               <div className="p-3 bg-cyan-600/20 rounded-lg w-fit mb-4">
                 <ShieldCheckIcon className="h-8 w-8 text-cyan-400"/>
@@ -128,7 +122,6 @@ const QuantumTechnology = () => {
                 Unbreakable encryption systems based on quantum mechanical principles.
               </p>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">
               <div className="p-3 bg-pink-600/20 rounded-lg w-fit mb-4">
                 <CpuChipIcon className="h-8 w-8 text-pink-400"/>
@@ -141,7 +134,6 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
-
       {/* Applications Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -204,7 +196,6 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -285,7 +276,6 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
         <div className="max-w-4xl mx-auto text-center">

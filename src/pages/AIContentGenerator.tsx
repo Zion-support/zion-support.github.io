@@ -2,205 +2,6 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-import { SEO } from "../components/SEOHead";
-import { 
-  PenTool, 
-  FileText, 
-  Brain, 
-  Zap, 
-  Target, 
-  Users, 
-  DollarSign,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Shield,
-  Type,
-  Image,
-  Video,
-  Mic,
-  Palette,
-  ShoppingBag,
-  Mail
-} from "lucide-react";
-import { Link } from "react-router-dom";
-export default function AIContentGenerator() {
-  const features = [
-    {
-      title: "AI Writing Assistant",
-      description: "Generate high-quality content for blogs, social media, and marketing campaigns",
-      icon: <PenTool className="h-6 w-6 text-zion-cyan" />
-    },
-    {
-      title: "Multi-Format Support",
-      description: "Create content in various formats: text, images, videos, and audio",
-      icon: <FileText className="h-6 w-6 text-zion-purple" />
-    },
-    {
-      title: "Brand Voice Consistency",
-      description: "Maintain your brand's unique voice across all content pieces",
-      icon: <Type className="h-6 w-6 text-zion-blue" />
-    },
-    {
-      title: "SEO Optimization",
-      description: "AI-powered SEO suggestions to improve content visibility and ranking",
-      icon: <Target className="h-6 w-6 text-zion-cyan" />
-    }
-  ];
-
-  const contentTypes = [
-    {
-import { SEO } from "../components/SEOHead";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, Brain, Zap, FileText, Globe, Users, Shield, Clock, Star } from "lucide-react";
-import { Link } from "react-router-dom";
-
-export default function AIContentGenerator() {
-  const features = [
-    "AI-powered content generation for any industry",
-    "SEO-optimized content with keyword research",
-    "Multiple content formats (blogs, social media, emails)",
-    "Brand voice customization and consistency",
-    "Plagiarism-free, original content",
-    "Real-time content optimization",
-    "Multi-language support (100+ languages)",
-    "Content calendar and scheduling",
-    "Performance analytics and insights",
-    "Team collaboration tools",
-    "API access for enterprise integration",
-    "24/7 customer support"
-      title: "Blog Posts",
-      description: "Long-form articles and blog content",
-      icon: <FileText className="h-8 w-8 text-zion-cyan" />
-    },
-    {
-      title: "Social Media",
-      description: "Posts for all major social platforms",
-      icon: <Users className="h-8 w-8 text-zion-purple" />
-    },
-    {
-      title: "Marketing Copy",
-      description: "Ads, landing pages, and promotional content",
-      icon: <Target className="h-8 w-8 text-zion-blue" />
-    },
-    {
-      title: "Product Descriptions",
-      description: "Compelling product and service descriptions",
-      icon: <ShoppingBag className="h-8 w-8 text-zion-cyan" />
-    },
-    {
-      title: "Email Campaigns",
-      description: "Newsletters and email marketing content",
-      icon: <Mail className="h-8 w-8 text-zion-purple" />
-    },
-    {
-      title: "Video Scripts",
-      description: "Scripts for video content and presentations",
-      icon: <Video className="h-8 w-8 text-zion-blue" />
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$49",
-      period: "/month",
-      description: "Perfect for individuals and small businesses",
-      features: [
-        "Up to 50 content pieces/month",
-        "Basic AI writing tools",
-        "Standard templates",
-        "Email support",
-        "Basic SEO suggestions"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Advanced content creation for growing businesses",
-      features: [
-        "Up to 200 content pieces/month",
-        "Advanced AI writing tools",
-        "Custom templates",
-        "Priority support",
-        "Advanced SEO optimization",
-        "Brand voice training",
-        "Multi-language support"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      title: "Blog Content Creation",
-      description: "Generate engaging blog posts, articles, and long-form content optimized for SEO and reader engagement.",
-      icon: <FileText className="h-8 w-8 text-zion-cyan" />
-    },
-    {
-      title: "Social Media Marketing",
-      description: "Create compelling social media posts, captions, and campaigns across all platforms.",
-      icon: <Globe className="h-8 w-8 text-zion-purple" />
-    },
-    {
-      title: "Email Marketing",
-      description: "Generate personalized email campaigns, newsletters, and automated sequences.",
-      icon: <Users className="h-8 w-8 text-zion-cyan" />
-    },
-    {
-      title: "Product Descriptions",
-      description: "Create compelling product descriptions, features, and marketing copy.",
-      icon: <Zap className="h-8 w-8 text-zion-purple" />
-      price: "$399",
-      period: "/month",
-      description: "Full-scale content creation for large organizations",
-      features: [
-        "Unlimited content pieces",
-        "Custom AI models",
-        "White-label solutions",
-        "Dedicated support",
-        "Advanced analytics",
-        "API access",
-        "Custom integrations"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Jennifer Martinez",
-      role: "Marketing Director, GrowthBrand",
-      content: "Zion's AI Content Generator increased our content output by 300% while maintaining quality. Game-changer!",
-      rating: 5
-    },
-    {
-      name: "David Kim",
-      role: "Content Creator, TechBlog",
-      content: "The AI writing assistant is incredibly intuitive. It understands context and generates engaging content.",
-      rating: 5
-    },
-    {
-      name: "Lisa Thompson",
-      role: "CEO, StartupXYZ",
-      content: "We've saved countless hours on content creation. The ROI is immediate and substantial.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-slate-dark">
-      <SEOHead 
-        title="AI Content Generator - Zion Tech Group" 
-        description="Create engaging, high-quality content with AI-powered writing tools. Generate blogs, social media posts, and marketing copy instantly."
-        keywords="AI content generator, content creation, AI writing, marketing copy, Zion Tech Group"
-        canonical="https://ziontechgroup.com/ai-content-generator"
-      />
-=======
 import { SEO } from "@/components/SEO";
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -369,8 +170,6 @@ export default function AIContentGenerator() {
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-slate-dark">
       <SEO title="AI Content Generator - Zion Tech Group" description="Create engaging, high-quality content with AI-powered writing tools. Generate blogs, social media posts, and marketing copy instantly." keywords="AI content generator, content creation, AI writing, marketing copy, Zion Tech Group" canonical="https://ziontechgroup.com/ai-content-generator"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
@@ -400,7 +199,6 @@ export default function AIContentGenerator() {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -449,7 +247,6 @@ export default function AIContentGenerator() {
           </div>
         </div>)}
       </section>
-
       {/* Use Cases */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -499,7 +296,6 @@ export default function AIContentGenerator() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -544,7 +340,6 @@ export default function AIContentGenerator() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto text-center">
@@ -596,7 +391,6 @@ export default function AIContentGenerator() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto text-center">

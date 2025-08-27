@@ -35,7 +35,6 @@ export interface EnhancedInnovativeService {
   rating?: number;
   aiScore?: number;
 }
-
 export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
   // AI-Powered Financial Services
   {
@@ -92,7 +91,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["Bloomberg", "Reuters", "Yahoo Finance", "Trading Platforms", "Banking APIs"],
     compliance: ["SEC", "FINRA", "GDPR", "SOC 2", "PCI DSS"]
   },
-
   // AI-Powered Healthcare Solutions
   {
     id: "ai-healthcare-diagnostic-platform",
@@ -148,7 +146,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["Epic", "Cerner", "PACS Systems", "Lab Information Systems", "Pharmacy Systems"],
     compliance: ["HIPAA", "FDA", "SOC 2", "HITECH", "ISO 27001"]
   },
-
   // AI-Powered Legal Services
   {
     id: "ai-legal-research-assistant",
@@ -204,7 +201,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["Westlaw", "LexisNexis", "Clio", "Practice Management Systems", "Document Management"],
     compliance: ["Data Privacy", "Attorney-Client Privilege", "SOC 2", "GDPR"]
   },
-
   // AI-Powered Marketing & Sales
   {
     id: "ai-marketing-automation-suite",
@@ -260,7 +256,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["Shopify", "WooCommerce", "HubSpot", "Salesforce", "Google Analytics", "Facebook Ads"],
     compliance: ["GDPR", "CCPA", "SOC 2", "Data Privacy"]
   },
-
   // AI-Powered Supply Chain Management
   {
     id: "ai-supply-chain-optimization",
@@ -316,7 +311,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["ERP Systems", "WMS", "TMS", "E-commerce Platforms", "Supplier Portals"],
     compliance: ["ISO 9001", "SOC 2", "GDPR", "Industry Standards"]
   },
-
   // AI-Powered Human Resources
   {
     id: "ai-hr-talent-management",
@@ -372,7 +366,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["ATS Systems", "HRIS", "LinkedIn", "Job Boards", "Background Check Services"],
     compliance: ["EEOC", "ADA", "FCRA", "SOC 2", "GDPR"]
   },
-
   // AI-Powered Real Estate
   {
     id: "ai-real-estate-analytics",
@@ -428,7 +421,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["MLS Systems", "Property Databases", "Financial Data Sources", "Market Data APIs"],
     compliance: ["Real Estate Regulations", "Data Privacy", "SOC 2", "Industry Standards"]
   },
-
   // AI-Powered Education
   {
     id: "ai-education-personalization",
@@ -484,7 +476,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["LMS Systems", "Student Information Systems", "Content Libraries", "Assessment Tools"],
     compliance: ["FERPA", "COPPA", "SOC 2", "Data Privacy", "Educational Standards"]
   },
-
   // AI-Powered Manufacturing
   {
     id: "ai-manufacturing-optimization",
@@ -540,7 +531,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["MES Systems", "SCADA", "ERP Systems", "IoT Devices", "Quality Control Systems"],
     compliance: ["ISO 9001", "ISO 14001", "SOC 2", "Industry 4.0 Standards"]
   },
-
   // AI-Powered Energy Management
   {
     id: "ai-energy-optimization",
@@ -596,7 +586,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["SCADA Systems", "Smart Meters", "Renewable Energy Systems", "Energy Trading Platforms"],
     compliance: ["ISO 50001", "SOC 2", "Energy Regulations", "Grid Standards"]
   },
-
   // AI-Powered Transportation & Logistics
   {
     id: "ai-transportation-optimization",
@@ -652,7 +641,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["GPS Systems", "Fleet Management Software", "TMS", "Fuel Cards", "Maintenance Systems"],
     compliance: ["DOT Regulations", "ELD Compliance", "SOC 2", "Transportation Standards"]
   },
-
   // AI-Powered Retail & E-commerce
   {
     id: "ai-retail-optimization",
@@ -708,7 +696,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["POS Systems", "E-commerce Platforms", "Inventory Management", "Customer Databases", "Payment Systems"],
     compliance: ["PCI DSS", "GDPR", "SOC 2", "Retail Regulations"]
   },
-
   // AI-Powered Real Estate Investment Platform
   {
     id: "ai-real-estate-investment",
@@ -769,7 +756,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered Education & Learning Platform
   {
     id: "ai-education-platform",
@@ -830,7 +816,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered Energy Management Platform
   {
     id: "ai-energy-management",
@@ -891,7 +876,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered Agriculture & Precision Farming
   {
     id: "ai-precision-agriculture",
@@ -952,7 +936,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered Construction & Project Management
   {
     id: "ai-construction-management",
@@ -1013,7 +996,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered Hospitality & Tourism
   {
     id: "ai-hospitality-platform",
@@ -1074,7 +1056,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered Insurance & Risk Assessment
   {
     id: "ai-insurance-platform",
@@ -1135,7 +1116,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered Legal Research & Document Analysis
   {
     id: "ai-legal-research",
@@ -1196,7 +1176,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered Media & Content Creation
   {
     id: "ai-media-platform",
@@ -1257,7 +1236,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered Gaming & Entertainment
   {
     id: "ai-gaming-platform",
@@ -1318,7 +1296,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered Cybersecurity & Threat Intelligence
   {
     id: "ai-cybersecurity-intelligence",
@@ -1379,7 +1356,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.99%",
     uptime: "99.99%"
   },
-
   // AI-Powered Supply Chain & Logistics
   {
     id: "ai-supply-chain-platform",
@@ -1440,7 +1416,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered Customer Experience & Support
   {
     id: "ai-customer-experience",
@@ -1501,7 +1476,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered HR & Talent Management
   {
     id: "ai-hr-talent-platform",
@@ -1562,7 +1536,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // AI-Powered Data Governance & Privacy
   {
     id: "ai-data-governance",
@@ -1624,19 +1597,15 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     uptime: "99.99%"
   }
 ];
-
 export const getInnovativeServiceByCategory = (category: string) => {
   return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.category === category);
 };
-
 export const getInnovativeServiceBySubcategory = (subcategory: string) => {
   return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.subcategory === subcategory);
 };
-
 export const getFeaturedInnovativeServices = () => {
   return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.rating >= 4.7).slice(0, 8);
 };
-
 export const getServicesByAIScore = (minScore: number) => {
   return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.aiScore && service.aiScore >= minScore);
 };

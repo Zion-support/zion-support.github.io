@@ -14,11 +14,9 @@ import {
   ChevronDown,
   ChevronRight
 } from 'lucide-react';
-
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-
   const helpCategories = [
     {
       id: 'getting-started',
@@ -76,7 +74,6 @@ export default function HelpCenter() {
       ]
     }
   ];
-
   const popularArticles = [
     'How to get started with AI services',
     'Understanding our pricing structure',
@@ -85,7 +82,6 @@ export default function HelpCenter() {
     'API integration guide',
     'Troubleshooting common issues'
   ];
-
   const contactMethods = [
     {
       icon: <Mail className="w-6 h-6" />,
@@ -109,18 +105,15 @@ export default function HelpCenter() {
       link: '#'
     }
   ];
-
   const toggleCategory = (categoryId: string) => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
-
   const filteredCategories = helpCategories.filter(category =>
     category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     category.articles.some(article => 
       article.title.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
       {/* Hero Section */}
@@ -163,7 +156,6 @@ export default function HelpCenter() {
           <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-blue rounded-full"></div>
         </div>
       </section>
-
       {/* Help Categories */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -180,7 +172,6 @@ export default function HelpCenter() {
               Find organized help content covering all aspects of our platform and services.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {filteredCategories.map((category, index) => (
               <motion.div
@@ -231,7 +222,6 @@ export default function HelpCenter() {
           </div>
         </div>
       </section>
-
       {/* Popular Articles */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
@@ -248,7 +238,6 @@ export default function HelpCenter() {
               Get started with these frequently accessed help articles and guides.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularArticles.map((article, index) => (
               <motion.div
@@ -273,7 +262,6 @@ export default function HelpCenter() {
           </div>
         </div>
       </section>
-
       {/* Contact Support */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -290,7 +278,6 @@ export default function HelpCenter() {
               Our support team is here to help you with any questions or issues you may have.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {contactMethods.map((method, index) => (
               <motion.div
@@ -316,7 +303,6 @@ export default function HelpCenter() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">

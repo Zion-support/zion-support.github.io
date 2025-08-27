@@ -1,5 +1,4 @@
 import React from 'react';
-
 export const HowItWorksSection = () => {
   return (
     <section className="py-12">

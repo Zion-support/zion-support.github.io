@@ -1,5 +1,4 @@
 import { ProductListing } from "@/types/listings";
-
 // Advanced Micro SAAS Services & AI Solutions
 export const ADVANCED_SERVICES: ProductListing[] = [
   // AI-Powered Business Solutions
@@ -74,7 +73,6 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-5 Weeks"
   },
-
   // Cybersecurity & Compliance Solutions
   {
     id: "ai-threat-detection",
@@ -123,7 +121,6 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "3-4 Weeks"
   },
-
   // Cloud & DevOps Solutions
   {
     id: "ai-cloud-cost-optimization",
@@ -172,7 +169,6 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "3-4 Weeks"
   },
-
   // Data & Analytics Solutions
   {
     id: "ai-data-quality-platform",
@@ -220,7 +216,6 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks"
   },
-
   // Marketing & Sales Automation
   {
     id: "ai-marketing-automation",
@@ -269,7 +264,6 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks"
   },
-
   // HR & Talent Management
   {
     id: "ai-hr-automation",
@@ -294,7 +288,6 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "3-4 Weeks"
   },
-
   // Financial Technology Solutions
   {
     id: "ai-financial-analytics",
@@ -320,7 +313,6 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-5 Weeks"
   },
-
   // Healthcare Technology
   {
     id: "ai-healthcare-analytics",
@@ -345,7 +337,6 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "5-6 Weeks"
   },
-
   // Manufacturing & IoT
   {
     id: "ai-manufacturing-optimization",
@@ -370,7 +361,6 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-5 Weeks"
   },
-
   // Retail & E-commerce
   {
     id: "ai-retail-optimization",
@@ -396,7 +386,6 @@ export const ADVANCED_SERVICES: ProductListing[] = [
     availability: "3-4 Weeks"
   }
 ];
-
 // Service Categories for better organization
 export const SERVICE_CATEGORIES = [
   {
@@ -456,7 +445,6 @@ export const SERVICE_CATEGORIES = [
     count: 1
   }
 ];
-
 // Pricing Tiers for different business sizes
 export const PRICING_TIERS = [
   {

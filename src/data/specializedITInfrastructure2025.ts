@@ -24,7 +24,6 @@ export interface SpecializedITInfrastructureService2025 {
   demoUrl?: string;
   documentationUrl?: string;
 }
-
 export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureService2025[] = [
   // Edge Computing Orchestration Platform
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService2025[] = [
@@ -80,7 +79,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     },
     websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure"
   },
-
   // Quantum-Ready Cloud Infrastructure
   // Quantum Network Infrastructure
   {
@@ -134,7 +132,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     },
     websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure"
   },
-
   // 5G Enterprise Infrastructure Solutions
   {
     id: "5g-enterprise-infrastructure-solutions",
@@ -187,7 +184,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     },
     websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure"
   },
-
   // Autonomous DevOps Infrastructure
   {
     id: "autonomous-devops-infrastructure",
@@ -247,7 +243,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     scalability: "Infinite auto-scaling",
     uptime: "99.99% availability"
   },
-
   // Zero-Trust Security Infrastructure
   {
     id: "zero-trust-security-infrastructure",
@@ -307,7 +302,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     scalability: "Enterprise-wide deployment",
     uptime: "99.9% security availability"
   },
-
   // Green Computing Infrastructure
   {
     id: "green-computing-infrastructure",
@@ -367,7 +361,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     scalability: "Sustainable scaling",
     uptime: "99.5% green availability"
   },
-
   // Hybrid Multi-Cloud Orchestration
   {
     id: "hybrid-multi-cloud-orchestration",
@@ -428,7 +421,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     },
     websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure"
   },
-
   // AI-Powered Infrastructure Management
   {
     id: "ai-powered-infrastructure-management",

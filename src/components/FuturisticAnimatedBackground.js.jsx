@@ -29,7 +29,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
         const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
         // Initialize particles
         for (let i = 0; i < particleCount; i++) {
-            particles.push({
+            particles({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 vx: (Math.random() - 0.5) * 2,

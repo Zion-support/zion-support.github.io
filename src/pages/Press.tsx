@@ -13,9 +13,8 @@ import {
   Award,
   TrendingUp
 } from 'lucide-react';
-import Head from 'next/head';
-import Link from 'next/link';
-
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 const Press: React.FC = () => {
   const pressReleases = [
     {
@@ -40,7 +39,6 @@ const Press: React.FC = () => {
       category: "Business"
     }
   ];
-
   const mediaAssets = [
     {
       title: "Company Logo",
@@ -71,7 +69,6 @@ const Press: React.FC = () => {
       downloadUrl: "/assets/brand-guidelines.pdf"
     }
   ];
-
   const companyStats = [
     { label: "Founded", value: "2024" },
     { label: "Employees", value: "150+" },
@@ -80,7 +77,6 @@ const Press: React.FC = () => {
     { label: "AI Models Deployed", value: "25+" },
     { label: "Security Certifications", value: "SOC 2, ISO 27001" }
   ];
-
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
@@ -89,7 +85,6 @@ const Press: React.FC = () => {
       day: 'numeric' 
     });
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -106,7 +101,6 @@ const Press: React.FC = () => {
               Media resources, press releases, and information for journalists covering Zion Tech Group and the technology industry.
             </p>
           </div>
-
           {/* Company Overview */}
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
@@ -127,7 +121,6 @@ const Press: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Press Releases */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Latest Press Releases</h2>
@@ -159,7 +152,6 @@ const Press: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Media Assets */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Media Assets</h2>
@@ -186,7 +178,6 @@ const Press: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Contact Information */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Media Contact</h2>
@@ -246,7 +237,6 @@ const Press: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Additional Resources */}
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-8">Additional Resources</h2>
@@ -282,5 +272,4 @@ const Press: React.FC = () => {
     </div>
   );
 };
-
 export default Press;

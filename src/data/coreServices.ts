@@ -30,7 +30,6 @@ export interface CoreService {
   aiScore?: number;
   featured?: boolean;
 }
-
 export const CORE_SERVICES: CoreService[] = [
   {
     id: "ai-content-hub-pro",
@@ -204,7 +203,6 @@ export const CORE_SERVICES: CoreService[] = [
     featured: true
   }
 ];
-
 export const SERVICE_CATEGORIES = [
   { label: 'AI & Content Management', value: 'ai-content' },
   { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },
@@ -213,7 +211,6 @@ export const SERVICE_CATEGORIES = [
   { label: 'IT Consulting', value: 'it-consulting' },
   { label: 'Software Development', value: 'software-development' }
 ];
-
 export const SERVICE_SUBCATEGORIES = {
   'ai-content': ['Content Creation', 'Content Management', 'SEO Optimization', 'Marketing Automation'],
   'cloud-infrastructure': ['Cloud Hosting', 'DevOps', 'Infrastructure as Code', 'Monitoring'],
@@ -222,13 +219,11 @@ export const SERVICE_SUBCATEGORIES = {
   'it-consulting': ['Strategy', 'Architecture', 'Implementation', 'Optimization'],
   'software-development': ['Custom Development', 'API Integration', 'Maintenance', 'Support']
 };
-
 export const PRICING_TIERS = {
   basic: { name: 'Basic', multiplier: 1 },
   professional: { name: 'Professional', multiplier: 1.5 },
   enterprise: { name: 'Enterprise', multiplier: 2.5 }
 };
-
 export const CONTACT_INFO = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",

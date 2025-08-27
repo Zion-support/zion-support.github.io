@@ -3,35 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-<<<<<<< HEAD
-import { 
-  CheckCircle, 
-  XCircle, 
-  Star, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Users, 
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  TrendingUp,
-  BarChart3,
-  Cloud,
-  Lock,
-  Database,
-  Globe
-} from 'lucide-react';
-import { SEO } from "../components/SEOHead"';
-import { ADVANCED_SERVICES, PRICING_TIERS } from '@/data/advancedServices';
-
-=======
 import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { PRICING_TIERS } from '@/data/advancedServices';
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 // Service comparison data
 const SERVICE_COMPARISONS = [
     {
@@ -104,23 +78,9 @@ const SERVICE_COMPARISONS = [
     }
 ];
 export default function ServicesComparisonPage() {
-<<<<<<< HEAD
-  const [selectedCategory, setSelectedCategory] = useState("AI & Automation");
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="Services Comparison & Pricing - Zion Tech Group" 
-        description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget."
-        keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services"
-        canonical="https://ziontechgroup.com/services-comparison"
-      />
-=======
     const [selectedCategory, setSelectedCategory] = useState("AI & Automation");
     return (<div className="min-h-screen bg-background">
       <SEO title="Services Comparison & Pricing - Zion Tech Group" description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget." keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services" canonical="https://ziontechgroup.com/services-comparison"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
@@ -149,7 +109,6 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing Tiers Overview */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -184,7 +143,6 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* Service Comparisons */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
@@ -194,14 +152,12 @@ export default function ServicesComparisonPage() {
               Compare features, capabilities, and pricing across all our services
             </p>
           </div>
-
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
             <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 bg-zion-blue-light">
               {SERVICE_COMPARISONS.map((category) => (<TabsTrigger key={category.category} value={category.category} className="data-[state=active]:bg-zion-cyan data-[state=active]:text-zion-blue">
                   {category.category}
                 </TabsTrigger>))}
             </TabsList>
-
             {SERVICE_COMPARISONS.map((category) => (<TabsContent key={category.category} value={category.category} className="mt-8">
                 <div className="space-y-8">
                   {category.services.map((service, serviceIndex) => (<Card key={serviceIndex} className="border-zion-blue-light">
@@ -227,7 +183,6 @@ export default function ServicesComparisonPage() {
                               Choose Starter
                             </Button>
                           </div>
-
                           {/* Professional Plan */}
                           <div className="text-center p-6 border-2 border-zion-cyan rounded-lg bg-zion-blue-light/5">
                             <Badge className="mb-2 bg-zion-cyan text-zion-blue">Most Popular</Badge>
@@ -243,7 +198,6 @@ export default function ServicesComparisonPage() {
                               Choose Professional
                             </Button>
                           </div>
-
                           {/* Enterprise Plan */}
                           <div className="text-center p-6 border border-zion-blue-light rounded-lg">
                             <h3 className="text-xl font-semibold text-zion-blue mb-2">Enterprise</h3>
@@ -266,7 +220,6 @@ export default function ServicesComparisonPage() {
           </Tabs>
         </div>
       </section>
-
       {/* Value Proposition */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -312,7 +265,6 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 text-center">

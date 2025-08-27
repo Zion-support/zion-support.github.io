@@ -20,11 +20,9 @@ import {
   Phone
 } from 'lucide-react';
 import { ENHANCED_INNOVATIVE_SERVICES_2025 } from '../data/enhancedInnovativeServices2025';
-
 export function EnhancedPricingComparison() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [showFeatures, setShowFeatures] = useState<string | null>(null);
-
   const categories = [
     { id: 'all', name: 'All Categories', icon: <Star className="h-5 w-5" /> },
     { id: 'Quantum AI Services', name: 'Quantum AI', icon: <Brain className="h-5 w-5" /> },
@@ -33,11 +31,9 @@ export function EnhancedPricingComparison() {
     { id: 'Healthcare Technology', name: 'Health Tech', icon: <Users className="h-5 w-5" /> },
     { id: 'FinTech & RegTech', name: 'FinTech', icon: <DollarSign className="h-5 w-5" /> }
   ];
-
   const filteredServices = selectedCategory === 'all' 
     ? ENHANCED_INNOVATIVE_SERVICES_2025
     : ENHANCED_INNOVATIVE_SERVICES_2025.filter(service => service.category === selectedCategory);
-
   const marketAnalysis = {
     totalServices: ENHANCED_INNOVATIVE_SERVICES_2025.length,
     averagePrice: Math.round(ENHANCED_INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0) / ENHANCED_INNOVATIVE_SERVICES_2025.length),
@@ -45,21 +41,18 @@ export function EnhancedPricingComparison() {
     totalCategories: new Set(ENHANCED_INNOVATIVE_SERVICES_2025.map(s => s.category)).size,
     featuredServices: ENHANCED_INNOVATIVE_SERVICES_2025.filter(s => s.featured).length
   };
-
   const getPriceTier = (price: number) => {
     if (price < 200) return { tier: 'Starter', color: 'text-green-400', bg: 'bg-green-500/20' };
     if (price < 500) return { tier: 'Professional', color: 'text-blue-400', bg: 'bg-blue-500/20' };
     if (price < 1000) return { tier: 'Enterprise', color: 'text-purple-400', bg: 'bg-purple-500/20' };
     return { tier: 'Premium', color: 'text-yellow-400', bg: 'bg-yellow-500/20' };
   };
-
   const getAiScoreColor = (score: number) => {
     if (score >= 95) return 'text-green-400';
     if (score >= 90) return 'text-blue-400';
     if (score >= 85) return 'text-yellow-400';
     return 'text-red-400';
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark/80 via-zion-slate/50 to-zion-blue-dark/80">
       <div className="container mx-auto px-4">
@@ -79,7 +72,6 @@ export function EnhancedPricingComparison() {
             Comprehensive pricing comparison and feature analysis of our cutting-edge innovative services. 
             Find the perfect solution for your business needs with transparent pricing and detailed feature breakdowns.
           </p>
-
           {/* Market Analysis */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-5xl mx-auto mb-8">
             <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
@@ -104,7 +96,6 @@ export function EnhancedPricingComparison() {
             </div>
           </div>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -127,7 +118,6 @@ export function EnhancedPricingComparison() {
             </button>
           ))}
         </motion.div>
-
         {/* Services Comparison Table */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -145,7 +135,6 @@ export function EnhancedPricingComparison() {
               <div className="col-span-2 text-center">Rating</div>
               <div className="col-span-1 text-center">Actions</div>
             </div>
-
             {/* Table Rows */}
             <div className="divide-y divide-white/10">
               {filteredServices.map((service, index) => {
@@ -177,14 +166,12 @@ export function EnhancedPricingComparison() {
                         </div>
                       </div>
                     </div>
-
                     {/* Category */}
                     <div className="col-span-2 flex items-center justify-center">
                       <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple-light border border-zion-purple-light rounded-full text-xs font-medium">
                         {service.subcategory}
                       </span>
                     </div>
-
                     {/* Price */}
                     <div className="col-span-2 text-center">
                       <div className="text-2xl font-bold text-white mb-1">${service.price}</div>
@@ -193,7 +180,6 @@ export function EnhancedPricingComparison() {
                         {priceTier.tier}
                       </span>
                     </div>
-
                     {/* AI Score */}
                     <div className="col-span-2 text-center">
                       <div className={`text-2xl font-bold ${aiScoreColor} mb-1`}>{service.aiScore}</div>
@@ -205,7 +191,6 @@ export function EnhancedPricingComparison() {
                         ></div>
                       </div>
                     </div>
-
                     {/* Rating */}
                     <div className="col-span-2 text-center">
                       <div className="flex items-center justify-center gap-1 mb-1">
@@ -215,7 +200,6 @@ export function EnhancedPricingComparison() {
                       <div className="text-sm text-zion-slate-light">({service.reviewCount} reviews)</div>
                       <div className="text-xs text-zion-slate-light">{service.location}</div>
                     </div>
-
                     {/* Actions */}
                     <div className="col-span-1 flex items-center justify-center gap-2">
                       <button
@@ -233,7 +217,6 @@ export function EnhancedPricingComparison() {
                         <ArrowRight className="h-4 w-4" />
                       </Link>
                     </div>
-
                     {/* Expandable Features Section */}
                     <AnimatePresence>
                       {showFeatures === service.id && (
@@ -260,7 +243,6 @@ export function EnhancedPricingComparison() {
                                 ))}
                               </div>
                             </div>
-
                             {/* Technology Stack */}
                             <div>
                               <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
@@ -275,7 +257,6 @@ export function EnhancedPricingComparison() {
                                 ))}
                               </div>
                             </div>
-
                             {/* Benefits & ROI */}
                             <div>
                               <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
@@ -301,7 +282,6 @@ export function EnhancedPricingComparison() {
                               </div>
                             </div>
                           </div>
-
                           {/* Contact & CTA */}
                           <div className="mt-6 pt-6 border-t border-white/20 flex flex-col md:flex-row items-center justify-between gap-4">
                             <div className="flex items-center gap-6 text-sm text-zion-slate-light">
@@ -347,7 +327,6 @@ export function EnhancedPricingComparison() {
             </div>
           </div>
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -384,5 +363,4 @@ export function EnhancedPricingComparison() {
     </section>
   );
 }
-
 export default EnhancedPricingComparison;

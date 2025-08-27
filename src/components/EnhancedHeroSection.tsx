@@ -13,7 +13,6 @@ import {
   Globe,
   Brain
 } from 'lucide-react';
-
 interface HeroSlide {
   title: string;
   subtitle: string;
@@ -25,11 +24,9 @@ interface HeroSlide {
   gradient: string;
   icon: React.ComponentType<any>;
 }
-
 export default function EnhancedHeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const heroSlides: HeroSlide[] = [
     {
       title: "AI-Powered Business Solutions",
@@ -65,34 +62,26 @@ export default function EnhancedHeroSection() {
       icon: Globe
     }
   ];
-
   useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 6000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, heroSlides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     setIsAutoPlaying(false);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };
-
   const currentSlideData = heroSlides[currentSlide];
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Animated background elements */}
@@ -102,7 +91,6 @@ export default function EnhancedHeroSection() {
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
-
       {/* Hero content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -128,22 +116,18 @@ export default function EnhancedHeroSection() {
                   </div>
                   <span className="ml-3 text-zion-cyan font-medium">Featured Service</span>
                 </div>
-
                 {/* Title */}
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   {currentSlideData.title}
                 </h1>
-
                 {/* Subtitle */}
                 <p className="text-xl sm:text-2xl text-zion-cyan font-semibold mb-4">
                   {currentSlideData.subtitle}
                 </p>
-
                 {/* Description */}
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   {currentSlideData.description}
                 </p>
-
                 {/* Features */}
                 <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
                   {currentSlideData.features.map((feature, index) => (
@@ -159,7 +143,6 @@ export default function EnhancedHeroSection() {
                     </motion.div>
                   ))}
                 </div>
-
                 {/* CTA Button */}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -181,7 +164,6 @@ export default function EnhancedHeroSection() {
               </motion.div>
             </AnimatePresence>
           </motion.div>
-
           {/* Right content - Image and stats */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -203,7 +185,6 @@ export default function EnhancedHeroSection() {
                 </div>
               </div>
             </div>
-
             {/* Floating stats card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -223,7 +204,6 @@ export default function EnhancedHeroSection() {
             </motion.div>
           </motion.div>
         </div>
-
         {/* Slide navigation */}
         <div className="flex items-center justify-center mt-16 space-x-4">
           <button
@@ -255,7 +235,6 @@ export default function EnhancedHeroSection() {
           </button>
         </div>
       </div>
-
       {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}

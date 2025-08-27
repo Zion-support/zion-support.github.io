@@ -55,19 +55,16 @@ export function AboutSection() {
               quantum computing, and autonomous systems accessible to organizations of all sizes. 
               We believe that innovation should drive progress, not complexity.
             </p>
-
             <p className="text-lg text-zion-slate-light mb-8 leading-relaxed">
               Today, we serve clients across 25+ countries, from startups to Fortune 500 
               companies, helping them navigate the complexities of digital transformation 
               and emerge stronger, more efficient, and future-ready.
             </p>
-
             <Link to="/about" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform">
               Learn Our Story
               <ArrowRight className="w-5 h-5"/>
             </Link>
           </div>
-
           {/* Right Column - Achievements */}
           <div className="grid grid-cols-2 gap-6">
             {achievements.map((achievement, index) => (<div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">
@@ -81,7 +78,6 @@ export function AboutSection() {
               </div>))}
           </div>
         </div>
-
         {/* Values Section */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12 font-futuristic">
@@ -100,7 +96,6 @@ export function AboutSection() {
               </div>))}
           </div>
         </div>
-
         {/* Technology Expertise */}
         <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark rounded-3xl p-8 md:p-12 border border-white/10">
           <div className="text-center mb-12">
@@ -112,14 +107,12 @@ export function AboutSection() {
               deliver comprehensive solutions for any digital challenge your business faces.
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
             {technologies.map((tech, index) => (<div key={index} className="flex items-center text-zion-slate-light">
                 <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"/>
                 <span className="text-sm">{tech}</span>
               </div>))}
           </div>
-
           <div className="text-center">
             <Link to="/expertise" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform">
               Explore Our Expertise
@@ -127,7 +120,6 @@ export function AboutSection() {
             </Link>
           </div>
         </div>
-
         {/* Team Section */}
         <div className="text-center mt-20">
           <h3 className="text-3xl font-bold text-white mb-6 font-futuristic">

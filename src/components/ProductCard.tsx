@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
@@ -8,7 +8,7 @@ import { addItem } from '@/store/cartSlice';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-import { useRouter } from 'next/router';
+import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'usehooks-ts';
 import { useEnqueueSnackbar } from '@/context/SnackbarContext';
 import { captureException } from '@/utils/sentry';
@@ -16,7 +16,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     const { isAuthenticated } = useAuth();
     const { isWishlisted, toggle } = useWishlist();
     const [imageError, setImageError] = useState(false);
-    const router = useRouter();
+    const router = useNavigate();
     const enqueueSnackbar = useEnqueueSnackbar();
     if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
         captureException(new Error('Invalid product data received by ProductCard'), {
@@ -58,7 +58,6 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
       <button className="absolute top-2 right-2 p-1 rounded-full bg-background/70" onClick={() => toggle(product.id)} aria-label={active ? 'Remove from favorites' : 'Add to favorites'}>
         <Heart aria-hidden="true" className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'}/>
       </button>
-
     <div className="w-full h-40 relative mb-2">
       {imageUrl && !imageError ? (<Image src={imageUrl} alt={imageAltText} fill style={{ objectFit: 'cover' }} onError={(e) => handleImageError(e)} priority={false} sizes={imageSizes}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center">
           <span className="text-gray-500">No Image</span>

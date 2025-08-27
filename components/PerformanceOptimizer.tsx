@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Zap, Clock, TrendingUp, Shield, Eye, Download, Wifi, Cpu } from 'lucide-react';
-
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -10,16 +9,13 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   timeToInteractive: number;
 }
-
 interface PerformanceOptimizerProps {
   className?: string;
 }
-
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizationComplete, setOptimizationComplete] = useState(false);
-
   // Performance monitoring
   const measurePerformance = useCallback(() => {
     if ('performance' in window) {
@@ -37,11 +33,9 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
         firstInputDelay: 0, // Would need to use PerformanceObserver
         timeToInteractive: navigation.domInteractive - navigation.domContentLoadedEventStart
       };
-
       setMetrics(metrics);
     }
   }, []);
-
   // Image optimization
   const optimizeImages = useCallback(async () => {
     const images = document.querySelectorAll('img');
@@ -55,10 +49,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
         }
       });
     });
-
     await Promise.all(promises);
   }, []);
-
   // Lazy loading implementation
   const implementLazyLoading = useCallback(() => {
     const images = document.querySelectorAll('img[data-src]');
@@ -72,10 +64,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
         }
       });
     });
-
     images.forEach((img) => imageObserver.observe(img));
   }, []);
-
   // Service worker registration
   const registerServiceWorker = useCallback(async () => {
     if ('serviceWorker' in navigator) {
@@ -87,7 +77,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
       }
     }
   }, []);
-
   // Performance optimization
   const optimizePerformance = useCallback(async () => {
     setIsOptimizing(true);
@@ -124,7 +113,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
       setIsOptimizing(false);
     }
   }, [optimizeImages, implementLazyLoading, registerServiceWorker]);
-
   useEffect(() => {
     // Measure initial performance
     measurePerformance();
@@ -135,7 +123,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
     // Register service worker
     registerServiceWorker();
   }, [measurePerformance, implementLazyLoading, registerServiceWorker]);
-
   const getPerformanceScore = (metrics: PerformanceMetrics) => {
     let score = 100;
     
@@ -145,7 +132,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
     
     return Math.max(0, score);
   };
-
   const getPerformanceGrade = (score: number) => {
     if (score >= 90) return { grade: 'A', color: 'text-green-600', bg: 'bg-green-100' };
     if (score >= 80) return { grade: 'B', color: 'text-blue-600', bg: 'bg-blue-100' };
@@ -153,7 +139,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
     if (score >= 60) return { grade: 'D', color: 'text-orange-600', bg: 'bg-orange-100' };
     return { grade: 'F', color: 'text-red-600', bg: 'bg-red-100' };
   };
-
   return (
     <div className={`space-y-6 ${className}`}>
       {/* Performance Header */}
@@ -175,7 +160,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
           Monitor and optimize website performance for the best user experience
         </motion.p>
       </div>
-
       {/* Performance Metrics */}
       {metrics && (
         <motion.div 
@@ -196,7 +180,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
               {metrics.loadTime < 1000 ? 'Excellent' : metrics.loadTime < 3000 ? 'Good' : 'Needs Improvement'}
             </div>
           </div>
-
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
             <div className="flex items-center space-x-3 mb-3">
               <Eye className="w-6 h-6 text-green-600" />
@@ -209,7 +192,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
               {metrics.firstContentfulPaint < 800 ? 'Excellent' : metrics.firstContentfulPaint < 1500 ? 'Good' : 'Needs Improvement'}
             </div>
           </div>
-
           <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
             <div className="flex items-center space-x-3 mb-3">
               <Cpu className="w-6 h-6 text-purple-600" />
@@ -224,7 +206,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
           </div>
         </motion.div>
       )}
-
       {/* Performance Score */}
       {metrics && (
         <motion.div 
@@ -249,7 +230,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
           </div>
         </motion.div>
       )}
-
       {/* Optimization Controls */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -279,7 +259,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
           )}
         </button>
       </motion.div>
-
       {/* Optimization Status */}
       {optimizationComplete && (
         <motion.div 
@@ -296,7 +275,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
           </p>
         </motion.div>
       )}
-
       {/* Performance Tips */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -327,5 +305,4 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
     </div>
   );
 };
-
 export default PerformanceOptimizer;

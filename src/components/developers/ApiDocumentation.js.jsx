@@ -23,7 +23,6 @@ export function ApiDocumentation() {
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.
           </AlertDescription>
         </Alert>
-
         <Tabs defaultValue="jobs" className="space-y-4">
           <TabsList className="bg-zinc-800 border-zinc-700">
             <TabsTrigger value="jobs">Jobs</TabsTrigger>
@@ -51,22 +50,18 @@ export function ApiDocumentation() {
     'Content-Type': 'application/json'
   }
 });
-
 const data = await response.json();
 console.log(data);`,
             python: `import requests
-
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 }
-
 response = requests.get(
     'https://ziontechgroup.com/api/v1/jobs',
     params={'limit': 10, 'category': 'development'},
     headers=headers
 )
-
 data = response.json()
 print(data)`
         }} responseExamples={{
@@ -111,22 +106,18 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId}\`
     'Content-Type': 'application/json'
   }
 });
-
 const data = await response.json();
 console.log(data);`,
             python: `import requests
-
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 }
-
 job_id = 'job_abc123'
 response = requests.get(
     f'https://ziontechgroup.com/api/v1/jobs/{job_id}',
     headers=headers
 )
-
 data = response.json()
 print(data)`
         }} responseExamples={{
@@ -195,17 +186,14 @@ print(data)`
     deadline: '2025-06-30T23:59:59Z'
   })
 });
-
 const data = await response.json();
 console.log(data);`,
             python: `import requests
 import json
-
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 }
-
 payload = {
     'title': 'Senior React Developer',
     'description': 'We need an experienced React developer...',
@@ -218,13 +206,11 @@ payload = {
     },
     'deadline': '2025-06-30T23:59:59Z'
 }
-
 response = requests.post(
     'https://ziontechgroup.com/api/v1/jobs',
     headers=headers,
     data=json.dumps(payload)
 )
-
 data = response.json()
 print(data)`
         }} responseExamples={{
@@ -266,22 +252,18 @@ print(data)`
     'Content-Type': 'application/json'
   }
 });
-
 const data = await response.json();
 console.log(data);`,
             python: `import requests
-
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 }
-
 response = requests.get(
     'https://ziontechgroup.com/api/v1/talent',
     params={'skills': 'react,typescript'},
     headers=headers
 )
-
 data = response.json()
 print(data)`
         }} responseExamples={{
@@ -320,22 +302,18 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
     'Content-Type': 'application/json'
   }
 });
-
 const data = await response.json();
 console.log(data);`,
             python: `import requests
-
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 }
-
 talent_id = 'talent_abc123'
 response = requests.get(
     f'https://ziontechgroup.com/api/v1/talent/{talent_id}',
     headers=headers
 )
-
 data = response.json()
 print(data)`
         }} responseExamples={{
@@ -414,17 +392,14 @@ print(data)`
     requester_email: 'john@example.com'
   })
 });
-
 const data = await response.json();
 console.log(data);`,
             python: `import requests
 import json
-
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 }
-
 payload = {
     'talent_id': 'talent_abc123',
     'project_name': 'E-commerce Website Redesign',
@@ -436,13 +411,11 @@ payload = {
     'requester_name': 'John Doe',
     'requester_email': 'john@example.com'
 }
-
 response = requests.post(
     'https://ziontechgroup.com/api/v1/quotes',
     headers=headers,
     data=json.dumps(payload)
 )
-
 data = response.json()
 print(data)`
         }} responseExamples={{
@@ -481,21 +454,17 @@ print(data)`
     'Content-Type': 'application/json'
   }
 });
-
 const data = await response.json();
 console.log(data);`,
             python: `import requests
-
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 }
-
 response = requests.get(
     'https://ziontechgroup.com/api/v1/quotes',
     headers=headers
 )
-
 data = response.json()
 print(data)`
         }} responseExamples={{
@@ -540,7 +509,6 @@ print(data)`
               </p>
               
               <CodeBlock code={`import crypto from 'crypto';
-
 // Function to verify webhook signature
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret);
@@ -550,7 +518,6 @@ function verifyWebhookSignature(payload, signature, secret) {
     Buffer.from(expectedSignature)
   );
 }
-
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const signature = req.headers['x-zion-signature'];

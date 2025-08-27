@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
 interface EnhancedFuturisticBackgroundProps {
   children: React.ReactNode;
   intensity?: number;
   variant?: 'quantum' | 'neural' | 'cyberpunk' | 'holographic' | 'quantum-matrix';
 }
-
 const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
   children,
   intensity = 1.0,
@@ -14,7 +12,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
-
   const colorSchemes = {
     quantum: {
       primary: '#00ffff',
@@ -57,31 +54,24 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       glow: '#4ecdc4'
     }
   };
-
   const intensitySettings = {
     low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 },
     medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 },
     high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
   };
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     const colors = colorSchemes[colorScheme];
     const settings = intensitySettings[intensity];
-
     // Enhanced particle system
     class Particle {
       x: number;
@@ -92,16 +82,13 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       color: string;
       type: 'quantum' | 'neural' | 'cyberpunk' | 'holographic';
     }> = [];
-
     const colors = {
       quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'],
       neural: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'],
       cyberpunk: ['#ff006e', '#8338ec', '#3a86ff', '#06ffa5'],
       holographic: ['#ffd700', '#ff69b4', '#00ffff', '#ff1493']
     };
-
     const currentColors = colors[variant] || colors.quantum;
-
     // Initialize particles
     for (let i = 0; i < 100 * intensity; i++) {
       particles.push({
@@ -115,10 +102,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         type: variant as any
       });
     }
-
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Create gradient background
       const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.95)');
@@ -126,7 +111,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.95)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Draw quantum grid
       if (variant === 'quantum' || variant === 'quantum-matrix') {
         ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
@@ -147,24 +131,20 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           ctx.stroke();
         }
       }
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
-
         // Wrap around edges
         if (this.x < 0) this.x = canvas.width;
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
-
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
         ctx.fill();
-
         // Draw connections
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
@@ -183,7 +163,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
             }
           }
         });
-
         // Add quantum effects
         if (variant === 'quantum' || variant === 'quantum-matrix') {
           if (Math.random() < 0.01 * intensity) {
@@ -195,7 +174,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           }
         }
       });
-
       // Draw neural network connections for neural variant
       if (variant === 'neural') {
         ctx.strokeStyle = 'rgba(255, 107, 107, 0.2)';
@@ -213,7 +191,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           }
         });
       }
-
       // Draw cyberpunk effects
       if (variant === 'cyberpunk') {
         ctx.strokeStyle = 'rgba(255, 0, 110, 0.3)';
@@ -230,7 +207,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           ctx.stroke();
         }
       }
-
       // Draw holographic effects
       if (variant === 'holographic') {
         ctx.strokeStyle = 'rgba(255, 215, 0, 0.4)';
@@ -247,12 +223,9 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           }
         });
       }
-
       animationRef.current = requestAnimationFrame(animate);
     };
-
     animate();
-
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
@@ -260,7 +233,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       window.removeEventListener('resize', resizeCanvas);
     };
   }, [intensity, variant]);
-
   return (
     <div className="relative min-h-screen overflow-hidden">
       <canvas
@@ -313,7 +285,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           }}
         />
       </div>
-
       {/* Content */}
       <div className="relative z-20">
         {children}
@@ -321,5 +292,4 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     </div>
   );
 };
-
 export default EnhancedFuturisticBackground;

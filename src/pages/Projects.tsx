@@ -1,23 +1,15 @@
 import React from "react";
 import { useProjects } from "@/hooks/useProjects";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Clock, Briefcase } from "lucide-react";
 function ProjectsContent() {
-<<<<<<< HEAD
-  const { projects, isLoading } = useProjects();
-
-  return (
-    <>
-      <SEOHead title="My Projects | Zion AI Marketplace" description="View and manage your projects." />
-=======
     const { projects, isLoading } = useProjects();
     return (<>
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">

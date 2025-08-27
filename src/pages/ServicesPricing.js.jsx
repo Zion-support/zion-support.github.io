@@ -151,7 +151,6 @@ export default function ServicesPricing() {
     const [selectedTier, setSelectedTier] = useState('professional');
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO title="Micro SAAS Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS services. Choose from Starter, Professional, or Enterprise tiers to match your business needs and budget." keywords="micro SAAS pricing, service costs, AI services pricing, IT solutions pricing" url="https://ziontechgroup.com/services-pricing"/>
-
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
@@ -174,7 +173,6 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark py-4 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto">
@@ -200,7 +198,6 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-
       {/* Pricing Tiers */}
       <div className="py-20 px-4">
         <div className="container mx-auto">
@@ -212,7 +209,6 @@ export default function ServicesPricing() {
               All plans include our core features with additional capabilities as you scale up
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index) => (<Card key={index} className={`relative bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 ${tier.popular ? 'ring-2 ring-zion-purple scale-105' : ''}`}>
                 {tier.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -258,7 +254,6 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-
       {/* Service Category Pricing */}
       <div className="py-20 px-4 bg-zion-blue-dark">
         <div className="container mx-auto">
@@ -270,7 +265,6 @@ export default function ServicesPricing() {
               Detailed pricing for each service category. Contact us for custom enterprise solutions.
             </p>
           </div>
-
           <Tabs value={selectedTier} onValueChange={setSelectedTier} className="max-w-6xl mx-auto">
             <TabsList className="grid w-full grid-cols-3 bg-zion-blue border-zion-blue-light">
               <TabsTrigger value="starter" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
@@ -311,7 +305,6 @@ export default function ServicesPricing() {
           </Tabs>
         </div>
       </div>
-
       {/* Benefits Section */}
       <div className="py-20 px-4">
         <div className="container mx-auto">
@@ -323,7 +316,6 @@ export default function ServicesPricing() {
               We deliver more than just software - we deliver business transformation
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light bg-zion-blue-dark">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
@@ -335,7 +327,6 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">

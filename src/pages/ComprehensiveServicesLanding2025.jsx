@@ -62,7 +62,6 @@ const ComprehensiveServicesLanding2025 = () => {
               <div className="text-sm text-gray-400">Uptime Guarantee</div>
             </div>
           </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/enhanced-services-2025" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105">
@@ -74,7 +73,6 @@ const ComprehensiveServicesLanding2025 = () => {
           </div>
         </div>
       </section>
-
       {/* Industry Solutions */}
       <section className="px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-7xl mx-auto">
@@ -86,7 +84,6 @@ const ComprehensiveServicesLanding2025 = () => {
               Tailored solutions designed for your specific industry challenges and opportunities
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {industries.map((industry) => (<button key={industry.id} onClick={() => setSelectedIndustry(industry.id)} className={`p-6 rounded-xl border transition-all duration-300 text-left ${selectedIndustry === industry.id
                 ? 'bg-blue-500/20 border-blue-400 scale-105'
@@ -96,7 +93,6 @@ const ComprehensiveServicesLanding2025 = () => {
                 <p className="text-sm text-gray-400">{industry.description}</p>
               </button>))}
           </div>
-
           {/* Services Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service) => (<div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 overflow-hidden hover:border-blue-400 transition-all duration-300 hover:scale-105">
@@ -115,7 +111,6 @@ const ComprehensiveServicesLanding2025 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Service Content */}
                 <div className="p-6">
                   <p className="text-gray-300 text-sm mb-4">{service.description}</p>
@@ -130,7 +125,6 @@ const ComprehensiveServicesLanding2025 = () => {
                         </div>))}
                     </div>
                   </div>
-
                   {/* Market Info */}
                   <div className="grid grid-cols-2 gap-4 text-xs text-gray-400 mb-4">
                     <div>
@@ -140,7 +134,6 @@ const ComprehensiveServicesLanding2025 = () => {
                       <span className="text-blue-400">Customers:</span> {service.customers.toLocaleString()}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className="flex gap-2">
                     <button className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105">
@@ -155,7 +148,6 @@ const ComprehensiveServicesLanding2025 = () => {
           </div>
         </div>
       </section>
-
       {/* Why Choose Zion Tech Group */}
       <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -167,7 +159,6 @@ const ComprehensiveServicesLanding2025 = () => {
               We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-6xl mb-4">🚀</div>
@@ -214,7 +205,6 @@ const ComprehensiveServicesLanding2025 = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Comparison */}
       <section className="px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-7xl mx-auto">
@@ -226,7 +216,6 @@ const ComprehensiveServicesLanding2025 = () => {
               Transparent pricing that delivers exceptional value compared to traditional enterprise solutions
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-center mb-4">Starter</h3>
@@ -256,7 +245,6 @@ const ComprehensiveServicesLanding2025 = () => {
                 Get Started
               </button>
             </div>
-
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 border border-blue-400 transform scale-105">
               <div className="text-center mb-2">
                 <span className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
@@ -292,7 +280,6 @@ const ComprehensiveServicesLanding2025 = () => {
                 Get Started
               </button>
             </div>
-
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-center mb-4">Enterprise</h3>
               <div className="text-center mb-6">
@@ -328,7 +315,6 @@ const ComprehensiveServicesLanding2025 = () => {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -340,7 +326,6 @@ const ComprehensiveServicesLanding2025 = () => {
               See how our solutions have transformed businesses across industries
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="flex items-center mb-4">
@@ -355,7 +340,6 @@ const ComprehensiveServicesLanding2025 = () => {
               </p>
               <div className="text-green-400 font-semibold">450% ROI in 6 months</div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-3">🏭</div>
@@ -369,7 +353,6 @@ const ComprehensiveServicesLanding2025 = () => {
               </p>
               <div className="text-green-400 font-semibold">380% ROI in 8 months</div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="flex items-center mb-4">
                 <div className="text-4xl mr-3">💰</div>
@@ -386,7 +369,6 @@ const ComprehensiveServicesLanding2025 = () => {
           </div>
         </div>
       </section>
-
       {/* Final CTA */}
       <section className="px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto text-center">

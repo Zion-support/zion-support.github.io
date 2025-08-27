@@ -116,7 +116,6 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           </div>
         </div>
       </div>
-
       {/* Key Metrics Overview */}
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -130,7 +129,6 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             </div>
             <div className="text-xs text-gray-600 dark:text-gray-400">Session Duration</div>
           </div>
-
           {/* Page Views */}
           <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
             <div className="flex items-center justify-center mb-2">
@@ -141,7 +139,6 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             </div>
             <div className="text-xs text-gray-600 dark:text-gray-400">Page Views</div>
           </div>
-
           {/* Total Events */}
           <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
             <div className="flex items-center justify-center mb-2">
@@ -152,7 +149,6 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             </div>
             <div className="text-xs text-gray-600 dark:text-gray-400">Total Events</div>
           </div>
-
           {/* Performance Score */}
           <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
             <div className="flex items-center justify-center mb-2">
@@ -165,7 +161,6 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           </div>
         </div>
       </div>
-
       {/* Real-time Events Feed */}
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
         <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">
@@ -194,7 +189,6 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             </div>)}
         </div>
       </div>
-
       {/* Detailed Analytics */}
       {isExpanded && (<div className="border-t border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">
           <h4 className="font-medium text-gray-900 dark:text-white mb-3">Detailed Analytics</h4>
@@ -221,7 +215,6 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 </div>
               </div>
             </div>)}
-
           {/* Events by Category */}
           <div className="mb-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
             <h5 className="font-medium text-green-800 dark:text-green-200 mb-2">Events by Category</h5>
@@ -241,7 +234,6 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
                 </div>))}
             </div>
           </div>
-
           {/* Session Information */}
           {currentSession && (<div className="mb-4 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
               <h5 className="font-medium text-purple-800 dark:text-purple-200 mb-2">Session Details</h5>
@@ -267,7 +259,6 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               </div>
             </div>)}
         </div>)}
-
       {/* Controls */}
       <div className="p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
         <div className="flex gap-2">

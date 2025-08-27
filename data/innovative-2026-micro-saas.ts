@@ -14,7 +14,6 @@ export interface Innovative2026MicroSaas {
     address: string;
   };
 }
-
 export const innovative2026MicroSaasServices: Innovative2026MicroSaas[] = [
   {
     id: "2026-micro-saas",

@@ -29,7 +29,6 @@ import {
   Code,
   GraduationCap
 } from 'lucide-react';
-
 const AIHRRecruitment: React.FC = () => {
   const features = [
     {
@@ -57,7 +56,6 @@ const AIHRRecruitment: React.FC = () => {
       benefits: ["Resume parsing", "Skill assessment", "Background verification"]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-8">
@@ -74,7 +72,6 @@ const AIHRRecruitment: React.FC = () => {
             Transform your hiring process with intelligent AI solutions that find the best talent faster and more efficiently.
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {features.map((feature, index) => (
             <motion.div
@@ -102,7 +99,6 @@ const AIHRRecruitment: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -121,5 +117,4 @@ const AIHRRecruitment: React.FC = () => {
     </div>
   );
 };
-
 export default AIHRRecruitment;

@@ -8,28 +8,23 @@ import {
   Phone, Mail, MapPin
 } from 'lucide-react';
 import Link from 'next/link';
-
 export default function EnhancedNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   const navigationItems = [
     {
       name: 'Home',
@@ -68,7 +63,6 @@ export default function EnhancedNavigation() {
       icon: '📞'
     }
   ];
-
   const serviceCategories = [
     {
       name: 'AI & Machine Learning',
@@ -113,7 +107,6 @@ export default function EnhancedNavigation() {
       color: 'from-indigo-500 to-purple-500'
     }
   ];
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -137,7 +130,6 @@ export default function EnhancedNavigation() {
               <div className="text-xs text-gray-400">Revolutionary Technology Solutions</div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -155,7 +147,6 @@ export default function EnhancedNavigation() {
               </Link>
             ))}
           </div>
-
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
@@ -167,7 +158,6 @@ export default function EnhancedNavigation() {
               <span className="text-sm">{contactInfo.email}</span>
             </div>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -177,7 +167,6 @@ export default function EnhancedNavigation() {
           </button>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -205,7 +194,6 @@ export default function EnhancedNavigation() {
                   {item.name}
                 </Link>
               ))}
-
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-gray-700 space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -225,7 +213,6 @@ export default function EnhancedNavigation() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Service Categories Dropdown */}
       <AnimatePresence>
         {activeDropdown === 'services' && (
@@ -268,5 +255,4 @@ export default function EnhancedNavigation() {
     </motion.nav>
   );
 };
-
 export default EnhancedNavigation;

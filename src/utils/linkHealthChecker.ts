@@ -6,17 +6,14 @@ export interface LinkHealthResult {
   error?: string;
   lastChecked: Date;
 }
-
 export interface LinkHealthConfig {
   timeout?: number;
   retries?: number;
   userAgent?: string;
   followRedirects?: boolean;
 }
-
 export class LinkHealthChecker {
   private config: Required<LinkHealthConfig>;
-
   constructor(config: LinkHealthConfig = {}) {
     this.config = {
       timeout: config.timeout || 10000,
@@ -25,7 +22,6 @@ export class LinkHealthChecker {
       followRedirects: config.followRedirects !== false
     };
   }
-
   async checkLink(url: string): Promise<LinkHealthResult> {
     const startTime = Date.now();
     
@@ -38,7 +34,6 @@ export class LinkHealthChecker {
         },
         redirect: this.config.followRedirects ? 'follow' : 'manual'
       });
-
       const responseTime = Date.now() - startTime;
       
       if (response.ok || response.status < 400) {
@@ -68,16 +63,15 @@ export class LinkHealthChecker {
       };
     }
   }
-
   async checkMultipleLinks(urls: string[]): Promise<LinkHealthResult[]> {
     const results: LinkHealthResult[] = [];
     
     for (const url of urls) {
       try {
         const result = await this.checkLink(url);
-        results.push(result);
+        results(result);
       } catch (error) {
-        results.push({
+        results({
           url,
           status: 'error',
           error: error instanceof Error ? error.message : 'Unknown error',
@@ -88,7 +82,6 @@ export class LinkHealthChecker {
     
     return results;
   }
-
   async checkLinksWithRetry(url: string): Promise<LinkHealthResult> {
     let lastError: string | undefined;
     
@@ -115,7 +108,6 @@ export class LinkHealthChecker {
       lastChecked: new Date()
     };
   }
-
   getHealthSummary(results: LinkHealthResult[]): {
     total: number;
     healthy: number;
@@ -135,7 +127,6 @@ export class LinkHealthChecker {
     const averageResponseTime = responseTimes.length > 0
       ? responseTimes.reduce((a, b) => a + b, 0) / responseTimes.length
       : 0;
-
     return {
       total,
       healthy,
@@ -144,7 +135,6 @@ export class LinkHealthChecker {
       averageResponseTime
     };
   }
-
   generateReport(results: LinkHealthResult[]): string {
     const summary = this.getHealthSummary(results);
     const timestamp = new Date().toISOString();
@@ -171,5 +161,4 @@ export class LinkHealthChecker {
     return report;
   }
 }
-
 export default LinkHealthChecker;

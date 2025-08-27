@@ -3,6 +3,7 @@ import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
+<<<<<<< HEAD
 
 // Service Worker Registration
 if ('serviceWorker' in navigator) {
@@ -30,8 +31,9 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 const rootElement = document.getElementById('root');
-
 function renderApp() {
     const app = React.createElement(React.StrictMode, null,
         React.createElement(App, null)
@@ -45,7 +47,6 @@ function renderApp() {
         createRoot(rootElement).render(app);
     }
 }
-
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
@@ -58,24 +59,39 @@ function displayFatalError(message) {
       </div>`;
     }
 }
+<<<<<<< HEAD
 
 // Error handling and app initialization
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 try {
     renderApp();
 } catch (error) {
     console.error('Global error caught in main.jsx:', error);
     displayFatalError(error.message);
 }
+<<<<<<< HEAD
 
 // Global error event listeners
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 window.addEventListener('error', (e) => {
     console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
 });
+<<<<<<< HEAD
 
 window.addEventListener('unhandledrejection', (e) => {
     console.error('Unhandled promise rejection:', e.reason);
     displayFatalError('An unexpected error occurred. Please try again.');
+=======
+// Add performance monitoring
+window.addEventListener('load', () => {
+  if ('performance' in window) {
+    const perfData = performance.getEntriesByType('navigation')[0];
+    console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+  }
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 });
 
 // Performance monitoring

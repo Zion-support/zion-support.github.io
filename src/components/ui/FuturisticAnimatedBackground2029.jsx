@@ -20,7 +20,7 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
         const selectedColors = colors[theme];
         // Create particles
         for (let i = 0; i < 150; i++) {
-            particles.push({
+            particles({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 vx: (Math.random() - 0.5) * 3,

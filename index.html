@@ -102,24 +102,9 @@
 			}
 		}
 		</script>
-		
-		<!-- Preload critical resources -->
-		<link rel="preload" href="/src/main.tsx" as="script" />
-		<link rel="preload" href="/src/index.css" as="style" />
 	</head>
 	<body>
 		<div id="root"></div>
 		<script type="module" src="/src/main.tsx"></script>
-		
-		<!-- Performance monitoring -->
-		<script>
-			// Performance monitoring
-			window.addEventListener('load', () => {
-				if ('performance' in window) {
-					const perfData = performance.getEntriesByType('navigation')[0];
-					console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
-				}
-			});
-		</script>
 	</body>
 </html>

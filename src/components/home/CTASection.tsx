@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 const CTASection: React.FC = () => {
   return (
     <section className="py-20" role="region" aria-labelledby="cta-heading">
@@ -42,5 +41,4 @@ const CTASection: React.FC = () => {
     </section>
   );
 };
-
 export default CTASection;

@@ -1,33 +1,26 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
 interface UltraFuturisticBackground2036Props {
   variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
 }
-
 export default function UltraFuturisticBackground2036({ 
   variant = 'default', 
   intensity = 'medium' 
 }: UltraFuturisticBackground2036Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Particle system
     const particles: Array<{
       x: number;
@@ -39,20 +32,17 @@ export default function UltraFuturisticBackground2036({
       color: string;
       type: 'quantum' | 'neon' | 'energy' | 'data';
     }> = [];
-
     const colors = {
       quantum: ['#00ffff', '#0080ff', '#8000ff', '#ff0080'],
       neon: ['#00ff00', '#ff00ff', '#ffff00', '#00ffff'],
       energy: ['#ff6600', '#ff0066', '#6600ff', '#00ff66'],
       data: ['#00ccff', '#cc00ff', '#ffcc00', '#00ffcc']
     };
-
     const intensityMultiplier = {
       low: 0.5,
       medium: 1,
       high: 1.5
     };
-
     const variantConfig = {
       default: { particleCount: 50, speed: 1, size: 2 },
       quantum: { particleCount: 80, speed: 1.5, size: 3 },
@@ -60,10 +50,8 @@ export default function UltraFuturisticBackground2036({
       ai: { particleCount: 120, speed: 2, size: 1.5 },
       cyber: { particleCount: 90, speed: 1.8, size: 2.2 }
     };
-
     const config = variantConfig[variant];
     const multiplier = intensityMultiplier[intensity];
-
     // Initialize particles
     for (let i = 0; i < config.particleCount * multiplier; i++) {
       particles.push({
@@ -77,10 +65,8 @@ export default function UltraFuturisticBackground2036({
         type: variant === 'default' ? ['quantum', 'neon', 'energy', 'data'][Math.floor(Math.random() * 4)] as any : variant
       });
     }
-
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Create gradient background
       const gradient = ctx.createRadialGradient(
         canvas.width / 2, 
@@ -98,19 +84,16 @@ export default function UltraFuturisticBackground2036({
       
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
-
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-
         // Draw particle with glow effect
         ctx.save();
         
@@ -136,7 +119,6 @@ export default function UltraFuturisticBackground2036({
         ctx.fill();
         
         ctx.restore();
-
         // Draw connections between nearby particles
         particles.slice(index + 1).forEach(otherParticle => {
           const distance = Math.sqrt(
@@ -155,25 +137,20 @@ export default function UltraFuturisticBackground2036({
           }
         });
       });
-
       // Add floating geometric shapes
       if (variant === 'quantum' || variant === 'ai') {
         drawQuantumShapes(ctx, canvas, multiplier);
       }
-
       // Add data streams for AI variant
       if (variant === 'ai') {
         drawDataStreams(ctx, canvas, multiplier);
       }
-
       // Add space elements for space variant
       if (variant === 'space') {
         drawSpaceElements(ctx, canvas, multiplier);
       }
-
       animationRef.current = requestAnimationFrame(animate);
     };
-
     const drawQuantumShapes = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {
       const time = Date.now() * 0.001;
       
@@ -208,7 +185,6 @@ export default function UltraFuturisticBackground2036({
         ctx.restore();
       }
     };
-
     const drawDataStreams = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {
       const time = Date.now() * 0.001;
       
@@ -237,7 +213,6 @@ export default function UltraFuturisticBackground2036({
         ctx.restore();
       }
     };
-
     const drawSpaceElements = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, multiplier: number) => {
       const time = Date.now() * 0.001;
       
@@ -270,9 +245,7 @@ export default function UltraFuturisticBackground2036({
       ctx.arc(canvas.width * 0.7, canvas.height * 0.3, 200 * multiplier, 0, Math.PI * 2);
       ctx.fill();
     };
-
     animate();
-
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
@@ -280,7 +253,6 @@ export default function UltraFuturisticBackground2036({
       window.removeEventListener('resize', resizeCanvas);
     };
   }, [variant, intensity]);
-
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       <canvas

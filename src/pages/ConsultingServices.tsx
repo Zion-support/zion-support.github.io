@@ -13,7 +13,6 @@ import {
   BarChart3,
   Rocket
 } from 'lucide-react';
-
 export default function ConsultingServices() {
   const consultingServices = [
     {
@@ -65,7 +64,6 @@ export default function ConsultingServices() {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const consultingApproach = [
     {
       step: "Discovery",
@@ -92,7 +90,6 @@ export default function ConsultingServices() {
       icon: "⚡"
     }
   ];
-
   const benefits = [
     {
       icon: Lightbulb,
@@ -115,7 +112,6 @@ export default function ConsultingServices() {
       description: "Faster time-to-value with expert guidance and support"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -140,7 +136,6 @@ export default function ConsultingServices() {
           </motion.div>
         </div>
       </section>
-
       {/* Consulting Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -182,7 +177,6 @@ export default function ConsultingServices() {
           </div>
         </div>
       </section>
-
       {/* Consulting Approach Section */}
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
@@ -222,7 +216,6 @@ export default function ConsultingServices() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -257,7 +250,6 @@ export default function ConsultingServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">

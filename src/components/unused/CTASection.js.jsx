@@ -85,7 +85,6 @@ export function CTASection() {
             </Link>
           </div>
         </motion.div>
-
         {/* Contact Options */}
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {ctaOptions.map((option, index) => (<motion.div key={index} variants={itemVariants} className="group">
@@ -112,7 +111,6 @@ export function CTASection() {
               </Link>
             </motion.div>))}
         </motion.div>
-
         {/* Additional Info */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.5 }} className="text-center mt-16">
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">

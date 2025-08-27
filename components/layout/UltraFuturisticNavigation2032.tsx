@@ -19,14 +19,12 @@ import {
   TrendingUpIcon, TargetIcon, UsersIcon, BriefcaseIcon,
   BookOpenIcon, MessageCircleIcon, StarIcon
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const mainNavigationRoutes = [
   { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
   { name: 'Services', href: '/services', icon: Briefcase, description: 'Our comprehensive service portfolio' },
@@ -37,7 +35,6 @@ const mainNavigationRoutes = [
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
 ];
-
 const serviceCategories = [
   {
     title: '🚀 2032 Revolutionary AI Services',
@@ -112,7 +109,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const quickLinks = [
   { name: '2032 Services', href: '/2032-futuristic-services-showcase', icon: Star, description: 'Revolutionary 2032 services' },
   { name: 'Enhanced Pricing', href: '/enhanced-market-pricing-2032', icon: DollarSign, description: 'Comprehensive pricing analysis' },
@@ -123,12 +119,10 @@ const quickLinks = [
   { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },
   { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
 ];
-
 export default function UltraFuturisticNavigation2032() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -136,10 +130,8 @@ export default function UltraFuturisticNavigation2032() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   return (
     <>
       {/* Top Contact Bar */}
@@ -164,7 +156,6 @@ export default function UltraFuturisticNavigation2032() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav className={`fixed top-10 w-full z-50 transition-all duration-300 ${
         isScrolled 
@@ -188,7 +179,6 @@ export default function UltraFuturisticNavigation2032() {
                 <span className="text-xs text-cyan-300 font-medium">2032 Future Technology</span>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {/* Main Routes */}
@@ -207,7 +197,6 @@ export default function UltraFuturisticNavigation2032() {
                   </Link>
                 ))}
               </div>
-
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-2 px-4 py-2 text-slate-300 hover:text-white transition-colors duration-200 bg-black/20 rounded-lg border border-cyan-500/30 hover:border-cyan-500/50">
@@ -251,7 +240,6 @@ export default function UltraFuturisticNavigation2032() {
                   </div>
                 </div>
               </div>
-
               {/* Quick Links */}
               <div className="flex items-center space-x-4">
                 {quickLinks.slice(0, 3).map((link) => (
@@ -267,7 +255,6 @@ export default function UltraFuturisticNavigation2032() {
                   </Link>
                 ))}
               </div>
-
               {/* Contact Button */}
               <Link
                 href="/contact"
@@ -276,7 +263,6 @@ export default function UltraFuturisticNavigation2032() {
                 Get Started
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -287,7 +273,6 @@ export default function UltraFuturisticNavigation2032() {
           </div>
         </div>
       </nav>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -317,7 +302,6 @@ export default function UltraFuturisticNavigation2032() {
                   </Link>
                 ))}
               </div>
-
               {/* Service Categories */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white mb-4">Service Categories</h3>
@@ -346,7 +330,6 @@ export default function UltraFuturisticNavigation2032() {
                   </div>
                 ))}
               </div>
-
               {/* Quick Links */}
               <div className="grid grid-cols-2 gap-4">
                 {quickLinks.map((link) => (
@@ -363,7 +346,6 @@ export default function UltraFuturisticNavigation2032() {
                   </Link>
                 ))}
               </div>
-
               {/* Contact Info */}
               <div className="p-4 rounded-xl bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/30">
                 <h3 className="text-sm font-medium text-white mb-3">Contact Information</h3>
@@ -386,7 +368,6 @@ export default function UltraFuturisticNavigation2032() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Spacer for fixed navigation */}
       <div className="h-30"></div>
     </>

@@ -88,7 +88,7 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
       </div>
     </TabsContext.Provider>);
 }
-;
+
 export function TabsList({ children, className = '' }) {
     return (<div className={`flex border-b border-gray-200 ${className}`}>
 >>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
@@ -96,6 +96,7 @@ export function TabsList({ children, className = '' }) {
     </button>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface TabsContentProps {
@@ -117,6 +118,9 @@ export function TabsContent({ children, value, className = '' }: TabsContentProp
   );
 =======
 ;
+=======
+
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 export function TabsTrigger({ children, value, className = '' }) {
     const context = useContext(TabsContext);
     if (!context)

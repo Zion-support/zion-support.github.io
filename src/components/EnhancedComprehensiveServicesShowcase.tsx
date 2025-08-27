@@ -68,7 +68,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
               <div className="text-sm text-gray-300">Support Available</div>
             </div>
           </div>
-
           {/* Search and Filter */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
@@ -78,7 +77,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
               </svg>
             </div>
           </div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeCategory === category.id
@@ -89,7 +87,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -104,12 +101,10 @@ const EnhancedComprehensiveServicesShowcase = () => {
                     {service.category}
                   </span>
                 </div>
-
                 <div className="mb-6">
                   <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
                   <div className="text-sm text-gray-400">{service.period}</div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -123,7 +118,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
                       </li>)}
                   </ul>
                 </div>
-
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <div className="flex text-yellow-400">
@@ -141,7 +135,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
           </div>
         </div>
       </section>
-
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -181,7 +174,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -201,7 +193,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
           </div>
         </div>
       </section>
-
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-slate-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -218,7 +209,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
                   </svg>
                 </button>
               </div>
-
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Service Overview</h3>
@@ -233,7 +223,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
                         </li>))}
                     </ul>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Technology Stack</h4>
                     <div className="flex flex-wrap gap-2">
@@ -243,7 +232,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
                     </div>
                   </div>
                 </div>
-
                 <div>
                   <div className="bg-white/10 rounded-lg p-6 mb-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Pricing & Plans</h4>
@@ -260,7 +248,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
                         <span className="text-white">{selectedService.annualDiscount}</span>
                       </div>)}
                   </div>
-
                   <div className="bg-white/10 rounded-lg p-6 mb-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Business Impact</h4>
                     <div className="mb-4">
@@ -276,7 +263,6 @@ const EnhancedComprehensiveServicesShowcase = () => {
                       <p className="text-gray-300 text-sm">{selectedService.targetAudience}</p>
                     </div>
                   </div>
-
                   <div className="bg-white/10 rounded-lg p-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Get Started</h4>
                     <div className="space-y-3">

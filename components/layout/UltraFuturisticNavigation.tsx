@@ -6,26 +6,21 @@ import {
   Brain, Rocket, Shield, Globe, Zap,
   Home, Briefcase, FileText, Phone, Info
 } from 'lucide-react';
-
 interface UltraFuturisticNavigationProps {
   className?: string;
 }
-
 const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -33,11 +28,9 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
         setIsOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
-
   const navigationItems = [
     {
       name: 'Home',
@@ -72,7 +65,6 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
       icon: <Phone className="w-4 h-4" />
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
@@ -84,7 +76,6 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: -10 },
     visible: {
@@ -93,7 +84,6 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
       transition: { duration: 0.4 }
     }
   };
-
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -130,7 +120,6 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
               </div>
             </Link>
           </motion.div>
-
           {/* Desktop Navigation */}
           <motion.div
             className="hidden lg:flex items-center space-x-8"
@@ -157,7 +146,6 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
                     <span>{item.name}</span>
                   </Link>
                 )}
-
                 {/* Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.name && (
                   <motion.div
@@ -188,7 +176,6 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
               </div>
             ))}
           </motion.div>
-
           {/* Right side actions */}
           <motion.div
             className="hidden lg:flex items-center space-x-4"
@@ -198,7 +185,6 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
             <button className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">
               <Search className="w-5 h-5" />
             </button>
-
             {/* Contact Button */}
             <Link
               href="/contact"
@@ -207,7 +193,6 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
               Get Started
             </Link>
           </motion.div>
-
           {/* Mobile menu button */}
           <motion.button
             className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 transition-colors duration-300"
@@ -218,7 +203,6 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
           </motion.button>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -284,7 +268,6 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
                     )}
                   </div>
                 ))}
-
                 {/* Mobile Contact Button */}
                 <div className="pt-4 border-t border-cyan-500/20">
                   <Link
@@ -300,7 +283,6 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Floating holographic elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-4 right-20 w-1 h-1 bg-cyan-400 rounded-full opacity-60 animate-pulse" />
@@ -310,5 +292,4 @@ const UltraFuturisticNavigation: React.FC<UltraFuturisticNavigationProps> = ({ c
     </motion.nav>
   );
 };
-
 export default UltraFuturisticNavigation;

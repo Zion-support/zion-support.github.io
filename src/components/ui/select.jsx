@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function Select({ children, className = '', value, onValueChange }) {
     return (
         <select 
@@ -11,11 +10,9 @@ export function Select({ children, className = '', value, onValueChange }) {
         </select>
     );
 }
-
 export function SelectValue({ placeholder }) {
     return <span className="text-sm">{placeholder || 'Select an option'}</span>;
 }
-
 export function SelectTrigger({ children, className = '', ...props }) {
     return (
         <button 
@@ -26,7 +23,6 @@ export function SelectTrigger({ children, className = '', ...props }) {
         </button>
     );
 }
-
 export function SelectContent({ children, className = '' }) {
     return (
         <div className={`
@@ -38,7 +34,6 @@ export function SelectContent({ children, className = '' }) {
         </div>
     );
 }
-
 export function SelectItem({ children, className = '', value, ...props }) {
     return (
         <div 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   text?: string;
@@ -8,7 +7,6 @@ interface LoadingSpinnerProps {
   className?: string;
   fullScreen?: boolean;
 }
-
 export default function LoadingSpinner({
   size = 'md',
   text = 'Loading...',
@@ -22,14 +20,12 @@ export default function LoadingSpinner({
     lg: 'w-16 h-16',
     xl: 'w-24 h-24'
   };
-
   const textSizes = {
     sm: 'text-sm',
     md: 'text-base',
     lg: 'text-lg',
     xl: 'text-xl'
   };
-
   const renderSpinner = () => {
     switch (variant) {
       case 'minimal':
@@ -79,7 +75,6 @@ export default function LoadingSpinner({
         );
     }
   };
-
   const content = (
     <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
       {renderSpinner()}
@@ -95,7 +90,6 @@ export default function LoadingSpinner({
       )}
     </div>
   );
-
   if (fullScreen) {
     return (
       <div className="fixed inset-0 bg-white dark:bg-gray-900 flex items-center justify-center z-50">
@@ -155,6 +149,5 @@ export default function LoadingSpinner({
       </div>
     );
   }
-
   return content;
 }

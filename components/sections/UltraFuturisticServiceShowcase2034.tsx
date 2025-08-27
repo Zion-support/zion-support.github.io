@@ -6,13 +6,11 @@ import {
   ArrowRight, Star, TrendingUp, Zap, Shield, Globe,
   Phone, Mail, MapPin
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
 };
-
 const serviceCategories = [
   {
     title: '🧠 2034 Revolutionary AI Services',
@@ -190,7 +188,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const UltraFuturisticServiceShowcase2034: React.FC = () => {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-b from-gray-900 via-black to-gray-900">
@@ -205,7 +202,6 @@ const UltraFuturisticServiceShowcase2034: React.FC = () => {
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <motion.div 
@@ -224,7 +220,6 @@ const UltraFuturisticServiceShowcase2034: React.FC = () => {
             Transform your business with solutions that were once science fiction.
           </p>
         </motion.div>
-
         {/* Service Categories */}
         <div className="space-y-20">
           {serviceCategories.map((category, categoryIndex) => (
@@ -247,7 +242,6 @@ const UltraFuturisticServiceShowcase2034: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Services Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
@@ -263,7 +257,6 @@ const UltraFuturisticServiceShowcase2034: React.FC = () => {
                       <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-6 transform transition-transform duration-300 group-hover:scale-110`}>
                         <category.icon className="w-8 h-8 text-white" />
                       </div>
-
                       {/* Service Content */}
                       <div className="space-y-4">
                         <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
@@ -272,7 +265,6 @@ const UltraFuturisticServiceShowcase2034: React.FC = () => {
                         <p className="text-gray-300 leading-relaxed">
                           {service.description}
                         </p>
-
                         {/* Features */}
                         <div className="space-y-2">
                           {service.features.map((feature, featureIndex) => (
@@ -282,7 +274,6 @@ const UltraFuturisticServiceShowcase2034: React.FC = () => {
                             </div>
                           ))}
                         </div>
-
                         {/* Market Info */}
                         <div className="pt-4 border-t border-gray-700/50">
                           <div className="flex justify-between items-center text-sm text-gray-400">
@@ -290,7 +281,6 @@ const UltraFuturisticServiceShowcase2034: React.FC = () => {
                             <span className="text-green-400">↑ {service.growth}</span>
                           </div>
                         </div>
-
                         {/* Price and CTA */}
                         <div className="pt-4 flex items-center justify-between">
                           <div className="text-3xl font-bold text-white">
@@ -306,7 +296,6 @@ const UltraFuturisticServiceShowcase2034: React.FC = () => {
                           </Link>
                         </div>
                       </div>
-
                       {/* Hover Effect */}
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                     </div>
@@ -316,7 +305,6 @@ const UltraFuturisticServiceShowcase2034: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* CTA Section */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -353,5 +341,4 @@ const UltraFuturisticServiceShowcase2034: React.FC = () => {
     </section>
   );
 };
-
 export default UltraFuturisticServiceShowcase2034;

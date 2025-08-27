@@ -108,7 +108,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
           </button>
         </div>
       </div>
-
       {/* Monitoring Status */}
       <div className="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center justify-between">
@@ -139,7 +138,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
           </div>
         </div>
       </div>
-
       {/* Navigation Tabs */}
       <div className="flex border-b border-gray-200 dark:border-gray-700">
         {[
@@ -155,7 +153,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             <span>{label}</span>
           </button>))}
       </div>
-
       {/* Content */}
       <div className="p-4">
         <AnimatePresence mode="wait">
@@ -204,7 +201,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   </div>
                 </div>
               </div>
-
               {/* Recent Events */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Security Events</h3>
@@ -231,7 +227,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 </div>
               </div>
             </motion.div>)}
-
           {activeTab === 'events' && (<motion.div key="events" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Security Events</h3>
@@ -282,7 +277,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   </div>))}
               </div>
             </motion.div>)}
-
           {activeTab === 'compliance' && (<motion.div key="compliance" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Compliance Rules</h3>
@@ -328,7 +322,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   </div>))}
               </div>
             </motion.div>)}
-
           {activeTab === 'threats' && (<motion.div key="threats" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Threat Intelligence</h3>
               
@@ -371,7 +364,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 </div>
               </div>
             </motion.div>)}
-
           {activeTab === 'reports' && (<motion.div key="reports" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Reports & Analytics</h3>
               
@@ -408,7 +400,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             </motion.div>)}
         </AnimatePresence>
       </div>
-
       {/* Settings Panel */}
       <AnimatePresence>
         {showSettings && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="border-t border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">

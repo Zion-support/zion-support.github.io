@@ -134,7 +134,6 @@ export function PricingSection() {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -144,7 +143,6 @@ export function PricingSection() {
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto leading-relaxed mb-8">
             Choose the perfect plan for your business. All plans include our core features with no hidden fees.
           </p>
-
           {/* Billing toggle */}
           <div className="inline-flex items-center bg-zion-blue-dark/40 rounded-xl p-1 border border-zion-blue-light/30">
             <button onClick={() => setBillingPeriod('month')} className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${billingPeriod === 'month'
@@ -162,7 +160,6 @@ export function PricingSection() {
             </button>
           </div>
         </motion.div>
-
         {/* Pricing Plans */}
         <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {plans.map((plan, index) => (<motion.div key={plan.name} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }} className="relative">
@@ -173,7 +170,6 @@ export function PricingSection() {
                     Most Popular
                   </div>
                 </div>)}
-
               <div className={`h-full p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group ${plan.popular ? 'ring-2 ring-zion-purple/50' : ''}`}>
                 {/* Plan header */}
                 <div className="text-center mb-8">
@@ -191,7 +187,6 @@ export function PricingSection() {
                     <span className="text-zion-slate-light">/{billingPeriod}</span>
                   </div>
                 </div>
-
                 {/* Features */}
                 <div className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (<div key={idx} className="flex items-center gap-3">
@@ -208,7 +203,6 @@ export function PricingSection() {
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>))}
                 </div>
-
                 {/* CTA Button */}
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${plan.popular
                 ? 'bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white shadow-lg hover:shadow-zion-purple/25'
@@ -219,7 +213,6 @@ export function PricingSection() {
               </div>
             </motion.div>))}
         </motion.div>
-
         {/* Add-ons Section */}
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
           <h3 className="text-3xl font-bold text-white mb-6">
@@ -229,7 +222,6 @@ export function PricingSection() {
             Enhance your plan with these powerful add-ons to meet your specific needs
           </p>
         </motion.div>
-
         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {addons.map((addon, index) => (<motion.div key={addon.name} variants={itemVariants} whileHover={{ y: -4 }} transition={{ type: "spring", stiffness: 300 }}>
               <div className="p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
@@ -248,21 +240,18 @@ export function PricingSection() {
                     <span className="text-zion-slate-light">/{addon.period}</span>
                   </div>
                 </div>
-
                 <div className="space-y-2 mb-6">
                   {addon.features.map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                       <span>{feature}</span>
                     </div>))}
                 </div>
-
                 <button className="w-full py-2 px-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-lg text-sm font-medium transition-all duration-300">
                   Add to Plan
                 </button>
               </div>
             </motion.div>))}
         </motion.div>
-
         {/* FAQ Section */}
         <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
           <h3 className="text-2xl font-bold text-white mb-6">Have Questions?</h3>

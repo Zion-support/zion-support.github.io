@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead";
 import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -15,9 +15,8 @@ export default function WhitelabelManager() {
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />;
   }
-
   return (
-    <>
+<>
       <SEOHead 
         title="White-Label Management - Zion AI Marketplace"
         description="Create and manage white-label instances of the Zion AI Marketplace platform."
@@ -31,7 +30,6 @@ export default function WhitelabelManager() {
               Create and manage branded versions of the platform for agencies, startups, and enterprise clients.
             </p>
           </div>
-
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="mb-8">
               <TabsTrigger value="tenants">Tenants</TabsTrigger>

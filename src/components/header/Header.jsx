@@ -13,7 +13,6 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Search as SearchIcon } from "lucide-react";
-
 export function Header({ hideLogin = false, customLogo, customTheme }) {
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
@@ -22,7 +21,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const searchSuggestions = generateSearchSuggestions();
-
   // If we have a white-label tenant and no specific customTheme is provided,
   // use the tenant's primary color
   const effectiveTheme = customTheme || (isWhitelabel ? {
@@ -30,13 +28,11 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
     backgroundColor: '#000000', // Default dark background
     textColor: '#ffffff', // Default light text
   } : undefined);
-
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor,
     color: effectiveTheme.textColor,
     borderColor: `${effectiveTheme.primaryColor}20`
   } : {};
-
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +41,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (query.trim()) {
@@ -53,11 +48,9 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
       setQuery("");
     }
   };
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
   return (
     <header 
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -75,12 +68,10 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
       
       <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor}/>
-
         {/* Desktop Navigation */}
         <div className="ml-6 flex-1 hidden lg:block">
           <MainNavigation />
         </div>
-
         {/* Search Bar */}
         <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">
           <div className="relative group">
@@ -99,7 +90,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
             </div>
           </div>
         </form>
-
         {/* Right Side Actions */}
         <div className="flex items-center gap-3">
           {/* AI Assistant Button */}
@@ -107,17 +97,14 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
             <Sparkles className="h-4 w-4 group-hover:animate-pulse"/>
             <span className="text-sm font-medium">AI Assistant</span>
           </button>
-
           <LanguageSelector />
           {!hideLogin && <UserMenu />}
-
           {/* Mobile Menu Button */}
           <button onClick={toggleMobileMenu} className="lg:hidden p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors">
             {isMobileMenuOpen ? <X className="h-5 w-5"/> : <Menu className="h-5 w-5"/>}
           </button>
         </div>
       </div>
-
       {/* Mobile Search Bar */}
       <div className="lg:hidden px-4 pb-4">
         <form onSubmit={handleSubmit}>
@@ -138,7 +125,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
           </div>
         </form>
       </div>
-
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-40 bg-zion-blue-dark/95 backdrop-blur-xl">
@@ -201,7 +187,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
                 )}
               </ul>
             </nav>
-
             <div className="p-4 border-t border-zion-purple/30">
               <div className="flex flex-col gap-3">
                 <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-medium hover:from-zion-purple-light hover:to-zion-cyan-light transition-all duration-300">

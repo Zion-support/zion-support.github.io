@@ -95,12 +95,10 @@ import {
   UserCheck9,
   UserCheck10
 } from 'lucide-react';
-
 export function EnhancedPricingSection2027() {
   const [billingPeriod, setBillingPeriod] = useState<'month' | 'year'>('month');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'plans' | 'services' | 'enterprise' | 'comparison'>('plans');
-
   const plans = [
     {
       name: "Starter",
@@ -197,7 +195,6 @@ export function EnhancedPricingSection2027() {
       savings: "Save 30% with annual billing"
     }
   ];
-
   const addons = [
     {
       name: "AI Model Training",
@@ -248,7 +245,6 @@ export function EnhancedPricingSection2027() {
       features: ["SOC 2 compliance", "GDPR compliance", "HIPAA compliance", "Advanced encryption", "Audit trails"]
     }
   ];
-
   const serviceCategories = [
     {
       name: "AI Services",
@@ -302,19 +298,16 @@ export function EnhancedPricingSection2027() {
       ]
     }
   ];
-
   const getDiscountedPrice = (price: number) => {
     const discount = billingPeriod === 'year' ? (billingPeriod === 'year' ? 0.25 : 0) : 0;
     return Math.round(price * (1 - discount));
   };
-
   const getAnnualSavings = (price: number) => {
     if (billingPeriod === 'year') {
       return Math.round(price * 12 * 0.25);
     }
     return 0;
   };
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -325,7 +318,6 @@ export function EnhancedPricingSection2027() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
@@ -337,7 +329,6 @@ export function EnhancedPricingSection2027() {
       }
     }
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden quantum-particles">
       {/* Background decorative elements */}
@@ -347,7 +338,6 @@ export function EnhancedPricingSection2027() {
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full animate-pulse holographic" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-zion-blue rounded-full animate-pulse holographic" style={{ animationDelay: '0.5s' }}></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div 
@@ -367,7 +357,6 @@ export function EnhancedPricingSection2027() {
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto leading-relaxed mb-8">
             Choose the perfect plan for your business. All plans include our core features with transparent pricing and no hidden fees.
           </p>
-
           {/* Billing toggle */}
           <div className="inline-flex items-center bg-zion-blue-dark/40 rounded-xl p-1 border border-zion-blue-light/30">
             <button 
@@ -393,7 +382,6 @@ export function EnhancedPricingSection2027() {
             </button>
           </div>
         </motion.div>
-
         {/* Navigation Tabs */}
         <motion.div 
           className="flex flex-wrap justify-center gap-2 mb-12"
@@ -422,7 +410,6 @@ export function EnhancedPricingSection2027() {
             </button>
           ))}
         </motion.div>
-
         {/* Content based on active tab */}
         <AnimatePresence mode="wait">
           {activeTab === 'plans' && (
@@ -476,7 +463,6 @@ export function EnhancedPricingSection2027() {
                         </div>
                       )}
                     </div>
-
                     <div className="space-y-4 mb-8">
                       <h4 className="text-white font-semibold text-lg">What's included:</h4>
                       <ul className="space-y-3">
@@ -488,7 +474,6 @@ export function EnhancedPricingSection2027() {
                         ))}
                       </ul>
                     </div>
-
                     {plan.notIncluded.length > 0 && (
                       <div className="space-y-4 mb-8">
                         <h4 className="text-zion-slate-light font-semibold text-lg">Not included:</h4>
@@ -502,7 +487,6 @@ export function EnhancedPricingSection2027() {
                         </ul>
                       </div>
                     )}
-
                     <button className={`w-full py-3 px-6 rounded-xl font-medium transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan/90 hover:to-zion-purple/90'
@@ -515,7 +499,6 @@ export function EnhancedPricingSection2027() {
               ))}
             </motion.div>
           )}
-
           {activeTab === 'services' && (
             <motion.div
               key="services"
@@ -569,7 +552,6 @@ export function EnhancedPricingSection2027() {
               ))}
             </motion.div>
           )}
-
           {activeTab === 'enterprise' && (
             <motion.div
               key="enterprise"
@@ -656,7 +638,6 @@ export function EnhancedPricingSection2027() {
               </div>
             </motion.div>
           )}
-
           {activeTab === 'comparison' && (
             <motion.div
               key="comparison"
@@ -700,7 +681,6 @@ export function EnhancedPricingSection2027() {
             </motion.div>
           )}
         </AnimatePresence>
-
         {/* Add-ons Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -717,7 +697,6 @@ export function EnhancedPricingSection2027() {
               Enhance your plan with powerful add-ons designed to meet your specific business needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {addons.map((addon, index) => (
               <motion.div
@@ -758,7 +737,6 @@ export function EnhancedPricingSection2027() {
             ))}
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

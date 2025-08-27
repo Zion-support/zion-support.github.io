@@ -2,7 +2,11 @@ import React from "react";
 import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate, useParams } from "react-router-dom";
+<<<<<<< HEAD
 import { SEOHead } from "../components/seo/SEOHead";
+=======
+import SEOHead from "../components/SEOHead.jsx";
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 import { useWhitelabel } from "@/context/WhitelabelContext";

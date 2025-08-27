@@ -38,7 +38,6 @@ export interface Listing {
     cost: number;
   };
 }
-
 export interface ListingFilter {
   category?: string;
   priceRange?: {
@@ -52,7 +51,6 @@ export interface ListingFilter {
   sortBy?: 'price' | 'date' | 'rating' | 'views';
   sortOrder?: 'asc' | 'desc';
 }
-
 export interface ListingSearchResult {
   listings: Listing[];
   total: number;
@@ -60,7 +58,6 @@ export interface ListingSearchResult {
   limit: number;
   hasMore: boolean;
 }
-
 export interface ListingFormData {
   title: string;
   description: string;
@@ -83,7 +80,6 @@ export interface ListingFormData {
     cost: number;
   };
 }
-
 export interface ListingStats {
   totalListings: number;
   activeListings: number;

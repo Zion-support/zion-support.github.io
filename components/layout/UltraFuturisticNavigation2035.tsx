@@ -10,7 +10,6 @@ import {
   Home, Briefcase, Phone, Mail,
   MapPin, Calendar, FileText, Award, DollarSign
 } from 'lucide-react';
-
 interface NavigationItem {
   name: string;
   href: string;
@@ -20,7 +19,6 @@ interface NavigationItem {
   badge?: string;
   color?: string;
 }
-
 const navigationItems: NavigationItem[] = [
   {
     name: '🏠 Home',
@@ -211,14 +209,12 @@ const navigationItems: NavigationItem[] = [
     ]
   }
 ];
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const navigationItems: NavigationItem[] = [
   {
     name: 'Pricing',
@@ -411,7 +407,6 @@ const navigationItems: NavigationItem[] = [
     ]
   }
 ];
-
 const quickActions = [
   { name: 'Get Started', href: '/contact', icon: <ArrowRight className="w-4 h-4" />, primary: true },
   { name: 'Get a Quote', href: '/quote', icon: <DollarSign className="w-4 h-4" /> },
@@ -423,26 +418,21 @@ const quickActions = [
   { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" /> },
   { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
 ];
-
 const UltraFuturisticNavigation2035: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   const handleDropdownToggle = (itemName: string) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
-
   const filteredServices = navigationItems.flatMap(item => 
     item.children?.filter(child => 
       child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       child.description?.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   );
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
       {/* Top Contact Bar */}
@@ -465,7 +455,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -481,7 +470,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               <p className="text-xs text-gray-400">Future Technology Solutions</p>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -501,7 +489,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                     </span>
                   )}
                 </button>
-
                 {/* Dropdown Menu */}
                 {item.children && (
                   <AnimatePresence>
@@ -546,7 +533,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Search Bar */}
           <div className="hidden lg:flex items-center space-x-4">
             <div className="relative">
@@ -560,7 +546,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               />
             </div>
           </div>
-
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -570,7 +555,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               Get Started
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -580,7 +564,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
           </button>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -603,7 +586,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   className="w-full pl-10 pr-4 py-3 bg-white/5 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 />
               </div>
-
               {/* Mobile Navigation Items */}
               <div className="space-y-4">
                 {navigationItems.map((item) => (
@@ -625,7 +607,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
                       )}
                     </button>
-
                     {/* Mobile Dropdown */}
                     {item.children && activeDropdown === item.name && (
                       <motion.div
@@ -656,7 +637,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-cyan-500/20">
                 <Link
@@ -671,7 +651,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Search Results Overlay */}
       {searchQuery && (
         <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-t border-cyan-500/20 z-50">

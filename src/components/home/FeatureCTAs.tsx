@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Building, Clock, Brain, Server, TrendingUp, CheckCircle, Play, Download } from "lucide-react";
-
 export function FeatureCTAs() {
   const features = [
     {
@@ -83,7 +82,6 @@ export function FeatureCTAs() {
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
     }
   ];
-
   const ctaItems = [
     {
       title: "Watch Demo",
@@ -118,9 +116,8 @@ export function FeatureCTAs() {
       hoverColor: "from-orange-700 to-red-700"
     }
   ];
-
   return (
-    <>
+<>
       {/* Features Section */}
       <section className="py-16 bg-gradient-to-b from-background to-background/90">
         <div className="container mx-auto px-4">
@@ -162,7 +159,6 @@ export function FeatureCTAs() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -174,7 +170,6 @@ export function FeatureCTAs() {
               Choose your next step and begin your journey with Zion Tech Group
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {ctaItems.map((item, index) => (
               <a 
@@ -201,7 +196,6 @@ export function FeatureCTAs() {
               </a>
             ))}
           </div>
-
           <div className="text-center mt-12">
             <p className="text-gray-400 mb-4">
               Need help choosing? Our experts are here to guide you.
@@ -216,6 +210,6 @@ export function FeatureCTAs() {
           </div>
         </div>
       </section>
-    </>
+</>
   );
 }

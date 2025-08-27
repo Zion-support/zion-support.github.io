@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 interface LogoProps {
   customLogo?: string;
   customColor?: string;
   isWhitelabel?: boolean;
   brandName?: string;
 }
-
 export const Logo: React.FC<LogoProps> = ({ 
   customLogo, 
   customColor, 
@@ -15,7 +13,6 @@ export const Logo: React.FC<LogoProps> = ({
   brandName = 'ZION' 
 }) => {
   const logoColor = customColor || 'from-zion-cyan via-zion-purple-light to-zion-purple';
-
   if (customLogo) {
     return (
       <Link to="/" className="flex items-center space-x-2">
@@ -23,7 +20,6 @@ export const Logo: React.FC<LogoProps> = ({
       </Link>
     );
   }
-
   return (
     <Link to="/" className="flex items-center group">
       <div className="flex items-center space-x-2">

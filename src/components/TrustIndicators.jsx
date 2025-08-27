@@ -51,7 +51,6 @@ export function TrustIndicators({ className, showStats = true, showCertification
             to ensure your business operations remain secure and uninterrupted.
           </p>
         </div>
-
         {/* Trust Indicators Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {indicators.map((indicator, index) => (<div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">
@@ -66,7 +65,6 @@ export function TrustIndicators({ className, showStats = true, showCertification
               </p>
             </div>))}
         </div>
-
         {/* Stats Section */}
         {showStats && (<div className="mb-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -83,7 +81,6 @@ export function TrustIndicators({ className, showStats = true, showCertification
                 </div>))}
             </div>
           </div>)}
-
         {/* Certifications Section */}
         {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -100,7 +97,6 @@ export function TrustIndicators({ className, showStats = true, showCertification
                 </div>))}
             </div>
           </div>)}
-
         {/* Customer Testimonials Preview */}
         <div className="mt-16 text-center">
           <div className="flex justify-center items-center gap-2 mb-4">

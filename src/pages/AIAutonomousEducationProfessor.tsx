@@ -20,7 +20,6 @@ const AIAutonomousEducationProfessor = () => {
               Meet your personal AI professor that never sleeps, never gets tired, and adapts to your learning style in real-time
             </p>
           </div>
-
           {/* Educational Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -44,7 +43,6 @@ const AIAutonomousEducationProfessor = () => {
               <p className="text-gray-300">Learn from anywhere, anytime</p>
             </div>
           </div>
-
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -83,7 +81,6 @@ const AIAutonomousEducationProfessor = () => {
               <p className="text-gray-300">Comprehensive learning insights and recommendations</p>
             </div>
           </div>
-
           {/* Learning Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Personalized Learning Process</h2>
@@ -113,7 +110,6 @@ const AIAutonomousEducationProfessor = () => {
               </div>
             </div>
           </div>
-
           {/* Subjects */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Available Subjects</h2>
@@ -123,7 +119,6 @@ const AIAutonomousEducationProfessor = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Learning Applications</h2>
@@ -144,7 +139,6 @@ const AIAutonomousEducationProfessor = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-teal-600 to-cyan-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Learn with AI?</h2>

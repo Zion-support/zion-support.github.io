@@ -55,7 +55,6 @@ export const QuickAccess = () => {
             Get started quickly with our most popular services and solutions
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {quickLinks.map((link, index) => (<a key={index} href={link.href} className="group bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
               <div className="flex items-start justify-between mb-4">
@@ -74,7 +73,6 @@ export const QuickAccess = () => {
               </p>
             </a>))}
         </div>
-
         <div className="text-center mt-12">
           <a href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
             View All Services

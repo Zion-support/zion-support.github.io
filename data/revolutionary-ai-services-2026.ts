@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface RevolutionaryAIService2026 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface RevolutionaryAIService2026 {
   rating: number;
   reviews: number;
 }
-
 export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
   // AI Multimodal Fusion Platform
   {
@@ -94,7 +92,6 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.9,
     reviews: 145
   },
-
   // AI Autonomous Business Platform
   {
     id: 'ai-autonomous-business-platform',
@@ -147,7 +144,6 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.8,
     reviews: 67
   },
-
   // AI Creative Studio Platform
   {
     id: 'ai-creative-studio-platform',
@@ -200,7 +196,6 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.9,
     reviews: 389
   },
-
   // AI Healthcare Companion Platform
   {
     id: 'ai-healthcare-companion-platform',
@@ -253,7 +248,6 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     rating: 4.9,
     reviews: 112
   },
-
   // Quantum Logistics Platform
   {
     id: 'quantum-logistics-platform',

@@ -131,7 +131,6 @@ export const AdvancedServiceComparison = () => {
           Compare our cutting-edge services across different tiers, complexity levels, and pricing to find the perfect solution for your business needs.
         </p>
       </motion.div>
-
       {/* Filters and Controls */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -153,7 +152,6 @@ export const AdvancedServiceComparison = () => {
               {COMPLEXITY_LEVELS.map(level => (<option key={level} value={level}>{level}</option>))}
             </select>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Price Range</label>
             <select value={filters.priceRange} onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))} className="w-full p-2 border border-zion-slate-light rounded-md">
@@ -161,7 +159,6 @@ export const AdvancedServiceComparison = () => {
               {PRICE_RANGES.map(range => (<option key={range} value={range}>{range}</option>))}
             </select>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology</label>
             <select value={filters.technology} onChange={(e) => setFilters(prev => ({ ...prev, technology: e.target.value }))} className="w-full p-2 border border-zion-slate-light rounded-md">
@@ -172,7 +169,6 @@ export const AdvancedServiceComparison = () => {
               <option value="Cybersecurity">Cybersecurity</option>
             </select>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">View Mode</label>
             <div className="flex gap-2">
@@ -188,12 +184,10 @@ export const AdvancedServiceComparison = () => {
             </div>
           </div>
         </div>
-
         <div className="mt-4">
           <Input placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="max-w-md"/>
         </div>
       </motion.div>
-
       {/* Service Grid */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
         {filteredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * index }}>
@@ -217,7 +211,6 @@ export const AdvancedServiceComparison = () => {
                     <span className="text-sm text-zion-slate-light">{service.popularity}</span>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                   <div className="flex items-center gap-1">
                     <DollarSign className="w-4 h-4"/>
@@ -233,7 +226,6 @@ export const AdvancedServiceComparison = () => {
                   </div>
                 </div>
               </CardHeader>
-
               <CardContent className="pt-0">
                 <div className="space-y-4">
                   <div>
@@ -248,7 +240,6 @@ export const AdvancedServiceComparison = () => {
                         </li>))}
                     </ul>
                   </div>
-
                   <div>
                     <h4 className="font-semibold text-zion-slate-dark mb-2 flex items-center gap-2">
                       <Target className="w-4 h-4 text-zion-purple"/>
@@ -260,7 +251,6 @@ export const AdvancedServiceComparison = () => {
                         </Badge>))}
                     </div>
                   </div>
-
                   <div className="pt-2">
                     <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick={() => window.open(service.link, '_blank')}>
                       Learn More
@@ -271,7 +261,6 @@ export const AdvancedServiceComparison = () => {
             </Card>
           </motion.div>))}
       </motion.div>
-
       {/* Comparison Summary */}
       {selectedServices.length > 0 && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mt-8 bg-white rounded-lg shadow-lg p-6">
           <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
@@ -305,7 +294,6 @@ export const AdvancedServiceComparison = () => {
             </Button>
           </div>
         </motion.div>)}
-
       {/* CTA Section */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="mt-12 text-center">
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">

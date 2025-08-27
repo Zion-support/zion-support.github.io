@@ -273,7 +273,6 @@ export function AdvancedSecurityDashboard() {
           </button>
         </div>
       </div>
-
       {/* Controls */}
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">
         <div className="flex items-center justify-between">
@@ -305,7 +304,6 @@ export function AdvancedSecurityDashboard() {
           </div>
         </div>
       </div>
-
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">
         {[
@@ -324,7 +322,6 @@ export function AdvancedSecurityDashboard() {
             </button>);
         })}
       </div>
-
       {/* Content */}
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">
         {activeTab === 'overview' && (<div className="space-y-6">
@@ -349,7 +346,6 @@ export function AdvancedSecurityDashboard() {
                   </div>
                 </div>))}
             </div>
-
             {/* Quick Security Status */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="bg-gradient-to-r from-zion-red/10 to-zion-orange/10 p-6 rounded-xl border border-zion-red/20">
@@ -370,7 +366,6 @@ export function AdvancedSecurityDashboard() {
                     </div>))}
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-zion-blue"/>
@@ -393,7 +388,6 @@ export function AdvancedSecurityDashboard() {
               </div>
             </div>
           </div>)}
-
         {activeTab === 'events' && (<div className="space-y-4">
             {filteredEvents.map(event => (<div key={event.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -421,7 +415,6 @@ export function AdvancedSecurityDashboard() {
                 </div>
               </div>))}
           </div>)}
-
         {activeTab === 'compliance' && (<div className="space-y-4">
             {filteredCompliance.map(req => (<div key={req.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -456,7 +449,6 @@ export function AdvancedSecurityDashboard() {
                 </div>
               </div>))}
           </div>)}
-
         {activeTab === 'threats' && (<div className="space-y-4">
             {threatIntelligence.map(threat => (<div key={threat.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -498,7 +490,6 @@ export function AdvancedSecurityDashboard() {
                 </div>
               </div>))}
           </div>)}
-
         {activeTab === 'analytics' && (<div className="space-y-6">
             <div className="text-center text-zion-slate-light">
               <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50"/>

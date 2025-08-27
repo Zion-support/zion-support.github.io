@@ -76,7 +76,6 @@ export function FeaturesSection() {
             exceptional results that drive your business forward.
           </p>
         </motion.div>
-
         {/* Features Grid */}
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (<motion.div key={index} variants={itemVariants} className="group">
@@ -96,7 +95,6 @@ export function FeaturesSection() {
               </div>
             </motion.div>))}
         </motion.div>
-
         {/* Additional Info */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.5 }} className="mt-16 text-center">
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">

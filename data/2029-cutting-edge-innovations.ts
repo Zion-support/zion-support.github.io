@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface CuttingEdge2029Service {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface CuttingEdge2029Service {
   rating: number;
   reviews: number;
 }
-
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Neural Interface Services
   {

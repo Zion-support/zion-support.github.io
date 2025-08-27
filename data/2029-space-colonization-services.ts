@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface SpaceColonization2029Service {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface SpaceColonization2029Service {
   rating: number;
   reviews: number;
 }
-
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   // Space Colonization & Mining Services
   {

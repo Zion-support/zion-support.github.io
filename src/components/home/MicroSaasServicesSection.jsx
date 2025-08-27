@@ -11,12 +11,10 @@ export function MicroSaasServicesSection() {
       <div className="absolute -top-2 -right-2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
         Featured
       </div>
-
       {/* Service Icon */}
       <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
         <Zap className="w-8 h-8 text-white"/>
       </div>
-
       {/* Service Info */}
       <div className="space-y-3">
         <h3 className="text-lg font-bold text-white group-hover:text-zion-cyan transition-colors">
@@ -25,7 +23,6 @@ export function MicroSaasServicesSection() {
         <p className="text-zion-slate-light text-sm leading-relaxed">
           {service.description.substring(0, 120)}...
         </p>
-
         {/* AI Score and Rating */}
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -38,7 +35,6 @@ export function MicroSaasServicesSection() {
             <span className="text-sm text-white">{service.rating}</span>
           </div>
         </div>
-
         {/* Pricing */}
         <div className="flex items-center justify-between">
           <div>
@@ -49,7 +45,6 @@ export function MicroSaasServicesSection() {
             {service.subcategory}
           </Badge>
         </div>
-
         {/* Key Benefits */}
         <div className="space-y-2">
           {service.benefits.slice(0, 2).map((benefit, index) => (<div key={index} className="flex items-start space-x-2">
@@ -57,7 +52,6 @@ export function MicroSaasServicesSection() {
               <span className="text-xs text-zion-slate-light">{benefit}</span>
             </div>))}
         </div>
-
         {/* Learn More Button */}
         <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group-hover:shadow-lg group-hover:shadow-zion-purple/20 transition-all duration-300">
           <Link to={service.website} target="_blank" rel="noopener noreferrer">
@@ -86,12 +80,10 @@ export function MicroSaasServicesSection() {
             to enterprise IT solutions, we provide innovative tools that drive growth and efficiency.
           </p>
         </div>
-
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredServices.map((service) => (<ServiceCard key={service.id} service={service}/>))}
         </div>
-
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div className="text-center">
@@ -123,7 +115,6 @@ export function MicroSaasServicesSection() {
             <div className="text-zion-slate-light">Happy Clients</div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-blue-dark/50 to-zion-purple-dark/50 border border-zion-blue-light/20 rounded-2xl p-8 max-w-4xl mx-auto">

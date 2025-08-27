@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
-import * as serviceWorkerRegistration from './utils/serviceWorkerRegistration';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,12 +12,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// Register service worker for PWA functionality
-serviceWorkerRegistration.register();
-
-// Request notification permission
-serviceWorkerRegistration.requestNotificationPermission();
-
-// Handle install prompt
-serviceWorkerRegistration.handleInstallPrompt();

@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function PasswordStrengthMeter({ password }) {
     const calculatePasswordStrength = (password) => {
         let score = 0;
@@ -10,7 +9,6 @@ export function PasswordStrengthMeter({ password }) {
         if (/[^A-Za-z0-9]/.test(password)) score++;
         return score;
     };
-
     const getStrengthLabel = (score) => {
         if (score <= 1) return "Very Weak";
         if (score <= 2) return "Weak";
@@ -18,11 +16,9 @@ export function PasswordStrengthMeter({ password }) {
         if (score <= 4) return "Good";
         return "Strong";
     };
-
     const score = calculatePasswordStrength(password);
     const value = (score / 5) * 100;
     const label = getStrengthLabel(score);
-
     const getStrengthColor = (score) => {
         if (score <= 1) return "bg-red-500";
         if (score <= 2) return "bg-orange-500";
@@ -30,7 +26,6 @@ export function PasswordStrengthMeter({ password }) {
         if (score <= 4) return "bg-blue-500";
         return "bg-green-500";
     };
-
     return (
         <div className="mt-2" aria-live="polite">
             <div className="w-full bg-gray-200 rounded-full h-2">

@@ -35,7 +35,6 @@ export const UserMenu = () => {
         <span className="text-sm font-medium hidden sm:block">{user.name || user.email}</span>
         <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}/>
       </button>
-
       {isOpen && (<div className="absolute top-full right-0 mt-2 w-56 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
           <div className="py-2">
             {/* User Info */}
@@ -43,7 +42,6 @@ export const UserMenu = () => {
               <div className="text-sm font-medium text-white">{user.name || 'User'}</div>
               <div className="text-xs text-gray-400">{user.email}</div>
             </div>
-
             {/* Menu Items */}
             <div className="py-1">
               <Link to="/profile" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
@@ -66,7 +64,6 @@ export const UserMenu = () => {
                 Settings
               </Link>
             </div>
-
             {/* Logout */}
             <div className="border-t border-gray-800 pt-1">
               <button onClick={handleLogout} className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-400 hover:text-red-300 hover:bg-red-900/20 transition-colors">

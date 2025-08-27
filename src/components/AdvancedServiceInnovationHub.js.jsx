@@ -240,7 +240,6 @@ const AdvancedServiceInnovationHub = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Innovation Trends View */}
       {viewMode === 'trends' && (<>
           {/* Filters */}
@@ -264,7 +263,6 @@ const AdvancedServiceInnovationHub = () => {
                   <option value="Low">Low Impact</option>
                 </select>
               </div>
-
               <div>
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Status</label>
                 <select value={selectedStatus} onChange={(e) => setSelectedStatus(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">
@@ -275,14 +273,12 @@ const AdvancedServiceInnovationHub = () => {
                   <option value="Disruptive">Disruptive</option>
                 </select>
               </div>
-
               <div>
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>
                 <Input placeholder="Search trends..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full"/>
               </div>
             </div>
           </motion.div>
-
           {/* Trends Grid */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
             {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }}>
@@ -359,7 +355,6 @@ const AdvancedServiceInnovationHub = () => {
               </motion.div>))}
           </motion.div>
         </>)}
-
       {/* Future Roadmap View */}
       {viewMode === 'roadmap' && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="space-y-6">
           {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }}>
@@ -439,7 +434,6 @@ const AdvancedServiceInnovationHub = () => {
               </Card>
             </motion.div>))}
         </motion.div>)}
-
       {/* Strategic Insights View */}
       {viewMode === 'insights' && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="space-y-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -486,7 +480,6 @@ const AdvancedServiceInnovationHub = () => {
                 </div>
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -531,7 +524,6 @@ const AdvancedServiceInnovationHub = () => {
               </CardContent>
             </Card>
           </div>
-
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -580,7 +572,6 @@ const AdvancedServiceInnovationHub = () => {
             </CardContent>
           </Card>
         </motion.div>)}
-
       {/* CTA Section */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="mt-12 text-center">
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">

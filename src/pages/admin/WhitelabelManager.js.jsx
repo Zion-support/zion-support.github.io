@@ -24,7 +24,6 @@ export default function WhitelabelManager() {
               Create and manage branded versions of the platform for agencies, startups, and enterprise clients.
             </p>
           </div>
-
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="mb-8">
               <TabsTrigger value="tenants">Tenants</TabsTrigger>

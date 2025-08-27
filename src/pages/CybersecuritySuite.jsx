@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -107,7 +107,6 @@ export default function CybersecuritySuite() {
     ];
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
       <SEOHead title="Cybersecurity Suite - Zion Tech Group" description="Comprehensive security monitoring, threat detection, and incident response for businesses of all sizes. Starting at $199/month." keywords="cybersecurity, threat detection, security monitoring, incident response, compliance, security audit" canonical="https://ziontechgroup.com/cybersecurity-suite"/>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="container mx-auto text-center">
@@ -134,7 +133,6 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
-
       {/* Security Services */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -160,7 +158,6 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
-
       {/* Features Grid */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -185,7 +182,6 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
-
       {/* Compliance Section */}
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto">
@@ -208,7 +204,6 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -251,7 +246,6 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto text-center">

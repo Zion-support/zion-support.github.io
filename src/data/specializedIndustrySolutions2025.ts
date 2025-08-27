@@ -34,15 +34,217 @@ export interface SpecializedIndustrySolution2025 {
   demoUrl?: string;
   caseStudies?: string[];
 }
-
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution2025[] = [
   // Healthcare & Life Sciences
   {
+<<<<<<< HEAD
     id: "ai-healthcare-diagnostic-platform",
     title: "AI Healthcare Diagnostic Platform Pro",
     description: "Advanced AI-powered diagnostic platform that analyzes medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
     category: "Healthcare & Life Sciences",
     subcategory: "AI Diagnostics",
+=======
+    id: "ai-healthcare-diagnostics",
+    title: "AI-Powered Healthcare Diagnostics Platform",
+    description: "Advanced medical diagnostics platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
+    category: "Healthcare",
+    subcategory: "Medical Diagnostics",
+    price: 7999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Medical image analysis",
+      "Symptom assessment",
+      "Treatment recommendations",
+      "Patient data integration",
+      "Clinical decision support",
+      "Radiology assistance",
+      "Pathology analysis",
+      "Risk assessment",
+      "Compliance management",
+      "Mobile app access"
+    ],
+    benefits: [
+      "Improve diagnostic accuracy by 25%",
+      "Reduce diagnosis time by 40%",
+      "Lower healthcare costs",
+      "Better patient outcomes",
+      "Enhanced clinical workflow"
+    ],
+    useCases: [
+      "Radiology departments",
+      "Primary care clinics",
+      "Emergency rooms",
+      "Specialty practices",
+      "Telemedicine platforms"
+    ],
+    targetAudience: [
+      "Healthcare providers",
+      "Radiologists",
+      "Primary care physicians",
+      "Hospital administrators",
+      "Telemedicine companies"
+    ],
+    tags: ["Healthcare", "AI", "Diagnostics", "Medical Imaging", "Clinical Decision Support"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$7,999 - $25,000/month",
+    roi: "300-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["TensorFlow", "PyTorch", "Python", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Epic", "Cerner", "PACS", "HL7", "FHIR", "DICOM"],
+      apiEndpoints: 400,
+      uptime: "99.99%",
+      security: ["HIPAA", "SOC 2", "ISO 27001", "GDPR", "Data encryption"]
+    },
+    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips"],
+    marketSize: "$67.4 billion by 2025",
+    compliance: ["HIPAA", "SOC 2", "ISO 27001", "GDPR", "FDA", "CE Mark"]
+  },
+  // Blockchain-Powered Financial Services Platform
+  {
+    id: "blockchain-financial-services",
+    title: "Blockchain-Powered Financial Services Platform",
+    description: "Comprehensive blockchain platform for financial services including payments, lending, asset management, and regulatory compliance with built-in DeFi capabilities.",
+    category: "Financial Services",
+    subcategory: "Blockchain Solutions",
+    price: 9999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Smart contract automation",
+      "DeFi protocols",
+      "Cross-border payments",
+      "Asset tokenization",
+      "Regulatory compliance",
+      "KYC/AML integration",
+      "Multi-currency support",
+      "Real-time settlement",
+      "API integration",
+      "Mobile wallet"
+    ],
+    benefits: [
+      "Reduce transaction costs by 80%",
+      "Accelerate settlement times",
+      "Enhanced security and transparency",
+      "Automated compliance",
+      "Global financial access"
+    ],
+    useCases: [
+      "Cross-border payments",
+      "Trade finance",
+      "Asset management",
+      "Lending platforms",
+      "Insurance products"
+    ],
+    targetAudience: [
+      "Banks",
+      "Fintech companies",
+      "Investment firms",
+      "Insurance companies",
+      "Payment processors"
+    ],
+    tags: ["Blockchain", "DeFi", "Financial Services", "Smart Contracts", "Payments"],
+    estimatedDelivery: "16-20 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$9,999 - $30,000/month",
+    roi: "400-600%",
+    innovationLevel: "Breakthrough",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Ethereum", "Hyperledger", "Polkadot", "React", "Node.js", "PostgreSQL"],
+      integrations: ["SWIFT", "ACH", "Visa", "Mastercard", "Banking APIs"],
+      apiEndpoints: 600,
+      uptime: "99.99%",
+      security: ["SOC 2", "ISO 27001", "PCI DSS", "GDPR", "Blockchain security"]
+    },
+    competitors: ["Ripple", "Circle", "Coinbase", "Binance", "ConsenSys"],
+    marketSize: "$19.9 billion by 2025",
+    compliance: ["SOC 2", "ISO 27001", "PCI DSS", "GDPR", "Financial regulations"]
+  },
+  // Smart Manufacturing & Industry 4.0 Platform
+  {
+    id: "smart-manufacturing-platform",
+    title: "Smart Manufacturing & Industry 4.0 Platform",
+    description: "Comprehensive Industry 4.0 platform that integrates IoT, AI, and automation to optimize manufacturing processes, quality control, and supply chain management.",
+    category: "Manufacturing",
+    subcategory: "Industry 4.0",
+    price: 11999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "IoT device management",
+      "Real-time monitoring",
+      "Predictive maintenance",
+      "Quality control automation",
+      "Supply chain optimization",
+      "Energy management",
+      "Production planning",
+      "Performance analytics",
+      "Mobile dashboard",
+      "API integration"
+    ],
+    benefits: [
+      "Increase production efficiency by 30%",
+      "Reduce downtime by 50%",
+      "Improve quality by 25%",
+      "Lower energy costs by 20%",
+      "Enhanced supply chain visibility"
+    ],
+    useCases: [
+      "Automotive manufacturing",
+      "Electronics production",
+      "Pharmaceutical manufacturing",
+      "Food processing",
+      "Chemical manufacturing"
+    ],
+    targetAudience: [
+      "Manufacturing managers",
+      "Operations directors",
+      "Plant engineers",
+      "Quality managers",
+      "Supply chain managers"
+    ],
+    tags: ["Manufacturing", "Industry 4.0", "IoT", "AI", "Automation"],
+    estimatedDelivery: "20-24 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$11,999 - $35,000/month",
+    roi: "350-550%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "IoT Protocols", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Siemens", "Rockwell", "Honeywell", "SAP", "Oracle"],
+      apiEndpoints: 800,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "IEC 62443", "Data encryption"]
+    },
+    competitors: ["Siemens", "GE Digital", "PTC", "Rockwell", "Honeywell"],
+    marketSize: "$156.6 billion by 2024",
+    compliance: ["SOC 2", "ISO 27001", "IEC 62443", "GDPR", "Industry standards"]
+  },
+  // AI-Powered Retail Analytics & Personalization Platform
+  {
+    id: "ai-retail-analytics",
+    title: "AI-Powered Retail Analytics & Personalization Platform",
+    description: "Advanced retail platform that uses AI to analyze customer behavior, optimize inventory, personalize experiences, and drive sales through intelligent insights.",
+    category: "Retail",
+    subcategory: "Analytics & Personalization",
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     price: 3999,
     currency: "$",
     pricingModel: "monthly",
@@ -300,8 +502,12 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce", "Oracle Commerce"],
     demoUrl: "https://ziontechgroup.com/demo/ai-retail-optimization"
   },
+<<<<<<< HEAD
 
   // Transportation & Logistics
+=======
+  // Renewable Energy Management & Optimization Platform
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: "autonomous-logistics-platform",
     title: "Autonomous Logistics Platform Pro",

@@ -1,12 +1,10 @@
 import React from 'react';
-
 interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   price?: string;
   image?: string;
 }
-
 export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">

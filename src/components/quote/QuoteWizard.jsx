@@ -93,7 +93,6 @@ export function QuoteWizard({ category }) {
         {loading && !delayedError && (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-testid="loading-indicator">
             {Array.from({ length: 6 }).map((_, i) => (<Skeleton key={i} className="h-[120px] w-full"/>))}
           </div>)}
-
         {delayedError && (<div className="space-y-2" data-testid="fetch-error-alert">
             <Alert variant="destructive">
               <AlertTitle>Error Fetching {category}</AlertTitle>
@@ -105,11 +104,9 @@ export function QuoteWizard({ category }) {
               Retry
             </Button>
           </div>)}
-
         {!loading && !delayedError && data && data.length === 0 && (<div className="text-center text-muted-foreground py-12">
             No {category} found.
           </div>)}
-
         {!loading && !delayedError && data && data.length > 0 && (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.map((item) => (<Card data-testid={`item-card-${item.id}`} key={item.id} className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`} onClick={() => setSelectedItemId(item.id)} tabIndex={0} onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
@@ -128,7 +125,6 @@ export function QuoteWizard({ category }) {
                 </Button>
               </Card>))}
           </div>)}
-
         {selectionError && (<p className="text-red-500 text-sm mt-2" data-testid="selection-error">
             {selectionError}
           </p>)}

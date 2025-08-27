@@ -14,7 +14,6 @@ export interface EnterpriseIt2026ServiceV2 {
     address: string;
   };
 }
-
 export const enterpriseIT2026ServicesV2: EnterpriseIt2026ServiceV2[] = [
   {
     id: "2026-enterprise-it-v2",

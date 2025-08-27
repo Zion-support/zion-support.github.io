@@ -85,19 +85,17 @@ const CloudDevOps = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/cloud-devops"/>
         <link rel="canonical" href="https://ziontechgroup.com/services/cloud-devops"/>
       </Helmet>
-
       description: "Automated build, test, and deployment pipelines for faster, more reliable releases.",
       features: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
     },
-    {icon}: Database,
+    {icon: Database,
       title: "Database Management",
       description: "Scalable database solutions with high availability and disaster recovery.",
       features: ["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"]
     }
   ];
-
   const platforms = [
-    {name}: "AWS",
+    {name: "AWS",
       description: "Amazon Web Services cloud platform solutions",
       icon: "☁️"
     },
@@ -114,7 +112,6 @@ const CloudDevOps = () => {
       icon: "🌐"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -144,7 +141,6 @@ const CloudDevOps = () => {
           </div>
         </div>
       </section>
-
       {/* Cloud Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -174,7 +170,6 @@ const CloudDevOps = () => {
           </div>
         </div>
       </section>
-
       {/* Cloud Platforms */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -198,7 +193,6 @@ const CloudDevOps = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -259,7 +253,6 @@ const CloudDevOps = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
@@ -285,7 +278,6 @@ const CloudDevOps = () => {
             </div>
           </div>
         </section>
-
         {/* Cloud Services Overview */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -317,7 +309,6 @@ const CloudDevOps = () => {
             </div>
           </div>
         </section>
-
         {/* Cloud Platforms */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -343,7 +334,6 @@ const CloudDevOps = () => {
             </div>
           </div>
         </section>
-
         {/* DevOps Process */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -370,7 +360,6 @@ const CloudDevOps = () => {
             </div>
           </div>
         </section>
-
         {/* DevOps Tools */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -395,7 +384,6 @@ const CloudDevOps = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -424,7 +412,6 @@ const CloudDevOps = () => {
             </div>
           </div>
         </section>
-
         {/* Case Studies */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -460,7 +447,6 @@ const CloudDevOps = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
@@ -476,7 +462,7 @@ const CloudDevOps = () => {
           </div>
         </section>
       </div>
-    </>
+</>
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -498,11 +484,11 @@ const CloudDevOps = () => {
       </section>
     </>);
                 div >
-                ;
+
             }
         }
     ];
 };
-;
-;
+
+
 export default CloudDevOps;

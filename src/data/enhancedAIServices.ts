@@ -22,7 +22,6 @@ export interface AIService {
   icon: string;
   image: string;
 }
-
 export const ENHANCED_AI_SERVICES: AIService[] = [
   {
     id: "ai-chatbot-platform",
@@ -548,15 +547,12 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"
   }
 ];
-
 export const getAIServiceById = (id: string): AIService | undefined => {
   return ENHANCED_AI_SERVICES.find(service => service.id === id);
 };
-
 export const getAIServicesByCategory = (category: string): AIService[] => {
   return ENHANCED_AI_SERVICES.filter(service => service.category === category);
 };
-
 export const getAIServiceCategories = (): string[] => {
   return [...new Set(ENHANCED_AI_SERVICES.map(service => service.category))];
 };

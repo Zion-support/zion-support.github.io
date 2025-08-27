@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useInterviews } from "@/hooks/useInterviews";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { InterviewCard } from "@/components/interviews/InterviewCard";
 import { Calendar, Clock, Video } from "lucide-react";
@@ -40,7 +40,7 @@ function InterviewsContent() {
             if (!grouped[dateKey]) {
                 grouped[dateKey] = [];
             }
-            grouped[dateKey].push(interview);
+            grouped[dateKey](interview);
         });
         return grouped;
     };
@@ -72,7 +72,6 @@ function InterviewsContent() {
             <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>
           </div>
         </div>
-
         <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">
           <TabsList className="mb-6">
             <TabsTrigger value="upcoming" className="flex items-center">

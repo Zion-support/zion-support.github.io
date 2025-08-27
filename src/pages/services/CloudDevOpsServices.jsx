@@ -131,7 +131,6 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -170,7 +169,6 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </section>
-
       {/* Cloud Platforms Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -202,7 +200,6 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -225,7 +222,6 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -245,7 +241,6 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -19,13 +19,29 @@ Allow: /contact/
 Allow: /blog/
 Allow: /careers/
 
+# Allow important pages
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blog
+Allow: /careers
+Allow: /privacy
+Allow: /terms
+
 # Crawl delay (optional)
 Crawl-delay: 1
 
+<<<<<<< HEAD
 # Specific rules for major search engines
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
+=======
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 
 User-agent: Bingbot
 Allow: /
@@ -33,6 +49,7 @@ Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
+<<<<<<< HEAD
 Crawl-delay: 2
 
 # Block AI training bots
@@ -53,3 +70,26 @@ Disallow: /
 
 User-agent: Omgilibot
 Disallow: /
+=======
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Rate limiting for aggressive crawlers
+User-agent: *
+Crawl-delay: 2
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

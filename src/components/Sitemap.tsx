@@ -52,7 +52,6 @@ const Sitemap = () => {
             Navigate through all our pages and services to find exactly what you need
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {/* Main Pages */}
           <div className="bg-white rounded-lg shadow-sm p-6">
@@ -66,7 +65,6 @@ const Sitemap = () => {
                 </li>))}
             </ul>
           </div>
-
           {/* Core Services */}
           <div className="bg-white rounded-lg shadow-sm p-6">
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Core Services</h3>
@@ -79,7 +77,6 @@ const Sitemap = () => {
                 </li>))}
             </ul>
           </div>
-
           {/* AI Autonomous Services */}
           <div className="bg-white rounded-lg shadow-sm p-6">
             <h3 className="text-xl font-semibold text-slate-900 mb-4">AI Autonomous Services</h3>
@@ -92,7 +89,6 @@ const Sitemap = () => {
                 </li>))}
             </ul>
           </div>
-
           {/* Pricing & Showcase */}
           <div className="bg-white rounded-lg shadow-sm p-6">
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Pricing & Showcase</h3>
@@ -111,7 +107,6 @@ const Sitemap = () => {
                 </li>))}
             </ul>
           </div>
-
           {/* Legal & Resources */}
           <div className="bg-white rounded-lg shadow-sm p-6">
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Legal & Resources</h3>
@@ -136,7 +131,6 @@ const Sitemap = () => {
               </li>
             </ul>
           </div>
-
           {/* Quick Links */}
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-sm p-6">
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Quick Links</h3>
@@ -153,7 +147,6 @@ const Sitemap = () => {
             </div>
           </div>
         </div>
-
         {/* Additional AI Services Grid */}
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">All AI Autonomous Services</h3>

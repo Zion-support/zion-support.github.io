@@ -254,7 +254,6 @@ export function AdvancedBusinessIntelligence() {
           </button>
         </div>
       </div>
-
       {/* Controls */}
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">
         <div className="flex items-center justify-between">
@@ -286,7 +285,6 @@ export function AdvancedBusinessIntelligence() {
           </div>
         </div>
       </div>
-
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">
         {[
@@ -304,7 +302,6 @@ export function AdvancedBusinessIntelligence() {
             </button>);
         })}
       </div>
-
       {/* Content */}
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">
         {activeTab === 'overview' && (<div className="space-y-6">
@@ -334,7 +331,6 @@ export function AdvancedBusinessIntelligence() {
                     </div>)}
                 </div>))}
             </div>
-
             {/* Quick Actions */}
             <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">
@@ -357,7 +353,6 @@ export function AdvancedBusinessIntelligence() {
               </div>
             </div>
           </div>)}
-
         {activeTab === 'insights' && (<div className="space-y-4">
             {insights.map(insight => (<div key={insight.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -387,7 +382,6 @@ export function AdvancedBusinessIntelligence() {
                 </div>
               </div>))}
           </div>)}
-
         {activeTab === 'models' && (<div className="space-y-4">
             {models.map(model => (<div key={model.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-center justify-between mb-3">
@@ -422,7 +416,6 @@ export function AdvancedBusinessIntelligence() {
                 </div>
               </div>))}
           </div>)}
-
         {activeTab === 'analytics' && (<div className="space-y-6">
             <div className="text-center text-zion-slate-light">
               <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50"/>

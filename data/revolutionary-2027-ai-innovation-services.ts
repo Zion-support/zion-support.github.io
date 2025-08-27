@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2027AIInnovationService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2027AIInnovationService {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovationService[] = [
   // AI-Powered Drug Discovery Platform
   {
@@ -94,7 +92,6 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     rating: 4.9,
     reviews: 180
   },
-
   // AI-Powered Climate Intelligence Platform
   {
     id: 'ai-climate-intelligence-platform-2027',
@@ -147,7 +144,6 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     rating: 4.7,
     reviews: 320
   },
-
   // AI-Powered Autonomous Vehicle Platform
   {
     id: 'ai-autonomous-vehicle-platform-2027',
@@ -200,7 +196,6 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     rating: 4.8,
     reviews: 120
   },
-
   // AI-Powered Quantum Computing Platform
   {
     id: 'ai-quantum-computing-platform-2027',
@@ -253,7 +248,6 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     rating: 4.9,
     reviews: 75
   },
-
   // AI-Powered Space Technology Platform
   {
     id: 'ai-space-technology-platform-2027',

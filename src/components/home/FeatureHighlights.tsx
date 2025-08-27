@@ -84,7 +84,6 @@ export function FeatureHighlights() {
         <div className="absolute top-20 right-20 w-96 h-96 bg-zion-purple rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-zion-cyan rounded-full blur-3xl"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -98,7 +97,6 @@ export function FeatureHighlights() {
             Discover the cutting-edge features and capabilities that make us the preferred choice for forward-thinking organizations
           </p>
         </motion.div>
-
         {/* Feature Highlights Grid */}
         <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {highlights.map((highlight, index) => (<motion.div key={index} variants={itemVariants} whileHover={{
@@ -115,7 +113,6 @@ export function FeatureHighlights() {
                   <div className={`inline-flex p-4 rounded-2xl bg-white/10 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <highlight.icon className="w-8 h-8 text-white"/>
                   </div>
-
                   {/* Content */}
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-200">
                     {highlight.title}
@@ -124,7 +121,6 @@ export function FeatureHighlights() {
                   <p className="text-zion-slate-light leading-relaxed mb-6">
                     {highlight.description}
                   </p>
-
                   {/* Features */}
                   <ul className="space-y-3">
                     {highlight.features.map((feature, idx) => (<li key={idx} className="flex items-center gap-3 text-zion-slate-light">
@@ -136,7 +132,6 @@ export function FeatureHighlights() {
               </div>
             </motion.div>))}
         </motion.div>
-
         {/* Achievements Section */}
         <motion.div className="bg-gradient-to-r from-zion-blue/20 to-zion-purple/20 rounded-3xl p-8 md:p-12 border border-zion-blue-light/20 mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="text-center mb-12">
@@ -147,7 +142,6 @@ export function FeatureHighlights() {
               Our achievements speak volumes about our commitment to excellence
             </p>
           </div>
-
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {achievements.map((achievement, index) => (<motion.div key={index} variants={achievementVariants} className="text-center group" whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
                 <div className={`inline-flex p-4 rounded-full bg-white/10 mb-4 ${achievement.color} bg-opacity-20 group-hover:scale-110 transition-transform duration-300`}>
@@ -158,7 +152,6 @@ export function FeatureHighlights() {
               </motion.div>))}
           </motion.div>
         </motion.div>
-
         {/* Technology Stack */}
         <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h3 className="text-3xl font-bold text-white mb-8">
@@ -170,7 +163,6 @@ export function FeatureHighlights() {
                 {tech}
               </motion.div>))}
           </motion.div>
-
           {/* CTA */}
           <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-10 py-4 rounded-xl font-semibold text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">

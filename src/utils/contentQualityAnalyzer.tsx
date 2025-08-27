@@ -174,60 +174,60 @@ export class ContentQualityAnalyzer {
     identifyIssues(metrics) {
         const issues = [];
         if (!metrics.title || metrics.title.length < 30) {
-            issues.push('Title is too short (should be 30-60 characters)');
+            issues('Title is too short (should be 30-60 characters)');
         }
         else if (metrics.title.length > 60) {
-            issues.push('Title is too long (should be 30-60 characters)');
+            issues('Title is too long (should be 30-60 characters)');
         }
         if (metrics.wordCount < 300) {
-            issues.push('Content is too short (should be at least 300 words)');
+            issues('Content is too short (should be at least 300 words)');
         }
         if (metrics.headingCount < 2) {
-            issues.push('Insufficient heading structure (should have at least 2 headings)');
+            issues('Insufficient heading structure (should have at least 2 headings)');
         }
         if (metrics.metaDescriptionLength < 120) {
-            issues.push('Meta description is too short (should be 120-160 characters)');
+            issues('Meta description is too short (should be 120-160 characters)');
         }
         else if (metrics.metaDescriptionLength > 160) {
-            issues.push('Meta description is too long (should be 120-160 characters)');
+            issues('Meta description is too long (should be 120-160 characters)');
         }
         if (metrics.imageCount === 0) {
-            issues.push('No images found (consider adding relevant images)');
+            issues('No images found (consider adding relevant images)');
         }
         if (metrics.linkCount < 2) {
-            issues.push('Insufficient internal linking (should have at least 2 internal links)');
+            issues('Insufficient internal linking (should have at least 2 internal links)');
         }
         if (!metrics.hasStructuredData) {
-            issues.push('No structured data found (consider adding JSON-LD or microdata)');
+            issues('No structured data found (consider adding JSON-LD or microdata)');
         }
         return issues;
     }
     generateRecommendations(issues) {
         const recommendations = [];
         if (issues.some(issue => issue.includes('Content is too short'))) {
-            recommendations.push('Expand content with relevant information, examples, and detailed explanations');
+            recommendations('Expand content with relevant information, examples, and detailed explanations');
         }
         if (issues.some(issue => issue.includes('Insufficient heading structure'))) {
-            recommendations.push('Add H1, H2, and H3 headings to improve content structure and SEO');
+            recommendations('Add H1, H2, and H3 headings to improve content structure and SEO');
         }
         if (issues.some(issue => issue.includes('Meta description'))) {
-            recommendations.push('Write compelling meta descriptions that accurately describe the page content');
+            recommendations('Write compelling meta descriptions that accurately describe the page content');
         }
         if (issues.some(issue => issue.includes('No images'))) {
-            recommendations.push('Add relevant images, diagrams, or infographics to enhance user engagement');
+            recommendations('Add relevant images, diagrams, or infographics to enhance user engagement');
         }
         if (issues.some(issue => issue.includes('Insufficient internal linking'))) {
-            recommendations.push('Add internal links to related pages to improve navigation and SEO');
+            recommendations('Add internal links to related pages to improve navigation and SEO');
         }
         if (issues.some(issue => issue.includes('No structured data'))) {
-            recommendations.push('Implement structured data markup for better search engine understanding');
+            recommendations('Implement structured data markup for better search engine understanding');
         }
         if (issues.some(issue => issue.includes('Title'))) {
-            recommendations.push('Optimize page titles with relevant keywords and compelling copy');
+            recommendations('Optimize page titles with relevant keywords and compelling copy');
         }
-        recommendations.push('Ensure content is unique, valuable, and addresses user intent');
-        recommendations.push('Use bullet points and numbered lists for better readability');
-        recommendations.push('Include relevant keywords naturally throughout the content');
+        recommendations('Ensure content is unique, valuable, and addresses user intent');
+        recommendations('Use bullet points and numbered lists for better readability');
+        recommendations('Include relevant keywords naturally throughout the content');
         return recommendations;
     }
     generateReport() {

@@ -24,7 +24,6 @@ export interface SpaceTechBreakthroughService2029 {
   useCases: string[];
   spaceCapabilities: string[];
 }
-
 export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029[] = [
   {
     id: "space-mining-automation-platform",

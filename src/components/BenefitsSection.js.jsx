@@ -5,14 +5,12 @@ import {
   Code, Rocket, Users, BarChart3, FileImage, TrendingUp, MessageCircle, 
   Video, FileText, Heart, PanelLeft, Building, CheckCircle, Star
 } from 'lucide-react';
-
 const additionalStats = [
   { icon: <Brain className="w-8 h-8" />, value: "99.9%", label: "Uptime" },
   { icon: <Shield className="w-8 h-8" />, value: "100%", label: "Security" },
   { icon: <Rocket className="w-8 h-8" />, value: "24/7", label: "Support" },
   { icon: <Star className="w-8 h-8" />, value: "5.0", label: "Rating" }
 ];
-
 const benefits = [
   {
     icon: <Brain className="w-10 h-10" />,
@@ -51,7 +49,6 @@ const benefits = [
     features: ["Quantum Computing", "Blockchain Solutions", "IoT Integration", "Edge Computing"]
   }
 ];
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -61,20 +58,16 @@ const containerVariants = {
     }
   }
 };
-
 const statsVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
 };
-
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 }
 };
-
 export default function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Enhanced background pattern */}
@@ -123,7 +116,6 @@ export default function BenefitsSection() {
             Our commitment to excellence drives every project to success.
           </p>
         </motion.div>
-
         {/* Additional stats section */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" 
@@ -164,12 +156,10 @@ export default function BenefitsSection() {
                     {benefit.icon}
                   </div>
                 </div>
-
                 {/* Stats badge */}
                 <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${benefit.bgColor} border border-zion-cyan/30 mb-4`}>
                   <span className="text-zion-cyan font-bold text-sm">{benefit.stats}</span>
                 </div>
-
                 {/* Title and description */}
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
                   {benefit.title}
@@ -177,7 +167,6 @@ export default function BenefitsSection() {
                 <p className="text-zion-slate-light leading-relaxed mb-6">
                   {benefit.description}
                 </p>
-
                 {/* Features list */}
                 <AnimatePresence>
                   {hoveredIndex === index && (
@@ -203,7 +192,6 @@ export default function BenefitsSection() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-
                 {/* Hover indicator */}
                 <div className="mt-4 text-zion-cyan/60 text-xs">
                   {hoveredIndex === index ? "Hover to see details" : "Hover for details"}
@@ -212,7 +200,6 @@ export default function BenefitsSection() {
             </motion.div>
           ))}
         </div>
-
         {/* Call to action */}
         <motion.div 
           className="text-center mt-16" 

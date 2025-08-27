@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SEO } from "../components/SEOHead"';
+import SEOHead from "../components/SEOHead.jsx";
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';

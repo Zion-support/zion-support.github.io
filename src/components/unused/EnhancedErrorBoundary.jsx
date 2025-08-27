@@ -82,38 +82,26 @@ class EnhancedErrorBoundary extends Component {
         if (error && errorInfo) {
             const issueBody = `
 ## Error Report
-
 **Error ID:** ${this.state.errorId}
-
 **Error Message:** ${error.message}
-
 **Error Stack:**
 \`\`\`
 ${error.stack}
 \`\`\`
-
 **Component Stack:**
 \`\`\`
 ${errorInfo.componentStack}
 \`\`\`
-
 **URL:** ${window.location.href}
 **User Agent:** ${navigator.userAgent}
 **Timestamp:** ${new Date().toISOString()}
-
 ## Steps to Reproduce
 1. 
 2. 
 3. 
-
 ## Expected Behavior
-
-
 ## Actual Behavior
-
-
 ## Additional Context
-
       `.trim();
             const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
             window.open(issueUrl, '_blank');
@@ -141,7 +129,6 @@ ${errorInfo.componentStack}
                 </div>
               </div>
             </div>
-
             {/* Content */}
             <div className="p-6 space-y-6">
               {/* Error Message */}
@@ -161,7 +148,6 @@ ${errorInfo.componentStack}
                   </div>
                 </div>
               </div>
-
               {/* Stack Trace (Collapsible) */}
               {this.state.error?.stack && (<div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
                   <button onClick={this.toggleStackTrace} className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors flex items-center justify-between text-left">
@@ -177,7 +163,6 @@ ${errorInfo.componentStack}
                       </pre>
                     </div>)}
                 </div>)}
-
               {/* Component Stack (if available) */}
               {this.state.errorInfo?.componentStack && (<div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
                   <div className="px-4 py-3 bg-slate-50 dark:bg-slate-700 border-b border-slate-200 dark:border-slate-700">
@@ -191,7 +176,6 @@ ${errorInfo.componentStack}
                     </pre>
                   </div>
                 </div>)}
-
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <button onClick={this.handleRetry} className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
@@ -204,7 +188,6 @@ ${errorInfo.componentStack}
                   <span>Go Home</span>
                 </button>
               </div>
-
               {/* Report Issue */}
               <div className="text-center">
                 <button onClick={this.handleReportIssue} className="inline-flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors">
@@ -212,7 +195,6 @@ ${errorInfo.componentStack}
                   <span>Report this issue</span>
                 </button>
               </div>
-
               {/* Help Text */}
               <div className="text-center text-sm text-slate-500 dark:text-slate-400">
                 <p>If this problem persists, please contact our support team.</p>

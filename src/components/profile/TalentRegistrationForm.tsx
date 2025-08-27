@@ -137,7 +137,7 @@ export function TalentRegistrationForm() {
                 if (Array.isArray(categorySkills)) {
                     categorySkills.forEach(skill => {
                         if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
-                            newSkills.push(skill);
+                            newSkills(skill);
                         }
                     });
                 }
@@ -225,7 +225,7 @@ export function TalentRegistrationForm() {
                             if (Array.isArray(categorySkills)) {
                                 categorySkills.forEach(skill => {
                                     if (typeof skill === 'string' && skill) {
-                                        aiSkills.push(skill);
+                                        aiSkills(skill);
                                     }
                                 });
                             }
@@ -297,7 +297,6 @@ export function TalentRegistrationForm() {
             Showcase your skills and experience to potential clients and employers.
           </CardDescription>
         </CardHeader>
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <CardContent className="space-y-8">
@@ -317,7 +316,6 @@ export function TalentRegistrationForm() {
                           <FormMessage className="text-red-400"/>
                         </FormItem>)}/>
                   </div>
-
                   <div className="col-span-1">
                     <FormField control={form.control} name="title" render={({ field }) => (<FormItem>
                           <FormLabel className="text-zion-slate-light">Professional Title</FormLabel>
@@ -330,7 +328,6 @@ export function TalentRegistrationForm() {
                           <FormMessage className="text-red-400"/>
                         </FormItem>)}/>
                   </div>
-
                   <div className="col-span-1">
                     <FormField control={form.control} name="location" render={({ field }) => (<FormItem>
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>
@@ -343,7 +340,6 @@ export function TalentRegistrationForm() {
                           <FormMessage className="text-red-400"/>
                         </FormItem>)}/>
                   </div>
-
                   <div className="col-span-1">
                     <FormField control={form.control} name="hourlyRate" render={({ field }) => (<FormItem>
                           <FormLabel className="text-zion-slate-light">Hourly Rate (USD)</FormLabel>
@@ -369,7 +365,6 @@ export function TalentRegistrationForm() {
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50"/>
                         </div>)}
                     </div>
-
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4"/>
                       <span>Upload Photo</span>
@@ -381,9 +376,7 @@ export function TalentRegistrationForm() {
                   </p>
                 </div>
               </div>
-
               <Separator className="bg-zion-blue-light/50"/>
-
               {/* Bio Section */}
               <div className="space-y-4">
                 <h3 className="text-lg font-medium text-white">Professional Bio</h3>
@@ -420,7 +413,6 @@ export function TalentRegistrationForm() {
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>
                   </div>)}
-
                 {/* Generated Content Display */}
                 {generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
                     <div className="flex items-center justify-between mb-3">
@@ -457,9 +449,7 @@ export function TalentRegistrationForm() {
                     </div>
                   </div>)}
               </div>
-
               <Separator className="bg-zion-blue-light/50"/>
-
               {/* Skills and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Skills Section */}
@@ -480,7 +470,6 @@ export function TalentRegistrationForm() {
                         </FormDescription>
                         <FormMessage className="text-red-400"/>
                       </FormItem>)}/>
-
                   <div className="flex flex-wrap gap-2 mt-2">
                     {skillTags.map(skill => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">
                         {skill}
@@ -491,7 +480,6 @@ export function TalentRegistrationForm() {
                     {skillTags.length === 0 && (<p className="text-zion-slate text-sm italic">No skills added yet</p>)}
                   </div>
                 </div>
-
                 {/* Availability Section */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Availability</h3>
@@ -506,7 +494,6 @@ export function TalentRegistrationForm() {
                                 Available Now
                               </label>
                             </div>
-
                             <div className="flex items-center space-x-2">
                               <input type="radio" id="limited" value="limited" checked={field.value === "limited"} onChange={() => field.onChange("limited")} className="text-zion-purple focus:ring-zion-purple"/>
                               <label htmlFor="limited" className="text-white flex items-center gap-2">
@@ -514,7 +501,6 @@ export function TalentRegistrationForm() {
                                 Limited Availability
                               </label>
                             </div>
-
                             <div className="flex items-center space-x-2">
                               <input type="radio" id="unavailable" value="unavailable" checked={field.value === "unavailable"} onChange={() => field.onChange("unavailable")} className="text-zion-purple focus:ring-zion-purple"/>
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
@@ -529,7 +515,6 @@ export function TalentRegistrationForm() {
                 </div>
               </div>
             </CardContent>
-
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
                 <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">

@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function BlogPage() {
   const blogPosts = [
     {
@@ -64,7 +63,6 @@ export default function BlogPage() {
       featured: false
     }
   ];
-
   const categories = [
     'All',
     'AI & Machine Learning',
@@ -75,9 +73,7 @@ export default function BlogPage() {
     'Sustainability',
     'Industry Insights'
   ];
-
   const featuredPost = blogPosts.find(post => post.featured);
-
   return (
     <>
       <Head>
@@ -86,7 +82,6 @@ export default function BlogPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -99,7 +94,6 @@ export default function BlogPage() {
             </p>
           </div>
         </section>
-
         {/* Featured Post */}
         {featuredPost && (
           <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -137,7 +131,6 @@ export default function BlogPage() {
             </div>
           </section>
         )}
-
         {/* Categories */}
         <section className="py-8 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
           <div className="max-w-7xl mx-auto">
@@ -157,7 +150,6 @@ export default function BlogPage() {
             </div>
           </div>
         </section>
-
         {/* Blog Posts Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -197,7 +189,6 @@ export default function BlogPage() {
             </div>
           </div>
         </section>
-
         {/* Newsletter Signup */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -221,7 +212,6 @@ export default function BlogPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

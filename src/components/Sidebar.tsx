@@ -5,7 +5,6 @@ import {
   Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, 
   TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, 
   LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import React from 'react';
@@ -97,7 +96,6 @@ import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitte
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Atom, Server, Database, Package, Building, Rocket } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
-
 export default function Sidebar() {
   const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
 import { useEffect } from 'react';
@@ -121,7 +119,6 @@ import { cn } from '@/lib/utils';
   Building,
   Leaf
 } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -1252,7 +1249,6 @@ interface SidebarProps {
         { name: 'News', path: '/news', icon: Globe }
   className?: string;
 }
-
 export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
   const location = useLocation();
   Users, 
@@ -1269,25 +1265,21 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
   X
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
-
 interface SidebarProps {
   isOpen: boolean;
   onToggle: () => void;
   className?: string;
 }
-
 export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-
   const navigationItems = [
     {
       title: 'Main',
       items: [
     onClose();
   }, [location.pathname, onClose]);
-
   const navigationItems = [
     {
       title: 'AI Services',
@@ -1443,7 +1435,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       ]
     }
   ];
-
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
@@ -1451,7 +1442,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
     { icon: Youtube, href: 'https://youtube.com/@ziontechgroup', label: 'YouTube' }
   ];
-
   const sidebarVariants = {
     closed: {
       x: '-100%',
@@ -1470,12 +1460,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       }
     }
   };
-
   const overlayVariants = {
     closed: { opacity: 0 },
     open: { opacity: 1 }
   };
-
   // Fixed contact information
   const contactInfo = [
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
@@ -1485,7 +1473,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
-
   // Fixed social media links with proper URLs
   const socialLinks = [
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
@@ -1525,7 +1512,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
   ];
-
   const sidebarVariants = {
     closed: {
       x: '-100%',
@@ -1544,7 +1530,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       }
     }
   };
-
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
@@ -1564,26 +1549,24 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       }
     }
   };
-
   return (
   return (
   return (
   return (
     <AnimatePresence>
       {isOpen && (
-        <>
+<>
           {/* Backdrop */}
             onClick={onClose}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
           />
           
           {/* Sidebar */}
-    <>
+<>
       <AnimatePresence>
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
             onClick={() => setIsSidebarOpen(false)}
           />
-
       {/* Sidebar */}
       <AnimatePresence>
         {isSidebarOpen && (
@@ -1601,7 +1584,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
             onClick={onClose}
           />
-
           {/* Sidebar */}
           <motion.aside
           <motion.div
@@ -1611,16 +1593,15 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             onClick={onClose}
           />
-
           {/* Sidebar */}
           <motion.aside
     <AnimatePresence>
       {isOpen && (
-        <>
+<>
           {/* Overlay */}
           <motion.div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-    <>
+<>
       {/* Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -1632,7 +1613,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
             onClick={onClose}
           />
-
       {/* Sidebar */}
       <AnimatePresence>
         {isOpen && (
@@ -1642,12 +1622,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
           />
         )}
       </AnimatePresence>
-
       {/* Sidebar */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-
           {/* Sidebar */}
           <motion.aside
             variants={sidebarVariants}
@@ -1670,7 +1648,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     <p className="text-xs text-gray-400">Navigation Menu</p>
                   </div>
         {isOpen && (
-          <>
+<>
             {/* Overlay */}
             <motion.div
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
@@ -1680,7 +1658,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               exit="closed"
               onClick={onClose}
             />
-
             {/* Sidebar */}
             <motion.aside
               className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-black to-blue-900 text-white z-50 shadow-2xl border-r border-cyan-500/30"
@@ -1738,7 +1715,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="w-6 h-6" />
               </button>
             </div>
-
   const overlayVariants = {
     closed: { opacity: 0 },
     open: { opacity: 1 }
@@ -1749,11 +1725,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       console.error(`Failed to open ${social.label}:`, error);
     }
   };
-
   return (
     <AnimatePresence>
       {isOpen && (
-        <>
+<>
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -1786,7 +1761,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="w-6 h-6" />
               </button>
             </div>
-
                     <button
                       onClick={() => toggleSection(section.title)}
                       className="flex items-center justify-between w-full text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text hover:bg-white/10 rounded-lg p-2 transition-colors"
@@ -1856,7 +1830,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   </div>
                 ))}
               </nav>
-
               {/* Contact Information */}
               <div className="mt-12 pt-8 border-t border-border">
                 <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
@@ -1920,7 +1893,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       View Pricing
                     </Link>
             </div>
-
             {/* Navigation Items */}
             <div className="p-4 space-y-6">
               {navigationItems.map((section, sectionIndex) => (
@@ -1963,7 +1935,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 />
               </div>
             </div>
-
             {/* Navigation Content */}
             <div className="p-6 space-y-8">
               {navigationItems.map((section, sectionIndex) => (
@@ -2063,7 +2034,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               <div className="neural-line" style={{ top: '60%', width: '70%', left: '15%', animationDelay: '2s' }}></div>
               <div className="neural-line" style={{ top: '80%', width: '50%', left: '25%', animationDelay: '3s' }}></div>
             </div>
-
             {/* Floating Quantum Elements */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="quantum-particle" style={{ top: '15%', left: '80%', animationDelay: '0s' }}></div>
@@ -2071,7 +2041,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               <div className="quantum-particle" style={{ top: '55%', left: '90%', animationDelay: '2s' }}></div>
               <div className="quantum-particle" style={{ top: '75%', left: '88%', animationDelay: '3s' }}></div>
             </div>
-
             <div className="relative h-full flex flex-col">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-zion-cyan/30">
@@ -2094,7 +2063,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   <X className="w-5 h-5 text-zion-slate-light group-hover:neon-text transition-colors" />
                 </button>
               </div>
-
               {/* Navigation Content */}
               <div className="flex-1 overflow-y-auto p-6 space-y-6">
                 {/* Main Navigation */}
@@ -2139,7 +2107,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   ))}
                 </nav>
               </div>
-
               {/* Social Links */}
               <div className="flex space-x-3">
                 {socialLinks.map((social, index) => (
@@ -2159,7 +2126,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="w-5 h-5" />
               </button>
             </div>
-
             {/* Navigation */}
             <div className="p-6 space-y-6">
               {navigationItems.map((section) => {
@@ -2229,7 +2195,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 );
               })}
             </div>
-
             {/* Contact & Social */}
             <div className="p-6 border-t border-gray-800/50 space-y-6">
               {/* Contact Info */}
@@ -2287,7 +2252,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   </div>
                 </div>
               ))}
-
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
                   Follow Us
@@ -2320,7 +2284,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     </a>
                   ))}
               </div>
-
               {/* Footer */}
               <div className="border-t border-gray-700/50 p-6 space-y-6">
                 {/* Contact Info */}
@@ -2344,7 +2307,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="h-5 w-5" />
               </button>
             </div>
-
             {/* Navigation */}
             <nav className="p-6 space-y-8">
               {navigationItems.map((section) => (
@@ -2356,7 +2318,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     {section.items.map((item) => {
                       const IconComponent = item.icon;
                       const isActive = location.pathname === item.path;
-
                 {/* Quick Actions */}
                 <div className="space-y-3">
                   <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
@@ -2372,7 +2333,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   </div>
                 </div>
               </div>
-
               {/* Footer */}
               <div className="border-t border-zion-cyan/30 p-6 space-y-4">
                 {/* Contact Info */}
@@ -2413,7 +2373,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     })}
                   </div>
                 </div>
-
                 {/* Social Links */}
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-zion-cyan neon-text">Follow Us</h4>
@@ -2435,7 +2394,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     })}
                   </div>
                 </div>
-
                 {/* Company Info */}
                 <div className="text-center pt-4 border-t border-zion-cyan/20">
                   <p className="text-xs text-zion-slate-light">
@@ -2446,7 +2404,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   </p>
                 </div>
               </div>
-
               {/* Social Links */}
               <div className="mt-6">
                 <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
@@ -2491,7 +2448,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="w-5 h-5" />
               </button>
             </div>
-
             {/* Navigation */}
             <nav className="p-6 space-y-8">
               {navigationItems.map((section, sectionIndex) => (
@@ -2522,7 +2478,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </div>
               ))}
             </nav>
-
             {/* Contact Information */}
             <div className="p-6 border-t border-gray-700 space-y-4">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
@@ -2544,7 +2499,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
             {/* Social Links */}
             <div className="p-6 border-t border-gray-700 space-y-4">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
@@ -2579,7 +2533,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </div>
               ))}
             </nav>
-
             {/* Contact Information */}
             <div className="p-6 border-t border-gray-800">
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
@@ -2602,8 +2555,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
-
             {/* CTA Button */}
             <div className="p-6 border-t border-gray-800">
               <Link
@@ -2636,7 +2587,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </Link>
               </div>
             </div>
-
             {/* Footer */}
             <div className="p-6 border-t border-gray-700 text-center">
               <p className="text-gray-500 text-xs">
@@ -2647,11 +2597,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </p>
             </div>
           </motion.aside>
-        </>
+</>
       )}
     </AnimatePresence>
                 </div>
-
                 {/* Company Info */}
                 <div className="text-center pt-4 border-t border-zion-cyan/20">
                   <p className="text-xs text-zion-slate-light">
@@ -2663,7 +2612,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </div>
               ))}
             </div>
-
             {/* Contact Information */}
             <div className="p-4 border-t border-cyan-500/30 mt-6">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide mb-3 px-3">
@@ -2682,7 +2630,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
             {/* Social Links */}
             <div className="p-4 border-t border-cyan-500/30">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide mb-3 px-3">
@@ -2703,7 +2650,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
             {/* Quick Actions */}
             <div className="p-4 border-t border-cyan-500/30">
               <div className="space-y-2">
@@ -2724,10 +2670,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
           </motion.aside>
               </div>
             </motion.aside>
-          </>
+</>
         )}
       </AnimatePresence>
-    </>
+</>
               {/* CTA Button */}
               <div className="pt-6">
                 <Link
@@ -2740,7 +2686,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </div>
             </div>
           </motion.div>
-        </>
+</>
       )}
     </AnimatePresence>
             {/* Social Links */}
@@ -2759,7 +2705,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
             {/* Newsletter Signup */}
             <div className="p-6 border-t border-gray-700">
               <h3 className="text-lg font-semibold text-cyan-400 mb-4">Stay Updated</h3>
@@ -2775,19 +2720,18 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </div>
             </div>
           </motion.div>
-        </>
+</>
       )}
     </AnimatePresence>
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+</>
   const quickActions = [
     { name: 'Get Started', href: '/contact', icon: Rocket, color: 'from-zion-cyan to-zion-blue' },
     { name: 'Request Demo', href: '/request-quote', icon: Video, color: 'from-zion-purple to-zion-cyan' },
     { name: 'Support Chat', href: '/support', icon: MessageSquare, color: 'from-green-400 to-emerald-400' }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: {
@@ -2798,12 +2742,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, x: -10 },
     visible: { opacity: 1, x: 0 }
   };
-
   return (
     <motion.aside 
       className={cn("w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 min-h-screen overflow-y-auto", className)}
@@ -2827,7 +2769,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             <p className="text-zion-cyan/70 text-xs font-medium">Innovation • Intelligence • Impact</p>
           </div>
         </div>
-
         {/* Quick Actions */}
         <div className="space-y-2">
           {quickActions.map((action) => (
@@ -2849,7 +2790,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     </aside>
   );
 }
-
 // Add missing icons
 const Database = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -2858,7 +2798,6 @@ const Database = ({ className }: { className?: string }) => (
     <path d="M12 12c-4.42 0-8-1.79-8-4V6.5c2.21 1.86 5.74 2.5 8 2.5s5.79-.64 8-2.5V8c0 2.21-3.58 4-8 4z"/>
   </svg>
 );
-
 const CheckCircle = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -2876,7 +2815,6 @@ const CheckCircle = ({ className }: { className?: string }) => (
   ChevronRight,
   ChevronDown
 } from 'lucide-react';
-
 interface SidebarItem {
   name: string;
   path: string;
@@ -2885,11 +2823,9 @@ interface SidebarItem {
   badge?: string;
   external?: boolean;
 }
-
 export function Sidebar() {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
   const location = useLocation();
-
   const sidebarItems: SidebarItem[] = [
     {
       name: 'Dashboard',
@@ -2997,7 +2933,6 @@ export function Sidebar() {
       ]
     }
   ];
-
   const toggleItem = (itemName: string) => {
     setExpandedItems(prev => 
       prev.includes(itemName)
@@ -3005,14 +2940,11 @@ export function Sidebar() {
         : [...prev, itemName]
     );
   };
-
   const isActive = (path: string) => location.pathname === path;
-
   const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
     const hasChildren = item.children && item.children.length > 0;
     const isExpanded = expandedItems.includes(item.name);
     const isItemActive = isActive(item.path);
-
     return (
       <div key={item.name}>
         <div className={`flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${
@@ -3059,7 +2991,6 @@ export function Sidebar() {
       </div>
     );
   };
-
   return (
     <aside className="w-64 bg-white border-r border-gray-200 h-screen overflow-y-auto shadow-lg">
       <div className="p-4">
@@ -3072,12 +3003,10 @@ export function Sidebar() {
             <span className="text-xl font-bold text-gray-900">Zion Tech</span>
           </Link>
         </div>
-
         {/* Navigation */}
         <nav className="space-y-2">
           {sidebarItems.map(item => renderSidebarItem(item))}
         </nav>
-
         {/* Quick Actions */}
         <div className="mt-8 pt-6 border-t border-gray-200">
           <h3 className="text-sm font-semibold text-gray-600 mb-3">Quick Actions</h3>
@@ -3097,7 +3026,6 @@ export function Sidebar() {
               <HelpCircle className="h-5 w-5" />
               <span className="font-medium">Get Help</span>
             </Link>
-
             <Link
               to="/pricing"
               className="flex items-center space-x-3 px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
@@ -3107,7 +3035,6 @@ export function Sidebar() {
             </Link>
           </div>
         </div>
-
         {/* Contact Info */}
         <div className="mt-8 pt-6 border-t border-gray-200">
           <h3 className="text-sm font-semibold text-gray-600 mb-3">Contact</h3>
@@ -3130,5 +3057,4 @@ export function Sidebar() {
     </aside>
   );
 }
-
 export default Sidebar;

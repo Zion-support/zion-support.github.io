@@ -1,5 +1,4 @@
 import Link from 'next/link'
-
 const nav = [
   { href: '/solutions', label: 'Solutions' },
   { href: '/services', label: 'Services' },
@@ -14,7 +13,6 @@ const nav = [
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]
-
 export default function Sidebar(){
   return (
     <div style={{padding:12,borderRight:'1px solid #eee'}}>

@@ -27,7 +27,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 top: `${20 + Math.random() * 60}%`,
             }}/>))}
           </div>
-
           {/* Service Header */}
           <div className="relative z-10">
             <div className="flex items-start justify-between mb-4">
@@ -54,12 +53,10 @@ const ServiceCard = ({ service, index, isVisible }) => {
                   <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-black"></div>
                 </div>)}
             </div>
-
             {/* Description */}
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
               {service.description}
             </p>
-
             {/* Features Grid */}
             <div className="grid grid-cols-2 gap-2 mb-4">
               {service.features.slice(0, 6).map((feature, idx) => (<div key={idx} className="flex items-center space-x-2 text-xs text-gray-400">
@@ -67,7 +64,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
                   <span className="truncate">{feature}</span>
                 </div>))}
             </div>
-
             {/* Benefits */}
             <div className="mb-4">
               <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Benefits</h4>
@@ -78,7 +74,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
                   </div>))}
               </div>
             </div>
-
             {/* Pricing and Contact */}
             <div className="flex items-center justify-between pt-4 border-t border-gray-700/50">
               <div>
@@ -93,7 +88,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 Get Started
               </button>
             </div>
-
             {/* Technology Stack */}
             {service.technologyStack && (<div className="mt-4 pt-4 border-t border-gray-700/50">
                 <h4 className="text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>
@@ -103,7 +97,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
                     </span>))}
                 </div>
               </div>)}
-
             {/* Contact Info */}
             <div className="mt-4 pt-4 border-t border-gray-700/50">
               <div className="text-xs text-gray-400 space-y-1">
@@ -124,7 +117,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
               </div>
             </div>
           </div>
-
           {/* Hover Effects */}
           <motion.div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial={false}/>
         </div>
@@ -159,7 +151,6 @@ export const FuturisticServicesShowcase = () => {
                 animationDuration: `${3 + Math.random() * 4}s`,
             }}/>))}
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <motion.div initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -181,7 +172,6 @@ export const FuturisticServicesShowcase = () => {
                 🔍
               </div>
             </div>
-
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-2">
               {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 ${selectedCategory === category
@@ -192,14 +182,12 @@ export const FuturisticServicesShowcase = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           <AnimatePresence>
             {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} isVisible={visibleServices.has(index)}/>))}
           </AnimatePresence>
         </div>
-
         {/* Call to Action */}
         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="text-center mt-20">
           <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/30">

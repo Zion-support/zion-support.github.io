@@ -29,12 +29,10 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { ENHANCED_INNOVATIVE_SERVICES_2025 } from '../data/enhancedInnovativeServices2025';
-
 export function EnhancedInnovativeServicesShowcase() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -44,15 +42,12 @@ export function EnhancedInnovativeServicesShowcase() {
       },
       { threshold: 0.1 }
     );
-
     const element = document.getElementById('enhanced-services-showcase');
     if (element) {
       observer.observe(element);
     }
-
     return () => observer.disconnect();
   }, []);
-
   const categories = [
     { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5" />, color: 'from-zion-cyan to-zion-purple' },
     { id: 'Quantum AI Services', name: 'Quantum AI', icon: <Brain className="h-5 w-5" />, color: 'from-purple-500 to-pink-500' },
@@ -65,11 +60,9 @@ export function EnhancedInnovativeServicesShowcase() {
     { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: <Eye className="h-5 w-5" />, color: 'from-indigo-500 to-purple-500' },
     { id: 'Advanced Analytics & BI', name: 'Analytics', icon: <BarChart3 className="h-5 w-5" />, color: 'from-cyan-500 to-blue-500' }
   ];
-
   const filteredServices = activeCategory === 'all'
     ? ENHANCED_INNOVATIVE_SERVICES_2025
     : ENHANCED_INNOVATIVE_SERVICES_2025.filter(service => service.category === activeCategory);
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Quantum AI Services': return <Brain className="h-6 w-6" />;
@@ -84,7 +77,6 @@ export function EnhancedInnovativeServicesShowcase() {
       default: return <Sparkles className="h-6 w-6" />;
     }
   };
-
   return (
     <section id="enhanced-services-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark/50 via-zion-slate/30 to-zion-blue-dark/50">
       <div className="container mx-auto px-4">
@@ -127,7 +119,6 @@ export function EnhancedInnovativeServicesShowcase() {
             </div>
           </div>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -150,7 +141,6 @@ export function EnhancedInnovativeServicesShowcase() {
             </button>
           ))}
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -183,7 +173,6 @@ export function EnhancedInnovativeServicesShowcase() {
                   )}
                 </div>
               </div>
-
               {/* Service Content */}
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors line-clamp-2">
                 {service.title}
@@ -191,7 +180,6 @@ export function EnhancedInnovativeServicesShowcase() {
               <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
                 {service.description}
               </p>
-
               {/* Key Features */}
               <div className="mb-4">
                 <div className="text-xs text-zion-slate-light/70 mb-2 flex items-center gap-2">
@@ -207,7 +195,6 @@ export function EnhancedInnovativeServicesShowcase() {
                   ))}
                 </div>
               </div>
-
               {/* Technology Stack */}
               <div className="mb-4">
                 <div className="text-xs text-zion-slate-light/70 mb-2 flex items-center gap-2">
@@ -222,7 +209,6 @@ export function EnhancedInnovativeServicesShowcase() {
                   ))}
                 </div>
               </div>
-
               {/* Price and Rating */}
               <div className="flex items-center justify-between mb-4">
                 <div className="text-left">
@@ -235,7 +221,6 @@ export function EnhancedInnovativeServicesShowcase() {
                   <span className="text-xs text-zion-slate-light/70">({service.reviewCount})</span>
                 </div>
               </div>
-
               {/* AI Score */}
               <div className="mb-4">
                 <div className="flex items-center justify-between text-sm">
@@ -249,7 +234,6 @@ export function EnhancedInnovativeServicesShowcase() {
                   ></div>
                 </div>
               </div>
-
               {/* Contact Information */}
               <div className="mb-4 p-3 bg-zion-slate-dark/50 rounded-lg border border-zion-slate-light/20">
                 <div className="flex items-center gap-2 text-xs text-zion-slate-light mb-2">
@@ -265,7 +249,6 @@ export function EnhancedInnovativeServicesShowcase() {
                   {service.contactEmail}
                 </div>
               </div>
-
               {/* CTA Buttons */}
               <div className="flex gap-2">
                 <Link
@@ -287,7 +270,6 @@ export function EnhancedInnovativeServicesShowcase() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* View All Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -304,7 +286,6 @@ export function EnhancedInnovativeServicesShowcase() {
             <ArrowRight className="h-5 w-5" />
           </Link>
         </motion.div>
-
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -339,5 +320,4 @@ export function EnhancedInnovativeServicesShowcase() {
     </section>
   );
 }
-
 export default EnhancedInnovativeServicesShowcase;

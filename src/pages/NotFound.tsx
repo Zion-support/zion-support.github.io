@@ -13,34 +13,23 @@ const NotFound = () => {
     return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: title, description: description, canonical: "https://ziontechgroup.com/404" }), _jsx("div", { className: "min-h-screen bg-zion-blue flex items-center justify-center", children: _jsxs("div", { className: "text-center p-6", children: [_jsx("h1", { className: "text-6xl font-bold mb-4 text-zion-cyan", children: "404" }), _jsx("p", { className: "text-2xl text-white mb-6", children: "Oops! Page not found" }), _jsx("p", { className: "text-zion-slate-light mb-8 text-lg", children: "The page you're looking for doesn't exist." }), _jsx(Link, { to: "/", className: "inline-block bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg", children: "Return to Home" })] }) })] }));
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-
-export default function NotFound() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20 flex items-center justify-center">
-=======
-import Link from 'next/link';
 const NotFound = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20 flex items-center justify-center">
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           {/* 404 Number */}
           <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.2 }} className="text-9xl md:text-[12rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mb-8">
             404
           </motion.div>
-
           {/* Error Message */}
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="text-4xl md:text-6xl font-bold text-white mb-6">
             Page Not Found
           </motion.h1>
-
           <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
             The page you're looking for doesn't exist or has been moved. 
             Let's get you back on track to exploring our amazing services.
           </motion.p>
-
           {/* Navigation Options */}
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="space-y-6 mb-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -53,7 +42,6 @@ const NotFound = () => {
                   Return to our homepage and explore our services
                 </p>
               </Link>
-
               <Link to="/services" className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
@@ -63,7 +51,6 @@ const NotFound = () => {
                   Discover what we can do for your business
                 </p>
               </Link>
-
               <Link to="/contact" className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
                 <div className="text-4xl mb-4">📞</div>
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
@@ -75,27 +62,7 @@ const NotFound = () => {
               </Link>
             </div>
           </motion.div>
-
           {/* CTA Buttons */}
-<<<<<<< HEAD
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center"
-          >
-            <Link
-              to="/"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Back to Home
-            </Link>
-            <Link
-              to="/contact"
-              className="border border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Get Help
-=======
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1 }} className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link to="/" className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg">
               <svg className="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,10 +76,8 @@ const NotFound = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
               </svg>
               Need Help?
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
             </Link>
           </motion.div>
-
           {/* Additional Help */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 1.2 }} className="mt-16 p-6 bg-white/5 rounded-2xl border border-white/10">
             <h3 className="text-xl font-semibold text-white mb-4">
@@ -138,13 +103,6 @@ const NotFound = () => {
           </motion.div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </div>
-  );
-}
-=======
     </div>);
-=======
 };
 export default NotFound;
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

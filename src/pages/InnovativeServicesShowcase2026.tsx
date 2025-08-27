@@ -26,12 +26,10 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { INNOVATIVE_SERVICES_2026, SERVICE_CATEGORIES_2026, SERVICE_SUBCATEGORIES_2026 } from '../data/innovativeServices2026';
-
 export default function InnovativeServicesShowcase2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-
   const filteredServices = useMemo(() => {
     return INNOVATIVE_SERVICES_2026.filter(service => {
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -43,16 +41,13 @@ export default function InnovativeServicesShowcase2026() {
       return matchesCategory && matchesSubcategory && matchesSearch;
     });
   }, [selectedCategory, selectedSubcategory, searchTerm]);
-
   const handleCategorySelect = (category: string) => {
     setSelectedCategory(category);
     setSelectedSubcategory('all');
   };
-
   const handleSubcategorySelect = (subcategory: string) => {
     setSelectedSubcategory(subcategory);
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI Services': return Brain;
@@ -63,7 +58,6 @@ export default function InnovativeServicesShowcase2026() {
       default: return Zap;
     }
   };
-
   const getPricingColor = (tier: string) => {
     switch (tier) {
       case 'Starter': return 'text-green-400';
@@ -72,7 +66,6 @@ export default function InnovativeServicesShowcase2026() {
       default: return 'text-gray-400';
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -111,7 +104,6 @@ export default function InnovativeServicesShowcase2026() {
                 </div>
               </div>
             </div>
-
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
@@ -130,7 +122,6 @@ export default function InnovativeServicesShowcase2026() {
           </motion.div>
         </div>
       </section>
-
       {/* Category Pills */}
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -168,7 +159,6 @@ export default function InnovativeServicesShowcase2026() {
               );
             })}
           </motion.div>
-
           {/* Subcategory Pills */}
           {selectedCategory !== 'all' && (
             <motion.div
@@ -204,7 +194,6 @@ export default function InnovativeServicesShowcase2026() {
           )}
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -237,7 +226,6 @@ export default function InnovativeServicesShowcase2026() {
                     </div>
                   )}
                 </div>
-
                 {/* Service Content */}
                 <div className="p-6">
                   {/* Category & Rating */}
@@ -249,17 +237,14 @@ export default function InnovativeServicesShowcase2026() {
                       <span className="text-sm text-gray-400">({service.reviewCount})</span>
                     </div>
                   </div>
-
                   {/* Title */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                     {service.title}
                   </h3>
-
                   {/* Description */}
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                     {service.description}
                   </p>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag) => (
@@ -271,7 +256,6 @@ export default function InnovativeServicesShowcase2026() {
                       </span>
                     ))}
                   </div>
-
                   {/* AI Score */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
@@ -281,7 +265,6 @@ export default function InnovativeServicesShowcase2026() {
                     </div>
                     <span className="text-sm text-gray-400">{service.availability}</span>
                   </div>
-
                   {/* Pricing & CTA */}
                   <div className="flex items-center justify-between">
                     <div>
@@ -313,7 +296,6 @@ export default function InnovativeServicesShowcase2026() {
               </motion.div>
             ))}
           </div>
-
           {/* No Results */}
           {filteredServices.length === 0 && (
             <motion.div
@@ -336,7 +318,6 @@ export default function InnovativeServicesShowcase2026() {
           )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -369,7 +350,6 @@ export default function InnovativeServicesShowcase2026() {
               </div>
             </div>
           </div>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:kleber@ziontechgroup.com"
@@ -389,7 +369,6 @@ export default function InnovativeServicesShowcase2026() {
     </div>
   );
 }
-
 // Search icon component
 const Search = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">

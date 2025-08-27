@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import { Users, Target, Award, Globe, Zap, Shield, TrendingUp, CheckCircle } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
-
 export default function About() {
 	const values = [
 		{
@@ -26,7 +25,6 @@ export default function About() {
 			description: 'Fast, iterative development that delivers value quickly and adapts to changing requirements.'
 		}
 	]
-
 	const milestones = [
 		{ year: '2020', title: 'Company Founded', description: 'Zion Tech Group established with a vision for AI-powered business transformation' },
 		{ year: '2021', title: 'First AI System', description: 'Successfully deployed our first autonomous AI system for enterprise client' },
@@ -35,7 +33,6 @@ export default function About() {
 		{ year: '2024', title: 'Quantum Integration', description: 'Began integrating quantum computing solutions into our AI platforms' },
 		{ year: '2025', title: 'Global Expansion', description: 'Expanded operations to serve clients across North America and Europe' }
 	]
-
 	const team = [
 		{
 			name: 'Kleber Santos',
@@ -62,7 +59,6 @@ export default function About() {
 			image: '/api/placeholder/150/150'
 		}
 	]
-
 	return (
 		<PageTransition>
 			{/* Hero Section */}
@@ -81,7 +77,6 @@ export default function About() {
 					</div>
 				</div>
 			</section>
-
 			{/* Mission Section */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -119,7 +114,6 @@ export default function About() {
 					</div>
 				</div>
 			</section>
-
 			{/* Values Section */}
 			<section className="bg-white py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -150,7 +144,6 @@ export default function About() {
 					</div>
 				</div>
 			</section>
-
 			{/* Timeline Section */}
 			<section className="py-24 sm:py-32 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -185,7 +178,6 @@ export default function About() {
 					</div>
 				</div>
 			</section>
-
 			{/* Team Section */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -215,7 +207,6 @@ export default function About() {
 					</div>
 				</div>
 			</section>
-
 			{/* CTA Section */}
 			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">

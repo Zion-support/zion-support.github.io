@@ -4,7 +4,6 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
-
 export interface MicroSaasService {
   id: number;
   name: string;
@@ -27,7 +26,6 @@ export interface MicroSaasService {
   freeTier: boolean;
   trialPeriod: string;
 }
-
 export interface ITService {
   id: number;
   name: string;
@@ -47,7 +45,6 @@ export interface ITService {
   deliveryTime: string;
   support: string;
 }
-
 export interface AIService {
   id: number;
   name: string;
@@ -69,7 +66,6 @@ export interface AIService {
   aiScore: number;
   useCases: string[];
 }
-
 // Advanced AI & Machine Learning Services
 export const advancedAIServices2025: AIService[] = [
   {
@@ -199,7 +195,6 @@ export const advancedAIServices2025: AIService[] = [
     useCases: ["Customer feedback", "Employee surveys", "Market research", "Therapeutic applications"]
   }
 ];
-
 // Blockchain & Web3 Services
 export const blockchainWeb3Services2025: MicroSaasService[] = [
   {
@@ -289,7 +284,6 @@ export const blockchainWeb3Services2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-
 // Cybersecurity & Compliance Services
 export const cybersecurityServices2025: ITService[] = [
   {
@@ -373,7 +367,6 @@ export const cybersecurityServices2025: ITService[] = [
     support: "24/7"
   }
 ];
-
 // Cloud & DevOps Services
 export const cloudDevOpsServices2025: ITService[] = [
   {
@@ -417,7 +410,6 @@ export const cloudDevOpsServices2025: ITService[] = [
     support: "Business hours"
   }
 ];
-
 // Healthcare & Biotech Services
 export const healthcareBiotechServices2025: AIService[] = [
   {
@@ -463,7 +455,6 @@ export const healthcareBiotechServices2025: AIService[] = [
     useCases: ["Radiology", "Pathology", "Cardiology", "Oncology"]
   }
 ];
-
 // IoT & Edge Computing Services
 export const iotEdgeServices2025: MicroSaasService[] = [
   {
@@ -510,7 +501,6 @@ export const iotEdgeServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-
 // Quantum Computing Services
 export const quantumComputingServices2025: AIService[] = [
   {
@@ -556,7 +546,6 @@ export const quantumComputingServices2025: AIService[] = [
     useCases: ["Portfolio optimization", "Supply chain", "Drug discovery", "Climate modeling"]
   }
 ];
-
 // Space & Aerospace Services
 export const spaceAerospaceServices2025: MicroSaasService[] = [
   {
@@ -603,7 +592,6 @@ export const spaceAerospaceServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-
 // Sustainability & Green Tech Services
 export const sustainabilityServices2025: MicroSaasService[] = [
   {
@@ -650,7 +638,6 @@ export const sustainabilityServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-
 // Fintech & Digital Banking Services
 export const fintechServices2025: MicroSaasService[] = [
   {
@@ -697,7 +684,6 @@ export const fintechServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-
 // Education & EdTech Services
 export const educationEdTechServices2025: MicroSaasService[] = [
   {
@@ -744,7 +730,6 @@ export const educationEdTechServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-
 // Real Estate & PropTech Services
 export const realEstatePropTechServices2025: MicroSaasService[] = [
   {
@@ -791,7 +776,6 @@ export const realEstatePropTechServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-
 // Logistics & Supply Chain Services
 export const logisticsSupplyChainServices2025: MicroSaasService[] = [
   {
@@ -838,7 +822,6 @@ export const logisticsSupplyChainServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-
 // Entertainment & Media Services
 export const entertainmentMediaServices2025: MicroSaasService[] = [
   {
@@ -885,7 +868,6 @@ export const entertainmentMediaServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-
 // Export all services
 export const allExpandedServices2025 = {
   advancedAI: advancedAIServices2025,
@@ -903,13 +885,11 @@ export const allExpandedServices2025 = {
   logistics: logisticsSupplyChainServices2025,
   entertainment: entertainmentMediaServices2025
 };
-
 // Helper functions
 export const getServicesByCategory = (category: string) => {
   const allServices = Object.values(allExpandedServices2025).flat();
   return allServices.filter(service => service.category === category);
 };
-
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   const allServices = Object.values(allExpandedServices2025).flat();
   return allServices.filter(service => {
@@ -922,12 +902,10 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
     return false;
   });
 };
-
 export const getPopularServices = (limit: number = 10) => {
   const allServices = Object.values(allExpandedServices2025).flat();
   return allServices.slice(0, limit);
 };
-
 export const searchServices = (query: string) => {
   const allServices = Object.values(allExpandedServices2025).flat();
   const searchTerm = query.toLowerCase();

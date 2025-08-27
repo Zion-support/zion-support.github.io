@@ -1,12 +1,10 @@
 import { ReactNode } from "react";
-
 interface FuturisticHeroProps {
   children: ReactNode;
   title?: string;
   subtitle?: string;
   className?: string;
 }
-
 export default function FuturisticHero({ 
   children, 
   title, 

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, BookOpen, Code, Database, Shield, Cloud, Brain, Zap, FileText, Download, ExternalLink, ChevronRight, ChevronDown, Copy, Check, Beaker } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 interface DocSection {
   id: string;
   title: string;
@@ -11,7 +10,6 @@ interface DocSection {
   color: string;
   articles: DocArticle[];
 }
-
 interface DocArticle {
   id: string;
   title: string;
@@ -20,13 +18,11 @@ interface DocArticle {
   tags: string[];
   content: string;
 }
-
 const Docs: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSection, setSelectedSection] = useState<string>('all');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
-
   const docSections: DocSection[] = [
     {
       id: 'getting-started',
@@ -219,7 +215,6 @@ const Docs: React.FC = () => {
       ]
     }
   ];
-
   const filteredSections = docSections.filter(section => {
     if (selectedSection !== 'all' && section.id !== selectedSection) return false;
     
@@ -234,7 +229,6 @@ const Docs: React.FC = () => {
     
     return true;
   });
-
   const toggleSection = (sectionId: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(sectionId)) {
@@ -244,13 +238,11 @@ const Docs: React.FC = () => {
     }
     setExpandedSections(newExpanded);
   };
-
   const copyCode = (code: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(code);
     setTimeout(() => setCopiedCode(null), 2000);
   };
-
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'beginner': return 'bg-green-100 text-green-800';
@@ -259,7 +251,6 @@ const Docs: React.FC = () => {
       default: return 'bg-gray-100 text-gray-800';
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header Section */}
@@ -280,7 +271,6 @@ const Docs: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Search and Filter Section */}
         <motion.div
@@ -300,7 +290,6 @@ const Docs: React.FC = () => {
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
             />
           </div>
-
           {/* Section Filters */}
           <div className="flex flex-wrap justify-center gap-2">
             <button
@@ -328,7 +317,6 @@ const Docs: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Documentation Sections */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -365,7 +353,6 @@ const Docs: React.FC = () => {
                     <ChevronRight className="w-5 h-5 text-gray-400" />
                   )}
                 </button>
-
                 {/* Section Content */}
                 {expandedSections.has(section.id) && (
                   <motion.div
@@ -429,7 +416,6 @@ const Docs: React.FC = () => {
             </div>
           )}
         </motion.div>
-
         {/* Quick Start Code Examples */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -456,7 +442,6 @@ const Docs: React.FC = () => {
     password: 'password123'
   })
 });
-
 const data = await response.json();
 const token = data.access_token;`)}
                     className="text-gray-400 hover:text-white transition-colors"
@@ -475,7 +460,6 @@ const token = data.access_token;`)}
     password: 'password123'
   })
 });
-
 const data = await response.json();
 const token = data.access_token;`}</code>
                 </pre>
@@ -484,7 +468,6 @@ const token = data.access_token;`}</code>
                 Use this code to authenticate with our API and get an access token.
               </p>
             </div>
-
             {/* API Call Example */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">API Call</h3>
@@ -493,17 +476,14 @@ const token = data.access_token;`}</code>
                   <span className="text-gray-400 text-sm">Python</span>
                   <button
                     onClick={() => copyCode(`import requests
-
 headers = {
     'Authorization': f'Bearer {access_token}',
     'Content-Type': 'application/json'
 }
-
 response = requests.get(
     'https://api.ziontechgroup.com/v1/services',
     headers=headers
 )
-
 services = response.json()`)}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
@@ -512,17 +492,14 @@ services = response.json()`)}
                 </div>
                 <pre className="text-gray-300 text-sm overflow-x-auto">
                   <code>{`import requests
-
 headers = {
     'Authorization': f'Bearer {access_token}',
     'Content-Type': 'application/json'
 }
-
 response = requests.get(
     'https://api.ziontechgroup.com/v1/services',
     headers=headers
 )
-
 services = response.json()`}</code>
                 </pre>
               </div>
@@ -532,7 +509,6 @@ services = response.json()`}</code>
             </div>
           </div>
         </motion.div>
-
         {/* Download and Resources */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -558,7 +534,6 @@ services = response.json()`}</code>
                   Download SDKs
                 </button>
               </div>
-
               <div className="text-center">
                 <FileText className="w-12 h-12 mx-auto mb-4 text-zion-cyan-light" />
                 <h3 className="text-lg font-semibold mb-2">PDF Documentation</h3>
@@ -569,7 +544,6 @@ services = response.json()`}</code>
                   Download PDFs
                 </button>
               </div>
-
               <div className="text-center">
                 <ExternalLink className="w-12 h-12 mx-auto mb-4 text-zion-cyan-light" />
                 <h3 className="text-lg font-semibold mb-2">API Explorer</h3>
@@ -583,7 +557,6 @@ services = response.json()`}</code>
             </div>
           </div>
         </motion.div>
-
         {/* Additional Resources */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -601,7 +574,6 @@ services = response.json()`}</code>
               <h3 className="font-semibold text-gray-900 mb-2">Help Center</h3>
               <p className="text-sm text-gray-600">Get help and support</p>
             </Link>
-
             <Link
               to="/webinars"
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-center"
@@ -610,7 +582,6 @@ services = response.json()`}</code>
               <h3 className="font-semibold text-gray-900 mb-2">Video Tutorials</h3>
               <p className="text-sm text-gray-600">Learn through video content</p>
             </Link>
-
             <Link
               to="/community"
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-center"
@@ -619,7 +590,6 @@ services = response.json()`}</code>
               <h3 className="font-semibold text-gray-900 mb-2">Developer Community</h3>
               <p className="text-sm text-gray-600">Connect with developers</p>
             </Link>
-
             <Link
               to="/training"
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-center"
@@ -634,5 +604,4 @@ services = response.json()`}</code>
     </div>
   );
 };
-
 export default Docs;

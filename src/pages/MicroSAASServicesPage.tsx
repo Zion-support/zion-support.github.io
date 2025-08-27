@@ -28,7 +28,6 @@ import {
   Lock,
   RefreshCw
 } from 'lucide-react';
-
 const MicroSAASServicesPage: React.FC = () => {
   const microSAASServices = [
     {
@@ -72,7 +71,6 @@ const MicroSAASServicesPage: React.FC = () => {
       deployment: '2-4 days'
     }
   ];
-
   const saasSolutions = [
     {
       title: 'Custom Dashboard Builder',
@@ -95,7 +93,6 @@ const MicroSAASServicesPage: React.FC = () => {
       benefits: ['Custom Reports', 'Data Visualization', 'Export Options', 'Scheduled Delivery']
     }
   ];
-
   const benefits = [
     {
       icon: Zap,
@@ -118,7 +115,6 @@ const MicroSAASServicesPage: React.FC = () => {
       description: 'Regular feature updates and improvements'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -158,7 +154,6 @@ const MicroSAASServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -176,7 +171,6 @@ const MicroSAASServicesPage: React.FC = () => {
               Focused solutions that deliver immediate value without the complexity
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -587,7 +581,6 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Micro SAAS Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -605,7 +598,6 @@ export default function MicroSAASServicesPage() {
               Ready-to-deploy software solutions for common business challenges
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {microSAASServices.map((service, index) => (
               <motion.div
@@ -635,7 +627,6 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="py-8 bg-zion-blue-dark/50">
         <div className="container mx-auto px-4">
@@ -645,99 +636,13 @@ export default function MicroSAASServicesPage() {
                 : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"}`}>
                 {category}
               </Button>))}
-<<<<<<< HEAD
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                    <p className="text-zion-slate-light">{service.description}</p>
-                  </div>
-                </div>
-
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <h4 className="font-semibold text-white mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">
-                          <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-white mb-2">Ideal For:</h4>
-                    <ul className="space-y-1">
-                      {service.useCases.map((useCase, useCaseIndex) => (
-                        <li key={useCaseIndex} className="flex items-center gap-2 text-zion-slate-light">
-                          <Target className="w-4 h-4 text-zion-purple" />
-                          <span className="text-sm">{useCase}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-4">
-                    <span className="text-zion-cyan font-semibold">{service.pricing}</span>
-                    <span className="text-zion-slate-light text-sm">Deploy in {service.deployment}</span>
-                  </div>
-                  <Link 
-                    to="/contact"
-                    className="text-zion-cyan hover:text-zion-blue transition-colors font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-1 w-4 h-4 inline" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-=======
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
-      {/* SAAS Solutions Overview */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              SAAS <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Platforms</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Advanced features and capabilities for enterprise-grade applications
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {saasSolutions.map((solution, index) => (
-              <motion.div
-                key={solution.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-=======
       {/* Services Grid */}
       <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
             {filteredServices.map((service) => (<Card key={service.id} className="group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:scale-105 border-zion-blue-light/20 bg-zion-blue-dark/50 backdrop-blur-sm">
                 <CardHeader className="pb-4">
                   <div className="flex justify-between items-start mb-4">
@@ -809,7 +714,6 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Technical Features */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -827,7 +731,6 @@ export default function MicroSAASServicesPage() {
               Built with modern technologies for performance and reliability
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { icon: Cloud, title: 'Cloud-Native', description: 'Built for scalability and reliability' },
@@ -865,7 +768,6 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -943,8 +845,3 @@ export default function MicroSAASServicesPage() {
       </div>
     </div>);
 }
-<<<<<<< HEAD
-
-export default MicroSAASServicesPage;
-=======
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

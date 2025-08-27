@@ -132,7 +132,6 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
       <motion.button onClick={() => setIsOpen(!isOpen)} className="p-3 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="AI Chat Assistant">
         <MessageSquare className="w-6 h-6"/>
       </motion.button>
-
       {/* Chat Window */}
       <AnimatePresence>
         {isOpen && (<motion.div className="fixed inset-0 z-50" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
@@ -170,7 +169,6 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                   </Button>
                 </div>
               </div>
-
               {/* Settings Panel */}
               <AnimatePresence>
                 {showSettings && !isMinimized && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}>
@@ -190,7 +188,6 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                     </div>
                   </motion.div>)}
               </AnimatePresence>
-
               {/* Messages */}
               {!isMinimized && (<div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[400px]">
                   {messages.map((message) => (<motion.div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
@@ -248,7 +245,6 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                   
                   <div ref={messagesEndRef}/>
                 </div>)}
-
               {/* Input Area */}
               {!isMinimized && (<div className="p-4 border-t border-zion-blue-light/30">
                   <div className="flex items-center gap-2">

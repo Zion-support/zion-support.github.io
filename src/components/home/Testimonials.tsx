@@ -1,18 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
-
 interface Testimonial {
   name: string;
   role: string;
   content: string;
   rating: number;
 }
-
 interface TestimonialsProps {
   testimonials: Testimonial[];
 }
-
 const Testimonials: React.FC<TestimonialsProps> = ({ testimonials }) => {
   return (
     <section className="py-20 bg-zion-slate-dark/30" role="region" aria-labelledby="testimonials-heading">
@@ -28,7 +25,6 @@ const Testimonials: React.FC<TestimonialsProps> = ({ testimonials }) => {
             What Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Clients Say</span>
           </h2>
         </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
@@ -58,5 +54,4 @@ const Testimonials: React.FC<TestimonialsProps> = ({ testimonials }) => {
     </section>
   );
 };
-
 export default Testimonials;

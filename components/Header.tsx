@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
-
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const navigation = {
     main: [
       { name: 'Solutions', href: '/solutions' },
@@ -20,7 +18,6 @@ export default function Header() {
       { name: 'Request Quote', href: '/contact' },
     ]
   };
-
   return (
     <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,7 +28,6 @@ export default function Header() {
               <span className="text-2xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {/* Main Navigation */}
@@ -46,7 +42,6 @@ export default function Header() {
                 </Link>
               ))}
             </div>
-
             {/* Resources Dropdown */}
             <div className="relative group">
               <button className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center">
@@ -68,7 +63,6 @@ export default function Header() {
               </div>
             </div>
           </nav>
-
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
             <Link
@@ -78,7 +72,6 @@ export default function Header() {
               Get Started
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -95,7 +88,6 @@ export default function Header() {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">

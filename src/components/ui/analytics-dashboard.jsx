@@ -72,7 +72,6 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
           </Button>
         </div>
       </div>
-
       {/* Metrics Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {/* Total Users */}
@@ -98,7 +97,6 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
               </div>
             </div>)}
         </motion.div>
-
         {/* Active Users */}
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('activeUsers')}>
           <div className="flex items-center justify-between mb-3">
@@ -122,7 +120,6 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
               </div>
             </div>)}
         </motion.div>
-
         {/* Revenue */}
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('revenue')}>
           <div className="flex items-center justify-between mb-3">
@@ -146,7 +143,6 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
               </div>
             </div>)}
         </motion.div>
-
         {/* Growth Rate */}
         <motion.div className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300" whileHover={{ scale: 1.02 }} onClick={() => handleMetricClick('growth')}>
           <div className="flex items-center justify-between mb-3">
@@ -171,7 +167,6 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
             </div>)}
         </motion.div>
       </div>
-
       {/* Selected Metric Details */}
       <AnimatePresence>
         {selectedMetric && (<motion.div className="bg-zion-blue/10 border border-zion-blue-light/20 rounded-lg p-4" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }}>

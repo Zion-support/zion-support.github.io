@@ -1,11 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { CartItem } from '@/types/cart';
 import { safeStorage } from '@/utils/safeStorage';
-
 interface CartState {
   items: CartItem[];
 }
-
 const loadState = (): CartItem[] => {
   const stored = safeStorage.getItem('zion_cart');
   if (!stored) return [];
@@ -15,11 +13,9 @@ const loadState = (): CartItem[] => {
     return [];
   }
 };
-
 const initialState: CartState = {
   items: loadState(),
 };
-
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
@@ -32,7 +28,7 @@ const cartSlice = createSlice({
       if (existing) {
         existing.quantity += 1;
       } else {
-        state.items.push({
+        state.items({
           id: action.payload.id,
           name: action.payload.title,
           price: action.payload.price,
@@ -61,8 +57,6 @@ const cartSlice = createSlice({
     },
   },
 });
-
 export const { addItem, removeItem, updateQuantity, setItems, clear } =
   cartSlice.actions;
 export default cartSlice.reducer;
-

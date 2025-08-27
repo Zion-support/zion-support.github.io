@@ -68,14 +68,12 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             ⭐ Most Popular
           </div>
         </motion.div>)}
-
       {/* Enhanced New Badge */}
       {isNew && (<motion.div className="absolute -top-3 right-4 z-10" initial={{ scale: 0, rotate: -180 }} animate={{ scale: 1, rotate: 0 }} transition={{ delay: 0.3, type: "spring", stiffness: 300 }}>
           <div className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-bounce">
             🆕 New
           </div>
         </motion.div>)}
-
       <div className="relative h-full bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 overflow-hidden group-hover:shadow-zion-glow">
         {/* Enhanced Background Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(34,221,210,0.05)_25%,rgba(34,221,210,0.05)_50%,transparent_50%,transparent_75%,rgba(34,221,210,0.05)_75%)] bg-[size:20px_20px] opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-pulse"/>
@@ -84,7 +82,6 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate={{ y: [0, -5, 0] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}>
           {icon}
         </motion.div>
-
         {/* Content */}
         <div className="relative z-10">
           {/* Enhanced Category */}
@@ -93,17 +90,14 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
               {category}
             </motion.span>
           </div>
-
           {/* Enhanced Title */}
           <h3 className="text-xl font-bold text-white mb-4 text-center group-hover:text-zion-cyan transition-all duration-300 group-hover:scale-105">
             {title}
           </h3>
-
           {/* Enhanced Description */}
           <p className="text-zion-slate-light text-sm leading-relaxed mb-6 text-center group-hover:text-white transition-colors duration-300">
             {description}
           </p>
-
           {/* Enhanced Features */}
           {features.length > 0 && (<div className="mb-6">
               <ul className="space-y-3">
@@ -113,7 +107,6 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
                   </motion.li>))}
               </ul>
             </div>)}
-
           {/* Enhanced Price */}
           <div className="text-center mb-6">
             <motion.div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-2" whileHover={{ scale: 1.1 }}>
@@ -121,7 +114,6 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             </motion.div>
             <div className="text-xs text-zion-slate-light group-hover:text-zion-cyan transition-colors duration-300">Starting Price</div>
           </div>
-
           {/* Enhanced CTA Button */}
           <div className="text-center">
             <Link to={href} className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zion-cyan/20 via-zion-blue/20 to-zion-purple/20 text-zion-cyan border border-zion-cyan/30 rounded-xl text-sm font-medium hover:from-zion-cyan/30 hover:via-zion-blue/30 hover:to-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 group-hover:shadow-zion-glow hover:scale-105">
@@ -132,14 +124,12 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             </Link>
           </div>
         </div>
-
         {/* Enhanced Hover Effect Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 via-zion-blue/5 to-zion-purple/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"/>
         
         {/* Animated Border Glow */}
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/20 to-zion-cyan/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-pulse"/>
       </div>
-
       {/* Enhanced Glow Effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/30 via-zion-blue/20 to-zion-purple/30 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 -z-10 group-hover:scale-110"/>
       

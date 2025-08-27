@@ -56,7 +56,6 @@ export default function ApiKeysManager() {
           Create New API Key
         </Button>
       </div>
-
       {/* Create New API Key Dialog */}
       <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
         <DialogTrigger asChild>
@@ -94,7 +93,6 @@ export default function ApiKeysManager() {
           </DialogFooter>
         </DialogContent>
       </Dialog>
-
       {/* New API Key Display */}
       {newApiKey && (<div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
           <h3 className="text-green-400 font-semibold mb-2">New API Key Created!</h3>
@@ -110,7 +108,6 @@ export default function ApiKeysManager() {
             I've Copied the Key
           </Button>
         </div>)}
-
       {/* API Keys List */}
       <div className="space-y-4">
         {apiKeys.map((apiKey) => (<div key={apiKey.id} className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
@@ -186,7 +183,6 @@ export default function ApiKeysManager() {
             </div>
           </div>))}
       </div>
-
       {/* Regenerate Confirmation Dialog */}
       <AlertDialog open={showRegenerateConfirm !== null} onOpenChange={() => setShowRegenerateConfirm(null)}>
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
@@ -211,7 +207,6 @@ export default function ApiKeysManager() {
           </DialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-
       {/* Delete Confirmation Dialog */}
       <AlertDialog open={showDeleteConfirm !== null} onOpenChange={() => setShowDeleteConfirm(null)}>
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">

@@ -12,7 +12,6 @@ export default function Services() {
     };
     return (<>
 			<SEO title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group" description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started." canonical="/services" url="https://ziontechgroup.com/services"/>
-
 			<main className="min-h-screen bg-zion-blue pt-24 pb-20">
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-12">
@@ -21,7 +20,6 @@ export default function Services() {
 							Real, ready-to-deploy offerings across Micro SaaS, AI, Cybersecurity, Data, and Cloud.
 						</p>
 					</div>
-
 					<div className="grid grid-cols-1 gap-12">
 						{servicesCatalog.map(category => (<section key={category.slug}>
 								<h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">{category.name}</h2>
@@ -37,11 +35,9 @@ export default function Services() {
 													<div className="text-zion-slate-light text-sm">{item.billing === 'month' ? 'Monthly' : item.billing === 'hour' ? 'Hourly' : 'Project-based'}</div>
 												</div>
 											</div>
-
 											<ul className="mt-4 space-y-2 text-zion-slate-light text-sm list-disc list-inside">
 												{item.features.map((f, idx) => (<li key={idx}>{f}</li>))}
 											</ul>
-
 											<div className="mt-6 flex items-center justify-between">
 												<Link to={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noopener noreferrer' : undefined} className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium py-2 px-4 rounded-lg border border-zion-cyan/40 hover:shadow-lg hover:shadow-zion-cyan/20">
 													<span>{item.ctaLabel}</span>
@@ -53,7 +49,6 @@ export default function Services() {
 								</div>
 							</section>))}
 					</div>
-
 					<section className="mt-16">
 						<h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">Contact Us</h2>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -71,7 +66,6 @@ export default function Services() {
 							<Link to="/contact" className="inline-flex items-center gap-2 text-white underline">Go to contact page</Link>
 						</div>
 					</section>
-
 				</div>
 			</main>
 		</>);

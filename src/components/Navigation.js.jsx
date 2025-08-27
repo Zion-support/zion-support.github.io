@@ -55,7 +55,6 @@ const Navigation = () => {
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigationItems.map((item) => {
@@ -67,7 +66,6 @@ const Navigation = () => {
                   <span>{item.name}</span>
                 </Link>);
         })}
-
             {/* Services Dropdown */}
             <div className="relative">
               <button onClick={() => setIsServicesOpen(!isServicesOpen)} className="flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-zion-slate-light hover:text-white hover:bg-white/10 transition-colors">
@@ -75,7 +73,6 @@ const Navigation = () => {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`}/>
               </button>
-
               {isServicesOpen && (<div className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-blue-light rounded-xl shadow-2xl z-50">
                   <div className="p-4">
                     <div className="grid grid-cols-1 gap-4">
@@ -91,14 +88,12 @@ const Navigation = () => {
                   </div>
                 </div>)}
             </div>
-
             {/* Contact Button */}
             <a href="tel:+13024640950" className="flex items-center space-x-2 px-4 py-2 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium hover:bg-zion-cyan-light transition-colors">
               <Phone className="w-4 h-4"/>
               <span>Contact Us</span>
             </a>
           </div>
-
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-zion-slate-light hover:text-white focus:outline-none focus:text-white">
@@ -107,7 +102,6 @@ const Navigation = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       {isOpen && (<div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-zion-blue-dark border-t border-zion-blue-light/30">
@@ -120,7 +114,6 @@ const Navigation = () => {
                   <span>{item.name}</span>
                 </Link>);
             })}
-
             {/* Mobile Services */}
             <div className="px-3 py-2">
               <h3 className="text-sm font-semibold text-zion-cyan mb-2">Service Categories</h3>
@@ -135,7 +128,6 @@ const Navigation = () => {
                   </div>))}
               </div>
             </div>
-
             {/* Mobile Contact */}
             <div className="px-3 py-2 border-t border-zion-blue-light/30">
               <a href="tel:+13024640950" className="flex items-center space-x-2 px-3 py-2 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium">

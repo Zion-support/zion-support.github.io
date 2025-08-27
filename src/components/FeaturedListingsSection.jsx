@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const featuredListings = [
   {
     id: 1,
@@ -100,7 +99,6 @@ const featuredListings = [
     highlights: ["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"]
   }
 ];
-
 export function FeaturedListingsSection() {
   const [hoveredListing, setHoveredListing] = useState(null);
   
@@ -285,7 +283,6 @@ export function FeaturedListingsSection() {
                       <ArrowRight className="w-4 h-4"/>
                     </Link>
                   </div>
-
                   {/* Expanded details on hover */}
                   <AnimatePresence>
                     {hoveredListing === listing.id && (
@@ -311,7 +308,6 @@ export function FeaturedListingsSection() {
                             </motion.div>
                           ))}
                         </div>
-
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {listing.technologies.slice(0, 4).map((tech, idx) => (

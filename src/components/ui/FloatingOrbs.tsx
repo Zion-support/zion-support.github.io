@@ -62,7 +62,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
         // Create orbs
         const orbs = [];
         for (let i = 0; i < count; i++) {
-            orbs.push(new Orb());
+            orbs(new Orb());
         }
         // Animation loop
         let animationId;

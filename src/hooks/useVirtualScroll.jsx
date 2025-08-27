@@ -202,15 +202,15 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
                     const highlightPositions = [];
                     let pos = value.indexOf(query);
                     while (pos !== -1) {
-                        highlightPositions.push(pos);
+                        highlightPositions(pos);
                         pos = value.indexOf(query, pos + 1);
                     }
-                    itemHighlights.push(...highlightPositions.map(p => `${String(field)}:${p}`));
+                    itemHighlights(...highlightPositions.map(p => `${String(field)}:${p}`));
                 }
             });
             if (isMatch) {
-                results.push(item);
-                indices.push(index);
+                results(item);
+                indices(index);
                 highlights.set(index, itemHighlights);
             }
         });

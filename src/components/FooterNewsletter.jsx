@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
-
 export function FooterNewsletter() {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -15,15 +13,12 @@ export function FooterNewsletter() {
       setError('Please enter your email address');
       return;
     }
-
     if (!/\S+@\S+\.\S+/.test(email)) {
       setError('Please enter a valid email address');
       return;
     }
-
     setError('');
     setIsSubmitting(true);
-
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -35,7 +30,6 @@ export function FooterNewsletter() {
       setIsSubmitting(false);
     }
   };
-
   if (isSubmitted) {
     return (
       <motion.div 
@@ -61,7 +55,6 @@ export function FooterNewsletter() {
       </motion.div>
     );
   }
-
   return (
     <div className="text-center">
       <motion.div
@@ -79,7 +72,6 @@ export function FooterNewsletter() {
           Join thousands of professionals staying ahead of the curve.
         </p>
       </motion.div>
-
       <motion.form 
         onSubmit={handleSubmit}
         className="max-w-md mx-auto"
@@ -112,10 +104,10 @@ export function FooterNewsletter() {
             className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100 flex items-center justify-center"
           >
             {isSubmitting ? (
-              <>
+<>
                 <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
                 Subscribing...
-              </>
+</>
             ) : (
               'Subscribe'
             )}
@@ -130,7 +122,6 @@ export function FooterNewsletter() {
           {' '}You can unsubscribe at any time.
         </p>
       </motion.form>
-
       <motion.div 
         className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center"
         initial={{ opacity: 0, y: 20 }}

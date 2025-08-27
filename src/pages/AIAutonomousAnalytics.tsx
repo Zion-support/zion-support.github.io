@@ -20,7 +20,6 @@ const AIAutonomousAnalytics = () => {
               Your AI analytics partner that never sleeps, never gets tired, and continuously discovers insights in your data 24/7
             </p>
           </div>
-
           {/* Analytics Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -44,7 +43,6 @@ const AIAutonomousAnalytics = () => {
               <p className="text-gray-300">Automated business insights</p>
             </div>
           </div>
-
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -83,7 +81,6 @@ const AIAutonomousAnalytics = () => {
               <p className="text-gray-300">AI that improves with every analysis</p>
             </div>
           </div>
-
           {/* Analytics Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Analytics Process</h2>
@@ -119,7 +116,6 @@ const AIAutonomousAnalytics = () => {
               </div>
             </div>
           </div>
-
           {/* Analytics Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Analytics Solutions</h2>
@@ -129,7 +125,6 @@ const AIAutonomousAnalytics = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Analytics Applications</h2>
@@ -150,7 +145,6 @@ const AIAutonomousAnalytics = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-teal-600 to-cyan-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Analytics?</h2>

@@ -27,7 +27,6 @@ export const LanguageSelector = () => {
         <span className="text-sm font-medium">{currentLang?.code}</span>
         <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}/>
       </button>
-
       {isOpen && (<div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
           <div className="py-2">
             {languages.map((language) => (<button key={language.code} onClick={() => handleLanguageChange(language.code)} className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-colors ${currentLanguage === language.code

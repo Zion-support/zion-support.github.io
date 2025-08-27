@@ -11,26 +11,22 @@ import {
 } from 'lucide-react';
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
 import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const featuredServices = [
   ...real2036InnovativeServices.slice(0, 3),
   ...real2036SpecializedServices.slice(0, 3)
 ];
-
 const stats = [
   { label: 'Services Available', value: '500+', icon: <Rocket className="w-6 h-6" /> },
   { label: 'Market Coverage', value: '$200B+', icon: <TrendingUp className="w-6 h-6" /> },
   { label: 'Client Satisfaction', value: '98%', icon: <Star className="w-6 h-6" /> },
   { label: 'Global Reach', value: '50+', icon: <Globe className="w-6 h-6" /> }
 ];
-
 const categories = [
   { name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6" />, count: 150, color: 'from-green-500 to-emerald-600' },
   { name: 'Quantum Technology', icon: <Atom className="w-6 h-6" />, count: 80, color: 'from-cyan-500 to-blue-600' },
@@ -39,10 +35,8 @@ const categories = [
   { name: 'Cybersecurity', icon: <Shield className="w-6 h-6" />, count: 90, color: 'from-blue-500 to-indigo-600' },
   { name: 'Edge Computing', icon: <Zap className="w-6 h-6" />, count: 70, color: 'from-yellow-500 to-orange-600' }
 ];
-
 export default function Homepage2036() {
   const [activeCategory, setActiveCategory] = useState('all');
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -52,7 +46,6 @@ export default function Homepage2036() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -63,7 +56,6 @@ export default function Homepage2036() {
       }
     }
   };
-
   return (
     <Layout>
       {/* Main Content */}
@@ -93,7 +85,6 @@ export default function Homepage2036() {
               />
             ))}
           </div>
-
           <div className="relative z-10 text-center max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -106,7 +97,6 @@ export default function Homepage2036() {
                 Pioneering the Future of Technology
               </div>
             </motion.div>
-
             <motion.h1 
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 30 }}
@@ -147,7 +137,6 @@ export default function Homepage2036() {
                 <ChevronRight className="w-5 h-5" />
               </a>
             </motion.div>
-
             {/* Stats */}
             <motion.div 
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
@@ -167,7 +156,6 @@ export default function Homepage2036() {
             </motion.div>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="py-16 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-6xl mx-auto">
@@ -207,7 +195,6 @@ export default function Homepage2036() {
             </motion.div>
           </div>
         </section>
-
         {/* Categories Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -226,7 +213,6 @@ export default function Homepage2036() {
                 across multiple domains and industries.
               </p>
             </motion.div>
-
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
@@ -259,7 +245,6 @@ export default function Homepage2036() {
             </motion.div>
           </div>
         </section>
-
         {/* Featured Services */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-7xl mx-auto">
@@ -278,7 +263,6 @@ export default function Homepage2036() {
                 transforming industries and driving the future of technology.
               </p>
             </motion.div>
-
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
@@ -320,7 +304,6 @@ export default function Homepage2036() {
                 </motion.div>
               ))}
             </motion.div>
-
             <motion.div 
               className="text-center mt-12"
               initial={{ opacity: 0 }}
@@ -338,7 +321,6 @@ export default function Homepage2036() {
             </motion.div>
           </div>
         </section>
-
         {/* Why Choose Us */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -357,7 +339,6 @@ export default function Homepage2036() {
                 solutions that drive real business transformation.
               </p>
             </motion.div>
-
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
@@ -418,7 +399,6 @@ export default function Homepage2036() {
             </motion.div>
           </div>
         </section>
-
         {/* Call to Action */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-4xl mx-auto text-center">

@@ -712,7 +712,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
   innovationLevel: string;
   marketSize: string;
 }
-
 export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
   // Quantum AI Business Intelligence Platform
   {
@@ -896,7 +895,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
     innovationLevel: "Revolutionary",
     marketSize: "$65 billion by 2030"
   },
-
   // Blockchain Supply Chain Management
   {
     id: "blockchain-supply-chain",
@@ -993,7 +991,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
     innovationLevel: "Advanced",
     marketSize: "$45 billion by 2027"
   },
-
   // AI-Powered Cybersecurity Platform
   {
     id: "ai-cybersecurity-platform",
@@ -1176,7 +1173,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
     innovationLevel: "Advanced",
     marketSize: "$75 billion by 2027"
   },
-
   // Metaverse Business Platform
   {
     id: "metaverse-business-platform",
@@ -1393,7 +1389,6 @@ export const MARKET_ANALYSIS_2027 = {
     innovationLevel: "Revolutionary",
     marketSize: "$120 billion by 2027"
   },
-
   // Quantum-Resistant Cryptography Platform
   {
     id: "quantum-resistant-cryptography",
@@ -1490,7 +1485,6 @@ export const MARKET_ANALYSIS_2027 = {
     innovationLevel: "Revolutionary",
     marketSize: "$35 billion by 2027"
   },
-
   // AI-Powered Healthcare Analytics Platform
   {
     id: "ai-healthcare-analytics",
@@ -1587,7 +1581,6 @@ export const MARKET_ANALYSIS_2027 = {
     innovationLevel: "Advanced",
     marketSize: "$85 billion by 2027"
   },
-
   // Sustainable Technology Platform
   {
     id: "sustainable-technology-platform",
@@ -1684,7 +1677,6 @@ export const MARKET_ANALYSIS_2027 = {
     innovationLevel: "Advanced",
     marketSize: "$55 billion by 2027"
   },
-
   // Edge Computing AI Platform
   {
     id: "edge-computing-ai-platform",
@@ -1782,6 +1774,10 @@ export const MARKET_ANALYSIS_2027 = {
     marketSize: "$40 billion by 2027"
   }
 ];
+<<<<<<< HEAD
 
 export default COMPREHENSIVE_PRICING_GUIDE_2027;
 >>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
+=======
+export default COMPREHENSIVE_PRICING_GUIDE_2027;
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
+<<<<<<< HEAD
 import { EnhancedLoadingSpinner } from './components/ui/EnhancedLoadingSpinner';
 import { ErrorBoundary } from './components/error/ErrorBoundary';
 import { AccessibilityProvider } from './components/accessibility/AccessibilityProvider';
@@ -90,6 +91,118 @@ const AppLoadingSpinner = () => (
     text="Loading amazing experiences..." 
     theme="zion"
   />
+=======
+// Lazy load pages with better chunking
+const Home = React.lazy(() => import('./pages/Home.jsx'));
+const About = React.lazy(() => import('./pages/About.jsx'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.tsx'));
+const Contact = React.lazy(() => import('./pages/Contact.jsx'));
+const Login = React.lazy(() => import('./pages/Login.jsx'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
+const EnhancedZionServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedZionServicesShowcase2025.tsx'));
+const ZionTechGroupMarketing2025 = React.lazy(() => import('./pages/ZionTechGroupMarketing2025.tsx'));
+// New pages from incoming branch
+const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
+const PricingPage = lazy(() => import('./pages/PricingPage'));
+// Service pages
+const AIServices = lazy(() => import('./pages/services/AIServices'));
+const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
+const EnterpriseSolutionsPage = lazy(() => import('./pages/services/EnterpriseIT'));
+const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
+const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
+// New innovative service pages
+const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainWeb3'));
+const IoTEdgeComputing = lazy(() => import('./pages/services/IoTEdgeComputing'));
+// Service pages from existing structure
+const CloudServices = React.lazy(() => import('./pages/services/Cloud'));
+const CybersecurityServices = React.lazy(() => import('./pages/services/Cybersecurity'));
+const InfrastructureServices = React.lazy(() => import('./pages/services/Infrastructure'));
+const ConsultingServices = React.lazy(() => import('./pages/services/Consulting'));
+const QuantumAIServices = React.lazy(() => import('./pages/services/quantum-ai'));
+// Other pages from existing structure
+const Signup = React.lazy(() => import('./pages/Signup'));
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
+const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
+const Analytics = React.lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
+const Categories = React.lazy(() => import('./pages/Categories'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PartnersPage = React.lazy(() => import('./pages/Partners'));
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
+
+// Missing components that are referenced in routes
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Accessibility = React.lazy(() => import('./pages/accessibility-auditor'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const APIDocs = React.lazy(() => import('./pages/ApiDocsHub'));
+const GDPR = React.lazy(() => import('./pages/GDPR'));
+const API = React.lazy(() => import('./pages/ApiDocsHub'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Support = React.lazy(() => import('./pages/Support'));
+const News = React.lazy(() => import('./pages/News'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
+
+// Enhanced loading spinner with accessibility
+const LoadingSpinner = () => (
+  <div 
+    className="min-h-screen bg-futuristic flex items-center justify-center"
+    role="status"
+    aria-label="Loading page content"
+  >
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-zion-cyan text-lg">Loading...</p>
+      <div className="sr-only">Loading page content, please wait...</div>
+    </div>
+  </div>
+);
+
+// Error boundary component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen bg-futuristic flex items-center justify-center p-4">
+    <div className="text-center max-w-md">
+      <h2 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h2>
+      <p className="text-zion-slate-light mb-6">{error.message}</p>
+      <button
+        onClick={resetErrorBoundary}
+        className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors"
+      >
+        Try again
+      </button>
+    </div>
+  </div>
+);
+
+// Enhanced loading component with skeleton
+const LoadingFallback = () => (
+  <div className="min-h-screen bg-background flex items-center justify-center">
+    <div className="text-center space-y-4">
+      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto"></div>
+      <p className="text-zion-cyan text-lg font-medium">Loading Zion...</p>
+      <p className="text-muted-foreground text-sm">Preparing your AI marketplace experience</p>
+    </div>
+  </div>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 );
 
 function App() {

@@ -9,7 +9,7 @@ import { Brain } from {
     CheckCircle,
     Star,
     import: { Brain, Search, BookOpen, Zap, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network }, from, 'lucide-react': ,
-    import: SEOHead, from, '../components/SEOHead': ,
+    
     FileText,
     Database,
     Globe,
@@ -86,7 +86,7 @@ Users,
     TestTube;
 from;
 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../components/SEOHead.jsx';
 Database,
     BarChart3,
     TrendingUp,
@@ -362,7 +362,7 @@ const AIAutonomousResearchAssistant = () => {
         impact, "50% faster trials"
     ];
 }, { title: , "Academic Research": , description: , "Streamline academic research processes and publication workflows": , icon: BookOpen, impact: , "3x productivity boost":  }, { title: , "Market Research": , description: , "Automated market analysis and competitive intelligence gathering": , icon: Search, impact: , "90% time savings": , "Reduce research time by 70%": , "Access to 100M+ research sources": , "Real-time trend analysis": , "Automated report generation":  };
-;
+
 const benefits = [
     {
         title: "Time Savings",
@@ -394,7 +394,6 @@ const AIAutonomousResearchAssistant = () => {
         <meta name="keywords" content="AI research assistant, autonomous research, research automation, AI research, Zion Tech Group"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-research-assistant"/>
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -428,7 +427,7 @@ const AIAutonomousResearchAssistant = () => {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionize your research with AI-powered autonomous research capabilities. 
               Discover insights faster, analyze data intelligently, and accelerate breakthroughs.
-    <>
+<>
       <SEOHead title="AI Autonomous Research Assistant - Zion Tech Group" description="Advanced AI-powered research automation platform that autonomously discovers, analyzes, and synthesizes information across multiple domains and data sources." keywords="AI research assistant, autonomous research, research automation, AI-powered research, intelligent research platform" type="website" url="https://ziontechgroup.com/ai-autonomous-research-assistant"/>
       
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
@@ -457,7 +456,7 @@ const AIAutonomousResearchAssistant = () => {
                   Request Demo
                 </Link>
               </div>
-    <>
+<>
       <SEOHead customData={{
             title: "AI Autonomous Research Assistant - Zion Tech Group",
             description: "Revolutionary AI-powered research assistant that automates literature review, data analysis, and hypothesis generation. Accelerate your research with intelligent automation and insights.",
@@ -522,7 +521,6 @@ const AIAutonomousResearchAssistant = () => {
             </div>
           </div>
         </></section>
-
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -552,7 +550,6 @@ const AIAutonomousResearchAssistant = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
@@ -583,16 +580,14 @@ const AIAutonomousResearchAssistant = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-    <>
+<>
       <Helmet>
         <title>AI Autonomous Research Assistant - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI autonomous research assistant that independently conducts research, analyzes data, and generates insights across multiple domains. Transform your research capabilities with AI-powered intelligence."/>
         <meta name="keywords" content="AI research assistant, autonomous research, research automation, AI research, research intelligence, automated research"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-research-assistant"/>
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -837,7 +832,6 @@ const AIAutonomousResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Research Areas Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -879,9 +873,8 @@ const AIAutonomousResearchAssistant = () => {
     </div>
         </></section>
       </div>
-    </>
+</>
   );
 };
-
 export default AIAutonomousResearchAssistant;</></></></></></></></></></></></></></></></></></></></></></></></></></>);
 };

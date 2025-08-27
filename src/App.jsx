@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer.jsx';
+<<<<<<< HEAD
 import { ChatAssistant } from './components/ChatAssistant';
 
 // Lazy load pages with better chunking
@@ -19,6 +20,11 @@ const Sitemap = lazy(() => import('./pages/Sitemap.tsx'));
 const GreenIT = lazy(() => import('./pages/GreenIT.tsx'));
 
 // Enhanced loading component with better UX
+=======
+import { ChatAssistant } from './components/ChatAssistant.jsx';
+// Lazy load only the pages we know work
+const Home = lazy(() => import('./pages/Home.jsx'));
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
     <div className="text-center">
@@ -97,7 +103,6 @@ const NotFound = () => (
     </div>
   </div>
 );
-
 function App() {
   return (
     <Router>
@@ -133,5 +138,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

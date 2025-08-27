@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface SpaceTechInnovation2026 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface SpaceTechInnovation2026 {
   rating: number;
   reviews: number;
 }
-
 export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
   // Space Technology AI Platform
   {
@@ -94,7 +92,6 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.9,
     reviews: 80
   },
-
   // Quantum Space Mining Platform
   {
     id: 'quantum-space-mining-platform',
@@ -147,7 +144,6 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.8,
     reviews: 45
   },
-
   // Satellite Operations AI
   {
     id: 'satellite-operations-ai',
@@ -200,7 +196,6 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.8,
     reviews: 95
   },
-
   // Space Debris Tracking System
   {
     id: 'space-debris-tracking-system',
@@ -253,7 +248,6 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.7,
     reviews: 55
   },
-
   // Space Weather Monitoring Platform
   {
     id: 'space-weather-monitoring-platform',

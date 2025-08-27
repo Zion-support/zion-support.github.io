@@ -3,10 +3,9 @@ import { motion } from 'framer-motion';
 import { UltimateInnovativeServicesShowcase2027 } from '@/components/UltimateInnovativeServicesShowcase2027';
 import { EnhancedPricingSection2027 } from '@/components/EnhancedPricingSection2027';
 import { SEO } from '@/components/SEO';
-
 export default function UltimateServicesShowcase2027Page() {
   return (
-    <>
+<>
       <SEO
         title="Ultimate Innovative Services 2027 | Zion Tech Group"
         description="Discover our cutting-edge micro SAAS, IT, and AI services that are revolutionizing industries and driving the future of technology. From AI autonomous trading to quantum computing solutions."
@@ -28,7 +27,6 @@ export default function UltimateServicesShowcase2027Page() {
             <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
             <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -60,24 +58,20 @@ export default function UltimateServicesShowcase2027Page() {
             </motion.div>
           </div>
         </section>
-
         {/* Services Showcase */}
         <section id="services" className="py-20">
           <UltimateInnovativeServicesShowcase2027 />
         </section>
-
         {/* Pricing Section */}
         <section className="py-20">
           <EnhancedPricingSection2027 />
         </section>
-
         {/* Call to Action */}
         <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full animate-pulse"></div>
             <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -111,6 +105,6 @@ export default function UltimateServicesShowcase2027Page() {
           </div>
         </section>
       </motion.div>
-    </>
+</>
   );
 }

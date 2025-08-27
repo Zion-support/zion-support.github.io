@@ -17,7 +17,6 @@ import {
   TrendingUp,
   Eye
 } from 'lucide-react';
-
 export default function Mission() {
   const coreValues = [
     {
@@ -65,7 +64,6 @@ export default function Mission() {
       ]
     }
   ];
-
   const missionPillars = [
     {
       title: "AI-Powered Transformation",
@@ -116,7 +114,6 @@ export default function Mission() {
       metrics: ["25+ countries served", "10+ regional offices", "Multi-language support"]
     }
   ];
-
   const impactAreas = [
     {
       title: "Healthcare",
@@ -163,7 +160,6 @@ export default function Mission() {
       ]
     }
   ];
-
   const futureVision = [
     {
       year: "2025",
@@ -209,7 +205,6 @@ import {
   Award,
   TrendingUp
 } from 'lucide-react';
-
 const Mission: React.FC = () => {
   const coreValues = [
     {
@@ -237,7 +232,6 @@ const Mission: React.FC = () => {
       color: 'from-yellow-500 to-orange-500'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -252,7 +246,6 @@ const Mission: React.FC = () => {
           </p>
         </div>
       </section>
-
       {/* Mission Statement */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -299,7 +292,6 @@ const Mission: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Vision Statement */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -346,7 +338,6 @@ const Mission: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Core Values */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -371,7 +362,6 @@ const Mission: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Strategic Goals */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -403,7 +393,6 @@ const Mission: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Strategic Goals Timeline */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -476,7 +465,6 @@ const Mission: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Core Values */}
                 <p className="text-gray-400 leading-relaxed">{value.description}</p>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
@@ -511,7 +499,6 @@ const Mission: React.FC = () => {
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                   {metric.number}
       </div>
-
       {/* Mission Pillars */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -564,7 +551,6 @@ const Mission: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Impact Areas */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Impact</h2>
@@ -595,7 +581,6 @@ const Mission: React.FC = () => {
           })}
         </div>
       </div>
-
       {/* Future Vision */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -673,7 +658,6 @@ const Mission: React.FC = () => {
         </div>
       </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -701,5 +685,4 @@ const Mission: React.FC = () => {
     </div>
   );
 };
-
 export default Mission;

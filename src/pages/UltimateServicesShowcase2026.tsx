@@ -63,13 +63,11 @@ import {
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
-
 export default function UltimateServicesShowcase2026() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
-
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'AI & Automation', name: 'AI & Automation', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
@@ -84,14 +82,12 @@ export default function UltimateServicesShowcase2026() {
     { id: 'AI & Privacy', name: 'AI & Privacy', icon: Lock, color: 'from-zion-purple to-zion-blue' },
     { id: 'Sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' }
   ];
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'budget', name: 'Budget', range: '$1,999 - $4,999' },
     { id: 'professional', name: 'Professional', range: '$4,999 - $9,999' },
     { id: 'enterprise', name: 'Enterprise', range: '$9,999+' }
   ];
-
   const sortOptions = [
     { id: 'featured', name: 'Featured', icon: Star },
     { id: 'price-low', name: 'Price: Low to High', icon: DollarSign },
@@ -99,7 +95,6 @@ export default function UltimateServicesShowcase2026() {
     { id: 'rating', name: 'Highest Rated', icon: Star },
     { id: 'newest', name: 'Newest', icon: Clock }
   ];
-
   const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2026.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -115,10 +110,8 @@ export default function UltimateServicesShowcase2026() {
     } else if (selectedPriceRange === 'enterprise') {
       matchesPrice = service.price.starter > 9999;
     }
-
     return matchesSearch && matchesCategory && matchesPrice;
   });
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
@@ -133,17 +126,14 @@ export default function UltimateServicesShowcase2026() {
         return b.featured ? 1 : -1;
     }
   });
-
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Zap;
   };
-
   const getCategoryColor = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-zion-cyan to-zion-blue';
   };
-
   return (
     <div className="min-h-screen bg-zion-slate-dark text-white">
       <SEO 
@@ -151,7 +141,6 @@ export default function UltimateServicesShowcase2026() {
         description="Discover our cutting-edge innovative services including AI, Quantum Computing, Biotechnology, Robotics, and more. Transform your business with next-generation technology solutions."
         keywords="AI services, quantum computing, biotechnology, robotics, neurotechnology, digital twins, XR platform, edge computing, federated learning, sustainable technology"
       />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light"></div>
@@ -201,7 +190,6 @@ export default function UltimateServicesShowcase2026() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information Banner */}
       <section className="bg-gradient-to-r from-zion-slate to-zion-slate-light py-8 px-4">
         <div className="max-w-7xl mx-auto">
@@ -230,7 +218,6 @@ export default function UltimateServicesShowcase2026() {
           </div>
         </div>
       </section>
-
       {/* Filters and Search */}
       <section className="py-8 px-4 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
@@ -246,7 +233,6 @@ export default function UltimateServicesShowcase2026() {
                 className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan"
               />
             </div>
-
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -259,7 +245,6 @@ export default function UltimateServicesShowcase2026() {
                 </option>
               ))}
             </select>
-
             {/* Price Filter */}
             <select
               value={selectedPriceRange}
@@ -272,7 +257,6 @@ export default function UltimateServicesShowcase2026() {
                 </option>
               ))}
             </select>
-
             {/* Sort */}
             <select
               value={sortBy}
@@ -288,7 +272,6 @@ export default function UltimateServicesShowcase2026() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -321,7 +304,6 @@ export default function UltimateServicesShowcase2026() {
                     <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
                     <p className="text-white/90 text-sm line-clamp-2">{service.description}</p>
                   </div>
-
                   {/* Service Content */}
                   <div className="p-6">
                     {/* Pricing */}
@@ -345,7 +327,6 @@ export default function UltimateServicesShowcase2026() {
                         </div>
                       </div>
                     </div>
-
                     {/* Key Benefits */}
                     <div className="mb-6">
                       <div className="flex items-center gap-2 mb-3">
@@ -361,7 +342,6 @@ export default function UltimateServicesShowcase2026() {
                         ))}
                       </ul>
                     </div>
-
                     {/* Service Details */}
                     <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                       <div>
@@ -385,7 +365,6 @@ export default function UltimateServicesShowcase2026() {
                         <span className="text-zion-cyan ml-2 capitalize">{service.supportLevel}</span>
                       </div>
                     </div>
-
                     {/* Action Buttons */}
                     <div className="flex gap-3">
                       <Link
@@ -401,7 +380,6 @@ export default function UltimateServicesShowcase2026() {
                         Get Quote
                       </Link>
                     </div>
-
                     {/* Additional Links */}
                     <div className="flex justify-between items-center mt-4 pt-4 border-t border-zion-slate-light">
                       {service.demoUrl && (
@@ -441,7 +419,6 @@ export default function UltimateServicesShowcase2026() {
               ))}
             </AnimatePresence>
           </div>
-
           {/* No Results */}
           {sortedServices.length === 0 && (
             <div className="text-center py-16">
@@ -465,7 +442,6 @@ export default function UltimateServicesShowcase2026() {
           )}
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20 px-4 bg-gradient-to-r from-zion-slate to-zion-slate-dark">
         <div className="max-w-4xl mx-auto text-center">

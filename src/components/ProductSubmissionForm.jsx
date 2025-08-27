@@ -224,7 +224,6 @@ export function ProductSubmissionForm() {
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
-
             <FormField control={form.control} name="description" render={({ field }) => (<FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
@@ -235,7 +234,6 @@ export function ProductSubmissionForm() {
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <FormField control={form.control} name="price" render={({ field }) => (<FormItem>
                     <FormLabel>Price (USD)</FormLabel>
@@ -247,7 +245,6 @@ export function ProductSubmissionForm() {
                     </FormDescription>
                     <FormMessage />
                   </FormItem>)}/>
-
               <FormField control={form.control} name="category" render={({ field }) => (<FormItem>
                     <FormLabel>Category</FormLabel>
                     <FormControl>
@@ -264,7 +261,6 @@ export function ProductSubmissionForm() {
                     <FormMessage />
                   </FormItem>)}/>
             </div>
-
             <FormField control={form.control} name="tags" render={({ field }) => (<FormItem>
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
@@ -275,7 +271,6 @@ export function ProductSubmissionForm() {
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
-
             <FormField control={form.control} name="image" render={() => (<FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
@@ -292,7 +287,6 @@ export function ProductSubmissionForm() {
                       </AspectRatio>
                     </div>)}
                 </FormItem>)}/>
-
             <FormField control={form.control} name="video" render={() => (<FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
@@ -303,7 +297,6 @@ export function ProductSubmissionForm() {
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
-
             <FormField control={form.control} name="model" render={() => (<FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
                   <FormControl>
@@ -314,7 +307,6 @@ export function ProductSubmissionForm() {
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
-
             <div className="flex justify-end">
               <Button type="submit" disabled={isSubmitting} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                 {isSubmitting ? "Publishing..." : "Publish Product"}

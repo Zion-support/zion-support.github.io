@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight } from 'lucide-react';
-
 interface Question {
 	id: string;
 	question: string;
 	options: string[];
 }
-
 interface AISolution {
 	name: string;
 	description: string;
@@ -18,12 +16,10 @@ interface AISolution {
 	href: string;
 	icon: React.ComponentType<{ className?: string }>;
 }
-
 const AIMatcher: React.FC = () => {
 	const [currentStep, setCurrentStep] = useState(1);
 	const [answers, setAnswers] = useState<Record<string, string>>({});
 	const [recommendations, setRecommendations] = useState<AISolution[]>([]);
-
 	const questions: Question[] = [
 		{
 			id: 'industry',
@@ -84,7 +80,6 @@ const AIMatcher: React.FC = () => {
 			],
 		},
 	];
-
 	const aiSolutions: AISolution[] = [
 		{
 			name: 'AI Business Intelligence',
@@ -141,11 +136,9 @@ const AIMatcher: React.FC = () => {
 			icon: Users,
 		},
 	];
-
 	const handleAnswer = (questionId: string, answer: string) => {
 		setAnswers((prev) => ({ ...prev, [questionId]: answer }));
 	};
-
 	const handleNext = () => {
 		if (currentStep < questions.length) {
 			setCurrentStep(currentStep + 1);
@@ -153,57 +146,47 @@ const AIMatcher: React.FC = () => {
 			generateRecommendations();
 		}
 	};
-
 	const handlePrevious = () => {
 		if (currentStep > 1) {
 			setCurrentStep(currentStep - 1);
 		}
 	};
-
 	const generateRecommendations = () => {
 		// Simple recommendation logic based on answers
 		const industry = answers.industry;
 		const companySize = answers.company_size;
 		const goals = answers.ai_goals;
 		let filteredSolutions = aiSolutions;
-
 		// Filter based on industry
 		if (industry === 'Healthcare & Life Sciences') {
 			filteredSolutions = filteredSolutions.filter((s) => s.name.includes('Healthcare') || s.category === 'Analytics & Insights');
 		} else if (industry === 'Financial Services') {
 			filteredSolutions = filteredSolutions.filter((s) => s.name.includes('Financial') || s.category === 'Analytics & Insights');
 		}
-
 		// Filter based on company size
 		if (companySize === 'Startup (1-50 employees)') {
 			filteredSolutions = filteredSolutions.filter((s) => s.name.includes('Micro') || s.name.includes('Workflow'));
 		}
-
 		// Filter based on goals
 		if (goals === 'Automate repetitive tasks') {
 			filteredSolutions = filteredSolutions.filter((s) => s.category === 'Process Automation');
 		} else if (goals === 'Improve customer experience') {
 			filteredSolutions = filteredSolutions.filter((s) => s.category === 'Customer Experience');
 		}
-
 		setRecommendations(filteredSolutions.slice(0, 3));
 		setCurrentStep(questions.length + 1);
 	};
-
 	const resetQuiz = () => {
 		setCurrentStep(1);
 		setAnswers({});
 		setRecommendations([]);
 	};
-
 	const progressPercentage = (currentStep / questions.length) * 100;
-
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 			{/* Hero Section */}
 			<div className="relative overflow-hidden">
 				<div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
-
 				<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -225,7 +208,6 @@ const AIMatcher: React.FC = () => {
 					</motion.div>
 				</div>
 			</div>
-
 			{/* Quiz Section */}
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
 				{currentStep <= questions.length ? (
@@ -252,11 +234,9 @@ const AIMatcher: React.FC = () => {
 								></div>
 							</div>
 						</div>
-
 						{/* Question */}
 						<div className="mb-8">
 							<h2 className="text-2xl font-bold text-white mb-6">{questions[currentStep - 1].question}</h2>
-
 							<div className="space-y-3">
 								{questions[currentStep - 1].options.map((option, index) => (
 									<button
@@ -273,7 +253,6 @@ const AIMatcher: React.FC = () => {
 								))}
 							</div>
 						</div>
-
 						{/* Navigation */}
 						<div className="flex justify-between">
 							<button
@@ -287,7 +266,6 @@ const AIMatcher: React.FC = () => {
 							>
 								Previous
 							</button>
-
 							<button
 								onClick={handleNext}
 								disabled={!answers[questions[currentStep - 1].id]}
@@ -318,7 +296,6 @@ const AIMatcher: React.FC = () => {
 								Based on your answers, here are the AI solutions that best match your business needs and goals.
 							</p>
 						</div>
-
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 							{recommendations.map((solution, index) => (
 								<motion.div
@@ -337,9 +314,7 @@ const AIMatcher: React.FC = () => {
 											<p className="text-sm text-blue-400">{solution.category}</p>
 										</div>
 									</div>
-
 									<p className="text-gray-400 text-sm mb-4">{solution.description}</p>
-
 									<div className="mb-4">
 										<h4 className="text-sm font-medium text-gray-300 mb-2">Best For:</h4>
 										<ul className="space-y-1">
@@ -351,7 +326,6 @@ const AIMatcher: React.FC = () => {
 											))}
 										</ul>
 									</div>
-
 									<Link
 										to={solution.href}
 										className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm group"
@@ -362,7 +336,6 @@ const AIMatcher: React.FC = () => {
 								</motion.div>
 							))}
 						</div>
-
 						<div className="text-center mt-12">
 							<button
 								onClick={resetQuiz}
@@ -380,7 +353,6 @@ const AIMatcher: React.FC = () => {
 					</motion.div>
 				)}
 			</div>
-
 			{/* CTA Section */}
 			<div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -415,5 +387,4 @@ const AIMatcher: React.FC = () => {
 		</div>
 	);
 };
-
 export default AIMatcher;

@@ -4,7 +4,6 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
-
 export interface MicroSaasService {
   id: number;
   name: string;
@@ -30,7 +29,6 @@ export interface MicroSaasService {
   marketSize: string;
   growthRate: string;
 }
-
 export interface ITService {
   id: number;
   name: string;
@@ -53,7 +51,6 @@ export interface ITService {
   marketSize: string;
   compliance: string[];
 }
-
 export interface AIService {
   id: number;
   name: string;
@@ -78,7 +75,6 @@ export interface AIService {
   marketSize: string;
   ethicalAI: string[];
 }
-
 // Revolutionary Micro SAAS Services for 2026
 export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
   {
@@ -312,7 +308,6 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
     growthRate: "280% annual growth"
   }
 ];
-
 // Advanced IT Infrastructure Services for 2026
 export const advancedITInfrastructureServices2026: ITService[] = [
   {
@@ -445,7 +440,6 @@ export const advancedITInfrastructureServices2026: ITService[] = [
     compliance: ["GDPR", "ISO 27001", "Edge Security Standards"]
   }
 ];
-
 // Revolutionary AI Services for 2026
 export const revolutionaryAIServices2026: AIService[] = [
   {
@@ -584,12 +578,10 @@ export const revolutionaryAIServices2026: AIService[] = [
     ethicalAI: ["Transparency", "Accountability", "Safety", "Human oversight"]
   }
 ];
-
 // Export all services
 export const allServices2026 = {
   microSaas: revolutionaryMicroSaasServices2026,
   itInfrastructure: advancedITInfrastructureServices2026,
   aiServices: revolutionaryAIServices2026
 };
-
 export default allServices2026;

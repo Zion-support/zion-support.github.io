@@ -121,10 +121,6 @@ import {
   FastForwardOctagon,
   ShuffleOctagon,
   RepeatOctagon,
-  Repeat1Triangle,
-  Shuffle2Triangle,
-  SkipBack2Triangle,
-  SkipForward2Triangle,
   PlayDodecagon,
   PauseDodecagon,
   StopDodecagon,
@@ -135,17 +131,14 @@ import {
   ShuffleDodecagon,
   RepeatDodecagon
 } from 'lucide-react';
-
 // Import the enhanced services showcase component
 import { EnhancedServicesShowcase } from '../components/home/EnhancedServicesShowcase';
-
 export default function Home() {
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
   };
-
   const staggerContainer = {
     animate: {
       transition: {
@@ -153,7 +146,6 @@ export default function Home() {
       }
     }
   };
-
   const quickAccessItems = [
     {
       title: 'AI Solutions',
@@ -184,7 +176,6 @@ export default function Home() {
       link: '/services/digital-transformation'
     }
   ];
-
   const featureHighlights = [
     {
       title: 'AI-Powered Innovation',
@@ -211,7 +202,6 @@ export default function Home() {
       benefits: ['Live Chat', 'Phone Support', 'Emergency Response']
     }
   ];
-
   const serviceCategories = [
     { name: 'AI & Machine Learning', icon: Brain, count: 25, color: 'from-zion-cyan to-zion-blue' },
     { name: 'Cybersecurity', icon: Shield, count: 18, color: 'from-zion-purple to-zion-cyan' },
@@ -220,7 +210,6 @@ export default function Home() {
     { name: 'IoT & Edge Computing', icon: Network, count: 15, color: 'from-zion-purple to-zion-blue' },
     { name: 'Quantum Computing', icon: Rocket, count: 8, color: 'from-zion-blue to-zion-cyan' }
   ];
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -248,7 +237,6 @@ export default function Home() {
               <Star className="w-4 h-4 mr-2" />
               Trusted by 500+ Global Companies
             </motion.div>
-
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Welcome to <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Zion Tech Group</span>
             </h1>
@@ -298,7 +286,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* Quick Access Section */}
       <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark relative overflow-hidden">
         {/* Background Pattern */}
@@ -324,7 +311,6 @@ export default function Home() {
               Get instant access to our most popular and in-demand technology solutions
             </p>
           </motion.div>
-
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             initial={{ opacity: 0, y: 30 }}
@@ -362,7 +348,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* Services Preview Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
@@ -380,7 +365,6 @@ export default function Home() {
               Comprehensive technology solutions designed to transform your business
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -420,10 +404,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Enhanced Services Showcase */}
       <EnhancedServicesShowcase />
-
       {/* Feature Highlights Section */}
       <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate relative overflow-hidden">
         {/* Background Pattern */}
@@ -449,7 +431,6 @@ export default function Home() {
               Discover the unique advantages that set us apart in the technology industry
             </p>
           </motion.div>
-
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
             initial={{ opacity: 0, y: 30 }}
@@ -484,7 +465,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* Service Categories Overview */}
       <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark relative overflow-hidden">
         {/* Background Pattern */}
@@ -530,7 +510,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-blue">
         <div className="container mx-auto px-4">
@@ -555,7 +534,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 text-center">

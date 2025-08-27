@@ -3,23 +3,19 @@ import { Link } from 'react-router-dom';
 import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart, UserPlus } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/Button';
-
 export function UserMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const { user, logout } = useAuth();
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
-
   const handleLogout = async () => {
     try {
       await logout();
@@ -28,7 +24,6 @@ export function UserMenu() {
       console.error('Logout failed:', error);
     }
   };
-
   if (!user) {
     return (
       <div className="flex items-center space-x-3">
@@ -46,7 +41,6 @@ export function UserMenu() {
       </div>
     );
   }
-
   return (
     <div className="relative" ref={menuRef}>
       <button
@@ -61,7 +55,6 @@ export function UserMenu() {
         </span>
         <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}/>
       </button>
-
       {isOpen && (
         <div className="absolute top-full right-0 mt-2 w-56 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
           <div className="py-2">
@@ -74,7 +67,6 @@ export function UserMenu() {
                 {user.email}
               </div>
             </div>
-
             {/* Menu Items */}
             <div className="py-1">
               <Link
@@ -113,7 +105,6 @@ export function UserMenu() {
                 Settings
               </Link>
             </div>
-
             {/* Logout */}
             <div className="border-t border-gray-800 pt-1">
               <button

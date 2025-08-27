@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2028FintechDigitalBankingService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2028FintechDigitalBankingService {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028FintechDigitalBankingService[] = [
   // AI-Powered Digital Banking Platform
   {
@@ -94,7 +92,6 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     rating: 4.9,
     reviews: 240
   },
-
   // AI-Powered Investment Management Platform
   {
     id: 'ai-investment-management-platform-2028',
@@ -147,7 +144,6 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     rating: 4.8,
     reviews: 520
   },
-
   // Blockchain-Based Payment Platform
   {
     id: 'blockchain-payment-platform-2028',
@@ -200,7 +196,6 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     rating: 4.9,
     reviews: 890
   },
-
   // AI-Powered Insurance Platform
   {
     id: 'ai-insurance-platform-2028',
@@ -253,7 +248,6 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     rating: 4.7,
     reviews: 320
   },
-
   // DeFi Lending and Borrowing Platform
   {
     id: 'defi-lending-borrowing-platform-2028',

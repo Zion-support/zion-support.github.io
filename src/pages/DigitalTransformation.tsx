@@ -100,20 +100,8 @@ const stats = [
     { label: "Customer Satisfaction", value: "95%", icon: Users }
 ];
 export default function DigitalTransformation() {
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEOHead 
-        title="Digital Transformation Services - Zion Tech Group" 
-        description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage."
-        keywords="digital transformation, business modernization, process automation, technology modernization, change management"
-        canonical="https://ziontechgroup.com/digital-transformation"
-      />
-=======
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Digital Transformation Services - Zion Tech Group" description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage." keywords="digital transformation, business modernization, process automation, technology modernization, change management" canonical="https://ziontechgroup.com/digital-transformation"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -143,7 +131,6 @@ export default function DigitalTransformation() {
         <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple/20 opacity-50"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,229,255,0.1),transparent_50%)]"></div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,7 +148,6 @@ export default function DigitalTransformation() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -173,7 +159,6 @@ export default function DigitalTransformation() {
               Comprehensive digital transformation solutions designed to modernize every aspect of your business.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {transformationServices.map((service, index) => {
             const IconComponent = service.icon;
@@ -195,7 +180,6 @@ export default function DigitalTransformation() {
                         {feature}
                       </li>))}
                   </ul>
-
                   <Link to="/contact" className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300">
                     Learn More
                     <ArrowRight className="w-4 h-4"/>
@@ -205,7 +189,6 @@ export default function DigitalTransformation() {
           </div>
         </div>
       </section>
-
       {/* Transformation Process */}
       <section className="py-24 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -217,7 +200,6 @@ export default function DigitalTransformation() {
               A proven methodology that ensures successful digital transformation with measurable results.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {transformationPhases.map((phase, index) => (<motion.div key={phase.phase} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
@@ -230,7 +212,6 @@ export default function DigitalTransformation() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -242,7 +223,6 @@ export default function DigitalTransformation() {
               Digital transformation delivers measurable benefits that impact every aspect of your business.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
             {
@@ -282,7 +262,6 @@ export default function DigitalTransformation() {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section className="py-24 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -294,7 +273,6 @@ export default function DigitalTransformation() {
               See how we've helped organizations transform their business through digital innovation.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (<motion.div key={testimonial.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                 <div className="flex gap-1 mb-4">
@@ -311,7 +289,6 @@ export default function DigitalTransformation() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

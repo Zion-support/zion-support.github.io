@@ -170,7 +170,6 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
           </Button>
         </div>
       </div>
-
       {/* Search and Filters */}
       {showFilters && (<div className="mb-6 space-y-4">
           {/* Search */}
@@ -202,12 +201,10 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
               </Button>))}
           </div>
         </div>)}
-
       {/* Grid View */}
       {viewMode === 'grid' && (<div className={`grid gap-6 ${columns === 2 ? 'grid-cols-1 md:grid-cols-2' : columns === 3 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'}`}>
           {filteredAndSortedItems.map((item, index) => (<Card3D key={item.id} item={item} index={index} onClick={() => handleCardClick(item)} onAction={handleActionClick} getStatusColor={getStatusColor} getComplexityColor={getComplexityColor} getCategoryIcon={getCategoryIcon}/>))}
         </div>)}
-
       {/* List View */}
       {viewMode === 'list' && (<div className="space-y-4">
           {filteredAndSortedItems.map((item, index) => (<motion.div key={item.id} className="flex items-center gap-4 p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.05 }} onClick={() => handleCardClick(item)}>
@@ -254,7 +251,6 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
               </div>
             </motion.div>))}
         </div>)}
-
       {/* Carousel View */}
       {viewMode === 'carousel' && (<div className="relative">
           <div className="overflow-hidden rounded-lg">
@@ -270,7 +266,6 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             {filteredAndSortedItems.map((_, index) => (<button key={index} onClick={() => setCurrentCarouselIndex(index)} className={`w-2 h-2 rounded-full transition-all duration-200 ${index === currentCarouselIndex ? 'bg-zion-cyan w-6' : 'bg-zinc-600 hover:bg-zinc-500'}`}/>))}
           </div>
         </div>)}
-
       {/* Selected Item Modal */}
       <AnimatePresence>
         {selectedItem && (<motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>

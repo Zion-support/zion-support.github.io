@@ -1,5 +1,4 @@
 import { ProductListing } from "@/types/listings";
-
 // Sample datacenter equipment listings
 export const EQUIPMENT_LISTINGS: ProductListing[] = [
   {
@@ -328,5 +327,3 @@ export const EQUIPMENT_LISTINGS: ProductListing[] = [
     reviewCount: 5,
   },
 ];
-
-

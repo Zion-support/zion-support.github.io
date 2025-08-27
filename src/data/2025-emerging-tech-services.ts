@@ -33,7 +33,6 @@ export interface EmergingTechService {
   researchPartners: string[];
   patents: string[];
 }
-
 export const emergingTechServices2025: EmergingTechService[] = [
   // Quantum Computing Services
   {
@@ -88,7 +87,6 @@ export const emergingTechServices2025: EmergingTechService[] = [
     researchPartners: ['MIT', 'Stanford', 'Caltech', 'CERN'],
     patents: ['Quantum Error Correction Method', 'Hybrid Quantum-Classical Workflow', 'Quantum Algorithm Optimization']
   },
-
   // Neuromorphic Computing
   {
     id: 'neuromorphic-computing-platform',
@@ -142,7 +140,6 @@ export const emergingTechServices2025: EmergingTechService[] = [
     researchPartners: ['Stanford Neuroscience Institute', 'MIT Brain Research', 'UC Berkeley'],
     patents: ['Spiking Neural Network Architecture', 'Brain-Inspired Learning Algorithm', 'Neuromorphic Hardware Interface']
   },
-
   // DNA Computing & Storage
   {
     id: 'dna-computing-storage-platform',
@@ -196,7 +193,6 @@ export const emergingTechServices2025: EmergingTechService[] = [
     researchPartners: ['Harvard Medical School', 'MIT Biology', 'Stanford Genetics'],
     patents: ['DNA Computing Method', 'Molecular Storage System', 'Biological Algorithm Framework']
   },
-
   // Photonic Computing
   {
     id: 'photonic-computing-platform',
@@ -250,7 +246,6 @@ export const emergingTechServices2025: EmergingTechService[] = [
     researchPartners: ['MIT Photonics', 'Stanford Optics', 'Caltech Quantum'],
     patents: ['Photonic Processor Design', 'Optical Neural Network', 'Light-Speed Computing Method']
   },
-
   // Biological Computing
   {
     id: 'biological-computing-platform',
@@ -304,7 +299,6 @@ export const emergingTechServices2025: EmergingTechService[] = [
     researchPartners: ['MIT Biology', 'Stanford Bioengineering', 'UC Berkeley'],
     patents: ['Biological Computing Method', 'Cellular Algorithm Framework', 'Living Computer System']
   },
-
   // Swarm Robotics
   {
     id: 'swarm-robotics-platform',
@@ -358,7 +352,6 @@ export const emergingTechServices2025: EmergingTechService[] = [
     researchPartners: ['MIT Robotics', 'Stanford AI', 'Carnegie Mellon Robotics'],
     patents: ['Swarm Coordination Algorithm', 'Multi-Robot Communication', 'Autonomous Decision System']
   },
-
   // Brain-Computer Interfaces
   {
     id: 'brain-computer-interface-platform',
@@ -412,7 +405,6 @@ export const emergingTechServices2025: EmergingTechService[] = [
     researchPartners: ['Stanford Neuroscience', 'MIT Brain Research', 'Johns Hopkins Medicine'],
     patents: ['Neural Signal Processing', 'Thought-to-Action Conversion', 'BCI Development Framework']
   },
-
   // Synthetic Biology
   {
     id: 'synthetic-biology-platform',
@@ -467,5 +459,4 @@ export const emergingTechServices2025: EmergingTechService[] = [
     patents: ['DNA Design Method', 'Genetic Circuit Framework', 'Biological System Optimization']
   }
 ];
-
 export default emergingTechServices2025;

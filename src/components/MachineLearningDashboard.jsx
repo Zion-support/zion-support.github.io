@@ -160,7 +160,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
           </button>
         </div>
       </div>
-
       {/* Navigation Tabs */}
       <div className="flex border-b border-gray-200 dark:border-gray-700">
         {[
@@ -176,7 +175,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             <span>{label}</span>
           </button>))}
       </div>
-
       {/* Content */}
       <div className="p-4">
         <AnimatePresence mode="wait">
@@ -223,7 +221,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                   </div>
                 </div>
               </div>
-
               {/* Training Jobs Status */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Training Jobs</h3>
@@ -246,7 +243,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                   </div>
                 </div>
               </div>
-
               {/* Recent Models */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Models</h3>
@@ -275,7 +271,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 </div>
               </div>
             </motion.div>)}
-
           {activeTab === 'models' && (<motion.div key="models" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">AI Models</h3>
@@ -286,7 +281,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                   </button>
                 </div>
               </div>
-
               {/* Create Model Form */}
               <AnimatePresence>
                 {showCreateModel && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
@@ -318,7 +312,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     </div>
                   </motion.div>)}
               </AnimatePresence>
-
               {/* Import Model */}
               <AnimatePresence>
                 {showImportModel && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
@@ -329,7 +322,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     </button>
                   </motion.div>)}
               </AnimatePresence>
-
               {/* Models List */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {models.map((model) => (<div key={model.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
@@ -395,7 +387,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                   </div>))}
               </div>
             </motion.div>)}
-
           {activeTab === 'training' && (<motion.div key="training" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Training Jobs</h3>
               
@@ -471,7 +462,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                   </div>)}
               </div>
             </motion.div>)}
-
           {activeTab === 'predictions' && (<motion.div key="predictions" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Make Predictions</h3>
               
@@ -491,7 +481,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 </div>
                 <textarea placeholder="Enter input data (JSON format)" value={predictionForm.input} onChange={(e) => setPredictionForm(prev => ({ ...prev, input: e.target.value }))} rows={3} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>
               </div>
-
               {/* Recent Predictions */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <h4 className="font-medium text-gray-900 dark:text-white mb-3">Recent Predictions</h4>
@@ -534,7 +523,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 </div>
               </div>
             </motion.div>)}
-
           {activeTab === 'analytics' && (<motion.div key="analytics" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Analytics</h3>
               

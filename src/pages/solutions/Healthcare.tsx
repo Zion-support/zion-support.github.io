@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
 const HealthcareSolutions = () => {
     const solutions = [
@@ -94,7 +94,6 @@ const HealthcareSolutions = () => {
           </div>
         </div>
       </div>
-
       {/* Core Solutions */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
@@ -133,7 +132,6 @@ const HealthcareSolutions = () => {
           </div>
         </div>
       </div>
-
       {/* Benefits Section */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
@@ -155,7 +153,6 @@ const HealthcareSolutions = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-4xl mx-auto text-center">

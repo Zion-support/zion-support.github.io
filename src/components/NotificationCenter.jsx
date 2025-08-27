@@ -1,6 +1,5 @@
 import React from 'react';
 import { Bell } from 'lucide-react';
-
 export const NotificationCenter = () => {
   return (
     <div className="relative">
@@ -10,5 +9,4 @@ export const NotificationCenter = () => {
     </div>
   );
 };
-
 export default NotificationCenter;

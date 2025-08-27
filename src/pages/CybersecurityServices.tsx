@@ -13,7 +13,6 @@ import {
   Zap,
   Target
 } from 'lucide-react';
-
 export default function CybersecurityServices() {
   const securityServices = [
     {
@@ -65,7 +64,6 @@ export default function CybersecurityServices() {
       color: "from-purple-500 to-pink-500"
     }
   ];
-
   const securitySolutions = [
     {
       category: "Network Security",
@@ -104,7 +102,6 @@ export default function CybersecurityServices() {
       ]
     }
   ];
-
   const benefits = [
     {
       icon: Shield,
@@ -127,7 +124,6 @@ export default function CybersecurityServices() {
       description: "Compliance with international security standards and best practices"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -152,7 +148,6 @@ export default function CybersecurityServices() {
           </motion.div>
         </div>
       </section>
-
       {/* Security Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -194,7 +189,6 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
-
       {/* Security Solutions Section */}
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
@@ -231,7 +225,6 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -266,7 +259,6 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">

@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, TrendingUp, AlertTriangle, CheckCircle, X } from 'lucide-react';
-
 interface PerformanceMetrics {
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
@@ -9,7 +8,6 @@ interface PerformanceMetrics {
   cls: number; // Cumulative Layout Shift
   ttfb: number; // Time to First Byte
 }
-
 interface PerformanceIssue {
   id: string;
   type: 'warning' | 'error' | 'info';
@@ -19,13 +17,11 @@ interface PerformanceIssue {
   threshold?: number;
   suggestion?: string;
 }
-
 export function PerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [issues, setIssues] = useState<PerformanceIssue[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-
   const performanceThresholds = {
     fcp: { good: 1800, poor: 3000 },
     lcp: { good: 2500, poor: 4000 },
@@ -33,14 +29,12 @@ export function PerformanceMonitor() {
     cls: { good: 0.1, poor: 0.25 },
     ttfb: { good: 800, poor: 1800 }
   };
-
   const getMetricScore = useCallback((metric: keyof PerformanceMetrics, value: number) => {
     const thresholds = performanceThresholds[metric];
     if (value <= thresholds.good) return 'good';
     if (value <= thresholds.poor) return 'needs-improvement';
     return 'poor';
   }, []);
-
   const getMetricColor = useCallback((score: string) => {
     switch (score) {
       case 'good': return 'text-green-500';
@@ -49,7 +43,6 @@ export function PerformanceMonitor() {
       default: return 'text-gray-500';
     }
   }, []);
-
   const getMetricIcon = useCallback((score: string) => {
     switch (score) {
       case 'good': return <CheckCircle className="w-4 h-4" />;
@@ -58,16 +51,13 @@ export function PerformanceMonitor() {
       default: return null;
     }
   }, []);
-
   const analyzePerformance = useCallback((metrics: PerformanceMetrics) => {
     const newIssues: PerformanceIssue[] = [];
-
     Object.entries(metrics).forEach(([metric, value]) => {
       const score = getMetricScore(metric as keyof PerformanceMetrics, value);
       const thresholds = performanceThresholds[metric as keyof PerformanceMetrics];
-
       if (score === 'needs-improvement') {
-        newIssues.push({
+        newIssues({
           id: `${metric}-warning`,
           type: 'warning',
           message: `${metric.toUpperCase()} is above recommended threshold`,
@@ -77,7 +67,7 @@ export function PerformanceMonitor() {
           suggestion: `Consider optimizing ${metric} to improve user experience`
         });
       } else if (score === 'poor') {
-        newIssues.push({
+        newIssues({
           id: `${metric}-error`,
           type: 'error',
           message: `${metric.toUpperCase()} is significantly above recommended threshold`,
@@ -88,10 +78,8 @@ export function PerformanceMonitor() {
         });
       }
     });
-
     setIssues(newIssues);
   }, [getMetricScore]);
-
   const measurePerformance = useCallback(async () => {
     if ('PerformanceObserver' in window) {
       try {
@@ -104,7 +92,6 @@ export function PerformanceMonitor() {
           }
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
-
         // Measure LCP
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -114,7 +101,6 @@ export function PerformanceMonitor() {
           }
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
         // Measure FID
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -124,7 +110,6 @@ export function PerformanceMonitor() {
           }
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
-
         // Measure CLS
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
@@ -136,14 +121,12 @@ export function PerformanceMonitor() {
           setMetrics(prev => ({ ...prev, cls: clsValue } as PerformanceMetrics));
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-
         // Measure TTFB
         const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigationEntry) {
           const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
           setMetrics(prev => ({ ...prev, ttfb } as PerformanceMetrics));
         }
-
         // Cleanup observers after 10 seconds
         setTimeout(() => {
           fcpObserver.disconnect();
@@ -151,34 +134,28 @@ export function PerformanceMonitor() {
           fidObserver.disconnect();
           clsObserver.disconnect();
         }, 10000);
-
       } catch (error) {
         console.warn('Performance monitoring not available:', error);
       }
     }
   }, []);
-
   useEffect(() => {
     // Start measuring after a short delay to ensure page is loaded
     const timer = setTimeout(measurePerformance, 1000);
     return () => clearTimeout(timer);
   }, [measurePerformance]);
-
   useEffect(() => {
     if (metrics) {
       analyzePerformance(metrics);
       setIsVisible(true);
     }
   }, [metrics, analyzePerformance]);
-
   const formatMetric = (metric: string, value: number) => {
     if (metric === 'cls') return value.toFixed(3);
     if (metric === 'fid') return `${Math.round(value)}ms`;
     return `${Math.round(value)}ms`;
   };
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -201,7 +178,6 @@ export function PerformanceMonitor() {
               {isExpanded ? '−' : '+'}
             </button>
           </div>
-
           {/* Metrics Summary */}
           <div className="p-4">
             {metrics && (
@@ -210,7 +186,6 @@ export function PerformanceMonitor() {
                   const score = getMetricScore(metric as keyof PerformanceMetrics, value);
                   const color = getMetricColor(score);
                   const icon = getMetricIcon(score);
-
                   return (
                     <div key={metric} className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
@@ -227,7 +202,6 @@ export function PerformanceMonitor() {
                 })}
               </div>
             )}
-
             {/* Issues */}
             {issues.length > 0 && (
               <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
@@ -251,7 +225,6 @@ export function PerformanceMonitor() {
               </div>
             )}
           </div>
-
           {/* Expanded View */}
           <AnimatePresence>
             {isExpanded && (

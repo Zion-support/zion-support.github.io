@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
-
 export function LoginContent() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -19,7 +17,6 @@ export function LoginContent() {
       // Handle login logic here
     }, 1000);
   };
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue p-4">
       <motion.div
@@ -46,7 +43,6 @@ export function LoginContent() {
             Sign in to your Zion Tech Group account
           </p>
         </div>
-
         {/* Login Form */}
         <motion.form
           initial={{ opacity: 0 }}
@@ -74,7 +70,6 @@ export function LoginContent() {
                 />
               </div>
             </div>
-
             {/* Password Field */}
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
@@ -100,7 +95,6 @@ export function LoginContent() {
                 </button>
               </div>
             </div>
-
             {/* Forgot Password Link */}
             <div className="text-right">
               <Link
@@ -110,7 +104,6 @@ export function LoginContent() {
                 Forgot your password?
               </Link>
             </div>
-
             {/* Submit Button */}
             <button
               type="submit"
@@ -131,7 +124,6 @@ export function LoginContent() {
             </button>
           </div>
         </motion.form>
-
         {/* Sign Up Link */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -149,7 +141,6 @@ export function LoginContent() {
             </Link>
           </p>
         </motion.div>
-
         {/* Back to Home */}
         <motion.div
           initial={{ opacity: 0 }}

@@ -6,14 +6,12 @@ export interface LinkValidationResult {
   httpStatus?: number;
   error?: string;
 }
-
 export interface LinkFix {
   originalUrl: string;
   newUrl: string;
   type: 'redirect' | 'update' | 'remove' | 'external';
   reason: string;
 }
-
 export class LinkValidator {
   private static readonly EXTERNAL_DOMAINS = [
     'linkedin.com',
@@ -25,14 +23,12 @@ export class LinkValidator {
     'discord.gg',
     'twitch.tv'
   ];
-
   private static readonly PROTOCOL_LINKS = [
     'tel:',
     'mailto:',
     'sms:',
     'whatsapp:'
   ];
-
   private static readonly BROKEN_LINK_MAPPINGS: Record<string, string> = {
     // Fix common broken internal links
     '/quantum-neural-network-platform/': '/services/quantum-technology',
@@ -101,7 +97,6 @@ export class LinkValidator {
     '/accessibility-auditor/': '/services/accessibility',
     '/accessibility-scanner/': '/services/accessibility'
   };
-
   static validateLink(url: string, parentPage?: string): LinkValidationResult {
     // Check for protocol links
     if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
@@ -112,7 +107,6 @@ export class LinkValidator {
         suggestedFix: 'Keep as-is - these are valid protocol links'
       };
     }
-
     // Check for external links
     if (this.isExternalLink(url)) {
       return {
@@ -122,7 +116,6 @@ export class LinkValidator {
         suggestedFix: 'Add rel="nofollow" and validate periodically'
       };
     }
-
     // Check for broken internal links that have mappings
     if (this.BROKEN_LINK_MAPPINGS[url]) {
       return {
@@ -133,7 +126,6 @@ export class LinkValidator {
         error: 'Broken internal link with available redirect'
       };
     }
-
     // For now, assume internal links are valid
     // In a real implementation, you'd check against actual routes
     return {
@@ -142,7 +134,6 @@ export class LinkValidator {
       parentPage
     };
   }
-
   static getSuggestedFixes(): LinkFix[] {
     return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original, newUrl]) => ({
       originalUrl: original,
@@ -151,7 +142,6 @@ export class LinkValidator {
       reason: 'Broken internal link with available redirect mapping'
     }));
   }
-
   static isExternalLink(url: string): boolean {
     try {
       const urlObj = new URL(url, 'https://ziontechgroup.com');
@@ -161,7 +151,6 @@ export class LinkValidator {
       return false;
     }
   }
-
   static generateRedirectRules(): string {
     const redirects = Object.entries(this.BROKEN_LINK_MAPPINGS)
       .map(([from, to]) => `${from} ${to} 301`)
@@ -170,10 +159,8 @@ export class LinkValidator {
     return `# Redirect rules for broken links
 ${redirects}`;
   }
-
   static generateSitemapExclusions(): string[] {
     return Object.keys(this.BROKEN_LINK_MAPPINGS);
   }
 }
-
 export const linkValidator = new LinkValidator();

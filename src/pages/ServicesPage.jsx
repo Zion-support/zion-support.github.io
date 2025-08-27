@@ -5997,7 +5997,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-zion-blue mb-4">IT & AI Services</h1>
@@ -6005,7 +6004,72 @@ export default function ServicesPage() {
             Find expert technology service providers for your business needs, from AI development to infrastructure management.
           </p>
         </div>
+<<<<<<< HEAD
 
+=======
+        {/* Services Overview Section */}
+        <div className="bg-gradient-to-r from-zion-blue to-zion-purple rounded-xl p-8 mb-8 text-white">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl font-bold mb-4">Why Choose Zion Tech Group?</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              We deliver cutting-edge AI and technology solutions with proven ROI, expert support, and innovative approaches to business transformation.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-zion-cyan mb-2">500+</div>
+              <div className="text-lg">Successful Projects</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-zion-cyan mb-2">99.9%</div>
+              <div className="text-lg">Uptime Guarantee</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-zion-cyan mb-2">24/7</div>
+              <div className="text-lg">Expert Support</div>
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="inline-flex items-center gap-4 bg-white/10 rounded-lg p-4">
+              <div>
+                <div className="font-semibold">Contact Us Today</div>
+                <div className="text-sm opacity-80">Get started with your digital transformation</div>
+              </div>
+              <div className="text-right">
+                <div className="font-semibold">+1 302 464 0950</div>
+                <div className="text-sm opacity-80">kleber@ziontechgroup.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Pricing Tiers */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-zion-blue mb-6 text-center">Service Pricing Tiers</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="bg-white rounded-lg p-4 text-center border border-zion-blue-light">
+              <h3 className="font-semibold text-zion-blue mb-2">Starter</h3>
+              <div className="text-2xl font-bold text-zion-purple mb-2">$19-99</div>
+              <div className="text-sm text-zion-slate-light">Basic AI tools & automation</div>
+            </div>
+            <div className="bg-white rounded-lg p-4 text-center border border-zion-blue-light">
+              <h3 className="font-semibold text-zion-blue mb-2">Professional</h3>
+              <div className="text-2xl font-bold text-zion-purple mb-2">$199-499</div>
+              <div className="text-sm text-zion-slate-light">Advanced AI platforms</div>
+            </div>
+            <div className="bg-white rounded-lg p-4 text-center border border-zion-blue-light">
+              <h3 className="font-semibold text-zion-blue mb-2">Enterprise</h3>
+              <div className="text-2xl font-bold text-zion-purple mb-2">$599-999</div>
+              <div className="text-sm text-zion-slate-light">Quantum & specialized solutions</div>
+            </div>
+            <div className="bg-white rounded-lg p-4 text-center border border-zion-blue-light">
+              <h3 className="font-semibold text-zion-blue mb-2">Custom</h3>
+              <div className="text-2xl font-bold text-zion-purple mb-2">$1000+</div>
+              <div className="text-sm text-zion-slate-light">Tailored enterprise solutions</div>
+            </div>
+          </div>
+        </div>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {listings.map((service) => (<div key={service.id} className="bg-white rounded-lg shadow-lg p-6 border border-zion-blue-light">
               <div className="mb-4">
@@ -6023,13 +6087,23 @@ export default function ServicesPage() {
                   <span className="text-zion-slate-light text-sm">({service.reviewCount})</span>
                 </div>
               </div>
-
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.slice(0, 3).map((tag, index) => (<span key={index} className="px-2 py-1 bg-zion-blue/10 text-zion-blue text-xs rounded-full">
                     {tag}
                   </span>))}
               </div>
+<<<<<<< HEAD
 
+=======
+              <div className="space-y-2 mb-4">
+                <div className="text-sm text-zion-slate-light">
+                  <span className="font-medium">Category:</span> {service.category}
+                </div>
+                <div className="text-sm text-zion-slate-light">
+                  <span className="font-medium">AI Score:</span> {service.aiScore}/100
+                </div>
+              </div>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
               <Link to="/contact">
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   Get Quote
@@ -6037,6 +6111,133 @@ export default function ServicesPage() {
               </Link>
             </div>))}
         </div>
+<<<<<<< HEAD
+=======
+        {/* Service Categories Overview */}
+        <div className="mt-12 bg-gray-50 rounded-xl p-8">
+          <h2 className="text-2xl font-bold text-zion-blue mb-6 text-center">Service Categories Overview</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg border border-zion-blue-light">
+              <h3 className="font-semibold text-zion-blue mb-3">🤖 AI & Machine Learning</h3>
+              <p className="text-sm text-zion-slate-light mb-3">Advanced AI solutions for content generation, code assistance, data analytics, and business intelligence.</p>
+              <div className="text-xs text-zion-purple font-medium">Starting at $19/month</div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg border border-zion-blue-light">
+              <h3 className="font-semibold text-zion-blue mb-3">🔒 Cybersecurity</h3>
+              <p className="text-sm text-zion-slate-light mb-3">Comprehensive security solutions including threat detection, zero-trust architecture, and penetration testing.</p>
+              <div className="text-xs text-zion-purple font-medium">Starting at $99/month</div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg border border-zion-blue-light">
+              <h3 className="font-semibold text-zion-blue mb-3">☁️ Cloud & Infrastructure</h3>
+              <p className="text-sm text-zion-slate-light mb-3">Multi-cloud management, DevOps automation, and edge computing solutions for modern infrastructure.</p>
+              <div className="text-xs text-zion-purple font-medium">Starting at $49/month</div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg border border-zion-blue-light">
+              <h3 className="font-semibold text-zion-blue mb-3">📊 Business Intelligence</h3>
+              <p className="text-sm text-zion-slate-light mb-3">AI-powered CRM, process automation, and market research tools for business growth.</p>
+              <div className="text-xs text-zion-purple font-medium">Starting at $29/month</div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg border border-zion-blue-light">
+              <h3 className="font-semibold text-zion-blue mb-3">🌐 Communication & Collaboration</h3>
+              <p className="text-sm text-zion-slate-light mb-3">AI meeting assistants, virtual event platforms, and translation services for global teams.</p>
+              <div className="text-xs text-zion-purple font-medium">Starting at $19/month</div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg border border-zion-blue-light">
+              <h3 className="font-semibold text-zion-blue mb-3">⚡ Emerging Technologies</h3>
+              <p className="text-sm text-zion-slate-light mb-3">Quantum computing, blockchain AI, metaverse platforms, and cutting-edge innovations.</p>
+              <div className="text-xs text-zion-purple font-medium">Starting at $199/month</div>
+            </div>
+          </div>
+        </div>
+        {/* Contact & Support Section */}
+        <div className="mt-12 bg-gradient-to-r from-zion-purple to-zion-blue rounded-xl p-8 text-white">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Get in touch with our experts to discuss your specific needs and discover how our AI-powered solutions can drive your success.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">📱</div>
+                  <div>
+                    <div className="font-medium">Phone</div>
+                    <div className="text-zion-cyan">+1 302 464 0950</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">✉️</div>
+                  <div>
+                    <div className="font-medium">Email</div>
+                    <div className="text-zion-cyan">kleber@ziontechgroup.com</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">📍</div>
+                  <div>
+                    <div className="font-medium">Address</div>
+                    <div className="text-zion-cyan">364 E Main St STE 1008<br />Middletown DE 19709</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">🌐</div>
+                  <div>
+                    <div className="font-medium">Website</div>
+                    <div className="text-zion-cyan">https://ziontechgroup.com</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Service Highlights</h3>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                  <span>500+ Successful AI Implementations</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                  <span>24/7 Expert Technical Support</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                  <span>99.9% Uptime Guarantee</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                  <span>Custom Enterprise Solutions</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                  <span>Proven ROI & Business Impact</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                  <span>Industry-Leading AI Technology</span>
+                </div>
+              </div>
+              
+              <div className="mt-6">
+                <Link to="/contact">
+                  <Button className="w-full bg-white text-zion-purple hover:bg-gray-100 font-semibold">
+                    Get Free Consultation
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
       </div>
     </div>);
 }

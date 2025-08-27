@@ -169,7 +169,6 @@ export function SecurityComplianceSection() {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -180,7 +179,6 @@ export function SecurityComplianceSection() {
             Enterprise-grade security standards and compliance certifications that ensure your data, 
             applications, and infrastructure are protected by industry-leading security measures.
           </p>
-
           {/* Security stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
             {securityStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -192,7 +190,6 @@ export function SecurityComplianceSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Security Standards */}
         <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -219,11 +216,9 @@ export function SecurityComplianceSection() {
                       <div className="text-zion-slate-light text-xs">Valid until {standard.validUntil}</div>
                     </div>
                   </div>
-
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                     {standard.description}
                   </p>
-
                   {/* Quick info */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
@@ -235,7 +230,6 @@ export function SecurityComplianceSection() {
                       <div className="text-zion-slate-light text-xs">Features</div>
                     </div>
                   </div>
-
                   {/* Features preview */}
                   <div className="mb-4">
                     <div className="text-zion-cyan font-semibold text-sm mb-2">Key Features:</div>
@@ -248,7 +242,6 @@ export function SecurityComplianceSection() {
                         </span>)}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
@@ -256,7 +249,6 @@ export function SecurityComplianceSection() {
                     </span>
                     <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
                   </div>
-
                   {/* Expanded details */}
                   <AnimatePresence>
                     {selectedStandard === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
@@ -269,7 +261,6 @@ export function SecurityComplianceSection() {
                               </span>))}
                           </div>
                         </div>
-
                         {/* Benefits */}
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">Benefits:</h5>
@@ -277,7 +268,6 @@ export function SecurityComplianceSection() {
                             {standard.benefits.join(", ")}
                           </div>
                         </div>
-
                         {/* Status Badge */}
                         <div className="text-center p-2 rounded-lg bg-zion-cyan/20 border border-zion-cyan/30">
                           <div className="text-zion-cyan font-bold text-sm">{standard.status}</div>
@@ -289,7 +279,6 @@ export function SecurityComplianceSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Compliance Frameworks */}
         <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -316,11 +305,9 @@ export function SecurityComplianceSection() {
                       <div className="text-zion-slate-light text-xs">{framework.maturity}</div>
                     </div>
                   </div>
-
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                     {framework.description}
                   </p>
-
                   {/* Quick info */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
@@ -332,7 +319,6 @@ export function SecurityComplianceSection() {
                       <div className="text-zion-slate-light text-xs">Maturity</div>
                     </div>
                   </div>
-
                   {/* Controls preview */}
                   <div className="mb-4">
                     <div className="text-zion-cyan font-semibold text-sm mb-2">Key Controls:</div>
@@ -345,7 +331,6 @@ export function SecurityComplianceSection() {
                         </span>)}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
@@ -353,7 +338,6 @@ export function SecurityComplianceSection() {
                     </span>
                     <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
                   </div>
-
                   {/* Expanded details */}
                   <AnimatePresence>
                     {selectedFramework === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
@@ -366,7 +350,6 @@ export function SecurityComplianceSection() {
                               </span>))}
                           </div>
                         </div>
-
                         {/* Benefits */}
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">Benefits:</h5>
@@ -374,7 +357,6 @@ export function SecurityComplianceSection() {
                             {framework.benefits.join(", ")}
                           </div>
                         </div>
-
                         {/* Implementation Badge */}
                         <div className="text-center p-2 rounded-lg bg-zion-cyan/20 border border-zion-cyan/30">
                           <div className="text-zion-cyan font-bold text-sm">{framework.implementation}</div>
@@ -386,7 +368,6 @@ export function SecurityComplianceSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Security Features */}
         <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -399,7 +380,6 @@ export function SecurityComplianceSection() {
                   <div className="text-zion-cyan mb-4 flex justify-center">
                     {feature.icon}
                   </div>
-
                   {/* Title and Description */}
                   <h4 className="text-xl font-bold text-white mb-3 text-center group-hover:text-zion-cyan transition-colors">
                     {feature.title}
@@ -407,7 +387,6 @@ export function SecurityComplianceSection() {
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed text-center">
                     {feature.description}
                   </p>
-
                   {/* Features preview */}
                   <div className="mb-4">
                     <div className="text-zion-cyan font-semibold text-sm mb-2">Features:</div>
@@ -420,14 +399,12 @@ export function SecurityComplianceSection() {
                         </span>)}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-center">
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       Learn More
                     </span>
                   </div>
-
                   {/* Expanded details */}
                   <AnimatePresence>
                     {selectedFeature === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
@@ -440,7 +417,6 @@ export function SecurityComplianceSection() {
                               </span>))}
                           </div>
                         </div>
-
                         {/* Benefits */}
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">Benefits:</h5>
@@ -454,7 +430,6 @@ export function SecurityComplianceSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Call to action */}
         <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">

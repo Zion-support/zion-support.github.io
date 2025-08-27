@@ -139,7 +139,6 @@ const BlockchainWeb3 = () => {
           </div>
         </div>
       </section>
-
       {/* Blockchain Services Grid */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -170,7 +169,6 @@ const BlockchainWeb3 = () => {
           </div>
         </div>
       </section>
-
       {/* Web3 Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -195,7 +193,6 @@ const BlockchainWeb3 = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -220,7 +217,6 @@ const BlockchainWeb3 = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -258,7 +254,6 @@ const BlockchainWeb3 = () => {
           </div>
         </div>
       </section>
-
       {/* Development Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -302,7 +297,6 @@ const BlockchainWeb3 = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">

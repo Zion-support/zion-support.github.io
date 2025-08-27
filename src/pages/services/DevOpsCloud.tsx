@@ -1,232 +1,8 @@
 import React from 'react';
-import { SEO } from "../components/SEOHead";
-import Link from 'next/link';
+import SEOHead from "../../components/SEOHead.jsx";
+import { Link } from 'react-router-dom';
 import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from 'lucide-react';
 export default function DevOpsCloudServices() {
-<<<<<<< HEAD
-  const devopsServices = [
-    {
-      icon: Cloud,
-      title: 'Cloud Migration & Strategy',
-      description: 'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.',
-      price: 'From $8,500/project',
-      marketPrice: '$7,000 - $25,000/project',
-      features: [
-        'Cloud readiness assessment',
-        'Multi-cloud strategy planning',
-        'Migration roadmap development',
-        'Cost optimization analysis',
-        'Security and compliance review',
-        'Performance benchmarking'
-      ],
-      benefits: [
-        'Reduced infrastructure costs by 30-50%',
-        'Improved scalability and flexibility',
-        'Enhanced disaster recovery',
-        'Better resource utilization'
-      ]
-    },
-    {
-      icon: Zap,
-      title: 'CI/CD Pipeline Development',
-      description: 'Automated continuous integration and deployment pipelines for faster, reliable software delivery.',
-      price: 'From $6,500/project',
-      marketPrice: '$5,500 - $18,000/project',
-      features: [
-        'Automated build and test pipelines',
-        'Deployment automation',
-        'Environment management',
-        'Rollback and recovery',
-        'Pipeline monitoring and alerts',
-        'Security scanning integration'
-      ],
-      benefits: [
-        'Faster time to market',
-        'Reduced deployment errors',
-        'Improved code quality',
-        'Enhanced team productivity'
-      ]
-    },
-    {
-      icon: Shield,
-      title: 'Infrastructure as Code (IaC)',
-      description: 'Automated infrastructure provisioning and management using modern IaC tools and practices.',
-      price: 'From $5,500/project',
-      marketPrice: '$4,500 - $15,000/project',
-      features: [
-        'Terraform and CloudFormation',
-        'Ansible and Puppet automation',
-        'Infrastructure versioning',
-        'Environment consistency',
-        'Automated scaling policies',
-        'Cost monitoring and alerts'
-      ],
-      benefits: [
-        'Consistent infrastructure deployment',
-        'Reduced manual configuration errors',
-        'Faster environment provisioning',
-        'Better cost control and visibility'
-      ]
-    },
-    {
-      icon: Database,
-      title: 'Container Orchestration & Kubernetes',
-      description: 'Enterprise-grade container management and orchestration with Kubernetes and Docker.',
-      price: 'From $7,500/project',
-      marketPrice: '$6,500 - $20,000/project',
-      features: [
-        'Kubernetes cluster design',
-        'Container security and scanning',
-        'Auto-scaling and load balancing',
-        'Service mesh implementation',
-        'Monitoring and logging',
-        'Backup and disaster recovery'
-      ],
-      benefits: [
-        'Improved application scalability',
-        'Better resource utilization',
-        'Enhanced deployment flexibility',
-        'Reduced operational overhead'
-      ]
-    },
-    {
-      icon: Users,
-      title: 'DevOps Consulting & Training',
-      description: 'Strategic DevOps consulting and comprehensive team training for organizational transformation.',
-      price: 'From $4,500/month',
-      marketPrice: '$3,500 - $12,000/month',
-      features: [
-        'DevOps maturity assessment',
-        'Process optimization',
-        'Team structure recommendations',
-        'Tool selection and implementation',
-        'Best practices training',
-        'Change management support'
-      ],
-      benefits: [
-        'Improved development velocity',
-        'Better team collaboration',
-        'Reduced operational costs',
-        'Enhanced software quality'
-      ]
-    },
-    {
-      icon: Server,
-      title: 'Monitoring & Observability',
-      description: 'Comprehensive monitoring, logging, and observability solutions for modern applications.',
-      price: 'From $4,800/month',
-      marketPrice: '$4,000 - $12,000/month',
-      features: [
-        'Application performance monitoring',
-        'Infrastructure monitoring',
-        'Centralized logging and analysis',
-        'Real-time alerting',
-        'Custom dashboards',
-        'Capacity planning insights'
-      ],
-      benefits: [
-        'Proactive issue detection',
-        'Improved system reliability',
-        'Better user experience',
-        'Data-driven optimization'
-      ]
-    }
-  ];
-
-  const cloudProviders = [
-    {
-      name: 'Amazon Web Services (AWS)',
-      services: 'EC2, S3, Lambda, RDS, EKS',
-      strengths: 'Market leader, extensive services',
-      pricing: 'Competitive, pay-as-you-use'
-    },
-    {
-      name: 'Microsoft Azure',
-      services: 'Virtual Machines, Blob Storage, Functions, AKS',
-      strengths: 'Enterprise integration, hybrid cloud',
-      pricing: 'Enterprise discounts, reserved instances'
-    },
-    {
-      name: 'Google Cloud Platform (GCP)',
-      services: 'Compute Engine, Cloud Storage, Cloud Functions, GKE',
-      strengths: 'AI/ML capabilities, global network',
-      pricing: 'Sustained use discounts, committed use'
-    },
-    {
-      name: 'Multi-Cloud Strategy',
-      services: 'Cross-platform orchestration, hybrid solutions',
-      strengths: 'Vendor independence, best-of-breed',
-      pricing: 'Optimized for each workload'
-    }
-  ];
-
-  const industries = [
-    'Financial Services & Banking',
-    'Healthcare & Life Sciences',
-    'E-commerce & Retail',
-    'Media & Entertainment',
-    'Manufacturing & Logistics',
-    'Education & Research',
-    'Government & Public Sector',
-    'Startups & Scale-ups'
-  ];
-
-  const technologies = [
-    'AWS, Azure, GCP',
-    'Kubernetes & Docker',
-    'Terraform & Ansible',
-    'Jenkins & GitLab CI',
-    'Prometheus & Grafana',
-    'ELK Stack & Splunk',
-    'Istio & Linkerd',
-    'Helm & ArgoCD'
-  ];
-
-  const benefits = [
-    'Faster software delivery and deployment',
-    'Improved system reliability and uptime',
-    'Reduced infrastructure costs',
-    'Enhanced security and compliance',
-    'Better scalability and performance',
-    'Improved team collaboration and productivity'
-  ];
-
-  const useCases = [
-    {
-      title: 'Microservices Migration',
-      description: 'Legacy monolithic application migration to microservices architecture with container orchestration.',
-      roi: '40-60% cost reduction',
-      implementation: '20-32 weeks'
-    },
-    {
-      title: 'Multi-Cloud Strategy',
-      description: 'Implementation of multi-cloud architecture for improved resilience and cost optimization.',
-      roi: '25-45% cost savings',
-      implementation: '16-24 weeks'
-    },
-    {
-      title: 'DevOps Transformation',
-      description: 'Complete organizational DevOps transformation with process optimization and tool implementation.',
-      roi: '30-50% efficiency improvement',
-      implementation: '24-36 weeks'
-    },
-    {
-      title: 'Cloud-Native Development',
-      description: 'Modern cloud-native application development with CI/CD and infrastructure automation.',
-      roi: '35-55% faster delivery',
-      implementation: '12-20 weeks'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="DevOps & Cloud Services - Zion Tech Group" 
-        description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery."
-        keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation"
-        canonical="https://ziontechgroup.com/services/devops-cloud"
-      />
-=======
     const devopsServices = [
         {
             icon: Cloud,
@@ -437,8 +213,6 @@ export default function DevOpsCloudServices() {
     ];
     return (<div className="min-h-screen bg-background">
       <SEO title="DevOps & Cloud Services - Zion Tech Group" description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery." keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation" canonical="https://ziontechgroup.com/services/devops-cloud"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -452,7 +226,6 @@ export default function DevOpsCloudServices() {
           </p>
         </div>
       </section>
-
       {/* Services Overview */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -463,7 +236,6 @@ export default function DevOpsCloudServices() {
               processes and infrastructure for better performance and efficiency.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {devopsServices.map((service, index) => (<div key={service.title} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
                 <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
@@ -490,7 +262,6 @@ export default function DevOpsCloudServices() {
           </div>
         </div>
       </section>
-
       {/* Cloud Providers Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -500,7 +271,6 @@ export default function DevOpsCloudServices() {
               Expertise across major cloud platforms to help you choose the right solution for your business needs.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {cloudProviders.map((provider, index) => (<div key={provider.name} className="bg-white rounded-xl p-6 border border-gray-200">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{provider.name}</h3>
@@ -522,7 +292,6 @@ export default function DevOpsCloudServices() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -532,7 +301,6 @@ export default function DevOpsCloudServices() {
               Proven DevOps solutions that deliver measurable business value across diverse industries.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {useCases.map((useCase, index) => (<div key={useCase.title} className="bg-gray-50 rounded-xl p-8 border border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{useCase.title}</h3>
@@ -551,7 +319,6 @@ export default function DevOpsCloudServices() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -572,7 +339,6 @@ export default function DevOpsCloudServices() {
                   </div>))}
               </div>
             </div>
-
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Free DevOps Assessment</h3>
               <p className="text-gray-600 mb-6">
@@ -596,7 +362,6 @@ export default function DevOpsCloudServices() {
           </div>
         </div>
       </section>
-
       {/* Industries Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -607,7 +372,6 @@ export default function DevOpsCloudServices() {
               across diverse industry sectors.
             </p>
           </div>
-
           <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {industries.map((industry, index) => (<div key={industry} className="bg-gray-50 rounded-xl p-6 text-center hover:bg-orange-50 transition-colors border border-gray-200">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -618,7 +382,6 @@ export default function DevOpsCloudServices() {
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -629,7 +392,6 @@ export default function DevOpsCloudServices() {
               and innovative solutions for our clients.
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {technologies.map((tech, index) => (<div key={tech} className="bg-white rounded-lg p-4 text-center hover:bg-orange-50 transition-colors border border-gray-200">
                 <span className="text-gray-700 font-medium text-sm">{tech}</span>
@@ -637,7 +399,6 @@ export default function DevOpsCloudServices() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -647,7 +408,6 @@ export default function DevOpsCloudServices() {
               A proven methodology for delivering successful DevOps transformations that drive business value.
             </p>
           </div>
-
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-6 gap-8">
               <div className="text-center">
@@ -659,7 +419,6 @@ export default function DevOpsCloudServices() {
                   Evaluate current DevOps maturity
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">2</span>
@@ -669,7 +428,6 @@ export default function DevOpsCloudServices() {
                   Develop DevOps roadmap and goals
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">3</span>
@@ -679,7 +437,6 @@ export default function DevOpsCloudServices() {
                   Build and deploy DevOps tools
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">4</span>
@@ -689,7 +446,6 @@ export default function DevOpsCloudServices() {
                   Enable teams with new processes
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">5</span>
@@ -699,7 +455,6 @@ export default function DevOpsCloudServices() {
                   Continuous improvement and scaling
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">6</span>
@@ -713,7 +468,6 @@ export default function DevOpsCloudServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
         <div className="container mx-auto px-4 text-center">

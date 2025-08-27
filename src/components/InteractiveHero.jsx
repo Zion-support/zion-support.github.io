@@ -87,7 +87,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             ease: "linear"
         }}/>
       </div>
-
       {/* Interactive Grid */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0" style={{
@@ -98,7 +97,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             backgroundSize: '50px 50px'
         }}/>
       </div>
-
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="text-center">
@@ -109,7 +107,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             </motion.span>
             {subtitle}
           </motion.div>
-
           {/* Title */}
           <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             {title.split(' ').map((word, index) => (<motion.span key={index} className="inline-block mr-4" whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
@@ -118,12 +115,10 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
                   </span>) : (word)}
               </motion.span>))}
           </motion.h1>
-
           {/* Description */}
           <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             {description}
           </motion.p>
-
           {/* Action Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -133,7 +128,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
                 <motion.div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg blur opacity-25 group-hover:opacity-75 transition-opacity duration-300" initial={false}/>
               </Link>
             </motion.div>
-
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link to={secondaryAction.href} className="group inline-flex items-center px-8 py-4 border-2 border-white/20 text-white rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
                 {secondaryAction.text}
@@ -143,7 +137,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
               </Link>
             </motion.div>
           </motion.div>
-
           {/* Interactive Stats */}
           <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (<motion.div key={index} className="text-center group cursor-pointer" whileHover={{ scale: 1.1 }} onClick={() => setActiveStat(index)}>
@@ -157,7 +150,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
           </motion.div>
         </motion.div>
       </div>
-
       {/* Floating Elements */}
       <motion.div className="absolute top-1/2 left-10 w-20 h-20 bg-blue-500/10 rounded-full border border-blue-400/20 backdrop-blur-sm" animate={{
             y: [0, -20, 0],
@@ -167,7 +159,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             repeat: Infinity,
             ease: "easeInOut"
         }}/>
-
       <motion.div className="absolute top-1/3 right-16 w-16 h-16 bg-cyan-500/10 rounded-full border border-cyan-400/20 backdrop-blur-sm" animate={{
             y: [0, 30, 0],
             x: [0, 20, 0]
@@ -176,7 +167,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             repeat: Infinity,
             ease: "easeInOut"
         }}/>
-
       {/* Mouse Follower Effect */}
       <motion.div className="fixed w-4 h-4 bg-blue-400/50 rounded-full pointer-events-none z-50 mix-blend-difference" animate={{
             x: mousePosition.x - 8,

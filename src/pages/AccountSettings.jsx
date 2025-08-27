@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { SEO } from "../components/SEOHead"';
+import SEOHead from "../components/SEOHead.jsx";
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';

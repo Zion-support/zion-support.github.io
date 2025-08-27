@@ -40,7 +40,6 @@ const benefits = [
 export default function AIComputerVisionPlatform() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Computer Vision Platform - Zion Tech Group" description="AI-powered computer vision platform solution that transforms your operations with intelligent automation and real-time insights." keywords="AI computer vision platform, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicomputervisionplatform/"/>
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple/20"></div>
@@ -75,7 +74,6 @@ export default function AIComputerVisionPlatform() {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,7 +85,6 @@ export default function AIComputerVisionPlatform() {
               Our AI system provides comprehensive computer vision platform capabilities that adapt and learn from your operations.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => {
             const IconComponent = feature.icon;
@@ -102,7 +99,6 @@ export default function AIComputerVisionPlatform() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,7 +110,6 @@ export default function AIComputerVisionPlatform() {
               Experience unprecedented efficiency and growth with our cutting-edge AI technology.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (<motion.div key={benefit} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"/>
@@ -123,7 +118,6 @@ export default function AIComputerVisionPlatform() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -17,7 +17,6 @@ import {
   Users,
   Clock
 } from 'lucide-react';
-
 interface Service {
   id: string;
   title: string;
@@ -33,11 +32,9 @@ interface Service {
   popular?: boolean;
   new?: boolean;
 }
-
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
-
   const services: Service[] = [
     {
       id: 'ai-business-intelligence',
@@ -121,7 +118,6 @@ export default function EnhancedServicesShowcase() {
       gradient: 'from-zion-cyan to-zion-blue'
     }
   ];
-
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'AI Solutions', name: 'AI Solutions', count: services.filter(s => s.category === 'AI Solutions').length },
@@ -130,11 +126,9 @@ export default function EnhancedServicesShowcase() {
     { id: 'Emerging Tech', name: 'Emerging Tech', count: services.filter(s => s.category === 'Emerging Tech').length },
     { id: 'Sustainability', name: 'Sustainability', count: services.filter(s => s.category === 'Sustainability').length }
   ];
-
   const filteredServices = selectedCategory === 'all' 
     ? services 
     : services.filter(service => service.category === selectedCategory);
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
       {/* Background decoration */}
@@ -142,7 +136,6 @@ export default function EnhancedServicesShowcase() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
       </div>
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <motion.div
@@ -159,7 +152,6 @@ export default function EnhancedServicesShowcase() {
             Discover our comprehensive suite of cutting-edge technology solutions designed to drive your business forward.
           </p>
         </motion.div>
-
         {/* Category filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -185,7 +177,6 @@ export default function EnhancedServicesShowcase() {
             </button>
           ))}
         </motion.div>
-
         {/* Services grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence mode="wait">
@@ -226,12 +217,10 @@ export default function EnhancedServicesShowcase() {
                       <span className="text-xs text-gray-500">({service.reviewCount})</span>
                     </div>
                   </div>
-
                   {/* Icon */}
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} bg-opacity-20 flex items-center justify-center mb-6`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-
                   {/* Content */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
                     {service.title}
@@ -239,7 +228,6 @@ export default function EnhancedServicesShowcase() {
                   <p className="text-gray-300 text-sm leading-relaxed mb-6">
                     {service.description}
                   </p>
-
                   {/* Features */}
                   <div className="space-y-2 mb-6">
                     {service.features.slice(0, 3).map((feature, idx) => (
@@ -249,7 +237,6 @@ export default function EnhancedServicesShowcase() {
                       </div>
                     ))}
                   </div>
-
                   {/* Price and CTA */}
                   <div className="flex items-center justify-between mt-auto">
                     <div className="text-2xl font-bold text-white">{service.price}</div>
@@ -261,7 +248,6 @@ export default function EnhancedServicesShowcase() {
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
                   </div>
-
                   {/* Hover effect overlay */}
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -273,7 +259,6 @@ export default function EnhancedServicesShowcase() {
             ))}
           </AnimatePresence>
         </div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

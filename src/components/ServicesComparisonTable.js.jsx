@@ -23,7 +23,6 @@ export function ServicesComparisonTable() {
             Compare our comprehensive service offerings to find the perfect solution for your business needs
           </p>
         </div>
-
         {/* Service Categories Overview */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {serviceCategories.map((category) => {
@@ -48,7 +47,6 @@ export function ServicesComparisonTable() {
               </Card>);
         })}
         </div>
-
         {/* Detailed Comparison Table */}
         <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
           <div className="overflow-x-auto">
@@ -114,7 +112,6 @@ export function ServicesComparisonTable() {
             </Table>
           </div>
         </div>
-
         {/* Contact Information */}
         <div className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-800">
           <div className="text-center mb-8">
@@ -151,7 +148,6 @@ export function ServicesComparisonTable() {
             </Button>
           </div>
         </div>
-
         {/* Service Highlights */}
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-slate-900 dark:text-white text-center mb-12">

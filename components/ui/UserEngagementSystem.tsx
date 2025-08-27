@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UserEngagementSystem: React.FC = () => {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
@@ -21,5 +20,4 @@ const UserEngagementSystem: React.FC = () => {
     </div>
   );
 };
-
 export default UserEngagementSystem;

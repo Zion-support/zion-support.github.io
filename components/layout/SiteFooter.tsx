@@ -1,5 +1,4 @@
 import Link from 'next/link'
-
 export default function SiteFooter() {
 	return (
 		<footer className="border-t border-gray-200 mt-16">

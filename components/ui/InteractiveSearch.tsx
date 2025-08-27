@@ -1,10 +1,8 @@
-
 interface InteractiveSearchProps {
   placeholder?: string;
   onSearch?: (query: string) => void;
   className?: string;
 }
-
 export default function InteractiveSearch({ 
   placeholder = "Search...", 
   onSearch, 
@@ -16,7 +14,6 @@ export default function InteractiveSearch({
     const query = formData.get('search') as string;
     onSearch?.(query);
   };
-
   return (
     <form onSubmit={handleSubmit} className={className}>
       <div className="relative">

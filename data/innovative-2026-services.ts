@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Innovative2026Service {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Innovative2026Service {
   rating: number;
   reviews: number;
 }
-
 export const innovative2026Services: Innovative2026Service[] = [
   // AI-Powered Business Intelligence
   {
@@ -94,7 +92,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 89
   },
-
   // Quantum-Secure Communication Platform
   {
     id: 'quantum-secure-comm-hub',
@@ -147,7 +144,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 52
   },
-
   // AI-Powered Legal Assistant
   {
     id: 'ai-legal-assistant-elite',
@@ -200,7 +196,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.8,
     reviews: 156
   },
-
   // Quantum Financial Trading Platform
   {
     id: 'quantum-financial-trading-pro',
@@ -253,7 +248,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 18
   },
-
   // AI-Powered Healthcare Diagnostics
   {
     id: 'ai-healthcare-diagnostics-pro',
@@ -306,7 +300,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 89
   },
-
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-pro',
@@ -359,7 +352,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 134
   },
-
   // AI-Powered Marketing Automation
   {
     id: 'ai-marketing-automation-elite',
@@ -412,7 +404,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.8,
     reviews: 267
   },
-
   // Quantum Blockchain Platform
   {
     id: 'quantum-blockchain-platform-pro',
@@ -465,7 +456,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.9,
     reviews: 62
   },
-
   // AI-Powered Education Platform
   {
     id: 'ai-education-platform-elite',
@@ -518,7 +508,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.8,
     reviews: 345
   },
-
   // Quantum IoT Platform
   {
     id: 'quantum-iot-platform-pro',

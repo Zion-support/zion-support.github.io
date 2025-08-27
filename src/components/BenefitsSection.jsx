@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, Zap, Shield, Users, Clock, TrendingUp, Star, Award, Globe, Lock } from 'lucide-react';
-
 const benefits = [
   {
     icon: <Zap className="w-8 h-8"/>,
@@ -58,14 +57,12 @@ const benefits = [
     features: ["Comprehensive Testing", "Quality Assurance", "Satisfaction Guarantee"]
   }
 ];
-
 const additionalStats = [
   { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Customer Rating" },
   { icon: <Award className="w-6 h-6"/>, value: "50+", label: "Industry Awards" },
   { icon: <Globe className="w-6 h-6"/>, value: "100+", label: "Countries Served" },
   { icon: <Lock className="w-6 h-6"/>, value: "1000+", label: "Projects Completed" }
 ];
-
 export function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   
@@ -99,7 +96,6 @@ export function BenefitsSection() {
             Experience the perfect blend of cutting-edge technology, expert craftsmanship, and unwavering commitment to your success.
           </p>
         </motion.div>
-
             >
               <div className="text-zion-cyan mb-2 flex justify-center">
                 {stat.icon}
@@ -127,12 +123,10 @@ export function BenefitsSection() {
                     {benefit.icon}
                   </div>
                 </div>
-
                 {/* Stats badge */}
                 <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${benefit.bgColor} border border-zion-cyan/30 mb-4`}>
                   <span className="text-zion-cyan font-bold text-sm">{benefit.stats}</span>
                 </div>
-
                 {/* Title and description */}
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
                   {benefit.title}
@@ -140,7 +134,6 @@ export function BenefitsSection() {
                 <p className="text-zion-slate-light leading-relaxed mb-6">
                   {benefit.description}
                 </p>
-
                 {/* Features list */}
                 <AnimatePresence>
                   {hoveredIndex === index && (
@@ -166,7 +159,6 @@ export function BenefitsSection() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-
                 {/* Hover indicator */}
                 <div className="mt-4 text-zion-cyan/60 text-xs">
                   {hoveredIndex === index ? "Hover to see details" : "Hover for details"}
@@ -175,7 +167,6 @@ export function BenefitsSection() {
             </motion.div>
           ))}
         </div>
-
         {/* Call to action */}
         <motion.div 
           className="text-center mt-16" 

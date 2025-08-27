@@ -1,80 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Globe, 
-  Brain, Rocket, Shield, Cloud, 
-  Zap, Atom, Building2, Star,
-  ArrowRight, ExternalLink
-} from 'lucide-react';
-import Link from 'next/link';
-
-const EnhancedFooter: React.FC = () => {
-	return (
-		<footer className="bg-gray-900 text-white py-8">
-			<div className="container mx-auto px-4">
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-					<div>
-						<h3 className="text-lg font-semibold mb-4">About Us</h3>
-						<p className="text-gray-300">
-							Leading technology solutions for modern businesses.
-						</p>
-					</div>
-					<div>
-						<h3 className="text-lg font-semibold mb-4">Services</h3>
-						<ul className="text-gray-300 space-y-2">
-							<li><Link href="/services" className="hover:text-white">All Services</Link></li>
-							<li><Link href="/services#ai-services" className="hover:text-white">AI Services</Link></li>
-							<li><Link href="/services#it-services" className="hover:text-white">IT Services</Link></li>
-							<li><Link href="/services#micro-saas" className="hover:text-white">Micro SaaS</Link></li>
-						</ul>
-					</div>
-					<div>
-						<h3 className="text-lg font-semibold mb-4">Company</h3>
-						<ul className="text-gray-300 space-y-2">
-							<li><Link href="/about" className="hover:text-white">About</Link></li>
-							<li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-							<li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-							<li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
-							<li><Link href="/terms" className="hover:text-white">Terms of Service</Link></li>
-						</ul>
-					</div>
-					<div>
-						<h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-						<div className="flex space-x-4">
-							<a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">Twitter</a>
-							<a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">LinkedIn</a>
-							<a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">GitHub</a>
-						</div>
-					</div>
-				</div>
-				<div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-					<p>&copy; 2024 Zion Tech Solutions. All rights reserved.</p>
-				</div>
-			</div>
-		</footer>
-	);
-};
-
-export default EnhancedFooter;
-=======
 import { 
   Brain, Atom, Rocket, Target, Zap, 
   Twitter, Linkedin, Github, Instagram, Youtube,
   Mail, Phone, MapPin, Globe, ArrowRight
 } from 'lucide-react';
-
 export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   const serviceCategories = [
     {
       title: 'AI & Machine Learning',
@@ -121,7 +59,6 @@ export default function EnhancedFooter() {
       ]
     }
   ];
-
   const companyLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Case Studies', href: '/case-studies' },
@@ -130,7 +67,6 @@ export default function EnhancedFooter() {
     { name: 'Blog', href: '/blog' },
     { name: 'Support', href: '/support' }
   ];
-
   const resourceLinks = [
     { name: 'Documentation', href: '/docs' },
     { name: 'API Reference', href: '/api' },
@@ -139,7 +75,6 @@ export default function EnhancedFooter() {
     { name: 'Best Practices', href: '/best-practices' },
     { name: 'Community Forum', href: '/community' }
   ];
-
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
@@ -148,7 +83,6 @@ export default function EnhancedFooter() {
     { name: 'Compliance', href: '/compliance' },
     { name: 'GDPR', href: '/gdpr' }
   ];
-
   const socialLinks = [
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
@@ -156,7 +90,6 @@ export default function EnhancedFooter() {
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> }
   ];
-
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
       {/* Main Footer Content */}
@@ -200,7 +133,6 @@ export default function EnhancedFooter() {
               </div>
             </div>
           </div>
-
           {/* Services */}
           <div>
             <h4 className="text-lg font-semibold mb-6 text-white">Services</h4>
@@ -231,7 +163,6 @@ export default function EnhancedFooter() {
               ))}
             </div>
           </div>
-
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
@@ -269,7 +200,6 @@ export default function EnhancedFooter() {
             </div>
           </div>
         </div>
-
         {/* Service Categories Grid */}
         <div className="mb-12">
           <h4 className="text-xl font-semibold text-center mb-8 text-white">Our Service Categories</h4>
@@ -297,7 +227,6 @@ export default function EnhancedFooter() {
             ))}
           </div>
         </div>
-
         {/* Social Links */}
         <div className="text-center mb-8">
           <h4 className="text-lg font-semibold mb-6 text-white">Follow Us</h4>
@@ -316,7 +245,6 @@ export default function EnhancedFooter() {
           </div>
         </div>
       </div>
-
       {/* Bottom Footer */}
       <div className="border-t border-gray-700">
         <div className="container mx-auto px-4 py-6">
@@ -343,4 +271,3 @@ export default function EnhancedFooter() {
     </footer>
   );
 }
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

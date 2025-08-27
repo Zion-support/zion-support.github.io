@@ -9,11 +9,9 @@ export interface RealMicroSaasService2024 {
   rating: number;
   customers: string;
 }
-
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
   {
   },
-
   // AI Customer Success Automation
   {
     id: 'ai-customer-success-automation',
@@ -66,7 +64,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.7,
     reviews: 650
   },
-
   // Quantum-Secure Communication Platform
   {
     id: 'quantum-secure-communication',
@@ -119,7 +116,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.8,
     reviews: 420
   },
-
   // Blockchain Supply Chain Transparency
   {
     id: 'blockchain-supply-chain-transparency',
@@ -172,7 +168,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.6,
     reviews: 320
   },
-
   // AI-Powered SEO Automation
   {
     id: 'ai-seo-automation-pro',
@@ -225,7 +220,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.8,
     reviews: 1100
   },
-
   // AI-Powered Social Media Management
   {
     id: 'ai-social-media-manager',
@@ -278,7 +272,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.7,
     reviews: 950
   },
-
   // AI-Powered Email Marketing Automation
   {
     id: 'ai-email-marketing-automation',
@@ -331,7 +324,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.8,
     reviews: 1300
   },
-
   // AI-Powered Customer Support Automation
   {
     id: 'ai-customer-support-automation',
@@ -384,7 +376,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     rating: 4.7,
     reviews: 820
   },
-
   // AI-Powered Project Management
   {
     id: 'ai-project-management-pro',

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useCallback, useState } from 'react';
-
 interface PerformanceMetrics {
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
@@ -9,14 +8,12 @@ interface PerformanceMetrics {
   domLoad: number; // DOM Content Loaded
   windowLoad: number; // Window Load
 }
-
 interface PerformanceData {
   metrics: PerformanceMetrics;
   timestamp: number;
   url: string;
   userAgent: string;
 }
-
 export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
@@ -24,15 +21,12 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
   const lcpObserverRef = useRef<PerformanceObserver | null>(null);
   const clsObserverRef = useRef<PerformanceObserver | null>(null);
   const fidObserverRef = useRef<PerformanceObserver | null>(null);
-
   // Initialize performance monitoring
   const initializeMonitoring = useCallback(() => {
     if (!enableMonitoring || !('PerformanceObserver' in window)) {
       return;
     }
-
     setIsMonitoring(true);
-
     // Monitor First Contentful Paint (FCP)
     try {
       observerRef.current = new PerformanceObserver((list) => {
@@ -47,7 +41,6 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
     } catch (error) {
       console.warn('FCP monitoring not supported:', error);
     }
-
     // Monitor Largest Contentful Paint (LCP)
     try {
       lcpObserverRef.current = new PerformanceObserver((list) => {
@@ -61,7 +54,6 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
     } catch (error) {
       console.warn('LCP monitoring not supported:', error);
     }
-
     // Monitor Cumulative Layout Shift (CLS)
     try {
       clsObserverRef.current = new PerformanceObserver((list) => {
@@ -77,7 +69,6 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
     } catch (error) {
       console.warn('CLS monitoring not supported:', error);
     }
-
     // Monitor First Input Delay (FID)
     try {
       fidObserverRef.current = new PerformanceObserver((list) => {
@@ -91,29 +82,24 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
       console.warn('FID monitoring not supported:', error);
     }
   }, [enableMonitoring]);
-
   // Get navigation timing metrics
   const getNavigationTiming = useCallback(() => {
     if (!enableMonitoring || !performance.getEntriesByType) {
       return;
     }
-
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
       const domLoad = navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
       const windowLoad = navigationEntry.loadEventEnd - navigationEntry.loadEventStart;
-
       setMetrics(prev => prev ? { ...prev, ttfb, domLoad, windowLoad } : { ttfb, domLoad, windowLoad } as PerformanceMetrics);
     }
   }, [enableMonitoring]);
-
   // Get resource timing metrics
   const getResourceTiming = useCallback(() => {
     if (!enableMonitoring || !performance.getEntriesByType) {
       return;
     }
-
     const resources = performance.getEntriesByType('resource');
     const slowResources = resources
       .filter((entry: PerformanceResourceTiming) => entry.duration > 1000)
@@ -123,51 +109,42 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
         size: entry.transferSize,
         type: entry.initiatorType
       }));
-
     if (slowResources.length > 0) {
       console.warn('Slow resources detected:', slowResources);
     }
   }, [enableMonitoring]);
-
   // Calculate performance score
   const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics): number => {
     let score = 100;
-
     // FCP scoring (0-100)
     if (metrics.fcp > 0) {
       if (metrics.fcp < 1800) score -= 0;
       else if (metrics.fcp < 3000) score -= 10;
       else score -= 30;
     }
-
     // LCP scoring (0-100)
     if (metrics.lcp > 0) {
       if (metrics.lcp < 2500) score -= 0;
       else if (metrics.lcp < 4000) score -= 10;
       else score -= 30;
     }
-
     // FID scoring (0-100)
     if (metrics.fid > 0) {
       if (metrics.fid < 100) score -= 0;
       else if (metrics.fid < 300) score -= 10;
       else score -= 30;
     }
-
     // CLS scoring (0-100)
     if (metrics.cls > 0) {
       if (metrics.cls < 0.1) score -= 0;
       else if (metrics.cls < 0.25) score -= 10;
       else score -= 30;
     }
-
     return Math.max(0, score);
   }, []);
-
   // Send performance data to analytics
   const sendPerformanceData = useCallback((performanceData: PerformanceData) => {
     if (!enableMonitoring) return;
-
     try {
       // You can integrate with Google Analytics, Mixpanel, or your own analytics service
       if (typeof gtag !== 'undefined') {
@@ -184,30 +161,25 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
           }
         });
       }
-
       // Send to your own analytics endpoint
       // fetch('/api/analytics/performance', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(performanceData)
       // });
-
       console.log('Performance data sent:', performanceData);
     } catch (error) {
       console.error('Failed to send performance data:', error);
     }
   }, [enableMonitoring, calculatePerformanceScore]);
-
   // Monitor component render performance
   const measureRenderTime = useCallback((componentName: string, startTime: number) => {
     if (!enableMonitoring) return;
-
     const renderTime = performance.now() - startTime;
     
     if (renderTime > 16) { // 16ms = 60fps threshold
       console.warn(`Slow render detected in ${componentName}: ${renderTime.toFixed(2)}ms`);
     }
-
     // Track render performance
     if (typeof gtag !== 'undefined') {
       gtag('event', 'component_render', {
@@ -221,13 +193,11 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
       });
     }
   }, [enableMonitoring]);
-
   // Monitor memory usage
   const getMemoryInfo = useCallback(() => {
     if (!enableMonitoring || !('memory' in performance)) {
       return null;
     }
-
     const memory = (performance as any).memory;
     return {
       usedJSHeapSize: memory.usedJSHeapSize,
@@ -235,7 +205,6 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
       jsHeapSizeLimit: memory.jsHeapSizeLimit
     };
   }, [enableMonitoring]);
-
   // Cleanup function
   const cleanup = useCallback(() => {
     if (observerRef.current) {
@@ -252,7 +221,6 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
     }
     setIsMonitoring(false);
   }, []);
-
   // Initialize monitoring on mount
   useEffect(() => {
     if (enableMonitoring) {
@@ -263,14 +231,12 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
         getNavigationTiming();
         getResourceTiming();
       }, 1000);
-
       return () => {
         clearTimeout(timer);
         cleanup();
       };
     }
   }, [enableMonitoring, initializeMonitoring, getNavigationTiming, getResourceTiming, cleanup]);
-
   // Send performance data when metrics are complete
   useEffect(() => {
     if (metrics && Object.keys(metrics).length >= 4) {
@@ -280,11 +246,9 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
         url: window.location.href,
         userAgent: navigator.userAgent
       };
-
       sendPerformanceData(performanceData);
     }
   }, [metrics, sendPerformanceData]);
-
   return {
     metrics,
     isMonitoring,
@@ -294,21 +258,17 @@ export const usePerformanceMonitor = (enableMonitoring: boolean = true) => {
     cleanup
   };
 };
-
 // Hook for measuring component render performance
 export const useRenderPerformance = (componentName: string) => {
   const startTime = useRef(performance.now());
   const { measureRenderTime } = usePerformanceMonitor();
-
   useEffect(() => {
     const renderTime = performance.now() - startTime.current;
     measureRenderTime(componentName, startTime.current);
     startTime.current = performance.now();
   });
-
   return startTime.current;
 };
-
 // Hook for measuring function execution time
 export const useFunctionPerformance = () => {
   const measureFunction = useCallback((fn: Function, functionName: string) => {
@@ -322,6 +282,5 @@ export const useFunctionPerformance = () => {
     
     return { result, executionTime };
   }, []);
-
   return { measureFunction };
 };

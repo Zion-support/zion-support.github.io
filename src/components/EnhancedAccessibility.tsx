@@ -34,7 +34,6 @@ import {
   ArrowRight,
   Space
 } from 'lucide-react';
-
 interface AccessibilitySettings {
   // Visual
   highContrast: boolean;
@@ -59,7 +58,6 @@ interface AccessibilitySettings {
   readingGuide: boolean;
   distractionFree: boolean;
 }
-
 export default function EnhancedAccessibility() {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -79,12 +77,10 @@ export default function EnhancedAccessibility() {
     readingGuide: false,
     distractionFree: false
   });
-
   const [activeTab, setActiveTab] = useState('visual');
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [toastType, setToastType] = useState<'success' | 'error' | 'info'>('info');
-
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
     setSettings(prev => ({ ...prev, [key]: value }));
     setToastMessage(`${key} updated`);
@@ -96,7 +92,6 @@ export default function EnhancedAccessibility() {
     
     setTimeout(() => setShowToast(false), 3000);
   }, []);
-
   const applySetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
     const root = document.documentElement;
     
@@ -144,7 +139,6 @@ export default function EnhancedAccessibility() {
         break;
     }
   }, []);
-
   const resetSettings = useCallback(() => {
     setSettings({
       highContrast: false,
@@ -177,16 +171,14 @@ export default function EnhancedAccessibility() {
     setShowToast(true);
     setTimeout(() => setShowToast(false), 3000);
   }, []);
-
   const tabs = [
     { id: 'visual', label: 'Visual', icon: Eye },
     { id: 'audio', label: 'Audio', icon: Headphones },
     { id: 'navigation', label: 'Navigation', icon: MousePointer },
     { id: 'cognitive', label: 'Cognitive', icon: Brain }
   ];
-
   return (
-    <>
+<>
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -195,7 +187,6 @@ export default function EnhancedAccessibility() {
       >
         <Accessibility className="w-6 h-6" />
       </button>
-
       {/* Accessibility Panel */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
@@ -216,7 +207,6 @@ export default function EnhancedAccessibility() {
                 <X className="w-6 h-6" />
               </button>
             </div>
-
             {/* Content */}
             <div className="flex-1 overflow-hidden">
               {/* Tabs */}
@@ -236,7 +226,6 @@ export default function EnhancedAccessibility() {
                   </button>
                 ))}
               </div>
-
               {/* Tab Content */}
               <div className="p-6 overflow-y-auto max-h-[60vh]">
                 {activeTab === 'visual' && (
@@ -301,7 +290,6 @@ export default function EnhancedAccessibility() {
                     </div>
                   </div>
                 )}
-
                 {activeTab === 'audio' && (
                   <div className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -352,7 +340,6 @@ export default function EnhancedAccessibility() {
                     </div>
                   </div>
                 )}
-
                 {activeTab === 'navigation' && (
                   <div className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -410,7 +397,6 @@ export default function EnhancedAccessibility() {
                     </div>
                   </div>
                 )}
-
                 {activeTab === 'cognitive' && (
                   <div className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -463,7 +449,6 @@ export default function EnhancedAccessibility() {
                 )}
               </div>
             </div>
-
             {/* Footer */}
             <div className="flex items-center justify-between p-6 border-t border-gray-200 dark:border-gray-700">
               <button
@@ -492,7 +477,6 @@ export default function EnhancedAccessibility() {
           </div>
         </div>
       )}
-
       {/* Toast Notification */}
       {showToast && (
         <div className={`fixed top-6 right-6 z-50 p-4 rounded-lg shadow-lg transition-all duration-300 ${
@@ -508,6 +492,6 @@ export default function EnhancedAccessibility() {
           </div>
         </div>
       )}
-    </>
+</>
   );
 }

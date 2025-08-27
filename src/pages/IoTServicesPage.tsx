@@ -1,26 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { 
-  Settings, 
-  Database, 
-  BarChart3, 
-  Shield, 
-  Zap,
-  Globe,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Zap as Cpu,
-  Cloud,
-  Smartphone,
-  TrendingUp as Activity
-} from "lucide-react";
-
-=======
 import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity } from "lucide-react";
 import { TrustedBySection } from "../TrustedBySection";
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 const iotServices = [
     {
         id: "iot-platform",
@@ -224,7 +205,6 @@ export default function IoTServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -247,7 +227,6 @@ export default function IoTServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -270,7 +249,6 @@ export default function IoTServicesPage() {
           </div>
         </div>
       </section>
-
       {/* IoT Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -281,12 +259,7 @@ export default function IoTServicesPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<<<<<<< HEAD
-            {iotServices.map((service) => (
-              <div key={service.id} className="overflow-hidden hover:shadow-lg transition-all duration-300">
-=======
             {iotServices.map((service) => (<Card key={service.id} className="overflow-hidden hover:shadow-lg transition-all duration-300">
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
                 <div className="aspect-video overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"/>
                 </div>
@@ -294,19 +267,10 @@ export default function IoTServicesPage() {
                   <div className="flex justify-between items-start mb-2">
                     <span className="bg-zion-purple/20 text-zion-purple px-3 py-1 rounded-full text-sm font-medium">
                       {service.category}
-<<<<<<< HEAD
-                    </span>
-                    {service.badge && (
-                      <span className="border-zion-cyan text-zion-cyan px-3 py-1 rounded-full text-sm font-medium">
-                        {service.badge}
-                      </span>
-                    )}
-=======
                     </Badge>
                     {service.badge && (<Badge variant="outline" className="border-zion-cyan text-zion-cyan">
                         {service.badge}
                       </Badge>)}
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
                   </div>
                   <div className="flex items-center gap-3 mb-3">
                     <div className="p-2 bg-zion-blue/10 rounded-lg">
@@ -336,24 +300,14 @@ export default function IoTServicesPage() {
                   <Link to={service.link}>
                     <button className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3 rounded-lg">
                       Learn More
-<<<<<<< HEAD
-                      <ArrowRight className="h-4 w-4 ml-2" />
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            ))}
-=======
                       <ArrowRight className="h-4 w-4 ml-2"/>
                     </Link>
                   </Button>
                 </CardContent>
               </Card>))}
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
@@ -384,30 +338,6 @@ export default function IoTServicesPage() {
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
-      {/* Trusted By Section */}
-      <section className="py-16 bg-zion-blue-dark">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Trusted by Leading Companies</h2>
-          <p className="text-zion-slate-light text-lg mb-8">
-            Our solutions are trusted by global enterprises and innovative startups.
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
-            <img src="/assets/logos/logo1.png" alt="Company 1" className="w-full h-12 object-contain" />
-            <img src="/assets/logos/logo2.png" alt="Company 2" className="w-full h-12 object-contain" />
-            <img src="/assets/logos/logo3.png" alt="Company 3" className="w-full h-12 object-contain" />
-            <img src="/assets/logos/logo4.png" alt="Company 4" className="w-full h-12 object-contain" />
-            <img src="/assets/logos/logo5.png" alt="Company 5" className="w-full h-12 object-contain" />
-            <img src="/assets/logos/logo6.png" alt="Company 6" className="w-full h-12 object-contain" />
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
-=======
       <TrustedBySection />
     </div>);
 }
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

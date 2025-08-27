@@ -9,14 +9,12 @@ import {
   Facebook, Twitter, Linkedin, Instagram, Youtube,
   Github, ArrowRight, ExternalLink
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const footerSections = [
   {
     title: '🚀 Core Services',
@@ -76,7 +74,6 @@ const footerSections = [
   ]
   }
 ];
-
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin, color: 'hover:text-blue-400' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
@@ -85,14 +82,12 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
   { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github, color: 'hover:text-gray-400' }
 ];
-
 const stats = [
   { number: '50+', label: 'Advanced Services', icon: Star, color: 'text-cyan-400' },
   { number: '1000+', label: 'Companies Served', icon: Users, color: 'text-purple-400' },
   { number: '99.9%', label: 'Uptime Guarantee', icon: ShieldIcon, color: 'text-green-400' },
   { number: '24/7', label: 'Global Support', icon: Zap, color: 'text-pink-400' }
 ];
-
 export default function UltraFuturisticFooter2035() {
   return (
     <footer className="relative bg-black border-t border-cyan-500/20 overflow-hidden">
@@ -101,7 +96,6 @@ export default function UltraFuturisticFooter2035() {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -125,7 +119,6 @@ export default function UltraFuturisticFooter2035() {
                 Pioneering the future with revolutionary AI consciousness, quantum computing, emerging technologies, 
                 and innovative micro SAAS solutions that transform businesses worldwide.
               </p>
-
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -145,7 +138,6 @@ export default function UltraFuturisticFooter2035() {
                   <span>{contactInfo.address}</span>
                 </div>
               </div>
-
               {/* Social Links */}
               <div className="flex items-center space-x-4">
                 {socialLinks.map((social) => (
@@ -161,7 +153,6 @@ export default function UltraFuturisticFooter2035() {
                 ))}
               </div>
             </div>
-
             {/* Stats Section */}
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, index) => (
@@ -184,7 +175,6 @@ export default function UltraFuturisticFooter2035() {
               ))}
             </div>
           </div>
-
           {/* Service Links Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {footerSections.map((section, sectionIndex) => (
@@ -220,7 +210,6 @@ export default function UltraFuturisticFooter2035() {
               </motion.div>
             ))}
           </div>
-
           {/* CTA Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -253,7 +242,6 @@ export default function UltraFuturisticFooter2035() {
             </div>
           </motion.div>
         </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-cyan-500/20 bg-black/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

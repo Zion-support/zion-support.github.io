@@ -6,10 +6,8 @@ import {
   Twitter, Linkedin, Github, 
   ArrowUp, Heart, Zap, Facebook
 } from 'lucide-react';
-
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
   const footerSections = [
     {
       title: 'Services',
@@ -52,17 +50,14 @@ const Footer: React.FC = () => {
       ]
     }
   ];
-
   const socialLinks = [
     { name: 'LinkedIn', href: '/social/linkedin/', icon: <Linkedin className="w-5 h-5" /> },
     { name: 'Facebook', href: '/social/facebook/', icon: <Facebook className="w-5 h-5" /> },
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> },
   ];
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   return (
     <footer className="bg-gray-900 border-t border-gray-800 relative overflow-hidden">
       {/* Background Effects */}
@@ -71,7 +66,6 @@ const Footer: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
       </div>
-
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -114,7 +108,6 @@ const Footer: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Footer Sections */}
             {footerSections.map((section) => (
               <div key={section.title}>
@@ -136,7 +129,6 @@ const Footer: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Bottom Section */}
           <div className="mt-16 pt-8 border-t border-gray-800">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
@@ -149,7 +141,6 @@ const Footer: React.FC = () => {
                 <span className="hidden sm:inline">and</span>
                 <Zap className="w-4 h-4 text-yellow-400" />
               </div>
-
               {/* Social Links */}
               <div className="flex items-center space-x-4">
                 {socialLinks.map((social) => (
@@ -168,7 +159,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Scroll to Top Button */}
         <motion.button
           onClick={scrollToTop}
@@ -182,5 +172,4 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
 export default Footer;

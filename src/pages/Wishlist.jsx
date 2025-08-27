@@ -16,7 +16,7 @@ export default function WishlistPage() {
     useEffect(() => {
         // Redirect if not authenticated and auth loading is complete
         if (!isAuthLoading && !user) {
-            router.push('/login');
+            router('/login');
         }
     }, [user, isAuthLoading, router]);
     if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
@@ -26,7 +26,7 @@ export default function WishlistPage() {
     const addToCart = (item) => {
         const stored = safeStorage.getItem(getCartKey(user?.id));
         const cart = stored ? JSON.parse(stored) : [];
-        cart.push({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });
+        cart({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });
         safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
         dispatch({ type: 'SET_ITEMS', payload: cart });
     };

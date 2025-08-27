@@ -66,7 +66,6 @@ export function AccessibilityMenu() {
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
         <Settings className="h-5 w-5"/>
       </motion.button>
-
       {/* Menu Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl" initial={{ opacity: 0, scale: 0.9, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9, y: 20 }} transition={{ type: "spring", stiffness: 300, damping: 30 }}>
@@ -77,7 +76,6 @@ export function AccessibilityMenu() {
                   Reset
                 </Button>
               </div>
-
               {/* Font Size */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
@@ -92,7 +90,6 @@ export function AccessibilityMenu() {
                     </Button>))}
                 </div>
               </div>
-
               {/* High Contrast */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
@@ -105,7 +102,6 @@ export function AccessibilityMenu() {
                   {settings.highContrast ? 'Enabled' : 'Disabled'}
                 </Button>
               </div>
-
               {/* Reduced Motion */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
@@ -118,7 +114,6 @@ export function AccessibilityMenu() {
                   {settings.reducedMotion ? 'Enabled' : 'Disabled'}
                 </Button>
               </div>
-
               {/* Sound Toggle */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
@@ -131,7 +126,6 @@ export function AccessibilityMenu() {
                   {settings.soundEnabled ? 'Enabled' : 'Disabled'}
                 </Button>
               </div>
-
               {/* Info */}
               <div className="text-xs text-zion-slate-light text-center">
                 Settings are automatically saved and applied across your session
@@ -139,7 +133,6 @@ export function AccessibilityMenu() {
             </div>
           </motion.div>)}
       </AnimatePresence>
-
       {/* Backdrop */}
       <AnimatePresence>
         {isOpen && (<motion.div className="fixed inset-0 z-40 bg-black/20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setIsOpen(false)}/>)}

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Shield } from 'lucide-react';
-
 export default function Status() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [isLoading, setIsLoading] = useState(true);
-
   // Mock system status data - in a real app, this would come from an API
   const systemStatus = {
     overall: 'operational',
@@ -50,7 +48,6 @@ export default function Status() {
       }
     ]
   };
-
   const incidents = [
     {
       id: 1,
@@ -71,23 +68,19 @@ export default function Status() {
       description: 'Updated API rate limiting policies to improve service stability.'
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
-
     // Simulate loading
     const loadingTimer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
-
     return () => {
       clearInterval(timer);
       clearTimeout(loadingTimer);
     };
   }, []);
-
   const getStatusIcon = (status) => {
     switch (status) {
       case 'operational':
@@ -102,7 +95,6 @@ export default function Status() {
         return <Activity className="w-5 h-5 text-gray-400" />;
     }
   };
-
   const getStatusColor = (status) => {
     switch (status) {
       case 'operational':
@@ -117,7 +109,6 @@ export default function Status() {
         return 'text-gray-400';
     }
   };
-
   const getStatusBgColor = (status) => {
     switch (status) {
       case 'operational':
@@ -132,7 +123,6 @@ export default function Status() {
         return 'bg-gray-400/10 border-gray-400/20';
     }
   };
-
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24 flex items-center justify-center">
@@ -143,7 +133,6 @@ export default function Status() {
       </div>
     );
   }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
       <div className="container mx-auto px-4 py-16">
@@ -165,7 +154,6 @@ export default function Status() {
             All systems are currently operational.
           </p>
         </motion.div>
-
         {/* Overall Status */}
         <motion.div 
           className="bg-zinc-800/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-8 mb-16"
@@ -200,7 +188,6 @@ export default function Status() {
           </motion.div>
         </div>
       </section>
-
       {/* Overall Status Section */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container-responsive">
@@ -217,7 +204,6 @@ export default function Status() {
               Current operational status and key performance metrics for all Zion Tech Group services.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -231,7 +217,6 @@ export default function Status() {
               <h3 className="text-2xl font-bold text-white mb-2">All Systems Operational</h3>
               <p className="text-zion-slate-light">No active incidents</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -244,7 +229,6 @@ export default function Status() {
               <h3 className="text-2xl font-bold text-white mb-2">{systemStatus.uptime}</h3>
               <p className="text-zion-slate-light">Uptime</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -257,7 +241,6 @@ export default function Status() {
               <h3 className="text-2xl font-bold text-white mb-2">{systemStatus.responseTime}</h3>
               <p className="text-zion-slate-light">Avg Response Time</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -272,7 +255,6 @@ export default function Status() {
             </motion.div>
           </div>
         </motion.div>
-
         {/* Service Status Grid */}
         <motion.div 
           className="mb-16"
@@ -317,7 +299,6 @@ export default function Status() {
             ))}
           </div>
         </motion.div>
-
         {/* Recent Incidents */}
         <motion.div 
           className="bg-zinc-800/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-8 mb-16"
@@ -364,7 +345,6 @@ export default function Status() {
             ))}
           </div>
         </motion.div>
-
         {/* Status Page Info */}
         <motion.div 
           className="text-center"

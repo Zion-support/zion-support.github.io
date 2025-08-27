@@ -137,7 +137,7 @@ export function FeaturedListingsSection() {
             }
         }
     };
-    ;
+
     const renderStars = (rating) => {
         return Array.from({ length: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
@@ -151,7 +151,6 @@ export function FeaturedListingsSection() {
             backgroundSize: '60px 60px'
         }}/>
       </div>
-
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
@@ -169,7 +168,6 @@ export function FeaturedListingsSection() {
             Each project represents our commitment to excellence and cutting-edge technology.
           </p>
         </motion.div>
-
         {/* Category filters */}
         <motion.div className="flex flex-wrap justify-center gap-3 mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
           {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${selectedCategory === category
@@ -189,7 +187,6 @@ export function FeaturedListingsSection() {
                       Featured
                     </div>
                   </div>)}
-
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img src={listing.image} alt={listing.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
@@ -268,7 +265,6 @@ export function FeaturedListingsSection() {
                       <ArrowRight className="w-4 h-4"/>
                     </button>
                   </div>
-
                   {/* Expanded details on hover */}
                   <AnimatePresence>
                     {hoveredListing === listing.id && (<motion.div className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
@@ -279,7 +275,6 @@ export function FeaturedListingsSection() {
                               <span>{highlight}</span>
                             </motion.div>))}
                         </div>
-
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {listing.technologies.slice(0, 4).map((tech, idx) => (<motion.span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: idx * 0.1 }}>
@@ -315,6 +310,6 @@ export function FeaturedListingsSection() {
         </motion.div>
       </div>);
     section >
-    ;
-    ;
+
+
 }

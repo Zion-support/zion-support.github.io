@@ -57,7 +57,6 @@ import {
   UserCheck,
   Zap
 } from 'lucide-react';
-
 export default function AILegalTech() {
   const features = [
     {
@@ -115,7 +114,6 @@ import {
   DollarSign,
   Target
 } from 'lucide-react';
-
 const AILegalTech: React.FC = () => {
   const features = [
     {
@@ -136,7 +134,6 @@ const AILegalTech: React.FC = () => {
   Lock,
   Gavel
 } from 'lucide-react';
-
 const AILegalTech = () => {
   const features = [
     {
@@ -164,7 +161,6 @@ const AILegalTech = () => {
   Heart,
   Home
 } from 'lucide-react';
-
 export default function AILegalTech() {
   const services = [
     {
@@ -224,7 +220,6 @@ export default function AILegalTech() {
       price: 'Starting at $2,499/month'
     }
   ];
-
   const legalTechFeatures = [
     {
       title: 'Contract Intelligence',
@@ -292,7 +287,6 @@ export default function AILegalTech() {
       description: "Enterprise-grade security with encryption, access controls, and audit trails for sensitive legal documents."
     }
   ];
-
   const useCases = [
     {
       title: "Contract Management",
@@ -316,7 +310,6 @@ export default function AILegalTech() {
 =======
     }
   ];
-
   const benefits = [
     "Reduce legal document review time by 80%",
     "Improve contract accuracy by 95%",
@@ -325,7 +318,6 @@ export default function AILegalTech() {
     "Faster legal research and analysis",
     "Better risk management and mitigation"
   ];
-
   const solutions = [
     {
       title: "Contract Management",
@@ -358,7 +350,6 @@ export default function AILegalTech() {
   Home,
   Lightbulb
 } from 'lucide-react';
-
 export default function AILegalTech() {
   const features = [
     {
@@ -398,7 +389,6 @@ export default function AILegalTech() {
       benefits: ["Secure messaging", "Document sharing", "Progress tracking", "Client collaboration"]
     }
   ];
-
   const practiceAreas = [
     {
       title: 'Time Savings',
@@ -421,7 +411,6 @@ export default function AILegalTech() {
       icon: CheckCircle
     }
   ];
-
   const industries = [
     {
       title: 'Corporate Law',
@@ -451,7 +440,6 @@ export default function AILegalTech() {
     "Enhance compliance monitoring and reporting",
     "Improve client service and response times"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -462,7 +450,6 @@ export default function AILegalTech() {
     "Automate 80% of repetitive legal tasks",
     "Enhance risk assessment and compliance"
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -518,7 +505,6 @@ export default function AILegalTech() {
     "Enhance compliance monitoring with 24/7 automated tracking",
     "Achieve 99%+ accuracy in legal document processing"
   ];
-
   const useCases = [
     {
       industry: "Corporate Law",
@@ -541,7 +527,6 @@ export default function AILegalTech() {
       metrics: ["Compliance Rate", "Risk Assessment", "Document Accuracy"]
     }
   ];
-
   const pricing = [
     {
       name: "Starter",
@@ -595,7 +580,6 @@ export default function AILegalTech() {
       tools: ["Patent search", "Trademark analysis", "IP monitoring", "Infringement detection"]
     }
   ];
-
   const pricingPlans = [
     {
       name: "Solo Practitioner",
@@ -644,7 +628,6 @@ export default function AILegalTech() {
       ]
     }
   ];
-
       description: "Comprehensive solution for large legal organizations",
       features: [
         "Custom AI models",
@@ -674,7 +657,6 @@ export default function AILegalTech() {
       popular: false
     }
   ];
-
   const successMetrics = [
     {
       metric: "90%",
@@ -697,7 +679,6 @@ export default function AILegalTech() {
       detail: "AI-powered compliance monitoring"
     }
   ];
-
   const useCases = [
     {
       scenario: "Contract Review",
@@ -720,7 +701,6 @@ export default function AILegalTech() {
       benefits: ["Consistent quality", "Time savings", "Template library", "Customization options"]
     }
   ];
-
   return (
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -792,7 +772,6 @@ export default function AILegalTech() {
         keywords="AI legal tech, legal automation, contract analysis, legal research, compliance monitoring, legal software"
         canonical="https://ziontechgroup.com/services/ai-legal-tech"
       />
-
       {/* Hero Section with Futuristic Background */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
@@ -832,7 +811,6 @@ export default function AILegalTech() {
               Schedule Demo
             </button>
           </div>
-
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
@@ -886,7 +864,6 @@ export default function AILegalTech() {
 =======
         </div>
       </section>
-
       {/* Features Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -903,7 +880,6 @@ export default function AILegalTech() {
               to revolutionize how legal professionals work.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -964,7 +940,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </div>
-
       {/* Services Section */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -999,7 +974,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -1057,7 +1031,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
             ))}
 =======
@@ -1092,7 +1065,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1126,7 +1098,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </section>
-
       {/* Practice Areas Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1144,7 +1115,6 @@ export default function AILegalTech() {
               Our AI legal solutions are designed to support various practice areas and legal specialties.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {practiceAreas.map((area, index) => (
               <motion.div
@@ -1203,7 +1173,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
@@ -1269,7 +1238,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </section>
-
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
@@ -1359,7 +1327,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1439,7 +1406,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </div>
-
       {/* Legal Tech Features Section */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1479,7 +1445,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </div>
-
       {/* Industries Section */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1506,7 +1471,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </div>
-
       {/* Benefits Section */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1533,7 +1497,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -1611,7 +1574,6 @@ export default function AILegalTech() {
           </div>
         </div>
       </section>
-
       {/* Navigation Links */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1663,7 +1625,6 @@ export default function AILegalTech() {
     </div>
   );
 };
-
 export default AILegalTech;
 =======
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
@@ -1689,7 +1650,6 @@ export default AILegalTech;
             </Link>
           </div>
         </div>
-
         {/* Features Grid */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -1710,7 +1670,6 @@ export default AILegalTech;
             })}
           </div>
         </div>
-
         {/* Benefits Section */}
         <div className="mb-20">
           <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8">
@@ -1727,7 +1686,6 @@ export default AILegalTech;
             </div>
           </div>
         </div>
-
         {/* Use Cases */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -1751,7 +1709,6 @@ export default AILegalTech;
             ))}
           </div>
         </div>
-
         {/* Pricing */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -1799,7 +1756,6 @@ export default AILegalTech;
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8">
@@ -1834,7 +1790,6 @@ export default AILegalTech;
 }
 =======
 };
-
 export default AILegalTech;
 =======
 }

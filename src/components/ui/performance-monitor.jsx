@@ -248,7 +248,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             </Button>
           </div>
         </div>
-
         {/* Settings Panel */}
         <AnimatePresence>
           {showSettings && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}>
@@ -265,7 +264,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               </div>
             </motion.div>)}
         </AnimatePresence>
-
         {/* Metrics Display */}
         <div className="p-4">
           <div className="grid grid-cols-2 gap-4">
@@ -279,7 +277,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 {metrics.fps}
               </div>
             </div>
-
             {/* Memory */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
@@ -290,7 +287,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 {metrics.memory.percentage}%
               </div>
             </div>
-
             {/* Render Time */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
@@ -301,7 +297,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 {metrics.renderTime}ms
               </div>
             </div>
-
             {/* Network */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
@@ -313,7 +308,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               </div>
             </div>
           </div>
-
           {/* Detailed Metrics */}
           {isExpanded && (<motion.div className="mt-4 pt-4 border-t border-zion-blue-light/30" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} transition={{ duration: 0.2 }}>
               <div className="space-y-3">
@@ -329,7 +323,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     </span>
                   </div>
                 </div>
-
                 {/* Disk Usage */}
                 <div className="flex items-center justify-between">
                   <span className="text-zinc-300 text-xs">Disk Usage</span>
@@ -342,7 +335,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     </span>
                   </div>
                 </div>
-
                 {/* Memory Details */}
                 <div className="flex items-center justify-between">
                   <span className="text-zinc-300 text-xs">Memory Details</span>
@@ -350,7 +342,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     {metrics.memory.used}MB / {metrics.memory.total}MB
                   </span>
                 </div>
-
                 {/* Last Updated */}
                 <div className="flex items-center justify-between">
                   <span className="text-zinc-300 text-xs">Last Updated</span>
@@ -360,7 +351,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 </div>
               </div>
             </motion.div>)}
-
           {/* Alerts */}
           {alerts.length > 0 && (<div className="mt-4 pt-4 border-t border-zion-blue-light/30">
               <div className="flex items-center justify-between mb-3">
@@ -386,7 +376,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             })}
               </div>
             </div>)}
-
           {/* Actions */}
           <div className="mt-4 pt-4 border-t border-zion-blue-light/30">
             <div className="flex items-center gap-2">
