@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, RefreshCw, Target, Users, Zap, Globe } from 'lucide-react';
 
@@ -29,14 +27,10 @@ const DigitalTransformation: React.FC = () => {
       description: "Streamline operations and improve efficiency through digital workflows",
       features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
       icon: "⚡"
-      features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
-      icon: "⚡"
     },
     {
       title: "Customer Experience Enhancement",
       description: "Create seamless digital experiences that delight your customers",
-      features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
-      icon: "🎯"
       features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
       icon: "🎯"
     },
@@ -45,14 +39,6 @@ const DigitalTransformation: React.FC = () => {
       description: "Leverage data insights to drive informed business decisions",
       features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
       icon: "📊"
-      features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
-      icon: "📊"
-    },
-    {
-      title: "Technology Infrastructure",
-      description: "Modernize your technology stack for scalability and performance",
-      features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
-      icon: "🏗️"
     }
   ];
 
@@ -64,25 +50,18 @@ const DigitalTransformation: React.FC = () => {
     "Competitive advantage in the digital marketplace"
   ];
 
-  const transformationApproach = [
-    { step: "Assessment", icon: "🔍", description: "Evaluate current state and identify opportunities" },
-    { step: "Strategy", icon: "📋", description: "Develop comprehensive transformation roadmap" },
-    { step: "Implementation", icon: "🚀", description: "Execute changes with agile methodology" },
-    { step: "Optimization", icon: "📈", description: "Continuous improvement and scaling" }
-  ];
+  const contactInfo = {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008, Middletown DE 19709"
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-      <SEO 
-        title="Digital Transformation - Zion Tech Group"
-        description="Transform your business for the digital age with our comprehensive digital transformation services."
-        keywords="digital transformation, process automation, digital strategy, change management, performance optimization"
-        canonical="https://ziontechgroup.com/services/digital-transformation"
-      />
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
+        <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1 
             className="text-4xl md:text-6xl font-bold mb-6"
             initial={{ opacity: 0, y: -20 }}
@@ -119,12 +98,18 @@ const DigitalTransformation: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Transformation Capabilities
+      {/* Services Grid */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Our Transformation Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               End-to-end digital transformation solutions for modern businesses
@@ -272,16 +257,34 @@ const DigitalTransformation: React.FC = () => {
             to="/contact"
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
           >
-            Start Your Transformation
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let's discuss how digital transformation can revolutionize your operations, 
+              improve customer experiences, and drive sustainable growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href={`tel:${contactInfo.phone}`}
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now
+              </a>
+              <a 
+                href={`mailto:${contactInfo.email}`}
+                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Mail className="w-5 h-5" />
+                Send Email
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default DigitalTransformation;
 };
 
 export default DigitalTransformation;

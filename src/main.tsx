@@ -4,21 +4,15 @@ import App from './App';
 import './index.css';
 import * as serviceWorkerRegistration from './utils/serviceWorkerRegistration';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// Register service worker for PWA functionality
-serviceWorkerRegistration.register();
-
-// Request notification permission
-serviceWorkerRegistration.requestNotificationPermission();
-
-// Handle install prompt
-serviceWorkerRegistration.handleInstallPrompt();
+// Render the app
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  const root = createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+}

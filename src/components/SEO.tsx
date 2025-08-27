@@ -45,9 +45,9 @@ export function SEO({
   noindex = false,
   nofollow = false
 }: SEOProps) {
-  const siteUrl = 'https://ziontechgroup.com';
-  const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+  const siteName = 'Zion Tech Group';
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com');
   
   // Default meta description if none provided
   const metaDescription = description || 
@@ -82,48 +82,9 @@ export function SEO({
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-800-ZION-TECH",
+      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "info@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://facebook.com/ziontechgroup",
-      "https://instagram.com/ziontechgroup"
-    ],
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 39.4496,
-        "longitude": -75.7163
-      },
-      "geoRadius": "50000"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Technology Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI & Analytics Solutions",
-            "description": "Cutting-edge artificial intelligence and data analytics services"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Cybersecurity Services",
-      "areaServed": "US",
-      "availableLanguage": "English"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
+      "email": "kleber@ziontechgroup.com"
     }
   };
 
@@ -226,32 +187,6 @@ export function SEO({ title, description, keywords, canonical, noindex = false }
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
       
-      {/* Additional meta tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#22ddd2" />
-      <meta name="msapplication-TileColor" content="#22ddd2" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-      {/* Favicons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/icon-180x180.png" />
-      <link rel="apple-touch-icon" sizes="152x152" href="/icon-152x152.png" />
-      <link rel="apple-touch-icon" sizes="144x144" href="/icon-144x144.png" />
-      <link rel="apple-touch-icon" sizes="120x120" href="/icon-120x120.png" />
-      <link rel="apple-touch-icon" sizes="114x114" href="/icon-114x114.png" />
-      <link rel="apple-touch-icon" sizes="76x76" href="/icon-76x76.png" />
-      <link rel="apple-touch-icon" sizes="72x72" href="/icon-72x72.png" />
-      <link rel="apple-touch-icon" sizes="60x60" href="/icon-60x60.png" />
-      <link rel="apple-touch-icon" sizes="57x57" href="/icon-57x57.png" />
-=======
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={fullImageUrl} />
@@ -274,6 +209,10 @@ export function SEO({ title, description, keywords, canonical, noindex = false }
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://cdn.gpteng.co" />
+=======
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0f172a" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -283,79 +222,26 @@ export function SEO({ title, description, keywords, canonical, noindex = false }
         {JSON.stringify(pageSchema)}
       </script>
       
-      <meta name="apple-mobile-web-app-title" content="Zion Tech" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-      
-      {/* Performance and UX */}
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      
-      {/* Language and Region */}
-      <meta httpEquiv="Content-Language" content="en" />
-      <meta name="language" content="English" />
-      <meta name="geo.region" content="US-DE" />
-      <meta name="geo.placename" content="Middletown, Delaware" />
-      
-      {/* Business Information */}
-      <meta name="business:contact_data:street_address" content="364 E Main St STE 1008" />
-      <meta name="business:contact_data:locality" content="Middletown" />
-      <meta name="business:contact_data:region" content="DE" />
-      <meta name="business:contact_data:postal_code" content="19709" />
-      <meta name="business:contact_data:country_name" content="United States" />
-      {/* Website structured data */}
-      {type === 'website' && (
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": siteName,
-            "url": siteUrl,
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": `${siteUrl}/search?q={search_term_string}`,
-              "query-input": "required name=search_term_string"
-            }
-          })}
-        </script>
-      )}
-      
-      {/* Breadcrumb structured data */}
-      {canonical && canonical !== '/' && (
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": siteUrl
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": title,
-                "item": canonicalUrl
-              }
-            ]
-          })}
-        </script>
-      )}
-=======
       <meta name="business:contact_data:phone_number" content="+1-800-ZION-TECH" />
       <meta name="business:contact_data:email" content="info@ziontechgroup.com" />
     </Helmet>
   );
 }
 =======
+=======
+      {/* Additional structured data if provided */}
+      {publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
+      {section && (
+        <meta property="article:section" content={section} />
+      )}
+      {tags && tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
     </Helmet>
   );
 }
