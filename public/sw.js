@@ -10,7 +10,8 @@ const STATIC_FILES = [
   '/favicon.ico',
   '/og-image.svg',
   '/manifest.json',
-  '/offline.html'
+  '/offline.html',
+  '/vite.svg'
 ];
 
 // Install event - cache static files with better error handling
@@ -24,7 +25,18 @@ self.addEventListener('install', (event) => {
           STATIC_FILES.map(url => 
             cache.add(url).catch(error => {
               console.warn(`Failed to cache ${url}:`, error);
-              return null; // Continue with other files
+              // Try to fetch and cache manually if add() fails
+              return fetch(url)
+                .then(response => {
+                  if (response.ok) {
+                    return cache.put(url, response);
+                  }
+                  throw new Error(`HTTP ${response.status}`);
+                })
+                .catch(fetchError => {
+                  console.warn(`Manual fetch failed for ${url}:`, fetchError);
+                  return null; // Continue with other files
+                });
             })
           )
         );
@@ -72,86 +84,77 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Skip chrome-extension and other non-http requests
-  if (!url.protocol.startsWith('http')) {
+  // Skip external requests
+  if (url.origin !== self.location.origin) {
+    // For external requests, try to fetch from network but don't cache
+    event.respondWith(
+      fetch(request).catch((error) => {
+        console.warn('External request failed:', url.href, error);
+        // Return a fallback response for failed external requests
+        // For images, return a placeholder or skip caching
+        if (request.destination === 'image') {
+          console.log('Skipping failed external image:', url.href);
+          return new Response('', { status: 404 });
+        }
+        // For other external requests, return a basic error response
+        return new Response('External resource unavailable', { status: 503 });
+      })
+    );
     return;
   }
 
-  // Handle different types of requests
-  if (url.pathname === '/') {
-    // Homepage - cache first
-    event.respondWith(
-      caches.match(request)
-        .then((response) => {
-          return response || fetch(request)
-            .then((fetchResponse) => {
-              // Cache the response for future use
-              const responseToCache = fetchResponse.clone();
-              caches.open(DYNAMIC_CACHE)
-                .then((cache) => {
-                  cache.put(request, responseToCache);
-                });
-              return fetchResponse;
-            });
-        })
-    );
-  } else if (STATIC_FILES.includes(url.pathname)) {
-    // Static files - cache first
-    event.respondWith(
-      caches.match(request)
-        .then((response) => {
-          return response || fetch(request)
-            .then((fetchResponse) => {
-              const responseToCache = fetchResponse.clone();
-              caches.open(STATIC_CACHE)
-                .then((cache) => {
-                  cache.put(request, responseToCache);
-                });
-              return fetchResponse;
-            });
-        })
-    );
-  } else if (url.pathname.startsWith('/api/')) {
-    // API requests - network first with cache fallback
-    event.respondWith(
-      fetch(request)
-        .then((response) => {
-          // Cache successful API responses
-          if (response.ok) {
+  // Handle internal requests
+  event.respondWith(
+    caches.match(request)
+      .then((response) => {
+        // Return cached response if available
+        if (response) {
+          return response;
+        }
+
+        // Clone the request for potential caching
+        const fetchRequest = request.clone();
+
+        return fetch(fetchRequest)
+          .then((response) => {
+            // Check if we received a valid response
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            // Clone the response for caching
             const responseToCache = response.clone();
+
+            // Cache the response in dynamic cache
             caches.open(DYNAMIC_CACHE)
               .then((cache) => {
                 cache.put(request, responseToCache);
+              })
+              .catch((error) => {
+                console.warn('Failed to cache response:', error);
               });
-          }
-          return response;
-        })
-        .catch(() => {
-          // Fallback to cached response if available
-          return caches.match(request);
-        })
-    );
-  } else {
-    // Other requests - network first with cache fallback
-    event.respondWith(
-      fetch(request)
-        .then((response) => {
-          // Cache successful responses
-          if (response.ok) {
-            const responseToCache = response.clone();
-            caches.open(DYNAMIC_CACHE)
-              .then((cache) => {
-                cache.put(request, responseToCache);
-              });
-          }
-          return response;
-        })
-        .catch(() => {
-          // Fallback to cached response if available
-          return caches.match(request);
-        })
-    );
-  }
+
+            return response;
+          })
+          .catch((error) => {
+            console.warn('Fetch failed, serving offline page:', error);
+            
+            // For navigation requests, serve offline page
+            if (request.mode === 'navigate') {
+              return caches.match('/offline.html');
+            }
+
+            // For other requests, return a basic offline response
+            return new Response('Offline - Resource unavailable', {
+              status: 503,
+              statusText: 'Service Unavailable',
+              headers: new Headers({
+                'Content-Type': 'text/plain'
+              })
+            });
+          });
+      })
+  );
 });
 
 // Background sync for offline actions
@@ -159,39 +162,42 @@ self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     event.waitUntil(
       // Handle background sync tasks
-      console.log('Background sync triggered')
+      console.log('Background sync triggered:', event.tag)
     );
   }
 });
 
 // Push notification handling
 self.addEventListener('push', (event) => {
-  const options = {
-    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
-    icon: '/favicon.ico',
-    badge: '/favicon.ico',
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'Explore',
-        icon: '/favicon.ico'
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body || 'New notification from Zion Tech Group',
+      icon: '/favicon.ico',
+      badge: '/favicon.ico',
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: 1
       },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/favicon.ico'
-      }
-    ]
-  };
+      actions: [
+        {
+          action: 'explore',
+          title: 'View',
+          icon: '/favicon.ico'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/favicon.ico'
+        }
+      ]
+    };
 
-  event.waitUntil(
-    self.registration.showNotification('Zion Tech Group', options)
-  );
+    event.waitUntil(
+      self.registration.showNotification(data.title || 'Zion Tech Group', options)
+    );
+  }
 });
 
 // Notification click handling
