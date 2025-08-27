@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<<<<<<< HEAD
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Zion Tech Group — AI, Cloud, and Cybersecurity Solutions. We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business." />
+    <meta name="keywords" content="AI, artificial intelligence, cloud computing, cybersecurity, autonomous systems, cloud platforms, Zion Tech Group" />
+    <meta name="author" content="Zion Tech Group" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2e73ea" />
+=======
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Zion Tech Group - Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
+    />
+    <meta name="keywords" content="AI, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group" />
+    <meta name="author" content="Zion Tech Group" />
+    <meta name="robots" content="index, follow" />
+>>>>>>> origin/cursor/website-audit-and-enhancement-eb94
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com/" />
+<<<<<<< HEAD
+    <meta property="og:title" content="Zion Tech Group — AI, Cloud, and Cybersecurity Solutions" />
+    <meta property="og:description" content="We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business." />
+    <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:site_name" content="Zion Tech Group" />
+=======
+    <meta property="og:title" content="Zion Tech Group - Technology Solutions" />
+    <meta property="og:description" content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
+    <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+>>>>>>> origin/cursor/website-audit-and-enhancement-eb94
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ziontechgroup.com/" />
+<<<<<<< HEAD
+    <meta property="twitter:title" content="Zion Tech Group — AI, Cloud, and Cybersecurity Solutions" />
+    <meta property="twitter:description" content="We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business." />
+    <meta property="twitter:image" content="/og-image.svg" />
+    
+    <title>Zion Tech Group — AI, Cloud, and Cybersecurity Solutions</title>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/favicon.svg" as="image" type="image/svg+xml">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/favicon.svg",
+      "description": "We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "url": "https://ziontechgroup.com/contact"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup"
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+=======
+    <meta property="twitter:title" content="Zion Tech Group - Technology Solutions" />
+    <meta property="twitter:description" content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
+    <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ziontechgroup.com/" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <title>Zion Tech Group - Technology Solutions</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-eb94
+  </body>
+</html>

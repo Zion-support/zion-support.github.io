@@ -1,11 +1,11 @@
 {
-  "name": "Zion Tech Group - AI-Powered Technology Solutions",
-  "short_name": "Zion Tech",
-  "description": "Leading provider of AI-powered business solutions, cloud infrastructure, and cybersecurity services",
+  "name": "Zion Tech Group - AI Marketplace",
+  "short_name": "Zion",
+  "description": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#17072b",
-  "theme_color": "#22ddd2",
+  "background_color": "#172d67",
+  "theme_color": "#2e73ea",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
@@ -116,5 +116,15 @@
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400
-  }
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "handle_links": "preferred",
+  "protocol_handlers": [
+    {
+      "protocol": "web+zion",
+      "url": "/%s"
+    }
+  ]
 }

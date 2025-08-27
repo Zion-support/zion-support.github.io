@@ -1,59 +1,21 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'node:path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './src'),
     },
-  },
-  build: {
-    target: 'es2015',
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'animation-vendor': ['framer-motion'],
-          'icons-vendor': ['lucide-react'],
-          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
-        },
-        chunkFileNames: 'js/[name]-[hash].js',
-        entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
-      },
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
-    chunkSizeWarningLimit: 1000,
-    // Ensure proper asset handling for Netlify
-    assetsInlineLimit: 4096,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
   },
   server: {
     port: 3000,
-    open: false,
+    open: true,
   },
-  preview: { port: 4173, host: true, open: false },
-  define: {
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
-    // Handle both VITE_ and NEXT_PUBLIC_ prefixes for compatibility
-    'process.env.NEXT_PUBLIC_SUPABASE_URL': JSON.stringify(process.env.VITE_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL),
-    'process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY': JSON.stringify(process.env.VITE_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY),
-    'process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME': JSON.stringify(process.env.VITE_CLOUDINARY_CLOUD_NAME || process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME),
-    'process.env.NEXT_PUBLIC_STRIPE_TEST_KEY': JSON.stringify(process.env.VITE_STRIPE_TEST_KEY || process.env.NEXT_PUBLIC_STRIPE_TEST_KEY),
-    'process.env.NEXT_PUBLIC_API_URL': JSON.stringify(process.env.VITE_API_URL || process.env.NEXT_PUBLIC_API_URL),
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
   },
-  esbuild: { drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [] },
-  worker: { format: 'es' },
-  envPrefix: ['VITE_', 'ZION_', 'NEXT_PUBLIC_'],
-});
+})

@@ -1,231 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-		<title>Zion Tech Group - Pioneering AI & Quantum Technology Solutions</title>
-		
-		<!-- Enhanced SEO Meta Tags -->
-		<meta name="description" content="Zion Tech Group delivers cutting-edge AI solutions, quantum technology, and innovative IT services. Transform your business with intelligent automation and next-generation cybersecurity." />
-		<meta name="keywords" content="AI solutions, quantum technology, cybersecurity, IT services, business transformation, intelligent automation, Zion Tech Group, machine learning, cloud computing, digital transformation, blockchain, IoT, edge computing" />
-		<meta name="author" content="Zion Tech Group" />
-		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-		<meta name="theme-color" content="#22ddd2" />
-		<meta name="color-scheme" content="dark light" />
-		
-		<!-- Open Graph Meta Tags -->
-		<meta property="og:title" content="Zion Tech Group - Pioneering AI & Quantum Technology Solutions" />
-		<meta property="og:description" content="Transform your business with cutting-edge AI solutions, quantum technology, and innovative IT services." />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://ziontechgroup.com" />
-		<meta property="og:image" content="/og-image.jpg" />
-		<meta property="og:image:width" content="1200" />
-		<meta property="og:image:height" content="630" />
-		<meta property="og:image:alt" content="Zion Tech Group - AI & Quantum Technology Solutions" />
-		<meta property="og:site_name" content="Zion Tech Group" />
-		<meta property="og:locale" content="en_US" />
-		
-		<!-- Twitter Card Meta Tags -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Zion Tech Group - Pioneering AI & Quantum Technology Solutions" />
-		<meta name="twitter:description" content="Transform your business with cutting-edge AI solutions, quantum technology, and innovative IT services." />
-		<meta name="twitter:image" content="/og-image.jpg" />
-		<meta name="twitter:site" content="@ziontechgroup" />
-		<meta name="twitter:creator" content="@ziontechgroup" />
-		
-		<!-- PWA Meta Tags -->
-		<meta name="application-name" content="Zion Tech Group" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<meta name="apple-mobile-web-app-title" content="Zion Tech" />
-		<meta name="format-detection" content="telephone=no" />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="msapplication-config" content="/browserconfig.xml" />
-		<meta name="msapplication-TileColor" content="#22ddd2" />
-		<meta name="msapplication-tap-highlight" content="no" />
-		
-		<!-- Performance Optimizations -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-		<link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
-		<link rel="preload" href="/src/main.jsx" as="script" />
-		<link rel="preload" href="/src/index.css" as="style" />
-		<link rel="modulepreload" href="/src/main.jsx" />
-		
-		<!-- PWA Manifest -->
-		<link rel="manifest" href="/manifest.json" />
-		
-		<!-- Theme Color -->
-		<meta name="msapplication-TileColor" content="#22ddd2" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		
-		<!-- Structured Data -->
-		<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "Organization",
-			"name": "Zion Tech Group",
-			"url": "https://ziontechgroup.com",
-			"logo": "https://ziontechgroup.com/logo.png",
-			"description": "Pioneering the future with cutting-edge AI solutions, quantum technology, and innovative IT services.",
-			"foundingDate": "2023",
-			"address": {
-				"@type": "PostalAddress",
-				"streetAddress": "364 E Main St STE 1008",
-				"addressLocality": "Middletown",
-				"addressRegion": "DE",
-				"postalCode": "19709",
-				"addressCountry": "US"
-			},
-			"contactPoint": {
-				"@type": "ContactPoint",
-				"contactType": "customer service",
-				"telephone": "+1-302-464-0950",
-				"email": "kleber@ziontechgroup.com",
-				"availableLanguage": "English"
-			},
-			"sameAs": [
-				"https://linkedin.com/company/zion-tech-group",
-				"https://twitter.com/ziontechgroup",
-				"https://facebook.com/ziontechgroup"
-			],
-			"hasOfferCatalog": {
-				"@type": "OfferCatalog",
-				"name": "Technology Services",
-				"itemListElement": [
-					{
-						"@type": "Offer",
-						"itemOffered": {
-							"@type": "Service",
-							"name": "AI & Analytics Solutions",
-							"description": "Advanced AI-powered business intelligence and analytics solutions"
-						}
-					},
-					{
-						"@type": "Offer",
-						"itemOffered": {
-							"@type": "Service",
-							"name": "Cybersecurity Services",
-							"description": "Enterprise-grade security and threat detection systems"
-						}
-					},
-					{
-						"@type": "Offer",
-						"itemOffered": {
-							"@type": "Service",
-							"name": "Cloud Solutions",
-							"description": "Scalable cloud infrastructure and DevOps services"
-						}
-					},
-					{
-						"@type": "Offer",
-						"itemOffered": {
-							"@type": "Service",
-							"name": "Quantum Technology",
-							"description": "Next-generation quantum computing and cryptography solutions"
-						}
-					}
-				]
-			},
-			"areaServed": {
-				"@type": "Country",
-				"name": "United States"
-			},
-			"serviceArea": {
-				"@type": "GeoCircle",
-				"geoMidpoint": {
-					"@type": "GeoCoordinates",
-					"latitude": 39.4496,
-					"longitude": -75.7163
-				},
-				"geoRadius": "50000"
-			}
-		}
-		</script>
-		
-		<!-- Additional SEO -->
-		<link rel="canonical" href="https://ziontechgroup.com" />
-		<meta name="geo.region" content="US-DE" />
-		<meta name="geo.placename" content="Middletown, Delaware" />
-		<meta name="geo.position" content="39.4496;-75.7163" />
-		<meta name="ICBM" content="39.4496, -75.7163" />
-		
-		<!-- Security Headers -->
-		<meta http-equiv="X-Content-Type-Options" content="nosniff" />
-		<meta http-equiv="X-Frame-Options" content="DENY" />
-		<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
-		<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-		
-		<!-- Performance monitoring -->
-		<script>
-			// Performance monitoring and PWA installation
-			window.addEventListener('load', () => {
-				// Performance monitoring
-				if ('performance' in window) {
-					const perfData = performance.getEntriesByType('navigation')[0];
-					console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
-				}
-				
-				// PWA installation prompt
-				let deferredPrompt;
-				window.addEventListener('beforeinstallprompt', (e) => {
-					e.preventDefault();
-					deferredPrompt = e;
-					
-					// Show install button or notification
-					showInstallPrompt();
-				});
-				
-				// Service Worker registration
-				if ('serviceWorker' in navigator) {
-					navigator.serviceWorker.register('/sw.js')
-						.then((registration) => {
-							console.log('SW registered: ', registration);
-						})
-						.catch((registrationError) => {
-							console.log('SW registration failed: ', registrationError);
-						});
-				}
-			});
-			
-			function showInstallPrompt() {
-				// You can implement a custom install prompt here
-				console.log('PWA install prompt available');
-			}
-			
-			// Offline detection
-			window.addEventListener('online', () => {
-				document.body.classList.remove('offline');
-				console.log('Back online');
-			});
-			
-			window.addEventListener('offline', () => {
-				document.body.classList.add('offline');
-				console.log('Gone offline');
-			});
-		</script>
-	</head>
-	<body>
-		<div id="root"></div>
-		<script type="module" src="/src/main.tsx"></script>
-		
-		<!-- PWA Installation Script -->
-		<script>
-			// Handle PWA installation
-			window.addEventListener('appinstalled', (evt) => {
-				console.log('PWA installed successfully');
-				// Track installation in analytics
-				if (typeof gtag !== 'undefined') {
-					gtag('event', 'pwa_install', {
-						event_category: 'engagement',
-						event_label: 'pwa_installation'
-					});
-				}
-			});
-		</script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta
+      name="description"
+      content="Zion Tech Group - Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
+    />
+    <meta name="keywords" content="AI, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group" />
+    <meta name="author" content="Zion Tech Group" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com/" />
+    <meta property="og:title" content="Zion Tech Group - Technology Solutions" />
+    <meta property="og:description" content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
+    <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ziontechgroup.com/" />
+    <meta property="twitter:title" content="Zion Tech Group - Technology Solutions" />
+    <meta property="twitter:description" content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
+    <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ziontechgroup.com/" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <title>Zion Tech Group - Technology Solutions</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

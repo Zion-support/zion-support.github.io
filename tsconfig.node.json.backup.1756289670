@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+<<<<<<< HEAD
+    "allowSyntheticDefaultImports": true,
+    "strict": true
+=======
+    "allowSyntheticDefaultImports": true
+>>>>>>> origin/cursor/website-audit-and-enhancement-eb94
+  },
+  "include": ["vite.config.ts"]
+}
