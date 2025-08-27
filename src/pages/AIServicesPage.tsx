@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { 
   Brain, 
   Zap, 
@@ -22,10 +21,9 @@ import {
   Target,
   Award,
   Clock,
-  Star
+  Star,
+  Heart
 } from 'lucide-react';
-
-<<<<<<< HEAD
 const aiServices = [
   {
     id: 'ai-consciousness-simulator',

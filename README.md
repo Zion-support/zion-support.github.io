@@ -15,7 +15,6 @@ Zion Tech Group is a leading technology solutions provider offering cutting-edge
 
 ## 🌟 Our Comprehensive Service Portfolio
 
-<<<<<<< HEAD
 ### 🤖 AI & Machine Learning Services
 
 #### **AI-Powered Business Intelligence & Analytics** - $2,999/month
@@ -210,7 +209,7 @@ Zion Tech Group is a leading technology solutions provider offering cutting-edge
 - Quantum computing platforms
 - Custom AI solutions
 - Full-stack digital transformation
-=======
+
 ### 🤖 AI & Business Intelligence Services
 - **AI Predictive Analytics Engine** - $12,999/month
   - 95% prediction accuracy with real-time processing
@@ -300,7 +299,6 @@ Zion Tech Group is a leading technology solutions provider offering cutting-edge
 - **💼 Enterprise-Grade**: SOC 2, ISO 27001, GDPR, HIPAA compliance
 - **💰 Competitive Pricing**: Transparent pricing with volume discounts
 - **🚀 Future-Ready**: Technology solutions designed for tomorrow's challenges
->>>>>>> origin/cursor/add-comprehensive-services-2025
 
 ## 🛠️ Technology Stack
 
@@ -312,12 +310,6 @@ This application is built with modern, cutting-edge technologies:
 - **Build Tool**: Vite with optimized bundling
 - **Deployment**: Netlify with automatic deployments
 - **Version Control**: Git with GitHub integration
-
-<<<<<<< HEAD
-- [Services Overview](/services) - Complete service catalog
-- [Services Advertising](/services-advertising) - Detailed service information and pricing
-- [Request Quote](/request-quote) - Get custom pricing
-- [Contact Us](/contact) - Get in touch with our experts
 
 ## 🚀 Technology Stack
 
@@ -389,20 +381,18 @@ We invest heavily in research and development to stay at the forefront of techno
 - **Blockchain Innovation**: Creating new decentralized solutions
 - **Space Technology**: Leveraging satellite data for business insights
 - **Edge Computing**: Optimizing IoT and real-time processing
-=======
+
 ## 🚀 Getting Started
->>>>>>> origin/cursor/add-comprehensive-services-2025
 
 ### Prerequisites
 - Node.js 18+ 
 - npm, yarn, or pnpm
 - Modern web browser
 
-<<<<<<< HEAD
 **Ready to transform your business with cutting-edge technology? Contact Zion Tech Group today!**
 
 📞 **+1 302 464 0950** | 📧 **kleber@ziontechgroup.com** | 🌐 **https://ziontechgroup.com**
-=======
+
 ### Installation
 
 ```bash
@@ -552,4 +542,3 @@ For support, questions, or to learn more about our services:
 *Transforming businesses through innovative technology solutions*
 
 [![Zion Tech Group](https://img.shields.io/badge/Zion%20Tech%20Group-Innovative%20Solutions-blue?style=for-the-badge&logo=react)](https://ziontechgroup.com)
->>>>>>> origin/cursor/add-comprehensive-services-2025
