@@ -384,6 +384,8 @@ const Blog: React.FC = () => {
                 </div>
             </main>
             <Footer />
-</>
+        </>
     );
 }
+
+export default Blog;
