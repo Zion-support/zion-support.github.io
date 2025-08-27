@@ -42,7 +42,9 @@ export const FuturisticFooter: React.FC = () => {
         { name: "IT Infrastructure", href: "/it-services" },
         { name: "Emerging Technologies", href: "/emerging-tech" },
         { name: "Cybersecurity", href: "/it-services/cybersecurity" },
-        { name: "Cloud Solutions", href: "/it-services/cloud" }
+        { name: "Cloud Solutions", href: "/it-services/cloud" },
+        { name: "DevOps & Automation", href: "/it-services/devops" },
+        { name: "Data Management", href: "/it-services/data" }
       ]
     },
     {
@@ -53,7 +55,9 @@ export const FuturisticFooter: React.FC = () => {
         { name: "Edge Computing", href: "/emerging-tech/edge" },
         { name: "IoT Solutions", href: "/emerging-tech/iot" },
         { name: "Healthcare AI", href: "/ai-services/healthcare" },
-        { name: "Financial AI", href: "/ai-services/financial" }
+        { name: "Financial AI", href: "/ai-services/financial" },
+        { name: "Green Technology", href: "/green-it" },
+        { name: "Space Technology", href: "/emerging-tech/space" }
       ]
     },
     {
@@ -64,7 +68,9 @@ export const FuturisticFooter: React.FC = () => {
         { name: "Careers", href: "/careers" },
         { name: "Partners", href: "/partners" },
         { name: "News & Blog", href: "/blog" },
-        { name: "Press Kit", href: "/press" }
+        { name: "Press Kit", href: "/press" },
+        { name: "Investor Relations", href: "/investors" },
+        { name: "Sustainability", href: "/sustainability" }
       ]
     },
     {
@@ -75,7 +81,9 @@ export const FuturisticFooter: React.FC = () => {
         { name: "Developer Portal", href: "/developer" },
         { name: "Support Center", href: "/support" },
         { name: "FAQ", href: "/faq" },
-        { name: "Contact Us", href: "/contact" }
+        { name: "Contact Us", href: "/contact" },
+        { name: "Case Studies", href: "/case-studies" },
+        { name: "Marketplace", href: "/marketplace" }
       ]
     }
   ];
@@ -178,12 +186,64 @@ export const FuturisticFooter: React.FC = () => {
             ))}
           </div>
 
-          {/* Bottom Section */}
+          {/* Additional Quick Access Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            className="border-t border-zion-slate/30 mt-12 pt-8"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                  <Zap className="w-5 h-5 mr-2 text-zion-cyan" />
+                  Quick Actions
+                </h3>
+                <ul className="space-y-2">
+                  <li>
+                    <Link
+                      to="/request-quote"
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
+                    >
+                      Request Quote
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/demo"
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
+                    >
+                      Book Demo
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/support"
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
+                    >
+                      Get Support
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/status"
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
+                    >
+                      System Status
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Bottom Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
             className="border-t border-zion-slate/30 mt-12 pt-8"
           >
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">

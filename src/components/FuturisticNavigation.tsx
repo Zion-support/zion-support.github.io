@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { MobileSidebarToggle } from './MobileSidebarToggle';
 import { 
   Menu, 
   X, 
@@ -98,6 +99,7 @@ import {
   MicOff,
   Volume2,
   VolumeX,
+  Handshake,
   Play,
   Pause,
   Stop,
@@ -179,7 +181,6 @@ import {
 } from 'lucide-react';
 
 export const FuturisticNavigation: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -194,7 +195,6 @@ export const FuturisticNavigation: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    setMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [location.pathname]);
 
@@ -219,7 +219,9 @@ export const FuturisticNavigation: React.FC = () => {
         { name: "Machine Learning", href: "/ai-services/machine-learning" },
         { name: "Computer Vision", href: "/ai-services/computer-vision" },
         { name: "Natural Language Processing", href: "/ai-services/nlp" },
-        { name: "Autonomous AI Agents", href: "/ai-services/autonomous-agents" }
+        { name: "Autonomous AI Agents", href: "/ai-services/autonomous-agents" },
+        { name: "Healthcare AI", href: "/ai-services/healthcare" },
+        { name: "Financial AI", href: "/ai-services/financial" }
       ]
     },
     {
@@ -230,7 +232,8 @@ export const FuturisticNavigation: React.FC = () => {
         { name: "Business Tools", href: "/micro-saas/business-tools" },
         { name: "Productivity Apps", href: "/micro-saas/productivity" },
         { name: "Industry Solutions", href: "/micro-saas/industry" },
-        { name: "Custom Development", href: "/micro-saas/custom" }
+        { name: "Custom Development", href: "/micro-saas/custom" },
+        { name: "Marketplace", href: "/marketplace" }
       ]
     },
     {
@@ -241,7 +244,8 @@ export const FuturisticNavigation: React.FC = () => {
         { name: "Cloud Solutions", href: "/it-services/cloud" },
         { name: "Cybersecurity", href: "/it-services/cybersecurity" },
         { name: "DevOps & Automation", href: "/it-services/devops" },
-        { name: "Data Management", href: "/it-services/data" }
+        { name: "Data Management", href: "/it-services/data" },
+        { name: "Network Security", href: "/it-services/network-security" }
       ]
     },
     {
@@ -252,7 +256,8 @@ export const FuturisticNavigation: React.FC = () => {
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },
         { name: "Edge Computing", href: "/emerging-tech/edge" },
         { name: "IoT Solutions", href: "/emerging-tech/iot" },
-        { name: "Green Technology", href: "/green-it" }
+        { name: "Green Technology", href: "/green-it" },
+        { name: "Space Technology", href: "/emerging-tech/space" }
       ]
     }
   ];
@@ -292,12 +297,42 @@ export const FuturisticNavigation: React.FC = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">
+              {/* Main Navigation Links */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <Link
+                  to="/about"
+                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
+                >
+                  <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="font-medium">About</span>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+              >
+                <Link
+                  to="/partners"
+                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
+                >
+                  <Handshake className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="font-medium">Partners</span>
+                </Link>
+              </motion.div>
+
+              {/* Service Categories */}
               {serviceCategories.map((category, index) => (
                 <div key={category.name} className="relative">
                   <motion.button
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.5, delay: (index + 2) * 0.1 }}
                     onClick={() => toggleDropdown(category.name)}
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
                       activeDropdown === category.name 
@@ -400,73 +435,13 @@ export const FuturisticNavigation: React.FC = () => {
                 </motion.button>
               </div>
 
-              {/* Mobile menu button */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-              >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </motion.button>
+              {/* Mobile Sidebar Toggle */}
+              <MobileSidebarToggle />
             </div>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-xl border-t border-zion-cyan/20"
-            >
-              <div className="container mx-auto px-4 py-6 space-y-4">
-                {/* Mobile Search */}
-                <form onSubmit={handleSearch}>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      placeholder="Search services..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full px-4 py-3 pl-10 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50"
-                    />
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
-                  </div>
-                </form>
 
-                {/* Mobile Navigation Items */}
-                <div className="space-y-2">
-                  {serviceCategories.map((category) => (
-                    <div key={category.name} className="border-b border-zion-cyan/10 pb-2">
-                      <Link
-                        to={category.services[0].href} // Link to the first service in the category
-                        className="flex items-center space-x-3 p-3 text-white hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-                      >
-                        <category.icon className="w-5 h-5" />
-                        <span className="font-medium">{category.name}</span>
-                      </Link>
-                      <div className="ml-8 mt-2 space-y-1">
-                        {category.services.slice(0, 3).map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
-                            className="block p-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/5 rounded transition-all duration-300"
-                          >
-                            {service.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </header>
     </>
   );
