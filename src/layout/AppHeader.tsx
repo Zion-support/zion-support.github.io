@@ -90,7 +90,7 @@ export function AppHeader() {
 
   return (
     <>
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled 
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
           : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
@@ -115,12 +115,13 @@ export function AppHeader() {
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center space-x-8" aria-label="Primary">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
+                  aria-current={item.current ? 'page' : undefined}
                 >
                   {item.name}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
@@ -128,12 +129,13 @@ export function AppHeader() {
               ))}
               
               {/* Services Dropdown */}
-              <div className="relative">
+              <div className="relative" aria-haspopup="true" aria-expanded={servicesDropdownOpen}>
                 <button
                   onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                   onMouseEnter={() => setServicesDropdownOpen(true)}
                   onMouseLeave={() => setServicesDropdownOpen(false)}
                   className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
+                  aria-controls="services-menu"
                 >
                   Services
                   <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
@@ -142,9 +144,12 @@ export function AppHeader() {
                 
                 {servicesDropdownOpen && (
                   <div 
+                    id="services-menu"
                     className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 border border-cyan-400/20 rounded-xl shadow-2xl backdrop-blur-xl animate-fade-in"
                     onMouseEnter={() => setServicesDropdownOpen(true)}
                     onMouseLeave={() => setServicesDropdownOpen(false)}
+                    role="menu"
+                    aria-label="Services"
                   >
                     <div className="p-6">
                       <div className="grid grid-cols-1 gap-3">
@@ -153,6 +158,7 @@ export function AppHeader() {
                             key={service.name}
                             to={service.href}
                             className="flex items-center p-4 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group hover:scale-105"
+                            role="menuitem"
                           >
                             <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
                               <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
