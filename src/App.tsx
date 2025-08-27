@@ -32,6 +32,7 @@ const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Comprehen
 const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
 const ComprehensiveServicesOverview = React.lazy(() => import('./pages/ComprehensiveServicesOverview'));
 const ComprehensivePricingGuide2027New = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025'));
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -98,6 +99,7 @@ function App() {
               
               {/* New Comprehensive Routes */}
               <Route path="/services-overview" element={<ComprehensiveServicesOverview />} />
+              <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
               <Route path="/pricing-guide" element={<ComprehensivePricingGuide2027New />} />
               
               {/* Emerging Tech Routes */}
