@@ -387,7 +387,6 @@ function App() {
                     <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
                     <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
                     <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
-                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                     <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
                     <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
                     
