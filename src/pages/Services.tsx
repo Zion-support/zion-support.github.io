@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles } from 'lucide-react';
+import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles, Bot, Shield, FileText, Users, BarChart3, Cloud, ShieldCheck, Server, Database, Network, Rocket, Mail, Activity, Brain, Cpu, Zap, Lock, Target, CheckCircle, Star, Clock, Smartphone } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-import { NEW_SERVICES_2025 } from '../data/newServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
+import { CUTTING_EDGE_AI_SERVICES_2026 } from '../data/cuttingEdgeAIServices2026';
+import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026 } from '../data/specializedITInfrastructureServices2026';
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2026 } from '../data/specializedIndustrySolutions2026';
 
 export default function Services() {
   const aiServices = [
@@ -231,6 +233,24 @@ export default function Services() {
     }
   ];
 
+  const featuredCategories = [
+    {
+      title: "AI & Machine Learning",
+      desc: "Cutting-edge AI solutions for business automation and intelligence",
+      href: "/services/ai-services"
+    },
+    {
+      title: "Cloud & DevOps",
+      desc: "Scalable cloud infrastructure and automated deployment pipelines",
+      href: "/services/cloud-devops"
+    },
+    {
+      title: "Cybersecurity",
+      desc: "Advanced security solutions for modern enterprise threats",
+      href: "/services/cybersecurity"
+    }
+  ];
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -424,8 +444,7 @@ export default function Services() {
               </Link>
             ))}
           </div>
-            ))}
-          </motion.div>
+        </motion.div>
         </div>
       </section>
 
