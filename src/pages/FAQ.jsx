@@ -2,10 +2,6 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-<<<<<<< HEAD
-
-=======
->>>>>>> d55a36bd8e1888949033367a1b7620593463887f
 export default function FAQ() {
     const faqData = [
         {
@@ -57,18 +53,6 @@ export default function FAQ() {
             answer: "Getting started is simple! Create a free account, complete your profile, and start exploring the marketplace. You can immediately browse listings, connect with professionals, or showcase your own services and expertise."
         }
     ];
-<<<<<<< HEAD
-    
-    return (
-      <>
-        <SEO title="FAQ - Frequently Asked Questions" description="Find answers to common questions about Zion Tech Group's AI and tech marketplace platform." keywords="FAQ, Zion Tech Group, AI marketplace, tech platform, questions, support" canonical="https://ziontechgroup.com/faq"/>
-        <main className="min-h-screen bg-zion-blue pt-32 pb-20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <GradientHeading>Frequently Asked Questions</GradientHeading>
-              <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-                Find answers to the most common questions about Zion Tech Group and our marketplace platform
-=======
     return (<>
       <SEO title="FAQ - Frequently Asked Questions" description="Find answers to common questions about Zion Tech Group's AI and tech marketplace platform." keywords="FAQ, Zion Tech Group, AI marketplace, tech platform, questions, support" canonical="https://ziontechgroup.com/faq"/>
       <main className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
@@ -100,7 +84,6 @@ export default function FAQ() {
               <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>
               <p className="text-zion-slate-light mb-6">
                 Can't find what you're looking for? Our support team is here to help.
->>>>>>> d55a36bd8e1888949033367a1b7620593463887f
               </p>
             </div>
             

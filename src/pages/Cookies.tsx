@@ -105,11 +105,6 @@ export default function Cookies() {
               They help us provide you with a better experience by remembering your preferences, 
               analyzing how you use our site, and personalizing content.
             </p>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light leading-relaxed">
-              Cookies can be either "session cookies" (which are deleted when you close your browser) 
-              or "persistent cookies" (which remain on your device for a set period of time).
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="text-center">
                 <div className="bg-orange-600/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -521,13 +516,11 @@ export default function Cookies() {
 };
 
 export default Cookies;
-=======
       </main>
       <Footer />
     </div>
   );
 }
-=======
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 
@@ -547,7 +540,6 @@ export default function Cookies() {
             <GradientHeading>Cookie Policy</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
->>>>>>> d55a36bd8e1888949033367a1b7620593463887f
             </p>
           </div>
         </motion.div>

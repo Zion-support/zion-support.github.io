@@ -155,8 +155,6 @@ const Blog: React.FC = () => {
 
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
-<<<<<<< HEAD
-=======
 
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -165,7 +163,6 @@ const Blog: React.FC = () => {
       day: 'numeric'
     });
   };
->>>>>>> d55a36bd8e1888949033367a1b7620593463887f
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">

@@ -37,10 +37,6 @@ export function SEO({ title, description, keywords, image, canonical, ogImage, u
       <meta name="robots" content="index, follow" />
       <meta name="author" content={siteName} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
-
-=======
->>>>>>> 6d5204ab97205fd6c11a26b6113e675abf804a01
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOProps {
@@ -100,10 +96,6 @@ export function SEO({
   };
   // Merge with custom structured data
   const finalStructuredData = structuredData || defaultStructuredData;
-<<<<<<< HEAD
-
-=======
->>>>>>> 6d5204ab97205fd6c11a26b6113e675abf804a01
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -173,10 +165,6 @@ export function SEO({
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6d5204ab97205fd6c11a26b6113e675abf804a01
     </Helmet>
   );
 }

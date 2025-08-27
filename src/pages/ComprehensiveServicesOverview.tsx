@@ -9,22 +9,12 @@ import { ENHANCED_INNOVATIVE_SERVICES } from '@/data/enhancedInnovativeServices'
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import EnhancedSEO from '@/components/EnhancedSEO';
-// Combine all services
-const ALL_SERVICES = [
-  ...ENHANCED_INNOVATIVE_SERVICES,
-  ...COMPREHENSIVE_SERVICES,
-  ...INNOVATIVE_MICRO_SAAS_SERVICES
-] as any[];
-=======
 // Combine all services
 const ALL_SERVICES = [
     ...ENHANCED_INNOVATIVE_SERVICES,
     ...COMPREHENSIVE_SERVICES,
     ...INNOVATIVE_MICRO_SAAS_SERVICES
 ];
->>>>>>> cursor/website-audit-and-enhancement-1eed
 const categoryIcons = {
     'AI & Legal Tech': FileText,
     'AI & FinTech': DollarSign,
@@ -83,78 +73,6 @@ const supportLevelColors = {
     'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
 };
 export default function ComprehensiveServicesOverview() {
-<<<<<<< HEAD
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [priceRange, setPriceRange] = useState<string>('all');
-  const [selectedSupportLevel, setSelectedSupportLevel] = useState<string>('all');
-  const filteredServices = useMemo(() => {
-    let filtered = ALL_SERVICES;
-    // Search filter
-    if (searchQuery) {
-      const lowerQuery = searchQuery.toLowerCase();
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(lowerQuery) ||
-        service.description.toLowerCase().includes(lowerQuery) ||
-        (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery)))
-      );
-    }
-    // Category filter
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-    // Price range filter
-    if (priceRange !== 'all') {
-      switch (priceRange) {
-        case 'low':
-          filtered = filtered.filter(service => {
-            const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-            return price <= 1000;
-          });
-          break;
-        case 'medium':
-          filtered = filtered.filter(service => {
-            const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-            return price > 1000 && price <= 3000;
-          });
-          break;
-        case 'high':
-          filtered = filtered.filter(service => {
-            const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-            return price > 3000;
-          });
-          break;
-      }
-    }
-    // Support level filter
-    if (selectedSupportLevel !== 'all') {
-      filtered = filtered.filter(service => service.supportLevel === selectedSupportLevel);
-    }
-    return filtered;
-  }, [searchQuery, selectedCategory, priceRange, selectedSupportLevel]);
-  const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category))).sort();
-  const formatPrice = (price: any) => {
-    if (typeof price === 'number') {
-      if (price >= 1000) {
-        return `$${(price / 1000).toFixed(1)}k`;
-      }
-      return `$${price}`;
-    }
-    if (price?.monthly) {
-      if (price.monthly >= 1000) {
-        return `$${(price.monthly / 1000).toFixed(1)}k`;
-      }
-      return `$${price.monthly}`;
-    }
-    return 'Contact Us';
-  };
-  const getServicePrice = (service: any) => {
-    if (typeof service.price === 'number') {
-      return service.price;
-    }
-    return service.price?.monthly || 0;
-  };
-=======
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
@@ -464,4 +382,3 @@ export default function ComprehensiveServicesOverview() {
       </div>
     </>);
 }
->>>>>>> cursor/website-audit-and-enhancement-1eed

@@ -1,11 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Users2, 
-=======
   Users, 
->>>>>>> d55a36bd8e1888949033367a1b7620593463887f
   Globe, 
   Award, 
   TrendingUp, 
@@ -99,11 +95,7 @@ const PartnersPage: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-              <Users2 className="w-20 h-20 text-zion-cyan mx-auto mb-8" />
-=======
               <Users className="w-20 h-20 text-zion-cyan mx-auto mb-8" />
->>>>>>> d55a36bd8e1888949033367a1b7620593463887f
               <h1 className="text-5xl md:text-7xl font-bold mb-8">
                 Strategic <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
                   Partnerships

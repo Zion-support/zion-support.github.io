@@ -21,13 +21,3 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
       {children}
     </button>);
 }
-<<<<<<< HEAD
-// Export buttonVariants for backward compatibility
-export const buttonVariants = {
-  default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
-  outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',
-  ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',
-  link: 'text-zion-cyan hover:underline focus:ring-zion-cyan'
-};
-=======
->>>>>>> cursor/website-audit-and-enhancement-1eed

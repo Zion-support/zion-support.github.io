@@ -30,19 +30,7 @@ import {
   Mail,
   MapPin,
   Globe as GlobeIcon,
-<<<<<<< HEAD
-  Atom,
-  Blockchain,
-  Heart,
-  Scale,
-  Factory,
-  Satellite,
-  ShoppingCart,
-  Building,
-  Truck
-=======
   Heart
->>>>>>> cursor/website-audit-and-enhancement-1eed
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
@@ -60,33 +48,6 @@ export default function ServicesPage() {
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-<<<<<<< HEAD
-    { id: 'ai-automation', name: 'AI & Automation', icon: Cpu, color: 'from-zion-purple to-zion-red' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Atom, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'blockchain', name: 'Blockchain & Web3', icon: Blockchain, color: 'from-zion-purple to-zion-blue' },
-    { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'healthcare-ai', name: 'Healthcare AI', icon: Heart, color: 'from-zion-pink to-zion-purple' },
-    { id: 'legal-tech', name: 'Legal Tech', icon: Scale, color: 'from-zion-orange to-zion-purple' },
-    { id: 'financial-ai', name: 'Financial AI', icon: DollarSign, color: 'from-zion-green to-zion-blue' },
-    { id: 'manufacturing-ai', name: 'Manufacturing AI', icon: Factory, color: 'from-zion-blue to-zion-purple' },
-    { id: 'space-tech', name: 'Space Technology', icon: Satellite, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'neuromorphic-computing', name: 'Neuromorphic Computing', icon: Brain, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Heart, color: 'from-zion-pink to-zion-green' },
-    { id: 'advanced-robotics', name: 'Advanced Robotics', icon: Cpu, color: 'from-zion-blue to-zion-red' },
-    { id: 'advanced-materials', name: 'Advanced Materials', icon: Factory, color: 'from-zion-green to-zion-blue' },
-    { id: 'advanced-energy', name: 'Advanced Energy', icon: Zap, color: 'from-zion-yellow to-zion-orange' },
-    { id: 'advanced-transportation', name: 'Advanced Transportation', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
-    { id: 'advanced-communication', name: 'Advanced Communication', icon: Globe, color: 'from-zion-cyan to-zion-blue' },
-    { id: 'advanced-manufacturing', name: 'Advanced Manufacturing', icon: Factory, color: 'from-zion-orange to-zion-blue' },
-    { id: 'advanced-gaming', name: 'Advanced Gaming', icon: Code, color: 'from-zion-purple to-zion-pink' },
-    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Brain, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' },
-    { id: 'extended-reality', name: 'Extended Reality', icon: Code, color: 'from-zion-orange to-zion-purple' },
-    { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'federated-learning', name: 'Federated Learning', icon: Brain, color: 'from-zion-purple to-zion-blue' },
-    { id: 'sustainable-tech', name: 'Sustainable Technology', icon: Globe, color: 'from-zion-green to-zion-blue' },
-=======
     { id: 'ai-finance', name: 'AI & Finance', icon: TrendingUp, color: 'from-zion-purple to-zion-blue' },
     { id: 'ai-legal', name: 'AI & Legal', icon: Shield, color: 'from-zion-blue to-zion-cyan' },
     { id: 'ai-healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-zion-cyan to-zion-green' },
@@ -96,7 +57,6 @@ export default function ServicesPage() {
     { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
     { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
->>>>>>> cursor/website-audit-and-enhancement-1eed
     { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
     { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
     { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
@@ -138,11 +98,7 @@ export default function ServicesPage() {
   ];
 
   // Filter and sort services
-<<<<<<< HEAD
-  const filteredServices = ALL_INNOVATIVE_SERVICES.filter(service => {
-=======
   const filteredServices = allServices.filter(service => {
->>>>>>> cursor/add-new-services-2025
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -256,11 +212,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-<<<<<<< HEAD
-                <div className="text-3xl font-bold text-zion-cyan mb-2">{ALL_INNOVATIVE_SERVICES.length}+</div>
-=======
                 <div className="text-3xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
->>>>>>> cursor/add-new-services-2025
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               <motion.div 
@@ -269,11 +221,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-<<<<<<< HEAD
-                <div className="text-3xl font-bold text-zion-purple mb-2">32+</div>
-=======
                 <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length - 1}</div>
->>>>>>> cursor/website-audit-and-enhancement-1eed
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
               <motion.div 
@@ -368,11 +316,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-zion-slate-light">
-<<<<<<< HEAD
-              Showing {sortedServices.length} of {ALL_INNOVATIVE_SERVICES.length} services
-=======
               Showing {sortedServices.length} of {allServices.length} services
->>>>>>> cursor/add-new-services-2025
             </div>
           </motion.div>
         </div>
