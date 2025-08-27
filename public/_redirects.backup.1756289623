@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+# Handle SPA routing - redirect all routes to index.html
+/*    /index.html   200
+=======
 # Handle client-side routing for SPA
 /*    /index.html   200
 
@@ -10,3 +14,4 @@
 /ai-content-marketing-automation /ai-content-generator 301
 /ai-customer-success-automation /ai-customer-success-platform 301
 /browser-automation-cloud/ /browser-automation-cloud 301
+>>>>>>> origin/cursor/fix-netlify-nextjs-publish-directory-error-6c32

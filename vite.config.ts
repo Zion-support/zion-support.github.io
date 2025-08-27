@@ -32,6 +32,8 @@ export default defineConfig({
       },
     },
     chunkSizeWarningLimit: 1000,
+    // Ensure proper asset handling for Netlify
+    assetsInlineLimit: 4096,
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
@@ -44,8 +46,14 @@ export default defineConfig({
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+    // Handle both VITE_ and NEXT_PUBLIC_ prefixes for compatibility
+    'process.env.NEXT_PUBLIC_SUPABASE_URL': JSON.stringify(process.env.VITE_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL),
+    'process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY': JSON.stringify(process.env.VITE_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY),
+    'process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME': JSON.stringify(process.env.VITE_CLOUDINARY_CLOUD_NAME || process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME),
+    'process.env.NEXT_PUBLIC_STRIPE_TEST_KEY': JSON.stringify(process.env.VITE_STRIPE_TEST_KEY || process.env.NEXT_PUBLIC_STRIPE_TEST_KEY),
+    'process.env.NEXT_PUBLIC_API_URL': JSON.stringify(process.env.VITE_API_URL || process.env.NEXT_PUBLIC_API_URL),
   },
   esbuild: { drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [] },
   worker: { format: 'es' },
-  envPrefix: ['VITE_', 'ZION_'],
+  envPrefix: ['VITE_', 'ZION_', 'NEXT_PUBLIC_'],
 });

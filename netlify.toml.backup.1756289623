@@ -3,7 +3,11 @@
 # No Next.js plugins or configurations are needed
 
 [build]
+<<<<<<< HEAD
+  # Use `npm ci` for deterministic installs, Vite outputs to dist/
+=======
   # Use `npm ci` for deterministic installs, Vite builds to dist/
+>>>>>>> origin/cursor/fix-netlify-nextjs-publish-directory-error-6c32
   command = "npm ci && npm run build"
   publish = "dist"
 
@@ -12,7 +16,11 @@
   NODE_OPTIONS = "--max_old_space_size=4096"
   NPM_FLAGS = "--prefer-offline"
 
+<<<<<<< HEAD
+# Note: Removed @netlify/plugin-nextjs since this is a Vite project
+=======
 # Removed Next.js plugin since this is a Vite project
+>>>>>>> origin/cursor/fix-netlify-nextjs-publish-directory-error-6c32
 
 # Redirects for SEO/legacy URLs
 [[redirects]]
@@ -51,11 +59,23 @@
   status = 301
 
 [[redirects]]
+<<<<<<< HEAD
+  from = "/ai-content-marketing-automation"
+  to = "/intelligent-content-automation-platform"
+  status = 301
+
+[[redirects]]
+=======
+>>>>>>> origin/cursor/fix-netlify-nextjs-publish-directory-error-6c32
   from = "/browser-automation-cloud/"
   to = "/browser-automation-cloud"
   status = 301
 
+<<<<<<< HEAD
+# Add SPA fallback for client-side routing
+=======
 # Handle client-side routing for SPA (this is also in _redirects file)
+>>>>>>> origin/cursor/fix-netlify-nextjs-publish-directory-error-6c32
 [[redirects]]
   from = "/*"
   to = "/index.html"
