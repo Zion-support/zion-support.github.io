@@ -72,12 +72,7 @@ const benefits: Benefit[] = [
   }
 ];
 
-const stats = [
-  { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },
-  { icon: <CheckCircle className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },
-  { icon: <TrendingDown className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
-  { icon: <Globe className="w-6 h-6" />, value: "150+", label: "Countries Served" }
-];
+
 
 export function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
