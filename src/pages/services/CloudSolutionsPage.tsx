@@ -2,68 +2,65 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Zap, 
-  Code, 
+  Cloud, 
+  Server, 
   Database, 
-  Users, 
+  Zap, 
   Shield, 
+  Globe, 
   CheckCircle, 
   ArrowRight,
   Clock,
   Star,
   TrendingUp,
+  Users,
+  Lock,
   BarChart3,
-  Settings,
-  Lightbulb,
-  Briefcase,
-  Award,
-  Rocket,
-  Target,
-  Globe
+  Settings
 } from 'lucide-react';
 
-const MicroSAASPage = () => {
-  const saasServices = [
+const CloudSolutionsPage = () => {
+  const cloudServices = [
     {
-      id: 'custom-applications',
-      title: 'Custom Applications',
-      description: 'Tailored software solutions designed for your specific business needs',
-      icon: <Code className="w-8 h-8" />,
-      features: ['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],
-      useCases: ['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
-      pricing: 'Starting from $2,500/month'
+      id: 'cloud-migration',
+      title: 'Cloud Migration',
+      description: 'Seamless migration of applications and infrastructure to the cloud',
+      icon: <Cloud className="w-8 h-8" />,
+      features: ['Lift & Shift', 'Re-architecture', 'Hybrid Cloud', 'Multi-Cloud Strategy'],
+      useCases: ['Legacy Modernization', 'Cost Optimization', 'Scalability', 'Disaster Recovery'],
+      pricing: 'Starting from $5,000/month'
     },
     {
-      id: 'api-development',
-      title: 'API Development',
-      description: 'Robust and scalable APIs to connect your applications and services',
-      icon: <Database className="w-8 h-8" />,
-      features: ['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],
-      useCases: ['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
-      pricing: 'Starting from $1,800/month'
+      id: 'devops-automation',
+      title: 'DevOps Automation',
+      description: 'Automate your development and deployment processes',
+      icon: <Zap className="w-8 h-8" />,
+      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Automated Testing', 'Monitoring & Alerting'],
+      useCases: ['Faster Deployments', 'Quality Assurance', 'Team Collaboration', 'Reduced Errors'],
+      pricing: 'Starting from $3,500/month'
     },
     {
-      id: 'scalable-architecture',
-      title: 'Scalable Architecture',
-      description: 'Cloud-native architectures that grow with your business',
+      id: 'container-orchestration',
+      title: 'Container Orchestration',
+      description: 'Manage and scale containerized applications efficiently',
+      icon: <Server className="w-8 h-8" />,
+      features: ['Kubernetes', 'Docker Management', 'Service Mesh', 'Auto-scaling'],
+      useCases: ['Microservices', 'Application Scaling', 'Resource Optimization', 'High Availability'],
+      pricing: 'Starting from $4,200/month'
+    },
+    {
+      id: 'serverless-architecture',
+      title: 'Serverless Architecture',
+      description: 'Build scalable applications without managing infrastructure',
       icon: <Globe className="w-8 h-8" />,
-      features: ['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],
-      useCases: ['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
-      pricing: 'Starting from $3,200/month'
-    },
-    {
-      id: 'user-management',
-      title: 'User Management',
-      description: 'Comprehensive user authentication and authorization systems',
-      icon: <Users className="w-8 h-8" />,
-      features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
-      useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
-      pricing: 'Starting from $1,500/month'
+      features: ['Function as a Service', 'Event-Driven', 'Auto-scaling', 'Pay-per-use'],
+      useCases: ['Web Applications', 'API Development', 'Data Processing', 'IoT Backends'],
+      pricing: 'Starting from $2,800/month'
     }
   ];
 
-  const saasBenefits = [
-    'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration'
+  const cloudProviders = [
+    'AWS', 'Azure', 'Google Cloud', 'Digital Ocean', 'IBM Cloud', 'Oracle Cloud'
   ];
 
   const containerVariants = {
@@ -98,43 +95,43 @@ const MicroSAASPage = () => {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
-            <Zap className="w-10 h-10 text-white" />
+            <Cloud className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Micro SAAS
-            </span> Solutions
+              Cloud Solutions
+            </span> & DevOps
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-            Build and scale your software-as-a-service business with our micro SAAS solutions. 
-            From custom applications to scalable architectures, we help you create successful SAAS products.
+            Transform your infrastructure with modern cloud solutions and DevOps practices. 
+            From migration to automation, we help you build scalable, resilient systems.
           </p>
           
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">90%+</div>
-              <div className="text-zion-slate-light">Faster Development</div>
+              <div className="text-3xl font-bold text-zion-cyan mb-2">99.9%</div>
+              <div className="text-zion-slate-light">Uptime Guarantee</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-purple mb-2">50%+</div>
               <div className="text-zion-slate-light">Cost Reduction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-blue mb-2">24/7</div>
-              <div className="text-zion-slate-light">Uptime Support</div>
+              <div className="text-3xl font-bold text-zion-blue mb-2">10x</div>
+              <div className="text-zion-slate-light">Faster Deployments</div>
             </div>
           </div>
         </motion.div>
 
-        {/* SAAS Services Grid */}
+        {/* Cloud Services Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
         >
-          {saasServices.map((service, index) => (
+          {cloudServices.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -187,7 +184,7 @@ const MicroSAASPage = () => {
 
               {/* CTA Button */}
               <Link
-                to={`/micro-saas/${service.id}`}
+                to={`/services/cloud/${service.id}`}
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
               >
                 Learn More
@@ -197,7 +194,7 @@ const MicroSAASPage = () => {
           ))}
         </motion.div>
 
-        {/* SAAS Benefits */}
+        {/* Cloud Providers */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -206,30 +203,30 @@ const MicroSAASPage = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Benefits of Micro SAAS
+              Cloud Providers We Work With
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Discover why micro SAAS solutions are the future of software delivery 
-              and how they can transform your business.
+              We have expertise across major cloud platforms and can help you choose 
+              the best solution for your needs.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {saasBenefits.map((benefit, index) => (
+            {cloudProviders.map((provider, index) => (
               <motion.div
-                key={benefit}
+                key={provider}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
-                <div className="text-zion-cyan font-medium">{benefit}</div>
+                <div className="text-zion-cyan font-medium">{provider}</div>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Why Choose Our SAAS */}
+        {/* DevOps Benefits */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -238,18 +235,18 @@ const MicroSAASPage = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Why Choose Our SAAS Solutions?
+              DevOps Benefits
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Rocket className="w-8 h-8 text-white" />
+                <Clock className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Rapid Development</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Faster Delivery</h3>
               <p className="text-zion-slate-light">
-                Get to market faster with our proven development process
+                Reduce time-to-market with automated CI/CD pipelines
               </p>
             </div>
 
@@ -257,19 +254,19 @@ const MicroSAASPage = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Improved Security</h3>
               <p className="text-zion-slate-light">
-                Built with enterprise-grade security and compliance
+                Security integrated into every stage of development
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
+                <BarChart3 className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Scalable Growth</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Better Quality</h3>
               <p className="text-zion-slate-light">
-                Architecture that grows with your business needs
+                Automated testing and continuous monitoring
               </p>
             </div>
           </div>
@@ -283,24 +280,24 @@ const MicroSAASPage = () => {
           className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Build Your SAAS?
+            Ready to Scale in the Cloud?
           </h2>
           <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-            Let our SAAS experts help you create a successful software product 
-            that scales with your business and delights your customers.
+            Let our cloud experts help you build a scalable, resilient infrastructure 
+            that grows with your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105"
             >
-              Start SAAS Project
+              Get Cloud Consultation
             </Link>
             <Link
               to="/services/pricing"
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
-              View SAAS Pricing
+              View Cloud Pricing
             </Link>
           </div>
         </motion.div>
@@ -309,4 +306,4 @@ const MicroSAASPage = () => {
   );
 };
 
-export default MicroSAASPage;
+export default CloudSolutionsPage;
