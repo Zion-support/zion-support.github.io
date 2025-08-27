@@ -97,12 +97,7 @@ export default defineConfig({
   },
   css: {
     devSourcemap: true,
-    postcss: {
-      plugins: [
-        require('tailwindcss'),
-        require('autoprefixer')
-      ]
-    }
+    postcss: './postcss.config.js'
   },
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
