@@ -19,9 +19,14 @@ const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
 const Services2026 = React.lazy(() => import('./pages/Services2026'));
 const AIServices = React.lazy(() => import('./pages/AIServices'));
+const AISolutions = React.lazy(() => import('./pages/AISolutions'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
 const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
 const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
+const ComprehensiveServices = React.lazy(() => import('./pages/ComprehensiveServices'));
+const MobileLaunch = React.lazy(() => import('./pages/MobileLaunch'));
+const Analytics = React.lazy(() => import('./pages/Analytics'));
+const Match = React.lazy(() => import('./pages/Match'));
 const Solutions = React.lazy(() => import('./pages/solutions'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
@@ -182,9 +187,14 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/services2026" element={<Services2026 />} />
               <Route path="/ai-services" element={<AIServices />} />
+              <Route path="/ai-solutions" element={<AISolutions />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
               <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
+              <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
+              <Route path="/mobile-launch" element={<MobileLaunch />} />
+              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/match" element={<Match />} />
               <Route path="/search" element={<SearchPage />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/privacy" element={<Privacy />} />
