@@ -1,53 +1,48 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
-  Search, 
-  Filter, 
+  Sparkles, 
+  ArrowRight, 
   Star, 
   TrendingUp, 
+  Users, 
   Zap, 
   Shield, 
-  Brain, 
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
+  BarChart3, 
+  Globe, 
+  Cpu, 
+  Database, 
+  Cloud,
+  Brain,
+  Network,
+  Leaf,
+  Heart,
+  DollarSign,
+  Eye,
+  Target,
   CheckCircle,
   Clock,
-  Users,
-  Target,
-  BarChart3,
+  MapPin,
+  Phone,
+  Mail,
+  ExternalLink,
   Rocket,
-  Cpu,
-  Network,
-  Database,
-  Lock,
-  Leaf,
-  Scale,
-  Stethoscope,
-  Car,
-  Building2,
-  DollarSign,
+  Crown,
+  Building,
   Award,
   Lightbulb,
-  ArrowRight,
-  ChevronRight,
-  ChevronLeft,
-  Play,
-  Eye,
-  X,
-  Flask,
-  Calculator,
+  Gauge,
+  BarChart,
+  PieChart,
+  LineChart,
+  Activity,
   TrendingDown,
   Minus,
   Plus,
   Equal,
   Divide,
   Percent,
-  Euro,
-  Pound,
-  Yen,
   Bitcoin,
   Ethereum,
   CreditCard,
@@ -69,793 +64,735 @@ import {
   MicOff,
   Volume2,
   VolumeX,
+  Settings,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  FileText,
+  FileImage,
+  Video,
+  MessageCircle,
+  ShoppingCart,
+  Bell,
+  User,
+  Search,
+  Menu,
+  X,
+  ChevronDown,
+  ChevronUp,
+  ChevronLeft,
+  ChevronRight,
+  Play,
   Pause,
-  Stop,
   SkipBack,
   SkipForward,
-  Rewind,
-  FastForward,
-  Shuffle,
   Repeat,
-  Repeat1,
-  Shuffle2,
-  SkipBack2,
-  SkipForward2,
-  PlayCircle,
-  PauseCircle
+  Shuffle,
+  Volume,
+  Maximize,
+  Minimize,
+  Fullscreen,
+  FullscreenExit,
+  Download,
+  Upload,
+  Share,
+  MoreHorizontal,
+  MoreVertical,
+  Edit,
+  Trash2,
+  Copy,
+  Save,
+  PlusCircle,
+  MinusCircle,
+  XCircle,
+  AlertCircle,
+  Info,
+  Check,
+  X as XIcon,
+  Calculator,
+  TrendingUp as TrendingUpIcon,
+  PieChart as PieChartIcon,
+  BarChart3 as BarChart3Icon,
+  LineChart as LineChartIcon,
+  Activity as ActivityIcon,
+  Target as TargetIcon,
+  Award as AwardIcon,
+  Lightbulb as LightbulbIcon,
+  Zap as ZapIcon,
+  Shield as ShieldIcon,
+  Heart as HeartIcon,
+  Cpu as CpuIcon,
+  BookOpen as BookOpenIcon,
+  GraduationCap,
+  FileText as FileTextIcon
 } from 'lucide-react';
-import { INNOVATIVE_SERVICES_2027, InnovativeService2027 } from '../data/innovativeServices2027';
-import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from '../data/enhancedInnovativeServices2027';
+import { COMPREHENSIVE_PRICING_GUIDE_2027, MARKET_ANALYSIS_2027 } from '../data/comprehensivePricingGuide2027';
 
-// Combine all services
-const ALL_SERVICES = [...INNOVATIVE_SERVICES_2027, ...ENHANCED_INNOVATIVE_SERVICES_2027];
-
-const ComprehensivePricingGuide2027: React.FC = () => {
-  const [services, setServices] = useState<any[]>(ALL_SERVICES);
+export default function ComprehensivePricingGuide2027() {
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [selectedROI, setSelectedROI] = useState('all');
-  const [sortBy, setSortBy] = useState('title');
-  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'comparison'>('grid');
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [sortBy, setSortBy] = useState('price');
 
-  const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];
-  const priceRanges = [
-    'all',
-    'Under $1,000',
-    '$1,000 - $5,000',
-    '$5,000 - $10,000',
-    '$10,000 - $20,000',
-    '$20,000+'
-  ];
-  const roiRanges = [
-    'all',
-    'Under 200%',
-    '200% - 400%',
-    '400% - 600%',
-    '600% - 800%',
-    '800%+'
-  ];
-
-  const filteredServices = services.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
-    // Price range filtering
-    let matchesPrice = true;
-    if (selectedPriceRange !== 'all') {
-      const price = service.price;
-      switch (selectedPriceRange) {
-        case 'Under $1,000':
-          matchesPrice = price < 1000;
-          break;
-        case '$1,000 - $5,000':
-          matchesPrice = price >= 1000 && price < 5000;
-          break;
-        case '$5,000 - $10,000':
-          matchesPrice = price >= 5000 && price < 10000;
-          break;
-        case '$10,000 - $20,000':
-          matchesPrice = price >= 10000 && price < 20000;
-          break;
-        case '$20,000+':
-          matchesPrice = price >= 20000;
-          break;
-      }
-    }
-
-    // ROI filtering
-    let matchesROI = true;
-    if (selectedROI !== 'all') {
-      const roi = parseInt(service.roi.replace('%', ''));
-      switch (selectedROI) {
-        case 'Under 200%':
-          matchesROI = roi < 200;
-          break;
-        case '200% - 400%':
-          matchesROI = roi >= 200 && roi < 400;
-          break;
-        case '400% - 600%':
-          matchesROI = roi >= 400 && roi < 600;
-          break;
-        case '600% - 800%':
-          matchesROI = roi >= 600 && roi < 800;
-          break;
-        case '800%+':
-          matchesROI = roi >= 800;
-          break;
-      }
-    }
-    
-    return matchesSearch && matchesCategory && matchesPrice && matchesROI;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
-        return a.price - b.price;
-      case 'price-desc':
-        return b.price - a.price;
-      case 'roi':
-        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
-      case 'innovation':
-        const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Innovative': 1 };
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - 
-               (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
-      default:
-        return a.title.localeCompare(b.title);
-    }
-  });
-
-  const getPriceRangeStats = () => {
-    const stats = {
-      total: services.length,
-      under1k: services.filter(s => s.price < 1000).length,
-      k1to5: services.filter(s => s.price >= 1000 && s.price < 5000).length,
-      k5to10: services.filter(s => s.price >= 5000 && s.price < 10000).length,
-      k10to20: services.filter(s => s.price >= 10000 && s.price < 20000).length,
-      over20k: services.filter(s => s.price >= 20000).length,
-    };
-    return stats;
-  };
-
-  const getROIStats = () => {
-    const stats = {
-      total: services.length,
-      under200: services.filter(s => parseInt(s.roi.replace('%', '')) < 200).length,
-      k200to400: services.filter(s => {
-        const roi = parseInt(s.roi.replace('%', ''));
-        return roi >= 200 && roi < 400;
-      }).length,
-      k400to600: services.filter(s => {
-        const roi = parseInt(s.roi.replace('%', ''));
-        return roi >= 400 && roi < 600;
-      }).length,
-      k600to800: services.filter(s => {
-        const roi = parseInt(s.roi.replace('%', ''));
-        return roi >= 600 && roi < 800;
-      }).length,
-      over800: services.filter(s => parseInt(s.roi.replace('%', '')) >= 800).length,
-    };
-    return stats;
-  };
-
-  const toggleServiceSelection = (serviceId: string) => {
-    setSelectedServices(prev => 
-      prev.includes(serviceId) 
-        ? prev.filter(id => id !== serviceId)
-        : [...prev, serviceId]
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
     );
-  };
+
+    const element = document.getElementById('pricing-guide');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5" />, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'Quantum AI & Business Automation', name: 'Quantum AI Business', icon: <Brain className="h-5 w-5" />, color: 'from-purple-500 to-pink-500' },
+    { id: 'AI & Cybersecurity', name: 'AI Security', icon: <Shield className="h-5 w-5" />, color: 'from-red-500 to-orange-500' },
+    { id: 'AI & Research', name: 'AI Research', icon: <Search className="h-5 w-5" />, color: 'from-blue-500 to-cyan-500' },
+    { id: 'Quantum AI & Financial Technology', name: 'Quantum FinTech', icon: <DollarSign className="h-5 w-5" />, color: 'from-yellow-500 to-amber-500' },
+    { id: 'AI & Healthcare', name: 'AI Healthcare', icon: <Heart className="h-5 w-5" />, color: 'from-pink-500 to-rose-500' },
+    { id: 'AI & Manufacturing', name: 'AI Manufacturing', icon: <Cpu className="h-5 w-5" />, color: 'from-green-500 to-emerald-500' },
+    { id: 'Quantum AI & Edge Computing', name: 'Quantum Edge', icon: <Zap className="h-5 w-5" />, color: 'from-indigo-500 to-purple-500' },
+    { id: 'AI & Legal Technology', name: 'AI Legal', icon: <BookOpen className="h-5 w-5" />, color: 'from-orange-500 to-red-500' },
+    { id: 'AI & Education', name: 'AI Education', icon: <GraduationCap className="h-5 w-5" />, color: 'from-teal-500 to-cyan-500' },
+    { id: 'Quantum AI & Content Creation', name: 'Quantum Content', icon: <FileText className="h-5 w-5" />, color: 'from-violet-500 to-purple-500' }
+  ];
+
+  const filteredServices = COMPREHENSIVE_PRICING_GUIDE_2027
+    .filter(service => {
+      const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+      const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      return matchesCategory && matchesSearch;
+    })
+    .sort((a, b) => {
+      switch (sortBy) {
+        case 'price':
+          return b.ourPricing.professional.price - a.ourPricing.professional.price;
+        case 'roi':
+          const aROI = parseInt(a.roi.percentage.replace('%', ''));
+          const bROI = parseInt(b.roi.percentage.replace('%', ''));
+          return bROI - aROI;
+        case 'savings':
+          const aSavings = parseInt(a.roi.savings.replace(/[^0-9]/g, ''));
+          const bSavings = parseInt(b.roi.savings.replace(/[^0-9]/g, ''));
+          return bSavings - aSavings;
+        default:
+          return 0;
+      }
+    });
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'AI & DevOps': return <Cpu className="w-5 h-5" />;
-      case 'Blockchain & Quantum': return <Lock className="w-5 h-5" />;
-      case 'AI & Cybersecurity': return <Shield className="w-5 h-5" />;
-      case 'Edge Computing & AI': return <Network className="w-5 h-5" />;
-      case 'AI & Healthcare': return <Stethoscope className="w-5 h-5" />;
-      case 'Quantum Computing & AI': return <Brain className="w-5 h-5" />;
-      case 'AI & Automation': return <Rocket className="w-5 h-5" />;
-      case '5G & Networking': return <Globe className="w-5 h-5" />;
-      case 'AI & Legal Tech': return <Scale className="w-5 h-5" />;
-      case 'Sustainability & Technology': return <Leaf className="w-5 h-5" />;
-      case 'AI & Financial Technology': return <DollarSign className="w-5 h-5" />;
-      case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />;
-      case 'AI & Supply Chain': return <Network className="w-5 h-5" />;
-      case 'Neurotechnology & AI': return <Brain className="w-5 h-5" />;
-      case 'AI & Energy Management': return <Zap className="w-5 h-5" />;
-      case 'Quantum & Networking': return <Globe className="w-5 h-5" />;
-      case 'AI & Education Technology': return <Users className="w-5 h-5" />;
-      case 'Quantum & Materials Science': return <Flask className="w-5 h-5" />;
-      case 'AI & Space Technology': return <Rocket className="w-5 h-5" />;
-      case 'Quantum & Biology': return <Stethoscope className="w-5 h-5" />;
-      default: return <Zap className="w-5 h-5" />;
+      case 'Quantum AI & Business Automation': return <Brain className="h-6 w-6" />;
+      case 'AI & Cybersecurity': return <Shield className="h-6 w-6" />;
+      case 'AI & Research': return <Search className="h-6 w-6" />;
+      case 'Quantum AI & Financial Technology': return <DollarSign className="h-6 w-6" />;
+      case 'AI & Healthcare': return <Heart className="h-6 w-6" />;
+      case 'AI & Manufacturing': return <Cpu className="h-6 w-6" />;
+      case 'Quantum AI & Edge Computing': return <Zap className="h-6 w-6" />;
+      case 'AI & Legal Technology': return <BookOpen className="h-6 w-6" />;
+      case 'AI & Education': return <GraduationCap className="h-6 w-6" />;
+      case 'Quantum AI & Content Creation': return <FileText className="h-6 w-6" />;
+      default: return <Sparkles className="h-6 w-6" />;
     }
   };
 
-  const getInnovationLevelColor = (level: string) => {
-    switch (level) {
-      case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
-      case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
-      case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default: return 'bg-gray-600';
-    }
+  const calculateSavings = (ourPrice: number, marketPrice: number) => {
+    return ((marketPrice - ourPrice) / marketPrice * 100).toFixed(0);
   };
-
-  const priceStats = getPriceRangeStats();
-  const roiStats = getROIStats();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Header Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20"></div>
-        <div className="relative z-10 container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark">
+      {/* Header */}
+      <motion.header
+        initial={{ opacity: 0, y: -20 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 text-center relative overflow-hidden"
+      >
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full animate-pulse delay-2000"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <Calculator className="h-8 w-8 text-zion-cyan" />
+            <h1 className="text-5xl font-bold tracking-tight text-white">
+              Comprehensive <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Pricing Guide</span> 2027
+            </h1>
+            <Calculator className="h-8 w-8 text-zion-cyan" />
+          </div>
+          <p className="text-zion-slate-light text-xl max-w-4xl mx-auto leading-relaxed mb-8">
+            Discover our revolutionary pricing structure and see how much you can save compared to market rates. 
+            Get detailed breakdowns, ROI calculations, and competitor comparisons for all our services.
+          </p>
+
+          {/* Market Overview */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-xl p-6 border border-zion-cyan/30"
+            >
+              <div className="text-3xl font-bold text-zion-cyan mb-2">{MARKET_ANALYSIS_2027.totalMarketSize}</div>
+              <div className="text-zion-slate-light">Total Market Size</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-gradient-to-br from-zion-purple/20 to-zion-pink/20 rounded-xl p-6 border border-zion-purple/30"
+            >
+              <div className="text-3xl font-bold text-zion-purple mb-2">{MARKET_ANALYSIS_2027.growthRate}</div>
+              <div className="text-zion-slate-light">Annual Growth</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="bg-gradient-to-br from-zion-green/20 to-zion-emerald/20 rounded-xl p-6 border border-zion-green/30"
+            >
+              <div className="text-3xl font-bold text-zion-green mb-2">10+</div>
+              <div className="text-zion-slate-light">Service Categories</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="bg-gradient-to-br from-zion-orange/20 to-zion-red/20 rounded-xl p-6 border border-zion-orange/30"
+            >
+              <div className="text-3xl font-bold text-zion-orange mb-2">60-80%</div>
+              <div className="text-zion-slate-light">Cost Savings</div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.header>
+
+      {/* Main Content */}
+      <main id="pricing-guide" className="py-20">
+        <div className="container mx-auto px-4">
+          {/* Search and Filters */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mb-12"
           >
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-6">
-              Comprehensive Pricing Guide 2027
-            </h1>
-            <p className="text-xl text-zion-gray-light mb-8 max-w-3xl mx-auto">
-              Explore our complete range of innovative services with detailed pricing, ROI analysis, 
-              and market comparisons to find the perfect solution for your business needs.
-            </p>
-            
-            {/* Statistics Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4">
-                <div className="text-2xl font-bold text-zion-cyan">{priceStats.total}</div>
-                <div className="text-sm text-zion-gray-light">Total Services</div>
+            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+              {/* Search */}
+              <div className="relative flex-1 max-w-md">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark/50 border border-zion-slate-light/30 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                />
               </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4">
-                <div className="text-2xl font-bold text-green-400">${(services.reduce((sum, s) => sum + s.price, 0) / services.length).toFixed(0)}</div>
-                <div className="text-sm text-zion-gray-light">Avg Price</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4">
-                <div className="text-2xl font-bold text-blue-400">${services.reduce((sum, s) => sum + s.price, 0).toLocaleString()}</div>
-                <div className="text-sm text-zion-gray-light">Total Value</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4">
-                <div className="text-2xl font-bold text-purple-400">{Math.max(...services.map(s => parseInt(s.roi.replace('%', ''))))}%</div>
-                <div className="text-sm text-zion-gray-light">Max ROI</div>
-              </div>
-            </div>
 
-            <div className="flex justify-center space-x-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
-                onClick={() => document.getElementById('pricing-grid')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                <Calculator className="w-5 h-5" />
-                <span>View Pricing</span>
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                <Phone className="w-5 h-5" />
-                <span>Get Quote</span>
-              </motion.button>
+              {/* Sort */}
+              <div className="flex items-center gap-4">
+                <label className="text-zion-slate-light">Sort by:</label>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="bg-zion-slate-dark/50 border border-zion-slate-light/30 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  <option value="price">Price</option>
+                  <option value="roi">ROI</option>
+                  <option value="savings">Savings</option>
+                </select>
+              </div>
             </div>
           </motion.div>
-        </div>
-      </div>
 
-      {/* Filters and Search Section */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
-            {/* Search */}
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-gray-light w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white placeholder-zion-gray-light focus:outline-none focus:border-zion-cyan"
-              />
-            </div>
-
-            {/* Category Filter */}
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan"
-            >
-              {categories.map(category => (
-                <option key={category} value={category}>
-                  {category === 'all' ? 'All Categories' : category}
-                </option>
+          {/* Category Filter */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mb-12"
+          >
+            <div className="flex flex-wrap justify-center gap-3">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                    activeCategory === category.id
+                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
+                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark/70 hover:text-white'
+                  }`}
+                >
+                  {category.icon}
+                  {category.name}
+                </button>
               ))}
-            </select>
-
-            {/* Price Range Filter */}
-            <select
-              value={selectedPriceRange}
-              onChange={(e) => setSelectedPriceRange(e.target.value)}
-              className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan"
-            >
-              {priceRanges.map(range => (
-                <option key={range} value={range}>
-                  {range === 'all' ? 'All Prices' : range}
-                </option>
-              ))}
-            </select>
-
-            {/* ROI Filter */}
-            <select
-              value={selectedROI}
-              onChange={(e) => setSelectedROI(e.target.value)}
-              className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan"
-            >
-              {roiRanges.map(range => (
-                <option key={range} value={range}>
-                  {range === 'all' ? 'All ROI' : range}
-                </option>
-              ))}
-            </select>
-
-            {/* Sort By */}
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan"
-            >
-              <option value="title">Sort by Title</option>
-              <option value="price">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-              <option value="roi">Sort by ROI</option>
-              <option value="innovation">Sort by Innovation</option>
-            </select>
-
-            {/* View Mode */}
-            <div className="flex space-x-2">
-              <button
-                onClick={() => setViewMode('grid')}
-                className={`px-4 py-3 rounded-lg transition-colors ${
-                  viewMode === 'grid' 
-                    ? 'bg-zion-cyan text-white' 
-                    : 'bg-zion-slate-dark text-zion-gray-light hover:text-white'
-                }`}
-              >
-                Grid
-              </button>
-              <button
-                onClick={() => setViewMode('list')}
-                className={`px-4 py-3 rounded-lg transition-colors ${
-                  viewMode === 'list' 
-                    ? 'bg-zion-cyan text-white' 
-                    : 'bg-zion-slate-dark text-zion-gray-light hover:text-white'
-                }`}
-              >
-                List
-              </button>
-              <button
-                onClick={() => setViewMode('comparison')}
-                className={`px-4 py-3 rounded-lg transition-colors ${
-                  viewMode === 'comparison' 
-                    ? 'bg-zion-cyan text-white' 
-                    : 'bg-zion-slate-dark text-zion-gray-light hover:text-white'
-                }`}
-              >
-                Compare
-              </button>
             </div>
-          </div>
-        </div>
-      </div>
+          </motion.div>
 
-      {/* Pricing Statistics */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          {/* Price Distribution */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
-            <h3 className="text-xl font-bold text-white mb-4">Price Distribution</h3>
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-zion-gray-light">Under $1,000</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-zion-slate-dark rounded-full h-2">
-                    <div 
-                      className="bg-green-400 h-2 rounded-full" 
-                      style={{ width: `${(priceStats.under1k / priceStats.total) * 100}%` }}
-                    ></div>
-                  </div>
-                  <span className="text-white font-semibold">{priceStats.under1k}</span>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-gray-light">$1,000 - $5,000</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-zion-slate-dark rounded-full h-2">
-                    <div 
-                      className="bg-blue-400 h-2 rounded-full" 
-                      style={{ width: `${(priceStats.k1to5 / priceStats.total) * 100}%` }}
-                    ></div>
-                  </div>
-                  <span className="text-white font-semibold">{priceStats.k1to5}</span>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-gray-light">$5,000 - $10,000</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-zion-slate-dark rounded-full h-2">
-                    <div 
-                      className="bg-yellow-400 h-2 rounded-full" 
-                      style={{ width: `${(priceStats.k5to10 / priceStats.total) * 100}%` }}
-                    ></div>
-                  </div>
-                  <span className="text-white font-semibold">{priceStats.k5to10}</span>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-gray-light">$10,000 - $20,000</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-zion-slate-dark rounded-full h-2">
-                    <div 
-                      className="bg-orange-400 h-2 rounded-full" 
-                      style={{ width: `${(priceStats.k10to20 / priceStats.total) * 100}%` }}
-                    ></div>
-                  </div>
-                  <span className="text-white font-semibold">{priceStats.k10to20}</span>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-gray-light">$20,000+</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-zion-slate-dark rounded-full h-2">
-                    <div 
-                      className="bg-red-400 h-2 rounded-full" 
-                      style={{ width: `${(priceStats.over20k / priceStats.total) * 100}%` }}
-                    ></div>
-                  </div>
-                  <span className="text-white font-semibold">{priceStats.over20k}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* ROI Distribution */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
-            <h3 className="text-xl font-bold text-white mb-4">ROI Distribution</h3>
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-zion-gray-light">Under 200%</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-zion-slate-dark rounded-full h-2">
-                    <div 
-                      className="bg-red-400 h-2 rounded-full" 
-                      style={{ width: `${(roiStats.under200 / roiStats.total) * 100}%` }}
-                    ></div>
-                  </div>
-                  <span className="text-white font-semibold">{roiStats.under200}</span>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-gray-light">200% - 400%</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-zion-slate-dark rounded-full h-2">
-                    <div 
-                      className="bg-orange-400 h-2 rounded-full" 
-                      style={{ width: `${(roiStats.k200to400 / roiStats.total) * 100}%` }}
-                    ></div>
-                  </div>
-                  <span className="text-white font-semibold">{roiStats.k200to400}</span>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-gray-light">400% - 600%</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-zion-slate-dark rounded-full h-2">
-                    <div 
-                      className="bg-yellow-400 h-2 rounded-full" 
-                      style={{ width: `${(roiStats.k400to600 / roiStats.total) * 100}%` }}
-                    ></div>
-                  </div>
-                  <span className="text-white font-semibold">{roiStats.k400to600}</span>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-gray-light">600% - 800%</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-zion-slate-dark rounded-full h-2">
-                    <div 
-                      className="bg-blue-400 h-2 rounded-full" 
-                      style={{ width: `${(roiStats.k600to800 / roiStats.total) * 100}%` }}
-                    ></div>
-                  </div>
-                  <span className="text-white font-semibold">{roiStats.k600to800}</span>
-                </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-zion-gray-light">800%+</span>
-                <div className="flex items-center space-x-2">
-                  <div className="w-32 bg-zion-slate-dark rounded-full h-2">
-                    <div 
-                      className="bg-green-400 h-2 rounded-full" 
-                      style={{ width: `${(roiStats.over800 / roiStats.total) * 100}%` }}
-                    ></div>
-                  </div>
-                  <span className="text-white font-semibold">{roiStats.over800}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Services Grid/List */}
-      <div id="pricing-grid" className="container mx-auto px-4 py-8">
-        {viewMode === 'grid' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedServices.map((service, index) => (
+          {/* Services Grid */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="grid grid-cols-1 xl:grid-cols-2 gap-8"
+          >
+            {filteredServices.map((service, index) => (
               <motion.div
-                key={service.id}
+                key={service.serviceId}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/15 transition-all duration-300"
+                animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group relative bg-gradient-to-br from-zion-slate-dark/80 to-zion-slate/60 rounded-2xl p-6 border border-zion-slate-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    {getCategoryIcon(service.category)}
-                    <span className="text-zion-gray-light text-sm">{service.category}</span>
+                {/* Service Header */}
+                <div className="flex items-start justify-between mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="p-3 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-lg">
+                      {getCategoryIcon(service.category)}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
+                        {service.serviceName}
+                      </h3>
+                      <p className="text-zion-slate-light">{service.category}</p>
+                    </div>
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
-                    {service.innovationLevel}
-                  </span>
+                  <button
+                    onClick={() => setSelectedService(service.serviceId)}
+                    className="p-2 hover:bg-zion-slate-light/20 rounded-lg transition-colors duration-200"
+                  >
+                    <Eye className="h-5 w-5 text-zion-cyan" />
+                  </button>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-zion-gray-light mb-4 leading-relaxed">{service.description}</p>
-
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-gray-light">Monthly Price:</span>
-                    <span className="text-2xl font-bold text-zion-cyan">${service.price.toLocaleString()}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-gray-light">Expected ROI:</span>
-                    <span className="text-lg font-semibold text-green-400">{service.roi}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-gray-light">Market Range:</span>
-                    <span className="text-zion-gray-light">{service.marketPrice}</span>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {service.tags.slice(0, 3).map((tag: string, tagIndex: number) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full"
+                {/* Pricing Plans */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  {Object.entries(service.ourPricing).map(([tier, plan]) => (
+                    <div
+                      key={tier}
+                      className={`p-4 rounded-lg border ${
+                        plan.popular
+                          ? 'border-zion-cyan bg-zion-cyan/10'
+                          : 'border-zion-slate-light/30 bg-zion-slate-dark/30'
+                      }`}
                     >
-                      {tag}
-                    </span>
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="font-medium text-white">{plan.name}</span>
+                        {plan.popular && (
+                          <span className="px-2 py-1 bg-zion-cyan text-white text-xs rounded-full">
+                            Popular
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-2xl font-bold text-zion-cyan mb-2">
+                        ${plan.price.toLocaleString()}/month
+                      </div>
+                      <div className="text-sm text-zion-slate-light mb-3">
+                        Best for: {plan.bestFor}
+                      </div>
+                      <ul className="space-y-1">
+                        {plan.features.slice(0, 3).map((feature, idx) => (
+                          <li key={idx} className="text-xs text-zion-slate-light flex items-center gap-2">
+                            <CheckCircle className="h-3 w-3 text-zion-green flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   ))}
                 </div>
 
-                <div className="mt-6 flex items-center justify-between">
-                  <div className="flex items-center space-x-2 text-zion-gray-light text-sm">
-                    <Clock className="w-4 h-4" />
-                    <span>{service.estimatedDelivery}</span>
-                  </div>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg font-semibold text-sm"
-                    onClick={() => window.open(`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`)}
-                  >
-                    Get Quote
-                  </motion.button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        )}
-
-        {viewMode === 'list' && (
-          <div className="space-y-4">
-            {sortedServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/15 transition-all duration-300"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
-                  <div className="md:col-span-2">
-                    <div className="flex items-center space-x-3 mb-3">
-                      {getCategoryIcon(service.category)}
-                      <span className="text-zion-gray-light text-sm">{service.category}</span>
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
-                        {service.innovationLevel}
-                      </span>
+                {/* Market Comparison */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-3">Market Comparison</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="p-3 bg-zion-slate-dark/30 rounded-lg border border-zion-slate-light/20">
+                      <div className="flex items-center justify-between text-sm mb-2">
+                        <span className="text-zion-slate-light">Market Average:</span>
+                        <span className="text-zion-purple font-semibold">
+                          ${service.marketPricing.average.toLocaleString()}/month
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-zion-slate-light">You Save:</span>
+                        <span className="text-zion-green font-semibold">
+                          {calculateSavings(service.ourPricing.professional.price, service.marketPricing.average)}%
+                        </span>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                    <p className="text-zion-gray-light text-sm">{service.description}</p>
+                    <div className="p-3 bg-zion-slate-dark/30 rounded-lg border border-zion-slate-light/20">
+                      <div className="flex items-center justify-between text-sm mb-2">
+                        <span className="text-zion-slate-light">ROI:</span>
+                        <span className="text-zion-green font-semibold">{service.roi.percentage}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-zion-slate-light">Timeframe:</span>
+                        <span className="text-zion-cyan font-semibold">{service.roi.timeframe}</span>
+                      </div>
+                    </div>
                   </div>
-                  
+                </div>
+
+                {/* Competitors */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-3">Competitors</h4>
                   <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-zion-gray-light">Price:</span>
-                      <span className="text-xl font-bold text-zion-cyan">${service.price.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-gray-light">ROI:</span>
-                      <span className="text-green-400 font-semibold">{service.roi}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-gray-light">Delivery:</span>
-                      <span className="text-zion-gray-light">{service.estimatedDelivery}</span>
-                    </div>
+                    {service.competitors.slice(0, 2).map((competitor, idx) => (
+                      <div key={idx} className="flex items-center justify-between text-sm">
+                        <span className="text-zion-slate-light">{competitor.name}</span>
+                        <span className="text-zion-purple">{competitor.pricing}</span>
+                      </div>
+                    ))}
                   </div>
-                  
-                  <div className="text-right">
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-lg font-semibold"
-                      onClick={() => window.open(`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`)}
-                    >
-                      Get Quote
-                    </motion.button>
-                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-3">
+                  <Link
+                    to={`/contact?service=${service.serviceId}`}
+                    className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 flex items-center justify-center gap-2"
+                  >
+                    <Phone className="h-4 w-4" />
+                    Get Started
+                  </Link>
+                  <button
+                    onClick={() => setSelectedService(service.serviceId)}
+                    className="bg-zion-slate-dark/50 text-zion-cyan border border-zion-cyan/30 px-4 py-2 rounded-lg font-medium hover:bg-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300 flex items-center justify-center gap-2"
+                  >
+                    <BarChart3 className="h-4 w-4" />
+                    View Details
+                  </button>
                 </div>
               </motion.div>
             ))}
-          </div>
-        )}
+          </motion.div>
 
-        {viewMode === 'comparison' && (
-          <div className="space-y-8">
-            {/* Comparison Selection */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Select Services to Compare</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {sortedServices.slice(0, 6).map((service) => (
-                  <label key={service.id} className="flex items-center space-x-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={selectedServices.includes(service.id)}
-                      onChange={() => toggleServiceSelection(service.id)}
-                      className="w-4 h-4 text-zion-cyan bg-zion-slate-dark border-zion-gray-dark rounded focus:ring-zion-cyan"
-                    />
-                    <span className="text-zion-gray-light">{service.title}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
+          {/* No Results */}
+          {filteredServices.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+              className="text-center py-12"
+            >
+              <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
+              <button
+                onClick={() => {
+                  setActiveCategory('all');
+                  setSearchTerm('');
+                }}
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-medium hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300"
+              >
+                View All Services
+              </button>
+            </motion.div>
+          )}
 
-            {/* Comparison Table */}
-            {selectedServices.length > 0 && (
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 overflow-x-auto">
-                <h3 className="text-xl font-bold text-white mb-4">Service Comparison</h3>
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-zion-gray-dark">
-                      <th className="text-left py-3 px-4 text-zion-gray-light">Feature</th>
-                      {selectedServices.map(serviceId => {
-                        const service = sortedServices.find(s => s.id === serviceId);
-                        return service ? (
-                          <th key={serviceId} className="text-left py-3 px-4 text-white">
-                            {service.title}
-                          </th>
-                        ) : null;
-                      })}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-zion-gray-dark/50">
-                      <td className="py-3 px-4 text-zion-gray-light font-semibold">Category</td>
-                      {selectedServices.map(serviceId => {
-                        const service = sortedServices.find(s => s.id === serviceId);
-                        return service ? (
-                          <td key={serviceId} className="py-3 px-4 text-zion-gray-light">{service.category}</td>
-                        ) : null;
-                      })}
-                    </tr>
-                    <tr className="border-b border-zion-gray-dark/50">
-                      <td className="py-3 px-4 text-zion-gray-light font-semibold">Price</td>
-                      {selectedServices.map(serviceId => {
-                        const service = sortedServices.find(s => s.id === serviceId);
-                        return service ? (
-                          <td key={serviceId} className="py-3 px-4 text-zion-cyan font-bold">${service.price.toLocaleString()}</td>
-                        ) : null;
-                      })}
-                    </tr>
-                    <tr className="border-b border-zion-gray-dark/50">
-                      <td className="py-3 px-4 text-zion-gray-light font-semibold">ROI</td>
-                      {selectedServices.map(serviceId => {
-                        const service = sortedServices.find(s => s.id === serviceId);
-                        return service ? (
-                          <td key={serviceId} className="py-3 px-4 text-green-400 font-semibold">{service.roi}</td>
-                        ) : null;
-                      })}
-                    </tr>
-                    <tr className="border-b border-zion-gray-dark/50">
-                      <td className="py-3 px-4 text-zion-gray-light font-semibold">Innovation Level</td>
-                      {selectedServices.map(serviceId => {
-                        const service = sortedServices.find(s => s.id === serviceId);
-                        return service ? (
-                          <td key={serviceId} className="py-3 px-4">
-                            <span className={`px-2 py-1 rounded-full text-xs font-semibold text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
-                              {service.innovationLevel}
-                            </span>
-                          </td>
-                        ) : null;
-                      })}
-                    </tr>
-                    <tr className="border-b border-zion-gray-dark/50">
-                      <td className="py-3 px-4 text-zion-gray-light font-semibold">Delivery Time</td>
-                      {selectedServices.map(serviceId => {
-                        const service = sortedServices.find(s => s.id === serviceId);
-                        return service ? (
-                          <td key={serviceId} className="py-3 px-4 text-zion-gray-light">{service.estimatedDelivery}</td>
-                        ) : null;
-                      })}
-                    </tr>
-                    <tr>
-                      <td className="py-3 px-4 text-zion-gray-light font-semibold">Contact</td>
-                      {selectedServices.map(serviceId => {
-                        const service = sortedServices.find(s => s.id === serviceId);
-                        return service ? (
-                          <td key={serviceId} className="py-3 px-4">
-                            <motion.button
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg font-semibold text-sm"
-                              onClick={() => window.open(`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`)}
-                            >
-                              Get Quote
-                            </motion.button>
-                          </td>
-                        ) : null;
-                      })}
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-
-      {/* Contact Section */}
-      <div id="contact" className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-2xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-          <p className="text-zion-gray-light mb-8 max-w-2xl mx-auto">
-            Contact our team to discuss your requirements and get a customized quote for any of our innovative services.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div className="bg-white/10 rounded-xl p-6">
-              <Phone className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-zion-gray-light">+1 302 464 0950</p>
-            </div>
-            
-            <div className="bg-white/10 rounded-xl p-6">
-              <Mail className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-zion-gray-light">kleber@ziontechgroup.com</p>
-            </div>
-            
-            <div className="bg-white/10 rounded-xl p-6">
-              <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-zion-gray-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center space-x-2 mx-auto"
-            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
+          {/* Market Analysis */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="mt-20"
           >
-            <ExternalLink className="w-5 h-5" />
-            <span>Visit Zion Tech Group</span>
-          </motion.button>
+            <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-2xl p-8 border border-zion-cyan/30">
+              <h2 className="text-3xl font-bold text-white text-center mb-8">
+                Market Analysis & Competitive Advantages
+              </h2>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {/* Key Trends */}
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                    <TrendingUpIcon className="h-5 w-5 text-zion-cyan" />
+                    Key Market Trends
+                  </h3>
+                  <ul className="space-y-2">
+                    {MARKET_ANALYSIS_2027.keyTrends.map((trend, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-zion-slate-light">
+                        <ArrowRight className="h-3 w-3 text-zion-cyan flex-shrink-0" />
+                        {trend}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Competitive Advantages */}
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                    <Award className="h-5 w-5 text-zion-purple" />
+                    Our Advantages
+                  </h3>
+                  <ul className="space-y-2">
+                    {MARKET_ANALYSIS_2027.competitiveAdvantages.map((advantage, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-zion-slate-light">
+                        <CheckCircle className="h-3 w-3 text-zion-green flex-shrink-0" />
+                        {advantage}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Market Opportunities */}
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                    <Target className="h-5 w-5 text-zion-green" />
+                    Market Opportunities
+                  </h3>
+                  <ul className="space-y-2">
+                    {MARKET_ANALYSIS_2027.marketOpportunities.map((opportunity, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-zion-slate-light">
+                        <Lightbulb className="h-3 w-3 text-zion-yellow flex-shrink-0" />
+                        {opportunity}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* CTA Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            className="text-center mt-20"
+          >
+            <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-2xl p-8 border border-zion-cyan/30">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h3>
+              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+                Contact us today to discuss your specific needs and get a customized quote. 
+                Our team of experts is ready to help you transform your business with our revolutionary services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  <Phone className="h-5 w-5" />
+                  Contact Us Today
+                </Link>
+                <a
+                  href="tel:+13024640950"
+                  className="bg-zion-slate-dark/50 text-zion-cyan border border-zion-cyan/30 px-8 py-3 rounded-lg font-medium hover:bg-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  <Phone className="h-5 w-5" />
+                  Call +1 302 464 0950
+                </a>
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </div>
+      </main>
+
+      {/* Service Detail Modal */}
+      <AnimatePresence>
+        {selectedService && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedService(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="bg-zion-slate-dark rounded-2xl p-6 max-w-6xl w-full max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {(() => {
+                const service = COMPREHENSIVE_PRICING_GUIDE_2027.find(s => s.serviceId === selectedService);
+                
+                if (!service) return null;
+
+                return (
+                  <div>
+                    <div className="flex items-start justify-between mb-6">
+                      <div>
+                        <h2 className="text-2xl font-bold text-white mb-2">{service.serviceName}</h2>
+                        <p className="text-zion-slate-light">{service.category}</p>
+                      </div>
+                      <button
+                        onClick={() => setSelectedService(null)}
+                        className="p-2 hover:bg-zion-slate-light/20 rounded-lg transition-colors duration-200"
+                      >
+                        <XIcon className="h-6 w-6 text-zion-slate-light" />
+                      </button>
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                      {/* Pricing Plans */}
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-4">Pricing Plans</h3>
+                        <div className="space-y-4">
+                          {Object.entries(service.ourPricing).map(([tier, plan]) => (
+                            <div
+                              key={tier}
+                              className={`p-4 rounded-lg border ${
+                                plan.popular
+                                  ? 'border-zion-cyan bg-zion-cyan/10'
+                                  : 'border-zion-slate-light/30 bg-zion-slate-dark/30'
+                              }`}
+                            >
+                              <div className="flex items-center justify-between mb-3">
+                                <span className="font-medium text-white">{plan.name}</span>
+                                {plan.popular && (
+                                  <span className="px-3 py-1 bg-zion-cyan text-white text-sm rounded-full">
+                                    Most Popular
+                                  </span>
+                                )}
+                              </div>
+                              <div className="text-3xl font-bold text-zion-cyan mb-3">
+                                ${plan.price.toLocaleString()}/month
+                              </div>
+                              <div className="text-zion-slate-light mb-4">
+                                Best for: {plan.bestFor}
+                              </div>
+                              <ul className="space-y-2">
+                                {plan.features.map((feature, idx) => (
+                                  <li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">
+                                    <CheckCircle className="h-4 w-4 text-zion-green flex-shrink-0" />
+                                    {feature}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Market Analysis */}
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-4">Market Analysis</h3>
+                        
+                        {/* Market Pricing */}
+                        <div className="mb-6">
+                          <h4 className="text-md font-medium text-white mb-3">Market Pricing Range</h4>
+                          <div className="space-y-3">
+                            <div className="flex items-center justify-between">
+                              <span className="text-zion-slate-light">Low:</span>
+                              <span className="text-zion-green">${service.marketPricing.low.toLocaleString()}/month</span>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <span className="text-zion-slate-light">Average:</span>
+                              <span className="text-zion-purple font-semibold">${service.marketPricing.average.toLocaleString()}/month</span>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <span className="text-zion-slate-light">High:</span>
+                              <span className="text-zion-red">${service.marketPricing.high.toLocaleString()}/month</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* ROI Information */}
+                        <div className="mb-6">
+                          <h4 className="text-md font-medium text-white mb-3">ROI & Savings</h4>
+                          <div className="space-y-3">
+                            <div className="flex items-center justify-between">
+                              <span className="text-zion-slate-light">ROI:</span>
+                              <span className="text-zion-green font-semibold">{service.roi.percentage}</span>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <span className="text-zion-slate-light">Timeframe:</span>
+                              <span className="text-zion-cyan">{service.roi.timeframe}</span>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <span className="text-zion-slate-light">Annual Savings:</span>
+                              <span className="text-zion-green font-semibold">{service.roi.savings}</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Competitors */}
+                        <div className="mb-6">
+                          <h4 className="text-md font-medium text-white mb-3">Competitors</h4>
+                          <div className="space-y-3">
+                            {service.competitors.map((competitor, idx) => (
+                              <div key={idx} className="p-3 bg-zion-slate-dark/30 rounded-lg border border-zion-slate-light/20">
+                                <div className="flex items-center justify-between mb-2">
+                                  <span className="font-medium text-white">{competitor.name}</span>
+                                  <span className="text-zion-purple">{competitor.pricing}</span>
+                                </div>
+                                <div className="text-sm text-zion-slate-light">
+                                  {competitor.features.join(', ')}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Market Trend */}
+                        <div>
+                          <h4 className="text-md font-medium text-white mb-3">Market Trend</h4>
+                          <p className="text-zion-slate-light">{service.marketTrend}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex gap-4 mt-8 pt-6 border-t border-zion-slate-light/20">
+                      <Link
+                        to={`/contact?service=${service.serviceId}`}
+                        className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-medium hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 text-center"
+                      >
+                        Get Started Today
+                      </Link>
+                      <a
+                        href={`tel:${service.contactInfo.phone}`}
+                        className="bg-zion-slate-dark/50 text-zion-cyan border border-zion-cyan/30 px-6 py-3 rounded-lg font-medium hover:bg-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300 text-center"
+                      >
+                        Call {service.contactInfo.phone}
+                      </a>
+                    </div>
+                  </div>
+                );
+              })()}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
-};
+}
 
-export default ComprehensivePricingGuide2027;
+// Helper component for graduation cap icon
+function GraduationCap(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+      <path d="M6 12v5c3 3 9 3 12 0v-5" />
+    </svg>
+  );
+}
