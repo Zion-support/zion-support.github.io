@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock } from 'lucide-react'
 
 
@@ -39,13 +39,13 @@ export default function Index() {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/services"
+								href="/services"
 								className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
 							>
 								Explore Our Services
 							</Link>
 							<Link
-								to="/contact"
+								href="/contact"
 								className="text-sm font-semibold leading-6 text-gray-900"
 							>
 								Get in Touch <span aria-hidden="true">→</span>
@@ -73,7 +73,7 @@ export default function Index() {
 								<h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
 								<p className="text-gray-600 mb-6">{feature.description}</p>
 								<Link
-									to={feature.href}
+									href={feature.href}
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
 								>
 									Learn More <ArrowRight className="ml-2 h-4 w-4" />
@@ -89,18 +89,18 @@ export default function Index() {
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Ready to Transform Your Business?</h2>
-						<p className="mt-6 text-lg text-gray-600">
+						<p className="mt-6 text-lg leading-8 text-gray-600">
 							Let's discuss how our AI, cloud, and cybersecurity solutions can help you achieve your technology goals.
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/contact"
+								href="/contact"
 								className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
 							>
 								Get Started Today
 							</Link>
 							<Link
-								to="/about"
+								href="/about"
 								className="text-sm font-semibold leading-6 text-gray-900"
 							>
 								Learn More <span aria-hidden="true">→</span>
