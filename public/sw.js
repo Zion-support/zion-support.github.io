@@ -143,8 +143,6 @@ self.addEventListener('sync', (event) => {
   }
 });
 
-=======
-
 async function doBackgroundSync() {
   try {
     // Perform background sync operations
@@ -182,23 +180,6 @@ self.addEventListener('push', (event) => {
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
   );
-      actions: [
-        {
-          action: 'explore',
-          title: 'Explore',
-          icon: '/images/zion-logo.png'
-        },
-        {
-          action: 'close',
-          title: 'Close',
-          icon: '/images/zion-logo.png'
-        }
-      ]
-    };
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
-  }
 });
 // Notification click handling
 self.addEventListener('notificationclick', (event) => {
