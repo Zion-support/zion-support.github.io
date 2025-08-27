@@ -1,8 +1,9 @@
-const CACHE_NAME = 'zion-tech-group-v1';
+const CACHE_NAME = 'zion-tech-group-v1.0.0';
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',
   '/static/css/main.css',
+  '/manifest.json',
   '/images/zion-tech-group-logo.png',
   '/images/zion-tech-group-og.jpg'
 ];
@@ -18,7 +19,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Fetch event - serve from cache when offline
+// Fetch event - serve from cache if available
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
