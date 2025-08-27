@@ -1,3 +1,27 @@
+import React from 'react'
+import { ErrorBoundary as ReactErrorBoundary } from 'react-error-boundary'
+
+type Props = {
+	children: React.ReactNode
+}
+
+function Fallback() {
+	return (
+		<div className="min-h-[200px] p-6 text-center text-red-200 bg-red-950/40 border border-red-800 rounded-lg">
+			<h2 className="text-xl font-semibold mb-2">Something went wrong</h2>
+			<p>Please try again or refresh the page.</p>
+		</div>
+	)
+}
+
+export function ErrorBoundary({ children }: Props) {
+	return (
+		<ReactErrorBoundary FallbackComponent={Fallback}>
+			{children}
+		</ReactErrorBoundary>
+	)
+}
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { AlertTriangle, RefreshCw, Home, Bug, X } from 'lucide-react';

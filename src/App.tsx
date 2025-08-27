@@ -1,14 +1,18 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
-import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
+import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
-import { AppLoadingSpinner } from './components/ui/LoadingSpinner.tsx';
+import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+<<<<<<< HEAD
 import { AppWrapper } from './AppWrapper';
 import { PerformanceMonitor } from './components/ui/performance-monitor';
+=======
+<<<<<<< HEAD
+>>>>>>> ae517307e3a (Simplify app structure, update SEO, and use react-helmet-async)
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
@@ -139,29 +143,35 @@ const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
 
 // Accessibility page
 const Accessibility = () => (
+=======
+
+// Lazy load only the pages we are certain exist
+const Home = React.lazy(() => import('./pages/Index'));
+
+// Simple placeholder pages for missing ones
+const Careers = () => (
+>>>>>>> bcdda716496 (Simplify app structure, update SEO, and use react-helmet-async)
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
     <SEO 
-      title="Accessibility - Zion Tech Group"
-      description="Learn about our commitment to accessibility and inclusive design."
+      title="Careers - Zion Tech Group"
+      description="Join our team of technology experts and help shape the future of AI-powered business solutions."
     />
     <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Accessibility</h1>
-      <p className="text-xl text-gray-300">We strive to meet WCAG 2.1 AA guidelines.</p>
+      <h1 className="text-4xl font-bold mb-4">Careers</h1>
+      <p className="text-xl text-gray-300">Join our team</p>
     </div>
   </div>
 );
 
-// Not Found page
-const NotFound = () => (
+const Marketplace = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
     <SEO 
-      title="Page Not Found - Zion Tech Group"
-      description="The page you're looking for doesn't exist."
-      noindex
+      title="Marketplace - Zion Tech Group"
+      description="Explore our marketplace of AI-powered technology solutions and services."
     />
     <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">404 - Not Found</h1>
-      <p className="text-xl text-gray-300">Please check the URL or go back to the homepage.</p>
+      <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
+      <p className="text-xl text-gray-300">Explore our solutions</p>
     </div>
   </div>
 );
@@ -171,13 +181,18 @@ function App() {
     <ErrorBoundary>
 
       <div className="min-h-screen bg-futuristic">
-        <FuturisticAnimatedBackground />
         <AppHeader />
+<<<<<<< HEAD
         
         <main className="flex-1 relative z-10">
           <Suspense fallback={<AppLoadingSpinner />}>
+=======
+        <main className="flex-1">
+          <Suspense fallback={<LoadingSpinner />}>
+>>>>>>> bcdda716496 (Simplify app structure, update SEO, and use react-helmet-async)
             <Routes>
               <Route path="/" element={<Home />} />
+<<<<<<< HEAD
               <Route path="/home2026" element={<Home2026 />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
@@ -298,16 +313,25 @@ function App() {
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
+=======
+              {/* Catch all route */}
+              <Route path="*" element={<Home />} />
+>>>>>>> ae517307e3a (Simplify app structure, update SEO, and use react-helmet-async)
             </Routes>
           </Suspense>
         </main>
-        
-        <EnhancedFuturisticFooter />
+        <Footer />
         <ChatAssistant />
         <PerformanceOptimizer />
+<<<<<<< HEAD
         <PerformanceMonitor enabled={true} autoRefresh={true} />
+=======
+<<<<<<< HEAD
+>>>>>>> ae517307e3a (Simplify app structure, update SEO, and use react-helmet-async)
         <AccessibilityEnhancer />
         <PWAUpdater />
+=======
+>>>>>>> bcdda716496 (Simplify app structure, update SEO, and use react-helmet-async)
       </div>
     </ErrorBoundary>
   );
