@@ -66,7 +66,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
     marketPosition: 'Leading AI-powered business intelligence platform with advanced analytics, predictive insights, and comprehensive business intelligence capabilities.',
-    targetAudience: 'Business analysts', 'Data scientists', 'Executives', 'Business intelligence teams', 'Technology companies',
+    targetAudience: ['Business analysts', 'Data scientists', 'Executives', 'Business intelligence teams', 'Technology companies'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'AI Business Intelligence',
