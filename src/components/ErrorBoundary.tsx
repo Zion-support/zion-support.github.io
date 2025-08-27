@@ -1,6 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
@@ -43,6 +44,14 @@ export class ErrorBoundary extends Component<Props, State> {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
+    }
+
+    // Log error to analytics service if available
+    if (window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: true
+      });
     }
 
     // In production, you could send this to an error reporting service
@@ -100,6 +109,11 @@ export class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       const { error, errorId } = this.state;
+
+      // Use fallback if provided
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
 
       return (
         <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
@@ -169,13 +183,13 @@ export class ErrorBoundary extends Component<Props, State> {
                 <Bug className="h-4 w-4" />
                 Copy Error Report
               </button>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="flex items-center justify-center gap-2 px-4 py-2 bg-zion-slate/20 hover:bg-zion-slate/30 text-zion-slate-light rounded-lg transition-colors text-sm"
               >
-                <Shield className="h-4 w-4" />
+                <Mail className="h-4 w-4" />
                 Contact Support
-              </a>
+              </Link>
             </div>
 
             {/* Helpful Tips */}
@@ -201,3 +215,5 @@ export class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+export default ErrorBoundary;
