@@ -1,0 +1,207 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { MessageCircle, X, Send, Bot, User, Sparkles } from 'lucide-react';
+
+interface Message {
+  id: string;
+  text: string;
+  sender: 'user' | 'assistant';
+  timestamp: Date;
+}
+
+export const ChatAssistant: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: '1',
+      text: 'Hello! I\'m Zion, your AI assistant. How can I help you today?',
+      sender: 'assistant',
+      timestamp: new Date()
+    }
+  ]);
+  const [inputValue, setInputValue] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isOpen]);
+
+  const handleSendMessage = async () => {
+    if (!inputValue.trim()) return;
+
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      text: inputValue,
+      sender: 'user',
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setInputValue('');
+    setIsTyping(true);
+
+    // Simulate AI response
+    setTimeout(() => {
+      const responses = [
+        "That's a great question! Let me help you with that.",
+        "I understand your inquiry. Here's what I can tell you about that.",
+        "Excellent point! Based on our services, here's what I recommend.",
+        "I'd be happy to help you with that. Let me provide some insights.",
+        "That's an interesting topic! Here's what Zion Tech Group offers in that area."
+      ];
+      
+      const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+      
+      const assistantMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: randomResponse,
+        sender: 'assistant',
+        timestamp: new Date()
+      };
+
+      setMessages(prev => [...prev, assistantMessage]);
+      setIsTyping(false);
+    }, 1500);
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage();
+    }
+  };
+
+  return (
+    <>
+      {/* Chat Toggle Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/80 hover:to-zion-blue/80 text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-110 group"
+        aria-label="Toggle chat assistant"
+      >
+        <MessageCircle className="w-6 h-6" />
+        <div className="absolute -top-2 -right-2 w-3 h-3 bg-zion-orange rounded-full animate-pulse"></div>
+      </button>
+
+      {/* Chat Window */}
+      {isOpen && (
+        <div className="fixed bottom-24 right-6 z-50 w-96 h-[500px] bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 flex flex-col">
+          {/* Header */}
+          <div className="flex items-center justify-between p-4 border-b border-zion-cyan/20 bg-gradient-to-r from-zion-slate to-zion-slate-dark rounded-t-2xl">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
+                <Bot className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h3 className="font-bold text-zion-slate-dark">Zion AI Assistant</h3>
+                <p className="text-xs text-zion-slate">Powered by AI</p>
+              </div>
+            </div>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-zion-slate hover:text-zion-cyan transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Messages */}
+          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            {messages.map((message) => (
+              <div
+                key={message.id}
+                className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+              >
+                <div
+                  className={`max-w-[80%] p-3 rounded-2xl ${
+                    message.sender === 'user'
+                      ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white'
+                      : 'bg-zion-slate/10 text-zion-slate-dark border border-zion-cyan/20'
+                  }`}
+                >
+                  <div className="flex items-center space-x-2 mb-1">
+                    {message.sender === 'user' ? (
+                      <User className="w-4 h-4" />
+                    ) : (
+                      <Bot className="w-4 h-4 text-zion-cyan" />
+                    )}
+                    <span className="text-xs opacity-70">
+                      {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                    </span>
+                  </div>
+                  <p className="text-sm">{message.text}</p>
+                </div>
+              </div>
+            ))}
+            
+            {isTyping && (
+              <div className="flex justify-start">
+                <div className="max-w-[80%] p-3 rounded-2xl bg-zion-slate/10 text-zion-slate-dark border border-zion-cyan/20">
+                  <div className="flex items-center space-x-2">
+                    <Bot className="w-4 h-4 text-zion-cyan" />
+                    <div className="flex space-x-1">
+                      <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                      <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            <div ref={messagesEndRef} />
+          </div>
+
+          {/* Input */}
+          <div className="p-4 border-t border-zion-cyan/20">
+            <div className="flex space-x-2">
+              <input
+                ref={inputRef}
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Ask me anything about Zion Tech Group..."
+                className="flex-1 px-3 py-2 border border-zion-cyan/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan text-zion-slate-dark placeholder-zion-slate/60"
+              />
+              <button
+                onClick={handleSendMessage}
+                disabled={!inputValue.trim() || isTyping}
+                className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/80 hover:to-zion-blue/80 disabled:from-zion-slate/50 disabled:to-zion-slate/50 text-white rounded-xl transition-all duration-200 disabled:cursor-not-allowed"
+              >
+                <Send className="w-4 h-4" />
+              </button>
+            </div>
+            
+            {/* Quick Actions */}
+            <div className="mt-3 flex flex-wrap gap-2">
+              {['Services', 'Pricing', 'Contact', 'About'].map((action) => (
+                <button
+                  key={action}
+                  onClick={() => {
+                    setInputValue(`Tell me about ${action.toLowerCase()}`);
+                    handleSendMessage();
+                  }}
+                  className="px-3 py-1 text-xs bg-zion-slate/10 hover:bg-zion-cyan/10 text-zion-slate-dark hover:text-zion-cyan rounded-lg transition-colors border border-zion-cyan/20 hover:border-zion-cyan/40"
+                >
+                  {action}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
