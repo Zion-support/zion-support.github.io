@@ -1,0 +1,26 @@
+import type { AppProps } from 'next/app';
+<<<<<<< HEAD
+import Layout from '../components/Layout';
+import '../src/styles/globals.css';
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
+}
+
+export default MyApp;
+=======
+import '../styles/globals.css';
+import ModernLayout from '../components/layout/ModernLayout';
+
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <ModernLayout>
+      <Component {...pageProps} />
+    </ModernLayout>
+  );
+}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-547f
