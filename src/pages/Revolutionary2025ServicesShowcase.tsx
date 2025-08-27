@@ -9,6 +9,7 @@ import {
   Shield, 
   Brain, 
   Globe,
+  Atom,
   Phone,
   Mail,
   MapPin,
@@ -515,6 +516,156 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         </div>
       </section>
 
+      {/* Pricing Comparison Section */}
+      <section className="py-20 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Competitive Pricing Plans
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            Choose the perfect plan for your business needs with transparent pricing and unmatched value
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <motion.div
+              className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-8 rounded-xl border border-green-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold text-white mb-4">Starter Plan</h3>
+              <div className="text-4xl font-bold text-green-400 mb-2">$2,999</div>
+              <p className="text-gray-300 mb-6">per month</p>
+              <ul className="space-y-3 mb-8 text-left">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Basic AI Integration
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Standard Support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Core Features
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Monthly Updates
+                </li>
+              </ul>
+              <button className="w-full px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
+                Get Started
+              </button>
+            </motion.div>
+            
+            <motion.div
+              className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-8 rounded-xl border-2 border-blue-500/50 transform scale-105"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-blue-500 text-white text-sm font-bold px-3 py-1 rounded-full mb-4 inline-block">
+                MOST POPULAR
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Professional Plan</h3>
+              <div className="text-4xl font-bold text-blue-400 mb-2">$7,999</div>
+              <p className="text-gray-300 mb-6">per month</p>
+              <ul className="space-y-3 mb-8 text-left">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                  Advanced AI Features
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                  Priority Support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                  Custom Integrations
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                  Weekly Updates
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                  Dedicated Account Manager
+                </li>
+              </ul>
+              <button className="w-full px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                Get Started
+              </button>
+            </motion.div>
+            
+            <motion.div
+              className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Plan</h3>
+              <div className="text-4xl font-bold text-purple-400 mb-2">$19,999</div>
+              <p className="text-gray-300 mb-6">per month</p>
+              <ul className="space-y-3 mb-8 text-left">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
+                  Full AI Suite
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
+                  24/7 Premium Support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
+                  Custom Development
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
+                  Daily Updates
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
+                  White-label Solutions
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
+                  SLA Guarantee
+                </li>
+              </ul>
+              <button className="w-full px-6 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors">
+                Get Started
+              </button>
+            </motion.div>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <p className="text-gray-400 mb-4">All plans include:</p>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
+              <span className="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                Free Setup & Migration
+              </span>
+              <span className="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                45-Day Money-Back Guarantee
+              </span>
+              <span className="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                No Hidden Fees
+              </span>
+              <span className="flex items-center">
+                <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                Flexible Billing
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
         <div className="container mx-auto px-4 text-center">
@@ -550,6 +701,95 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               <p>🚀 No setup fees • 📞 24/7 support • 💰 45-day free trial</p>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Technology Stack Section */}
+      <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Cutting-Edge Technology Stack
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            Built with the latest AI, Quantum Computing, and Autonomous technologies
+          </p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <motion.div
+              className="text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-6 rounded-xl border border-blue-500/30 group-hover:border-blue-400 transition-all duration-300">
+                <Brain className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">AI/ML</h3>
+                <p className="text-gray-300 text-sm">Advanced Neural Networks, Deep Learning, NLP</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              className="text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-6 rounded-xl border border-purple-500/30 group-hover:border-purple-400 transition-all duration-300">
+                <Atom className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
+                <p className="text-gray-300 text-sm">Quantum Algorithms, Superposition, Entanglement</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              className="text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-6 rounded-xl border border-green-500/30 group-hover:border-green-400 transition-all duration-300">
+                <Zap className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Autonomous Systems</h3>
+                <p className="text-gray-300 text-sm">Self-Driving Operations, Auto-Scaling, ML-Ops</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              className="text-center group"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30 group-hover:border-red-400 transition-all duration-300">
+                <Shield className="w-12 h-12 text-red-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Cybersecurity</h3>
+                <p className="text-gray-300 text-sm">Zero-Trust, AI-Powered Threat Detection</p>
+              </div>
+            </motion.div>
+          </div>
+          
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-400 mb-2">99.99%</div>
+              <p className="text-gray-300 text-sm">Uptime Guarantee</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-400 mb-2">50ms</div>
+              <p className="text-gray-300 text-sm">Response Time</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-green-400 mb-2">256-bit</div>
+              <p className="text-gray-300 text-sm">Encryption</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-red-400 mb-2">24/7</div>
+              <p className="text-gray-300 text-sm">Monitoring</p>
+            </div>
+          </div>
         </div>
       </section>
 
