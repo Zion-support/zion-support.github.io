@@ -69,6 +69,16 @@ const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateSe
 const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
 
+// Sitemap-aligned pages
+const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
+const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
+
+// Enhanced services pages - only import existing ones
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
+
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
@@ -104,6 +114,8 @@ const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AI
 const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -156,6 +168,7 @@ const NotFound = () => (
 function App() {
   return (
     <ErrorBoundary>
+
       <div className="min-h-screen bg-futuristic">
         <FuturisticAnimatedBackground />
         <AppHeader />
@@ -210,6 +223,11 @@ function App() {
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
               
+              {/* New sitemap routes */}
+              <Route path="/ai-solutions" element={<AiSolutions />} />
+              <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
+              <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
+              
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
               <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
@@ -256,6 +274,8 @@ function App() {
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+              <Route path="/services/ai" element={<AiSolutions />} />
               
               {/* 2026 Services routes */}
               <Route path="/services/quantum-computing" element={<QuantumComputing />} />
