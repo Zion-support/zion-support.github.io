@@ -66,60 +66,23 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
       name: 'Services',
       matches: (path: string) => path.startsWith('/services'),
       children: [
-        {
-          key: 'ai-services',
-          href: '/services/ai',
-          name: 'AI & Analytics',
-          matches: (path: string) => path.startsWith('/services/ai')
-        },
-        {
-          key: 'quantum',
-          href: '/services/quantum',
-          name: 'Quantum Computing',
-          matches: (path: string) => path.startsWith('/services/quantum')
-        },
-        {
-          key: 'blockchain',
-          href: '/services/blockchain',
-          name: 'Blockchain',
-          matches: (path: string) => path.startsWith('/services/blockchain')
-        },
-        {
-          key: 'iot',
-          href: '/services/iot',
-          name: 'IoT & Edge',
-          matches: (path: string) => path.startsWith('/services/iot')
-        },
-        {
-          key: 'cybersecurity',
-          href: '/services/cybersecurity',
-          name: 'Cybersecurity',
-          matches: (path: string) => path.startsWith('/services/cybersecurity')
-        },
-        {
-          key: 'healthcare',
-          href: '/services/healthcare',
-          name: 'Healthcare',
-          matches: (path: string) => path.startsWith('/services/healthcare')
-        },
-        {
-          key: 'finance',
-          href: '/services/finance',
-          name: 'Finance',
-          matches: (path: string) => path.startsWith('/services/finance')
-        },
-        {
-          key: 'manufacturing',
-          href: '/services/manufacturing',
-          name: 'Manufacturing',
-          matches: (path: string) => path.startsWith('/services/manufacturing')
-        },
-        {
-          key: 'sustainability',
-          href: '/services/sustainability',
-          name: 'Sustainability',
-          matches: (path: string) => path.startsWith('/services/sustainability')
-        }
+        { key: 'cloud-devops', href: '/services/cloud-devops', name: 'Cloud & DevOps', matches: (p: string) => p.startsWith('/services/cloud-devops') },
+        { key: 'digital-twin', href: '/services/digital-twin', name: 'Digital Twin', matches: (p: string) => p.startsWith('/services/digital-twin') },
+        { key: 'data-analytics', href: '/services/data-analytics', name: 'Data Analytics', matches: (p: string) => p.startsWith('/services/data-analytics') },
+        { key: 'it-infrastructure', href: '/services/it-infrastructure', name: 'IT Infrastructure', matches: (p: string) => p.startsWith('/services/it-infrastructure') },
+        { key: 'ai-business-intelligence', href: '/services/ai-business-intelligence', name: 'AI Business Intelligence', matches: (p: string) => p.startsWith('/services/ai-business-intelligence') },
+        { key: 'ai-sales-copilot', href: '/services/ai-sales-copilot', name: 'AI Sales Copilot', matches: (p: string) => p.startsWith('/services/ai-sales-copilot') },
+        { key: 'cloud-finops-optimizer', href: '/services/cloud-finops-optimizer', name: 'Cloud FinOps Optimizer', matches: (p: string) => p.startsWith('/services/cloud-finops-optimizer') },
+        { key: 'ai-compliance-assistant', href: '/services/ai-compliance-assistant', name: 'AI Compliance Assistant', matches: (p: string) => p.startsWith('/services/ai-compliance-assistant') },
+        { key: 'ai-auto-email-responder', href: '/services/ai-auto-email-responder', name: 'AI Auto Email Responder', matches: (p: string) => p.startsWith('/services/ai-auto-email-responder') },
+        { key: 'mobile-feedback-surveys', href: '/services/mobile-feedback-surveys', name: 'Feedback Surveys', matches: (p: string) => p.startsWith('/services/mobile-feedback-surveys') },
+        { key: 'ai-compliance-copilot', href: '/services/ai-compliance-copilot', name: 'AI Compliance Copilot', matches: (p: string) => p.startsWith('/services/ai-compliance-copilot') },
+        { key: 'llm-content-studio', href: '/services/llm-content-studio', name: 'LLM Content Studio', matches: (p: string) => p.startsWith('/services/llm-content-studio') },
+        { key: 'finops-advisor', href: '/services/finops-advisor', name: 'FinOps Advisor', matches: (p: string) => p.startsWith('/services/finops-advisor') },
+        { key: 'returns-management', href: '/services/returns-management', name: 'Returns Management', matches: (p: string) => p.startsWith('/services/returns-management') },
+        { key: 'email-sequencer', href: '/services/email-sequencer', name: 'Email Sequencer', matches: (p: string) => p.startsWith('/services/email-sequencer') },
+        { key: 'podcast-transcription', href: '/services/podcast-transcription', name: 'Podcast Transcription', matches: (p: string) => p.startsWith('/services/podcast-transcription') },
+        { key: 'micro-crm', href: '/services/micro-crm', name: 'Micro CRM', matches: (p: string) => p.startsWith('/services/micro-crm') }
       ]
     },
     {
