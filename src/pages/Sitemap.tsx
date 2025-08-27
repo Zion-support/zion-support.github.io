@@ -1,342 +1,428 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
-  Home, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Target, 
-  Users, 
-  Globe, 
-  Cpu, 
+  Globe,
   Brain,
-  ArrowRight,
-  Star,
+  Cloud,
+  Shield,
+  Rocket,
+  Atom,
+  Zap,
+  Users,
   Building,
   Code,
+  Database,
+  Network,
+  Lock,
+  Eye,
+  Heart,
+  Factory,
+  ShoppingCart,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  TrendingUp,
+  BarChart3,
+  PenTool,
+  Server,
+  Smartphone,
+  Cpu,
+  Truck,
+  FileText,
   BookOpen,
   MessageCircle,
   HelpCircle,
   DollarSign,
   Gauge,
-  Search,
-  PenTool,
   Workflow,
-  Atom,
-  Truck,
-  Heart,
-  Lock,
-  Award,
+  Star,
+  Target,
+  CheckCircle,
+  ArrowRight,
   Phone,
   Mail,
   MapPin,
-  ShoppingCart
+  Calendar,
+  Clock,
+  Award,
+  ChevronRight
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from '@/components/SEO';
 
-export default function Sitemap() {
-  const siteStructure = [
+interface SitemapSection {
+  title: string;
+  icon: React.ComponentType<any>;
+  description: string;
+  links: SitemapLink[];
+}
+
+interface SitemapLink {
+  name: string;
+  path: string;
+  description?: string;
+  featured?: boolean;
+}
+
+const Sitemap: React.FC = () => {
+  const sitemapSections: SitemapSection[] = [
     {
       title: 'Main Pages',
-      icon: Home,
+      icon: Globe,
+      description: 'Core website pages and information',
       links: [
-        { name: 'Home', href: '/', description: 'Main homepage' },
-        { name: 'Home 2026', href: '/home2026', description: '2026 vision and services' },
-        { name: 'About Us', href: '/about', description: 'Company information and mission' },
-        { name: 'Contact', href: '/contact', description: 'Get in touch with us' },
-        { name: 'Leadership', href: '/leadership', description: 'Meet our leadership team' },
-        { name: 'Team', href: '/team', description: 'Our team members' },
-        { name: 'Careers', href: '/careers', description: 'Job opportunities' },
-        { name: 'Partners', href: '/partners', description: 'Partnership opportunities' },
-        { name: 'News', href: '/news', description: 'Latest company news' },
-        { name: 'Events', href: '/events', description: 'Upcoming events' },
-        { name: 'Blog', href: '/blog', description: 'Industry insights and articles' }
+        { name: 'Home', path: '/', description: 'Main landing page', featured: true },
+        { name: 'About Us', path: '/about', description: 'Company information and mission', featured: true },
+        { name: 'Our Team', path: '/team', description: 'Meet our leadership and experts', featured: true },
+        { name: 'Contact', path: '/contact', description: 'Get in touch with us', featured: true },
+        { name: 'News', path: '/news', description: 'Latest updates and announcements', featured: true },
+        { name: 'Blog', path: '/blog', description: 'Industry insights and articles' },
+        { name: 'Careers', path: '/careers', description: 'Job opportunities' },
+        { name: 'Partners', path: '/partners', description: 'Strategic partnerships' },
+        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
+        { name: 'Search', path: '/search', description: 'Search our content and services' }
       ]
     },
     {
-      title: 'Services Overview',
-      icon: Zap,
-      links: [
-        { name: 'Services', href: '/services', description: 'All our services' },
-        { name: '2026 Services', href: '/services2026', description: 'Revolutionary 2026 services', featured: true },
-        { name: 'AI Services', href: '/ai-services', description: 'AI-focused services' },
-        { name: 'IT Services', href: '/it-services', description: 'IT infrastructure and consulting' },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Micro SaaS solutions' },
-        { name: 'Solutions', href: '/solutions', description: 'Industry solutions' },
-        { name: 'AI Solutions', href: '/ai-solutions', description: 'Comprehensive AI solutions' },
-        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-        { name: 'Request Quote', href: '/request-quote', description: 'Get a custom quote' },
-        { name: 'Pricing', href: '/pricing', description: 'Service pricing' }
-      ]
-    },
-    {
-      title: 'AI & Technology Services',
+      title: 'AI & Machine Learning',
       icon: Brain,
+      description: 'Artificial intelligence and machine learning solutions',
       links: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'AI-powered analytics' },
-        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', description: 'Process automation' },
-        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', description: 'AI security solutions' },
-        { name: 'AI Content Generator', href: '/services/ai-content-generator', description: 'AI content creation' },
-        { name: 'AI Customer Support', href: '/services/ai-customer-support', description: 'Intelligent support' },
-        { name: 'AI Data Analytics', href: '/services/ai-data-analytics', description: 'Data insights' },
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', description: 'Marketing optimization' },
-        { name: 'AI Project Manager', href: '/services/ai-project-manager', description: 'Project management AI' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales assistance' },
-        { name: 'AI HR Talent Platform', href: '/services/ai-hr-talent-platform', description: 'HR solutions' }
+        { name: 'AI Services Overview', path: '/ai-services', description: 'Comprehensive AI solutions', featured: true },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights' },
+        { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
+        { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
+        { name: 'AI-Powered SEO', path: '/services/ai-seo', description: 'Machine learning SEO optimization' },
+        { name: 'Interview Assessment AI', path: '/services/interview-assessment', description: 'AI-powered candidate evaluation' },
+        { name: 'AI Content Generator', path: '/services/ai-content-generator', description: 'Automated content creation' },
+        { name: 'AI Customer Support', path: '/services/ai-customer-support', description: 'Intelligent support automation' },
+        { name: 'AI Autonomous Research', path: '/services/ai-autonomous-research-assistant', description: 'Automated research capabilities' },
+        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', description: 'Healthcare AI solutions' },
+        { name: 'AI Project Management', path: '/services/ai-project-management', description: 'AI-driven project management' },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Marketing automation with AI' }
       ]
     },
     {
-      title: 'Specialized Services',
-      icon: Rocket,
+      title: 'Quantum Computing',
+      icon: Atom,
+      description: 'Next-generation quantum computing solutions',
       links: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', description: 'Quantum solutions' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', description: 'IoT and edge computing' },
-        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Digital twin platform' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Cloud and DevOps' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'IT infrastructure' },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence' },
-        { name: 'Sustainability', href: '/services/sustainability', description: 'Green IT solutions' },
-        { name: 'Space Tech', href: '/services/space-tech', description: 'Space technology' },
-        { name: 'Blockchain Services', href: '/services/blockchain-services', description: 'Blockchain solutions' },
-        { name: '5G Solutions', href: '/services/five-g-enterprise-solutions', description: '5G enterprise solutions' }
+        { name: 'Quantum Computing Services', path: '/services/quantum-computing', description: 'Quantum computing solutions', featured: true },
+        { name: 'Quantum AI Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', description: 'AI and quantum computing integration' },
+        { name: 'Quantum Machine Learning', path: '/services/quantum-machine-learning', description: 'Quantum-enhanced ML algorithms' },
+        { name: 'Quantum Financial Trading', path: '/services/quantum-financial-trading', description: 'Quantum algorithms for finance' },
+        { name: 'Quantum Neural Networks', path: '/services/quantum-neural-network-platform', description: 'Quantum neural network solutions' },
+        { name: 'Quantum Edge Computing', path: '/services/quantum-edge-computing-platform', description: 'Edge computing with quantum capabilities' }
       ]
     },
     {
-      title: 'Business Solutions',
-      icon: Building,
+      title: 'Cloud & DevOps',
+      icon: Cloud,
+      description: 'Cloud infrastructure and DevOps automation',
       links: [
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Compliance automation' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Email automation' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', description: 'Feedback collection' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'Content creation' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' },
-        { name: 'Returns Management', href: '/services/returns-management', description: 'RMA automation' },
-        { name: 'Email Sequencer', href: '/services/email-sequencer', description: 'Email sequences' },
-        { name: 'Podcast Transcription', href: '/services/podcast-transcription', description: 'Audio transcription' },
-        { name: 'Micro CRM', href: '/services/micro-crm', description: 'Customer relationship management' },
-        { name: 'Website Analytics', href: '/services/website-analytics', description: 'Privacy-first analytics' }
+        { name: 'Cloud DevOps Services', path: '/services/cloud-devops', description: 'Cloud and DevOps solutions', featured: true },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' },
+        { name: 'FinOps Advisor', path: '/services/finops-advisor', description: 'Cloud cost optimization' },
+        { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', description: 'Financial operations automation' },
+        { name: 'Cloud Migration', path: '/services/cloud-migration', description: 'Seamless cloud transitions' },
+        { name: 'Container Orchestration', path: '/services/kubernetes', description: 'Kubernetes and container management' },
+        { name: 'Infrastructure as Code', path: '/services/infrastructure-as-code', description: 'Automated infrastructure deployment' }
       ]
     },
     {
-      title: 'Support & Resources',
-      icon: HelpCircle,
-      links: [
-        { name: 'Help Center', href: '/help', description: 'Help and support' },
-        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
-        { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
-        { name: 'Developers', href: '/developers', description: 'Developer portal' },
-        { name: 'API Reference', href: '/developers', description: 'API documentation' },
-        { name: 'Training', href: '/training', description: 'Training programs' },
-        { name: 'Support', href: '/support', description: 'Technical support' },
-        { name: 'Status', href: '/status', description: 'Service status' },
-        { name: 'White Papers', href: '/white-papers', description: 'Research papers' },
-        { name: 'Webinars', href: '/webinars', description: 'Educational webinars' }
-      ]
-    },
-    {
-      title: 'Marketplace & Solutions',
-      icon: ShoppingCart,
-      links: [
-        { name: 'Marketplace', href: '/marketplace', description: 'Product marketplace' },
-        { name: 'Marketplace Products', href: '/marketplace/products', description: 'Available products' },
-        { name: 'Marketplace Talent', href: '/marketplace/talent', description: 'Talent solutions' },
-        { name: 'Marketplace Equipment', href: '/marketplace/equipment', description: 'Equipment services' },
-        { name: 'Marketplace Services', href: '/marketplace/services', description: 'Service marketplace' },
-        { name: 'Talent Solutions', href: '/talent', description: 'Talent acquisition' },
-        { name: 'Equipment Services', href: '/equipment', description: 'Equipment management' },
-        { name: 'Green IT', href: '/green-it', description: 'Sustainable technology' },
-        { name: 'Research & Development', href: '/research-development', description: 'R&D initiatives' }
-      ]
-    },
-    {
-      title: 'Legal & Privacy',
+      title: 'Cybersecurity',
       icon: Shield,
+      description: 'Advanced security and compliance solutions',
       links: [
-        { name: 'Privacy Policy', href: '/privacy', description: 'Privacy information' },
-        { name: 'Terms of Service', href: '/terms', description: 'Terms and conditions' },
-        { name: 'Cookies Policy', href: '/cookies', description: 'Cookie usage' },
-        { name: 'Security', href: '/security', description: 'Security measures' },
-        { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' }
+        { name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Comprehensive security solutions', featured: true },
+        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', description: 'AI-powered threat detection' },
+        { name: 'Security Headers & CSP', path: '/services/security-headers-csp', description: 'Web security hardening' },
+        { name: 'DSR Privacy Portal', path: '/services/dsr-portal', description: 'GDPR/CCPA compliance portal' },
+        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', description: 'Zero trust security architecture' },
+        { name: 'Threat Intelligence', path: '/services/ai-autonomous-threat-intelligence', description: 'AI-powered threat analysis' },
+        { name: 'Mobile Security', path: '/services/ai-autonomous-mobile-security', description: 'Mobile device security' },
+        { name: 'Forensics & Investigation', path: '/services/ai-autonomous-forensics', description: 'Digital forensics with AI' }
+      ]
+    },
+    {
+      title: 'Digital Transformation',
+      icon: Rocket,
+      description: 'Strategic technology consulting and transformation',
+      links: [
+        { name: 'Digital Transformation', path: '/services/digital-transformation', description: 'Strategic transformation consulting', featured: true },
+        { name: 'IT Consulting', path: '/services/it-consulting', description: 'Technology strategy and planning' },
+        { name: 'Digital Twin', path: '/services/digital-twin', description: 'Virtual system replicas' },
+        { name: 'Business Intelligence', path: '/services/business-intelligence', description: 'Performance metrics and reporting' },
+        { name: 'Data Analytics', path: '/services/data-analytics', description: 'Business intelligence and insights' },
+        { name: 'Process Optimization', path: '/services/process-optimization', description: 'Workflow and process improvement' },
+        { name: 'Change Management', path: '/services/change-management', description: 'Organizational change support' }
+      ]
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      icon: Zap,
+      description: 'Affordable software solutions for small businesses',
+      links: [
+        { name: 'Micro SaaS Platform', path: '/micro-saas', description: 'Micro SaaS solutions overview', featured: true },
+        { name: 'Micro CRM', path: '/services/micro-crm', description: 'Customer relationship management' },
+        { name: 'Helpdesk Platform', path: '/services/helpdesk', description: 'Customer support system' },
+        { name: 'Project Management', path: '/services/project-management', description: 'Project tracking and collaboration' },
+        { name: 'Inventory Management', path: '/services/inventory-management', description: 'Stock and inventory tracking' },
+        { name: 'Accounting Software', path: '/services/accounting-software', description: 'Financial management tools' },
+        { name: 'HR Platform', path: '/services/ai-hr-platform', description: 'Human resources management' }
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      icon: TrendingUp,
+      description: 'Cutting-edge and future technologies',
+      links: [
+        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', description: 'Smart device networks', featured: true },
+        { name: 'Blockchain Solutions', path: '/services/blockchain', description: 'Distributed ledger technology' },
+        { name: 'Space Technology', path: '/services/space-tech', description: 'Space and satellite solutions' },
+        { name: 'Metaverse Development', path: '/services/metaverse-development', description: 'Virtual world creation' },
+        { name: 'Sustainable Technology', path: '/services/sustainable-technology', description: 'Green technology solutions' },
+        { name: 'Green Computing', path: '/services/green-computing', description: 'Energy-efficient computing' },
+        { name: '5G Solutions', path: '/services/5g-solutions', description: 'Next-generation network infrastructure' }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      icon: Building,
+      description: 'Industry-specific technology solutions',
+      links: [
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Healthcare technology solutions', featured: true },
+        { name: 'Financial Services', path: '/solutions/financial', description: 'Fintech and banking solutions' },
+        { name: 'Manufacturing', path: '/solutions/manufacturing', description: 'Industry 4.0 and smart manufacturing' },
+        { name: 'Retail & E-commerce', path: '/solutions/retail', description: 'Digital retail transformation' },
+        { name: 'Education Technology', path: '/solutions/education', description: 'EdTech and learning platforms' },
+        { name: 'Government Solutions', path: '/solutions/government', description: 'Public sector technology' },
+        { name: 'Energy & Utilities', path: '/solutions/energy', description: 'Energy sector technology' }
+      ]
+    },
+    {
+      title: 'Resources & Support',
+      icon: BookOpen,
+      description: 'Documentation, support, and learning resources',
+      links: [
+        { name: 'Help Center', path: '/help', description: 'Comprehensive help and support', featured: true },
+        { name: 'Case Studies', path: '/case-studies', description: 'Success stories and examples' },
+        { name: 'Documentation', path: '/docs', description: 'Technical documentation' },
+        { name: 'API Reference', path: '/api', description: 'API documentation and guides' },
+        { name: 'Training Programs', path: '/training', description: 'Skill development courses' },
+        { name: 'Webinars', path: '/webinars', description: 'Educational webinars and events' },
+        { name: 'White Papers', path: '/white-papers', description: 'Industry research and insights' },
+        { name: 'Video Tutorials', path: '/tutorials', description: 'Step-by-step video guides' }
+      ]
+    },
+    {
+      title: 'Company & Legal',
+      icon: Users,
+      description: 'Company information and legal documents',
+      links: [
+        { name: 'Privacy Policy', path: '/privacy', description: 'Data privacy and protection', featured: true },
+        { name: 'Terms of Service', path: '/terms', description: 'Service terms and conditions' },
+        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage and management' },
+        { name: 'Accessibility', path: '/accessibility', description: 'Accessibility statement' },
+        { name: 'Sitemap', path: '/sitemap', description: 'Complete website structure' },
+        { name: 'Press Kit', path: '/press', description: 'Media resources and information' },
+        { name: 'Investor Relations', path: '/investors', description: 'Financial and investor information' },
+        { name: 'Careers', path: '/careers', description: 'Job opportunities and culture' }
       ]
     }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+  const quickLinks = [
+    { name: 'Get Started', path: '/contact', icon: ArrowRight, featured: true },
+    { name: 'Request Quote', path: '/request-quote', icon: DollarSign },
+    { name: 'Schedule Demo', path: '/demo', icon: Calendar },
+    { name: 'Support Portal', path: '/support', icon: HelpCircle },
+    { name: 'Partner Program', path: '/partners', icon: Users },
+    { name: 'Developer Hub', path: '/developer', icon: Code }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
         title="Sitemap - Zion Tech Group"
-        description="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category."
+        description="Complete sitemap of Zion Tech Group's website. Find all our services, solutions, and resources organized by category."
+        keywords="sitemap, Zion Tech Group, website structure, services, solutions, navigation"
       />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Site
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Map</span>
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Complete Website
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Sitemap
+              </span>
             </h1>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Navigate our comprehensive website structure. Find all pages, services, and resources 
-              organized by category for easy discovery.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Explore our comprehensive website structure and discover all the services, 
+              solutions, and resources Zion Tech Group has to offer.
             </p>
-          </div>
+          </motion.div>
+
+          {/* Quick Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {quickLinks.map((link, index) => (
+                <Link
+                  key={index}
+                  to={link.path}
+                  className={`p-4 rounded-xl transition-all duration-300 text-center group ${
+                    link.featured
+                      ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 hover:border-cyan-400/60'
+                      : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 hover:border-cyan-400/40'
+                  }`}
+                >
+                  <div className={`w-8 h-8 mx-auto mb-2 ${
+                    link.featured ? 'text-cyan-400' : 'text-gray-400 group-hover:text-cyan-400'
+                  } transition-colors duration-300`}>
+                    <link.icon className="w-full h-full" />
+                  </div>
+                  <p className={`text-sm font-medium ${
+                    link.featured ? 'text-white' : 'text-gray-300 group-hover:text-white'
+                  } transition-colors duration-300`}>
+                    {link.name}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Background Elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5" />
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
         </div>
       </section>
 
-      {/* Sitemap Structure */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-8 lg:grid-cols-2">
-            {siteStructure.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mr-4">
+      {/* Sitemap Sections */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {sitemapSections.map((section, sectionIndex) => (
+              <motion.div
+                key={section.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300"
+              >
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center border border-cyan-400/30">
                     <section.icon className="w-6 h-6 text-cyan-400" />
                   </div>
-                  <h2 className="text-2xl font-bold text-white">{section.title}</h2>
+                  <div>
+                    <h2 className="text-2xl font-bold text-white">{section.title}</h2>
+                    <p className="text-gray-400 text-sm">{section.description}</p>
+                  </div>
                 </div>
-                
+
                 <div className="space-y-3">
                   {section.links.map((link, linkIndex) => (
                     <Link
                       key={linkIndex}
-                      to={link.href}
-                      className="flex items-start justify-between p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group"
+                      to={link.path}
+                      className="flex items-center justify-between p-3 rounded-lg hover:bg-white/5 transition-all duration-200 group"
                     >
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-2">
-                          <span className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                      <div className="flex items-center space-x-3">
+                        {link.featured && (
+                          <Star className="w-4 h-4 text-yellow-400" />
+                        )}
+                        <div>
+                          <p className={`font-medium transition-colors duration-200 ${
+                            link.featured 
+                              ? 'text-cyan-400' 
+                              : 'text-white group-hover:text-cyan-400'
+                          }`}>
                             {link.name}
-                          </span>
-                          {link.featured && (
-                            <Star className="w-4 h-4 text-yellow-400" />
+                          </p>
+                          {link.description && (
+                            <p className="text-gray-400 text-sm">{link.description}</p>
                           )}
                         </div>
-                        <p className="text-slate-400 text-sm mt-1">{link.description}</p>
                       </div>
-                      <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors flex-shrink-0 ml-3" />
+                      <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
                     </Link>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 bg-slate-800/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Contact Information</h2>
-              <p className="text-xl text-slate-300">
-                Get in touch with us for any questions or assistance.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-                <a 
-                  href={`tel:${contactInfo.phone}`}
-                  className="text-slate-300 hover:text-cyan-400 transition-colors"
-                >
-                  {contactInfo.phone}
-                </a>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12 text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Need Help Finding Something?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Can't find what you're looking for? Our team is here to help you navigate 
+              our services and find the right solution for your needs.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="flex items-center space-x-3 text-gray-300">
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <span>+1 302 464 0950</span>
               </div>
-
-              <div className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                <a 
-                  href={`mailto:${contactInfo.email}`}
-                  className="text-slate-300 hover:text-cyan-400 transition-colors"
-                >
-                  {contactInfo.email}
-                </a>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <span>kleber@ziontechgroup.com</span>
               </div>
-
-              <div className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-                <p className="text-slate-300 text-sm">
-                  {contactInfo.address}
-                </p>
-              </div>
-
-              <div className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
-                <a 
-                  href={contactInfo.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-cyan-400 transition-colors"
-                >
-                  {contactInfo.website.replace('https://', '')}
-                </a>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <MapPin className="w-5 h-5 text-cyan-400" />
+                <span>Middletown, DE</span>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Quick Navigation */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Quick Navigation</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="p-6 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-200 hover:scale-105"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
-                <MessageCircle className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">Get Started</h3>
-                <p className="text-slate-300 text-sm">Contact us to begin your journey</p>
+                Contact Us
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-
               <Link
-                to="/services"
-                className="p-6 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-200 hover:scale-105"
+                to="/search"
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >
-                <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">Our Services</h3>
-                <p className="text-slate-300 text-sm">Explore our comprehensive solutions</p>
-              </Link>
-
-              <Link
-                to="/about"
-                className="p-6 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-200 hover:scale-105"
-              >
-                <Building className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">About Us</h3>
-                <p className="text-slate-300 text-sm">Learn about our company and mission</p>
+                Search Our Site
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default Sitemap;
