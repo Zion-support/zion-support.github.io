@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
   Home, 
