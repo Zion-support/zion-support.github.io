@@ -41,6 +41,8 @@ const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 const Webinars = React.lazy(() => import('./pages/Webinars'));
 const Status = React.lazy(() => import('./pages/Status'));
 const Training = React.lazy(() => import('./pages/Training'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Insights = React.lazy(() => import('./pages/Insights'));
 const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
@@ -194,6 +196,8 @@ function App() {
               <Route path="/white-papers" element={<WhitePapers />} />
               <Route path="/webinars" element={<Webinars />} />
               <Route path="/training" element={<Training />} />
+              <Route path="/community" element={<Community />} />
+              <Route path="/insights" element={<Insights />} />
               <Route path="/support" element={<Support />} />
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
