@@ -1,12 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  PenTool, 
-  FileText, 
-  Brain, 
   TrendingUp, 
-  Users, 
+  Brain, 
   Target, 
+  BarChart3, 
   CheckCircle,
   ArrowRight,
   Star,
@@ -20,52 +18,54 @@ import {
   Clock,
   DollarSign,
   Award,
-  MessageSquare,
+  Users,
   Share2,
-  BarChart3
+  Zap,
+  Shield,
+  DollarSign as DollarSignIcon
 } from 'lucide-react';
 
-const AIContentMarketingSuite: React.FC = () => {
+const AIAutonomousSales: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Content Creation',
-      description: 'Generate high-quality, engaging content using advanced language models'
+      title: 'AI-Powered Sales Intelligence',
+      description: 'Advanced machine learning for autonomous sales strategy and optimization'
     },
     {
       icon: Target,
-      title: 'Audience Targeting',
-      description: 'AI-driven insights to create content that resonates with your target audience'
+      title: 'Lead Generation',
+      description: 'Intelligent lead generation and qualification with AI-driven insights'
     },
     {
       icon: TrendingUp,
-      title: 'Performance Analytics',
-      description: 'Track content performance and optimize based on real-time data'
-    },
-    {
-      icon: Users,
-      title: 'Personalization Engine',
-      description: 'Automatically personalize content for different audience segments'
-    },
-    {
-      icon: Clock,
-      title: 'Automated Publishing',
-      description: 'Schedule and publish content across multiple platforms automatically'
+      title: 'Sales Forecasting',
+      description: 'Predictive sales forecasting and revenue optimization'
     },
     {
       icon: BarChart3,
-      title: 'SEO Optimization',
-      description: 'AI-powered SEO recommendations to improve content discoverability'
+      title: 'Sales Analytics',
+      description: 'Real-time analytics and insights into sales performance and trends'
+    },
+    {
+      icon: Users,
+      title: 'Customer Segmentation',
+      description: 'AI-driven customer segmentation and targeting strategies'
+    },
+    {
+      icon: DollarSignIcon,
+      title: 'Revenue Optimization',
+      description: 'Continuous optimization of sales processes and revenue generation'
     }
   ];
 
   const benefits = [
-    'Increase content production by 300%',
-    'Improve engagement rates by 45%',
-    'Reduce content creation costs by 60%',
-    'Boost SEO rankings by 40%',
-    'Enhance brand consistency',
-    'Accelerate time-to-market'
+    'Increase sales revenue by 120%',
+    'Improve lead conversion by 80%',
+    'Reduce sales cycle by 60%',
+    'Automate sales processes',
+    '24/7 autonomous operation',
+    'Real-time sales insights'
   ];
 
   return (
@@ -78,23 +78,23 @@ const AIContentMarketingSuite: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-teal-500/20 border border-green-500/30 text-green-400 text-sm font-medium mb-6">
-              <PenTool className="w-4 h-4 mr-2" />
-              AI-Powered Content Marketing
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-400 text-sm font-medium mb-6">
+              <TrendingUp className="w-4 h-4 mr-2" />
+              AI-Powered Autonomous Sales
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Create, Optimize, and Scale
-              <span className="bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent"> Content Marketing</span>
+              Transform Your Sales with
+              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your content marketing with AI-powered creation, optimization, and distribution. 
-              Generate engaging content at scale while maintaining quality and brand consistency.
+              Revolutionize your sales operations with our AI-powered autonomous platform. 
+              Generate leads, optimize conversions, and maximize revenue with intelligent automation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
               <button className="px-8 py-4 border border-green-500/30 text-green-400 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300">
@@ -116,10 +116,10 @@ const AIContentMarketingSuite: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Content Marketing Features
+              Advanced Sales Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI suite provides everything you need to create, optimize, and distribute compelling content
+              Our AI platform provides comprehensive sales capabilities for modern businesses
             </p>
           </motion.div>
           
@@ -133,7 +133,7 @@ const AIContentMarketingSuite: React.FC = () => {
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -155,10 +155,10 @@ const AIContentMarketingSuite: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose AI Content Marketing Suite?
+              Why Choose AI Autonomous Sales?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in your content marketing performance and ROI
+              Experience measurable improvements in sales performance and revenue generation
             </p>
           </motion.div>
           
@@ -185,13 +185,13 @@ const AIContentMarketingSuite: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-green-500/10 to-teal-500/10 border border-green-500/20 rounded-xl p-8"
+              className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-xl p-8"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Ready to Scale Your Content?</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">Ready to Transform Sales?</h3>
               <p className="text-gray-300 mb-6">
-                Join thousands of marketers already using AI to create compelling content at scale.
+                Join thousands of businesses already using AI to enhance their sales performance.
               </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all duration-300">
+              <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
                 Get Started Today
               </button>
             </motion.div>
@@ -209,13 +209,13 @@ const AIContentMarketingSuite: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Content Marketing?
+              Ready to Revolutionize Sales?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start creating engaging content at scale with our AI-powered marketing suite.
+              Start your journey to AI-powered sales with our comprehensive platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all duration-300">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
                 Start Free Trial
               </button>
               <button className="px-8 py-4 border border-green-500/30 text-green-400 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300">
@@ -229,4 +229,4 @@ const AIContentMarketingSuite: React.FC = () => {
   );
 };
 
-export default AIContentMarketingSuite;
+export default AIAutonomousSales;

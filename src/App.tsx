@@ -80,6 +80,7 @@ const MobileSurvey = lazy(() => import('./pages/services/MobileSurvey'));
 // Additional innovative services
 const AIAutonomousCodeReviewer = lazy(() => import('./pages/services/AIAutonomousCodeReviewer'));
 const ZeroTrustNetworkAccess = lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
+const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecurityPlatform'));
 
 // Additional new service pages
 const AIPoweredSEO = lazy(() => import('./pages/services/AIPoweredSEO'));
@@ -125,6 +126,20 @@ const IoTEdgeComputing = lazy(() => import('./pages/services/iot-edge-computing'
 const QuantumComputing = lazy(() => import('./pages/services/quantum-computing'));
 const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
 const SustainableTechnology = lazy(() => import('./pages/services/sustainable-technology'));
+const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
+const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
+const AIAutonomousForensics = lazy(() => import('./pages/services/AIAutonomousForensics'));
+const AIAutonomousThreatIntelligence = lazy(() => import('./pages/services/AIAutonomousThreatIntelligence'));
+const AIAutonomousLegalResearch = lazy(() => import('./pages/services/AIAutonomousLegalResearch'));
+const AIAutonomousMarketing = lazy(() => import('./pages/services/AIAutonomousMarketing'));
+const AIAutonomousBusinessOperations = lazy(() => import('./pages/services/AIAutonomousBusinessOperations'));
+const AIAutonomousEcosystemManager = lazy(() => import('./pages/services/AIAutonomousEcosystemManager'));
+const AIAutonomousCustomerService = lazy(() => import('./pages/services/AIAutonomousCustomerService'));
+const AIAutonomousSales = lazy(() => import('./pages/services/AIAutonomousSales'));
+const AIAutonomousFinance = lazy(() => import('./pages/services/AIAutonomousFinance'));
+const AIAutonomousHR = lazy(() => import('./pages/services/AIAutonomousHR'));
+const AIAutonomousLegalCounsel = lazy(() => import('./pages/services/AIAutonomousLegalCounsel'));
 
 
 
@@ -275,10 +290,25 @@ function App() {
                     {/* Additional innovative services */}
                     <Route path="/services/ai-autonomous-code-reviewer" element={<AIAutonomousCodeReviewer />} />
                     <Route path="/services/zero-trust-network-access" element={<ZeroTrustNetworkAccess />} />
+                    <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
+                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                    <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                    <Route path="/services/ai-autonomous-forensics" element={<AIAutonomousForensics />} />
+                    <Route path="/services/ai-autonomous-threat-intelligence" element={<AIAutonomousThreatIntelligence />} />
+                    <Route path="/services/ai-autonomous-legal-research" element={<AIAutonomousLegalResearch />} />
+                    <Route path="/services/ai-autonomous-marketing" element={<AIAutonomousMarketing />} />
+                    <Route path="/services/ai-autonomous-business-operations" element={<AIAutonomousBusinessOperations />} />
+                    <Route path="/services/ai-autonomous-ecosystem-manager" element={<AIAutonomousEcosystemManager />} />
+                    <Route path="/services/ai-autonomous-customer-service" element={<AIAutonomousCustomerService />} />
+                    <Route path="/services/ai-autonomous-sales" element={<AIAutonomousSales />} />
+                    <Route path="/services/ai-autonomous-finance" element={<AIAutonomousFinance />} />
+                    <Route path="/services/ai-autonomous-hr" element={<AIAutonomousHR />} />
+                    <Route path="/services/ai-autonomous-legal-counsel" element={<AIAutonomousLegalCounsel />} />
                     
                     {/* Additional new service pages */}
                     <Route path="/services/ai-powered-seo" element={<AIPoweredSEO />} />
-                    <Route path="/services/interview-assessment-ai" element={<InterviewAssessmentAI />} />
+                    <Route path="/services/interview-assessment" element={<InterviewAssessmentAI />} />
                     <Route path="/services/helpdesk-platform" element={<HelpdeskPlatform />} />
                     <Route path="/services/dsr-portal" element={<DSRPortal />} />
                     <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
