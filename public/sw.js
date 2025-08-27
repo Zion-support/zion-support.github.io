@@ -2,34 +2,41 @@ const CACHE_NAME = 'zion-tech-group-v1.0.0';
 const STATIC_CACHE = 'zion-static-v1.0.0';
 const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 
-// Files to cache immediately
+// Files to cache immediately - updated to match Vite build structure
 const STATIC_FILES = [
   '/',
   '/index.html',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/images/zion-logo.png',
-  '/images/hero-ai-solutions.jpg',
-  '/images/hero-quantum.jpg',
-  '/images/hero-autonomous.jpg',
-  '/fonts/Orbitron-Bold.woff2',
-  '/fonts/Rajdhani-Medium.woff2'
+  '/favicon.svg',
+  '/favicon.ico',
+  '/og-image.svg',
+  '/manifest.json',
+  '/offline.html'
 ];
 
-// Install event - cache static files
+// Install event - cache static files with better error handling
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
         console.log('Caching static files');
-        return cache.addAll(STATIC_FILES);
+        // Use addAll with individual error handling for each file
+        return Promise.allSettled(
+          STATIC_FILES.map(url => 
+            cache.add(url).catch(error => {
+              console.warn(`Failed to cache ${url}:`, error);
+              return null; // Continue with other files
+            })
+          )
+        );
       })
-      .then(() => {
-        console.log('Static files cached successfully');
+      .then((results) => {
+        const successful = results.filter(r => r.status === 'fulfilled').length;
+        const failed = results.filter(r => r.status === 'rejected').length;
+        console.log(`Static files cached: ${successful} successful, ${failed} failed`);
         return self.skipWaiting();
       })
       .catch((error) => {
-        console.error('Error caching static files:', error);
+        console.error('Error in service worker install:', error);
       })
   );
 });
@@ -60,6 +67,9 @@ self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
+  // Debug logging
+  console.log('SW fetch:', request.method, url.href);
+
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
@@ -67,6 +77,17 @@ self.addEventListener('fetch', (event) => {
 
   // Skip external requests
   if (url.origin !== self.location.origin) {
+    // For external requests, try to fetch from network but don't cache
+    event.respondWith(
+      fetch(request).catch((error) => {
+        console.warn('External request failed:', url.href, error);
+        // Return a fallback response for failed external requests
+        return new Response('External resource not available', { 
+          status: 503,
+          headers: { 'Content-Type': 'text/plain' }
+        });
+      })
+    );
     return;
   }
 
@@ -84,9 +105,10 @@ self.addEventListener('fetch', (event) => {
 function isStaticFile(request) {
   const url = new URL(request.url);
   return (
-    url.pathname.startsWith('/static/') ||
+    url.pathname.startsWith('/js/') ||
+    url.pathname.startsWith('/css/') ||
     url.pathname.startsWith('/images/') ||
-    url.pathname.startsWith('/fonts/') ||
+    url.pathname.startsWith('/assets/') ||
     url.pathname.endsWith('.js') ||
     url.pathname.endsWith('.css') ||
     url.pathname.endsWith('.png') ||
@@ -95,7 +117,9 @@ function isStaticFile(request) {
     url.pathname.endsWith('.gif') ||
     url.pathname.endsWith('.svg') ||
     url.pathname.endsWith('.woff') ||
-    url.pathname.endsWith('.woff2')
+    url.pathname.endsWith('.woff2') ||
+    url.pathname.endsWith('.ico') ||
+    url.pathname.endsWith('.webp')
   );
 }
 
@@ -247,14 +271,39 @@ self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'CACHE_UPDATE') {
     event.waitUntil(updateCache());
   }
+  
+  if (event.data && event.data.type === 'GET_VERSION') {
+    event.ports[0].postMessage({ version: CACHE_NAME });
+  }
 });
+
+// Check for updates every hour
+setInterval(async () => {
+  try {
+    const registration = await self.registration;
+    if (registration) {
+      await registration.update();
+    }
+  } catch (error) {
+    console.log('Service worker update check failed:', error);
+  }
+}, 60 * 60 * 1000); // Check every hour
 
 // Update cache with new files
 async function updateCache() {
   try {
     const cache = await caches.open(STATIC_CACHE);
-    await cache.addAll(STATIC_FILES);
-    console.log('Cache updated successfully');
+    const results = await Promise.allSettled(
+      STATIC_FILES.map(url => 
+        cache.add(url).catch(error => {
+          console.warn(`Failed to update cache for ${url}:`, error);
+          return null;
+        })
+      )
+    );
+    const successful = results.filter(r => r.status === 'fulfilled').length;
+    const failed = results.filter(r => r.status === 'rejected').length;
+    console.log(`Cache updated: ${successful} successful, ${failed} failed`);
   } catch (error) {
     console.error('Cache update failed:', error);
   }
