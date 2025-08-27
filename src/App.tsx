@@ -21,9 +21,9 @@ import LoadingSpinner from './components/ui/LoadingSpinner';
 
 // Lazy-loaded pages for better performance
 const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Contact = lazy(() => import('./pages/Contact'));
+const About = lazy(() => import('./pages/about'));
+const Services = lazy(() => import('./pages/services'));
+const Contact = lazy(() => import('./pages/contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const Careers = lazy(() => import('./pages/Careers'));
 
