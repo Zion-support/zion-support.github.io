@@ -7,7 +7,6 @@ export type InnovativeMicroSaasV2 = {
 	rating: number;
 	reviews: number;
 };
-
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 	{
 		id: 'ai-business-intelligence-pro',

@@ -1,5 +1,4 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-
 export const real2027Q3Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'mdm-mobile-device-management',

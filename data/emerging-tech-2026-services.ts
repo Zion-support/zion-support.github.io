@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EmergingTech2026Service {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface EmergingTech2026Service {
   rating: number;
   reviews: number;
 }
-
 export const emergingTech2026Services: EmergingTech2026Service[] = [
   // Neural Interface Development Platform
   {
@@ -94,7 +92,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.9,
     reviews: 23
   },
-
   // Quantum Consciousness Simulation
   {
     id: 'quantum-consciousness-simulation',
@@ -147,7 +144,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 5.0,
     reviews: 18
   },
-
   // Holographic Metaverse Platform
   {
     id: 'holographic-metaverse-platform',
@@ -200,7 +196,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8,
     reviews: 95
   },
-
   // Autonomous Manufacturing AI
   {
     id: 'autonomous-manufacturing-ai',
@@ -253,7 +248,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.9,
     reviews: 78
   },
-
   // Space Technology AI Platform
   {
     id: 'space-technology-ai-platform',
@@ -306,7 +300,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.9,
     reviews: 42
   },
-
   // Quantum Energy Management
   {
     id: 'quantum-energy-management',
@@ -359,7 +352,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8,
     reviews: 67
   },
-
   // AI-Powered Robotics Platform
   {
     id: 'ai-robotics-platform-elite',
@@ -412,7 +404,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8,
     reviews: 98
   },
-
   // Quantum Logistics Platform
   {
     id: 'quantum-logistics-platform',
@@ -465,7 +456,6 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8,
     reviews: 112
   },
-
   // AI-Powered Virtual Events Platform
   {
     id: 'ai-virtual-events-platform',

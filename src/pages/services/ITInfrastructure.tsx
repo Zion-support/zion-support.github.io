@@ -1,268 +1,431 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Server, Network, Shield, Database, Cloud, Zap, CheckCircle, ArrowRight, Cpu, HardDrive, Monitor, Users, Globe, Lock, BarChart3, Clock } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 
-const ITInfrastructure: React.FC = () => {
+export default function ITInfrastructure() {
   const features = [
     {
-      title: "Network Management",
-      description: "Comprehensive network infrastructure design, implementation, and maintenance",
-      features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],
-      icon: "🌐"
-    },
-    {
-      title: "System Administration",
-      description: "Expert management of servers, operating systems, and enterprise applications",
-      features: ["Server Management", "OS Administration", "Application Support", "Performance Tuning"],
-      icon: "🖥️"
-    },
-    {
-      title: "Data Center Operations",
-      description: "Professional data center management and optimization services",
-      features: ["Facility Management", "Power & Cooling", "Hardware Maintenance", "Capacity Planning"],
-      icon: "🏢"
-    },
-    {
-      title: "Performance Optimization",
-      description: "System and network performance analysis and improvement",
-      features: ["Performance Monitoring", "Bottleneck Analysis", "Optimization Strategies", "Capacity Planning"],
-      icon: "⚡"
-    }
-  ];
-
-  const infrastructureFeatures = [
-    { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
-    { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
-    { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
-    { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="IT Infrastructure - Zion Tech Group"
-        description="Build a robust and scalable IT infrastructure with our expert solutions and management services."
-        keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
-        canonical="https://ziontechgroup.com/services/infrastructure"
-      />
-      title: "Network Infrastructure",
-      description: "Design, implement, and maintain robust network solutions",
-      features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
-      icon: "🌐"
-    },
-    {
+      icon: Server,
       title: "Server Management",
-      description: "Comprehensive server infrastructure and management services",
-      features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"],
-      icon: "🖥️"
+      description: "24/7 monitoring and maintenance of your physical and virtual servers"
     },
     {
-      title: "Storage Solutions",
-      description: "Scalable storage infrastructure for growing businesses",
-      features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"],
-      icon: "💾"
+      icon: Network,
+      title: "Network Infrastructure",
+      description: "Design, implementation, and optimization of enterprise networks"
     },
     {
-      title: "Security Infrastructure",
-      description: "Multi-layered security infrastructure protection",
-      features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],
-      icon: "🔒"
+      icon: Database,
+      title: "Database Administration",
+      description: "Performance tuning, backup strategies, and disaster recovery"
+    },
+    {
+      icon: Shield,
+      title: "Security Hardening",
+      description: "Multi-layered security approach with regular vulnerability assessments"
+    },
+    {
+      icon: Cloud,
+      title: "Hybrid Cloud Solutions",
+      description: "Seamless integration between on-premises and cloud infrastructure"
+    },
+    {
+      icon: Monitor,
+      title: "Proactive Monitoring",
+      description: "Real-time monitoring with predictive analytics and alerting"
     }
   ];
 
-  const infrastructureAreas = [
-    { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
-    { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
-    { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
-    { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
+  const pricing = [
+    {
+      name: "Basic",
+      price: "$499",
+      period: "/month",
+      description: "For small businesses with basic IT needs",
+      features: [
+        "Up to 5 servers",
+        "Basic network monitoring",
+        "Email support",
+        "Monthly maintenance",
+        "Security updates"
+      ],
+      cta: "Get Started",
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$1,299",
+      period: "/month",
+      description: "For growing businesses with complex infrastructure",
+      features: [
+        "Up to 20 servers",
+        "Advanced monitoring",
+        "Priority support",
+        "Weekly maintenance",
+        "Security audits",
+        "Performance optimization"
+      ],
+      cta: "Start Free Trial",
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$2,999",
+      period: "/month",
+      description: "For large enterprises with mission-critical systems",
+      features: [
+        "Unlimited servers",
+        "Custom monitoring",
+        "24/7 phone support",
+        "Daily maintenance",
+        "Compliance reporting",
+        "Dedicated engineer"
+      ],
+      cta: "Contact Sales",
+      popular: false
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Zap,
+      title: "Improved Performance",
+      description: "Optimize infrastructure for maximum efficiency and speed"
+    },
+    {
+      icon: Shield,
+      title: "Enhanced Security",
+      description: "Protect your assets with enterprise-grade security measures"
+    },
+    {
+      icon: BarChart3,
+      title: "Cost Reduction",
+      description: "Reduce operational costs through efficient resource management"
+    },
+    {
+      icon: Users,
+      title: "Expert Support",
+      description: "Access to certified IT professionals 24/7"
+    }
+  ];
+
+  const infrastructureTypes = [
+    {
+      icon: Server,
+      title: "On-Premises",
+      description: "Traditional infrastructure within your organization",
+      features: ["Full control", "Custom hardware", "Security compliance", "Predictable costs"]
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud-based solutions",
+      features: ["Elastic scaling", "Pay-per-use", "Global reach", "Managed services"]
+    },
+    {
+      icon: Network,
+      title: "Hybrid",
+      description: "Best of both worlds approach",
+      features: ["Flexibility", "Cost optimization", "Risk mitigation", "Performance balance"]
+    }
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>IT Infrastructure — Zion Tech Group | Network & System Management</title>
-        <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services." />
-        <meta property="og:title" content="IT Infrastructure — Zion Tech Group" />
-        <meta property="og:description" content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure." />
-        <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure" />
-      </Helmet>
+    <div className="min-h-screen bg-futuristic relative overflow-hidden">
+      <SEO 
+        title="IT Infrastructure Services - Zion Tech Group"
+        description="Build robust, scalable IT infrastructure with our enterprise-grade solutions. From server management to network optimization, we've got you covered."
+        keywords="IT infrastructure, server management, network infrastructure, database administration, IT consulting"
+      />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
+        <div className="absolute top-20 left-10 animate-pulse">
+          <div className="w-32 h-32 bg-blue-500/20 rounded-full blur-3xl" />
+        </div>
+        <div className="absolute bottom-20 right-10 animate-pulse delay-1000">
+          <div className="w-40 h-40 bg-purple-500/20 rounded-full blur-3xl" />
+        </div>
+      </div>
+
+      <div className="relative z-10">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              IT
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Infrastructure
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build a solid foundation for your business with enterprise-grade IT infrastructure. 
-              Our comprehensive services ensure reliability, scalability, and security.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Get Infrastructure Consultation
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Infrastructure Services */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Infrastructure Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive solutions to build and maintain your IT foundation
+        <section className="pt-32 pb-20">
+          <div className="container-responsive">
+            <motion.div 
+              className="text-center max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+                <Server className="w-4 h-4 mr-2" />
+                Enterprise IT Infrastructure
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Build <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent">Rock-Solid</span> Infrastructure
+              </h1>
+              <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
+                Design, build, and maintain enterprise-grade IT infrastructure that scales with your business. 
+                From server management to network optimization, we ensure your technology foundation is robust and reliable.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureServices.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
-                  <div className="text-5xl mb-6">{service.icon}</div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="text-sm text-gray-300 flex items-center">
-                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link 
+                  to="/request-quote"
+                  className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
+                >
+                  Request Quote
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* Infrastructure Areas */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        {/* Infrastructure Types Section */}
+        <section className="py-20">
+          <div className="container-responsive">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
                 Infrastructure Solutions
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Multi-layered approach to building robust IT infrastructure
+              <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+                Choose the infrastructure approach that best fits your business requirements
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureAreas.map((area, index) => (
-                <div
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {infrastructureTypes.map((type, index) => (
+                <motion.div
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
+                  className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                    <type.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{type.title}</h3>
+                  <p className="text-zinc-400 mb-4">{type.description}</p>
                   <ul className="space-y-2">
-                    {area.solutions.map((solution, idx) => (
-                      <li key={idx} className="text-gray-300 flex items-center">
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
-                        {solution}
+                    {type.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-zinc-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Benefits */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Infrastructure Services?
+        {/* Features Section */}
+        <section className="py-20 bg-white/5">
+          <div className="container-responsive">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our IT Infrastructure?
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Proven expertise and cutting-edge technology for reliable infrastructure
+              <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+                Our comprehensive approach ensures your infrastructure is robust, secure, and scalable
               </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-zinc-400">{feature.description}</p>
+                </motion.div>
+              ))}
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Reliability</h3>
-                <p className="text-gray-300">99.9% uptime guarantee with redundant systems</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 11l5-5m0 0l5 5m-5-5v12" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Scalability</h3>
-                <p className="text-gray-300">Grow your infrastructure as your business expands</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Security</h3>
-                <p className="text-gray-300">Multi-layered security for comprehensive protection</p>
-              </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20">
+          <div className="container-responsive">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Transparent Pricing
+              </h2>
+              <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+                Choose the plan that fits your business needs. All plans include our core infrastructure services.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricing.map((plan, index) => (
+                <motion.div
+                  key={index}
+                  className={`relative p-8 rounded-2xl ${
+                    plan.popular 
+                      ? 'bg-gradient-to-br from-blue-500/20 to-purple-500/20 border-2 border-blue-500/50' 
+                      : 'bg-white/5 border border-white/10'
+                  } backdrop-blur-sm`}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold rounded-full">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="flex items-baseline justify-center mb-2">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-zinc-400 ml-1">{plan.period}</span>
+                    </div>
+                    <p className="text-zinc-400">{plan.description}</p>
+                  </div>
+
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-zinc-300">
+                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600'
+                        : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
+                    }`}
+                  >
+                    {plan.cta}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 bg-white/5">
+          <div className="container-responsive">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Business Benefits
+              </h2>
+              <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+                See measurable improvements in your IT operations and business performance
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <benefit.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                    <p className="text-zinc-400">{benefit.description}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Build Your Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our infrastructure services can support your business growth
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+        <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
+          <div className="container-responsive text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              Get Infrastructure Consultation
-            </Link>
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Build Your Infrastructure?
+              </h2>
+              <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
+                Join hundreds of companies that trust Zion Tech Group with their critical infrastructure needs
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Journey
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link 
+                  to="/request-quote"
+                  className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
+                >
+                  Get Custom Quote
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
-};
-
-export default ITInfrastructure;
+}

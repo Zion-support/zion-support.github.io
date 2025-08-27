@@ -3,29 +3,34 @@ import React, { createContext, useContext } from 'react';
 interface User {
   id: string;
   email: string;
-  name?: string;
-  avatar_url?: string;
-  created_at?: string;
-  updated_at?: string;
+  displayName?: string;
+  avatar?: string;
+  role?: string;
+  isEmailVerified?: boolean;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+interface AuthTokens {
+  accessToken: string | null;
+  refreshToken: string | null;
 }
 
 interface AuthContextType {
   user: User | null;
   isLoading: boolean;
-  login: (email: string, password: string) => Promise<{ error: string | null }>;
-  signup: (email: string, password: string, userData: any) => Promise<any>;
-  register: (name: string, email: string, password: string) => Promise<{ error: string | null }>;
-  logout: () => Promise<void>;
-  resetPassword: (email: string) => Promise<{ error: string | null }>;
-  updateProfile: (updates: Partial<User>) => Promise<{ error: string | null }>;
-  loginWithGoogle: () => Promise<{ error: string | null }>;
-  loginWithFacebook: () => Promise<{ error: string | null }>;
-  loginWithTwitter: () => Promise<{ error: string | null }>;
-  loginWithWeb3: () => Promise<{ error: string | null }>;
   onboardingStep: number;
-  setOnboardingStep: (step: number) => void;
-  tokens: { accessToken: string | null; refreshToken: string | null };
-  setTokens: (tokens: { accessToken: string | null; refreshToken: string | null }) => void;
+  tokens: AuthTokens;
+  login: (email: string, password: string) => Promise<{ error: string | null }>;
+  register: (name: string, email: string, password: string) => Promise<{ error: string | null }>;
+  signup: (email: string, password: string, userData: any) => Promise<any>;
+  logout: () => Promise<void>;
+  resetPassword: (email: string) => Promise<void>;
+  updateProfile: (updates: Partial<User>) => Promise<void>;
+  loginWithGoogle: () => Promise<void>;
+  loginWithFacebook: () => Promise<void>;
+  loginWithTwitter: () => Promise<void>;
+  loginWithWeb3: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -39,4 +44,4 @@ export const useAuth = () => {
 };
 
 export { AuthContext };
-export type { User, AuthContextType };
+export type { User, AuthTokens, AuthContextType };

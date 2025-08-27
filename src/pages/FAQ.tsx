@@ -1,381 +1,505 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Plus, 
-  Minus, 
+  ChevronDown, 
+  ChevronUp, 
   Search, 
-  HelpCircle, 
-  MessageCircle, 
-  Mail, 
-  Phone,
-  ChevronDown,
-  BookOpen,
-  Shield,
-  Zap,
+  Brain, 
+  Cloud, 
+  Shield, 
+  Zap, 
+  Star,
   Users,
-  Globe
+  Building,
+  Globe,
+  Server,
+  Database,
+  Network,
+  Lock,
+  Heart,
+  ShoppingCart,
+  MessageCircle,
+  HelpCircle,
+  FileText,
+  Video,
+  TestTube,
+  Code,
+  BookOpen,
+  Briefcase,
+  Newspaper,
+  Target,
+  DollarSign,
+  Settings,
+  Bell,
+  Filter,
+  Download,
+  Edit,
+  Trash2,
+  Plus,
+  Calendar,
+  Truck,
+  BarChart3,
+  Atom,
+  Leaf,
+  Satellite,
+  Cpu,
+  Rocket,
+  TrendingUp,
+  Award,
+  Activity,
+  CheckCircle,
+  AlertCircle,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  ArrowRight,
+  QuestionMark,
+  Lightbulb,
+  Info,
+  AlertTriangle,
+  Tag
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 
-const FAQ: React.FC = () => {
+interface FAQItem {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
+  icon: any;
+  tags: string[];
+}
+
+export function FAQ() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
-  const faqCategories = [
+  const categories = [
+    { id: 'all', name: 'All Questions', icon: QuestionMark, count: 0 },
+    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 0 },
+    { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
+    { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
+    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },
+    { id: 'pricing', name: 'Pricing & Billing', icon: DollarSign, count: 0 },
+    { id: 'support', name: 'Support & Training', icon: HelpCircle, count: 0 },
+    { id: 'general', name: 'General', icon: Info, count: 0 }
+  ];
+
+  const faqData: FAQItem[] = [
+    // AI Services
     {
-      id: 'general',
-      title: 'General Questions',
-      icon: HelpCircle,
-      questions: [
-        {
-          id: 1,
-          question: 'What is Zion Tech Group?',
-          answer: 'Zion Tech Group is a leading technology company specializing in AI services, micro SAAS solutions, IT services, and emerging technologies. We help businesses transform their digital operations through innovative technology solutions.'
-        },
-        {
-          id: 2,
-          question: 'Where is Zion Tech Group located?',
-          answer: 'We have offices in multiple locations worldwide, with our headquarters in San Francisco, California. We serve clients globally and have a distributed team of experts.'
-        },
-        {
-          id: 3,
-          question: 'How can I contact Zion Tech Group?',
-          answer: 'You can reach us through multiple channels: email at contact@ziontechgroup.com, phone at +1 (555) 123-4567, or through our contact form on the website. We typically respond within 24 hours.'
-        }
-      ]
+      id: 'ai-1',
+      question: 'What AI services does Zion Tech Group offer?',
+      answer: 'Zion Tech Group provides comprehensive AI services including AI Business Intelligence, AI Compliance Assistant, AI Sales Copilot, AI Content Marketing Suite, AI Project Management, AI Financial Analytics, AI Customer Support Automation, and many more. Our AI solutions are designed to enhance business operations, improve decision-making, and drive innovation across various industries.',
+      category: 'ai-services',
+      icon: Brain,
+      tags: ['AI', 'Machine Learning', 'Business Intelligence', 'Automation']
     },
     {
-      id: 'services',
-      title: 'Our Services',
-      icon: Zap,
-      questions: [
-        {
-          id: 4,
-          question: 'What AI services do you offer?',
-          answer: 'We offer comprehensive AI services including machine learning model development, natural language processing, computer vision, predictive analytics, and AI consulting. Our solutions are tailored to specific industry needs.'
-        },
-        {
-          id: 5,
-          question: 'What is micro SAAS and how can it help my business?',
-          answer: 'Micro SAAS refers to specialized, focused software-as-a-service solutions that address specific business needs. These solutions are cost-effective, easy to implement, and provide immediate value without the complexity of enterprise software.'
-        },
-        {
-          id: 6,
-          question: 'Do you provide IT consulting services?',
-          answer: 'Yes, we offer comprehensive IT consulting services including digital transformation, cloud migration, cybersecurity assessment, infrastructure optimization, and technology strategy development.'
-        }
-      ]
+      id: 'ai-2',
+      question: 'How does AI Business Intelligence work?',
+      answer: 'Our AI Business Intelligence platform uses advanced machine learning algorithms to analyze vast amounts of data from multiple sources. It provides real-time insights, predictive analytics, and automated reporting to help businesses make data-driven decisions. The system continuously learns and improves from new data, ensuring increasingly accurate predictions and recommendations.',
+      category: 'ai-services',
+      icon: Brain,
+      tags: ['AI', 'Business Intelligence', 'Analytics', 'Predictive']
     },
     {
-      id: 'pricing',
-      title: 'Pricing & Plans',
+      id: 'ai-3',
+      question: 'Can AI services integrate with existing systems?',
+      answer: 'Yes, our AI services are designed with enterprise-grade integration capabilities. We support REST APIs, webhooks, and standard data formats. Our team works closely with your IT department to ensure seamless integration with existing ERP, CRM, and business systems. We also provide custom integration solutions for unique requirements.',
+      category: 'ai-services',
+      icon: Brain,
+      tags: ['Integration', 'API', 'Enterprise', 'Compatibility']
+    },
+
+    // Cloud & Infrastructure
+    {
+      id: 'cloud-1',
+      question: 'What cloud infrastructure solutions do you provide?',
+      answer: 'We offer comprehensive cloud infrastructure solutions including Cloud DevOps, IT Infrastructure management, FinOps optimization, and cloud migration services. Our solutions cover AWS, Azure, Google Cloud, and hybrid cloud environments. We help organizations optimize costs, improve performance, and ensure scalability.',
+      category: 'cloud-infrastructure',
+      icon: Cloud,
+      tags: ['Cloud', 'DevOps', 'Infrastructure', 'Migration']
+    },
+    {
+      id: 'cloud-2',
+      question: 'How do you ensure cloud security?',
+      answer: 'Cloud security is our top priority. We implement multi-layered security measures including identity and access management, encryption at rest and in transit, network security, and continuous monitoring. Our security team follows industry best practices and compliance standards like SOC 2, ISO 27001, and GDPR.',
+      category: 'cloud-infrastructure',
+      icon: Cloud,
+      tags: ['Security', 'Compliance', 'Encryption', 'Monitoring']
+    },
+
+    // Security & Compliance
+    {
+      id: 'security-1',
+      question: 'What cybersecurity services do you offer?',
+      answer: 'Our cybersecurity portfolio includes AI-powered threat detection, zero-trust network architecture, security headers and CSP implementation, DSR privacy portal, and comprehensive security audits. We provide 24/7 monitoring, incident response, and security training for your team.',
+      category: 'security',
       icon: Shield,
-      questions: [
-        {
-          id: 7,
-          question: 'How do you structure your pricing?',
-          answer: 'Our pricing is project-based and depends on the scope, complexity, and timeline of your project. We offer flexible engagement models including fixed-price projects, time and materials, and ongoing support contracts.'
-        },
-        {
-          id: 8,
-          question: 'Do you offer free consultations?',
-          answer: 'Yes, we provide a free initial consultation to understand your needs and discuss potential solutions. This helps us provide accurate project estimates and recommendations.'
-        },
-        {
-          id: 9,
-          question: 'Are there ongoing costs after project completion?',
-          answer: 'This depends on the type of project. Some solutions require ongoing maintenance and support, while others are self-contained. We\'ll clearly outline all costs during the planning phase.'
-        }
-      ]
+      tags: ['Cybersecurity', 'Threat Detection', 'Zero Trust', 'Compliance']
     },
     {
-      id: 'support',
-      title: 'Support & Maintenance',
-      icon: Users,
-      questions: [
-        {
-          id: 10,
-          question: 'What kind of support do you provide?',
-          answer: 'We offer comprehensive support including 24/7 technical support, regular maintenance updates, performance monitoring, and emergency response. Support levels can be customized based on your needs.'
-        },
-        {
-          id: 11,
-          question: 'How quickly do you respond to support requests?',
-          answer: 'Response times vary by support tier. Premium support clients receive responses within 2 hours, while standard support clients receive responses within 24 hours. Emergency issues are addressed immediately.'
-        },
-        {
-          id: 12,
-          question: 'Do you provide training for your solutions?',
-          answer: 'Yes, we provide comprehensive training for all our solutions. This includes user training, administrator training, and ongoing education as new features are released.'
-        }
-      ]
+      id: 'security-2',
+      question: 'How do you handle data privacy and compliance?',
+      answer: 'We implement robust data privacy measures including GDPR and CCPA compliance tools, data encryption, access controls, and regular privacy audits. Our DSR portal allows users to manage their data rights, and we provide comprehensive privacy impact assessments for all projects.',
+      category: 'security',
+      icon: Shield,
+      tags: ['Privacy', 'GDPR', 'CCPA', 'Data Rights']
+    },
+
+    // Quantum Computing
+    {
+      id: 'quantum-1',
+      question: 'What quantum computing services are available?',
+      answer: 'We offer quantum computing solutions including quantum machine learning, quantum neural networks, and hybrid AI-quantum platforms. Our services help organizations explore quantum advantage for optimization problems, cryptography, and scientific simulations. We provide both cloud-based quantum access and on-premise quantum solutions.',
+      category: 'quantum',
+      icon: Atom,
+      tags: ['Quantum Computing', 'Machine Learning', 'Optimization', 'Cryptography']
+    },
+
+    // IoT & Edge Computing
+    {
+      id: 'iot-1',
+      question: 'How do IoT and edge computing solutions work?',
+      answer: 'Our IoT and edge computing solutions enable real-time data processing at the network edge, reducing latency and bandwidth requirements. We provide IoT device management, edge analytics, and secure connectivity solutions. This is ideal for applications requiring immediate response times like autonomous vehicles and smart cities.',
+      category: 'iot',
+      icon: Network,
+      tags: ['IoT', 'Edge Computing', 'Real-time', 'Connectivity']
+    },
+
+    // Pricing & Billing
+    {
+      id: 'pricing-1',
+      question: 'What are your pricing models?',
+      answer: 'We offer flexible pricing models including pay-as-you-go, subscription-based plans, and enterprise custom pricing. Our pricing is transparent and scales with your usage. We also provide cost optimization services to help you maximize ROI on our solutions.',
+      category: 'pricing',
+      icon: DollarSign,
+      tags: ['Pricing', 'Billing', 'ROI', 'Optimization']
+    },
+    {
+      id: 'pricing-2',
+      question: 'Do you offer free trials?',
+      answer: 'Yes, we offer free trials for most of our services. Trial periods typically range from 14 to 30 days depending on the service complexity. During the trial, you get full access to features and our support team to help you evaluate the solution.',
+      category: 'pricing',
+      icon: DollarSign,
+      tags: ['Free Trial', 'Evaluation', 'Support']
+    },
+
+    // Support & Training
+    {
+      id: 'support-1',
+      question: 'What support options are available?',
+      answer: 'We provide 24/7 technical support through multiple channels including phone, email, live chat, and our help center. Enterprise customers get dedicated support managers and priority response times. We also offer comprehensive training programs and documentation.',
+      category: 'support',
+      icon: HelpCircle,
+      tags: ['Support', 'Training', 'Documentation', '24/7']
+    },
+    {
+      id: 'support-2',
+      question: 'Do you provide training and certification?',
+      answer: 'Yes, we offer comprehensive training programs including online courses, workshops, and certification programs. Our training covers product usage, best practices, and advanced features. We also provide custom training for enterprise customers.',
+      category: 'support',
+      icon: HelpCircle,
+      tags: ['Training', 'Certification', 'Workshops', 'Best Practices']
+    },
+
+    // General
+    {
+      id: 'general-1',
+      question: 'What industries do you serve?',
+      answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, government, and education. Our solutions are designed to be industry-agnostic while providing industry-specific features and compliance requirements.',
+      category: 'general',
+      icon: Building,
+      tags: ['Industries', 'Healthcare', 'Finance', 'Manufacturing']
+    },
+    {
+      id: 'general-2',
+      question: 'How do I get started with Zion Tech Group?',
+      answer: 'Getting started is easy! You can contact our sales team for a consultation, sign up for a free trial, or schedule a demo. We\'ll assess your needs and recommend the best solutions. Our onboarding team will guide you through the setup process.',
+      category: 'general',
+      icon: Rocket,
+      tags: ['Getting Started', 'Consultation', 'Demo', 'Onboarding']
     }
   ];
 
-  const toggleItem = (itemId: number) => {
-    setOpenItems(prev => 
-      prev.includes(itemId) 
-        ? prev.filter(id => id !== itemId)
-        : [...prev, itemId]
-    );
+  // Calculate category counts
+  categories.forEach(category => {
+    if (category.id === 'all') {
+      category.count = faqData.length;
+    } else {
+      category.count = faqData.filter(item => item.category === category.id).length;
+    }
+  });
+
+  const toggleItem = (id: string) => {
+    const newExpanded = new Set(expandedItems);
+    if (newExpanded.has(id)) {
+      newExpanded.delete(id);
+    } else {
+      newExpanded.add(id);
+    }
+    setExpandedItems(newExpanded);
   };
 
-  const filteredCategories = faqCategories.map(category => ({
-    ...category,
-    questions: category.questions.filter(q =>
-      q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      q.answer.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  })).filter(category => category.questions.length > 0);
+  const filteredFAQ = faqData.filter(item => {
+    const matchesSearch = item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
-<<<<<<< HEAD
-  const toggleCategory = (title) => {
-    setExpandedCategory(expandedCategory === title ? null : title);
-  };
-
-=======
->>>>>>> cursor/website-audit-and-enhancement-96e5
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-6xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <SEO 
+        title="FAQ - Zion Tech Group"
+        description="Frequently asked questions about our AI, cybersecurity, and cloud services. Get answers to common questions about Zion Tech Group solutions."
+      />
+      {/* Header */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5 }}
             >
-              <HelpCircle className="w-20 h-20 text-zion-cyan mx-auto mb-8" />
-              <h1 className="text-5xl md:text-7xl font-bold mb-8">
-                Frequently Asked <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                  Questions
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto">
-                Find answers to common questions about our services, pricing, and how we can help transform your business.
-              </p>
-
-              {/* Search Bar */}
-              <div className="max-w-2xl mx-auto">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                  <input
-                    type="text"
-                    placeholder="Search for answers..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-4 py-4 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
-                  />
-                </div>
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
+                <HelpCircle className="h-10 w-10 text-white" />
               </div>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Find answers to common questions about our services, pricing, and support. Can't find what you're looking for? Contact our support team.
+              </p>
             </motion.div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* FAQ Categories */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {filteredCategories.map((category, categoryIndex) => (
-            <motion.div
-              key={category.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
-              viewport={{ once: true }}
-              className="mb-16"
-            >
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
-                  <category.icon className="w-6 h-6 text-white" />
-                </div>
-                <h2 className="text-3xl font-bold text-white">{category.title}</h2>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Search and Filters */}
+        <div className="mb-8">
+          <div className="flex flex-col lg:flex-row gap-4">
+            {/* Search Bar */}
+            <div className="flex-1">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search questions, answers, or topics..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
               </div>
+            </div>
 
-              <div className="space-y-4">
-                {category.questions.map((item) => (
+            {/* Category Filter */}
+            <div className="lg:w-64">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                {categories.map(category => (
+                  <option key={category.id} value={category.id}>
+                    {category.name} ({category.count})
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Main FAQ List */}
+          <div className="lg:col-span-2">
+            <div className="space-y-4">
+              {filteredFAQ.length > 0 ? (
+                filteredFAQ.map((item, index) => (
                   <motion.div
                     key={item.id}
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300"
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden"
                   >
                     <button
                       onClick={() => toggleItem(item.id)}
-                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-zion-slate-dark/30 transition-colors duration-300"
+                      className="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors flex items-center justify-between"
                     >
-                      <h3 className="text-lg font-semibold text-white pr-4">
-                        {item.question}
-                      </h3>
-                      <div className="flex-shrink-0">
-                        {openItems.includes(item.id) ? (
-                          <Minus className="w-5 h-5 text-zion-cyan" />
-                        ) : (
-                          <Plus className="w-5 h-5 text-zion-cyan" />
-                        )}
+                      <div className="flex items-start space-x-3">
+                        <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                          <item.icon className="h-4 w-4 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-medium text-gray-900">{item.question}</h3>
+                          <div className="flex flex-wrap gap-2 mt-2">
+                            {item.tags.slice(0, 3).map(tag => (
+                              <span
+                                key={tag}
+                                className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
+                      {expandedItems.has(item.id) ? (
+                        <ChevronUp className="h-5 w-5 text-gray-400 flex-shrink-0" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5 text-gray-400 flex-shrink-0" />
+                      )}
                     </button>
                     
                     <AnimatePresence>
-                      {openItems.includes(item.id) && (
+                      {expandedItems.has(item.id) && (
                         <motion.div
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
                           <div className="px-6 pb-4">
-                            <p className="text-zion-slate-light leading-relaxed">
-                              {item.answer}
-                            </p>
+                            <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                            <div className="mt-4 flex items-center space-x-4 text-sm text-gray-500">
+                              <span className="flex items-center">
+                                <Info className="h-4 w-4 mr-1" />
+                                Category: {categories.find(c => c.id === item.category)?.name}
+                              </span>
+                              <span className="flex items-center">
+                                <Tag className="h-4 w-4 mr-1" />
+                                {item.tags.length} tags
+                              </span>
+                            </div>
                           </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
                   </motion.div>
+                ))
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-center py-12"
+                >
+                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">No questions found</h3>
+                  <p className="text-gray-600">Try adjusting your search terms or category filter.</p>
+                </motion.div>
+              )}
+            </div>
+          </div>
+
+          {/* Sidebar */}
+          <div className="space-y-6">
+            {/* Quick Stats */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">FAQ Stats</h3>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-600">Total Questions</span>
+                  <span className="font-semibold text-gray-900">{faqData.length}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-600">Categories</span>
+                  <span className="font-semibold text-gray-900">{categories.length - 1}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-gray-600">Most Popular</span>
+                  <span className="font-semibold text-gray-900">AI Services</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Popular Categories */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Popular Categories</h3>
+              <div className="space-y-3">
+                {categories.slice(1, 6).map(category => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
+                      selectedCategory === category.id
+                        ? 'bg-blue-50 border border-blue-200'
+                        : 'hover:bg-gray-50'
+                    }`}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <category.icon className="h-5 w-5 text-gray-600" />
+                      <span className="text-sm font-medium text-gray-700">{category.name}</span>
+                    </div>
+                    <span className="text-sm text-gray-500">{category.count}</span>
+                  </button>
                 ))}
               </div>
-            </motion.div>
-          ))}
+            </div>
 
-          {/* No Results */}
-          {filteredCategories.length === 0 && searchQuery && (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center py-20"
-            >
-              <HelpCircle className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">No results found</h3>
-              <p className="text-zion-slate-light mb-6">
-                Try adjusting your search terms or browse our categories below
+            {/* Contact Support */}
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-white">
+              <h3 className="text-lg font-semibold mb-3">Still Need Help?</h3>
+              <p className="text-blue-100 mb-4">
+                Can't find the answer you're looking for? Our support team is here to help.
               </p>
-              <button
-                onClick={() => setSearchQuery('')}
-                className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-              >
-                Clear Search
-              </button>
-            </motion.div>
-          )}
-        </div>
-      </section>
-
-      {/* Still Have Questions */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Still Have <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Questions</span>?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-12">
-              Can't find what you're looking for? Our team is here to help you get the answers you need.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <MessageCircle className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">Live Chat</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Chat with our support team in real-time
-                </p>
-                <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
-                  Start Chat
-                </button>
-              </div>
-              
-              <div className="text-center">
-                <Mail className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">Email Support</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Send us a detailed message
-                </p>
-                <Link 
-                  to="/contact"
-                  className="inline-block px-6 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 text-zion-cyan font-semibold rounded-xl hover:bg-zion-slate-dark/70 transition-all duration-300"
+              <div className="space-y-3">
+                <a
+                  href="/contact"
+                  className="flex items-center justify-center w-full px-4 py-2 bg-white text-blue-600 rounded-lg font-medium hover:bg-gray-50 transition-colors"
                 >
-                  Send Email
-                </Link>
-              </div>
-              
-              <div className="text-center">
-                <Phone className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">Phone Support</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Call us directly for immediate assistance
-                </p>
-                <a 
-                  href="tel:+15551234567"
-                  className="inline-block px-6 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 text-zion-cyan font-semibold rounded-xl hover:bg-zion-slate-dark/70 transition-all duration-300"
+                  <MessageCircle className="h-4 w-4 mr-2" />
+                  Contact Support
+                </a>
+                <a
+                  href="/help"
+                  className="flex items-center justify-center w-full px-4 py-2 border border-white/30 text-white rounded-lg font-medium hover:bg-white/10 transition-colors"
                 >
-                  Call Now
+                  <HelpCircle className="h-4 w-4 mr-2" />
+                  Help Center
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </section>
 
-      {/* Additional Resources */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Additional <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Resources</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-12">
-              Explore our knowledge base, documentation, and community resources
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Explore our comprehensive suite of AI, cloud, and security services designed to transform your business.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { icon: BookOpen, title: 'Documentation', description: 'Comprehensive guides and API references', link: '/docs' },
-                { icon: Globe, title: 'Knowledge Base', description: 'Articles, tutorials, and best practices', link: '/knowledge' },
-                { icon: Users, title: 'Community', description: 'Connect with other users and developers', link: '/community' },
-                { icon: Shield, title: 'Support Portal', description: 'Submit tickets and track requests', link: '/support' }
-              ].map((resource, index) => (
-                <motion.div
-                  key={resource.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                >
-                  <resource.icon className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-                  <h3 className="text-lg font-bold text-white mb-2">{resource.title}</h3>
-                  <p className="text-zion-slate-light text-sm mb-4">{resource.description}</p>
-                  <Link 
-                    to={resource.link}
-                    className="inline-flex items-center text-zion-cyan hover:text-zion-blue transition-colors text-sm font-medium"
-                  >
-                    Learn More
-                    <ChevronDown className="ml-1 w-4 h-4 rotate-[-90deg]" />
-                  </Link>
-                </motion.div>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/services"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+              >
+                Explore Services
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                Get in Touch
+              </a>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
-};
-
-export default FAQ;
+}

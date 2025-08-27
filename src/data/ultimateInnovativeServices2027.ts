@@ -35,37 +35,44 @@ export interface UltimateInnovativeService2027 {
   marketTrend: string;
   aiModel?: string;
   trainingData?: string;
+  marketingContent: {
+    headline: string;
+    valueProposition: string;
+    keyFeatures: string[];
+    competitiveAdvantages: string[];
+    testimonials?: string[];
+    caseStudies?: string[];
+  };
 }
-
 export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] = [
-  // Quantum AI Autonomous Business Platform
+  // AI-Powered Quantum Computing Platform
   {
-    id: "quantum-ai-autonomous-business-platform",
-    title: "Quantum AI Autonomous Business Platform",
-    description: "Revolutionary quantum-powered AI platform that autonomously manages entire business operations, from strategy to execution, using quantum computing and advanced AI algorithms.",
-    category: "Quantum AI & Business Automation",
-    subcategory: "Autonomous Business Management",
+    id: "ai-quantum-computing-platform",
+    title: "AI-Powered Quantum Computing Platform",
+    description: "Revolutionary quantum computing platform that leverages AI to solve complex problems in cryptography, drug discovery, financial modeling, and climate science with unprecedented speed and accuracy.",
+    category: "AI & Quantum Computing",
+    subcategory: "Quantum AI",
     price: 15999,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Quantum-powered decision making",
-      "Autonomous business strategy generation",
-      "Real-time market analysis and adaptation",
-      "Predictive business modeling",
-      "Automated resource allocation",
-      "Quantum-secured communications",
-      "AI-powered risk management",
-      "Autonomous customer relationship management",
-      "Quantum financial modeling",
-      "24/7 autonomous operation"
+      "AI-optimized quantum algorithms",
+      "Hybrid classical-quantum processing",
+      "Quantum machine learning models",
+      "Real-time quantum error correction",
+      "Quantum cryptography protocols",
+      "Quantum neural networks",
+      "Quantum optimization engines",
+      "Quantum simulation capabilities",
+      "Quantum-safe encryption",
+      "Quantum cloud infrastructure"
     ],
     benefits: [
-      "Increase business efficiency by 300-500%",
-      "Reduce operational costs by 60-80%",
-      "Real-time market adaptation",
-      "Quantum advantage in complex decisions",
-      "Zero human error in critical operations"
+      "1000x faster computation for complex problems",
+      "Breakthrough discoveries in drug development",
+      "Unbreakable quantum encryption",
+      "Revolutionary AI model training",
+      "Climate modeling and prediction"
     ],
     useCases: [
       "Enterprise business management",
@@ -106,7 +113,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     aiModel: "GPT-5 + Quantum Neural Networks",
     trainingData: "Multi-domain business data + Quantum simulations"
   },
-
   // AI-Powered Autonomous Cybersecurity Defense
   {
     id: "ai-autonomous-cybersecurity-defense",
@@ -175,7 +181,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     aiModel: "Advanced AI + Machine Learning",
     trainingData: "Global threat intelligence + Behavioral patterns"
   },
-
   // Autonomous AI Research Platform
   {
     id: "autonomous-ai-research-platform",
@@ -244,7 +249,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     aiModel: "GPT-5 + Specialized Research AI",
     trainingData: "Scientific literature + Research data + Peer-reviewed papers"
   },
-
   // Quantum Financial Trading Platform
   {
     id: "quantum-financial-trading-platform",
@@ -313,7 +317,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     aiModel: "Quantum AI + Advanced ML",
     trainingData: "Market data + Trading patterns + Risk models"
   },
-
   // AI-Powered Autonomous Healthcare Platform
   {
     id: "ai-autonomous-healthcare-platform",
@@ -382,7 +385,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     aiModel: "Specialized Medical AI + GPT-5",
     trainingData: "Medical records + Clinical data + Research papers"
   },
-
   // Autonomous AI Manufacturing Platform
   {
     id: "autonomous-ai-manufacturing-platform",
@@ -451,7 +453,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     aiModel: "Industrial AI + Computer Vision",
     trainingData: "Manufacturing data + Quality metrics + Production patterns"
   },
-
   // Quantum Edge Computing Platform
   {
     id: "quantum-edge-computing-platform",
@@ -520,7 +521,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     aiModel: "Quantum AI + Edge AI",
     trainingData: "IoT data + Edge computing patterns + Quantum algorithms"
   },
-
   // AI-Powered Autonomous Legal Platform
   {
     id: "ai-autonomous-legal-platform",
@@ -561,19 +561,19 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       "Law firms",
       "Corporate legal departments",
       "Government agencies",
-      "Legal research institutions",
-      "Contract management companies"
+      "Technology companies",
+      "Universities"
     ],
-    tags: ["AI Legal", "Legal Automation", "Contract Analysis", "Legal Research", "Compliance"],
+    tags: ["Quantum Computing", "AI", "Machine Learning", "Cryptography", "Research"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$9,999 - $59,999/month",
-    roi: "600-1000%",
-    innovationLevel: "Breakthrough",
+    marketPrice: "$15,999 - $49,999/month",
+    roi: "1000-5000%",
+    innovationLevel: "Revolutionary",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-legal",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
@@ -589,7 +589,6 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     aiModel: "Legal AI + GPT-5",
     trainingData: "Legal documents + Case law + Regulations + Contracts"
   },
-
   // Autonomous AI Education Platform
   {
     id: "autonomous-ai-education-platform",
@@ -650,81 +649,387 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       integrations: ["LMS Systems", "Content Management", "Assessment Platforms", "Analytics Tools", "Communication Tools"],
       apiEndpoints: 500,
       uptime: "99.99%",
-      security: ["Data Encryption", "Access Control", "Privacy Protection", "Compliance"],
-      compliance: ["FERPA", "COPPA", "GDPR", "ISO 27001", "SOC 2"]
+      security: ["Quantum Key Distribution", "Post-Quantum Cryptography", "Zero Trust"],
+      compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"]
     },
-    competitors: ["Coursera", "Udemy", "Khan Academy", "Duolingo"],
-    marketTrend: "Explosive growth in AI education",
-    aiModel: "Educational AI + GPT-5",
-    trainingData: "Educational content + Learning patterns + Assessment data"
+    competitors: ["IBM", "Google", "Microsoft", "D-Wave", "Rigetti"],
+    marketTrend: "Explosive Growth",
+    aiModel: "GPT-5 + Quantum Neural Networks",
+    trainingData: "Multi-domain scientific datasets",
+    marketingContent: {
+      headline: "Revolutionize Problem-Solving with AI-Powered Quantum Computing",
+      valueProposition: "Unlock the power of quantum computing combined with AI to solve previously impossible problems in science, finance, and technology.",
+      keyFeatures: [
+        "AI-optimized quantum algorithms for maximum efficiency",
+        "Hybrid classical-quantum processing architecture",
+        "Real-time quantum error correction and optimization",
+        "Quantum machine learning models for pattern recognition",
+        "Quantum-safe encryption protocols for future-proof security"
+      ],
+      competitiveAdvantages: [
+        "1000x faster computation for complex optimization problems",
+        "Breakthrough capabilities in drug discovery and materials science",
+        "Unbreakable quantum encryption for ultimate security",
+        "Revolutionary AI model training on quantum hardware",
+        "First-mover advantage in quantum AI applications"
+      ]
+    }
   },
-
   // Quantum AI Content Creation Platform
   {
-    id: "quantum-ai-content-creation-platform",
-    title: "Quantum AI Content Creation Platform",
-    description: "Revolutionary quantum-powered AI platform that autonomously creates high-quality, engaging content across all media types, from text to video to interactive experiences.",
-    category: "Quantum AI & Content Creation",
-    subcategory: "Autonomous Content Generation",
-    price: 5999,
+    id: "autonomous-ai-business-platform",
+    title: "Autonomous AI Business Platform",
+    description: "Complete business automation platform that uses advanced AI to autonomously manage all aspects of business operations, from customer service to strategic decision-making, without human intervention.",
+    category: "AI & Business Automation",
+    subcategory: "Autonomous Operations",
+    price: 8999,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Quantum-powered content generation",
-      "Multi-media content creation",
-      "Autonomous content optimization",
-      "Real-time content adaptation",
-      "Personalized content creation",
-      "SEO optimization",
-      "Content analytics",
-      "Multilingual content",
-      "Brand voice consistency",
-      "24/7 autonomous operation"
+      "Autonomous customer service management",
+      "AI-powered strategic planning",
+      "Automated financial analysis and reporting",
+      "Intelligent supply chain optimization",
+      "Predictive market analysis",
+      "Autonomous HR management",
+      "AI-driven product development",
+      "Automated compliance monitoring",
+      "Intelligent risk management",
+      "Autonomous marketing campaigns"
     ],
     benefits: [
-      "Increase content production by 1000%",
-      "Reduce content costs by 80%",
-      "24/7 content creation",
-      "Personalized content",
-      "SEO optimization"
+      "95% reduction in operational costs",
+      "24/7 autonomous business operations",
+      "Data-driven strategic decisions",
+      "Predictive business insights",
+      "Scalable operations without human limits"
     ],
     useCases: [
-      "Marketing agencies",
-      "Content creators",
-      "E-commerce businesses",
-      "Publishers",
-      "Social media management"
+      "E-commerce automation",
+      "Service business management",
+      "Manufacturing operations",
+      "Financial services",
+      "Healthcare administration",
+      "Education management",
+      "Real estate operations",
+      "Consulting services"
     ],
     targetAudience: [
-      "Marketing agencies",
-      "Content creators",
-      "E-commerce businesses",
-      "Publishers",
-      "Social media managers"
+      "Small to medium businesses",
+      "Enterprises",
+      "Startups",
+      "E-commerce companies",
+      "Service providers"
     ],
-    tags: ["Quantum AI", "Content Creation", "AI Writing", "Content Generation", "Marketing AI"],
+    tags: ["AI", "Business Automation", "Autonomous Systems", "Operations", "Strategy"],
     estimatedDelivery: "12-16 weeks",
-    supportLevel: "premium",
-    marketPrice: "$5,999 - $39,999/month",
-    roi: "400-700%",
+    supportLevel: "enterprise",
+    marketPrice: "$8,999 - $29,999/month",
+    roi: "500-1000%",
     innovationLevel: "Breakthrough",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/quantum-content",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology: ["Quantum AI", "Natural Language Processing", "Computer Vision", "Audio Processing", "Machine Learning"],
-      integrations: ["CMS Platforms", "Social Media", "E-commerce Platforms", "Analytics Tools", "Marketing Tools"],
+      technology: ["GPT-5", "Claude 3", "BERT", "TensorFlow", "PyTorch"],
+      integrations: ["Salesforce", "HubSpot", "QuickBooks", "Shopify", "Stripe"],
       apiEndpoints: 300,
       uptime: "99.99%",
-      security: ["Data Encryption", "Access Control", "Content Security", "Compliance"],
-      compliance: ["ISO 27001", "SOC 2", "GDPR", "Content Guidelines"]
+      security: ["AI-powered threat detection", "Encryption", "Access control"],
+      compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX", "PCI DSS"]
     },
-    competitors: ["OpenAI", "Jasper", "Copy.ai", "Writesonic"],
-    marketTrend: "Explosive growth in AI content creation",
-    aiModel: "Quantum AI + GPT-5 + DALL-E 3",
-    trainingData: "Content data + Writing patterns + Visual content + Audio content"
+    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
+    marketTrend: "High Growth",
+    aiModel: "Multi-modal AI ensemble",
+    trainingData: "Business operations datasets",
+    marketingContent: {
+      headline: "Transform Your Business with Autonomous AI Operations",
+      valueProposition: "Let AI run your business autonomously while you focus on innovation and growth. Achieve 95% cost reduction and 24/7 operations.",
+      keyFeatures: [
+        "Complete business process automation with AI intelligence",
+        "Autonomous decision-making for strategic planning",
+        "Predictive analytics for market opportunities",
+        "Automated customer service and support",
+        "Intelligent financial management and reporting"
+      ],
+      competitiveAdvantages: [
+        "95% reduction in operational costs and human error",
+        "24/7 autonomous business operations",
+        "AI-powered strategic insights and planning",
+        "Predictive business intelligence and forecasting",
+        "Scalable operations without human resource limitations"
+      ]
+    }
+  },
+  // Next-Gen Cybersecurity AI Platform
+  {
+    id: "nextgen-cybersecurity-ai-platform",
+    title: "Next-Gen Cybersecurity AI Platform",
+    description: "Advanced AI-powered cybersecurity platform that provides real-time threat detection, autonomous incident response, and predictive security analytics to protect against evolving cyber threats.",
+    category: "AI & Cybersecurity",
+    subcategory: "AI Security",
+    price: 6999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered threat detection",
+      "Autonomous incident response",
+      "Predictive security analytics",
+      "Behavioral analysis",
+      "Zero-day threat prevention",
+      "Automated vulnerability assessment",
+      "Intelligent access control",
+      "Real-time monitoring",
+      "Threat intelligence",
+      "Compliance automation"
+    ],
+    benefits: [
+      "99.99% threat detection rate",
+      "Zero false positives",
+      "Real-time incident response",
+      "Predictive threat prevention",
+      "Automated compliance management"
+    ],
+    useCases: [
+      "Enterprise security",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies",
+      "E-commerce platforms",
+      "Cloud infrastructure",
+      "IoT networks",
+      "Critical infrastructure"
+    ],
+    targetAudience: [
+      "Enterprises",
+      "Financial services",
+      "Healthcare",
+      "Government",
+      "Technology companies"
+    ],
+    tags: ["Cybersecurity", "AI", "Threat Detection", "Incident Response", "Security"],
+    estimatedDelivery: "10-14 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$6,999 - $19,999/month",
+    roi: "400-800%",
+    innovationLevel: "Breakthrough",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    technicalSpecs: {
+      technology: ["GPT-5", "Deep Learning", "Machine Learning", "NLP", "Computer Vision"],
+      integrations: ["SIEM", "EDR", "Firewalls", "IDS/IPS", "Cloud platforms"],
+      apiEndpoints: 250,
+      uptime: "99.99%",
+      security: ["Zero Trust", "Encryption", "Multi-factor authentication"],
+      compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"]
+    },
+    competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Cisco"],
+    marketTrend: "High Growth",
+    aiModel: "Multi-modal security AI",
+    trainingData: "Global threat intelligence",
+    marketingContent: {
+      headline: "Revolutionize Your Security with AI-Powered Cyber Defense",
+      valueProposition: "Stay ahead of cyber threats with our AI-powered security platform that provides 99.99% threat detection and autonomous incident response.",
+      keyFeatures: [
+        "AI-powered real-time threat detection and analysis",
+        "Autonomous incident response and remediation",
+        "Predictive security analytics and threat prevention",
+        "Behavioral analysis for insider threat detection",
+        "Zero-day threat prevention and mitigation"
+      ],
+      competitiveAdvantages: [
+        "99.99% threat detection rate with zero false positives",
+        "Autonomous incident response in milliseconds",
+        "Predictive threat intelligence and prevention",
+        "AI-powered behavioral analysis and anomaly detection",
+        "Automated compliance management and reporting"
+      ]
+    }
+  },
+  // Hyper-Intelligent Data Analytics Platform
+  {
+    id: "hyper-intelligent-data-analytics-platform",
+    title: "Hyper-Intelligent Data Analytics Platform",
+    description: "Revolutionary data analytics platform that combines AI, machine learning, and advanced algorithms to provide unprecedented insights, predictions, and business intelligence from complex data sets.",
+    category: "AI & Data Analytics",
+    subcategory: "Intelligent Analytics",
+    price: 5999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered data processing",
+      "Predictive analytics",
+      "Real-time data visualization",
+      "Natural language queries",
+      "Automated insights generation",
+      "Machine learning models",
+      "Data quality management",
+      "Advanced reporting",
+      "Interactive dashboards",
+      "Data governance"
+    ],
+    benefits: [
+      "10x faster data processing",
+      "Automated insight generation",
+      "Predictive business intelligence",
+      "Real-time decision support",
+      "Scalable analytics infrastructure"
+    ],
+    useCases: [
+      "Business intelligence",
+      "Market research",
+      "Customer analytics",
+      "Financial analysis",
+      "Healthcare analytics",
+      "Manufacturing optimization",
+      "Supply chain analytics",
+      "Risk assessment"
+    ],
+    targetAudience: [
+      "Enterprises",
+      "Data scientists",
+      "Business analysts",
+      "Researchers",
+      "Consultants"
+    ],
+    tags: ["Data Analytics", "AI", "Machine Learning", "Business Intelligence", "Predictive Analytics"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$5,999 - $15,999/month",
+    roi: "300-600%",
+    innovationLevel: "Breakthrough",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    technicalSpecs: {
+      technology: ["GPT-5", "TensorFlow", "PyTorch", "Apache Spark", "Kubernetes"],
+      integrations: ["Snowflake", "Databricks", "Tableau", "Power BI", "AWS"],
+      apiEndpoints: 200,
+      uptime: "99.99%",
+      security: ["Data encryption", "Access control", "Audit logging"],
+      compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "SOX"]
+    },
+    competitors: ["Tableau", "Power BI", "Qlik", "Looker", "Databricks"],
+    marketTrend: "High Growth",
+    aiModel: "Multi-modal AI analytics",
+    trainingData: "Multi-domain datasets",
+    marketingContent: {
+      headline: "Unlock the Power of Your Data with Hyper-Intelligent Analytics",
+      valueProposition: "Transform your data into actionable insights with our AI-powered analytics platform that provides 10x faster processing and automated intelligence generation.",
+      keyFeatures: [
+        "AI-powered data processing and analysis",
+        "Predictive analytics and forecasting",
+        "Natural language data queries and insights",
+        "Automated business intelligence generation",
+        "Real-time interactive dashboards and reporting"
+      ],
+      competitiveAdvantages: [
+        "10x faster data processing and analysis",
+        "Automated insight generation and recommendations",
+        "Predictive business intelligence and forecasting",
+        "Natural language interface for data exploration",
+        "Scalable analytics infrastructure for any data volume"
+      ]
+    }
+  },
+  // Autonomous IoT Edge Computing Platform
+  {
+    id: "autonomous-iot-edge-computing-platform",
+    title: "Autonomous IoT Edge Computing Platform",
+    description: "Revolutionary IoT platform that brings AI and computing power to the edge, enabling autonomous decision-making, real-time processing, and intelligent automation for connected devices and systems.",
+    category: "IoT & Edge Computing",
+    subcategory: "Autonomous IoT",
+    price: 4999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Edge AI processing",
+      "Autonomous device management",
+      "Real-time data processing",
+      "Intelligent automation",
+      "Predictive maintenance",
+      "Energy optimization",
+      "Security at the edge",
+      "Scalable architecture",
+      "Cloud integration",
+      "Device orchestration"
+    ],
+    benefits: [
+      "Real-time decision making",
+      "Reduced latency",
+      "Bandwidth optimization",
+      "Enhanced security",
+      "Scalable IoT deployment"
+    ],
+    useCases: [
+      "Smart cities",
+      "Industrial IoT",
+      "Smart homes",
+      "Healthcare monitoring",
+      "Agriculture automation",
+      "Transportation",
+      "Energy management",
+      "Environmental monitoring"
+    ],
+    targetAudience: [
+      "Manufacturing companies",
+      "Smart city planners",
+      "Healthcare providers",
+      "Agriculture companies",
+      "Energy companies"
+    ],
+    tags: ["IoT", "Edge Computing", "AI", "Automation", "Smart Cities"],
+    estimatedDelivery: "10-14 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,999 - $12,999/month",
+    roi: "300-500%",
+    innovationLevel: "Breakthrough",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    technicalSpecs: {
+      technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes Edge", "5G", "LoRaWAN"],
+      integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP"],
+      apiEndpoints: 150,
+      uptime: "99.95%",
+      security: ["Edge encryption", "Device authentication", "Secure boot"],
+      compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry standards"]
+    },
+    competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
+    marketTrend: "High Growth",
+    aiModel: "Edge-optimized AI models",
+    trainingData: "IoT sensor data",
+    marketingContent: {
+      headline: "Revolutionize IoT with Autonomous Edge Computing",
+      valueProposition: "Bring AI to the edge with our autonomous IoT platform that enables real-time decision-making and intelligent automation for connected devices.",
+      keyFeatures: [
+        "Edge AI processing for real-time decision making",
+        "Autonomous device management and orchestration",
+        "Intelligent automation and predictive maintenance",
+        "Energy optimization and resource management",
+        "Enhanced security and privacy at the edge"
+      ],
+      competitiveAdvantages: [
+        "Real-time decision making at the edge",
+        "Reduced latency and bandwidth usage",
+        "Autonomous device management and optimization",
+        "Scalable IoT deployment architecture",
+        "Advanced security and privacy protection"
+      ]
+    }
   }
 ];
+export default ULTIMATE_INNOVATIVE_SERVICES_2027;

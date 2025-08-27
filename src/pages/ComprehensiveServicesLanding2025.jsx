@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { allEnhancedServices } from '../data/enhanced-2025-comprehensive-services';
+import { innovativeMicroSaasServices2025 } from '../data/innovativeMicroSaasServices2025';
 const ComprehensiveServicesLanding2025 = () => {
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const industries = [
@@ -15,7 +15,7 @@ const ComprehensiveServicesLanding2025 = () => {
     ];
     const getServicesByIndustry = (industry) => {
         if (industry === 'all')
-            return allEnhancedServices;
+            return innovativeMicroSaasServices2025;
         const industryMap = {
             'finance': ['FinTech & AI', 'Cybersecurity & Quantum Computing'],
             'healthcare': ['Healthcare & AI'],
@@ -25,7 +25,7 @@ const ComprehensiveServicesLanding2025 = () => {
             'legal': ['Legal Tech & AI'],
             'marketing': ['Marketing & AI']
         };
-        return allEnhancedServices.filter(service => industryMap[industry]?.includes(service.category));
+        return innovativeMicroSaasServices2025.filter(service => industryMap[industry]?.includes(service.category));
     };
     const filteredServices = getServicesByIndustry(selectedIndustry);
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">

@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Innovative2026MicroSaasServiceV2 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Innovative2026MicroSaasServiceV2 {
   rating: number;
   reviews: number;
 }
-
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2[] = [
   // AI-Powered Business Intelligence & Analytics
   {
@@ -94,7 +92,6 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2
     rating: 4.9,
     reviews: 950
   },
-
   // Autonomous AI Agents Platform
   {
     id: 'autonomous-ai-agents-platform-2026',
@@ -147,7 +144,6 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2
     rating: 4.8,
     reviews: 1100
   },
-
   // AI Healthcare Companion
   {
     id: 'ai-healthcare-companion-2026',
@@ -200,7 +196,6 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2
     rating: 4.9,
     reviews: 800
   },
-
   // Quantum Cybersecurity Suite
   {
     id: 'quantum-cybersecurity-suite-2026',
@@ -253,7 +248,6 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2
     rating: 4.9,
     reviews: 450
   },
-
   // Neuromorphic Computing Platform
   {
     id: 'neuromorphic-computing-platform-2026',
@@ -306,7 +300,6 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2
     rating: 4.8,
     reviews: 75
   },
-
   // DNA Computing Platform
   {
     id: 'dna-computing-platform-2026',
@@ -359,7 +352,6 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2
     rating: 4.9,
     reviews: 25
   },
-
   // Swarm Robotics Platform
   {
     id: 'swarm-robotics-platform-2026',
@@ -412,7 +404,6 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2
     rating: 4.8,
     reviews: 120
   },
-
   // Space Technology AI Platform
   {
     id: 'space-technology-ai-platform-2026',

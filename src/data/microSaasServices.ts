@@ -4,9 +4,9 @@ export interface MicroSaasService {
   description: string;
   category: string;
   subcategory?: string;
-  price?: number;
-  currency?: string;
-  pricingModel?: string;
+  price: number;
+  currency: string;
+  pricingModel: string;
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -29,7 +29,6 @@ export interface MicroSaasService {
   images: string[];
   createdAt: string;
 }
-
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "ai-chatbot-builder",
@@ -97,16 +96,17 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Analytics & performance tracking"
     ],
     benefits: [
-      "Save 10+ hours per week on content creation",
-      "Improve SEO rankings by 40%",
-      "Increase engagement rates by 60%",
-      "Reduce content costs by 70%"
+      "Save 15+ hours per week on content creation",
+      "Improve SEO rankings by 45%",
+      "Increase engagement rates by 55%",
+      "Maintain consistent brand voice",
+      "Scale content production 10x"
     ],
-    targetAudience: ["Marketing teams", "Content creators", "Small businesses", "Agencies"],
+    targetAudience: ["Content creators", "Marketing teams", "Small businesses", "Digital agencies"],
     marketPrice: "$79-199/month",
     website: "https://ziontechgroup.com/ai-content-generator",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["AI Content", "SEO", "Marketing", "Copywriting"],
+    tags: ["AI Content", "SEO", "Marketing", "Automation"],
     aiScore: 92,
     rating: 4.7,
     reviewCount: 203,
@@ -121,13 +121,54 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "ai-customer-service",
+    title: "AI Customer Service Platform",
+    description: "Intelligent customer service automation with AI-powered ticket routing, sentiment analysis, and automated responses for 24/7 support.",
+    category: "AI Services",
+    subcategory: "Customer Service",
+    price: 149,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI ticket routing",
+      "Automated responses",
+      "Sentiment analysis",
+      "Customer satisfaction tracking",
+      "Multi-channel support",
+      "Knowledge base"
+    ],
+    benefits: [
+      "Reduce response time by 70%",
+      "Improve customer satisfaction by 40%",
+      "Handle 10x more tickets with same team",
+      "24/7 automated support"
+    ],
+    targetAudience: ["Customer service teams", "Support teams", "E-commerce businesses", "SaaS companies"],
+    marketPrice: "$149-399/month",
+    website: "https://ziontechgroup.com/ai-customer-service",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["AI Support", "Customer Service", "Automation", "24/7 Support"],
+    aiScore: 94,
+    rating: 4.9,
+    reviewCount: 178,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
   }
 ];
-
 export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id);
 };
-
 export const MICRO_SAAS_CATEGORIES = [
   'AI Business Solutions',
   'IT Infrastructure', 
@@ -138,7 +179,6 @@ export const MICRO_SAAS_CATEGORIES = [
   'E-commerce',
   'EdTech'
 ];
-
 export const PRICING_TIERS = [
   {
     name: 'Starter',
@@ -156,17 +196,14 @@ export const PRICING_TIERS = [
     features: ['Custom features', '24/7 support', 'Unlimited users']
   }
 ];
-
 export const CONTACT_INFO = {
   email: 'kleber@ziontechgroup.com',
   phone: '+1 (555) 123-4567',
   address: '123 Tech Street, Innovation City, IC 12345'
 };
-
 export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
   return MICRO_SAAS_SERVICES.filter(service => service.category === category);
 };
-
 export const getMicroSaasCategories = (): string[] => {
   return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
 };

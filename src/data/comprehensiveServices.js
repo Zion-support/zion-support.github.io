@@ -1,421 +1,383 @@
-export const COMPREHENSIVE_SERVICES = [
-    // AI & Machine Learning Services
-    {
-        id: "ai-chatbot-enterprise",
-        title: "Enterprise AI Chatbot Development",
-        description: "Custom AI-powered chatbots for customer service, sales, and support. Integrates with CRM, knowledge bases, and existing systems. Includes training, deployment, and ongoing optimization.",
-        category: "AI Services",
-        subcategory: "Chatbots & Virtual Assistants",
-        price: 8999,
-        currency: "$",
-        tags: ["AI Chatbot", "Customer Service", "CRM Integration", "Natural Language Processing"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.9,
-        reviewCount: 156,
-        featured: true,
-        location: "Global",
-        availability: "2-3 Weeks",
-        aiScore: 95,
-        pricingTier: "Professional"
-    },
-    {
-        id: "ai-content-generation",
-        title: "AI Content Generation Suite Pro",
-        description: "AI-powered content creation for blogs, social media, and marketing campaigns. Generate engaging, SEO-optimized content at scale.",
-        category: "AI Services",
-        subcategory: "Content Generation",
-        price: 800,
-        currency: "$",
-        tags: ["AI", "Content Creation", "Marketing", "SEO", "Automation"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.8,
-        reviewCount: 89,
-        featured: true,
-        location: "Global",
-        availability: "1-2 Weeks",
-        aiScore: 96,
-        pricingTier: "Starter"
-    },
-    {
-        id: "ai-business-intelligence",
-        title: "AI-Powered Business Intelligence Platform",
-        description: "Advanced analytics and business intelligence platform with AI-driven insights, predictive analytics, and real-time dashboards.",
-        category: "AI Services",
-        subcategory: "Business Intelligence",
-        price: 4500,
-        currency: "$",
-        tags: ["AI", "Business Intelligence", "Analytics", "Predictive", "Dashboard"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.9,
-        reviewCount: 234,
-        featured: true,
-        location: "Global",
-        availability: "4-6 Weeks",
-        aiScore: 98,
-        pricingTier: "Enterprise"
-    },
-    // IT Infrastructure & Cloud Services
-    {
-        id: "cloud-migration-expert",
-        title: "Cloud Migration & Optimization Expert",
-        description: "Complete cloud migration services with cost optimization, security implementation, and performance tuning for AWS, Azure, and Google Cloud.",
-        category: "IT Services",
-        subcategory: "Cloud Services",
-        price: 3500,
-        currency: "$",
-        tags: ["Cloud Migration", "AWS", "Azure", "Optimization", "Security"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.7,
-        reviewCount: 156,
-        featured: true,
-        location: "Global",
-        availability: "3-5 Weeks",
-        aiScore: 92,
-        pricingTier: "Professional"
-    },
-    {
-        id: "cybersecurity-audit",
-        title: "Complete Cybersecurity Audit & Implementation",
-        description: "Comprehensive security assessment, penetration testing, and security infrastructure implementation with compliance reporting.",
-        category: "IT Services",
-        subcategory: "Cybersecurity",
-        price: 6000,
-        currency: "$",
-        tags: ["Cybersecurity", "Audit", "Penetration Testing", "Compliance", "Security"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.9,
-        reviewCount: 189,
-        featured: true,
-        location: "Global",
-        availability: "4-8 Weeks",
-        aiScore: 97,
-        pricingTier: "Enterprise"
-    },
-    {
-        id: "devops-automation",
-        title: "DevOps Automation & CI/CD Suite",
-        description: "Complete DevOps automation with CI/CD pipelines, infrastructure as code, monitoring, and deployment automation.",
-        category: "IT Services",
-        subcategory: "DevOps",
-        price: 2800,
-        currency: "$",
-        tags: ["DevOps", "CI/CD", "Automation", "Infrastructure", "Monitoring"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.8,
-        reviewCount: 134,
-        featured: true,
-        location: "Global",
-        availability: "3-4 Weeks",
-        aiScore: 94,
-        pricingTier: "Professional"
-    },
-    // Business Process Automation
-    {
-        id: "workflow-automation",
-        title: "Business Workflow Automation Platform",
-        description: "Custom workflow automation solution to streamline business processes, reduce manual work, and improve efficiency.",
-        category: "Business Solutions",
-        subcategory: "Automation",
-        price: 2200,
-        currency: "$",
-        tags: ["Workflow", "Automation", "Business Process", "Efficiency", "Productivity"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.7,
-        reviewCount: 98,
-        featured: true,
-        location: "Global",
-        availability: "2-4 Weeks",
-        aiScore: 93,
-        pricingTier: "Professional"
-    },
-    {
-        id: "customer-support-ai",
-        title: "AI-Powered Customer Support Automation",
-        description: "Intelligent customer support system with ticket routing, automated responses, and customer satisfaction tracking.",
-        category: "Business Solutions",
-        subcategory: "Customer Support",
-        price: 1800,
-        currency: "$",
-        tags: ["Customer Support", "AI", "Automation", "Ticket Management", "Analytics"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.6,
-        reviewCount: 76,
-        featured: true,
-        location: "Global",
-        availability: "2-3 Weeks",
-        aiScore: 91,
-        pricingTier: "Starter"
-    },
-    // E-commerce & Digital Marketing
-    {
-        id: "ecommerce-ai-optimization",
-        title: "E-commerce AI Optimization Suite",
-        description: "AI-powered e-commerce optimization including product recommendations, pricing optimization, and customer behavior analysis.",
-        category: "E-commerce",
-        subcategory: "AI Optimization",
-        price: 3200,
-        currency: "$",
-        tags: ["E-commerce", "AI", "Optimization", "Recommendations", "Analytics"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.8,
-        reviewCount: 145,
-        featured: true,
-        location: "Global",
-        availability: "3-5 Weeks",
-        aiScore: 95,
-        pricingTier: "Professional"
-    },
-    {
-        id: "digital-marketing-automation",
-        title: "Digital Marketing Automation Platform",
-        description: "Comprehensive marketing automation platform with email campaigns, social media management, and lead nurturing.",
-        category: "Digital Marketing",
-        subcategory: "Automation",
-        price: 1500,
-        currency: "$",
-        tags: ["Marketing", "Automation", "Email", "Social Media", "Lead Generation"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.7,
-        reviewCount: 112,
-        featured: true,
-        location: "Global",
-        availability: "2-3 Weeks",
-        aiScore: 92,
-        pricingTier: "Starter"
-    },
-    // Healthcare & FinTech Solutions
-    {
-        id: "healthcare-ai-diagnostics",
-        title: "Healthcare AI Diagnostic Platform",
-        description: "AI-powered medical diagnostic platform with image analysis, patient data management, and clinical decision support.",
-        category: "Healthcare",
-        subcategory: "AI Diagnostics",
-        price: 8500,
-        currency: "$",
-        tags: ["Healthcare", "AI", "Diagnostics", "Medical", "Image Analysis"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.9,
-        reviewCount: 67,
-        featured: true,
-        location: "Global",
-        availability: "8-12 Weeks",
-        aiScore: 99,
-        pricingTier: "Enterprise"
-    },
-    {
-        id: "fintech-compliance-security",
-        title: "FinTech Compliance & Security Suite",
-        description: "Complete financial technology compliance solution with security protocols, regulatory reporting, and audit trails.",
-        category: "FinTech",
-        subcategory: "Compliance & Security",
-        price: 7200,
-        currency: "$",
-        tags: ["FinTech", "Compliance", "Security", "Regulatory", "Audit"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.8,
-        reviewCount: 89,
-        featured: true,
-        location: "Global",
-        availability: "6-10 Weeks",
-        aiScore: 96,
-        pricingTier: "Enterprise"
-    },
-    // IoT & Smart Solutions
-    {
-        id: "iot-management-platform",
-        title: "Enterprise IoT Management Platform",
-        description: "Comprehensive IoT platform for device management, data collection, and real-time monitoring across multiple locations.",
-        category: "IoT Solutions",
-        subcategory: "Management Platform",
-        price: 5500,
-        currency: "$",
-        tags: ["IoT", "Device Management", "Monitoring", "Real-time", "Enterprise"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.7,
-        reviewCount: 123,
-        featured: true,
-        location: "Global",
-        availability: "5-8 Weeks",
-        aiScore: 94,
-        pricingTier: "Professional"
-    },
-    {
-        id: "smart-building-automation",
-        title: "Smart Building Automation System",
-        description: "Intelligent building management system with energy optimization, security monitoring, and automated controls.",
-        category: "IoT Solutions",
-        subcategory: "Building Automation",
-        price: 4200,
-        currency: "$",
-        tags: ["Smart Building", "Automation", "Energy", "Security", "IoT"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-        },
-        images: ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.6,
-        reviewCount: 87,
-        featured: true,
-        location: "Global",
-        availability: "4-6 Weeks",
-        aiScore: 93,
-        pricingTier: "Professional"
-    },
-    // Education & Training Solutions
-    {
-        id: "ai-learning-management",
-        title: "AI-Powered Learning Management System",
-        description: "Intelligent LMS with personalized learning paths, adaptive assessments, and progress tracking for educational institutions.",
-        category: "Education",
-        subcategory: "Learning Management",
-        price: 3800,
-        currency: "$",
-        tags: ["Education", "AI", "LMS", "Personalized Learning", "Assessment"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            email: "kleber@ziontechgroup.com",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.8,
-        reviewCount: 156,
-        featured: true,
-        location: "Global",
-        availability: "4-7 Weeks",
-        aiScore: 95,
-        pricingTier: "Professional"
-    },
-    {
-        id: "vr-ar-training",
-        title: "VR/AR Training & Simulation Platform",
-        description: "Immersive virtual and augmented reality training platform for corporate training, skill development, and simulation.",
-        category: "Education",
-        subcategory: "VR/AR Training",
-        price: 6500,
-        currency: "$",
-        tags: ["VR", "AR", "Training", "Simulation", "Immersive"],
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            email: "kleber@ziontechgroup.com",
-        },
-        images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-15T10:00:00.000Z",
-        rating: 4.9,
-        reviewCount: 78,
-        featured: true,
-        location: "Global",
-        availability: "6-10 Weeks",
-        aiScore: 97,
-        pricingTier: "Enterprise"
+export const comprehensiveServices = [
+  {
+    id: 1,
+    name: 'IT Infrastructure Management',
+    category: 'Infrastructure',
+    description: 'Complete IT infrastructure setup, maintenance, and optimization',
+    basePrice: 2500,
+    pricingModel: 'monthly',
+    features: [
+      'Network infrastructure design and implementation',
+      'Server setup and configuration',
+      'Cloud infrastructure management',
+      'Backup and disaster recovery',
+      '24/7 monitoring and alerting',
+      'Performance optimization',
+      'Security hardening',
+      'Compliance management'
+    ],
+    included: [
+      'Unlimited support tickets',
+      'Monthly health reports',
+      'Quarterly security audits',
+      'Annual infrastructure review',
+      'Emergency response (4hr)',
+      'Remote and on-site support'
+    ],
+    notIncluded: [
+      'Hardware procurement',
+      'Software licensing',
+      'Custom development',
+      'Staff training'
+    ],
+    popular: true,
+    icon: '🏗️',
+    responseTime: '4 hours',
+    sla: '99.9% uptime'
+  },
+  {
+    id: 2,
+    name: 'Cybersecurity Services',
+    category: 'Security',
+    description: 'Comprehensive cybersecurity protection and compliance',
+    basePrice: 1800,
+    pricingModel: 'monthly',
+    features: [
+      'Threat detection and prevention',
+      'Vulnerability assessments',
+      'Penetration testing',
+      'Security awareness training',
+      'Incident response planning',
+      'Compliance monitoring',
+      'Security policy development',
+      'Regular security updates'
+    ],
+    included: [
+      '24/7 security monitoring',
+      'Monthly security reports',
+      'Quarterly penetration tests',
+      'Annual security audits',
+      'Emergency incident response',
+      'Compliance documentation'
+    ],
+    notIncluded: [
+      'Hardware security appliances',
+      'Third-party security tools',
+      'Legal compliance fees',
+      'Insurance requirements'
+    ],
+    popular: false,
+    icon: '🛡️',
+    responseTime: '2 hours',
+    sla: '99.95% threat detection'
+  },
+  {
+    id: 3,
+    name: 'Cloud Solutions',
+    category: 'Cloud',
+    description: 'Cloud migration, management, and optimization services',
+    basePrice: 3200,
+    pricingModel: 'monthly',
+    features: [
+      'Cloud strategy and planning',
+      'Migration services',
+      'Multi-cloud management',
+      'Cost optimization',
+      'Performance monitoring',
+      'Security configuration',
+      'Backup and recovery',
+      'Auto-scaling setup'
+    ],
+    included: [
+      'Cloud architecture design',
+      'Migration project management',
+      'Ongoing optimization',
+      'Monthly cost analysis',
+      'Performance reports',
+      'Security reviews'
+    ],
+    notIncluded: [
+      'Cloud platform costs',
+      'Third-party tools',
+      'Data transfer fees',
+      'Custom development'
+    ],
+    popular: false,
+    icon: '☁️',
+    responseTime: '8 hours',
+    sla: '99.9% availability'
+  },
+  {
+    id: 4,
+    name: 'Data Management',
+    category: 'Data',
+    description: 'Data backup, recovery, and management solutions',
+    basePrice: 1200,
+    pricingModel: 'monthly',
+    features: [
+      'Automated backup systems',
+      'Data recovery services',
+      'Archive management',
+      'Data governance',
+      'Compliance reporting',
+      'Performance optimization',
+      'Disaster recovery planning',
+      'Regular testing and validation'
+    ],
+    included: [
+      'Unlimited data backup',
+      'Daily backup verification',
+      'Monthly recovery testing',
+      'Quarterly disaster recovery drills',
+      'Annual compliance audits',
+      '24/7 emergency recovery'
+    ],
+    notIncluded: [
+      'Storage hardware',
+      'Cloud storage costs',
+      'Data transfer fees',
+      'Legal compliance review'
+    ],
+    popular: false,
+    icon: '💾',
+    responseTime: '6 hours',
+    sla: '99.99% data integrity'
+  },
+  {
+    id: 5,
+    name: 'Network Services',
+    category: 'Networking',
+    description: 'Professional network design, implementation, and management',
+    basePrice: 1600,
+    pricingModel: 'monthly',
+    features: [
+      'Network design and planning',
+      'Hardware installation',
+      'Configuration and optimization',
+      'Security implementation',
+      'Performance monitoring',
+      'Troubleshooting support',
+      'Capacity planning',
+      'Documentation and training'
+    ],
+    included: [
+      'Network health monitoring',
+      'Monthly performance reports',
+      'Quarterly capacity reviews',
+      'Annual network audits',
+      'Emergency troubleshooting',
+      'Hardware warranty support'
+    ],
+    notIncluded: [
+      'Network hardware',
+      'ISP services',
+      'Third-party licenses',
+      'Custom network tools'
+    ],
+    popular: true,
+    icon: '🌐',
+    responseTime: '4 hours',
+    sla: '99.9% network uptime'
+  },
+  {
+    id: 6,
+    name: 'Help Desk Support',
+    category: 'Support',
+    description: 'Comprehensive IT help desk and user support services',
+    basePrice: 800,
+    pricingModel: 'monthly',
+    features: [
+      '24/7 help desk support',
+      'Remote troubleshooting',
+      'User training and guidance',
+      'Software support',
+      'Hardware support',
+      'Account management',
+      'Password resets',
+      'Basic troubleshooting'
+    ],
+    included: [
+      'Unlimited support tickets',
+      'Phone and email support',
+      'Remote desktop assistance',
+      'Knowledge base access',
+      'Monthly support reports',
+      'User satisfaction surveys'
+    ],
+    notIncluded: [
+      'On-site visits',
+      'Hardware repairs',
+      'Software licensing',
+      'Advanced training'
+    ],
+    popular: false,
+    icon: '🎧',
+    responseTime: '2 hours',
+    sla: '95% first-call resolution'
+  }
+];
+
+export const serviceCategories = [
+  {
+    name: 'Infrastructure',
+    description: 'Core IT infrastructure services',
+    icon: '🏗️',
+    services: comprehensiveServices.filter(s => s.category === 'Infrastructure')
+  },
+  {
+    name: 'Security',
+    description: 'Cybersecurity and compliance services',
+    icon: '🛡️',
+    services: comprehensiveServices.filter(s => s.category === 'Security')
+  },
+  {
+    name: 'Cloud',
+    description: 'Cloud computing and migration services',
+    icon: '☁️',
+    services: comprehensiveServices.filter(s => s.category === 'Cloud')
+  },
+  {
+    name: 'Data',
+    description: 'Data management and recovery services',
+    icon: '💾',
+    services: comprehensiveServices.filter(s => s.category === 'Data')
+  },
+  {
+    name: 'Networking',
+    description: 'Network infrastructure services',
+    icon: '🌐',
+    services: comprehensiveServices.filter(s => s.category === 'Networking')
+  },
+  {
+    name: 'Support',
+    description: 'Help desk and user support services',
+    icon: '🎧',
+    services: comprehensiveServices.filter(s => s.category === 'Support')
+  }
+];
+
+export const pricingTiers = [
+  {
+    name: 'Starter',
+    description: 'Perfect for small businesses',
+    price: 800,
+    features: [
+      'Basic IT support',
+      'Email and file sharing',
+      'Basic security',
+      'Monthly reports',
+      'Phone support'
+    ],
+    limitations: [
+      'Up to 10 users',
+      'Basic monitoring',
+      'Standard response time'
+    ]
+  },
+  {
+    name: 'Professional',
+    description: 'Ideal for growing businesses',
+    price: 2000,
+    features: [
+      'Everything in Starter',
+      'Advanced security',
+      'Cloud backup',
+      'Network monitoring',
+      'Priority support',
+      'Quarterly reviews'
+    ],
+    limitations: [
+      'Up to 50 users',
+      'Business hours support',
+      '4-hour response time'
+    ]
+  },
+  {
+    name: 'Enterprise',
+    description: 'For large organizations',
+    price: 5000,
+    features: [
+      'Everything in Professional',
+      '24/7 support',
+      'Custom solutions',
+      'Dedicated team',
+      'Advanced analytics',
+      'Strategic consulting'
+    ],
+    limitations: [
+      'Unlimited users',
+      'Custom SLAs',
+      '1-hour response time'
+    ]
+  }
+];
+
+export const getServiceById = (id) => {
+  return comprehensiveServices.find(service => service.id === id);
+};
+
+export const getServicesByCategory = (category) => {
+  return comprehensiveServices.filter(service => service.category === category);
+};
+
+export const getPopularServices = () => {
+  return comprehensiveServices.filter(service => service.popular);
+};
+
+export const calculateServiceCost = (serviceId, months = 1, customizations = []) => {
+  const service = getServiceById(serviceId);
+  if (!service) return 0;
+  
+  let baseCost = service.basePrice * months;
+  
+  // Add customization costs
+  customizations.forEach(customization => {
+    if (customization.type === 'addon') {
+      baseCost += customization.price * months;
+    } else if (customization.type === 'oneTime') {
+      baseCost += customization.price;
     }
-];
+  });
+  
+  return baseCost;
+};
+
+export const getServiceRecommendations = (businessSize, industry, budget) => {
+  let recommendations = comprehensiveServices;
+  
+  // Filter by business size
+  if (businessSize === 'small') {
+    recommendations = recommendations.filter(service => 
+      ['Support', 'Data'].includes(service.category)
+    );
+  } else if (businessSize === 'medium') {
+    recommendations = recommendations.filter(service => 
+      ['Support', 'Data', 'Networking', 'Security'].includes(service.category)
+    );
+  }
+  
+  // Filter by budget
+  if (budget === 'low') {
+    recommendations = recommendations.filter(service => service.basePrice <= 1500);
+  } else if (budget === 'medium') {
+    recommendations = recommendations.filter(service => service.basePrice <= 3000);
+  }
+  
+  return recommendations;
+};
+
+// Service categories for filtering
 export const SERVICE_CATEGORIES = [
-    "AI Services",
-    "IT Services",
-    "Business Solutions",
-    "E-commerce",
-    "Digital Marketing",
-    "Healthcare",
-    "FinTech",
-    "IoT Solutions",
-    "Education"
+  { label: 'Infrastructure', value: 'infrastructure' },
+  { label: 'Security', value: 'security' },
+  { label: 'Cloud', value: 'cloud' },
+  { label: 'Support', value: 'support' },
+  { label: 'Data', value: 'data' },
+  { label: 'Networking', value: 'networking' },
+  { label: 'Development', value: 'development' },
+  { label: 'Consulting', value: 'consulting' }
 ];
-export const SERVICE_SUBCATEGORIES = {
-    "AI Services": ["Chatbots & Virtual Assistants", "Content Generation", "Business Intelligence", "Computer Vision", "Natural Language Processing"],
-    "IT Services": ["Cloud Services", "Cybersecurity", "DevOps", "Infrastructure", "Data Management"],
-    "Business Solutions": ["Automation", "Customer Support", "Workflow Management", "Analytics", "Integration"],
-    "E-commerce": ["AI Optimization", "Platform Development", "Payment Systems", "Inventory Management", "Customer Experience"],
-    "Digital Marketing": ["Automation", "SEO", "Social Media", "Content Strategy", "Analytics"],
-    "Healthcare": ["AI Diagnostics", "Patient Management", "Telemedicine", "Medical Imaging", "Clinical Support"],
-    "FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"],
-    "IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],
-    "Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"]
-};
-export const PRICING_TIERS = {
-    "Starter": { min: 500, max: 2000, label: "Starter ($500 - $2,000)" },
-    "Professional": { min: 2000, max: 5000, label: "Professional ($2,000 - $5,000)" },
-    "Enterprise": { min: 5000, max: 10000, label: "Enterprise ($5,000 - $10,000)" }
-};
+
+// Alias exports for backward compatibility
+export const COMPREHENSIVE_SERVICES = comprehensiveServices;
+export const PRICING_TIERS = pricingTiers;

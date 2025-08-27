@@ -1,68 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+
 const ITInfrastructure = () => {
-    const features = [
-        {
-            title: "Network Management",
-            description: "Comprehensive network infrastructure design, implementation, and maintenance",
-            features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],
-            icon: "🌐"
-        },
-        {
-            title: "System Administration",
-            description: "Expert management of servers, operating systems, and enterprise applications",
-            features: ["Server Management", "OS Administration", "Application Support", "Performance Tuning"],
-            icon: "🖥️"
-        },
-        {
-            title: "Data Center Operations",
-            description: "Professional data center management and optimization services",
-            features: ["Facility Management", "Power & Cooling", "Hardware Maintenance", "Capacity Planning"],
-            icon: "🏢"
-        },
-        {
-            title: "Performance Optimization",
-            description: "System and network performance analysis and improvement",
-            features: ["Performance Monitoring", "Bottleneck Analysis", "Optimization Strategies", "Capacity Planning"],
-            icon: "⚡"
-        }
-    ];
-    const infrastructureFeatures = [
-        { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
-        { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
-        { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
-        { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
-    ];
-    return (<div className="min-h-screen bg-background">
-      <SEO title="IT Infrastructure - Zion Tech Group" description="Build a robust and scalable IT infrastructure with our expert solutions and management services." keywords="IT infrastructure, server management, network design, data centers, infrastructure security" canonical="https://ziontechgroup.com/services/infrastructure"/>
-      title: "Network Infrastructure",
-      description: "Design, implement, and maintain robust network solutions",
-      features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
+  const features = [
+    {
+      title: "Network Management",
+      description: "Comprehensive network infrastructure design, implementation, and maintenance",
+      features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],
       icon: "🌐"
     },
-    {title}: "Server Management",
-      description: "Comprehensive server infrastructure and management services",
-      features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"],
+    {
+      title: "System Administration",
+      description: "Expert management of servers, operating systems, and enterprise applications",
+      features: ["Server Management", "OS Administration", "Application Support", "Performance Tuning"],
       icon: "🖥️"
     },
-    {title}: "Storage Solutions",
-      description: "Scalable storage infrastructure for growing businesses",
-      features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"],
-      icon: "💾"
+    {
+      title: "Data Center Operations",
+      description: "Professional data center management and optimization services",
+      features: ["Facility Management", "Power & Cooling", "Hardware Maintenance", "Capacity Planning"],
+      icon: "🏢"
     },
-    {title}: "Security Infrastructure",
-      description: "Multi-layered security infrastructure protection",
-      features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],
-      icon: "🔒"
+    {
+      title: "Performance Optimization",
+      description: "System and network performance analysis and improvement",
+      features: ["Performance Monitoring", "Bottleneck Analysis", "Optimization Strategies", "Capacity Planning"],
+      icon: "⚡"
     }
   ];
 
+  const infrastructureFeatures = [
+    { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
+    { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
+    { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
+    { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
+  ];
+
   const infrastructureAreas = [
-    {area}: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
-    {area}: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
-    {area}: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
-    {area}: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
+    { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
+    { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
+    { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
+    { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
 
   return (
@@ -101,34 +80,34 @@ const ITInfrastructure = () => {
           </div>
         </section>
 
-        {/* Infrastructure Services */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        {/* Features Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Infrastructure Services
+                Infrastructure Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive solutions to build and maintain your IT foundation
+                Comprehensive IT infrastructure services for modern businesses
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="text-5xl mb-6">{service.icon}</div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
-                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                          {feature}
-                        </li>))}
-                    </ul>
-                  </div>
-                </div>))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.features.map((item, idx) => (
+                      <li key={idx} className="text-gray-300 flex items-center">
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -138,7 +117,7 @@ const ITInfrastructure = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Infrastructure Solutions
+                Infrastructure Areas
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Multi-layered approach to building robust IT infrastructure
@@ -146,15 +125,19 @@ const ITInfrastructure = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureAreas.map((area, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              {infrastructureAreas.map((area, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
                   <ul className="space-y-2">
-                    {area.solutions.map((solution, idx) => (<li key={idx} className="text-gray-300 flex items-center">
+                    {area.solutions.map((solution, idx) => (
+                      <li key={idx} className="text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {solution}
-                      </li>))}
+                      </li>
+                    ))}
                   </ul>
-                </div>))}
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -224,5 +207,4 @@ const ITInfrastructure = () => {
   );
 };
 
-export default ITInfrastructure;</>);
-};
+export default ITInfrastructure;

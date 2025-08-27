@@ -1,21 +1,9 @@
-import React, { useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { SEOHead } from '../components/seo/SEOHead';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { TrustedBySection } from '@/components/TrustedBySection';
-import { QuoteFormSection } from '@/components/QuoteFormSection';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { 
   Shield, 
   Lock, 
@@ -29,32 +17,17 @@ import {
   Star,
   CheckCircle,
   ArrowRight,
-  ExternalLink,
   Zap,
   Brain,
   Network,
-  Smartphone,
-  CreditCard,
-  Clock,
-  Award,
-  BarChart3,
-  FileText,
   Server,
   Database,
   Key,
-  Search,
   Monitor,
-  AlertCircle,
-  TrendingUp,
-  DollarSign
+  TrendingUp
 } from 'lucide-react';
 import { ENHANCED_SERVICES } from '@/data/enhancedServices';
-
-// Filter cybersecurity services
-const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service => 
-  service.category.includes('Cybersecurity') || 
-  service.category.includes('Security') ||
-  service.category.includes('Zero Trust')
+import { 
   AlertTriangle, 
   CheckCircle, 
   Star,
@@ -72,7 +45,10 @@ const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
   Users,
   Database,
   Server,
-  Key
+  Key,
+  Eye,
+  Lock,
+  Shield
 } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
@@ -80,7 +56,6 @@ import { TrustedBySection } from '@/components/TrustedBySection';
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service => 
   service.category === 'Cybersecurity'
 );
-
 const SECURITY_SERVICE_CATEGORIES = [
   {
     id: 'threat-detection',
@@ -97,15 +72,12 @@ const SECURITY_SERVICE_CATEGORIES = [
     services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
   }
 ];
-
 export default function CybersecurityServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const getCategoryIcon = (category: string) => {
     const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
     return categoryData?.icon || Shield;
   };
-
   const getPricingModelLabel = (model: string) => {
     switch (model) {
       case 'one-time': return 'One-time';
@@ -115,435 +87,62 @@ export default function CybersecurityServicesPage() {
       default: return model;
     }
   };
-
   return (
-          {/* Services Tab */}
-          <TabsContent value="services" className="space-y-12">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Cybersecurity Service Portfolio</h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-                Comprehensive security solutions designed to protect your business from modern cyber threats.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {CYBERSECURITY_SERVICES.map((service) => (
-                <SecurityServiceCard key={service.id} service={service} />
-              ))}
-            </div>
-
-            {/* Additional Security Services */}
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
-                <CardHeader>
-                  <CardTitle className="text-white flex items-center gap-2">
-                    <Search className="h-6 w-6 text-zion-cyan" />
-                    Penetration Testing
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-zion-cyan-light mb-4">
-                    Comprehensive security assessments to identify vulnerabilities before attackers do.
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-400" />
-                      <span className="text-sm text-zion-cyan-light">Network penetration testing</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-400" />
-                      <span className="text-sm text-zion-cyan-light">Web application testing</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-400" />
-                      <span className="text-sm text-zion-cyan-light">Social engineering assessments</span>
-                    </div>
-                  </div>
-                  <Button className="w-full mt-4 bg-zion-purple hover:bg-zion-purple-dark text-white">
-                    Learn More
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
-                <CardHeader>
-                  <CardTitle className="text-white flex items-center gap-2">
-                    <Monitor className="h-6 w-6 text-zion-cyan" />
-                    Security Monitoring
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-zion-cyan-light mb-4">
-                    24/7 security monitoring and threat intelligence to detect and respond to incidents in real-time.
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-400" />
-                      <span className="text-sm text-zion-cyan-light">SIEM implementation</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-400" />
-                      <span className="text-sm text-zion-cyan-light">Threat intelligence feeds</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-400" />
-                      <span className="text-sm text-zion-cyan-light">Incident response automation</span>
-                    </div>
-                  </div>
-                  <Button className="w-full mt-4 bg-zion-purple hover:bg-zion-purple-dark text-white">
-                    Learn More
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
-                <CardHeader>
-                  <CardTitle className="text-white flex items-center gap-2">
-                    <FileText className="h-6 w-6 text-zion-cyan" />
-                    Security Training
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-zion-cyan-light mb-4">
-                    Employee security awareness training to create a human firewall against social engineering attacks.
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-400" />
-                      <span className="text-sm text-zion-cyan-light">Phishing simulation</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-400" />
-                      <span className="text-sm text-zion-cyan-light">Security best practices</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-400" />
-                      <span className="text-sm text-zion-cyan-light">Compliance training</span>
-                    </div>
-                  </div>
-                  <Button className="w-full mt-4 bg-zion-purple hover:bg-zion-purple-dark text-white">
-                    Learn More
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </TabsContent>
-
-          {/* Compliance Tab */}
-          <TabsContent value="compliance" className="space-y-12">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Compliance & Regulatory Standards</h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-                Ensure your business meets industry standards and regulatory requirements with our comprehensive compliance solutions.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <ComplianceCard
-                icon={<FileText className="h-8 w-8" />}
-                title="GDPR Compliance"
-                description="European data protection regulation compliance with privacy-by-design principles."
-                requirements={["Data protection", "Privacy rights", "Breach notification", "Data processing"]}
-                industries={["All EU businesses", "Healthcare", "Finance", "E-commerce"]}
-              />
-              <ComplianceCard
-                icon={<Shield className="h-8 w-8" />}
-                title="SOC 2 Type II"
-                description="Service Organization Control 2 certification for security, availability, and confidentiality."
-                requirements={["Security controls", "Availability monitoring", "Confidentiality", "Processing integrity"]}
-                industries={["SaaS companies", "Cloud providers", "Data centers", "IT services"]}
-              />
-              <ComplianceCard
-                icon={<Lock className="h-8 w-8" />}
-                title="HIPAA Compliance"
-                description="Health Insurance Portability and Accountability Act compliance for healthcare organizations."
-                requirements={["Patient privacy", "Data security", "Access controls", "Audit trails"]}
-                industries={["Healthcare", "Medical devices", "Health insurance", "Telemedicine"]}
-              />
-              <ComplianceCard
-                icon={<CreditCard className="h-8 w-8" />}
-                title="PCI DSS"
-                description="Payment Card Industry Data Security Standard for payment processing security."
-                requirements={["Card data protection", "Network security", "Access control", "Regular testing"]}
-                industries={["Retail", "E-commerce", "Payment processing", "Financial services"]}
-              />
-              <ComplianceCard
-                icon={<Server className="h-8 w-8" />}
-                title="ISO 27001"
-                description="International standard for information security management systems."
-                requirements={["Risk assessment", "Security controls", "Management system", "Continuous improvement"]}
-                industries={["Technology", "Manufacturing", "Financial services", "Government"]}
-              />
-              <ComplianceCard
-                icon={<Database className="h-8 w-8" />}
-                title="CCPA Compliance"
-                description="California Consumer Privacy Act compliance for consumer data protection."
-                requirements={["Consumer rights", "Data transparency", "Opt-out mechanisms", "Data security"]}
-                industries={["California businesses", "Online services", "Data brokers", "Large corporations"]}
-              />
-            </div>
-          </TabsContent>
-
-          {/* Threats Tab */}
-          <TabsContent value="threats" className="space-y-12">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Modern Cyber Threats</h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-                Understanding the threat landscape is the first step in building effective cybersecurity defenses.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <ThreatCard
-                icon={<AlertTriangle className="h-8 w-8" />}
-                title="Ransomware Attacks"
-                description="Malicious software that encrypts files and demands payment for decryption."
-                impact="High - Data loss, business disruption, financial loss"
-                prevention={["Regular backups", "Email filtering", "User training", "Patch management"]}
-                trend="Increasing 150% annually"
-              />
-              <ThreatCard
-                icon={<Users className="h-8 w-8" />}
-                title="Social Engineering"
-                description="Manipulation tactics to trick users into revealing sensitive information."
-                impact="Medium - Data breaches, unauthorized access, reputation damage"
-                prevention={["Security training", "Multi-factor authentication", "Verification procedures", "Incident reporting"]}
-                trend="Most common attack vector"
-              />
-              <ThreatCard
-                icon={<Network className="h-8 w-8" />}
-                title="DDoS Attacks"
-                description="Distributed denial-of-service attacks that overwhelm systems with traffic."
-                impact="Medium - Service disruption, revenue loss, customer dissatisfaction"
-                prevention={["Traffic filtering", "CDN protection", "Rate limiting", "Incident response"]}
-                trend="Increasing in sophistication"
-              />
-              <ThreatCard
-                icon={<Database className="h-8 w-8" />}
-                title="Data Breaches"
-                description="Unauthorized access to sensitive information and intellectual property."
-                impact="High - Financial loss, legal consequences, brand damage"
-                prevention={["Access controls", "Encryption", "Monitoring", "Regular audits"]}
-                trend="Costing $4.35M average"
-              />
-              <ThreatCard
-                icon={<Smartphone className="h-8 w-8" />}
-                title="Mobile Threats"
-                description="Attacks targeting mobile devices and applications."
-                impact="Medium - Data theft, device compromise, privacy violations"
-                prevention={["Mobile device management", "App security", "User training", "Regular updates"]}
-                trend="Growing with mobile adoption"
-              />
-                             <ThreatCard
-                 icon={<Network className="h-8 w-8" />}
-                 title="Supply Chain Attacks"
-                 description="Compromising software or hardware through third-party vendors."
-                 impact="High - Widespread compromise, trust erosion, regulatory scrutiny"
-                 prevention={["Vendor assessment", "Code signing", "Supply chain monitoring", "Incident response"]}
-                 trend="Increasingly sophisticated"
-               />
-            </div>
-          </TabsContent>
-
-          {/* Pricing Tab */}
-          <TabsContent value="pricing" className="space-y-12">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Cybersecurity Service Pricing</h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-                Transparent pricing for comprehensive cybersecurity solutions that fit your business needs and budget.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <PricingCard
-                title="Essential Security"
-                price="$3,999"
-                description="Basic cybersecurity protection for small businesses"
-                features={[
-                  "Security assessment",
-                  "Basic monitoring",
-                  "Employee training",
-                  "Incident response",
-                  "Email support"
-                ]}
-                popular={false}
-              />
-              <PricingCard
-                title="Professional Security"
-                price="$9,999"
-                description="Comprehensive security solution for growing businesses"
-                features={[
-                  "Advanced threat detection",
-                  "24/7 monitoring",
-                  "Penetration testing",
-                  "Compliance support",
-                  "Priority support",
-                  "Security training"
-                ]}
-                popular={true}
-              />
-              <PricingCard
-                title="Enterprise Security"
-                price="$24,999"
-                description="Full-scale security transformation for large organizations"
-                features={[
-                  "Custom security architecture",
-                  "Advanced threat hunting",
-                  "Full compliance suite",
-                  "Dedicated security team",
-                  "24/7 support",
-                  "Custom training programs",
-                  "Ongoing optimization"
-                ]}
-                popular={false}
-              />
-            </div>
-
-            {/* ROI Calculator */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-              <h3 className="text-3xl font-bold text-white mb-8 text-center">Security Investment ROI</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="text-xl font-semibold text-white mb-4">Cost of Breach Prevention</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">Average breach cost:</span>
-                      <span className="text-white font-semibold">$4.35M</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">Security investment:</span>
-                      <span className="text-white font-semibold">$9,999</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">ROI ratio:</span>
-                      <span className="text-white font-semibold">435:1</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">Risk reduction:</span>
-                      <span className="text-white font-semibold">90%+</span>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-xl font-semibold text-white mb-4">Additional Benefits</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">Compliance cost savings:</span>
-                      <span className="text-white font-semibold">$50K-200K</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">Insurance premium reduction:</span>
-                      <span className="text-white font-semibold">20-40%</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">Customer trust increase:</span>
-                      <span className="text-white font-semibold">Significant</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">Competitive advantage:</span>
-                      <span className="text-white font-semibold">High</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
-
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Secure Your Business Today
-          </h2>
-          <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
-            Don't wait until it's too late. Protect your business with enterprise-grade cybersecurity solutions.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan px-8 py-3">
-              <Shield className="mr-2 h-5 w-5" />
-              Security Assessment
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3">
-              <Phone className="mr-2 h-5 w-5" />
-              Schedule Consultation
-            </Button>
-          </div>
-        </section>
-
-      {/* Contact Section */}
-      <div className="bg-zion-blue-dark py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-6">Get in Touch</h2>
-            <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-              Ready to strengthen your cybersecurity posture? Contact our security experts today.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <Phone className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-zion-cyan-light">+1 302 464 0950</p>
-              <p className="text-sm text-zion-cyan-light">Mon-Fri 9AM-6PM EST</p>
-            </div>
-            <div className="text-center">
-              <Mail className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
-              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-zion-cyan-light">kleber@ziontechgroup.com</p>
-              <p className="text-sm text-zion-cyan-light">24/7 Response</p>
-            </div>
-            <div className="text-center">
-              <MapPin className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-zion-cyan-light">364 E Main St STE 1008</p>
-              <p className="text-sm text-zion-cyan-light">Middletown DE 19709</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <>
-      <SEO 
-        title="Cybersecurity Services & Solutions - Zion Tech Group" 
-        description="Protect your business with enterprise-grade cybersecurity solutions including threat detection, zero trust security, and compliance services. 24/7 monitoring and support."
+      <SEOHead 
+        title="Cybersecurity Services - Zion Tech Group"
+        description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
+        keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Cybersecurity Services",
+          "description": "Comprehensive cybersecurity solutions",
+          "url": "https://ziontechgroup.com/services/cybersecurity",
+          "provider": {
+            "@type": "Organization",
+            "name": "Zion Tech Group"
+          }
+        }}
       />
-      <Header />
-      
-      <main className="flex-1">
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-zion-blue via-red-900 to-zion-blue-dark py-16 md:py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-blue-900/20"></div>
-          <div className="container mx-auto px-4 md:px-6 relative z-10">
-            <div className="text-center max-w-4xl mx-auto">
-              <div className="flex justify-center mb-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-full p-4">
-                  <Shield className="h-16 w-16 text-white" />
-                </div>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-white mb-6">
-                Cybersecurity Solutions
-              </h1>
-              <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-                Protect your business with enterprise-grade cybersecurity solutions. From threat detection 
-                to zero trust security, we deliver comprehensive protection against modern cyber threats.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
-                  <Phone className="mr-2 h-4 w-4" />
-                  Get Security Consultation: +1 302 464 0950
-                </Button>
-                <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
-                  <Mail className="mr-2 h-4 w-4" />
-                  kleber@ziontechgroup.com
-                </Button>
-              </div>
+        <section className="py-32 px-4 relative overflow-hidden">
+          {/* Background Elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl animate-pulse" />
+            <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
+            <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s' }} />
+          </div>
+          <div className="relative z-10 max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-red-500 via-orange-500 to-red-600 bg-clip-text text-transparent">
+                Cybersecurity
+              </span>
+              <br />
+              <span className="text-white">That Never Sleeps</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security 
+              platform provides 24/7 protection against evolving cyber threats.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Security Assessment
+                <ArrowRight className="inline ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/case-studies"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                View Case Studies
+              </Link>
             </div>
           </div>
         </section>
-
         {/* Security Service Categories */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
@@ -553,7 +152,6 @@ export default function CybersecurityServicesPage() {
                 Comprehensive cybersecurity solutions designed to protect your business from all angles
               </p>
             </div>
-            
             <div className="grid gap-6 md:grid-cols-2">
               {SECURITY_SERVICE_CATEGORIES.map((category) => {
                 const IconComponent = category.icon;
@@ -577,7 +175,6 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </section>
-
         {/* Security Services Showcase */}
         <section className="py-16 bg-muted/50">
           <div className="container mx-auto px-4 md:px-6">
@@ -587,7 +184,6 @@ export default function CybersecurityServicesPage() {
                 Discover how our cybersecurity solutions can protect your business and ensure compliance
               </p>
             </div>
-
             <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
               <TabsList className="grid w-full grid-cols-3 mb-8">
                 <TabsTrigger value="all">All Security Services</TabsTrigger>
@@ -597,7 +193,6 @@ export default function CybersecurityServicesPage() {
                   </TabsTrigger>
                 ))}
               </TabsList>
-
               <TabsContent value="all" className="space-y-6">
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {CYBERSECURITY_SERVICES.map((service) => (
@@ -605,7 +200,6 @@ export default function CybersecurityServicesPage() {
                   ))}
                 </div>
               </TabsContent>
-
               {SECURITY_SERVICE_CATEGORIES.map((category) => (
                 <TabsContent key={category.id} value={category.id} className="space-y-6">
                   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -618,7 +212,6 @@ export default function CybersecurityServicesPage() {
             </Tabs>
           </div>
         </section>
-
         {/* Security Benefits Section */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
@@ -628,7 +221,6 @@ export default function CybersecurityServicesPage() {
                 Enterprise-grade protection with the agility and pricing of a startup
               </p>
             </div>
-            
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               <div className="text-center">
                 <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -639,7 +231,6 @@ export default function CybersecurityServicesPage() {
                   Round-the-clock security monitoring and threat detection
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="h-8 w-8 text-red-600" />
@@ -649,7 +240,6 @@ export default function CybersecurityServicesPage() {
                   Advanced AI algorithms for faster threat identification
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="h-8 w-8 text-red-600" />
@@ -659,7 +249,6 @@ export default function CybersecurityServicesPage() {
                   Meet SOC2, GDPR, HIPAA, and other compliance requirements
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Zap className="h-8 w-8 text-red-600" />
@@ -672,7 +261,6 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </section>
-
         {/* Security Implementation Process */}
         <section className="py-16 bg-muted/50">
           <div className="container mx-auto px-4 md:px-6">
@@ -682,7 +270,6 @@ export default function CybersecurityServicesPage() {
                 Our proven methodology ensures comprehensive security implementation and ongoing protection
               </p>
             </div>
-            
             <div className="grid gap-8 md:grid-cols-4">
               <div className="text-center">
                 <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
@@ -693,7 +280,6 @@ export default function CybersecurityServicesPage() {
                   Comprehensive security audit and vulnerability assessment
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                   2
@@ -703,7 +289,6 @@ export default function CybersecurityServicesPage() {
                   Develop security roadmap and compliance strategy
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                   3
@@ -713,7 +298,6 @@ export default function CybersecurityServicesPage() {
                   Deploy security solutions and monitoring systems
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                   4
@@ -726,7 +310,6 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </section>
-
         {/* Compliance & Standards */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
@@ -736,7 +319,6 @@ export default function CybersecurityServicesPage() {
                 Our security solutions help you meet industry standards and regulatory requirements
               </p>
             </div>
-            
             <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-6">
               {[
                 { name: 'SOC2', icon: '🔒', description: 'Security Controls' },
@@ -748,53 +330,69 @@ export default function CybersecurityServicesPage() {
               ].map((standard) => (
                 <Card key={standard.name} className="text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
-                    <div className="text-3xl mb-2">{standard.icon}</div>
-                    <CardTitle className="text-lg">{standard.name}</CardTitle>
+                    <div className="bg-gradient-to-r from-red-500 to-orange-500 p-4 rounded-lg w-16 h-16 mb-4 flex items-center justify-center">
+                      <service.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <CardTitle className="text-xl text-white">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-gray-400">
+                      {service.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">{standard.description}</p>
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="text-2xl font-bold text-red-400 mb-4">
+                      {service.price}
+                    </div>
+                    <Button className="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600">
+                      Get Started
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
             </div>
           </div>
         </section>
-
         {/* Contact CTA */}
         <section className="py-16 bg-zion-blue">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Secure Your Business?
             </h2>
-            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Get in touch with our cybersecurity experts to discuss your security needs and discover 
-              how we can protect your business from evolving cyber threats.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Don't wait until it's too late. Get a comprehensive security assessment and protect your business today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
-                <Phone className="mr-2 h-4 w-4" />
-                Call: +1 302 464 0950
-              </Button>
-              <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
-                <Mail className="mr-2 h-4 w-4" />
-                Email: kleber@ziontechgroup.com
-              </Button>
-            </div>
-            <div className="mt-8 text-zion-slate-light">
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>Website: <a href="https://ziontechgroup.com" className="text-zion-cyan hover:underline">https://ziontechgroup.com</a></p>
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Schedule Security Assessment
+                <ArrowRight className="inline ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/case-studies"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                View Security Case Studies
+              </Link>
             </div>
           </div>
         </section>
-
         <TrustedBySection />
       </main>
-      
       <Footer />
-    </>
+</>
   );
 }
-
 // Security Service Card Component
 function SecurityServiceCard({ service }: { service: any }) {
 import React, { useState } from 'react';
@@ -831,32 +429,25 @@ import {
 } from 'lucide-react';
 import { EXPANDED_SERVICES, type ExpandedService } from '@/data/expandedServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
-
 export default function CybersecurityServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
   const [priceRange, setPriceRange] = useState<string>('all');
-
   // Filter only security services
   const securityServices = EXPANDED_SERVICES.filter(service => 
     service.category === 'Security Services'
   );
-
   const filteredServices = securityServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
     const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-    
     let matchesPrice = true;
     if (priceRange === 'low') matchesPrice = service.price < 500;
     else if (priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000;
     else if (priceRange === 'high') matchesPrice = service.price >= 1000;
-    
     return matchesSearch && matchesSubcategory && matchesPrice;
   });
-
   const getPricingModelIcon = (model: string) => {
     switch (model) {
       case 'monthly': return <Clock className="w-4 h-4" />;
@@ -865,7 +456,6 @@ export default function CybersecurityServicesPage() {
       default: return <DollarSign className="w-4 h-4" />;
     }
   };
-
   const getPricingModelText = (model: string) => {
   const getPricingModelLabel = (model: string) => {
     switch (model) {
@@ -876,7 +466,6 @@ export default function CybersecurityServicesPage() {
       default: return model;
     }
   };
-
   return (
     <Card className="hover:shadow-lg transition-shadow border-red-500/20">
       <div className="relative">
@@ -894,7 +483,6 @@ export default function CybersecurityServicesPage() {
           AI Score: {service.aiScore}
         </Badge>
       </div>
-      
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
           <div className="text-2xl">🔒</div>
@@ -907,13 +495,11 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </div>
-        
         <CardTitle className="text-lg leading-tight">{service.title}</CardTitle>
         <CardDescription className="line-clamp-3">
           {service.description}
         </CardDescription>
       </CardHeader>
-      
       <CardContent className="space-y-4">
         {/* Rating and Reviews */}
         <div className="flex items-center gap-2">
@@ -925,21 +511,18 @@ export default function CybersecurityServicesPage() {
             ({service.reviewCount} reviews)
           </span>
         </div>
-        
         {/* Market Price */}
         <div className="flex items-center gap-2 text-sm">
           <TrendingUp className="h-4 w-4 text-green-600" />
           <span className="text-muted-foreground">Market Price:</span>
           <span className="font-medium">{service.marketPrice}</span>
         </div>
-        
         {/* Delivery Time */}
         <div className="flex items-center gap-2 text-sm">
           <Clock className="h-4 w-4 text-blue-600" />
           <span className="text-muted-foreground">Delivery:</span>
           <span className="font-medium">{service.deliveryTime}</span>
         </div>
-        
         {/* Key Features */}
         <div className="space-y-2">
           <h4 className="font-medium text-sm">Key Features:</h4>
@@ -952,7 +535,6 @@ export default function CybersecurityServicesPage() {
             ))}
           </ul>
         </div>
-        
         {/* Contact Information */}
         <div className="pt-4 border-t">
           <div className="space-y-2 text-sm">
@@ -966,7 +548,6 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </div>
-        
         {/* Action Buttons */}
         <div className="flex gap-2 pt-4">
           <Button className="flex-1 bg-red-600 hover:bg-red-700">
@@ -999,7 +580,6 @@ export default function CybersecurityServicesPage() {
   Monitor
 } from "lucide-react";
 import { CYBERSECURITY_SERVICES } from "@/data/expandedServices";
-
 const CybersecurityServicesPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
@@ -1032,7 +612,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-6">
@@ -1065,7 +644,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </div>
-
       {/* Security Threats Overview */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -1077,7 +655,6 @@ const CybersecurityServicesPage = () => {
               Stay protected against evolving cyber threats with our comprehensive security solutions
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -1086,7 +663,6 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Ransomware Attacks</h3>
               <p className="text-gray-600">Protect against data encryption and extortion attempts with advanced threat detection</p>
             </div>
-            
             <div className="text-center">
               <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-orange-600" />
@@ -1094,7 +670,6 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Social Engineering</h3>
               <p className="text-gray-600">Defend against phishing, pretexting, and other human-based attack vectors</p>
             </div>
-            
             <div className="text-center">
               <div className="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Server className="h-8 w-8 text-yellow-600" />
@@ -1102,7 +677,6 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Supply Chain Attacks</h3>
               <p className="text-gray-600">Secure your software and hardware supply chain against compromise</p>
             </div>
-            
             <div className="text-center">
               <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Database className="h-8 w-8 text-purple-600" />
@@ -1113,7 +687,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </div>
-
       {/* Cybersecurity Services Grid */}
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -1125,7 +698,6 @@ const CybersecurityServicesPage = () => {
               Comprehensive security solutions to protect your business from all angles
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {CYBERSECURITY_SERVICES.map((service) => (
               <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-red-500/20">
@@ -1167,7 +739,6 @@ const CybersecurityServicesPage = () => {
                       <span>{service.availability}</span>
                     </div>
                   </div>
-                  
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-xs">
@@ -1175,7 +746,6 @@ const CybersecurityServicesPage = () => {
                       </Badge>
                     ))}
                   </div>
-
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <BarChart3 className="h-4 w-4" />
@@ -1191,7 +761,6 @@ const CybersecurityServicesPage = () => {
               </Card>
             ))}
           </div>
-
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
               <h3 className="text-xl font-semibold text-zion-slate-light mb-2">No security services found</h3>
@@ -1207,7 +776,6 @@ const CybersecurityServicesPage = () => {
           )}
         </div>
       </section>
-
       {/* Security Statistics */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -1217,26 +785,22 @@ const CybersecurityServicesPage = () => {
               Our security solutions protect businesses worldwide
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">99.9%</div>
               <div className="text-white font-semibold">Threat Detection Rate</div>
               <div className="text-zion-slate-light text-sm">Advanced AI-powered threat detection</div>
             </div>
-            
             <div className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">24/7</div>
               <div className="text-white font-semibold">Security Monitoring</div>
               <div className="text-zion-slate-light text-sm">Round-the-clock threat monitoring</div>
             </div>
-            
             <div className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">15min</div>
               <div className="text-white font-semibold">Response Time</div>
               <div className="text-zion-slate-light text-sm">Average incident response time</div>
             </div>
-            
             <div className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">100%</div>
               <div className="text-white font-semibold">Compliance Success</div>
@@ -1253,7 +817,6 @@ const CybersecurityServicesPage = () => {
               security challenges and protect your business assets.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityServices.map((service) => (
               <div key={service.id} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
@@ -1267,10 +830,8 @@ const CybersecurityServicesPage = () => {
                     <span className="text-zion-cyan text-sm font-medium">{service.category}</span>
                   </div>
                 </div>
-                
                 <h3 className="text-white text-xl font-bold mb-3">{service.title}</h3>
                 <p className="text-zion-slate-light mb-4">{service.description}</p>
-                
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -1282,7 +843,6 @@ const CybersecurityServicesPage = () => {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="border-t border-zion-blue-light pt-4 mb-4">
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center text-zion-cyan">
@@ -1295,7 +855,6 @@ const CybersecurityServicesPage = () => {
                     </div>
                   </div>
                 </div>
-                
                 <Link to="/request-quote">
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                     Get Quote
@@ -1306,7 +865,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </section>
-
       {/* Security Technologies */}
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -1319,7 +877,6 @@ const CybersecurityServicesPage = () => {
               comprehensive protection for your business.
             </p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {securityTechnologies.map((tech, index) => (
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -1332,7 +889,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </section>
-
       {/* Compliance Standards */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -1345,7 +901,6 @@ const CybersecurityServicesPage = () => {
               requirements across multiple sectors.
             </p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {complianceStandards.map((standard, index) => (
               <div key={index} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -1358,7 +913,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </section>
-
       {/* Threat Intelligence */}
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -1371,7 +925,6 @@ const CybersecurityServicesPage = () => {
               and 24/7 security monitoring services.
             </p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {threatIntelligence.map((intel, index) => (
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -1384,7 +937,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </section>
-
       {/* Why Choose ZionTech for Security */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -1397,7 +949,6 @@ const CybersecurityServicesPage = () => {
               solutions that protect your business and build customer trust.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-6">
@@ -1409,7 +960,6 @@ const CybersecurityServicesPage = () => {
                 extensive experience in enterprise security.
               </p>
             </div>
-            
             <div className="text-center p-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-10 h-10 text-white" />
@@ -1420,7 +970,6 @@ const CybersecurityServicesPage = () => {
                 with zero major security breaches.
               </p>
             </div>
-            
             <div className="text-center p-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-10 h-10 text-white" />
@@ -1434,7 +983,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </section>
-
       {/* Security Pricing */}
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -1447,7 +995,6 @@ const CybersecurityServicesPage = () => {
               flexible payment options and comprehensive protection.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 text-center">
               <h3 className="text-white text-2xl font-bold mb-4">Essential Security</h3>
@@ -1466,7 +1013,6 @@ const CybersecurityServicesPage = () => {
                 </Button>
               </Link>
             </div>
-            
             <div className="bg-gradient-to-br from-zion-purple to-zion-purple-dark border border-zion-purple rounded-lg p-8 text-center relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-zion-cyan text-zion-blue px-4 py-2 rounded-full text-sm font-bold">
@@ -1489,7 +1035,6 @@ const CybersecurityServicesPage = () => {
                 </Button>
               </Link>
             </div>
-            
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 text-center">
               <h3 className="text-white text-2xl font-bold mb-4">Enterprise Security</h3>
               <div className="text-4xl font-bold text-zion-cyan mb-6">
@@ -1510,7 +1055,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
@@ -1521,7 +1065,6 @@ const CybersecurityServicesPage = () => {
             Contact our cybersecurity experts today to discuss how we can help you 
             protect your business from evolving threats.
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1533,7 +1076,6 @@ const CybersecurityServicesPage = () => {
                 Middletown DE 19709
               </p>
             </div>
-            
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
@@ -1543,7 +1085,6 @@ const CybersecurityServicesPage = () => {
                 +1 302 464 0950
               </p>
             </div>
-            
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
@@ -1554,7 +1095,6 @@ const CybersecurityServicesPage = () => {
               </p>
             </div>
           </div>
-          
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/request-quote">
               <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
@@ -1569,15 +1109,13 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </section>
-
       <TrustedBySection />
       <QuoteFormSection />
-    </>
+</>
   );
 }
         </div>
       </div>
-
       {/* Security Framework */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -1589,7 +1127,6 @@ const CybersecurityServicesPage = () => {
               Our security approach follows industry best practices and compliance standards
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-red-50 to-pink-50">
               <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -1598,7 +1135,6 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-3 text-gray-900">SOC 2 Type II</h3>
               <p className="text-gray-600">Security, availability, and processing integrity controls for service organizations</p>
             </div>
-
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-50">
               <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <FileText className="h-8 w-8 text-white" />
@@ -1606,7 +1142,6 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-3 text-gray-900">ISO 27001</h3>
               <p className="text-gray-600">International standard for information security management systems</p>
             </div>
-
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-green-50 to-emerald-50">
               <div className="bg-green-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Key className="h-8 w-8 text-white" />
@@ -1614,7 +1149,6 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-3 text-gray-900">PCI DSS</h3>
               <p className="text-gray-600">Payment card industry data security standard compliance</p>
             </div>
-
             <div className="text-center p-6 rounded-lg bg-gradient-to-br from-purple-50 to-violet-50">
               <div className="bg-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Monitor className="h-8 w-8 text-white" />
@@ -1625,7 +1159,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </div>
-
       {/* Security Process */}
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -1637,7 +1170,6 @@ const CybersecurityServicesPage = () => {
               Systematic approach to identifying, assessing, and mitigating security risks
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
@@ -1646,7 +1178,6 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Assessment</h3>
               <p className="text-gray-600">Comprehensive security audit and vulnerability assessment</p>
             </div>
-
             <div className="text-center">
               <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 2
@@ -1654,7 +1185,6 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Strategy</h3>
               <p className="text-gray-600">Develop security roadmap and prioritize remediation efforts</p>
             </div>
-
             <div className="text-center">
               <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 3
@@ -1662,7 +1192,6 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Implementation</h3>
               <p className="text-gray-600">Deploy security controls and monitoring solutions</p>
             </div>
-
             <div className="text-center">
               <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 4
@@ -1673,7 +1202,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </div>
-
       {/* Security Tools & Technologies */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -1685,7 +1213,6 @@ const CybersecurityServicesPage = () => {
               State-of-the-art security tools and platforms for comprehensive protection
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -1711,7 +1238,6 @@ const CybersecurityServicesPage = () => {
                 </ul>
               </CardContent>
             </Card>
-
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="bg-blue-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
@@ -1736,7 +1262,6 @@ const CybersecurityServicesPage = () => {
                 </ul>
               </CardContent>
             </Card>
-
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="bg-green-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
@@ -1761,7 +1286,6 @@ const CybersecurityServicesPage = () => {
                 </ul>
               </CardContent>
             </Card>
-
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="bg-purple-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
@@ -1786,7 +1310,6 @@ const CybersecurityServicesPage = () => {
                 </ul>
               </CardContent>
             </Card>
-
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="bg-yellow-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
@@ -1811,7 +1334,6 @@ const CybersecurityServicesPage = () => {
                 </ul>
               </CardContent>
             </Card>
-
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="bg-cyan-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
@@ -1839,7 +1361,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="py-16 bg-gradient-to-r from-red-600 to-red-800 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -1865,7 +1386,6 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </div>
-
       {/* Footer Contact */}
       <div className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
@@ -1882,7 +1402,6 @@ const CybersecurityServicesPage = () => {
                 </a>
               </div>
             </div>
-            
             <div>
               <h3 className="text-xl font-semibold mb-6 text-red-400">Contact Information</h3>
               <div className="space-y-4">
@@ -1901,7 +1420,6 @@ const CybersecurityServicesPage = () => {
               </div>
             </div>
           </div>
-          
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">ziontechgroup.com</a></p>
           </div>
@@ -1909,11 +1427,6 @@ const CybersecurityServicesPage = () => {
       </div>
     </div>
   );
-};
+}
 
 export default CybersecurityServicesPage;
-}
-      </CardContent>
-    </Card>
-  );
-}

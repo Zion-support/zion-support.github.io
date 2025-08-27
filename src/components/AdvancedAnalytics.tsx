@@ -1,295 +1,418 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  BarChart3, 
+  TrendingUp, 
+  Users, 
+  Eye, 
+  MousePointer, 
+  Clock, 
+  Globe,
+  X,
+  Activity,
+  Zap,
+  Target,
+  Award,
+  Calendar,
+  MapPin,
+  Device,
+  Monitor,
+  Smartphone,
+  Tablet
+} from 'lucide-react';
 
 interface AnalyticsData {
-  visitors: number;
-  conversions: number;
-  revenue: number;
+  pageViews: number;
+  uniqueVisitors: number;
+  sessionDuration: number;
   bounceRate: number;
-  avgSessionDuration: number;
-  topPages: Array<{ page: string; views: number }>;
-  trafficSources: Array<{ source: string; percentage: number }>;
-  deviceTypes: Array<{ device: string; percentage: number }>;
+  conversionRate: number;
+  topPages: Array<{ path: string; views: number }>;
+  userAgents: Array<{ device: string; count: number }>;
+  referrers: Array<{ source: string; count: number }>;
+  timeOnPage: number;
+  scrollDepth: number;
+  clickEvents: number;
+  formSubmissions: number;
 }
 
-export function AdvancedAnalytics() {
+interface Props {
+  enabled?: boolean;
+  showMetrics?: boolean;
+}
+
+export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props) {
+  const [isVisible, setIsVisible] = useState(false);
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
-    visitors: 0,
-    conversions: 0,
-    revenue: 0,
+    pageViews: 0,
+    uniqueVisitors: 0,
+    sessionDuration: 0,
     bounceRate: 0,
-    avgSessionDuration: 0,
+    conversionRate: 0,
     topPages: [],
-    trafficSources: [],
-    deviceTypes: []
+    userAgents: [],
+    referrers: [],
+    timeOnPage: 0,
+    scrollDepth: 0,
+    clickEvents: 0,
+    formSubmissions: 0
   });
+  const [sessionStart, setSessionStart] = useState<number>(Date.now());
+  const [isTracking, setIsTracking] = useState(false);
 
-  const [timeRange, setTimeRange] = useState('7d');
-  const [isLoading, setIsLoading] = useState(true);
+  // Initialize analytics tracking
+  const initializeTracking = useCallback(() => {
+    if (!enabled) return;
 
-  useEffect(() => {
-    // Simulate API call
-    const fetchData = async () => {
-      setIsLoading(true);
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      setAnalyticsData({
-        visitors: Math.floor(Math.random() * 10000) + 5000,
-        conversions: Math.floor(Math.random() * 500) + 100,
-        revenue: Math.floor(Math.random() * 50000) + 10000,
-        bounceRate: Math.random() * 30 + 20,
-        avgSessionDuration: Math.floor(Math.random() * 300) + 120,
-        topPages: [
-          { page: '/', views: Math.floor(Math.random() * 5000) + 2000 },
-          { page: '/services', views: Math.floor(Math.random() * 3000) + 1500 },
-          { page: '/contact', views: Math.floor(Math.random() * 2000) + 1000 },
-          { page: '/about', views: Math.floor(Math.random() * 1500) + 800 },
-          { page: '/pricing', views: Math.floor(Math.random() * 1000) + 500 }
-        ],
-        trafficSources: [
-          { source: 'Organic Search', percentage: 45 },
-          { source: 'Direct', percentage: 25 },
-          { source: 'Social Media', percentage: 20 },
-          { source: 'Referral', percentage: 10 }
-        ],
-        deviceTypes: [
-          { device: 'Desktop', percentage: 60 },
-          { device: 'Mobile', percentage: 35 },
-          { device: 'Tablet', percentage: 5 }
-        ]
-      });
-      
-      setIsLoading(false);
+    setIsTracking(true);
+    setSessionStart(Date.now());
+
+    // Track page view
+    const trackPageView = () => {
+      setAnalyticsData(prev => ({
+        ...prev,
+        pageViews: prev.pageViews + 1
+      }));
     };
 
-    fetchData();
-  }, [timeRange]);
+    // Track scroll depth
+    const trackScrollDepth = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+      
+      setAnalyticsData(prev => ({
+        ...prev,
+        scrollDepth: Math.max(prev.scrollDepth, scrollPercent)
+      }));
+    };
 
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
-    return num.toString();
-  };
+    // Track time on page
+    const trackTimeOnPage = () => {
+      const timeSpent = Math.round((Date.now() - sessionStart) / 1000);
+      setAnalyticsData(prev => ({
+        ...prev,
+        timeOnPage: timeSpent
+      }));
+    };
 
-  const formatCurrency = (num: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD'
-    }).format(num);
-  };
+    // Track click events
+    const trackClickEvents = () => {
+      setAnalyticsData(prev => ({
+        ...prev,
+        clickEvents: prev.clickEvents + 1
+      }));
+    };
 
-  if (isLoading) {
+    // Track form submissions
+    const trackFormSubmissions = (e: Event) => {
+      if (e.target instanceof HTMLFormElement) {
+        setAnalyticsData(prev => ({
+          ...prev,
+          formSubmissions: prev.formSubmissions + 1
+        }));
+      }
+    };
+
+    // Track user agent
+    const trackUserAgent = () => {
+      const userAgent = navigator.userAgent;
+      let device = 'Desktop';
+      
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
+        device = /iPad/i.test(userAgent) ? 'Tablet' : 'Mobile';
+      }
+      
+      setAnalyticsData(prev => {
+        const existingDevice = prev.userAgents.find(d => d.device === device);
+        if (existingDevice) {
+          existingDevice.count++;
+        } else {
+          prev.userAgents.push({ device, count: 1 });
+        }
+        return { ...prev };
+      });
+    };
+
+    // Track referrer
+    const trackReferrer = () => {
+      if (document.referrer) {
+        const referrer = new URL(document.referrer);
+        const source = referrer.hostname;
+        
+        setAnalyticsData(prev => {
+          const existingSource = prev.referrers.find(r => r.source === source);
+          if (existingSource) {
+            existingSource.count++;
+          } else {
+            prev.referrers.push({ source, count: 1 });
+          }
+          return { ...prev };
+        });
+      }
+    };
+
+    // Initialize tracking
+    trackPageView();
+    trackUserAgent();
+    trackReferrer();
+
+    // Add event listeners
+    window.addEventListener('scroll', trackScrollDepth, { passive: true });
+    document.addEventListener('click', trackClickEvents);
+    document.addEventListener('submit', trackFormSubmissions);
+    
+    // Update time on page every second
+    const timeInterval = setInterval(trackTimeOnPage, 1000);
+
+    // Track page visibility changes
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        // Page is hidden, pause tracking
+        setIsTracking(false);
+      } else {
+        // Page is visible, resume tracking
+        setIsTracking(true);
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('scroll', trackScrollDepth);
+      document.removeEventListener('click', trackClickEvents);
+      document.removeEventListener('submit', trackFormSubmissions);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      clearInterval(timeInterval);
+    };
+  }, [enabled, sessionStart]);
+
+  // Initialize tracking on mount
+  useEffect(() => {
+    const cleanup = initializeTracking();
+    return cleanup;
+  }, [initializeTracking]);
+
+  // Calculate session duration
+  useEffect(() => {
+    if (isTracking) {
+      const interval = setInterval(() => {
+        const duration = Math.round((Date.now() - sessionStart) / 1000);
+        setAnalyticsData(prev => ({
+          ...prev,
+          sessionDuration: duration
+        }));
+      }, 1000);
+
+      return () => clearInterval(interval);
+    }
+  }, [isTracking, sessionStart]);
+
+  // Simulate some analytics data for demonstration
+  useEffect(() => {
+    if (enabled) {
+      // Simulate top pages
+      setAnalyticsData(prev => ({
+        ...prev,
+        topPages: [
+          { path: '/', views: 1250 },
+          { path: '/services', views: 890 },
+          { path: '/about', views: 456 },
+          { path: '/contact', views: 234 },
+          { path: '/blog', views: 189 }
+        ],
+        bounceRate: 35.2,
+        conversionRate: 8.7
+      }));
+    }
+  }, [enabled]);
+
+  if (!enabled) return null;
+
+  if (!isVisible) {
     return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan"></div>
-      </div>
+      <motion.button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-44 right-4 z-50 p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        title="Analytics Dashboard"
+        aria-label="Open analytics dashboard"
+      >
+        <BarChart3 className="w-6 h-6 text-white" />
+      </motion.button>
     );
   }
 
   return (
-    <div className="space-y-6 p-6">
-      <div className="text-center">
-        <h2 className="text-3xl font-bold text-zion-blue mb-4">
-          Advanced Analytics Dashboard
-        </h2>
-        <p className="text-zion-slate-light text-lg">
-          Real-time insights and performance metrics
-        </p>
-        
-        {/* Time Range Selector */}
-        <div className="flex justify-center mt-4 space-x-2">
-          {['1d', '7d', '30d', '90d'].map((range) => (
-            <button
-              key={range}
-              onClick={() => setTimeRange(range)}
-              className={`px-4 py-2 rounded-lg transition-colors ${
-                timeRange === range
-                  ? 'bg-zion-cyan text-white'
-                  : 'bg-zion-slate/10 text-zion-slate-light hover:bg-zion-slate/20'
-              }`}
-            >
-              {range}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Key Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="p-6 bg-gradient-to-br from-zion-blue/20 to-zion-purple/20 border border-zion-blue/30 rounded-xl"
-        >
-          <div className="text-2xl font-bold text-zion-blue">
-            {formatNumber(analyticsData.visitors)}
-          </div>
-          <div className="text-zion-slate-light text-sm">Total Visitors</div>
-          <div className="text-zion-cyan text-xs mt-2">+12.5% vs last period</div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="p-6 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-xl"
-        >
-          <div className="text-2xl font-bold text-zion-purple">
-            {formatNumber(analyticsData.conversions)}
-          </div>
-          <div className="text-zion-slate-light text-sm">Conversions</div>
-          <div className="text-zion-cyan text-xs mt-2">+8.3% vs last period</div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="p-6 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/30 rounded-xl"
-        >
-          <div className="text-2xl font-bold text-zion-cyan">
-            {formatCurrency(analyticsData.revenue)}
-          </div>
-          <div className="text-zion-slate-light text-sm">Revenue</div>
-          <div className="text-zion-cyan text-xs mt-2">+15.7% vs last period</div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="p-6 bg-gradient-to-br from-zion-slate/20 to-zion-blue/20 border border-zion-slate/30 rounded-xl"
-        >
-          <div className="text-2xl font-bold text-zion-slate-light">
-            {analyticsData.bounceRate.toFixed(1)}%
-          </div>
-          <div className="text-zion-slate-light text-sm">Bounce Rate</div>
-          <div className="text-red-400 text-xs mt-2">-2.1% vs last period</div>
-        </motion.div>
-      </div>
-
-      {/* Detailed Analytics */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Top Pages */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.5 }}
-          className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl"
-        >
-          <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
-            Top Pages
-          </h3>
-          <div className="space-y-3">
-            {analyticsData.topPages.map((page, index) => (
-              <div key={page.page} className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-                    index === 0 ? 'bg-yellow-500 text-black' :
-                    index === 1 ? 'bg-gray-400 text-black' :
-                    index === 2 ? 'bg-amber-600 text-white' : 'bg-zion-slate/20 text-zion-slate-light'
-                  }`}>
-                    {index + 1}
-                  </div>
-                  <span className="text-zion-slate-light">{page.page}</span>
-                </div>
-                <span className="text-zion-cyan font-semibold">
-                  {formatNumber(page.views)}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Traffic Sources */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.6 }}
-          className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl"
-        >
-          <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
-            Traffic Sources
-          </h3>
-          <div className="space-y-4">
-            {analyticsData.trafficSources.map((source) => (
-              <div key={source.source}>
-                <div className="flex justify-between text-sm mb-2">
-                  <span className="text-zion-slate-light">{source.source}</span>
-                  <span className="text-zion-cyan font-semibold">{source.percentage}%</span>
-                </div>
-                <div className="w-full bg-zion-slate/20 rounded-full h-2">
-                  <div
-                    className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full transition-all duration-1000"
-                    style={{ width: `${source.percentage}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Device Types */}
+    <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.7 }}
-        className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl"
+        initial={{ opacity: 0, x: 300 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 300 }}
+        className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[90vh] overflow-y-auto"
       >
-        <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
-          Device Types
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {analyticsData.deviceTypes.map((device) => (
-            <div key={device.device} className="text-center">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">
-                {device.percentage}%
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
+            <BarChart3 className="w-6 h-6 text-indigo-500" />
+            Analytics Dashboard
+          </h3>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-gray-600 transition-colors p-1"
+            aria-label="Close analytics dashboard"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="space-y-6">
+          {/* Real-time Metrics */}
+          <div>
+            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
+              <Activity className="w-4 h-4 text-green-500" />
+              Real-time Metrics
+            </h4>
+            
+            <div className="grid grid-cols-2 gap-3">
+              <div className="p-3 bg-green-50 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Eye className="w-4 h-4 text-green-500" />
+                  <span className="text-xs text-green-600">Page Views</span>
+                </div>
+                <span className="text-lg font-bold text-green-700">{analyticsData.pageViews}</span>
               </div>
-              <div className="text-zion-slate-light">{device.device}</div>
-              <div className="mt-2">
-                <div className="w-full bg-zion-slate/20 rounded-full h-3">
-                  <div
-                    className="bg-gradient-to-r from-zion-blue to-zion-purple h-3 rounded-full transition-all duration-1000"
-                    style={{ width: `${device.percentage}%` }}
-                  ></div>
+              
+              <div className="p-3 bg-blue-50 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Users className="w-4 h-4 text-blue-500" />
+                  <span className="text-xs text-blue-600">Unique Visitors</span>
+                </div>
+                <span className="text-lg font-bold text-blue-700">{analyticsData.uniqueVisitors || 1}</span>
+              </div>
+              
+              <div className="p-3 bg-purple-50 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Clock className="w-4 h-4 text-purple-500" />
+                  <span className="text-xs text-purple-600">Session Duration</span>
+                </div>
+                <span className="text-lg font-bold text-purple-700">{Math.floor(analyticsData.sessionDuration / 60)}m {analyticsData.sessionDuration % 60}s</span>
+              </div>
+              
+              <div className="p-3 bg-orange-50 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <MousePointer className="w-4 h-4 text-orange-500" />
+                  <span className="text-xs text-orange-600">Clicks</span>
+                </div>
+                <span className="text-lg font-bold text-orange-700">{analyticsData.clickEvents}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Performance Metrics */}
+          <div>
+            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
+              <Zap className="w-4 h-4 text-yellow-500" />
+              Performance Metrics
+            </h4>
+            
+            <div className="space-y-3">
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <span className="text-sm text-gray-700">Scroll Depth</span>
+                <span className="text-sm font-medium text-gray-800">{analyticsData.scrollDepth}%</span>
+              </div>
+              
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <span className="text-sm text-gray-700">Time on Page</span>
+                <span className="text-sm font-medium text-gray-800">{Math.floor(analyticsData.timeOnPage / 60)}m {analyticsData.timeOnPage % 60}s</span>
+              </div>
+              
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <span className="text-sm text-gray-700">Form Submissions</span>
+                <span className="text-sm font-medium text-gray-800">{analyticsData.formSubmissions}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Conversion Metrics */}
+          <div>
+            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
+              <Target className="w-4 h-4 text-red-500" />
+              Conversion Metrics
+            </h4>
+            
+            <div className="grid grid-cols-2 gap-3">
+              <div className="p-3 bg-red-50 rounded-lg">
+                <div className="text-center">
+                  <div className="text-lg font-bold text-red-700">{analyticsData.bounceRate}%</div>
+                  <div className="text-xs text-red-600">Bounce Rate</div>
+                </div>
+              </div>
+              
+              <div className="p-3 bg-green-50 rounded-lg">
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-700">{analyticsData.conversionRate}%</div>
+                  <div className="text-xs text-green-600">Conversion Rate</div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </motion.div>
+          </div>
 
-      {/* Performance Insights */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8 }}
-        className="p-6 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 border border-zion-blue/20 rounded-xl"
-      >
-        <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
-          Performance Insights
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Top Pages */}
           <div>
-            <h4 className="text-zion-cyan font-semibold mb-2">Optimization Opportunities</h4>
-            <ul className="text-zion-slate text-sm space-y-1">
-              <li>• Mobile conversion rate can be improved by 15%</li>
-              <li>• Page load speed optimization needed for /services</li>
-              <li>• A/B testing recommended for pricing page</li>
-            </ul>
+            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
+              <Award className="w-4 h-4 text-blue-500" />
+              Top Pages
+            </h4>
+            
+            <div className="space-y-2">
+              {analyticsData.topPages.slice(0, 3).map((page, index) => (
+                <div key={page.path} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-medium text-gray-500">#{index + 1}</span>
+                    <span className="text-sm text-gray-700">{page.path}</span>
+                  </div>
+                  <span className="text-sm font-medium text-gray-800">{page.views}</span>
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* Device Distribution */}
           <div>
-            <h4 className="text-zion-purple font-semibold mb-2">Key Achievements</h4>
-            <ul className="text-zion-slate text-sm space-y-1">
-              <li>• 25% increase in organic traffic</li>
-              <li>• 18% improvement in session duration</li>
-              <li>• 12% reduction in bounce rate</li>
-            </ul>
+            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
+              <Device className="w-4 h-4 text-purple-500" />
+              Device Distribution
+            </h4>
+            
+            <div className="space-y-2">
+              {analyticsData.userAgents.map((device, index) => (
+                <div key={index} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
+                  <div className="flex items-center gap-2">
+                    {device.device === 'Mobile' && <Smartphone className="w-4 h-4 text-blue-500" />}
+                    {device.device === 'Tablet' && <Tablet className="w-4 h-4 text-green-500" />}
+                    {device.device === 'Desktop' && <Monitor className="w-4 h-4 text-purple-500" />}
+                    <span className="text-sm text-gray-700">{device.device}</span>
+                  </div>
+                  <span className="text-sm font-medium text-gray-800">{device.count}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Session Status */}
+          <div className="pt-4 border-t border-gray-200">
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium text-gray-700">Session Status</span>
+              <div className="flex items-center gap-2">
+                <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`}></div>
+                <span className="text-xs text-gray-600">{isTracking ? 'Active' : 'Paused'}</span>
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
-    </div>
+    </AnimatePresence>
   );
 }

@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EnterpriseITService2030 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface EnterpriseITService2030 {
   rating: number;
   reviews: number;
 }
-
 export const enterpriseITServices2030: EnterpriseITService2030[] = [
   // Autonomous DevOps Platform 2030
   {

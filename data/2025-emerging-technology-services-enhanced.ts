@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EmergingTechnologyService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface EmergingTechnologyService {
   rating: number;
   reviews: number;
 }
-
 export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[] = [
   // Quantum Computing as a Service
   {
@@ -94,7 +92,6 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     rating: 4.9,
     reviews: 18
   },
-
   // Blockchain Infrastructure Platform
   {
     id: 'blockchain-infrastructure-platform',
@@ -147,7 +144,6 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     rating: 4.8,
     reviews: 67
   },
-
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',
@@ -200,7 +196,6 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     rating: 4.7,
     reviews: 98
   },
-
   // Metaverse Development Platform
   {
     id: 'metaverse-development-platform',
@@ -253,7 +248,6 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     rating: 4.8,
     reviews: 45
   },
-
   // Space Technology Platform
   {
     id: 'space-technology-platform',

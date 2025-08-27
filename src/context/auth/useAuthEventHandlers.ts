@@ -3,10 +3,12 @@ import { useCallback } from 'react';
 interface User {
   id: string;
   email: string;
-  name?: string;
-  avatar_url?: string;
-  created_at?: string;
-  updated_at?: string;
+  displayName?: string;
+  avatar?: string;
+  role?: string;
+  isEmailVerified?: boolean;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export const useAuthEventHandlers = (
@@ -15,12 +17,12 @@ export const useAuthEventHandlers = (
 ) => {
   const handleSignedIn = useCallback((user: User) => {
     setUser(user);
-    setOnboardingStep(0); // Reset onboarding step on sign in
+    setOnboardingStep(1); // Start onboarding process
   }, [setUser, setOnboardingStep]);
 
   const handleSignedOut = useCallback(() => {
     setUser(null);
-    setOnboardingStep(0);
+    setOnboardingStep(0); // Reset onboarding
   }, [setUser, setOnboardingStep]);
 
   return {

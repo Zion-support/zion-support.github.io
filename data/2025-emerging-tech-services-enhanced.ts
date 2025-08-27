@@ -37,14 +37,12 @@ export interface EmergingTechService {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   {
     id: 'space-mining-platform',
@@ -91,7 +89,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 5.0,
     reviews: 6
   },
-
   // Brain-Computer Interface Platform
   {
     id: 'quantum-bio-computing',
@@ -144,7 +141,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 9
   },
-
   // Brain-Computer Interface Platform
   {
     id: 'brain-computer-interface',
@@ -197,7 +193,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.7,
     reviews: 16
   },
-
   // Quantum Energy Platform
   {
     id: 'quantum-energy-platform',
@@ -250,7 +245,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 12
   },
-
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -303,7 +297,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 4
   },
-
   // Quantum Materials Discovery Platform
   {
     id: 'quantum-materials-discovery-platform',
@@ -356,7 +349,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 19
   },
-
   // Quantum Robotics Platform
   {
     id: 'quantum-robotics',
@@ -409,7 +401,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.7,
     reviews: 31
   },
-
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security',
@@ -462,7 +453,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 45
   },
-
   // Quantum Logistics Platform
   {
     id: 'quantum-logistics-optimization',
@@ -515,7 +505,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.7,
     reviews: 62
   },
-
   // Metaverse AI Development Platform
   {
     id: 'metaverse-ai-development-platform',
@@ -568,7 +557,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.6,
     reviews: 98
   },
-
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning-platform',
@@ -621,7 +609,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 12
   },
-
   // Quantum Energy Platform
   {
     id: 'neuromorphic-computing-platform',
@@ -674,7 +661,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 18
   },
-
   // Synthetic Biology Platform
   {
     id: 'synthetic-biology-platform',
@@ -721,7 +707,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 16
   },
-
   // Space Resource Mining Platform
   {
     id: 'space-resource-mining-platform',
@@ -774,7 +759,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 5.0,
     reviews: 2
   },
-
   // Brain-Computer Interface Platform
   {
     id: 'brain-computer-interface-platform',
@@ -827,7 +811,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 8
   },
-
   // Quantum Robotics
   {
     id: 'quantum-materials-discovery-platform',
@@ -880,7 +863,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 5.0,
     reviews: 5
   },
-
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -933,7 +915,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 11
   },
-
   // Quantum Bio-Computing Platform
   {
     id: 'quantum-bio-computing-platform',
@@ -986,7 +967,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 5.0,
     reviews: 4
   },
-
   // Quantum Energy Platform
   {
     id: 'quantum-energy-platform',

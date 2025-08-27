@@ -36,13 +36,18 @@ interface SelectItemProps {
 
 export function SelectItem({ children, value }: SelectItemProps) {
   return (
-    <option value={value} className="bg-zion-blue-dark text-white">
+    <option value={value}>
       {children}
     </option>
   );
 }
 
-export function SelectTrigger({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+interface SelectTriggerProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function SelectTrigger({ children, className = '' }: SelectTriggerProps) {
   return (
     <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}>
       {children}
@@ -50,10 +55,18 @@ export function SelectTrigger({ children, className = '' }: { children: React.Re
   );
 }
 
-export function SelectValue({ placeholder }: { placeholder?: string }) {
+interface SelectValueProps {
+  placeholder?: string;
+}
+
+export function SelectValue({ placeholder }: SelectValueProps) {
   return <span className="text-sm">{placeholder || 'Select an option'}</span>;
 }
 
-export function SelectContent({ children }: { children: React.ReactNode }) {
+interface SelectContentProps {
+  children: React.ReactNode;
+}
+
+export function SelectContent({ children }: SelectContentProps) {
   return <div className="relative">{children}</div>;
 }

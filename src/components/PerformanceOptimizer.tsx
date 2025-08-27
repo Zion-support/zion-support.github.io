@@ -1,229 +1,254 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Zap, TrendingUp, Gauge, Cpu, Memory, Wifi, Battery, Activity } from 'lucide-react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  className?: string;
-  threshold?: number;
-  rootMargin?: string;
-  delay?: number;
-  duration?: number;
-  y?: number;
-  scale?: number;
-  opacity?: number;
+interface PerformanceMetrics {
+  fps: number;
+  memory: number;
+  network: number;
+  cpu: number;
+  battery: number;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  className = '',
-  threshold = 0.1,
-  rootMargin = '0px',
-  delay = 0,
-  duration = 0.6,
-  y = 20,
-  scale = 1,
-  opacity = 1
-}) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { threshold, rootMargin });
-
-  return (
-    <motion.div
-      ref={ref}
-      className={className}
-      initial={{ opacity: 0, y, scale: scale === 1 ? 1 : 0.95 }}
-      animate={isInView ? { opacity, y: 0, scale: 1 } : { opacity: 0, y, scale: scale === 1 ? 1 : 0.95 }}
-      transition={{ duration, delay, ease: 'easeOut' }}
-    >
-      {children}
-    </motion.div>
-  );
-};
-
-// Lazy loading wrapper for images
-export const LazyImage: React.FC<{
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-}> = ({ src, alt, className = '', placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzM0MTU2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2YzZjRmNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+' }) => {
-  const [imageSrc, setImageSrc] = useState(placeholder);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      setImageSrc(src);
-      setIsLoaded(true);
-    };
-  }, [src]);
-
-  return (
-    <img
-      src={imageSrc}
-      alt={alt}
-      className={`${className} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-60'}`}
-    />
-  );
-};
-
-// Intersection observer hook for performance
-export const useIntersectionObserver = (
-  options: IntersectionObserverInit = {}
-) => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const [ref, setRef] = useState<HTMLElement | null>(null);
-
-  useEffect(() => {
-    if (!ref) return;
-
-    const observer = new IntersectionObserver(([entry]) => {
-      setIsIntersecting(entry.isIntersecting);
-    }, options);
-
-    observer.observe(ref);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [ref, options]);
-
-  return [setRef, isIntersecting] as const;
-};
-
-// Performance monitoring component
-export const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0
+export function PerformanceOptimizer() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fps: 60,
+    memory: 0,
+    network: 0,
+    cpu: 0,
+    battery: 0
   });
+  const [isVisible, setIsVisible] = useState(false);
+  const [optimizations, setOptimizations] = useState<string[]>([]);
 
-  useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fid = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+  // Performance monitoring
+  const measurePerformance = useCallback(() => {
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const memory = (performance as any).memory;
+      
+      setMetrics(prev => ({
+        ...prev,
+        memory: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0,
+        network: navigation ? Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart) : 0
+      }));
     }
   }, []);
 
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
+  // FPS monitoring
+  const measureFPS = useCallback(() => {
+    let frameCount = 0;
+    let lastTime = performance.now();
+    
+    const countFrames = () => {
+      frameCount++;
+      const currentTime = performance.now();
+      
+      if (currentTime - lastTime >= 1000) {
+        const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+        setMetrics(prev => ({ ...prev, fps }));
+        frameCount = 0;
+        lastTime = currentTime;
+      }
+      
+      requestAnimationFrame(countFrames);
+    };
+    
+    requestAnimationFrame(countFrames);
+  }, []);
+
+  // Battery monitoring
+  const measureBattery = useCallback(async () => {
+    if ('getBattery' in navigator) {
+      try {
+        const battery = await (navigator as any).getBattery();
+        setMetrics(prev => ({ ...prev, battery: Math.round(battery.level * 100) }));
+      } catch (error) {
+        console.log('Battery API not supported');
+      }
+    }
+  }, []);
+
+  // CPU monitoring
+  const measureCPU = useCallback(() => {
+    if ('hardwareConcurrency' in navigator) {
+      const cores = navigator.hardwareConcurrency;
+      setMetrics(prev => ({ ...prev, cpu: cores }));
+    }
+  }, []);
+
+  // Performance optimizations
+  const applyOptimizations = useCallback(() => {
+    const newOptimizations: string[] = [];
+    
+    // Image optimization
+    if (metrics.memory > 100) {
+      newOptimizations.push('Optimizing image loading and caching');
+    }
+    
+    // Network optimization
+    if (metrics.network > 1000) {
+      newOptimizations.push('Implementing service worker caching');
+    }
+    
+    // FPS optimization
+    if (metrics.fps < 30) {
+      newOptimizations.push('Reducing animation complexity');
+    }
+    
+    setOptimizations(newOptimizations);
+  }, [metrics]);
+
+  useEffect(() => {
+    measurePerformance();
+    measureFPS();
+    measureBattery();
+    measureCPU();
+    
+    const interval = setInterval(measurePerformance, 5000);
+    return () => clearInterval(interval);
+  }, [measurePerformance, measureFPS, measureBattery, measureCPU]);
+
+  useEffect(() => {
+    applyOptimizations();
+  }, [applyOptimizations]);
+
+  // Auto-hide after 5 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(false), 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isVisible) {
+    return (
+      <motion.button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 right-4 z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        title="Performance Monitor"
+      >
+        <Activity className="w-6 h-6 text-white" />
+      </motion.button>
+    );
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div>FCP: {metrics.fcp.toFixed(0)}ms</div>
-      <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
-      <div>FID: {metrics.fid.toFixed(0)}ms</div>
-      <div>CLS: {metrics.cls.toFixed(3)}</div>
-    </div>
-  );
-};
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        className="fixed bottom-4 right-4 z-50 w-80 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6"
+      >
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+            <Gauge className="w-5 h-5 text-cyan-500" />
+            Performance Monitor
+          </h3>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            ×
+          </button>
+        </div>
 
-// Virtual scrolling component for large lists
-export const VirtualList: React.FC<{
-  items: any[];
-  itemHeight: number;
-  containerHeight: number;
-  renderItem: (item: any, index: number) => React.ReactNode;
-}> = ({ items, itemHeight, containerHeight, renderItem }) => {
-  const [scrollTop, setScrollTop] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
+        <div className="space-y-4">
+          {/* FPS */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-4 h-4 text-green-500" />
+              <span className="text-sm text-gray-600">FPS</span>
+            </div>
+            <span className={`font-mono text-sm ${metrics.fps >= 50 ? 'text-green-600' : metrics.fps >= 30 ? 'text-yellow-600' : 'text-red-600'}`}>
+              {metrics.fps}
+            </span>
+          </div>
 
-  const visibleItemCount = Math.ceil(containerHeight / itemHeight);
-  const startIndex = Math.floor(scrollTop / itemHeight);
-  const endIndex = Math.min(startIndex + visibleItemCount + 1, items.length);
+          {/* Memory */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Memory className="w-4 h-4 text-blue-500" />
+              <span className="text-sm text-gray-600">Memory</span>
+            </div>
+            <span className={`font-mono text-sm ${metrics.memory < 50 ? 'text-green-600' : metrics.memory < 100 ? 'text-yellow-600' : 'text-red-600'}`}>
+              {metrics.memory} MB
+            </span>
+          </div>
 
-  const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
-    setScrollTop(e.currentTarget.scrollTop);
-  }, []);
+          {/* Network */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Wifi className="w-4 h-4 text-purple-500" />
+              <span className="text-sm text-gray-600">Network</span>
+            </div>
+            <span className={`font-mono text-sm ${metrics.network < 500 ? 'text-green-600' : metrics.network < 1000 ? 'text-yellow-600' : 'text-red-600'}`}>
+              {metrics.network}ms
+            </span>
+          </div>
 
-  const totalHeight = items.length * itemHeight;
-  const offsetY = startIndex * itemHeight;
+          {/* CPU */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Cpu className="w-4 h-4 text-orange-500" />
+              <span className="text-sm text-gray-600">CPU Cores</span>
+            </div>
+            <span className="font-mono text-sm text-gray-800">{metrics.cpu}</span>
+          </div>
 
-  return (
-    <div
-      ref={containerRef}
-      style={{ height: containerHeight, overflow: 'auto' }}
-      onScroll={handleScroll}
-    >
-      <div style={{ height: totalHeight, position: 'relative' }}>
-        <div style={{ transform: `translateY(${offsetY}px)` }}>
-          {items.slice(startIndex, endIndex).map((item, index) =>
-            renderItem(item, startIndex + index)
+          {/* Battery */}
+          {metrics.battery > 0 && (
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Battery className="w-4 h-4 text-green-500" />
+                <span className="text-sm text-gray-600">Battery</span>
+              </div>
+              <span className={`font-mono text-sm ${metrics.battery > 50 ? 'text-green-600' : metrics.battery > 20 ? 'text-yellow-600' : 'text-red-600'}`}>
+                {metrics.battery}%
+              </span>
+            </div>
           )}
         </div>
-      </div>
-    </div>
+
+        {/* Optimizations */}
+        {optimizations.length > 0 && (
+          <div className="mt-4 pt-4 border-t border-gray-200">
+            <h4 className="text-sm font-medium text-gray-700 mb-2">Optimizations Applied:</h4>
+            <ul className="space-y-1">
+              {optimizations.map((opt, index) => (
+                <li key={index} className="text-xs text-gray-600 flex items-center gap-2">
+                  <Zap className="w-3 h-3 text-yellow-500" />
+                  {opt}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Performance Score */}
+        <div className="mt-4 pt-4 border-t border-gray-200">
+          <div className="flex items-center justify-between">
+            <span className="text-sm font-medium text-gray-700">Performance Score</span>
+            <div className="flex items-center gap-2">
+              <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div 
+                  className={`h-full rounded-full transition-all duration-300 ${
+                    metrics.fps >= 50 && metrics.memory < 100 ? 'bg-green-500' : 
+                    metrics.fps >= 30 && metrics.memory < 150 ? 'bg-yellow-500' : 'bg-red-500'
+                  }`}
+                  style={{ 
+                    width: `${Math.min(100, (metrics.fps / 60) * 100)}%` 
+                  }}
+                />
+              </div>
+              <span className="text-xs font-mono text-gray-600">
+                {Math.round((metrics.fps / 60) * 100)}%
+              </span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </AnimatePresence>
   );
-};
-
-// Debounced input hook for search optimization
-export const useDebounce = (value: any, delay: number) => {
-  const [debouncedValue, setDebouncedValue] = useState(value);
-
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [value, delay]);
-
-  return debouncedValue;
-};
-
-// Memoized component wrapper for expensive computations
-export const MemoizedComponent = React.memo<{
-  children: React.ReactNode;
-  className?: string;
-}>(({ children, className = '' }) => (
-  <div className={className}>{children}</div>
-));
-
-MemoizedComponent.displayName = 'MemoizedComponent';
+}

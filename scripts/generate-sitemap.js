@@ -1,15 +1,11 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 // Define the base URL for your website
 const BASE_URL = 'https://ziontechgroup.com';
-
 // Define all the routes/pages on your website
 const routes = [
   {
@@ -67,7 +63,6 @@ const routes = [
     lastmod: new Date().toISOString().split('T')[0]
   }
 ];
-
 // Generate the sitemap XML content
 function generateSitemapXML() {
   const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
@@ -88,32 +83,26 @@ ${urlsetOpen}
 ${urls}
 ${urlsetClose}`;
 }
-
 // Generate robots.txt content
 function generateRobotsTxt() {
   return `User-agent: *
 Allow: /
-
 # Sitemap
 Sitemap: ${BASE_URL}/sitemap.xml
-
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
-
 # Allow important files
 Allow: /robots.txt
 Allow: /sitemap.xml
 Allow: /favicon.ico
 Allow: /manifest.json
-
 # Crawl delay (optional)
 Crawl-delay: 1`;
 }
-
 // Generate the sitemap
 function generateSitemap() {
   try {
@@ -164,6 +153,5 @@ function generateSitemap() {
     process.exit(1);
   }
 }
-
 // Run the sitemap generation
 generateSitemap();

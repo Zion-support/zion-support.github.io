@@ -1,11 +1,9 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const http = require('http');
 const url = require('url');
-
 class AutomationDashboard {
   constructor() {
     this.automationSystems = new Map();
@@ -16,21 +14,18 @@ class AutomationDashboard {
     this.loadAutomationSystems();
     this.startMetricsCollection();
   }
-
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
   }
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   loadAutomationSystems() {
     const systems = [
       { name: 'lint-monitor', path: 'lint-monitor.js', category: 'code-quality', status: 'available' },
@@ -45,7 +40,6 @@ class AutomationDashboard {
       { name: 'intelligent-orchestrator', path: 'intelligent-orchestrator.js', category: 'orchestration', status: 'available' },
       { name: 'automation-factory', path: 'automation-factory.js', category: 'factory', status: 'available' }
     ];
-
     for (const system of systems) {
       const systemPath = path.join(__dirname, system.path);
       if (fs.existsSync(systemPath)) {
@@ -63,19 +57,16 @@ class AutomationDashboard {
       }
     }
   }
-
   startMetricsCollection() {
     // Collect metrics every 30 seconds
     setInterval(() => {
       this.collectMetrics();
     }, 30000);
-
     // Generate alerts every minute
     setInterval(() => {
       this.generateAlerts();
     }, 60000);
   }
-
   collectMetrics() {
     for (const [name, system] of this.automationSystems) {
       const metrics = {
@@ -86,14 +77,11 @@ class AutomationDashboard {
         averageExecutionTime: system.averageExecutionTime,
         uptime: system.uptime
       };
-
       this.metrics.set(name, metrics);
     }
   }
-
   generateAlerts() {
     this.alerts = [];
-
     for (const [name, system] of this.automationSystems) {
       const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
       
@@ -105,7 +93,6 @@ class AutomationDashboard {
           timestamp: new Date().toISOString()
         });
       }
-
       if (system.averageExecutionTime > 30000) {
         this.alerts.push({
           type: 'warning',
@@ -114,7 +101,6 @@ class AutomationDashboard {
           timestamp: new Date().toISOString()
         });
       }
-
       if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
         this.alerts.push({
           type: 'error',
@@ -125,17 +111,14 @@ class AutomationDashboard {
       }
     }
   }
-
   async runSystem(systemName) {
     const system = this.automationSystems.get(systemName);
     if (!system) {
       this.log(`❌ System not found: ${systemName}`);
       return false;
     }
-
     const startTime = Date.now();
     system.isRunning = true;
-
     try {
       this.log(`🚀 Running system: ${systemName}`);
       
@@ -159,22 +142,18 @@ class AutomationDashboard {
       system.isRunning = false;
     }
   }
-
   updateSystemMetrics(systemName, success, executionTime) {
     const system = this.automationSystems.get(systemName);
     if (!system) return;
-
     if (success) {
       system.successCount++;
     } else {
       system.failureCount++;
     }
-
     system.totalExecutionTime += executionTime;
     system.averageExecutionTime = system.totalExecutionTime / (system.successCount + system.failureCount);
     system.lastRun = new Date();
   }
-
   async runAllSystems() {
     this.log('🚀 Running all automation systems...');
     
@@ -192,12 +171,10 @@ class AutomationDashboard {
     this.log(`📊 Completed ${results.length} systems`);
     return results;
   }
-
   generateDashboardHTML() {
     const systems = Array.from(this.automationSystems.values());
     const metrics = Array.from(this.metrics.values());
     const alerts = this.alerts;
-
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -232,7 +209,6 @@ class AutomationDashboard {
                 </div>
             `).join('')}
         </div>
-
         <!-- Alerts -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-8">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">Alerts</h2>
@@ -245,13 +221,11 @@ class AutomationDashboard {
                 </div>
             `).join('') : '<p class="text-gray-500">No alerts</p>'}
         </div>
-
         <!-- Performance Chart -->
         <div class="bg-white rounded-lg shadow-md p-6">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">Performance Metrics</h2>
             <canvas id="performanceChart" width="400" height="200"></canvas>
         </div>
-
         <!-- Actions -->
         <div class="bg-white rounded-lg shadow-md p-6 mt-8">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">Actions</h2>
@@ -268,7 +242,6 @@ class AutomationDashboard {
             </div>
         </div>
     </div>
-
     <script>
         // Performance Chart
         const ctx = document.getElementById('performanceChart').getContext('2d');
@@ -294,7 +267,6 @@ class AutomationDashboard {
                 }
             }
         });
-
         function runAllSystems() {
             fetch('/api/run-all', { method: 'POST' })
                 .then(response => response.json())
@@ -303,11 +275,9 @@ class AutomationDashboard {
                     setTimeout(refreshDashboard, 5000);
                 });
         }
-
         function refreshDashboard() {
             location.reload();
         }
-
         function generateReport() {
             fetch('/api/report')
                 .then(response => response.json())
@@ -320,14 +290,12 @@ class AutomationDashboard {
                     a.click();
                 });
         }
-
         // Auto-refresh every 30 seconds
         setInterval(refreshDashboard, 30000);
     </script>
 </body>
 </html>`;
   }
-
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -342,7 +310,6 @@ class AutomationDashboard {
       alerts: this.alerts,
       recommendations: this.generateRecommendations()
     };
-
     // System details
     for (const [name, system] of this.automationSystems) {
       report.systems[name] = {
@@ -357,15 +324,12 @@ class AutomationDashboard {
         uptime: system.uptime
       };
     }
-
     // Metrics
     for (const [name, metric] of this.metrics) {
       report.metrics[name] = metric;
     }
-
     return report;
   }
-
   calculateAverageSuccessRate() {
     const systems = Array.from(this.automationSystems.values());
     const totalSuccessRate = systems.reduce((sum, system) => {
@@ -375,10 +339,8 @@ class AutomationDashboard {
     
     return systems.length > 0 ? totalSuccessRate / systems.length : 0;
   }
-
   generateRecommendations() {
     const recommendations = [];
-
     for (const [name, system] of this.automationSystems) {
       const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
       
@@ -390,7 +352,6 @@ class AutomationDashboard {
           priority: 'high'
         });
       }
-
       if (system.averageExecutionTime > 30000) {
         recommendations.push({
           type: 'optimization',
@@ -399,7 +360,6 @@ class AutomationDashboard {
           priority: 'medium'
         });
       }
-
       if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
         recommendations.push({
           type: 'maintenance',
@@ -409,33 +369,27 @@ class AutomationDashboard {
         });
       }
     }
-
     return recommendations;
   }
-
   createServer() {
     const server = http.createServer((req, res) => {
       const parsedUrl = url.parse(req.url, true);
       const pathname = parsedUrl.pathname;
-
       res.setHeader('Content-Type', 'application/json');
       res.setHeader('Access-Control-Allow-Origin', '*');
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
       res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-
       if (req.method === 'OPTIONS') {
         res.writeHead(200);
         res.end();
         return;
       }
-
       switch (pathname) {
         case '/':
           res.setHeader('Content-Type', 'text/html');
           res.writeHead(200);
           res.end(this.generateDashboardHTML());
           break;
-
         case '/api/status':
           res.writeHead(200);
           res.end(JSON.stringify({
@@ -444,7 +398,6 @@ class AutomationDashboard {
             alerts: this.alerts
           }));
           break;
-
         case '/api/run-all':
           if (req.method === 'POST') {
             this.runAllSystems().then(results => {
@@ -456,7 +409,6 @@ class AutomationDashboard {
             res.end(JSON.stringify({ error: 'Method not allowed' }));
           }
           break;
-
         case '/api/run':
           if (req.method === 'POST') {
             let body = '';
@@ -473,25 +425,20 @@ class AutomationDashboard {
             res.end(JSON.stringify({ error: 'Method not allowed' }));
           }
           break;
-
         case '/api/report':
           res.writeHead(200);
           res.end(JSON.stringify(this.generateReport()));
           break;
-
         default:
           res.writeHead(404);
           res.end(JSON.stringify({ error: 'Not found' }));
       }
     });
-
     return server;
   }
-
   sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
-
   start(port = 3001) {
     const server = this.createServer();
     server.listen(port, () => {
@@ -501,12 +448,10 @@ class AutomationDashboard {
     });
   }
 }
-
 // CLI handling
 const dashboard = new AutomationDashboard();
 const command = process.argv[2];
 const port = process.argv[3] || 3001;
-
 switch (command) {
   case 'start':
     dashboard.start(parseInt(port));
@@ -528,7 +473,6 @@ switch (command) {
     console.log('  run-all  - Run all automation systems');
     process.exit(1);
 }
-
 // Graceful shutdown
 process.on('SIGINT', () => {
   console.log('\n🛑 Shutting down automation dashboard...');

@@ -1,112 +1,312 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PlusIcon, XMarkIcon, ChatBubbleLeftRightIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { 
+  Plus, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  ArrowUp, 
+  Settings, 
+  HelpCircle,
+  X,
+  ChevronUp,
+  ChevronDown,
+  Star,
+  Share2,
+  Bookmark,
+  Download,
+  Search
+} from 'lucide-react';
 
 interface FloatingActionButtonProps {
-  className?: string;
+  enabled?: boolean;
 }
 
-const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ className = '' }) => {
-  const [isOpen, setIsOpen] = useState(false);
+export function FloatingActionButton({ enabled = true }: FloatingActionButtonProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  // Hide button when scrolling down, show when scrolling up
+  const handleScroll = useCallback(() => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const isScrollingDown = scrollTop > (window as any).lastScrollTop;
+    
+    if (isScrollingDown && scrollTop > 100) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+    
+    (window as any).lastScrollTop = scrollTop;
+  }, []);
 
-  const actionItems = [
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
+  // Quick actions
+  const quickActions = [
     {
-      icon: ChatBubbleLeftRightIcon,
-      label: 'Live Chat',
-      action: () => window.open('https://ziontechgroup.com/chat', '_blank'),
-      color: 'bg-green-500 hover:bg-green-600'
+      icon: MessageCircle,
+      label: 'Chat Support',
+      action: () => {
+        // Trigger chat support
+        const chatButton = document.querySelector('[data-chat-trigger]') as HTMLElement;
+        if (chatButton) chatButton.click();
+      },
+      color: 'from-blue-500 to-blue-600',
+      delay: 0.1
     },
     {
-      icon: PhoneIcon,
+      icon: Phone,
       label: 'Call Us',
-      action: () => window.open('tel:+1-555-0123', '_self'),
-      color: 'bg-blue-500 hover:bg-blue-600'
+      action: () => {
+        window.location.href = 'tel:+1-555-0123';
+      },
+      color: 'from-green-500 to-green-600',
+      delay: 0.2
     },
     {
-      icon: EnvelopeIcon,
+      icon: Mail,
       label: 'Email',
-      action: () => window.open('mailto:info@ziontechgroup.com', '_self'),
-      color: 'bg-purple-500 hover:bg-purple-600'
+      action: () => {
+        window.location.href = 'mailto:contact@ziontechgroup.com';
+      },
+      color: 'from-purple-500 to-purple-600',
+      delay: 0.3
+    },
+    {
+      icon: Search,
+      label: 'Search',
+      action: () => {
+        const searchInput = document.querySelector('[data-search-input]') as HTMLInputElement;
+        if (searchInput) {
+          searchInput.focus();
+          searchInput.click();
+        }
+      },
+      color: 'from-orange-500 to-orange-600',
+      delay: 0.4
+    },
+    {
+      icon: Bookmark,
+      label: 'Bookmark',
+      action: () => {
+        if (navigator.share) {
+          navigator.share({
+            title: 'Zion Tech Group',
+            url: window.location.href
+          });
+        } else {
+          // Fallback for browsers that don't support Web Share API
+          const url = window.location.href;
+          const title = document.title;
+          const bookmarkUrl = `https://del.icio.us/post?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
+          window.open(bookmarkUrl, '_blank');
+        }
+      },
+      color: 'from-red-500 to-red-600',
+      delay: 0.5
+    },
+    {
+      icon: Download,
+      label: 'Download App',
+      action: () => {
+        // Trigger app download or PWA install
+        const installButton = document.querySelector('[data-pwa-install]') as HTMLElement;
+        if (installButton) {
+          installButton.click();
+        } else {
+          // Show app store links
+          const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+          const isAndroid = /Android/.test(navigator.userAgent);
+          
+          if (isIOS) {
+            window.open('https://apps.apple.com/app/zion-tech-group/id123456789', '_blank');
+          } else if (isAndroid) {
+            window.open('https://play.google.com/store/apps/details?id=com.ziontechgroup.app', '_blank');
+          } else {
+            // Show PWA install prompt
+            const deferredPrompt = (window as any).deferredPrompt;
+            if (deferredPrompt) {
+              deferredPrompt.prompt();
+            }
+          }
+        }
+      },
+      color: 'from-indigo-500 to-indigo-600',
+      delay: 0.6
     }
   ];
 
+  // Scroll to top
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+
+  // Toggle expanded state
+  const toggleExpanded = useCallback(() => {
+    setIsExpanded(!isExpanded);
+  }, [isExpanded]);
+
+  if (!enabled) return null;
+
   return (
-    <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
+    <>
+      {/* Main Floating Action Button */}
       <AnimatePresence>
-        {isOpen && (
+        {isVisible && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute bottom-16 right-0 mb-2 space-y-3"
+            exit={{ opacity: 0, scale: 0 }}
+            className="fixed bottom-6 right-6 z-50"
           >
-            {actionItems.map((item, index) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-center space-x-3"
-              >
-                <motion.button
-                  onClick={item.action}
-                  className={`${item.color} text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110`}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  aria-label={item.label}
-                >
-                  <item.icon className="w-5 h-5" />
-                </motion.button>
-                <motion.span
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap"
-                >
-                  {item.label}
-                </motion.span>
-              </motion.div>
-            ))}
+            {/* Quick Actions */}
+            <AnimatePresence>
+              {isExpanded && (
+                <div className="mb-4 space-y-3">
+                  {quickActions.map((action, index) => (
+                    <motion.button
+                      key={action.label}
+                      initial={{ opacity: 0, x: 20, scale: 0.8 }}
+                      animate={{ opacity: 1, x: 0, scale: 1 }}
+                      exit={{ opacity: 0, x: 20, scale: 0.8 }}
+                      transition={{ delay: action.delay, duration: 0.2 }}
+                      onClick={action.action}
+                      className={`group relative flex items-center justify-center w-14 h-14 bg-gradient-to-r ${action.color} rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110`}
+                      title={action.label}
+                      aria-label={action.label}
+                    >
+                      <action.icon className="w-6 h-6 text-white" />
+                      
+                      {/* Tooltip */}
+                      <div className="absolute right-full mr-3 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
+                        {action.label}
+                        <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-gray-900 border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+                      </div>
+                    </motion.button>
+                  ))}
+                </div>
+              )}
+            </AnimatePresence>
+
+            {/* Main Button */}
+            <motion.button
+              onClick={toggleExpanded}
+              className="relative flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              title={isExpanded ? 'Close Menu' : 'Quick Actions'}
+              aria-label={isExpanded ? 'Close quick actions menu' : 'Open quick actions menu'}
+            >
+              <AnimatePresence mode="wait">
+                {isExpanded ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <X className="w-8 h-8 text-white" />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="plus"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Plus className="w-8 h-8 text-white" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>
 
-      <motion.button
-        onClick={toggleMenu}
-        className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}
-      >
-        <AnimatePresence>
-          {isOpen ? (
-            <motion.div
-              key="close"
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <XMarkIcon className="w-6 h-6" />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="open"
-              initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <PlusIcon className="w-6 h-6" />
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.button>
-    </div>
-  );
-};
+      {/* Scroll to Top Button */}
+      <AnimatePresence>
+        {window.pageYOffset > 300 && (
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            onClick={scrollToTop}
+            className="fixed bottom-6 left-6 z-50 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-gray-600 to-gray-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            title="Scroll to top"
+            aria-label="Scroll to top of page"
+          >
+            <ArrowUp className="w-6 h-6 text-white" />
+          </motion.button>
+        )}
+      </AnimatePresence>
 
-export default FloatingActionButton;
+      {/* Help Button */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1, duration: 0.3 }}
+        onClick={() => {
+          // Trigger help center or FAQ
+          const helpButton = document.querySelector('[data-help-trigger]') as HTMLElement;
+          if (helpButton) helpButton.click();
+        }}
+        className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        title="Get Help"
+        aria-label="Open help center"
+      >
+        <HelpCircle className="w-6 h-6 text-white" />
+      </motion.button>
+
+      {/* Settings Button */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.2, duration: 0.3 }}
+        onClick={() => {
+          // Trigger settings panel
+          const settingsButton = document.querySelector('[data-settings-trigger]') as HTMLElement;
+          if (settingsButton) settingsButton.click();
+        }}
+        className="fixed top-6 right-6 z-50 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-gray-500 to-gray-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        title="Settings"
+        aria-label="Open settings"
+      >
+        <Settings className="w-6 h-6 text-white" />
+      </motion.button>
+
+      {/* Feedback Button */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.4, duration: 0.3 }}
+        onClick={() => {
+          // Trigger feedback form
+          const feedbackButton = document.querySelector('[data-feedback-trigger]') as HTMLElement;
+          if (feedbackButton) feedbackButton.click();
+        }}
+        className="fixed top-6 left-6 z-50 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        title="Send Feedback"
+        aria-label="Open feedback form"
+      >
+        <Star className="w-6 h-6 text-white" />
+      </motion.button>
+    </>
+  );
+}

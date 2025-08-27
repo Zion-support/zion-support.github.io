@@ -5,19 +5,17 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { FilterSidebar } from "@/components/search/FilterSidebar";
 import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
 import { ProductListingCard } from "@/components/ProductListingCard";
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
+import { marketplaceItems, marketplaceFilters } from "@/data/marketplaceData";
 import { generateRandomListing } from "@/utils/generateRandomListing";
-import { toast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 export default function Marketplace() {
     const navigate = useNavigate();
-    const { t } = useTranslation();
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedProductTypes, setSelectedProductTypes] = useState([]);
     const [selectedLocations, setSelectedLocations] = useState([]);
     const [selectedAvailability, setSelectedAvailability] = useState([]);
     const [selectedRating, setSelectedRating] = useState(null);
-    const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+    const [listings, setListings] = useState(marketplaceItems);
     const [isLoading, setIsLoading] = useState(false);
     const [view, setView] = useState(() => localStorage.getItem('marketplaceView') || 'grid');
     // Automatically append a new listing every 2 minutes
@@ -27,8 +25,7 @@ export default function Marketplace() {
         }, 120000); // 2 minutes
         return () => clearInterval(interval);
     }, []);
-    const searchSuggestions = generateSearchSuggestions();
-    const filterOptions = useMemo(() => generateFilterOptions(listings), [listings]);
+    // Filter options are now imported from marketplaceData
     useEffect(() => {
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
@@ -88,10 +85,8 @@ export default function Marketplace() {
     const handleRequestQuote = (listingId) => {
         const listing = listings.find(item => item.id === listingId);
         if (listing) {
-            toast({
-                title: "Quote Requested",
-                description: `Your quote request for ${listing.title} has been sent.`
-            });
+                    // Quote request functionality would go here
+        console.log(`Quote requested for ${listing.title}`);
             // Navigate to the quote request page with the listing information
             navigate("/request-quote", {
                 state: {
@@ -114,7 +109,6 @@ export default function Marketplace() {
             Browse our curated collection of solutions from verified providers.
           </p>
         </div>
-        
         {/* Search and filter bar */}
         <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
@@ -131,7 +125,6 @@ export default function Marketplace() {
             </div>
           </div>
         </div>
-
         {/* Main layout with sidebar and results */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar Filters */}
@@ -143,12 +136,10 @@ export default function Marketplace() {
             selectedRating
         }} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>
           </div>
-          
           {/* Main content */}
           <div className="lg:col-span-3">
             {/* Active filters display */}
             <ActiveFiltersBar selectedProductTypes={selectedProductTypes} selectedLocations={selectedLocations} selectedAvailability={selectedAvailability} selectedRating={selectedRating} searchQuery={searchQuery} onRemoveFilter={handleFilterChange} onRemoveRating={() => setSelectedRating(null)} onClearSearch={() => setSearchQuery("")}/>
-
             {/* Results count */}
             <div className="mb-6">
               <p className="text-zion-slate-light">
@@ -156,7 +147,6 @@ export default function Marketplace() {
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
-            
             {/* Display actual marketplace listings */}
             {isLoading ? (<div className="flex justify-center py-20">
                 <Loader2 className="h-8 w-8 animate-spin text-zion-purple"/>

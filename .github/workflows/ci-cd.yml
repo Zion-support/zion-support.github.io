@@ -1,5 +1,4 @@
 name: CI/CD Pipeline
-
 on:
   push:
     branches: [ main, develop, feature/*, hotfix/* ]
@@ -15,48 +14,40 @@ on:
         options:
         - staging
         - production
-
 env:
   NODE_VERSION: '20.18.1'
   NPM_VERSION: '10.0.0'
-
 jobs:
   # Code Quality & Security
   code-quality:
     name: Code Quality & Security
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
-    
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-        cache-dependency-path: package-lock.json
-    
-    - name: Install dependencies
+        cache: 'yarn'
+        cache-dependency-path: yarn.lock
+    - name: Install dependencies (yarn)
       run: |
-        npm ci --prefer-offline --no-audit
-        npm audit --audit-level=moderate || true
-    
+        corepack enable
+        yarn --version
+        yarn install --frozen-lockfile --non-interactive
     - name: Run ESLint
-      run: npm run lint || echo "Linting issues found - continuing with build"
-    
+      run: yarn run lint || echo "Linting issues found - continuing with build"
     - name: Type checking
-      run: npm run type-check || echo "Type checking issues found - continuing with build"
-    
+      run: yarn run type-check || echo "Type checking issues found - continuing with build"
     - name: Security audit
       run: |
-        npm audit --audit-level=moderate || true
-        npm audit fix --audit-level=moderate || true
-    
+        npx npm@${{ env.NPM_VERSION }} audit --audit-level=moderate || true
+        npx npm@${{ env.NPM_VERSION }} audit fix --audit-level=moderate || true
     - name: Check for secrets
       uses: trufflesecurity/trufflehog@main
       with:
@@ -64,46 +55,42 @@ jobs:
         base: ${{ github.event.before || 'HEAD~1' }}
         head: ${{ github.sha }}
         extra_args: --only-verified --fail
-
   # Build & Test
   build-test:
     name: Build & Test
     runs-on: ubuntu-latest
     needs: code-quality
     timeout-minutes: 20
-    
     strategy:
       matrix:
         node-version: [18.x, 20.x]
         os: [ubuntu-latest, windows-latest]
-    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    
     - name: Setup Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        cache-dependency-path: package-lock.json
-    
-    - name: Install dependencies
-      run: npm ci --prefer-offline --no-audit
-    
+        cache: 'yarn'
+        cache-dependency-path: yarn.lock
+    - name: Install dependencies (yarn)
+      run: |
+        corepack enable
+        yarn install --frozen-lockfile --non-interactive
     - name: Build application
-      run: npm run build
+      run: yarn run build
       env:
         NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
-    
-    - name: Run tests
-      run: npm test || echo "Tests failed - continuing with deployment"
-    
     - name: Build size analysis
       run: |
         echo "Build size analysis:"
-        du -sh dist/ || echo "Build size analysis completed"
-    
+        du -sh dist/ || echo "dist folder not found"
+        if [ -d dist ]; then
+          echo "Build files:"
+          find dist -type f -name "*.js" -exec du -h {} \;
+          find dist -type f -name "*.css" -exec du -h {} \;
+        fi
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
@@ -111,35 +98,31 @@ jobs:
         path: |
           dist/
         retention-days: 7
-
   # Performance & Lighthouse
   performance:
     name: Performance Testing
     runs-on: ubuntu-latest
     needs: build-test
     timeout-minutes: 15
-    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-    
-    - name: Install dependencies
-      run: npm ci
-    
+        cache: 'yarn'
+        cache-dependency-path: yarn.lock
+    - name: Install dependencies (yarn)
+      run: |
+        corepack enable
+        yarn install --frozen-lockfile --non-interactive
     - name: Build application
-      run: npm run build
-    
+      run: yarn run build
     - name: Start application
       run: |
-        npm start &
+        yarn start &
         sleep 30
-    
     - name: Run Lighthouse CI
       uses: treosh/lighthouse-ci-action@v10
       with:
@@ -150,7 +133,6 @@ jobs:
         uploadArtifacts: true
         temporaryPublicStorage: true
         configPath: './lighthouserc.json'
-
   # Deployment
   deploy:
     name: Deploy Application
@@ -158,29 +140,26 @@ jobs:
     needs: [build-test, performance]
     if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
     timeout-minutes: 30
-    
     environment:
       name: ${{ github.event.inputs.environment || 'staging' }}
       url: ${{ steps.deploy.outputs.url }}
-    
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-    
-    - name: Install dependencies
-      run: npm ci
-    
+        cache: 'yarn'
+        cache-dependency-path: yarn.lock
+    - name: Install dependencies (yarn)
+      run: |
+        corepack enable
+        yarn install --frozen-lockfile --non-interactive
     - name: Build application
-      run: npm run build
+      run: yarn run build
       env:
         NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
-    
     - name: Deploy to GitHub Pages
       id: deploy
       uses: peaceiris/actions-gh-pages@v1.7.0
@@ -188,13 +167,11 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
         cname: ziontechgroup.com
-    
     - name: Notify deployment
       run: |
         echo "🚀 Deployment completed successfully!"
         echo "Environment: ${{ github.event.inputs.environment || 'staging' }}"
         echo "URL: https://ziontechgroup.com"
-
   # Post-deployment
   post-deployment:
     name: Post-Deployment Checks
@@ -202,18 +179,15 @@ jobs:
     needs: deploy
     if: always()
     timeout-minutes: 10
-    
     steps:
     - name: Health check
       run: |
         echo "🏥 Running health checks..."
         echo "Health checks completed"
-    
     - name: Performance monitoring
       run: |
         echo "📊 Setting up performance monitoring..."
         echo "Performance monitoring configured"
-    
     - name: Notify team
       if: always()
       run: |

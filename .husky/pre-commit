@@ -2,11 +2,28 @@
 
 echo "🔍 Running pre-commit checks..."
 
-# Temporarily disable TypeScript check due to many syntax errors in other files
-# echo "🔍 Running TypeScript type check..."
-# npm run type-check || {
-#   echo "❌ TypeScript type check failed. Please fix the issues before committing."
-#   exit 1
-# }
+# Run linting
+echo "🔍 Running linting..."
+npm run lint || {
+    echo "⚠️  Linting issues found, but continuing..."
+}
 
-echo "✅ Pre-commit checks passed"
+# Run type checking (non-blocking)
+echo "🔍 Running TypeScript type check..."
+npm run type-check || {
+    echo "⚠️  TypeScript type check failed, but continuing..."
+}
+
+# Run build check (non-blocking)
+echo "🏗️ Running build check..."
+npm run build || {
+    echo "⚠️  Build failed, but continuing..."
+}
+
+# Check for uncommitted changes in package files
+if git diff --cached --name-only | grep -E "package\.json|package-lock\.json" > /dev/null; then
+    echo "📦 Package files changed, running npm install..."
+    npm install
+fi
+
+echo "✅ Pre-commit checks completed"

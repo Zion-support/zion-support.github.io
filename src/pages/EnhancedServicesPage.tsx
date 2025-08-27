@@ -47,7 +47,8 @@ export default function EnhancedServicesPage() {
     const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'basic' && service.price <= 2000) ||
                         (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||
-                        (selectedPriceRange === 'enterprise' && service.price > 8000);
+                        (selectedPriceRange === 'enterprise' && service.price > 8000 && service.price <= 25000) ||
+                        (selectedPriceRange === 'premium' && service.price > 25000);
     
     return matchesSearch && matchesCategory && matchesPrice;
   });
@@ -89,7 +90,8 @@ export default function EnhancedServicesPage() {
   const getPriceRange = (price: number) => {
     if (price <= 2000) return 'basic';
     if (price <= 8000) return 'professional';
-    return 'enterprise';
+    if (price <= 25000) return 'enterprise';
+    return 'premium';
   };
 
   return (
@@ -136,7 +138,7 @@ export default function EnhancedServicesPage() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Service Pricing Tiers
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {Object.entries(SERVICE_PRICING_TIERS).map(([tier, info]) => (
               <Card key={tier} className="bg-zion-blue border-zion-blue-light">
                 <CardHeader className="text-center">
@@ -150,6 +152,88 @@ export default function EnhancedServicesPage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Overview & Benefits */}
+      <section className="py-16 bg-zion-blue">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Why Choose Zion Tech Group Services?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Brain className="w-8 h-8 text-zion-blue-dark" />
+                </div>
+                <CardTitle className="text-zion-cyan">AI-Powered Solutions</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-white">Cutting-edge AI and machine learning services with proven results and continuous innovation.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Shield className="w-8 h-8 text-zion-blue-dark" />
+                </div>
+                <CardTitle className="text-zion-cyan">Enterprise Security</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-white">World-class cybersecurity solutions with compliance frameworks and 24/7 monitoring.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Cloud className="w-8 h-8 text-zion-blue-dark" />
+                </div>
+                <CardTitle className="text-zion-cyan">Cloud Excellence</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-white">Multi-cloud expertise with cost optimization and seamless hybrid solutions.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Database className="w-8 h-8 text-zion-blue-dark" />
+                </div>
+                <CardTitle className="text-zion-cyan">Data Intelligence</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-white">Advanced analytics and machine learning pipelines for actionable business insights.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Code className="w-8 h-8 text-zion-blue-dark" />
+                </div>
+                <CardTitle className="text-zion-cyan">DevOps Excellence</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-white">Modern development practices with automated CI/CD and microservices architecture.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Zap className="w-8 h-8 text-zion-blue-dark" />
+                </div>
+                <CardTitle className="text-zion-cyan">Innovation First</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-white">Pioneering emerging technologies like quantum computing, blockchain, and AR/VR.</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -188,7 +272,8 @@ export default function EnhancedServicesPage() {
                 <SelectItem value="all">All Prices</SelectItem>
                 <SelectItem value="basic">Basic ($500 - $2,000)</SelectItem>
                 <SelectItem value="professional">Professional ($2,000 - $8,000)</SelectItem>
-                <SelectItem value="enterprise">Enterprise ($8,000+)</SelectItem>
+                <SelectItem value="enterprise">Enterprise ($8,000 - $25,000)</SelectItem>
+                <SelectItem value="premium">Premium ($25,000+)</SelectItem>
               </SelectContent>
             </Select>
           </div>

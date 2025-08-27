@@ -1,8 +1,6 @@
-
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
-
 const categories = [
   {
     title: "AI Services",
@@ -37,7 +35,6 @@ const categories = [
     gradient: "from-zion-purple-light to-zion-purple",
   },
 ];
-
 const specialServices = [
   {
     title: "IT Onsite Services",
@@ -52,11 +49,9 @@ const specialServices = [
     link: "/services-comparison"
   }
 ];
-
 interface CategoriesSectionProps {
   showTitle?: boolean;
 }
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -67,7 +62,6 @@ const containerVariants = {
     }
   }
 };
-
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
@@ -79,7 +73,6 @@ const itemVariants = {
     }
   }
 };
-
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
     <section className="py-20 bg-zion-blue relative overflow-hidden">
