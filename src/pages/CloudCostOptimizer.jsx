@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -128,7 +128,7 @@ export default function CloudCostOptimizer() {
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
-      <SEO title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"/>
+      <SEOHead title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"/>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">

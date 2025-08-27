@@ -3,14 +3,14 @@ import { useParams } from "react-router-dom";
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
 import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from "lucide-react";
 function HiringTrackerContent() {
     const { jobId } = useParams();
     const [activeTab, setActiveTab] = useState("kanban");
     return (<>
-      <SEO title="Hiring Tracker | Zion AI Marketplace" description="Manage your candidate pipeline in the Zion AI Marketplace."/>
+      <SEOHead title="Hiring Tracker | Zion AI Marketplace" description="Manage your candidate pipeline in the Zion AI Marketplace."/>
       
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">

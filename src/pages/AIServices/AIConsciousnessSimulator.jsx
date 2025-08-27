@@ -39,7 +39,7 @@ const benefits = [
 ];
 export default function AIConsciousnessSimulator() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Consciousness Simulator - Zion Tech Group" description="AI-powered consciousness simulator solution that transforms your operations with intelligent automation and real-time insights." keywords="AI consciousness simulator, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiconsciousnesssimulator/"/>
+      <SEOHead title="Consciousness Simulator - Zion Tech Group" description="AI-powered consciousness simulator solution that transforms your operations with intelligent automation and real-time insights." keywords="AI consciousness simulator, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiconsciousnesssimulator/"/>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

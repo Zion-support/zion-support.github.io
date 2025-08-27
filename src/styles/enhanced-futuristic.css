@@ -199,6 +199,68 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+/* Advanced Holographic Effects */
+.holographic {
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(34, 221, 210, 0.1) 25%,
+    rgba(140, 21, 233, 0.1) 50%,
+    rgba(46, 115, 234, 0.1) 75%,
+    transparent 100%
+  );
+  background-size: 200% 200%;
+  animation: holographicShift 4s ease-in-out infinite;
+  position: relative;
+}
+
+.holographic::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.05) 75%,
+    transparent 100%
+  );
+  background-size: 200% 200%;
+  animation: holographicShift 4s ease-in-out infinite reverse;
+}
+
+/* Quantum Particle Effects */
+.quantum-particles {
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-particles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, var(--zion-cyan), transparent),
+    radial-gradient(2px 2px at 40px 70px, var(--zion-purple), transparent),
+    radial-gradient(1px 1px at 90px 40px, var(--zion-blue), transparent),
+    radial-gradient(1px 1px at 130px 80px, var(--zion-green), transparent),
+    radial-gradient(2px 2px at 160px 30px, var(--zion-pink), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: particleFloat 20s linear infinite;
+  opacity: 0.6;
+}
+  background-clip: text;
 }
 
 .text-gradient-cyan {
@@ -528,4 +590,38 @@
   background: var(--zion-yellow);
   box-shadow: 0 0 10px var(--zion-yellow);
   animation: neon-flicker 1s ease-in-out infinite;
+}
+
+/* Additional Keyframe Animations */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes holographicShift {
+  0%, 100% { background-position: 0% 0%; }
+  25% { background-position: 100% 0%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-100px); }
+}
+
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 10px currentColor;
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+    transform: scale(1.05);
+  }
 }

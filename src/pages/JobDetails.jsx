@@ -9,7 +9,7 @@ import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
 import useJobDetails from '@/hooks/useJobDetails';
 import { ApplyToJobModal } from '@/components/messaging/job-application';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 export default function JobDetails() {
     // Cast to specify the expected route param type since useParams may be untyped
@@ -58,7 +58,7 @@ export default function JobDetails() {
     };
     const isOwnJob = user?.id === job.client_id;
     return (<>
-      <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
+      <SEOHead title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">

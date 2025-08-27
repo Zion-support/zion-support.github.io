@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-react";
+import { SEO } from "../components/SEOHead";
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
 import { useAuth } from "@/hooks/useAuth";
@@ -17,15 +17,21 @@ import { MyApplications } from "@/components/jobs/MyApplications";
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {
-    const { user } = useAuth();
-    const [activeTab, setActiveTab] = useState("job-matches");
-    const onboardingStatus = useOnboardingStatus();
-    const showAdvanced = onboardingStatus.profileCompleted &&
-        onboardingStatus.skillsAdded &&
-        onboardingStatus.availabilitySet &&
-        onboardingStatus.matchReceived;
-    return (<>
-      <SEO title="Talent Dashboard | Zion AI Marketplace" description="Your personalized talent dashboard with job matches and professional opportunities."/>
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("job-matches");
+  const onboardingStatus = useOnboardingStatus();
+  const showAdvanced =
+    onboardingStatus.profileCompleted &&
+    onboardingStatus.skillsAdded &&
+    onboardingStatus.availabilitySet &&
+    onboardingStatus.matchReceived;
+
+  return (
+    <>
+      <SEOHead 
+        title="Talent Dashboard | Zion AI Marketplace" 
+        description="Your personalized talent dashboard with job matches and professional opportunities." 
+      />
       
       <main className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">

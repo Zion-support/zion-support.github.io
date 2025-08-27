@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const augmentedServicesBatch3 = [
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export interface RealAugmentedService2025Batch3 {
   id: string;
   name: string;
@@ -13,8 +7,6 @@ export interface RealAugmentedService2025Batch3 {
 }
 
 export const augmentedServicesBatch3: RealAugmentedService2025Batch3[] = [
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   {

@@ -1,75 +1,84 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket } from 'lucide-react';
-const AISolutions = () => {
-    const aiServices = [
-        {
-            icon: Brain,
-            title: "AI Autonomous Systems",
-            description: "Self-learning AI systems that operate independently and continuously improve performance",
-            features: ["Machine Learning", "Neural Networks", "Predictive Analytics", "Automated Decision Making"],
-            path: "/ai-autonomous-systems"
-        },
-        {
-            icon: Cpu,
-            title: "AI Research Assistant",
-            description: "Intelligent research tools that accelerate discovery and analysis across all domains",
-            features: ["Data Mining", "Pattern Recognition", "Literature Review", "Hypothesis Generation"],
-            path: "/ai-autonomous-research-assistant"
-        },
-        {
-            icon: Shield,
-            title: "AI-Powered Cybersecurity",
-            description: "Advanced threat detection and prevention using artificial intelligence",
-            features: ["Threat Intelligence", "Behavioral Analysis", "Real-time Monitoring", "Automated Response"],
-            path: "/ai-powered-enterprise-security"
-        },
-        {
-            icon: Cloud,
-            title: "AI Business Intelligence",
-            description: "Comprehensive business analytics and insights powered by AI",
-            features: ["Data Visualization", "Predictive Modeling", "Performance Metrics", "Strategic Planning"],
-            path: "/ai-business-intelligence"
-        },
-        {
-            icon: Zap,
-            title: "AI Content Generation",
-            description: "Automated content creation for marketing, documentation, and communication",
-            features: ["Text Generation", "Image Creation", "Video Production", "Multilingual Support"],
-            path: "/ai-content-generator"
-        },
-        {
-            icon: Target,
-            title: "AI Sales & Marketing",
-            description: "Intelligent automation for sales processes and marketing campaigns",
-            features: ["Lead Scoring", "Customer Segmentation", "Campaign Optimization", "ROI Analysis"],
-            path: "/ai-agentic-sales-outreach"
-        }
-    ];
-    const benefits = [
-        {
-            icon: Rocket,
-            title: "Accelerated Innovation",
-            description: "Speed up development cycles and bring new solutions to market faster"
-        },
-        {
-            icon: Users,
-            title: "Enhanced User Experience",
-            description: "Create more intuitive and personalized user interactions"
-        },
-        {
-            icon: BarChart3,
-            title: "Data-Driven Decisions",
-            description: "Make better business decisions with AI-powered insights and analytics"
-        },
-        {
-            icon: Globe,
-            title: "Global Scalability",
-            description: "Scale your operations globally with AI automation and optimization"
-        }
-    ];
-    return (<div className="min-h-screen bg-background pt-20">
-      <SEO title="AI Solutions - Zion Tech Group" description="Discover cutting-edge AI solutions including autonomous systems, research assistance, cybersecurity, and business intelligence from Zion Tech Group." keywords="AI solutions, artificial intelligence, autonomous systems, AI research, cybersecurity, business intelligence" canonical="https://ziontechgroup.com/ai-solutions"/>
+
+const AISolutions: React.FC = () => {
+  const aiServices = [
+    {
+      icon: Brain,
+      title: "AI Autonomous Systems",
+      description: "Self-learning AI systems that operate independently and continuously improve performance",
+      features: ["Machine Learning", "Neural Networks", "Predictive Analytics", "Automated Decision Making"],
+      path: "/ai-autonomous-systems"
+    },
+    {
+      icon: Cpu,
+      title: "AI Research Assistant",
+      description: "Intelligent research tools that accelerate discovery and analysis across all domains",
+      features: ["Data Mining", "Pattern Recognition", "Literature Review", "Hypothesis Generation"],
+      path: "/ai-autonomous-research-assistant"
+    },
+    {
+      icon: Shield,
+      title: "AI-Powered Cybersecurity",
+      description: "Advanced threat detection and prevention using artificial intelligence",
+      features: ["Threat Intelligence", "Behavioral Analysis", "Real-time Monitoring", "Automated Response"],
+      path: "/ai-powered-enterprise-security"
+    },
+    {
+      icon: Cloud,
+      title: "AI Business Intelligence",
+      description: "Comprehensive business analytics and insights powered by AI",
+      features: ["Data Visualization", "Predictive Modeling", "Performance Metrics", "Strategic Planning"],
+      path: "/ai-business-intelligence"
+    },
+    {
+      icon: Zap,
+      title: "AI Content Generation",
+      description: "Automated content creation for marketing, documentation, and communication",
+      features: ["Text Generation", "Image Creation", "Video Production", "Multilingual Support"],
+      path: "/ai-content-generator"
+    },
+    {
+      icon: Target,
+      title: "AI Sales & Marketing",
+      description: "Intelligent automation for sales processes and marketing campaigns",
+      features: ["Lead Scoring", "Customer Segmentation", "Campaign Optimization", "ROI Analysis"],
+      path: "/ai-agentic-sales-outreach"
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Rocket,
+      title: "Accelerated Innovation",
+      description: "Speed up development cycles and bring new solutions to market faster"
+    },
+    {
+      icon: Users,
+      title: "Enhanced User Experience",
+      description: "Create more intuitive and personalized user interactions"
+    },
+    {
+      icon: BarChart3,
+      title: "Data-Driven Decisions",
+      description: "Make better business decisions with AI-powered insights and analytics"
+    },
+    {
+      icon: Globe,
+      title: "Global Scalability",
+      description: "Scale your operations globally with AI automation and optimization"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background pt-20">
+      <SEOHead 
+        title="AI Solutions - Zion Tech Group" 
+        description="Discover cutting-edge AI solutions including autonomous systems, research assistance, cybersecurity, and business intelligence from Zion Tech Group."
+        keywords="AI solutions, artificial intelligence, autonomous systems, AI research, cybersecurity, business intelligence"
+        canonical="https://ziontechgroup.com/ai-solutions"
+      />
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

@@ -48,162 +48,97 @@ export function FeaturedListingsSection() {
     ? featuredServices 
     : featuredServices.filter(service => service.category === selectedCategory);
 
-  const categories = ["All", "AI Solutions", "Cloud & DevOps", "Cybersecurity", "Digital Transformation", "IT Consulting"];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
+        ★
+      </span>
+    ));
+  };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Services</span>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Featured Services
           </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Discover our most popular and highly-rated technology services. 
-            Each solution is crafted to deliver exceptional value and results.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Discover our most popular and highly-rated technology solutions
           </p>
-        </motion.div>
-
-        {/* Category Filter */}
-        <motion.div 
-          className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
-                  selectedCategory === category
-                    ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
-                    : 'bg-zion-blue-light/10 text-zion-slate-light hover:bg-zion-blue-light/20 hover:text-white'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Featured Services Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.2
-              }
-            }
-          }}
-          initial="hidden"
-          animate="visible"
-        >
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, index) => (
-            <motion.div
-              key={index}
-              className="group relative"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 }
-              }}
-              onHoverStart={() => setHoveredListing(index)}
-              onHoverEnd={() => setHoveredListing(null)}
-            >
-              <div className="bg-zion-blue-light/10 rounded-xl p-6 border border-zion-blue-light/20 hover:border-zion-cyan/40 transition-all duration-300 h-full hover:shadow-lg hover:shadow-zion-cyan/10">
-                {/* Service Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-4xl">{service.image}</div>
-                  <div className="flex items-center gap-1 text-yellow-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="text-sm font-medium text-white">{service.rating}</span>
-                  </div>
-                </div>
-
-                {/* Service Info */}
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full font-medium mb-3">
+            <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
                     {service.category}
                   </span>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-zion-slate-light text-sm leading-relaxed">
-                    {service.description}
-                  </p>
+                  <div className="flex items-center space-x-1">
+                    {renderStars(service.rating)}
+                    <span className="text-sm text-gray-600 ml-1">({service.reviews})</span>
+                  </div>
                 </div>
-
-                {/* Features */}
+                
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {service.image}
+                </div>
+                
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                
                 <div className="mb-4">
-                  <div className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                        <span className="text-zion-slate-light">{feature}</span>
-                      </div>
+                  <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                        {feature}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
-
-                {/* Service Stats */}
-                <div className="flex items-center justify-between text-sm text-zion-slate-light mb-4">
-                  <div className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    <span>{service.reviews} reviews</span>
-                  </div>
-                  <div className="text-zion-cyan font-semibold">{service.price}</div>
+                
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-gray-900">{service.price}</span>
+                  <Link
+                    to={service.link}
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
+                  >
+                    Learn More →
+                  </Link>
                 </div>
-
-                {/* CTA Button */}
+              </div>
+              
+              <div className="px-6 pb-6">
                 <Link
                   to={service.link}
-                  className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 group-hover:shadow-lg group-hover:shadow-zion-cyan/25"
+                  className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
                 >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  Get Started
                 </Link>
               </div>
-
-              {/* Hover Overlay */}
-              <AnimatePresence>
-                {hoveredListing === index && (
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10 rounded-xl border border-zion-cyan/30 backdrop-blur-sm"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  />
-                )}
-              </AnimatePresence>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
-
-        {/* View All Services CTA */}
-        <motion.div 
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <Link
-            to="/services"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25"
-          >
-            View All Services
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,38 +1,48 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
-import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
-const AIServices = () => {
-    const features = [
-        {
-            icon: Brain,
-            title: "AI Strategy",
-            description: "Comprehensive AI strategy development and implementation"
-        },
-        {
-            icon: Cpu,
-            title: "Machine Learning",
-            description: "Custom ML models and algorithms for your business"
-        },
-        {
-            icon: Database,
-            title: "Data Analytics",
-            description: "Advanced analytics powered by artificial intelligence"
-        },
-        {
-            icon: Shield,
-            title: "AI Ethics",
-            description: "Responsible AI development and governance"
-        }
-    ];
-    const benefits = [
-        "Increased operational efficiency by 60%",
-        "Enhanced customer insights and personalization",
-        "Automated decision-making processes",
-        "Competitive advantage through AI innovation",
-        "Scalable AI solutions that grow with your business"
-    ];
-    return (<div className="min-h-screen bg-background">
-      <SEO title="AI Services - Zion Tech Group" description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy." keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics" canonical="https://ziontechgroup.com/services/ai-services"/>
+import { SEO } from "../components/SEOHead";
+import Link from 'next/link';
+import { Check, Brain, Zap, Shield, Database, Users, TrendingUp, Globe } from 'lucide-react';
+
+const AIServices: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI Strategy",
+      description: "Comprehensive AI strategy development and implementation"
+    },
+    {
+      icon: Cpu,
+      title: "Machine Learning",
+      description: "Custom ML models and algorithms for your business"
+    },
+    {
+      icon: Database,
+      title: "Data Analytics",
+      description: "Advanced analytics powered by artificial intelligence"
+    },
+    {
+      icon: Shield,
+      title: "AI Ethics",
+      description: "Responsible AI development and governance"
+    }
+  ];
+
+  const benefits = [
+    "Increased operational efficiency by 60%",
+    "Enhanced customer insights and personalization",
+    "Automated decision-making processes",
+    "Competitive advantage through AI innovation",
+    "Scalable AI solutions that grow with your business"
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="AI Services - Zion Tech Group"
+        description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy."
+        keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics"
+        canonical="https://ziontechgroup.com/services/ai-services"
+      />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">

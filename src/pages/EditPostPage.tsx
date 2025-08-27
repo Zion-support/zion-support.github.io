@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Button } from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
@@ -63,34 +63,17 @@ export default function EditPostPage() {
           </Button>
         </div>);
     }
-    const initialValues = {
-        title: post.title,
-        content: post.content,
-        categoryId: post.categoryId,
-        tags: post.tags.join(", ")
-    };
-    const handleSubmit = async (values) => {
-        try {
-            // Here we would normally update the post in the database
-            // For now, we'll just simulate a successful update
-            toast({
-                title: "Post updated",
-                description: "Your post has been updated successfully"
-            });
-            // Redirect back to the post
-            navigate(`/community/post/${postId}`);
-        }
-        catch (error) {
-            toast({
-                title: "Error",
-                description: "There was a problem updating your post",
-                variant: "destructive"
-            });
-        }
-    };
-    return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>
-        ,
-            <div className="container py-8">
+  };
+
+  return (
+    
+      <SEOHead 
+        title="Edit Post | Community Forum | Zion AI Marketplace"
+        description="Edit your discussion post in the Zion AI Marketplace community forum."
+        keywords="community, forum, discussion, edit post"
+      />
+      
+      <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
             Forum

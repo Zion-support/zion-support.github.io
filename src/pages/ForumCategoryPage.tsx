@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { Suspense } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Input } from "@/components/ui/input";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import PostCard from "@/components/community/PostCard";
 import { usePostsByCategory } from "@/hooks/usePostsByCategory";
 import NotFound from "./NotFound";
