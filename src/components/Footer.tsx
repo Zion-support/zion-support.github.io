@@ -49,6 +49,7 @@ export function Footer() {
       icon: Globe,
       links: [
         { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Partners', path: '/partners', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Blog', path: '/blog', icon: Newspaper },
         { name: 'Contact', path: '/contact', icon: Phone }
@@ -63,7 +64,8 @@ export function Footer() {
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain },
-        { name: 'All Services', path: '/services', icon: Zap }
+        { name: 'All Services', path: '/services', icon: Zap },
+        { name: 'Pricing', path: '/pricing', icon: DollarSign }
       ]
     },
     {
@@ -72,16 +74,19 @@ export function Footer() {
       links: [
         { name: 'Blog', path: '/blog', icon: FileText },
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
-        { name: 'Request a Quote', path: '/request-quote', icon: FileText }
+        { name: 'Request a Quote', path: '/request-quote', icon: FileText },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe }
       ]
     },
     {
       title: 'Support',
       icon: Shield,
       links: [
-        { name: 'Contact Us', path: '/contact', icon: Phone },
+        { name: 'Contact Us', path: '/contact', icon: Phone }, 
         { name: 'Dashboard', path: '/dashboard', icon: Activity },
-        { name: 'Login', path: '/login', icon: HelpCircle }
+        { name: 'Login', path: '/login', icon: HelpCircle },
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Support', path: '/support', icon: HelpCircle }
       ]
     }
   ];
