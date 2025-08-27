@@ -30,19 +30,26 @@ import {
   Mail,
   MapPin,
   Globe as GlobeIcon,
+  Atom,
+  Blockchain,
   Heart,
   ShoppingCart,
   Building,
   Truck
 } from 'lucide-react';
-import { SEO } from "../components/SEOHead";
-import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
-=======
 import React from 'react';
 import { Header } from '@/components/header/Header';
 import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
+=======
+import { SEO } from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { ADVANCED_ENTERPRISE_SOLUTIONS_2025 } from "@/data/advancedEnterpriseSolutions2025";
+import { NEXT_GEN_AI_SERVICES_2025 } from "@/data/nextGenAIServices2025";
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/specializedIndustrySolutions2025";
+import { IOT_EDGE_COMPUTING_SERVICES_2025 } from "@/data/iotEdgeComputingServices2025";
+import { map2026ServicesToExistingStructure } from "@/utils/serviceMapper";
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -51,15 +58,7 @@ export default function ServicesPage() {
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'ai-finance', name: 'AI & Finance', icon: TrendingUp, color: 'from-zion-purple to-zion-blue' },
-    { id: 'ai-legal', name: 'AI & Legal', icon: Shield, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'ai-healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-zion-cyan to-zion-green' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'quantum-ml', name: 'Quantum ML', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
-    { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
+    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: Rocket, color: 'from-zion-blue to-zion-purple' }
     { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
     { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
     { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
@@ -94,7 +93,8 @@ export default function ServicesPage() {
     ...ADVANCED_ENTERPRISE_SOLUTIONS_2025,
     ...NEXT_GEN_AI_SERVICES_2025,
     ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025,
-    ...IOT_EDGE_COMPUTING_SERVICES_2025
+    ...IOT_EDGE_COMPUTING_SERVICES_2025,
+    ...map2026ServicesToExistingStructure()
   ];
   // Filter and sort services
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
