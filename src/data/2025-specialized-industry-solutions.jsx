@@ -1,493 +1,329 @@
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
-    // Healthcare & Life Sciences
-    {
-        id: "ai-drug-discovery-platform",
-        title: "AI-Powered Drug Discovery Platform",
-        description: "Revolutionary platform using AI and machine learning to accelerate drug discovery, predict drug interactions, and optimize clinical trial design. Reduces drug development time by 60%.",
-        category: "Healthcare",
-        subcategory: "Drug Discovery",
-        price: 2999,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI molecular modeling",
-            "Drug interaction prediction",
-            "Clinical trial optimization",
-            "Target identification",
-            "ADMET prediction",
-            "Patent analysis",
-            "Collaboration tools",
-            "Regulatory compliance"
-        ],
-        benefits: [
-            "60% faster drug development",
-            "Reduce R&D costs by 40%",
-            "Higher success rates",
-            "Faster time to market",
-            "Competitive advantage"
-        ],
-        targetAudience: ["Pharmaceutical companies", "Biotech firms", "Research institutions", "CROs"],
-        marketPrice: "$2,999-7,999/month",
-        website: "https://ziontechgroup.com/ai-drug-discovery",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Healthcare", "AI", "Drug Discovery", "Pharma"],
-        aiScore: 97,
-        rating: 4.9,
-        reviewCount: 34,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-15T10:00:00.000Z"
-    },
-
-    // Financial Services
-    {
-        id: "quantum-financial-modeling",
-        title: "Quantum Financial Modeling Suite",
-        description: "Advanced financial modeling platform leveraging quantum computing for portfolio optimization, risk assessment, and algorithmic trading. Provides exponential speed improvements for complex financial calculations.",
-        category: "Financial Services",
-        subcategory: "Quantitative Finance",
-        price: 1999,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Quantum portfolio optimization",
-            "Risk assessment algorithms",
-            "Real-time market analysis",
-            "Algorithmic trading strategies",
-            "Regulatory compliance",
-            "Multi-asset support",
-            "Performance analytics",
-            "API integration"
-        ],
-        benefits: [
-            "1000x faster calculations",
-            "Superior risk management",
-            "Competitive trading advantage",
-            "Regulatory compliance",
-            "Increased profitability"
-        ],
-        targetAudience: ["Investment banks", "Hedge funds", "Asset managers", "Trading firms"],
-        marketPrice: "$1,999-4,999/month",
-        website: "https://ziontechgroup.com/quantum-financial-modeling",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Financial Services", "Quantum Computing", "Trading", "Risk Management"],
-        aiScore: 98,
-        rating: 4.9,
-        reviewCount: 28,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-20T14:30:00.000Z"
-    },
-
-    // Manufacturing & Industry 4.0
-    {
-        id: "smart-manufacturing-platform",
-        title: "Smart Manufacturing 4.0 Platform",
-        description: "Comprehensive Industry 4.0 platform integrating IoT, AI, and robotics for intelligent manufacturing. Features predictive maintenance, quality control, and autonomous production optimization.",
-        category: "Manufacturing",
-        subcategory: "Industry 4.0",
-        price: 899,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "IoT device integration",
-            "Predictive maintenance",
-            "Quality control automation",
-            "Production optimization",
-            "Energy management",
-            "Supply chain visibility",
-            "Real-time analytics",
-            "Custom dashboards"
-        ],
-        benefits: [
-            "Reduce downtime by 30%",
-            "Improve quality by 25%",
-            "Reduce energy costs by 20%",
-            "Increase productivity by 40%",
-            "Real-time optimization"
-        ],
-        targetAudience: ["Manufacturing companies", "Factories", "Production facilities", "Industrial companies"],
-        marketPrice: "$899-2,999/month",
-        website: "https://ziontechgroup.com/smart-manufacturing",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Manufacturing", "Industry 4.0", "IoT", "Predictive Analytics"],
-        aiScore: 95,
-        rating: 4.8,
-        reviewCount: 56,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-25T11:15:00.000Z"
-    },
-
-    // Energy & Sustainability
-    {
-        id: "renewable-energy-optimization",
-        title: "Renewable Energy Optimization Platform",
-        description: "AI-powered platform for optimizing renewable energy production, storage, and distribution. Maximizes efficiency and reduces costs for solar, wind, and hydroelectric systems.",
-        category: "Energy",
-        subcategory: "Renewable Energy",
-        price: 699,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Energy production optimization",
-            "Storage management",
-            "Grid integration",
-            "Weather prediction",
-            "Demand forecasting",
-            "Cost optimization",
-            "Carbon tracking",
-            "Compliance reporting"
-        ],
-        benefits: [
-            "Increase energy production by 25%",
-            "Reduce operational costs by 30%",
-            "Optimize storage utilization",
-            "Improve grid stability",
-            "Reduce carbon footprint"
-        ],
-        targetAudience: ["Energy companies", "Solar farms", "Wind farms", "Utilities"],
-        marketPrice: "$699-1,999/month",
-        website: "https://ziontechgroup.com/renewable-energy",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Energy", "Renewable", "Optimization", "Sustainability"],
-        aiScore: 94,
-        rating: 4.7,
-        reviewCount: 42,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-01T09:00:00.000Z"
-    },
-
-    // Transportation & Logistics
-    {
-        id: "autonomous-logistics-platform",
-        title: "Autonomous Logistics & Supply Chain Platform",
-        description: "Intelligent logistics platform using AI and autonomous systems for route optimization, warehouse automation, and supply chain visibility. Reduces logistics costs by 40%.",
-        category: "Transportation",
-        subcategory: "Logistics",
-        price: 799,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Route optimization",
-            "Warehouse automation",
-            "Supply chain visibility",
-            "Demand forecasting",
-            "Inventory management",
-            "Fleet management",
-            "Real-time tracking",
-            "Analytics dashboard"
-        ],
-        benefits: [
-            "Reduce logistics costs by 40%",
-            "Improve delivery times by 30%",
-            "Optimize warehouse operations",
-            "Real-time visibility",
-            "Automated decision making"
-        ],
-        targetAudience: ["Logistics companies", "E-commerce", "Manufacturing", "Retail"],
-        marketPrice: "$799-2,499/month",
-        website: "https://ziontechgroup.com/autonomous-logistics",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Logistics", "Supply Chain", "Autonomous Systems", "Optimization"],
-        aiScore: 96,
-        rating: 4.8,
-        reviewCount: 67,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-05T15:30:00.000Z"
-    },
-
-    // Education & EdTech
-    {
-        id: "ai-personalized-learning",
-        title: "AI-Powered Personalized Learning Platform",
-        description: "Intelligent education platform that adapts to individual learning styles, provides personalized content, and tracks progress in real-time. Improves learning outcomes by 50%.",
-        category: "Education",
-        subcategory: "Personalized Learning",
-        price: 199,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Adaptive learning algorithms",
-            "Personalized content",
-            "Progress tracking",
-            "Skill assessment",
-            "Collaborative learning",
-            "Gamification",
-            "Analytics dashboard",
-            "Mobile learning"
-        ],
-        benefits: [
-            "Improve learning outcomes by 50%",
-            "Personalized learning paths",
-            "Real-time progress tracking",
-            "Engaging learning experience",
-            "Data-driven insights"
-        ],
-        targetAudience: ["Schools", "Universities", "Corporate training", "Online education"],
-        marketPrice: "$199-599/month",
-        website: "https://ziontechgroup.com/ai-personalized-learning",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Education", "AI", "Personalized Learning", "EdTech"],
-        aiScore: 93,
-        rating: 4.6,
-        reviewCount: 89,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-10T12:00:00.000Z"
-    },
-
-    // Real Estate & PropTech
-    {
-        id: "ai-real-estate-analytics",
-        title: "AI Real Estate Analytics Platform",
-        description: "Comprehensive real estate platform using AI for market analysis, property valuation, investment opportunities, and predictive market trends. Provides data-driven insights for real estate decisions.",
-        category: "Real Estate",
-        subcategory: "Analytics",
-        price: 399,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Market analysis",
-            "Property valuation",
-            "Investment analysis",
-            "Predictive trends",
-            "Risk assessment",
-            "Portfolio optimization",
-            "Market reports",
-            "API access"
-        ],
-        benefits: [
-            "Accurate property valuations",
-            "Identify investment opportunities",
-            "Reduce investment risks",
-            "Market trend predictions",
-            "Data-driven decisions"
-        ],
-        targetAudience: ["Real estate investors", "Agents", "Developers", "Property managers"],
-        marketPrice: "$399-1,299/month",
-        website: "https://ziontechgroup.com/ai-real-estate",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Real Estate", "AI", "Analytics", "Investment"],
-        aiScore: 92,
-        rating: 4.5,
-        reviewCount: 45,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-15T16:45:00.000Z"
-    },
-
-    // Agriculture & AgTech
-    {
-        id: "precision-agriculture-platform",
-        title: "Precision Agriculture & Smart Farming Platform",
-        description: "AI-powered agricultural platform for precision farming, crop monitoring, yield optimization, and sustainable agriculture practices. Increases crop yields by 30% while reducing resource usage.",
-        category: "Agriculture",
-        subcategory: "Precision Farming",
-        price: 299,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Crop monitoring",
-            "Soil analysis",
-            "Weather prediction",
-            "Irrigation optimization",
-            "Pest detection",
-            "Yield prediction",
-            "Resource management",
-            "Sustainability tracking"
-        ],
-        benefits: [
-            "Increase crop yields by 30%",
-            "Reduce water usage by 25%",
-            "Optimize resource allocation",
-            "Predictive pest management",
-            "Sustainable farming practices"
-        ],
-        targetAudience: ["Farmers", "Agricultural companies", "Food producers", "Research institutions"],
-        marketPrice: "$299-899/month",
-        website: "https://ziontechgroup.com/precision-agriculture",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Agriculture", "Precision Farming", "AI", "Sustainability"],
-        aiScore: 94,
-        rating: 4.7,
-        reviewCount: 38,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-20T10:15:00.000Z"
-    },
-
-    // Legal & RegTech
-    {
-        id: "ai-legal-research-platform",
-        title: "AI Legal Research & Compliance Platform",
-        description: "Intelligent legal research platform using AI for case analysis, document review, compliance monitoring, and legal risk assessment. Reduces research time by 80%.",
-        category: "Legal Services",
-        subcategory: "Legal Research",
-        price: 599,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI case analysis",
-            "Document review",
-            "Compliance monitoring",
-            "Risk assessment",
-            "Legal research",
-            "Precedent analysis",
-            "Regulatory updates",
-            "Collaboration tools"
-        ],
-        benefits: [
-            "Reduce research time by 80%",
-            "Improve case outcomes",
-            "Automated compliance",
-            "Risk mitigation",
-            "Cost savings"
-        ],
-        targetAudience: ["Law firms", "Corporate legal departments", "Compliance officers", "Legal researchers"],
-        marketPrice: "$599-1,999/month",
-        website: "https://ziontechgroup.com/ai-legal-research",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Legal", "AI", "Compliance", "Research"],
-        aiScore: 95,
-        rating: 4.8,
-        reviewCount: 52,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-25T14:00:00.000Z"
-    },
-
-    // Media & Entertainment
-    {
-        id: "ai-content-creation-studio",
-        title: "AI Content Creation & Media Production Studio",
-        description: "Revolutionary content creation platform using AI for video production, music composition, script writing, and media optimization. Reduces production costs by 60%.",
-        category: "Media & Entertainment",
-        subcategory: "Content Creation",
-        price: 399,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI video production",
-            "Music composition",
-            "Script writing",
-            "Content optimization",
-            "Multi-format output",
-            "Brand customization",
-            "Analytics dashboard",
-            "Collaboration tools"
-        ],
-        benefits: [
-            "Reduce production costs by 60%",
-            "Faster content creation",
-            "Consistent quality",
-            "Multi-format output",
-            "Brand consistency"
-        ],
-        targetAudience: ["Media companies", "Marketing agencies", "Content creators", "Entertainment industry"],
-        marketPrice: "$399-1,299/month",
-        website: "https://ziontechgroup.com/ai-content-creation",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Media", "Content Creation", "AI", "Entertainment"],
-        aiScore: 93,
-        rating: 4.6,
-        reviewCount: 41,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-03-01T11:30:00.000Z"
-    }
+  // Healthcare & Life Sciences
+  {
+    id: "ai-diagnostic-platform",
+    title: "AI Diagnostic Imaging Platform",
+    description: "Advanced AI-powered medical imaging platform for accurate diagnosis of diseases and conditions",
+    category: "Healthcare",
+    price: "$18,500/month",
+    features: [
+      "Multi-modality imaging support",
+      "AI-powered diagnosis",
+      "Radiology workflow automation",
+      "Clinical decision support",
+      "HIPAA compliance",
+      "Integration with PACS systems"
+    ],
+    benefits: [
+      "95% diagnostic accuracy",
+      "50% faster diagnosis",
+      "Reduced radiologist workload",
+      "Improved patient outcomes"
+    ],
+    link: "/services/ai-diagnostic-platform",
+    image: "/images/ai-diagnostic-platform.jpg",
+    technology: "AI + Medical Imaging",
+    marketSize: "$4.8B by 2025",
+    targetIndustry: "Hospitals, Clinics, Radiology Centers"
+  },
+  {
+    id: "precision-medicine-platform",
+    title: "Precision Medicine Platform",
+    description: "Personalized treatment platform using AI and genomics for targeted therapies",
+    category: "Healthcare",
+    price: "$22,000/month",
+    features: [
+      "Genomic analysis",
+      "AI treatment recommendations",
+      "Clinical trial matching",
+      "Patient outcome tracking",
+      "Drug interaction analysis",
+      "Personalized dosing"
+    ],
+    benefits: [
+      "Personalized treatments",
+      "Improved efficacy",
+      "Reduced side effects",
+      "Better patient outcomes"
+    ],
+    link: "/services/precision-medicine",
+    image: "/images/precision-medicine.jpg",
+    technology: "AI + Genomics",
+    marketSize: "$3.2B by 2025",
+    targetIndustry: "Hospitals, Research Institutions, Pharma"
+  },
+  
+  // Financial Services
+  {
+    id: "ai-risk-management",
+    title: "AI Risk Management Platform",
+    description: "Comprehensive risk management platform using AI for real-time financial risk assessment",
+    category: "Financial Services",
+    price: "$15,500/month",
+    features: [
+      "Real-time risk monitoring",
+      "AI risk scoring",
+      "Regulatory compliance",
+      "Stress testing",
+      "Portfolio optimization",
+      "Fraud detection"
+    ],
+    benefits: [
+      "Real-time risk assessment",
+      "Regulatory compliance",
+      "Reduced financial losses",
+      "Improved decision making"
+    ],
+    link: "/services/ai-risk-management",
+    image: "/images/ai-risk-management.jpg",
+    technology: "AI + Risk Analytics",
+    marketSize: "$5.6B by 2025",
+    targetIndustry: "Banks, Investment Firms, Insurance"
+  },
+  {
+    id: "quantum-trading-platform",
+    title: "Quantum Trading Platform",
+    description: "Revolutionary trading platform using quantum computing for ultra-fast market analysis",
+    category: "Financial Services",
+    price: "$35,000/month",
+    features: [
+      "Quantum market analysis",
+      "Ultra-fast execution",
+      "AI trading strategies",
+      "Risk management",
+      "Compliance monitoring",
+      "Real-time analytics"
+    ],
+    benefits: [
+      "Quantum advantage in trading",
+      "Ultra-fast execution",
+      "Superior market analysis",
+      "Competitive edge"
+    ],
+    link: "/services/quantum-trading",
+    image: "/images/quantum-trading.jpg",
+    technology: "Quantum Computing + AI",
+    marketSize: "$2.8B by 2025",
+    targetIndustry: "Hedge Funds, Investment Banks, Trading Firms"
+  },
+  
+  // Manufacturing & Industry 4.0
+  {
+    id: "smart-manufacturing-platform",
+    title: "Smart Manufacturing Platform",
+    description: "Comprehensive Industry 4.0 platform for intelligent manufacturing operations",
+    category: "Manufacturing",
+    price: "$12,500/month",
+    features: [
+      "IoT device management",
+      "Predictive maintenance",
+      "Quality control AI",
+      "Supply chain optimization",
+      "Energy management",
+      "Production analytics"
+    ],
+    benefits: [
+      "30% efficiency improvement",
+      "Reduced downtime",
+      "Quality enhancement",
+      "Cost optimization"
+    ],
+    link: "/services/smart-manufacturing",
+    image: "/images/smart-manufacturing.jpg",
+    technology: "IoT + AI + Analytics",
+    marketSize: "$6.2B by 2025",
+    targetIndustry: "Manufacturing, Automotive, Aerospace"
+  },
+  {
+    id: "3d-printing-ai-platform",
+    title: "AI-Powered 3D Printing Platform",
+    description: "Intelligent 3D printing platform with AI optimization and quality control",
+    category: "Manufacturing",
+    price: "$8,500/month",
+    features: [
+      "AI design optimization",
+      "Quality prediction",
+      "Material optimization",
+      "Print failure prevention",
+      "Cost optimization",
+      "Design validation"
+    ],
+    benefits: [
+      "Reduced print failures",
+      "Material optimization",
+      "Cost savings",
+      "Quality improvement"
+    ],
+    link: "/services/3d-printing-ai",
+    image: "/images/3d-printing-ai.jpg",
+    technology: "AI + 3D Printing",
+    marketSize: "$2.1B by 2025",
+    targetIndustry: "Manufacturing, Prototyping, Research"
+  },
+  
+  // Energy & Sustainability
+  {
+    id: "smart-grid-platform",
+    title: "Smart Grid Management Platform",
+    description: "AI-powered platform for intelligent energy grid management and optimization",
+    category: "Energy",
+    price: "$16,500/month",
+    features: [
+      "Grid load balancing",
+      "Renewable integration",
+      "Predictive maintenance",
+      "Energy optimization",
+      "Demand response",
+      "Grid security"
+    ],
+    benefits: [
+      "Grid efficiency improvement",
+      "Renewable integration",
+      "Reduced energy waste",
+      "Enhanced reliability"
+    ],
+    link: "/services/smart-grid",
+    image: "/images/smart-grid.jpg",
+    technology: "AI + IoT + Energy",
+    marketSize: "$4.5B by 2025",
+    targetIndustry: "Utilities, Energy Companies, Cities"
+  },
+  {
+    id: "carbon-capture-ai",
+    title: "AI Carbon Capture Platform",
+    description: "Intelligent platform for optimizing carbon capture and sequestration processes",
+    category: "Sustainability",
+    price: "$19,500/month",
+    features: [
+      "Capture optimization",
+      "Sequestration monitoring",
+      "Carbon credit tracking",
+      "Process automation",
+      "Efficiency analytics",
+      "Compliance reporting"
+    ],
+    benefits: [
+      "Increased capture efficiency",
+      "Cost optimization",
+      "Regulatory compliance",
+      "Environmental impact"
+    ],
+    link: "/services/carbon-capture-ai",
+    image: "/images/carbon-capture-ai.jpg",
+    technology: "AI + Environmental Tech",
+    marketSize: "$2.8B by 2025",
+    targetIndustry: "Energy, Manufacturing, Environmental"
+  },
+  
+  // Transportation & Logistics
+  {
+    id: "autonomous-logistics",
+    title: "Autonomous Logistics Platform",
+    description: "AI-powered platform for autonomous logistics and supply chain management",
+    category: "Transportation",
+    price: "$14,500/month",
+    features: [
+      "Autonomous vehicle management",
+      "Route optimization",
+      "Inventory management",
+      "Predictive analytics",
+      "Real-time tracking",
+      "Cost optimization"
+    ],
+    benefits: [
+      "24/7 autonomous operation",
+      "Route optimization",
+      "Cost reduction",
+      "Improved efficiency"
+    ],
+    link: "/services/autonomous-logistics",
+    image: "/images/autonomous-logistics.jpg",
+    technology: "AI + Autonomous Vehicles",
+    marketSize: "$5.8B by 2025",
+    targetIndustry: "Logistics, E-commerce, Manufacturing"
+  },
+  {
+    id: "smart-city-mobility",
+    title: "Smart City Mobility Platform",
+    description: "Comprehensive platform for intelligent urban transportation and mobility management",
+    category: "Smart Cities",
+    price: "$21,500/month",
+    features: [
+      "Traffic optimization",
+      "Public transport management",
+      "Parking optimization",
+      "Mobility analytics",
+      "Environmental monitoring",
+      "Citizen engagement"
+    ],
+    benefits: [
+      "Reduced traffic congestion",
+      "Improved air quality",
+      "Enhanced mobility",
+      "Citizen satisfaction"
+    ],
+    link: "/services/smart-city-mobility",
+    image: "/images/smart-city-mobility.jpg",
+    technology: "AI + IoT + Mobility",
+    marketSize: "$4.2B by 2025",
+    targetIndustry: "Cities, Transportation, Government"
+  },
+  
+  // Education & Training
+  {
+    id: "ai-education-platform",
+    title: "AI-Powered Education Platform",
+    description: "Intelligent learning platform with personalized education and adaptive learning",
+    category: "Education",
+    price: "$6,500/month",
+    features: [
+      "Personalized learning paths",
+      "Adaptive content",
+      "Progress tracking",
+      "Skill assessment",
+      "Collaborative learning",
+      "Analytics dashboard"
+    ],
+    benefits: [
+      "Personalized learning",
+      "Improved outcomes",
+      "Engagement enhancement",
+      "Scalable education"
+    ],
+    link: "/services/ai-education",
+    image: "/images/ai-education.jpg",
+    technology: "AI + EdTech",
+    marketSize: "$3.8B by 2025",
+    targetIndustry: "Schools, Universities, Corporate Training"
+  },
+  
+  // Retail & E-commerce
+  {
+    id: "ai-retail-platform",
+    title: "AI Retail Intelligence Platform",
+    description: "Comprehensive platform for intelligent retail operations and customer experience",
+    category: "Retail",
+    price: "$9,500/month",
+    features: [
+      "Customer behavior analysis",
+      "Inventory optimization",
+      "Price optimization",
+      "Personalized marketing",
+      "Supply chain optimization",
+      "Customer service AI"
+    ],
+    benefits: [
+      "Increased sales",
+      "Customer satisfaction",
+      "Cost optimization",
+      "Competitive advantage"
+    ],
+    link: "/services/ai-retail",
+    image: "/images/ai-retail.jpg",
+    technology: "AI + Retail Analytics",
+    marketSize: "$4.6B by 2025",
+    targetIndustry: "Retail, E-commerce, Hospitality"
+  }
 ];
 
 export const INDUSTRY_CATEGORIES = [

@@ -1,493 +1,305 @@
 export const CUTTING_EDGE_2025_SERVICES = [
-    // Quantum Computing Services
-    {
-        id: "quantum-optimization-suite",
-        title: "Quantum Optimization Suite Pro",
-        description: "Revolutionary quantum computing platform for solving complex optimization problems in logistics, finance, and scientific research. Leverages quantum algorithms for exponential speed improvements.",
-        category: "Quantum Computing",
-        subcategory: "Optimization Solutions",
-        price: 2499,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Quantum annealing algorithms",
-            "Hybrid quantum-classical computing",
-            "Real-time optimization dashboards",
-            "API for custom integrations",
-            "Quantum error correction",
-            "Multi-cloud quantum access",
-            "Advanced analytics",
-            "24/7 quantum support"
-        ],
-        benefits: [
-            "1000x faster optimization solving",
-            "Reduce logistics costs by 30-50%",
-            "Quantum advantage in complex problems",
-            "Future-proof technology investment",
-            "Competitive edge in optimization"
-        ],
-        targetAudience: ["Logistics companies", "Financial institutions", "Research institutions", "Manufacturing"],
-        marketPrice: "$2,499-5,999/month",
-        website: "https://ziontechgroup.com/quantum-optimization",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Quantum Computing", "Optimization", "AI", "Innovation"],
-        aiScore: 98,
-        rating: 4.9,
-        reviewCount: 23,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-15T10:00:00.000Z"
-    },
-
-    // Advanced Cybersecurity Services
-    {
-        id: "ai-threat-hunting-platform",
-        title: "AI-Powered Threat Hunting Platform",
-        description: "Next-generation cybersecurity platform that uses AI and machine learning to proactively detect, analyze, and neutralize advanced threats before they impact your business.",
-        category: "Cybersecurity",
-        subcategory: "AI Threat Detection",
-        price: 399,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI-powered threat detection",
-            "Behavioral analysis",
-            "Zero-day exploit prevention",
-            "Real-time threat intelligence",
-            "Automated incident response",
-            "Threat hunting automation",
-            "Compliance reporting",
-            "24/7 SOC monitoring"
-        ],
-        benefits: [
-            "99.9% threat detection rate",
-            "Reduce incident response time by 80%",
-            "Proactive threat prevention",
-            "Compliance with industry standards",
-            "Reduced cybersecurity costs"
-        ],
-        targetAudience: ["Enterprises", "Financial services", "Healthcare", "Government"],
-        marketPrice: "$399-1,299/month",
-        website: "https://ziontechgroup.com/ai-threat-hunting",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Cybersecurity", "AI", "Threat Detection", "SOC"],
-        aiScore: 96,
-        rating: 4.8,
-        reviewCount: 89,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-20T14:30:00.000Z"
-    },
-
-    // Autonomous Systems Services
-    {
-        id: "autonomous-robotics-platform",
-        title: "Autonomous Robotics Management Platform",
-        description: "Comprehensive platform for managing fleets of autonomous robots in warehouses, manufacturing, and logistics. Features AI-powered navigation, task optimization, and real-time monitoring.",
-        category: "Autonomous Systems",
-        subcategory: "Robotics Management",
-        price: 599,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Multi-robot fleet management",
-            "AI pathfinding algorithms",
-            "Task optimization engine",
-            "Real-time monitoring dashboard",
-            "Predictive maintenance",
-            "Safety compliance tools",
-            "Integration APIs",
-            "Analytics and reporting"
-        ],
-        benefits: [
-            "Increase operational efficiency by 40%",
-            "Reduce labor costs by 60%",
-            "24/7 autonomous operation",
-            "Improved safety and compliance",
-            "Scalable robotics solutions"
-        ],
-        targetAudience: ["Warehouses", "Manufacturing", "Logistics", "Healthcare"],
-        marketPrice: "$599-1,999/month",
-        website: "https://ziontechgroup.com/autonomous-robotics",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Autonomous Systems", "Robotics", "AI", "Automation"],
-        aiScore: 95,
-        rating: 4.7,
-        reviewCount: 45,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-25T11:15:00.000Z"
-    },
-
-    // Digital Twin Services
-    {
-        id: "digital-twin-platform",
-        title: "Digital Twin Enterprise Platform",
-        description: "Create virtual replicas of physical assets, processes, and systems for real-time monitoring, predictive maintenance, and optimization. Perfect for manufacturing, energy, and smart cities.",
-        category: "Digital Twin",
-        subcategory: "Enterprise Solutions",
-        price: 799,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "3D asset modeling",
-            "Real-time data synchronization",
-            "Predictive analytics",
-            "Simulation capabilities",
-            "IoT integration",
-            "AR/VR visualization",
-            "Custom dashboards",
-            "API ecosystem"
-        ],
-        benefits: [
-            "Reduce maintenance costs by 25%",
-            "Improve asset utilization by 30%",
-            "Predictive failure prevention",
-            "Optimized operational efficiency",
-            "Data-driven decision making"
-        ],
-        targetAudience: ["Manufacturing", "Energy companies", "Smart cities", "Infrastructure"],
-        marketPrice: "$799-2,499/month",
-        website: "https://ziontechgroup.com/digital-twin",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Digital Twin", "IoT", "Predictive Analytics", "3D Modeling"],
-        aiScore: 94,
-        rating: 4.8,
-        reviewCount: 67,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-01T09:00:00.000Z"
-    },
-
-    // Edge AI Services
-    {
-        id: "edge-ai-computing",
-        title: "Edge AI Computing Platform",
-        description: "Deploy AI models directly on edge devices for real-time processing, reduced latency, and offline capabilities. Ideal for IoT, autonomous vehicles, and smart devices.",
-        category: "Edge Computing",
-        subcategory: "AI Deployment",
-        price: 299,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Edge AI model deployment",
-            "Real-time inference",
-            "Offline processing",
-            "Model optimization",
-            "Device management",
-            "Security protocols",
-            "Analytics dashboard",
-            "Custom integrations"
-        ],
-        benefits: [
-            "Reduce latency by 90%",
-            "Lower bandwidth costs",
-            "Offline AI capabilities",
-            "Real-time decision making",
-            "Scalable edge deployment"
-        ],
-        targetAudience: ["IoT companies", "Autonomous vehicles", "Smart devices", "Manufacturing"],
-        marketPrice: "$299-899/month",
-        website: "https://ziontechgroup.com/edge-ai",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Edge Computing", "AI", "IoT", "Real-time"],
-        aiScore: 93,
-        rating: 4.6,
-        reviewCount: 34,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-05T15:30:00.000Z"
-    },
-
-    // Synthetic Data Services
-    {
-        id: "synthetic-data-generator",
-        title: "Synthetic Data Generation Platform",
-        description: "Generate high-quality, privacy-compliant synthetic data for AI training, testing, and development. Perfect for companies needing large datasets without privacy concerns.",
-        category: "Data Services",
-        subcategory: "Synthetic Data",
-        price: 199,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI-powered data generation",
-            "Privacy compliance tools",
-            "Custom data schemas",
-            "Quality validation",
-            "API access",
-            "Bulk generation",
-            "Format conversion",
-            "Analytics dashboard"
-        ],
-        benefits: [
-            "Eliminate privacy concerns",
-            "Reduce data collection costs",
-            "Accelerate AI development",
-            "Compliance with regulations",
-            "Unlimited data generation"
-        ],
-        targetAudience: ["AI companies", "Healthcare", "Financial services", "Research"],
-        marketPrice: "$199-599/month",
-        website: "https://ziontechgroup.com/synthetic-data",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Synthetic Data", "AI Training", "Privacy", "Data Generation"],
-        aiScore: 91,
-        rating: 4.5,
-        reviewCount: 28,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-10T12:00:00.000Z"
-    },
-
-    // Neuromorphic Computing Services
-    {
-        id: "neuromorphic-computing",
-        title: "Neuromorphic Computing Platform",
-        description: "Brain-inspired computing platform that mimics neural networks for ultra-efficient AI processing. Ideal for pattern recognition, sensory processing, and cognitive computing.",
-        category: "Neuromorphic Computing",
-        subcategory: "AI Processing",
-        price: 1499,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Neuromorphic processors",
-            "Spiking neural networks",
-            "Low-power computing",
-            "Real-time learning",
-            "Pattern recognition",
-            "Sensory processing",
-            "Custom algorithms",
-            "Performance analytics"
-        ],
-        benefits: [
-            "100x more energy efficient",
-            "Real-time learning capabilities",
-            "Superior pattern recognition",
-            "Low latency processing",
-            "Future-proof architecture"
-        ],
-        targetAudience: ["AI research", "Robotics", "IoT", "Neuroscience"],
-        marketPrice: "$1,499-3,999/month",
-        website: "https://ziontechgroup.com/neuromorphic-computing",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Neuromorphic", "AI", "Neural Networks", "Efficiency"],
-        aiScore: 97,
-        rating: 4.9,
-        reviewCount: 15,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-15T16:45:00.000Z"
-    },
-
-    // Federated Learning Services
-    {
-        id: "federated-learning-platform",
-        title: "Federated Learning Platform",
-        description: "Distributed AI training platform that enables model training across multiple devices without sharing raw data. Perfect for privacy-sensitive applications and edge computing.",
-        category: "AI Services",
-        subcategory: "Federated Learning",
-        price: 449,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Distributed training",
-            "Privacy-preserving ML",
-            "Model aggregation",
-            "Edge device support",
-            "Real-time updates",
-            "Security protocols",
-            "Performance monitoring",
-            "Custom algorithms"
-        ],
-        benefits: [
-            "Maintain data privacy",
-            "Reduce bandwidth usage",
-            "Distributed computing power",
-            "Real-time model updates",
-            "Scalable AI training"
-        ],
-        targetAudience: ["Healthcare", "Financial services", "IoT", "Edge computing"],
-        marketPrice: "$449-1,299/month",
-        website: "https://ziontechgroup.com/federated-learning",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Federated Learning", "Privacy", "AI", "Distributed Computing"],
-        aiScore: 94,
-        rating: 4.7,
-        reviewCount: 41,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-20T10:15:00.000Z"
-    },
-
-    // Quantum Machine Learning Services
-    {
-        id: "quantum-ml-platform",
-        title: "Quantum Machine Learning Platform",
-        description: "Revolutionary platform combining quantum computing with machine learning for solving complex problems in drug discovery, materials science, and financial modeling.",
-        category: "Quantum Computing",
-        subcategory: "Machine Learning",
-        price: 1999,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Quantum ML algorithms",
-            "Hybrid quantum-classical models",
-            "Drug discovery tools",
-            "Materials science simulation",
-            "Financial modeling",
-            "Quantum feature maps",
-            "Custom algorithm development",
-            "Research collaboration tools"
-        ],
-        benefits: [
-            "Exponential speed improvements",
-            "Solve previously intractable problems",
-            "Revolutionary scientific discoveries",
-            "Competitive advantage in research",
-            "Future of computing technology"
-        ],
-        targetAudience: ["Pharmaceutical companies", "Research institutions", "Financial services", "Materials science"],
-        marketPrice: "$1,999-4,999/month",
-        website: "https://ziontechgroup.com/quantum-ml",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Quantum Computing", "Machine Learning", "Research", "Innovation"],
-        aiScore: 99,
-        rating: 5.0,
-        reviewCount: 12,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-25T14:00:00.000Z"
-    },
-
-    // Biometric Authentication Services
-    {
-        id: "biometric-auth-platform",
-        title: "Advanced Biometric Authentication Platform",
-        description: "Multi-modal biometric authentication platform using AI for facial recognition, fingerprint scanning, voice recognition, and behavioral analysis. Enterprise-grade security with seamless user experience.",
-        category: "Security",
-        subcategory: "Biometric Authentication",
-        price: 299,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Multi-modal biometrics",
-            "AI-powered recognition",
-            "Liveness detection",
-            "Behavioral analysis",
-            "Mobile SDK",
-            "Web integration",
-            "Compliance tools",
-            "Analytics dashboard"
-        ],
-        benefits: [
-            "99.9% authentication accuracy",
-            "Eliminate password vulnerabilities",
-            "Seamless user experience",
-            "Multi-factor security",
-            "Compliance with regulations"
-        ],
-        targetAudience: ["Enterprises", "Financial services", "Healthcare", "Government"],
-        marketPrice: "$299-899/month",
-        website: "https://ziontechgroup.com/biometric-auth",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Biometrics", "Authentication", "Security", "AI"],
-        aiScore: 95,
-        rating: 4.8,
-        reviewCount: 73,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-03-01T11:30:00.000Z"
-    }
+  // Quantum Computing Solutions
+  {
+    id: "quantum-ai-platform",
+    title: "Quantum AI Platform",
+    description: "Revolutionary quantum machine learning platform that leverages quantum computing for unprecedented AI performance",
+    category: "Quantum Computing",
+    price: "$15,000/month",
+    features: [
+      "Quantum neural networks",
+      "Quantum optimization algorithms",
+      "Hybrid classical-quantum processing",
+      "Real-time quantum state monitoring",
+      "Quantum error correction",
+      "Scalable quantum architecture"
+    ],
+    benefits: [
+      "1000x faster AI training",
+      "Quantum advantage in optimization",
+      "Future-proof quantum infrastructure",
+      "Competitive edge in AI research"
+    ],
+    link: "/services/quantum-ai-platform",
+    image: "/images/quantum-ai-platform.jpg",
+    technology: "Quantum Computing + AI",
+    marketSize: "$2.5B by 2025",
+    targetIndustry: "Research, Finance, Healthcare"
+  },
+  {
+    id: "quantum-cryptography-suite",
+    title: "Quantum Cryptography Suite",
+    description: "Post-quantum cryptographic solutions that remain secure even against quantum computers",
+    category: "Quantum Security",
+    price: "$8,500/month",
+    features: [
+      "Post-quantum algorithms",
+      "Quantum key distribution",
+      "Quantum-resistant encryption",
+      "Real-time security monitoring",
+      "Compliance with NIST standards",
+      "Zero-trust architecture"
+    ],
+    benefits: [
+      "Quantum-resistant security",
+      "Future-proof encryption",
+      "Regulatory compliance",
+      "Enhanced data protection"
+    ],
+    link: "/services/quantum-cryptography",
+    image: "/images/quantum-cryptography.jpg",
+    technology: "Quantum Cryptography",
+    marketSize: "$1.8B by 2025",
+    targetIndustry: "Banking, Government, Healthcare"
+  },
+  
+  // Advanced AI Solutions
+  {
+    id: "autonomous-ai-agents",
+    title: "Autonomous AI Agents Platform",
+    description: "Self-learning AI agents that can autonomously execute complex business processes and decision-making",
+    category: "Autonomous AI",
+    price: "$12,000/month",
+    features: [
+      "Multi-agent orchestration",
+      "Autonomous decision making",
+      "Continuous learning capabilities",
+      "Process automation",
+      "Natural language understanding",
+      "Predictive analytics"
+    ],
+    benefits: [
+      "24/7 autonomous operation",
+      "Reduced human intervention",
+      "Improved efficiency",
+      "Scalable AI workforce"
+    ],
+    link: "/services/autonomous-ai-agents",
+    image: "/images/autonomous-ai-agents.jpg",
+    technology: "Autonomous AI + ML",
+    marketSize: "$3.2B by 2025",
+    targetIndustry: "Manufacturing, Logistics, Finance"
+  },
+  {
+    id: "ai-brain-computer-interface",
+    title: "AI Brain-Computer Interface",
+    description: "Revolutionary interface that enables direct communication between human brain and AI systems",
+    category: "Neurotechnology",
+    price: "$25,000/month",
+    features: [
+      "Non-invasive brain monitoring",
+      "AI-powered thought interpretation",
+      "Real-time neural feedback",
+      "Cognitive enhancement tools",
+      "Accessibility solutions",
+      "Research collaboration tools"
+    ],
+    benefits: [
+      "Revolutionary human-AI interaction",
+      "Enhanced accessibility",
+      "Cognitive enhancement",
+      "Research breakthrough potential"
+    ],
+    link: "/services/ai-brain-interface",
+    image: "/images/ai-brain-interface.jpg",
+    technology: "Neurotechnology + AI",
+    marketSize: "$1.5B by 2025",
+    targetIndustry: "Healthcare, Research, Accessibility"
+  },
+  
+  // Advanced Cybersecurity
+  {
+    id: "ai-threat-hunting",
+    title: "AI-Powered Threat Hunting Platform",
+    description: "Advanced cybersecurity platform that uses AI to proactively hunt and eliminate threats before they materialize",
+    category: "AI Cybersecurity",
+    price: "$9,500/month",
+    features: [
+      "AI threat detection",
+      "Behavioral analysis",
+      "Predictive threat modeling",
+      "Automated response",
+      "Threat intelligence",
+      "Zero-day protection"
+    ],
+    benefits: [
+      "Proactive threat prevention",
+      "Reduced false positives",
+      "24/7 security monitoring",
+      "Advanced threat intelligence"
+    ],
+    link: "/services/ai-threat-hunting",
+    image: "/images/ai-threat-hunting.jpg",
+    technology: "AI + Cybersecurity",
+    marketSize: "$4.1B by 2025",
+    targetIndustry: "Enterprise, Government, Finance"
+  },
+  {
+    id: "quantum-safe-blockchain",
+    title: "Quantum-Safe Blockchain Platform",
+    description: "Next-generation blockchain that integrates quantum-resistant cryptography for ultimate security",
+    category: "Quantum Blockchain",
+    price: "$11,000/month",
+    features: [
+      "Quantum-resistant consensus",
+      "Post-quantum cryptography",
+      "Scalable blockchain architecture",
+      "Smart contract security",
+      "Cross-chain interoperability",
+      "Regulatory compliance"
+    ],
+    benefits: [
+      "Quantum-resistant security",
+      "Future-proof blockchain",
+      "Enhanced scalability",
+      "Regulatory compliance"
+    ],
+    link: "/services/quantum-blockchain",
+    image: "/images/quantum-blockchain.jpg",
+    technology: "Quantum + Blockchain",
+    marketSize: "$2.8B by 2025",
+    targetIndustry: "Finance, Supply Chain, Government"
+  },
+  
+  // Space Technology
+  {
+    id: "space-ai-platform",
+    title: "Space AI Platform",
+    description: "AI-powered platform for space exploration, satellite management, and space data analytics",
+    category: "Space Technology",
+    price: "$18,000/month",
+    features: [
+      "Satellite constellation management",
+      "Space data analytics",
+      "Autonomous space operations",
+      "Earth observation AI",
+      "Space weather prediction",
+      "Satellite communication optimization"
+    ],
+    benefits: [
+      "Revolutionary space operations",
+      "Enhanced satellite efficiency",
+      "Advanced space research",
+      "Commercial space advantage"
+    ],
+    link: "/services/space-ai-platform",
+    image: "/images/space-ai-platform.jpg",
+    technology: "Space Tech + AI",
+    marketSize: "$3.5B by 2025",
+    targetIndustry: "Aerospace, Research, Government"
+  },
+  
+  // Biotechnology & AI
+  {
+    id: "ai-drug-discovery",
+    title: "AI Drug Discovery Platform",
+    description: "Revolutionary platform that accelerates drug discovery using AI and quantum computing",
+    category: "AI Biotechnology",
+    price: "$22,000/month",
+    features: [
+      "AI molecular modeling",
+      "Quantum chemistry calculations",
+      "Drug target identification",
+      "Clinical trial optimization",
+      "Personalized medicine",
+      "Drug repurposing"
+    ],
+    benefits: [
+      "10x faster drug discovery",
+      "Reduced development costs",
+      "Personalized treatments",
+      "Breakthrough therapies"
+    ],
+    link: "/services/ai-drug-discovery",
+    image: "/images/ai-drug-discovery.jpg",
+    technology: "AI + Biotechnology",
+    marketSize: "$5.2B by 2025",
+    targetIndustry: "Pharmaceuticals, Healthcare, Research"
+  },
+  
+  // Advanced Robotics
+  {
+    id: "autonomous-robotics",
+    title: "Autonomous Robotics Platform",
+    description: "AI-powered robotics platform for autonomous manufacturing, logistics, and service operations",
+    category: "Autonomous Robotics",
+    price: "$16,500/month",
+    features: [
+      "Multi-robot coordination",
+      "Autonomous navigation",
+      "Computer vision",
+      "Predictive maintenance",
+      "Human-robot collaboration",
+      "Scalable automation"
+    ],
+    benefits: [
+      "24/7 autonomous operation",
+      "Improved efficiency",
+      "Reduced operational costs",
+      "Enhanced safety"
+    ],
+    link: "/services/autonomous-robotics",
+    image: "/images/autonomous-robotics.jpg",
+    technology: "AI + Robotics",
+    marketSize: "$3.8B by 2025",
+    targetIndustry: "Manufacturing, Logistics, Healthcare"
+  },
+  
+  // Quantum Internet
+  {
+    id: "quantum-internet",
+    title: "Quantum Internet Infrastructure",
+    description: "Next-generation internet infrastructure using quantum entanglement for ultra-secure communication",
+    category: "Quantum Internet",
+    price: "$28,000/month",
+    features: [
+      "Quantum entanglement networks",
+      "Quantum key distribution",
+      "Quantum repeaters",
+      "Quantum routers",
+      "Quantum memory",
+      "Quantum error correction"
+    ],
+    benefits: [
+      "Unhackable communication",
+      "Quantum advantage",
+      "Future-proof infrastructure",
+      "Revolutionary security"
+    ],
+    link: "/services/quantum-internet",
+    image: "/images/quantum-internet.jpg",
+    technology: "Quantum Internet",
+    marketSize: "$1.2B by 2025",
+    targetIndustry: "Telecommunications, Government, Finance"
+  },
+  
+  // AI Ethics & Governance
+  {
+    id: "ai-governance-platform",
+    title: "AI Governance & Ethics Platform",
+    description: "Comprehensive platform for ensuring AI systems are ethical, transparent, and compliant with regulations",
+    category: "AI Governance",
+    price: "$7,500/month",
+    features: [
+      "AI ethics monitoring",
+      "Bias detection",
+      "Transparency tools",
+      "Regulatory compliance",
+      "Audit trails",
+      "Stakeholder engagement"
+    ],
+    benefits: [
+      "Ethical AI deployment",
+      "Regulatory compliance",
+      "Risk mitigation",
+      "Stakeholder trust"
+    ],
+    link: "/services/ai-governance",
+    image: "/images/ai-governance.jpg",
+    technology: "AI + Governance",
+    marketSize: "$2.1B by 2025",
+    targetIndustry: "Enterprise, Government, Healthcare"
+  }
 ];
 
 export const CUTTING_EDGE_CATEGORIES = [
