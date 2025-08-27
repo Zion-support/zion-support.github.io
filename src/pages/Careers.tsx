@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe } from 'lucide-react';
 export default function Careers() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -130,7 +131,7 @@ export default function Careers() {
       title: 'Impact',
       description: 'We focus on creating meaningful solutions that make a real difference.'
     }
-  };
+  ];
   const contactInfo = [
     { icon: Mail, label: "Email", value: "careers@ziontechgroup.com", href: "mailto:careers@ziontechgroup.com" },
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
@@ -230,7 +231,7 @@ export default function Careers() {
             </p>
           </div>
           <div className="space-y-6">
-            {openPositions.map((position) => (
+            {jobOpenings.map((position) => (
               <div key={position.id} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                   <div>
