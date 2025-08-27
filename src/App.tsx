@@ -73,6 +73,12 @@ const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatf
 const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
 
+// Additional service pages
+const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
+const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
+
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -174,6 +180,12 @@ function App() {
               <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
               <Route path="/services/dsr-portal" element={<DSRPortal />} />
               <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+              
+              {/* Additional service routes */}
+              <Route path="/services/digital-twin" element={<DigitalTwin />} />
+              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+              <Route path="/services/green-it" element={<GreenIT />} />
+              <Route path="/services/data-analytics" element={<DataAnalytics />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
