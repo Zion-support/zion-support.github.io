@@ -13,7 +13,9 @@ import {
   Phone,
   Globe,
   Shield,
-  Zap
+  Zap,
+  Brain,
+  Cloud
 } from 'lucide-react'
 
 export default function Signup() {
