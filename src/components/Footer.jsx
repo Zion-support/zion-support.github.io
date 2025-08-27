@@ -290,6 +290,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
 
       {/* Scroll to top button */}
       <button
