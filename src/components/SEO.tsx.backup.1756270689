@@ -28,9 +28,12 @@ interface SEOProps {
   canonical?: string;
   noindex?: boolean;
   nofollow?: boolean;
+<<<<<<< HEAD
+=======
   structuredData?: object;
   twitterHandle?: string;
   facebookAppId?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-94d4
 }
 
   // Merge custom structured data with default
@@ -127,6 +130,50 @@ const SEO: React.FC<SEOProps> = ({
   tags = [],
   canonical,
   noindex = false,
+<<<<<<< HEAD
+  nofollow = false
+}) => {
+  const siteName = 'Zion Tech Group';
+  const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+  const fullDescription = description.length > 160 ? `${description.substring(0, 157)}...` : description;
+  
+  // Structured data for organization
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/images/zion-logo.png',
+    description: 'AI-Powered Business Solutions & IT Services',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US'
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      email: 'contact@ziontechgroup.com'
+    },
+    sameAs: [
+      'https://linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgroup'
+    ]
+  };
+
+  // Structured data for website
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    description: 'AI-Powered Business Solutions & IT Services',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://ziontechgroup.com/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string'
+    }
+  };
+=======
   nofollow = false,
   structuredData,
   twitterHandle = '@ziontechgroup',
@@ -159,21 +206,45 @@ const SEO: React.FC<SEOProps> = ({
 
   // Merge custom structured data with default
   const finalStructuredData = structuredData || defaultStructuredData;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-94d4
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
+<<<<<<< HEAD
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="author" content={author} />
+      
+      {/* Robots */}
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
+      {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
+=======
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content={author || siteName} />
       
       {/* Robots */}
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-94d4
       
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
       
+<<<<<<< HEAD
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={fullDescription} />
+      <meta property="og:url" content={url} />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:image" content={image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:locale" content="en_US" />
+=======
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -188,21 +259,45 @@ const SEO: React.FC<SEOProps> = ({
       {tags && tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
       ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-94d4
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={twitterHandle} />
       <meta name="twitter:creator" content={twitterHandle} />
       <meta name="twitter:title" content={fullTitle} />
+<<<<<<< HEAD
+      <meta name="twitter:description" content={fullDescription} />
+      <meta name="twitter:image" content={image} />
+      
+=======
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image.startsWith('http') ? image : `${siteUrl}${image}`} />
       
       {/* Facebook */}
       {facebookAppId && <meta property="fb:app_id" content={facebookAppId} />}
       
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-94d4
       {/* Additional Meta Tags */}
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
+      <meta name="theme-color" content="#22ddd2" />
+      <meta name="msapplication-TileColor" content="#22ddd2" />
+      {/* Additional structured data if provided */}
+      {publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
+      {section && (
+        <meta property="article:section" content={section} />
+      )}
+      {tags && tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
+=======
       {/* Additional SEO Meta Tags */}
       <meta name="google-site-verification" content="your-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
@@ -235,6 +330,7 @@ const SEO: React.FC<SEOProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-94d4
     </Helmet>
   );
 }
