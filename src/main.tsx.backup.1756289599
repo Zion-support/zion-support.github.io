@@ -1,0 +1,24 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+<<<<<<< HEAD
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+import { ErrorBoundary } from './components/ErrorBoundary'
+=======
+import App from './App.tsx'
+>>>>>>> origin/cursor/website-audit-and-enhancement-9cb9
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+<<<<<<< HEAD
+    <ErrorBoundary>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ErrorBoundary>
+=======
+    <App />
+>>>>>>> origin/cursor/website-audit-and-enhancement-9cb9
+  </React.StrictMode>,
+)

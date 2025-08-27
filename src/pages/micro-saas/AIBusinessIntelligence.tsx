@@ -1,0 +1,425 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
+  BarChart3, 
+  TrendingUp, 
+  Database, 
+  Zap, 
+  Shield, 
+  Users, 
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Award,
+  Clock,
+  Target,
+  Lightbulb,
+  Network,
+  Smartphone,
+  Cloud,
+  PieChart
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const features = [
+  {
+    icon: Brain,
+    title: 'Predictive Analytics',
+    description: 'Forecast trends and make data-driven decisions with AI-powered insights'
+  },
+  {
+    icon: BarChart3,
+    title: 'Real-time Dashboards',
+    description: 'Live monitoring and visualization of key business metrics'
+  },
+  {
+    icon: Database,
+    title: 'Data Integration',
+    description: 'Connect and consolidate data from multiple sources seamlessly'
+  },
+  {
+    icon: Zap,
+    title: 'Automated Reporting',
+    description: 'Generate comprehensive reports automatically with AI insights'
+  },
+  {
+    icon: Shield,
+    title: 'Data Security',
+    description: 'Enterprise-grade security for sensitive business intelligence'
+  },
+  {
+    icon: Users,
+    title: 'Collaborative Analytics',
+    description: 'Team-based analytics with role-based access control'
+  }
+];
+
+const benefits = [
+  'Increase decision-making speed by 80%',
+  'Improve forecast accuracy by 60%',
+  'Reduce manual reporting time by 90%',
+  'Identify new revenue opportunities',
+  'Optimize operational efficiency',
+  'Enhance competitive intelligence'
+];
+
+const useCases = [
+  {
+    title: 'Sales Intelligence',
+    description: 'Predict customer behavior and optimize sales strategies',
+    icon: TrendingUp,
+    features: ['Lead Scoring', 'Pipeline Analytics', 'Revenue Forecasting']
+  },
+  {
+    title: 'Customer Analytics',
+    description: 'Understand customer patterns and improve retention',
+    icon: Users,
+    features: ['Churn Prediction', 'Customer Segmentation', 'Lifetime Value']
+  },
+  {
+    title: 'Financial Intelligence',
+    description: 'Monitor financial health and predict cash flow',
+    icon: BarChart3,
+    features: ['Cash Flow Analysis', 'Risk Assessment', 'Budget Optimization']
+  },
+  {
+    title: 'Operational Intelligence',
+    description: 'Optimize business processes and resource allocation',
+    icon: Zap,
+    features: ['Process Optimization', 'Resource Planning', 'Performance Monitoring']
+  }
+];
+
+const testimonials = [
+  {
+    name: 'Alex Thompson',
+    role: 'VP of Sales',
+    company: 'TechGrowth Inc',
+    content: 'The AI business intelligence platform has transformed our sales process. We now make data-driven decisions in real-time.',
+    rating: 5
+  },
+  {
+    name: 'Maria Rodriguez',
+    role: 'Marketing Director',
+    company: 'Digital Solutions',
+    content: 'Customer insights from the platform have improved our marketing ROI by 40% and customer retention by 25%.',
+    rating: 5
+  },
+  {
+    name: 'David Chen',
+    role: 'CFO',
+    company: 'Innovation Corp',
+    content: 'Financial forecasting accuracy has improved dramatically, helping us make better strategic decisions.',
+    rating: 5
+  }
+];
+
+export default function AIBusinessIntelligence() {
+  return (
+    <div className="min-h-screen bg-futuristic">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-blue via-zion-purple to-zion-cyan opacity-20"></div>
+        <div className="container-responsive relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="inline-flex items-center space-x-2 bg-zion-blue/10 border border-zion-blue/20 rounded-full px-6 py-3 mb-8">
+              <Brain className="w-5 h-5 text-zion-blue" />
+              <span className="text-zion-blue font-medium">AI Business Intelligence</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Transform Your Business with
+              <span className="text-gradient block">AI-Powered Intelligence</span>
+            </h1>
+            
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Unlock the power of your data with our comprehensive AI business intelligence platform. 
+              Make smarter decisions, predict trends, and drive growth with real-time insights.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/request-quote"
+                className="btn-futuristic px-8 py-4 text-lg font-semibold"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <button className="btn-outline px-8 py-4 text-lg font-semibold">
+                <Play className="w-5 h-5 mr-2" />
+                Watch Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Comprehensive AI Business Intelligence
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              From data integration to predictive analytics, our platform provides everything you need 
+              to transform raw data into actionable business intelligence.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-xl border border-zion-blue/20 rounded-2xl p-8 hover:border-zion-blue/40 transition-all duration-300 group"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-blue to-zion-cyan rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-white/5">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Why Choose AI Business Intelligence?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Experience the transformative benefits of AI-powered business intelligence.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-center space-x-4 bg-white/5 backdrop-blur-xl border border-zion-blue/20 rounded-xl p-6"
+              >
+                <CheckCircle className="w-6 h-6 text-zion-blue flex-shrink-0" />
+                <span className="text-zion-slate-light">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Industry Use Cases
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Discover how leading businesses are leveraging AI business intelligence to solve real challenges.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={useCase.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-xl border border-zion-blue/20 rounded-2xl p-8 hover:border-zion-blue/40 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
+                  <useCase.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-zion-slate-light leading-relaxed mb-6">{useCase.description}</p>
+                <div className="mb-6">
+                  <h4 className="text-zion-blue font-medium mb-2">Key Features:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {useCase.features.map((feature) => (
+                      <span
+                        key={feature}
+                        className="px-3 py-1 bg-zion-blue/10 border border-zion-blue/20 rounded-full text-sm text-zion-blue"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <Link
+                  to="/request-quote"
+                  className="inline-flex items-center text-zion-blue hover:text-zion-blue-light transition-colors font-medium"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Features Section */}
+      <section className="py-20 bg-white/5">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Platform Features
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Built with cutting-edge technology for maximum performance and scalability.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { name: 'Cloud Native', description: 'Scalable cloud infrastructure', icon: Cloud },
+              { name: 'Real-time', description: 'Live data processing', icon: Zap },
+              { name: 'Mobile Ready', description: 'Cross-platform access', icon: Smartphone },
+              { name: 'API First', description: 'Easy integration', icon: Network }
+            ].map((feature, index) => (
+              <motion.div
+                key={feature.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-gradient-to-br from-zion-blue to-zion-cyan rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="h-10 w-10 text-white" />
+                </div>
+                <div className="text-xl font-bold text-white mb-2">{feature.name}</div>
+                <div className="text-zion-blue text-sm">{feature.description}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Don't just take our word for it. Here's what business leaders say about our AI platform.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-xl border border-zion-blue/20 rounded-2xl p-8"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-zion-slate-light mb-6 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-zion-blue text-sm">{testimonial.role}</div>
+                  <div className="text-zion-slate-light text-sm">{testimonial.company}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-white/5">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Join hundreds of companies already leveraging AI business intelligence to drive growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/request-quote"
+                className="btn-futuristic px-8 py-4 text-lg font-semibold"
+              >
+                Get Your Free Demo
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/contact"
+                className="btn-outline px-8 py-4 text-lg font-semibold"
+              >
+                Talk to an Expert
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

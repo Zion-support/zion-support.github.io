@@ -1,172 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { EnhancedMobileNavigation } from '../components/EnhancedMobileNavigation.tsx';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Database, 
-  Users, 
-  Code, 
-  Lock, 
-  Rocket 
-} from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { MainNavigation } from './MainNavigation';
 
 export function AppHeader() {
-  const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const location = useLocation();
-
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Close dropdown when route changes
-  useEffect(() => {
-    setActiveDropdown(null);
-  }, [location.pathname]);
-
-  const navigationItems = [
-    { name: 'Home', path: '/', icon: null },
-    { 
-      name: 'Services', 
-      path: '/services', 
-      icon: null,
-      dropdown: [
-        { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500' },
-        { name: 'Quantum Computing', path: '/services?category=quantum', icon: Zap, color: 'from-blue-500 to-cyan-500' },
-        { name: 'Blockchain & Web3', path: '/services?category=blockchain', icon: Lock, color: 'from-green-500 to-emerald-500' },
-        { name: 'IoT & Edge Computing', path: '/services?category=iot', icon: Cloud, color: 'from-orange-500 to-red-500' },
-        { name: 'AR/VR Development', path: '/services?category=ar-vr', icon: Users, color: 'from-indigo-500 to-purple-500' },
-        { name: 'FinTech Solutions', path: '/services?category=fintech', icon: Database, color: 'from-yellow-500 to-orange-500' },
-        { name: 'Green Technology', path: '/services?category=green-tech', icon: Shield, color: 'from-green-400 to-teal-500' },
-        { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' },
-      ]
-    },
-    { name: 'About', path: '/about', icon: null },
-    { name: 'Contact', path: '/contact', icon: null },
-  ];
-
-  const isActive = (path) => location.pathname === path;
-
   return (
-    <header className="bg-black/90 backdrop-blur-md border-b border-zion-cyan/20 fixed top-0 left-0 right-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-lg lg:text-xl">Z</span>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-xl lg:text-2xl font-bold text-white">ZION TECH GROUP</div>
-              <div className="text-xs text-zion-cyan font-medium">INNOVATION • TECHNOLOGY • FUTURE</div>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative">
-                {item.dropdown ? (
-                  <div
-                    onMouseEnter={() => setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <button className="flex items-center space-x-2 text-white hover:text-zion-cyan transition-colors duration-300 py-2">
-                      <span className={isActive(item.path) ? 'text-zion-cyan' : ''}>
-                        {item.name}
-                      </span>
-                      <ChevronDown className="w-4 h-4" />
-                    </button>
-                    
-                    <AnimatePresence>
-                      {activeDropdown === item.name && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 10 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/10 p-4 z-50"
-                        >
-                          <div className="grid grid-cols-1 gap-2">
-                            {item.dropdown.map((dropdownItem) => {
-                              const Icon = dropdownItem.icon;
-                              return (
-                                <Link
-                                  key={dropdownItem.name}
-                                  to={dropdownItem.path}
-                                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-200 group"
-                                >
-                                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}>
-                                    <Icon className="w-4 h-4 text-white" />
-                                  </div>
-                                  <span className="text-white group-hover:text-zion-cyan transition-colors duration-200">
-                                    {dropdownItem.name}
-                                  </span>
-                                </Link>
-                              );
-                            })}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ) : (
-                  <Link 
-                    to={item.path}
-                    className={`text-white hover:text-zion-cyan transition-colors duration-300 py-2 ${
-                      isActive(item.path) ? 'text-zion-cyan' : ''
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </nav>
-
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link to="/login">
-              <motion.button 
-                className="px-6 py-2 text-white hover:text-zion-cyan transition-colors duration-300 font-medium"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Login
-              </motion.button>
-            </Link>
-            <Link to="/contact">
-              <motion.button 
-                className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform shadow-lg shadow-zion-cyan/25"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="flex items-center space-x-2">
-                  <Rocket className="w-4 h-4" />
-                  <span>Get Started</span>
-                </span>
-              </motion.button>
+    <header className="bg-gradient-to-r from-zion-slate-dark via-zion-slate to-zion-slate-dark shadow-lg border-b border-zion-blue-light/20 fixed top-0 left-0 right-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
+                ZION
+              </h1>
             </Link>
           </div>
-
-          {/* Enhanced Mobile Navigation */}
-          <EnhancedMobileNavigation />
+          <MainNavigation />
         </div>
       </div>
     </header>
