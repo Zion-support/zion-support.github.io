@@ -875,6 +875,188 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
+  },
+
+  // AI Agent Helpdesk for ITSM
+  {
+    id: "ai-agent-itsm-helpdesk",
+    title: "AI Agent Helpdesk for ITSM",
+    description: "Autonomous LLM agents triage, resolve, and route IT tickets with knowledge-grounded answers, Change/Incident workflows, and audit trails integrated with your ITSM.",
+    category: "AI & Analytics",
+    subcategory: "IT Service Management",
+    price: 1599,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Multi-channel intake (Slack/Teams/Email)",
+      "RAG over KBs and runbooks",
+      "Automated ticket classification & routing",
+      "Action execution via secure connectors",
+      "Change/Incident templates",
+      "Escalation to human with full context",
+      "SLA tracking and analytics",
+      "PII redaction & policy guardrails",
+      "SSO + RBAC",
+      "Admin dashboard"
+    ],
+    benefits: [
+      "25–45% reduction in ticket volume",
+      "Faster MTTR and fewer escalations",
+      "Consistent policy-compliant responses",
+      "Lower support costs"
+    ],
+    useCases: [
+      "Password and access requests",
+      "VPN and device troubleshooting",
+      "Software requests and approvals",
+      "Knowledge discovery"
+    ],
+    targetAudience: ["IT Operations", "Service Desk Managers", "Platform Engineering"],
+    tags: ["ITSM", "LLM", "RAG", "Automation", "Service Desk"],
+    estimatedDelivery: "2–4 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,200 – $4,000/month",
+    roi: "200–400%",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology: ["LLM", "Vector DB", "RAG", "Serverless Functions"],
+      integrations: ["ServiceNow", "Jira Service Management", "Zendesk", "Okta"],
+      apiEndpoints: 38,
+      uptime: "99.9%",
+      security: ["SOC 2", "GDPR", "SAML SSO"]
+    }
+  },
+
+  // Data Governance & Quality as a Service
+  {
+    id: "data-governance-quality-aas",
+    title: "Data Governance & Quality as a Service",
+    description: "Turnkey data governance with lineage, quality checks, SLAs, and incident workflows. We implement metrics layer, contracts, and alerting across your stack.",
+    category: "AI & Analytics",
+    subcategory: "Data Governance",
+    price: 2499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "End-to-end lineage and impact analysis",
+      "Quality checks & anomaly detection",
+      "Data SLAs and ownership",
+      "Semantic/metrics layer",
+      "Contracts and schema enforcement",
+      "Alerting and incident runbooks",
+      "Self-serve data catalog",
+      "Role-based policies",
+      "Cost and performance guardrails",
+      "Executive reporting"
+    ],
+    benefits: [
+      "Fewer data incidents",
+      "Trustworthy dashboards",
+      "Reduced time-to-insight",
+      "Audit-ready governance"
+    ],
+    useCases: ["Revenue reporting", "Regulatory analytics", "Marketing attribution"],
+    targetAudience: ["Data Platform", "Analytics Engineering", "Compliance"],
+    tags: ["Data Governance", "Lineage", "Quality", "Observability"],
+    estimatedDelivery: "4–8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,000 – $7,000/month",
+    roi: "200–350%",
+    innovationLevel: "Professional",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology: ["dbt", "OpenLineage", "Great Expectations", "Airflow"],
+      integrations: ["Snowflake", "BigQuery", "Redshift", "Looker"],
+      apiEndpoints: 22,
+      uptime: "99.9%",
+      security: ["SSO", "Row-level security"]
+    }
+  },
+
+  // Cloud Landing Zone in 10 Days
+  {
+    id: "cloud-landing-zone-10-days",
+    title: "Cloud Landing Zone in 10 Days",
+    description: "Secure, compliant, and cost-governed multi-account cloud landing zone with network, IAM, logging, and guardrails—delivered fast.",
+    category: "Cloud & Infrastructure",
+    subcategory: "Foundation",
+    price: 24999,
+    currency: "$",
+    pricingModel: "one-time",
+    features: [
+      "Multi-account org and SSO",
+      "Network hub/spoke & transit",
+      "Logging and audit baseline",
+      "CIS/NIST guardrails",
+      "Image and pipeline standards",
+      "Cost controls & budgets",
+      "Backup and DR patterns",
+      "IaC with GitOps",
+      "Runbook and enablement",
+      "Handoff workshop"
+    ],
+    benefits: [
+      "Production-ready foundation",
+      "Faster app onboarding",
+      "Lower security risk",
+      "Predictable costs"
+    ],
+    useCases: ["Greenfield cloud", "Migrations", "Subsidiary onboarding"],
+    targetAudience: ["Platform Engineering", "Security", "IT"],
+    tags: ["Landing Zone", "Security", "IaC", "Governance"],
+    estimatedDelivery: "2 weeks",
+    supportLevel: "professional",
+    marketPrice: "$20,000 – $60,000 one-time",
+    roi: "150–300%",
+    innovationLevel: "Professional",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology: ["Terraform", "Crossplane", "AWS/Azure/GCP Org"],
+      integrations: ["Okta", "Datadog", "PagerDuty"],
+      apiEndpoints: 12,
+      uptime: "99.9%",
+      security: ["CIS", "NIST", "SSO"]
+    }
+  },
+
+  // Marketing Content Ops Co-pilot
+  {
+    id: "marketing-content-ops-copilot",
+    title: "Marketing Content Ops Co‑pilot",
+    description: "Workflow and AI generation for briefs, calendars, assets, and approvals with brand voice controls and analytics.",
+    category: "AI & Content Marketing",
+    subcategory: "Content Ops",
+    price: 799,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Brief generation and planning",
+      "Brand voice and style guides",
+      "Multi-channel publishing",
+      "Asset versioning and review",
+      "SEO and performance insights",
+      "Collaborative editing",
+      "Templates and automations",
+      "Webhook/API integrations",
+      "SSO and permissions",
+      "Audit and archives"
+    ],
+    benefits: [
+      "Faster content throughput",
+      "Higher quality and consistency",
+      "Measurable campaign ROI",
+      "Lower production costs"
+    ],
+    useCases: ["Blog + social", "Product launches", "Lifecycle campaigns"],
+    targetAudience: ["Marketing Ops", "Content Teams", "Agencies"],
+    tags: ["LLM", "Content", "Workflow", "SEO"],
+    estimatedDelivery: "1–2 weeks",
+    supportLevel: "professional",
+    marketPrice: "$499 – $1,999/month",
+    roi: "250–500%",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
   }
 ];
 
