@@ -64,6 +64,10 @@ const UltimateInnovativeServices2026 = React.lazy(() => import('./pages/Ultimate
 const ComprehensiveServicesOverview2026 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2026'));
 const Zion2026ComprehensiveServicesShowcase = React.lazy(() => import('./pages/Zion2026ComprehensiveServicesShowcase'));
 
+// 2027 Enhanced Services and Case Studies
+const AllServices2027 = React.lazy(() => import('./pages/AllServices2027'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+
 // Service pages
 const AIServices = React.lazy(() => import('./pages/services/AIServices'));
 const CybersecurityServices = React.lazy(() => import('./pages/services/CybersecurityServices'));
@@ -184,6 +188,8 @@ function App() {
                   <Route path="/ultimate-innovative-services-2026" element={<UltimateInnovativeServices2026 />} />
                   <Route path="/comprehensive-services-overview-2026" element={<ComprehensiveServicesOverview2026 />} />
                   <Route path="/zion-2026-comprehensive-services" element={<Zion2026ComprehensiveServicesShowcase />} />
+                  <Route path="/all-services-2027" element={<AllServices2027 />} />
+                  <Route path="/case-studies" element={<CaseStudies />} />
                   
                   {/* Additional Routes */}
                   <Route path="/partners" element={<Partners />} />
