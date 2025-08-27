@@ -131,7 +131,11 @@ const GreenIT: React.FC = () => {
       description: 'Waste reduction and resource optimization'
     },
     {
-<<<<<<< HEAD
+      icon: TreePine,
+      title: 'Carbon Capture',
+      description: 'Technologies for carbon sequestration and reduction'
+    },
+    {
       icon: Globe,
       title: "Carbon-Neutral Operations",
       description: "Comprehensive carbon offset programs and sustainable business practices across all operations.",
@@ -187,11 +191,6 @@ const GreenIT: React.FC = () => {
       challenge: "High e-waste generation and inefficient IT infrastructure",
       solution: "Circular IT economy implementation with sustainable infrastructure",
       results: ["70% reduction in e-waste", "50% improvement in IT efficiency"]
-=======
-      icon: TreePine,
-      title: 'Carbon Capture',
-      description: 'Technologies for carbon sequestration and reduction'
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7
     }
   ];
 
