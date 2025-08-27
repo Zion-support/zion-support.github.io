@@ -52,7 +52,7 @@ export function EnhancedSEO({
   description = "The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive — all in one place.",
   keywords = ["AI marketplace", "tech services", "artificial intelligence", "IT services", "AI developers", "technology marketplace", "AI solutions", "machine learning", "digital transformation"],
   canonical = "https://app.ziontechgroup.com/",
-  ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
+  ogImage = "/favicon.svg",
   ogType = "website",
   twitterCard = "summary_large_image",
   structuredData,
@@ -103,7 +103,7 @@ export function EnhancedSEO({
       "highPrice": "25000",
       "description": "Enterprise AI and Technology Solutions"
     "url": "https://app.ziontechgroup.com",
-    "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
+    "logo": "/favicon.svg",
     "description": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
     "foundingDate": "2024",
     "sameAs": [
