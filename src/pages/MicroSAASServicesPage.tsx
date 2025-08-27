@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -199,7 +194,6 @@ const MicroSAASServicesPage: React.FC = () => {
                 <p className="text-zion-slate-light">{benefit.description}</p>
               </motion.div>
             ))}
-=======
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
@@ -590,19 +584,12 @@ export default function MicroSAASServicesPage() {
               <TrendingUp className="h-5 w-5 mr-2"/>
               Start Free Trial
             </Button>
->>>>>>> cursor/website-audit-and-enhancement-1eed
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Search and Filter Section */}
-      <section className="py-8">
-=======
       {/* Micro SAAS Services Grid */}
       <section className="py-20">
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -629,24 +616,6 @@ export default function MicroSAASServicesPage() {
                 viewport={{ once: true }}
                 className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
-<<<<<<< HEAD
-                All Services
-              </button>
-              {categories.map((category) => (
-                <button
-                  key={category.name}
-                  onClick={() => setSelectedCategory(category.name)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category.name
-                      ? 'bg-zion-purple text-white shadow-lg shadow-zion-purple/25'
-                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-purple'
-                  }`}
-                >
-                  {category.name}
-                </button>
-              ))}
-            </div>
-=======
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark/80 border-b border-zion-blue-light">
         <div className="container mx-auto px-4 py-6">
@@ -676,8 +645,6 @@ export default function MicroSAASServicesPage() {
                 : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"}`}>
                 {category}
               </Button>))}
->>>>>>> cursor/website-audit-and-enhancement-1eed
-=======
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-8 h-8 text-white" />
@@ -729,7 +696,6 @@ export default function MicroSAASServicesPage() {
                 </div>
               </motion.div>
             ))}
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7
           </div>
         </div>
       </section>
@@ -737,11 +703,6 @@ export default function MicroSAASServicesPage() {
       {/* SAAS Solutions Overview */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {filteredServices.map((service, index) => (
-=======
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -759,7 +720,6 @@ export default function MicroSAASServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {saasSolutions.map((solution, index) => (
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7
               <motion.div
                 key={solution.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -768,16 +728,6 @@ export default function MicroSAASServicesPage() {
                 viewport={{ once: true }}
                 className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
-<<<<<<< HEAD
-                {/* Service Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  {service.popular && (
-                    <span className="px-3 py-1 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-medium rounded-full">
-                      Popular
-=======
             {filteredServices.map((service) => (<Card key={service.id} className="group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:scale-105 border-zion-blue-light/20 bg-zion-blue-dark/50 backdrop-blur-sm">
                 <CardHeader className="pb-4">
                   <div className="flex justify-between items-start mb-4">
@@ -828,10 +778,8 @@ export default function MicroSAASServicesPage() {
                     </span>
                     <span className="text-zion-slate-light">
                       {service.price === 0 ? '' : '/month'}
->>>>>>> cursor/website-audit-and-enhancement-1eed
                     </span>
                   )}
-=======
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6">{solution.description}</p>
                 
@@ -845,7 +793,6 @@ export default function MicroSAASServicesPage() {
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7
                 </div>
               </motion.div>
             ))}
@@ -891,52 +838,10 @@ export default function MicroSAASServicesPage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
-
-                {/* Features */}
-                <div className="space-y-2 mb-6">
-                  {service.features.slice(0, 3).map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-zion-purple flex-shrink-0" />
-                      <span className="text-sm text-zion-slate-light">{feature}</span>
-                    </div>
-                  ))}
-                  {service.features.length > 3 && (
-                    <p className="text-xs text-zion-slate-light/70">
-                      +{service.features.length - 3} more features
-                    </p>
-                  )}
-                </div>
-
-                {/* Stats */}
-                <div className="flex items-center justify-between mb-6 text-sm">
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-white">{service.rating}</span>
-                    <span className="text-zion-slate-light">({service.reviews})</span>
-                  </div>
-<<<<<<< HEAD
-                  <div className="flex items-center space-x-1 text-zion-slate-light">
-                    <Users className="w-4 h-4" />
-                    <span>{service.customers} customers</span>
-                  </div>
-                </div>
-
-                {/* CTA Button */}
-                <Link
-                  to={service.link}
-                  className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-medium rounded-lg hover:shadow-lg hover:shadow-zion-purple/25 transition-all duration-300 group-hover:scale-105"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-=======
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7
               </motion.div>
             ))}
-=======
                 </CardContent>
                 <CardFooter className="pt-0">
                   <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group-hover:shadow-lg group-hover:shadow-zion-purple/25 transition-all">
@@ -947,18 +852,12 @@ export default function MicroSAASServicesPage() {
                   </Button>
                 </CardFooter>
               </Card>))}
->>>>>>> cursor/website-audit-and-enhancement-1eed
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="py-20">
-=======
       <section className="py-20 bg-zion-slate-dark/30">
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1011,8 +910,6 @@ export default function MicroSAASServicesPage() {
     </div>
   );
 };
-<<<<<<< HEAD
-=======
       <div className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">
@@ -1036,8 +933,5 @@ export default function MicroSAASServicesPage() {
       </div>
     </div>);
 }
->>>>>>> cursor/website-audit-and-enhancement-1eed
-=======
 
 export default MicroSAASServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7

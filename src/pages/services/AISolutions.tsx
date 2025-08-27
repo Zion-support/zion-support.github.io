@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-=======
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
@@ -10,7 +9,6 @@ const AISolutions: React.FC = () => {
     {
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Target, TrendingUp, Shield, Users, Globe, Cpu, FileText } from 'lucide-react';
-=======
 import Head from 'next/head';
 
 const AISolutions: React.FC = () => {
@@ -69,7 +67,6 @@ const AISolutions: React.FC = () => {
       title: "Natural Language Processing",
       description: "Advanced text and speech processing capabilities",
       features: ["Chatbot Development", "Sentiment Analysis", "Document Processing", "Language Translation"],
-=======
       title: "Machine Learning",
       description: "Custom ML models and algorithms for your business needs",
       features: ["Predictive Analytics", "Pattern Recognition", "Data Modeling", "Model Training"],
@@ -126,7 +123,6 @@ const AISolutions: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Harness the power of artificial intelligence to transform your business. 
               Our cutting-edge AI solutions drive innovation and competitive advantage.
-=======
     {
       icon: Zap,
       title: "Increased Efficiency",
@@ -395,7 +391,6 @@ const AISolutions: React.FC = () => {
         </section>
       </div>
     </>
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
