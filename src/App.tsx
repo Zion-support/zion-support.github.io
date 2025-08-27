@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import { EnhancedFooter } from './components/EnhancedFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
@@ -74,6 +74,9 @@ const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateSe
 const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
+
+// New 2029 services showcase
+const InnovativeServicesShowcase2029 = React.lazy(() => import('./pages/InnovativeServicesShowcase2029'));
 
 // Sitemap-aligned pages
 const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
@@ -313,6 +316,11 @@ function App() {
               <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
               <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
               
+              {/* 2029 Services Showcase */}
+              <Route path="/innovative-services-showcase-2029" element={<InnovativeServicesShowcase2029 />} />
+              <Route path="/services-2029" element={<InnovativeServicesShowcase2029 />} />
+              <Route path="/2029-services" element={<InnovativeServicesShowcase2029 />} />
+              
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
@@ -342,7 +350,7 @@ function App() {
             </Routes>
           </Suspense>
         </main>
-        <Footer />
+        <EnhancedFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
         <AccessibilityEnhancer enabled={true} showControls={true} />
