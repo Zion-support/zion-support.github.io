@@ -21,10 +21,10 @@ const Solutions = React.lazy(() => import('./pages/Solutions'));
 const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
 const News = React.lazy(() => import('./pages/News'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
-const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
-const Events = React.lazy(() => import('./pages/Events'));
+
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
@@ -58,7 +58,7 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/news" element={<News />} />
-              <Route path="/events" element={<Events />} />
+
               <Route path="/partners" element={<PartnersPage />} />
               
               {/* Service Routes */}
@@ -80,7 +80,7 @@ function App() {
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/request-quote" element={<RequestQuote />} />
-              <Route path="/search" element={<SearchPage />} />
+
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
               
