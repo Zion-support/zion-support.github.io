@@ -22,10 +22,6 @@ import {
   Crown,
   Sparkles,
   Flame,
-<<<<<<< HEAD
-  Thunder,
-=======
->>>>>>> b853260fd825552ae78a5c6124dfc100e849b8d4
   Sun,
   Moon,
   Infinity,
