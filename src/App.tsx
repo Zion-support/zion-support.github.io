@@ -34,6 +34,9 @@ const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
 // 2029 Cutting-Edge Services
 const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
 
+// 2026 AI Marketplace Services
+const Zion2026AIMarketplaceShowcase = lazy(() => import('./pages/Zion2026AIMarketplaceShowcase'));
+
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
@@ -306,6 +309,7 @@ function App() {
                     <Route path="/it-services" element={<ITServices />} />
                     <Route path="/micro-saas" element={<MicroSaaS />} />
                     <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
+                    <Route path="/zion-ai-marketplace-2026" element={<Zion2026AIMarketplaceShowcase />} />
                     <Route path="/ai-solutions" element={<AiSolutions />} />
                     <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
                     <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
