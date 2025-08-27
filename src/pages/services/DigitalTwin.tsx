@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -431,3 +432,4 @@ export default function DigitalTwin() {
     </div>
   );
 }
+
