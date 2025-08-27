@@ -1,19 +1,24 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
+import compress from 'vite-plugin-compression'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    compress({ algorithm: 'brotliCompress', ext: '.br', deleteOriginFile: false }),
+    compress({ algorithm: 'gzip', ext: '.gz', deleteOriginFile: false })
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
     }
   },
   build: {
-    target: 'esnext',
+    target: 'es2018',
     minify: 'esbuild',
-    sourcemap: true,
+    sourcemap: false,
     outDir: 'dist',
     rollupOptions: {
       input: path.resolve(__dirname, 'index.html'),
@@ -62,6 +67,8 @@ export default defineConfig({
       },
       external: [],
     },
+    cssCodeSplit: true,
+    brotliSize: true,
   },
   server: {
     port: 3000,
