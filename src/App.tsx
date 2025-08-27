@@ -21,13 +21,13 @@ const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Compre
 // Enhanced loading spinner with accessibility
 const LoadingSpinner = () => (
   <div 
-    className="min-h-screen bg-futuristic flex items-center justify-center"
+    className="min-h-screen futuristic-bg flex items-center justify-center"
     role="status"
     aria-label="Loading page content"
   >
     <div className="text-center">
-      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-      <p className="text-zion-cyan text-lg">Loading...</p>
+      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4 neon-glow"></div>
+      <p className="text-zion-cyan text-lg font-semibold">Loading...</p>
       <div className="sr-only">Loading page content, please wait...</div>
     </div>
   </div>
@@ -35,13 +35,13 @@ const LoadingSpinner = () => (
 
 // Error boundary component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen bg-futuristic flex items-center justify-center p-4">
+  <div className="min-h-screen futuristic-bg flex items-center justify-center p-4">
     <div className="text-center max-w-md">
       <h2 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h2>
       <p className="text-zion-slate-light mb-6">{error.message}</p>
       <button
         onClick={resetErrorBoundary}
-        className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors"
+        className="btn-futuristic"
       >
         Try again
       </button>
@@ -68,7 +68,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+      <div className="min-h-screen futuristic-bg">
         <AppHeader />
         <main className="flex-1" role="main">
           <Suspense fallback={<LoadingSpinner />}>
