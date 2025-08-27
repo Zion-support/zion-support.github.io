@@ -38,7 +38,11 @@ export default function Partners() {
       benefits: ['Research collaboration', 'Talent pipeline', 'Innovation programs']
     }
   ];
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
   const existingPartners = [
     {
       name: 'Microsoft',
@@ -83,7 +87,11 @@ export default function Partners() {
       year: '2022'
     }
   ];
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
   const benefits = [
     {
       icon: TrendingUp,
@@ -106,7 +114,11 @@ export default function Partners() {
       description: 'Access shared resources, expertise, and infrastructure'
     }
   ];
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
   return (
     <div className="min-h-screen bg-zion-slate-dark pt-24">
       {/* Hero Section */}
@@ -135,7 +147,11 @@ export default function Partners() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
       {/* Partnership Types */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -170,6 +186,7 @@ export default function Partners() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
@@ -183,6 +200,15 @@ export default function Partners() {
             </p>
           </div>
 
+=======
+      
+      {/* Benefits */}
+      <section className="py-16 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Why Partner With Us?
+          </h2>
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div
@@ -199,7 +225,11 @@ export default function Partners() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
       {/* Existing Partners */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -239,7 +269,50 @@ export default function Partners() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
+=======
+      
+      {/* Partnership Process */}
+      <section className="py-16 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            How to Become a Partner
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                1
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Initial Contact</h3>
+              <p className="text-zion-slate-light text-sm">Reach out to discuss partnership opportunities</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                2
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Evaluation</h3>
+              <p className="text-zion-slate-light text-sm">We assess mutual benefits and alignment</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                3
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Agreement</h3>
+              <p className="text-zion-slate-light text-sm">Finalize partnership terms and conditions</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                4
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Launch</h3>
+              <p className="text-zion-slate-light text-sm">Begin collaboration and joint initiatives</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-slate-dark to-zion-slate">
         <div className="max-w-4xl mx-auto text-center">

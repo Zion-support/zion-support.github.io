@@ -152,13 +152,21 @@
 
 @layer base {
   * {
+<<<<<<< HEAD
     border-color: hsl(var(--border));
+=======
+    @apply border-zion-slate-light/20;
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
   }
 <<<<<<< HEAD
 
   body {
+<<<<<<< HEAD
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
+=======
+    @apply bg-zion-slate-dark text-white;
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
     font-feature-settings: "rlig" 1, "calt" 1;
     font-family: var(--font-sans);
     overflow-x: hidden;
