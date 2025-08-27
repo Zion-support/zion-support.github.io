@@ -23,7 +23,6 @@ import {
   Sparkles,
   Flame,
   Thunder,
-  Lightning,
   Sun,
   Moon,
   Planet,
@@ -366,6 +365,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             }
           </motion.div>
         ))}
+      </div>
       </div>
     </footer>
   );
