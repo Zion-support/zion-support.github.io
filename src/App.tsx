@@ -13,6 +13,7 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 const Home = React.lazy(() => import('./pages/Home'));
 const Home2026 = React.lazy(() => import('./pages/Home2026'));
 const About = React.lazy(() => import('./pages/About'));
+const ApiDemo = React.lazy(() => import('./components/ApiDemo'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
@@ -309,6 +310,9 @@ function App() {
               {/* Additional routes */}
               <Route path="/api" element={<API />} />
               <Route path="/developers" element={<DeveloperPortal />} />
+              
+              {/* Hybrid App Demo */}
+              <Route path="/hybrid-demo" element={<ApiDemo />} />
               
               {/* Catch-all */}
               <Route path="*" element={<Home />} />
