@@ -34,6 +34,7 @@ const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
 const EnhancedZionServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedZionServicesShowcase2025.tsx'));
 const ZionTechGroupMarketing2025 = React.lazy(() => import('./pages/ZionTechGroupMarketing2025.tsx'));
+const InnovativeServices2028 = React.lazy(() => import('./pages/InnovativeServices2028'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -178,6 +179,7 @@ function App() {
                 <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
                 <Route path="/enhanced-zion-services-2025" element={<EnhancedZionServicesShowcase2025 />} />
                 <Route path="/zion-tech-group-marketing-2025" element={<ZionTechGroupMarketing2025 />} />
+                <Route path="/innovative-services-2028" element={<InnovativeServices2028 />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
