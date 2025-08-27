@@ -10,7 +10,8 @@ const STATIC_FILES = [
   '/favicon.ico',
   '/og-image.svg',
   '/manifest.json',
-  '/offline.html'
+  '/offline.html',
+  '/vite.svg'
 ];
 
 // Install event - cache static files with better error handling
@@ -24,7 +25,18 @@ self.addEventListener('install', (event) => {
           STATIC_FILES.map(url => 
             cache.add(url).catch(error => {
               console.warn(`Failed to cache ${url}:`, error);
-              return null; // Continue with other files
+              // Try to fetch and cache manually if add() fails
+              return fetch(url)
+                .then(response => {
+                  if (response.ok) {
+                    return cache.put(url, response);
+                  }
+                  throw new Error(`HTTP ${response.status}`);
+                })
+                .catch(fetchError => {
+                  console.warn(`Manual fetch failed for ${url}:`, fetchError);
+                  return null; // Continue with other files
+                });
             })
           )
         );
@@ -82,6 +94,11 @@ self.addEventListener('fetch', (event) => {
       fetch(request).catch((error) => {
         console.warn('External request failed:', url.href, error);
         // Return a fallback response for failed external requests
+        // For images, return a placeholder or skip caching
+        if (request.destination === 'image') {
+          console.log('Skipping failed external image:', url.href);
+          return new Response('', { status: 204 }); // No content
+        }
         return new Response('External resource not available', { 
           status: 503,
           headers: { 'Content-Type': 'text/plain' }
@@ -109,8 +126,11 @@ function isStaticFile(request) {
     url.pathname.startsWith('/css/') ||
     url.pathname.startsWith('/images/') ||
     url.pathname.startsWith('/assets/') ||
-    url.pathname.endsWith('.js') ||
-    url.pathname.endsWith('.css') ||
+    url.pathname.startsWith('/src/') ||
+    url.endsWith('.js') ||
+    url.endsWith('.ts') ||
+    url.endsWith('.tsx') ||
+    url.endsWith('.css') ||
     url.pathname.endsWith('.png') ||
     url.pathname.endsWith('.jpg') ||
     url.pathname.endsWith('.jpeg') ||
