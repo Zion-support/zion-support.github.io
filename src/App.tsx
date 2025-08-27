@@ -118,6 +118,7 @@ const QuantumMachineLearning = React.lazy(() => import('./pages/services/quantum
 // Additional pages
 const API = React.lazy(() => import('./pages/API'));
 const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
+const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 
 // Accessibility page
 const Accessibility = () => (
@@ -255,6 +256,7 @@ function App() {
               {/* Additional routes */}
               <Route path="/api" element={<API />} />
               <Route path="/developers" element={<DeveloperPortal />} />
+              <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />

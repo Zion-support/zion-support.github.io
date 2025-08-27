@@ -38,6 +38,7 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
     { name: '2026 Services', href: '/services2026', current: false, featured: true },
+    { name: 'Revolutionary 2030', href: '/revolutionary-services-2030', current: false, featured: true },
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
