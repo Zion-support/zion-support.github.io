@@ -239,7 +239,7 @@ export const FuturisticNavigation: React.FC = () => {
 
   return (
     <>
-      <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${
+      <header className={`sticky top-0 z-50 w-full transition-all duration-500 quantum-particles ${
         scrolled 
           ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
           : 'bg-transparent'
@@ -255,14 +255,14 @@ export const FuturisticNavigation: React.FC = () => {
             >
               <Link to="/" className="flex items-center space-x-3 group">
                 <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-zion-cyan/25">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-zion-cyan/25 holographic neon-glow">
                     <span className="text-2xl font-bold text-white">Z</span>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-xl opacity-25 group-hover:opacity-50 transition-opacity duration-300"></div>
                 </div>
                 <div className="hidden sm:block">
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+                  <h1 className="text-2xl font-bold text-gradient">
                     ZION TECH GROUP
                   </h1>
                   <p className="text-xs text-zion-slate-light font-medium">Innovation • Intelligence • Impact</p>

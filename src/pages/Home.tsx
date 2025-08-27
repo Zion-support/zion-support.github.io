@@ -31,15 +31,15 @@ import { UltimateServicesShowcase2027 } from "@/components/UltimateServicesShowc
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 quantum-particles">
     <div className="relative">
-      <div className="w-32 h-32 border-4 border-cyan-400/20 rounded-full"></div>
-      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-lg">
+      <div className="w-32 h-32 border-4 border-cyan-400/20 rounded-full holographic"></div>
+      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin neon-glow"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-lg text-gradient">
         ZION
       </div>
       <div className="mt-4 text-center">
-        <div className="text-cyan-400 text-sm animate-pulse">Loading amazing experiences...</div>
+        <div className="text-cyan-400 text-sm animate-pulse neon-glow">Loading amazing experiences...</div>
       </div>
     </div>
   </div>
@@ -75,7 +75,7 @@ const StatsSection = React.memo(() => {
   ];
 
   return (
-    <section id="stats-section" className="py-20 bg-black/50">
+    <section id="stats-section" className="py-20 bg-black/50 quantum-particles">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
@@ -86,10 +86,10 @@ const StatsSection = React.memo(() => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center group"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300 holographic neon-glow">
                 <span className="text-2xl">{stat.icon}</span>
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 text-gradient">{stat.value}</div>
               <div className="text-lg font-semibold mb-2 text-white">{stat.label}</div>
               <div className="text-sm text-gray-400">{stat.description}</div>
             </motion.div>
@@ -217,6 +217,50 @@ export default function Home() {
       <Suspense fallback={<EnhancedLoadingSpinner />}>
         <HeroSection />
         <StatsSection />
+        
+        {/* Futuristic Quantum Background Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 quantum-particles"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-6">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-5xl md:text-6xl font-bold mb-6">
+                <span className="text-gradient">Quantum</span> 
+                <span className="text-white"> Innovation</span>
+              </h2>
+              <p className="text-xl md:text-2xl text-zion-slate-light max-w-3xl mx-auto">
+                Experience the future of technology with our cutting-edge quantum computing and AI solutions
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { icon: "⚛️", title: "Quantum Computing", desc: "Next-generation computational power" },
+                { icon: "🧠", title: "AI Consciousness", desc: "Advanced artificial intelligence systems" },
+                { icon: "🔮", title: "Future Tech", desc: "Innovation beyond imagination" }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="text-center group"
+                >
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300 holographic">
+                    <span className="text-3xl">{item.icon}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-zion-slate-light">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        
         <EnhancedServiceCategories />
         <TechSolutionsSection />
         <CaseStudiesSection />
