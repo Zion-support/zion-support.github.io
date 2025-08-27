@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -17,12 +17,6 @@ import {
   ExternalLink,
   Heart,
   Sparkles,
-  Quantum,
-  Space,
-  Biohazard,
-  Nanotech,
-  Neural,
-  Robot,
   Building,
   Handshake,
   TrendingUp,
@@ -67,11 +61,10 @@ export function Footer() {
   const serviceCategories = [
     {
       name: 'AI & Quantum',
-      icon: Quantum,
+      icon: Brain,
       services: [
         { name: 'Quantum AI Platform', href: '/innovative-services-2027' },
         { name: 'Autonomous AI Systems', href: '/innovative-services-2027' },
-        { name: 'Neural Technology', href: '/innovative-services-2027' },
         { name: 'Machine Learning', href: '/services/ai-services' }
       ]
     },
@@ -91,7 +84,6 @@ export function Footer() {
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops' },
         { name: 'Edge Computing', href: '/services/iot-edge' },
-        { name: 'Quantum Cloud', href: '/innovative-services-2027' },
         { name: 'Infrastructure as Code', href: '/services/cloud-devops' }
       ]
     },
@@ -135,12 +127,12 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Instagram', href: '#', icon: Instagram },
-    { name: 'YouTube', href: '#', icon: Youtube },
-    { name: 'GitHub', href: '#', icon: Github }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
 
   const scrollToTop = () => {
@@ -220,6 +212,8 @@ export function Footer() {
                     href={social.href}
                     className="p-2 text-zion-neon/60 hover:text-zion-neon hover:bg-zion-neon/10 rounded-lg transition-all duration-200"
                     aria-label={social.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <social.icon className="w-5 h-5" />
                   </a>
