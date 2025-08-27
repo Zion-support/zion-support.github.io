@@ -28,7 +28,16 @@ import {
   MapPin,
   ExternalLink,
   Search,
-  Clock
+  Clock,
+  Wifi,
+  Chip,
+  Database as DatabaseIcon,
+  ShieldCheck,
+  Bot,
+  GitFork,
+  Eye as EyeIcon,
+  Sparkles as SparklesIcon,
+  Zap as ZapIcon
 } from 'lucide-react';
 import { ADVANCED_AI_SERVICES_2028 } from '../data/advancedAIServices2028';
 import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from '../data/comprehensiveITInfrastructure2028';

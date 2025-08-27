@@ -1,288 +1,412 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BarChart3, TrendingUp, Users, Zap, Activity, Eye, MousePointer, Clock } from 'lucide-react';
+import { 
+  BarChart3, 
+  Users, 
+  Eye, 
+  MousePointer, 
+  Clock, 
+  X,
+  Activity,
+  Zap,
+  Target,
+  Award,
+  Monitor,
+  Smartphone,
+  Tablet
+} from 'lucide-react';
 
 interface AnalyticsData {
   pageViews: number;
   uniqueVisitors: number;
-  averageSessionDuration: number;
+  sessionDuration: number;
   bounceRate: number;
-  performanceScore: number;
-  userInteractions: number;
-  loadTime: number;
-  memoryUsage: number;
+  conversionRate: number;
+  topPages: Array<{ path: string; views: number }>;
+  userAgents: Array<{ device: string; count: number }>;
+  referrers: Array<{ source: string; count: number }>;
+  timeOnPage: number;
+  scrollDepth: number;
+  clickEvents: number;
+  formSubmissions: number;
 }
 
-interface PerformanceMetric {
-  name: string;
-  value: number;
-  unit: string;
-  icon: React.ComponentType<any>;
-  color: string;
-  trend: 'up' | 'down' | 'stable';
+interface Props {
+  enabled?: boolean;
 }
 
-export const AdvancedAnalytics: React.FC<{ enabled?: boolean; showMetrics?: boolean }> = ({ 
-  enabled = true, 
-  showMetrics = true 
-}) => {
+export function AdvancedAnalytics({ enabled = true }: Props): JSX.Element | null {
+  const [isVisible, setIsVisible] = useState(false);
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
     pageViews: 0,
     uniqueVisitors: 0,
-    averageSessionDuration: 0,
+    sessionDuration: 0,
     bounceRate: 0,
-    performanceScore: 0,
-    userInteractions: 0,
-    loadTime: 0,
-    memoryUsage: 0
+    conversionRate: 0,
+    topPages: [],
+    userAgents: [],
+    referrers: [],
+    timeOnPage: 0,
+    scrollDepth: 0,
+    clickEvents: 0,
+    formSubmissions: 0
   });
+  const [sessionStart, setSessionStart] = useState<number>(Date.now());
+  const [isTracking, setIsTracking] = useState(false);
 
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  // Initialize analytics tracking
+  const initializeTracking = useCallback(() => {
+    if (!enabled) return () => {};
 
-  // Simulate real-time data updates
-  const updateAnalytics = useCallback(() => {
-    if (!enabled) return;
+    setIsTracking(true);
+    setSessionStart(Date.now());
 
-    setAnalyticsData(prev => ({
-      pageViews: prev.pageViews + Math.floor(Math.random() * 5) + 1,
-      uniqueVisitors: prev.uniqueVisitors + Math.floor(Math.random() * 2),
-      averageSessionDuration: Math.max(0, prev.averageSessionDuration + (Math.random() - 0.5) * 10),
-      bounceRate: Math.max(0, Math.min(100, prev.bounceRate + (Math.random() - 0.5) * 5)),
-      performanceScore: Math.max(0, Math.min(100, prev.performanceScore + (Math.random() - 0.5) * 2)),
-      userInteractions: prev.userInteractions + Math.floor(Math.random() * 3) + 1,
-      loadTime: Math.max(0, prev.loadTime + (Math.random() - 0.5) * 50),
-      memoryUsage: Math.max(0, prev.memoryUsage + (Math.random() - 0.5) * 5)
-    }));
-  }, [enabled]);
+    // Track page view
+    const trackPageView = () => {
+      setAnalyticsData(prev => ({
+        ...prev,
+        pageViews: prev.pageViews + 1
+      }));
+    };
 
-  // Performance monitoring
-  const measurePerformance = useCallback(() => {
-    if (!enabled) return;
+    // Track scroll depth
+    const trackScrollDepth = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+      
+      setAnalyticsData(prev => ({
+        ...prev,
+        scrollDepth: Math.max(prev.scrollDepth, scrollPercent)
+      }));
+    };
 
-    // Measure page load performance
-    if ('performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {
+    // Track time on page
+    const trackTimeOnPage = () => {
+      const timeSpent = Math.round((Date.now() - sessionStart) / 1000);
+      setAnalyticsData(prev => ({
+        ...prev,
+        timeOnPage: timeSpent
+      }));
+    };
+
+    // Track click events
+    const trackClickEvents = () => {
+      setAnalyticsData(prev => ({
+        ...prev,
+        clickEvents: prev.clickEvents + 1
+      }));
+    };
+
+    // Track form submissions
+    const trackFormSubmissions = (e: Event) => {
+      if (e.target instanceof HTMLFormElement) {
         setAnalyticsData(prev => ({
           ...prev,
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart
+          formSubmissions: prev.formSubmissions + 1
         }));
       }
-    }
-
-    // Measure memory usage if available
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      setAnalyticsData(prev => ({
-        ...prev,
-        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-      }));
-    }
-  }, [enabled]);
-
-  // User interaction tracking
-  const trackUserInteractions = useCallback(() => {
-    if (!enabled) return;
-
-    const handleInteraction = () => {
-      setAnalyticsData(prev => ({
-        ...prev,
-        userInteractions: prev.userInteractions + 1
-      }));
     };
 
-    document.addEventListener('click', handleInteraction);
-    document.addEventListener('scroll', handleInteraction);
-    document.addEventListener('keydown', handleInteraction);
+    // Track user agent
+    const trackUserAgent = () => {
+      const userAgent = navigator.userAgent;
+      let device = 'Desktop';
+      
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
+        device = /iPad/i.test(userAgent) ? 'Tablet' : 'Mobile';
+      }
+      
+      setAnalyticsData(prev => {
+        const existingDevice = prev.userAgents.find(d => d.device === device);
+        if (existingDevice) {
+          existingDevice.count++;
+        } else {
+          prev.userAgents.push({ device, count: 1 });
+        }
+        return { ...prev };
+      });
+    };
 
+    // Track referrer
+    const trackReferrer = () => {
+      if (document.referrer) {
+        const referrer = new URL(document.referrer);
+        const source = referrer.hostname;
+        
+        setAnalyticsData(prev => {
+          const existingSource = prev.referrers.find(r => r.source === source);
+          if (existingSource) {
+            existingSource.count++;
+          } else {
+            prev.referrers.push({ source, count: 1 });
+          }
+          return { ...prev };
+        });
+      }
+    };
+
+    // Initialize tracking
+    trackPageView();
+    trackUserAgent();
+    trackReferrer();
+
+    // Add event listeners
+    window.addEventListener('scroll', trackScrollDepth, { passive: true });
+    document.addEventListener('click', trackClickEvents);
+    document.addEventListener('submit', trackFormSubmissions);
+    
+    // Update time on page every second
+    const timeInterval = setInterval(trackTimeOnPage, 1000);
+
+    // Track page visibility changes
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        // Page is hidden, pause tracking
+        setIsTracking(false);
+      } else {
+        // Page is visible, resume tracking
+        setIsTracking(true);
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Cleanup function
     return () => {
-      document.removeEventListener('click', handleInteraction);
-      document.removeEventListener('scroll', handleInteraction);
-      document.removeEventListener('keydown', handleInteraction);
+      window.removeEventListener('scroll', trackScrollDepth);
+      document.removeEventListener('click', trackClickEvents);
+      document.removeEventListener('submit', trackFormSubmissions);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      clearInterval(timeInterval);
     };
-  }, [enabled]);
+  }, [enabled, sessionStart]);
 
+  // Initialize tracking on mount
   useEffect(() => {
-    if (!enabled) return;
+    const cleanup = initializeTracking();
+    return cleanup;
+  }, [initializeTracking]);
 
-    // Initialize with some data
-    setAnalyticsData({
-      pageViews: Math.floor(Math.random() * 1000) + 500,
-      uniqueVisitors: Math.floor(Math.random() * 500) + 200,
-      averageSessionDuration: Math.floor(Math.random() * 300) + 120,
-      bounceRate: Math.floor(Math.random() * 40) + 20,
-      performanceScore: Math.floor(Math.random() * 20) + 80,
-      userInteractions: Math.floor(Math.random() * 100) + 50,
-      loadTime: Math.floor(Math.random() * 200) + 100,
-      memoryUsage: Math.floor(Math.random() * 50) + 25
-    });
+  // Calculate session duration
+  useEffect(() => {
+    if (isTracking) {
+      const interval = setInterval(() => {
+        const duration = Math.round((Date.now() - sessionStart) / 1000);
+        setAnalyticsData(prev => ({
+          ...prev,
+          sessionDuration: duration
+        }));
+      }, 1000);
 
-    // Set up real-time updates
-    const interval = setInterval(updateAnalytics, 5000);
-    const performanceInterval = setInterval(measurePerformance, 10000);
-
-    // Track user interactions
-    const cleanup = trackUserInteractions();
-
-    // Show analytics after a delay
-    const showTimer = setTimeout(() => setIsVisible(true), 2000);
-
-    return () => {
-      clearInterval(interval);
-      clearInterval(performanceInterval);
-      clearTimeout(showTimer);
-      cleanup?.();
-    };
-  }, [enabled, updateAnalytics, measurePerformance, trackUserInteractions]);
-
-  const performanceMetrics: PerformanceMetric[] = [
-    {
-      name: 'Performance Score',
-      value: analyticsData.performanceScore,
-      unit: '%',
-      icon: Zap,
-      color: 'text-green-400',
-      trend: analyticsData.performanceScore > 85 ? 'up' : analyticsData.performanceScore < 75 ? 'down' : 'stable'
-    },
-    {
-      name: 'Load Time',
-      value: analyticsData.loadTime,
-      unit: 'ms',
-      icon: Clock,
-      color: 'text-blue-400',
-      trend: analyticsData.loadTime < 200 ? 'up' : analyticsData.loadTime > 500 ? 'down' : 'stable'
-    },
-    {
-      name: 'Memory Usage',
-      value: analyticsData.memoryUsage,
-      unit: 'MB',
-      icon: Activity,
-      color: 'text-purple-400',
-      trend: analyticsData.memoryUsage < 50 ? 'up' : analyticsData.memoryUsage > 100 ? 'down' : 'stable'
+      return () => clearInterval(interval);
     }
-  ];
+  }, [isTracking, sessionStart]);
 
-  if (!enabled || !isVisible) return null;
+  // Simulate some analytics data for demonstration
+  useEffect(() => {
+    if (enabled) {
+      // Simulate top pages
+      setAnalyticsData(prev => ({
+        ...prev,
+        topPages: [
+          { path: '/', views: 1250 },
+          { path: '/services', views: 890 },
+          { path: '/about', views: 456 },
+          { path: '/contact', views: 234 },
+          { path: '/blog', views: 189 }
+        ],
+        bounceRate: 35.2,
+        conversionRate: 8.7
+      }));
+    }
+  }, [enabled]);
+
+  if (!enabled) return null;
+
+  if (!isVisible) {
+    return (
+      <motion.button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-44 right-4 z-50 p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        title="Analytics Dashboard"
+        aria-label="Open analytics dashboard"
+      >
+        <BarChart3 className="w-6 h-6 text-white" />
+      </motion.button>
+    );
+  }
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: 20, scale: 0.95 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        exit={{ opacity: 0, y: 20, scale: 0.95 }}
-        className="fixed bottom-4 right-4 z-50"
+        initial={{ opacity: 0, x: 300 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 300 }}
+        className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[90vh] overflow-y-auto"
       >
-        <motion.div
-          className="bg-zion-slate-dark/95 backdrop-blur-md border border-zion-slate-light/30 rounded-2xl shadow-2xl overflow-hidden"
-          initial={{ width: 80, height: 80 }}
-          animate={{ width: isExpanded ? 400 : 80, height: isExpanded ? 'auto' : 80 }}
-          transition={{ duration: 0.3, ease: 'easeInOut' }}
-        >
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-zion-slate-light/20">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <BarChart3 className="w-5 h-5 text-white" />
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
+            <BarChart3 className="w-6 h-6 text-indigo-500" />
+            Analytics Dashboard
+          </h3>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-gray-600 transition-colors p-1"
+            aria-label="Close analytics dashboard"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="space-y-6">
+          {/* Real-time Metrics */}
+          <div>
+            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
+              <Activity className="w-4 h-4 text-green-500" />
+              Real-time Metrics
+            </h4>
+            
+            <div className="grid grid-cols-2 gap-3">
+              <div className="p-3 bg-green-50 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Eye className="w-4 h-4 text-green-500" />
+                  <span className="text-xs text-green-600">Page Views</span>
+                </div>
+                <span className="text-lg font-bold text-green-700">{analyticsData.pageViews}</span>
               </div>
-              <span className="text-white font-semibold">Analytics</span>
+              
+              <div className="p-3 bg-blue-50 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Users className="w-4 h-4 text-blue-500" />
+                  <span className="text-xs text-blue-600">Unique Visitors</span>
+                </div>
+                <span className="text-lg font-bold text-blue-700">{analyticsData.uniqueVisitors || 1}</span>
+              </div>
+              
+              <div className="p-3 bg-purple-50 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Clock className="w-4 h-4 text-purple-500" />
+                  <span className="text-xs text-purple-600">Session Duration</span>
+                </div>
+                <span className="text-lg font-bold text-purple-700">{Math.floor(analyticsData.sessionDuration / 60)}m {analyticsData.sessionDuration % 60}s</span>
+              </div>
+              
+              <div className="p-3 bg-orange-50 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <MousePointer className="w-4 h-4 text-orange-500" />
+                  <span className="text-xs text-orange-600">Clicks</span>
+                </div>
+                <span className="text-lg font-bold text-orange-700">{analyticsData.clickEvents}</span>
+              </div>
             </div>
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="text-zion-slate-light hover:text-white transition-colors"
-            >
-              <motion.div
-                animate={{ rotate: isExpanded ? 180 : 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                ▼
-              </motion.div>
-            </button>
           </div>
 
-          {/* Expanded Content */}
-          <AnimatePresence>
-            {isExpanded && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                className="p-4 space-y-4"
-              >
-                {/* Key Metrics */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400">{analyticsData.pageViews}</div>
-                    <div className="text-xs text-zion-slate-light">Page Views</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-400">{analyticsData.uniqueVisitors}</div>
-                    <div className="text-xs text-zion-slate-light">Unique Visitors</div>
-                  </div>
-                </div>
-
-                {/* Performance Metrics */}
-                <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-white">Performance</h4>
-                  {performanceMetrics.map((metric, index) => (
-                    <motion.div
-                      key={metric.name}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex items-center justify-between p-2 bg-zion-slate/50 rounded-lg"
-                    >
-                      <div className="flex items-center space-x-2">
-                        <metric.icon className={`w-4 h-4 ${metric.color}`} />
-                        <span className="text-sm text-zion-slate-light">{metric.name}</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <span className="text-sm font-semibold text-white">
-                          {metric.value.toFixed(1)}{metric.unit}
-                        </span>
-                        <motion.div
-                          animate={{ 
-                            color: metric.trend === 'up' ? '#22c55e' : 
-                                   metric.trend === 'down' ? '#ef4444' : '#6b7280'
-                          }}
-                          className="text-xs"
-                        >
-                          {metric.trend === 'up' ? '↗' : metric.trend === 'down' ? '↘' : '→'}
-                        </motion.div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* User Behavior */}
-                <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-white">User Behavior</h4>
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="text-center p-2 bg-zion-slate/50 rounded-lg">
-                      <div className="text-lg font-bold text-green-400">{analyticsData.averageSessionDuration}s</div>
-                      <div className="text-xs text-zion-slate-light">Avg. Session</div>
-                    </div>
-                    <div className="text-center p-2 bg-zion-slate/50 rounded-lg">
-                      <div className="text-lg font-bold text-orange-400">{analyticsData.bounceRate}%</div>
-                      <div className="text-xs text-zion-slate-light">Bounce Rate</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* Collapsed State */}
-          {!isExpanded && (
-            <div className="flex items-center justify-center h-full">
-              <div className="text-center">
-                <div className="text-lg font-bold text-cyan-400">{analyticsData.performanceScore}%</div>
-                <div className="text-xs text-zion-slate-light">Score</div>
+          {/* Performance Metrics */}
+          <div>
+            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
+              <Zap className="w-4 h-4 text-yellow-500" />
+              Performance Metrics
+            </h4>
+            
+            <div className="space-y-3">
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <span className="text-sm text-gray-700">Scroll Depth</span>
+                <span className="text-sm font-medium text-gray-800">{analyticsData.scrollDepth}%</span>
+              </div>
+              
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <span className="text-sm text-gray-700">Time on Page</span>
+                <span className="text-sm font-medium text-gray-800">{Math.floor(analyticsData.timeOnPage / 60)}m {analyticsData.timeOnPage % 60}s</span>
+              </div>
+              
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <span className="text-sm text-gray-700">Form Submissions</span>
+                <span className="text-sm font-medium text-gray-800">{analyticsData.formSubmissions}</span>
               </div>
             </div>
-          )}
-        </motion.div>
+          </div>
+
+          {/* Conversion Metrics */}
+          <div>
+            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
+              <Target className="w-4 h-4 text-red-500" />
+              Conversion Metrics
+            </h4>
+            
+            <div className="grid grid-cols-2 gap-3">
+              <div className="p-3 bg-red-50 rounded-lg">
+                <div className="text-center">
+                  <div className="text-lg font-bold text-red-700">{analyticsData.bounceRate}%</div>
+                  <div className="text-xs text-red-600">Bounce Rate</div>
+                </div>
+              </div>
+              
+              <div className="p-3 bg-green-50 rounded-lg">
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-700">{analyticsData.conversionRate}%</div>
+                  <div className="text-xs text-green-600">Conversion Rate</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Top Pages */}
+          <div>
+            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
+              <Award className="w-4 h-4 text-blue-500" />
+              Top Pages
+            </h4>
+            
+            <div className="space-y-2">
+              {analyticsData.topPages.slice(0, 3).map((page, index) => (
+                <div key={page.path} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-medium text-gray-500">#{index + 1}</span>
+                    <span className="text-sm text-gray-700">{page.path}</span>
+                  </div>
+                  <span className="text-sm font-medium text-gray-800">{page.views}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Device Distribution */}
+          <div>
+            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
+              <Monitor className="w-4 h-4 text-purple-500" />
+              Device Distribution
+            </h4>
+            
+            <div className="space-y-2">
+              {analyticsData.userAgents.map((device, index) => (
+                <div key={index} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
+                  <div className="flex items-center gap-2">
+                    {device.device === 'Mobile' && <Smartphone className="w-4 h-4 text-blue-500" />}
+                    {device.device === 'Tablet' && <Tablet className="w-4 h-4 text-green-500" />}
+                    {device.device === 'Desktop' && <Monitor className="w-4 h-4 text-purple-500" />}
+                    <span className="text-sm text-gray-700">{device.device}</span>
+                  </div>
+                  <span className="text-sm font-medium text-gray-800">{device.count}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Session Status */}
+          <div className="pt-4 border-t border-gray-200">
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium text-gray-700">Session Status</span>
+              <div className="flex items-center gap-2">
+                <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`}></div>
+                <span className="text-xs text-gray-600">{isTracking ? 'Active' : 'Paused'}</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </motion.div>
     </AnimatePresence>
   );
-};
+}

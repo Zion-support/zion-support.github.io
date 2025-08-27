@@ -2,348 +2,193 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Users, 
-  Handshake, 
+  Building, 
   Globe, 
+  Star, 
+  ArrowRight, 
+  Handshake, 
   Award, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Brain,
+  TrendingUp,
+  Shield,
   Cloud,
-  Lock,
-  Rocket,
-  Star
+  Brain,
+  Zap,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
 
 export default function Partners() {
-  const partners = [
+  const partnerCategories = [
     {
-      name: 'Microsoft Azure',
-      logo: '🔵',
-      category: 'Cloud Platform',
-      description: 'Strategic cloud infrastructure partner providing enterprise-grade solutions.',
-      benefits: ['Azure credits', 'Technical support', 'Joint go-to-market']
+      title: 'Technology Partners',
+      description: 'Leading technology companies that enhance our solutions',
+      icon: Brain,
+      partners: [
+        { name: 'Microsoft', logo: 'M', tier: 'Platinum', category: 'Cloud & AI' },
+        { name: 'AWS', logo: 'AWS', tier: 'Platinum', category: 'Cloud Infrastructure' },
+        { name: 'Google Cloud', logo: 'GC', tier: 'Gold', category: 'AI & ML' },
+        { name: 'IBM', logo: 'IBM', tier: 'Gold', category: 'Enterprise Solutions' }
+      ]
     },
     {
-      name: 'AWS',
-      logo: '🟠',
-      category: 'Cloud Services',
-      description: 'Leading cloud provider for scalable and reliable infrastructure.',
-      benefits: ['AWS credits', 'Architecture guidance', 'Marketplace integration']
+      title: 'System Integrators',
+      description: 'Partners who help implement our solutions worldwide',
+      icon: Building,
+      partners: [
+        { name: 'Accenture', logo: 'A', tier: 'Platinum', category: 'Global SI' },
+        { name: 'Deloitte', logo: 'D', tier: 'Platinum', category: 'Consulting' },
+        { name: 'PwC', logo: 'P', tier: 'Gold', category: 'Advisory' }
+      ]
     },
     {
-      name: 'Google Cloud',
-      logo: '🔴',
-      category: 'AI & ML Platform',
-      description: 'Advanced AI and machine learning capabilities for enterprise solutions.',
-      benefits: ['GCP credits', 'AI/ML expertise', 'Innovation labs access']
-    },
-    {
-      name: 'Cisco',
-      logo: '🔵',
-      category: 'Networking',
-      description: 'Enterprise networking and security solutions for modern businesses.',
-      benefits: ['Certification programs', 'Technical training', 'Partner support']
-    },
-    {
-      name: 'Dell Technologies',
-      logo: '🔵',
-      category: 'Hardware & Infrastructure',
-      description: 'End-to-end technology solutions for enterprise transformation.',
-      benefits: ['Hardware discounts', 'Technical expertise', 'Joint solutions']
-    },
-    {
-      name: 'Intel',
-      logo: '🔵',
-      category: 'Processor Technology',
-      description: 'Leading processor technology for AI and high-performance computing.',
-      benefits: ['Early access programs', 'Technical resources', 'Innovation support']
+      title: 'Channel Partners',
+      description: 'Resellers and distributors expanding our reach',
+      icon: Globe,
+      partners: [
+        { name: 'TechCorp', logo: 'TC', tier: 'Silver', category: 'Reseller' },
+        { name: 'InnovateTech', logo: 'IT', tier: 'Silver', category: 'Distributor' }
+      ]
     }
   ];
 
-  const partnershipTiers = [
-    {
-      name: 'Strategic Partner',
-      icon: Star,
-      description: 'Deep integration and joint go-to-market initiatives',
-      benefits: [
-        'Dedicated partner manager',
-        'Joint marketing campaigns',
-        'Revenue sharing programs',
-        'Early access to new features',
-        'Co-innovation projects'
-      ]
-    },
-    {
-      name: 'Gold Partner',
-      icon: Award,
-      description: 'Strong collaboration with enhanced support and resources',
-      benefits: [
-        'Enhanced technical support',
-        'Marketing development funds',
-        'Training and certification',
-        'Joint customer events',
-        'Solution development support'
-      ]
-    },
-    {
-      name: 'Silver Partner',
-      icon: TrendingUp,
-      description: 'Growing partnership with foundational support',
-      benefits: [
-        'Basic technical support',
-        'Partner portal access',
-        'Training resources',
-        'Marketing materials',
-        'Lead generation support'
-      ]
-    }
+  const benefits = [
+    { icon: Star, title: 'Exclusive Access', description: 'Early access to new features and beta programs' },
+    { icon: Shield, title: 'Technical Support', description: 'Dedicated technical support and training' },
+    { icon: TrendingUp, title: 'Revenue Growth', description: 'Competitive margins and growth opportunities' },
+    { icon: Award, title: 'Recognition', description: 'Partner awards and marketing support' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Partners - Zion Tech Group"
-        description="Join our network of technology partners and unlock new opportunities for growth, innovation, and market expansion."
-      />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Strategic
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Partnerships</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join our network of technology leaders and unlock new opportunities for growth, 
-              innovation, and market expansion in the digital transformation landscape.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105">
-                Become a Partner
-              </button>
-              <button className="px-8 py-3 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                View Partnership Tiers
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Partnership Benefits */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Why Partner With Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We offer comprehensive support, resources, and opportunities to help our partners 
-              succeed in the rapidly evolving technology landscape.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Users,
-                title: 'Expanded Market Reach',
-                description: 'Access our extensive customer base and market presence across multiple industries.'
-              },
-              {
-                icon: Handshake,
-                title: 'Joint Go-to-Market',
-                description: 'Collaborate on marketing campaigns, events, and customer acquisition strategies.'
-              },
-              {
-                icon: Globe,
-                title: 'Global Presence',
-                description: 'Leverage our international network and local market expertise.'
-              },
-              {
-                icon: Award,
-                title: 'Recognition & Rewards',
-                description: 'Earn rewards, certifications, and recognition for your partnership achievements.'
-              },
-              {
-                icon: TrendingUp,
-                title: 'Revenue Growth',
-                description: 'Increase your revenue through joint solutions and referral programs.'
-              },
-              {
-                icon: Shield,
-                title: 'Technical Support',
-                description: 'Access our technical expertise and resources to enhance your solutions.'
-              }
-            ].map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-                  <benefit.icon className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </motion.div>
-            ))}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {/* Header */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
+                <Handshake className="h-10 w-10 text-white" />
+              </div>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">Partners</h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Join our global partner ecosystem and help organizations transform their business with cutting-edge technology solutions.
+              </p>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Partnership Tiers */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Partnership Tiers
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the partnership level that best fits your business goals and growth objectives.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {partnershipTiers.map((tier, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                  index === 0 
-                    ? 'border-cyan-400/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20' 
-                    : 'border-slate-700/50 hover:border-cyan-400/50'
-                }`}
-              >
-                <div className="text-center mb-6">
-                  <div className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center ${
-                    index === 0 
-                      ? 'bg-gradient-to-br from-cyan-400 to-blue-500' 
-                      : 'bg-gradient-to-br from-slate-600 to-slate-700'
-                  }`}>
-                    <tier.icon className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <p className="text-gray-300">{tier.description}</p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Partner Categories */}
+        <div className="space-y-12">
+          {partnerCategories.map((category, index) => (
+            <motion.div
+              key={category.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white rounded-xl shadow-sm border border-gray-200 p-8"
+            >
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  <category.icon className="h-6 w-6 text-white" />
                 </div>
-                <ul className="space-y-3">
-                  {tier.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <Zap className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-                <button className={`w-full mt-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  index === 0
-                    ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:from-cyan-500 hover:to-blue-600'
-                    : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                }`}>
-                  {index === 0 ? 'Apply Now' : 'Learn More'}
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Current Partners */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Our Trusted Partners
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're proud to work with industry leaders who share our vision for 
-              innovation and digital transformation.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {partners.map((partner, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-              >
-                <div className="text-center mb-4">
-                  <div className="text-4xl mb-3">{partner.logo}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
-                  <span className="inline-block px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">
-                    {partner.category}
-                  </span>
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900">{category.title}</h2>
+                  <p className="text-gray-600">{category.description}</p>
                 </div>
-                <p className="text-gray-300 text-center mb-4">{partner.description}</p>
-                <div className="space-y-2">
-                  {partner.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <Rocket className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-                      {benefit}
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {category.partners.map((partner, partnerIndex) => (
+                  <motion.div
+                    key={partner.name}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: (index * 0.1) + (partnerIndex * 0.05) }}
+                    className="text-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
+                      {partner.logo}
                     </div>
-                  ))}
+                    <h3 className="font-semibold text-gray-900 mb-1">{partner.name}</h3>
+                    <p className="text-sm text-gray-600 mb-2">{partner.category}</p>
+                    <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
+                      partner.tier === 'Platinum' ? 'bg-yellow-100 text-yellow-800' :
+                      partner.tier === 'Gold' ? 'bg-yellow-100 text-yellow-800' :
+                      'bg-gray-100 text-gray-800'
+                    }`}>
+                      {partner.tier}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Benefits Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="mt-16 bg-white rounded-xl shadow-sm border border-gray-200 p-8"
+        >
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Partner Benefits</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 + index * 0.1 }}
+                className="text-center p-6"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-4">
+                  <benefit.icon className="h-8 w-8 text-white" />
                 </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-600 text-sm">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.div>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
-        <div className="container mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Join Our Partner Network?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Let's explore how we can work together to drive innovation, 
-              expand market reach, and deliver exceptional value to customers.
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h2 className="text-2xl font-bold mb-4">Ready to Partner With Us?</h2>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Join our partner ecosystem and help organizations leverage the power of AI, cloud, and emerging technologies.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105">
-                Start Partnership Discussion
-              </button>
-              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Download Partner Kit
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                Become a Partner
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
+              >
+                Contact Partnership Team
+              </a>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 }
