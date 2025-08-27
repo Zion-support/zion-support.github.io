@@ -134,6 +134,12 @@ const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthc
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 
+// Additional new innovative AI services
+const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
+const AIContentCreationSuite = React.lazy(() => import('./pages/services/AIContentCreationSuite'));
+
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
@@ -275,9 +281,17 @@ function App() {
               <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
               <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
               
+              {/* Additional new innovative AI services */}
+              <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+              <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+              <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+              <Route path="/services/ai-content-creation-suite" element={<AIContentCreationSuite />} />
+              
               {/* New 2025 service routes */}
               <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
               <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
+              <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
+              <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
               
               {/* New 2026 service routes */}
               <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />

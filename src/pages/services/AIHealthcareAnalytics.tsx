@@ -1,95 +1,95 @@
-import { Truck, BarChart3, Globe, Zap, Check, ArrowRight, ExternalLink, Phone, Mail, TrendingUp, Shield, Clock, MapPin } from 'lucide-react';
+import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AIHealthcareAnalytics() {
   const features = [
-    'AI-powered demand forecasting and planning',
-    'Real-time inventory optimization and management',
-    'Automated supplier selection and evaluation',
-    'Route optimization and logistics planning',
-    'Supply chain risk assessment and mitigation',
-    'Cost optimization and budget management',
-    'Sustainability tracking and carbon footprint analysis',
-    'Multi-warehouse inventory distribution',
-    'Real-time shipment tracking and visibility',
-    'Predictive maintenance for logistics equipment'
+    'AI-powered patient outcome prediction',
+    'Real-time health monitoring and alerts',
+    'Predictive analytics for disease prevention',
+    'Automated medical image analysis',
+    'Clinical decision support systems',
+    'Population health management',
+    'Drug interaction and safety monitoring',
+    'Healthcare fraud detection',
+    'Patient engagement optimization',
+    'Regulatory compliance automation'
   ];
 
   const benefits = [
-    'Reduce supply chain costs by up to 25%',
-    'Improve inventory turnover by 40%',
-    'Reduce lead times by 30%',
-    'Increase on-time delivery to 98%',
-    'Minimize stockouts and overstock situations',
-    'Optimize warehouse space utilization by 35%'
+    'Improve patient outcomes by 35%',
+    'Reduce healthcare costs by 25%',
+    'Increase diagnostic accuracy by 40%',
+    'Reduce readmission rates by 30%',
+    'Optimize resource allocation by 45%',
+    'Enhance patient satisfaction by 50%'
   ];
 
   const useCases = [
-    'Retail and e-commerce optimization',
-    'Manufacturing supply chain management',
-    'Healthcare logistics and distribution',
-    'Food and beverage supply chains',
-    'Automotive parts distribution',
-    'Pharmaceutical supply chain compliance'
+    'Hospital management and operations',
+    'Clinical research and trials',
+    'Telemedicine and remote care',
+    'Pharmaceutical development',
+    'Insurance and claims processing',
+    'Public health monitoring'
   ];
 
   const tiers = [
     {
-      name: 'Starter',
-      price: '$499/mo',
+      name: 'Clinical',
+      price: '$599/mo',
       details: [
-        'Up to 5 locations',
-        'Basic demand forecasting',
-        'Inventory optimization',
+        'Up to 100 patients',
+        'Basic health analytics',
+        'Standard reporting',
         'Email support',
-        'Standard reporting'
+        'HIPAA compliance'
       ]
     },
     {
       name: 'Professional',
-      price: '$1,299/mo',
+      price: '$1,499/mo',
       details: [
-        'Up to 25 locations',
-        'Advanced AI forecasting',
-        'Multi-warehouse optimization',
+        'Up to 1,000 patients',
+        'Advanced AI analytics',
+        'Custom dashboards',
         'Priority support',
-        'Custom integrations',
-        'Advanced analytics'
+        'API integrations',
+        'Advanced compliance'
       ]
     },
     {
       name: 'Enterprise',
-      price: '$2,999/mo',
+      price: '$3,999/mo',
       details: [
-        'Unlimited locations',
-        'Full AI optimization suite',
+        'Unlimited patients',
+        'Full AI healthcare suite',
         'Custom algorithms',
         'Dedicated support',
-        'API access',
-        'White-label solutions'
+        'White-label solutions',
+        'Multi-facility support'
       ]
     }
   ];
 
   const technicalSpecs = {
-    technology: ['Machine Learning', 'Deep Learning', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
-    integrations: ['SAP', 'Oracle', 'Salesforce', 'Shopify', 'WooCommerce', 'QuickBooks', 'FedEx', 'UPS'],
-    security: ['SOC 2 Type II', 'ISO 27001', 'GDPR', 'End-to-end encryption', 'Multi-factor authentication'],
-    uptime: '99.95%',
-    compliance: ['ISO 9001', 'ISO 14001', 'SOC 2', 'GDPR', 'CCPA']
+    technology: ['Deep Learning', 'Natural Language Processing', 'Python', 'React', 'Node.js', 'PostgreSQL', 'TensorFlow'],
+    integrations: ['Epic', 'Cerner', 'Allscripts', 'Meditech', 'Practice Fusion', 'Athenahealth'],
+    security: ['HIPAA', 'SOC 2 Type II', 'HITECH', 'End-to-end encryption', 'Multi-factor authentication'],
+    uptime: '99.99%',
+    compliance: ['HIPAA', 'HITECH', 'SOC 2', 'ISO 27001', 'GDPR', 'CCPA']
   };
 
-  const industrySolutions = [
+  const healthcareSolutions = [
     {
-      industry: 'Retail & E-commerce',
-      solutions: ['Omnichannel inventory management', 'Seasonal demand forecasting', 'Returns optimization']
+      specialty: 'Cardiology',
+      solutions: ['Heart disease prediction', 'ECG analysis', 'Risk assessment', 'Treatment optimization']
     },
     {
-      industry: 'Manufacturing',
-      solutions: ['Just-in-time inventory', 'Supplier performance tracking', 'Quality control integration']
+      specialty: 'Oncology',
+      solutions: ['Cancer detection', 'Treatment planning', 'Outcome prediction', 'Clinical trial matching']
     },
     {
-      industry: 'Healthcare',
-      solutions: ['Cold chain management', 'Regulatory compliance', 'Patient safety protocols']
+      specialty: 'Neurology',
+      solutions: ['Brain imaging analysis', 'Cognitive assessment', 'Disease progression tracking', 'Treatment response monitoring']
     }
   ];
 
@@ -98,13 +98,13 @@ export default function AISupplyChainOptimization() {
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Truck className="w-4 h-4 mr-2" /> AI-Powered Supply Chain Optimization
+            <Heart className="w-4 h-4 mr-2" /> AI-Powered Healthcare Analytics
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            AI Supply Chain Optimization
+            AI Healthcare Analytics Platform
           </h1>
           <p className="text-zion-slate-light text-xl">
-            Revolutionize your supply chain with AI-powered optimization, real-time visibility, and predictive analytics.
+            Transform healthcare delivery with AI-powered analytics, predictive insights, and clinical decision support.
           </p>
         </div>
       </section>
@@ -123,7 +123,7 @@ export default function AISupplyChainOptimization() {
             </ul>
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Business Benefits</h2>
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Healthcare Benefits</h2>
             <ul className="space-y-3">
               {benefits.map((benefit) => (
                 <li key={benefit} className="flex items-start">
@@ -140,7 +140,7 @@ export default function AISupplyChainOptimization() {
           <div className="grid md:grid-cols-3 gap-6">
             {useCases.map((useCase) => (
               <div key={useCase} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
-                <Globe className="w-6 h-6 text-zion-cyan mb-3" />
+                <Activity className="w-6 h-6 text-zion-cyan mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{useCase}</div>
               </div>
             ))}
@@ -148,11 +148,11 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Industry Solutions</h2>
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Specialty Solutions</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {industrySolutions.map((solution) => (
-              <div key={solution.industry} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{solution.industry}</h3>
+            {healthcareSolutions.map((solution) => (
+              <div key={solution.specialty} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{solution.specialty}</h3>
                 <ul className="space-y-2">
                   {solution.solutions.map((sol) => (
                     <li key={sol} className="flex items-start text-sm text-zion-slate-dark">
@@ -196,7 +196,7 @@ export default function AISupplyChainOptimization() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Integrations</h3>
+                <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">EHR Integrations</h3>
                 <div className="flex flex-wrap gap-2">
                   {technicalSpecs.integrations.map((integration) => (
                     <span key={integration} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm">
@@ -238,7 +238,7 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-14 text-center">
-          <div className="text-sm text-zion-slate-light mb-2">Ready to optimize your supply chain?</div>
+          <div className="text-sm text-zion-slate-light mb-2">Ready to transform healthcare with AI?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
