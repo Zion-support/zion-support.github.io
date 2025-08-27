@@ -39,6 +39,8 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
 const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
 const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/ComprehensivePricingGuide2026'));
+const ExpandedServicesShowcase2027 = React.lazy(() => import('./pages/ExpandedServicesShowcase2027'));
+const ExpandedServicesPricingGuide2027 = React.lazy(() => import('./pages/ExpandedServicesPricingGuide2027'));
 
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 
@@ -96,6 +98,8 @@ function App() {
               <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
               <Route path="/revolutionary-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
               <Route path="/pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
+              <Route path="/expanded-services-2027" element={<ExpandedServicesShowcase2027 />} />
+              <Route path="/expanded-services-pricing-2027" element={<ExpandedServicesPricingGuide2027 />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
