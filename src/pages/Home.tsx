@@ -1,7 +1,6 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Users, 
   TrendingUp, 
@@ -32,8 +31,7 @@ import {
   Chip,
   Wifi,
   ShieldCheck,
-  Globe2,
-  Zap as ZapIcon
+  Globe2
 } from 'lucide-react';
 import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
 // Enhanced loading component with better UX
