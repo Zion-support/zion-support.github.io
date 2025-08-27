@@ -7,8 +7,9 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -345,8 +346,9 @@ function App() {
         <Footer />
         <ChatAssistant />
         <PerformanceOptimizer />
-        <AccessibilityEnhancer enabled={true} showControls={true} />
+        <EnhancedAccessibilityEnhancer enabled={true} showControls={true} />
         <MobileExperienceEnhancer enabled={true} />
+        <PerformanceMonitor enabled={true} showMetrics={true} />
       </div>
     </ErrorBoundary>
   );
