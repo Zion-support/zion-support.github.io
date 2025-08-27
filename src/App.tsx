@@ -99,9 +99,10 @@ const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAut
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
 
 // Additional innovative AI services
-const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
+const AIQuantumFinancialTrading = lazy(() => import('./pages/services/AIQuantumFinancialTrading'));
 const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
+const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
 
 // Additional innovative services
 const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
@@ -295,6 +296,11 @@ function App() {
                   <Route path="/new-innovative-services-2025" element={<NewServicesShowcase2025 />} />
                   
                   {/* Additional innovative AI services */}
+                  <Route path="/services/ai-quantum-financial-trading" element={<AIQuantumFinancialTrading />} />
+                  <Route path="/services/ai-autonomous-supply-chain" element={<AIAutonomousSupplyChain />} />
+                  <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
+                  
+                  {/* Additional innovative AI services */}
                   <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
                   <Route path="/services/ai-autonomous-supply-chain" element={<AIAutonomousSupplyChain />} />
                   <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
@@ -314,6 +320,7 @@ function App() {
                   
                   {/* 2029 Services Showcase */}
                   <Route path="/comprehensive-services-showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
+                  <Route path="/2029-comprehensive-services-showcase" element={<ComprehensiveServicesShowcase2029 />} />
                   
                   {/* Additional Pages */}
                   <Route path="/dashboard" element={<Dashboard />} />
