@@ -7,11 +7,7 @@ import {
   Zap, Atom, Globe, Building2,
   Phone, Mail, MapPin
 } from 'lucide-react';
-<<<<<<< HEAD
-import Link from 'next/link';
-=======
 
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 export default function EnhancedNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -258,9 +254,5 @@ export default function EnhancedNavigation() {
       </AnimatePresence>
     </motion.nav>
   );
-<<<<<<< HEAD
 };
 export default EnhancedNavigation;
-=======
-}
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87

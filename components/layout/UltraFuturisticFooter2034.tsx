@@ -347,9 +347,5 @@ export default function UltraFuturisticFooter2034() {
       </div>
     </footer>
   );
-<<<<<<< HEAD
 };
 export default UltraFuturisticFooter2034;
-=======
-}
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87

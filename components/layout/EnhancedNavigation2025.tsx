@@ -7,20 +7,41 @@ import {
   Zap, Globe, Star, Users,
   Target, Microscope, Atom, Database,
   Lock, Cloud, BarChart3, Settings,
-  Eye, Code, Palette, Layers,
+  Eye, Code, Palette, Palette,
   Network, Server, ShieldCheck,
   DollarSign, Phone, ArrowRight, Mail, MapPin, Dna, BookOpen, Building
 } from 'lucide-react';
-interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  submenu?: NavigationItem[];
-}
+
+export default function EnhancedNavigation2025() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
+  };
+
+  const closeAllDropdowns = () => {
+    setActiveDropdown(null);
+    setIsOpen(false);
+  };
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+  interface NavigationItem {
+    name: string;
+    href: string;
+    icon?: React.ReactNode;
+    description?: string;
+    children?: NavigationItem[];
+    badge?: string;
+    title?: string;
+    submenu?: NavigationItem[];
+  }
 const navigationItems: NavigationItem[] = [
   {
     name: '🚀 All Services',
