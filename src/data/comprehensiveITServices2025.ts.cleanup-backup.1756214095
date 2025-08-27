@@ -1,24 +1,11 @@
 export interface ComprehensiveITService {
-<<<<<<< HEAD
-<<<<<<< HEAD
   id: string;
   title: string;
   description: string;
 =======
-<<<<<<< HEAD
-  id: number;
-  name: string;
-=======
   id: string;
   title: string;
   description: string;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-  id: string;
-  title: string;
-  description: string;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   category: string;
   subcategory: string;
   description: string;
@@ -35,19 +22,7 @@ export interface ComprehensiveITService {
     website: string;
     address: string;
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
   technology: string[];
-=======
-<<<<<<< HEAD
-  marketPrice: string;
-  competitors: string[];
-  roi: string;
-  setupTime: string;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-  technology: string[];
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   integrations: string[];
   compliance: string[];
   roi: string;
@@ -62,17 +37,10 @@ export interface ComprehensiveITService {
   serviceLevel: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
-  // Cloud Infrastructure & Migration Services
-=======
 export const comprehensiveITServices2025: ComprehensiveITService[] = [
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   // Cloud Infrastructure & Migration Services
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   {
     id: "cloud-infrastructure-migration-services",
     title: "Cloud Infrastructure & Migration Services - Seamless Cloud Transformation",
@@ -306,20 +274,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       "Operational optimization",
       "Customer insights and analytics",
       "Performance monitoring and reporting"
-<<<<<<< HEAD
-    ],
-    targetAudience: [
-      "Data analysts",
-      "Business intelligence managers",
-      "Operations managers",
-      "Marketing teams",
-      "Executive leadership"
-    ],
-    tags: ["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
-    estimatedDelivery: "6-10 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,299 - $5,000/month",
-=======
     ],
     targetAudience: [
       "Data analysts",
@@ -530,339 +484,11 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     estimatedDelivery: "2-4 weeks",
     supportLevel: "premium",
     marketPrice: "$799 - $3,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark"],
-    integrations: ["Data sources", "Business systems", "Cloud platforms", "Analytics tools", "Reporting systems"],
-    compliance: ["GDPR", "CCPA", "Data privacy", "Industry regulations"],
-    roi: "600% within 10 months",
-    competitors: ["Tableau", "Power BI", "Looker", "Qlik"],
-    demoUrl: "https://ziontechgroup.com/demo/data-analytics",
-    caseStudies: ["Retail company 70% decision improvement", "Manufacturing 45% efficiency increase"],
-    marketTrend: "Growing data analytics adoption with 50% annual growth",
-    industryFocus: ["Retail", "Manufacturing", "Finance", "Healthcare", "Technology"],
-    scalability: "Enterprise data platform with unlimited data processing",
-    customizationLevel: "Custom analytics solutions and reporting dashboards",
-    serviceLevel: "24/7 data monitoring and support"
-  },
-
-  // Network Infrastructure & Management Services
-  {
-    id: "network-infrastructure-management-services",
-    title: "Network Infrastructure & Management Services - Reliable Network Solutions",
-    description: "Comprehensive network infrastructure and management services that design, implement, and maintain reliable, secure, and high-performance network solutions for businesses of all sizes.",
-    category: "Network Services",
-    subcategory: "Infrastructure & Management",
-    price: 999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Network design and architecture",
-      "Infrastructure implementation",
-      "Network security and monitoring",
-      "Performance optimization",
-      "Disaster recovery planning",
-      "24/7 network monitoring",
-      "Proactive maintenance",
-      "Capacity planning",
-      "Network documentation",
-      "Ongoing support and optimization"
-    ],
-    benefits: [
-      "Improve network reliability by 95%",
-      "Reduce network downtime by 80%",
-      "Enhance network security",
-      "Optimize network performance",
-      "Reduce operational costs by 35%"
-    ],
-    useCases: [
-      "Network infrastructure design",
-      "Security implementation",
-      "Performance optimization",
-      "Disaster recovery planning",
-      "Network expansion and scaling"
-    ],
-    targetAudience: [
-      "Network administrators",
-      "IT managers",
-      "System administrators",
-      "Business owners",
-      "Technology consultants"
-    ],
-    tags: ["Network Infrastructure", "Network Management", "Security", "Performance", "Monitoring"],
-    estimatedDelivery: "4-8 weeks",
-    supportLevel: "premium",
-    marketPrice: "$999 - $4,000/month",
-=======
-    technology: ["Help desk platforms", "Remote support tools", "Monitoring systems", "Knowledge management", "Reporting tools"],
-    integrations: ["Business systems", "User management", "Monitoring tools", "Communication platforms"],
-    compliance: ["Service level agreements", "Support standards", "User privacy"],
-    roi: "400% within 8 months",
-    competitors: ["Zendesk", "Freshdesk", "ServiceNow", "Atlassian"],
-    demoUrl: "https://ziontechgroup.com/demo/it-support",
-    caseStudies: ["Enterprise 60% productivity improvement", "SMB 45% support cost reduction"],
-    marketTrend: "Growing IT support demand with 40% annual growth",
-    industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Education"],
-    scalability: "Multi-organization support platform with unlimited user support",
-    customizationLevel: "Custom support workflows and knowledge bases",
-    serviceLevel: "24/7 technical support and monitoring"
-  },
-
-  // Software Development & Custom Solutions
-  {
-    id: "software-development-custom-solutions",
-    title: "Software Development & Custom Solutions - Tailored Technology Solutions",
-    description: "Comprehensive software development and custom solution services that create tailored applications, integrate existing systems, and develop innovative technology solutions to meet specific business needs and objectives.",
-    category: "Software Development",
-    subcategory: "Custom Solutions",
-    price: 1999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Custom software development",
-      "System integration services",
-      "API development and management",
-      "Database design and optimization",
-      "User interface and experience design",
-      "Testing and quality assurance",
-      "Deployment and maintenance",
-      "Performance optimization",
-      "Security implementation",
-      "Ongoing support and updates"
-    ],
-    benefits: [
-      "Create tailored business solutions",
-      "Improve operational efficiency by 50%",
-      "Enable new business capabilities",
-      "Reduce manual processes by 70%",
-      "Gain competitive advantages"
-    ],
-    useCases: [
-      "Custom business applications",
-      "System integration projects",
-      "Process automation",
-      "Data management solutions",
-      "Customer-facing applications"
-    ],
-    targetAudience: [
-      "Business owners",
-      "Product managers",
-      "Technology leaders",
-      "Operations managers",
-      "Digital transformation teams"
-    ],
-    tags: ["Software Development", "Custom Solutions", "System Integration", "API Development", "Custom Applications"],
-    estimatedDelivery: "8-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,999 - $8,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-<<<<<<< HEAD
-    technology: ["Cisco", "Juniper", "Aruba", "Network monitoring tools", "Security appliances"],
-    integrations: ["Network devices", "Security systems", "Monitoring tools", "Cloud platforms", "Business systems"],
-    compliance: ["Network security standards", "Industry regulations", "Best practices"],
-    roi: "500% within 12 months",
-    competitors: ["Cisco", "Juniper", "Aruba", "Fortinet"],
-    demoUrl: "https://ziontechgroup.com/demo/network-infrastructure",
-    caseStudies: ["Enterprise 95% network reliability improvement", "SMB 80% downtime reduction"],
-    marketTrend: "Growing network infrastructure demand with 40% annual growth",
-    industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Education"],
-    scalability: "Enterprise network infrastructure with unlimited scalability",
-    customizationLevel: "Custom network solutions and security configurations",
-    serviceLevel: "24/7 network monitoring and support"
-  },
-
-  // IT Consulting & Strategic Planning Services
-  {
-    id: "it-consulting-strategic-planning-services",
-    title: "IT Consulting & Strategic Planning Services - Technology Strategy Excellence",
-    description: "Strategic IT consulting and planning services that help businesses align technology with business objectives, optimize IT investments, and create roadmaps for digital transformation and technology innovation.",
-    category: "IT Consulting",
-    subcategory: "Strategic Planning",
-    price: 299,
-    currency: "$",
-    pricingModel: "hourly",
-    features: [
-      "Technology strategy development",
-      "Digital transformation planning",
-      "IT investment optimization",
-      "Technology roadmap creation",
-      "Vendor selection and management",
-      "Risk assessment and mitigation",
-      "Compliance and governance planning",
-      "Change management strategies",
-      "Performance measurement frameworks",
-      "Ongoing strategic guidance"
-    ],
-    benefits: [
-      "Align technology with business goals",
-      "Optimize IT investments by 40%",
-      "Reduce technology risks",
-      "Improve operational efficiency",
-      "Enable strategic competitive advantages"
-    ],
-    useCases: [
-      "Technology strategy development",
-      "Digital transformation planning",
-      "IT investment optimization",
-      "Vendor selection and management",
-      "Technology risk assessment"
-    ],
-    targetAudience: [
-      "Chief Technology Officers",
-      "IT directors",
-      "Business executives",
-      "Technology leaders",
-      "Business owners"
-    ],
-    tags: ["IT Consulting", "Strategic Planning", "Digital Transformation", "Technology Strategy", "IT Governance"],
-    estimatedDelivery: "2-4 weeks",
-    supportLevel: "consulting",
-    marketPrice: "$299 - $500/hour",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Strategic frameworks", "Planning tools", "Analytics platforms", "Governance frameworks"],
-    integrations: ["Business systems", "Technology platforms", "Analytics tools", "Governance systems"],
-    compliance: ["Industry best practices", "Governance standards", "Regulatory requirements"],
-    roi: "1000% within 6 months",
-    competitors: ["McKinsey", "BCG", "Bain", "Accenture"],
-    demoUrl: "https://ziontechgroup.com/demo/it-consulting",
-    caseStudies: ["Fortune 500 40% IT investment optimization", "Startup successful digital transformation"],
-    marketTrend: "Growing IT consulting demand with 35% annual growth",
-    industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
-    scalability: "Consulting services for organizations of all sizes",
-    customizationLevel: "Custom strategic plans and technology roadmaps",
-    serviceLevel: "Flexible consulting engagement models"
-  },
-
-  // IT Support & Help Desk Services
-  {
-    id: "it-support-help-desk-services",
-    title: "IT Support & Help Desk Services - Reliable Technical Support",
-    description: "Comprehensive IT support and help desk services that provide reliable technical assistance, problem resolution, and ongoing support for businesses to ensure smooth technology operations and user productivity.",
-    category: "IT Support",
-    subcategory: "Help Desk & Support",
-    price: 799,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "24/7 technical support",
-      "Help desk ticketing system",
-      "Remote desktop support",
-      "On-site support services",
-      "Proactive monitoring",
-      "Knowledge base management",
-      "User training and education",
-      "Performance reporting",
-      "Escalation procedures",
-      "Ongoing support optimization"
-    ],
-    benefits: [
-      "Improve user productivity by 60%",
-      "Reduce IT support costs by 45%",
-      "Enhance user satisfaction",
-      "Minimize system downtime",
-      "Enable self-service support"
-    ],
-    useCases: [
-      "Technical support and troubleshooting",
-      "User training and education",
-      "System maintenance and updates",
-      "Performance monitoring",
-      "Help desk optimization"
-    ],
-    targetAudience: [
-      "IT support managers",
-      "Help desk teams",
-      "Business users",
-      "IT administrators",
-      "Business owners"
-    ],
-    tags: ["IT Support", "Help Desk", "Technical Support", "User Support", "Problem Resolution"],
-    estimatedDelivery: "2-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$799 - $3,000/month",
-=======
-    technology: ["React", "Node.js", "Python", "Java", "C#", "Cloud platforms"],
-    integrations: ["Business systems", "Databases", "APIs", "Cloud services", "Third-party platforms"],
-    compliance: ["Security standards", "Quality standards", "Industry regulations"],
-    roi: "800% within 18 months",
-    competitors: ["Custom development agencies", "System integrators", "Technology consultancies"],
-    demoUrl: "https://ziontechgroup.com/demo/software-development",
-    caseStudies: ["Manufacturing 50% efficiency improvement", "Retail 70% process automation"],
-    marketTrend: "Growing custom software demand with 55% annual growth",
-    industryFocus: ["All Industries", "Technology", "Manufacturing", "Retail", "Healthcare"],
-    scalability: "Enterprise development platform with unlimited customization",
-    customizationLevel: "Fully custom software solutions and integrations",
-    serviceLevel: "Comprehensive development and ongoing support"
-  },
-
-  // IT Project Management & Implementation Services
-  {
-    id: "it-project-management-implementation-services",
-    title: "IT Project Management & Implementation Services - Successful Project Delivery",
-    description: "Professional IT project management and implementation services that ensure successful delivery of technology projects, manage resources effectively, and deliver projects on time and within budget.",
-    category: "Project Management",
-    subcategory: "IT Implementation",
-    price: 1499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Project planning and scoping",
-      "Resource management and allocation",
-      "Risk assessment and mitigation",
-      "Timeline and budget management",
-      "Stakeholder communication",
-      "Quality assurance and testing",
-      "Change management",
-      "Project documentation",
-      "Performance monitoring",
-      "Post-implementation support"
-    ],
-    benefits: [
-      "Ensure project success by 90%",
-      "Reduce project risks by 70%",
-      "Deliver projects on time and budget",
-      "Improve stakeholder satisfaction",
-      "Enable smooth project transitions"
-    ],
-    useCases: [
-      "Technology implementation projects",
-      "System migration projects",
-      "Infrastructure deployment",
-      "Software implementation",
-      "Digital transformation projects"
-    ],
-    targetAudience: [
-      "Project managers",
-      "IT directors",
-      "Business executives",
-      "Technology leaders",
-      "Implementation teams"
-    ],
-    tags: ["Project Management", "Implementation", "Risk Management", "Change Management", "Project Delivery"],
-    estimatedDelivery: "Project-based",
-    supportLevel: "premium",
-    marketPrice: "$1,499 - $6,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-<<<<<<< HEAD
     technology: ["Help desk platforms", "Remote support tools", "Monitoring systems", "Knowledge management", "Reporting tools"],
     integrations: ["Business systems", "User management", "Monitoring tools", "Communication platforms"],
     compliance: ["Service level agreements", "Support standards", "User privacy"],
@@ -995,9 +621,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     technology: ["Project management tools", "Collaboration platforms", "Monitoring systems", "Reporting tools"],
     integrations: ["Business systems", "Project tools", "Communication platforms", "Analytics tools"],
     compliance: ["Project standards", "Quality standards", "Industry best practices"],
@@ -1010,12 +633,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     scalability: "Project management services for projects of all sizes",
     customizationLevel: "Custom project management methodologies and tools",
     serviceLevel: "Comprehensive project management and support"
-<<<<<<< HEAD
-  }
-];
-
-export default COMPREHENSIVE_IT_SERVICES_2025;
-=======
     marketPrice: "$15,000/month (Industry average: $30,000/month)",
     competitors: ["Cisco DNA Center", "Juniper Contrail", "VMware NSX", "OpenDaylight"],
     roi: "300% ROI within 6 months",
@@ -1326,39 +943,12 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,499 - $10,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-<<<<<<< HEAD
-    marketPrice: "$12,000/month (Industry average: $25,000/month)",
-    competitors: ["New Relic", "Datadog", "Dynatrace", "AppDynamics"],
-    roi: "350% ROI within 6 months",
-    setupTime: "2-3 weeks",
-    integrations: ["Applications", "Databases", "Cloud platforms", "Infrastructure"],
-    freeTier: true,
-    trialPeriod: "30 days",
-    serviceLevel: "24/7 monitoring",
-    useCases: [
-      "Application monitoring",
-      "Infrastructure monitoring",
-      "Performance optimization",
-      "Capacity planning",
-      "User experience tracking",
-      "Troubleshooting"
-    ],
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry standards"],
-    scalability: "Unlimited monitoring",
-    support: "Performance monitoring expert support",
-    certifications: ["APM", "Cloud Platforms", "Performance Management", "Monitoring"]
-  }
-];
-
-export default comprehensiveITServices2025;
-=======
     technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],
     integrations: ["On-premises systems", "Legacy applications", "Database systems", "Security platforms", "Monitoring tools"],
     compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "Industry-specific regulations"],
@@ -1903,11 +1493,8 @@ export default comprehensiveITServices2025;
 ];
 
 export default COMPREHENSIVE_IT_SERVICES_2025;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
   }
 ];
 
 export default COMPREHENSIVE_IT_SERVICES_2025;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

@@ -457,10 +457,6 @@ export default function EquipmentPage() {
   }, []);
 
   return (
-<<<<<<< HEAD
-    
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
       <DynamicListingPage
         title="Datacenter Equipment"
         description="Browse professional hardware for modern datacenter and network deployments."
@@ -470,9 +466,5 @@ export default function EquipmentPage() {
         initialPrice={{ min: 400, max: 50000 }}
         detailBasePath="/equipment"
       />
-<<<<<<< HEAD
-    
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
   );
 }

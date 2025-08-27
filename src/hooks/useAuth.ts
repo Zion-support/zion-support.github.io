@@ -111,4 +111,4 @@ export const useAuth = () => {
     isLoading: authState.isLoading,
     isAdmin: authState.user?.role === 'admin'
   };
-};
+}

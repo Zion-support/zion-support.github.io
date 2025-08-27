@@ -1,17 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-export default function Status() {
-	return (
-		<div className="min-h-screen bg-background text-foreground py-16">
-			<div className="container mx-auto px-4 max-w-3xl">
-				<h1 className="text-3xl font-bold mb-4">Status</h1>
-				<p className="text-muted-foreground">All systems operational.</p>
-			</div>
-		</div>
-	);
-}
-=======
 import Link from 'next/link';
 import { 
   CheckCircle, 
@@ -426,4 +413,3 @@ const Status: React.FC = () => {
 };
 
 export default Status;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

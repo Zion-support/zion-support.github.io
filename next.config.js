@@ -1,11 +1,21 @@
 /** @type {import('next').NextConfig} */
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || ''
 const nextConfig = {
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
-	images: { unoptimized: true },
-	eslint: { ignoreDuringBuilds: true },
-	typescript: { ignoreBuildErrors: true },
+	assetPrefix,
+	images: {
+		// Using unoptimized to support static hosting/CDN without Next Image optimization
+		unoptimized: true
+	},
+	eslint: {
+		ignoreDuringBuilds: true
+	},
+	typescript: {
+		// Allow builds to pass even if there are type errors; CI can run type-check separately
+		ignoreBuildErrors: true
+	},
 	async redirects() {
 		return [
 			{ source: '/ai-customer-success-platform', destination: '/services/ai-customer-success-platform', permanent: true },

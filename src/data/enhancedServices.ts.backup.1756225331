@@ -382,9 +382,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 94
-<<<<<<< HEAD
-  }
-=======
   },
 
   // Additional modern services (new)
@@ -543,7 +540,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   { id: "vision-quality-inspection", title: "Computer Vision Quality Inspection", description: "On-prem/edge vision for defect detection in manufacturing lines with dashboards.", category: "IoT & Edge", price: 9999, currency: "$", tags: ["Computer Vision", "Edge", "Manufacturing", "Defect Detection"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-28T09:25:00.000Z", rating: 4.8, reviewCount: 33, location: "Global", availability: "Within-month", aiScore: 93 },
   { id: "ai-talent-sourcing", title: "AI Talent Sourcing & Screening", description: "Pipeline sourcing, ranking, and screening with bias controls and interview automation.", category: "HR Tech", price: 2999, currency: "$", tags: ["Recruiting", "Screening", "LLM", "Bias Controls"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-30T08:00:00.000Z", rating: 4.7, reviewCount: 47, location: "Global", availability: "Within-week", aiScore: 91 },
   { id: "governed-rag-platform", title: "Governed RAG Platform", description: "End-to-end governed RAG with evaluations, citations, access controls, PHI/PII redaction, and monitoring.", category: "AI & Machine Learning", price: 7999, currency: "$", tags: ["RAG", "Governance", "PII", "Monitoring"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-05-02T10:00:00.000Z", rating: 4.9, reviewCount: 21, location: "Global", availability: "Within-month", aiScore: 97 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-be2d
 ];
 
 // Service categories for filtering
@@ -568,12 +564,9 @@ export const SERVICE_PRICING_TIERS = {
   enterprise: { range: "$8,000 - $25,000+", description: "Custom enterprise solutions with dedicated support" }
 };
 
-<<<<<<< HEAD
-=======
 // Backward-compatible alias expected by EnhancedServicesPage
 export const PRICING_TIERS = SERVICE_PRICING_TIERS;
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-be2d
 // Contact information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",

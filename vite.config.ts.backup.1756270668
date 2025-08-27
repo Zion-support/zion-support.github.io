@@ -1,0 +1,189 @@
+			'clsx',
+			'tailwind-merge',
+			'class-variance-authority'
+		],
+		exclude: ['@radix-ui/react-icons'],
+		// Enhanced dependency optimization
+		esbuildOptions: {
+			target: 'esnext'
+		}
+	},
+	css: { 
+		devSourcemap: false
+	},
+	esbuild: {
+		jsx: 'automatic',
+	},
+	server: {
+		port: 3000,
+		host: true,
+		open: true,
+		cors: true,
+		hmr: { overlay: false },
+		// Enhanced dev server
+		fs: {
+			allow: ['..']
+		}
+	},
+	preview: { 
+		port: 4173, 
+		host: true, 
+		open: true 
+	},
+	define: {
+		__DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+		__PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+		// Enhanced global definitions
+		'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+	},
+	envPrefix: ['VITE_', 'ZION_'],
+	// Enhanced experimental features
+	experimental: {
+		renderBuiltUrl(filename, { hostType }) {
+			if (hostType === 'js') {
+				return { js: `__ASSET__${filename}__` }
+			} else {
+				return { relative: true }
+			}
+		}
+	}
+});
+=======
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'node:path'
+<<<<<<< HEAD
+=======
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7079
+
+export default defineConfig({
+<<<<<<< HEAD
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    }
+  },
+  server: {
+    port: 3000,
+    host: true
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['lucide-react', 'framer-motion']
+        }
+      }
+    }
+  }
+=======
+	plugins: [
+		react(),
+	],
+	resolve: {
+		alias: {
+			'@': path.resolve(__dirname, './src'),
+		},
+	},
+	build: {
+		target: 'esnext',
+		minify: 'terser',
+		sourcemap: false,
+		rollupOptions: {
+			output: {
+				manualChunks: {
+					'react-vendor': ['react', 'react-dom'],
+					'ui-vendor': [
+						'@radix-ui/react-accordion',
+						'@radix-ui/react-alert-dialog',
+						'@radix-ui/react-aspect-ratio',
+						'@radix-ui/react-avatar',
+						'@radix-ui/react-checkbox',
+						'@radix-ui/react-context-menu',
+						'@radix-ui/react-dialog',
+						'@radix-ui/react-dropdown-menu',
+						'@radix-ui/react-label',
+						'@radix-ui/react-popover',
+						'@radix-ui/react-progress',
+						'@radix-ui/react-radio-group',
+						'@radix-ui/react-scroll-area',
+						'@radix-ui/react-select',
+						'@radix-ui/react-separator',
+						'@radix-ui/react-slider',
+						'@radix-ui/react-slot',
+						'@radix-ui/react-switch',
+						'@radix-ui/react-tabs',
+						'@radix-ui/react-toast',
+						'@radix-ui/react-tooltip',
+					],
+					'animation-vendor': ['framer-motion'],
+					'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+					'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
+					'icons-vendor': ['lucide-react'],
+					'charts-vendor': ['recharts'],
+					'date-vendor': ['date-fns', 'react-day-picker'],
+				},
+				chunkFileNames: 'js/[name]-[hash].js',
+				entryFileNames: 'js/[name]-[hash].js',
+				assetFileNames: (assetInfo) => {
+					const name = assetInfo.name || ''
+					if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]'
+					if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]'
+					if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]'
+					return 'assets/[name]-[hash].[ext]'
+				},
+			},
+			external: [],
+		},
+		terserOptions: {
+			compress: {
+				drop_console: true,
+				drop_debugger: true,
+				pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+			},
+			mangle: { safari10: true },
+		},
+		chunkSizeWarningLimit: 1000,
+	},
+	optimizeDeps: {
+		include: [
+			'react',
+			'react-dom',
+			'react-router-dom',
+			'framer-motion',
+			'lucide-react',
+			'clsx',
+			'tailwind-merge',
+		],
+		exclude: ['@radix-ui/react-icons'],
+	},
+	css: { devSourcemap: false },
+	server: {
+		port: 3000,
+		host: true,
+		open: true,
+		cors: true,
+		hmr: { overlay: false },
+	},
+	preview: {
+		port: 4173,
+		host: true,
+		open: true,
+	},
+	define: {
+		__DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+		__PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+	},
+	esbuild: {
+		drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+	},
+	worker: { format: 'es' },
+	envPrefix: ['VITE_', 'ZION_'],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7079
+})
