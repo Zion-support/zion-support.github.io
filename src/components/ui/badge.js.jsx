@@ -18,7 +18,6 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
     );
 };
 
-=======
     );
 };
 export { Badge };

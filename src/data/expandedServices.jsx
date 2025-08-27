@@ -509,3 +509,6 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = {
     'business-automation': ['RPA', 'Workflow Automation', 'Process Optimization', 'Integration', 'Analytics'],
     'business-solutions': ['ERP', 'CRM', 'HR Systems', 'Financial Systems', 'Project Management']
 };
+
+// Alias exports for backward compatibility
+export const SERVICE_CATEGORIES = EXPANDED_SERVICE_CATEGORIES;

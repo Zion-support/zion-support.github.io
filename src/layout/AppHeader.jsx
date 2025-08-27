@@ -113,46 +113,45 @@ export function AppHeader() {
             {navigationItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
-                  <div
-                    onMouseEnter={() => setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <button className="flex items-center gap-2 text-zinc-300 hover:text-white transition-colors duration-300 py-2">
-                      {item.name}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} />
+                  <div className="relative">
+                    <button
+                      className="flex items-center space-x-1 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 py-2"
+                      onMouseEnter={() => setActiveDropdown(item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-4 h-4" />
                     </button>
-
+                    
                     {/* Dropdown Menu */}
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                          className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/10 p-4"
+                          initial={{ opacity: 0, y: -10, scale: 0.95 }}
                           animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          exit={{ opacity: 0, y: -10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-80 bg-zinc-900/95 backdrop-blur-xl border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden"
+                          onMouseEnter={() => setActiveDropdown(item.name)}
+                          onMouseLeave={() => setActiveDropdown(null)}
                         >
-                          <div className="p-4">
-                            <div className="grid grid-cols-1 gap-2">
-                              {item.dropdown.map((dropdownItem) => (
-                                <Link
-                                  key={dropdownItem.name}
-                                  to={dropdownItem.path}
-                                  className="flex items-center gap-3 p-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 group"
-                                >
-                                  <div className={`p-2 rounded-lg bg-gradient-to-br ${dropdownItem.color} group-hover:scale-110 transition-transform duration-300`}>
-                                    <dropdownItem.icon className="w-4 h-4 text-white" />
+                          <div className="grid grid-cols-1 gap-2">
+                            {item.dropdown.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.name}
+                                to={dropdownItem.path}
+                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group/item"
+                              >
+                                <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}>
+                                  <dropdownItem.icon className="w-5 h-5 text-white" />
+                                </div>
+                                <div>
+                                  <div className="text-white font-medium group-hover/item:text-zion-cyan transition-colors duration-300">
+                                    {dropdownItem.name}
                                   </div>
-                                  <div>
-                                    <div className="text-white font-medium group-hover:text-zion-cyan transition-colors">
-                                      {dropdownItem.name}
-                                    </div>
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
+                                </div>
+                              </Link>
+                            ))}
                           </div>
                         </motion.div>
                       )}
@@ -161,8 +160,10 @@ export function AppHeader() {
                 ) : (
                   <Link
                     to={item.path}
-                    className={`text-zinc-300 hover:text-white transition-colors duration-300 py-2 ${
-                      isActiveRoute(item.path) ? 'text-zion-cyan' : ''
+                    className={`transition-colors duration-300 ${
+                      isActiveRoute(item.path)
+                        ? 'text-zion-cyan'
+                        : 'text-zion-slate-light hover:text-zion-cyan'
                     }`}
                   >
                     {item.name}
@@ -174,17 +175,12 @@ export function AppHeader() {
 
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
-            {/* Theme toggle */}
+            {/* Dark mode toggle */}
             <button
               onClick={toggleDarkMode}
-              className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
+              className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
             >
               {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-
-            {/* Language selector */}
-            <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
-              <Globe className="w-5 h-5" />
             </button>
 
             {/* CTA Button */}

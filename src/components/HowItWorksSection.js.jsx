@@ -184,7 +184,6 @@ export function HowItWorksSection() {
                         <div className="space-y-2">
                           {step.details.map((detail, idx) => (
                             <motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }}>
-=======
                   {/* Interactive details on hover */}
                   <AnimatePresence>
                     {hoveredStep === index && (

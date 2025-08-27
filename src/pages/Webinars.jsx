@@ -1,53 +1,60 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Video, Brain, Cpu, Shield, Zap, Rocket, Building } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 export default function Webinars() {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [selectedStatus, setSelectedStatus] = useState('all');
-    const categories = [
-        { id: 'all', name: 'All Topics', icon: Video },
-        { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },
-        { id: 'quantum', name: 'Quantum Technology', icon: Cpu },
-        { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
-        { id: 'cloud', name: 'Cloud & DevOps', icon: Zap },
-        { id: 'business', name: 'Business Solutions', icon: Building },
-        { id: 'emerging-tech', name: 'Emerging Tech', icon: Rocket }
-    ];
-    const statuses = [
-        { id: 'all', name: 'All Webinars' },
-        { id: 'upcoming', name: 'Upcoming' },
-        { id: 'live', name: 'Live Now' },
-        { id: 'recorded', name: 'Recorded' }
-    ];
-    const Webinars = () => {
-        const webinars = [
-            {
-                title: "AI-Powered Business Transformation",
-                date: "March 25, 2024",
-                duration: "60 minutes",
-                speaker: "Dr. Sarah Chen",
-                description: "Learn how AI is revolutionizing business operations and creating new opportunities for growth.",
-                category: "AI & Business"
-            },
-            {
-                title: "Cybersecurity Best Practices 2024",
-                date: "April 10, 2024",
-                duration: "45 minutes",
-                speaker: "Michael Rodriguez",
-                description: "Essential cybersecurity strategies to protect your business from evolving threats.",
-                category: "Security"
-            },
-            {
-                title: "Cloud Migration Strategies",
-                date: "April 25, 2024",
-                duration: "75 minutes",
-                speaker: "David Kim",
-                description: "Step-by-step guide to successful cloud migration and optimization.",
-                category: "Cloud & DevOps"
-            }
-        ];
-        return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+  const webinars = [
+    {
+      title: "AI-Powered Business Transformation",
+      description: "Learn how artificial intelligence is revolutionizing business operations and creating new opportunities for growth and efficiency.",
+      category: "AI & Business",
+      date: "March 15, 2025",
+      duration: "60 minutes",
+      speaker: "Dr. Sarah Chen"
+    },
+    {
+      title: "Cybersecurity in the Digital Age",
+      description: "Explore the latest cybersecurity threats and best practices for protecting your organization's digital assets.",
+      category: "Security",
+      date: "March 22, 2025",
+      duration: "45 minutes",
+      speaker: "Michael Rodriguez"
+    },
+    {
+      title: "Cloud Migration Strategies",
+      description: "Discover proven strategies for migrating your infrastructure to the cloud while minimizing downtime and risk.",
+      category: "Cloud & DevOps",
+      date: "March 29, 2025",
+      duration: "75 minutes",
+      speaker: "Jennifer Kim"
+    },
+    {
+      title: "Data Analytics for Decision Making",
+      description: "Learn how to leverage data analytics to make informed business decisions and drive strategic growth.",
+      category: "Analytics",
+      date: "April 5, 2025",
+      duration: "60 minutes",
+      speaker: "David Thompson"
+    },
+    {
+      title: "Digital Transformation Roadmap",
+      description: "Get a comprehensive roadmap for digital transformation that aligns with your business goals and objectives.",
+      category: "Strategy",
+      date: "April 12, 2025",
+      duration: "90 minutes",
+      speaker: "Lisa Wang"
+    },
+    {
+      title: "Emerging Technologies in 2025",
+      description: "Stay ahead of the curve with insights into the most promising emerging technologies and their business applications.",
+      category: "Innovation",
+      date: "April 19, 2025",
+      duration: "60 minutes",
+      speaker: "Dr. Robert Johnson"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -64,7 +71,8 @@ export default function Webinars() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {webinars.map((webinar, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+            {webinars.map((webinar, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <div className="mb-4">
                   <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">{webinar.category}</span>
                 </div>
@@ -98,7 +106,8 @@ export default function Webinars() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
                   </svg>
                 </Link>
-              </div>))}
+              </div>
+            ))}
           </div>
           
           <div className="text-center">
@@ -113,35 +122,8 @@ export default function Webinars() {
               </Link>
             </div>
           </div>
-=======
-import {CogIcon} from '@heroicons/react/24/outline';
-
-const $page: React.FC = () => {}
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400"/>
-            </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            $page
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under development. Contact us for more information.
-          </p>
-          <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
-            Contact Us for More Information
-          </Link>
         </div>
       </section>
     </div>
   );
-};
-
-export default $page;
-        </></></>);
-    };
 }
