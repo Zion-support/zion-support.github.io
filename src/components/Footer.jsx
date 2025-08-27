@@ -21,13 +21,16 @@ export function Footer() {
 
   const footerNavigation = {
     marketplace: [
-      { name: 'Products', href: '/marketplace' },
-      { name: 'Services', href: '/services' },
-      { name: 'Talent', href: '/talent' },
-      { name: 'Equipment', href: '/equipment' },
-      { name: 'Categories', href: '/categories' },
-      { name: 'Green IT', href: '/green-it' },
-      { name: 'IT Onsite Services', href: '/it-onsite-services' }
+      { name: 'All Services', href: '/services' },
+      { name: 'AI Services', href: '/services/ai' },
+      { name: 'Cybersecurity', href: '/services/cybersecurity' },
+      { name: 'Cloud Services', href: '/services/cloud' },
+      { name: 'Blockchain', href: '/services/blockchain' },
+      { name: 'Quantum Computing', href: '/services/quantum' },
+      { name: 'IoT Services', href: '/services/iot' },
+      { name: 'Digital Marketing', href: '/services/digital-marketing' },
+      { name: 'IT Onsite Services', href: '/it-onsite-services' },
+      { name: 'Green IT', href: '/green-it' }
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -88,15 +91,15 @@ export function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 text-zion-slate-light">
                 <Mail className="w-4 h-4 text-zion-cyan"/>
-                <span className="text-sm">hello@ziontechgroup.com</span>
+                <span className="text-sm">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center gap-3 text-zion-slate-light">
                 <Phone className="w-4 h-4 text-zion-cyan"/>
-                <span className="text-sm">+1 (555) 123-4567</span>
+                <span className="text-sm">+1 302 464 0950</span>
               </div>
               <div className="flex items-center gap-3 text-zion-slate-light">
                 <MapPin className="w-4 h-4 text-zion-cyan"/>
-                <span className="text-sm">Global • Remote First</span>
+                <span className="text-sm">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
 
