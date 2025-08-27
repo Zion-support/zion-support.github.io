@@ -72,6 +72,13 @@ const StatsSection = React.memo(() => {
     };
   }, []);
 
+<<<<<<< HEAD
+  const stats = [
+    { number: '500+', label: 'Happy Clients', icon: Users },
+    { number: '50+', label: 'Expert Team', icon: Award },
+    { number: '99.9%', label: 'Uptime SLA', icon: Shield },
+    { number: '24/7', label: 'Support', icon: Phone }
+=======
   const heroFeatures = [
     { icon: Brain, title: 'AI-Powered Solutions', description: 'Cutting-edge artificial intelligence for modern businesses', gradient: 'from-zion-cyan to-zion-blue' },
     { icon: Shield, title: 'Cybersecurity Excellence', description: 'Advanced protection for your digital assets', gradient: 'from-zion-purple to-zion-cyan' },
@@ -177,6 +184,7 @@ const StatsSection = React.memo(() => {
       icon: Users,
       color: "from-zion-cyan to-zion-neon"
     }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab7e
   ];
 
   // Auto-rotate testimonials
@@ -346,6 +354,10 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Enhanced Service Showcase */}
+      <EnhancedServicesShowcase />
+=======
       {/* Services Overview */}
       <section className="py-20 bg-zion-slate">
         <div className="container mx-auto px-4">
@@ -354,6 +366,7 @@ const Home: React.FC = () => {
           </Suspense>
         </div>
       </section>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab7e
 
       {/* Stats Section */}
       <StatsSection />
