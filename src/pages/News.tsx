@@ -1,3 +1,18 @@
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+export default function News() {
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
+			<SEO title="News - Zion Tech Group" description="Latest updates and announcements from Zion Tech Group." />
+			<div className="container-responsive text-white">
+				<h1 className="text-4xl font-bold mb-4">News</h1>
+				<p className="text-zion-slate-light max-w-2xl">Company announcements, product releases, and press mentions.</p>
+			</div>
+		</div>
+	);
+}
+
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowRight, ExternalLink } from 'lucide-react';
 

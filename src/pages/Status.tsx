@@ -11,6 +11,7 @@ import {
   Shield,
   Activity
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 const Status: React.FC = () => {
   const systemStatus = {
@@ -119,6 +120,7 @@ const Status: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+          <SEO title="System Status - Zion Tech Group" description="Live status and uptime information." />
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">

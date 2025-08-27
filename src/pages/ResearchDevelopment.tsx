@@ -1,3 +1,18 @@
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+export default function ResearchDevelopment() {
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
+			<SEO title="Research & Development - Zion Tech Group" description="Our R&D initiatives in AI, quantum, and advanced computing." />
+			<div className="container-responsive text-white">
+				<h1 className="text-4xl font-bold mb-4">Research & Development</h1>
+				<p className="text-zion-slate-light max-w-2xl">Exploring frontier technologies to build what's next.</p>
+			</div>
+		</div>
+	);
+}
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 

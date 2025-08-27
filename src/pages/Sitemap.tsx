@@ -1,5 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+
+const links = [
+	'/', '/about', '/contact', '/blog', '/faq', '/careers', '/partners', '/news',
+	'/solutions', '/research-development', '/request-quote', '/green-it',
+	'/services', '/ai-services', '/it-services', '/micro-saas',
+	'/marketplace', '/marketplace/products', '/marketplace/talent', '/marketplace/equipment',
+	'/talent', '/equipment', '/team', '/help', '/security', '/status',
+	'/privacy', '/terms', '/cookies'
+];
+
+export default function Sitemap() {
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
+			<SEO title="Sitemap - Zion Tech Group" description="Browse all site pages." />
+			<div className="container-responsive text-white">
+				<h1 className="text-4xl font-bold mb-6">Sitemap</h1>
+				<ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+					{links.map((path) => (
+						<li key={path}>
+							<Link to={path} className="text-zion-cyan hover:underline">{path}</Link>
+						</li>
+					))}
+				</ul>
+			</div>
+		</div>
+	);
+}
+
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase } from 'lucide-react';
 export default function SitemapPage() {
   const siteStructure = [

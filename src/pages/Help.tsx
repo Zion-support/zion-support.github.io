@@ -1,4 +1,19 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
+
+export default function Help() {
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
+			<SEO title="Help Center - Zion Tech Group" description="Find answers and support resources." />
+			<div className="container-responsive text-white">
+				<h1 className="text-4xl font-bold mb-4">Help Center</h1>
+				<p className="text-zion-slate-light max-w-2xl">Guides, FAQs, and contact options to help you succeed.</p>
+			</div>
+		</div>
+	);
+}
+
+import React from 'react';
 import { HelpCircle, BookOpen, Video, Users, MessageCircle, Search, FileText, Lightbulb } from 'lucide-react';
 
 const Help = () => {

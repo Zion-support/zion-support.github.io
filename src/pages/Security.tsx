@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
 import { Shield, Lock, Eye, Key, CheckCircle, AlertTriangle, Server, Database, Network, Users, FileText, Globe } from 'lucide-react';
 
 export default function Security() {
@@ -104,6 +105,7 @@ export default function Security() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEO title="Security - Zion Tech Group" description="Our approach to security and compliance." />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">

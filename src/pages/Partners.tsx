@@ -1,4 +1,19 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
+
+export default function Partners() {
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
+			<SEO title="Partners - Zion Tech Group" description="Our strategic partners and alliances." />
+			<div className="container-responsive text-white">
+				<h1 className="text-4xl font-bold mb-4">Partners</h1>
+				<p className="text-zion-slate-light max-w-2xl">We collaborate with industry leaders to deliver end-to-end solutions.</p>
+			</div>
+		</div>
+	);
+}
+
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 

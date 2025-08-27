@@ -141,7 +141,8 @@ const departments = [
 export default function Team() {
   return (
     <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
+      {/* SEO and Hero Section */}
+      <SEO title="Our Team - Zion Tech Group" description="Meet the people behind our innovations." />
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
         <div className="absolute inset-0">

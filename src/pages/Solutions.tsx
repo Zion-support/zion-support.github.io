@@ -1,3 +1,18 @@
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+export default function Solutions() {
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
+			<SEO title="Solutions - Zion Tech Group" description="Explore our innovative solutions across industries." />
+			<div className="container-responsive text-white">
+				<h1 className="text-4xl font-bold mb-4">Solutions</h1>
+				<p className="text-zion-slate-light max-w-2xl">Discover AI, cloud, cybersecurity, IoT, and more tailored to your needs.</p>
+			</div>
+		</div>
+	);
+}
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 

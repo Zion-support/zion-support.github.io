@@ -1,3 +1,18 @@
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+export default function Marketplace() {
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
+			<SEO title="Marketplace - Zion Tech Group" description="Explore products, talent, equipment, and services." />
+			<div className="container-responsive text-white">
+				<h1 className="text-4xl font-bold mb-4">Marketplace</h1>
+				<p className="text-zion-slate-light max-w-2xl">Browse solutions, talent, equipment, and services in one place.</p>
+			</div>
+		</div>
+	);
+}
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
