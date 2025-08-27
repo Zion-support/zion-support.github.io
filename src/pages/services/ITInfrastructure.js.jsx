@@ -1,67 +1,54 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-const ITInfrastructure = () => {
-    const features = [
-        {
-            title: "Network Management",
-            description: "Comprehensive network infrastructure design, implementation, and maintenance",
-            features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],
-            icon: "🌐"
-        },
-        {
-            title: "System Administration",
-            description: "Expert management of servers, operating systems, and enterprise applications",
-            features: ["Server Management", "OS Administration", "Application Support", "Performance Tuning"],
-            icon: "🖥️"
-        },
-        {
-            title: "Data Center Operations",
-            description: "Professional data center management and optimization services",
-            features: ["Facility Management", "Power & Cooling", "Hardware Maintenance", "Capacity Planning"],
-            icon: "🏢"
-        },
-        {
-            title: "Performance Optimization",
-            description: "System and network performance analysis and improvement",
-            features: ["Performance Monitoring", "Bottleneck Analysis", "Optimization Strategies", "Capacity Planning"],
-            icon: "⚡"
-        }
-    ];
-    const infrastructureFeatures = [
-        { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
-        { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
-        { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
-        { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
-    ];
-    return (<div className="min-h-screen bg-background">
-      <SEO title="IT Infrastructure - Zion Tech Group" description="Build a robust and scalable IT infrastructure with our expert solutions and management services." keywords="IT infrastructure, server management, network design, data centers, infrastructure security" canonical="https://ziontechgroup.com/services/infrastructure"/>
+import { 
+  Server, 
+  Network, 
+  HardDrive, 
+  Shield, 
+  Cpu, 
+  Database, 
+  Cloud, 
+  Lock,
+  ArrowRight,
+  CheckCircle,
+  Settings,
+  Monitor
+} from 'lucide-react';
+
+const ITInfrastructure: React.FC = () => {
+  const infrastructureServices = [
+    {
       title: "Network Infrastructure",
       description: "Design, implement, and maintain robust network solutions",
       features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
       icon: "🌐"
     },
-    {title}: "Server Management",
+    {
+      title: "Server Management",
       description: "Comprehensive server infrastructure and management services",
       features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"],
       icon: "🖥️"
     },
-    {title}: "Storage Solutions",
+    {
+      title: "Storage Solutions",
       description: "Scalable storage infrastructure for growing businesses",
       features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"],
       icon: "💾"
     },
-    {title}: "Security Infrastructure",
+    {
+      title: "Security Infrastructure",
       description: "Multi-layered security infrastructure protection",
       features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],
       icon: "🔒"
     }
   ];
   const infrastructureAreas = [
-    {area}: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
-    {area}: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
-    {area}: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
-    {area}: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
+    { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
+    { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
+    { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
+    { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
   return (
 <>
@@ -110,7 +97,15 @@ const ITInfrastructure = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
+              {infrastructureServices.map((service, index) => (
+                <motion.div 
+                  key={index} 
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
                   <div className="text-5xl mb-6">{service.icon}</div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -118,13 +113,16 @@ const ITInfrastructure = () => {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="text-sm text-gray-300 flex items-center">
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                           {feature}
-                        </li>))}
+                        </li>
+                      ))}
                     </ul>
                   </div>
-                </div>))}
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -133,20 +131,36 @@ const ITInfrastructure = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Infrastructure Solutions
+                Infrastructure Areas We Cover
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Multi-layered approach to building robust IT infrastructure
+                End-to-end infrastructure solutions across all critical areas
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureAreas.map((area, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                  <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
-                  <ul className="space-y-2">
-                    {area.solutions.map((solution, idx) => (<li key={idx} className="text-gray-300 flex items-center">
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+              {infrastructureAreas.map((area, index) => (
+                <motion.div 
+                  key={index} 
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300"
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-2xl font-semibold text-white mb-4">{area.area}</h3>
+                  <div className="space-y-3">
+                    {area.solutions.map((solution, idx) => (
+                      <div key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                         {solution}
+<<<<<<< HEAD
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+=======
                       </li>))}
                   </ul>
                 </div>))}
@@ -195,26 +209,45 @@ const ITInfrastructure = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Security</h3>
                 <p className="text-gray-300">Multi-layered security for comprehensive protection</p>
               </div>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
             </div>
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Build Your Infrastructure?
+              Ready to Build Your IT Foundation?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our infrastructure services can support your business growth
+              Let our infrastructure experts help you design and implement a robust, 
+              scalable, and secure IT foundation for your business.
             </p>
-            <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-              Get Infrastructure Consultation
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+              >
+                Start Your Infrastructure Project
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link 
+                to="/services" 
+                className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Explore All Services
+              </Link>
+            </div>
           </div>
         </section>
       </div>
 </>
   );
 };
+<<<<<<< HEAD
+
+export default ITInfrastructure;
+=======
 export default ITInfrastructure;</>);
 };
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

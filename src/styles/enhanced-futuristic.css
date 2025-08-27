@@ -175,11 +175,10 @@
 }
 /* Enhanced Text Gradients */
 .text-gradient {
-  background: linear-gradient(135deg, var(--zion-cyan) 0%, var(--zion-blue) 50%, var(--zion-purple) 100%);
+  background: linear-gradient(135deg, var(--zion-cyan) 0%, var(--zion-purple) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradientShift 3s ease-in-out infinite;
 }
 /* Advanced Holographic Effects */
 .holographic {
@@ -236,8 +235,12 @@
   animation: particleFloat 20s linear infinite;
   opacity: 0.6;
 }
+<<<<<<< HEAD
+
+=======
   background-clip: text;
 }
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 .text-gradient-cyan {
   background: linear-gradient(135deg, var(--zion-cyan) 0%, var(--zion-cyan-light) 100%);
   -webkit-background-clip: text;

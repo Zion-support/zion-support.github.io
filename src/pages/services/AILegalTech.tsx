@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+=======
 import { Link } from 'react-router-dom';
+=======
 import { Link } from 'react-router-dom';
+=======
 import { SEO } from '../../components/SEO';
+=======
 import { Link } from 'react-router-dom';
 import { 
   Scale, 
@@ -42,6 +46,7 @@ import {
   FileCheck,
   Clock as ClockIcon,
   DollarSign
+=======
   Brain, 
   Shield, 
   Clock, 
@@ -83,6 +88,7 @@ export default function AILegalTech() {
       icon: Clock,
       title: "Compliance Monitoring",
       description: "Real-time compliance monitoring and automated regulatory updates."
+=======
 import { Link } from 'react-router-dom';
 import { 
   Shield, 
@@ -115,6 +121,7 @@ const AILegalTech: React.FC = () => {
       title: "AI-Powered Document Analysis",
       description: "Advanced natural language processing that analyzes legal documents, contracts, and case files with human-like understanding.",
       benefits: ["Contract review automation", "Risk assessment", "Compliance checking"]
+=======
   Brain, 
   Shield, 
   Zap,
@@ -237,6 +244,7 @@ export default function AILegalTech() {
       description: 'Intelligent document generation and management',
       icon: Zap,
       benefits: ['Template automation', 'Workflow management', 'Collaboration tools', 'Version control']
+=======
       icon: Scale,
       title: "Contract Analysis",
       description: "AI-powered contract review that identifies risks, obligations, and opportunities in legal documents."
@@ -255,6 +263,7 @@ export default function AILegalTech() {
       icon: Brain,
       title: "Risk Assessment",
       description: "Machine learning models that predict legal risks and compliance issues before they arise."
+=======
       description: "AI-driven legal research tools that quickly find relevant case law, statutes, and precedents across multiple jurisdictions."
     },
     {
@@ -298,6 +307,7 @@ export default function AILegalTech() {
       title: "Compliance & Risk",
       description: "Monitor regulatory changes and identify compliance risks with automated AI systems.",
       icon: Shield
+=======
     }
   ];
   const benefits = [
@@ -324,6 +334,7 @@ export default function AILegalTech() {
     {
       title: "Risk Assessment",
       description: "AI-powered legal risk analysis and mitigation"
+=======
   Brain, 
   Shield, 
   Clock, 
@@ -421,6 +432,7 @@ export default function AILegalTech() {
       description: 'Property contracts, lease agreements, and compliance',
       icon: Home
     }
+=======
     "Reduce legal document review time by 70-90%",
     "Improve contract accuracy and risk identification",
     "Accelerate due diligence processes",
@@ -464,6 +476,7 @@ export default function AILegalTech() {
         "Automated workflows",
         "Advanced compliance tools",
         "Up to 500 documents/month",
+=======
     {
       title: "Reduce Review Time",
       value: "80%",
@@ -484,6 +497,7 @@ export default function AILegalTech() {
       value: "3x",
       description: "Faster case preparation and legal strategy development"
     }
+=======
     "Reduce legal document review time by 60-80% with AI analysis",
     "Cut legal research costs by 40-60% through automation",
     "Improve contract accuracy by 85-95% with AI validation",
@@ -540,6 +554,7 @@ export default function AILegalTech() {
         "Priority support",
         "Custom integrations"
       ],
+=======
     {
       name: "Corporate Law",
       description: "AI-powered contract management and corporate compliance",
@@ -623,6 +638,7 @@ export default function AILegalTech() {
         "24/7 phone support"
       ],
       popular: false
+=======
       price: "$1,599/month",
       description: "For large law firms and corporate legal departments",
       features: [
@@ -700,6 +716,7 @@ export default function AILegalTech() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Revolutionize your legal practice with AI-powered tools that automate research, analyze documents, 
               and provide intelligent insights. Work smarter, not harder, with cutting-edge legal technology.
+=======
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
@@ -747,6 +764,7 @@ export default function AILegalTech() {
               <div className="text-gray-400">Efficiency Boost</div>
             </div>
           </div>
+=======
     <div className="min-h-screen bg-gradient-to-br from-black via-indigo-900 to-purple-900">
       <SEOHead 
         title="AI Legal Tech Platform - Zion Tech Group" 
@@ -812,6 +830,7 @@ export default function AILegalTech() {
               <div className="text-gray-400 text-sm">Compliance Accuracy</div>
             </div>
           </div>
+=======
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -842,6 +861,7 @@ export default function AILegalTech() {
           <div className="absolute top-20 left-10 w-2 h-2 bg-amber-400 rounded-full animate-ping"></div>
           <div className="absolute top-40 right-20 w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-amber-400 rounded-full animate-bounce"></div>
+=======
         </div>
       </section>
       {/* Features Section */}
@@ -883,6 +903,7 @@ export default function AILegalTech() {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI legal technology platform combines cutting-edge artificial intelligence 
               with proven legal expertise to deliver exceptional results.
+=======
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -904,6 +925,7 @@ export default function AILegalTech() {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI legal technology platform combines cutting-edge artificial intelligence with deep legal expertise 
               to deliver exceptional results for legal professionals.
+=======
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Schedule a Demo
@@ -981,6 +1003,7 @@ export default function AILegalTech() {
                 </ul>
               </div>
             ))}
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1010,6 +1033,7 @@ export default function AILegalTech() {
       </section>
       {/* Use Cases Section */}
             ))}
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1070,6 +1094,7 @@ export default function AILegalTech() {
                 </div>
               ))}
             </div>
+=======
           </div>
         </div>
       </section>
@@ -1112,6 +1137,7 @@ export default function AILegalTech() {
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI legal technology platform adapts to your specific practice area and requirements.
+=======
       {/* Practice Areas Section */}
       <section className="py-20 bg-indigo-900/30">
         <div className="container mx-auto px-4">
@@ -1178,6 +1204,7 @@ export default function AILegalTech() {
                 <div className="text-4xl font-bold text-green-400 mb-2">{benefit.value}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
+=======
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-indigo-500/50 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.scenario}</h3>
                 <p className="text-gray-300 mb-4">{useCase.description}</p>
@@ -1189,6 +1216,7 @@ export default function AILegalTech() {
                     </li>
                   ))}
                 </ul>
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1228,6 +1256,7 @@ export default function AILegalTech() {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+=======
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1258,6 +1287,7 @@ export default function AILegalTech() {
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
+=======
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-indigo-400 mb-2">{plan.price}</div>
@@ -1283,6 +1313,7 @@ export default function AILegalTech() {
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
+=======
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:scale-105'
@@ -1291,6 +1322,7 @@ export default function AILegalTech() {
                   {plan.cta}
                 </button>
               </div>
+=======
             ))}
           </div>
         </div>
@@ -1327,7 +1359,9 @@ export default function AILegalTech() {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of legal professionals who have already revolutionized their practice with AI technology.
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
+=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-500/10 to-orange-500/10">
         <div className="max-w-4xl mx-auto text-center">
@@ -1469,6 +1503,7 @@ export default function AILegalTech() {
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Legal Practice?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of legal professionals who have revolutionized their practice with AI-powered solutions.
+=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
@@ -1501,6 +1536,7 @@ export default function AILegalTech() {
               Schedule Demo
             </Link>
           </div>
+=======
       <section className="py-20 bg-gradient-to-r from-indigo-900/50 via-purple-900/50 to-blue-900/50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1525,6 +1561,7 @@ export default function AILegalTech() {
               Need enterprise pricing? <a href="/contact" className="text-indigo-400 hover:text-indigo-300 underline">Contact our sales team</a>
             </p>
           </div>
+=======
             Join forward-thinking law firms using AI to deliver better client service and improve efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1582,12 +1619,14 @@ export default function AILegalTech() {
               </div>
             </Link>
           </div>
+=======
         </div>
       </section>
     </div>
   );
 };
 export default AILegalTech;
+=======
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Get Started Today
@@ -1598,6 +1637,7 @@ export default AILegalTech;
             >
               View Pricing Plans
             </Link>
+=======
               className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
               Start Free Trial
@@ -1746,7 +1786,10 @@ export default AILegalTech;
     </div>
   );
 }
+=======
 }
+=======
 };
 export default AILegalTech;
+=======
 }

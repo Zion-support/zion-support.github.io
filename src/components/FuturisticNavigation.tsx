@@ -144,7 +144,9 @@ export const FuturisticNavigation: React.FC = () => {
         { name: 'Zero Trust Security', href: '/innovative-services#cybersecurity', icon: Shield, description: 'Advanced cybersecurity platform' },
         { name: 'Digital Twin Technology', href: '/innovative-services#digital-twin', icon: Eye, description: 'Digital twin and simulation platform' },
         { name: 'Metaverse & VR', href: '/innovative-services#metaverse', icon: Globe2, description: 'Metaverse and virtual reality platform' },
-        { name: 'Green Tech Solutions', href: '/innovative-services#green-tech', icon: Leaf, description: 'Sustainability and green technology' }
+        { name: 'Green Tech Solutions', href: '/innovative-services#green-tech', icon: Leaf, description: 'Sustainability and green technology' },
+        { name: 'Emerging Tech Services', href: '/emerging-tech-services', icon: Rocket, description: 'Revolutionary emerging technology solutions' },
+        { name: 'Advanced Cybersecurity', href: '/advanced-cybersecurity', icon: Shield, description: 'Military-grade cybersecurity services' }
       ]
     },
     {
@@ -214,18 +216,6 @@ export const FuturisticNavigation: React.FC = () => {
         { name: 'Webinars', href: '/webinars', icon: Video, description: 'Educational webinars' },
         { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Frequently asked questions' },
         { name: 'Support', href: '/support', icon: HelpCircle, description: 'Technical support and help' }
-      ]
-    },
-    {
-      name: 'Comprehensive',
-      href: '/services-overview',
-      icon: BarChart3,
-      color: 'from-zion-green to-zion-emerald',
-      dropdown: [
-        { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' },
-        { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' },
-        { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' },
-        { name: 'Innovative Services', href: '/innovative-services-2027', icon: Lightbulb, description: 'Cutting-edge innovative solutions' }
       ]
     }
   ];

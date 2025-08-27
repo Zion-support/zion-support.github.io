@@ -17,7 +17,7 @@ import {
   Globe,
   Lock
 } from 'lucide-react';
-import SEOHead from "../components/SEOHead.jsx";
+import SEOHead from "../components/SEOHead";
 const features = [
     {
         title: "Intelligent Decision Making",

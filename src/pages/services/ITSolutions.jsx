@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from "../components/SEOHead.jsx";
+import SEOHead from "../../components/SEOHead.jsx";
 import { Shield, Database, Monitor } from 'lucide-react';
 const ITSolutions = () => {
     const features = [

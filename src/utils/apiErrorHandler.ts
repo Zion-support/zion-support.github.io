@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+export const handleApiError = (error: any, fallbackMessage: string = 'An error occurred') => {
+  if (error?.response?.data?.message) {
+    return error.response.data.message;
+=======
 /**
  * API Error Handler utility for consistent error handling across the application
  */
@@ -88,30 +93,39 @@ export const handleHttpError = (status: number, error?: any): void => {
 export const extractErrorMessage = (error: any): string => {
   if (typeof error === 'string') {
     return error;
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   }
   
   if (error?.message) {
     return error.message;
   }
   
-  if (error?.error) {
-    return error.error;
+  if (typeof error === 'string') {
+    return error;
   }
   
-  if (error?.data?.message) {
-    return error.data.message;
-  }
-  
-  if (error?.response?.data?.message) {
-    return error.response.data.message;
-  }
-  
-  if (error?.response?.data?.error) {
-    return error.response.data.error;
-  }
-  
-  return 'An unexpected error occurred';
+  return fallbackMessage;
 };
+<<<<<<< HEAD
+
+export const isNetworkError = (error: any) => {
+  return error?.code === 'NETWORK_ERROR' || 
+         error?.message?.includes('Network Error') ||
+         error?.message?.includes('Failed to fetch');
+};
+
+export const isAuthError = (error: any) => {
+  return error?.status === 401 || 
+         error?.status === 403 ||
+         error?.response?.status === 401 ||
+         error?.response?.status === 403;
+};
+
+export const showApiError = (error: any, fallbackMessage: string = 'An error occurred') => {
+  const message = handleApiError(error, fallbackMessage);
+  console.error('API Error:', { error, message });
+  return message;
+=======
 /**
  * Checks if an error is a network error
  */
@@ -148,4 +162,5 @@ export const handleAuthError = (error: any): void => {
   } else {
     showApiError(error, 'Authentication failed');
   }
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 };

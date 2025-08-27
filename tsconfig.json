@@ -17,9 +17,18 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": { "@/*": ["./src/*"] },
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "incremental": true,
+    "strictNullChecks": true
   },
-  "include": ["src", "components", "pages", "vite.config.ts", "tailwind.config.ts"],
+  "include": [
+    "src",
+    "pages",
+    "components",
+    "data",
+    "types"
+  ],
   "exclude": [
     "node_modules",
     "dist/**",

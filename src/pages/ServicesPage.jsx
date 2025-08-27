@@ -1,8 +1,8 @@
-import { Button } from "../components/ui/Button.jsx";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 import { useEffect, useState } from "react";
-import { SEO } from "../components/SEO.jsx";
+import { SEO } from "@/components/SEO";
 // Enhanced service listings with new micro SAAS services
 const SERVICE_LISTINGS = [
     // AI & Machine Learning Services
@@ -5759,444 +5759,6 @@ const SERVICE_LISTINGS = [
         marketSize: "$23.4B market",
         growthRate: "190% annual growth"
     },
-    // NEW INNOVATIVE SERVICES 2025
-    {
-        id: "quantum-ai-platform",
-        title: "Quantum AI Platform",
-        description: "Next-generation quantum computing platform with AI integration for complex problem solving. Quantum machine learning, optimization, and simulation capabilities.",
-        category: "Quantum Computing",
-        price: 999,
-        currency: "$",
-        tags: ["Quantum Computing", "AI Integration", "Machine Learning", "Optimization"],
-        author: {
-            name: "Zion Quantum Labs",
-            id: "zion-quantum-labs",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-15T10:00:00.000Z",
-        aiScore: 99,
-        rating: 4.9,
-        reviewCount: 89,
-    },
-    {
-        id: "blockchain-ai-oracle",
-        title: "Blockchain AI Oracle",
-        description: "Decentralized AI oracle network for blockchain applications. Smart contract integration, real-time data feeds, and AI-powered decision making.",
-        category: "Blockchain & AI",
-        price: 199,
-        currency: "$",
-        tags: ["Blockchain", "AI Oracle", "Smart Contracts", "DeFi"],
-        author: {
-            name: "Zion Blockchain",
-            id: "zion-blockchain",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-20T14:30:00.000Z",
-        aiScore: 96,
-        rating: 4.8,
-        reviewCount: 156,
-    },
-    {
-        id: "autonomous-devops",
-        title: "Autonomous DevOps Platform",
-        description: "Self-healing DevOps platform with AI-powered automation. Continuous deployment, monitoring, and infrastructure management without human intervention.",
-        category: "DevOps & Automation",
-        price: 299,
-        currency: "$",
-        tags: ["Autonomous DevOps", "Self-Healing", "CI/CD", "Infrastructure"],
-        author: {
-            name: "Zion Autonomous Systems",
-            id: "zion-autonomous-systems",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-25T09:15:00.000Z",
-        aiScore: 97,
-        rating: 4.9,
-        reviewCount: 234,
-    },
-    {
-        id: "ai-cybersecurity-suite",
-        title: "AI Cybersecurity Suite Pro",
-        description: "Advanced AI-powered cybersecurity with threat prediction, automated response, and zero-day vulnerability detection. 24/7 protection for enterprise networks.",
-        category: "Cybersecurity",
-        price: 599,
-        currency: "$",
-        tags: ["AI Security", "Threat Prediction", "Zero-Day Detection", "Enterprise"],
-        author: {
-            name: "Zion Cyber Defense",
-            id: "zion-cyber-defense",
-            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-30T15:45:00.000Z",
-        aiScore: 98,
-        rating: 4.9,
-        reviewCount: 178,
-    },
-    {
-        id: "metaverse-ai-platform",
-        title: "Metaverse AI Platform",
-        description: "AI-powered metaverse creation and management platform. Virtual world generation, NPC AI, and immersive experience optimization.",
-        category: "Metaverse & AI",
-        price: 399,
-        currency: "$",
-        tags: ["Metaverse", "AI Generation", "Virtual Worlds", "Immersive Tech"],
-        author: {
-            name: "Zion Metaverse",
-            id: "zion-metaverse",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-05T11:20:00.000Z",
-        aiScore: 95,
-        rating: 4.8,
-        reviewCount: 123,
-    },
-    {
-        id: "ai-climate-prediction",
-        title: "AI Climate Prediction Engine",
-        description: "Advanced climate modeling and prediction using AI and machine learning. Weather forecasting, climate change analysis, and environmental impact assessment.",
-        category: "Climate & AI",
-        price: 249,
-        currency: "$",
-        tags: ["Climate Modeling", "Weather Prediction", "Environmental AI", "Sustainability"],
-        author: {
-            name: "Zion Climate Tech",
-            id: "zion-climate-tech",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-10T13:15:00.000Z",
-        aiScore: 94,
-        rating: 4.7,
-        reviewCount: 89,
-    },
-    {
-        id: "ai-legal-contract-generator",
-        title: "AI Legal Contract Generator",
-        description: "Intelligent contract generation and analysis platform. Custom contract creation, legal compliance checking, and risk assessment automation.",
-        category: "Legal Tech",
-        price: 179,
-        currency: "$",
-        tags: ["Contract Generation", "Legal AI", "Compliance", "Risk Assessment"],
-        author: {
-            name: "Zion Legal AI",
-            id: "zion-legal-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-15T16:30:00.000Z",
-        aiScore: 93,
-        rating: 4.8,
-        reviewCount: 145,
-    },
-    {
-        id: "ai-supply-chain-optimizer",
-        title: "AI Supply Chain Optimizer",
-        description: "Intelligent supply chain optimization and management platform. Demand forecasting, inventory optimization, and logistics automation.",
-        category: "Supply Chain & AI",
-        price: 349,
-        currency: "$",
-        tags: ["Supply Chain", "Demand Forecasting", "Inventory Optimization", "Logistics"],
-        author: {
-            name: "Zion Supply Chain",
-            id: "zion-supply-chain",
-            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-20T10:45:00.000Z",
-        aiScore: 92,
-        rating: 4.7,
-        reviewCount: 167,
-    },
-    {
-        id: "ai-human-resources-suite",
-        title: "AI HR Suite Pro",
-        description: "Comprehensive AI-powered human resources management platform. Recruitment automation, employee performance analysis, and HR analytics.",
-        category: "HR & AI",
-        price: 129,
-        currency: "$",
-        tags: ["HR Management", "Recruitment AI", "Performance Analysis", "HR Analytics"],
-        author: {
-            name: "Zion HR Solutions",
-            id: "zion-hr-solutions",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-25T14:20:00.000Z",
-        aiScore: 91,
-        rating: 4.6,
-        reviewCount: 234,
-    },
-    {
-        id: "ai-marketing-automation-pro",
-        title: "AI Marketing Automation Pro",
-        description: "Advanced marketing automation platform with AI-powered personalization. Campaign optimization, customer segmentation, and ROI maximization.",
-        category: "Marketing & AI",
-        price: 199,
-        currency: "$",
-        tags: ["Marketing Automation", "AI Personalization", "Campaign Optimization", "ROI"],
-        author: {
-            name: "Zion Marketing AI",
-            id: "zion-marketing-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-03-01T12:00:00.000Z",
-        aiScore: 95,
-        rating: 4.8,
-        reviewCount: 189,
-    },
-    {
-        id: "ai-sales-intelligence",
-        title: "AI Sales Intelligence Platform",
-        description: "Intelligent sales platform with lead scoring, opportunity prediction, and sales forecasting. AI-powered insights for revenue optimization.",
-        category: "Sales & AI",
-        price: 159,
-        currency: "$",
-        tags: ["Sales Intelligence", "Lead Scoring", "Opportunity Prediction", "Revenue Optimization"],
-        author: {
-            name: "Zion Sales AI",
-            id: "zion-sales-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-03-05T15:30:00.000Z",
-        aiScore: 93,
-        rating: 4.7,
-        reviewCount: 156,
-    },
-    {
-        id: "ai-customer-experience",
-        title: "AI Customer Experience Platform",
-        description: "Omnichannel customer experience platform with AI-powered personalization. Customer journey mapping, sentiment analysis, and experience optimization.",
-        category: "Customer Experience",
-        price: 229,
-        currency: "$",
-        tags: ["Customer Experience", "AI Personalization", "Journey Mapping", "Sentiment Analysis"],
-        author: {
-            name: "Zion CX Platform",
-            id: "zion-cx-platform",
-            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-03-10T11:15:00.000Z",
-        aiScore: 94,
-        rating: 4.8,
-        reviewCount: 178,
-    },
-    {
-        id: "ai-product-development",
-        title: "AI Product Development Suite",
-        description: "AI-powered product development and innovation platform. Market research, feature prioritization, and product lifecycle management.",
-        category: "Product Development",
-        price: 279,
-        currency: "$",
-        tags: ["Product Development", "Market Research", "Feature Prioritization", "Innovation"],
-        author: {
-            name: "Zion Product AI",
-            id: "zion-product-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-03-15T13:45:00.000Z",
-        aiScore: 92,
-        rating: 4.7,
-        reviewCount: 134,
-    },
-    {
-        id: "ai-compliance-automation",
-        title: "AI Compliance Automation",
-        description: "Automated compliance monitoring and reporting platform. Regulatory compliance, audit automation, and risk management for various industries.",
-        category: "Compliance & AI",
-        price: 399,
-        currency: "$",
-        tags: ["Compliance Automation", "Regulatory Monitoring", "Audit Automation", "Risk Management"],
-        author: {
-            name: "Zion Compliance AI",
-            id: "zion-compliance-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-03-20T16:20:00.000Z",
-        aiScore: 96,
-        rating: 4.9,
-        reviewCount: 89,
-    },
-    {
-        id: "ai-data-governance",
-        title: "AI Data Governance Platform",
-        description: "Intelligent data governance and management platform. Data quality, privacy compliance, and governance automation for enterprise data.",
-        category: "Data Governance",
-        price: 449,
-        currency: "$",
-        tags: ["Data Governance", "Data Quality", "Privacy Compliance", "Enterprise Data"],
-        author: {
-            name: "Zion Data Governance",
-            id: "zion-data-governance",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-03-25T10:30:00.000Z",
-        aiScore: 95,
-        rating: 4.8,
-        reviewCount: 123,
-    },
-    {
-        id: "ai-edge-computing",
-        title: "AI Edge Computing Platform",
-        description: "Distributed AI computing platform for edge devices. Real-time processing, low-latency inference, and edge AI model deployment.",
-        category: "Edge Computing & AI",
-        price: 199,
-        currency: "$",
-        tags: ["Edge Computing", "Real-time Processing", "Low-latency AI", "Edge Deployment"],
-        author: {
-            name: "Zion Edge AI",
-            id: "zion-edge-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-03-30T14:15:00.000Z",
-        aiScore: 93,
-        rating: 4.7,
-        reviewCount: 167,
-    },
-    {
-        id: "ai-iot-platform",
-        title: "AI IoT Platform",
-        description: "Intelligent IoT platform with AI-powered device management. Sensor data analysis, predictive maintenance, and IoT automation.",
-        category: "IoT & AI",
-        price: 159,
-        currency: "$",
-        tags: ["IoT Platform", "Sensor Analytics", "Predictive Maintenance", "IoT Automation"],
-        author: {
-            name: "Zion IoT AI",
-            id: "zion-iot-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-04-01T12:45:00.000Z",
-        aiScore: 91,
-        rating: 4.6,
-        reviewCount: 145,
-    },
-    {
-        id: "ai-financial-trading",
-        title: "AI Financial Trading Platform",
-        description: "AI-powered algorithmic trading platform with real-time market analysis. Portfolio optimization, risk management, and automated trading strategies.",
-        category: "Financial AI",
-        price: 799,
-        currency: "$",
-        tags: ["Algorithmic Trading", "Market Analysis", "Portfolio Optimization", "Risk Management"],
-        author: {
-            name: "Zion Financial AI",
-            id: "zion-financial-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-04-05T15:20:00.000Z",
-        aiScore: 97,
-        rating: 4.9,
-        reviewCount: 89,
-    },
-    {
-        id: "ai-healthcare-diagnostics",
-        title: "AI Healthcare Diagnostics",
-        description: "Advanced AI-powered medical diagnostics and imaging analysis. Disease detection, treatment recommendations, and healthcare workflow optimization.",
-        category: "Healthcare AI",
-        price: 499,
-        currency: "$",
-        tags: ["Medical Diagnostics", "Imaging Analysis", "Disease Detection", "Healthcare AI"],
-        author: {
-            name: "Zion Healthcare AI",
-            id: "zion-healthcare-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-04-10T11:30:00.000Z",
-        aiScore: 96,
-        rating: 4.8,
-        reviewCount: 234,
-    },
-    {
-        id: "ai-manufacturing-optimization",
-        title: "AI Manufacturing Optimization",
-        description: "Intelligent manufacturing optimization platform with predictive maintenance and quality control. Production efficiency, cost reduction, and quality assurance.",
-        category: "Manufacturing AI",
-        price: 349,
-        currency: "$",
-        tags: ["Manufacturing AI", "Predictive Maintenance", "Quality Control", "Production Efficiency"],
-        author: {
-            name: "Zion Manufacturing AI",
-            id: "zion-manufacturing-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-04-15T14:45:00.000Z",
-        aiScore: 94,
-        rating: 4.7,
-        reviewCount: 178,
-    },
-    {
-        id: "ai-retail-analytics",
-        title: "AI Retail Analytics Platform",
-        description: "Intelligent retail analytics and customer behavior analysis. Inventory optimization, demand forecasting, and personalized shopping experiences.",
-        category: "Retail AI",
-        price: 199,
-        currency: "$",
-        tags: ["Retail Analytics", "Customer Behavior", "Inventory Optimization", "Personalization"],
-        author: {
-            name: "Zion Retail AI",
-            id: "zion-retail-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-04-20T16:15:00.000Z",
-        aiScore: 92,
-        rating: 4.6,
-        reviewCount: 156,
-    },
-    {
-        id: "ai-logistics-optimization",
-        title: "AI Logistics Optimization",
-        description: "Intelligent logistics and transportation optimization platform. Route optimization, fleet management, and supply chain logistics automation.",
-        category: "Logistics AI",
-        price: 279,
-        currency: "$",
-        tags: ["Logistics AI", "Route Optimization", "Fleet Management", "Supply Chain"],
-        author: {
-            name: "Zion Logistics AI",
-            id: "zion-logistics-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-04-25T13:20:00.000Z",
-        aiScore: 93,
-        rating: 4.7,
-        reviewCount: 134,
-    },
-    {
-        id: "ai-energy-management",
-        title: "AI Energy Management Platform",
-        description: "Intelligent energy management and optimization platform. Smart grid management, renewable energy optimization, and energy efficiency analytics.",
-        category: "Energy AI",
-        price: 399,
-        currency: "$",
-        tags: ["Energy Management", "Smart Grid", "Renewable Energy", "Energy Efficiency"],
-        author: {
-            name: "Zion Energy AI",
-            id: "zion-energy-ai",
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        },
-        images: ["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-04-30T10:45:00.000Z",
-        aiScore: 95,
-        rating: 4.8,
-        reviewCount: 89,
-    },
     // Legacy services (keeping existing ones)
     {
         id: "service-1",
@@ -6405,28 +5967,6 @@ const SERVICE_FILTERS = [
     { label: 'Analytics', value: 'analytics' },
     { label: 'Consulting', value: 'consulting' },
     { label: 'Strategy', value: 'strategy' },
-    { label: 'Quantum Computing', value: 'quantum-computing' },
-    { label: 'Blockchain & AI', value: 'blockchain-ai' },
-    { label: 'DevOps & Automation', value: 'devops-automation' },
-    { label: 'Metaverse & AI', value: 'metaverse-ai' },
-    { label: 'Climate & AI', value: 'climate-ai' },
-    { label: 'Legal Tech', value: 'legal-tech' },
-    { label: 'Supply Chain & AI', value: 'supply-chain-ai' },
-    { label: 'HR & AI', value: 'hr-ai' },
-    { label: 'Marketing & AI', value: 'marketing-ai' },
-    { label: 'Sales & AI', value: 'sales-ai' },
-    { label: 'Customer Experience', value: 'customer-experience' },
-    { label: 'Product Development', value: 'product-development' },
-    { label: 'Compliance & AI', value: 'compliance-ai' },
-    { label: 'Data Governance', value: 'data-governance' },
-    { label: 'Edge Computing & AI', value: 'edge-computing-ai' },
-    { label: 'IoT & AI', value: 'iot-ai' },
-    { label: 'Financial AI', value: 'financial-ai' },
-    { label: 'Healthcare AI', value: 'healthcare-ai' },
-    { label: 'Manufacturing AI', value: 'manufacturing-ai' },
-    { label: 'Retail AI', value: 'retail-ai' },
-    { label: 'Logistics AI', value: 'logistics-ai' },
-    { label: 'Energy AI', value: 'energy-ai' },
 ];
 export default function ServicesPage() {
     const [listings, setListings] = useState(SERVICE_LISTINGS);
@@ -6437,12 +5977,7 @@ export default function ServicesPage() {
         return () => clearInterval(interval);
     }, []);
     return (<div className="min-h-screen bg-background">
-      <SEO 
-        title="Comprehensive IT & AI Services 2025 - Zion Tech Group" 
-        description="Discover cutting-edge AI, Quantum Computing, Blockchain, Metaverse, and specialized industry solutions. From micro SAAS to enterprise platforms, transform your business with Zion Tech Group's innovative technology services." 
-        keywords="AI services, quantum computing, blockchain AI, metaverse platform, cybersecurity, cloud infrastructure, business intelligence, Zion Tech Group, IT services, technology consulting, micro SAAS, enterprise solutions" 
-        url="https://ziontechgroup.com/services"
-      />
+      <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com/services"/>
       
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
@@ -6464,12 +5999,14 @@ export default function ServicesPage() {
       </div>
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-zion-blue mb-4">Comprehensive IT & AI Services 2025</h1>
-          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-            Discover cutting-edge technology solutions including AI, Quantum Computing, Blockchain, Metaverse, and specialized industry platforms. 
-            From micro SAAS to enterprise solutions, we offer innovative services to transform your business.
+          <h1 className="text-4xl font-bold text-zion-blue mb-4">IT & AI Services</h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Find expert technology service providers for your business needs, from AI development to infrastructure management.
           </p>
         </div>
+<<<<<<< HEAD
+
+=======
         {/* Services Overview Section */}
         <div className="bg-gradient-to-r from-zion-blue to-zion-purple rounded-xl p-8 mb-8 text-white">
           <div className="text-center mb-6">
@@ -6532,8 +6069,9 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {listings.map((service) => (<div key={service.id} className="bg-white rounded-lg shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
+          {listings.map((service) => (<div key={service.id} className="bg-white rounded-lg shadow-lg p-6 border border-zion-blue-light">
               <div className="mb-4">
                 <h3 className="text-xl font-semibold text-zion-blue mb-2">{service.title}</h3>
                 <p className="text-zion-slate-light">{service.description}</p>
@@ -6554,6 +6092,9 @@ export default function ServicesPage() {
                     {tag}
                   </span>))}
               </div>
+<<<<<<< HEAD
+
+=======
               <div className="space-y-2 mb-4">
                 <div className="text-sm text-zion-slate-light">
                   <span className="font-medium">Category:</span> {service.category}
@@ -6562,6 +6103,7 @@ export default function ServicesPage() {
                   <span className="font-medium">AI Score:</span> {service.aiScore}/100
                 </div>
               </div>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
               <Link to="/contact">
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   Get Quote
@@ -6569,6 +6111,8 @@ export default function ServicesPage() {
               </Link>
             </div>))}
         </div>
+<<<<<<< HEAD
+=======
         {/* Service Categories Overview */}
         <div className="mt-12 bg-gray-50 rounded-xl p-8">
           <h2 className="text-2xl font-bold text-zion-blue mb-6 text-center">Service Categories Overview</h2>
@@ -6693,6 +6237,7 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
       </div>
     </div>);
 }

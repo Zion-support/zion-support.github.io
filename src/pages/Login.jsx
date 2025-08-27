@@ -1,8 +1,11 @@
 import { useEffect } from 'react';
+<<<<<<< HEAD
+=======
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { safeStorage } from '@/utils/safeStorage';
 import { LoginForm } from '@/components/auth/login/LoginForm';
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 import { ErrorBoundary } from 'react-error-boundary';
 import { LoginErrorFallback } from '@/components/auth/login/LoginErrorFallback';
 import { useCart } from '@/context/CartContext';
@@ -10,6 +13,15 @@ import { toast } from '@/hooks/use-toast';
 import { useDispatch } from 'react-redux';
 import { setLoggedIn } from '@/store/authSlice';
 export default function Login() {
+<<<<<<< HEAD
+  const dispatch = useDispatch();
+  const { clearCart } = useCart();
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
+
+=======
   const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -20,10 +32,40 @@ export default function Login() {
     const queryString = location.search;
     const params = new URLSearchParams(queryString);
     const token = params.get('token');
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     if (token) {
       // Store token in localStorage for now
       localStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing and clean up history
+<<<<<<< HEAD
+      window.history.replaceState({}, document.title, window.location.pathname);
+      
+      // Set logged in state
+      dispatch(setLoggedIn({ token }));
+      
+      // Clear cart on login
+      clearCart();
+      
+      // Show success message
+      toast({
+        title: "Login Successful",
+        description: "Welcome to Zion Tech Group!",
+      });
+      
+      // Redirect to home page
+      window.location.href = '/';
+    }
+  }, [dispatch, clearCart]);
+
+  return (
+    <ErrorBoundary FallbackComponent={LoginErrorFallback}>
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+        </div>
+      </div>
+    </ErrorBoundary>
+  );
+=======
       // The actual authentication state will update via useAuth's listeners,
       // which should trigger the other useEffect.
       navigate(location.pathname, { replace: true });
@@ -51,4 +93,5 @@ export default function Login() {
   // If authenticated and isLoading is false, the useEffect above should have navigated.
   // Return null or a minimal layout if needed, though direct navigation is preferred.
   return null;
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 }

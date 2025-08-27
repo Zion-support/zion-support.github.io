@@ -1,49 +1,137 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader.jsx';
+import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer.jsx';
+<<<<<<< HEAD
+import { ChatAssistant } from './components/ChatAssistant';
+
+// Lazy load pages with better chunking
+const Home = lazy(() => import('./pages/Home.tsx'));
+const About = lazy(() => import('./pages/About.tsx'));
+const Contact = lazy(() => import('./pages/Contact.tsx'));
+const Blog = lazy(() => import('./pages/Blog.tsx'));
+const PartnersPage = lazy(() => import('./pages/Partners.tsx'));
+const Login = lazy(() => import('./pages/Login.jsx'));
+const FAQ = lazy(() => import('./pages/FAQ.tsx'));
+const Careers = lazy(() => import('./pages/Careers.tsx'));
+const Privacy = lazy(() => import('./pages/Privacy.tsx'));
+const Terms = lazy(() => import('./pages/Terms.tsx'));
+const Sitemap = lazy(() => import('./pages/Sitemap.tsx'));
+const GreenIT = lazy(() => import('./pages/GreenIT.tsx'));
+
+// Enhanced loading component with better UX
+=======
 import { ChatAssistant } from './components/ChatAssistant.jsx';
 // Lazy load only the pages we know work
 const Home = lazy(() => import('./pages/Home.jsx'));
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 const LoadingSpinner = () => (
-  <div className="min-h-screen bg-futuristic flex items-center justify-center">
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
     <div className="text-center">
-      <div className="relative">
-        <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-        <div className="absolute inset-0 w-16 h-16 border-4 border-zion-purple border-t-transparent rounded-full animate-spin mx-auto mb-4" style={{ animationDelay: '-0.5s' }}></div>
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan mx-auto mb-4"></div>
+      <p className="text-zion-slate-light text-lg">Loading Zion Tech Group...</p>
+      <div className="mt-4 space-y-2">
+        <div className="h-2 bg-zion-slate rounded-full w-48 mx-auto">
+          <div className="h-2 bg-zion-cyan rounded-full animate-pulse" style={{ width: '60%' }}></div>
+        </div>
+        <div className="h-2 bg-zion-slate rounded-full w-32 mx-auto">
+          <div className="h-2 bg-zion-purple rounded-full animate-pulse" style={{ width: '40%' }}></div>
+        </div>
       </div>
-      <p className="text-zion-cyan text-lg font-medium">Loading Zion Tech Group...</p>
-      <p className="text-zion-slate-light text-sm mt-2">Preparing your experience</p>
+    </div>
+  </div>
+);
+
+// Error boundary component
+const ErrorFallback = ({ error, resetErrorBoundary }) => (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="text-center max-w-md mx-auto p-8">
+      <div className="text-6xl mb-4">⚠️</div>
+      <h1 className="text-2xl font-bold text-zion-cyan mb-4">Something went wrong</h1>
+      <p className="text-zion-slate-light mb-6">
+        We encountered an unexpected error. Please try refreshing the page.
+      </p>
+      <div className="space-y-3">
+        <button
+          onClick={resetErrorBoundary}
+          className="bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors w-full"
+        >
+          Try Again
+        </button>
+        <button
+          onClick={() => window.location.href = '/'}
+          className="bg-zion-slate text-white px-6 py-3 rounded-lg hover:bg-zion-slate-dark transition-colors w-full"
+        >
+          Go Home
+        </button>
+      </div>
+      {process.env.NODE_ENV === 'development' && (
+        <details className="mt-6 text-left">
+          <summary className="cursor-pointer text-zion-slate-light">Error Details</summary>
+          <pre className="mt-2 text-xs text-red-400 bg-zion-slate-dark p-3 rounded overflow-auto">
+            {error.message}
+          </pre>
+        </details>
+      )}
+    </div>
+  </div>
+);
+
+// 404 page component
+const NotFound = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="text-center">
+      <h1 className="text-6xl font-bold text-zion-cyan mb-4">404</h1>
+      <h2 className="text-2xl font-semibold text-zion-slate-light mb-4">Page Not Found</h2>
+      <p className="text-zion-slate-light mb-6 max-w-md mx-auto">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+      <div className="space-y-3">
+        <a 
+          href="/" 
+          className="inline-block bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors"
+        >
+          Go Home
+        </a>
+        <button 
+          onClick={() => window.history.back()}
+          className="block mx-auto mt-3 bg-zion-slate text-white px-6 py-3 rounded-lg hover:bg-zion-slate-dark transition-colors"
+        >
+          Go Back
+        </button>
+      </div>
     </div>
   </div>
 );
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
         <AppHeader />
-        <main className="flex-1 pt-16 lg:pt-20">
+        
+        <main className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
+              {/* Main pages */}
               <Route path="/" element={<Home />} />
-              {/* 404 route */}
-              <Route path="*" element={
-                <div className="min-h-screen bg-futuristic flex items-center justify-center">
-                  <div className="text-center">
-                    <h1 className="text-6xl font-bold text-zion-cyan mb-4">404</h1>
-                    <p className="text-xl text-zion-slate-light mb-8">Page not found</p>
-                    <button
-                      onClick={() => window.history.back()}
-                      className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform"
-                    >
-                      Go Back
-                    </button>
-                  </div>
-                </div>
-              } />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
+
+              {/* Catch-all route for 404 */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
+
         <Footer />
         <ChatAssistant />
       </div>

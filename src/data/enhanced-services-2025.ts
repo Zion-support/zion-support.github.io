@@ -1,28 +1,29 @@
-export interface EnhancedService2025 {
+export interface EnhancedService {
   id: string;
-  title: string;
+  name: string;
+  tagline: string;
   description: string;
-  category: string;
-  price: number;
-  currency: string;
-  tags: string[];
-  author: {
-    name: string;
-    id: string;
-    avatarUrl: string;
+  category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech';
+  pricing: {
+    monthly: string;
+    yearly: string;
+    enterprise: string;
+    setup: string;
   };
-  images: string[];
-  createdAt: string;
-  aiScore: number;
-  rating: number;
-  reviewCount: number;
   features: string[];
-  useCases: string[];
+  benefits: string[];
+  technology: string[];
   integrations: string[];
-  marketPosition: string;
+  useCases: string[];
   targetAudience: string;
+  marketPosition: string;
+  competitors: string[];
+  roi: string;
   trialDays: number;
   setupTime: string;
+  icon: string;
+  color: string;
+  link: string;
   contactInfo: {
     mobile: string;
     email: string;
@@ -30,6 +31,18 @@ export interface EnhancedService2025 {
     website: string;
   };
 }
+<<<<<<< HEAD
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+export const enhancedServices2025: EnhancedService[] = [
+  // MICRO SAAS SERVICES
+=======
 export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
   // AI-Powered Autonomous Services
   {
@@ -71,70 +84,89 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     }
   },
   // Quantum Computing Services
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
-    id: "quantum-neural-network-platform",
-    title: "Quantum Neural Network Platform",
-    description: "Next-generation AI powered by quantum computing for solving complex problems in drug discovery, financial modeling, and climate prediction.",
-    category: "Quantum Computing",
-    price: 5999,
-    currency: "$",
-    tags: ["Quantum AI", "Neural Networks", "Drug Discovery", "Financial Modeling"],
-    author: {
-      name: "Zion Quantum Labs",
-      id: "zion-quantum-labs",
-      avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+    id: 'ai-powered-code-review-assistant',
+    name: 'AI-Powered Code Review Assistant',
+    tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',
+    description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
+    category: 'micro-saas',
+    pricing: {
+      monthly: '$199/month',
+      yearly: '$1,999/year',
+      enterprise: 'Custom pricing',
+      setup: '$299 one-time'
     },
-    images: ["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-01-20T14:30:00.000Z",
-    aiScore: 98,
-    rating: 4.9,
-    reviewCount: 15,
     features: [
-      "Quantum neural network training",
-      "Complex problem solving",
-      "Drug discovery algorithms",
-      "Financial risk modeling",
-      "Climate prediction models"
+      'Automated security vulnerability detection',
+      'Code quality scoring and metrics',
+      'Best practice recommendations',
+      'Integration with GitHub/GitLab/Bitbucket',
+      'Custom rule configuration',
+      'Team performance analytics',
+      'Automated PR comments',
+      'Compliance checking (SOC2, HIPAA)',
+      'Performance impact analysis',
+      'Multi-language support'
     ],
-    useCases: ["Drug discovery", "Financial modeling", "Climate prediction", "Optimization problems"],
-    integrations: ["Research platforms", "Financial systems", "Scientific computing tools"],
-    marketPosition: "Leading quantum AI platform for complex problem solving",
-    targetAudience: "Pharmaceutical companies, financial institutions, research organizations",
+    benefits: [
+      'Reduce code review time by 40-60%',
+      'Improve code quality by 25%',
+      'Catch security issues before deployment',
+      'Standardize coding practices',
+      'Reduce technical debt'
+    ],
+    technology: ['AI/ML', 'Static Analysis', 'Security Scanning', 'Git Integration'],
+    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Teams'],
+    useCases: ['Code quality improvement', 'Security compliance', 'Team productivity', 'DevOps automation'],
+    targetAudience: 'Development teams, DevOps engineers, CTOs, Engineering managers',
+    marketPosition: 'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus',
+    competitors: ['SonarQube', 'CodeClimate', 'Snyk', 'DeepCode'],
+    roi: 'Reduce code review time by 40-60% and improve code quality by 25%',
     trialDays: 14,
-    setupTime: "4-6 weeks",
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"
-    }
+    setupTime: '2 hours',
+    icon: '🔍',
+    color: 'from-blue-600 to-indigo-700',
+    link: '/services/ai-code-review-assistant',
+    contactInfo
   },
+<<<<<<< HEAD
+
+=======
   // Advanced Cybersecurity Services
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
-    id: "zero-trust-security-suite",
-    title: "Zero Trust Security Suite",
-    description: "Comprehensive zero-trust security implementation with continuous verification, micro-segmentation, and AI-powered threat detection.",
-    category: "Cybersecurity",
-    price: 499,
-    currency: "$",
-    tags: ["Zero Trust", "Continuous Verification", "Micro-segmentation", "AI Security"],
-    author: {
-      name: "Zion Security",
-      id: "zion-security",
-      avatarUrl: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=100&h=100",
+    id: 'intelligent-incident-response-platform',
+    name: 'Intelligent Incident Response Platform',
+    tagline: 'AI-driven incident detection, automated response, and post-mortem analysis',
+    description: 'Comprehensive incident management platform that uses AI to detect, respond to, and analyze security incidents in real-time, reducing response time and improving resolution quality.',
+    category: 'micro-saas',
+    pricing: {
+      monthly: '$299/month',
+      yearly: '$2,999/year',
+      enterprise: 'Custom pricing',
+      setup: '$499 one-time'
     },
-    images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-01-22T13:20:00.000Z",
-    aiScore: 97,
-    rating: 4.8,
-    reviewCount: 78,
     features: [
-      "Continuous identity verification",
-      "Network micro-segmentation",
-      "AI-powered threat detection",
-      "Real-time security monitoring",
-      "Automated incident response"
+      'AI-powered threat detection',
+      'Automated incident response workflows',
+      'Real-time alerting and notifications',
+      'Incident timeline tracking',
+      'Post-mortem analysis tools',
+      'Integration with security tools',
+      'Compliance reporting',
+      'Team collaboration features',
+      'Knowledge base management',
+      'Performance metrics dashboard'
     ],
+<<<<<<< HEAD
+    benefits: [
+      'Reduce incident response time by 70%',
+      'Improve incident resolution by 45%',
+      'Automate routine response tasks',
+      'Enhance team collaboration',
+      'Maintain compliance standards'
+=======
     useCases: ["Enterprise security", "Compliance", "Threat prevention", "Incident response"],
     integrations: ["Active Directory", "SIEM systems", "Cloud platforms", "Network devices"],
     marketPosition: "Comprehensive zero-trust security solution for modern enterprises",
@@ -173,85 +205,109 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       "Real-time data processing",
       "Low-latency applications",
       "Scalable infrastructure"
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     ],
-    useCases: ["IoT applications", "Real-time analytics", "Content delivery", "Mobile applications"],
-    integrations: ["IoT platforms", "Cloud services", "Mobile networks", "Data centers"],
-    marketPosition: "Leading edge computing platform for IoT and real-time applications",
-    targetAudience: "IoT companies, mobile app developers, content providers",
+    technology: ['AI/ML', 'Automation', 'Security Orchestration', 'Real-time Analytics'],
+    integrations: ['SIEM', 'EDR', 'Firewall', 'Slack', 'Teams', 'Jira'],
+    useCases: ['Security incident management', 'IT operations', 'Compliance management', 'Team collaboration'],
+    targetAudience: 'Security teams, IT operations, SOC analysts, Compliance officers',
+    marketPosition: 'Competes with PagerDuty, ServiceNow; adds AI-powered automation and security focus',
+    competitors: ['PagerDuty', 'ServiceNow', 'VictorOps', 'OpsGenie'],
+    roi: 'Reduce incident response time by 70% and improve resolution quality by 45%',
     trialDays: 14,
-    setupTime: "1-2 weeks",
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"
-    }
+    setupTime: '4 hours',
+    icon: '🚨',
+    color: 'from-red-600 to-pink-700',
+    link: '/services/incident-response-platform',
+    contactInfo
   },
+<<<<<<< HEAD
+
+=======
   // AI-Powered Healthcare Services
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
-    id: "ai-healthcare-assistant",
-    title: "AI Healthcare Assistant",
-    description: "Intelligent health monitoring, symptom analysis, and wellness recommendations with HIPAA compliance and medical-grade accuracy.",
-    category: "Healthcare AI",
-    price: 29,
-    currency: "$",
-    tags: ["Health Monitoring", "Symptom Analysis", "Wellness Coaching", "HIPAA Compliant"],
-    author: {
-      name: "Zion Health",
-      id: "zion-health",
-      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+    id: 'smart-invoice-management-system',
+    name: 'Smart Invoice Management System',
+    tagline: 'AI-powered invoice processing, approval workflows, and payment tracking',
+    description: 'Intelligent invoice management platform that automates the entire invoice lifecycle from receipt to payment, reducing processing time and improving accuracy.',
+    category: 'micro-saas',
+    pricing: {
+      monthly: '$79/month',
+      yearly: '$799/year',
+      enterprise: 'Custom pricing',
+      setup: '$199 one-time'
     },
-    images: ["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-01-17T14:45:00.000Z",
-    aiScore: 96,
-    rating: 4.8,
-    reviewCount: 267,
     features: [
-      "Health data monitoring",
-      "AI symptom analysis",
-      "Wellness recommendations",
-      "HIPAA compliance",
-      "Medical device integration"
+      'OCR invoice processing',
+      'Automated approval workflows',
+      'Payment integration',
+      'Analytics dashboard',
+      'Multi-currency support',
+      'Vendor management',
+      'Compliance checking',
+      'Mobile app access',
+      'API integration',
+      'Custom reporting'
     ],
-    useCases: ["Health monitoring", "Symptom tracking", "Wellness coaching", "Remote patient care"],
-    integrations: ["Health devices", "EHR systems", "Wearable technology", "Telemedicine platforms"],
-    marketPosition: "Advanced AI healthcare assistant with medical-grade accuracy",
-    targetAudience: "Healthcare providers, patients, wellness companies",
+    benefits: [
+      'Reduce processing time by 90%',
+      'Improve accuracy by 95%',
+      'Automate approval processes',
+      'Enhance vendor relationships',
+      'Maintain compliance standards'
+    ],
+    technology: ['AI/ML', 'OCR', 'Workflow Automation', 'Cloud Computing'],
+    integrations: ['QuickBooks', 'Xero', 'Sage', 'Stripe', 'PayPal', 'Bank APIs'],
+    useCases: ['Accounts payable', 'Vendor management', 'Financial compliance', 'Process automation'],
+    targetAudience: 'Finance teams, Accounting professionals, Small businesses, Enterprises',
+    marketPosition: 'Competes with Bill.com, AvidXchange; adds AI-powered automation and analytics',
+    competitors: ['Bill.com', 'AvidXchange', 'Coupa', 'SAP Ariba'],
+    roi: 'Reduce invoice processing costs by 60% and improve accuracy by 95%',
     trialDays: 30,
-    setupTime: "1-2 weeks",
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"
-    }
+    setupTime: '1 hour',
+    icon: '📄',
+    color: 'from-green-600 to-emerald-700',
+    link: '/services/invoice-management',
+    contactInfo
   },
+<<<<<<< HEAD
+
+=======
   // Financial AI Services
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
-    id: "ai-financial-advisor",
-    title: "AI Financial Advisor",
-    description: "Personalized financial planning and investment recommendations powered by AI with portfolio optimization and risk assessment.",
-    category: "Financial AI",
-    price: 39,
-    currency: "$",
-    tags: ["Financial Planning", "Investment Advice", "Portfolio Optimization", "Risk Assessment"],
-    author: {
-      name: "Zion Financial",
-      id: "zion-financial",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+    id: 'ai-customer-success-automation',
+    name: 'AI Customer Success Automation',
+    tagline: 'Intelligent customer onboarding, support, and retention automation',
+    description: 'AI-driven platform that automates customer success processes, predicts churn, and optimizes customer experience to improve retention and satisfaction.',
+    category: 'micro-saas',
+    pricing: {
+      monthly: '$149/month',
+      yearly: '$1,499/year',
+      enterprise: 'Custom pricing',
+      setup: '$299 one-time'
     },
-    images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-01-21T16:00:00.000Z",
-    aiScore: 95,
-    rating: 4.8,
-    reviewCount: 143,
     features: [
-      "Personalized financial planning",
-      "Investment recommendations",
-      "Portfolio optimization",
-      "Risk assessment",
-      "Market analysis"
+      'Automated onboarding workflows',
+      'Predictive churn analysis',
+      'Support ticket routing',
+      'Success metrics tracking',
+      'Customer health scoring',
+      'Automated outreach campaigns',
+      'Integration with CRM systems',
+      'Performance analytics',
+      'Custom dashboards',
+      'API access'
     ],
+<<<<<<< HEAD
+    benefits: [
+      'Increase customer retention by 25%',
+      'Reduce churn by 30%',
+      'Automate routine tasks',
+      'Improve customer satisfaction',
+      'Scale customer success operations'
+=======
     useCases: ["Personal finance", "Investment management", "Retirement planning", "Risk management"],
     integrations: ["Banking systems", "Investment platforms", "Tax software", "Financial data providers"],
     marketPosition: "Intelligent financial advisor for personalized wealth management",
@@ -290,135 +346,451 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       "Compliance monitoring",
       "Legal research",
       "Document generation"
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     ],
-    useCases: ["Contract review", "Legal research", "Compliance checking", "Risk assessment"],
-    integrations: ["Legal databases", "Document management systems", "E-discovery platforms"],
-    marketPosition: "Advanced AI legal assistant for document review and analysis",
-    targetAudience: "Law firms, corporate legal departments, compliance officers",
+    technology: ['AI/ML', 'Predictive Analytics', 'Automation', 'CRM Integration'],
+    integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zendesk', 'Intercom', 'Slack'],
+    useCases: ['Customer success', 'Customer support', 'Retention optimization', 'Onboarding automation'],
+    targetAudience: 'Customer success teams, SaaS companies, Customer support managers, Growth teams',
+    marketPosition: 'Competes with Gainsight, Totango; adds AI-powered automation and predictive analytics',
+    competitors: ['Gainsight', 'Totango', 'ChurnZero', 'CustomerSuccessBox'],
+    roi: 'Increase customer retention by 25% and reduce churn by 30%',
     trialDays: 14,
-    setupTime: "2-3 weeks",
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"
-    }
+    setupTime: '3 hours',
+    icon: '🎯',
+    color: 'from-purple-600 to-violet-700',
+    link: '/services/customer-success-automation',
+    contactInfo
   },
+<<<<<<< HEAD
+
+=======
   // Marketing AI Services
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
-    id: "ai-marketing-automation",
-    title: "AI Marketing Automation",
-    description: "Intelligent marketing automation with personalized campaigns, customer segmentation, and predictive analytics for maximum ROI.",
-    category: "Marketing AI",
-    price: 79,
-    currency: "$",
-    tags: ["Marketing Automation", "Personalization", "Customer Segmentation", "Predictive Analytics"],
-    author: {
-      name: "Zion Marketing",
-      id: "zion-marketing",
-      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+    id: 'intelligent-data-analytics-dashboard',
+    name: 'Intelligent Data Analytics Dashboard',
+    tagline: 'Real-time business intelligence and KPI monitoring platform',
+    description: 'Advanced analytics platform that provides real-time insights, custom dashboards, and predictive analytics to drive data-driven decision making.',
+    category: 'micro-saas',
+    pricing: {
+      monthly: '$199/month',
+      yearly: '$1,999/year',
+      enterprise: 'Custom pricing',
+      setup: '$399 one-time'
     },
-    images: ["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-01-23T15:30:00.000Z",
-    aiScore: 94,
-    rating: 4.8,
-    reviewCount: 178,
     features: [
-      "Personalized campaigns",
-      "Customer segmentation",
-      "Predictive analytics",
-      "A/B testing automation",
-      "ROI optimization"
+      'Real-time data visualization',
+      'Custom dashboard builder',
+      'Predictive analytics',
+      'Data integration tools',
+      'Automated reporting',
+      'Mobile app access',
+      'API access',
+      'Custom alerts',
+      'Data export capabilities',
+      'Team collaboration'
     ],
-    useCases: ["Email marketing", "Social media campaigns", "Customer retention", "Lead generation"],
-    integrations: ["CRM systems", "Email platforms", "Social media", "Analytics tools"],
-    marketPosition: "AI-powered marketing automation for personalized customer engagement",
-    targetAudience: "Marketing teams, e-commerce businesses, agencies",
-    trialDays: 30,
-    setupTime: "1-2 weeks",
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"
-    }
+    benefits: [
+      'Improve decision making by 40%',
+      'Reduce reporting time by 80%',
+      'Identify new opportunities',
+      'Optimize business processes',
+      'Enhance team productivity'
+    ],
+    technology: ['AI/ML', 'Real-time Analytics', 'Data Visualization', 'Cloud Computing'],
+    integrations: ['Google Analytics', 'Salesforce', 'HubSpot', 'Stripe', 'Shopify', 'Database APIs'],
+    useCases: ['Business intelligence', 'Performance monitoring', 'Data analysis', 'Reporting automation'],
+    targetAudience: 'Business analysts, Data scientists, Executives, Marketing teams',
+    marketPosition: 'Competes with Tableau, Power BI; adds AI-powered insights and real-time capabilities',
+    competitors: ['Tableau', 'Power BI', 'Looker', 'Metabase'],
+    roi: 'Improve decision making by 40% and reduce reporting time by 80%',
+    trialDays: 14,
+    setupTime: '2 hours',
+    icon: '📊',
+    color: 'from-cyan-600 to-blue-700',
+    link: '/services/analytics-dashboard',
+    contactInfo
   },
+<<<<<<< HEAD
+
+  // IT SERVICES
+=======
   // Supply Chain AI Services
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
-    id: "ai-supply-chain-optimization",
-    title: "AI Supply Chain Optimization",
-    description: "Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation for cost reduction.",
-    category: "Supply Chain AI",
-    price: 199,
-    currency: "$",
-    tags: ["Supply Chain", "Demand Forecasting", "Inventory Optimization", "Logistics"],
-    author: {
-      name: "Zion Supply Chain",
-      id: "zion-supply-chain",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+    id: 'network-security-monitoring',
+    name: 'Network Security Monitoring',
+    tagline: '24/7 network security monitoring and threat detection',
+    description: 'Comprehensive network security monitoring service that provides real-time threat detection, incident response, and compliance reporting for enterprise networks.',
+    category: 'it-services',
+    pricing: {
+      monthly: '$1,500/month',
+      yearly: '$15,000/year',
+      enterprise: 'Custom pricing',
+      setup: '$2,000 one-time'
     },
-    images: ["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-01-28T10:30:00.000Z",
-    aiScore: 92,
-    rating: 4.7,
-    reviewCount: 92,
     features: [
-      "Demand forecasting",
-      "Inventory optimization",
-      "Logistics automation",
-      "Cost analysis",
-      "Risk management"
+      '24/7 network monitoring',
+      'Real-time threat detection',
+      'Incident response support',
+      'Compliance reporting',
+      'Vulnerability assessment',
+      'Security consulting',
+      'Penetration testing',
+      'Security awareness training',
+      'Incident post-mortem',
+      'Continuous improvement'
     ],
-    useCases: ["Inventory management", "Demand planning", "Logistics optimization", "Cost reduction"],
-    integrations: ["ERP systems", "WMS platforms", "Logistics providers", "Supplier systems"],
-    marketPosition: "AI-powered supply chain optimization for cost reduction and efficiency",
-    targetAudience: "Manufacturing companies, retailers, logistics providers",
-    trialDays: 30,
-    setupTime: "3-4 weeks",
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"
-    }
+    benefits: [
+      'Proactive threat detection',
+      '24/7 security monitoring',
+      'Compliance assurance',
+      'Reduced security risks',
+      'Expert security guidance'
+    ],
+    technology: ['SIEM', 'EDR', 'Network Monitoring', 'Threat Intelligence'],
+    integrations: ['Firewall', 'IDS/IPS', 'VPN', 'Email Security', 'Cloud Security'],
+    useCases: ['Enterprise security', 'Compliance management', 'Threat detection', 'Incident response'],
+    targetAudience: 'Enterprise IT teams, Security professionals, Compliance officers, CISOs',
+    marketPosition: 'Competes with managed security service providers; adds AI-powered threat detection',
+    competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne', 'Managed MSSPs'],
+    roi: 'Reduce security incidents by 60% and improve compliance by 90%',
+    trialDays: 0,
+    setupTime: '1-2 weeks',
+    icon: '🛡️',
+    color: 'from-red-600 to-orange-700',
+    link: '/services/network-security-monitoring',
+    contactInfo
   },
+<<<<<<< HEAD
+
+=======
   // Education AI Services
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
-    id: "ai-education-platform",
-    title: "AI Education Platform",
-    description: "Personalized learning platform with adaptive curriculum, intelligent tutoring, and progress tracking for optimal student outcomes.",
-    category: "Education AI",
-    price: 49,
-    currency: "$",
-    tags: ["Personalized Learning", "Adaptive Curriculum", "Intelligent Tutoring", "Progress Tracking"],
-    author: {
-      name: "Zion Education",
-      id: "zion-education",
-      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+    id: 'data-backup-recovery-solutions',
+    name: 'Data Backup & Recovery Solutions',
+    tagline: 'Automated backup solutions with disaster recovery planning',
+    description: 'Comprehensive data protection service that includes automated backups, cloud storage, disaster recovery planning, and business continuity solutions.',
+    category: 'it-services',
+    pricing: {
+      monthly: '$800/month',
+      yearly: '$8,000/year',
+      enterprise: 'Custom pricing',
+      setup: '$1,500 one-time'
     },
-    images: ["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-01-30T15:15:00.000Z",
-    aiScore: 93,
-    rating: 4.8,
-    reviewCount: 156,
     features: [
-      "Personalized learning paths",
-      "Adaptive curriculum",
-      "Intelligent tutoring",
-      "Progress tracking",
-      "Performance analytics"
+      'Automated backup scheduling',
+      'Cloud storage integration',
+      'Disaster recovery planning',
+      'Recovery testing',
+      'RTO optimization',
+      'Data encryption',
+      'Compliance support',
+      '24/7 support',
+      'Recovery documentation',
+      'Business continuity planning'
     ],
-    useCases: ["K-12 education", "Higher education", "Corporate training", "Skill development"],
-    integrations: ["LMS platforms", "Assessment tools", "Content libraries", "Analytics platforms"],
-    marketPosition: "AI-powered personalized learning platform for optimal student outcomes",
-    targetAudience: "Educational institutions, corporate training departments, online learning platforms",
-    trialDays: 30,
-    setupTime: "2-3 weeks",
-    contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"
-    }
+    benefits: [
+      '99.99% recovery success rate',
+      'Automated backup processes',
+      'Cloud redundancy',
+      'Compliance assurance',
+      'Business continuity'
+    ],
+    technology: ['Cloud Storage', 'Backup Software', 'Encryption', 'Disaster Recovery'],
+    integrations: ['AWS S3', 'Azure Blob', 'Google Cloud', 'On-premise Storage', 'VMware', 'Hyper-V'],
+    useCases: ['Data protection', 'Disaster recovery', 'Business continuity', 'Compliance management'],
+    targetAudience: 'IT administrators, Data center managers, Compliance officers, Business continuity managers',
+    marketPosition: 'Competes with Veeam, Commvault; adds cloud-native and AI-powered optimization',
+    competitors: ['Veeam', 'Commvault', 'Rubrik', 'Cohesity'],
+    roi: 'Ensure 99.99% data recovery and reduce downtime by 80%',
+    trialDays: 0,
+    setupTime: '1-2 weeks',
+    icon: '💾',
+    color: 'from-blue-600 to-indigo-700',
+    link: '/services/backup-recovery',
+    contactInfo
+  },
+
+  {
+    id: 'it-asset-management-platform',
+    name: 'IT Asset Management Platform',
+    tagline: 'Comprehensive IT asset tracking and lifecycle management',
+    description: 'Complete IT asset management solution that tracks hardware, software, licenses, and provides lifecycle management, cost optimization, and compliance reporting.',
+    category: 'it-services',
+    pricing: {
+      monthly: '$500/month',
+      yearly: '$5,000/year',
+      enterprise: 'Custom pricing',
+      setup: '$1,000 one-time'
+    },
+    features: [
+      'Asset discovery and tracking',
+      'License management',
+      'Depreciation tracking',
+      'Maintenance scheduling',
+      'Cost optimization',
+      'Compliance reporting',
+      'Vendor management',
+      'Contract tracking',
+      'Mobile app access',
+      'API integration'
+    ],
+    benefits: [
+      'Optimize IT costs by 30%',
+      'Improve compliance tracking',
+      'Automate maintenance scheduling',
+      'Enhance asset visibility',
+      'Reduce audit time'
+    ],
+    technology: ['Asset Discovery', 'Database Management', 'Reporting Engine', 'Mobile Development'],
+    integrations: ['Active Directory', 'SCCM', 'ServiceNow', 'Jira', 'Slack', 'Email systems'],
+    useCases: ['IT asset management', 'License compliance', 'Cost optimization', 'Audit preparation'],
+    targetAudience: 'IT asset managers, IT administrators, Compliance officers, Finance teams',
+    marketPosition: 'Competes with ServiceNow, BMC; adds AI-powered optimization and mobile access',
+    competitors: ['ServiceNow', 'BMC', 'Ivanti', 'ManageEngine'],
+    roi: 'Optimize IT costs by 30% and improve compliance by 95%',
+    trialDays: 14,
+    setupTime: '1 week',
+    icon: '🏷️',
+    color: 'from-green-600 to-emerald-700',
+    link: '/services/asset-management',
+    contactInfo
+  },
+
+  // AI SERVICES
+  {
+    id: 'ai-chatbot-development',
+    name: 'AI Chatbot Development',
+    tagline: 'Custom AI chatbots for customer service and support',
+    description: 'Intelligent chatbot solutions that provide 24/7 customer support, handle complex queries, and integrate seamlessly with your existing systems.',
+    category: 'ai-services',
+    pricing: {
+      monthly: '$2,000/month',
+      yearly: '$20,000/year',
+      enterprise: 'Custom pricing',
+      setup: '$5,000 one-time'
+    },
+    features: [
+      'Natural language processing',
+      'Multi-language support',
+      'Integration APIs',
+      'Analytics dashboard',
+      'Custom training',
+      'Voice recognition',
+      'Sentiment analysis',
+      'Escalation handling',
+      'Knowledge base integration',
+      'Performance monitoring'
+    ],
+    benefits: [
+      '24/7 customer support',
+      'Instant response times',
+      'Reduce support costs by 40%',
+      'Improve customer satisfaction',
+      'Scale support operations'
+    ],
+    technology: ['NLP', 'Machine Learning', 'API Development', 'Cloud Computing'],
+    integrations: ['Website', 'Mobile Apps', 'CRM Systems', 'Help Desk', 'Slack', 'Teams'],
+    useCases: ['Customer support', 'Sales assistance', 'FAQ handling', 'Appointment booking'],
+    targetAudience: 'Customer support teams, E-commerce businesses, Service companies, Marketing teams',
+    marketPosition: 'Competes with Intercom, Drift; adds advanced AI capabilities and custom development',
+    competitors: ['Intercom', 'Drift', 'Zendesk', 'Freshchat'],
+    roi: 'Reduce support costs by 40% and improve customer satisfaction by 35%',
+    trialDays: 7,
+    setupTime: '2-4 weeks',
+    icon: '🤖',
+    color: 'from-purple-600 to-violet-700',
+    link: '/services/ai-chatbot',
+    contactInfo
+  },
+
+  {
+    id: 'predictive-analytics-platform',
+    name: 'Predictive Analytics Platform',
+    tagline: 'AI-powered predictive analytics for business forecasting',
+    description: 'Advanced predictive analytics platform that uses machine learning to forecast trends, identify opportunities, and optimize business decisions.',
+    category: 'ai-services',
+    pricing: {
+      monthly: '$3,500/month',
+      yearly: '$35,000/year',
+      enterprise: 'Custom pricing',
+      setup: '$8,000 one-time'
+    },
+    features: [
+      'Data modeling and analysis',
+      'Forecasting algorithms',
+      'Visualization tools',
+      'API integration',
+      'Custom model training',
+      'Real-time predictions',
+      'Performance monitoring',
+      'Automated insights',
+      'Scenario planning',
+      'Risk assessment'
+    ],
+    benefits: [
+      'Improve decision making by 50%',
+      'Identify new opportunities',
+      'Reduce risks',
+      'Optimize operations',
+      'Increase revenue'
+    ],
+    technology: ['Machine Learning', 'Statistical Analysis', 'Data Processing', 'Visualization'],
+    integrations: ['Database Systems', 'CRM', 'ERP', 'Business Intelligence', 'Cloud Platforms'],
+    useCases: ['Sales forecasting', 'Demand planning', 'Risk management', 'Performance optimization'],
+    targetAudience: 'Data scientists, Business analysts, Executives, Operations managers',
+    marketPosition: 'Competes with SAS, IBM SPSS; adds cloud-native and AI-powered automation',
+    competitors: ['SAS', 'IBM SPSS', 'RapidMiner', 'Alteryx'],
+    roi: 'Improve decision making by 50% and increase revenue by 20%',
+    trialDays: 14,
+    setupTime: '3-4 weeks',
+    icon: '🔮',
+    color: 'from-indigo-600 to-purple-700',
+    link: '/services/predictive-analytics',
+    contactInfo
+  },
+
+  {
+    id: 'computer-vision-solutions',
+    name: 'Computer Vision Solutions',
+    tagline: 'AI-powered image and video analysis for various industries',
+    description: 'Advanced computer vision solutions that analyze images and videos for quality control, process automation, and business intelligence across multiple industries.',
+    category: 'ai-services',
+    pricing: {
+      monthly: '$4,000/month',
+      yearly: '$40,000/year',
+      enterprise: 'Custom pricing',
+      setup: '$10,000 one-time'
+    },
+    features: [
+      'Object detection and recognition',
+      'Image classification',
+      'Video analysis',
+      'Custom model training',
+      'Real-time processing',
+      'Quality control automation',
+      'Process monitoring',
+      'Analytics dashboard',
+      'API access',
+      'Mobile integration'
+    ],
+    benefits: [
+      'Automate quality control by 80%',
+      'Improve process efficiency',
+      'Reduce human error',
+      '24/7 monitoring',
+      'Scalable solutions'
+    ],
+    technology: ['Computer Vision', 'Deep Learning', 'Image Processing', 'Real-time Analytics'],
+    integrations: ['Cameras', 'IoT Devices', 'Manufacturing Systems', 'Quality Control Tools'],
+    useCases: ['Quality control', 'Process automation', 'Security monitoring', 'Retail analytics'],
+    targetAudience: 'Manufacturing companies, Retail businesses, Security firms, Quality control teams',
+    marketPosition: 'Competes with Cognex, Keyence; adds AI-powered analysis and cloud integration',
+    competitors: ['Cognex', 'Keyence', 'Basler', 'Teledyne'],
+    roi: 'Automate quality control by 80% and reduce defects by 60%',
+    trialDays: 7,
+    setupTime: '4-6 weeks',
+    icon: '👁️',
+    color: 'from-cyan-600 to-blue-700',
+    link: '/services/computer-vision',
+    contactInfo
+  },
+
+  // EMERGING TECH SERVICES
+  {
+    id: 'quantum-computing-solutions',
+    name: 'Quantum Computing Solutions',
+    tagline: 'Next-generation quantum computing services for complex problem solving',
+    description: 'Cutting-edge quantum computing solutions that solve complex optimization problems, cryptography challenges, and scientific simulations.',
+    category: 'emerging-tech',
+    pricing: {
+      monthly: '$10,000/month',
+      yearly: '$100,000/year',
+      enterprise: 'Custom pricing',
+      setup: '$25,000 one-time'
+    },
+    features: [
+      'Quantum algorithm development',
+      'Optimization problem solving',
+      'Cryptography services',
+      'Scientific simulations',
+      'Quantum consulting',
+      'Training and education',
+      'Research collaboration',
+      'Performance benchmarking',
+      'Custom development',
+      'Ongoing support'
+    ],
+    benefits: [
+      'Solve previously intractable problems',
+      'Exponential performance improvements',
+      'Future-proof technology',
+      'Competitive advantage',
+      'Research leadership'
+    ],
+    technology: ['Quantum Computing', 'Quantum Algorithms', 'Quantum Software', 'Cloud Quantum'],
+    integrations: ['IBM Quantum', 'Google Quantum', 'Microsoft Azure Quantum', 'Amazon Braket'],
+    useCases: ['Optimization problems', 'Cryptography', 'Scientific research', 'Financial modeling'],
+    targetAudience: 'Research institutions, Financial services, Pharmaceutical companies, Government agencies',
+    marketPosition: 'Leading edge quantum computing services with expertise in multiple quantum platforms',
+    competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Quantum', 'D-Wave'],
+    roi: 'Solve complex problems 1000x faster than classical computing',
+    trialDays: 0,
+    setupTime: '2-3 months',
+    icon: '⚛️',
+    color: 'from-violet-600 to-purple-700',
+    link: '/services/quantum-computing',
+    contactInfo
+  },
+
+  {
+    id: 'blockchain-web3-solutions',
+    name: 'Blockchain & Web3 Solutions',
+    tagline: 'Decentralized applications and blockchain infrastructure development',
+    description: 'Comprehensive blockchain and Web3 solutions including smart contract development, DeFi applications, NFT platforms, and decentralized infrastructure.',
+    category: 'emerging-tech',
+    pricing: {
+      monthly: '$5,000/month',
+      yearly: '$50,000/year',
+      enterprise: 'Custom pricing',
+      setup: '$15,000 one-time'
+    },
+    features: [
+      'Smart contract development',
+      'DeFi application building',
+      'NFT platform development',
+      'Blockchain infrastructure',
+      'Web3 consulting',
+      'Security auditing',
+      'Token economics',
+      'Governance systems',
+      'Cross-chain solutions',
+      'Mobile integration'
+    ],
+    benefits: [
+      'Decentralized solutions',
+      'Transparent operations',
+      'Reduced intermediaries',
+      'Enhanced security',
+      'Innovation leadership'
+    ],
+    technology: ['Blockchain', 'Smart Contracts', 'Web3', 'DeFi', 'NFTs'],
+    integrations: ['Ethereum', 'Polygon', 'Solana', 'Binance Smart Chain', 'MetaMask', 'WalletConnect'],
+    useCases: ['DeFi applications', 'NFT marketplaces', 'Supply chain tracking', 'Digital identity'],
+    targetAudience: 'Startups, Financial services, Gaming companies, Supply chain businesses',
+    marketPosition: 'Leading blockchain development services with expertise in multiple protocols',
+    competitors: ['ConsenSys', 'Chainlink Labs', 'Alchemy', 'Infura'],
+    roi: 'Reduce transaction costs by 90% and increase transparency by 100%',
+    trialDays: 0,
+    setupTime: '2-4 months',
+    icon: '🔗',
+    color: 'from-orange-600 to-red-700',
+    link: '/services/blockchain-web3',
+    contactInfo
   }
 ];
+
+export default enhancedServices2025;

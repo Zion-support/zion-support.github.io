@@ -19,8 +19,14 @@ import {
 } from 'lucide-react';
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
+<<<<<<< HEAD
+  const [openCategories, setOpenCategories] = useState([]);
+
+  const toggleCategory = (category) => {
+=======
   const [openCategories, setOpenCategories] = useState<string[]>([]);
   const toggleCategory = (category: string) => {
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     setOpenCategories(prev => 
       prev.includes(category) 
         ? prev.filter(c => c !== category)

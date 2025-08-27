@@ -1,8 +1,22 @@
+<<<<<<< HEAD
+const CACHE_NAME = 'zion-tech-group-v1.0.0';
+const STATIC_CACHE = 'zion-static-v1.0.0';
+const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
+
+// Files to cache immediately
+const STATIC_FILES = [
+=======
+<<<<<<< HEAD
+const CACHE_NAME = 'zion-tech-group-v1';
+const urlsToCache = [
+=======
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
 const STATIC_CACHE = 'zion-static-v1.0.0';
 const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 // Files to cache immediately
 const STATIC_FILES = [
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
   '/',
   '/index.html',
   '/static/js/bundle.js',
@@ -12,7 +26,16 @@ const STATIC_FILES = [
   '/images/zion-logo.png',
   '/images/zion-tech-group-og.jpg'
 ];
+<<<<<<< HEAD
+
+<<<<<<< HEAD
 // Install event - cache static files
+=======
+// Install event - cache resources
+=======
+// Install event - cache static files
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
@@ -42,18 +65,36 @@ self.addEventListener('activate', (event) => {
   );
   self.clients.claim();
 });
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
 // Fetch event - serve from cache or network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
+<<<<<<< HEAD
+
+=======
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
   }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
   // Skip chrome-extension and other non-http requests
   if (!url.protocol.startsWith('http')) {
     return;
   }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
   // Handle different types of requests
   if (url.pathname === '/' || url.pathname === '/index.html') {
     // Home page - cache first
@@ -69,6 +110,10 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(networkFirst(request, DYNAMIC_CACHE));
   }
 });
+<<<<<<< HEAD
+
+=======
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
 // Cache first strategy
 async function cacheFirst(request, cacheName) {
   try {
@@ -88,6 +133,10 @@ async function cacheFirst(request, cacheName) {
     return new Response('Network error', { status: 503 });
   }
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
 // Network first strategy
 async function networkFirst(request, cacheName) {
   try {
@@ -114,6 +163,11 @@ async function networkFirst(request, cacheName) {
     return new Response('Network error', { status: 503 });
   }
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
@@ -145,6 +199,7 @@ self.addEventListener('push', (event) => {
         dateOfArrival: Date.now(),
         primaryKey: 1
       },
+<<<<<<< HEAD
       actions: [
         {
           action: 'explore',
@@ -158,10 +213,43 @@ self.addEventListener('push', (event) => {
         }
       ]
     };
+
+=======
+<<<<<<< HEAD
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/icon-192x192.png'
+      }
+    ]
+  };
+
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
+=======
+      actions: [
+        {
+          action: 'explore',
+          title: 'Explore',
+          icon: '/images/zion-logo.png'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/images/zion-logo.png'
+        }
+      ]
+    };
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
     event.waitUntil(
       self.registration.showNotification(data.title, options)
     );
   }
+<<<<<<< HEAD
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
 });
 // Notification click handling
 self.addEventListener('notificationclick', (event) => {
@@ -171,7 +259,14 @@ self.addEventListener('notificationclick', (event) => {
       clients.openWindow('/')
     );
   }
+<<<<<<< HEAD
 });
+
+=======
+<<<<<<< HEAD
+=======
+});
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
 // Message handling for communication with main thread
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
@@ -182,11 +277,23 @@ self.addEventListener('message', (event) => {
     event.ports[0].postMessage({ version: CACHE_NAME });
   }
 });
+<<<<<<< HEAD
+
+=======
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
 // Error handling
 self.addEventListener('error', (event) => {
   console.error('Service worker error:', event.error);
 });
+<<<<<<< HEAD
+
 // Unhandled rejection handling
 self.addEventListener('unhandledrejection', (event) => {
   console.error('Service worker unhandled rejection:', event.reason);
+=======
+// Unhandled rejection handling
+self.addEventListener('unhandledrejection', (event) => {
+  console.error('Service worker unhandled rejection:', event.reason);
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
+>>>>>>> 07c266352c876443e58034ffb7a74c218043aa76
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from "../components/SEOHead.jsx";
+import SEOHead from "../../components/SEOHead.jsx";
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const AIServices = () => {
     const features = [

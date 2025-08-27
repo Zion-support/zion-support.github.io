@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import { Header } from "@/components/Header";
+import { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,8 @@ import { ShoppingCart, Star, Truck, Shield, RotateCcw } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { EQUIPMENT_DETAILS } from "@/data/equipmentDetails";
+<<<<<<< HEAD
+=======
 export const SAMPLE_EQUIPMENT = [
     {
         id: 1,
@@ -71,6 +73,7 @@ export const SAMPLE_EQUIPMENT = [
         warranty: "5-year enterprise warranty"
     }
 ];
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 export default function EquipmentDetail() {
     const { equipmentId } = useParams();
     const navigate = useNavigate();

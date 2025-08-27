@@ -1,9 +1,40 @@
 import React from 'react';
+<<<<<<< HEAD
+
+=======
 import { AlertTriangle, RefreshCw } from 'lucide-react';
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 interface LoginErrorFallbackProps {
-  error?: Error;
-  resetErrorBoundary?: () => void;
+  error: Error;
+  resetErrorBoundary: () => void;
 }
+<<<<<<< HEAD
+
+export const LoginErrorFallback: React.FC<LoginErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
+    return (
+        <div className="min-h-screen flex items-center justify-center bg-zion-blue-dark">
+            <div className="max-w-md w-full mx-auto p-6">
+                <div className="bg-zion-blue rounded-lg p-8 text-center">
+                    <h2 className="text-2xl font-bold text-white mb-4">Something went wrong</h2>
+                    <p className="text-zion-slate-light mb-6">
+                        We encountered an error while loading the login page. Please try again.
+                    </p>
+                    <button
+                        onClick={resetErrorBoundary}
+                        className="px-6 py-3 bg-zion-cyan text-zion-blue-dark rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
+                    >
+                        Try again
+                    </button>
+                    {process.env.NODE_ENV === 'development' && (
+                        <details className="mt-4 text-left">
+                            <summary className="text-zion-slate-light cursor-pointer">Error details</summary>
+                            <pre className="text-xs text-zion-slate-light mt-2 p-2 bg-zion-blue-dark rounded overflow-auto">
+                                {error.message}
+                            </pre>
+                        </details>
+                    )}
+                </div>
+=======
 export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginErrorFallbackProps) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -23,17 +54,15 @@ export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginE
           <div className="flex">
             <div className="flex-shrink-0">
               <AlertTriangle className="h-5 w-5 text-red-400" />
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
             </div>
-            <div className="ml-3">
-              <h3 className="text-sm font-medium text-red-800">
-                Error Details
-              </h3>
-              <div className="mt-2 text-sm text-red-700">
-                {error?.message || 'An unexpected error occurred'}
-              </div>
-            </div>
-          </div>
         </div>
+<<<<<<< HEAD
+    );
+};
+
+export default LoginErrorFallback;
+=======
         <div className="flex flex-col space-y-3">
           <button
             onClick={resetErrorBoundary}
@@ -65,3 +94,4 @@ export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginE
     </div>
   );
 }
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
