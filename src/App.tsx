@@ -27,6 +27,13 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
+const Help = React.lazy(() => import('./pages/Help'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const GenericPage = React.lazy(() => import('./pages/[...slug]'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -97,6 +104,12 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/login" element={<Login />} />
               <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+              <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
@@ -108,8 +121,8 @@ function App() {
               <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
               <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
               
-              {/* Catch all route */}
-              <Route path="*" element={<Home />} />
+              {/* Catch all route to generic page (covers docs, webinars, training, enterprise, etc.) */}
+              <Route path="*" element={<GenericPage />} />
             </Routes>
           </Suspense>
         </main>
