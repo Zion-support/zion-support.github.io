@@ -26,22 +26,26 @@ import {
   FileText,
   Heart,
   PanelLeft,
+<<<<<<< HEAD
   FlaskConical
+=======
+  Building,
+  ShoppingCart,
+  Settings,
+  Target,
+  Palette,
+  Smartphone,
+  Server
+>>>>>>> origin/cursor/website-audit-and-enhancement-5081
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 =======
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Cloud, Shield, Code, Rocket } from 'lucide-react';
-=======
 import { Menu, X, Search, User, Bell, ChevronDown, ChevronRight } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-enhancement-0ec9
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-<<<<<<< HEAD
-=======
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -54,7 +58,6 @@ export function AppHeader() {
   }, []);
 =======
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
->>>>>>> origin/cursor/website-audit-and-enhancement-0ec9
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -157,6 +160,7 @@ export function AppHeader() {
       href: '/solutions',
       icon: Rocket,
       dropdown: [
+<<<<<<< HEAD
         { name: 'AI & Machine Learning', href: '/solutions#ai-ml' },
         { name: 'Cybersecurity', href: '/solutions#cybersecurity' },
         { name: 'Cloud Computing', href: '/solutions#cloud-computing' },
@@ -176,14 +180,27 @@ export function AppHeader() {
         { name: 'Patents', href: '/research-development#patents' },
         { name: 'Case Studies', href: '/case-studies' },
         { name: 'Events', href: '/events' }
+=======
+        { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
+        { name: 'Blockchain', href: '/services/blockchain', icon: Lock },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe },
+        { name: 'Sustainability', href: '/services/sustainability', icon: Heart },
+        { name: '5G Solutions', href: '/services/5g-solutions', icon: Network },
+        { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone }
+>>>>>>> origin/cursor/website-audit-and-enhancement-5081
       ]
     },
     {
       name: 'Micro SAAS',
-      href: '/micro-saas',
+      href: '/micro-saas-services',
       icon: Code,
       color: 'from-zion-blue to-zion-cyan'
     },
+<<<<<<< HEAD
     { 
       name: 'Equipment', 
       href: '/equipment', 
@@ -212,45 +229,66 @@ export function AppHeader() {
       icon: Cloud,
       color: 'from-zion-blue to-zion-cyan'
     },
+=======
+    {
+      name: 'IT Services',
+      href: '/it-services',
+      icon: Server,
+      dropdown: [
+        { name: 'Infrastructure', href: '/it-services/infrastructure' },
+        { name: 'Digital Transformation', href: '/it-services/digital-transformation' },
+        { name: 'Consulting', href: '/it-services/consulting' },
+        { name: 'Onsite Support', href: '/it-services/onsite-support' },
+        { name: 'Green IT', href: '/green-it' },
+        { name: '5G Solutions', href: '/5g-enterprise-solutions' }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Startup Solutions', href: '/startup-solutions' },
+        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+        { name: 'Financial Services', href: '/solutions/financial' },
+        { name: 'Manufacturing', href: '/solutions/manufacturing' },
+        { name: 'Retail & E-commerce', href: '/solutions/retail' }
+      ]
+    },
+    {
+      name: 'Marketplace',
+      href: '/marketplace',
+      icon: ShoppingCart,
+      dropdown: [
+        { name: 'Products', href: '/marketplace/products' },
+        { name: 'Talent', href: '/marketplace/talent' },
+        { name: 'Equipment', href: '/marketplace/equipment' },
+        { name: 'Services', href: '/marketplace/services' },
+        { name: 'AI Tools', href: '/marketplace/ai-tools' },
+        { name: 'Software', href: '/marketplace/software' }
+      ]
+    },
+    {
+      name: 'Company',
+      href: '/about',
+      icon: Building,
+      dropdown: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Contact', href: '/contact' },
+        { name: 'Leadership', href: '/leadership' },
+        { name: 'Press', href: '/press' }
+      ]
+    }
+>>>>>>> origin/cursor/website-audit-and-enhancement-5081
   ];
 
   return (
     <>
-<<<<<<< HEAD
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled 
-          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
-          : 'bg-zion-slate-dark/80 backdrop-blur-md border-b border-zion-cyan/10'
-      }`}>
-        <div className="container-responsive">
-          <div className="flex h-20 items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center">
-              <Link to="/" className="flex-shrink-0 group">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center neon-glow group-hover:neon-glow-purple transition-all duration-300">
-                    <Zap className="w-6 h-6 text-white" />
-                  </div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-                    Zion Tech Group
-                  </h1>
-                </div>
-              </Link>
-            </div>
-            
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex ml-8 space-x-8">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-zion-slate-light hover:text-zion-cyan px-3 py-2 text-sm font-medium transition-all duration-300 relative group"
-                >
-                  {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-zion-cyan to-zion-purple transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              ))}
-=======
       <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
         <div className="container flex h-16 items-center px-4 sm:px-6">
           {/* Logo */}
@@ -464,7 +502,6 @@ export function AppHeader() {
                   ))}
                 </div>
               </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-0ec9
               
               {/* Services Dropdown */}
               <div className="relative">

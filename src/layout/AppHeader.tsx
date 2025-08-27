@@ -26,7 +26,13 @@ import {
   FileText,
   Heart,
   PanelLeft,
-  FlaskConical
+  Building,
+  ShoppingCart,
+  Settings,
+  Target,
+  Palette,
+  Smartphone,
+  Server
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 =======
@@ -150,61 +156,78 @@ export function AppHeader() {
       href: '/solutions',
       icon: Rocket,
       dropdown: [
-        { name: 'AI & Machine Learning', href: '/solutions#ai-ml' },
-        { name: 'Cybersecurity', href: '/solutions#cybersecurity' },
-        { name: 'Cloud Computing', href: '/solutions#cloud-computing' },
-        { name: 'Data Analytics', href: '/solutions#data-analytics' },
-        { name: 'IoT & Edge', href: '/solutions#iot-edge' },
-        { name: 'Digital Transformation', href: '/solutions#digital-transformation' }
-      ]
-    },
-    {
-      name: 'Research',
-      href: '/research-development',
-      icon: FlaskConical,
-      dropdown: [
-        { name: 'Research Areas', href: '/research-development#research-areas' },
-        { name: 'Active Projects', href: '/research-development#active-projects' },
-        { name: 'Publications', href: '/research-development#publications' },
-        { name: 'Patents', href: '/research-development#patents' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Events', href: '/events' }
+        { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
+        { name: 'Blockchain', href: '/services/blockchain', icon: Lock },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe },
+        { name: 'Sustainability', href: '/services/sustainability', icon: Heart },
+        { name: '5G Solutions', href: '/services/5g-solutions', icon: Network },
+        { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone }
       ]
     },
     {
       name: 'Micro SAAS',
-      href: '/micro-saas',
+      href: '/micro-saas-services',
       icon: Code,
       color: 'from-zion-blue to-zion-cyan'
     },
-    { 
-      name: 'Equipment', 
-      href: '/equipment', 
-      description: 'Infrastructure & Hardware',
-      icon: Cloud,
-      color: 'from-zion-purple to-zion-blue'
+    {
+      name: 'IT Services',
+      href: '/it-services',
+      icon: Server,
+      dropdown: [
+        { name: 'Infrastructure', href: '/it-services/infrastructure' },
+        { name: 'Digital Transformation', href: '/it-services/digital-transformation' },
+        { name: 'Consulting', href: '/it-services/consulting' },
+        { name: 'Onsite Support', href: '/it-services/onsite-support' },
+        { name: 'Green IT', href: '/green-it' },
+        { name: '5G Solutions', href: '/5g-enterprise-solutions' }
+      ]
     },
-    { 
-      name: 'Consulting', 
-      href: '/consulting', 
-      description: 'Digital Transformation',
-      icon: Rocket,
-      color: 'from-zion-cyan to-zion-green'
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Startup Solutions', href: '/startup-solutions' },
+        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+        { name: 'Financial Services', href: '/solutions/financial' },
+        { name: 'Manufacturing', href: '/solutions/manufacturing' },
+        { name: 'Retail & E-commerce', href: '/solutions/retail' }
+      ]
     },
-    { 
-      name: 'Cybersecurity', 
-      href: '/services/cybersecurity', 
-      description: 'Security & Compliance',
-      icon: Shield,
-      color: 'from-zion-red to-zion-purple'
+    {
+      name: 'Marketplace',
+      href: '/marketplace',
+      icon: ShoppingCart,
+      dropdown: [
+        { name: 'Products', href: '/marketplace/products' },
+        { name: 'Talent', href: '/marketplace/talent' },
+        { name: 'Equipment', href: '/marketplace/equipment' },
+        { name: 'Services', href: '/marketplace/services' },
+        { name: 'AI Tools', href: '/marketplace/ai-tools' },
+        { name: 'Software', href: '/marketplace/software' }
+      ]
     },
-    { 
-      name: 'Cloud Services', 
-      href: '/services/cloud', 
-      description: 'DevOps & Infrastructure',
-      icon: Cloud,
-      color: 'from-zion-blue to-zion-cyan'
-    },
+    {
+      name: 'Company',
+      href: '/about',
+      icon: Building,
+      dropdown: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Contact', href: '/contact' },
+        { name: 'Leadership', href: '/leadership' },
+        { name: 'Press', href: '/press' }
+      ]
+    }
   ];
 
   return (

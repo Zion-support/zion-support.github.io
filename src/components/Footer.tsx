@@ -24,43 +24,27 @@ import {
   Award,
   Clock,
   CheckCircle,
-  FlaskConical
+  Target,
+  ShoppingCart,
+  Server,
+  Smartphone,
+  Palette
 } from 'lucide-react';
 
 const footerNavigation = {
   services: {
     title: 'Core Services',
     items: [
-      { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, description: 'Machine learning and data insights' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Protect your digital assets' },
-      { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Scalable infrastructure solutions' },
-      { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Connected device management' },
-      { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket, description: 'Next-generation computing' },
-      { name: 'Blockchain', href: '/services/blockchain', icon: Code, description: 'Decentralized solutions' },
-      { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, description: 'Virtual replica technology' },
-      { name: 'Sustainability', href: '/services/sustainability', icon: Heart, description: 'Green IT solutions' }
-    ],
-  },
-  solutions: {
-    title: 'Solutions',
-    items: [
-      { name: 'AI & Machine Learning', href: '/solutions#ai-ml' },
-      { name: 'Cybersecurity', href: '/solutions#cybersecurity' },
-      { name: 'Cloud Computing', href: '/solutions#cloud-computing' },
-      { name: 'Data Analytics', href: '/solutions#data-analytics' },
-      { name: 'IoT & Edge', href: '/solutions#iot-edge' },
-      { name: 'Digital Transformation', href: '/solutions#digital-transformation' }
-    ],
-  },
-  research: {
-    title: 'Research',
-    items: [
-      { name: 'Research Areas', href: '/research-development#research-areas' },
-      { name: 'Active Projects', href: '/research-development#active-projects' },
-      { name: 'Publications', href: '/research-development#publications' },
-      { name: 'Patents', href: '/research-development#patents' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Events', href: '/events' }
+      { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
+      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+      { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+      { name: 'IoT & Edge', href: '/services/iot-edge', icon: Zap },
+      { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
+      { name: 'Blockchain', href: '/services/blockchain', icon: Code },
+      { name: 'Digital Twin', href: '/services/digital-twin', icon: Building },
+      { name: 'Sustainability', href: '/services/sustainability', icon: Heart },
+      { name: '5G Solutions', href: '/5g-enterprise-solutions', icon: Server },
+      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone }
     ],
   },
   microSaas: {
@@ -76,82 +60,58 @@ const footerNavigation = {
       { name: 'HR Platform', href: '/micro-saas/hr-platform', icon: Users, description: 'Human resources automation' }
     ],
   },
-  enterprise: {
-    title: 'Enterprise Solutions',
+  solutions: {
+    title: 'Solutions',
     items: [
-      { name: 'Cloud Migration', href: '/enterprise-solutions/cloud-migration', icon: Cloud, description: 'Enterprise cloud transformation' },
-      { name: 'Digital Transformation', href: '/enterprise-solutions/digital-transformation', icon: Rocket, description: 'End-to-end transformation' },
-      { name: 'Cybersecurity Framework', href: '/enterprise-solutions/cybersecurity', icon: Shield, description: 'Enterprise security solutions' },
-      { name: 'Data Analytics', href: '/enterprise-solutions/data-analytics', icon: BarChart3, description: 'Enterprise data insights' },
-      { name: 'Process Automation', href: '/enterprise-solutions/automation', icon: Zap, description: 'Intelligent automation' },
-      { name: 'System Integration', href: '/enterprise-solutions/integration', icon: Network, description: 'Seamless integration' },
-      { name: 'Infrastructure Modernization', href: '/enterprise-solutions/infrastructure', icon: Server, description: 'Modern infrastructure' },
-      { name: 'Strategic Consulting', href: '/enterprise-solutions/consulting', icon: Users, description: 'Technology advisory' }
+      { name: 'Enterprise Solutions', href: '/enterprise' },
+      { name: 'Startup Solutions', href: '/startup-solutions' },
+      { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+      { name: 'Financial Services', href: '/solutions/financial' },
+      { name: 'Manufacturing', href: '/solutions/manufacturing' },
+      { name: 'Retail & E-commerce', href: '/solutions/retail' },
+      { name: 'Education Technology', href: '/solutions/education' },
+      { name: 'Government & Public Sector', href: '/solutions/government' }
     ],
   },
-  nextGenAI: {
-    title: 'Next-Gen AI',
+  marketplace: {
+    title: 'Marketplace',
     items: [
-      { name: 'Autonomous AI Systems', href: '/next-gen-ai/autonomous-systems', icon: Brain, description: 'Self-learning AI systems' },
-      { name: 'Advanced NLP', href: '/next-gen-ai/nlp', icon: MessageCircle, description: 'Natural language processing' },
-      { name: 'Computer Vision AI', href: '/next-gen-ai/computer-vision', icon: Eye, description: 'Advanced visual AI' },
-      { name: 'AI Ethics Platform', href: '/next-gen-ai/ethics', icon: Shield, description: 'Responsible AI development' },
-      { name: 'Quantum-Classical AI', href: '/next-gen-ai/quantum-ai', icon: Rocket, description: 'Hybrid quantum AI' },
-      { name: 'Federated Learning', href: '/next-gen-ai/federated-learning', icon: Network, description: 'Privacy-preserving AI' },
-      { name: 'AI Research Platform', href: '/next-gen-ai/research', icon: TestTube, description: 'AI research tools' },
-      { name: 'AI Optimization Engine', href: '/next-gen-ai/optimization', icon: Target, description: 'Advanced optimization' }
-    ],
-  },
-  industrySolutions: {
-    title: 'Industry Solutions',
-    items: [
-      { name: 'Healthcare AI', href: '/industry-solutions/healthcare', icon: HealthIcon, description: 'AI-powered healthcare' },
-      { name: 'FinTech Solutions', href: '/industry-solutions/fintech', icon: FinanceIcon, description: 'Financial technology' },
-      { name: 'Smart Manufacturing', href: '/industry-solutions/manufacturing', icon: Factory, description: 'IoT manufacturing' },
-      { name: 'Retail AI Platform', href: '/industry-solutions/retail', icon: ShoppingCart, description: 'AI retail solutions' },
-      { name: 'Education Technology', href: '/industry-solutions/education', icon: BookOpen, description: 'EdTech platform' },
-      { name: 'Government Solutions', href: '/industry-solutions/government', icon: GovernmentIcon, description: 'Government tech' },
-      { name: 'Energy Optimization', href: '/industry-solutions/energy', icon: EnergyIcon, description: 'Energy management' },
-      { name: 'Transportation & Logistics', href: '/industry-solutions/transportation', icon: TransportIcon, description: 'Smart logistics' }
-    ],
-  },
-  iotEdge: {
-    title: 'IoT & Edge Computing',
-    items: [
-      { name: 'Smart City Platform', href: '/iot-edge/smart-city', icon: Building, description: 'Smart city solutions' },
-      { name: 'Industrial IoT Suite', href: '/iot-edge/industrial-iot', icon: Factory, description: 'Industrial IoT' },
-      { name: 'Edge AI Platform', href: '/iot-edge/edge-ai', icon: Cpu, description: 'Edge AI computing' },
-      { name: 'Connected Device Management', href: '/iot-edge/device-management', icon: Smartphone, description: 'IoT device management' },
-      { name: 'Sensor Network Platform', href: '/iot-edge/sensor-networks', icon: Radio, description: 'Sensor networks' },
-      { name: 'Edge Computing Infrastructure', href: '/iot-edge/edge-infrastructure', icon: Server, description: 'Edge infrastructure' },
-      { name: 'IoT Security Platform', href: '/iot-edge/iot-security', icon: Shield, description: 'IoT security' },
-      { name: 'IoT Data Analytics', href: '/iot-edge/iot-analytics', icon: BarChart3, description: 'IoT analytics' }
+      { name: 'Products', href: '/marketplace/products' },
+      { name: 'Services', href: '/services' },
+      { name: 'Talent', href: '/marketplace/talent' },
+      { name: 'Equipment', href: '/marketplace/equipment' },
+      { name: 'Categories', href: '/categories' },
+      { name: 'Green IT', href: '/green-it' },
+      { name: 'IT Onsite Services', href: '/it-onsite-services' },
+      { name: 'AI Tools', href: '/marketplace/ai-tools' }
     ],
   },
   company: {
     title: 'Company',
     items: [
-      { name: 'About Us', href: '/about', icon: Users, description: 'Learn our story' },
-      { name: 'Blog', href: '/blog', icon: FileText, description: 'Latest insights' },
-      { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic alliances' },
-      { name: 'Careers', href: '/careers', icon: Users, description: 'Join our team' },
-      { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch' },
-      { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Common questions' },
-      { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation' },
-      { name: 'Green IT', href: '/green-it', icon: Heart, description: 'Sustainability initiatives' }
+      { name: 'About Us', href: '/about' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'FAQ', href: '/faq' },
+      { name: 'Sitemap', href: '/sitemap' },
+      { name: 'Leadership', href: '/leadership' },
+      { name: 'Press', href: '/press' }
     ],
   },
   support: {
     title: 'Support & Resources',
     items: [
-      { name: 'Help Center', href: '/help-center', icon: HelpCircle, description: 'Get help and support' },
-      { name: 'Contact Support', href: '/contact', icon: MessageCircle, description: 'Reach our team' },
-      { name: 'Terms of Service', href: '/terms', icon: FileText, description: 'Legal terms' },
-      { name: 'Privacy Policy', href: '/privacy', icon: Shield, description: 'Data protection' },
-      { name: 'Security', href: '/security', icon: SecurityIcon, description: 'Security practices' },
-      { name: 'System Status', href: '/status', icon: CheckCircle, description: 'Service status' },
-      { name: 'Research & Development', href: '/research-development', icon: TestTube, description: 'R&D initiatives' },
-      { name: 'News', href: '/news', icon: TrendingUp, description: 'Latest updates' }
+      { name: 'Help Center', href: '/help' },
+      { name: 'Contact Support', href: '/contact' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Security', href: '/security' },
+      { name: 'System Status', href: '/status' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'Training', href: '/training' },
+      { name: 'Community', href: '/community' }
     ],
   },
 };
@@ -307,8 +267,9 @@ export function Footer() {
                 {section.title === 'Solutions' && <Rocket className="w-5 h-5 text-zion-cyan" />}
                 {section.title === 'Research' && <FlaskConical className="w-5 h-5 text-zion-purple" />}
                 {section.title === 'Micro SAAS' && <Code className="w-5 h-5 text-zion-purple" />}
-                {section.title === 'Marketplace' && <Building className="w-5 h-5 text-zion-blue" />}
-                {section.title === 'Company' && <Users className="w-5 h-5 text-zion-cyan" />}
+                {section.title === 'Solutions' && <Target className="w-5 h-5 text-zion-blue" />}
+                {section.title === 'Marketplace' && <ShoppingCart className="w-5 h-5 text-zion-blue" />}
+                {section.title === 'Company' && <Building className="w-5 h-5 text-zion-cyan" />}
                 {section.title === 'Support & Resources' && <Award className="w-5 h-5 text-zion-purple" />}
                 {section.title}
               </h4>
@@ -329,21 +290,35 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Newsletter Section */}
-        <div className="mt-12 pt-8 border-t border-slate-700/50">
-          <div className="max-w-2xl mx-auto text-center">
-            <h4 className="text-white font-semibold mb-2">Stay Updated</h4>
-            <p className="text-slate-400 mb-4">Get the latest insights on AI, technology trends, and industry updates</p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
-              <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
-                Subscribe
-              </button>
-            </div>
+        {/* Bottom section */}
+        <motion.div 
+          className="pt-8 border-t border-zion-cyan/20 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <div className="flex items-center space-x-4 text-zion-slate-light text-sm">
+            <span>&copy; 2025 Zion Tech Group. All rights reserved.</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline">Made with <Heart className="w-4 h-4 inline text-zion-cyan" /> for innovation</span>
+          </div>
+          
+          <div className="flex items-center space-x-4">
+            <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+              Privacy Policy
+            </Link>
+            <span className="text-zion-slate-light">•</span>
+            <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+              Terms of Service
+            </Link>
+            <span className="text-zion-slate-light">•</span>
+            <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+              Cookies
+            </Link>
+            <span className="text-zion-slate-light">•</span>
+            <Link to="/accessibility" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+              Accessibility
+            </Link>
           </div>
         </motion.div>
 

@@ -1,10 +1,18 @@
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield, Search } from "lucide-react";
-import { useRef } from "react";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Search, 
+  Rocket, 
+  Users, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
+  Star, 
+  Sparkles,
+  ArrowRight
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export function HeroSection() {
   const { t } = useTranslation();
@@ -184,16 +192,63 @@ export function HeroSection() {
             </div>
             <span className="font-medium">Global Talent Pool</span>
           </motion.div>
-          
-          <motion.div 
-            className="flex items-center gap-3 group" 
-            whileHover={{ scale: 1.05 }} 
-            transition={{ type: "spring", stiffness: 400 }}
-          >
-            <div className="p-2 bg-zion-cyan-light/20 rounded-full group-hover:bg-zion-cyan-light/30 transition-colors">
-              <Users className="w-6 h-6 text-zion-cyan-light"/>
-            </div>
-            <span className="font-medium">24/7 Support</span>
+
+          {/* Description */}
+          <motion.p variants={itemVariants} className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed">
+            Discover cutting-edge AI solutions, expert talent, and innovative services that drive digital transformation. 
+            From startups to enterprises, we deliver results that matter.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button 
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform transition-all duration-300 group" 
+                size="lg" 
+                asChild
+              >
+                <Link to="/contact" role="button" aria-label="Get Started Today" className="flex items-center gap-2">
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
+                </Link>
+              </Button>
+            </motion.div>
+            
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button 
+                variant="outline" 
+                className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white text-lg py-6 px-8 transition-all duration-300" 
+                size="lg" 
+                asChild
+              >
+                <Link to="/services" role="button" aria-label="Explore Services">
+                  Explore Services
+                </Link>
+              </Button>
+            </motion.div>
+          </motion.div>
+
+          {/* Trust indicators with enhanced animations */}
+          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {[
+              { icon: Users, label: "10K+ Users", value: "Trusted by thousands" },
+              { icon: TrendingUp, label: "95% Success", value: "Project completion rate" },
+              { icon: Shield, label: "Enterprise", value: "Fortune 500 clients" },
+              { icon: Star, label: "24/7 Support", value: "Always available" }
+            ].map((metric, index) => (
+              <motion.div 
+                key={index}
+                className="text-center group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <div className="flex justify-center mb-2">
+                  <metric.icon className="w-8 h-8 text-zion-cyan group-hover:text-zion-purple transition-colors"/>
+                </div>
+                <div className="text-white font-bold text-lg mb-1">{metric.label}</div>
+                <div className="text-zion-slate-light text-sm">{metric.value}</div>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.div>
 
@@ -303,4 +358,4 @@ export function HeroSection() {
       </motion.div>
     </section>
   );
-};
+}
