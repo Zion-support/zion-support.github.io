@@ -2,20 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe } from 'lucide-react';
 
-interface Testimonial {
-  id: number;
-  name: string;
-  position: string;
-  company: string;
-  companyLogo?: string;
-  content: string;
-  rating: number;
-  industry: string;
-  project: string;
-  avatar?: string;
-}
-
-const testimonials: Testimonial[] = [
+const testimonials = [
   {
     id: 1,
     name: "Sarah Chen",
@@ -68,159 +55,74 @@ const testimonials: Testimonial[] = [
   }
 ];
 
-export const TestimonialsSection: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const goToTestimonial = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  // Auto-play functionality
-  React.useEffect(() => {
-    if (!isAutoPlaying) return;
-
-    const interval = setInterval(() => {
-      nextTestimonial();
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, currentIndex]);
-
-  const currentTestimonial = testimonials[currentIndex];
-
+export function TestimonialsSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            What Our <span className="text-zion-cyan">Clients Say</span>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            What Our Users Say
           </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders say about working with Zion Tech Group.
+          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+            Join thousands of satisfied professionals who trust Zion for their technology needs
           </p>
-        </motion.div>
-
-        {/* Testimonials Carousel */}
-        <div className="relative max-w-4xl mx-auto">
-          {/* Main Testimonial */}
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.5 }}
-            className="bg-zion-slate-dark/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-zion-slate/20 relative overflow-hidden"
-          >
-            {/* Background Pattern */}
-            <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5"></div>
-            
-            {/* Quote Icon */}
-            <div className="absolute top-6 right-6 text-zion-cyan/20">
-              <Quote size={48} />
-            </div>
-
-            {/* Content */}
-            <div className="relative z-10">
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <div 
+              key={index}
+              className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"
+            >
+              {/* Quote icon */}
+              <div className="mb-4">
+                <Quote className="w-8 h-8 text-zion-cyan opacity-60" />
+              </div>
+              
               {/* Rating */}
-              <div className="flex items-center mb-6">
-                {[...Array(currentTestimonial.rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+              <div className="flex items-center mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
-
-              {/* Testimonial Text */}
-              <blockquote className="text-lg md:text-xl text-white mb-8 leading-relaxed">
-                "{currentTestimonial.content}"
-              </blockquote>
-
-              {/* Author Info */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
-                    <User className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">{currentTestimonial.name}</div>
-                    <div className="text-zion-slate-light text-sm">{currentTestimonial.position}</div>
-                    <div className="flex items-center text-zion-cyan text-sm">
-                      <Building className="h-3 w-3 mr-1" />
-                      {currentTestimonial.company}
-                    </div>
-                  </div>
+              
+              {/* Content */}
+              <p className="text-zion-slate-light mb-6 leading-relaxed">
+                "{testimonial.content}"
+              </p>
+              
+              {/* Author */}
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">
+                  {testimonial.avatar}
                 </div>
-                
-                {/* Project Info */}
-                <div className="text-right text-sm text-zion-slate-light">
-                  <div className="flex items-center justify-end mb-1">
-                    <Globe className="h-3 w-3 mr-1" />
-                    {currentTestimonial.industry}
-                  </div>
-                  <div className="text-zion-cyan font-medium">{currentTestimonial.project}</div>
+                <div>
+                  <div className="text-white font-semibold">{testimonial.name}</div>
+                  <div className="text-zion-slate-light text-sm">{testimonial.role}</div>
+                  <div className="text-zion-cyan text-sm">{testimonial.company}</div>
                 </div>
               </div>
             </div>
-          </motion.div>
-
-          {/* Navigation Controls */}
-          <div className="flex items-center justify-center mt-8 space-x-4">
-            <button
-              onClick={prevTestimonial}
-              className="p-2 bg-zion-slate-dark/50 hover:bg-zion-cyan/20 text-zion-cyan rounded-full transition-colors border border-zion-slate/20"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            
-            {/* Dots Indicator */}
-            <div className="flex space-x-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentIndex
-                      ? 'bg-zion-cyan scale-125'
-                      : 'bg-zion-slate/40 hover:bg-zion-slate/60'
-                  }`}
-                />
-              ))}
+          ))}
+        </div>
+        
+        {/* Trust indicators */}
+        <div className="text-center mt-16">
+          <div className="inline-flex items-center space-x-6 bg-zion-blue/50 backdrop-blur-sm border border-zion-cyan/20 rounded-full px-8 py-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-zion-cyan text-sm font-medium">Verified Reviews</span>
             </div>
-            
-            <button
-              onClick={nextTestimonial}
-              className="p-2 bg-zion-slate-dark/50 hover:bg-zion-cyan/20 text-zion-cyan rounded-full transition-colors border border-zion-slate/20"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
-
-          {/* Auto-play Toggle */}
-          <div className="flex justify-center mt-4">
-            <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className={`text-sm px-3 py-1 rounded-full transition-colors ${
-                isAutoPlaying
-                  ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                  : 'bg-zion-slate/20 text-zion-slate-light border border-zion-slate/30'
-              }`}
-            >
-              {isAutoPlaying ? 'Pause' : 'Play'} Auto-play
-            </button>
+            <div className="w-px h-4 bg-zion-cyan/30"></div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+              <span className="text-zion-cyan text-sm font-medium">Real Users</span>
+            </div>
+            <div className="w-px h-4 bg-zion-cyan/30"></div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+              <span className="text-zion-cyan text-sm font-medium">Recent Feedback</span>
+            </div>
           </div>
         </div>
 
@@ -252,4 +154,4 @@ export const TestimonialsSection: React.FC = () => {
       </div>
     </section>
   );
-};
+}

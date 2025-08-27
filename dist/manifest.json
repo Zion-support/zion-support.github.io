@@ -1,63 +1,47 @@
 {
-  "name": "Zion Tech Group - AI Marketplace",
-  "short_name": "Zion",
-  "description": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#172d67",
-  "theme_color": "#2e73ea",
-  "orientation": "portrait-primary",
-  "scope": "/",
-  "lang": "en",
-  "categories": ["business", "productivity", "technology"],
+  "short_name": "Zion Tech",
+  "name": "Zion Tech Group - AI & Technology Solutions",
+  "description": "Empowering businesses with cutting-edge AI solutions and innovative technology services",
   "icons": [
     {
-      "src": "/icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     },
     {
-      "src": "/icon-96x96.png",
-      "sizes": "96x96",
+      "src": "logo192.png",
       "type": "image/png",
-      "purpose": "maskable any"
+      "sizes": "192x192"
     },
     {
-      "src": "/icon-128x128.png",
-      "sizes": "128x128",
+      "src": "logo512.png",
       "type": "image/png",
-      "purpose": "maskable any"
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "screenshots": [
+    {
+      "src": "screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
     },
     {
-      "src": "/icon-144x144.png",
-      "sizes": "144x144",
+      "src": "screenshot-narrow.png",
+      "sizes": "750x1334",
       "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "form_factor": "narrow"
     }
   ],
   "shortcuts": [
@@ -68,8 +52,20 @@
       "url": "/services",
       "icons": [
         {
-          "src": "/icon-96x96.png",
-          "sizes": "96x96"
+          "src": "logo192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "AI Solutions",
+      "short_name": "AI Solutions",
+      "description": "Explore AI solutions",
+      "url": "/ai-solutions",
+      "icons": [
+        {
+          "src": "logo192.png",
+          "sizes": "192x192"
         }
       ]
     },
@@ -80,51 +76,10 @@
       "url": "/contact",
       "icons": [
         {
-          "src": "/icon-96x96.png",
-          "sizes": "96x96"
+          "src": "logo192.png",
+          "sizes": "192x192"
         }
       ]
-    },
-    {
-      "name": "AI Solutions",
-      "short_name": "AI",
-      "description": "Explore AI-powered solutions",
-      "url": "/services/ai-business-intelligence",
-      "icons": [
-        {
-          "src": "/icon-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ],
-  "related_applications": [],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
-  "launch_handler": {
-    "client_mode": "navigate-existing"
-  },
-  "handle_links": "preferred",
-  "protocol_handlers": [
-    {
-      "protocol": "web+zion",
-      "url": "/%s"
     }
   ]
 }
