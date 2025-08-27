@@ -60,6 +60,7 @@ export type ServiceVariant =
   | 'project-management-futuristic'
   | 'fintech'
   | 'fintech-futuristic'
+  | 'defi-futuristic'
   | 'quantum-bio-enterprise'
   | 'quantum-materials-enterprise'
   | 'supply-chain-futuristic'

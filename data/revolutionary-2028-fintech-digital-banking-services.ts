@@ -280,7 +280,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/defi-lending-borrowing-platform-2028',
     marketPosition: 'Competes with Aave ($0-0.09%/transaction), Compound ($0-0.5%/transaction), and MakerDAO ($0-0.5%/transaction). Our advantage: AI risk management, comprehensive DeFi, and competitive pricing.',
-    targetAudience: 'DeFi protocols', 'Lending platforms', 'Financial institutions', 'Crypto companies', 'Individual investors',
+    targetAudience: ['DeFi protocols', 'Lending platforms', 'Financial institutions', 'Crypto companies', 'Individual investors'],
     trialDays: 21,
     setupTime: '1 month',
     category: 'DeFi Lending',

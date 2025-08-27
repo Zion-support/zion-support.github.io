@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+
 import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 
