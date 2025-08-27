@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Index from '../pages/index'
+import Services from '../pages/services'
+import Contact from '../pages/contact'
+import ComprehensiveServices from './pages/ComprehensiveServices'
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+  )
+=======
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
@@ -67,6 +85,7 @@ function App() {
       </div>
     </Router>
   );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
 }
 
 export default App;

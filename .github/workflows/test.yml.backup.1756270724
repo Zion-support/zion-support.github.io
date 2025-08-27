@@ -37,6 +37,19 @@ jobs:
             echo "Build failed: out folder not found"
             exit 1
           fi
+<<<<<<< HEAD
+      - name: Run Tests
+        run: npm test -- --run
+        continue-on-error: true
+      - name: Run Cypress Tests (if available)
+        run: npm run cypress:run
+        env:
+          TEST_USER_EMAIL: ${{ secrets.CYPRESS_TEST_USER_EMAIL }}
+          TEST_USER_PASSWORD: ${{ secrets.CYPRESS_TEST_USER_PASSWORD }}
+          TEST_USER_DISPLAY_NAME: ${{ secrets.CYPRESS_TEST_USER_DISPLAY_NAME }}
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+=======
       - name: Verify asset paths
         run: |
           npx http-server dist -p 5000 -s >/dev/null 2>&1 &
@@ -49,6 +62,7 @@ jobs:
       - name: Upload build artifacts
         if: success()
         uses: actions/upload-artifact@v4
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
         with:
           name: build
           path: dist

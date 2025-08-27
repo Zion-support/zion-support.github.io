@@ -20,6 +20,13 @@ jobs:
     timeout-minutes: 30
     
     steps:
+<<<<<<< HEAD
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+=======
       - uses: actions/checkout@v4
       - id: queue
         name: Read queue length
@@ -95,6 +102,7 @@ jobs:
 
       - name: Upload shard report
         uses: actions/upload-artifact@v4
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
         with:
           node-version: '20'
           cache: 'npm'

@@ -8,6 +8,13 @@
     "npm": ">=8.0.0"
   },
   "scripts": {
+<<<<<<< HEAD
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --max-warnings 0",
+    "preview": "vite preview",
+    "test": "vitest run"
+=======
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
     "prebuild": "echo 'skip prebuild health-check'",
@@ -24,6 +31,7 @@
     "test:ci": "vitest run --coverage --reporter=verbose",
     "security:scan": "npm audit --audit-level=moderate",
     "build:check": "npm run build && npm run start & sleep 10 && curl -f http://localhost:4173/ || exit 1"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -57,7 +65,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^6.0.0",
+<<<<<<< HEAD
+    "react-helmet-async": "^2.0.5",
     "react-hook-form": "^7.47.0",
+    "react-hot-toast": "^2.6.0",
+    "react-i18next": "^15.7.2",
+=======
+    "react-hook-form": "^7.47.0",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
     "react-redux": "^9.2.0",
     "react-remove-scroll-bar": "^2.3.8",
     "react-router-dom": "^6.20.0",
@@ -66,11 +81,16 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+<<<<<<< HEAD
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+=======
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
     "@types/node": "^20.8.10",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "^4.1.1",
@@ -81,7 +101,11 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+<<<<<<< HEAD
+    "globals": "^16.3.0",
+=======
     "jsdom": "^23.0.0",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "terser": "^5.43.1",

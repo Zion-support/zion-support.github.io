@@ -7,40 +7,17 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['./tests/setup.ts'],
-    include: ['tests/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    exclude: [
-      'node_modules/',
-      'dist/',
-      'coverage/',
-      'tests.disabled/**',
-      'supabase.disabled/**',
-      '**/*.d.ts',
-      '**/*.config.*',
-      'scripts/',
-      'public/',
-      '.github/',
-      'broken_files_backup/',
-      'src.broken/',
-      'services.disabled.temp/'
-    ],
+    setupFiles: ['./src/test/setup.ts'],
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
       exclude: [
         'node_modules/',
-        'dist/',
-        'coverage/',
-        'tests.disabled/**',
-        'supabase.disabled/**',
+        'src/test/',
         '**/*.d.ts',
         '**/*.config.*',
-        'scripts/',
-        'public/',
-        '.github/',
-        'broken_files_backup/',
-        'src.broken/',
-        'services.disabled.temp/'
+        '**/dist/**',
+        '**/coverage/**'
       ]
     }
   },

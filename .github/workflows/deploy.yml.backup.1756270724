@@ -3,32 +3,78 @@ name: Deploy
 on:
   push:
     branches: [main]
+<<<<<<< HEAD
+=======
     branches: [main]
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
   workflow_dispatch:
 
 permissions:
   contents: read
+<<<<<<< HEAD
+=======
   deployments: write
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+<<<<<<< HEAD
+    needs: [ci]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+=======
 =======
     environment: production
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
+<<<<<<< HEAD
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build project
+        run: npm run build
+      
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
 
       - name: Install dependencies
         run: npm ci
 
+<<<<<<< HEAD
+      - name: Run linting
+        run: npm run lint
+        continue-on-error: true
+
+      - name: Run type checking
+        run: npm run type-check
+
+      - name: Build project
+        run: npm run build
+
+      - name: Verify build output
+=======
       - name: Run tests
         run: npm run test:ci
         continue-on-error: true
@@ -37,11 +83,37 @@ jobs:
         run: npm run build
 
       - name: Verify build
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
         run: |
           if [ ! -d dist ]; then
             echo "Build failed: dist folder not found"
             exit 1
           fi
+<<<<<<< HEAD
+          echo "Build successful - dist folder created"
+          
+          # Check for essential files
+          if [ -f dist/index.html ]; then
+            echo "✓ index.html found"
+          else
+            echo "✗ index.html not found"
+            exit 1
+          fi
+          
+          if [ -d dist/assets ]; then
+            echo "✓ assets folder found"
+          else
+            echo "✗ assets folder not found"
+            exit 1
+          fi
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-build
+          path: dist/
+          retention-days: 30
+=======
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -111,3 +183,4 @@ jobs:
               required_contexts: []
             });
             console.log('Deployment created:', deployment.data.id);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15

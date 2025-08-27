@@ -1,5 +1,9 @@
 import { useEffect } from 'react';
+<<<<<<< HEAD:src/components/disabled/Login.jsx.backup.1756270656
+import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
+=======
 import { useNavigate, useLocation } from 'react-router-dom';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15:src/pages/Login.jsx
 import { useAuth } from '@/hooks/useAuth';
 import { safeStorage } from '@/utils/safeStorage';
 import { LoginContent } from '@/components/auth/login/LoginContent';
@@ -14,15 +18,24 @@ export default function Login() {
   const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+<<<<<<< HEAD:src/components/disabled/Login.jsx.backup.1756270656
+  const [searchParams] = useSearchParams();
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15:src/pages/Login.jsx
   const { dispatch } = useCart();
   const reduxDispatch = useDispatch();
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
+<<<<<<< HEAD:src/components/disabled/Login.jsx.backup.1756270656
+    // It runs when component mounts or searchParams change
+    const token = searchParams.get('token');
+=======
     // It runs when component mounts or location.search (containing query) changes
     const queryString = location.search;
     const params = new URLSearchParams(queryString);
     const token = params.get('token');
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15:src/pages/Login.jsx
     if (token) {
       // Store token in localStorage for now
       localStorage.setItem('zion_token', token);
@@ -31,11 +44,21 @@ export default function Login() {
       // which should trigger the other useEffect.
       navigate(location.pathname, { replace: true });
     }
+<<<<<<< HEAD:src/components/disabled/Login.jsx.backup.1756270656
+  }, [searchParams, location.pathname, navigate]);
+=======
   }, [location.search, location.pathname, navigate]);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15:src/pages/Login.jsx
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
+<<<<<<< HEAD:src/components/disabled/Login.jsx.backup.1756270656
+      const next = location.state?.from || '/dashboard';
+      navigate(next, { replace: true });
+    }
+  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
+=======
       const next = searchParams.get('next') || '/dashboard';
       navigate(next, { replace: true });
     }
@@ -45,6 +68,7 @@ export default function Login() {
       navigate(next, { replace: true });
     }
   }, [isAuthenticated, isLoading, location.search, navigate, reduxDispatch]);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15:src/pages/Login.jsx
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {

@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award } from 'lucide-react'
+=======
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Plus, Star, TrendingUp } from 'lucide-react'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-cf15
 import PageTransition from '../src/components/PageTransition'
 
 export default function Services() {
