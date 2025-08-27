@@ -56,7 +56,6 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^6.20.0",
     "tailwind-merge": "^2.0.0"
->>>>>>> 82cf801bf276a75a58eba4afb3f2a06107c62829
   },
   "devDependencies": {
     "@types/node": "^20.8.10",
