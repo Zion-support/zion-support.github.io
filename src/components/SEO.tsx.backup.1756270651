@@ -6,6 +6,12 @@ interface SEOProps {
   title: string;
   description: string;
   canonical?: string;
+<<<<<<< HEAD
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
+=======
   url?: string;
   image?: string;
   type?: 'website' | 'article' | 'product' | 'service';
@@ -14,6 +20,7 @@ interface SEOProps {
   author?: string;
   section?: string;
   tags?: string[];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
   noindex?: boolean;
   nofollow?: boolean;
 }
@@ -22,6 +29,12 @@ export function SEO({
   title,
   description,
   canonical,
+<<<<<<< HEAD
+  ogImage = '/images/zion-tech-group-og.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+=======
   url = 'https://ziontechgroup.com',
   image = '/images/zion-tech-group-og.jpg',
   type = 'website',
@@ -30,18 +43,31 @@ export function SEO({
   author = 'Zion Tech Group',
   section,
   tags = [],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
   noindex = false,
   nofollow = false
 }: SEOProps) {
+<<<<<<< HEAD
+  const siteName = 'Zion Tech Group';
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const siteUrl = 'https://ziontechgroup.com';
+  const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
+
+=======
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = canonical ? `${url}${canonical}` : url;
   const fullImage = image.startsWith('http') ? image : `${url}${image}`;
 
   // Default structured data for organization
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
+<<<<<<< HEAD
+    "url": siteUrl,
+            "description": "Advanced security protocols and threat protection"
+=======
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/images/zion-logo.png",
     "description": "Leading AI & Technology Solutions Provider",
@@ -81,6 +107,7 @@ export function SEO({
             "@type": "Service",
             "name": "Cybersecurity",
             "description": "Advanced Cybersecurity Solutions"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
           }
         },
         {
@@ -88,13 +115,50 @@ export function SEO({
           "itemOffered": {
             "@type": "Service",
             "name": "Cloud & DevOps",
+<<<<<<< HEAD
+            "description": "Scalable cloud infrastructure and development operations"
+=======
             "description": "Cloud Infrastructure and DevOps Services"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
           }
         }
       ]
     }
   };
 
+<<<<<<< HEAD
+  // Structured data for the current page
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": type === 'article' ? 'Article' : 'WebPage',
+    "headline": title,
+    "description": metaDescription,
+    "url": fullUrl,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": fullUrl
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/images/zion-tech-group-logo.png`
+      }
+    },
+    "image": fullImageUrl,
+    "datePublished": publishedTime || new Date().toISOString(),
+    "dateModified": modifiedTime || new Date().toISOString(),
+    "author": {
+      "@type": "Organization",
+      "name": author
+    },
+    ...(type === 'article' && {
+      "articleSection": section,
+      "keywords": tags.join(', ')
+    })
+  };
+=======
     "logo": `${siteUrl}/images/zion-logo.png`,
     "description": "Leading technology solutions provider specializing in AI, cloud computing, cybersecurity, and digital transformation.",
     "address": {
@@ -129,6 +193,7 @@ export function SEO({
   const finalStructuredData = structuredData 
     ? { ...defaultStructuredData, ...structuredData }
     : defaultStructuredData;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
 
   return (
     <Helmet>
@@ -145,6 +210,11 @@ export function SEO({ title, description, keywords, canonical, noindex = false }
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+<<<<<<< HEAD
+      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="description" content={metaDescription} />
+      <meta name="robots" content={robotsContent} />
+=======
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
       
       {/* Canonical URL */}
@@ -154,13 +224,22 @@ export function SEO({ title, description, keywords, canonical, noindex = false }
       
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={fullUrl} />}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
+<<<<<<< HEAD
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={fullCanonical} />
+      <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+=======
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={fullImage} />
       <meta property="og:type" content={type} />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
@@ -168,6 +247,11 @@ export function SEO({ title, description, keywords, canonical, noindex = false }
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
+<<<<<<< HEAD
+      <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+=======
       <meta name="twitter:image" content={fullImage} />
       
       {/* Article specific meta tags */}
@@ -193,21 +277,69 @@ export function SEO({ title, description, keywords, canonical, noindex = false }
       {noindex && <meta name="robots" content="noindex" />}
       {nofollow && <meta name="robots" content="nofollow" />}
       {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
       
       {/* Additional Meta Tags */}
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
+<<<<<<< HEAD
+      
+      {/* Language and Region */}
+      <meta httpEquiv="Content-Language" content="en" />
+      <meta name="language" content="English" />
+      <meta name="geo.region" content="US" />
+      
+      {/* Business Information */}
+      <meta name="application-name" content={siteName} />
+      <meta name="apple-mobile-web-app-title" content={siteName} />
+=======
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
       
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || pageStructuredData)}
       </script>
       
+<<<<<<< HEAD
+      {/* Organization Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(defaultStructuredData)}
+      </script>
+      
+      {/* Preconnect to External Domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0f172a" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(organizationSchema)}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(pageSchema)}
+      </script>
+      
+      <meta name="business:contact_data:phone_number" content="+1-800-ZION-TECH" />
+      <meta name="business:contact_data:email" content="info@ziontechgroup.com" />
+    </Helmet>
+  );
+}
+=======
 =======
       {/* Additional structured data if provided */}
       {publishedTime && (
@@ -247,6 +379,7 @@ export function SEO({ title, description, keywords, canonical, noindex = false }
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
     </Helmet>
   );
 }

@@ -55,6 +55,8 @@
     --ring: 216 84% 53%;
 
     --radius: 0.5rem;
+<<<<<<< HEAD
+=======
 
     --sidebar-background: 228 12% 92%;
     --sidebar-foreground: 0 0% 7%;
@@ -78,6 +80,7 @@
     --line-height: 1.5;
     --letter-spacing: 0px;
     --reduced-motion: no-preference;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
   }
 
   .dark {
@@ -105,6 +108,8 @@
     --border: 0 0% 68%;
     --input: 0 0% 68%;
     --ring: 216 84% 53%;
+<<<<<<< HEAD
+=======
     --sidebar-background: 228 12% 92%;
     --sidebar-foreground: 0 0% 7%;
     --sidebar-primary: 216 84% 53%;
@@ -152,6 +157,7 @@
     --sidebar-accent-foreground: 220.9 39.3% 11%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 262 83% 58%;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
   }
 }
 
@@ -160,6 +166,11 @@
     border-color: hsl(var(--border));
   }
   body {
+<<<<<<< HEAD
+    @apply bg-background text-foreground;
+  }
+}
+=======
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-family: var(--font-sans);
@@ -499,3 +510,4 @@
     transform: scale(1.1);
   }
 }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-44a1
