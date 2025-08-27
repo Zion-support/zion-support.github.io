@@ -80,6 +80,10 @@ const API = React.lazy(() => import('./pages/API'));
 const Status = React.lazy(() => import('./pages/Status'));
 const APIDocs = React.lazy(() => import('./pages/APIDocs'));
 
+// New Enhanced Innovative Services 2027 pages
+const EnhancedInnovativeServicesShowcase2027 = lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
+const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+
 // Enhanced loading component with skeleton
 const LoadingFallback = () => (
   <div className="min-h-screen bg-background flex items-center justify-center">
@@ -142,6 +146,10 @@ function App() {
               <Route path="/news" element={<News />} />
               <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
               <Route path="/pricing-page" element={<PricingPage />} />
+              
+              {/* New Enhanced Innovative Services 2027 Routes */}
+              <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
+              <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
               
               {/* Catch-all route */}
               <Route path="*" element={<NotFound />} />
