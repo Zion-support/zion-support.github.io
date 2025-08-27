@@ -98,6 +98,9 @@ import {
   Stop,
   SkipBack,
   SkipForward,
+  Truck,
+  Package,
+  FileText,
   Rewind,
   FastForward,
   Shuffle,
@@ -174,28 +177,15 @@ import {
 } from 'lucide-react';
 
 const footerNavigation = {
-  cuttingEdgeInnovations: {
-    title: 'Cutting-Edge Innovations',
-    items: [
-      { name: 'AI Business Automation Suite', href: '/innovative-services#ai-automation', icon: Brain, description: 'AI-powered business process automation' },
-      { name: 'Quantum Computing as a Service', href: '/innovative-services#quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
-      { name: 'Enterprise Blockchain Platform', href: '/innovative-services#blockchain', icon: Lock, description: 'Enterprise blockchain solutions' },
-      { name: 'IoT Edge Computing Platform', href: '/innovative-services#iot-edge', icon: Wifi, description: 'IoT and edge computing platform' },
-      { name: 'Zero Trust Cybersecurity', href: '/innovative-services#cybersecurity', icon: Shield, description: 'Advanced cybersecurity platform' },
-      { name: 'Digital Twin Technology', href: '/innovative-services#digital-twin', icon: Eye, description: 'Digital twin and simulation platform' },
-      { name: 'Metaverse & VR Platform', href: '/innovative-services#metaverse', icon: Globe2, description: 'Metaverse and virtual reality platform' },
-      { name: 'Green Tech Solutions', href: '/innovative-services#green-tech', icon: Leaf, description: 'Sustainability and green technology' }
-    ],
-  },
   aiServices: {
     title: 'AI Services',
     items: [
-      { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research' },
-      { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
-      { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
-      { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },
-      { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },
-      { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
+      { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
+      { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
+      { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
+      { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },
+      { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },
+      { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' }
     ],
   },
   microSaas: {
@@ -290,13 +280,13 @@ export const FuturisticFooter: React.FC = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light border-t border-zion-cyan/20 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light border-t border-zion-cyan/20 overflow-hidden quantum-particles">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan/10 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/10 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/10 rounded-full animate-pulse delay-2000"></div>
+          <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan/10 rounded-full animate-pulse holographic"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/10 rounded-full animate-pulse delay-1000 holographic"></div>
+          <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/10 rounded-full animate-pulse delay-2000 holographic"></div>
         </div>
       </div>
 
@@ -314,11 +304,11 @@ export const FuturisticFooter: React.FC = () => {
                 className="space-y-6"
               >
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center shadow-lg shadow-zion-cyan/25">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center shadow-lg shadow-zion-cyan/25 holographic neon-glow">
                     <span className="text-2xl font-bold text-white">Z</span>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+                    <h3 className="text-2xl font-bold text-gradient">
                       ZION TECH GROUP
                     </h3>
                     <p className="text-sm text-zion-slate-light">Innovation • Intelligence • Impact</p>
@@ -345,6 +335,12 @@ export const FuturisticFooter: React.FC = () => {
                     </a>
                   </div>
                   <div className="flex items-center space-x-3 text-zion-slate-light">
+                    <Globe className="w-4 h-4 text-zion-cyan" />
+                    <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan transition-colors duration-300">
+                      {contactInfo.website.replace('https://', '')}
+                    </a>
+                  </div>
+                  <div className="flex items-center space-x-3 text-zion-slate-light">
                     <MapPin className="w-4 h-4 text-zion-cyan" />
                     <span>{contactInfo.address}</span>
                   </div>
@@ -360,7 +356,7 @@ export const FuturisticFooter: React.FC = () => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`p-2 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-zion-slate-light ${social.color} hover:bg-zion-cyan/10 hover:border-zion-cyan/40 transition-all duration-300`}
+                      className={`p-2 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-zion-slate-light ${social.color} hover:bg-zion-cyan/10 hover:border-zion-cyan/40 transition-all duration-300 hover:neon-glow`}
                     >
                       <social.icon className="w-5 h-5" />
                     </motion.a>
@@ -379,7 +375,8 @@ export const FuturisticFooter: React.FC = () => {
                 viewport={{ once: true }}
                 className="space-y-4"
               >
-                <h4 className="text-lg font-semibold text-zion-cyan flex items-center space-x-2">
+                <h4 className="text-lg font-semibold text-gradient flex items-center space-x-2">
+                  <section.icon className="w-5 h-5" />
                   <span>{section.title}</span>
                 </h4>
                 <div className="space-y-2">

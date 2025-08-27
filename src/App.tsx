@@ -1,9 +1,9 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader.jsx';
-import { Footer } from './components/Footer.jsx';
-import { ChatAssistant } from './components/ChatAssistant.jsx';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { FuturisticNavigation } from './components/FuturisticNavigation';
+import { FuturisticFooter } from './components/FuturisticFooter';
+import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
+import { ChatAssistant } from './components/ChatAssistant';
 
 // Lazy load pages with better chunking
 const Home = React.lazy(() => import('./pages/Home.jsx'));
@@ -35,7 +35,6 @@ const LoadingSpinner = () => (
   </div>
 );
 
-<<<<<<< HEAD
 // Error boundary component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-futuristic flex items-center justify-center p-4">
@@ -48,7 +47,10 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       >
         Try again
       </button>
-=======
+    </div>
+  </div>
+);
+
 // New pages from incoming branch
 const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
@@ -60,9 +62,6 @@ const EnterpriseSolutionsPage = lazy(() => import('./pages/services/EnterpriseIT
 const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
-
-// Additional innovative services
-// Removed unavailable imports
 
 // New innovative service pages
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
@@ -77,11 +76,7 @@ const ConsultingServices = React.lazy(() => import('./pages/services/Consulting'
 const QuantumAIServices = React.lazy(() => import('./pages/services/quantum-ai'));
 
 // Other pages from existing structure
-const Login = React.lazy(() => import('./pages/Login'));
 const Signup = React.lazy(() => import('./pages/Signup'));
-
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
 const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
 const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
 const Analytics = React.lazy(() => import('./pages/Analytics'));
@@ -97,13 +92,6 @@ const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
-const Team = React.lazy(() => import('./pages/Team'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
-const Accessibility = React.lazy(() => import('./pages/Accessibility'));
-const GDPR = React.lazy(() => import('./pages/GDPR'));
-const API = React.lazy(() => import('./pages/API'));
-const Status = React.lazy(() => import('./pages/Status'));
-const APIDocs = React.lazy(() => import('./pages/APIDocs'));
 
 // Enhanced loading component with skeleton
 const LoadingFallback = () => (
@@ -112,52 +100,21 @@ const LoadingFallback = () => (
       <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto"></div>
       <p className="text-zion-cyan text-lg font-medium">Loading Zion...</p>
       <p className="text-muted-foreground text-sm">Preparing your AI marketplace experience</p>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
     </div>
   </div>
 );
 
 function App() {
-  // Performance monitoring
-  useEffect(() => {
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['navigation'] });
-      
-      return () => observer.disconnect();
-    }
-  }, []);
-
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
-        <AppHeader />
-<<<<<<< HEAD
-        <main className="flex-1" role="main">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
-              <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
-              <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
-              <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
-              <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
-              <Route path="/enhanced-zion-services-2025" element={<EnhancedZionServicesShowcase2025 />} />
-              <Route path="/zion-tech-group-marketing-2025" element={<ZionTechGroupMarketing2025 />} />
-=======
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
+        {/* Futuristic Animated Background */}
+        <FuturisticAnimatedBackground />
         
-        <main className="flex-1">
+        {/* Navigation */}
+        <FuturisticNavigation />
+        
+        <main className="flex-1 relative z-10">
           <Suspense fallback={<LoadingFallback />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -205,13 +162,15 @@ function App() {
               
               {/* Catch-all route */}
               <Route path="*" element={<NotFound />} />
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
             </Routes>
           </Suspense>
         </main>
-        <Footer />
+        
+        {/* Footer */}
+        <FuturisticFooter />
+        
+        {/* Chat Assistant */}
         <ChatAssistant />
-        <PerformanceMonitor />
       </div>
     </Router>
   );
