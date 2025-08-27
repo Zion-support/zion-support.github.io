@@ -84,6 +84,7 @@ export default function ExpandedServicesPage() {
               </select>
             </div>
           </div>
+
           {/* Quick Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
@@ -105,6 +106,7 @@ export default function ExpandedServicesPage() {
           </div>
         </div>
       </section>
+
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -138,6 +140,7 @@ export default function ExpandedServicesPage() {
                       <span className="text-sm font-medium text-zion-purple">AI Score: {service.aiScore}</span>
                     </div>
                   </div>
+
                   {/* Price and Market Price */}
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
@@ -149,6 +152,7 @@ export default function ExpandedServicesPage() {
                       </span>
                     </div>
                   </div>
+
                   {/* Features Preview */}
                   <div className="space-y-2">
                     <h4 className="font-semibold text-zion-blue-dark text-sm">Key Features:</h4>
@@ -161,6 +165,7 @@ export default function ExpandedServicesPage() {
                         </Badge>)}
                     </div>
                   </div>
+
                   {/* Benefits */}
                   <div className="space-y-2">
                     <h4 className="font-semibold text-zion-blue-dark text-sm">Benefits:</h4>
@@ -171,6 +176,7 @@ export default function ExpandedServicesPage() {
                         </li>))}
                     </ul>
                   </div>
+
                   {/* Contact Information */}
                   <div className="pt-4 border-t border-gray-200">
                     <div className="space-y-2">
@@ -190,6 +196,7 @@ export default function ExpandedServicesPage() {
                       </div>
                     </div>
                   </div>
+
                   {/* Action Buttons */}
                   <div className="flex space-x-2 pt-4">
                     <Button className="flex-1 bg-zion-purple hover:bg-zion-purple-dark">
@@ -202,12 +209,14 @@ export default function ExpandedServicesPage() {
                 </CardContent>
               </Card>))}
           </div>
+
           {filteredServices.length === 0 && (<div className="text-center py-16">
               <h3 className="text-xl font-semibold text-gray-600 mb-2">No services found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or browse all categories.</p>
             </div>)}
         </div>
       </section>
+
       {/* Service Categories Overview */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -234,6 +243,7 @@ export default function ExpandedServicesPage() {
           </div>
         </div>
       </section>
+
       {/* Why Choose Zion Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
@@ -272,6 +282,7 @@ export default function ExpandedServicesPage() {
           </div>
         </div>
       </section>
+
       {/* Contact CTA */}
       <section className="py-16 bg-gradient-to-r from-zion-purple to-zion-purple-dark">
         <div className="container mx-auto px-4 text-center">
@@ -299,6 +310,7 @@ export default function ExpandedServicesPage() {
           </div>
         </div>
       </section>
+
       <TrustedBySection />
     </div>);
 }

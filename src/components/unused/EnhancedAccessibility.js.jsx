@@ -109,6 +109,7 @@ const EnhancedAccessibility = () => {
       <button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-6 left-6 z-50 p-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50" aria-label="Toggle accessibility settings" aria-expanded={isOpen} aria-controls="accessibility-panel">
         <AdjustmentsHorizontalIcon className="w-6 h-6"/>
       </button>
+
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.3 }} id="accessibility-panel" className="fixed bottom-24 left-6 z-50 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 max-h-96 overflow-y-auto" role="dialog" aria-labelledby="accessibility-title">
@@ -121,6 +122,7 @@ const EnhancedAccessibility = () => {
                   ×
                 </button>
               </div>
+
               {/* High Contrast Toggle */}
               <div className="mb-4">
                 <label className="flex items-center justify-between">
@@ -135,6 +137,7 @@ const EnhancedAccessibility = () => {
                   Increases contrast for better visibility
                 </p>
               </div>
+
               {/* Font Size Control */}
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -152,6 +155,7 @@ const EnhancedAccessibility = () => {
                   </button>
                 </div>
               </div>
+
               {/* Reduced Motion Toggle */}
               <div className="mb-4">
                 <label className="flex items-center justify-between">
@@ -166,6 +170,7 @@ const EnhancedAccessibility = () => {
                   Reduces animations and motion effects
                 </p>
               </div>
+
               {/* Focus Indicator Toggle */}
               <div className="mb-4">
                 <label className="flex items-center justify-between">
@@ -180,6 +185,7 @@ const EnhancedAccessibility = () => {
                   Makes focus indicators more visible
                 </p>
               </div>
+
               {/* Color Blindness Support */}
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -192,6 +198,7 @@ const EnhancedAccessibility = () => {
                   <option value="tritanopia">Tritanopia (Blue-Blind)</option>
                 </select>
               </div>
+
               {/* Screen Reader Support */}
               <div className="mb-4">
                 <label className="flex items-center justify-between">
@@ -206,6 +213,7 @@ const EnhancedAccessibility = () => {
                   Announces page changes and important events
                 </p>
               </div>
+
               {/* Keyboard Navigation */}
               <div className="mb-4">
                 <label className="flex items-center justify-between">
@@ -220,6 +228,7 @@ const EnhancedAccessibility = () => {
                   Improves keyboard navigation experience
                 </p>
               </div>
+
               {/* Action Buttons */}
               <div className="space-y-2">
                 <button onClick={() => speakText('Accessibility settings panel opened. You can adjust various accessibility options here.')} className="w-full px-4 py-2 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
@@ -231,6 +240,7 @@ const EnhancedAccessibility = () => {
                   Reset to Defaults
                 </button>
               </div>
+
               {/* Keyboard Shortcuts Help */}
               <div className="mt-4 pt-4 border-t border-gray-200 dark:border-slate-700">
                 <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-2">
@@ -246,6 +256,7 @@ const EnhancedAccessibility = () => {
             </div>
           </motion.div>)}
       </AnimatePresence>
+
       {/* Backdrop */}
       {isOpen && (<div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} aria-hidden="true"/>)}
     </>);

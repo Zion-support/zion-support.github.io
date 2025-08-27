@@ -51,6 +51,7 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
               <p className="text-xs text-gray-500">Loading...</p>
             </div>
           </motion.div>)}
+
         {/* Error State */}
         {hasError && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="absolute inset-0 bg-red-100 dark:bg-red-900/20 flex items-center justify-center">
             <div className="text-center text-red-600 dark:text-red-400">
@@ -59,8 +60,10 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
             </div>
           </motion.div>)}
       </AnimatePresence>
+
       {/* Main Image */}
       <motion.img ref={imageRef} src={currentSrc} alt={alt} sizes={sizes} className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} onLoad={handleLoad} onError={handleError} loading={priority ? 'eager' : 'lazy'} decoding="async"/>
+
       {/* Progressive Loading Effect */}
       {isLoaded && !hasError && (<motion.div initial={{ opacity: 0, scale: 1.1 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3 }} className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"/>)}
     </div>);

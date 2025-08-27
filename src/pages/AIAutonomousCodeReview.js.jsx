@@ -20,6 +20,7 @@ const AIAutonomousCodeReview = () => {
               Transform your development workflow with intelligent, autonomous code review that catches bugs, improves quality, and accelerates delivery
             </p>
           </div>
+
           {/* Key Benefits */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousCodeReview = () => {
               <p className="text-gray-300">Never wait for reviewers</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousCodeReview = () => {
               <p className="text-gray-300">AI system that improves over time based on your codebase patterns</p>
             </div>
           </div>
+
           {/* How It Works */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">How It Works</h2>
@@ -104,6 +107,7 @@ const AIAutonomousCodeReview = () => {
               </div>
             </div>
           </div>
+
           {/* Supported Languages */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Supported Languages & Frameworks</h2>
@@ -113,6 +117,7 @@ const AIAutonomousCodeReview = () => {
                 </div>))}
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Revolutionize Your Code Review?</h2>

@@ -36,6 +36,7 @@ function App() {
       </Suspense>
     </Layout>
   )
+
 }
 
 export default App

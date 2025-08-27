@@ -112,6 +112,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
               </a>
             </div>
           </div>
+
           {/* Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link to="/comprehensive-services-2025" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105">
@@ -126,6 +127,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Filters Section */}
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -136,6 +138,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                 <label className="block text-sm font-medium text-gray-300 mb-2">Search Services</label>
                 <input type="text" placeholder="Search by name, description, or features..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
               </div>
+
               {/* Category Filter */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
@@ -145,6 +148,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                     </option>))}
                 </select>
               </div>
+
               {/* Sort */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
@@ -155,6 +159,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                 </select>
               </div>
             </div>
+
             <div className="text-center">
               <p className="text-gray-300">
                 Showing <span className="text-white font-semibold">{filteredServices.length}</span> of{' '}
@@ -164,6 +169,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
@@ -176,6 +182,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                   </span>
                   <span className="text-3xl">{service.icon || '🚀'}</span>
                 </div>
+
                 {/* Service Name and Category */}
                 <h3 className="text-xl font-bold mb-2 text-white group-hover:text-blue-400 transition-colors">
                   {service.name}
@@ -183,12 +190,15 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                 <p className="text-sm text-gray-400 mb-3 flex items-center">
                   {getCategoryIcon(service.category)} {service.category}
                 </p>
+
                 {/* Tagline */}
                 {service.tagline && (<p className="text-gray-300 mb-4 italic">{service.tagline}</p>)}
+
                 {/* Description */}
                 <p className="text-gray-300 mb-4 line-clamp-3">
                   {service.description}
                 </p>
+
                 {/* Pricing */}
                 <div className="mb-4">
                   {service.price ? (<div className="text-2xl font-bold text-blue-400">
@@ -203,6 +213,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                   
                   {service.projectRate && (<p className="text-sm text-gray-400 mt-1">{service.projectRate}</p>)}
                 </div>
+
                 {/* Features */}
                 {service.features && (<div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
@@ -216,11 +227,13 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                         </li>)}
                     </ul>
                   </div>)}
+
                 {/* Market Position */}
                 {service.marketPosition && (<div className="mb-4 p-3 bg-white/5 rounded-lg">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Market Position:</h4>
                     <p className="text-xs text-gray-400">{service.marketPosition}</p>
                   </div>)}
+
                 {/* ROI and Benefits */}
                 <div className="mb-4">
                   {service.roi && (<div className="mb-2">
@@ -235,6 +248,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
                       </span>
                     </div>)}
                 </div>
+
                 {/* Contact and Action */}
                 <div className="border-t border-white/20 pt-4">
                   <div className="flex justify-between items-center">
@@ -251,6 +265,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Call to Action */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-4xl mx-auto text-center">

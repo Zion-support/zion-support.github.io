@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SEOHead from "../components/SEOHead.jsx";
+import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
 import ultimateInnovativeServices2025 from '../../data/2025-ultimate-innovative-services-expansion';
@@ -56,7 +56,7 @@ export default function UltimateHomepage2025() {
         { name: 'Government', icon: Shield, color: 'from-gray-500 to-blue-500' }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOHead title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025" description="Transform your business with our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Leading the future of technology." keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, innovative solutions"/>
+      <SEO title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025" description="Transform your business with our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Leading the future of technology." keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, innovative solutions"/>
       
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -139,6 +139,7 @@ export default function UltimateHomepage2025() {
           </div>
         </div>
       </div>
+
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -173,6 +174,7 @@ export default function UltimateHomepage2025() {
           </div>
         </div>
       </div>
+
       {/* Stats Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -185,6 +187,7 @@ export default function UltimateHomepage2025() {
             </div>))}
         </div>
       </div>
+
       {/* Benefits Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -206,6 +209,7 @@ export default function UltimateHomepage2025() {
             </div>))}
         </div>
       </div>
+
       {/* Featured Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -258,6 +262,7 @@ export default function UltimateHomepage2025() {
           </Link>
         </div>
       </div>
+
       {/* Industries Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -280,6 +285,7 @@ export default function UltimateHomepage2025() {
             </div>))}
         </div>
       </div>
+
       {/* All Services Preview */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -321,6 +327,7 @@ export default function UltimateHomepage2025() {
           </Link>
         </div>
       </div>
+
       {/* Call to Action Section */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

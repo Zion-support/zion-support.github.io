@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
-
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategories, setExpandedCategories] = useState<string[]>(['getting-started']);
-
   const toggleCategory = (category: string) => {
     setExpandedCategories(prev => 
       prev.includes(category) 
@@ -18,7 +12,6 @@ export default function HelpCenter() {
         : [...prev, category]
     );
   };
-
   const helpCategories = {
     'getting-started': {
       title: 'Getting Started',
@@ -81,7 +74,6 @@ export default function HelpCenter() {
       ]
     }
   };
-
   const popularArticles = [
     'How to create your first account',
     'Understanding the marketplace',
@@ -90,7 +82,6 @@ export default function HelpCenter() {
     'Payment and escrow system',
     'Account security best practices'
   ];
-
   return (
     <>
       <Helmet>
@@ -99,7 +90,6 @@ export default function HelpCenter() {
         <meta name="keywords" content="help center, support, FAQ, tutorials, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/help-center" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         {/* Hero Section */}
         <section className="pt-24 pb-16 px-4">
@@ -110,7 +100,6 @@ export default function HelpCenter() {
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8">
               Find answers to common questions, explore tutorials, and get the support you need to succeed with Zion Tech Group.
             </p>
-            
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
@@ -124,7 +113,6 @@ export default function HelpCenter() {
             </div>
           </div>
         </section>
-
         {/* Help Categories */}
         <section className="py-16 px-4">
           <div className="container mx-auto">
@@ -150,7 +138,6 @@ export default function HelpCenter() {
                       )}
                     </button>
                   </div>
-                  
                   {expandedCategories.includes(key) && (
                     <div className="space-y-2">
                       {category.articles.map((article, index) => (
@@ -169,7 +156,6 @@ export default function HelpCenter() {
             </div>
           </div>
         </section>
-
         {/* Popular Articles */}
         <section className="py-16 px-4 bg-zion-blue-light/10">
           <div className="container mx-auto">
@@ -184,26 +170,9 @@ export default function HelpCenter() {
                   >
                     Read Article
                     <ArrowRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import SEO from '../SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
-import { Search, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail } from 'lucide-react';
-=======
 import React, { useState } from 'react';
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-67e4
 import { Link } from 'react-router-dom';
 import { 
   Search, 
@@ -219,85 +188,7 @@ import {
   Zap,
   Cloud
 } from 'lucide-react';
-
 const HelpCenter: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const helpCategories = [
-    {
-      id: 'getting-started',
-      name: 'Getting Started',
-      description: 'Learn the basics and get up and running quickly',
-      icon: '🚀',
-      articles: [
-        { title: 'Welcome to Zion Tech Group', path: '/help/welcome' },
-        { title: 'Setting Up Your Account', path: '/help/setup' },
-        { title: 'First Steps Guide', path: '/help/first-steps' },
-        { title: 'Platform Overview', path: '/help/platform-overview' }
-      ]
-    },
-    {
-      id: 'services',
-      name: 'Services',
-      description: 'Understanding our technology solutions and services',
-      icon: '🔧',
-      articles: [
-        { title: 'AI Solutions Guide', path: '/help/ai-solutions' },
-        { title: 'Cloud & DevOps Setup', path: '/help/cloud-devops' },
-        { title: 'Cybersecurity Best Practices', path: '/help/cybersecurity' },
-        { title: 'Digital Transformation Process', path: '/help/digital-transformation' }
-      ]
-    },
-    {
-      id: 'account-billing',
-      name: 'Account & Billing',
-      description: 'Manage your account, billing, and subscriptions',
-      icon: '💳',
-      articles: [
-        { title: 'Account Settings', path: '/help/account-settings' },
-        { title: 'Billing & Invoices', path: '/help/billing' },
-        { title: 'Subscription Management', path: '/help/subscriptions' },
-        { title: 'Payment Methods', path: '/help/payment-methods' }
-      ]
-    },
-    {
-      id: 'technical-support',
-      name: 'Technical Support',
-      description: 'Get help with technical issues and troubleshooting',
-      icon: '🛠️',
-      articles: [
-        { title: 'Common Issues & Solutions', path: '/help/common-issues' },
-        { title: 'API Documentation', path: '/help/api-docs' },
-        { title: 'Integration Guides', path: '/help/integrations' },
-        { title: 'Performance Optimization', path: '/help/performance' }
-      ]
-    },
-    {
-      id: 'security-privacy',
-      name: 'Security & Privacy',
-      description: 'Learn about our security measures and privacy policies',
-      icon: '🔒',
-      articles: [
-        { title: 'Security Features', path: '/help/security-features' },
-        { title: 'Data Privacy', path: '/help/data-privacy' },
-        { title: 'Compliance Information', path: '/help/compliance' },
-        { title: 'Security Best Practices', path: '/help/security-best-practices' }
-      ]
-    },
-    {
-      id: 'training-resources',
-      name: 'Training & Resources',
-      description: 'Educational materials and learning resources',
-      icon: '📚',
-      articles: [
-        { title: 'Video Tutorials', path: '/help/video-tutorials' },
-        { title: 'Webinar Recordings', path: '/help/webinars' },
-        { title: 'White Papers', path: '/help/white-papers' },
-        { title: 'Training Programs', path: '/help/training' }
-=======
   const faqCategories = [
     {
       title: "Getting Started",
@@ -339,7 +230,6 @@ const HelpCenter: React.FC = () => {
           question: "How quickly do you respond to support requests?",
           answer: "We prioritize support requests based on severity. Critical issues receive immediate attention, while standard requests are typically addressed within 4-8 hours during business hours."
         }
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
 =======
   const helpCategories = [
     {
@@ -380,57 +270,9 @@ const HelpCenter: React.FC = () => {
         "Upgrading Your Plan",
         "Payment Methods",
         "Invoice Management"
->>>>>>> origin/cursor/website-audit-and-enhancement-67e4
       ]
     }
   ];
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const popularArticles = [
-    { title: 'How to Get Started with AI Solutions', category: 'Services', path: '/help/ai-solutions' },
-    { title: 'Understanding Cloud Migration', category: 'Services', path: '/help/cloud-migration' },
-    { title: 'Cybersecurity Best Practices', category: 'Security & Privacy', path: '/help/cybersecurity' },
-    { title: 'Billing and Payment FAQ', category: 'Account & Billing', path: '/help/billing-faq' },
-    { title: 'API Integration Guide', category: 'Technical Support', path: '/help/api-integration' }
-  ];
-
-  const filteredCategories = selectedCategory === 'all' 
-    ? helpCategories 
-    : helpCategories.filter(cat => cat.id === selectedCategory);
-
-  const filteredArticles = helpCategories.flatMap(cat => cat.articles)
-    .filter(article => 
-      article.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Help Center
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Find answers to your questions, learn how to use our services, and get the support you need. 
-            Our comprehensive help center is designed to get you up and running quickly.
-          </p>
-        </div>
-
-        {/* Search Bar */}
-        <div className="max-w-2xl mx-auto mb-12">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search for help articles, guides, and solutions..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-6 py-4 bg-slate-800/50 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors text-lg"
-            />
-            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">
-              🔍
-=======
   const supportChannels = [
     {
       title: "Phone Support",
@@ -457,7 +299,6 @@ const HelpCenter: React.FC = () => {
       response: "Immediate"
     }
   ];
-
   const resources = [
     {
       title: "Documentation",
@@ -488,7 +329,6 @@ const HelpCenter: React.FC = () => {
       category: "Community"
     }
   ];
-
 =======
   const popularArticles = [
     {
@@ -516,24 +356,10 @@ const HelpCenter: React.FC = () => {
       views: "1.2k"
     }
   ];
-
->>>>>>> origin/cursor/website-audit-and-enhancement-67e4
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              How Can We
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Help You?
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Find answers to your questions, get technical support, and access helpful resources to make the most of our services.
-=======
 import React from 'react';
 import { AppHeader } from '@/layout/AppHeader';
 import { Footer } from '@/components/Footer';
@@ -553,7 +379,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 export default function HelpCenter() {
   const helpCategories = [
     {
@@ -635,7 +460,6 @@ export default function HelpCenter() {
       color: "from-teal-500 to-cyan-500"
     }
   ];
-
   const quickActions = [
     {
       title: "Contact Support",
@@ -666,7 +490,6 @@ export default function HelpCenter() {
       color: "bg-blue-500 text-white"
     }
   ];
-
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -675,9 +498,7 @@ export default function HelpCenter() {
         keywords="help, support, documentation, Zion Tech Group, AI marketplace, tech services"
         canonical="https://ziontechgroup.com/help-center"
       />
-      
       <AppHeader />
-      
       <main className="pt-16 pb-20">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
@@ -687,85 +508,12 @@ export default function HelpCenter() {
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Find answers, tutorials, and support resources to help you make the most of Zion Tech Group
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
             </p>
-            
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
-<<<<<<< HEAD
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search for help articles, tutorials, or contact information..."
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
-            </div>
-          </div>
-
-<<<<<<< HEAD
-        {/* Quick Actions */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 p-6 rounded-xl text-white text-center hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-          >
-            <div className="text-3xl mb-3">📞</div>
-            <h3 className="text-lg font-semibold mb-2">Contact Support</h3>
-            <p className="text-sm opacity-90">Get direct help from our team</p>
-          </Link>
-          
-          <Link
-            to="/status"
-            className="bg-slate-800/50 p-6 rounded-xl text-white text-center border border-white/10 hover:border-blue-500/30 transition-all duration-300"
-          >
-            <div className="text-3xl mb-3">📊</div>
-            <h3 className="text-lg font-semibold mb-2">Service Status</h3>
-            <p className="text-sm text-gray-300">Check system status and updates</p>
-          </Link>
-          
-          <Link
-            to="/faq"
-            className="bg-slate-800/50 p-6 rounded-xl text-white text-center border border-white/10 hover:border-blue-500/30 transition-all duration-300"
-          >
-            <div className="text-3xl mb-3">❓</div>
-            <h3 className="text-lg font-semibold mb-2">FAQ</h3>
-            <p className="text-sm text-gray-300">Frequently asked questions</p>
-          </Link>
-        </div>
-
-        {/* Popular Articles */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-8">Popular Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {popularArticles.map((article, index) => (
-              <Link
-                key={index}
-                to={article.path}
-                className="bg-slate-800/50 p-6 rounded-xl border border-white/10 hover:border-blue-500/30 transition-all duration-300 group"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <span className="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full">
-                    {article.category}
-                  </span>
-                </div>
-                <h3 className="text-white font-semibold group-hover:text-blue-400 transition-colors duration-300">
-                  {article.title}
-                </h3>
-                <div className="mt-3 flex items-center text-blue-400 text-sm font-medium">
-                  Read Article
-                  <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </Link>
-            ))}
-=======
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
-
 const $page: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -775,7 +523,6 @@ const $page: React.FC = () => {
             <div className="p-3 bg-blue-600/20 rounded-full">
               <CogIcon className="h-12 w-12 text-blue-400" />
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             $page
@@ -790,119 +537,6 @@ const $page: React.FC = () => {
             Contact Us for More Information
           </Link>
         </div>
-<<<<<<< HEAD
-
-        {/* Help Categories */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-8">Browse by Category</h2>
-          
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-3 mb-8">
-            <button
-              onClick={() => setSelectedCategory('all')}
-              className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                selectedCategory === 'all'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
-              }`}
-            >
-              All Categories
-            </button>
-            {helpCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
-
-          {/* Categories Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCategories.map((category) => (
-              <div key={category.id} className="bg-slate-800/50 rounded-xl p-6 border border-white/10">
-                <div className="text-center mb-6">
-                  <div className="text-4xl mb-3">{category.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>
-                  <p className="text-gray-300 text-sm">{category.description}</p>
-                </div>
-                
-                <div className="space-y-3">
-                  {category.articles.map((article, index) => (
-                    <Link
-                      key={index}
-                      to={article.path}
-                      className="block p-3 rounded-lg bg-slate-700/50 hover:bg-slate-700/80 transition-all duration-300 border border-transparent hover:border-blue-500/30"
-                    >
-                      <div className="text-white text-sm font-medium group-hover:text-blue-400 transition-colors duration-300">
-                        {article.title}
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Search Results */}
-        {searchQuery && (
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-white mb-8">
-              Search Results for "{searchQuery}"
-            </h2>
-            <div className="space-y-4">
-              {filteredArticles.map((article, index) => (
-                <Link
-                  key={index}
-                  to={article.path}
-                  className="block p-4 bg-slate-800/50 rounded-lg border border-white/10 hover:border-blue-500/30 transition-all duration-300"
-                >
-                  <h3 className="text-white font-semibold hover:text-blue-400 transition-colors duration-300">
-                    {article.title}
-                  </h3>
-                </Link>
-              ))}
-              {filteredArticles.length === 0 && (
-                <div className="text-center py-8">
-                  <p className="text-gray-300">No articles found for your search.</p>
-                  <p className="text-gray-400 text-sm mt-2">Try different keywords or browse our categories.</p>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Still Need Help */}
-        <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-8 border border-blue-500/30">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Still Need Help?
-            </h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our support team is here to help you 
-              with any questions or issues you may have.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Contact Support
-              </Link>
-              <Link
-                to="/support"
-                className="bg-slate-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-all duration-300"
-              >
-                Support Portal
-              </Link>
-=======
           {/* Support Channels */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Get Support</h2>
@@ -933,7 +567,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Search, MessageCircle, BookOpen, Users, Settings, Shield, CreditCard, HelpCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function HelpCenter() {
   const helpCategories = [
     {
@@ -973,7 +606,6 @@ export default function HelpCenter() {
       color: "text-zion-blue"
     }
   ];
-
   const faqs = [
     {
       question: "How do I create an account on Zion?",
@@ -1008,7 +640,6 @@ export default function HelpCenter() {
       answer: "Yes! Zion is available worldwide. We support multiple currencies and languages, making it easy to connect with talent and clients globally."
     }
   ];
-
   return (
     <AppLayout>
       <SEO 
@@ -1017,7 +648,6 @@ export default function HelpCenter() {
         keywords="help center, support, FAQ, Zion marketplace, customer service"
         canonical="https://ziontechgroup.com/help"
       />
-      
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -1027,7 +657,6 @@ export default function HelpCenter() {
               Find answers to your questions and get the support you need
             </p>
           </div>
-
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-16">
             <div className="relative">
@@ -1039,7 +668,6 @@ export default function HelpCenter() {
               />
             </div>
           </div>
-
           {/* Help Categories */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8 text-center">How can we help you?</h2>
@@ -1068,7 +696,6 @@ export default function HelpCenter() {
             </div>
           </div>
         </section>
-
         {/* Quick Actions */}
         <section className="py-16 bg-zion-blue/5">
           <div className="container mx-auto px-4">
@@ -1090,7 +717,6 @@ export default function HelpCenter() {
             </div>
           </div>
         </section>
-
         {/* Help Categories */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -1119,117 +745,11 @@ export default function HelpCenter() {
                       View All Articles
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
                   </CardContent>
                 </Card>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-
-          {/* Quick Actions */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-white mb-8 text-center">Quick Actions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple h-16 text-lg">
-                <Link to="/contact">
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  Contact Support
-                </Link>
-              </Button>
-              <Button asChild className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light h-16 text-lg">
-                <Link to="/community">
-                  <Users className="mr-2 h-5 w-5" />
-                  Ask Community
-                </Link>
-              </Button>
-              <Button asChild className="bg-gradient-to-r from-zion-green to-zion-green-dark hover:from-zion-green-light hover:to-zion-green h-16 text-lg">
-                <Link to="/sitemap">
-                  <HelpCircle className="mr-2 h-5 w-5" />
-                  Browse All Pages
-                </Link>
-              </Button>
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
-            </div>
-          </div>
-
-          {/* FAQ Section */}
-          <div className="mb-16">
-<<<<<<< HEAD
-            <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-            <div className="space-y-8">
-              {faqCategories.map((category) => {
-                const IconComponent = category.icon;
-                return (
-                  <div key={category.title} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                    <div className="flex items-center mb-6">
-                      <IconComponent className="w-8 h-8 text-blue-400 mr-3" />
-                      <h3 className="text-2xl font-semibold">{category.title}</h3>
-                    </div>
-                    <div className="space-y-4">
-                      {category.questions.map((item, index) => (
-                        <div key={index} className="bg-white/5 rounded-lg p-4">
-                          <h4 className="font-semibold mb-2 text-blue-300">{item.question}</h4>
-                          <p className="text-gray-300 text-sm">{item.answer}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Resources Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Helpful Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {resources.map((resource) => {
-                const IconComponent = resource.icon;
-                return (
-                  <Link
-                    key={resource.title}
-                    to={resource.link}
-                    className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <IconComponent className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">{resource.title}</h3>
-                    <p className="text-gray-300 text-sm mb-3">{resource.description}</p>
-                    <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
-                      {resource.category}
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Contact CTA */}
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-xl p-8 border border-blue-500/30">
-              <Lightbulb className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Still Need Help?</h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Can't find what you're looking for? Our expert team is here to help you with any questions or technical issues you may have.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
-                  Contact Support
-                </Link>
-                <a
-                  href="mailto:support@ziontechgroup.com"
-                  className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/20 transition-all duration-300"
-                >
-                  Email Support
-                </a>
-              </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
-=======
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Help
@@ -1242,7 +762,6 @@ export default function HelpCenter() {
               and get the most out of Zion Tech Group's services
             </p>
           </div>
-          
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-16">
             <div className="relative">
@@ -1256,7 +775,6 @@ export default function HelpCenter() {
               </button>
             </div>
           </div>
-          
           {/* Help Categories */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Browse by Category</h2>
@@ -1265,7 +783,6 @@ export default function HelpCenter() {
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{category.description}</p>
-                  
                   <div className="space-y-2 mb-4">
                     {category.articles.map((article, idx) => (
                       <div key={idx} className="text-sm text-gray-400 hover:text-blue-400 cursor-pointer transition-colors">
@@ -1273,26 +790,18 @@ export default function HelpCenter() {
                       </div>
                     ))}
                   </div>
-                  
                   <Link
                     to={`/docs/${category.title.toLowerCase().replace(/\s+/g, '-')}`}
                     className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
                   >
                     View All →
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   </Link>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </section>
-
         {/* Contact Support */}
         <section className="py-16 px-4">
           <div className="container mx-auto text-center">
@@ -1300,7 +809,6 @@ export default function HelpCenter() {
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Our support team is here to help you 24/7. Get in touch with us through any of these channels.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -1312,7 +820,6 @@ export default function HelpCenter() {
                   Start Chat
                 </button>
               </div>
-              
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-6 h-6 text-zion-cyan" />
@@ -1326,7 +833,6 @@ export default function HelpCenter() {
                   Send Email
                 </Link>
               </div>
-              
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-6 h-6 text-zion-cyan" />
@@ -1347,9 +853,6 @@ export default function HelpCenter() {
     </>
   );
 }
-<<<<<<< HEAD
-=======
-          
           {/* Popular Articles */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Popular Articles</h2>
@@ -1371,7 +874,6 @@ export default function HelpCenter() {
               ))}
             </div>
           </div>
-          
           {/* Quick Actions */}
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
@@ -1399,22 +901,15 @@ export default function HelpCenter() {
                   View Documentation
                 </Link>
               </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-67e4
             </div>
           </div>
         </div>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
       </section>
     </div>
   );
 };
-
-<<<<<<< HEAD
-export default HelpCenter;
-=======
 export default $page;
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
 =======
             <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
             <div className="max-w-4xl mx-auto">
@@ -1432,7 +927,6 @@ export default $page;
               </Accordion>
             </div>
           </div>
-
           {/* Contact Section */}
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Still need help?</h2>
@@ -1454,10 +948,8 @@ export default $page;
     </AppLayout>
   );
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
         </section>
-
         {/* Additional Resources */}
         <section className="py-16 bg-zion-blue-dark">
           <div className="container mx-auto px-4">
@@ -1467,7 +959,6 @@ export default $page;
                 Explore our comprehensive library of resources to help you succeed on Zion Tech Group
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card className="bg-zion-blue border-zion-purple/20">
                 <CardContent className="p-6 text-center">
@@ -1481,7 +972,6 @@ export default $page;
                   </Button>
                 </CardContent>
               </Card>
-              
               <Card className="bg-zion-blue border-zion-purple/20">
                 <CardContent className="p-6 text-center">
                   <FileText className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
@@ -1494,7 +984,6 @@ export default $page;
                   </Button>
                 </CardContent>
               </Card>
-              
               <Card className="bg-zion-blue border-zion-purple/20">
                 <CardContent className="p-6 text-center">
                   <Users className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
@@ -1510,7 +999,6 @@ export default $page;
             </div>
           </div>
         </section>
-
         {/* Contact Support */}
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
@@ -1533,12 +1021,8 @@ export default $page;
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

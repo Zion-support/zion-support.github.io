@@ -110,6 +110,7 @@ export function WebhooksManager() {
                     The URL where webhook payloads will be sent when events occur.
                   </p>
                 </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
                   <Input id="webhook-secret" type="password" value={webhookSecret} onChange={(e) => setWebhookSecret(e.target.value)} placeholder="Enter secret key" aria-label="Secret key" className="bg-zinc-800 border-zinc-700"/>
@@ -213,6 +214,7 @@ export function WebhooksManager() {
           <RefreshCw size={14} className="mr-1"/> Refresh
         </Button>
       </CardFooter>
+
       {/* Test Webhook Dialog */}
       <Dialog open={showTestDialog !== null} onOpenChange={(open) => {
             if (!open) {
@@ -301,6 +303,7 @@ export function WebhooksManager() {
             </>)}
         </DialogContent>
       </Dialog>
+
       {/* Delete Webhook Confirmation Dialog */}
       <AlertDialog open={showDeleteConfirm !== null} onOpenChange={(open) => !open && setShowDeleteConfirm(null)}>
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">

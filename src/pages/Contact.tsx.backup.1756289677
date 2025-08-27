@@ -1,0 +1,488 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Clock, 
+  MessageSquare, 
+  Globe, 
+  Building,
+  Send,
+  CheckCircle,
+  Users,
+  Shield,
+  Cloud,
+  Brain,
+  Rocket,
+  Zap
+} from 'lucide-react';
+// Contact form data
+const contactFormFields = [
+  {
+    name: 'firstName',
+    label: 'First Name',
+    type: 'text',
+    required: true,
+    placeholder: 'Enter your first name'
+  },
+  {
+    name: 'lastName',
+    label: 'Last Name',
+    type: 'text',
+    required: true,
+    placeholder: 'Enter your last name'
+  },
+  {
+    name: 'email',
+    label: 'Email',
+    type: 'email',
+    required: true,
+    placeholder: 'Enter your email address'
+  },
+  {
+    name: 'company',
+    label: 'Company',
+    type: 'text',
+    required: false,
+    placeholder: 'Enter your company name'
+  },
+  {
+    name: 'phone',
+    label: 'Phone',
+    type: 'tel',
+    required: false,
+    placeholder: 'Enter your phone number'
+  },
+  {
+    name: 'service',
+    label: 'Service Interest',
+    type: 'select',
+    required: false,
+    options: [
+      'AI & Analytics',
+      'Cybersecurity',
+      'Cloud & DevOps',
+      'IoT & Edge',
+      'Quantum Computing',
+      'Blockchain',
+      'Digital Twin',
+      'Sustainability',
+      'Other'
+    ]
+  }
+];
+// Contact information
+const contactInfo = {
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  hours: 'Monday - Friday: 9:00 AM - 6:00 PM EST',
+  website: 'https://ziontechgroup.com'
+};
+// Services overview
+const services = [
+  {
+    title: 'AI & Analytics',
+    description: 'Advanced artificial intelligence and data analytics solutions',
+    icon: Brain,
+    color: 'from-zion-cyan to-zion-blue'
+  },
+  {
+    title: 'Cybersecurity',
+    description: 'Comprehensive security and threat protection',
+    icon: Shield,
+    color: 'from-zion-purple to-zion-red'
+  },
+  {
+    title: 'Cloud & DevOps',
+    description: 'Scalable cloud infrastructure and automation',
+    icon: Cloud,
+    color: 'from-zion-blue to-zion-indigo'
+  },
+  {
+    title: 'IoT & Edge',
+    description: 'Internet of Things and edge computing solutions',
+    icon: Zap,
+    color: 'from-zion-green to-zion-teal'
+  },
+  {
+    title: 'Quantum Computing',
+    description: 'Next-generation quantum technology',
+    icon: Rocket,
+    color: 'from-zion-purple to-zion-pink'
+  }
+];
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    subject: '',
+    message: '',
+    budget: '',
+    timeline: ''
+  });
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus('submitting');
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        subject: '',
+        message: '',
+        budget: '',
+        timeline: ''
+      });
+      setFormStatus('success');
+      // Reset success status after 5 seconds
+      setTimeout(() => setFormStatus('idle'), 5000);
+    } catch (error) {
+      setFormStatus('error');
+      // Reset error status after 5 seconds
+      setTimeout(() => setFormStatus('idle'), 5000);
+    }
+  };
+  return (
+    <>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="space-y-8"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+              Get in Touch
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Ready to transform your business with cutting-edge technology? Let's discuss how we can help.
+            </p>
+            <p className="text-lg text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+              Whether you're looking for AI solutions, cybersecurity services, or want to explore our marketplace, 
+              our team is here to guide you every step of the way.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      {/* Contact Form & Info Section */}
+      <section className="py-20 bg-zion-slate">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-bold text-white mb-8">Send us a Message</h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {contactFormFields.slice(0, 2).map((field) => (
+                    <div key={field.name}>
+                      <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                        {field.label} {field.required && <span className="text-zion-cyan">*</span>}
+                      </label>
+                      <input
+                        type={field.type}
+                        name={field.name}
+                        value={formData[field.name as keyof typeof formData]}
+                        onChange={handleInputChange}
+                        required={field.required}
+                        placeholder={field.placeholder}
+                        className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {contactFormFields.slice(2, 4).map((field) => (
+                    <div key={field.name}>
+                      <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                        {field.label} {field.required && <span className="text-zion-cyan">*</span>}
+                      </label>
+                      <input
+                        type={field.type}
+                        name={field.name}
+                        value={formData[field.name as keyof typeof formData]}
+                        onChange={handleInputChange}
+                        required={field.required}
+                        placeholder={field.placeholder}
+                        className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {contactFormFields.slice(4, 6).map((field) => (
+                    <div key={field.name}>
+                      <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                        {field.label} {field.required && <span className="text-zion-cyan">*</span>}
+                      </label>
+                      {field.type === 'select' ? (
+                        <select
+                          name={field.name}
+                          value={formData[field.name as keyof typeof formData]}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                        >
+                          <option value="">Select a service</option>
+                          {field.options?.map((option) => (
+                            <option key={option} value={option}>{option}</option>
+                          ))}
+                        </select>
+                      ) : (
+                        <input
+                          type={field.type}
+                          name={field.name}
+                          value={formData[field.name as keyof typeof formData]}
+                          onChange={handleInputChange}
+                          required={field.required}
+                          placeholder={field.placeholder}
+                          className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                    Subject <span className="text-zion-cyan">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    required
+                    placeholder="What can we help you with?"
+                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                    Message <span className="text-zion-cyan">*</span>
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={6}
+                    placeholder="Tell us more about your project or inquiry..."
+                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 resize-none"
+                  />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                      Budget Range
+                    </label>
+                    <select
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                    >
+                      <option value="">Select budget range</option>
+                      <option value="under-10k">Under $10,000</option>
+                      <option value="10k-50k">$10,000 - $50,000</option>
+                      <option value="50k-100k">$50,000 - $100,000</option>
+                      <option value="100k-plus">$100,000+</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                      Timeline
+                    </label>
+                    <select
+                      name="timeline"
+                      value={formData.timeline}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                    >
+                      <option value="">Select timeline</option>
+                      <option value="asap">ASAP</option>
+                      <option value="1-3-months">1-3 months</option>
+                      <option value="3-6-months">3-6 months</option>
+                      <option value="6-plus-months">6+ months</option>
+                    </select>
+                  </div>
+                </div>
+                {/* Form Status Messages */}
+                {formStatus === 'success' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-center space-x-3 p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-400"
+                  >
+                    <CheckCircle className="w-5 h-5" />
+                    <span>Message sent successfully! We'll get back to you soon.</span>
+                  </motion.div>
+                )}
+                {formStatus === 'error' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-center space-x-3 p-4 bg-red-500/20 border border-red-500/30 rounded-lg text-red-400"
+                  >
+                    <AlertCircle className="w-5 h-5" />
+                    <span>Something went wrong. Please try again.</span>
+                  </motion.div>
+                )}
+                <button
+                  type="submit"
+                  disabled={formStatus === 'submitting'}
+                  className="w-full px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
+                >
+                  {formStatus === 'submitting' ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      <span>Sending...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      <span>Send Message</span>
+                    </>
+                  )}
+                </button>
+              </form>
+            </motion.div>
+            {/* Contact Information */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-8"
+            >
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-8">Contact Information</h2>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                      <a href={`tel:${contactInfo.phone}`} className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        {contactInfo.phone}
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-pink rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                      <a href={`mailto:${contactInfo.email}`} className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        {contactInfo.email}
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-zion-green to-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                      <p className="text-zion-slate-light">{contactInfo.address}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-zion-orange to-zion-red rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">Business Hours</h3>
+                      <p className="text-zion-slate-light">{contactInfo.hours}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Services Overview */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Our Services</h3>
+                <div className="space-y-4">
+                  {services.map((service, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                      className="flex items-center space-x-4 p-4 bg-zion-slate-dark rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                    >
+                      <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                        <service.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white">{service.title}</h4>
+                        <p className="text-sm text-zion-slate-light">{service.description}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-purple">
+        <div className="max-w-4xl mx-auto text-center px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Join hundreds of companies already leveraging our cutting-edge technology solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href={`tel:${contactInfo.phone}`}
+                className="px-8 py-4 bg-white text-zion-cyan rounded-lg font-semibold hover:bg-zion-slate-light transition-all duration-300 transform hover:scale-105"
+              >
+                Call Us Now
+              </a>
+              <a 
+                href={`mailto:${contactInfo.email}`}
+                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-zion-cyan transition-all duration-300"
+              >
+                Send Email
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </>
+  );
+}

@@ -12,7 +12,6 @@ import {
   Shield,
   Zap
 } from 'lucide-react';
-
 import React from 'react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
@@ -26,79 +25,26 @@ import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { MicroSaasShowcase } from "@/components/home/MicroSaasShowcase";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-<<<<<<< HEAD
-import { ServicesOverview } from "@/components/ServicesOverview";
-=======
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
 import { BottomNavigation } from "@/components/MobileNavigation";
 import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
->>>>>>> origin/cursor/website-audit-and-enhancement-ba38
-
   return (
     <div className="min-h-screen bg-background">
-<<<<<<< HEAD
-      <SEO 
-        title="Zion - The Tech & AI Marketplace" 
-        description="Discover top AI and tech talent, services, and equipment in one place."
-        keywords="AI, technology, marketplace, services, talent"
-        canonical="https://ziontechgroup.com/"
-      />
-
-      {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="text-center"
-              >
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="w-12 h-12 text-cyan-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-400">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-=======
       <HomePageSEO />
-
       <ITServiceRequestHero />
->>>>>>> origin/cursor/website-audit-and-enhancement-ba38
-
       <HeroSection />
-      
       <QuickAccess />
-      
       <FeatureCTAs />
-      
       <FeatureHighlights />
-      
-<<<<<<< HEAD
-      <ServicesOverview />
-=======
       <MicroSaasShowcase />
->>>>>>> origin/cursor/website-audit-and-enhancement-ba38
-      
       <CategoriesSection />
       <BenefitsSection />
       <HowItWorksSection />
       <FeaturedListingsSection />
       <NewsletterSection />
-<<<<<<< HEAD
-=======
-      
       {/* Mobile Bottom Navigation */}
       <BottomNavigation />
->>>>>>> origin/cursor/website-audit-and-enhancement-ba38
     </div>
   );
 };
-
 export default Home;

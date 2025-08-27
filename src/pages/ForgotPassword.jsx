@@ -26,7 +26,7 @@ export default function ForgotPassword() {
     };
     if (isSubmitted) {
         return (<>
-        <SEOHead title="Password Reset Sent - Zion Tech Group" description="Check your email for password reset instructions." canonical="https://ziontechgroup.com/forgot-password"/>
+        <SEO title="Password Reset Sent - Zion Tech Group" description="Check your email for password reset instructions." canonical="https://ziontechgroup.com/forgot-password"/>
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="max-w-md w-full mx-auto p-6">
             <div className="text-center">
@@ -64,6 +64,7 @@ export default function ForgotPassword() {
                 Enter your email and we'll send you a link to reset your password.
               </p>
             </div>
+
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {submitted ? (<div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
@@ -90,9 +91,11 @@ export default function ForgotPassword() {
                           </FormControl>
                           <FormMessage className="text-red-400"/>
                         </FormItem>)}/>
+
                     <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading}>
                       {isLoading ? "Sending..." : "Reset Password"}
                     </Button>
+
                     <div className="text-center">
                       <Link to="/login" className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light">
                         Back to login
@@ -102,6 +105,7 @@ export default function ForgotPassword() {
                 </Form>)}
             </div>
           </div>
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
@@ -112,10 +116,12 @@ export default function ForgotPassword() {
                 <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>
               </div>
             </div>
+
             <Button type="submit" disabled={isLoading || !email.trim()} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple disabled:opacity-50 disabled:cursor-not-allowed">
               {isLoading ? 'Sending...' : 'Send Reset Link'}
             </Button>
           </form>
+
           <div className="mt-8 text-center">
             <p className="text-zion-slate-light text-sm">
               Remember your password?{' '}

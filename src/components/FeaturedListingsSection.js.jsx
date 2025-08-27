@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, Award } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Added Link import
+
 const featuredListings = [
     {
         id: 1,
@@ -137,7 +139,7 @@ export function FeaturedListingsSection() {
             }
         }
     };
-
+    ;
     const renderStars = (rating) => {
         return Array.from({ length: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
@@ -151,6 +153,7 @@ export function FeaturedListingsSection() {
             backgroundSize: '60px 60px'
         }}/>
       </div>
+
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
@@ -168,6 +171,7 @@ export function FeaturedListingsSection() {
             Each project represents our commitment to excellence and cutting-edge technology.
           </p>
         </motion.div>
+
         {/* Category filters */}
         <motion.div className="flex flex-wrap justify-center gap-3 mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
           {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${selectedCategory === category
@@ -187,6 +191,7 @@ export function FeaturedListingsSection() {
                       Featured
                     </div>
                   </div>)}
+
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img src={listing.image} alt={listing.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
@@ -265,51 +270,77 @@ export function FeaturedListingsSection() {
                       <ArrowRight className="w-4 h-4"/>
                     </button>
                   </div>
+
                   {/* Expanded details on hover */}
                   <AnimatePresence>
-                    {hoveredListing === listing.id && (<motion.div className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
+                    {hoveredListing === listing.id && (
+                      <motion.div 
+                        className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" 
+                        initial={{ opacity: 0, height: 0, y: 10 }} 
+                        animate={{ opacity: 1, height: "auto", y: 0 }} 
+                        exit={{ opacity: 0, height: 0, y: 10 }} 
+                        transition={{ duration: 0.3 }}
+                      >
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Highlights:</h4>
                         <div className="space-y-2 mb-4">
-                          {listing.highlights.map((highlight, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }}>
+                          {listing.highlights.map((highlight, idx) => (
+                            <motion.div 
+                              key={idx} 
+                              className="flex items-center gap-2 text-zion-slate-light/80 text-xs" 
+                              initial={{ opacity: 0, x: -10 }} 
+                              animate={{ opacity: 1, x: 0 }} 
+                              transition={{ delay: idx * 0.1 }}
+                            >
                               <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                               <span>{highlight}</span>
-                            </motion.div>))}
+                            </motion.div>
+                          ))}
                         </div>
+
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
-                          {listing.technologies.slice(0, 4).map((tech, idx) => (<motion.span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: idx * 0.1 }}>
+                          {listing.technologies.slice(0, 4).map((tech, idx) => (
+                            <motion.span 
+                              key={idx} 
+                              className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" 
+                              initial={{ opacity: 0, scale: 0.8 }} 
+                              animate={{ opacity: 1, scale: 1 }} 
+                              transition={{ delay: idx * 0.1 }}
+                            >
                               {tech}
-                            </motion.span>))}
+                            </motion.span>
+                          ))}
                         </div>
-                      </motion.div>)}
+                      </motion.div>
+                    )}
                   </AnimatePresence>
                 </div>
               </div>
               
               <div className="px-6 pb-6">
-                <Link to={service.link} className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg">
+                <Link to={`/services/${listing.id}`} className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg">
                   Get Started
                 </Link>
               </div>
-            </div>))}
-        </></div>
-        
-        {/* Enhanced bottom CTA */}
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
-          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
-            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
-              <p className="text-white text-lg mb-4">
-                Ready to start your next project?
-              </p>
-              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
-                View All Projects
-                <ArrowRight className="w-5 h-5"/>
-              </button>
-            </div>
-          </div>
+            </motion.div>
+          ))}
         </motion.div>
-      </div>);
-    section >
-
-
+      </div>
+      
+      {/* Enhanced bottom CTA */}
+      <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
+          <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
+            <p className="text-white text-lg mb-4">
+              Ready to start your next project?
+            </p>
+            <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+              View All Projects
+              <ArrowRight className="w-5 h-5"/>
+            </button>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  );
 }

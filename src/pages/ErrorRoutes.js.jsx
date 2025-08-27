@@ -32,6 +32,7 @@ const NotFound = () => {
             </button>
           </div>
         </div>
+
         <div className="mt-12 pt-8 border-t border-zion-slate-light">
           <h3 className="text-lg font-semibold text-zion-blue-dark mb-4">
             Popular Pages

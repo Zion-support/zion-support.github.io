@@ -1,55 +1,57 @@
 import { useState, useEffect } from 'react';
-export interface User {
+
+interface User {
   id: string;
   email: string;
-  display_name?: string;
-  created_at?: string;
-  updated_at?: string;
+  displayName?: string;
+  avatar?: string;
+  role?: string;
+  isEmailVerified?: boolean;
+  createdAt?: string;
+  updatedAt?: string;
 }
-export interface Tokens {
+
+interface AuthTokens {
   accessToken: string | null;
   refreshToken: string | null;
 }
-export interface OnboardingStep {
-  current: number;
-  total: number;
-  completed: boolean;
-}
+
 export const useAuthState = () => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [onboardingStep, setOnboardingStep] = useState<OnboardingStep>({
-    current: 1,
-    total: 3,
-    completed: false
-  });
-  const [tokens, setTokens] = useState<Tokens>({
+  const [onboardingStep, setOnboardingStep] = useState(0);
+  const [tokens, setTokens] = useState<AuthTokens>({
     accessToken: null,
     refreshToken: null
   });
-  // Initialize auth state from localStorage/sessionStorage
+
   useEffect(() => {
-    try {
-      if (typeof window !== 'undefined') {
-        const storedAuth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
-        const storedTokens = localStorage.getItem('tokens') || sessionStorage.getItem('tokens');
-        
-        if (storedAuth) {
-          const authData = JSON.parse(storedAuth);
-          setUser(authData.user || null);
+    // Check for existing auth state on mount
+    const checkAuthState = async () => {
+      try {
+        if (typeof window !== 'undefined') {
+          const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
+          if (auth) {
+            const parsed = JSON.parse(auth);
+            if (parsed.user && parsed.token) {
+              setUser(parsed.user);
+              setTokens({
+                accessToken: parsed.token,
+                refreshToken: parsed.refreshToken || null
+              });
+            }
+          }
         }
-        
-        if (storedTokens) {
-          const tokenData = JSON.parse(storedTokens);
-          setTokens(tokenData);
-        }
+      } catch (error) {
+        console.error('Error checking auth state:', error);
+      } finally {
+        setIsLoading(false);
       }
-    } catch (error) {
-      console.error('Error initializing auth state:', error);
-    } finally {
-      setIsLoading(false);
-    }
+    };
+
+    checkAuthState();
   }, []);
+
   return {
     user,
     setUser,

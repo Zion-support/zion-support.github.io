@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from "../components/SEOHead.jsx";
+import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -109,7 +109,7 @@ export default function HowItWorks() {
         }
     ];
     return (<>
-      <SEOHead title="How It Works - Zion Tech Group Platform Guide" description="Learn how Zion's AI and tech marketplace works for both clients seeking services and talent offering their expertise." keywords="how it works, Zion platform, marketplace workflow, client guide, talent guide" canonical="https://ziontechgroup.com/how-it-works"/>
+      <SEO title="How It Works - Zion Tech Group Platform Guide" description="Learn how Zion's AI and tech marketplace works for both clients seeking services and talent offering their expertise." keywords="how it works, Zion platform, marketplace workflow, client guide, talent guide" canonical="https://ziontechgroup.com/how-it-works"/>
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -118,6 +118,7 @@ export default function HowItWorks() {
               Discover how our AI-powered marketplace connects talented professionals with innovative projects
             </p>
           </div>
+
           {/* Platform Overview */}
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -142,6 +143,7 @@ export default function HowItWorks() {
               </div>
             </div>
           </div>
+
           {/* How It Works for Clients */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">For Clients</h2>
@@ -163,6 +165,7 @@ export default function HowItWorks() {
                 </Card>))}
             </div>
           </div>
+
           {/* How It Works for Talent */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">For Talent</h2>
@@ -184,6 +187,7 @@ export default function HowItWorks() {
                 </Card>))}
             </div>
           </div>
+
           {/* Platform Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Platform Features</h2>
@@ -203,6 +207,7 @@ export default function HowItWorks() {
                 </Card>))}
             </div>
           </div>
+
           {/* Benefits Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Zion?</h2>
@@ -225,6 +230,7 @@ export default function HowItWorks() {
                 </Card>))}
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>

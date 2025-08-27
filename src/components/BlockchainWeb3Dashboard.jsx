@@ -97,6 +97,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             </button>)}
         </div>
       </div>
+
       {/* Wallet Status */}
       {wallet && (<div className="p-4 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 border-b border-gray-200 dark:border-gray-700">
           <div className="flex items-center justify-between">
@@ -129,6 +130,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             </select>
           </div>
         </div>)}
+
       {/* Navigation Tabs */}
       <div className="flex border-b border-gray-200 dark:border-gray-700">
         {[
@@ -145,6 +147,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             <span>{label}</span>
           </button>))}
       </div>
+
       {/* Content */}
       <div className="p-4">
         <AnimatePresence mode="wait">
@@ -191,6 +194,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                   </div>
                 </div>
               </div>
+
               {/* Recent Activity */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Activity</h3>
@@ -221,6 +225,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 </div>
               </div>
             </motion.div>)}
+
           {activeTab === 'wallet' && (<motion.div key="wallet" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               {!wallet ? (<div className="text-center py-12">
                   <Wallet className="w-16 h-16 text-gray-400 mx-auto mb-4"/>
@@ -275,6 +280,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                       </div>
                     </div>
                   </div>
+
                   <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Actions</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -291,6 +297,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                   </div>
                 </div>)}
             </motion.div>)}
+
           {activeTab === 'contracts' && (<motion.div key="contracts" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Smart Contracts</h3>
@@ -344,6 +351,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                   </div>))}
               </div>
             </motion.div>)}
+
           {activeTab === 'nfts' && (<motion.div key="nfts" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">NFT Collection</h3>
@@ -389,6 +397,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                   </div>))}
               </div>
             </motion.div>)}
+
           {activeTab === 'defi' && (<motion.div key="defi" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">DeFi Positions</h3>
@@ -447,6 +456,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                   </div>))}
               </div>
             </motion.div>)}
+
           {activeTab === 'transactions' && (<motion.div key="transactions" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Transaction History</h3>
@@ -523,6 +533,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             </motion.div>)}
         </AnimatePresence>
       </div>
+
       {/* Mint NFT Modal */}
       <AnimatePresence>
         {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -564,6 +575,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
+
       {/* Send Transaction Modal */}
       <AnimatePresence>
         {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">

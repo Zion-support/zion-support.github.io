@@ -1,3 +1,4 @@
+
 import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
@@ -19,54 +20,63 @@ import AccountSettings from "@/pages/AccountSettings";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 import Services from "@/pages/Services";
+
 const ContentRoutes = () => {
-    return (<Routes>
+  return (
+    <Routes>
       {/* Content Routes */}
-      <Route path="/" element={<Home />}/>
-      <Route path="/home" element={<Home />}/>
-      <Route path="/about" element={<About />}/>
-      <Route path="/contact" element={<Contact />}/>
-      <Route path="/services" element={<Services />}/>
-      <Route path="/privacy" element={<Privacy />}/>
-      <Route path="/cookies" element={<Cookies />}/>
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/cookies" element={<Cookies />} />
       
       {/* Help Center Routes */}
-      <Route path="/help" element={<HelpCenterPage />}/>
-      <Route path="/support" element={<HelpCenterPage />}/>
-      <Route path="/faq" element={<FAQ />}/>
+      <Route path="/help" element={<HelpCenterPage />} />
+      <Route path="/support" element={<HelpCenterPage />} />
+      <Route path="/faq" element={<FAQ />} />
       
       {/* Blog Routes */}
-      <Route path="/blog" element={<Blog />}/>
-      <Route path="/blog/:slug" element={<BlogPost />}/>
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
       {/* Legacy paths for older links */}
-      <Route path="/content/blog" element={<Blog />}/>
-      <Route path="/content/blog/:slug" element={<BlogPost />}/>
+      <Route path="/content/blog" element={<Blog />} />
+      <Route path="/content/blog/:slug" element={<BlogPost />} />
       
       {/* Green IT Route */}
-      <Route path="/green-it" element={<GreenIT />}/>
+      <Route path="/green-it" element={<GreenIT />} />
+
       {/* Careers Route */}
-      <Route path="/careers" element={<Careers />}/>
+      <Route path="/careers" element={<Careers />} />
+
       {/* Enterprise Route */}
-      <Route path="/enterprise" element={<Enterprise />}/>
+      <Route path="/enterprise" element={<Enterprise />} />
+
       {/* Legal Pages */}
-      <Route path="/terms" element={<Terms />}/>
+      <Route path="/terms" element={<Terms />} />
+
       {/* Account Settings */}
-      <Route path="/settings/account" element={<AccountSettings />}/>
+      <Route path="/settings/account" element={<AccountSettings />} />
       
       {/* Project Room */}
-      <Route path="/project-room/:projectId" element={<ProjectRoom />}/>
+      <Route path="/project-room/:projectId" element={<ProjectRoom />} />
       
       {/* Video Call */}
-      <Route path="/video-call/:roomId" element={<VideoCall />}/>
+      <Route path="/video-call/:roomId" element={<VideoCall />} />
+
       {/* Global Search Route */}
-      <Route path="/search" element={<SearchPage />}/>
+      <Route path="/search" element={<SearchPage />} />
       
       {/* API Documentation Redirect */}
-      <Route path="/api-docs" element={<Navigate to="/developers/docs" replace/>}/>
+      <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />
       
       {/* Sitemap Pages */}
-      <Route path="/sitemap" element={<Sitemap />}/>
-      <Route path="/sitemap-page" element={<SitemapPage />}/>
-    </Routes>);
+      <Route path="/sitemap" element={<Sitemap />} />
+      <Route path="/sitemap-page" element={<SitemapPage />} />
+    </Routes>
+  );
 };
+
 export default ContentRoutes;

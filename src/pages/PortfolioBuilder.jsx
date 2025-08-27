@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import SEOHead from "../components/SEOHead.jsx";
+import { SEO } from '@/components/SEO';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';
@@ -7,7 +7,7 @@ import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builde
 function PortfolioBuilderContent() {
     const [activeTab, setActiveTab] = useState('resume');
     return (<>
-      <SEOHead title="Portfolio Builder | Zion AI Marketplace" description="Create and customize your resume and portfolio to showcase your skills and experience."/>
+      <SEO title="Portfolio Builder | Zion AI Marketplace" description="Create and customize your resume and portfolio to showcase your skills and experience."/>
       
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8">Resume & Portfolio Builder</h1>

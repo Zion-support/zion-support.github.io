@@ -109,6 +109,7 @@ export const AccessibilityPanel = () => {
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label="Open Accessibility Settings">
         <Accessibility className="w-6 h-6"/>
       </motion.button>
+
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>
@@ -123,6 +124,7 @@ export const AccessibilityPanel = () => {
                   <X className="w-4 h-4"/>
                 </Button>
               </div>
+
               {/* Settings */}
               <div className="space-y-6">
                 {/* High Contrast */}
@@ -135,6 +137,7 @@ export const AccessibilityPanel = () => {
                     {highContrast ? <Eye className="w-4 h-4"/> : <EyeOff className="w-4 h-4"/>}
                   </Button>
                 </div>
+
                 {/* Reduced Motion */}
                 <div className="flex items-center justify-between">
                   <div>
@@ -145,6 +148,7 @@ export const AccessibilityPanel = () => {
                     {reducedMotion ? <VolumeX className="w-4 h-4"/> : <Volume2 className="w-4 h-4"/>}
                   </Button>
                 </div>
+
                 {/* Font Size */}
                 <div>
                   <h3 className="text-white font-medium mb-3">Font Size</h3>
@@ -154,6 +158,7 @@ export const AccessibilityPanel = () => {
                       </Button>))}
                   </div>
                 </div>
+
                 {/* Color Blind Mode */}
                 <div>
                   <h3 className="text-white font-medium mb-3">Color Blind Support</h3>
@@ -163,6 +168,7 @@ export const AccessibilityPanel = () => {
                       </Button>))}
                   </div>
                 </div>
+
                 {/* Keyboard Shortcuts */}
                 <div className="bg-zion-blue-dark/50 rounded-lg p-4">
                   <h3 className="text-white font-medium mb-3 flex items-center gap-2">
@@ -185,6 +191,7 @@ export const AccessibilityPanel = () => {
                   </div>
                 </div>
               </div>
+
               {/* Footer */}
               <div className="mt-6 pt-4 border-t border-zion-cyan/20">
                 <p className="text-xs text-zion-slate-light text-center">

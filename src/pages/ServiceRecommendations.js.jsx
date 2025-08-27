@@ -91,6 +91,7 @@ const ServiceRecommendations = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -103,6 +104,7 @@ const ServiceRecommendations = () => {
               personalized service recommendations that maximize your ROI and success.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 <Card className="h-full text-center hover:shadow-lg transition-shadow">
@@ -124,6 +126,7 @@ const ServiceRecommendations = () => {
           </div>
         </div>
       </section>
+
       {/* Process Steps Section */}
       <section className="py-16 px-6 bg-zion-blue-light/5">
         <div className="max-w-6xl mx-auto">
@@ -135,6 +138,7 @@ const ServiceRecommendations = () => {
               Getting personalized service recommendations is quick and easy with our streamlined process
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {processSteps.map((step, index) => (<motion.div key={index} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="flex gap-4">
                 <div className="flex-shrink-0">
@@ -157,6 +161,7 @@ const ServiceRecommendations = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
@@ -168,6 +173,7 @@ const ServiceRecommendations = () => {
               Discover the advantages of AI-powered service matching for your business
             </p>
           </motion.div>
+
           <div className="space-y-4">
             {benefits.map((benefit, index) => (<motion.div key={index} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0"/>
@@ -176,6 +182,7 @@ const ServiceRecommendations = () => {
           </div>
         </div>
       </section>
+
       {/* Recommendation Engine Section */}
       <section id="recommendation-engine" className="py-16 px-6 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto">
@@ -188,9 +195,11 @@ const ServiceRecommendations = () => {
               find the perfect services for your needs.
             </p>
           </motion.div>
+
           <AdvancedServiceRecommendation />
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">
         <div className="max-w-4xl mx-auto text-center">

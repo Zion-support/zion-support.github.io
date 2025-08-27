@@ -47,13 +47,16 @@ export class SitemapGenerator {
         const { baseUrl } = this.config;
         return `User-agent: *
 Allow: /
+
 # Sitemaps
 Sitemap: ${baseUrl}/sitemap.xml
+
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
+
 # Allow important pages
 Allow: /
 Allow: /services/
@@ -62,6 +65,7 @@ Allow: /about/
 Allow: /contact/
 Allow: /blog/
 Allow: /careers/
+
 # Crawl delay (optional)
 Crawl-delay: 1`;
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
 const Leadership = () => {
     const leadershipTeam = [
@@ -166,6 +166,7 @@ const Leadership = () => {
           </div>
         </div>
       </section>
+
       {/* Vision Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -187,6 +188,7 @@ const Leadership = () => {
           </div>
         </div>
       </section>
+
       {/* Leadership Team */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -260,6 +262,7 @@ const Leadership = () => {
           </div>
         </div>
       </section>
+
       {/* Company Values */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -287,6 +290,7 @@ const Leadership = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -302,6 +302,7 @@ const UltimatePricing2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Pricing Tiers */}
       {pricingTiers.map((tier, tierIndex) => (<section key={tierIndex} className={`py-20 px-4 sm:px-6 lg:px-8 ${tierIndex % 2 === 0 ? 'bg-white/5' : ''}`}>
           <div className="max-w-7xl mx-auto">
@@ -334,6 +335,7 @@ const UltimatePricing2025 = () => {
                         </li>))}
                     </ul>
                   </div>
+
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-yellow-400 mb-3">Key Benefits:</h4>
                     <ul className="space-y-2">
@@ -343,6 +345,7 @@ const UltimatePricing2025 = () => {
                         </li>))}
                     </ul>
                   </div>
+
                   <div className="mb-6 space-y-4">
                     <div className="bg-white/5 rounded-lg p-4">
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Market Position</h4>
@@ -364,6 +367,7 @@ const UltimatePricing2025 = () => {
             </div>
           </div>
         </section>))}
+
       {/* Value Proposition Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -415,6 +419,7 @@ const UltimatePricing2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Enhanced CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">

@@ -217,6 +217,7 @@ const EmergingTech = () => {
           </motion.div>
         </div>
       </div>
+
       {/* Technologies Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-16">
@@ -266,6 +267,7 @@ const EmergingTech = () => {
             </motion.div>))}
         </motion.div>
       </div>
+
       {/* Research & Development Section */}
       <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-t border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -278,6 +280,7 @@ const EmergingTech = () => {
               working on next-generation technologies that will shape the future.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {researchAreas.map((area, index) => (<motion.div key={area.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">
                 <div className="flex items-center justify-between mb-4">
@@ -300,6 +303,7 @@ const EmergingTech = () => {
           </div>
         </div>
       </div>
+
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">

@@ -24,7 +24,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             wordCount += words.length;
             // Check for empty content
             if (words.length === 0) {
-                issues({
+                issues.push({
                     id: `empty-content-${index}`,
                     type: 'error',
                     title: 'Empty Content',
@@ -40,7 +40,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             }
             // Check for very short content
             if (words.length > 0 && words.length < 10) {
-                issues({
+                issues.push({
                     id: `short-content-${index}`,
                     type: 'warning',
                     title: 'Very Short Content',
@@ -56,7 +56,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             }
             // Check for very long paragraphs (hard to read)
             if (words.length > 100) {
-                issues({
+                issues.push({
                     id: `long-paragraph-${index}`,
                     type: 'warning',
                     title: 'Very Long Paragraph',
@@ -77,7 +77,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 if (previousHeadings.length > 0) {
                     const lastLevel = parseInt(previousHeadings[previousHeadings.length - 1].tagName.charAt(1));
                     if (level - lastLevel > 1) {
-                        issues({
+                        issues.push({
                             id: `heading-skip-${index}`,
                             type: 'warning',
                             title: 'Heading Level Skipped',
@@ -102,7 +102,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 if (count > 5 && word.length > 3) {
                     const density = (count / commonWords.length) * 100;
                     if (density > 3) {
-                        issues({
+                        issues.push({
                             id: `keyword-stuffing-${index}-${word}`,
                             type: 'warning',
                             title: 'Potential Keyword Stuffing',
@@ -121,7 +121,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
                 const content = element.getAttribute('content') || '';
                 if (content.length < 50) {
-                    issues({
+                    issues.push({
                         id: `short-meta-${index}`,
                         type: 'warning',
                         title: 'Short Meta Description',
@@ -135,7 +135,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     seoScore -= 5;
                 }
                 else if (content.length > 160) {
-                    issues({
+                    issues.push({
                         id: `long-meta-${index}`,
                         type: 'warning',
                         title: 'Long Meta Description',
@@ -153,7 +153,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             if (element.tagName === 'A') {
                 const href = element.getAttribute('href');
                 if (href && (href.startsWith('#') || href.startsWith('javascript:'))) {
-                    issues({
+                    issues.push({
                         id: `broken-link-${index}`,
                         type: 'warning',
                         title: 'Potential Broken Link',
@@ -171,7 +171,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             if (element.tagName === 'IMG') {
                 const alt = element.getAttribute('alt');
                 if (!alt || alt.trim() === '') {
-                    issues({
+                    issues.push({
                         id: `missing-alt-${index}`,
                         type: 'error',
                         title: 'Missing Alt Text',
@@ -189,7 +189,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         });
         // Generate suggestions based on analysis
         if (wordCount < 300) {
-            suggestions({
+            suggestions.push({
                 id: 'increase-content',
                 type: 'improvement',
                 title: 'Increase Content Length',
@@ -200,7 +200,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             });
         }
         if (readabilityScore < 80) {
-            suggestions({
+            suggestions.push({
                 id: 'improve-readability',
                 type: 'optimization',
                 title: 'Improve Readability',
@@ -211,7 +211,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             });
         }
         if (seoScore < 80) {
-            suggestions({
+            suggestions.push({
                 id: 'seo-optimization',
                 type: 'enhancement',
                 title: 'SEO Optimization',
@@ -222,7 +222,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             });
         }
         if (engagementScore < 80) {
-            suggestions({
+            suggestions.push({
                 id: 'engagement-improvement',
                 type: 'improvement',
                 title: 'Improve User Engagement',
@@ -349,6 +349,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
       <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-20 right-4 z-50 w-14 h-14 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`} aria-label="Content Quality Analysis" aria-expanded={isOpen}>
         <DocumentTextIcon className="w-6 h-6"/>
       </motion.button>
+
       {/* Content Quality Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} className="fixed bottom-20 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
@@ -361,6 +362,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 <XMarkIcon className="w-5 h-5"/>
               </button>
             </div>
+
             {/* Tabs */}
             <div className="flex border-b border-gray-200 dark:border-gray-700">
               {['overview', 'issues', 'suggestions', 'actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab
@@ -369,6 +371,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>))}
             </div>
+
             {/* Content */}
             <div className="p-4 max-h-96 overflow-y-auto">
               {/* Overview Tab */}
@@ -388,6 +391,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                           </div>
                         </div>
                       </div>
+
                       {/* Word Count */}
                       <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
                         <div className="text-center">
@@ -399,6 +403,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                           </div>
                         </div>
                       </div>
+
                       {/* Individual Scores */}
                       <div className="grid grid-cols-3 gap-3">
                         <div className={`p-3 rounded-lg ${getScoreBgColor(analysis.readabilityScore)}`}>
@@ -434,6 +439,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                           </div>
                         </div>
                       </div>
+
                       {/* Summary */}
                       <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                         <div className="text-sm text-blue-800 dark:text-blue-200">
@@ -443,11 +449,13 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         </div>
                       </div>
                     </>)}
+
                   {/* Analyze Button */}
                   <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
                   </button>
                 </div>)}
+
               {/* Issues Tab */}
               {activeTab === 'issues' && (<div className="space-y-4">
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">
@@ -489,6 +497,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         </div>))}
                     </div>)}
                 </div>)}
+
               {/* Suggestions Tab */}
               {activeTab === 'suggestions' && (<div className="space-y-4">
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">
@@ -525,21 +534,25 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         </div>))}
                     </div>)}
                 </div>)}
+
               {/* Actions Tab */}
               {activeTab === 'actions' && (<div className="space-y-4">
                   <div className="text-center text-gray-500 dark:text-gray-400">
                     <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-500"/>
                     <p>Take action to improve content quality</p>
                   </div>
+
                   {/* Auto-fix Button */}
                   {analysis && analysis.issues.filter(i => i.fixable).length > 0 && (<button onClick={autoFixIssues} className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
                       Auto-fix Issues
                     </button>)}
+
                   {/* Re-analyze Button */}
                   <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
                     <ArrowPathIcon className="w-4 h-4 inline mr-2"/>
                     {isAnalyzing ? 'Analyzing...' : 'Re-analyze Content'}
                   </button>
+
                   {/* Export Report */}
                   {analysis && (<button onClick={() => {
                         const report = JSON.stringify(analysis, null, 2);
@@ -557,6 +570,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             </div>
           </motion.div>)}
       </AnimatePresence>
+
       {/* CSS for highlighting */}
       <style>{`
         .content-highlight {

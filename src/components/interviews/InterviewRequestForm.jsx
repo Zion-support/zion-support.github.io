@@ -102,6 +102,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
           </div>
         </div>
+
         <FormField control={form.control} name="title" render={({ field }) => (<FormItem>
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
@@ -109,6 +110,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
               </FormControl>
               <FormMessage />
             </FormItem>)}/>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField control={form.control} name="date" render={({ field }) => (<FormItem className="flex flex-col">
                 <FormLabel>Date</FormLabel>
@@ -127,6 +129,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 </Popover>
                 <FormMessage />
               </FormItem>)}/>
+
           <FormField control={form.control} name="time" render={({ field }) => (<FormItem>
                 <FormLabel>Time</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -144,6 +147,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <FormMessage />
               </FormItem>)}/>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField control={form.control} name="duration" render={({ field }) => (<FormItem>
                 <FormLabel>Duration</FormLabel>
@@ -162,6 +166,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 </Select>
                 <FormMessage />
               </FormItem>)}/>
+
           <FormField control={form.control} name="platform" render={({ field }) => (<FormItem>
                 <FormLabel>Platform</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -180,6 +185,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <FormMessage />
               </FormItem>)}/>
         </div>
+
         {form.watch('platform') !== 'in-app' && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
@@ -187,6 +193,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 </FormControl>
                 <FormMessage />
               </FormItem>)}/>)}
+
         <FormField control={form.control} name="notes" render={({ field }) => (<FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
@@ -194,6 +201,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
               </FormControl>
               <FormMessage />
             </FormItem>)}/>
+
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
             Cancel

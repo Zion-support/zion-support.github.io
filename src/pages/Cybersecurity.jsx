@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from "../components/SEOHead.jsx";
+import { SEO } from "@/components/SEO";
 import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
 const Cybersecurity = () => {
     const securityServices = [
@@ -69,7 +69,8 @@ const Cybersecurity = () => {
         }
     ];
     return (<div className="min-h-screen bg-background pt-20">
-      <SEOHead title="Cybersecurity Solutions - Zion Tech Group" description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group." keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection" canonical="https://ziontechgroup.com/cybersecurity"/>
+      <SEO title="Cybersecurity Solutions - Zion Tech Group" description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group." keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection" canonical="https://ziontechgroup.com/cybersecurity"/>
+
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -93,6 +94,7 @@ const Cybersecurity = () => {
           </div>
         </div>
       </section>
+
       {/* Security Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,6 +107,7 @@ const Cybersecurity = () => {
               protection for your organization's most valuable assets.
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityServices.map((service) => (<div key={service.title} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group">
                 <div className="p-8">
@@ -127,6 +130,7 @@ const Cybersecurity = () => {
           </div>
         </div>
       </section>
+
       {/* Security Features */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -138,6 +142,7 @@ const Cybersecurity = () => {
               Experience enterprise-grade security with our proven solutions and expert implementation.
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {securityFeatures.map((feature) => (<div key={feature.title} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-6">
@@ -149,6 +154,7 @@ const Cybersecurity = () => {
           </div>
         </div>
       </section>
+
       {/* Security Statistics */}
       <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -172,6 +178,7 @@ const Cybersecurity = () => {
           </div>
         </div>
       </section>
+
       {/* Compliance Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -232,6 +239,7 @@ const Cybersecurity = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

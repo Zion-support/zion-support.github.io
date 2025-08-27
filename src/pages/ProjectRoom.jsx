@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import SEOHead from "../components/SEOHead.jsx";
+import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -50,7 +50,7 @@ export default function ProjectRoom() {
         }
     };
     return (<>
-      <SEOHead title={`Project Room - ${projectId}`} description="Collaborate on your project"/>
+      <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project"/>
       
       <main className="container mx-auto py-8">
         <div className="flex justify-between items-center mb-6">

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import ImageWithRetry from '@/components/ui/ImageWithRetry';
 import { Star, MessageSquare, Brain, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
 import { PaymentButton } from "@/components/transactions/PaymentButton";
@@ -16,7 +16,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 export default function ListingDetail() {
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
-    const router = useNavigate();
+    const router = useRouter();
     const id = router.query.id;
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
@@ -64,6 +64,7 @@ export default function ListingDetail() {
                       </div>))}
                   </div>)}
               </div>
+
               {/* Description Section */}
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
@@ -200,5 +201,5 @@ export default function ListingDetail() {
      profileName={listing.author.name} profileType="service"/>
         </DialogContent>
       </Dialog>;
-
+    ;
 }

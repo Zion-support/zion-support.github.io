@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Filter, SortAsc, Star, ShoppingCart } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Card, CardHeader, CardContent } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
+import { Footer } from '@/components/Footer';
 
 const EquipmentPage = () => {
   const [equipment, setEquipment] = useState([]);
@@ -11,6 +11,14 @@ const EquipmentPage = () => {
   const [filterCategory, setFilterCategory] = useState('');
   const [sortBy, setSortBy] = useState('newest');
   const [priceRange, setPriceRange] = useState([0, 10000]);
+  const [filterBrand, setFilterBrand] = useState('');
+  const [filterAvailability, setFilterAvailability] = useState('');
+  const [minRating, setMinRating] = useState(0);
+  const [showRecommended, setShowRecommended] = useState(false);
+
+  const categories = ['Servers', 'Networking', 'Storage', 'Workstations', 'Security'];
+  const brandOptions = ['Dell', 'HP', 'Cisco', 'IBM', 'Lenovo'];
+  const availabilityOptions = ['In Stock', 'Low Stock', 'Out of Stock'];
 
   useEffect(() => {
     // Simulate loading
@@ -18,10 +26,6 @@ const EquipmentPage = () => {
       setLoading(false);
     }, 1000);
   }, []);
-
-  const categories = ['Computers', 'Networking', 'Storage', 'Security'];
-  const brandOptions = ['Dell', 'HP', 'Cisco', 'NetApp'];
-  const availabilityOptions = ['In Stock', 'Out of Stock', 'Pre-order'];
 
   const EquipmentFilterControls = () => (
     <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg">
@@ -52,7 +56,7 @@ const EquipmentPage = () => {
           <option value="rating">Highest Rated</option>
         </select>
       </div>
-      
+
       <div className="flex items-center gap-2">
         <span className="text-sm">$</span>
         <input 
@@ -69,6 +73,15 @@ const EquipmentPage = () => {
           className="w-20 bg-background border border-border px-2 py-1 rounded"
         />
       </div>
+
+      <Button 
+        variant={showRecommended ? "default" : "outline"} 
+        size="sm" 
+        onClick={() => setShowRecommended(!showRecommended)}
+      >
+        <Star className="h-4 w-4 mr-1"/>
+        {showRecommended ? "All Equipment" : "Recommended"}
+      </Button>
     </div>
   );
 
@@ -112,29 +125,74 @@ const EquipmentPage = () => {
   );
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       <div className="container mx-auto px-4 py-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-4xl font-bold mb-6">Equipment & Hardware</h1>
-          <p className="text-lg text-muted-foreground mb-8">
-            Browse our selection of high-quality IT equipment and hardware solutions
+        <div className="text-center mb-8">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Enterprise <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Equipment</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover our comprehensive range of enterprise-grade IT equipment, servers, networking solutions, and more.
           </p>
-          
-          <EquipmentFilterControls />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {loading ? (
-              <div>Loading...</div>
-            ) : (
-              <div>No equipment available</div>
-            )}
-          </div>
-        </motion.div>
+        </div>
+
+        <EquipmentFilterControls />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {loading ? (
+            // Loading skeleton
+            Array.from({ length: 8 }).map((_, i) => (
+              <Card key={i} className="h-full animate-pulse">
+                <CardHeader className="pb-3">
+                  <div className="h-6 bg-gray-700 rounded mb-2"></div>
+                  <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+                </CardHeader>
+                <CardContent>
+                  <div className="h-4 bg-gray-700 rounded mb-2"></div>
+                  <div className="h-4 bg-gray-700 rounded w-2/3"></div>
+                </CardContent>
+              </Card>
+            ))
+          ) : (
+            // Sample equipment data
+            [
+              {
+                title: "Dell PowerEdge R750 Server",
+                category: "Servers",
+                brand: "Dell",
+                price: 2499,
+                availability: "In Stock",
+                rating: 4.8,
+                reviewCount: 127,
+                description: "High-performance 2U rack server with Intel Xeon processors, perfect for enterprise workloads."
+              },
+              {
+                title: "Cisco Catalyst 9300 Switch",
+                category: "Networking",
+                brand: "Cisco",
+                price: 1899,
+                availability: "In Stock",
+                rating: 4.9,
+                reviewCount: 89,
+                description: "Enterprise-grade network switch with advanced security features and high throughput."
+              },
+              {
+                title: "HP ProLiant DL380 Gen10",
+                category: "Servers",
+                brand: "HP",
+                price: 2199,
+                availability: "Low Stock",
+                rating: 4.7,
+                reviewCount: 156,
+                description: "Reliable 2U server with excellent performance and enterprise support."
+              }
+            ].map((equipment, index) => (
+              <EquipmentCard key={index} equipment={equipment} />
+            ))
+          )}
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };

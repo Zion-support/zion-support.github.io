@@ -105,6 +105,7 @@ export default function Onboarding() {
               Complete your profile to get started
             </p>
           </div>
+
           <div className="mb-12">
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">
               {steps.map((step, index) => (<Step key={index} status={currentStep > index
@@ -114,8 +115,10 @@ export default function Onboarding() {
                     : "incomplete"} label={step.label} description={step.description}/>))}
             </Steps>
           </div>
+
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">
             {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType}/>) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType}/>)}
+
             {currentStep === 1 && (<div className="mt-6">
                 <Button variant="outline" className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light" onClick={() => setCurrentStep(0)}>
                   Back to Role Selection

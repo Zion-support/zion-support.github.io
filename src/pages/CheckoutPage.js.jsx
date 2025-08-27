@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'; // Changed from useParams
+import { useRouter } from 'next/router'; // Changed from useParams
 import { useEffect, useState } from 'react';
 import { Elements } from '@stripe/react-stripe-js';
 import { getStripe } from '@/utils/getStripe';
@@ -6,7 +6,7 @@ import CardForm from '@/components/checkout/CardForm';
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';
 import { NEW_PRODUCTS } from '@/data/newProductsData';
 export default function CheckoutPage() {
-    const router = useNavigate();
+    const router = useRouter();
     const { id: rawId } = router.query;
     const id = typeof rawId === 'string' ? rawId : undefined;
     const [product, setProduct] = useState(null);

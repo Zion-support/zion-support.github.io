@@ -1,41 +1,14 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-  CalendarIcon,
-  ClockIcon,
-  UserIcon,
-  TagIcon,
-  ArrowRightIcon,
-  NewspaperIcon,
-  TrendingUpIcon as TrendingUp,
-  LightbulbIcon,
-  StarIcon,
-  GlobeAltIcon as Globe,
-  ShieldCheckIcon as Shield,
-  BoltIcon as Zap,
-  HeartIcon
-} from '@heroicons/react/24/outline';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 import { SEO } from '../components/SEO';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 const News: React.FC = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
   };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const categories = [
   Calendar, 
   User, 
@@ -50,11 +23,9 @@ const News: React.FC = () => {
   Award,
   Globe
 } from 'lucide-react';
-
 export default function News() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-
   const categories = [
     'All',
     'Company News',
@@ -65,7 +36,6 @@ export default function News() {
     'Research & Development',
     'Market Trends'
   ];
-
   const sources = [
     'All Sources',
     'Company Press Releases',
@@ -75,7 +45,6 @@ export default function News() {
     'Partner Updates',
     'Customer Success Stories'
   ];
-
   const timeframes = [
     'All Time',
     'Last 24 Hours',
@@ -85,7 +54,6 @@ export default function News() {
     'Last Year'
 =======
   const [selectedYear, setSelectedYear] = useState('all');
-
   const categories = [
     { id: 'all', name: 'All News', icon: Newspaper, count: 67 },
     { id: 'company', name: 'Company News', icon: Building, count: 23 },
@@ -94,15 +62,12 @@ export default function News() {
     { id: 'awards', name: 'Awards & Recognition', icon: Award, count: 8 },
     { id: 'industry', name: 'Industry Insights', icon: TrendingUp, count: 6 }
   ];
-
   const years = [
     { id: 'all', name: 'All Years', count: 67 },
     { id: '2025', name: '2025', count: 23 },
     { id: '2024', name: '2024', count: 28 },
     { id: '2023', name: '2023', count: 16 }
   ];
-<<<<<<< HEAD
-=======
   const staggerContainer = {
     animate: {
       transition: {
@@ -110,137 +75,10 @@ export default function News() {
       }
     }
   };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
   const newsArticles = [
     {
       id: 1,
-<<<<<<< HEAD
-      title: "Zion Tech Group Launches Revolutionary Quantum Neural Network Platform",
-      excerpt: "The company introduces a breakthrough quantum computing solution that combines neural networks with quantum processing for unprecedented computational power.",
-      content: "Zion Tech Group today announced the launch of its revolutionary Quantum Neural Network Platform, marking a significant milestone in the convergence of quantum computing and artificial intelligence. This breakthrough technology represents a paradigm shift in computational capabilities, enabling organizations to solve complex problems that were previously impossible with classical computing methods...",
-      author: "Zion Tech Group Press",
-      publishDate: "2025-01-20",
-      readTime: "5 min read",
-      category: "technology",
-      tags: ["quantum-computing", "ai", "innovation", "breakthrough"],
-      featured: true,
-      image: "/news/quantum-neural-network.jpg",
-      views: 15420,
-      shares: 892
-    },
-    {
-      id: 2,
-      title: "Zion Tech Group Named 'AI Company of the Year' at Tech Excellence Awards",
-      excerpt: "The company receives prestigious recognition for its contributions to artificial intelligence and autonomous systems innovation.",
-      content: "Zion Tech Group has been honored with the 'AI Company of the Year' award at the prestigious Tech Excellence Awards 2025. This recognition celebrates the company's groundbreaking work in artificial intelligence, autonomous systems, and quantum technology solutions that are transforming industries worldwide...",
-      author: "Zion Tech Group Press",
-      publishDate: "2025-01-18",
-      readTime: "4 min read",
-      category: "awards",
-      tags: ["awards", "recognition", "ai", "excellence"],
-      featured: true,
-      image: "/news/tech-excellence-award.jpg",
-      views: 12850,
-      shares: 756
-    },
-    {
-      id: 3,
-      title: "Strategic Partnership with Global Healthcare Consortium Announced",
-      excerpt: "Zion Tech Group partners with leading healthcare organizations to deploy AI-powered diagnostic and treatment optimization systems.",
-      content: "Zion Tech Group has announced a strategic partnership with the Global Healthcare Consortium, a coalition of leading healthcare organizations worldwide. This collaboration will focus on deploying advanced AI-powered diagnostic systems, treatment optimization platforms, and predictive healthcare analytics to improve patient outcomes globally...",
-      author: "Zion Tech Group Press",
-      publishDate: "2025-01-15",
-      readTime: "6 min read",
-      category: "partnerships",
-      tags: ["healthcare", "partnership", "ai", "diagnostics"],
-      featured: false,
-      image: "/news/healthcare-partnership.jpg",
-      views: 9870,
-      shares: 543
-    },
-    {
-      id: 4,
-      title: "New AI Autonomous Research Assistant Surpasses Human Performance Benchmarks",
-      excerpt: "Zion Tech Group's latest AI research tool demonstrates superior capabilities in scientific literature analysis and research synthesis.",
-      content: "Zion Tech Group has announced that its new AI Autonomous Research Assistant has achieved breakthrough performance, surpassing human benchmarks in scientific literature analysis, research synthesis, and hypothesis generation. This advanced AI system represents a significant leap forward in research automation and knowledge discovery...",
-      author: "Dr. Sarah Chen",
-      publishDate: "2025-01-12",
-      readTime: "7 min read",
-      category: "technology",
-      tags: ["ai-research", "automation", "scientific-discovery", "innovation"],
-      featured: false,
-      image: "/news/ai-research-assistant.jpg",
-      views: 11230,
-      shares: 678
-    },
-    {
-      id: 5,
-      title: "Zion Tech Group Expands Global Operations with New European Headquarters",
-      excerpt: "The company establishes a new European headquarters in Amsterdam to better serve European clients and expand its international presence.",
-      content: "Zion Tech Group has announced the expansion of its global operations with the establishment of a new European headquarters in Amsterdam, Netherlands. This strategic expansion will enable the company to better serve its growing European client base and strengthen its position in the European technology market...",
-      author: "Zion Tech Group Press",
-      publishDate: "2025-01-10",
-      readTime: "5 min read",
-      category: "company",
-      tags: ["expansion", "europe", "global-operations", "amsterdam"],
-      featured: false,
-      image: "/news/european-hq.jpg",
-      views: 8760,
-      shares: 432
-    },
-    {
-      id: 6,
-      title: "Breakthrough in SOC2 Compliance Automation Technology",
-      excerpt: "Zion Tech Group introduces automated compliance monitoring system that reduces audit time by 90%.",
-      content: "Zion Tech Group has achieved a major breakthrough in compliance automation with the introduction of its new SOC2 Compliance Automation Technology. This innovative system streamlines the compliance process, reducing audit preparation time by 90% while maintaining the highest standards of security and compliance...",
-      author: "Alex Thompson",
-      publishDate: "2025-01-08",
-      readTime: "6 min read",
-      category: "technology",
-      tags: ["compliance", "automation", "soc2", "security"],
-      featured: false,
-      image: "/news/soc2-automation.jpg",
-      views: 9450,
-      shares: 521
-    },
-    {
-      id: 7,
-      title: "Zion Tech Group Named to Fortune 500 Fastest-Growing Companies List",
-      excerpt: "The company ranks #47 on Fortune's list of fastest-growing companies, recognizing its rapid expansion and innovation.",
-      content: "Zion Tech Group has been named to Fortune magazine's prestigious list of the 500 fastest-growing companies in America. Ranking #47 on the list, this recognition highlights the company's exceptional growth trajectory, innovative technology solutions, and strong market position in the rapidly evolving AI and quantum technology sectors...",
-      author: "Zion Tech Group Press",
-      publishDate: "2025-01-05",
-      readTime: "4 min read",
-      category: "awards",
-      tags: ["fortune-500", "growth", "recognition", "success"],
-      featured: false,
-      image: "/news/fortune-500.jpg",
-      views: 13420,
-      shares: 789
-    },
-    {
-      id: 8,
-      title: "New 5G Enterprise Solutions Division Launched",
-      excerpt: "Zion Tech Group establishes dedicated division for next-generation 5G enterprise networking and infrastructure solutions.",
-      content: "Zion Tech Group has announced the launch of its new 5G Enterprise Solutions Division, dedicated to providing cutting-edge 5G networking and infrastructure solutions for enterprise clients. This new division will focus on delivering high-speed, low-latency connectivity solutions that enable the next generation of enterprise applications...",
-      author: "Jennifer Lee",
-      publishDate: "2025-01-03",
-      readTime: "5 min read",
-      category: "company",
-      tags: ["5g", "networking", "enterprise", "infrastructure"],
-      featured: false,
-      image: "/news/5g-solutions.jpg",
-      views: 7890,
-      shares: 445
-    }
-  ];
-
-  const filteredNews = newsArticles.filter(article => {
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-=======
   const categories = [
     "All News",
     "Product Launch",
@@ -250,9 +88,7 @@ export default function News() {
     "Company News",
     "Product Updates"
   ];
-
   const featuredArticle = newsArticles.find(article => article.featured);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -265,13 +101,10 @@ export default function News() {
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.content.toLowerCase().includes(searchQuery.toLowerCase());
-    
     return matchesCategory && matchesYear && matchesSearch;
   });
-
   const featuredNews = filteredNews.filter(article => article.featured);
   const regularNews = filteredNews.filter(article => !article.featured);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -302,12 +135,10 @@ import {
   Video,
   FileText
 } from 'lucide-react';
-
 const News = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('latest');
-
   const categories = [
     { id: 'all', name: 'All News', icon: Newspaper, count: 89, color: 'from-gray-500 to-slate-500' },
     { id: 'company', name: 'Company News', icon: Building, count: 23, color: 'from-blue-500 to-cyan-500' },
@@ -316,7 +147,6 @@ const News = () => {
     { id: 'partnerships', name: 'Partnerships', icon: Users, count: 18, color: 'from-purple-500 to-pink-500' },
     { id: 'technology', name: 'Technology', icon: TrendingUp, count: 25, color: 'from-red-500 to-rose-500' }
   ];
-
   const featuredNews = [
     {
       id: 1,
@@ -348,7 +178,6 @@ const News = () => {
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 export default function News() {
   const featuredNews = [
     {
@@ -363,7 +192,6 @@ export default function News() {
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
-
 export default function News() {
   const newsItems = [
     {
@@ -386,7 +214,6 @@ export default function News() {
       featured: true
     }
   ];
-
   const recentNews = [
     {
       id: 4,
@@ -549,7 +376,6 @@ export default function News() {
       isPressRelease: false
     }
   ];
-
   const filteredNews = newsItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          item.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -557,10 +383,8 @@ export default function News() {
     const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
   const featuredNews = newsItems.filter(item => item.featured);
   const regularNews = filteredNews.filter(item => !item.featured);
-
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
@@ -569,7 +393,6 @@ export default function News() {
       day: 'numeric' 
     });
   };
-
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -604,7 +427,6 @@ export default function News() {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               For press releases, media interviews, or company information, please contact our communications team.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Contact Press Team
@@ -625,7 +447,6 @@ export default function News() {
             <h2 className="text-4xl font-bold text-white mb-4">Latest News</h2>
             <p className="text-xl text-gray-300">Stay updated with our newest announcements and updates</p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedNews.slice(3).map((news, index) => (
               <motion.article
@@ -642,7 +463,6 @@ export default function News() {
                     {news.type.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
                   </span>
                 </div>
-
                 {/* News Image */}
                 <div className="relative h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10"></div>
@@ -650,7 +470,6 @@ export default function News() {
                     <Newspaper className="w-12 h-12 text-cyan-400/50" />
                   </div>
                 </div>
-
                 {/* News Content */}
                 <div className="p-6">
                   {/* Category */}
@@ -659,17 +478,14 @@ export default function News() {
                       {categories.find(cat => cat.id === news.category)?.name}
                     </span>
                   </div>
-
                   {/* Title */}
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
                     {news.title}
                   </h3>
-
                   {/* Excerpt */}
                   <p className="text-gray-300 mb-4 line-clamp-3 text-sm">
                     {news.excerpt}
                   </p>
-
                   {/* Meta Information */}
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <div className="flex items-center gap-2">
@@ -683,7 +499,6 @@ export default function News() {
                       {news.readTime}
                     </span>
                   </div>
-
                   {/* Engagement Stats */}
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <div className="flex items-center gap-3">
@@ -693,7 +508,6 @@ export default function News() {
                       </span>
                     </div>
                   </div>
-
                   {/* Action Button */}
                   {news.externalLink ? (
                     <a
@@ -715,7 +529,6 @@ export default function News() {
               </motion.article>
             ))}
           </div>
-
           {/* Load More Button */}
           {sortedNews.length > 9 && (
             <div className="text-center mt-12">
@@ -726,7 +539,6 @@ export default function News() {
           )}
         </div>
       </section>
-
       {/* Press Kit CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -808,7 +620,6 @@ export default function News() {
       image: '🏭'
     }
   ];
-
   const categories = [
     'All News',
     'Product Launch',
@@ -820,14 +631,6 @@ export default function News() {
     'Case Study',
     'Awards'
   ];
-
-<<<<<<< HEAD
-  // Combine all news sources
-  const allNews = [...breakingNews, ...latestNews, ...pressReleases];
-  const featuredNews = allNews.filter(article => article.priority === 'breaking');
-  const recentNews = allNews.slice(0, 3);
-
-=======
       title: "Zion Tech Group Launches Revolutionary AI-Powered Business Intelligence Platform",
       excerpt: "Our latest AI platform transforms how businesses analyze data and make decisions, featuring advanced machine learning algorithms and real-time analytics.",
       category: "Product Launch",
@@ -887,7 +690,6 @@ export default function News() {
       featured: false
     }
   ];
-
   const pressReleases = [
     {
       title: "Zion Tech Group Secures $25M Series B Funding Round",
@@ -905,7 +707,6 @@ export default function News() {
       summary: "Security certification demonstrates commitment to protecting client data and maintaining highest security standards."
     }
   ];
-
   const categories = [
     "All News",
     "Product Launch",
@@ -915,8 +716,6 @@ export default function News() {
     "Case Studies",
     "Industry Insights"
   ];
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
@@ -925,7 +724,6 @@ export default function News() {
       day: 'numeric'
     });
   };
-
   return (
     <>
       <SEO 
@@ -933,7 +731,6 @@ export default function News() {
         description="Stay updated with the latest news, product launches, company updates, and industry insights from Zion Tech Group."
         keywords="news, press releases, company updates, AI news, technology news, Zion Tech Group"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -941,29 +738,12 @@ export default function News() {
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
           </div>
-          
           <motion.div 
             className="max-w-7xl mx-auto text-center relative z-10"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-            {categories.map((category, index) => (
-              <button
-                key={category.id}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  index === 0
-                    ? 'bg-purple-600 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
-          </motion.div>
-        </section>
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -997,7 +777,6 @@ export default function News() {
               Stay informed about our latest developments, product updates, industry insights, 
               and company milestones as we continue to innovate and grow.
             </p>
-            
             {/* Search and Filter */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
@@ -1011,8 +790,6 @@ export default function News() {
                 />
               </div>
             </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3">
               {categories.map((category) => (
@@ -1035,7 +812,6 @@ export default function News() {
                 {" "}News & Updates
               </span>
             </motion.h1>
-            
             <motion.p 
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
@@ -1047,7 +823,6 @@ export default function News() {
             </motion.p>
           </motion.div>
         </section>
-
         {/* Featured Article */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -1060,7 +835,6 @@ export default function News() {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Featured Story</h2>
             </motion.div>
-            
             {newsArticles.filter(article => article.featured).map((article) => (
               <motion.div
                 key={article.id}
@@ -1100,7 +874,6 @@ export default function News() {
             ))}
           </div>
         </section>
-
         {/* Category Filter */}
         <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -1118,26 +891,15 @@ export default function News() {
                     index === 0 
                       ? 'bg-blue-600 text-white' 
                       : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
                   }`}
                 >
                   {category}
                 </button>
               ))}
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {featuredArticle && (
-=======
             </motion.div>
           </div>
         </section>
-
         {/* News Grid */}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div 
@@ -1154,7 +916,6 @@ export default function News() {
                 Stay updated with our latest developments and industry insights
               </p>
             </motion.div>
-            
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={staggerContainer}
@@ -1172,14 +933,8 @@ export default function News() {
                   <div className="text-center mb-4">
                     <div className="text-6xl mb-2">{article.image}</div>
                   </div>
-                  
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   <h3 className="text-2xl font-bold text-white mb-4">{featuredArticle.title}</h3>
                   <p className="text-gray-300 mb-6">{featuredArticle.excerpt}</p>
-                  
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <div className="flex items-center space-x-2">
@@ -1191,13 +946,11 @@ export default function News() {
                         <span>{new Date(featuredArticle.date).toLocaleDateString()}</span>
                       </div>
                     </div>
-                    
                     <button className="px-6 py-3 bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold rounded-lg hover:from-green-400 hover:to-teal-400 transition-all duration-300 transform hover:scale-105">
                       Read Full Article
                     </button>
                   </div>
                 </div>
-                
                 <div className="relative">
                   <div className="w-full h-64 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl border border-green-400/30 flex items-center justify-center">
                     <Newspaper className="w-16 h-16 text-green-400" />
@@ -1208,7 +961,6 @@ export default function News() {
           </div>
         </section>
       )}
-
       {/* Categories Filter */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -1251,15 +1003,12 @@ export default function News() {
                       </span>
                     )}
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
                     {item.title}
                   </h3>
-                  
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {item.excerpt}
                   </p>
-                  
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <div className="flex items-center">
@@ -1280,7 +1029,6 @@ export default function News() {
                       {item.views}
                     </div>
                   </div>
-                  
                   <div className="flex flex-wrap gap-2 mb-6">
                     {item.tags.slice(0, 3).map((tag, index) => (
                       <span
@@ -1291,7 +1039,6 @@ export default function News() {
                       </span>
                     ))}
                   </div>
-                  
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
                     Read Full Article
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -1302,9 +1049,7 @@ export default function News() {
           </div>
         </div>
       </div>
-
       </section>
-
       {/* News Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1314,28 +1059,23 @@ export default function News() {
               Stay updated with our latest insights, product launches, and industry developments
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {newsArticles.filter(article => !article.featured).map((article) => (
               <article key={article.id} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="p-6">
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
                   <div className="flex items-center space-x-4 mb-4">
                     <span className="px-3 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full border border-blue-600/30">
                       {article.category}
                     </span>
                     <span className="text-gray-400 text-xs">{article.readTime}</span>
                   </div>
-                  
                   <h3 className="text-xl font-semibold text-white mb-3 leading-tight">
                     {article.title}
                   </h3>
-                  
                   <p className="text-gray-300 text-sm leading-relaxed mb-4">
                     {article.excerpt}
                   </p>
-                  
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-xs">{formatDate(article.date)}</span>
                     <button className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
@@ -1347,7 +1087,6 @@ export default function News() {
             </motion.div>
           </div>
         </section>
-
         {/* Press Releases */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -1365,7 +1104,6 @@ export default function News() {
                 Official announcements and company milestones
               </p>
             </motion.div>
-            
             <motion.div 
               className="grid grid-cols-1 lg:grid-cols-3 gap-8"
               variants={staggerContainer}
@@ -1383,15 +1121,12 @@ export default function News() {
                   <div className="mb-4">
                     <span className="text-blue-400 text-sm font-medium">Press Release</span>
                   </div>
-                  
                   <h3 className="text-lg font-semibold text-white mb-3 leading-tight">
                     {release.title}
                   </h3>
-                  
                   <p className="text-gray-300 text-sm leading-relaxed mb-4">
                     {release.summary}
                   </p>
-                  
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-xs">{formatDate(release.date)}</span>
                     <button className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
@@ -1403,7 +1138,6 @@ export default function News() {
             </motion.div>
           </div>
         </section>
-
         {/* Newsletter Signup */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center px-4">
@@ -1449,11 +1183,6 @@ export default function News() {
     </>
   );
 };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export default News;
 =======
       title: 'Zion Tech Group Named Top AI Company by Tech Innovation Awards',
@@ -1495,9 +1224,7 @@ export default News;
       image: '/images/news/cybersecurity-certification.jpg'
     }
   ];
-
   const categories = ['All', 'Product Launch', 'Awards', 'Partnerships', 'Research', 'Company News', 'Security'];
-
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -1506,7 +1233,6 @@ export default News;
         keywords="news, updates, press releases, announcements, Zion Tech Group"
         canonical="https://ziontechgroup.com/news"
       />
-
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -1518,7 +1244,6 @@ export default News;
             and innovations from Zion Tech Group as we continue to shape the future of technology.
           </p>
         </div>
-
         {/* Featured News */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Featured News</h2>
@@ -1559,7 +1284,6 @@ export default News;
             </div>
           ))}
         </div>
-
         {/* Latest News Grid */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Latest News</h2>
@@ -1604,7 +1328,6 @@ export default News;
             ))}
           </div>
         </div>
-
         {/* Press Kit & Media */}
         <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-3xl p-8 border border-purple-500/20 mb-16">
           <div className="text-center">
@@ -1632,7 +1355,6 @@ export default News;
             </div>
           </div>
         </div>
-
         {/* Newsletter Signup */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Stay Updated</h2>
@@ -1672,15 +1394,12 @@ export default News;
                     </span>
                   )}
                 </div>
-                
                 <h3 className="text-xl font-bold text-white mb-4 leading-tight">
                   {item.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                   {item.excerpt}
                 </p>
-                
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4 text-sm text-gray-400">
                     <div className="flex items-center">
@@ -1697,7 +1416,6 @@ export default News;
                     {item.readTime}
                   </div>
                 </div>
-                
                 <div className="flex flex-wrap gap-2 mb-6">
                   {item.tags.slice(0, 2).map((tag, index) => (
                     <span
@@ -1708,7 +1426,6 @@ export default News;
                     </span>
                   ))}
                 </div>
-                
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
                   Read Article
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -1718,7 +1435,6 @@ export default News;
           ))}
         </div>
       </div>
-
       {/* Press Room CTA */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -1750,4 +1466,3 @@ export default News;
 }
 =======
 export default News;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

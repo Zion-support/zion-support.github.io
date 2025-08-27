@@ -20,7 +20,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
         const selectedColors = colors[theme];
         // Create particles
         for (let i = 0; i < 100; i++) {
-            particles({
+            particles.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 vx: (Math.random() - 0.5) * 2,

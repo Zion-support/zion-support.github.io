@@ -20,6 +20,7 @@ const AIAutonomousCreativeDirector = () => {
               Meet your new creative partner - an AI that thinks like a creative director, generates breakthrough ideas, and produces stunning creative work 24/7
             </p>
           </div>
+
           {/* Creative Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousCreativeDirector = () => {
               <p className="text-gray-300">Multi-channel marketing strategies</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousCreativeDirector = () => {
               <p className="text-gray-300">Track creative performance and optimize for better results</p>
             </div>
           </div>
+
           {/* Creative Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Creative Process</h2>
@@ -110,6 +113,7 @@ const AIAutonomousCreativeDirector = () => {
               </div>
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Creative Applications</h2>
@@ -130,6 +134,7 @@ const AIAutonomousCreativeDirector = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Meet Your AI Creative Director?</h2>

@@ -12,10 +12,8 @@ import {
   CheckCircle,
   AlertTriangle
 } from 'lucide-react';
-
 const PrivacyPage = () => {
   const lastUpdated = "December 15, 2024";
-
   const dataWeCollect = [
     {
       category: "Personal Information",
@@ -38,7 +36,6 @@ const PrivacyPage = () => {
       purpose: "To provide customer support, improve our services, and send relevant communications"
     }
   ];
-
   const dataSharing = [
     {
       category: "Service Providers",
@@ -61,7 +58,6 @@ const PrivacyPage = () => {
       examples: ["Marketing partnerships", "Integration services", "Third-party applications"]
     }
   ];
-
   const userRights = [
     {
       right: "Access",
@@ -94,7 +90,6 @@ const PrivacyPage = () => {
       icon: <Shield className="h-5 w-5" />
     }
   ];
-
   const securityMeasures = [
     "Encryption of data in transit and at rest",
     "Regular security audits and penetration testing",
@@ -103,18 +98,7 @@ const PrivacyPage = () => {
     "Incident response and breach notification procedures",
     "Regular backups and disaster recovery planning"
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-zion-blue-dark text-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 bg-zion-cyan/20 rounded-full flex items-center justify-center">
-              <Shield className="h-10 w-10 text-zion-cyan" />
-            </div>
-=======
     <>
       <SEO
         title="Privacy Policy"
@@ -130,7 +114,6 @@ const PrivacyPage = () => {
               Your privacy is important to us. This page explains how we collect,
               use, and safeguard your information.
             </p>
->>>>>>> origin/cursor/website-audit-and-enhancement-3805
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
             Privacy Policy
@@ -145,7 +128,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
       {/* Table of Contents */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,7 +149,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
       {/* Overview */}
       <section id="overview" className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -191,7 +172,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
       {/* Data Collection */}
       <section id="data-collection" className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,7 +180,6 @@ const PrivacyPage = () => {
             <p className="text-zion-slate-light mb-8">
               We collect various types of information to provide and improve our services. Here's what we collect and why:
             </p>
-            
             <div className="space-y-6">
               {dataWeCollect.map((item, index) => (
                 <div key={index} className="bg-zion-blue-light/10 p-6 rounded-xl border border-zion-blue-light/20">
@@ -225,7 +204,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
       {/* Data Use */}
       <section id="data-use" className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -254,7 +232,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
       {/* Data Sharing */}
       <section id="data-sharing" className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -264,7 +241,6 @@ const PrivacyPage = () => {
               We do not sell, trade, or otherwise transfer your personal information to third parties 
               without your consent, except as described in this policy:
             </p>
-            
             <div className="space-y-6">
               {dataSharing.map((item, index) => (
                 <div key={index} className="bg-zion-blue-light/10 p-6 rounded-xl border border-zion-blue-light/20">
@@ -286,7 +262,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
       {/* Data Security */}
       <section id="data-security" className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -296,7 +271,6 @@ const PrivacyPage = () => {
               We implement appropriate technical and organizational security measures to protect your 
               personal information against unauthorized access, alteration, disclosure, or destruction.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               {securityMeasures.map((measure, index) => (
                 <div key={index} className="flex items-start space-x-3">
@@ -305,7 +279,6 @@ const PrivacyPage = () => {
                 </div>
               ))}
             </div>
-            
             <p className="text-zion-slate-light">
               Despite our security measures, no method of transmission over the internet or electronic 
               storage is 100% secure. We cannot guarantee absolute security, but we are committed to 
@@ -314,7 +287,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
       {/* User Rights */}
       <section id="user-rights" className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -324,7 +296,6 @@ const PrivacyPage = () => {
               Depending on your location, you may have certain rights regarding your personal information. 
               We are committed to honoring these rights:
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {userRights.map((right, index) => (
                 <div key={index} className="bg-zion-blue-light/10 p-6 rounded-xl border border-zion-blue-light/20">
@@ -336,7 +307,6 @@ const PrivacyPage = () => {
                 </div>
               ))}
             </div>
-            
             <div className="mt-8 p-6 bg-zion-cyan/10 rounded-xl border border-zion-cyan/20">
               <h3 className="text-lg font-semibold text-zion-cyan mb-3">How to Exercise Your Rights</h3>
               <p className="text-zion-slate-light mb-4">
@@ -352,7 +322,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
       {/* Cookies */}
       <section id="cookies" className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -381,7 +350,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
       {/* Children's Privacy */}
       <section id="children" className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -401,7 +369,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
       {/* International Transfers */}
       <section id="international" className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -421,7 +388,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
       {/* Policy Changes */}
       <section id="changes" className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -443,7 +409,6 @@ const PrivacyPage = () => {
           </div>
         </div>
       </section>
-
       {/* Contact */}
       <section id="contact" className="py-20 bg-gradient-to-br from-zion-purple-dark via-zion-blue to-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -451,27 +416,23 @@ const PrivacyPage = () => {
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             If you have any questions about this Privacy Policy or our data practices, please contact us:
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-zion-blue-dark/50 p-6 rounded-xl border border-zion-blue-light/20">
               <Mail className="h-8 w-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Email</h3>
               <p className="text-zion-slate-light">privacy@ziontechgroup.com</p>
             </div>
-            
             <div className="bg-zion-blue-dark/50 p-6 rounded-xl border border-zion-blue-light/20">
               <Phone className="h-8 w-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
               <p className="text-zion-slate-light">+1 (555) 123-4567</p>
             </div>
-            
             <div className="bg-zion-blue-dark/50 p-6 rounded-xl border border-zion-blue-light/20">
               <Globe className="h-8 w-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Address</h3>
               <p className="text-zion-slate-light">San Francisco, CA</p>
             </div>
           </div>
-          
           <div className="mt-12">
             <Link to="/contact">
               <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105">
@@ -484,5 +445,4 @@ const PrivacyPage = () => {
     </div>
   );
 };
-
 export default PrivacyPage;

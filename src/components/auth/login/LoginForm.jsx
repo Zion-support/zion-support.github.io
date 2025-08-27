@@ -15,7 +15,7 @@ const loginSchema = z.object({
     email: z.string().email("Please enter a valid email").min(1, "Email is required"),
     password: z.string().min(6, "Password must be at least 6 characters"),
 });
-export function LoginForm() {
+function LoginForm() {
     const { login, isLoading } = useAuth();
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
@@ -61,6 +61,7 @@ export function LoginForm() {
               </FormControl>
               <FormMessage className="text-red-400"/>
             </FormItem>)}/>
+
         <FormField control={form.control} name="password" render={({ field }) => (<FormItem>
               <FormLabel className="text-zion-slate-light">Password</FormLabel>
               <FormControl>
@@ -78,6 +79,7 @@ export function LoginForm() {
               </FormControl>
               <FormMessage className="text-red-400"/>
             </FormItem>)}/>
+
         <div className="flex items-center justify-between">
           <div className="text-sm">
             <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
@@ -85,6 +87,7 @@ export function LoginForm() {
             </Link>
           </div>
         </div>
+
         <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading || isSubmitting}>
           {isLoading || isSubmitting ? "Logging in..." : "Login"}
         </Button>
@@ -92,3 +95,5 @@ export function LoginForm() {
       <LoadingOverlay visible={isLoading || isSubmitting}/>
     </Form>);
 }
+
+export default LoginForm;

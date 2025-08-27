@@ -1,15 +1,15 @@
 import React from 'react';
-import SEOHead from "../components/SEOHead.jsx";
+import { SEO } from '@/components/SEO';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent';
 function ProjectMilestones() {
     return (<ProtectedRoute>
-<>
-        <SEOHead title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables"/>
+      <>
+        <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables"/>
         
         <ProjectMilestonesContent />
         
-</>
+      </>
     </ProtectedRoute>);
 }
 export default ProjectMilestones;

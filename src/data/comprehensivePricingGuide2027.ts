@@ -1,1783 +1,885 @@
-<<<<<<< HEAD
-export interface PricingTier {
-  name: string;
-  price: number;
-  currency: string;
-  period: string;
-  features: string[];
-  bestFor: string;
-  popular?: boolean;
-}
-
-export interface ServicePricing {
-  serviceId: string;
-  serviceName: string;
-  category: string;
-  ourPricing: {
-    starter: PricingTier;
-    professional: PricingTier;
-    enterprise: PricingTier;
-  };
-  marketPricing: {
-    low: number;
-    average: number;
-    high: number;
-    currency: string;
-  };
-  competitors: {
-    name: string;
-    pricing: string;
-    features: string[];
-  }[];
-  roi: {
-    timeframe: string;
-    percentage: string;
-    savings: string;
-  };
-  marketTrend: string;
-=======
-export interface ServicePricing {
+export interface ComprehensivePricingItem2027 {
   id: string;
   title: string;
+  description: string;
   category: string;
   subcategory: string;
   pricing: {
     starter: {
-      price: number;
-      currency: string;
-      period: string;
+      price: string;
+      billing: string;
       features: string[];
-      bestFor: string;
+      limitations: string[];
     };
     professional: {
-      price: number;
-      currency: string;
-      period: string;
+      price: string;
+      billing: string;
       features: string[];
-      bestFor: string;
+      limitations: string[];
     };
     enterprise: {
-      price: number;
-      currency: string;
-      period: string;
+      price: string;
+      billing: string;
       features: string[];
-      bestFor: string;
+      limitations: string[];
     };
     custom: {
       description: string;
       features: string[];
-      bestFor: string;
+      contact: string;
     };
   };
-  marketPrice: string;
-  roi: string;
-  competitors: string[];
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
+  marketInfo: {
+    marketSize: string;
+    growthRate: string;
+    averageMarketPrice: string;
+    competitors: string[];
+    roi: string;
+    setupTime: string;
+  };
+  features: {
+    core: string[];
+    advanced: string[];
+    enterprise: string[];
+  };
+  benefits: string[];
+  targetAudience: string[];
+  useCases: string[];
+  integrations: string[];
+  compliance: string[];
+  support: {
+    email: boolean;
+    phone: boolean;
+    chat: boolean;
+    dedicated: boolean;
+    sla: string;
+  };
   contactInfo: {
     phone: string;
     email: string;
     website: string;
+    address: string;
   };
-<<<<<<< HEAD
 }
-
-export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
-  // Quantum AI Autonomous Business Platform
+export const comprehensivePricingGuide2027: ComprehensivePricingItem2027[] = [
+  // Web3 & Metaverse Solutions
   {
-    serviceId: "quantum-ai-autonomous-business-platform",
-    serviceName: "Quantum AI Autonomous Business Platform",
-    category: "Quantum AI & Business Automation",
-    ourPricing: {
-      starter: {
-        name: "Starter",
-        price: 15999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic quantum AI decision making",
-          "Autonomous business strategy",
-          "Real-time market analysis",
-          "Basic risk management",
-          "Email support"
-        ],
-        bestFor: "Small to medium enterprises"
-      },
-      professional: {
-        name: "Professional",
-        price: 29999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced quantum AI capabilities",
-          "Full autonomous business management",
-          "Predictive business modeling",
-          "Advanced risk management",
-          "Priority support",
-          "Custom integrations"
-        ],
-        bestFor: "Growing enterprises",
-        popular: true
-      },
-      enterprise: {
-        name: "Enterprise",
-        price: 99999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Full quantum AI platform",
-          "Custom quantum algorithms",
-          "Dedicated quantum computing resources",
-          "24/7 dedicated support",
-          "Custom development",
-          "On-premise deployment options"
-        ],
-        bestFor: "Large corporations and government"
-      }
-    },
-    marketPricing: {
-      low: 50000,
-      average: 150000,
-      high: 500000,
-      currency: "$"
-    },
-    competitors: [
-      {
-        name: "IBM Quantum",
-        pricing: "$50,000 - $200,000/month",
-        features: ["Quantum computing access", "Basic AI integration", "Limited automation"]
-      },
-      {
-        name: "Google Quantum AI",
-        pricing: "$75,000 - $300,000/month",
-        features: ["Quantum algorithms", "AI integration", "Cloud-based"]
-      },
-      {
-        name: "Microsoft Azure Quantum",
-        pricing: "$60,000 - $250,000/month",
-        features: ["Quantum development tools", "AI services", "Enterprise integration"]
-      }
-    ],
-    roi: {
-      timeframe: "12 months",
-      percentage: "800-1500%",
-      savings: "$2M - $10M annually"
-    },
-    marketTrend: "Exponential growth in quantum AI adoption",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/quantum-ai-business"
-    }
-  },
-
-  // AI Autonomous Cybersecurity Defense
-  {
-    serviceId: "ai-autonomous-cybersecurity-defense",
-    serviceName: "AI Autonomous Cybersecurity Defense System",
-    category: "AI & Cybersecurity",
-    ourPricing: {
-      starter: {
-        name: "Starter",
-        price: 8999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic AI threat detection",
-          "Automated incident response",
-          "Real-time monitoring",
-          "Basic reporting",
-          "Email support"
-        ],
-        bestFor: "Medium businesses"
-      },
-      professional: {
-        name: "Professional",
-        price: 15999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced AI threat detection",
-          "Full autonomous response",
-          "Behavioral analysis",
-          "Advanced reporting",
-          "Priority support",
-          "Custom integrations"
-        ],
-        bestFor: "Large enterprises",
-        popular: true
-      },
-      enterprise: {
-        name: "Enterprise",
-        price: 49999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Complete autonomous defense",
-          "Custom AI models",
-          "Dedicated security team",
-          "24/7 phone support",
-          "Custom development",
-          "On-premise options"
-        ],
-        bestFor: "Government and critical infrastructure"
-      }
-    },
-    marketPricing: {
-      low: 25000,
-      average: 75000,
-      high: 200000,
-      currency: "$"
-    },
-    competitors: [
-      {
-        name: "CrowdStrike",
-        pricing: "$30,000 - $100,000/month",
-        features: ["EDR platform", "Threat intelligence", "Basic AI"]
-      },
-      {
-        name: "SentinelOne",
-        pricing: "$25,000 - $80,000/month",
-        features: ["Autonomous endpoint protection", "AI-powered detection", "Cloud-native"]
-      },
-      {
-        name: "Palo Alto Networks",
-        pricing: "$40,000 - $150,000/month",
-        features: ["Network security", "AI threat prevention", "Comprehensive platform"]
-      }
-    ],
-    roi: {
-      timeframe: "6 months",
-      percentage: "600-1000%",
-      savings: "$500K - $2M annually"
-    },
-    marketTrend: "Rapid adoption of AI-powered security",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-cybersecurity"
-    }
-  },
-
-  // Autonomous AI Research Platform
-  {
-    serviceId: "autonomous-ai-research-platform",
-    serviceName: "Autonomous AI Research Platform",
-    category: "AI & Research",
-    ourPricing: {
-      starter: {
-        name: "Starter",
-        price: 12999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic autonomous research",
-          "AI-powered analysis",
-          "Document generation",
-          "Basic collaboration tools",
-          "Email support"
-        ],
-        bestFor: "Small research teams"
-      },
-      professional: {
-        name: "Professional",
-        price: 24999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced autonomous research",
-          "Full AI research capabilities",
-          "Advanced collaboration tools",
-          "Priority support",
-          "Custom integrations",
-          "Advanced analytics"
-        ],
-        bestFor: "Research institutions",
-        popular: true
-      },
-      enterprise: {
-        name: "Enterprise",
-        price: 79999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Complete autonomous research",
-          "Custom AI models",
-          "Dedicated research team",
-          "24/7 support",
-          "Custom development",
-          "On-premise deployment"
-        ],
-        bestFor: "Large research organizations"
-      }
-    },
-    marketPricing: {
-      low: 40000,
-      average: 120000,
-      high: 300000,
-      currency: "$"
-    },
-    competitors: [
-      {
-        name: "OpenAI",
-        pricing: "$20,000 - $100,000/month",
-        features: ["AI models", "Basic research tools", "Limited automation"]
-      },
-      {
-        name: "Anthropic",
-        pricing: "$25,000 - $120,000/month",
-        features: ["Claude AI", "Research assistance", "Basic automation"]
-      },
-      {
-        name: "Google AI",
-        pricing: "$50,000 - $200,000/month",
-        features: ["AI research tools", "Cloud computing", "Limited autonomy"]
-      }
-    ],
-    roi: {
-      timeframe: "12 months",
-      percentage: "1000-2000%",
-      savings: "$1M - $5M annually"
-    },
-    marketTrend: "Explosive growth in AI research automation",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-research"
-    }
-  },
-
-  // Quantum Financial Trading Platform
-  {
-    serviceId: "quantum-financial-trading-platform",
-    serviceName: "Quantum Financial Trading Platform",
-    category: "Quantum AI & Financial Technology",
-    ourPricing: {
-      starter: {
-        name: "Starter",
-        price: 19999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic quantum trading",
-          "AI market analysis",
-          "Risk management",
-          "Basic reporting",
-          "Email support"
-        ],
-        bestFor: "Small trading firms"
-      },
-      professional: {
-        name: "Professional",
-        price: 39999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced quantum trading",
-          "Full AI capabilities",
-          "Advanced risk management",
-          "Priority support",
-          "Custom integrations",
-          "Advanced analytics"
-        ],
-        bestFor: "Medium trading firms",
-        popular: true
-      },
-      enterprise: {
-        name: "Enterprise",
-        price: 149999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Complete quantum trading",
-          "Custom quantum algorithms",
-          "Dedicated trading team",
-          "24/7 support",
-          "Custom development",
-          "On-premise deployment"
-        ],
-        bestFor: "Large financial institutions"
-      }
-    },
-    marketPricing: {
-      low: 100000,
-      average: 300000,
-      high: 1000000,
-      currency: "$"
-    },
-    competitors: [
-      {
-        name: "Bloomberg",
-        pricing: "$100,000 - $500,000/month",
-        features: ["Trading platform", "Market data", "Basic AI"]
-      },
-      {
-        name: "Thomson Reuters",
-        pricing: "$80,000 - $400,000/month",
-        features: ["Financial data", "Trading tools", "Limited AI"]
-      },
-      {
-        name: "Interactive Brokers",
-        pricing: "$50,000 - $200,000/month",
-        features: ["Trading platform", "Basic analytics", "No quantum computing"]
-      }
-    ],
-    roi: {
-      timeframe: "6 months",
-      percentage: "1000-2000%",
-      savings: "$5M - $50M annually"
-    },
-    marketTrend: "Rapid adoption of quantum trading",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/quantum-trading"
-    }
-  },
-
-  // AI Autonomous Healthcare Platform
-  {
-    serviceId: "ai-autonomous-healthcare-platform",
-    serviceName: "AI Autonomous Healthcare Platform",
-    category: "AI & Healthcare",
-    ourPricing: {
-      starter: {
-        name: "Starter",
-        price: 15999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic AI diagnosis",
-          "Health monitoring",
-          "Basic treatment planning",
-          "Email support"
-        ],
-        bestFor: "Small clinics"
-      },
-      professional: {
-        name: "Professional",
-        price: 29999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced AI healthcare",
-          "Full autonomous care",
-          "Advanced monitoring",
-          "Priority support",
-          "Custom integrations",
-          "Advanced analytics"
-        ],
-        bestFor: "Hospitals",
-        popular: true
-      },
-      enterprise: {
-        name: "Enterprise",
-        price: 99999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Complete autonomous healthcare",
-          "Custom AI models",
-          "Dedicated healthcare team",
-          "24/7 support",
-          "Custom development",
-          "On-premise deployment"
-        ],
-        bestFor: "Large healthcare systems"
-      }
-    },
-    marketPricing: {
-      low: 50000,
-      average: 150000,
-      high: 500000,
-      currency: "$"
-    },
-    competitors: [
-      {
-        name: "IBM Watson Health",
-        pricing: "$50,000 - $200,000/month",
-        features: ["AI healthcare", "Basic automation", "Limited autonomy"]
-      },
-      {
-        name: "Google Health",
-        pricing: "$40,000 - $150,000/month",
-        features: ["AI research", "Basic tools", "No autonomous care"]
-      },
-      {
-        name: "Microsoft Healthcare",
-        pricing: "$60,000 - $250,000/month",
-        features: ["Healthcare AI", "Cloud services", "Limited automation"]
-      }
-    ],
-    roi: {
-      timeframe: "12 months",
-      percentage: "800-1500%",
-      savings: "$2M - $10M annually"
-    },
-    marketTrend: "Explosive growth in AI healthcare",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-healthcare"
-    }
-  },
-
-  // Autonomous AI Manufacturing Platform
-  {
-    serviceId: "autonomous-ai-manufacturing-platform",
-    serviceName: "Autonomous AI Manufacturing Platform",
-    category: "AI & Manufacturing",
-    ourPricing: {
-      starter: {
-        name: "Starter",
-        price: 17999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic AI manufacturing",
-          "Production planning",
-          "Quality control",
-          "Basic reporting",
-          "Email support"
-        ],
-        bestFor: "Small manufacturers"
-      },
-      professional: {
-        name: "Professional",
-        price: 34999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced AI manufacturing",
-          "Full autonomous production",
-          "Advanced quality control",
-          "Priority support",
-          "Custom integrations",
-          "Advanced analytics"
-        ],
-        bestFor: "Medium manufacturers",
-        popular: true
-      },
-      enterprise: {
-        name: "Enterprise",
-        price: 119999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Complete autonomous manufacturing",
-          "Custom AI models",
-          "Dedicated manufacturing team",
-          "24/7 support",
-          "Custom development",
-          "On-premise deployment"
-        ],
-        bestFor: "Large manufacturers"
-      }
-    },
-    marketPricing: {
-      low: 60000,
-      average: 180000,
-      high: 600000,
-      currency: "$"
-    },
-    competitors: [
-      {
-        name: "Siemens",
-        pricing: "$80,000 - $300,000/month",
-        features: ["Manufacturing automation", "Basic AI", "Limited autonomy"]
-      },
-      {
-        name: "GE Digital",
-        pricing: "$70,000 - $250,000/month",
-        features: ["Industrial AI", "Predictive maintenance", "Basic automation"]
-      },
-      {
-        name: "Rockwell Automation",
-        pricing: "$60,000 - $200,000/month",
-        features: ["Automation systems", "Basic AI", "No autonomous operation"]
-      }
-    ],
-    roi: {
-      timeframe: "12 months",
-      percentage: "700-1200%",
-      savings: "$3M - $15M annually"
-    },
-    marketTrend: "Rapid adoption of AI manufacturing",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-manufacturing"
-    }
-  },
-
-  // Quantum Edge Computing Platform
-  {
-    serviceId: "quantum-edge-computing-platform",
-    serviceName: "Quantum Edge Computing Platform",
-    category: "Quantum AI & Edge Computing",
-    ourPricing: {
-      starter: {
-        name: "Starter",
-        price: 12999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic quantum edge",
-          "Edge AI capabilities",
-          "Basic processing",
-          "Email support"
-        ],
-        bestFor: "Small IoT deployments"
-      },
-      professional: {
-        name: "Professional",
-        price: 24999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced quantum edge",
-          "Full edge AI",
-          "Advanced processing",
-          "Priority support",
-          "Custom integrations",
-          "Advanced analytics"
-        ],
-        bestFor: "Medium IoT deployments",
-        popular: true
-      },
-      enterprise: {
-        name: "Enterprise",
-        price: 79999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Complete quantum edge",
-          "Custom quantum algorithms",
-          "Dedicated edge team",
-          "24/7 support",
-          "Custom development",
-          "On-premise deployment"
-        ],
-        bestFor: "Large IoT deployments"
-      }
-    },
-    marketPricing: {
-      low: 40000,
-      average: 120000,
-      high: 400000,
-      currency: "$"
-    },
-    competitors: [
-      {
-        name: "AWS IoT",
-        pricing: "$30,000 - $150,000/month",
-        features: ["IoT platform", "Basic edge computing", "No quantum computing"]
-      },
-      {
-        name: "Microsoft Azure IoT",
-        pricing: "$40,000 - $200,000/month",
-        features: ["IoT services", "Edge computing", "Basic AI"]
-      },
-      {
-        name: "Google Cloud IoT",
-        pricing: "$35,000 - $180,000/month",
-        features: ["IoT platform", "Edge AI", "No quantum edge"]
-      }
-    ],
-    roi: {
-      timeframe: "12 months",
-      percentage: "800-1500%",
-      savings: "$1M - $8M annually"
-    },
-    marketTrend: "Explosive growth in quantum edge computing",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/quantum-edge"
-    }
-  },
-
-  // AI Autonomous Legal Platform
-  {
-    serviceId: "ai-autonomous-legal-platform",
-    serviceName: "AI Autonomous Legal Platform",
-    category: "AI & Legal Technology",
-    ourPricing: {
-      starter: {
-        name: "Starter",
-=======
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  innovationLevel: string;
-  marketSize: string;
-}
-export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
-  // Quantum AI Business Intelligence Platform
-  {
-    id: "quantum-ai-business-intelligence",
-    title: "Quantum AI Business Intelligence Platform",
-    category: "Quantum AI & Analytics",
-    subcategory: "Business Intelligence",
+    id: 'metaverse-commerce-platform',
+    title: 'Metaverse Commerce Platform',
+    description: 'Complete metaverse commerce solution with virtual storefronts, NFT marketplaces, and immersive shopping experiences',
+    category: 'Metaverse Solutions',
+    subcategory: 'E-commerce',
     pricing: {
       starter: {
-        price: 2999,
-        currency: "$",
-        period: "month",
+        price: '$2,500/month',
+        billing: 'monthly',
         features: [
-          "Basic quantum algorithms",
-          "Standard data analysis",
-          "Basic reporting",
-          "Email support",
-          "5 user licenses"
+          'Basic 3D virtual storefront',
+          'NFT marketplace (up to 1,000 items)',
+          'Basic VR/AR shopping experience',
+          'Mobile app support',
+          'Basic analytics dashboard',
+          'Email support'
         ],
-        bestFor: "Small research teams and startups"
+        limitations: [
+          'Limited customization options',
+          'Basic payment methods only',
+          'Standard hosting',
+          'No advanced AI features'
+        ]
       },
       professional: {
-        price: 4999,
-        currency: "$",
-        period: "month",
+        price: '$5,000/month',
+        billing: 'monthly',
         features: [
-          "Advanced quantum algorithms",
-          "Real-time analytics",
-          "Custom dashboards",
-          "Priority support",
-          "25 user licenses",
-          "API access"
+          'Advanced 3D virtual storefronts',
+          'NFT marketplace (up to 10,000 items)',
+          'Advanced VR/AR experiences',
+          'Multi-platform compatibility',
+          'Advanced analytics and reporting',
+          'AI-powered recommendations',
+          'Priority support',
+          'Custom branding'
         ],
-        bestFor: "Medium enterprises and research institutions"
+        limitations: [
+          'Limited API access',
+          'Standard SLA',
+          'No dedicated account manager'
+        ]
       },
       enterprise: {
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
-        price: 9999,
-        currency: "$",
-        period: "month",
+        price: '$15,000/month',
+        billing: 'monthly',
         features: [
-<<<<<<< HEAD
-          "Basic AI legal research",
-          "Document generation",
-          "Basic contract analysis",
-          "Email support"
+          'Unlimited virtual storefronts',
+          'Unlimited NFT marketplace',
+          'Custom VR/AR development',
+          'Full platform customization',
+          'Advanced AI and ML features',
+          'White-label solution',
+          'Dedicated account manager',
+          '24/7 premium support',
+          'Custom integrations',
+          'Advanced security features'
         ],
-        bestFor: "Small law firms"
-      },
-      professional: {
-        name: "Professional",
-        price: 19999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced AI legal",
-          "Full autonomous legal",
-          "Advanced contract analysis",
-          "Priority support",
-          "Custom integrations",
-          "Advanced analytics"
-        ],
-        bestFor: "Medium law firms",
-        popular: true
-      },
-      enterprise: {
-        name: "Enterprise",
-        price: 59999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Complete autonomous legal",
-          "Custom AI models",
-          "Dedicated legal team",
-          "24/7 support",
-          "Custom development",
-          "On-premise deployment"
-        ],
-        bestFor: "Large law firms"
-      }
-    },
-    marketPricing: {
-      low: 30000,
-      average: 90000,
-      high: 300000,
-      currency: "$"
-    },
-    competitors: [
-      {
-        name: "LexisNexis",
-        pricing: "$20,000 - $100,000/month",
-        features: ["Legal research", "Basic AI", "No autonomous operation"]
-      },
-      {
-        name: "Westlaw",
-        pricing: "$25,000 - $120,000/month",
-        features: ["Legal database", "Basic tools", "Limited AI"]
-      },
-      {
-        name: "Thomson Reuters",
-        pricing: "$30,000 - $150,000/month",
-        features: ["Legal services", "Basic AI", "No autonomy"]
-      }
-    ],
-    roi: {
-      timeframe: "6 months",
-      percentage: "600-1000%",
-      savings: "$500K - $3M annually"
-    },
-    marketTrend: "Rapid adoption of AI legal services",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-legal"
-    }
-  },
-
-  // Autonomous AI Education Platform
-  {
-    serviceId: "autonomous-ai-education-platform",
-    serviceName: "Autonomous AI Education Platform",
-    category: "AI & Education",
-    ourPricing: {
-      starter: {
-        name: "Starter",
-=======
-          "Full quantum advantage",
-          "Custom quantum models",
-          "Dedicated support team",
-          "Unlimited users",
-          "Custom integrations",
-          "Training and certification"
-        ],
-        bestFor: "Large enterprises and government agencies"
+        limitations: [
+          'Custom development time required',
+          'Minimum 12-month contract'
+        ]
       },
       custom: {
-        description: "Tailored quantum solutions for specific industries",
+        description: 'Fully customized metaverse commerce solution for large enterprises',
         features: [
-          "Industry-specific quantum models",
-          "Custom hardware integration",
-          "Dedicated quantum experts",
-          "Research collaboration",
-          "Exclusive access to new features"
+          'Custom development',
+          'Dedicated infrastructure',
+          'Custom AI models',
+          'Advanced security protocols',
+          'Compliance certifications',
+          'Training and onboarding'
         ],
-        bestFor: "Fortune 500 companies and research organizations"
+        contact: 'Contact sales for custom pricing'
       }
     },
-    marketPrice: "$4,999 - $15,999/month",
-    roi: "500-800%",
-    competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Quantum", "D-Wave"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    marketInfo: {
+      marketSize: '$800B by 2028',
+      growthRate: '45% CAGR',
+      averageMarketPrice: '$3,500/month',
+      competitors: ['Meta', 'Roblox', 'Decentraland', 'Spatial'],
+      roi: '300-500% within 18 months',
+      setupTime: '4-6 weeks'
     },
-    features: [
-      "Quantum-enhanced AI algorithms",
-      "Real-time complex data analysis",
-      "Quantum machine learning models",
-      "Predictive analytics with 99.9% accuracy",
-      "Multi-dimensional data visualization"
-    ],
+    features: {
+      core: [
+        '3D virtual storefronts',
+        'NFT marketplace integration',
+        'VR/AR shopping experiences',
+        'Cross-platform compatibility',
+        'Real-time analytics',
+        'Multi-currency support'
+      ],
+      advanced: [
+        'AI-powered recommendations',
+        'Social commerce features',
+        'Advanced customization',
+        'Performance optimization',
+        'Advanced security',
+        'API access'
+      ],
+      enterprise: [
+        'Custom development',
+        'White-label solution',
+        'Advanced AI/ML',
+        'Custom integrations',
+        'Dedicated support',
+        'Compliance features'
+      ]
+    },
     benefits: [
-      "Solve complex problems 1000x faster than classical computers",
-      "Achieve 99.9% prediction accuracy",
-      "Real-time optimization of business processes",
-      "Quantum advantage in competitive markets"
-    ],
-    useCases: [
-      "Financial portfolio optimization",
-      "Supply chain optimization",
-      "Drug discovery acceleration",
-      "Climate modeling and prediction"
+      'Tap into $800B+ metaverse economy',
+      'Increase customer engagement by 300%',
+      'Reduce physical retail costs',
+      '24/7 global accessibility',
+      'Enhanced customer experience',
+      'New revenue streams'
     ],
     targetAudience: [
-      "Fortune 500 companies",
-      "Financial institutions",
-      "Research organizations",
-      "Government agencies"
-    ],
-    innovationLevel: "Revolutionary",
-    marketSize: "$65 billion by 2030"
-  },
-  // Blockchain Supply Chain Management
-  {
-    id: "blockchain-supply-chain",
-    title: "Blockchain Supply Chain Management Platform",
-    category: "Blockchain & Supply Chain",
-    subcategory: "Supply Chain Management",
-    pricing: {
-      starter: {
-        price: 999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic supply chain tracking",
-          "Simple smart contracts",
-          "Standard reporting",
-          "Email support",
-          "10 supplier connections"
-        ],
-        bestFor: "Small manufacturers and retailers"
-      },
-      professional: {
-        price: 1999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced tracking capabilities",
-          "Complex smart contracts",
-          "Real-time analytics",
-          "Priority support",
-          "100 supplier connections",
-          "API access"
-        ],
-        bestFor: "Medium enterprises and logistics providers"
-      },
-      enterprise: {
-        price: 4999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Full blockchain implementation",
-          "Custom smart contracts",
-          "Advanced analytics",
-          "Dedicated support team",
-          "Unlimited connections",
-          "Custom integrations"
-        ],
-        bestFor: "Large enterprises and global supply chains"
-      },
-      custom: {
-        description: "Industry-specific blockchain solutions",
-        features: [
-          "Industry compliance frameworks",
-          "Custom blockchain networks",
-          "Dedicated blockchain experts",
-          "Training and workshops",
-          "Ongoing optimization"
-        ],
-        bestFor: "Fortune 500 companies and government agencies"
-      }
-    },
-    marketPrice: "$1,999 - $6,999/month",
-    roi: "300-500%",
-    competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    features: [
-      "Real-time supply chain tracking",
-      "Smart contract automation",
-      "Blockchain-based verification",
-      "IoT sensor integration",
-      "Automated compliance reporting"
-    ],
-    benefits: [
-      "Reduce supply chain costs by 30%",
-      "Improve transparency by 100%",
-      "Automate compliance processes",
-      "Eliminate counterfeit products"
+      'E-commerce businesses',
+      'Retail brands',
+      'Fashion companies',
+      'Luxury brands',
+      'Gaming companies',
+      'Entertainment companies'
     ],
     useCases: [
-      "Food safety tracking",
-      "Pharmaceutical supply chains",
-      "Luxury goods authentication",
-      "Automotive parts tracking"
+      'Virtual retail stores',
+      'Digital fashion shows',
+      'Virtual events and conferences',
+      'Gaming commerce',
+      'Virtual real estate',
+      'Educational experiences'
     ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Retail chains",
-      "Logistics providers",
-      "Food and beverage companies"
+    integrations: [
+      'Shopify',
+      'WooCommerce',
+      'Stripe',
+      'MetaMask',
+      'WalletConnect',
+      'Major payment processors',
+      'Social media platforms',
+      'Analytics tools'
     ],
-    innovationLevel: "Advanced",
-    marketSize: "$45 billion by 2027"
-  },
-  // AI-Powered Cybersecurity Platform
-  {
-    id: "ai-cybersecurity-platform",
-    title: "AI-Powered Cybersecurity Platform",
-    category: "AI & Cybersecurity",
-    subcategory: "Threat Detection",
-    pricing: {
-      starter: {
-        price: 1999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic threat detection",
-          "Standard monitoring",
-          "Email alerts",
-          "Email support",
-          "Up to 100 endpoints"
-        ],
-        bestFor: "Small businesses and startups"
-      },
-      professional: {
-        price: 3499,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced threat detection",
-          "Behavioral analysis",
-          "Automated response",
-          "Priority support",
-          "Up to 1000 endpoints",
-          "API access"
-        ],
-        bestFor: "Medium enterprises and financial institutions"
-      },
-      enterprise: {
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
-        price: 7999,
-        currency: "$",
-        period: "month",
-        features: [
-<<<<<<< HEAD
-          "Basic AI education",
-          "Content generation",
-          "Basic tutoring",
-          "Email support"
-        ],
-        bestFor: "Small schools"
-      },
-      professional: {
-        name: "Professional",
-        price: 15999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced AI education",
-          "Full autonomous learning",
-          "Advanced tutoring",
-          "Priority support",
-          "Custom integrations",
-          "Advanced analytics"
-        ],
-        bestFor: "Universities",
-        popular: true
-      },
-      enterprise: {
-        name: "Enterprise",
-        price: 49999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Complete autonomous education",
-          "Custom AI models",
-          "Dedicated education team",
-          "24/7 support",
-          "Custom development",
-          "On-premise deployment"
-        ],
-        bestFor: "Large educational institutions"
-      }
+    compliance: ['GDPR', 'CCPA', 'SOC2', 'PCI DSS', 'Data privacy regulations'],
+    support: {
+      email: true,
+      phone: true,
+      chat: true,
+      dedicated: true,
+      sla: '99.9% uptime, 4-hour response time'
     },
-    marketPricing: {
-      low: 25000,
-      average: 75000,
-      high: 250000,
-      currency: "$"
-    },
-    competitors: [
-      {
-        name: "Coursera",
-        pricing: "$15,000 - $80,000/month",
-        features: ["Online courses", "Basic AI", "No autonomous learning"]
-      },
-      {
-        name: "Udemy",
-        pricing: "$10,000 - $60,000/month",
-        features: ["Course platform", "Basic tools", "Limited AI"]
-      },
-      {
-        name: "Khan Academy",
-        pricing: "$20,000 - $100,000/month",
-        features: ["Educational content", "Basic AI", "No autonomy"]
-      }
-    ],
-    roi: {
-      timeframe: "12 months",
-      percentage: "500-800%",
-      savings: "$300K - $2M annually"
-    },
-    marketTrend: "Explosive growth in AI education",
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-education"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
-  // Quantum AI Content Creation Platform
+  // DeFi Yield Optimizer
   {
-    serviceId: "quantum-ai-content-creation-platform",
-    serviceName: "Quantum AI Content Creation Platform",
-    category: "Quantum AI & Content Creation",
-    ourPricing: {
-      starter: {
-        name: "Starter",
-=======
-          "Full AI-powered security",
-          "Zero-trust architecture",
-          "24/7 monitoring",
-          "Dedicated security team",
-          "Unlimited endpoints",
-          "Custom integrations"
-        ],
-        bestFor: "Large enterprises and critical infrastructure"
-      },
-      custom: {
-        description: "Industry-specific security solutions",
-        features: [
-          "Industry compliance frameworks",
-          "Custom security models",
-          "Dedicated security experts",
-          "Training and workshops",
-          "Ongoing security optimization"
-        ],
-        bestFor: "Government agencies and critical infrastructure"
-      }
-    },
-    marketPrice: "$3,499 - $12,999/month",
-    roi: "400-600%",
-    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    features: [
-      "AI-powered threat detection",
-      "Behavioral analysis",
-      "Zero-day attack prevention",
-      "Automated incident response",
-      "Threat intelligence sharing"
-    ],
-    benefits: [
-      "Detect threats 10x faster than traditional solutions",
-      "Reduce false positives by 95%",
-      "Automate 80% of security responses",
-      "Achieve 99.99% threat detection rate"
-    ],
-    useCases: [
-      "Enterprise security operations",
-      "Financial institution protection",
-      "Healthcare data security",
-      "Government cybersecurity"
-    ],
-    targetAudience: [
-      "Large enterprises",
-      "Financial institutions",
-      "Healthcare organizations",
-      "Government agencies"
-    ],
-    innovationLevel: "Advanced",
-    marketSize: "$75 billion by 2027"
-  },
-  // Metaverse Business Platform
-  {
-    id: "metaverse-business-platform",
-    title: "Metaverse Business Platform",
-    category: "Metaverse & Virtual Reality",
-    subcategory: "Business Solutions",
+    id: 'defi-yield-optimizer',
+    title: 'DeFi Yield Optimizer Pro',
+    description: 'AI-powered DeFi yield optimization platform with automated strategy execution and risk management',
+    category: 'Web3 Solutions',
+    subcategory: 'DeFi',
     pricing: {
       starter: {
-        price: 1499,
-        currency: "$",
-        period: "month",
+        price: '$199/month',
+        billing: 'monthly',
         features: [
-          "Basic virtual storefront",
-          "Simple 3D models",
-          "Standard analytics",
-          "Email support",
-          "Up to 1000 visitors/month"
+          'Basic yield optimization',
+          'Up to 5 strategies',
+          'Basic risk assessment',
+          'Portfolio tracking',
+          'Email alerts',
+          'Basic analytics'
         ],
-        bestFor: "Small businesses and startups"
+        limitations: [
+          'Limited strategy options',
+          'Basic risk management',
+          'No advanced features',
+          'Standard support'
+        ]
       },
       professional: {
-        price: 2499,
-        currency: "$",
-        period: "month",
+        price: '$499/month',
+        billing: 'monthly',
         features: [
-          "Advanced virtual experiences",
-          "AI-powered assistants",
-          "Real-time analytics",
-          "Priority support",
-          "Up to 10000 visitors/month",
-          "API access"
+          'Advanced yield optimization',
+          'Up to 20 strategies',
+          'Advanced risk management',
+          'Automated rebalancing',
+          'Advanced analytics',
+          'Priority support',
+          'Mobile app access',
+          'API access'
         ],
-        bestFor: "Medium enterprises and retail brands"
+        limitations: [
+          'Limited custom strategies',
+          'Standard SLA',
+          'No dedicated support'
+        ]
       },
       enterprise: {
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
-        price: 5999,
-        currency: "$",
-        period: "month",
+        price: '$1,999/month',
+        billing: 'monthly',
         features: [
-<<<<<<< HEAD
-          "Basic quantum AI content",
-          "Text generation",
-          "Basic optimization",
-          "Email support"
+          'Unlimited strategies',
+          'Custom strategy development',
+          'Advanced risk management',
+          'Institutional features',
+          'Dedicated account manager',
+          '24/7 premium support',
+          'Custom integrations',
+          'Advanced reporting',
+          'Compliance features'
         ],
-        bestFor: "Small content creators"
+        limitations: [
+          'Minimum 6-month contract',
+          'Custom development time required'
+        ]
       },
-      professional: {
-        name: "Professional",
-        price: 11999,
-        currency: "$",
-        period: "month",
+      custom: {
+        description: 'Custom DeFi solutions for institutional clients',
         features: [
-          "Advanced quantum AI content",
-          "Full autonomous creation",
-          "Multi-media content",
-          "Priority support",
-          "Custom integrations",
-          "Advanced analytics"
+          'Custom strategy development',
+          'Dedicated infrastructure',
+          'Advanced risk models',
+          'Compliance reporting',
+          'Training and support',
+          'Custom integrations'
         ],
-        bestFor: "Marketing agencies",
-        popular: true
-      },
-      enterprise: {
-        name: "Enterprise",
-        price: 39999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Complete autonomous content",
-          "Custom quantum AI",
-          "Dedicated content team",
-          "24/7 support",
-          "Custom development",
-          "On-premise deployment"
-        ],
-        bestFor: "Large content companies"
+        contact: 'Contact sales for institutional pricing'
       }
     },
-    marketPricing: {
-      low: 20000,
-      average: 60000,
-      high: 200000,
-      currency: "$"
+    marketInfo: {
+      marketSize: '$50B+ DeFi market',
+      growthRate: '60% CAGR',
+      averageMarketPrice: '$300/month',
+      competitors: ['Yearn Finance', 'Beefy Finance', 'Harvest Finance', 'Convex Finance'],
+      roi: '200-400% annually',
+      setupTime: '1-2 weeks'
     },
-    competitors: [
-      {
-        name: "OpenAI",
-        pricing: "$10,000 - $50,000/month",
-        features: ["AI models", "Basic content", "No quantum computing"]
-      },
-      {
-        name: "Jasper",
-        pricing: "$15,000 - $80,000/month",
-        features: ["AI writing", "Content tools", "Limited automation"]
-      },
-      {
-        name: "Copy.ai",
-        pricing: "$12,000 - $70,000/month",
-        features: ["AI copywriting", "Basic tools", "No quantum AI"]
-      }
+    features: {
+      core: [
+        'Multi-chain yield farming',
+        'AI strategy optimization',
+        'Risk assessment algorithms',
+        'Portfolio tracking',
+        'Real-time alerts',
+        'Basic analytics'
+      ],
+      advanced: [
+        'Automated rebalancing',
+        'Advanced risk management',
+        'Strategy backtesting',
+        'Performance analytics',
+        'Mobile app support',
+        'API access'
+      ],
+      enterprise: [
+        'Custom strategies',
+        'Institutional features',
+        'Advanced compliance',
+        'Dedicated support',
+        'Custom integrations',
+        'Advanced reporting'
+      ]
+    },
+    benefits: [
+      'Optimize yields by 25-40%',
+      'Reduce impermanent loss',
+      'Automated portfolio management',
+      'Professional-grade analytics',
+      'Risk management',
+      'Time savings'
     ],
-    roi: {
-      timeframe: "6 months",
-      percentage: "400-700%",
-      savings: "$200K - $1M annually"
+    targetAudience: [
+      'DeFi users',
+      'Crypto investors',
+      'Institutional investors',
+      'Trading firms',
+      'Crypto funds',
+      'Individual traders'
+    ],
+    useCases: [
+      'Yield farming optimization',
+      'Portfolio management',
+      'Risk management',
+      'Automated trading',
+      'Strategy development',
+      'Performance tracking'
+    ],
+    integrations: [
+      'MetaMask',
+      'WalletConnect',
+      'Ledger',
+      'Trezor',
+      'Major DEXs',
+      'DeFi protocols',
+      'Analytics platforms',
+      'Trading tools'
+    ],
+    compliance: ['KYC/AML', 'Regulatory reporting', 'Tax compliance', 'Data privacy'],
+    support: {
+      email: true,
+      phone: true,
+      chat: true,
+      dedicated: true,
+      sla: '99.5% uptime, 2-hour response time'
     },
-    marketTrend: "Explosive growth in AI content creation",
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/quantum-content"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  // Carbon-Neutral Cloud Platform
+  {
+    id: 'carbon-neutral-cloud',
+    title: 'Carbon-Neutral Cloud Platform',
+    description: '100% carbon-neutral cloud infrastructure with renewable energy integration and carbon offset tracking',
+    category: 'Sustainable Tech',
+    subcategory: 'Cloud Computing',
+    pricing: {
+      starter: {
+        price: '$299/month',
+        billing: 'monthly',
+        features: [
+          'Basic cloud hosting',
+          'Renewable energy powered',
+          'Carbon offset tracking',
+          'Basic sustainability reporting',
+          'Email support',
+          'Standard SLA'
+        ],
+        limitations: [
+          'Limited resources',
+          'Basic features only',
+          'Standard performance',
+          'No advanced features'
+        ]
+      },
+      professional: {
+        price: '$799/month',
+        billing: 'monthly',
+        features: [
+          'Advanced cloud hosting',
+          'Green computing algorithms',
+          'Advanced sustainability reporting',
+          'Performance optimization',
+          'Priority support',
+          'Advanced analytics',
+          'Custom configurations',
+          'API access'
+        ],
+        limitations: [
+          'Limited customization',
+          'Standard SLA',
+          'No dedicated support'
+        ]
+      },
+      enterprise: {
+        price: '$2,999/month',
+        billing: 'monthly',
+        features: [
+          'Enterprise cloud infrastructure',
+          'Custom green computing',
+          'Advanced carbon tracking',
+          'Dedicated infrastructure',
+          '24/7 premium support',
+          'Custom integrations',
+          'Advanced security',
+          'Compliance features',
+          'Dedicated account manager'
+        ],
+        limitations: [
+          'Minimum 12-month contract',
+          'Custom setup time required'
+        ]
+      },
+      custom: {
+        description: 'Custom sustainable cloud solutions for large enterprises',
+        features: [
+          'Custom infrastructure design',
+          'Advanced sustainability features',
+          'Custom compliance',
+          'Dedicated team',
+          'Training and onboarding',
+          'Custom integrations'
+        ],
+        contact: 'Contact sales for enterprise pricing'
+      }
+    },
+    marketInfo: {
+      marketSize: '$500B+ cloud market',
+      growthRate: '35% CAGR',
+      averageMarketPrice: '$500/month',
+      competitors: ['Google Cloud', 'AWS', 'Microsoft Azure', 'DigitalOcean'],
+      roi: '20-40% cost savings + ESG benefits',
+      setupTime: '2-4 weeks'
+    },
+    features: {
+      core: [
+        'Renewable energy powered',
+        'Carbon offset tracking',
+        'Green computing algorithms',
+        'Energy efficiency monitoring',
+        'Basic sustainability reporting',
+        'Standard cloud features'
+      ],
+      advanced: [
+        'Advanced sustainability metrics',
+        'Carbon credit marketplace',
+        'Green hosting options',
+        'Performance optimization',
+        'Advanced analytics',
+        'Custom configurations'
+      ],
+      enterprise: [
+        'Custom sustainability features',
+        'Advanced compliance',
+        'Dedicated infrastructure',
+        'Custom integrations',
+        'Advanced security',
+        'Dedicated support'
+      ]
+    },
+    benefits: [
+      'Reduce carbon footprint by 90%',
+      'Meet ESG compliance requirements',
+      'Attract environmentally conscious customers',
+      'Potential tax benefits',
+      'Improved brand reputation',
+      'Cost savings'
+    ],
+    targetAudience: [
+      'Tech companies',
+      'Enterprises',
+      'Startups',
+      'Government agencies',
+      'Educational institutions',
+      'Non-profit organizations'
+    ],
+    useCases: [
+      'Web hosting',
+      'Application deployment',
+      'Data storage',
+      'AI/ML workloads',
+      'Development environments',
+      'Testing and staging'
+    ],
+    integrations: [
+      'Kubernetes',
+      'Docker',
+      'Terraform',
+      'Major cloud providers',
+      'CI/CD tools',
+      'Monitoring tools',
+      'Analytics platforms',
+      'Security tools'
+    ],
+    compliance: ['ISO 14001', 'Carbon Trust', 'ESG standards', 'SOC2', 'ISO 27001'],
+    support: {
+      email: true,
+      phone: true,
+      chat: true,
+      dedicated: true,
+      sla: '99.9% uptime, 1-hour response time'
+    },
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  // Brain-Computer Interface Platform
+  {
+    id: 'brain-computer-interface',
+    title: 'Brain-Computer Interface Platform',
+    description: 'Advanced BCI platform for medical applications, accessibility, and human-computer interaction research',
+    category: 'NeuroTech Solutions',
+    subcategory: 'Medical Technology',
+    pricing: {
+      starter: {
+        price: '$5,000/month',
+        billing: 'monthly',
+        features: [
+          'Basic BCI hardware',
+          'Standard EEG processing',
+          'Basic brain signal analysis',
+          'Research tools',
+          'Email support',
+          'Basic documentation'
+        ],
+        limitations: [
+          'Limited processing power',
+          'Basic algorithms only',
+          'Standard accuracy',
+          'No advanced features'
+        ]
+      },
+      professional: {
+        price: '$15,000/month',
+        billing: 'monthly',
+        features: [
+          'Advanced BCI hardware',
+          'High-resolution EEG processing',
+          'Advanced signal analysis',
+          'Machine learning algorithms',
+          'Research collaboration tools',
+          'Priority support',
+          'Advanced documentation',
+          'Training materials'
+        ],
+        limitations: [
+          'Limited customization',
+          'Standard SLA',
+          'No dedicated support'
+        ]
+      },
+      enterprise: {
+        price: '$50,000/month',
+        billing: 'monthly',
+        features: [
+          'Enterprise BCI platform',
+          'Custom hardware integration',
+          'Advanced AI algorithms',
+          'Custom research tools',
+          'Dedicated research team',
+          '24/7 premium support',
+          'Custom integrations',
+          'Advanced compliance',
+          'Dedicated account manager'
+        ],
+        limitations: [
+          'Minimum 24-month contract',
+          'Custom development time required'
+        ]
+      },
+      custom: {
+        description: 'Custom BCI solutions for research institutions and medical facilities',
+        features: [
+          'Custom hardware development',
+          'Advanced research tools',
+          'Custom AI algorithms',
+          'Dedicated research team',
+          'Training and certification',
+          'Custom integrations'
+        ],
+        contact: 'Contact sales for research pricing'
+      }
+    },
+    marketInfo: {
+      marketSize: '$2B+ BCI market',
+      growthRate: '55% CAGR',
+      averageMarketPrice: '$20,000/month',
+      competitors: ['Neuralink', 'Kernel', 'CTRL-labs', 'OpenBCI'],
+      roi: 'Research and humanitarian impact',
+      setupTime: '3-6 months'
+    },
+    features: {
+      core: [
+        'High-resolution EEG processing',
+        'Real-time brain signal analysis',
+        'Basic machine learning',
+        'Research tools and APIs',
+        'Patient monitoring',
+        'Basic compliance'
+      ],
+      advanced: [
+        'Advanced AI algorithms',
+        'Custom research tools',
+        'Advanced analytics',
+        'Collaboration features',
+        'Advanced compliance',
+        'Custom integrations'
+      ],
+      enterprise: [
+        'Custom hardware integration',
+        'Advanced AI research',
+        'Custom compliance',
+        'Dedicated support',
+        'Advanced security',
+        'Research partnerships'
+      ]
+    },
+    benefits: [
+      'Enable communication for paralyzed patients',
+      'Advance neuroscience research',
+      'Improve accessibility technology',
+      'Create new human-computer interfaces',
+      'Medical breakthroughs',
+      'Research advancement'
+    ],
+    targetAudience: [
+      'Medical institutions',
+      'Research universities',
+      'Healthcare companies',
+      'Accessibility tech companies',
+      'Government research agencies',
+      'Pharmaceutical companies'
+    ],
+    useCases: [
+      'Medical research',
+      'Patient communication',
+      'Accessibility solutions',
+      'Human-computer interaction',
+      'Neuroscience research',
+      'Medical diagnostics'
+    ],
+    integrations: [
+      'Medical devices',
+      'Research platforms',
+      'Analytics tools',
+      'Mobile apps',
+      'Healthcare systems',
+      'Research databases',
+      'AI platforms',
+      'Security systems'
+    ],
+    compliance: ['FDA', 'CE marking', 'Medical device regulations', 'HIPAA', 'Research ethics'],
+    support: {
+      email: true,
+      phone: true,
+      chat: true,
+      dedicated: true,
+      sla: '99.5% uptime, 4-hour response time'
+    },
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  // Fusion Energy Simulation Platform
+  {
+    id: 'fusion-energy-simulation',
+    title: 'Fusion Energy Simulation Platform',
+    description: 'Advanced simulation platform for fusion energy research, plasma physics, and reactor design',
+    category: 'Fusion Energy Solutions',
+    subcategory: 'Energy Research',
+    pricing: {
+      starter: {
+        price: '$10,000/month',
+        billing: 'monthly',
+        features: [
+          'Basic plasma simulation',
+          'Standard reactor models',
+          'Basic research tools',
+          'Email support',
+          'Basic documentation',
+          'Standard compute resources'
+        ],
+        limitations: [
+          'Limited simulation complexity',
+          'Basic models only',
+          'Standard performance',
+          'No advanced features'
+        ]
+      },
+      professional: {
+        price: '$25,000/month',
+        billing: 'monthly',
+        features: [
+          'Advanced plasma simulation',
+          'Advanced reactor models',
+          '3D visualization',
+          'Performance optimization',
+          'Research collaboration tools',
+          'Priority support',
+          'Advanced documentation',
+          'Training materials'
+        ],
+        limitations: [
+          'Limited customization',
+          'Standard SLA',
+          'No dedicated support'
+        ]
+      },
+      enterprise: {
+        price: '$100,000/month',
+        billing: 'monthly',
+        features: [
+          'Enterprise simulation platform',
+          'Custom simulation models',
+          'Advanced visualization',
+          'Custom research tools',
+          'Dedicated research team',
+          '24/7 premium support',
+          'Custom integrations',
+          'Advanced compliance',
+          'Dedicated account manager'
+        ],
+        limitations: [
+          'Minimum 36-month contract',
+          'Custom development time required'
+        ]
+      },
+      custom: {
+        description: 'Custom fusion research solutions for government and research institutions',
+        features: [
+          'Custom simulation development',
+          'Advanced research tools',
+          'Custom hardware integration',
+          'Dedicated research team',
+          'Training and certification',
+          'Custom integrations'
+        ],
+        contact: 'Contact sales for research pricing'
+      }
+    },
+    marketInfo: {
+      marketSize: '$50B+ fusion energy market',
+      growthRate: '70% CAGR',
+      averageMarketPrice: '$50,000/month',
+      competitors: ['ITER', 'Commonwealth Fusion', 'General Fusion', 'TAE Technologies'],
+      roi: 'Research advancement and energy innovation',
+      setupTime: '6-12 months'
+    },
+    features: {
+      core: [
+        'Plasma physics simulation',
+        'Basic reactor design tools',
+        '3D visualization',
+        'Research tools',
+        'Basic analytics',
+        'Standard compliance'
+      ],
+      advanced: [
+        'Advanced simulation models',
+        'Performance optimization',
+        'Advanced analytics',
+        'Collaboration features',
+        'Custom models',
+        'Advanced compliance'
+      ],
+      enterprise: [
+        'Custom simulation development',
+        'Advanced research tools',
+        'Custom hardware integration',
+        'Dedicated support',
+        'Advanced security',
+        'Research partnerships'
+      ]
+    },
+    benefits: [
+      'Accelerate fusion research',
+      'Reduce experimental costs',
+      'Improve reactor designs',
+      'Enable breakthrough discoveries',
+      'Energy innovation',
+      'Research collaboration'
+    ],
+    targetAudience: [
+      'Research institutions',
+      'Energy companies',
+      'Government agencies',
+      'Universities',
+      'Defense contractors',
+      'International organizations'
+    ],
+    useCases: [
+      'Fusion research',
+      'Reactor design',
+      'Plasma physics',
+      'Energy innovation',
+      'Scientific research',
+      'Educational purposes'
+    ],
+    integrations: [
+      'Research platforms',
+      'Scientific computing tools',
+      'Data analysis software',
+      'Visualization tools',
+      'High-performance computing',
+      'Research databases',
+      'AI platforms',
+      'Security systems'
+    ],
+    compliance: ['Research standards', 'Data security', 'International collaboration', 'Export controls'],
+    support: {
+      email: true,
+      phone: true,
+      chat: true,
+      dedicated: true,
+      sla: '99.9% uptime, 8-hour response time'
+    },
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
 ];
-
-// Market Analysis Summary
-export const MARKET_ANALYSIS_2027 = {
-  totalMarketSize: "$500 billion",
-  growthRate: "45% annually",
-  keyTrends: [
-    "Quantum AI adoption accelerating",
-    "Autonomous systems becoming mainstream",
-    "AI-first business transformation",
-    "Edge computing with AI",
-    "Cybersecurity automation",
-    "Healthcare AI revolution",
-    "Manufacturing 4.0 with AI",
-    "Legal tech automation",
-    "Education AI transformation",
-    "Content creation AI"
-  ],
-  competitiveAdvantages: [
-    "First-mover in quantum AI",
-    "Complete autonomous solutions",
-    "24/7 operation capability",
-    "Zero human error",
-    "Quantum computing advantage",
-    "Comprehensive AI integration",
-    "Enterprise-grade security",
-    "Custom development capabilities",
-    "On-premise deployment options",
-    "Dedicated support teams"
-  ],
-  marketOpportunities: [
-    "Quantum AI market leadership",
-    "Autonomous systems dominance",
-    "Enterprise AI transformation",
-    "Government AI adoption",
-    "Healthcare AI revolution",
-    "Manufacturing AI leadership",
-    "Financial AI transformation",
-    "Legal AI automation",
-    "Education AI transformation",
-    "Content AI leadership"
-  ]
+export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
+export const getComprehensivePricingGuide2027ByCategory = (category: string) => 
+  comprehensivePricingGuide2027.filter(item => item.category === category);
+export const getComprehensivePricingGuide2027ById = (id: string) => 
+  comprehensivePricingGuide2027.find(item => item.id === id);
+export const pricingCategories2027 = [
+  'Metaverse Solutions',
+  'Web3 Solutions',
+  'Sustainable Tech',
+  'NeuroTech Solutions',
+  'Fusion Energy Solutions'
+];
+export const pricingSubcategories2027 = {
+  'Metaverse Solutions': ['E-commerce', 'Gaming', 'Social', 'Education'],
+  'Web3 Solutions': ['DeFi', 'NFTs', 'Blockchain', 'Cryptocurrency'],
+  'Sustainable Tech': ['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
+  'NeuroTech Solutions': ['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
+  'Fusion Energy Solutions': ['Energy Research', 'Plasma Physics', 'Reactor Design', 'Simulation']
 };
-=======
-          "Full metaverse presence",
-          "Custom virtual experiences",
-          "Advanced AI capabilities",
-          "Dedicated support team",
-          "Unlimited visitors",
-          "Custom integrations"
-        ],
-        bestFor: "Large enterprises and global brands"
-      },
-      custom: {
-        description: "Industry-specific metaverse solutions",
-        features: [
-          "Industry-specific virtual environments",
-          "Custom AI models",
-          "Dedicated metaverse experts",
-          "Training and workshops",
-          "Ongoing optimization"
-        ],
-        bestFor: "Fortune 500 companies and entertainment companies"
-      }
-    },
-    marketPrice: "$2,499 - $8,999/month",
-    roi: "350-550%",
-    competitors: ["Meta", "Microsoft", "Google", "Apple", "Roblox"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    features: [
-      "3D virtual storefronts",
-      "AI-powered virtual assistants",
-      "Virtual event hosting",
-      "NFT marketplace integration",
-      "Virtual reality experiences"
-    ],
-    benefits: [
-      "Reach global audiences 24/7",
-      "Reduce physical infrastructure costs",
-      "Create immersive brand experiences",
-      "Generate new revenue streams"
-    ],
-    useCases: [
-      "Virtual retail stores",
-      "Virtual events and conferences",
-      "Virtual real estate",
-      "Virtual education platforms"
-    ],
-    targetAudience: [
-      "Retail brands",
-      "Event organizers",
-      "Educational institutions",
-      "Entertainment companies"
-    ],
-    innovationLevel: "Revolutionary",
-    marketSize: "$120 billion by 2027"
-  },
-  // Quantum-Resistant Cryptography Platform
-  {
-    id: "quantum-resistant-cryptography",
-    title: "Quantum-Resistant Cryptography Platform",
-    category: "Quantum Security",
-    subcategory: "Cryptography",
-    pricing: {
-      starter: {
-        price: 2499,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic quantum-resistant algorithms",
-          "Standard encryption",
-          "Basic security monitoring",
-          "Email support",
-          "Up to 1000 transactions/day"
-        ],
-        bestFor: "Small financial institutions and startups"
-      },
-      professional: {
-        price: 3999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced quantum-resistant algorithms",
-          "Hybrid encryption systems",
-          "Advanced security monitoring",
-          "Priority support",
-          "Up to 10000 transactions/day",
-          "API access"
-        ],
-        bestFor: "Medium enterprises and financial institutions"
-      },
-      enterprise: {
-        price: 8999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Full quantum-resistant implementation",
-          "Custom encryption algorithms",
-          "24/7 security monitoring",
-          "Dedicated security team",
-          "Unlimited transactions",
-          "Custom integrations"
-        ],
-        bestFor: "Large enterprises and government agencies"
-      },
-      custom: {
-        description: "Industry-specific quantum security solutions",
-        features: [
-          "Industry compliance frameworks",
-          "Custom quantum algorithms",
-          "Dedicated quantum security experts",
-          "Training and workshops",
-          "Ongoing security optimization"
-        ],
-        bestFor: "Government agencies and critical infrastructure"
-      }
-    },
-    marketPrice: "$3,999 - $14,999/month",
-    roi: "450-700%",
-    competitors: ["IBM", "Microsoft", "Google", "Cloudflare", "Entrust"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    features: [
-      "Post-quantum algorithms",
-      "Hybrid encryption systems",
-      "Quantum key distribution",
-      "Lattice-based cryptography",
-      "Code-based cryptography"
-    ],
-    benefits: [
-      "Future-proof against quantum attacks",
-      "Maintain high performance",
-      "Comply with emerging standards",
-      "Protect sensitive data long-term"
-    ],
-    useCases: [
-      "Government communications",
-      "Financial transactions",
-      "Healthcare data protection",
-      "Military communications"
-    ],
-    targetAudience: [
-      "Government agencies",
-      "Financial institutions",
-      "Healthcare organizations",
-      "Military organizations"
-    ],
-    innovationLevel: "Revolutionary",
-    marketSize: "$35 billion by 2027"
-  },
-  // AI-Powered Healthcare Analytics Platform
-  {
-    id: "ai-healthcare-analytics",
-    title: "AI-Powered Healthcare Analytics Platform",
-    category: "AI & Healthcare",
-    subcategory: "Analytics",
-    pricing: {
-      starter: {
-        price: 1999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic patient analytics",
-          "Standard reporting",
-          "Basic HIPAA compliance",
-          "Email support",
-          "Up to 1000 patients"
-        ],
-        bestFor: "Small clinics and medical practices"
-      },
-      professional: {
-        price: 2999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced patient analytics",
-          "Predictive modeling",
-          "Full HIPAA compliance",
-          "Priority support",
-          "Up to 10000 patients",
-          "API access"
-        ],
-        bestFor: "Medium hospitals and healthcare networks"
-      },
-      enterprise: {
-        price: 6999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Full AI healthcare platform",
-          "Custom AI models",
-          "24/7 monitoring",
-          "Dedicated healthcare team",
-          "Unlimited patients",
-          "Custom integrations"
-        ],
-        bestFor: "Large hospital systems and research institutions"
-      },
-      custom: {
-        description: "Industry-specific healthcare AI solutions",
-        features: [
-          "Industry compliance frameworks",
-          "Custom medical AI models",
-          "Dedicated healthcare experts",
-          "Training and workshops",
-          "Ongoing optimization"
-        ],
-        bestFor: "Major hospital systems and pharmaceutical companies"
-      }
-    },
-    marketPrice: "$2,999 - $9,999/month",
-    roi: "300-500%",
-    competitors: ["Epic", "Cerner", "Allscripts", "Athenahealth", "IBM Watson Health"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    features: [
-      "Patient outcome prediction",
-      "Disease pattern recognition",
-      "Treatment optimization",
-      "Risk assessment",
-      "Population health analytics"
-    ],
-    benefits: [
-      "Improve patient outcomes by 40%",
-      "Reduce healthcare costs by 25%",
-      "Optimize treatment plans",
-      "Early disease detection"
-    ],
-    useCases: [
-      "Hospital management",
-      "Clinical research",
-      "Pharmaceutical development",
-      "Insurance risk assessment"
-    ],
-    targetAudience: [
-      "Hospitals and clinics",
-      "Research institutions",
-      "Pharmaceutical companies",
-      "Insurance companies"
-    ],
-    innovationLevel: "Advanced",
-    marketSize: "$85 billion by 2027"
-  },
-  // Sustainable Technology Platform
-  {
-    id: "sustainable-technology-platform",
-    title: "Sustainable Technology Platform",
-    category: "Sustainability & Green Tech",
-    subcategory: "Environmental Management",
-    pricing: {
-      starter: {
-        price: 999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic carbon tracking",
-          "Standard reporting",
-          "Basic sustainability metrics",
-          "Email support",
-          "Up to 100 employees"
-        ],
-        bestFor: "Small businesses and startups"
-      },
-      professional: {
-        price: 1799,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced sustainability analytics",
-          "Real-time monitoring",
-          "Advanced reporting",
-          "Priority support",
-          "Up to 1000 employees",
-          "API access"
-        ],
-        bestFor: "Medium enterprises and manufacturing companies"
-      },
-      enterprise: {
-        price: 3999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Full sustainability platform",
-          "Custom sustainability models",
-          "24/7 monitoring",
-          "Dedicated sustainability team",
-          "Unlimited employees",
-          "Custom integrations"
-        ],
-        bestFor: "Large enterprises and government agencies"
-      },
-      custom: {
-        description: "Industry-specific sustainability solutions",
-        features: [
-          "Industry compliance frameworks",
-          "Custom sustainability models",
-          "Dedicated sustainability experts",
-          "Training and workshops",
-          "Ongoing optimization"
-        ],
-        bestFor: "Fortune 500 companies and government agencies"
-      }
-    },
-    marketPrice: "$1,799 - $5,999/month",
-    roi: "250-400%",
-    competitors: ["SAP", "Oracle", "Microsoft", "Salesforce", "IBM"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    features: [
-      "Carbon footprint tracking",
-      "Energy optimization",
-      "Waste reduction analytics",
-      "Sustainable supply chain",
-      "Green building management"
-    ],
-    benefits: [
-      "Reduce carbon footprint by 30%",
-      "Lower energy costs by 25%",
-      "Achieve sustainability certifications",
-      "Improve brand reputation"
-    ],
-    useCases: [
-      "Corporate sustainability",
-      "Building management",
-      "Manufacturing optimization",
-      "Supply chain sustainability"
-    ],
-    targetAudience: [
-      "Large corporations",
-      "Manufacturing companies",
-      "Real estate developers",
-      "Government agencies"
-    ],
-    innovationLevel: "Advanced",
-    marketSize: "$55 billion by 2027"
-  },
-  // Edge Computing AI Platform
-  {
-    id: "edge-computing-ai-platform",
-    title: "Edge Computing AI Platform",
-    category: "Edge Computing & AI",
-    subcategory: "IoT Intelligence",
-    pricing: {
-      starter: {
-        price: 1499,
-        currency: "$",
-        period: "month",
-        features: [
-          "Basic edge AI processing",
-          "Standard IoT integration",
-          "Basic analytics",
-          "Email support",
-          "Up to 100 devices"
-        ],
-        bestFor: "Small IoT projects and startups"
-      },
-      professional: {
-        price: 2299,
-        currency: "$",
-        period: "month",
-        features: [
-          "Advanced edge AI processing",
-          "Real-time analytics",
-          "Advanced IoT integration",
-          "Priority support",
-          "Up to 1000 devices",
-          "API access"
-        ],
-        bestFor: "Medium enterprises and IoT manufacturers"
-      },
-      enterprise: {
-        price: 4999,
-        currency: "$",
-        period: "month",
-        features: [
-          "Full edge AI platform",
-          "Custom AI models",
-          "24/7 monitoring",
-          "Dedicated edge computing team",
-          "Unlimited devices",
-          "Custom integrations"
-        ],
-        bestFor: "Large enterprises and IoT platform providers"
-      },
-      custom: {
-        description: "Industry-specific edge computing solutions",
-        features: [
-          "Industry compliance frameworks",
-          "Custom edge AI models",
-          "Dedicated edge computing experts",
-          "Training and workshops",
-          "Ongoing optimization"
-        ],
-        bestFor: "Major IoT manufacturers and smart city developers"
-      }
-    },
-    marketPrice: "$2,299 - $7,999/month",
-    roi: "350-550%",
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    features: [
-      "Edge AI processing",
-      "Real-time analytics",
-      "Low-latency inference",
-      "Privacy-preserving AI",
-      "Distributed learning"
-    ],
-    benefits: [
-      "Reduce latency by 90%",
-      "Improve privacy and security",
-      "Lower bandwidth costs",
-      "Enable offline AI processing"
-    ],
-    useCases: [
-      "Autonomous vehicles",
-      "Smart cities",
-      "Industrial IoT",
-      "Healthcare monitoring"
-    ],
-    targetAudience: [
-      "IoT device manufacturers",
-      "Smart city developers",
-      "Industrial companies",
-      "Healthcare providers"
-    ],
-    innovationLevel: "Advanced",
-    marketSize: "$40 billion by 2027"
-  }
-];
-<<<<<<< HEAD
-
-export default COMPREHENSIVE_PRICING_GUIDE_2027;
->>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
-=======
-export default COMPREHENSIVE_PRICING_GUIDE_2027;
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

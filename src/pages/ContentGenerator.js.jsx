@@ -15,7 +15,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useRouter } from "next/router";
 export default function ContentGenerator() {
     const { user, isLoading } = useAuth();
-    const router = useNavigate();
+    const router = useRouter();
     const [contentType, setContentType] = useState('blog');
     const [customPrompt, setCustomPrompt] = useState('');
     const [topic, setTopic] = useState('');
@@ -28,7 +28,7 @@ export default function ContentGenerator() {
     React.useEffect(() => {
         if (!isLoading && !user) {
             toast.error("You must be logged in to access this page");
-            router("/login?redirect=/content-generator");
+            router.push("/login?redirect=/content-generator");
         }
     }, [user, isLoading, router]);
     const generateContent = async () => {

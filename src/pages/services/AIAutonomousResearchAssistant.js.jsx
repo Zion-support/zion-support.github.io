@@ -30,6 +30,7 @@ const AIAutonomousResearchAssistant = () => {
           </div>
         </div>
       </section>
+
       {/* What is AI Autonomous Research Assistant */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -93,6 +94,7 @@ const AIAutonomousResearchAssistant = () => {
           </div>
         </div>
       </section>
+
       {/* Key Features */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -110,6 +112,7 @@ const AIAutonomousResearchAssistant = () => {
                 across multiple sources and languages.
               </p>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
                 <LightBulbIcon className="h-8 w-8 text-green-400"/>
@@ -120,6 +123,7 @@ const AIAutonomousResearchAssistant = () => {
                 might overlook.
               </p>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
                 <ChartBarIcon className="h-8 w-8 text-purple-400"/>
@@ -129,6 +133,7 @@ const AIAutonomousResearchAssistant = () => {
                 Comprehensive data analysis with interactive visualizations and automated report generation.
               </p>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">
                 <AcademicCapIcon className="h-8 w-8 text-orange-400"/>
@@ -139,6 +144,7 @@ const AIAutonomousResearchAssistant = () => {
                 continuous learning capabilities.
               </p>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">
                 <RocketLaunchIcon className="h-8 w-8 text-cyan-400"/>
@@ -149,6 +155,7 @@ const AIAutonomousResearchAssistant = () => {
                 to new information automatically.
               </p>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">
                 <GlobeAltIcon className="h-8 w-8 text-pink-400"/>
@@ -162,6 +169,7 @@ const AIAutonomousResearchAssistant = () => {
           </div>
         </div>
       </section>
+
       {/* How It Works */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -179,6 +187,7 @@ const AIAutonomousResearchAssistant = () => {
                 requirements and develops a research strategy.
               </p>
             </div>
+
             <div className="text-center">
               <div className="w-16 h-16 bg-green-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-green-400">2</span>
@@ -189,6 +198,7 @@ const AIAutonomousResearchAssistant = () => {
                 cross-references information across domains.
               </p>
             </div>
+
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-purple-400">3</span>
@@ -199,6 +209,7 @@ const AIAutonomousResearchAssistant = () => {
                 create comprehensive research summaries.
               </p>
             </div>
+
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-orange-400">4</span>
@@ -212,6 +223,7 @@ const AIAutonomousResearchAssistant = () => {
           </div>
         </div>
       </section>
+
       {/* Applications */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -228,6 +240,7 @@ const AIAutonomousResearchAssistant = () => {
                 <li>• Cross-disciplinary research connections</li>
               </ul>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-green-400">Business Intelligence</h3>
               <ul className="space-y-2 text-gray-300">
@@ -237,6 +250,7 @@ const AIAutonomousResearchAssistant = () => {
                 <li>• Industry landscape mapping</li>
               </ul>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-purple-400">Scientific Discovery</h3>
               <ul className="space-y-2 text-gray-300">
@@ -246,6 +260,7 @@ const AIAutonomousResearchAssistant = () => {
                 <li>• Research collaboration identification</li>
               </ul>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-orange-400">Patent Research</h3>
               <ul className="space-y-2 text-gray-300">
@@ -255,6 +270,7 @@ const AIAutonomousResearchAssistant = () => {
                 <li>• Technology trend forecasting</li>
               </ul>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">Medical Research</h3>
               <ul className="space-y-2 text-gray-300">
@@ -264,6 +280,7 @@ const AIAutonomousResearchAssistant = () => {
                 <li>• Treatment effectiveness studies</li>
               </ul>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-pink-400">Technology Innovation</h3>
               <ul className="space-y-2 text-gray-300">
@@ -276,6 +293,7 @@ const AIAutonomousResearchAssistant = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -296,6 +314,7 @@ const AIAutonomousResearchAssistant = () => {
                   </p>
                 </div>
               </div>
+
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-white font-bold">✓</span>
@@ -308,6 +327,7 @@ const AIAutonomousResearchAssistant = () => {
                   </p>
                 </div>
               </div>
+
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-white font-bold">✓</span>
@@ -321,6 +341,7 @@ const AIAutonomousResearchAssistant = () => {
                 </div>
               </div>
             </div>
+
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -334,6 +355,7 @@ const AIAutonomousResearchAssistant = () => {
                   </p>
                 </div>
               </div>
+
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-white font-bold">✓</span>
@@ -346,6 +368,7 @@ const AIAutonomousResearchAssistant = () => {
                   </p>
                 </div>
               </div>
+
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <span className="text-white font-bold">✓</span>
@@ -362,6 +385,7 @@ const AIAutonomousResearchAssistant = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -1572,167 +1573,32 @@ import {
   CheckCircle,
   BarChart3
 } from 'lucide-react';
+=======
+import { ArrowRight, Users, TrendingUp, Clock, DollarSign, Globe } from 'lucide-react';
+>>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
 export default function CaseStudies() {
   const caseStudies = [
     {
       id: 1,
       title: 'AI-Powered Customer Service Transformation',
-      company: 'TechCorp Solutions',
-      industry: 'Technology',
-      challenge: 'High customer service costs and long response times',
-      solution: 'Implemented AI-powered chatbots and automated ticket routing',
+      company: 'Global Retail Corp',
+      industry: 'Retail',
+      challenge: 'High customer service costs and long response times affecting customer satisfaction',
+      solution: 'Implemented AI-powered chatbots and intelligent routing system',
       results: [
-        'Reduced response time by 85%',
-        'Cut customer service costs by 60%',
-        'Improved customer satisfaction to 94%'
-      ],
-      duration: '3 months',
-      teamSize: '8 people',
-      technologies: ['AI/ML', 'NLP', 'Automation'],
-      image: '🤖',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'Quantum-Safe Cybersecurity Implementation',
-      company: 'GlobalBank International',
-      industry: 'Financial Services',
-      challenge: 'Vulnerability to quantum computing attacks',
-      solution: 'Deployed quantum-resistant cryptography and security protocols',
-      results: [
-        'Enhanced security against future threats',
-        'Compliant with new regulatory requirements',
-        'Zero security breaches in 18 months'
+        '40% reduction in customer service costs',
+        '85% improvement in response time',
+        '92% customer satisfaction rate',
+        '24/7 automated support coverage'
       ],
       duration: '6 months',
-      teamSize: '12 people',
-      technologies: ['Quantum Cryptography', 'Security', 'Compliance'],
-      image: '🔒',
-      featured: false
-    },
-    {
-      id: 3,
-      title: 'Cloud Infrastructure Migration',
-      company: 'ManufacturePro Inc.',
-      industry: 'Manufacturing',
-      challenge: 'Outdated on-premise systems limiting scalability',
-      solution: 'Migrated to hybrid cloud infrastructure with automation',
-      results: [
-        'Increased system performance by 300%',
-        'Reduced infrastructure costs by 40%',
-        'Enabled 24/7 global operations'
-      ],
-      duration: '8 months',
-      teamSize: '15 people',
-      technologies: ['Cloud Migration', 'DevOps', 'Automation'],
-      image: '☁️',
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'AI Business Intelligence Platform',
-      company: 'RetailChain Corp',
-      industry: 'Retail',
-      challenge: 'Poor data visibility and decision-making capabilities',
-      solution: 'Built comprehensive AI-powered BI platform',
-      results: [
-        'Improved decision-making speed by 70%',
-        'Increased revenue by 25%',
-        'Enhanced inventory optimization'
-      ],
-      duration: '5 months',
-      teamSize: '10 people',
-      technologies: ['AI/ML', 'Data Analytics', 'Business Intelligence'],
-      image: '📊',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Autonomous Manufacturing Systems',
-      company: 'AutoTech Industries',
-      industry: 'Automotive',
-      challenge: 'Production inefficiencies and quality control issues',
-      solution: 'Implemented AI-driven autonomous manufacturing systems',
-      results: [
-        'Increased production efficiency by 45%',
-        'Reduced defects by 80%',
-        'Lowered operational costs by 35%'
-      ],
-      duration: '10 months',
-      teamSize: '20 people',
-      technologies: ['AI/ML', 'IoT', 'Robotics'],
-      image: '🏭',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Healthcare Data Analytics Platform',
-      company: 'MediCare Systems',
-      industry: 'Healthcare',
-      challenge: 'Fragmented patient data and poor insights',
-      solution: 'Developed unified healthcare analytics platform',
-      results: [
-        'Improved patient outcomes by 30%',
-        'Reduced administrative overhead by 50%',
-        'Enhanced diagnostic accuracy'
-      ],
-      duration: '7 months',
-      teamSize: '18 people',
-      technologies: ['Data Analytics', 'Healthcare IT', 'AI/ML'],
-      image: '🏥',
-      featured: false
-    }
-  ];
-  const industries = [
-    'All Industries',
-    'Technology',
-    'Financial Services',
-    'Manufacturing',
-    'Retail',
-    'Healthcare',
-    'Government'
-  ];
-  const technologies = [
-    'All Technologies',
-    'AI/ML',
-    'Quantum Technology',
-    'Cybersecurity',
-    'Cloud Computing',
-    'Data Analytics',
-    'IoT'
-  ];
-  CheckCircle, 
-  TrendingUp, 
-  Users, 
-  Building, 
-  Shield, 
-  Brain,
-  Zap,
-  Globe,
-  Award,
-  ArrowRight
-} from 'lucide-react';
-const CaseStudies = () => {
-  const caseStudies = [
-    {
-      id: 1,
-      title: "AI-Powered Healthcare Analytics Transformation",
-      client: "Regional Medical Center",
-      industry: "Healthcare",
-      challenge: "Complex patient data analysis and predictive modeling for improved care outcomes",
-      solution: "Implemented AI-powered analytics platform with machine learning algorithms for patient risk assessment",
-      results: [
-        "40% improvement in early disease detection",
-        "25% reduction in readmission rates",
-        "30% faster diagnosis times",
-        "$2.5M annual cost savings"
-      ],
-      technologies: ["AI/ML", "Healthcare Analytics", "Predictive Modeling", "Data Integration"],
-      image: "/images/case-studies/healthcare-analytics.jpg",
-      category: "AI Solutions"
+      investment: '$250,000',
+      roi: '320%',
+      technologies: ['AI/ML', 'NLP', 'Cloud Computing', 'API Integration']
     },
     {
       id: 2,
+<<<<<<< HEAD
       title: "Quantum-Safe Cybersecurity Implementation",
       client: "Global Financial Institution",
       industry: "Financial Services",
@@ -4332,223 +4198,142 @@ export default function CaseStudies() {
       industry: 'Government',
       challenge: 'Advanced persistent threats requiring sophisticated detection and response capabilities.',
       solution: 'Zero-trust network architecture with AI-powered threat detection and automated response.',
+=======
+      title: 'Cybersecurity Infrastructure Overhaul',
+      company: 'Financial Services Inc',
+      industry: 'Finance',
+      challenge: 'Outdated security systems vulnerable to modern cyber threats',
+      solution: 'Implemented zero-trust architecture with advanced threat detection',
+>>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
       results: [
         '99.9% threat detection rate',
-        'Real-time response to 99% of incidents',
-        'Zero successful breaches since implementation',
-        '50% reduction in security team workload'
+        'Zero security breaches in 18 months',
+        '50% reduction in security incidents',
+        'Full compliance with industry regulations'
       ],
-      image: '/images/case-studies/cybersecurity.jpg'
-    },
-    {
-      id: 5,
-      title: 'Retail Customer Experience Platform',
-      client: 'International Retail Chain',
-      industry: 'Retail',
-      challenge: 'Personalized customer experience across multiple channels and locations.',
-      solution: 'AI-powered customer experience platform with predictive analytics and autonomous optimization.',
-      results: [
-        '35% increase in customer engagement',
-        'Personalized recommendations with 85% accuracy',
-        '20% increase in average order value',
-        'Real-time optimization across 500+ locations'
-      ],
-      image: '/images/case-studies/retail-cx.jpg'
-    },
-    {
-      id: 6,
-      title: 'Energy Grid Optimization',
-      client: 'Utility Company',
-      industry: 'Energy & Utilities',
-      challenge: 'Grid efficiency and renewable energy integration requiring complex optimization algorithms.',
-      solution: 'Quantum computing-powered grid optimization system with AI-driven demand forecasting.',
-      results: [
-        '30% improvement in grid efficiency',
-        '40% increase in renewable energy integration',
-        'Predictive maintenance reducing outages by 60%',
-        '$100M+ in operational savings annually'
-      ],
-      image: '/images/case-studies/energy-grid.jpg'
-    }
-  ];
-  const industries = ['All', 'Healthcare', 'Financial Services', 'Manufacturing', 'Government', 'Retail', 'Energy & Utilities'];
-  return (
-    <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="Case Studies - Zion Tech Group" 
-        description="Explore real-world success stories and results from Zion Tech Group's innovative technology solutions"
-        keywords="case studies, success stories, results, implementations, Zion Tech Group"
-        canonical="https://ziontechgroup.com/case-studies"
-      />
-      <div className="container mx-auto px-4 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
-            Case Studies
-          </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover how our innovative AI, quantum computing, and autonomous solutions 
-            are transforming businesses across industries. Real results, measurable impact, 
-            and proven success stories.
-          </p>
-        </div>
-        {/* Featured Case Study */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">Featured Success Story</h2>
-          {caseStudies.filter(study => study.featured).map((study) => (
-            <div key={study.id} className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 border border-cyan-500/20">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-cyan-500 text-white text-sm font-medium rounded-full">
-                      {study.industry}
-                    </span>
-                    <span className="text-gray-400 text-sm">Featured Case Study</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{study.title}</h3>
-                  <p className="text-cyan-400 font-semibold mb-4">{study.client}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                    <p className="text-gray-300">{study.challenge}</p>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                    <p className="text-gray-300">{study.solution}</p>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Results</h4>
-                    <ul className="space-y-2">
-                      {study.results.map((result, index) => (
-                        <li key={index} className="flex items-start">
-                          <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          <span className="text-gray-300">{result}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-      title: 'AI-Powered Financial Services Transformation',
-      company: 'Global Bank Corp',
-      industry: 'Financial Services',
-      challenge: 'Complex legacy systems and manual processes causing delays and errors',
-      solution: 'Implemented AI-powered automation platform with quantum computing capabilities',
-      results: {
-        efficiency: '85%',
-        costReduction: '60%',
-        timeToMarket: '70%',
-        customerSatisfaction: '95%'
-      },
-      image: '/api/placeholder/400/250',
-      category: 'AI & Automation'
-    },
-    {
-      id: 2,
-      title: 'Healthcare AI Implementation Success',
-      company: 'Metro Health Systems',
-      industry: 'Healthcare',
-      challenge: 'Patient data analysis taking weeks, affecting treatment decisions',
-      solution: 'Deployed AI-powered diagnostic and treatment recommendation system',
-      results: {
-        efficiency: '90%',
-        costReduction: '45%',
-        timeToMarket: '80%',
-        customerSatisfaction: '98%'
-      },
-      image: '/api/placeholder/400/250',
-      category: 'Healthcare AI'
+      duration: '8 months',
+      investment: '$500,000',
+      roi: '280%',
+      technologies: ['Zero Trust', 'SIEM', 'EDR', 'Threat Intelligence']
     },
     {
       id: 3,
-      title: 'Manufacturing Process Optimization',
-      company: 'Tech Manufacturing Inc',
-      industry: 'Manufacturing',
-      challenge: 'Production inefficiencies and quality control issues',
-      solution: 'Integrated AI-powered predictive maintenance and quality control systems',
-      results: {
-        efficiency: '75%',
-        costReduction: '55%',
-        timeToMarket: '65%',
-        customerSatisfaction: '92%'
-      },
-      image: '/api/placeholder/400/250',
-      category: 'Industrial AI'
+      title: 'Cloud Migration and DevOps Transformation',
+      company: 'Tech Startup XYZ',
+      industry: 'Technology',
+      challenge: 'Legacy infrastructure limiting scalability and deployment speed',
+      solution: 'Migrated to cloud-native architecture with CI/CD pipelines',
+      results: [
+        '90% faster deployment cycles',
+        '60% reduction in infrastructure costs',
+        '99.9% uptime achieved',
+        'Unlimited scalability for growth'
+      ],
+      duration: '4 months',
+      investment: '$180,000',
+      roi: '450%',
+      technologies: ['AWS', 'Kubernetes', 'Docker', 'Jenkins', 'Terraform']
     },
     {
       id: 4,
-      title: 'Retail Customer Experience Revolution',
-      company: 'Smart Retail Chain',
-      industry: 'Retail',
-      challenge: 'Poor customer engagement and inventory management',
-      solution: 'AI-powered customer analytics and inventory optimization platform',
-      results: {
-        efficiency: '80%',
-        costReduction: '40%',
-        timeToMarket: '75%',
-        customerSatisfaction: '96%'
-      },
-      image: '/api/placeholder/400/250',
-      category: 'Retail AI'
+      title: 'Digital Transformation for Manufacturing',
+      company: 'Industrial Manufacturing Co',
+      industry: 'Manufacturing',
+      challenge: 'Manual processes causing inefficiencies and quality issues',
+      solution: 'Implemented IoT sensors and predictive analytics platform',
+      results: [
+        '25% increase in production efficiency',
+        '30% reduction in quality defects',
+        'Predictive maintenance preventing 80% of breakdowns',
+        'Real-time monitoring and analytics'
+      ],
+      duration: '10 months',
+      investment: '$750,000',
+      roi: '180%',
+      technologies: ['IoT', 'Big Data', 'Machine Learning', 'Cloud Platform']
     },
     {
       id: 5,
-      title: 'Government Digital Transformation',
-      company: 'City Government',
-      industry: 'Government',
-      challenge: 'Slow citizen services and outdated systems',
-      solution: 'Modernized infrastructure with AI-powered citizen service platform',
-      results: {
-        efficiency: '70%',
-        costReduction: '50%',
-        timeToMarket: '85%',
-        customerSatisfaction: '94%'
-      },
-      image: '/api/placeholder/400/250',
-      category: 'Government Tech'
+      title: 'Data Analytics and Business Intelligence',
+      company: 'Healthcare Provider Network',
+      industry: 'Healthcare',
+      challenge: 'Fragmented data preventing insights and operational optimization',
+      solution: 'Built centralized data warehouse with advanced analytics',
+      results: [
+        '360-degree patient view achieved',
+        '20% improvement in treatment outcomes',
+        '15% reduction in operational costs',
+        'Real-time reporting and dashboards'
+      ],
+      duration: '7 months',
+      investment: '$400,000',
+      roi: '220%',
+      technologies: ['Data Warehouse', 'ETL', 'Business Intelligence', 'Data Governance']
     },
     {
       id: 6,
-      title: 'Education Technology Innovation',
-      company: 'University Network',
-      industry: 'Education',
-      challenge: 'Limited student engagement and outdated learning methods',
-      solution: 'AI-powered personalized learning platform with adaptive content',
-      results: {
-        efficiency: '85%',
-        costReduction: '35%',
-        timeToMarket: '90%',
-        customerSatisfaction: '97%'
-      },
-      image: '/api/placeholder/400/250',
-      category: 'EdTech'
+      title: 'Legacy System Modernization',
+      company: 'Government Agency',
+      industry: 'Government',
+      challenge: 'Outdated systems causing service delays and security risks',
+      solution: 'Modernized applications with microservices architecture',
+      results: [
+        '70% faster service delivery',
+        'Enhanced security and compliance',
+        'Improved citizen experience',
+        'Reduced maintenance costs'
+      ],
+      duration: '12 months',
+      investment: '$1,200,000',
+      roi: '150%',
+      technologies: ['Microservices', 'API Gateway', 'Cloud Native', 'DevOps']
     }
   ];
-  const categories = ['All', 'AI & Automation', 'Healthcare AI', 'Industrial AI', 'Retail AI', 'Government Tech', 'EdTech'];
+  const industries = [
+    { name: 'Retail', count: 15, icon: TrendingUp },
+    { name: 'Finance', count: 12, icon: DollarSign },
+    { name: 'Healthcare', count: 8, icon: Users },
+    { name: 'Manufacturing', count: 10, icon: TrendingUp },
+    { name: 'Technology', count: 20, icon: Globe },
+    { name: 'Government', count: 6, icon: Users }
+  ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-blue-900/20"></div>
-        <div className="absolute inset-0 bg-gray-800/20"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/50 text-cyan-400 text-sm font-medium mb-6">
-              <TrendingUp className="w-4 h-4 mr-2" />
-              Success Stories
+      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Case Studies
+          </h1>
+          <p className="text-xl md:text-2xl text-zion-slate-light max-w-3xl mx-auto">
+            Real-world examples of how we've helped organizations transform their business through innovative technology solutions
+          </p>
+        </div>
+      </section>
+      {/* Stats Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold text-zion-cyan mb-2">71+</div>
+              <div className="text-zion-slate-dark">Successful Projects</div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-              Case Studies
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Discover how organizations across industries are transforming their operations 
-              with our cutting-edge AI and technology solutions.
-            </p>
+            <div>
+              <div className="text-4xl font-bold text-zion-purple mb-2">$2.5M+</div>
+              <div className="text-zion-slate-dark">Total Investment</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-zion-cyan mb-2">280%</div>
+              <div className="text-zion-slate-dark">Average ROI</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-zion-purple mb-2">6</div>
+              <div className="text-zion-slate-dark">Industries Served</div>
+            </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -4811,25 +4596,144 @@ const CaseStudies: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">
+=======
+      {/* Industry Filter */}
+      <section className="py-16 bg-zion-slate-light">
+>>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Studies</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how Zion Tech Group has helped businesses across industries achieve their digital transformation goals.
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
+              Industries We Serve
+            </h2>
+            <p className="text-xl text-zion-slate-light">
+              Explore case studies from your industry
             </p>
           </div>
-          
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <p className="text-gray-600 text-center">
-              Case studies coming soon. We're working on showcasing our client success stories.
-            </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {industries.map((industry, index) => (
+              <div key={index} className="text-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow cursor-pointer">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <industry.icon className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <div className="text-lg font-semibold text-zion-slate-dark mb-1">
+                  {industry.name}
+                </div>
+                <div className="text-sm text-zion-slate-light">
+                  {industry.count} projects
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-</>
+      </section>
+      {/* Case Studies Grid */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
+              Featured Case Studies
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Discover how our solutions have delivered measurable results across different industries and use cases
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {caseStudies.map((study) => (
+              <div key={study.id} className="bg-white border border-zion-slate-light/20 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-sm font-medium rounded-full">
+                    {study.industry}
+                  </span>
+                  <div className="flex items-center space-x-2 text-zion-slate-light">
+                    <Clock className="w-4 h-4" />
+                    <span className="text-sm">{study.duration}</span>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-zion-slate-dark mb-2">
+                  {study.title}
+                </h3>
+                <div className="flex items-center space-x-2 mb-4">
+                  <Users className="w-4 h-4 text-zion-slate-light" />
+                  <span className="text-zion-slate-light">{study.company}</span>
+                </div>
+                <div className="space-y-4 mb-6">
+                  <div>
+                    <h4 className="font-semibold text-zion-slate-dark mb-2">Challenge:</h4>
+                    <p className="text-zion-slate-light">{study.challenge}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-zion-slate-dark mb-2">Solution:</h4>
+                    <p className="text-zion-slate-light">{study.solution}</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="text-center p-3 bg-zion-slate-light/5 rounded-lg">
+                    <div className="text-2xl font-bold text-zion-cyan">{study.roi}</div>
+                    <div className="text-sm text-zion-slate-light">ROI</div>
+                  </div>
+                  <div className="text-center p-3 bg-zion-slate-light/5 rounded-lg">
+                    <div className="text-2xl font-bold text-zion-purple">${study.investment}</div>
+                    <div className="text-sm text-zion-slate-light">Investment</div>
+                  </div>
+                </div>
+                <div className="mb-6">
+                  <h4 className="font-semibold text-zion-slate-dark mb-3">Key Results:</h4>
+                  <ul className="space-y-2">
+                    {study.results.map((result, index) => (
+                      <li key={index} className="flex items-start text-zion-slate-light">
+                        <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        {result}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mb-6">
+                  <h4 className="font-semibold text-zion-slate-dark mb-3">Technologies Used:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {study.technologies.map((tech, index) => (
+                      <span key={index} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <button className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300">
+                  View Full Case Study
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-purple">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Create Your Success Story?
+          </h2>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
+            Let's discuss how our technology solutions can transform your business and deliver similar results
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center px-8 py-4 bg-white text-zion-blue-dark font-semibold rounded-lg hover:shadow-lg transition-all duration-300">
+              Start Your Project
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </button>
+            <button className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-all duration-300">
+              Schedule Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
   );
+<<<<<<< HEAD
 };
 export default CaseStudies;
 =======
 }
 >>>>>>> 6dd29c142034ec935b31fa0640beb1de37312487
+=======
+}
+>>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e

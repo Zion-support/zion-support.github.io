@@ -42,6 +42,7 @@ export default function ServicesPricingGuide() {
     };
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO title="Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio." keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing" canonical="https://ziontechgroup.com/services-pricing-guide"/>
+
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
@@ -64,6 +65,7 @@ export default function ServicesPricingGuide() {
           </div>
         </div>
       </div>
+
       {/* Contact Information Banner */}
       <div className="bg-zion-blue-dark py-6 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto">
@@ -89,6 +91,7 @@ export default function ServicesPricingGuide() {
           </div>
         </div>
       </div>
+
       {/* Category Filter */}
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
@@ -102,6 +105,7 @@ export default function ServicesPricingGuide() {
           </div>
         </div>
       </div>
+
       {/* Pricing Overview */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -113,6 +117,7 @@ export default function ServicesPricingGuide() {
               Our services are categorized into three main tiers based on complexity and scope
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center">
@@ -144,6 +149,7 @@ export default function ServicesPricingGuide() {
                 </ul>
               </CardContent>
             </Card>
+
             <Card className="bg-zion-blue-dark border-zion-purple/50">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -174,6 +180,7 @@ export default function ServicesPricingGuide() {
                 </ul>
               </CardContent>
             </Card>
+
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -205,12 +212,14 @@ export default function ServicesPricingGuide() {
               </CardContent>
             </Card>
           </div>
+
           {/* Services Table */}
           <Tabs defaultValue="table" className="w-full">
             <TabsList className="grid w-full grid-cols-2 bg-zion-blue-dark border-zion-blue-light">
               <TabsTrigger value="table" className="text-white">Table View</TabsTrigger>
               <TabsTrigger value="cards" className="text-white">Card View</TabsTrigger>
             </TabsList>
+
             <TabsContent value="table" className="mt-6">
               <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden">
                 <Table>
@@ -274,6 +283,7 @@ export default function ServicesPricingGuide() {
                 </Table>
               </div>
             </TabsContent>
+
             <TabsContent value="cards" className="mt-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service) => (<Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300">
@@ -309,11 +319,13 @@ export default function ServicesPricingGuide() {
                             <span>AI Score: {service.aiScore}/100</span>
                           </div>)}
                       </div>
+
                       <div className="flex items-center gap-2">
                         <Star className="w-4 h-4 text-yellow-400 fill-current"/>
                         <span className="text-white">{service.rating}</span>
                         <span className="text-zion-slate-light">({service.reviewCount} reviews)</span>
                       </div>
+
                       <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                         <Mail className="w-4 h-4 mr-2"/>
                         Get Quote
@@ -325,6 +337,7 @@ export default function ServicesPricingGuide() {
           </Tabs>
         </div>
       </div>
+
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">

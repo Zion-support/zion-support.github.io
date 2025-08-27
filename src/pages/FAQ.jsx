@@ -2,11 +2,8 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-<<<<<<< HEAD
-import { Header } from "@/components/header/Header";
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-=======
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 export default function FAQ() {
     const faqData = [
         {
@@ -69,7 +66,6 @@ export default function FAQ() {
               Find answers to the most common questions about Zion Tech Group and our marketplace platform
             </p>
           </div>
-          
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
               {faqData.map((item, index) => (<AccordionItem key={index} value={`item-${index}`} className="border-zion-blue-light">
@@ -84,7 +80,6 @@ export default function FAQ() {
                 </AccordionItem>))}
             </Accordion>
           </div>
-          
           <div className="mt-16 text-center">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
               <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>

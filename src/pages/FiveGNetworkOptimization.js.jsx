@@ -8,6 +8,7 @@ const FiveGNetworkOptimization = () => {
         <meta name="description" content="Advanced 5G network optimization solutions for enhanced performance, coverage, and efficiency."/>
         <meta name="keywords" content="5G optimization, network performance, telecommunications, 5G infrastructure, network efficiency"/>
       </Helmet>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 relative overflow-hidden">
@@ -31,6 +32,7 @@ const FiveGNetworkOptimization = () => {
             </div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -40,6 +42,7 @@ const FiveGNetworkOptimization = () => {
                 Comprehensive tools for maximizing 5G network performance and reliability
               </p>
             </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
             {
@@ -80,6 +83,7 @@ const FiveGNetworkOptimization = () => {
             </div>
           </div>
         </section>
+
         {/* Performance Metrics Section */}
         <section className="py-20 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -89,6 +93,7 @@ const FiveGNetworkOptimization = () => {
                 Measurable results from our 5G optimization solutions
               </p>
             </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
             {
@@ -121,6 +126,7 @@ const FiveGNetworkOptimization = () => {
             </div>
           </div>
         </section>
+
         {/* Use Cases Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -130,6 +136,7 @@ const FiveGNetworkOptimization = () => {
                 Industries and use cases that benefit from optimized 5G networks
               </p>
             </div>
+
             <div className="grid md:grid-cols-2 gap-8">
               {[
             {
@@ -155,6 +162,7 @@ const FiveGNetworkOptimization = () => {
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">

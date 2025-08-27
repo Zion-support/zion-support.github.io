@@ -20,6 +20,7 @@ const AIAutonomousQualityAssurance = () => {
               Your AI quality assurance partner that continuously monitors quality, ensures standards, and maintains excellence with intelligent autonomous operation
             </p>
           </div>
+
           {/* Quality Assurance Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousQualityAssurance = () => {
               <p className="text-gray-300">Analyze quality</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousQualityAssurance = () => {
               <p className="text-gray-300">Learns new standards</p>
             </div>
           </div>
+
           {/* Quality Assurance Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Quality Assurance Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousQualityAssurance = () => {
               </div>
             </div>
           </div>
+
           {/* Quality Assurance Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Quality Assurance Solutions</h2>
@@ -125,6 +129,7 @@ const AIAutonomousQualityAssurance = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Quality Assurance Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousQualityAssurance = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Quality Assurance?</h2>

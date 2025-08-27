@@ -1,22 +1,22 @@
-import { CategoriesSection } from "@/components/CategoriesSection";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { GradientHeading } from "@/components/GradientHeading";
-export default function Categories() {
+export default function Featured() {
     return (<>
       
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-12">
           <div className="text-center mb-12">
             <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">
-              Browse Categories
+              Featured Listings
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-              Explore our extensive range of AI services and products organized by category. 
-              Find exactly what you're looking for to enhance your business or personal projects.
+              Discover our handpicked selection of premium AI products and services. 
+              These featured listings represent the best that the Zion Marketplace has to offer.
             </p>
           </div>
           
-          {/* Reuse the Categories Section component */}
-          <CategoriesSection showTitle={false}/>
+          {/* Reuse the FeaturedListings component */}
+          <FeaturedListingsSection showTitle={false}/>
         </div>
       </div>
       

@@ -82,6 +82,7 @@ export function ContactSection() {
             Let's discuss how Zion Tech Group can help you achieve your goals.
           </p>
         </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {/* Contact Methods */}
           <div className="lg:col-span-2">
@@ -101,6 +102,7 @@ export function ContactSection() {
                 </div>))}
             </div>
           </div>
+
           {/* Office Hours */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold text-white mb-6 font-tech">Office Hours</h3>
@@ -128,6 +130,7 @@ export function ContactSection() {
             </div>
           </div>
         </div>
+
         {/* Office Locations */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Our Offices</h3>
@@ -148,6 +151,7 @@ export function ContactSection() {
               </div>))}
           </div>
         </div>
+
         {/* Support Features */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Why Choose Our Support?</h3>
@@ -163,6 +167,7 @@ export function ContactSection() {
               </div>))}
           </div>
         </div>
+
         {/* CTA Section */}
         <div className="text-center">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>

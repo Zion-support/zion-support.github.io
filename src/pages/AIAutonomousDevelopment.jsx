@@ -20,6 +20,7 @@ const AIAutonomousDevelopment = () => {
               Your AI development partner that continuously writes code, builds applications, and creates software solutions with intelligent autonomous operation
             </p>
           </div>
+
           {/* Development Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousDevelopment = () => {
               <p className="text-gray-300">Develop platforms</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousDevelopment = () => {
               <p className="text-gray-300">Learns new technologies</p>
             </div>
           </div>
+
           {/* Development Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Development Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousDevelopment = () => {
               </div>
             </div>
           </div>
+
           {/* Development Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Development Solutions</h2>
@@ -125,6 +129,7 @@ const AIAutonomousDevelopment = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Development Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousDevelopment = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Development?</h2>

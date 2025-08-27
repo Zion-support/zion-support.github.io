@@ -20,6 +20,7 @@ const AIAutonomousFinance = () => {
               Revolutionize financial management with AI that never sleeps - intelligent analysis, automated trading, and optimized investment strategies
             </p>
           </div>
+
           {/* Finance Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousFinance = () => {
               <p className="text-gray-300">Intelligent trade execution</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousFinance = () => {
               <p className="text-gray-300">Regulatory compliance automation</p>
             </div>
           </div>
+
           {/* Finance Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">AI Finance Process</h2>
@@ -110,6 +113,7 @@ const AIAutonomousFinance = () => {
               </div>
             </div>
           </div>
+
           {/* Financial Services */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Financial Services</h2>
@@ -119,6 +123,7 @@ const AIAutonomousFinance = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Finance Applications</h2>
@@ -139,6 +144,7 @@ const AIAutonomousFinance = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI Finance?</h2>

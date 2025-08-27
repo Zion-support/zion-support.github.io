@@ -1,258 +1,274 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, ArrowUp, Star, Zap, Users, ChevronUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
-interface FloatingCTAProps {
-  variant?: 'default' | 'minimal' | 'featured';
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
-}
-export function FloatingCTA({ variant = 'default', position = 'bottom-right' }: FloatingCTAProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [showScrollTop, setShowScrollTop] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
+import { 
+  MessageCircle, 
+  X, 
+  ArrowRight,
+  Phone,
+  Mail,
+  Calendar,
+  Clock,
+  Users,
+  Star,
+  Shield,
+  Brain,
+  Cloud,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  BarChart3,
+  FileImage,
+  TrendingUp,
+  Video,
+  FileText,
+  Heart,
+  ShoppingCart,
+  Settings,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Award,
+  Target,
+  Lightbulb,
+  ShieldCheck,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Atom,
+  Dna,
+  Microscope,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
+  Eye,
+  Ear,
+  Hand,
+  Foot,
+  Bone,
+  Tooth,
+  Pill,
+  Bandage,
+  Thermometer,
+  Scale,
+  Calculator,
+  ChartBar,
+  PieChart,
+  LineChart,
+  Activity,
+  TrendingDown,
+  Minus,
+  Plus,
+  Equal,
+  Divide,
+  Percent,
+  DollarSign,
+  Euro,
+  Pound,
+  Yen,
+  Bitcoin,
+  Ethereum,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
+  Key,
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX
+} from 'lucide-react';
+
+const FloatingCTA: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400);
-      setIsVisible(window.scrollY > 300);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Show CTA after 5 seconds
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
   }, []);
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-  const containerVariants = {
-    hidden: { scale: 0, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 260,
-        damping: 20
-      }
+
+  const contactMethods = [
+    {
+      icon: Phone,
+      title: "Call Us",
+      description: "Speak with an expert",
+      action: "+1 (555) 123-4567",
+      color: "from-green-500 to-emerald-500"
     },
-    hover: {
-      scale: 1.1,
-      transition: {
-        duration: 0.2
-      }
-    }
-  };
-  const expandVariants = {
-    hidden: {
-      scale: 0.8,
-      opacity: 0,
-      y: 20
+    {
+      icon: Mail,
+      title: "Email Us",
+      description: "Send us a message",
+      action: "info@ziontechgroup.com",
+      color: "from-blue-500 to-cyan-500"
     },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 25
-      }
+    {
+      icon: Calendar,
+      title: "Schedule Demo",
+      description: "Book a consultation",
+      action: "Book Now",
+      color: "from-purple-500 to-pink-500"
     }
-  };
-  const getPositionClasses = () => {
-    switch (position) {
-      case 'bottom-left':
-        return 'bottom-6 left-6';
-      case 'top-right':
-        return 'top-6 right-6';
-      case 'top-left':
-        return 'top-6 left-6';
-      default:
-        return 'bottom-6 right-6';
-    }
-  };
-  const getExpandedPositionClasses = () => {
-    switch (position) {
-      case 'bottom-left':
-        return 'bottom-6 left-6';
-      case 'top-right':
-        return 'top-6 right-6';
-      case 'top-left':
-        return 'top-6 left-6';
-      default:
-        return 'bottom-6 right-6';
-    }
-  };
+  ];
+
+  const quickServices = [
+    { name: "AI Solutions", icon: Brain, link: "/ai-services" },
+    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },
+    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },
+    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" }
+  ];
+
   if (!isVisible) return null;
-  if (variant === 'minimal') {
-    return (
+
+  return (
+    <>
+      {/* Floating Button */}
+      <motion.button
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.5, type: "spring" }}
+        onClick={() => setIsOpen(true)}
+        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-110 flex items-center justify-center text-white"
+      >
+        <MessageCircle className="w-8 h-8" />
+      </motion.button>
+
+      {/* Modal */}
       <AnimatePresence>
-        {showScrollTop && (
-          <motion.button
-            onClick={scrollToTop}
-            className={`fixed ${getPositionClasses()} bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 z-40`}
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setIsOpen(false)}
           >
-            <ArrowUp className="w-5 h-5" />
-          </motion.button>
-        )}
-      </AnimatePresence>
-    );
-  }
-  if (variant === 'featured') {
-    return (
-      <div className={`fixed ${getPositionClasses()} z-40`}>
-        <AnimatePresence>
-          {!isExpanded ? (
-            <motion.button
-              onClick={() => setIsExpanded(true)}
-              className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-purple/25 transition-all duration-300 group"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="relative">
-                <Zap className="w-6 h-6" />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-              </div>
-            </motion.button>
-          ) : (
             <motion.div
-              className="absolute bottom-20 right-0 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-2xl p-6 shadow-2xl backdrop-blur-md"
-              variants={expandVariants}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
+              initial={{ scale: 0.8, opacity: 0, y: 50 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.8, opacity: 0, y: 50 }}
+              transition={{ duration: 0.3, type: "spring" }}
+              className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-3xl p-8 max-w-2xl w-full border border-slate-600 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-white font-semibold text-lg">Quick Actions</h3>
+              {/* Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div>
+                  <h2 className="text-3xl font-bold text-white mb-2">Get in Touch</h2>
+                  <p className="text-gray-300">We're here to help transform your business</p>
+                </div>
                 <button
-                  onClick={() => setIsExpanded(false)}
-                  className="text-zion-slate-light hover:text-white transition-colors"
+                  onClick={() => setIsOpen(false)}
+                  className="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-slate-600 transition-all duration-300"
                 >
-                  <X className="h-5 w-5" />
+                  <X className="w-5 h-5" />
                 </button>
               </div>
-              <div className="space-y-3">
-                <Link
-                  to="/match"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-zion-purple/20 hover:bg-zion-purple/30 transition-colors group"
-                  onClick={() => setIsExpanded(false)}
-                >
-                  <div className="p-2 rounded-full bg-zion-purple/30 group-hover:scale-110 transition-transform">
-                    <Zap className="h-4 w-4 text-zion-cyan" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-white font-medium">AI Talent Matcher</p>
-                    <p className="text-zion-slate-light text-sm">Find perfect matches instantly</p>
-                  </div>
-                </Link>
-                <Link
-                  to="/contact"
-                  className="flex items-center gap-3 p-3 rounded-lg bg-zion-cyan/20 hover:bg-zion-cyan/30 transition-colors group"
-                  onClick={() => setIsExpanded(false)}
-                >
-                  <div className="p-2 rounded-full bg-zion-cyan/30 group-hover:scale-110 transition-transform">
-                    <MessageCircle className="h-4 w-4 text-zion-purple" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-white font-medium">Get Support</p>
-                    <p className="text-zion-slate-light text-sm">24/7 expert assistance</p>
-                  </div>
-                </Link>
+
+              {/* Contact Methods */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                {contactMethods.map((method, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-6 border border-slate-500 hover:border-cyan-400 transition-all duration-300 group cursor-pointer"
+                  >
+                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br ${method.color} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      <method.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{method.title}</h3>
+                    <p className="text-gray-400 text-sm mb-3">{method.description}</p>
+                    <div className="text-cyan-400 font-medium text-sm group-hover:text-cyan-300 transition-colors duration-300">
+                      {method.action}
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-              <div className="mt-4 pt-4 border-t border-zion-purple/20">
-                <p className="text-zion-slate-light text-sm text-center">
-                  Need help? Our team is here for you
-                </p>
+
+              {/* Quick Services */}
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold text-white mb-4">Quick Access to Services</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {quickServices.map((service, index) => (
+                    <motion.a
+                      key={index}
+                      href={service.link}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                      className="flex items-center p-4 bg-slate-700 rounded-xl border border-slate-500 hover:border-cyan-400 transition-all duration-300 group"
+                    >
+                      <service.icon className="w-5 h-5 text-cyan-400 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-white group-hover:text-cyan-400 transition-colors duration-300">
+                        {service.name}
+                      </span>
+                      <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1 transition-transform duration-300" />
+                    </motion.a>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.6 }}
+                className="w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
+              >
+                Start Your Project Today
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </motion.button>
+
+              {/* Trust Indicators */}
+              <div className="mt-6 text-center">
+                <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">
+                  <div className="flex items-center">
+                    <Shield className="w-4 h-4 mr-2" />
+                    <span>Secure & Private</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-2" />
+                    <span>24/7 Support</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 mr-2" />
+                    <span>500+ Projects</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    );
-  }
-  // Default variant
-  return (
-    <div className={`fixed ${getPositionClasses()} z-50`}>
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            className="absolute bottom-20 right-0 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-2xl p-6 shadow-2xl backdrop-blur-md"
-            variants={expandVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-          >
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-white font-semibold text-lg">Quick Actions</h3>
-              <button
-                onClick={() => setIsExpanded(false)}
-                className="text-zion-slate-light hover:text-white transition-colors"
-              >
-                <X className="h-5 w-5" />
-              </button>
-            </div>
-            <div className="space-y-3">
-              <Link
-                to="/match"
-                className="flex items-center gap-3 p-3 rounded-lg bg-zion-purple/20 hover:bg-zion-purple/30 transition-colors group"
-                onClick={() => setIsExpanded(false)}
-              >
-                <div className="p-2 rounded-full bg-zion-purple/30 group-hover:scale-110 transition-transform">
-                  <Zap className="h-4 w-4 text-zion-cyan" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-white font-medium">AI Talent Matcher</p>
-                  <p className="text-zion-slate-light text-sm">Find perfect matches instantly</p>
-                </div>
-              </Link>
-              <Link
-                to="/contact"
-                className="flex items-center gap-3 p-3 rounded-lg bg-zion-cyan/20 hover:bg-zion-cyan/30 transition-colors group"
-                onClick={() => setIsExpanded(false)}
-              >
-                <div className="p-2 rounded-full bg-zion-cyan/30 group-hover:scale-110 transition-transform">
-                  <MessageCircle className="h-4 w-4 text-zion-purple" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-white font-medium">Get Support</p>
-                  <p className="text-zion-slate-light text-sm">24/7 expert assistance</p>
-                </div>
-              </Link>
-            </div>
-            <div className="mt-4 pt-4 border-t border-zion-purple/20">
-              <p className="text-zion-slate-light text-sm text-center">
-                Need help? Our team is here for you
-              </p>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="flex flex-col gap-3">
-        <motion.button
-          onClick={scrollToTop}
-          className="w-14 h-14 bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center transition-all duration-300 group"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          whileHover="hover"
-        >
-          <ChevronUp className="h-6 w-6 text-white group-hover:text-zion-cyan transition-colors" />
-        </motion.button>
-        <motion.button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="w-14 h-14 bg-gradient-to-r from-zion-purple to-zion-purple-dark border border-zion-purple/30 hover:border-zion-purple/50 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center transition-all duration-300 group"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          whileHover="hover"
-        >
-          <MessageCircle className="h-6 w-6 text-white group-hover:text-zion-cyan transition-colors" />
-        </motion.button>
-      </div>
-    </div>
+    </>
   );
-}
+};
+
+export default FloatingCTA;

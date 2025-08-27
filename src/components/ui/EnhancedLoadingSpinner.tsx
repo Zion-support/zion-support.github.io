@@ -1,202 +1,156 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Loader2, Zap, Brain, Shield, Cloud } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Loader2, Zap, Brain, Rocket, Globe } from 'lucide-react';
 
 interface EnhancedLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'default' | 'zion' | 'tech';
-  text?: string;
+  message?: string;
   showProgress?: boolean;
   progress?: number;
+  variant?: 'default' | 'ai' | 'tech' | 'global';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  className?: string;
 }
 
-const icons = {
-  default: Loader2,
-  zion: Zap,
-  tech: Brain,
-};
-
-export function EnhancedLoadingSpinner({
-  size = 'md',
-  variant = 'default',
-  text,
+export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
+  message = 'Loading amazing experiences...',
   showProgress = false,
   progress = 0,
-}: EnhancedLoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-6 h-6',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-  };
+  variant = 'default',
+  size = 'lg',
+  className = ''
+}) => {
+  const [currentMessage, setCurrentMessage] = useState(message);
+  const [messageIndex, setMessageIndex] = useState(0);
 
-  const Icon = icons[variant];
+  const loadingMessages = [
+    'Loading AI-powered insights...',
+    'Optimizing cloud infrastructure...',
+    'Securing your digital assets...',
+    'Innovating the future of tech...',
+    'Connecting global networks...',
+    'Building autonomous systems...',
+    'Unleashing quantum capabilities...',
+    'Crafting seamless user experiences...',
+    'Processing complex data streams...',
+    'Initializing advanced algorithms...'
+  ];
 
-  const containerVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut"
-      }
+  useEffect(() => {
+    if (variant === 'ai' || variant === 'tech' || variant === 'global') {
+      const interval = setInterval(() => {
+        setMessageIndex((prevIndex) => (prevIndex + 1) % loadingMessages.length);
+      }, 3000); // Change message every 3 seconds
+      return () => clearInterval(interval);
     }
+  }, [variant, loadingMessages.length]);
+
+  useEffect(() => {
+    setCurrentMessage(message);
+  }, [message]);
+
+  const spinnerSizeClasses = {
+    sm: 'h-4 w-4 border-2',
+    md: 'h-6 w-6 border-2',
+    lg: 'h-8 w-8 border-3',
+    xl: 'h-12 w-12 border-4',
   };
 
-  const spinVariants = {
-    animate: {
-      rotate: 360,
-      transition: {
-        duration: 1,
-        repeat: Infinity,
-        ease: "linear"
-      }
-    }
+  const spinnerColorClasses = {
+    default: 'border-t-blue-500',
+    ai: 'border-t-purple-500',
+    tech: 'border-t-cyan-500',
+    global: 'border-t-green-500',
   };
 
-  const pulseVariants = {
-    animate: {
-      scale: [1, 1.1, 1],
-      opacity: [0.5, 1, 0.5],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
+  const iconMap = {
+    default: Loader2,
+    ai: Brain,
+    tech: Zap,
+    global: Globe,
   };
+
+  const IconComponent = iconMap[variant];
 
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="flex flex-col items-center justify-center space-y-4"
-    >
-      {/* Main Spinner */}
-      <div className="relative">
-        <motion.div
-          variants={spinVariants}
-          animate="animate"
-          className={`${sizeClasses[size]} text-zion-cyan`}
-        >
-          <Icon className="w-full h-full" />
-        </motion.div>
-        
-        {/* Orbiting dots for tech variant */}
-        {variant === 'tech' && (
-          <>
-            <motion.div
-              variants={pulseVariants}
-              animate="animate"
-              className="absolute -top-1 -right-1 w-2 h-2 bg-zion-purple rounded-full"
-            />
-            <motion.div
-              variants={pulseVariants}
-              animate="animate"
-              style={{ animationDelay: '0.5s' }}
-              className="absolute -bottom-1 -left-1 w-2 h-2 bg-zion-cyan rounded-full"
-            />
-            <motion.div
-              variants={pulseVariants}
-              animate="animate"
-              style={{ animationDelay: '1s' }}
-              className="absolute -top-1 -left-1 w-2 h-2 bg-zion-blue rounded-full"
-            />
-          </>
-        )}
-      </div>
-
-      {/* Loading Text */}
-      {text && (
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-zinc-400 text-sm font-medium text-center"
-        >
-          {text}
-        </motion.p>
-      )}
-
-      {/* Progress Bar */}
-      {showProgress && (
-        <motion.div
-          initial={{ opacity: 0, width: 0 }}
-          animate={{ opacity: 1, width: '100%' }}
-          transition={{ delay: 0.3 }}
-          className="w-32 h-2 bg-zinc-700 rounded-full overflow-hidden"
-        >
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <motion.div
+        className={`rounded-full animate-spin ${spinnerSizeClasses[size]} ${spinnerColorClasses[variant]} border-solid border-gray-700`}
+        initial={{ rotate: 0 }}
+        animate={{ rotate: 360 }}
+        transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+      >
+        {variant !== 'default' && (
           <motion.div
+            className="absolute inset-0 flex items-center justify-center text-white"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, repeat: Infinity, repeatType: 'reverse' }}
+          >
+            <IconComponent className={`h-3 w-3 ${size === 'xl' ? 'h-6 w-6' : ''}`} />
+          </motion.div>
+        )}
+      </motion.div>
+      {(variant === 'ai' || variant === 'tech' || variant === 'global') && (
+        <AnimatePresence mode="wait">
+          <motion.p
+            key={messageIndex}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.5 }}
+            className="mt-3 text-sm text-gray-400 text-center max-w-xs"
+          >
+            {loadingMessages[messageIndex]}
+          </motion.p>
+        </AnimatePresence>
+      )}
+      {showProgress && (
+        <div className="w-full bg-gray-700 rounded-full h-2.5 mt-3">
+          <motion.div
+            className="bg-blue-500 h-2.5 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"
-          />
+            transition={{ duration: 0.5 }}
+          ></motion.div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export const ZionLoadingSpinner: React.FC<Omit<EnhancedLoadingSpinnerProps, 'variant'>> = (props) => (
+  <EnhancedLoadingSpinner {...props} variant="tech" />
+);
+
+export const TechLoadingSpinner: React.FC<Omit<EnhancedLoadingSpinnerProps, 'variant'>> = (props) => (
+  <EnhancedLoadingSpinner {...props} variant="tech" />
+);
+
+interface LoadingOverlayProps {
+  isOpen: boolean;
+  message?: string;
+  progress?: number;
+  variant?: 'default' | 'ai' | 'tech' | 'global';
+}
+
+export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
+  isOpen,
+  message,
+  progress,
+  variant = 'default',
+}) => {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[9999]"
+        >
+          <EnhancedLoadingSpinner message={message} showProgress={progress !== undefined} progress={progress} variant={variant} size="xl" />
         </motion.div>
       )}
-
-      {/* Loading Dots Animation */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-        className="flex space-x-1"
-      >
-        {[0, 1, 2].map((i) => (
-          <motion.div
-            key={i}
-            animate={{
-              y: [0, -10, 0],
-              opacity: [0.5, 1, 0.5],
-            }}
-            transition={{
-              duration: 1.4,
-              repeat: Infinity,
-              delay: i * 0.2,
-              ease: "easeInOut"
-            }}
-            className="w-2 h-2 bg-zion-cyan rounded-full"
-          />
-        ))}
-      </motion.div>
-    </motion.div>
+    </AnimatePresence>
   );
-}
-
-// Specialized loading components
-export function ZionLoadingSpinner(props: Omit<EnhancedLoadingSpinnerProps, 'variant'>) {
-  return <EnhancedLoadingSpinner {...props} variant="zion" />;
-}
-
-export function TechLoadingSpinner(props: Omit<EnhancedLoadingSpinnerProps, 'variant'>) {
-  return <EnhancedLoadingSpinner {...props} variant="tech" />;
-}
-
-// Loading overlay for full-screen loading
-export function LoadingOverlay({ 
-  text = "Loading...", 
-  showProgress = false, 
-  progress = 0 
-}: {
-  text?: string;
-  showProgress?: boolean;
-  progress?: number;
-}) {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-zinc-900/80 backdrop-blur-sm z-50 flex items-center justify-center"
-    >
-      <EnhancedLoadingSpinner
-        size="lg"
-        variant="zion"
-        text={text}
-        showProgress={showProgress}
-        progress={progress}
-      />
-    </motion.div>
-  );
-}
+};

@@ -178,6 +178,7 @@ export default function AIFinancialTrading() {
             </Link>
           </div>
         </div>
+
         {/* Key Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -197,6 +198,7 @@ export default function AIFinancialTrading() {
             <div className="text-gray-400">Uptime</div>
           </div>
         </div>
+
         {/* Features Grid */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -213,6 +215,7 @@ export default function AIFinancialTrading() {
               </div>))}
           </div>
         </div>
+
         {/* Trading Instruments Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -229,6 +232,7 @@ export default function AIFinancialTrading() {
               </div>))}
           </div>
         </div>
+
         {/* Pricing Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -271,6 +275,7 @@ export default function AIFinancialTrading() {
               </div>))}
           </div>
         </div>
+
         {/* Benefits Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -287,6 +292,7 @@ export default function AIFinancialTrading() {
               </div>))}
           </div>
         </div>
+
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8">

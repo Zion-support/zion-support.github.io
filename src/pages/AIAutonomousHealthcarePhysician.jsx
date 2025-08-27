@@ -20,6 +20,7 @@ const AIAutonomousHealthcarePhysician = () => {
               Your personal AI physician available 24/7 for medical consultation, health monitoring, and diagnostic support
             </p>
           </div>
+
           {/* Healthcare Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousHealthcarePhysician = () => {
               <p className="text-gray-300">Evidence-based recommendations</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousHealthcarePhysician = () => {
               <p className="text-gray-300">AI that improves with medical research</p>
             </div>
           </div>
+
           {/* Medical Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Medical Consultation Process</h2>
@@ -110,6 +113,7 @@ const AIAutonomousHealthcarePhysician = () => {
               </div>
             </div>
           </div>
+
           {/* Medical Specialties */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Medical Specialties</h2>
@@ -119,6 +123,7 @@ const AIAutonomousHealthcarePhysician = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Healthcare Applications</h2>
@@ -139,6 +144,7 @@ const AIAutonomousHealthcarePhysician = () => {
               </div>
             </div>
           </div>
+
           {/* Disclaimer */}
           <div className="mb-16 text-center">
             <div className="bg-yellow-600/20 border border-yellow-600/40 rounded-xl p-6 max-w-4xl mx-auto">
@@ -148,6 +154,7 @@ const AIAutonomousHealthcarePhysician = () => {
               </p>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for 24/7 Medical Support?</h2>

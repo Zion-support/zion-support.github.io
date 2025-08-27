@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
+import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
+
 const steps = [
   {
     icon: <Search className="w-8 h-8" />,
@@ -55,183 +56,240 @@ const steps = [
     bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
     details: [
       "Agile development process",
+      "Regular progress updates",
       "Quality assurance",
-      "Progress tracking",
-      "Regular updates"
+      "Performance monitoring"
     ],
     duration: "1-4 weeks",
-    success: "92% project success"
+    success: "99% quality score"
+  },
+  {
+    icon: <CheckCircle className="w-8 h-8" />,
+    title: "Deliver",
+    description: "Receive your completed project with ongoing support and maintenance",
+    color: "from-zion-purple-light to-zion-purple",
+    bgColor: "from-zion-purple-light/20 to-zion-purple/20",
+    details: [
+      "Comprehensive testing",
+      "Documentation delivery",
+      "Training and handover",
+      "Post-launch support"
+    ],
+    duration: "Ongoing",
+    success: "100% client retention"
   }
 ];
+
 const stats = [
-  { icon: <CheckCircle className="w-6 h-6" />, value: "10K+", label: "Projects Completed" },
-  { icon: <Clock className="w-6 h-6" />, value: "24/7", label: "Support Available" },
-  { icon: <Target className="w-6 h-6" />, value: "98%", label: "Client Satisfaction" },
-  { icon: <TrendingUp className="w-6 h-6" />, value: "3x", label: "Faster Delivery" }
+  { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },
+  { icon: <Target className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },
+  { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
+  { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" }
 ];
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
-};
+
 export function HowItWorksSection() {
-  const [activeStep, setActiveStep] = useState<number | null>(null);
+  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
+  const [activeStep, setActiveStep] = useState<number>(0);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const statsVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-      {/* Background decorative elements */}
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
+      {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
-        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
+          backgroundSize: '40px 40px'
+        }} />
       </div>
+
+      {/* Floating decorative elements */}
+      <div className="absolute inset-0">
+        <motion.div 
+          className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
+          animate={{ rotate: -360 }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+      
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <motion.div
-          className="text-center mb-16"
+        <motion.div 
+          className="text-center mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            How It Works
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our streamlined process makes it simple to find, connect, and collaborate with the perfect technology solutions for your business
+          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+            Our streamlined process ensures your project success from concept to completion. 
+            Experience the Zion difference with our proven methodology.
           </p>
         </motion.div>
-        {/* Steps Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {steps.map((step, index) => (
-            <motion.div
-              key={step.title}
-              variants={itemVariants}
-              className="group relative"
-              onMouseEnter={() => setActiveStep(index)}
-              onMouseLeave={() => setActiveStep(null)}
-            >
-              <div className="h-full p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                {/* Step Number */}
-                <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
-                  {index + 1}
-                </div>
-                {/* Icon */}
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${step.bgColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <div className="text-zion-blue">
-                    {step.icon}
-                  </div>
-                </div>
-                {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-zion-blue transition-colors">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {step.description}
-                </p>
-                {/* Details */}
-                <div className="space-y-2 mb-6">
-                  {step.details.map((detail, detailIndex) => (
-                    <div key={detailIndex} className="flex items-center text-sm text-gray-500">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                      {detail}
-                    </div>
-                  ))}
-                </div>
-                {/* Stats */}
-                <div className="flex justify-between items-center text-sm">
-                  <div className="flex items-center text-zion-blue">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {step.duration}
-                  </div>
-                  <div className="text-zion-purple font-semibold">
-                    {step.success}
-                  </div>
-                </div>
-              </div>
-              {/* Hover effect overlay */}
-              <AnimatePresence>
-                {activeStep === index && (
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-zion-blue/5 to-zion-purple/5 rounded-2xl"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
-        </motion.div>
-        {/* Stats Section */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
+
+        {/* Stats section */}
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              variants={itemVariants}
-              className="text-center"
+            <motion.div 
+              key={index} 
+              variants={statsVariants}
+              className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
             >
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-full flex items-center justify-center">
-                <div className="text-zion-blue">
-                  {stat.icon}
-                </div>
+              <div className="text-zion-cyan mb-2 flex justify-center">
+                {stat.icon}
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2">
-                {stat.value}
-              </div>
-              <div className="text-sm text-gray-600">
-                {stat.label}
-              </div>
+              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-zion-slate-light text-sm">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
-        {/* CTA Section */}
-        <motion.div
-          className="text-center"
+        
+        {/* Steps section */}
+        <motion.div 
+          className="relative"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {/* Enhanced connection line */}
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue opacity-20 blur-sm"></div>
+          </div>
+
+          {/* Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+            {steps.map((step, index) => (
+              <motion.div
+                key={index}
+                className="text-center group cursor-pointer"
+                onMouseEnter={() => setHoveredStep(index)}
+                onMouseLeave={() => setHoveredStep(null)}
+                onClick={() => setActiveStep(index)}
+                whileHover={{ y: -10 }}
+                transition={{ duration: 0.3 }}
+              >
+                {/* Step circle */}
+                <div className="relative mb-6">
+                  <motion.div 
+                    className={`w-20 h-20 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center text-white shadow-lg mx-auto`}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {step.icon}
+                  </motion.div>
+                  
+                  {/* Step number */}
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center text-white text-sm font-bold border-2 border-zion-slate-dark">
+                    {index + 1}
+                  </div>
+                </div>
+
+                {/* Step title */}
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                  {step.title}
+                </h3>
+
+                {/* Step description */}
+                <p className="text-zion-slate-light text-sm leading-relaxed mb-4">
+                  {step.description}
+                </p>
+
+                {/* Step details on hover */}
+                <AnimatePresence>
+                  {hoveredStep === index && (
+                    <motion.div 
+                      className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-4 shadow-xl backdrop-blur-sm z-20"
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <div className="text-center mb-3">
+                        <div className="text-zion-cyan font-semibold mb-2">Key Features:</div>
+                        <ul className="text-zion-slate-light text-xs space-y-1">
+                          {step.details.map((detail, idx) => (
+                            <li key={idx} className="flex items-center gap-2">
+                              <CheckCircle className="w-3 h-3 text-zion-cyan flex-shrink-0" />
+                              <span>{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="border-t border-zion-cyan/20 pt-3">
+                        <div className="flex justify-between text-xs text-zion-slate-light">
+                          <span>Duration: {step.duration}</span>
+                          <span>Success: {step.success}</span>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                {/* Hover indicator */}
+                <div className="mt-4 text-zion-cyan/60 text-xs">
+                  {hoveredStep === index ? "Hover to see details" : "Hover for details"}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Call to action */}
+        <motion.div 
+          className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <div className="bg-gradient-to-r from-zion-blue to-zion-purple rounded-2xl p-12 text-white">
-            <h2 className="text-3xl font-bold mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that trust Zion Tech Group for their technology needs
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="inline-flex items-center justify-center px-8 py-4 bg-white text-zion-blue font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300">
-                Start Your Project
-              </button>
-              <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-colors duration-300">
-                Learn More
+          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
+            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
+              <p className="text-white text-lg mb-4">
+                Ready to experience the Zion difference?
+              </p>
+              <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                Get Started Today
               </button>
             </div>
           </div>

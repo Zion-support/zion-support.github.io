@@ -91,6 +91,7 @@ const ServicePortfolioDashboard = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Portfolio Statistics */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -103,6 +104,7 @@ const ServicePortfolioDashboard = () => {
               providing unmatched coverage and innovation capabilities.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {portfolioStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 <Card className="h-full text-center hover:shadow-lg transition-shadow">
@@ -127,6 +129,7 @@ const ServicePortfolioDashboard = () => {
           </div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-16 px-6 bg-zion-blue-light/5">
         <div className="max-w-6xl mx-auto">
@@ -138,6 +141,7 @@ const ServicePortfolioDashboard = () => {
               Powerful tools and insights to help you understand, analyze, and optimize your service portfolio
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {features.map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 <Card className="h-full hover:shadow-lg transition-shadow">
@@ -161,6 +165,7 @@ const ServicePortfolioDashboard = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
@@ -172,6 +177,7 @@ const ServicePortfolioDashboard = () => {
               Discover the advantages of comprehensive portfolio management and strategic insights
             </p>
           </motion.div>
+
           <div className="space-y-4">
             {benefits.map((benefit, index) => (<motion.div key={index} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0"/>
@@ -180,6 +186,7 @@ const ServicePortfolioDashboard = () => {
           </div>
         </div>
       </section>
+
       {/* Portfolio Dashboard Section */}
       <section id="portfolio-dashboard" className="py-16 px-6 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto">
@@ -192,9 +199,11 @@ const ServicePortfolioDashboard = () => {
               performance metrics, and strategic insights.
             </p>
           </motion.div>
+
           <AdvancedServicePortfolioDashboard />
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">
         <div className="max-w-4xl mx-auto text-center">

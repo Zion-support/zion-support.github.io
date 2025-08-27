@@ -47,8 +47,10 @@ function TalentDashboardContent() {
             </Button>
           </div>
         </div>
+
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
             <Card className="mb-8">

@@ -100,6 +100,7 @@ const GetStarted = () => {
           </div>
         </div>
       </section>
+
       {/* Process Steps */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -123,6 +124,7 @@ const GetStarted = () => {
           </div>
         </div>
       </section>
+
       {/* Services Overview */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -159,6 +161,7 @@ const GetStarted = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -180,6 +183,7 @@ const GetStarted = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -213,6 +217,7 @@ const GetStarted = () => {
           </div>
         </div>
       </section>
+
       {/* Contact Methods */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">

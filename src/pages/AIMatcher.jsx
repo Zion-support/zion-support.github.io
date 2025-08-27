@@ -193,6 +193,7 @@ const AIMatcher = () => {
           </motion.div>
         </div>
       </div>
+
       {/* Quiz Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         {currentStep <= questions.length ? (<motion.div key={currentStep} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.3 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-8">
@@ -206,6 +207,7 @@ const AIMatcher = () => {
                 <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full transition-all duration-300" style={{ width: `${progressPercentage}%` }}></div>
               </div>
             </div>
+
             {/* Question */}
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-white mb-6">
@@ -220,6 +222,7 @@ const AIMatcher = () => {
                   </button>))}
               </div>
             </div>
+
             {/* Navigation */}
             <div className="flex justify-between">
               <button onClick={handlePrevious} disabled={currentStep === 1} className={`px-6 py-2 rounded-lg border transition-all duration-200 ${currentStep === 1
@@ -246,6 +249,7 @@ const AIMatcher = () => {
                 Based on your answers, here are the AI solutions that best match your business needs and goals.
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {recommendations.map((solution, index) => (<motion.div key={solution.name} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300">
                   <div className="flex items-center mb-4">
@@ -276,6 +280,7 @@ const AIMatcher = () => {
                   </Link>
                 </motion.div>))}
             </div>
+
             <div className="text-center mt-12">
               <button onClick={resetQuiz} className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 mr-4">
                 Take Quiz Again
@@ -286,6 +291,7 @@ const AIMatcher = () => {
             </div>
           </motion.div>)}
       </div>
+
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

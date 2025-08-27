@@ -1,27 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Cpu, 
-  Target, 
-  TrendingUp, 
-  Shield, 
-  Globe, 
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Download,
-  BookOpen,
-  MessageSquare
-} from 'lucide-react';
-=======
 import Head from 'next/head';
 import { Brain, Cpu, Zap, Shield, TrendingUp, Users, ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
-
 const QuantumNeuralNetworkPlatform: React.FC = () => {
   const features = [
     {
@@ -45,7 +24,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
       description: 'Next-generation encryption and security protocols based on quantum mechanics principles.'
     }
   ];
-
   const useCases = [
     {
       title: 'Financial Modeling',
@@ -68,7 +46,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
       icon: Brain
     }
   ];
-
   const benefits = [
     'Exponential speedup in complex computations',
     'Enhanced accuracy in pattern recognition',
@@ -77,7 +54,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
     'Seamless integration with existing AI systems',
     'Real-time decision making capabilities'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -114,7 +90,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -127,7 +102,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               unprecedented performance and capabilities.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
@@ -144,7 +118,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -157,7 +130,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               creating new opportunities for innovation.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => {
               const IconComponent = useCase.icon;
@@ -174,7 +146,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -196,7 +167,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 ))}
               </div>
             </div>
-            
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
               <h3 className="text-2xl font-semibold text-white mb-6">Performance Metrics</h3>
               <div className="space-y-6">
@@ -232,7 +202,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -260,7 +229,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Resources Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -272,7 +240,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
               Explore our resources to understand how quantum neural networks can transform your business.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
@@ -284,7 +251,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 Read Docs →
               </Link>
             </div>
-            
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                 <Download className="w-6 h-6 text-white" />
@@ -295,7 +261,6 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 Download →
               </Link>
             </div>
-            
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                 <MessageSquare className="w-6 h-6 text-white" />
@@ -312,5 +277,4 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
     </div>
   );
 };
-
 export default QuantumNeuralNetworkPlatform;

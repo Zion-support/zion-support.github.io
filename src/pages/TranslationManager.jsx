@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SEOHead from "../components/SEOHead.jsx";
+import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
@@ -72,7 +72,7 @@ export default function TranslationManager() {
             Object.entries(langTranslations).forEach(([key, value]) => {
                 if (key.toLowerCase().includes(query) ||
                     (typeof value === 'string' && value.toLowerCase().includes(query))) {
-                    filtered(key);
+                    filtered.push(key);
                 }
             });
         });
@@ -177,7 +177,7 @@ export default function TranslationManager() {
             .filter(lang => !translations[lang]?.[key]);
     };
     return (<>
-      <SEOHead title={t('translation.manager_title')} description={t('translation.manager_description')}/>
+      <SEO title={t('translation.manager_title')} description={t('translation.manager_description')}/>
       
       <main className={`container mx-auto px-${isMobile ? '4' : '6'} py-8`}>
         <Card>

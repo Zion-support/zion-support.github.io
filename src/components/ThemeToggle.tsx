@@ -27,56 +27,37 @@ export function ThemeToggle() {
     } else {
       root.classList.add(theme);
     }
-
     localStorage.setItem('zion-theme', theme);
   }, [theme, mounted]);
 
-  const handleThemeChange = (newTheme: Theme) => {
+  const toggleTheme = (newTheme: Theme) => {
     setTheme(newTheme);
   };
 
-  if (!mounted) {
-    return (
-      <div className="w-10 h-10 rounded-lg bg-zinc-800/50 border border-zinc-700/50 animate-pulse" />
-    );
-  }
+  if (!mounted) return null;
 
   return (
-    <div className="relative inline-flex items-center rounded-lg bg-zinc-800/50 border border-zinc-700/50 p-1">
+    <div className="flex items-center space-x-2 p-1 bg-zion-slate-dark rounded-full border border-zion-slate-light/20">
       <button
-        onClick={() => handleThemeChange('light')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'light'
-            ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
-            : 'text-zinc-400 hover:text-white hover:bg-zinc-700/50'
-        }`}
-        title="Light mode"
+        onClick={() => toggleTheme('light')}
+        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'light' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
+        aria-label="Switch to light theme"
       >
-        <Sun className="w-4 h-4" />
+        <Sun className="h-5 w-5" />
       </button>
-      
       <button
-        onClick={() => handleThemeChange('system')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'system'
-            ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
-            : 'text-zinc-400 hover:text-white hover:bg-zinc-700/50'
-        }`}
-        title="System preference"
+        onClick={() => toggleTheme('dark')}
+        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'dark' ? 'bg-zion-purple text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
+        aria-label="Switch to dark theme"
       >
-        <Monitor className="w-4 h-4" />
+        <Moon className="h-5 w-5" />
       </button>
-      
       <button
-        onClick={() => handleThemeChange('dark')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'dark'
-            ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
-            : 'text-zinc-400 hover:text-white hover:bg-zinc-700/50'
-        }`}
-        title="Dark mode"
+        onClick={() => toggleTheme('system')}
+        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'system' ? 'bg-zion-green text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
+        aria-label="Switch to system theme"
       >
-        <Moon className="w-4 h-4" />
+        <Monitor className="h-5 w-5" />
       </button>
     </div>
   );

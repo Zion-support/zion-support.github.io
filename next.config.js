@@ -3,9 +3,15 @@ const nextConfig = {
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
-	images: { unoptimized: true },
-	eslint: { ignoreDuringBuilds: true },
-	typescript: { ignoreBuildErrors: true },
+	images: {
+		unoptimized: true
+	},
+	eslint: {
+		ignoreDuringBuilds: true
+	},
+	typescript: {
+		ignoreBuildErrors: true,
+	},
 	async redirects() {
 		return [
 			{ source: '/ai-customer-success-platform', destination: '/services/ai-customer-success-platform', permanent: true },
@@ -15,8 +21,9 @@ const nextConfig = {
 			{ source: '/intelligent-content-automation-platform', destination: '/services/intelligent-content-automation-platform', permanent: true },
 			{ source: '/intelligent-hr-analytics-platform', destination: '/services/intelligent-hr-analytics-platform', permanent: true },
 			{ source: '/smart-crm-intelligence-suite', destination: '/services/smart-crm-intelligence-suite', permanent: true },
-			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true },
+			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true }
 		];
-	},
+	}
 };
-module.exports = nextConfig;
+
+export default nextConfig;

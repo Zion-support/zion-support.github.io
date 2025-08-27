@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     phone: '',
     company: '',
     phone: '',
@@ -28,7 +24,6 @@ import { toast } from "@/components/ui/use-toast";
 import z from "zod";
 import { ChatAssistant } from "@/components/ChatAssistant";
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -66,7 +61,6 @@ import {
   AlertCircle
 } from 'lucide-react';
 =======
-
 export default function Contact() {
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -77,8 +71,6 @@ import {
   Clock, 
   MessageSquare, 
   ArrowRight,
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { 
   Mail, 
@@ -88,41 +80,25 @@ import {
   MessageSquare, 
   Globe, 
   Building,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   Send,
   CheckCircle
 } from 'lucide-react';
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-const Contact = () => {
-=======
 const Contact: React.FC = () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 const Contact = () => {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     company: '',
     phone: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
   const [isSubmitted, setIsSubmitted] = useState(false);
 =======
     subject: '',
     message: ''
   });
-
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -130,11 +106,9 @@ const Contact = () => {
       [name]: value
     }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('submitting');
-    
     // Simulate form submission
     setTimeout(() => {
       setFormStatus('success');
@@ -153,10 +127,8 @@ const Contact = () => {
       }, 3000);
     }, 2000);
   };
-
 =======
   const [submitSuccess, setSubmitSuccess] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -164,14 +136,12 @@ const Contact = () => {
       [name]: value
     }));
   };
-
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-
 =======
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: "" }));
@@ -188,11 +158,9 @@ const Contact = () => {
           messages: [{ role: "user", content: message }]
         }),
       });
-      
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant");
       }
-      
       return Promise.resolve();
     } catch (error) {
       console.error("Error in AI chat:", error);
@@ -204,27 +172,22 @@ const Contact = () => {
       return Promise.resolve();
     }
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 =======
     setIsSubmitting(true);
     setIsSubmitting(true);
-    
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     // Simulate form submission
     // Here you would typically send the form data to your backend
     // Form submitted successfully - console.log removed for production
-    
     // Reset form after 3 seconds
     setTimeout(() => {
       setSubmitStatus('idle');
 =======
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -234,7 +197,6 @@ const Contact = () => {
 =======
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
     // Reset form after 5 seconds
     setTimeout(() => {
 =======
@@ -246,44 +208,32 @@ const Contact = () => {
     budget: '',
     timeline: ''
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
   };
-
-=======
-<<<<<<< HEAD
 =======
     service: '',
     message: ''
   });
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -294,10 +244,6 @@ const Contact = () => {
         company: '',
         phone: '',
         service: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
 =======
 =======
@@ -309,13 +255,11 @@ const Contact = () => {
 =======
 =======
 =======
-      
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000);
     }, 2000);
 =======
   };
-
   const contactMethods = [
     {
       description: 'Call us directly for immediate assistance',
@@ -347,7 +291,6 @@ const Contact = () => {
       email: "kleber@ziontechgroup.com"
     }
   ];
-
   const officeLocations = [
     {
       city: 'New York',
@@ -447,16 +390,11 @@ const Contact = () => {
       link: 'tel:+13024640950',
       description: 'Available Monday-Friday, 9AM-6PM EST'
 =======
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         message: ''
       });
     }, 3000);
   };
-
   const contactInfo = [
     {
       icon: Mail,
@@ -483,7 +421,6 @@ const Contact = () => {
       action: '#'
     }
   ];
-
   const services = [
     'AI Solutions & Machine Learning',
     'Cloud & DevOps Services',
@@ -496,7 +433,6 @@ const Contact = () => {
     'Custom Software Development',
     'Consulting & Strategy'
   ];
-
   const offices = [
     {
       city: 'Wilmington, DE',
@@ -520,7 +456,6 @@ const Contact = () => {
       email: 'ca@ziontechgroup.com'
     }
   ];
-
   const officeLocations = [
     {
       city: 'Wilmington, DE',
@@ -548,10 +483,6 @@ const Contact = () => {
       zip: 'EC1A 1BB',
       phone: '+44 20 7123 4567',
       email: 'london@ziontechgroup.com'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
       name: "Headquarters",
       address: "123 Tech Avenue, San Francisco, CA 94105",
@@ -563,20 +494,10 @@ const Contact = () => {
       address: "456 Innovation Street, New York, NY 10001",
       phone: "+1 302 464 0950", 
       email: "commercial@ziontechgroup.com"
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
-
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-    
       <SEO 
         title="Contact Zion - Get in Touch" 
         description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
@@ -615,7 +536,6 @@ const Contact = () => {
       response: "Within 48 hours"
     }
   ];
-
   const officeLocations = [
     {
       city: "Middletown, DE",
@@ -639,7 +559,6 @@ const Contact = () => {
       phone: "+1 212 987 6543"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -671,7 +590,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
 =======
 =======
                       name="email"
@@ -692,8 +610,6 @@ const Contact = () => {
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Ready to transform your business? Let's discuss how our AI-powered solutions can drive your success.
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -704,17 +620,10 @@ const Contact = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Ready to transform your business with cutting-edge technology? Let's discuss how we can help 
             you achieve your digital transformation goals.
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </p>
         </div>
       </section>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
@@ -749,7 +658,6 @@ const Contact = () => {
               Tell us about your project and we'll get back to you within 24 hours with a customized solution.
             </p>
           </motion.div>
-
           {isSubmitted ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -800,7 +708,6 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700">
             <h2 className="text-2xl font-bold text-white mb-6">Send Us a Message</h2>
-            
             {formStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-900/20 border border-green-500/30 rounded-lg">
                 <div className="flex items-center">
@@ -809,7 +716,6 @@ const Contact = () => {
                 </div>
               </div>
             )}
-
             {formStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg">
                 <div className="flex items-center">
@@ -818,7 +724,6 @@ const Contact = () => {
                 </div>
               </div>
             )}
-
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -852,7 +757,6 @@ const Contact = () => {
                   />
                 </div>
               </div>
-
                     <label className="block text-white font-medium mb-2">
                       Service of Interest
                     </label>
@@ -883,8 +787,6 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-
-
                 <div className="mb-6">
                   <label htmlFor="service" className="block text-sm font-semibold text-zion-blue-dark mb-2">
                     Service of Interest
@@ -902,7 +804,6 @@ const Contact = () => {
                     ))}
                   </select>
                 </div>
-
                 <div className="mb-8">
                   <label htmlFor="message" className="block text-sm font-semibold text-zion-blue-dark mb-2">
                     Message *
@@ -934,7 +835,6 @@ const Contact = () => {
                   />
                 </div>
               </div>
-
               <div className="mb-6">
                 <label className="block text-sm font-medium text-zion-slate-light mb-2">Service of Interest</label>
                 <select
@@ -949,7 +849,6 @@ const Contact = () => {
                   ))}
                 </select>
               </div>
-
               <div className="mb-8">
                 <label className="block text-sm font-medium text-zion-slate-light mb-2">Message *</label>
                 <textarea
@@ -962,7 +861,6 @@ const Contact = () => {
                   placeholder="Tell us about your project, requirements, and goals..."
                 />
               </div>
-
               <div className="text-center">
                 <button
                   type="submit"
@@ -982,8 +880,6 @@ const Contact = () => {
                   )}
                 </button>
               </form>
-<<<<<<< HEAD
-=======
       {/* Contact Information */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1012,7 +908,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Form & Office Locations */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1020,7 +915,6 @@ const Contact = () => {
             {/* Contact Form */}
             <div>
               <h2 className="text-3xl font-bold mb-8 text-white">Send Us a Message</h2>
-              
               {isSubmitted ? (
                 <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-8 text-center">
                   <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
@@ -1063,7 +957,6 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
@@ -1095,7 +988,6 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                       Company Name
@@ -1110,7 +1002,6 @@ const Contact = () => {
                       placeholder="Enter your company name"
                     />
                   </div>
-
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service of Interest
@@ -1128,7 +1019,6 @@ const Contact = () => {
                       ))}
                     </select>
                   </div>
-
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                       Message *
@@ -1144,7 +1034,6 @@ const Contact = () => {
                       placeholder="Tell us about your project or how we can help..."
                     />
                   </div>
-
                   <button
                     type="submit"
                     disabled={isSubmitting}
@@ -1164,44 +1053,29 @@ const Contact = () => {
                   </button>
                 </form>
               )}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
-
             {/* Office Locations */}
             <div>
               <h2 className="text-3xl font-bold mb-8 text-white">Our Offices</h2>
               <div className="space-y-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 {officeLocations.map((office, index) => (
                   <div key={index} className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Building className="w-6 h-6 text-cyan-400" />
-<<<<<<< HEAD
-=======
                 {offices.map((office, index) => (
                   <div key={index} className="p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Building className="h-6 w-6 text-white" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-semibold text-white mb-2">
                           {office.city}, {office.country}
                         </h3>
                         <div className="space-y-2 text-gray-300">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                           <p className="flex items-center space-x-2">
                             <MapPin className="w-4 h-4 text-gray-400" />
                             <span>{office.address}, {office.city}, {office.zip}</span>
@@ -1221,8 +1095,6 @@ const Contact = () => {
                           <p className="flex items-center space-x-2">
                             <Clock className="w-4 h-4 text-gray-400" />
                             <span>{office.hours}</span>
-<<<<<<< HEAD
-=======
                           <p className="flex items-center">
                             <MapPin className="h-4 w-4 mr-2 text-blue-400" />
                             {office.address}
@@ -1234,9 +1106,7 @@ const Contact = () => {
                           <p className="flex items-center">
                             <Mail className="h-4 w-4 mr-2 text-blue-400" />
                             {office.email}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                           </p>
                         </div>
                       </div>
@@ -1244,11 +1114,6 @@ const Contact = () => {
                   </div>
                 ))}
               </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               {/* Social Media */}
               <div className="mt-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Follow Us</h3>
@@ -1304,7 +1169,6 @@ const Contact = () => {
                     placeholder="Tell us about your project, requirements, or any questions you have..."
                   />
                 </div>
-
                 <div className="text-center">
                   <button
                     type="submit"
@@ -1329,7 +1193,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Form & Map */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1390,7 +1253,6 @@ const Contact = () => {
               We're not just another technology company. We're your strategic partner in innovation and growth.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
@@ -1404,7 +1266,6 @@ const Contact = () => {
                 decades of combined experience to every project.
               </p>
             </div>
-            
             <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="w-8 h-8 text-white" />
@@ -1417,7 +1278,6 @@ const Contact = () => {
                 goals with measurable ROI and lasting impact.
               </p>
             </div>
-            
             <div className="bg-white rounded-xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
                 <Star className="w-8 h-8 text-white" />
@@ -1434,7 +1294,6 @@ const Contact = () => {
                 Let's discuss your project requirements and how we can help.
               </p>
             </div>
-
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -1468,7 +1327,6 @@ const Contact = () => {
                   />
                 </div>
               </div>
-
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-zion-blue-dark mb-2">
@@ -1504,7 +1362,6 @@ const Contact = () => {
                   />
                 </div>
               </div>
-
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                   Company
@@ -1519,7 +1376,6 @@ const Contact = () => {
                   placeholder="Enter your company name"
                 />
               </div>
-
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                   Subject *
@@ -1541,7 +1397,6 @@ const Contact = () => {
                   <option value="other">Other</option>
                 </select>
               </div>
-
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
@@ -1599,8 +1454,6 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-
-
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
                 <div className="space-y-4 text-zion-slate-light">
@@ -1622,8 +1475,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-=======
-<<<<<<< HEAD
 =======
               {/* Additional Contact Options */}
               <div className="mt-8 p-6 rounded-xl bg-white/5">
@@ -1654,14 +1505,11 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto">
@@ -1688,11 +1536,6 @@ const Contact = () => {
                 retail, and technology. Our solutions are adaptable to any business sector.
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -1710,7 +1553,6 @@ const Contact = () => {
                   startups alike, delivering scalable solutions that grow with your business.
                 </p>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1727,7 +1569,6 @@ const Contact = () => {
                   quality delivery regardless of your location or timezone.
                 </p>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1752,7 +1593,6 @@ const Contact = () => {
           )}
         </div>
       </section>
-
       {/* Social Media & Additional Info */}
       <section className="py-20 px-6 bg-zion-blue-dark">
         <div className="max-w-6xl mx-auto">
@@ -1767,7 +1607,6 @@ const Contact = () => {
               Follow us on social media for the latest updates, insights, and technology trends.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Social Media */}
             <motion.div
@@ -1799,7 +1638,6 @@ const Contact = () => {
                   placeholder="Tell us about your project or inquiry..."
                 />
               </div>
-
               <button
                 type="submit"
                 disabled={formStatus === 'submitting'}
@@ -1819,13 +1657,11 @@ const Contact = () => {
               </button>
             </form>
           </div>
-
           {/* Contact Information */}
           <div className="space-y-8">
             {/* Main Contact Info */}
             <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700">
               <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
-              
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
@@ -1837,7 +1673,6 @@ const Contact = () => {
                     <p className="text-gray-400 text-sm">{contactInfo.hours}</p>
                   </div>
                 </div>
-
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
@@ -1848,7 +1683,6 @@ const Contact = () => {
                     <p className="text-gray-400 text-sm">We'll respond within 24 hours</p>
                   </div>
                 </div>
-
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
@@ -1861,11 +1695,9 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
             {/* Office Locations */}
             <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700">
               <h2 className="text-2xl font-bold text-white mb-6">Our Offices</h2>
-              
               <div className="space-y-4">
                 {officeLocations.map((office, index) => (
                   <div key={index} className="p-4 bg-gray-700/50 rounded-lg">
@@ -1885,7 +1717,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
       {/* Contact Methods */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -1899,10 +1730,8 @@ const Contact = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <MessageSquare className="w-6 h-6 text-white" />
                 </div>
-                
                 <h3 className="text-lg font-semibold text-white mb-2 text-center">{method.title}</h3>
                 <p className="text-gray-300 text-sm mb-4 text-center">{method.description}</p>
-                
                 <div className="text-center">
                   <p className="text-cyan-400 font-medium mb-1">{method.email}</p>
                   <p className="text-gray-400 text-xs">Response: {method.response}</p>
@@ -1912,7 +1741,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -1975,7 +1803,6 @@ const Contact = () => {
             </a>
           </div>
         </div>
-
         <div className="bg-white rounded-lg shadow-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1996,7 +1823,6 @@ const Contact = () => {
                   <p className="mt-1 text-sm text-red-600">{errors.name}</p>
                 )}
               </div>
-
               <div>
                 <Label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                   Email *
@@ -2015,7 +1841,6 @@ const Contact = () => {
                 )}
               </div>
             </div>
-
             <div>
               <Label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
                 Subject *
@@ -2033,7 +1858,6 @@ const Contact = () => {
                 <p className="mt-1 text-sm text-red-600">{errors.subject}</p>
               )}
             </div>
-
             <div>
               <Label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                 Message *
@@ -2051,7 +1875,6 @@ const Contact = () => {
                 <p className="mt-1 text-sm text-red-600">{errors.message}</p>
               )}
             </div>
-
             <div className="flex justify-end">
               <Button
                 type="submit"
@@ -2111,7 +1934,6 @@ const Contact = () => {
             </a>
           </div>
         </div>
-
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -2122,7 +1944,6 @@ const Contact = () => {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
             <p className="text-gray-600">info@ziontechgroup.com</p>
           </div>
-
           <div className="text-center">
             <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2132,7 +1953,6 @@ const Contact = () => {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
             <p className="text-gray-600">+1 (555) 123-4567</p>
           </div>
-
           <div className="text-center">
             <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2145,7 +1965,6 @@ const Contact = () => {
           </div>
         </div>
 =======
-
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-2">
                   Message *
@@ -2161,7 +1980,6 @@ const Contact = () => {
                   placeholder="Tell us about your project or how we can help..."
                 />
               </div>
-
               <button
                 type="submit"
                 className="w-full bg-zion-cyan hover:bg-zion-cyan-light text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
@@ -2171,7 +1989,6 @@ const Contact = () => {
               </button>
             </form>
           </div>
-
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
@@ -2199,7 +2016,6 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
               <h3 className="text-xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
               <ul className="space-y-3 text-zion-slate-light">
@@ -2225,32 +2041,21 @@ const Contact = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
               <h3 className="text-xl font-bold text-white mb-4">Response Time</h3>
               <p className="text-zion-slate-light mb-4">
                 We typically respond to all inquiries within 24 hours during business days.
-<<<<<<< HEAD
-=======
             <div className="bg-white/5 p-6 rounded-xl">
               <h3 className="text-xl font-semibold text-white mb-3">Do you provide ongoing support?</h3>
               <p className="text-gray-300">
                 Absolutely! We offer comprehensive support packages including 24/7 monitoring, 
                 regular maintenance, and continuous optimization of your solutions.
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </p>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-=======
-
-
 const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20 px-4 sm:px-6 lg:px-8">
@@ -2292,11 +2097,9 @@ const Contact = () => {
       setFormData({ name: "", email: "", subject: "", message: "" });
     }, 2000);
   };
-
   const handleSendMessage = (message: string) => {
     console.log("Sending message:", message);
   };
-
   const contactMethods = [
     {
       icon: Phone,
@@ -2320,13 +2123,11 @@ const Contact = () => {
       color: "text-zion-cyan"
     }
   ];
-
   const businessHours = [
     { day: "Monday - Friday", hours: "9:00 AM - 6:00 PM EST" },
     { day: "Saturday", hours: "10:00 AM - 4:00 PM EST" },
     { day: "Sunday", hours: "Closed (Emergency support available)" }
   ];
-
   const whyChooseUs = [
     {
       icon: Brain,
@@ -2349,7 +2150,6 @@ const Contact = () => {
       description: "Tailored solutions built specifically for you"
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -2359,7 +2159,6 @@ const Contact = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -2370,7 +2169,6 @@ const Contact = () => {
       }
     }
   };
-
   const services = [
     "AI & Autonomous Systems",
     "Quantum Technology",
@@ -2381,7 +2179,6 @@ const Contact = () => {
     "Custom Development",
     "Consulting Services"
   ];
-
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white flex items-center justify-center">
@@ -2403,7 +2200,6 @@ const Contact = () => {
       </div>
     );
   }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
@@ -2420,7 +2216,6 @@ const Contact = () => {
           </p>
         </div>
       </section>
-
       {/* Contact Methods */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -2449,7 +2244,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Form Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -2462,7 +2256,6 @@ const Contact = () => {
                 Tell us about your project and we'll get back to you with a customized solution
               </p>
             </div>
-            
             <form onSubmit={handleSubmit} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -2496,7 +2289,6 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              
               <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7167!3d39.4496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7a8b8b8b8b8b8%3A0x8b8b8b8b8b8b8b8b!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus" 
@@ -2513,7 +2305,6 @@ const Contact = () => {
                   title="Zion Tech Group Office Location"
                 ></iframe>
               </div>
-
               <div className="mb-6">
                 <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                   Service of Interest
@@ -2531,7 +2322,6 @@ const Contact = () => {
                   ))}
                 </select>
               </div>
-
               <div className="mb-8">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
@@ -2547,7 +2337,6 @@ const Contact = () => {
                   placeholder="Tell us about your project, requirements, or questions..."
                 />
               </div>
-
               <div className="text-center">
                 <button
                   type="submit"
@@ -2561,7 +2350,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
       {/* Office Location Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -2621,7 +2409,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
 export default Contact;
 =======
 export default Contact;
@@ -2656,7 +2443,6 @@ export default Contact;
       color: "text-zion-purple"
     }
   ];
-
   const serviceCategories = [
     {
       name: "AI & Machine Learning",
@@ -2695,7 +2481,6 @@ export default Contact;
       color: "from-pink-500 to-rose-600"
     }
   ];
-
   const budgetRanges = [
     "Under $5,000",
     "$5,000 - $15,000",
@@ -2703,14 +2488,12 @@ export default Contact;
     "$50,000 - $100,000",
     "Over $100,000"
   ];
-
   const timelineOptions = [
     "Immediate (1-2 weeks)",
     "Quick (1-2 months)",
     "Standard (3-6 months)",
     "Long-term (6+ months)"
   ];
-
   return (
     <>
       <SEO 
@@ -2719,7 +2502,6 @@ export default Contact;
         keywords="contact, consultation, AI services, cybersecurity, tech support, Zion Tech Group"
       />
       <Header />
-      
       <main className="flex-1 relative">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 relative overflow-hidden">
@@ -2733,7 +2515,6 @@ export default Contact;
                 Ready to transform your business with cutting-edge technology? 
                 Our team of experts is here to help you achieve your goals.
               </p>
-              
               {/* Contact CTA */}
               <div className="bg-zion-blue-dark/50 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/30 max-w-2xl mx-auto">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
@@ -2754,7 +2535,6 @@ export default Contact;
             </div>
           </div>
         </section>
-
         {/* Contact Form & Information */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4">
@@ -2807,7 +2587,6 @@ export default Contact;
                             />
                           </div>
                         </div>
-
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <div>
                             <label className="text-sm font-medium text-zion-cyan mb-2 block">
@@ -2836,7 +2615,6 @@ export default Contact;
                             />
                           </div>
                         </div>
-
                         <div>
                           <label className="text-sm font-medium text-zion-cyan mb-2 block">
                             Company
@@ -2849,7 +2627,6 @@ export default Contact;
                             placeholder="Your Company Name"
                           />
                         </div>
-
                         <div>
                           <label className="text-sm font-medium text-zion-cyan mb-2 block">
                             Service Interest *
@@ -2869,7 +2646,6 @@ export default Contact;
                             </SelectContent>
                           </Select>
                         </div>
-
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           <div>
                             <label className="text-sm font-medium text-zion-cyan mb-2 block">
@@ -2902,7 +2678,6 @@ export default Contact;
                             </Select>
                           </div>
                         </div>
-
                         <div>
                           <label className="text-sm font-medium text-zion-cyan mb-2 block">
                             Project Details *
@@ -2917,7 +2692,6 @@ export default Contact;
                             placeholder="Tell us about your project, goals, and requirements..."
                           />
                         </div>
-
                         <Button 
                           type="submit" 
                           disabled={isSubmitting}
@@ -2940,7 +2714,6 @@ export default Contact;
                   </CardContent>
                 </Card>
               </div>
-
               {/* Contact Information */}
               <div className="space-y-8">
                 {/* Contact Details */}
@@ -2961,7 +2734,6 @@ export default Contact;
                     ))}
                   </div>
                 </div>
-
                 {/* Service Categories */}
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-6">Our Services</h3>
@@ -2979,7 +2751,6 @@ export default Contact;
                     ))}
                   </div>
                 </div>
-
                 {/* Why Choose Us */}
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
@@ -3010,7 +2781,6 @@ export default Contact;
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
           <div className="container mx-auto px-4 text-center">
@@ -3052,7 +2822,6 @@ export default Contact;
           </div>
         </section>
       </main>
-
       {/* Chat Assistant Modal */}
       {isChatOpen && (
         <ChatAssistant
@@ -3067,7 +2836,6 @@ export default Contact;
           onSendMessage={handleSendMessage}
         />
       )}
-    
   );
 }
 =======
@@ -3115,7 +2883,6 @@ export default Contact;
           <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -3186,7 +2953,6 @@ export default Contact;
               Have questions or want to learn more? We'd love to hear from you.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
@@ -3194,7 +2960,6 @@ export default Contact;
                 Whether you have a question about our platform, pricing, or anything else, 
                 our team is ready to answer all your questions.
               </p>
-              
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -3229,7 +2994,6 @@ export default Contact;
                     )}
                   </div>
                 </div>
-
                 <div>
                   <label htmlFor="subject" className="block text-white mb-2">Subject</label>
                   <Input
@@ -3245,7 +3009,6 @@ export default Contact;
                     <p className="mt-1 text-sm text-red-500">{errors.subject}</p>
                   )}
                 </div>
-
                 <div>
                   <label htmlFor="message" className="block text-white mb-2">Message</label>
                   <Textarea
@@ -3261,7 +3024,6 @@ export default Contact;
                     <p className="mt-1 text-sm text-red-500">{errors.message}</p>
                   )}
                 </div>
-                
                 <Button 
                   type="submit" 
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
@@ -3271,7 +3033,6 @@ export default Contact;
                 </Button>
               </form>
             </div>
-            
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
               <div className="grid grid-cols-1 gap-6">
@@ -3297,7 +3058,6 @@ export default Contact;
                   </Card>
                 ))}
               </div>
-              
               <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk" 
@@ -3310,7 +3070,6 @@ export default Contact;
                   title="Zion Office Locations"
                 ></iframe>
               </div>
-              
               <div className="mt-8">
                 <Card className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6">
                   <div className="flex items-center">
@@ -3332,7 +3091,6 @@ export default Contact;
               </div>
             </div>
           </div>
-          
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Need immediate assistance?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto">
@@ -3360,7 +3118,6 @@ export default Contact;
           </div>
         </div>
       </main>
-
       {/* Chat Assistant Modal */}
       {isChatOpen && (
         <ChatAssistant
@@ -3394,7 +3151,6 @@ export default Contact;
                     placeholder="Tell us about your project, requirements, or any questions you have..."
                   />
                 </div>
-
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
@@ -3417,7 +3173,6 @@ export default Contact;
               </form>
             </div>
           </motion.div>
-
           {/* Contact Information & Map */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -3448,7 +3203,6 @@ export default Contact;
                   View on Google Maps
                 </a>
               </div>
-
               {/* Business Hours */}
               <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-3">
@@ -3475,7 +3229,6 @@ export default Contact;
                   </div>
                 </div>
               </div>
-
               {/* Why Choose Us */}
               <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>
@@ -3505,7 +3258,6 @@ export default Contact;
             </div>
           </motion.div>
         </div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -3569,14 +3321,9 @@ export default Contact;
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </section>
     </div>
   );
 };
-
 export default Contact;

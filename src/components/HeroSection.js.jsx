@@ -70,6 +70,7 @@ export function HeroSection() {
         <motion.div className="absolute top-3/4 left-1/6 w-2 h-2 rounded-full bg-zion-purple-light opacity-80" variants={floatingVariants} animate="animate" style={{ animationDelay: '1.5s' }}/>
         <motion.div className="absolute top-1/6 right-1/6 w-4 h-4 rounded-full bg-zion-cyan opacity-40" variants={floatingVariants} animate="animate" style={{ animationDelay: '2.5s' }}/>
       </div>
+
       {/* Enhanced decorative geometric shapes with animations */}
       <motion.div className="absolute top-20 right-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
       <motion.div className="absolute bottom-20 left-20 w-24 h-24 border border-zion-purple/20 transform rotate-45 opacity-30" animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }}/>
@@ -85,10 +86,12 @@ export function HeroSection() {
             {t('home.hero_title') || "The Future of Tech & AI"}
           </GradientHeading>
         </motion.div>
+
         {/* Enhanced subtitle with better spacing and animations */}
         <motion.p variants={itemVariants} className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-16 max-w-5xl mx-auto leading-relaxed font-light">
           {t('home.hero_subtitle') || "Discover the world's most advanced AI marketplace. Connect with top tech talent, cutting-edge services, and revolutionary equipment in one seamless platform."}
         </motion.p>
+
         {/* Enhanced feature highlights with icons and animations */}
         <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-8 mb-16 text-zion-slate-light">
           <motion.div className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
@@ -112,6 +115,7 @@ export function HeroSection() {
             <span className="font-medium">24/7 Support</span>
           </motion.div>
         </motion.div>
+
         {/* Enhanced CTA buttons with better animations and effects */}
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
@@ -128,6 +132,7 @@ export function HeroSection() {
             </Link>
           </motion.div>
         </motion.div>
+
         {/* Enhanced trust indicators with better visuals */}
         <motion.div variants={itemVariants} className="mt-20 text-zion-slate-light/80">
           <p className="text-lg mb-6 font-medium">Trusted by leading companies worldwide</p>
@@ -138,6 +143,7 @@ export function HeroSection() {
             <motion.div className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" whileHover={{ scale: 1.1, opacity: 1 }} transition={{ type: "spring", stiffness: 400 }}/>
           </div>
         </motion.div>
+
         {/* New stats section */}
         <motion.div variants={itemVariants} className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <motion.div className="text-center group" whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400 }}>
@@ -162,130 +168,6 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
       </motion.div>
-    </section>);
+    </section>
+  );
 }
-import React from 'react';
-import { Search, Rocket } from "lucide-react";
-export const HeroSection = () => {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.8,
-                ease: "easeOut"
-            }
-        }
-    };
-    const floatingVariants = {
-        animate: {
-            y: [-15, 15, -15],
-            rotate: [0, 5, -5, 0],
-            transition: {
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut"
-            }
-        }
-    };
-    const trustMetrics = [
-        { icon: Users, label: "10K+ Users", value: "Trusted by thousands" },
-        { icon: TrendingUp, label: "95% Success", value: "Project completion rate" },
-        { icon: Shield, label: "Enterprise", value: "Fortune 500 clients" },
-        { icon: Rocket, label: "24/7 Support", value: "Always available" }
-    ];
-    const featureBadges = [
-        { icon: Zap, label: "AI-Powered Matching", color: "zion-cyan" },
-        { icon: Star, label: "Verified Professionals", color: "zion-purple" },
-        { icon: Shield, label: "Secure Payments", color: "zion-cyan" },
-        { icon: Rocket, label: "Enterprise Security", color: "zion-purple" }
-    ];
-    return (<section className="relative overflow-hidden py-20 md:py-32 min-h-[90vh] flex items-center">
-      {/* Background Layers */}
-      <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-90"/>
-      <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-transparent to-zion-cyan/20 animate-pulse"/>
-      
-      {/* Floating Elements */}
-      <motion.div className="absolute inset-0" variants={containerVariants} initial="hidden" animate="visible">
-        <motion.div className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60" variants={floatingVariants} animate="animate"/>
-        <motion.div className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-50" variants={floatingVariants} animate="animate" style={{ animationDelay: "1s" }}/>
-        <motion.div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-60" variants={floatingVariants} animate="animate" style={{ animationDelay: "2s" }}/>
-        <motion.div className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30" variants={floatingVariants} animate="animate" style={{ animationDelay: "3s" }}/>
-      </motion.div>
-      {/* Main Content */}
-      <div className="container relative z-10 px-4 mx-auto text-center">
-        <motion.div variants={containerVariants} initial="hidden" animate="visible">
-          {/* Badge */}
-          <motion.div variants={itemVariants} className="mb-6">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Sparkles className="h-8 w-8 text-zion-cyan animate-pulse"/>
-              <span className="text-zion-cyan text-lg font-medium">
-                AI-Powered Technology Solutions
-              </span>
-              <Sparkles className="h-8 w-8 text-zion-cyan animate-pulse"/>
-            </div>
-          </motion.div>
-          {/* Main Heading */}
-          <motion.div variants={itemVariants} className="mb-6">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white mb-4">
-              Transform Your Business with{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan animate-gradient">
-                AI
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mt-4">
-              Leading the future of technology innovation
-            </p>
-          </motion.div>
-          {/* Description */}
-          <motion.p variants={itemVariants} className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge AI solutions, expert talent, and innovative services that drive digital transformation. 
-            From startups to enterprises, we deliver results that matter.
-          </motion.p>
-          {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group" size="lg" asChild>
-              <Link to="/contact" role="button" aria-label="Get Started Today" className="flex items-center gap-2">
-                <Rocket className="h-5 w-5 group-hover:animate-bounce"/>
-                Get Started Today
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform"/>
-              </Link>
-            </Button>
-            
-            <Link to="/services" className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-              <Search className="h-5 w-5 group-hover:rotate-12 transition-transform"/>
-              Explore Services
-            </Link>
-          </motion.div>
-          {/* Trust Metrics */}
-          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
-            {trustMetrics.map((metric, index) => (<motion.div key={index} className="text-center group hover:scale-105 transition-transform duration-300" variants={itemVariants}>
-                <div className="flex justify-center mb-2">
-                  <metric.icon className="h-8 w-8 text-zion-cyan group-hover:animate-pulse"/>
-                </div>
-                <div className="text-zion-cyan font-bold text-lg">{metric.label}</div>
-                <div className="text-zion-slate-light text-sm">{metric.value}</div>
-              </motion.div>))}
-          </motion.div>
-          {/* Feature Badges */}
-          <motion.div variants={itemVariants} className="flex flex-wrap justify-center items-center gap-6 text-zion-slate-light text-sm">
-            {featureBadges.map((badge, index) => (<div key={index} className="flex items-center gap-2 group">
-                <div className={`w-2 h-2 bg-${badge.color} rounded-full group-hover:animate-pulse`}/>
-                <span className="group-hover:text-white transition-colors">{badge.label}</span>
-              </div>))}
-          </motion.div>
-        </motion.div>
-      </div>
-    </section>);
-};

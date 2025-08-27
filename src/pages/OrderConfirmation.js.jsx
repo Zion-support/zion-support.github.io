@@ -1,8 +1,8 @@
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';
 export default function OrderConfirmation() {
-    const router = useNavigate();
+    const router = useRouter();
     const { orderId } = router.query;
     if (!orderId)
         return null;

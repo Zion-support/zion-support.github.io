@@ -26,9 +26,11 @@ import {
   BarChart3,
   CreditCard
 } from 'lucide-react';
+
 export default function CybersecuritySolutions() {
   const [selectedThreat, setSelectedThreat] = useState('all');
   const [activeService, setActiveService] = useState('overview');
+
   const securityServices = [
     {
       icon: Shield,
@@ -73,6 +75,7 @@ export default function CybersecuritySolutions() {
       color: "from-zion-indigo to-zion-purple"
     }
   ];
+
   const threatTypes = [
     { id: 'all', name: 'All Threats', icon: Shield },
     { id: 'malware', name: 'Malware', icon: Bug },
@@ -81,6 +84,7 @@ export default function CybersecuritySolutions() {
     { id: 'ddos', name: 'DDoS Attacks', icon: Network },
     { id: 'insider', name: 'Insider Threats', icon: Users }
   ];
+
   const securityThreats = [
     {
       title: "Advanced Persistent Threats (APTs)",
@@ -131,6 +135,7 @@ export default function CybersecuritySolutions() {
       icon: Bug
     }
   ];
+
   const complianceFrameworks = [
     {
       name: "SOC 2 Type II",
@@ -169,12 +174,14 @@ export default function CybersecuritySolutions() {
       icon: BarChart3
     }
   ];
+
   const securityMetrics = [
     { metric: "99.9%", label: "Uptime Protection", description: "Continuous security monitoring and protection" },
     { metric: "<1hr", label: "Response Time", description: "Average time to detect and respond to threats" },
     { metric: "0", label: "Data Breaches", description: "Successful breaches prevented for our clients" },
     { metric: "24/7", label: "Security Coverage", description: "Round-the-clock security operations" }
   ];
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -184,6 +191,7 @@ export default function CybersecuritySolutions() {
       }
     }
   };
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -192,9 +200,11 @@ export default function CybersecuritySolutions() {
       transition: { duration: 0.6 }
     }
   };
+
   const filteredThreats = selectedThreat === 'all' 
     ? securityThreats 
     : securityThreats.filter(threat => threat.type === selectedThreat);
+
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -242,6 +252,7 @@ export default function CybersecuritySolutions() {
           </motion.div>
         </div>
       </section>
+
       {/* Security Services Overview */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -260,6 +271,7 @@ export default function CybersecuritySolutions() {
               ensuring business continuity and regulatory compliance.
             </p>
           </motion.div>
+
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -294,6 +306,7 @@ export default function CybersecuritySolutions() {
           </motion.div>
         </div>
       </section>
+
       {/* Threat Landscape */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -312,6 +325,7 @@ export default function CybersecuritySolutions() {
               protect against evolving attack vectors.
             </p>
           </motion.div>
+
           {/* Threat Filter */}
           <motion.div 
             className="flex flex-wrap justify-center gap-4 mb-12"
@@ -338,6 +352,7 @@ export default function CybersecuritySolutions() {
               );
             })}
           </motion.div>
+
           {/* Threats Grid */}
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -387,6 +402,7 @@ export default function CybersecuritySolutions() {
           </motion.div>
         </div>
       </section>
+
       {/* Compliance & Standards */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -405,6 +421,7 @@ export default function CybersecuritySolutions() {
               compliance management solutions.
             </p>
           </motion.div>
+
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -442,6 +459,7 @@ export default function CybersecuritySolutions() {
           </motion.div>
         </div>
       </section>
+
       {/* Security Metrics */}
       <section className="py-20 bg-gradient-to-r from-zion-red-dark to-zion-orange">
         <div className="container mx-auto px-4">
@@ -460,6 +478,7 @@ export default function CybersecuritySolutions() {
               peace of mind through proven protection capabilities.
             </p>
           </motion.div>
+
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
@@ -483,6 +502,7 @@ export default function CybersecuritySolutions() {
           </motion.div>
         </div>
       </section>
+
       {/* Security Process */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -501,6 +521,7 @@ export default function CybersecuritySolutions() {
               that protect your business from evolving threats.
             </p>
           </motion.div>
+
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
@@ -558,6 +579,7 @@ export default function CybersecuritySolutions() {
           </motion.div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-red-dark">
         <div className="container mx-auto px-4 text-center">

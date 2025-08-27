@@ -5,7 +5,7 @@ import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 export default function CaseStudy() {
-    const router = useNavigate();
+    const router = useRouter();
     const { slug } = router.query;
     const study = CASE_STUDIES.find((s) => s.slug === slug);
     if (!study) {

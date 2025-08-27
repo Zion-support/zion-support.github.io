@@ -58,12 +58,14 @@ import {
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
+
 export default function UltimateInnovativeServices2026() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
   const [expandedService, setExpandedService] = useState<string | null>(null);
+
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'quantum-ai', name: 'Quantum AI', icon: Atom, color: 'from-zion-purple to-zion-cyan' },
@@ -78,12 +80,14 @@ export default function UltimateInnovativeServices2026() {
     { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },
     { id: 'sustainable-technology', name: 'Sustainable Technology', icon: Leaf, color: 'from-zion-green to-zion-blue' }
   ];
+
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },
     { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },
     { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' }
   ];
+
   const sortOptions = [
     { id: 'featured', name: 'Featured' },
     { id: 'price-low', name: 'Price: Low to High' },
@@ -91,14 +95,17 @@ export default function UltimateInnovativeServices2026() {
     { id: 'innovation', name: 'Innovation Level' },
     { id: 'roi', name: 'ROI Potential' }
   ];
+
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.id === category);
     return cat ? cat.icon : Zap;
   };
+
   const getCategoryColor = (category: string) => {
     const cat = categories.find(c => c.id === category);
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
+
   const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2026.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -113,6 +120,7 @@ export default function UltimateInnovativeServices2026() {
     
     return matchesSearch && matchesCategory && matchesPrice;
   });
+
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
@@ -131,9 +139,11 @@ export default function UltimateInnovativeServices2026() {
         return 0;
     }
   });
+
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
@@ -190,6 +200,7 @@ export default function UltimateInnovativeServices2026() {
           </motion.div>
         </div>
       </section>
+
       {/* Search and Filters */}
       <section className="py-12 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -207,6 +218,7 @@ export default function UltimateInnovativeServices2026() {
                 />
               </div>
             </div>
+
             {/* Category Filter */}
             <div>
               <select
@@ -221,6 +233,7 @@ export default function UltimateInnovativeServices2026() {
                 ))}
               </select>
             </div>
+
             {/* Price Filter */}
             <div>
               <select
@@ -236,6 +249,7 @@ export default function UltimateInnovativeServices2026() {
               </select>
             </div>
           </div>
+
           {/* Sort Options */}
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <span className="text-zion-slate-300">Sort by:</span>
@@ -255,6 +269,7 @@ export default function UltimateInnovativeServices2026() {
           </div>
         </div>
       </section>
+
       {/* Services Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -266,6 +281,7 @@ export default function UltimateInnovativeServices2026() {
               Discover the future of technology with our cutting-edge micro SAAS solutions
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
               {sortedServices.map((service, index) => (
@@ -294,6 +310,7 @@ export default function UltimateInnovativeServices2026() {
                         </div>
                       </div>
                     </div>
+
                     {/* Service Title and Description */}
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                       {service.title}
@@ -301,6 +318,7 @@ export default function UltimateInnovativeServices2026() {
                     <p className="text-zion-slate-300 text-sm mb-4 line-clamp-3">
                       {service.description}
                     </p>
+
                     {/* Innovation Level Badge */}
                     <div className="flex items-center gap-2 mb-4">
                       <div className={`px-3 py-1 rounded-full text-xs font-semibold ${
@@ -316,6 +334,7 @@ export default function UltimateInnovativeServices2026() {
                         ROI: {service.roi}
                       </div>
                     </div>
+
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
@@ -332,23 +351,25 @@ export default function UltimateInnovativeServices2026() {
                         </span>
                       )}
                     </div>
+
                     {/* Expand/Collapse Button */}
                     <button
                       onClick={() => toggleServiceExpansion(service.id)}
                       className="w-full flex items-center justify-center gap-2 py-2 text-zion-cyan hover:text-white transition-colors"
                     >
                       {expandedService === service.id ? (
-<>
+                        <>
                           <EyeOff className="w-4 h-4" />
                           Show Less
-</>
+                        </>
                       ) : (
-<>
+                        <>
                           <Eye className="w-4 h-4" />
                           Learn More
-</>
+                        </>
                       )}
                     </button>
+
                     {/* Expanded Service Details */}
                     <AnimatePresence>
                       {expandedService === service.id && (
@@ -371,6 +392,7 @@ export default function UltimateInnovativeServices2026() {
                               ))}
                             </ul>
                           </div>
+
                           {/* Benefits */}
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
@@ -383,6 +405,7 @@ export default function UltimateInnovativeServices2026() {
                               ))}
                             </ul>
                           </div>
+
                           {/* Market Info */}
                           <div className="grid grid-cols-2 gap-4 text-xs">
                             <div>
@@ -394,6 +417,7 @@ export default function UltimateInnovativeServices2026() {
                               <div className="text-white font-semibold">{service.estimatedDelivery}</div>
                             </div>
                           </div>
+
                           {/* Contact Button */}
                           <div className="mt-4">
                             <Link
@@ -412,6 +436,7 @@ export default function UltimateInnovativeServices2026() {
               ))}
             </AnimatePresence>
           </div>
+
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
@@ -434,6 +459,7 @@ export default function UltimateInnovativeServices2026() {
           )}
         </div>
       </section>
+
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-purple/10">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">

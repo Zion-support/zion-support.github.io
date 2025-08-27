@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import { UserMenu } from '@/components/header/UserMenu';
@@ -24,7 +24,7 @@ export function PrimaryNav() {
     const isLoggedIn = !!user;
     const isMobile = useIsMobile();
     const { t } = useTranslation();
-    const router = useNavigate();
+    const router = useRouter();
     const [query, setQuery] = useState('');
     const suggestions = generateSearchSuggestions();
     let unreadCount = 0;
@@ -40,7 +40,7 @@ export function PrimaryNav() {
         e.preventDefault();
         if (query.trim()) {
             console.log('PrimaryNav search submit:', query);
-            router(`/search/${slugify(query)}`);
+            router.push(`/search/${slugify(query)}`);
             setQuery('');
         }
     };
@@ -63,19 +63,19 @@ export function PrimaryNav() {
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
-                router(`/marketplace/listing/${sugg.id}`);
+                router.push(`/marketplace/listing/${sugg.id}`);
             }
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                 // Documentation suggestions navigate directly to their path
-                router(sugg.slug);
+                router.push(sugg.slug);
             }
             else if (sugg.type === 'blog' && sugg.slug) {
                 // Blog posts navigate to blog detail page
-                router(`/blog/${sugg.slug}`);
+                router.push(`/blog/${sugg.slug}`);
             }
             else {
                 // Default: search results page with slug
-                router(`/search/${sugg.slug || slugify(sugg.text)}`);
+                router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
             }
             setQuery('');
             // Track analytics event

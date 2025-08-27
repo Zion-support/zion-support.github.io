@@ -20,6 +20,7 @@ const AIAutonomousWorkflow = () => {
               Transform your business processes with AI that never sleeps, never makes mistakes, and continuously optimizes every workflow
             </p>
           </div>
+
           {/* Workflow Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousWorkflow = () => {
               <p className="text-gray-300">Continuous workflow improvement</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousWorkflow = () => {
               <p className="text-gray-300">AI that improves with every workflow</p>
             </div>
           </div>
+
           {/* Workflow Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Workflow Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousWorkflow = () => {
               </div>
             </div>
           </div>
+
           {/* Workflow Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Workflow Solutions</h2>
@@ -125,6 +129,7 @@ const AIAutonomousWorkflow = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Industry Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousWorkflow = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for Autonomous Workflows?</h2>

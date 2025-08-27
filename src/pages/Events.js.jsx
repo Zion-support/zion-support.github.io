@@ -128,6 +128,7 @@ const Events = () => {
           </div>
         </div>
       </section>
+
       {/* Event Categories */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -148,6 +149,7 @@ const Events = () => {
           </div>
         </div>
       </section>
+
       {/* Upcoming Events */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,6 +202,7 @@ const Events = () => {
                   </button>
 import React from 'react';
 import {Link} from 'react-router-dom';
+
 const Events: React.FC = () => {}
   const upcomingEvents = [
     {title}: "AI Innovation Summit 2024",
@@ -221,6 +224,7 @@ const Events: React.FC = () => {}
       type: "Webinar"
     }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -282,6 +286,7 @@ const Events: React.FC = () => {}
           </div>
         </div>
       </section>
+
       {/* Contact Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -312,6 +317,7 @@ const Events: React.FC = () => {}
           </div>
         </div>
       </></section>
+
       {/* Newsletter Signup */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -336,5 +342,6 @@ const Events: React.FC = () => {}
     </></div>
   );
 };
+
 export default Events;</></>))}</></></></>);
 };

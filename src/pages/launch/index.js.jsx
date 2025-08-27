@@ -147,6 +147,7 @@ const LaunchToolkitPage = () => {
           </Button>
           {zipError && <p className="text-red-500 mt-2">Error creating ZIP: {zipError}</p>}
         </div>
+
         <div className="my-8">
           <Tabs value={activeBundle} onValueChange={(value) => setActiveBundle(value)} className="w-full">
             <TabsList className="grid w-full grid-cols-3 md:max-w-md mx-auto">
@@ -163,6 +164,7 @@ const LaunchToolkitPage = () => {
             Currently viewing: <span className="font-semibold capitalize">{activeBundle}</span> bundle. Some assets may be highlighted or filtered based on selection.
           </p>
         </div>
+
         <section id="media-kit" className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Media Kit</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -183,6 +185,7 @@ const LaunchToolkitPage = () => {
                   <a href="/toolkit_assets/media_kit/zion_typography.md" download className="text-blue-600 hover:underline">Download (.md)</a>
                 </div>
               </div>
+
               <h3 className="text-xl font-semibold mt-6 mb-3">Logos</h3>
               <div className="space-y-3">
                 <div>
@@ -199,6 +202,7 @@ const LaunchToolkitPage = () => {
                 </div>
               </div>
             </div>
+
             {/* Column 2: Press Release Generator */}
             <div>
               <h3 className="text-xl font-semibold mb-3">Press Release Templates</h3>
@@ -214,16 +218,20 @@ const LaunchToolkitPage = () => {
                     {selectedTemplateUrl === '/toolkit_assets/media_kit/press_release_templates/press_release_token_sale_template.md' && isLoadingTemplate ? 'Loading...' : 'Load Token Sale Template'}
                   </Button>)}
               </div>
+
               {loadError && <p className="text-red-500">Error: {loadError}</p>}
+
               {selectedTemplateContent && !isLoadingTemplate && (<div className="my-4 p-3 border rounded bg-gray-50 dark:bg-gray-800">
                   <h4 className="font-medium mb-2">Selected Template:</h4>
                   <pre className="whitespace-pre-wrap text-sm h-40 overflow-auto">{selectedTemplateContent}</pre>
                 </div>)}
+
               {selectedTemplateContent && !isLoadingTemplate && (<div className="space-y-2">
                   <Label htmlFor="custom-date">Enter Custom Date (YYYY-MM-DD):</Label>
                   <Input type="text" id="custom-date" placeholder="YYYY-MM-DD" value={customDate} onChange={(e) => setCustomDate(e.target.value)} className="max-w-xs"/>
                   <Button onClick={generateWithDate} disabled={!customDate}>Generate with Date</Button>
                 </div>)}
+
               {generatedPressRelease && (<div className="my-4 p-3 border rounded bg-green-50 dark:bg-green-900 dark:bg-opacity-25">
                   <h4 className="font-medium mb-2">Generated Press Release:</h4>
                   <pre className="whitespace-pre-wrap text-sm">{generatedPressRelease}</pre>
@@ -231,6 +239,7 @@ const LaunchToolkitPage = () => {
             </div>
           </div>
         </section>
+
         <section id="social-media-kit" className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Social Media Kit</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -249,6 +258,7 @@ const LaunchToolkitPage = () => {
                   <a href="/toolkit_assets/social_media_kit/banners/twitter_banner.png" download className="text-blue-600 hover:underline">Download (PNG)</a>
                 </div>
               </div>
+
               <h3 className="text-xl font-semibold mb-3">GIFs</h3>
               <div className="space-y-3">
                 <div>
@@ -258,6 +268,7 @@ const LaunchToolkitPage = () => {
                 </div>
               </div>
             </div>
+
             {/* Column 2: Explainer Copy */}
             <div>
               <h3 className="text-xl font-semibold mb-3">Explainer Copy Blocks</h3>
@@ -274,10 +285,12 @@ const LaunchToolkitPage = () => {
             </div>
           </div>
         </section>
+
         <section id="rollout-timeline" className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Rollout Timeline</h2>
           <div className="prose prose-sm sm:prose dark:prose-invert max-w-none">
             {/* Using prose for nice typography for this content-heavy section */}
+
             <h3 className="text-xl font-semibold mt-4 mb-2">Suggested Schedule</h3>
             <ul className="list-disc pl-5 space-y-1">
               <li><strong>Week 1:</strong> Closed Beta Invite</li>
@@ -285,6 +298,7 @@ const LaunchToolkitPage = () => {
               <li><strong>Week 3:</strong> Token Airdrop Snapshot</li>
               <li><strong>Week 4:</strong> Zion Global Summit</li>
             </ul>
+
             <h3 className="text-xl font-semibold mt-6 mb-2">Playbooks</h3>
             <div className="space-y-2">
               <div>
@@ -298,6 +312,7 @@ const LaunchToolkitPage = () => {
                 </a>
               </div>
             </div>
+
             <h3 className="text-xl font-semibold mt-6 mb-2">Optional Activations</h3>
             <p>
               Consider influencer and creator activation strategies to broaden reach and engagement.
@@ -305,14 +320,17 @@ const LaunchToolkitPage = () => {
             </p>
           </div>
         </section>
+
         <section id="legal-bundle" className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Legal Bundle</h2>
           <div className="prose prose-sm sm:prose dark:prose-invert max-w-none">
             {/* Using prose for nice typography if these were to be displayed directly. For links, it's less critical but maintains consistency. */}
+
             <p className="mb-4">
               The following legal documents are provided as templates. It is crucial to consult with legal counsel
               to customize these documents to your specific jurisdiction and operational details.
             </p>
+
             <ul className="list-none space-y-3"> {/* Using list-none to remove bullets, styling links directly */}
               {(activeBundle === 'general' || activeBundle === 'institutional') && (<li>
                   <h4 className="font-medium inline mr-2">Terms of Use:</h4>
@@ -348,6 +366,7 @@ const LaunchToolkitPage = () => {
             </ul>
           </div>
         </section>
+
         {/* Generate PDF Kit Section Placeholder */}
         <section id="generate-pdf-kit" className="mb-12">
           <h2 className="text-2xl font-semibold mb-4 border-b pb-2">Generate PDF Kit</h2>

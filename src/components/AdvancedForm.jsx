@@ -195,11 +195,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           {field.label}
           {field.required && <span className="text-red-500 ml-1">*</span>}
         </label>
+
         <div className="relative">
           {/* Field Icon */}
           <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
             {getFieldIcon(field)}
           </div>
+
           {/* Input Field */}
           {field.type === 'textarea' ? (<textarea name={field.name} value={fieldValue} onChange={(e) => handleFieldChange(field.name, e.target.value)} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
                     ? fieldValidation.isValid
@@ -224,15 +226,18 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                         ? 'border-green-500 focus:ring-green-200'
                         : 'border-red-500 focus:ring-red-200'
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}
+
           {/* Password Toggle */}
           {isPasswordField && (<button type="button" onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">
               {showPassword[field.name] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}
             </button>)}
+
           {/* Validation Icon */}
           {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">
               {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"/>) : (<AlertCircle className="w-5 h-5 text-red-500"/>)}
             </div>)}
         </div>
+
         {/* Validation Message */}
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} className="text-sm text-red-600 dark:text-red-400">
             {fieldValidation.message}
@@ -256,6 +261,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         <h2 className="text-2xl font-bold mb-2">{title}</h2>
         <p className="text-blue-100">{subtitle}</p>
       </div>
+
       {/* Progress Bar */}
       {showProgressBar && (<div className="px-6 pt-4">
           <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
@@ -266,11 +272,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>
           </div>
         </div>)}
+
       {/* Form */}
       <form onSubmit={handleSubmit} className="p-6 space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {fields.map(field => renderField(field))}
         </div>
+
         {/* Submit Button */}
         <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting
             ? 'bg-gray-400 cursor-not-allowed'
@@ -283,6 +291,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
               {submitText}
             </>)}
         </motion.button>
+
         {/* Form Status */}
         <AnimatePresence>
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">

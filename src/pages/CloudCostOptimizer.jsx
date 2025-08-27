@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from "../components/SEOHead.jsx";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -128,7 +128,8 @@ export default function CloudCostOptimizer() {
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
-      <SEOHead title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"/>
+      <SEO title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"/>
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="container mx-auto text-center">
@@ -155,6 +156,7 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
+
       {/* Cost Savings Metrics */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -178,6 +180,7 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
+
       {/* Optimization Services */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -203,6 +206,7 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
+
       {/* Supported Cloud Providers */}
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto">
@@ -225,6 +229,7 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
+
       {/* Features Grid */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -249,6 +254,7 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
+
       {/* Pricing Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -291,6 +297,7 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
+
       {/* Contact Section */}
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto text-center">

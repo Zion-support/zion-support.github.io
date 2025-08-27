@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -18,8 +15,6 @@ import {
   Lock,
   AlertTriangle
 } from 'lucide-react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
-
 const Soc2ComplianceAutomation: React.FC = () => {
   const features = [
     {
@@ -43,7 +38,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
       icon: "📊"
     }
   ];
-
   const soc2Criteria = [
     {
       principle: "Security",
@@ -71,7 +65,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
       controls: ["Data minimization", "Consent management", "Data retention", "Privacy by design"]
     }
   ];
-
   const automationBenefits = [
     {
       title: "Time Savings",
@@ -94,7 +87,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
       metric: "24/7"
     }
   ];
-
   const complianceTools = [
     {
       category: "Control Monitoring",
@@ -113,7 +105,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
       tools: ["Compliance reports", "Trend analysis", "Gap analysis", "Executive dashboards"]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -131,7 +122,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
               compliance insights to maintain your SOC 2 certification effortlessly.
             </p>
           </div>
-          
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Automated Compliance Features</h2>
@@ -145,7 +135,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
               ))}
             </div>
           </div>
-          
           {/* SOC 2 Criteria */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">SOC 2 Trust Service Criteria</h2>
@@ -154,7 +143,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <h3 className="text-xl font-semibold text-white mb-3">{criteria.principle}</h3>
                   <p className="text-gray-300 mb-4">{criteria.description}</p>
-                  
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Controls:</h4>
                     {criteria.controls.map((control, idx) => (
@@ -168,7 +156,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
               ))}
             </div>
           </div>
-          
           {/* Automation Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Benefits of Automation</h2>
@@ -182,7 +169,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
               ))}
             </div>
           </div>
-          
           {/* Compliance Tools */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Compliance Tools</h2>
@@ -202,7 +188,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
               ))}
             </div>
           </div>
-          
           {/* Implementation Process */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Implementation Process</h2>
@@ -214,7 +199,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Assessment</h3>
                 <p className="text-gray-300 text-sm">Evaluate current compliance status and requirements</p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">2</span>
@@ -222,7 +206,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Setup</h3>
                 <p className="text-gray-300 text-sm">Configure automated monitoring and control systems</p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">3</span>
@@ -230,7 +213,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Integration</h3>
                 <p className="text-gray-300 text-sm">Integrate with existing systems and processes</p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">4</span>
@@ -240,7 +222,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
               </div>
             </div>
           </div>
-          
           {/* Dashboard Preview */}
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
@@ -253,7 +234,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">Compliance Status</h3>
                   <p className="text-gray-300 text-sm">Real-time view of your SOC 2 compliance status</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">📊</span>
@@ -261,7 +241,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">Control Monitoring</h3>
                   <p className="text-gray-300 text-sm">Monitor all security controls in real-time</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">📋</span>
@@ -272,7 +251,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
               </div>
             </div>
           </div>
-          
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Perfect For</h2>
@@ -284,7 +262,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">SaaS Companies</h3>
                 <p className="text-gray-300 text-sm">Maintain SOC 2 compliance for customer trust</p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🏦</span>
@@ -292,7 +269,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">Financial Services</h3>
                 <p className="text-gray-300 text-sm">Meet regulatory requirements and security standards</p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🏥</span>
@@ -302,7 +278,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
               </div>
             </div>
           </div>
-          
           {/* CTA Section */}
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
@@ -332,5 +307,4 @@ const Soc2ComplianceAutomation: React.FC = () => {
     </div>
   );
 };
-
 export default Soc2ComplianceAutomation;

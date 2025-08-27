@@ -94,6 +94,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
             </Button>
           </div>
         </CardHeader>
+
         <AnimatePresence>
           {isExpanded && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }}>
               <CardContent className="pt-0 space-y-3">
@@ -121,6 +122,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
                       </div>
                     </div>))}
                 </div>
+
                 {/* Performance Tips */}
                 <div className="p-3 bg-zion-purple/10 border border-zion-purple/20 rounded-lg">
                   <div className="flex items-center gap-2 mb-2">

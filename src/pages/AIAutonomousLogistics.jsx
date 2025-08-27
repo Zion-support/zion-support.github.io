@@ -20,6 +20,7 @@ const AIAutonomousLogistics = () => {
               Transform your supply chain with AI that never sleeps, never makes mistakes, and continuously optimizes every aspect of logistics operations
             </p>
           </div>
+
           {/* Logistics Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousLogistics = () => {
               <p className="text-gray-300">Forecast demand and optimize inventory</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousLogistics = () => {
               <p className="text-gray-300">AI that improves with every operation</p>
             </div>
           </div>
+
           {/* Logistics Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Logistics Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousLogistics = () => {
               </div>
             </div>
           </div>
+
           {/* Logistics Areas */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Logistics Solutions</h2>
@@ -125,6 +129,7 @@ const AIAutonomousLogistics = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Industry Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousLogistics = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-sky-600 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Optimize Your Logistics?</h2>

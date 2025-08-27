@@ -20,6 +20,7 @@ const AIAutonomousPlanning = () => {
               Your AI planning partner that continuously creates strategies, plans actions, and optimizes decision-making with intelligent autonomous operation
             </p>
           </div>
+
           {/* Planning Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousPlanning = () => {
               <p className="text-gray-300">Allocate resources</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousPlanning = () => {
               <p className="text-gray-300">Learns new patterns</p>
             </div>
           </div>
+
           {/* Planning Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Planning Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousPlanning = () => {
               </div>
             </div>
           </div>
+
           {/* Planning Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Planning Solutions</h2>
@@ -125,6 +129,7 @@ const AIAutonomousPlanning = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Planning Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousPlanning = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-orange-600 to-amber-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Planning?</h2>

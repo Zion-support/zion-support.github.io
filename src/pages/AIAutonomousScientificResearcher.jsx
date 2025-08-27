@@ -20,6 +20,7 @@ const AIAutonomousScientificResearcher = () => {
               Meet your AI research partner - an intelligent scientist that never sleeps, never gets tired, and accelerates scientific discovery 24/7
             </p>
           </div>
+
           {/* Research Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousScientificResearcher = () => {
               <p className="text-gray-300">AI-driven scientific insights</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousScientificResearcher = () => {
               <p className="text-gray-300">Cross-disciplinary scientific insights</p>
             </div>
           </div>
+
           {/* Research Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Research Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousScientificResearcher = () => {
               </div>
             </div>
           </div>
+
           {/* Scientific Domains */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Scientific Domains</h2>
@@ -125,6 +129,7 @@ const AIAutonomousScientificResearcher = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Research Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousScientificResearcher = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Research?</h2>

@@ -1,9 +1,390 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter } from 'lucide-react';
+
 export default function Documentation() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popular');
+
+  const categories = [
+    { id: 'all', name: 'All Documentation', icon: <BookOpen className="w-5 h-5" />, count: 0 },
+    { id: 'getting-started', name: 'Getting Started', icon: <BookOpen className="w-5 h-5" />, count: 12 },
+    { id: 'api', name: 'API Reference', icon: <Code className="w-5 h-5" />, count: 28 },
+    { id: 'guides', name: 'User Guides', icon: <FileText className="w-5 h-5" />, count: 45 },
+    { id: 'tutorials', name: 'Tutorials', icon: <Video className="w-5 h-5" />, count: 23 },
+    { id: 'examples', name: 'Code Examples', icon: <Code className="w-5 h-5" />, count: 67 },
+    { id: 'reference', name: 'Reference', icon: <FileText className="w-5 h-5" />, count: 34 }
+  ];
+
+  const sortOptions = [
+    { value: 'popular', label: 'Most Popular' },
+    { value: 'newest', label: 'Newest First' },
+    { value: 'alphabetical', label: 'Alphabetical' },
+    { value: 'recently-updated', label: 'Recently Updated' }
+  ];
+
+  const documentationItems = [
+    {
+      id: 1,
+      title: 'Getting Started with Zion Tech Group',
+      description: 'Complete guide to setting up your account and first project',
+      category: 'getting-started',
+      type: 'guide',
+      difficulty: 'beginner',
+      readTime: '15 min',
+      lastUpdated: '2025-01-20',
+      views: 15420,
+      rating: 4.9,
+      featured: true,
+      tags: ['onboarding', 'setup', 'first-steps']
+    },
+    {
+      id: 2,
+      title: 'API Authentication Guide',
+      description: 'Step-by-step guide to API key management and authentication',
+      category: 'api',
+      type: 'guide',
+      difficulty: 'intermediate',
+      readTime: '25 min',
+      lastUpdated: '2025-01-18',
+      views: 8920,
+      rating: 4.8,
+      featured: true,
+      tags: ['api', 'authentication', 'security']
+    },
+    {
+      id: 3,
+      title: 'AI Services Integration Tutorial',
+      description: 'Learn how to integrate our AI services into your applications',
+      category: 'tutorials',
+      type: 'tutorial',
+      difficulty: 'advanced',
+      readTime: '45 min',
+      lastUpdated: '2025-01-15',
+      views: 6540,
+      rating: 4.7,
+      featured: false,
+      tags: ['ai', 'integration', 'tutorial']
+    },
+    {
+      id: 4,
+      title: 'REST API Reference',
+      description: 'Complete API reference with endpoints, parameters, and examples',
+      category: 'api',
+      type: 'reference',
+      difficulty: 'intermediate',
+      readTime: '60 min',
+      lastUpdated: '2025-01-12',
+      views: 12340,
+      rating: 4.9,
+      featured: true,
+      tags: ['api', 'reference', 'endpoints']
+    },
+    {
+      id: 5,
+      title: 'Micro SaaS Platform Setup',
+      description: 'Comprehensive guide to setting up your micro SaaS platform',
+      category: 'guides',
+      type: 'guide',
+      difficulty: 'intermediate',
+      readTime: '35 min',
+      lastUpdated: '2025-01-10',
+      views: 7890,
+      rating: 4.6,
+      featured: false,
+      tags: ['micro-saas', 'platform', 'setup']
+    },
+    {
+      id: 6,
+      title: 'Python SDK Examples',
+      description: 'Code examples and best practices for using our Python SDK',
+      category: 'examples',
+      type: 'examples',
+      difficulty: 'intermediate',
+      readTime: '30 min',
+      lastUpdated: '2025-01-08',
+      views: 5670,
+      rating: 4.5,
+      featured: false,
+      tags: ['python', 'sdk', 'examples']
+    }
+  ];
+
+  const featuredResources = [
+    {
+      title: 'Zion Tech Group Developer Portal',
+      description: 'Access our comprehensive developer resources and tools',
+      type: 'portal',
+      link: 'https://developers.ziontechgroup.com',
+      featured: true
+    },
+    {
+      title: 'API Playground',
+      description: 'Interactive API testing and exploration environment',
+      type: 'tool',
+      link: '/api-playground',
+      featured: true
+    },
+    {
+      title: 'Community Forum',
+      description: 'Connect with other developers and get help',
+      type: 'community',
+      link: '/community',
+      featured: false
+    }
+  ];
+
+  const getDifficultyColor = (difficulty: string) => {
+    switch (difficulty) {
+      case 'beginner': return 'bg-green-500';
+      case 'intermediate': return 'bg-yellow-500';
+      case 'advanced': return 'bg-red-500';
+      default: return 'bg-gray-500';
+    }
+  };
+
+  const getDifficultyText = (difficulty: string) => {
+    switch (difficulty) {
+      case 'beginner': return 'Beginner';
+      case 'intermediate': return 'Intermediate';
+      case 'advanced': return 'Advanced';
+      default: return 'Unknown';
+    }
+  };
+
+  const filteredItems = documentationItems.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+    
+    return matchesSearch && matchesCategory;
+  });
+
+  // Update counts
+  categories.forEach(cat => {
+    if (cat.id === 'all') {
+      cat.count = documentationItems.length;
+    } else {
+      cat.count = documentationItems.filter(item => item.category === cat.id).length;
+    }
+  });
+
   return (
-    <div className="container mx-auto px-4 py-12 text-white">
-      <h1 className="text-3xl font-bold mb-4">Documentation</h1>
-      <p className="text-gray-300">Developer and user documentation will be organized here.</p>
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex justify-center mb-6">
+            <div className="p-4 bg-zion-cyan/20 rounded-full">
+              <BookOpen className="w-16 h-16 text-zion-cyan" />
+            </div>
+          </div>
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Documentation & Resources
+          </h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Comprehensive documentation, tutorials, and resources to help you succeed with Zion Tech Group's innovative solutions.
+          </p>
+        </div>
+      </div>
+
+      {/* Search and Filters */}
+      <div className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Search Bar */}
+            <div className="relative mb-8">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search documentation..."
+                className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
+            </div>
+
+            {/* Categories and Sort */}
+            <div className="flex flex-col lg:flex-row gap-6 mb-8">
+              {/* Categories */}
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setActiveCategory(category.id)}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
+                      activeCategory === category.id
+                        ? 'bg-zion-cyan text-zion-slate-dark'
+                        : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                    }`}
+                  >
+                    {category.icon}
+                    {category.name}
+                    <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
+                      {category.count}
+                    </span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Sort Options */}
+              <div className="flex items-center gap-2">
+                <span className="text-zion-slate-light">Sort by:</span>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {sortOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Featured Resources */}
+      <div className="py-12 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            Featured Resources
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {featuredResources.map((resource, index) => (
+              <div
+                key={index}
+                className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
+              >
+                {resource.featured && (
+                  <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4">
+                    Featured
+                  </div>
+                )}
+                <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
+                <p className="text-zion-slate-light text-sm mb-4">{resource.description}</p>
+                <a
+                  href={resource.link}
+                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
+                >
+                  {resource.type === 'portal' ? 'Visit Portal' : 'Learn More'}
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Documentation Items */}
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            Documentation Library
+          </h2>
+          
+          {filteredItems.length > 0 ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+              {filteredItems.map((item) => (
+                <div
+                  key={item.id}
+                  className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
+                    item.featured ? 'ring-2 ring-zion-cyan' : ''
+                  }`}
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(item.difficulty)}`}>
+                        {getDifficultyText(item.difficulty)}
+                      </span>
+                      {item.featured && (
+                        <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
+                          Featured
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                      <Clock className="w-4 h-4" />
+                      {item.readTime}
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-zion-slate-light mb-4">{item.description}</p>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {item.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">
+                      <div className="flex items-center gap-1">
+                        <Users className="w-4 h-4" />
+                        {item.views.toLocaleString()}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        {item.rating}
+                      </div>
+                    </div>
+
+                    <button className="flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium">
+                      Read More
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <BookOpen className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No documentation found</h3>
+              <p className="text-zion-slate-light">
+                Try adjusting your search terms or browse all categories
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Need More Help?
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+            Can't find what you're looking for? Our support team is here to help you succeed.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/support"
+              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
+            >
+              Contact Support
+            </a>
+            <a 
+              href="/help"
+              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
+            >
+              Help Center
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

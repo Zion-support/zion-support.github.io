@@ -70,6 +70,7 @@ const CuttingEdgeServicesShowcase = () => {
             </span>
           </div>
         </div>
+
         {/* Contact Information */}
         <div className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 mb-12">
           <div className="text-center">
@@ -109,6 +110,7 @@ const CuttingEdgeServicesShowcase = () => {
             </div>
           </div>
         </div>
+
         {/* Filters */}
         <div className="mb-12">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -128,6 +130,7 @@ const CuttingEdgeServicesShowcase = () => {
             </div>
           </div>
         </div>
+
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {filteredServices.map((service) => (<div key={service.id} className="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105">
@@ -147,10 +150,12 @@ const CuttingEdgeServicesShowcase = () => {
                   </div>
                 </div>
               </div>
+
               {/* Description */}
               <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                 {service.description}
               </p>
+
               {/* Key Features */}
               <div className="mb-4">
                 <h4 className="text-white font-semibold mb-2 text-sm">Key Features</h4>
@@ -163,6 +168,7 @@ const CuttingEdgeServicesShowcase = () => {
                     </div>))}
                 </div>
               </div>
+
               {/* Benefits */}
               <div className="mb-4">
                 <h4 className="text-white font-semibold mb-2 text-sm">Benefits</h4>
@@ -175,6 +181,7 @@ const CuttingEdgeServicesShowcase = () => {
                     </div>))}
                 </div>
               </div>
+
               {/* Additional Info */}
               <div className="grid grid-cols-2 gap-4 text-xs mb-4">
                 <div>
@@ -196,6 +203,7 @@ const CuttingEdgeServicesShowcase = () => {
                   </div>
                 </div>
               </div>
+
               {/* Tags */}
               <div className="mb-4">
                 <div className="flex flex-wrap gap-2">
@@ -204,6 +212,7 @@ const CuttingEdgeServicesShowcase = () => {
                     </span>))}
                 </div>
               </div>
+
               {/* Contact Button */}
               <div className="text-center">
                 <a href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`} className="inline-block w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200">
@@ -215,6 +224,7 @@ const CuttingEdgeServicesShowcase = () => {
               </div>
             </div>))}
         </div>
+
         {/* Call to Action */}
         <div className="text-center mt-20">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-12">

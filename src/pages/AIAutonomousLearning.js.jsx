@@ -20,6 +20,7 @@ const AIAutonomousLearning = () => {
               Your AI learning partner that continuously acquires knowledge, adapts to new information, and improves performance with intelligent autonomous operation
             </p>
           </div>
+
           {/* Learning Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousLearning = () => {
               <p className="text-gray-300">Recognize patterns</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousLearning = () => {
               <p className="text-gray-300">Learns new patterns</p>
             </div>
           </div>
+
           {/* Learning Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Learning Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousLearning = () => {
               </div>
             </div>
           </div>
+
           {/* Learning Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Learning Solutions</h2>
@@ -125,6 +129,7 @@ const AIAutonomousLearning = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Learning Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousLearning = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-lime-600 to-green-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Learning?</h2>

@@ -20,6 +20,7 @@ const AIAutonomousIdentitySecurity = () => {
               Your AI identity security partner that continuously secures identities, detects threats, and protects identity infrastructure with intelligent autonomous operation
             </p>
           </div>
+
           {/* Identity Security Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousIdentitySecurity = () => {
               <p className="text-gray-300">Analyze security</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousIdentitySecurity = () => {
               <p className="text-gray-300">Learns new threats</p>
             </div>
           </div>
+
           {/* Identity Security Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Identity Security Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousIdentitySecurity = () => {
               </div>
             </div>
           </div>
+
           {/* Identity Security Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Identity Security Solutions</h2>
@@ -125,6 +129,7 @@ const AIAutonomousIdentitySecurity = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Identity Security Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousIdentitySecurity = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Identity Security?</h2>

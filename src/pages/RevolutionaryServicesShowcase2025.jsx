@@ -61,6 +61,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                 </div>
               </div>
             </div>
+
             {/* Market Overview */}
             <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">Market Overview</h2>
@@ -82,6 +83,7 @@ const RevolutionaryServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
+
       {/* Search and Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -96,6 +98,7 @@ const RevolutionaryServicesShowcase2025 = () => {
             </select>
           </div>
         </div>
+
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => (<div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -117,8 +120,10 @@ const RevolutionaryServicesShowcase2025 = () => {
                   <span className="text-gray-400">{service.period}</span>
                 </div>
               </div>
+
               {/* Service Description */}
               <p className="text-gray-300 text-sm mb-6 line-clamp-3">{service.description}</p>
+
               {/* Key Features */}
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Key Features</h4>
@@ -132,6 +137,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                     </div>)}
                 </div>
               </div>
+
               {/* Benefits */}
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Key Benefits</h4>
@@ -142,6 +148,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                     </div>))}
                 </div>
               </div>
+
               {/* Market Info */}
               <div className="mb-6 text-sm">
                 <div className="grid grid-cols-2 gap-4 text-gray-400">
@@ -155,6 +162,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                   </div>
                 </div>
               </div>
+
               {/* ROI and Setup */}
               <div className="mb-6 text-sm">
                 <div className="grid grid-cols-2 gap-4 text-gray-400">
@@ -168,6 +176,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                   </div>
                 </div>
               </div>
+
               {/* Trial Info */}
               <div className="mb-6 text-center">
                 <div className="bg-blue-500/20 rounded-lg p-3">
@@ -175,6 +184,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                   <p className="text-blue-400 text-sm">No credit card required</p>
                 </div>
               </div>
+
               {/* Action Buttons */}
               <div className="space-y-3">
                 <a href={service.websiteUrl} target="_blank" rel="noopener noreferrer" className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
@@ -184,6 +194,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                     Request Demo
                   </a>)}
               </div>
+
               {/* Contact Info */}
               <div className="mt-6 pt-6 border-t border-white/10 text-center">
                 <p className="text-sm text-gray-400 mb-2">Need help? Contact us directly:</p>
@@ -194,12 +205,14 @@ const RevolutionaryServicesShowcase2025 = () => {
               </div>
             </div>))}
         </div>
+
         {/* No Results */}
         {filteredServices.length === 0 && (<div className="text-center py-12">
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-gray-300">Try adjusting your search terms or category filter.</p>
           </div>)}
+
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">

@@ -146,6 +146,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle Content Quality Dashboard">
         <BarChart3 className="w-6 h-6"/>
       </button>
+
       {/* Dashboard Panel */}
       {isOpen && (<div className="absolute bottom-16 left-0 w-[800px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
           {/* Header */}
@@ -180,6 +181,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                 </div>
               </div>)}
           </div>
+
           {/* Content */}
           <div className="p-4 max-h-[600px] overflow-y-auto">
             {isLoading ? (<div className="flex items-center justify-center py-8">
@@ -203,6 +205,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     Export
                   </button>
                 </div>
+
                 {/* Top Issues */}
                 {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
                     <h4 className="font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">
@@ -215,6 +218,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                         </div>))}
                     </div>
                   </div>)}
+
                 {/* Pages Table */}
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">
                   <div className="overflow-x-auto">
@@ -267,6 +271,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     </table>
                   </div>
                 </div>
+
                 {/* Page Details Modal */}
                 {selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                     <div className="bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
@@ -298,6 +303,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                             <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.linkCount}</div>
                           </div>
                         </div>
+
                         {selectedPage.issues.length > 0 && (<div>
                             <h4 className="font-medium text-red-600 dark:text-red-400 mb-2">Issues Found</h4>
                             <div className="space-y-2">
@@ -307,6 +313,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                                 </div>))}
                             </div>
                           </div>)}
+
                         {selectedPage.recommendations.length > 0 && (<div>
                             <h4 className="font-medium text-green-600 dark:text-green-400 mb-2">Recommendations</h4>
                             <div className="space-y-2">
@@ -323,6 +330,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                 No content quality data available
               </div>)}
           </div>
+
           {/* Footer Actions */}
           <div className="bg-gray-50 dark:bg-gray-800 p-3 flex gap-2">
             <button onClick={analyzeAllPages} disabled={isLoading} className="flex-1 bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">

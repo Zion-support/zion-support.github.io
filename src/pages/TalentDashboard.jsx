@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
-import SEOHead from "../components/SEOHead.jsx";
+import { SEO } from "@/components/SEO";
 import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
@@ -25,7 +25,7 @@ function TalentDashboardContent() {
         onboardingStatus.availabilitySet &&
         onboardingStatus.matchReceived;
     return (<>
-      <SEOHead title="Talent Dashboard | Zion AI Marketplace" description="Your personalized talent dashboard with job matches and professional opportunities."/>
+      <SEO title="Talent Dashboard | Zion AI Marketplace" description="Your personalized talent dashboard with job matches and professional opportunities."/>
       
       <main className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
@@ -47,8 +47,10 @@ function TalentDashboardContent() {
             </Button>
           </div>
         </div>
+
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
             <Card className="mb-8">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 const AutonomousBusinessOperationsPlatform = () => {
     return (<div className="min-h-screen bg-slate-900 text-white">
       {/* Header Section */}
@@ -24,6 +24,7 @@ const AutonomousBusinessOperationsPlatform = () => {
           </div>
         </div>
       </div>
+
       {/* Key Benefits Section */}
       <div className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,6 +67,7 @@ const AutonomousBusinessOperationsPlatform = () => {
           </div>
         </div>
       </div>
+
       {/* Platform Modules Section */}
       <div className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -135,6 +137,7 @@ const AutonomousBusinessOperationsPlatform = () => {
           </div>
         </div>
       </div>
+
       {/* Success Metrics Section */}
       <div className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,6 +164,7 @@ const AutonomousBusinessOperationsPlatform = () => {
           </div>
         </div>
       </div>
+
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">

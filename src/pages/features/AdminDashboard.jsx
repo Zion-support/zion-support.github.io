@@ -1,10 +1,10 @@
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import SEOHead from "../components/SEOHead";
+import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 export default function AdminDashboard() {
     const schema = {
         "@context": "https://schema.org",
@@ -14,7 +14,7 @@ export default function AdminDashboard() {
         "url": "https://app.ziontechgroup.com/features/admin-dashboard"
     };
     return (<>
-      <SEOHead title="Admin Dashboard" description="Gain insight into your marketplace with powerful administration tools." keywords="admin dashboard, analytics, manage listings" canonical="https://app.ziontechgroup.com/features/admin-dashboard"/>
+      <SEO title="Admin Dashboard" description="Gain insight into your marketplace with powerful administration tools." keywords="admin dashboard, analytics, manage listings" canonical="https://app.ziontechgroup.com/features/admin-dashboard"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />

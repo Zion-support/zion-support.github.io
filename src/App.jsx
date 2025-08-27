@@ -1,41 +1,65 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
+<<<<<<< HEAD
 import { Footer } from './components/Footer.jsx';
+=======
+import Footer from './components/Footer.jsx';
+>>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
 import { ChatAssistant } from './components/ChatAssistant';
 
-// Lazy load pages with better chunking
-const Home = lazy(() => import('./pages/Home.tsx'));
-const About = lazy(() => import('./pages/About.tsx'));
-const Contact = lazy(() => import('./pages/Contact.tsx'));
-const Blog = lazy(() => import('./pages/Blog.tsx'));
-const PartnersPage = lazy(() => import('./pages/Partners.tsx'));
-const Login = lazy(() => import('./pages/Login.jsx'));
-const FAQ = lazy(() => import('./pages/FAQ.tsx'));
-const Careers = lazy(() => import('./pages/Careers.tsx'));
-const Privacy = lazy(() => import('./pages/Privacy.tsx'));
-const Terms = lazy(() => import('./pages/Terms.tsx'));
-const Sitemap = lazy(() => import('./pages/Sitemap.tsx'));
-const GreenIT = lazy(() => import('./pages/GreenIT.tsx'));
+// Lazy load all pages
+const Home = React.lazy(() => import('./pages/Home.tsx'));
+const About = React.lazy(() => import('./pages/About.tsx'));
+const Contact = React.lazy(() => import('./pages/Contact.tsx'));
+const Blog = React.lazy(() => import('./pages/Blog.tsx'));
+const PartnersPage = React.lazy(() => import('./pages/Partners.tsx'));
+const Login = React.lazy(() => import('./pages/Login.jsx'));
+const FAQ = React.lazy(() => import('./pages/FAQ.tsx'));
+const Careers = React.lazy(() => import('./pages/Careers.tsx'));
+const Privacy = React.lazy(() => import('./pages/Privacy.tsx'));
+const Terms = React.lazy(() => import('./pages/Terms.tsx'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
 
+<<<<<<< HEAD
 // Enhanced loading component with better UX
+=======
+// Services pages
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.tsx'));
+const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.tsx'));
+
+// Marketplace pages
+const Marketplace = React.lazy(() => import('./pages/Marketplace.tsx'));
+
+// Support pages
+const Support = React.lazy(() => import('./pages/Support.tsx'));
+const Security = React.lazy(() => import('./pages/Security.tsx'));
+const SystemStatus = React.lazy(() => import('./pages/SystemStatus.tsx'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility.tsx'));
+
+// Documentation pages
+const Documentation = React.lazy(() => import('./pages/Documentation.tsx'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers.tsx'));
+const Webinars = React.lazy(() => import('./pages/Webinars.tsx'));
+const Training = React.lazy(() => import('./pages/Training.tsx'));
+const Research = React.lazy(() => import('./pages/Research.tsx'));
+
+// Search and categories
+const Search = React.lazy(() => import('./pages/Search.tsx'));
+const Categories = React.lazy(() => import('./pages/Categories.tsx'));
+
+// API Playground
+const ApiPlayground = React.lazy(() => import('./pages/ApiPlayground.tsx'));
+
+// Loading component
+>>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
 const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan mx-auto mb-4"></div>
-      <p className="text-zion-slate-light text-lg">Loading Zion Tech Group...</p>
-      <div className="mt-4 space-y-2">
-        <div className="h-2 bg-zion-slate rounded-full w-48 mx-auto">
-          <div className="h-2 bg-zion-cyan rounded-full animate-pulse" style={{ width: '60%' }}></div>
-        </div>
-        <div className="h-2 bg-zion-slate rounded-full w-32 mx-auto">
-          <div className="h-2 bg-zion-purple rounded-full animate-pulse" style={{ width: '40%' }}></div>
-        </div>
-      </div>
-    </div>
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"></div>
   </div>
 );
 
+<<<<<<< HEAD
 // Error boundary component
 const ErrorFallback = ({ error, resetErrorBoundary }) => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -98,6 +122,8 @@ const NotFound = () => (
   </div>
 );
 
+=======
+>>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
 function App() {
   return (
     <Router>
@@ -117,8 +143,54 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/sitemap" element={<Sitemap />} />
+<<<<<<< HEAD
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="*" element={<NotFound />} />
+=======
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/pricing" element={<ComprehensivePricing />} />
+
+              {/* Services routes */}
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/pricing" element={<ServicesPricingPage />} />
+
+              {/* Marketplace routes */}
+              <Route path="/marketplace" element={<Marketplace />} />
+
+              {/* Support routes */}
+              <Route path="/support" element={<Support />} />
+              <Route path="/security" element={<Security />} />
+              <Route path="/status" element={<SystemStatus />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+
+              {/* Documentation routes */}
+              <Route path="/docs" element={<Documentation />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/training" element={<Training />} />
+              <Route path="/research" element={<Research />} />
+
+              {/* Search and categories */}
+              <Route path="/search" element={<Search />} />
+              <Route path="/categories" element={<Categories />} />
+
+              {/* API Playground */}
+              <Route path="/api-playground" element={<ApiPlayground />} />
+
+              {/* Catch-all route for 404 */}
+              <Route path="*" element={
+                <div className="flex items-center justify-center min-h-screen">
+                  <div className="text-center">
+                    <h1 className="text-4xl font-bold text-zion-cyan mb-4">404 - Page Not Found</h1>
+                    <p className="text-zion-slate-light mb-6">The page you're looking for doesn't exist.</p>
+                    <a href="/" className="bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors">
+                      Go Home
+                    </a>
+                  </div>
+                </div>
+              } />
+>>>>>>> c8f6a8c40c14e0279db0f3d243d3cf3fa516056e
             </Routes>
           </Suspense>
         </main>

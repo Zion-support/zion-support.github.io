@@ -162,6 +162,7 @@ export const EnhancedAbout = () => {
           </motion.div>
         </motion.div>
       </section>
+
       {/* Mission & Vision */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -178,6 +179,7 @@ export const EnhancedAbout = () => {
                 </p>
               </div>
             </motion.div>
+
             <motion.div variants={itemVariants}>
               <div className="mb-6">
                 <Globe className="h-16 w-16 text-zion-purple mb-4"/>
@@ -193,6 +195,7 @@ export const EnhancedAbout = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Company Values */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -216,6 +219,7 @@ export const EnhancedAbout = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Team Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -243,6 +247,7 @@ export const EnhancedAbout = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Company Timeline */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -278,6 +283,7 @@ export const EnhancedAbout = () => {
           </div>
         </div>
       </section>
+
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -304,6 +310,7 @@ export const EnhancedAbout = () => {
           </motion.div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <motion.div className="max-w-4xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>

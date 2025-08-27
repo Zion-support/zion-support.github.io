@@ -6,7 +6,7 @@ import { SearchResultCard } from "@/components/search/SearchResultCard";
 import { SearchBar } from "@/components/SearchBar";
 const LIMIT = 20;
 export default function SearchResultsPage() {
-    const router = useNavigate();
+    const router = useRouter();
     const initialQuery = router.query.q || "";
     const [query, setQuery] = useState(initialQuery);
     const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading, refetch } = useInfiniteQuery({

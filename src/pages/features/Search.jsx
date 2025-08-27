@@ -1,10 +1,10 @@
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import SEOHead from "../components/SEOHead";
+import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 export default function SearchFeature() {
     const schema = {
         "@context": "https://schema.org",
@@ -14,7 +14,7 @@ export default function SearchFeature() {
         "url": "https://app.ziontechgroup.com/features/search"
     };
     return (<>
-      <SEOHead title="Advanced Search" description="Find exactly what you need with fast, filterable search powered by Elasticsearch." keywords="search engine, filtering, tech marketplace search" canonical="https://app.ziontechgroup.com/features/search"/>
+      <SEO title="Advanced Search" description="Find exactly what you need with fast, filterable search powered by Elasticsearch." keywords="search engine, filtering, tech marketplace search" canonical="https://app.ziontechgroup.com/features/search"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />

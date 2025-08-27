@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from "../components/SEOHead.jsx";
+import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -64,7 +64,7 @@ export default function HelpCenterPage() {
         }
     ];
     return (<>
-      <SEOHead title="Help Center - Zion Tech Group" description="Get help and support for using Zion's marketplace platform. Find answers to common questions and contact our support team." keywords="help center, support, FAQ, customer service, Zion Tech Group" canonical="https://ziontechgroup.com/help"/>
+      <SEO title="Help Center - Zion Tech Group" description="Get help and support for using Zion's marketplace platform. Find answers to common questions and contact our support team." keywords="help center, support, FAQ, customer service, Zion Tech Group" canonical="https://ziontechgroup.com/help"/>
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,6 +83,7 @@ export default function HelpCenterPage() {
               </div>
             </div>
           </div>
+
           {/* Help Categories */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">How can we help you?</h2>
@@ -113,6 +114,7 @@ export default function HelpCenterPage() {
                 </Card>))}
             </div>
           </section>
+
           {/* FAQs */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
@@ -127,6 +129,7 @@ export default function HelpCenterPage() {
                 </Card>))}
             </div>
           </section>
+
           {/* Contact Support */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Still need help?</h2>
@@ -147,6 +150,7 @@ export default function HelpCenterPage() {
                   </Button>
                 </CardContent>
               </Card>
+
               <Card className="bg-zion-blue-dark border-zion-blue-light text-white text-center">
                 <CardHeader>
                   <div className="flex justify-center mb-4">
@@ -163,6 +167,7 @@ export default function HelpCenterPage() {
                   </Button>
                 </CardContent>
               </Card>
+
               <Card className="bg-zion-blue-dark border-zion-blue-light text-white text-center">
                 <CardHeader>
                   <div className="flex justify-center mb-4">
@@ -181,6 +186,7 @@ export default function HelpCenterPage() {
               </Card>
             </div>
           </section>
+
           {/* Additional Resources */}
           <section className="text-center">
             <Card className="bg-zion-blue-dark border-zion-cyan/30 text-white max-w-3xl mx-auto">

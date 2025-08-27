@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Suspense } from "react";
@@ -19,17 +18,13 @@ import {
   Megaphone,
   Search
 } from "@/components/icons";
-
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
     id: "getting-hired",
     name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
-<<<<<<< HEAD
-=======
     postCount: 45,
->>>>>>> origin/cursor/build-and-fix-errors-merged
     adminOnly: false,
     icon: "Briefcase"
   },
@@ -37,10 +32,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
-<<<<<<< HEAD
-=======
     postCount: 67,
->>>>>>> origin/cursor/build-and-fix-errors-merged
     adminOnly: false,
     icon: "MessageSquare"
   },
@@ -48,10 +40,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     id: "ai-tools",
     name: "AI Tools Discussion",
     description: "Discuss AI tools, frameworks, and best practices.",
-<<<<<<< HEAD
-=======
     postCount: 89,
->>>>>>> origin/cursor/build-and-fix-errors-merged
     adminOnly: false,
     icon: "Code"
   },
@@ -59,10 +48,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     id: "feedback",
     name: "Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.",
-<<<<<<< HEAD
-=======
     postCount: 23,
->>>>>>> origin/cursor/build-and-fix-errors-merged
     adminOnly: false,
     icon: "FileText"
   },
@@ -70,16 +56,11 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     id: "announcements",
     name: "Announcements",
     description: "Official announcements from the Zion team.",
-<<<<<<< HEAD
-=======
     postCount: 12,
->>>>>>> origin/cursor/build-and-fix-errors-merged
     adminOnly: true,
     icon: "Megaphone"
   }
 };
-
-
 const iconMap = {
   "Briefcase": Briefcase,
   "MessageSquare": MessageSquare,
@@ -87,7 +68,6 @@ const iconMap = {
   "FileText": FileText,
   "Megaphone": Megaphone
 };
-
 function CategoryContent({
   categoryId,
   category,
@@ -101,19 +81,10 @@ function CategoryContent({
 }) {
   const [searchQuery, setSearchQuery] = useState("");
   const {
-<<<<<<< HEAD
-    data: posts = [],
-    isPending: loading,
-    error,
-  } = usePostsByCategory(categoryId);
-  const errorMessage = error instanceof Error ? error.message : null;
-=======
     posts = [],
     loading,
   } = usePostsByCategory(categoryId);
   const errorMessage = null;
->>>>>>> origin/cursor/build-and-fix-errors-merged
-
   const filteredPosts = searchQuery
     ? posts.filter((post) =>
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -121,10 +92,8 @@ function CategoryContent({
         post.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
     : posts;
-
   const canCreatePost =
     categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin");
-
   return (
     <div className="container py-8">
       <div className="flex items-center gap-3 mb-6">
@@ -134,7 +103,6 @@ function CategoryContent({
         <span className="text-muted-foreground">/</span>
         <span className="font-medium">{category.name}</span>
       </div>
-
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
         <div className="flex items-center gap-4">
           <div className="p-3 bg-zion-purple/10 rounded-full">
@@ -145,10 +113,8 @@ function CategoryContent({
             <p className="text-muted-foreground mt-1">{category.description}</p>
           </div>
         </div>
-
         {canCreatePost && <CreatePostButton categoryId={categoryId} />}
       </div>
-
       <div className="mb-6">
         <div className="relative">
           <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
@@ -160,7 +126,6 @@ function CategoryContent({
           />
         </div>
       </div>
-
       {loading ? (
         <div className="text-center py-16">Loading...</div>
       ) : errorMessage ? (
@@ -175,25 +140,20 @@ function CategoryContent({
         <div className="text-center py-16">
           <h2 className="text-xl font-medium mb-2">No posts yet</h2>
           <p className="text-muted-foreground mb-6">Be the first to start a discussion in this category!</p>
-
           {canCreatePost && <CreatePostButton categoryId={categoryId} />}
         </div>
       )}
     </div>
   );
 }
-
 export default function ForumCategoryPage() {
   const { categoryId } = useParams();
   const { user } = useAuth();
-
   if (!categoryId || !categoriesInfo[categoryId]) {
     return <NotFound />;
   }
-
   const category = categoriesInfo[categoryId];
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare;
-
   return (
     <>
       <SEO
@@ -202,7 +162,6 @@ export default function ForumCategoryPage() {
         keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`}
         canonical={`https://ziontechgroup.com/community/category/${categoryId}`}
       />
-
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
         <CategoryContent
           categoryId={categoryId}

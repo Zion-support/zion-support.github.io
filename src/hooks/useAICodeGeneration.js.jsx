@@ -248,17 +248,22 @@ export const useAICodeGeneration = () => {
     const generateReactTypeScriptCode = (prompt, options) => {
         return `import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
+
 interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
   // TODO: Define props based on prompt: ${prompt}
 }
+
 export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {
   const [state, setState] = useState<any>(null);
+
   useEffect(() => {
     // TODO: Implement initialization logic
   }, []);
+
   const handleAction = useCallback(() => {
     // TODO: Implement action handler
   }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -271,23 +276,29 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
     </motion.div>
   );
 };
+
 export default GeneratedComponent;`;
     };
     const generateExpressCode = (prompt, _options) => {
         return `import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+
 const app = express();
 const PORT = process.env.PORT || 3000;
+
 // Middleware
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
+
 // Routes
 app.get('/', (req, res) => {
   res.json({ message: 'Generated API based on prompt: ${prompt}' });
 });
+
 // TODO: Implement additional routes based on prompt
+
 app.listen(PORT, () => {
   console.log(\`Server running on port \${PORT}\`);
 });`;
@@ -297,9 +308,11 @@ app.listen(PORT, () => {
 """
 Generated Python code based on prompt: ${prompt}
 """
+
 import asyncio
 from typing import Optional, List, Dict, Any
 from dataclasses import dataclass
+
 @dataclass
 class GeneratedClass:
     """Generated class based on prompt."""
@@ -312,6 +325,7 @@ class GeneratedClass:
         """Process data based on prompt requirements."""
         # TODO: Implement data processing logic
         return data
+
 async def main():
     """Main function."""
     instance = GeneratedClass()
@@ -325,8 +339,10 @@ if __name__ == "__main__":
 // Framework: ${options.framework || 'none'}
 // Style: ${options.style}
 // Target: ${options.target}
+
 // TODO: Implement code based on prompt requirements
 // This is a placeholder implementation
+
 console.log("Generated code placeholder");
 console.log("Prompt:", "${prompt}");
 console.log("Language:", "${options.language}");`;
@@ -364,7 +380,7 @@ console.log("Language:", "${options.language}");`;
         const suggestions = [];
         // Performance suggestions
         if (code.includes('setInterval') || code.includes('setTimeout')) {
-            suggestions({
+            suggestions.push({
                 id: `suggestion_${Date.now()}_1`,
                 type: 'performance',
                 title: 'Optimize Timer Usage',
@@ -380,7 +396,7 @@ console.log("Language:", "${options.language}");`;
         }
         // Security suggestions
         if (code.includes('innerHTML') || code.includes('document.write')) {
-            suggestions({
+            suggestions.push({
                 id: `suggestion_${Date.now()}_2`,
                 type: 'security',
                 title: 'Prevent XSS Attacks',
@@ -396,7 +412,7 @@ console.log("Language:", "${options.language}");`;
         }
         // Best practice suggestions
         if (code.includes('console.log')) {
-            suggestions({
+            suggestions.push({
                 id: `suggestion_${Date.now()}_3`,
                 type: 'best_practice',
                 title: 'Remove Console Logs',
@@ -415,14 +431,14 @@ console.log("Language:", "${options.language}");`;
     const analyzeCodeIssues = (code, _language) => {
         const issues = [];
         if (code.includes('TODO')) {
-            issues({
+            issues.push({
                 severity: 'info',
                 message: 'Code contains TODO comments that need implementation',
                 line: code.split('\n').findIndex(line => line.includes('TODO')) + 1
             });
         }
         if (code.includes('any')) {
-            issues({
+            issues.push({
                 severity: 'warning',
                 message: 'Usage of "any" type reduces type safety',
                 line: code.split('\n').findIndex(line => line.includes('any')) + 1
@@ -459,11 +475,13 @@ console.log("Language:", "${options.language}");`;
     const generateJestTests = (_code) => {
         return `import { render, screen, fireEvent } from '@testing-library/react';
 import GeneratedComponent from './GeneratedComponent';
+
 describe('GeneratedComponent', () => {
   it('renders without crashing', () => {
     render(<GeneratedComponent />);
     expect(screen.getByText('Generated Component')).toBeInTheDocument();
   });
+
   it('handles user interactions', () => {
     render(<GeneratedComponent />);
     // TODO: Add specific test cases based on component functionality
@@ -473,6 +491,7 @@ describe('GeneratedComponent', () => {
     const generatePytestTests = (_code) => {
         return `import pytest
 from generated_module import GeneratedClass
+
 class TestGeneratedClass:
     def test_initialization(self):
         instance = GeneratedClass()
@@ -488,6 +507,7 @@ class TestGeneratedClass:
     const generateGenericTests = (_code, language) => {
         return `// Generated tests for ${language} code
 // TODO: Implement specific test cases based on code functionality
+
 describe('Generated Code Tests', () => {
   it('should work as expected', () => {
     // TODO: Add test implementation
@@ -513,8 +533,10 @@ export const GeneratedComponent = () => {
     const generatePythonDoc = (_code) => {
         return `"""
 Generated Module
+
 This module was generated based on user requirements.
 """
+
 def generated_function():
     """
     Generated function with docstring.

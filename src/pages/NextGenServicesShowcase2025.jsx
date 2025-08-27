@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play } from 'lucide-react';
 export default function NextGenServicesShowcase2025() {
     const featuredServices = [
@@ -141,6 +141,7 @@ export default function NextGenServicesShowcase2025() {
           </motion.div>
         </div>
       </div>
+
       {/* Featured Enterprise Services */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -152,6 +153,7 @@ export default function NextGenServicesShowcase2025() {
               Cutting-edge AI and quantum technologies designed for Fortune 500 companies and innovative enterprises.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.2 }} className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm group hover:border-cyan-500/50 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>
                 {service.popular && (<div className="absolute -top-3 left-8">
@@ -170,7 +172,9 @@ export default function NextGenServicesShowcase2025() {
                     <p className="text-cyan-400 font-semibold">{service.category}</p>
                   </div>
                 </div>
+
                 <p className="text-gray-300 mb-6">{service.description}</p>
+
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -180,6 +184,7 @@ export default function NextGenServicesShowcase2025() {
                       </li>))}
                   </ul>
                 </div>
+
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Benefits:</h4>
                   <ul className="space-y-2">
@@ -189,6 +194,7 @@ export default function NextGenServicesShowcase2025() {
                       </li>))}
                   </ul>
                 </div>
+
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-3xl font-bold text-white">{service.price}</p>
@@ -208,6 +214,7 @@ export default function NextGenServicesShowcase2025() {
           </div>
         </div>
       </section>
+
       {/* Micro SaaS Services */}
       <section className="py-20 bg-gradient-to-br from-gray-900/50 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -219,6 +226,7 @@ export default function NextGenServicesShowcase2025() {
               Powerful, focused solutions for specific business needs with transparent pricing and immediate value.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasServices.map((service, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.2 }} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300">
                 <div className="mb-4">
@@ -228,6 +236,7 @@ export default function NextGenServicesShowcase2025() {
                   <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
                   <p className="text-gray-300 text-sm">{service.description}</p>
                 </div>
+
                 <div className="mb-4">
                   <ul className="space-y-1">
                     {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300 text-sm">
@@ -236,6 +245,7 @@ export default function NextGenServicesShowcase2025() {
                       </li>))}
                   </ul>
                 </div>
+
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-2xl font-bold text-white">{service.price}</p>
@@ -249,6 +259,7 @@ export default function NextGenServicesShowcase2025() {
           </div>
         </div>
       </section>
+
       {/* Infrastructure Services */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -260,6 +271,7 @@ export default function NextGenServicesShowcase2025() {
               Future-proof infrastructure solutions with quantum security, AI automation, and blockchain integration.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {infrastructureServices.map((service, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.2 }} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                 <div className="mb-4">
@@ -269,6 +281,7 @@ export default function NextGenServicesShowcase2025() {
                   <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
                   <p className="text-gray-300 text-sm">{service.description}</p>
                 </div>
+
                 <div className="mb-4">
                   <ul className="space-y-1">
                     {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300 text-sm">
@@ -277,6 +290,7 @@ export default function NextGenServicesShowcase2025() {
                       </li>))}
                   </ul>
                 </div>
+
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-2xl font-bold text-white">{service.price}</p>
@@ -290,6 +304,7 @@ export default function NextGenServicesShowcase2025() {
           </div>
         </div>
       </section>
+
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -326,6 +341,7 @@ export default function NextGenServicesShowcase2025() {
                 <p className="text-gray-300 text-sm">Fast implementation with dedicated support throughout the process</p>
               </div>
             </div>
+
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50">
               <h3 className="text-2xl font-bold text-white mb-4">Contact Information</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">

@@ -84,10 +84,12 @@ export function AccessibilityEnhancer() {
           Skip to navigation
         </a>
       </div>
+
       {/* Accessibility Toggle Button */}
       <Button onClick={() => setIsOpen(!isOpen)} variant="outline" size="icon" className="fixed top-4 right-4 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 hover:bg-zion-cyan/10" aria-label="Accessibility Settings">
         <span className="text-zion-cyan">A</span>
       </Button>
+
       {/* Accessibility Panel */}
       {isOpen && (<Card className="fixed top-16 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 shadow-2xl">
           <CardHeader className="pb-3">

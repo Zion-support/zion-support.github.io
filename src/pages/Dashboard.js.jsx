@@ -89,6 +89,7 @@ export default function Dashboard() {
                       <Send size={16} className="text-zion-cyan"/>
                       Send Test Notification
                     </Button>
+
                     <Button className="w-full flex items-center justify-center gap-2" variant="outline" onClick={async () => {
                 await createOnboardingNotification({
                     userId: user.id,
@@ -103,6 +104,7 @@ export default function Dashboard() {
                       <Settings size={16} className="text-zion-purple"/>
                       Send Onboarding Nudge
                     </Button>
+
                     <Button className="w-full flex items-center justify-center gap-2" variant="outline" onClick={async () => {
                 await createSystemNotification({
                     userId: user.id,
@@ -206,8 +208,8 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      
-    </>);
-    };
-    export default Dashboard;
-}
+    </>
+  );
+};
+
+export default Dashboard;

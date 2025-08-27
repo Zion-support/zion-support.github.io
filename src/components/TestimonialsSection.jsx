@@ -72,6 +72,7 @@ export const TestimonialsSection = () => {
             with our cutting-edge technology solutions.
           </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (<div key={testimonial.id} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
               <div className="flex items-center mb-4">
@@ -84,14 +85,17 @@ export const TestimonialsSection = () => {
                   <p className="text-sm text-orange-400">{testimonial.company}</p>
                 </div>
               </div>
+
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current"/>))}
               </div>
+
               <blockquote className="text-gray-300 italic">
                 "{testimonial.content}"
               </blockquote>
             </div>))}
         </div>
+
         <div className="text-center mt-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300">
             <Quote className="w-5 h-5 mr-2"/>
