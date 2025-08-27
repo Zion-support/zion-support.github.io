@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 import React from 'react';
 <<<<<<< HEAD
     <div className="min-h-screen bg-background">

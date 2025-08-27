@@ -150,6 +150,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
           </motion.div>)}
       </AnimatePresence>
     </div>);
+<<<<<<< HEAD
 =======
 import { MessageCircle, X, ArrowUp, Star, Zap, Users, ChevronUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -428,4 +429,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }: 
     </div>
   );
 >>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 }

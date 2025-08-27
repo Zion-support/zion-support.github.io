@@ -12,6 +12,9 @@ automation/logs/*.log
 automation/logs/*.runtime.log
 automation/data/*.json
 !automation/data/autonomous-config.json
+<<<<<<< HEAD
 dist/
 .next/
 yarn.lock
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738

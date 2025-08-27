@@ -2,9 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   keywords?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   author?: string;
   image?: string;
@@ -156,21 +157,27 @@ export function SEO({
     <Helmet>
 <<<<<<< HEAD
       {/* Basic Meta Tags */}
+=======
+  canonical?: string;
+  noindex?: boolean;
+}
+
+export function SEO({ title, description, keywords, canonical, noindex = false }: SEOProps) {
+  return (
+    <Helmet>
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
-      <meta name="revisit-after" content="7 days" />
+      {keywords && <meta name="keywords" content={keywords} />}
+      {canonical && <link rel="canonical" href={canonical} />}
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
       
-      {/* Open Graph Meta Tags */}
+      {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
+      <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Zion Tech Group" />
+<<<<<<< HEAD
 =======
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -196,10 +203,14 @@ export function SEO({
         <meta key={tag} property="article:tag" content={tag} />
       ))}
       
+=======
+      
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
@@ -324,6 +335,8 @@ export function SEO({
         </script>
       )}
 >>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
     </Helmet>
   );
 }

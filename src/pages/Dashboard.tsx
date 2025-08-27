@@ -397,6 +397,7 @@ export default function Dashboard() {
                 <div className="flex items-center justify-between">
                   <span className="text-zion-slate-light">Database</span>
                   <span className="text-green-400 text-sm">Operational</span>
+<<<<<<< HEAD
 =======
                 
                 {/* Badges Preview */}
@@ -435,6 +436,8 @@ export default function Dashboard() {
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>
                   <CommunityDiscussion />
 >>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
                 </div>
               </div>
             </div>
@@ -444,10 +447,13 @@ export default function Dashboard() {
 <<<<<<< HEAD
     </div>
   );
+<<<<<<< HEAD
 =======
       
     </>);
     };
     export default Dashboard;
 >>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 }

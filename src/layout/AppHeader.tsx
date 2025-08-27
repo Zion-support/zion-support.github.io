@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
@@ -200,6 +203,7 @@ export function AppHeader() {
       </header>
     </>
   );
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -221,4 +225,6 @@ export function AppHeader() {
 		</header>
 	);
 >>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 }

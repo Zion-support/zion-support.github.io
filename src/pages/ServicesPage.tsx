@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -35,6 +38,7 @@ import {
 } from 'lucide-react';
 import { SEO } from "../components/SEOHead";
 import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { Header } from '@/components/header/Header';
@@ -42,6 +46,8 @@ import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 >>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');

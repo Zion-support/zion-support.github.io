@@ -93,6 +93,7 @@ import {
   MicOff,
   Volume2,
   VolumeX,
+<<<<<<< HEAD
   Play,
   Pause,
   Stop,
@@ -186,71 +187,76 @@ const footerNavigation = {
       { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },
       { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },
       { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' }
-    ],
-  },
-  microSaas: {
-    title: 'Micro SAAS',
+=======
+  Leaf,
+  Space,
+  Handshake,
+  Calendar,
+  FileText,
+  BarChart3,
+  Video
+} from 'lucide-react';
+
+const footerSections = {
+  aiServices: {
+    title: 'AI Services',
     items: [
-      { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Intelligent business analytics' },
-      { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience', icon: Users, description: '360° customer journey management' },
-      { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
-      { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain', icon: Globe, description: 'AI-powered supply chain management' },
-      { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity', icon: ShieldCheck, description: 'Advanced threat protection' },
-      { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', icon: Cpu, description: 'Edge computing solutions' },
-      { name: 'Content Creation AI', href: '/micro-saas/content-creation', icon: FileText, description: 'AI-powered content generation' },
-      { name: 'HR Management Suite', href: '/micro-saas/hr-platform', icon: Briefcase, description: 'Modern HR management platform' }
+      { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
+      { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
+      { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
+      { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },
+      { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },
+      { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
     ],
   },
   itServices: {
     title: 'IT Services',
     items: [
-      { name: 'Infrastructure Management', href: '/it-services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' },
-      { name: 'Digital Transformation', href: '/it-services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' },
-      { name: 'IT Consulting', href: '/it-services/consulting', icon: Users, description: 'Expert IT consulting services' },
-      { name: 'Onsite Support', href: '/it-services/onsite-support', icon: Wifi, description: '24/7 onsite technical support' },
-      { name: 'Green IT Solutions', href: '/it-services/green-it', icon: Heart, description: 'Sustainable IT infrastructure' },
-      { name: '5G Network Solutions', href: '/it-services/5g-solutions', icon: Satellite, description: 'Next-gen network infrastructure' }
+      { name: 'Infrastructure Management', href: '/services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' },
+      { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' },
+      { name: 'IT Consulting', href: '/services/consulting', icon: Users, description: 'Expert IT consulting services' },
+      { name: 'Enterprise IT', href: '/services/enterprise-it', icon: Building, description: 'Enterprise-grade IT solutions' },
+      { name: 'Green IT Solutions', href: '/services/green-it', icon: Leaf, description: 'Sustainable IT infrastructure' },
+      { name: 'Space Technology', href: '/services/space-technology', icon: Space, description: 'Space tech solutions' }
     ],
   },
-  emergingTech: {
-    title: 'Emerging Tech',
+  solutions: {
+    title: 'Solutions',
     items: [
-      { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
-      { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi', icon: Lock, description: 'Blockchain and DeFi platforms' },
-      { name: 'Space Technology', href: '/emerging-tech/space-tech', icon: Satellite, description: 'Space technology innovations' },
-      { name: 'Biotechnology', href: '/emerging-tech/biotech', icon: Dna, description: 'Biotech and healthcare solutions' },
-      { name: 'Nanotechnology', href: '/emerging-tech/nanotech', icon: Microscope, description: 'Nanotechnology applications' },
-      { name: 'Augmented Reality', href: '/emerging-tech/ar-vr', icon: Eye, description: 'AR/VR development services' }
-    ],
-  },
-  marketplace: {
-    title: 'Marketplace',
-    items: [
-      { name: 'AI Products', href: '/marketplace/ai-products', icon: Brain, description: 'AI-powered products and tools' },
-      { name: 'IT Equipment', href: '/marketplace/it-equipment', icon: Monitor, description: 'Professional IT equipment' },
-      { name: 'Software Solutions', href: '/marketplace/software', icon: Code, description: 'Enterprise software solutions' },
-      { name: 'Professional Services', href: '/marketplace/services', icon: Briefcase, description: 'Expert professional services' },
-      { name: 'Talent Network', href: '/marketplace/talent', icon: Users, description: 'Skilled professionals network' },
-      { name: 'Innovation Hub', href: '/marketplace/innovation', icon: Lightbulb, description: 'Innovation and R&D services' }
+      { name: 'Business Solutions', href: '/solutions/business', icon: Briefcase, description: 'Comprehensive business solutions' },
+      { name: 'Technology Solutions', href: '/solutions/technology', icon: Cpu, description: 'Advanced technology solutions' },
+      { name: 'Industry Solutions', href: '/solutions/industry', icon: Building, description: 'Industry-specific solutions' },
+      { name: 'Innovation Hub', href: '/solutions/innovation', icon: Lightbulb, description: 'Innovation and R&D services' }
     ],
   },
   company: {
     title: 'Company',
     items: [
       { name: 'About Us', href: '/about', icon: Building, description: 'Learn about our mission and values' },
-      { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights and updates' },
-      { name: 'Partners', href: '/partners', icon: Users, description: 'Strategic partnerships' },
+      { name: 'Team', href: '/team', icon: Users, description: 'Meet our expert team' },
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-      { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with us' },
+      { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
+      { name: 'News', href: '/news', icon: FileText, description: 'Latest company updates' },
+      { name: 'Events', href: '/events', icon: Calendar, description: 'Upcoming events' }
+    ],
+  },
+  resources: {
+    title: 'Resources',
+    items: [
+      { name: 'Blog', href: '/blog', icon: FileText, description: 'Industry insights and articles' },
+      { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories and results' },
+      { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'In-depth research and analysis' },
+      { name: 'Webinars', href: '/webinars', icon: Video, description: 'Educational webinars' },
       { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Frequently asked questions' },
-      { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation guide' },
+      { name: 'Support', href: '/support', icon: HelpCircle, description: 'Technical support and help' }
     ],
   },
   support: {
-    title: 'Support & Resources',
+    title: 'Support & Legal',
     items: [
-      { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Comprehensive help resources' },
       { name: 'Contact Support', href: '/contact', icon: MessageCircle, description: '24/7 customer support' },
+      { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Comprehensive help resources' },
       { name: 'Terms of Service', href: '/terms', icon: FileText, description: 'Legal terms and conditions' },
       { name: 'Privacy Policy', href: '/privacy', icon: Shield, description: 'Data protection and privacy' },
       { name: 'Security', href: '/security', icon: ShieldCheck, description: 'Security measures and protocols' },
@@ -316,7 +322,7 @@ export const FuturisticFooter: React.FC = () => {
                 </div>
                 
                 <p className="text-zion-slate-light leading-relaxed">
-                  Leading the future of technology with cutting-edge AI services, innovative micro SAAS solutions, 
+                  Leading the future of technology with cutting-edge AI services, innovative solutions, 
                   and comprehensive IT services. Empowering businesses to thrive in the digital age.
                 </p>
 
@@ -365,6 +371,7 @@ export const FuturisticFooter: React.FC = () => {
               </motion.div>
             </div>
 
+<<<<<<< HEAD
             {/* Navigation sections */}
             {Object.entries(footerNavigation).map(([key, section], index) => (
               <motion.div
@@ -383,61 +390,82 @@ export const FuturisticFooter: React.FC = () => {
                   {section.items.map((item, itemIndex) => (
                     <motion.div
                       key={item.name}
+=======
+            {/* Footer Sections */}
+            {Object.entries(footerSections).map(([key, section]) => (
+              <div key={key}>
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-lg font-semibold text-white mb-4"
+                >
+                  {section.title}
+                </motion.h3>
+                <motion.ul
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="space-y-2"
+                >
+                  {section.items.map((item, index) => (
+                    <motion.li
+                      key={index}
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: itemIndex * 0.05 }}
+                      transition={{ duration: 0.3, delay: index * 0.05 }}
                       viewport={{ once: true }}
                     >
                       <Link
                         to={item.href}
-                        className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm leading-relaxed block group"
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm flex items-center space-x-2 group"
                       >
-                        <div className="flex items-start space-x-2 group-hover:translate-x-1 transition-transform duration-300">
-                          <item.icon className="w-3 h-3 text-zion-cyan mt-1 flex-shrink-0" />
-                          <span>{item.name}</span>
-                        </div>
-                        <p className="text-xs text-zion-slate-light/70 mt-1 ml-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          {item.description}
-                        </p>
+                        <item.icon className="w-3 h-3 text-zion-cyan group-hover:scale-110 transition-transform duration-300" />
+                        <span>{item.name}</span>
                       </Link>
-                    </motion.div>
+                    </motion.li>
                   ))}
-                </div>
-              </motion.div>
+                </motion.ul>
+              </div>
             ))}
           </div>
         </div>
 
-        {/* Bottom section */}
+        {/* Bottom Footer */}
         <div className="border-t border-zion-cyan/20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              <div className="flex items-center space-x-6 text-sm text-zion-slate-light">
-                <span>&copy; 2025 Zion Tech Group. All rights reserved.</span>
-                <Link to="/privacy" className="hover:text-zion-cyan transition-colors duration-300">
+              <div className="text-zion-slate-light text-sm">
+                © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+              </div>
+              
+              <div className="flex items-center space-x-6 text-sm">
+                <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
                   Privacy Policy
                 </Link>
-                <Link to="/terms" className="hover:text-zion-cyan transition-colors duration-300">
+                <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
                   Terms of Service
                 </Link>
-                <Link to="/sitemap" className="hover:text-zion-cyan transition-colors duration-300">
+                <Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
                   Sitemap
                 </Link>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <motion.button
-                  onClick={scrollToTop}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="p-3 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg text-white shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
-                >
-                  <ArrowUp className="w-5 h-5" />
-                </motion.button>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Scroll to top button */}
+        <motion.button
+          onClick={scrollToTop}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300 z-50"
+        >
+          <ArrowUp className="w-5 h-5" />
+        </motion.button>
       </div>
     </footer>
   );

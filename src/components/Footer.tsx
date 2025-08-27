@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
@@ -84,6 +87,7 @@ export const Footer: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -115,6 +119,8 @@ export const Footer: React.FC = () => {
   ];
 >>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };

@@ -1,20 +1,22 @@
+
 import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate, useParams } from "react-router-dom";
-import { SEO } from "../components/SEOHead";
+import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 import { useWhitelabel } from "@/context/WhitelabelContext";
+
 export default function CompanyWorkspace() {
-    const { companySlug } = useParams();
-    const { user } = useAuth();
-    const { company, isLoading, error } = useCompanyWorkspace(companySlug);
-    const { isWhitelabel, tenant, brandName } = useWhitelabel();
-    if (isLoading) {
-        return (<div className="flex items-center justify-center min-h-screen">
+  const { companySlug } = useParams() as { companySlug?: string };
+  const { user } = useAuth();
+  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
+  const { isWhitelabel, tenant, brandName } = useWhitelabel();
+  
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
 <<<<<<< HEAD
       </div>
@@ -41,10 +43,11 @@ export default function CompanyWorkspace() {
 
   return (
     <ProtectedRoute>
-      <SEOHead 
+      <SEO 
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
+<<<<<<< HEAD
       <Header 
         customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
         customTheme={effectiveTheme}
@@ -72,7 +75,11 @@ export default function CompanyWorkspace() {
 >>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>
         <CompanyDashboard company={company}/>
+=======
+      <main className="min-h-screen pt-20" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>
+        <CompanyDashboard company={company} />
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
       </main>
-      <Footer />
-    </ProtectedRoute>);
+    </ProtectedRoute>
+  );
 }

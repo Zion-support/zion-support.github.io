@@ -1,288 +1,129 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 import { 
-  HelpCircle, 
+  Plus, 
+  Minus, 
   Search, 
-  Filter,
-  ChevronDown,
-  ChevronUp,
-  Plus,
-  Minus,
-  X,
-  ArrowRight,
-  ExternalLink,
-  BookOpen,
-  Brain,
-  Shield,
-  Cpu,
-  Database,
-  Cloud,
-  Zap,
-  Target,
-  TrendingUp,
-  Lightbulb,
-  Award,
-  Eye,
-  MessageCircle,
-  Share2,
-  Heart,
-  Bookmark,
-  Clock3,
-  UserCheck,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  Settings,
-  BarChart3,
-  PieChart,
-  Activity,
-  TrendingDown,
-  ArrowUpRight,
-  ArrowDownRight,
-  Menu,
-  Grid,
-  List,
-  Filter as FilterIcon,
-  SortAsc,
-  SortDesc,
-  RefreshCw,
-  Save,
-  Edit,
-  Trash2,
-  Copy,
-  Link as LinkIcon,
-  Mail,
+  HelpCircle, 
+  MessageCircle, 
+  Mail, 
   Phone,
-  MapPin,
-  Globe,
-  Building,
-  Rocket,
-  Globe2,
-  Wifi,
-  WifiOff,
-  Signal,
-  SignalHigh,
-  SignalMedium,
-  SignalLow,
-  Battery,
-  BatteryCharging,
-  Power,
-  PowerOff,
-  Lock,
-  Unlock,
-  Key,
-  EyeOff,
-  EyeOn,
-  Camera,
-  CameraOff,
-  Microphone,
-  MicrophoneOff,
-  Volume2,
-  VolumeX,
-  Volume1,
-  Volume,
-  Mute,
-  Unmute,
-  PlayCircle,
-  PauseCircle,
-  StopCircle,
-  SkipBack,
-  SkipForward,
-  Rewind,
-  FastForward,
-  Shuffle,
-  Repeat,
-  Repeat1,
-  Shuffle2,
-  SkipBack2,
-  SkipForward2,
-  PlaySquare,
-  PauseSquare,
-  StopSquare,
-  PlayButton,
-  PauseButton,
-  StopButton,
-  PlayIcon,
-  PauseIcon,
-  StopIcon,
-  PlayIcon2,
-  PauseIcon2,
-  StopIcon2,
-  PlayIcon3,
-  PauseIcon3,
-  StopIcon3,
-  PlayIcon4,
-  PauseIcon4,
-  StopIcon4,
-  PlayIcon5,
-  PauseIcon5,
-  StopIcon5,
-  PlayIcon6,
-  PauseIcon6,
-  StopIcon6,
-  PlayIcon7,
-  PauseIcon7,
-  StopIcon7,
-  PlayIcon8,
-  PauseIcon8,
-  StopIcon8,
-  PlayIcon9,
-  PauseIcon9,
-  StopIcon9,
-  PlayIcon10,
-  PauseIcon10,
-  StopIcon10
+  ChevronDown,
+  BookOpen,
+  Shield,
+  Zap,
+  Users,
+  Globe
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export default function FAQ() {
-  const [activeCategory, setActiveCategory] = useState('general');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [expandedItems, setExpandedItems] = useState(new Set());
+const FAQ: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [openItems, setOpenItems] = useState<number[]>([]);
 
-  const faqCategories = {
-    general: {
-      title: "General Questions",
+  const faqCategories = [
+    {
+      id: 'general',
+      title: 'General Questions',
       icon: HelpCircle,
       questions: [
         {
-          question: "What is Zion Tech Group?",
-          answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect businesses with top AI and tech talent, services, and equipment in one comprehensive platform."
+          id: 1,
+          question: 'What is Zion Tech Group?',
+          answer: 'Zion Tech Group is a leading technology company specializing in AI services, micro SAAS solutions, IT services, and emerging technologies. We help businesses transform their digital operations through innovative technology solutions.'
         },
         {
-          question: "How does the AI talent matching work?",
-          answer: "Our AI-powered matching system analyzes your project requirements, budget, and timeline to connect you with the most suitable tech professionals. The system considers skills, experience, availability, and past performance to ensure optimal matches."
+          id: 2,
+          question: 'Where is Zion Tech Group located?',
+          answer: 'We have offices in multiple locations worldwide, with our headquarters in San Francisco, California. We serve clients globally and have a distributed team of experts.'
         },
         {
-          question: "What types of services do you offer?",
-          answer: "We offer a wide range of services including AI development, software engineering, IT consulting, equipment rental, green IT solutions, and specialized tech services. Our marketplace covers everything from individual freelancers to enterprise solutions."
-        },
-        {
-          question: "Is Zion Tech Group free to use?",
-          answer: "Yes! Our core marketplace platform is completely free to use. We believe in democratizing access to tech talent and services. Some premium features and enterprise solutions may have associated costs."
+          id: 3,
+          question: 'How can I contact Zion Tech Group?',
+          answer: 'You can reach us through multiple channels: email at contact@ziontechgroup.com, phone at +1 (555) 123-4567, or through our contact form on the website. We typically respond within 24 hours.'
         }
       ]
     },
-    clients: {
-      title: "For Clients & Employers",
-      icon: Building,
+    {
+      id: 'services',
+      title: 'Our Services',
+      icon: Zap,
       questions: [
         {
-          question: "How do I get started as a client?",
-          answer: "Simply create an account, post your project requirements, and our AI will match you with suitable talent. You can also browse our talent directory, equipment listings, and service categories to find what you need."
+          id: 4,
+          question: 'What AI services do you offer?',
+          answer: 'We offer comprehensive AI services including machine learning model development, natural language processing, computer vision, predictive analytics, and AI consulting. Our solutions are tailored to specific industry needs.'
         },
         {
-          question: "How do I find the right talent for my project?",
-          answer: "You can search for talent using our AI-powered matching system, browse categories, or post a job listing. Our platform will suggest the best matches based on your requirements, budget, and timeline."
+          id: 5,
+          question: 'What is micro SAAS and how can it help my business?',
+          answer: 'Micro SAAS refers to specialized, focused software-as-a-service solutions that address specific business needs. These solutions are cost-effective, easy to implement, and provide immediate value without the complexity of enterprise software.'
         },
         {
-          question: "What services can I find on Zion?",
-          answer: "Zion offers a wide range of services including AI development, web and mobile app development, data science, UI/UX design, IT consulting, equipment rentals, and specialized AI solutions for various industries."
-        },
-        {
-          question: "How do I ensure quality when hiring talent?",
-          answer: "All talent on Zion are verified professionals with portfolios, reviews, and ratings. You can review their work history, read client testimonials, and communicate directly before making a decision."
+          id: 6,
+          question: 'Do you provide IT consulting services?',
+          answer: 'Yes, we offer comprehensive IT consulting services including digital transformation, cloud migration, cybersecurity assessment, infrastructure optimization, and technology strategy development.'
         }
       ]
     },
-    talent: {
-      title: "For Talent & Professionals",
-      icon: Rocket,
-      questions: [
-        {
-          question: "How do I join as a tech professional?",
-          answer: "Create a profile highlighting your skills, experience, and portfolio. Our verification process ensures quality, and once approved, you'll start receiving project matches and can bid on opportunities."
-        },
-        {
-          question: "How do I showcase my skills and experience?",
-          answer: "Create a comprehensive profile highlighting your expertise, upload portfolio pieces, list your skills, and set your rates. You can also add certifications, education, and work samples to stand out."
-        },
-        {
-          question: "How do I get paid for my work?",
-          answer: "Zion offers secure payment processing with milestone-based payments. You can set up payment schedules, track project progress, and receive payments directly through our platform."
-        },
-        {
-          question: "Can I work with international clients?",
-          answer: "Absolutely! Zion is a global platform connecting talent and clients worldwide. You can work with clients from any country and expand your professional network internationally."
-        }
-      ]
-    },
-    marketplace: {
-      title: "Marketplace & Services",
-      icon: ShoppingCart,
-      questions: [
-        {
-          question: "What can I buy in the marketplace?",
-          answer: "Our marketplace includes AI services, software development, IT consulting, equipment rentals, specialized hardware, and more. We're constantly expanding our categories to meet your needs."
-        },
-        {
-          question: "How do I request a quote?",
-          answer: "Navigate to the 'Request Quote' page, fill out the form with your project requirements, and we'll connect you with qualified professionals who can provide detailed proposals."
-        },
-        {
-          question: "Are there any guarantees on services?",
-          answer: "Yes, we offer satisfaction guarantees and our dispute resolution system ensures fair outcomes. Most professionals also offer revisions and support to ensure your complete satisfaction."
-        },
-        {
-          question: "What is the AI Matcher feature?",
-          answer: "Our AI Matcher uses advanced algorithms to connect clients with the perfect talent based on project requirements, skills, availability, and budget. It saves time and ensures better matches."
-        }
-      ]
-    },
-    security: {
-      title: "Security & Trust",
+    {
+      id: 'pricing',
+      title: 'Pricing & Plans',
       icon: Shield,
       questions: [
         {
-          question: "How does Zion protect my data and privacy?",
-          answer: "We implement enterprise-grade security measures including encryption, secure payment processing, and strict privacy policies. Your data is never shared with third parties without consent."
+          id: 7,
+          question: 'How do you structure your pricing?',
+          answer: 'Our pricing is project-based and depends on the scope, complexity, and timeline of your project. We offer flexible engagement models including fixed-price projects, time and materials, and ongoing support contracts.'
         },
         {
-          question: "What happens if there's a dispute with a client or talent?",
-          answer: "Our dispute resolution system provides fair mediation for any conflicts. We review evidence from both parties and work to find a resolution that satisfies everyone involved."
+          id: 8,
+          question: 'Do you offer free consultations?',
+          answer: 'Yes, we provide a free initial consultation to understand your needs and discuss potential solutions. This helps us provide accurate project estimates and recommendations.'
         },
         {
-          question: "How secure are payments on the platform?",
-          answer: "All payments are processed through secure, encrypted channels with multiple layers of protection. We use industry-standard security protocols to ensure your financial information is safe."
-        },
-        {
-          question: "What verification processes do you have?",
-          answer: "We verify all talent through multiple steps including identity verification, skill assessments, portfolio reviews, and reference checks. This ensures quality and trust across our platform."
+          id: 9,
+          question: 'Are there ongoing costs after project completion?',
+          answer: 'This depends on the type of project. Some solutions require ongoing maintenance and support, while others are self-contained. We\'ll clearly outline all costs during the planning phase.'
         }
       ]
     },
-    support: {
-      title: "Technical Support",
-      icon: Cpu,
+    {
+      id: 'support',
+      title: 'Support & Maintenance',
+      icon: Users,
       questions: [
         {
-          question: "What if I encounter technical issues?",
-          answer: "Our support team is available 24/7. You can reach us through the contact form, email support@ziontechgroup.com, or use our live chat feature for immediate assistance."
+          id: 10,
+          question: 'What kind of support do you provide?',
+          answer: 'We offer comprehensive support including 24/7 technical support, regular maintenance updates, performance monitoring, and emergency response. Support levels can be customized based on your needs.'
         },
         {
-          question: "How secure is my data?",
-          answer: "We use enterprise-grade security measures including end-to-end encryption, secure payment processing, and strict data protection policies. Your privacy and security are our top priorities."
+          id: 11,
+          question: 'How quickly do you respond to support requests?',
+          answer: 'Response times vary by support tier. Premium support clients receive responses within 2 hours, while standard support clients receive responses within 24 hours. Emergency issues are addressed immediately.'
         },
         {
-          question: "Can I use Zion Tech Group on mobile devices?",
-          answer: "Absolutely! Our platform is fully responsive and works seamlessly on all devices. We also offer a dedicated mobile app for enhanced mobile experience."
-        },
-        {
-          question: "Do you offer API access for integrations?",
-          answer: "Yes, we provide comprehensive API access for enterprise clients who want to integrate our platform with their existing systems and workflows."
+          id: 12,
+          question: 'Do you provide training for your solutions?',
+          answer: 'Yes, we provide comprehensive training for all our solutions. This includes user training, administrator training, and ongoing education as new features are released.'
         }
       ]
     }
-  };
+  ];
 
-  const categories = Object.keys(faqCategories);
-
-  const filteredCategories = categories.filter(category => {
-    const categoryData = faqCategories[category];
-    const hasMatchingQuestions = categoryData.questions.some(q =>
-      q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      q.answer.toLowerCase().includes(searchTerm.toLowerCase())
+  const toggleItem = (itemId: number) => {
+    setOpenItems(prev => 
+      prev.includes(itemId) 
+        ? prev.filter(id => id !== itemId)
+        : [...prev, itemId]
     );
+<<<<<<< HEAD
     return searchTerm === '' || hasMatchingQuestions;
   });
 
@@ -436,246 +277,261 @@ const FAQ: React.FC = () => {
       }
     }
   };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
+=======
   };
 
+  const filteredCategories = faqCategories.map(category => ({
+    ...category,
+    questions: category.questions.filter(q =>
+      q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      q.answer.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  })).filter(category => category.questions.length > 0);
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
+
+
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+      <section className="pt-32 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <HelpCircle className="w-20 h-20 text-zion-cyan mx-auto mb-8" />
+              <h1 className="text-5xl md:text-7xl font-bold mb-8">
+                Frequently Asked <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+                  Questions
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto">
+                Find answers to common questions about our services, pricing, and how we can help transform your business.
+              </p>
+
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+                  <input
+                    type="text"
+                    placeholder="Search for answers..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
-        
-        <div className="container mx-auto px-4 text-center relative z-10">
+      </section>
+
+      {/* FAQ Categories */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {filteredCategories.map((category, categoryIndex) => (
+            <motion.div
+              key={category.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
+                  <category.icon className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="text-3xl font-bold text-white">{category.title}</h2>
+              </div>
+
+              <div className="space-y-4">
+                {category.questions.map((item) => (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300"
+                  >
+                    <button
+                      onClick={() => toggleItem(item.id)}
+                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-zion-slate-dark/30 transition-colors duration-300"
+                    >
+                      <h3 className="text-lg font-semibold text-white pr-4">
+                        {item.question}
+                      </h3>
+                      <div className="flex-shrink-0">
+                        {openItems.includes(item.id) ? (
+                          <Minus className="w-5 h-5 text-zion-cyan" />
+                        ) : (
+                          <Plus className="w-5 h-5 text-zion-cyan" />
+                        )}
+                      </div>
+                    </button>
+                    
+                    <AnimatePresence>
+                      {openItems.includes(item.id) && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-6 pb-4">
+                            <p className="text-zion-slate-light leading-relaxed">
+                              {item.answer}
+                            </p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+
+          {/* No Results */}
+          {filteredCategories.length === 0 && searchQuery && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center py-20"
+            >
+              <HelpCircle className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-white mb-2">No results found</h3>
+              <p className="text-zion-slate-light mb-6">
+                Try adjusting your search terms or browse our categories below
+              </p>
+              <button
+                onClick={() => setSearchQuery('')}
+                className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+              >
+                Clear Search
+              </button>
+            </motion.div>
+          )}
+        </div>
+      </section>
+
+      {/* Still Have Questions */}
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="flex justify-center mb-8">
-              <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-                <HelpCircle className="w-12 h-12 text-white" />
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Still Have <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Questions</span>?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-12">
+              Can't find what you're looking for? Our team is here to help you get the answers you need.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <MessageCircle className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-3">Live Chat</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Chat with our support team in real-time
+                </p>
+                <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
+                  Start Chat
+                </button>
+              </div>
+              
+              <div className="text-center">
+                <Mail className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-3">Email Support</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Send us a detailed message
+                </p>
+                <Link 
+                  to="/contact"
+                  className="inline-block px-6 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 text-zion-cyan font-semibold rounded-xl hover:bg-zion-slate-dark/70 transition-all duration-300"
+                >
+                  Send Email
+                </Link>
+              </div>
+              
+              <div className="text-center">
+                <Phone className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-3">Phone Support</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Call us directly for immediate assistance
+                </p>
+                <a 
+                  href="tel:+15551234567"
+                  className="inline-block px-6 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 text-zion-cyan font-semibold rounded-xl hover:bg-zion-slate-dark/70 transition-all duration-300"
+                >
+                  Call Now
+                </a>
               </div>
             </div>
-            
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Frequently Asked{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Questions
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              Find answers to common questions about Zion Tech Group's platform, 
-              services, and how to get started with our AI-powered marketplace.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button 
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Browse Questions
-              </motion.button>
-              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
-                Contact Support
-              </button>
-            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Search Section */}
-      <section className="py-20 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Find Your Answer
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Search through our comprehensive FAQ database to quickly find 
-              answers to your questions about Zion Tech Group.
-            </p>
-          </motion.div>
-
-          {/* Search Bar */}
-          <motion.div 
-            className="max-w-2xl mx-auto mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-zion-slate-light" />
-              <input
-                type="text"
-                placeholder="Search for answers to your questions..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-              />
-            </div>
-          </motion.div>
-
-          {/* Category Tabs */}
-          <motion.div 
-            className="flex flex-wrap justify-center gap-4 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-                  activeCategory === category
-                    ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
-                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-cyan/20'
-                }`}
-              >
-                {faqCategories[category].title}
-              </button>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* FAQ Content */}
-      <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="max-w-4xl mx-auto space-y-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {filteredCategories.map((category) => {
-              const categoryData = faqCategories[category];
-              const IconComponent = categoryData.icon;
-              
-              return (
-                <motion.div 
-                  key={category}
-                  className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden"
-                  variants={itemVariants}
-                >
-                  {/* Category Header */}
-                  <div className="bg-zion-cyan/10 p-6 border-b border-zion-cyan/20">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-white" />
-                      </div>
-                      <h2 className="text-2xl font-bold text-white">{categoryData.title}</h2>
-                    </div>
-                  </div>
-
-                  {/* Questions */}
-                  <div className="divide-y divide-zion-cyan/20">
-                    {categoryData.questions
-                      .filter(q =>
-                        searchTerm === '' ||
-                        q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                        q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-                      )
-                      .map((item, index) => {
-                        const itemId = `${category}-${index}`;
-                        const isExpanded = expandedItems.has(itemId);
-                        
-                        return (
-                          <div key={index} className="p-6">
-                            <button
-                              onClick={() => toggleExpanded(itemId)}
-                              className="w-full flex items-center justify-between text-left hover:text-zion-cyan transition-colors duration-300"
-                            >
-                              <h3 className="text-lg font-semibold text-white pr-4">
-                                {item.question}
-                              </h3>
-                              <div className="flex-shrink-0">
-                                {isExpanded ? (
-                                  <ChevronUp className="w-5 h-5 text-zion-cyan" />
-                                ) : (
-                                  <ChevronDown className="w-5 h-5 text-zion-slate-light" />
-                                )}
-                              </div>
-                            </button>
-                            
-                            {isExpanded && (
-                              <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
-                                transition={{ duration: 0.3 }}
-                                className="mt-4"
-                              >
-                                <p className="text-zion-slate-light leading-relaxed">
-                                  {item.answer}
-                                </p>
-                              </motion.div>
-                            )}
-                          </div>
-                        );
-                      })}
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
-        <div className="container mx-auto px-4 text-center">
+      {/* Additional Resources */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Still Have Questions?
+              Additional <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Resources</span>
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Can't find what you're looking for? Our support team is here to help 
-              with any questions or issues you may have.
+            <p className="text-xl text-zion-slate-light mb-12">
+              Explore our knowledge base, documentation, and community resources
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button 
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Contact Support
-              </motion.button>
-              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
-                Browse Documentation
-              </button>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: BookOpen, title: 'Documentation', description: 'Comprehensive guides and API references', link: '/docs' },
+                { icon: Globe, title: 'Knowledge Base', description: 'Articles, tutorials, and best practices', link: '/knowledge' },
+                { icon: Users, title: 'Community', description: 'Connect with other users and developers', link: '/community' },
+                { icon: Shield, title: 'Support Portal', description: 'Submit tickets and track requests', link: '/support' }
+              ].map((resource, index) => (
+                <motion.div
+                  key={resource.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+                >
+                  <resource.icon className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+                  <h3 className="text-lg font-bold text-white mb-2">{resource.title}</h3>
+                  <p className="text-zion-slate-light text-sm mb-4">{resource.description}</p>
+                  <Link 
+                    to={resource.link}
+                    className="inline-flex items-center text-zion-cyan hover:text-zion-blue transition-colors text-sm font-medium"
+                  >
+                    Learn More
+                    <ChevronDown className="ml-1 w-4 h-4 rotate-[-90deg]" />
+                  </Link>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
   return (
@@ -898,3 +754,8 @@ const FAQ: React.FC = () => {
 
 export default FAQ;
 >>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+};
+
+export default FAQ;
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
