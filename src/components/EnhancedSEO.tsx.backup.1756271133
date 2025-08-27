@@ -18,6 +18,16 @@ interface SEOProps {
   structuredData?: object;
 }
 
+<<<<<<< HEAD
+export const EnhancedSEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  keywords = [],
+  image = '/images/zion-tech-group-og.jpg',
+  url = window.location.href,
+  type = 'website',
+  author = 'Zion Tech Group',
+=======
 export function EnhancedSEO({
   title = "Zion - The Future of Tech & AI Marketplace",
   description = "The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive — all in one place.",
@@ -32,6 +42,7 @@ export function EnhancedSEO({
   language = "en",
   alternateLanguages = {},
   author = "Zion Tech Group",
+>>>>>>> origin/cursor/debug-web-application-loading-errors-c1c3
   publishedTime,
   modifiedTime,
   author = 'Zion Tech Group',
@@ -82,6 +93,9 @@ export function EnhancedSEO({
     },
     "sameAs": [
       "https://twitter.com/ziontechgroup",
+<<<<<<< HEAD
+      "https://www.linkedin.com/company/zion-marketplace",
+=======
       "https://github.com/Zion-Holdings"
     ],
     "offers": {
@@ -96,6 +110,7 @@ export function EnhancedSEO({
     "foundingDate": "2024",
     "sameAs": [
       "https://twitter.com/lovable_dev",
+>>>>>>> origin/cursor/debug-web-application-loading-errors-c1c3
       "https://www.facebook.com/zionmarketplace",
       "https://instagram.com/ziontechgroup",
       "https://github.com/ziontechgroup"

@@ -87,7 +87,7 @@ export class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https://ziontechgroup.com",
-                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
+                "logo": "/favicon.svg"
             }
         };
         // Add specific structured data based on page type
@@ -97,7 +97,7 @@ export class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https://ziontechgroup.com",
-                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
+                "logo": "/favicon.svg",
                 "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
                 "address": {
                     "@type": "PostalAddress",
@@ -191,13 +191,13 @@ export class SEOOptimizer {
     <meta property="og:description" content="${seoData.description}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="${seoData.canonicalUrl}" />
-    <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
+    <meta property="og:image" content="${seoData.ogImage || '/favicon.svg'}" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${seoData.title}" />
     <meta name="twitter:description" content="${seoData.description}" />
-    <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />
+    <meta name="twitter:image" content="${seoData.ogImage || '/favicon.svg'}" />
     
     <!-- Structured Data -->
     <script type="application/ld+json">

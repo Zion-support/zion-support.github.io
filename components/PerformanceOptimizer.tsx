@@ -88,6 +88,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
   const registerServiceWorker = useCallback(async () => {
     if ('serviceWorker' in navigator) {
       try {
+        // Unregister any existing service workers first
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        for (const registration of registrations) {
+          await registration.unregister();
+        }
+        
         const registration = await navigator.serviceWorker.register('/sw.js');
         console.log('Service Worker registered:', registration);
       } catch (error) {
