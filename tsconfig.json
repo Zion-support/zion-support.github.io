@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -28,11 +28,6 @@
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "strictNullChecks": true
   },
   "include": [
@@ -40,12 +35,10 @@
     "pages",
     "components",
     "data",
-    "types",
-    ".next/types/**/*.ts"
+    "types"
   ],
   "exclude": [
     "node_modules",
-    ".next/**",
     "dist/**",
     "temp_components/**",
     "zion-os/**"
