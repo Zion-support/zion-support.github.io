@@ -27,6 +27,10 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const HelpCenterPage = React.lazy(() => import('./pages/HelpCenterPage'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -41,6 +45,7 @@ const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusin
 const AISalesCopilot = React.lazy(() => import('./pages/services/AISalesCopilot'));
 const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
 const AIComplianceAssistant = React.lazy(() => import('./pages/services/AIComplianceAssistant'));
+const DigitalTransformation = React.lazy(() => import('./pages/DigitalTransformation'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -84,11 +89,21 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/help" element={<HelpCenterPage />} />
+              <Route path="/support" element={<HelpCenterPage />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/services" element={<Services />} />
+              {/* Aliases to match live domain URLs */}
+              <Route path="/ai-solutions" element={<AIServices />} />
+              <Route path="/services/infrastructure" element={<ITInfrastructure />} />
+              <Route path="/services/ai" element={<AIBusinessIntelligence />} />
+              <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
