@@ -6,7 +6,7 @@ import {
   Lock, 
   Eye, 
   Zap, 
-  Target, 
+  Award,
   Users, 
   CheckCircle,
   ArrowRight,
@@ -119,7 +119,7 @@ export default function CybersecurityServices() {
     {
       name: "NIST",
       description: "National Institute of Standards and Technology",
-      icon: Target,
+      icon: Award,
       color: "from-cyan-500 to-blue-600"
     }
   ];
@@ -128,7 +128,12 @@ export default function CybersecurityServices() {
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cybersecurity
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
