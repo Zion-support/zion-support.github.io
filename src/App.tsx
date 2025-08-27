@@ -44,8 +44,6 @@ const Training = React.lazy(() => import('./pages/Training'));
 const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
-const Documentation = React.lazy(() => import('./pages/Documentation'));
-
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
 const Help = React.lazy(() => import('./pages/Help'));
@@ -54,9 +52,6 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/Equipment'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const MarketplaceProducts = React.lazy(() => import('./pages/marketplace/Products'));
 const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'));
 const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipment'));
@@ -90,10 +85,16 @@ const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatf
 const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
 
+// New innovative AI services
+const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AICybersecurityPlatform = React.lazy(() => import('./pages/services/AICybersecurityPlatform'));
+const AICustomerExperience = React.lazy(() => import('./pages/services/AICustomerExperience'));
+const AIFinTechPlatform = React.lazy(() => import('./pages/services/AIFinTechPlatform'));
+
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 
 // Accessibility page
@@ -206,6 +207,13 @@ function App() {
               <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
               <Route path="/services/dsr-portal" element={<DSRPortal />} />
               <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+              
+              {/* New innovative AI service routes */}
+              <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
+              <Route path="/services/ai-customer-experience" element={<AICustomerExperience />} />
+              <Route path="/services/ai-fintech-platform" element={<AIFinTechPlatform />} />
               
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
