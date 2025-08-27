@@ -61,8 +61,8 @@ export function Footer() {
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
         { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'Infrastructure', path: '/services/infrastructure', icon: Building },
+        { name: 'AI Analytics', path: '/services/ai-analytics', icon: Brain },
         // Newly exposed landing pages
         { name: 'AI Services', path: '/ai-services', icon: Brain },
         { name: 'IT Services', path: '/it-services', icon: Building },

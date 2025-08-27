@@ -81,8 +81,8 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
         { name: "Digital Twin", href: "/services/digital-twin", icon: Cpu },
         { name: "Data Analytics", href: "/services/data-analytics", icon: TrendingUp },
-        { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain }
+        { name: "Infrastructure", href: "/services/infrastructure", icon: Server },
+        { name: "AI Analytics", href: "/services/ai-analytics", icon: Brain }
       ]
     },
     {
@@ -98,9 +98,9 @@ export const EnhancedSidebar: React.FC = () => {
   ];
 
   const quickActions = [
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
-    { name: "Book Demo", href: "/demo", icon: Calendar, variant: "secondary" },
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
+    { name: "Get Quote", href: "/request-quote", icon: MessageCircle, variant: "primary" },
+    { name: "Book Demo", href: "/contact", icon: Calendar, variant: "secondary" },
+    { name: "Support", href: "/help", icon: HelpCircle, variant: "secondary" }
   ];
 
   return (
