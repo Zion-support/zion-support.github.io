@@ -118,7 +118,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
     const lowerQuery = query.toLowerCase();
     // Add exact query as first suggestion
     if (query.trim()) {
-        suggestions.push({
+        suggestions({
             text: query,
             type: 'recent',
             id: `query-${query}`
@@ -129,7 +129,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .filter(category => category.toLowerCase().includes(lowerQuery))
         .slice(0, 3)
         .forEach(category => {
-        suggestions.push({
+        suggestions({
             text: category,
             type: 'category',
             id: `category-${category}`
@@ -140,7 +140,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .filter(tag => tag.toLowerCase().includes(lowerQuery))
         .slice(0, 3)
         .forEach(tag => {
-        suggestions.push({
+        suggestions({
             text: tag,
             type: 'tag',
             id: `tag-${tag}`
@@ -151,7 +151,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .filter(search => search.toLowerCase().includes(lowerQuery) && search !== query)
         .slice(0, 3)
         .forEach(search => {
-        suggestions.push({
+        suggestions({
             text: search,
             type: 'recent',
             id: `recent-${search}`

@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
 interface FuturisticAnimatedBackgroundProps {
   variant?: 'default' | 'cyberpunk' | 'quantum' | 'space';
   intensity?: 'low' | 'medium' | 'high';
   className?: string;
 }
-
 export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> = ({
   variant = 'default',
   intensity = 'medium',
@@ -14,23 +12,18 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Particle system
     const particles: Array<{
       x: number;
@@ -41,15 +34,13 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       opacity: number;
       color: string;
     }> = [];
-
     // Initialize particles based on variant
     const initParticles = () => {
       particles.length = 0;
       const particleCount = intensity === 'high' ? 200 : intensity === 'medium' ? 120 : 80;
-
       for (let i = 0; i < particleCount; i++) {
         const colors = getVariantColors(variant);
-        particles.push({
+        particles({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 2,
@@ -60,7 +51,6 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         });
       }
     };
-
     const getVariantColors = (variant: string) => {
       switch (variant) {
         case 'cyberpunk':
@@ -73,30 +63,25 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
           return ['#22ddd2', '#8c15e9', '#2e73ea', '#00ff88', '#ff6b35'];
       }
     };
-
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
-
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
-
         // Draw connections
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
@@ -104,7 +89,6 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
               Math.pow(particle.x - otherParticle.x, 2) +
               Math.pow(particle.y - otherParticle.y, 2)
             );
-
             if (distance < 100) {
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
@@ -117,25 +101,20 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
           }
         });
       });
-
       // Draw grid pattern for cyberpunk variant
       if (variant === 'cyberpunk') {
         drawCyberpunkGrid(ctx, canvas);
       }
-
       // Draw quantum waves for quantum variant
       if (variant === 'quantum') {
         drawQuantumWaves(ctx, canvas);
       }
-
       // Draw space nebula for space variant
       if (variant === 'space') {
         drawSpaceNebula(ctx, canvas);
       }
-
       animationRef.current = requestAnimationFrame(animate);
     };
-
     const drawCyberpunkGrid = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
       const time = Date.now() * 0.001;
       const gridSize = 50;
@@ -143,14 +122,12 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       ctx.strokeStyle = '#ff00ff';
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.3;
-
       for (let x = 0; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x + Math.sin(time + x * 0.01) * 10, 0);
         ctx.lineTo(x + Math.sin(time + x * 0.01) * 10, canvas.height);
         ctx.stroke();
       }
-
       for (let y = 0; y < canvas.height; y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y + Math.cos(time + y * 0.01) * 10);
@@ -158,14 +135,12 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         ctx.stroke();
       }
     };
-
     const drawQuantumWaves = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
       const time = Date.now() * 0.001;
       
       ctx.strokeStyle = '#22ddd2';
       ctx.lineWidth = 2;
       ctx.globalAlpha = 0.4;
-
       for (let i = 0; i < 3; i++) {
         ctx.beginPath();
         for (let x = 0; x < canvas.width; x += 2) {
@@ -182,7 +157,6 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         ctx.stroke();
       }
     };
-
     const drawSpaceNebula = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
       const time = Date.now() * 0.0005;
       
@@ -195,18 +169,14 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         canvas.height / 2,
         300
       );
-
       gradient.addColorStop(0, 'rgba(138, 21, 233, 0.3)');
       gradient.addColorStop(0.5, 'rgba(34, 221, 210, 0.2)');
       gradient.addColorStop(1, 'rgba(46, 115, 234, 0.1)');
-
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     };
-
     initParticles();
     animate();
-
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {
@@ -214,7 +184,6 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       }
     };
   }, [variant, intensity]);
-
   return (
     <div className={`fixed inset-0 -z-10 overflow-hidden ${className}`}>
       <canvas
@@ -279,18 +248,14 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     </div>
   );
 };
-
 // Variant-specific background components
 export const CyberpunkBackground: React.FC<{ className?: string }> = ({ className }) => (
   <FuturisticAnimatedBackground variant="cyberpunk" intensity="high" className={className} />
 );
-
 export const QuantumBackground: React.FC<{ className?: string }> = ({ className }) => (
   <FuturisticAnimatedBackground variant="quantum" intensity="medium" className={className} />
 );
-
 export const SpaceBackground: React.FC<{ className?: string }> = ({ className }) => (
   <FuturisticAnimatedBackground variant="space" intensity="low" className={className} />
 );
-
 export default FuturisticAnimatedBackground;

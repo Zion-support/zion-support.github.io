@@ -15,7 +15,6 @@ export interface QuantumSpaceTechService2026 {
     address: string;
   };
 }
-
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   {
     id: "2026-quantum-space-tech",

@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -15,7 +14,6 @@
     -moz-osx-font-smoothing: grayscale;
   }
 }
-
 @layer components {
   .line-clamp-2 {
     display: -webkit-box;
@@ -31,7 +29,6 @@
     overflow: hidden;
   }
 }
-
 @layer utilities {
   .text-gradient {
     @apply bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent;

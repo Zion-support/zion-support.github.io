@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
 import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from "lucide-react";
 function HiringTrackerContent() {
@@ -24,7 +24,6 @@ function HiringTrackerContent() {
             </p>
           </div>
         </div>
-
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>

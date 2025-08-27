@@ -5,13 +5,11 @@ import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
 import { INNOVATIVE_IT_SERVICES_2027 } from '@/data/innovativeITServices2027';
 import { INNOVATIVE_AI_SERVICES_2027 } from '@/data/innovativeAIServices2027';
-
 const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedService, setSelectedService] = useState<any>(null);
   const [viewMode, setViewMode] = useState<'grid' | 'list' | 'showcase'>('showcase');
   const [searchTerm, setSearchTerm] = useState<string>('');
-
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', color: 'from-zion-cyan to-zion-purple' },
     { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', color: 'from-purple-500 to-pink-500' },
@@ -24,19 +22,16 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
     { id: 'healthcare', name: 'Healthcare', icon: '🏥', color: 'from-red-500 to-pink-500' },
     { id: 'financial', name: 'Financial Services', icon: '💰', color: 'from-yellow-500 to-orange-500' }
   ];
-
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2027,
     ...INNOVATIVE_IT_SERVICES_2027,
     ...INNOVATIVE_AI_SERVICES_2027
   ];
-
   const filteredServices = allServices.filter(service => {
     if (selectedCategory === 'all') return true;
     return service.category.toLowerCase().includes(selectedCategory) ||
            service.subcategory.toLowerCase().includes(selectedCategory);
   });
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -46,7 +41,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -57,7 +51,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
       }
     }
   };
-
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
@@ -74,7 +67,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
@@ -109,7 +101,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
             Immerse yourself in our revolutionary technology showcase featuring cutting-edge micro SAAS, IT, and AI services. 
             Experience the future of technology with interactive demos and comprehensive insights.
           </motion.p>
-
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -128,7 +119,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Category Navigation */}
       <section className="py-12 bg-black/20 backdrop-blur-sm sticky top-0 z-20">
         <div className="max-w-7xl mx-auto px-6">
@@ -152,7 +142,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                 </motion.button>
               ))}
             </div>
-
             {/* View Toggle */}
             <div className="flex gap-2">
               <button
@@ -189,7 +178,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Featured Service Showcase */}
       {viewMode === 'showcase' && (
         <section className="py-20">
@@ -202,7 +190,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
             >
               Featured Services
             </motion.h2>
-
             <motion.div 
               variants={containerVariants}
               initial="hidden"
@@ -235,7 +222,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                       <p className="text-xl text-zion-cyan/80 leading-relaxed">
                         {service.description}
                       </p>
-
                       {/* Innovation Level Badge */}
                       <div className="inline-block">
                         <span className={`px-4 py-2 rounded-full text-sm font-bold ${
@@ -249,7 +235,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                         </span>
                       </div>
                     </div>
-
                     {/* Key Features */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
@@ -275,7 +260,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                         </ul>
                       </div>
                     </div>
-
                     {/* Pricing and Market Info */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div className="bg-black/30 rounded-lg p-4 border border-zion-cyan/20">
@@ -298,7 +282,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                         </div>
                       </div>
                     </div>
-
                     {/* Action Buttons */}
                     <div className="flex gap-4">
                       <Link
@@ -315,7 +298,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                       </Link>
                     </div>
                   </div>
-
                   {/* Service Visualization */}
                   <div className="flex-1">
                     <motion.div
@@ -338,7 +320,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                             <p className="text-sm mt-2">Click to explore features</p>
                           </div>
                         </div>
-
                         {/* Quick Stats */}
                         <div className="grid grid-cols-2 gap-4 mt-6">
                           <div className="text-center">
@@ -363,7 +344,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
           </div>
         </section>
       )}
-
       {/* Grid View */}
       {viewMode === 'grid' && (
         <section className="py-20">
@@ -392,27 +372,22 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                       {service.innovationLevel}
                     </span>
                   </div>
-
                   {/* Service Icon */}
                   <div className="text-4xl mb-4">{service.icon || '🚀'}</div>
-
                   {/* Service Title */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                     {service.title}
                   </h3>
-
                   {/* Service Description */}
                   <p className="text-zion-cyan/70 mb-4 line-clamp-3">
                     {service.description}
                   </p>
-
                   {/* Service Category */}
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-xs text-zion-cyan/50">{service.category}</span>
                     <span className="text-zion-cyan/30">•</span>
                     <span className="text-xs text-zion-cyan/50">{service.subcategory}</span>
                   </div>
-
                   {/* Price Range */}
                   <div className="mb-4">
                     <span className="text-zion-neon font-semibold">
@@ -420,7 +395,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                          (service as any).pricing?.monthly?.toLocaleString() || 'Custom Pricing'}
                     </span>
                   </div>
-
                   {/* Key Features */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h4>
@@ -433,7 +407,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex gap-3">
                     <Link
@@ -455,7 +428,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
           </div>
         </section>
       )}
-
       {/* List View */}
       {viewMode === 'list' && (
         <section className="py-20">
@@ -486,7 +458,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                         <p className="text-zion-cyan/80">{service.description}</p>
                       </div>
                     </div>
-
                     {/* Service Details */}
                     <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div className="bg-black/30 rounded-lg p-4 border border-zion-cyan/20">
@@ -509,7 +480,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                         </div>
                       </div>
                     </div>
-
                     {/* Action Buttons */}
                     <div className="flex gap-3">
                       <Link
@@ -532,7 +502,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
           </div>
         </section>
       )}
-
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -553,7 +522,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
           >
             Contact our team to schedule a personalized demo and discuss how our innovative services can transform your business.
           </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -574,7 +542,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
               Call +1 302 464 0950
             </a>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -589,5 +556,4 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
     </div>
   );
 };
-
 export default EnhancedInnovativeServicesShowcase2027;

@@ -24,7 +24,6 @@ export interface NextGenInnovativeService {
   demoUrl?: string;
   documentationUrl?: string;
 }
-
 export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
   // Space Technology Integration Platform
   {
@@ -78,7 +77,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/space-technology-integration"
   },
-
   // Biotechnology AI Platform
   {
     id: "biotechnology-ai-platform",
@@ -131,7 +129,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/biotechnology-ai-platform"
   },
-
   // Advanced Robotics Process Automation
   {
     id: "advanced-robotics-process-automation",
@@ -184,7 +181,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/advanced-robotics-automation"
   },
-
   // Brain-Computer Interface Development Platform
   {
     id: "brain-computer-interface-development-platform",
@@ -237,7 +233,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/brain-computer-interface"
   },
-
   // Autonomous Vehicle Fleet Management
   {
     id: "autonomous-vehicle-fleet-management",

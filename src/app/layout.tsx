@@ -6,9 +6,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { Toaster } from '@/components/ui/toaster'
 import { Toaster as SonnerToaster } from '@/components/ui/sonner'
-
 const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Innovative Technology Solutions',
   description: 'Leading provider of AI, cloud, cybersecurity, and digital transformation solutions. Transform your business with cutting-edge technology.',
@@ -37,7 +35,6 @@ export const metadata: Metadata = {
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#0ea5e9',
 }
-
 export default function RootLayout({
   children,
 }: {

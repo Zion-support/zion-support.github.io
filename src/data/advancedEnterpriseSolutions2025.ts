@@ -33,7 +33,6 @@ export interface AdvancedEnterpriseSolution2025 {
   marketSize?: string;
   compliance?: string[];
 }
-
 export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[] = [
   // AI-Powered Enterprise Resource Planning (ERP) Platform
   {
@@ -100,7 +99,6 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     marketSize: "$45.2 billion by 2025",
     compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS", "SOX"]
   },
-
   // Quantum-Resistant Cybersecurity Platform
   {
     id: "quantum-resistant-cybersecurity",
@@ -166,7 +164,6 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     marketSize: "$23.8 billion by 2025",
     compliance: ["SOC 2", "ISO 27001", "FedRAMP", "NIST", "FIPS 140-2", "GDPR"]
   },
-
   // AI-Powered Business Process Automation Suite
   {
     id: "ai-business-process-automation",
@@ -232,7 +229,6 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     marketSize: "$19.6 billion by 2025",
     compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX"]
   },
-
   // Next-Generation Business Intelligence & Analytics Platform
   {
     id: "next-gen-business-intelligence",
@@ -298,7 +294,6 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     marketSize: "$29.9 billion by 2025",
     compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX"]
   },
-
   // Enterprise Digital Twin Platform
   {
     id: "enterprise-digital-twin",

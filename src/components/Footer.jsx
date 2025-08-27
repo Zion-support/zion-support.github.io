@@ -15,16 +15,13 @@ import {
   Send,
   CheckCircle
 } from 'lucide-react';
-
 export function FooterNewsletter() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubscribe = async (e) => {
     e.preventDefault();
     if (!email) return;
-
     setIsLoading(true);
     // Simulate API call
     setTimeout(() => {
@@ -35,7 +32,6 @@ export function FooterNewsletter() {
       setTimeout(() => setIsSubscribed(false), 5000);
     }, 1000);
   };
-
   return (
     <div className="bg-zion-blue-dark/30 p-6 rounded-xl border border-zion-cyan/20">
       <h3 className="text-xl font-semibold text-white mb-4">Stay Updated</h3>
@@ -80,12 +76,10 @@ export function FooterNewsletter() {
     </div>
   );
 }
-
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   const footerSections = [
     {
       title: "Company",
@@ -135,7 +129,6 @@ export function Footer() {
       ]
     }
   ];
-
   const socialLinks = [
     { icon: <Twitter className="h-5 w-5" />, href: "https://twitter.com/ziontechgroup", label: "Twitter" },
     { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/company/zion-tech-group", label: "LinkedIn" },
@@ -143,7 +136,6 @@ export function Footer() {
     { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/ziontechgroup", label: "Instagram" },
     { icon: <Github className="h-5 w-5" />, href: "https://github.com/ziontechgroup", label: "GitHub" }
   ];
-
   return (
     <footer className="bg-zion-blue text-white relative overflow-hidden">
       {/* Background decorative elements */}
@@ -152,7 +144,6 @@ export function Footer() {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Company Info */}
@@ -187,7 +178,6 @@ export function Footer() {
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
-
               {/* Social media */}
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
@@ -208,7 +198,6 @@ export function Footer() {
               </div>
             </motion.div>
           </div>
-
           {/* Footer Sections */}
           {footerSections.map((section, sectionIndex) => (
             <motion.div
@@ -234,7 +223,6 @@ export function Footer() {
             </motion.div>
           ))}
         </div>
-
         {/* Newsletter Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -245,7 +233,6 @@ export function Footer() {
         >
           <FooterNewsletter />
         </motion.div>
-
         {/* Bottom Section */}
         <div className="border-t border-zion-cyan/20 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -268,7 +255,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}

@@ -25,7 +25,6 @@ import {
   X,
   ExternalLink
 } from "lucide-react";
-
 const categoryIcons = {
   'AI Business Intelligence': Brain,
   'Quantum Computing': Code,
@@ -38,7 +37,6 @@ const categoryIcons = {
   'Healthcare AI': Heart,
   'Autonomous Systems': Code
 };
-
 const categoryColors = {
   'AI Business Intelligence': 'from-purple-500 to-indigo-600',
   'Quantum Computing': 'from-blue-500 to-cyan-600',
@@ -51,7 +49,6 @@ const categoryColors = {
   'Healthcare AI': 'from-pink-500 to-rose-600',
   'Autonomous Systems': 'from-gray-500 to-slate-600'
 };
-
 const benefits = [
   {
     icon: <Zap className="h-6 w-6" />,
@@ -74,17 +71,14 @@ const benefits = [
     description: "30-day money-back guarantee with free migration support"
   }
 ];
-
 export function ComprehensiveServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
-
   const categories = useMemo(() => {
     const cats = ['All', ...Array.from(new Set(comprehensiveInnovativeServices.map(s => s.category)))];
     return cats;
   }, []);
-
   const filteredAndSortedServices = useMemo(() => {
     let filtered = comprehensiveInnovativeServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -93,7 +87,6 @@ export function ComprehensiveServicesShowcase() {
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
-
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -110,17 +103,14 @@ export function ComprehensiveServicesShowcase() {
           return b.customers - a.customers;
       }
     });
-
     return filtered;
   }, [searchTerm, selectedCategory, sortBy]);
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -162,7 +152,6 @@ export function ComprehensiveServicesShowcase() {
             ))}
           </motion.div>
         </div>
-
         {/* Search and Filters */}
         <motion.div 
           className="mb-12"
@@ -183,7 +172,6 @@ export function ComprehensiveServicesShowcase() {
                   className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
                 />
               </div>
-
               {/* Category Filter */}
               <div className="relative">
                 <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
@@ -199,7 +187,6 @@ export function ComprehensiveServicesShowcase() {
                   ))}
                 </select>
               </div>
-
               {/* Sort */}
               <div className="relative">
                 <TrendingUp className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
@@ -217,7 +204,6 @@ export function ComprehensiveServicesShowcase() {
             </div>
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div 
           className="mb-16"
@@ -246,34 +232,28 @@ export function ComprehensiveServicesShowcase() {
                         </div>
                       </div>
                     )}
-
                     {/* Icon */}
                     <div className="text-6xl mb-6 text-center group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div>
-
                     {/* Category */}
                     <div className="text-center mb-4">
                       <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 text-xs font-medium rounded-full border border-blue-500/30">
                         {service.category}
                       </span>
                     </div>
-
                     {/* Title */}
                     <h3 className="text-xl font-bold text-white mb-4 text-center group-hover:text-blue-400 transition-colors duration-300">
                       {service.name}
                     </h3>
-
                     {/* Tagline */}
                     <p className="text-blue-400 text-sm text-center mb-4 font-medium">
                       {service.tagline}
                     </p>
-
                     {/* Description */}
                     <p className="text-gray-300 text-sm leading-relaxed mb-6 text-center">
                       {service.description}
                     </p>
-
                     {/* Key Features */}
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
@@ -286,7 +266,6 @@ export function ComprehensiveServicesShowcase() {
                         ))}
                       </ul>
                     </div>
-
                     {/* Price and Metrics */}
                     <div className="text-center mb-6">
                       <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">
@@ -301,7 +280,6 @@ export function ComprehensiveServicesShowcase() {
                         <span>{service.customers} customers</span>
                       </div>
                     </div>
-
                     {/* Market Info */}
                     <div className="mb-6 text-xs text-gray-400">
                       <div className="grid grid-cols-2 gap-2">
@@ -313,7 +291,6 @@ export function ComprehensiveServicesShowcase() {
                         </div>
                       </div>
                     </div>
-
                     {/* CTA Button */}
                     <div className="text-center">
                       <a
@@ -326,7 +303,6 @@ export function ComprehensiveServicesShowcase() {
                         <ExternalLink className="h-4 w-4" />
                       </a>
                     </div>
-
                     {/* Hover Effects */}
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl" />
                   </div>
@@ -334,7 +310,6 @@ export function ComprehensiveServicesShowcase() {
               ))}
             </AnimatePresence>
           </div>
-
           {/* No Results */}
           {filteredAndSortedServices.length === 0 && (
             <motion.div 
@@ -348,7 +323,6 @@ export function ComprehensiveServicesShowcase() {
             </motion.div>
           )}
         </motion.div>
-
         {/* Contact Section */}
         <motion.div 
           className="bg-white/10 backdrop-blur-md p-8 rounded-lg border border-white/20"

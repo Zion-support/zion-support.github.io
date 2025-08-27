@@ -47,7 +47,6 @@ export default function OrderDetailPage() {
     }
     return (<div className="container max-w-3xl py-10 space-y-6">
       <h1 className="text-3xl font-bold">Order #{order.orderId}</h1>
-
       <div>
         <h2 className="font-semibold mb-2">Items</h2>
         <ul className="space-y-1">
@@ -57,19 +56,16 @@ export default function OrderDetailPage() {
             </li>))}
         </ul>
       </div>
-
       <div>
         <h2 className="font-semibold mb-2">Shipping Address</h2>
         <p>{order.shippingAddress.name}</p>
         <p>{order.shippingAddress.street}</p>
         <p>{order.shippingAddress.city}, {order.shippingAddress.state} {order.shippingAddress.zip}</p>
       </div>
-
       <div className="flex gap-3">
         <Button onClick={handleDownload}>Download PDF Invoice</Button>
         <Button variant="outline" onClick={handleResend}>Resend Receipt</Button>
       </div>
-
       <Link to="/orders" className="text-zion-purple underline">
         Back to orders
       </Link>

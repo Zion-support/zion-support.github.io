@@ -14,7 +14,6 @@ import {
   Phone,
   MapPin
 } from 'lucide-react';
-
 export default function Sitemap() {
   const sitemapStructure = [
     {
@@ -86,7 +85,6 @@ export default function Sitemap() {
       ]
     }
   ];
-
   const quickLinks = [
     { name: 'Get Started', path: '/contact', description: 'Start your journey with Zion Tech Group' },
     { name: 'View Services', path: '/comprehensive-services', description: 'Explore our AI and technology solutions' },
@@ -95,7 +93,6 @@ export default function Sitemap() {
     { name: 'Get Support', path: '/help', description: 'Find help and resources' },
     { name: 'View Pricing', path: '/comprehensive-pricing', description: 'Understand our pricing structure' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
       {/* Hero Section */}
@@ -109,7 +106,6 @@ export default function Sitemap() {
           </p>
         </div>
       </section>
-
       {/* Quick Links */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -132,7 +128,6 @@ export default function Sitemap() {
           </div>
         </div>
       </section>
-
       {/* Sitemap Structure */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -166,7 +161,6 @@ export default function Sitemap() {
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -207,7 +201,6 @@ export default function Sitemap() {
           </div>
         </div>
       </section>
-
       {/* Additional Resources */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -253,7 +246,6 @@ export default function Sitemap() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
         <div className="container mx-auto px-4 text-center">

@@ -178,7 +178,6 @@ export default function AICustomerServiceAutomation() {
             </Link>
           </div>
         </div>
-
         {/* Key Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -198,7 +197,6 @@ export default function AICustomerServiceAutomation() {
             <div className="text-gray-400">Response Time</div>
           </div>
         </div>
-
         {/* Features Grid */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -215,7 +213,6 @@ export default function AICustomerServiceAutomation() {
               </div>))}
           </div>
         </div>
-
         {/* Support Channels Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -232,7 +229,6 @@ export default function AICustomerServiceAutomation() {
               </div>))}
           </div>
         </div>
-
         {/* Pricing Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -275,7 +271,6 @@ export default function AICustomerServiceAutomation() {
               </div>))}
           </div>
         </div>
-
         {/* Benefits Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -292,7 +287,6 @@ export default function AICustomerServiceAutomation() {
               </div>))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-indigo-500/10 to-blue-500/10 border border-indigo-500/20 rounded-2xl p-8">

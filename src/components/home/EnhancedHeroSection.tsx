@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
   Play, 
@@ -14,7 +14,6 @@ import {
   TrendingUp,
   MessageCircle
 } from 'lucide-react';
-
 export function EnhancedHeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -40,7 +39,6 @@ export function EnhancedHeroSection() {
           <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse delay-2000"></div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         {/* Badge */}
@@ -48,7 +46,6 @@ export function EnhancedHeroSection() {
           <Sparkles className="h-4 w-4 animate-pulse" />
           <span>New Micro SAAS Services Available</span>
         </div>
-
         {/* Main Heading */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8">
           <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -58,13 +55,11 @@ export function EnhancedHeroSection() {
             The Future of Tech & AI
           </span>
         </h1>
-
         {/* Subtitle */}
         <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
           Discover the world's most comprehensive marketplace for AI talent, micro SAAS services, 
           and cutting-edge technology solutions. Transform your business with our innovative platform.
         </p>
-
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <Link 
@@ -84,7 +79,6 @@ export function EnhancedHeroSection() {
             Get Started
           </Link>
         </div>
-
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="text-center">
@@ -100,7 +94,6 @@ export function EnhancedHeroSection() {
             <div className="text-gray-400">Uptime</div>
           </div>
         </div>
-
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
@@ -108,7 +101,6 @@ export function EnhancedHeroSection() {
           </div>
         </div>
       </div>
-
       {/* Floating Action Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Link

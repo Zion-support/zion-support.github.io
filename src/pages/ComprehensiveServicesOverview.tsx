@@ -79,7 +79,6 @@ import {
   Flask as FlaskIcon,
   Rocket as RocketIconIcon
 } from 'lucide-react';
-
 // Service categories with descriptions and icons
 const SERVICE_CATEGORIES = [
   {
@@ -183,12 +182,10 @@ const SERVICE_CATEGORIES = [
     benefits: ['10x Content Speed', 'SEO Optimized', 'Multi-format Output']
   }
 ];
-
 export default function ComprehensiveServicesOverview() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -198,21 +195,17 @@ export default function ComprehensiveServicesOverview() {
       },
       { threshold: 0.1 }
     );
-
     const element = document.getElementById('services-overview');
     if (element) {
       observer.observe(element);
     }
-
     return () => observer.disconnect();
   }, []);
-
   const filteredCategories = SERVICE_CATEGORIES.filter(category =>
     category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     category.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
     category.services.some(service => service.toLowerCase().includes(searchTerm.toLowerCase()))
   );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark">
       {/* Header */}
@@ -228,7 +221,6 @@ export default function ComprehensiveServicesOverview() {
           <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full animate-pulse delay-2000"></div>
         </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Sparkles className="h-8 w-8 text-zion-cyan" />
@@ -241,7 +233,6 @@ export default function ComprehensiveServicesOverview() {
             Discover our complete portfolio of revolutionary AI, Quantum, and technology services designed to transform your business 
             and drive unprecedented growth and innovation.
           </p>
-
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <motion.div
@@ -283,7 +274,6 @@ export default function ComprehensiveServicesOverview() {
           </div>
         </div>
       </motion.header>
-
       {/* Main Content */}
       <main id="services-overview" className="py-20">
         <div className="container mx-auto px-4">
@@ -307,7 +297,6 @@ export default function ComprehensiveServicesOverview() {
               </div>
             </div>
           </motion.div>
-
           {/* Services Grid */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -337,7 +326,6 @@ export default function ComprehensiveServicesOverview() {
                     </p>
                   </div>
                 </div>
-
                 {/* Services List */}
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
@@ -353,7 +341,6 @@ export default function ComprehensiveServicesOverview() {
                     ))}
                   </ul>
                 </div>
-
                 {/* Features */}
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
@@ -371,7 +358,6 @@ export default function ComprehensiveServicesOverview() {
                     ))}
                   </div>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-8">
                   <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
@@ -387,7 +373,6 @@ export default function ComprehensiveServicesOverview() {
                     ))}
                   </ul>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex gap-3">
                   <Link
@@ -408,7 +393,6 @@ export default function ComprehensiveServicesOverview() {
               </motion.div>
             ))}
           </motion.div>
-
           {/* No Results */}
           {filteredCategories.length === 0 && (
             <motion.div
@@ -425,7 +409,6 @@ export default function ComprehensiveServicesOverview() {
               </button>
             </motion.div>
           )}
-
           {/* CTA Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -464,7 +447,6 @@ export default function ComprehensiveServicesOverview() {
     </div>
   );
 }
-
 // Helper component for graduation cap icon
 function GraduationCap(props: any) {
   return (

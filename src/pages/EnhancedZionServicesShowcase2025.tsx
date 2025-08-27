@@ -83,23 +83,20 @@ import {
   Users2 as Users2Icon,
   ShieldCheck as ShieldCheckIcon
 } from 'lucide-react';
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { enhancedZionServices2025, EnhancedServiceItem, EnhancedServiceCategory } from "@/data/enhancedZionServices2025";
-
 export default function EnhancedZionServicesShowcase2025() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
   const [expandedService, setExpandedService] = useState<string | null>(null);
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', min: 0, max: Infinity },
     { id: 'budget', name: 'Budget ($0 - $2,000)', min: 0, max: 2000 },
     { id: 'mid-range', name: 'Mid-Range ($2,000 - $8,000)', min: 2000, max: 8000 },
     { id: 'enterprise', name: 'Enterprise ($8,000+)', min: 8000, max: Infinity }
   ];
-
   const sortOptions = [
     { id: 'featured', name: 'Featured', icon: Star },
     { id: 'price-low', name: 'Price: Low to High', icon: DollarSign },
@@ -107,7 +104,6 @@ export default function EnhancedZionServicesShowcase2025() {
     { id: 'trending', name: 'Trending', icon: TrendingUp },
     { id: 'newest', name: 'Newest', icon: Clock }
   ];
-
   const getCategoryIcon = (categorySlug: string) => {
     const iconMap: { [key: string]: any } = {
       'advanced-ai-autonomous-systems': Brain,
@@ -125,7 +121,6 @@ export default function EnhancedZionServicesShowcase2025() {
     };
     return iconMap[categorySlug] || Globe;
   };
-
   const getCategoryColor = (categorySlug: string) => {
     const colorMap: { [key: string]: string } = {
       'advanced-ai-autonomous-systems': 'from-zion-cyan to-zion-purple',
@@ -143,7 +138,6 @@ export default function EnhancedZionServicesShowcase2025() {
     };
     return colorMap[categorySlug] || 'from-zion-cyan to-zion-blue';
   };
-
   const filteredServices = enhancedZionServices2025
     .flatMap(category => category.items)
     .filter(service => {
@@ -165,7 +159,6 @@ export default function EnhancedZionServicesShowcase2025() {
       
       return matchesSearch && matchesCategory && matchesPrice;
     });
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
@@ -180,13 +173,11 @@ export default function EnhancedZionServicesShowcase2025() {
         return 0;
     }
   });
-
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
-
   return (
-    <>
+<>
       <SEO 
         title="Zion Tech Group - Enhanced 2025 Services Showcase | Cutting-Edge AI, Quantum & Autonomous Solutions"
         description="Discover Zion Tech Group's revolutionary 2025 services portfolio featuring autonomous AI systems, quantum computing platforms, advanced cybersecurity, and next-generation technology solutions. Transform your business with the future of technology."
@@ -237,7 +228,6 @@ export default function EnhancedZionServicesShowcase2025() {
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filters */}
         <section className="py-8 px-4">
           <div className="max-w-7xl mx-auto">
@@ -254,7 +244,6 @@ export default function EnhancedZionServicesShowcase2025() {
                     className="w-full pl-10 pr-4 py-3 bg-zion-slate rounded-lg border border-zion-slate-light focus:border-zion-cyan focus:outline-none text-white placeholder-zion-gray-light"
                   />
                 </div>
-
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
@@ -268,7 +257,6 @@ export default function EnhancedZionServicesShowcase2025() {
                     </option>
                   ))}
                 </select>
-
                 {/* Price Filter */}
                 <select
                   value={selectedPriceRange}
@@ -281,7 +269,6 @@ export default function EnhancedZionServicesShowcase2025() {
                     </option>
                   ))}
                 </select>
-
                 {/* Sort */}
                 <select
                   value={sortBy}
@@ -298,7 +285,6 @@ export default function EnhancedZionServicesShowcase2025() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-12 px-4">
           <div className="max-w-7xl mx-auto">
@@ -324,7 +310,6 @@ export default function EnhancedZionServicesShowcase2025() {
                       <p className="text-zion-gray-light text-lg">{category.description}</p>
                     </div>
                   </div>
-
                   {/* Services in Category */}
                   <div className="grid md:grid-cols-2 gap-6">
                     {category.items
@@ -361,7 +346,6 @@ export default function EnhancedZionServicesShowcase2025() {
                               />
                             </button>
                           </div>
-
                           {/* Features Preview */}
                           <div className="mb-4">
                             <h5 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h5>
@@ -374,7 +358,6 @@ export default function EnhancedZionServicesShowcase2025() {
                               ))}
                             </div>
                           </div>
-
                           {/* CTA Button */}
                           <a
                             href={service.href}
@@ -385,7 +368,6 @@ export default function EnhancedZionServicesShowcase2025() {
                             {service.ctaLabel}
                             <ArrowRightIcon className="w-4 h-4" />
                           </a>
-
                           {/* Expanded Details */}
                           <AnimatePresence>
                             {expandedService === service.id && (
@@ -411,7 +393,6 @@ export default function EnhancedZionServicesShowcase2025() {
                                     ))}
                                   </ul>
                                 </div>
-
                                 {/* Use Cases */}
                                 <div className="mb-4">
                                   <h5 className="text-sm font-semibold text-zion-purple mb-2 flex items-center gap-2">
@@ -427,7 +408,6 @@ export default function EnhancedZionServicesShowcase2025() {
                                     ))}
                                   </ul>
                                 </div>
-
                                 {/* Market Trend & Competitive Advantage */}
                                 <div className="grid md:grid-cols-2 gap-4">
                                   <div>
@@ -456,7 +436,6 @@ export default function EnhancedZionServicesShowcase2025() {
             </div>
           </div>
         </section>
-
         {/* Call to Action Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -494,6 +473,6 @@ export default function EnhancedZionServicesShowcase2025() {
           </div>
         </section>
       </div>
-    </>
+</>
   );
 }

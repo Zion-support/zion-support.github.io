@@ -32,13 +32,11 @@ import {
   Shield as ShieldIcon
 } from 'lucide-react';
 import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/ultimateInnovativeServices2025';
-
 export default function UltimateInnovativeServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('innovation');
-
   const filteredServices = useMemo(() => {
     let filtered = ULTIMATE_INNOVATIVE_SERVICES_2025.filter(service => {
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -49,7 +47,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
       
       return matchesCategory && matchesSubcategory && matchesSearch;
     });
-
     // Sort services
     switch (sortBy) {
       case 'price':
@@ -69,19 +66,15 @@ export default function UltimateInnovativeServicesShowcase2025() {
       default:
         break;
     }
-
     return filtered;
   }, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
-
   const handleCategorySelect = (category: string) => {
     setSelectedCategory(category);
     setSelectedSubcategory('all');
   };
-
   const handleSubcategorySelect = (subcategory: string) => {
     setSelectedSubcategory(subcategory);
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Automation': return Brain;
@@ -96,7 +89,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
       default: return Rocket;
     }
   };
-
   const getInnovationColor = (level: string) => {
     switch (level) {
       case 'Revolutionary': return 'text-red-400';
@@ -105,13 +97,11 @@ export default function UltimateInnovativeServicesShowcase2025() {
       default: return 'text-gray-400';
     }
   };
-
   const getPricingColor = (price: number) => {
     if (price >= 20000) return 'text-red-400';
     if (price >= 10000) return 'text-yellow-400';
     return 'text-green-400';
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -153,7 +143,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Filters Section */}
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -180,7 +169,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
                 <option value="roi">Sort by ROI</option>
               </select>
             </div>
-
             {/* Category Filters */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
               <button
@@ -207,7 +195,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
                 </button>
               ))}
             </div>
-
             {/* Subcategory Filters */}
             {selectedCategory !== 'all' && (
               <div className="mt-4 pt-4 border-t border-slate-600">
@@ -245,7 +232,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
@@ -276,10 +262,8 @@ export default function UltimateInnovativeServicesShowcase2025() {
                     <div className="text-sm text-gray-400">per month</div>
                   </div>
                 </div>
-
                 {/* Description */}
                 <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
-
                 {/* Innovation Level */}
                 <div className="flex items-center justify-between mb-4">
                   <span className={`text-sm font-medium ${getInnovationColor(service.innovationLevel)}`}>
@@ -290,7 +274,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
                     <span className="text-sm text-green-400 font-medium">{service.roi} ROI</span>
                   </div>
                 </div>
-
                 {/* Key Features */}
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Key Features</h4>
@@ -308,7 +291,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
                     )}
                   </div>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Key Benefits</h4>
@@ -321,7 +303,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
                     ))}
                   </div>
                 </div>
-
                 {/* Technical Specs */}
                 {service.technicalSpecs && (
                   <div className="mb-4 p-3 bg-slate-700/50 rounded-lg">
@@ -336,7 +317,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
                     </div>
                   </div>
                 )}
-
                 {/* Market Info */}
                 <div className="mb-4 p-3 bg-slate-700/50 rounded-lg">
                   <div className="grid grid-cols-2 gap-2 text-xs">
@@ -350,7 +330,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
                     </div>
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex space-x-3">
                   <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
@@ -360,7 +339,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
                     Learn More
                   </button>
                 </div>
-
                 {/* Contact Info */}
                 <div className="mt-4 pt-4 border-t border-slate-600">
                   <div className="flex items-center justify-between text-xs text-gray-400">
@@ -380,7 +358,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
               </motion.div>
             ))}
           </div>
-
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
@@ -399,7 +376,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
           )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-4xl mx-auto text-center">

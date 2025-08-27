@@ -92,7 +92,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         // Initialize particles
         const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
         for (let i = 0; i < particleCount; i++) {
-            particlesRef.current.push(new Particle());
+            particlesRef.current(new Particle());
         }
         // Animation loop
         const animate = () => {
@@ -215,7 +215,6 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         {variant === 'neon' && (<div className="absolute inset-0 bg-gradient-to-t from-pink-500/5 via-transparent to-yellow-500/5"/>)}
         {variant === 'matrix' && (<div className="absolute inset-0 bg-gradient-to-b from-green-500/10 via-transparent to-transparent"/>)}
       </div>
-
       {/* Floating geometric shapes */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30" animate={{

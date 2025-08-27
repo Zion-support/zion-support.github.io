@@ -15,7 +15,6 @@ import {
   Shield
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -27,7 +26,6 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -35,7 +33,6 @@ export default function Contact() {
       [name]: value
     }));
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -59,7 +56,6 @@ export default function Contact() {
       });
     }, 3000);
   };
-
   const contactInfo = [
     {
       icon: Phone,
@@ -89,7 +85,6 @@ export default function Contact() {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const services = [
     "AI & Machine Learning",
     "Quantum Computing",
@@ -104,7 +99,6 @@ export default function Contact() {
     "Custom Development",
     "Consulting Services"
   ];
-
   const features = [
     {
       icon: Shield,
@@ -127,7 +121,6 @@ export default function Contact() {
       description: "100% satisfaction guarantee on all services"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       <SEO 
@@ -136,7 +129,6 @@ export default function Contact() {
         keywords="contact Zion Tech Group, AI consulting, quantum computing, blockchain services, IT solutions" 
         url="https://ziontechgroup.com/contact"
       />
-
       {/* Hero Section */}
       <section className="relative py-32 lg:py-40 overflow-hidden">
         {/* Animated Background Elements */}
@@ -145,7 +137,6 @@ export default function Contact() {
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple/20 rounded-full animate-pulse-slow"></div>
           <div className="absolute top-1/2 left-1/2 w-32 h-32 border border-zion-cyan/10 rounded-full animate-float"></div>
         </div>
-
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -161,7 +152,6 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information & Form */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -211,7 +201,6 @@ export default function Contact() {
                   );
                 })}
               </div>
-
               {/* Company Features */}
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>
@@ -238,7 +227,6 @@ export default function Contact() {
                 })}
               </div>
             </motion.div>
-
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -287,7 +275,6 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-white font-medium mb-2">Company</label>
@@ -312,7 +299,6 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-
                   <div>
                     <label className="block text-white font-medium mb-2">Service Interest</label>
                     <select
@@ -329,7 +315,6 @@ export default function Contact() {
                       ))}
                     </select>
                   </div>
-
                   <div>
                     <label className="block text-white font-medium mb-2">Message *</label>
                     <textarea
@@ -342,7 +327,6 @@ export default function Contact() {
                       placeholder="Tell us about your project or inquiry..."
                     />
                   </div>
-
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
@@ -352,15 +336,15 @@ export default function Contact() {
                   >
                     <span className="flex items-center justify-center space-x-2">
                       {isSubmitting ? (
-                        <>
+<>
                           <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                           <span>Sending...</span>
-                        </>
+</>
                       ) : (
-                        <>
+<>
                           <Send className="w-5 h-5" />
                           <span>Send Message</span>
-                        </>
+</>
                       )}
                     </span>
                   </motion.button>
@@ -370,7 +354,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
       {/* Additional Contact Methods */}
       <section className="py-20 bg-zion-blue-dark/30 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -388,7 +371,6 @@ export default function Contact() {
               Prefer a different communication method? We're available through multiple channels to accommodate your preferences.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
@@ -412,7 +394,6 @@ export default function Contact() {
                 <Phone className="w-4 h-4" />
               </a>
             </motion.div>
-
             <motion.div
               className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
@@ -435,7 +416,6 @@ export default function Contact() {
                 <Mail className="w-4 h-4" />
               </a>
             </motion.div>
-
             <motion.div
               className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
@@ -463,7 +443,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-purple via-zion-blue to-zion-cyan relative overflow-hidden">
         <div className="absolute inset-0">

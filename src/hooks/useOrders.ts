@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query';
-
 export interface Order {
   orderId: string;
   date: string;
@@ -7,7 +6,6 @@ export interface Order {
   status: string;
   invoiceUrl: string;
 }
-
 export function useGetOrdersQuery(userId?: string) {
   return useQuery({
     queryKey: ['orders', userId],

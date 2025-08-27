@@ -53,7 +53,6 @@ export default function AllServicesLandingPage() {
     };
     return (<div className="min-h-screen bg-background">
       <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/services"/>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">
         <div className="container mx-auto px-4 text-center">
@@ -75,7 +74,6 @@ export default function AllServicesLandingPage() {
               Get Free Consultation
             </Button>
           </div>
-
           {/* Quick Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
@@ -97,7 +95,6 @@ export default function AllServicesLandingPage() {
           </div>
         </div>
       </section>
-
       {/* Services by Category Tabs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -109,7 +106,6 @@ export default function AllServicesLandingPage() {
               Each category is designed to address specific business challenges and opportunities
             </p>
           </div>
-
           <Tabs defaultValue="ai-services" className="w-full">
             <TabsList className="grid w-full grid-cols-4 mb-8">
               {SERVICE_CATEGORIES.map((category) => (<TabsTrigger key={category.id} value={category.id} className="flex items-center space-x-2">
@@ -117,7 +113,6 @@ export default function AllServicesLandingPage() {
                   <span className="hidden sm:inline">{category.name}</span>
                 </TabsTrigger>))}
             </TabsList>
-
             {SERVICE_CATEGORIES.map((category) => (<TabsContent key={category.id} value={category.id} className="space-y-8">
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full mb-4">
@@ -126,7 +121,6 @@ export default function AllServicesLandingPage() {
                   <h3 className="text-2xl font-bold text-zion-blue-dark mb-2">{category.name}</h3>
                   <p className="text-gray-600 max-w-2xl mx-auto">{category.description}</p>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.services.map((service) => (<Card key={service.id} className="h-full hover:shadow-xl transition-all duration-300 border-zion-blue-light">
                       <CardHeader className="pb-4">
@@ -161,7 +155,6 @@ export default function AllServicesLandingPage() {
                             <span className="text-sm font-medium text-zion-purple">AI Score: {service.aiScore}</span>
                           </div>
                         </div>
-
                         {/* Price and Market Price */}
                         <div className="space-y-2">
                           <div className="flex items-center justify-between">
@@ -173,7 +166,6 @@ export default function AllServicesLandingPage() {
                             </span>
                           </div>
                         </div>
-
                         {/* Key Features */}
                         <div className="space-y-2">
                           <h4 className="font-semibold text-zion-blue-dark text-sm">Key Features:</h4>
@@ -186,7 +178,6 @@ export default function AllServicesLandingPage() {
                               </Badge>)}
                           </div>
                         </div>
-
                         {/* Top Benefits */}
                         <div className="space-y-2">
                           <h4 className="font-semibold text-zion-blue-dark text-sm">Key Benefits:</h4>
@@ -197,7 +188,6 @@ export default function AllServicesLandingPage() {
                               </li>))}
                           </ul>
                         </div>
-
                         {/* Service Details */}
                         <div className="pt-4 border-t border-gray-200 space-y-2">
                           <div className="flex items-center justify-between text-sm">
@@ -213,7 +203,6 @@ export default function AllServicesLandingPage() {
                             <span className="font-medium">{service.supportLevel}</span>
                           </div>
                         </div>
-
                         {/* Contact Information */}
                         <div className="pt-4 border-t border-gray-200">
                           <div className="space-y-2">
@@ -233,7 +222,6 @@ export default function AllServicesLandingPage() {
                             </div>
                           </div>
                         </div>
-
                         {/* Action Buttons */}
                         <div className="flex space-x-2 pt-4">
                           <Button className="flex-1 bg-zion-purple hover:bg-zion-purple-dark">
@@ -250,7 +238,6 @@ export default function AllServicesLandingPage() {
           </Tabs>
         </div>
       </section>
-
       {/* Why Choose Zion Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
@@ -289,7 +276,6 @@ export default function AllServicesLandingPage() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-16 bg-gradient-to-r from-zion-purple to-zion-purple-dark">
         <div className="container mx-auto px-4 text-center">
@@ -317,7 +303,6 @@ export default function AllServicesLandingPage() {
           </div>
         </div>
       </section>
-
       <TrustedBySection />
     </div>);
 }

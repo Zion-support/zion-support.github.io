@@ -34,7 +34,6 @@ import {
   Smartphone,
   Monitor
 } from 'lucide-react';
-
 const EnhancedServices: React.FC = () => {
   const enhancedServices = [
     {
@@ -78,7 +77,6 @@ const EnhancedServices: React.FC = () => {
       timeline: '2-4 months'
     }
   ];
-
   const advancedSolutions = [
     {
       title: 'AI-Powered Analytics',
@@ -101,7 +99,6 @@ const EnhancedServices: React.FC = () => {
       benefits: ['High-speed Connectivity', 'Low Latency', 'Massive IoT Support', 'Network Slicing']
     }
   ];
-
   const technologies = [
     {
       icon: Brain,
@@ -134,7 +131,6 @@ const EnhancedServices: React.FC = () => {
       description: 'Microservices, containers, and serverless computing'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -174,7 +170,6 @@ const EnhancedServices: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Enhanced Services Grid */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,7 +187,6 @@ const EnhancedServices: React.FC = () => {
               Advanced technology services that redefine what's possible
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {enhancedServices.map((service, index) => (
               <motion.div
@@ -212,7 +206,6 @@ const EnhancedServices: React.FC = () => {
                     <p className="text-zion-slate-light">{service.description}</p>
                   </div>
                 </div>
-
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="font-semibold text-white mb-2">Key Features:</h4>
@@ -225,7 +218,6 @@ const EnhancedServices: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   <div>
                     <h4 className="font-semibold text-white mb-2">Ideal For:</h4>
                     <ul className="space-y-1">
@@ -238,7 +230,6 @@ const EnhancedServices: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-4">
                     <span className="text-zion-cyan font-semibold">{service.pricing}</span>
@@ -257,7 +248,6 @@ const EnhancedServices: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Advanced Solutions Overview */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -275,7 +265,6 @@ const EnhancedServices: React.FC = () => {
               Specialized solutions for complex technological challenges
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {advancedSolutions.map((solution, index) => (
               <motion.div
@@ -305,7 +294,6 @@ const EnhancedServices: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Technology Stack */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -323,7 +311,6 @@ const EnhancedServices: React.FC = () => {
               Cutting-edge technologies that power our enhanced services
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (
               <motion.div
@@ -344,7 +331,6 @@ const EnhancedServices: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Why Choose Our Enhanced Services */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -362,7 +348,6 @@ const EnhancedServices: React.FC = () => {
               Innovation, expertise, and proven results in advanced technology
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: Award, title: 'Innovation Leaders', description: 'Pioneering cutting-edge technology solutions' },
@@ -388,7 +373,6 @@ const EnhancedServices: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -443,5 +427,4 @@ const EnhancedServices: React.FC = () => {
     </div>
   );
 };
-
 export default EnhancedServices;

@@ -6462,7 +6462,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-zion-blue mb-4">Comprehensive IT & AI Services 2025</h1>
@@ -6471,7 +6470,6 @@ export default function ServicesPage() {
             From micro SAAS to enterprise solutions, we offer innovative services to transform your business.
           </p>
         </div>
-
         {/* Services Overview Section */}
         <div className="bg-gradient-to-r from-zion-blue to-zion-purple rounded-xl p-8 mb-8 text-white">
           <div className="text-center mb-6">
@@ -6495,7 +6493,6 @@ export default function ServicesPage() {
               <div className="text-lg">Expert Support</div>
             </div>
           </div>
-
           <div className="text-center">
             <div className="inline-flex items-center gap-4 bg-white/10 rounded-lg p-4">
               <div>
@@ -6509,7 +6506,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-
         {/* Pricing Tiers */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-zion-blue mb-6 text-center">Service Pricing Tiers</h2>
@@ -6536,7 +6532,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {listings.map((service) => (<div key={service.id} className="bg-white rounded-lg shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
               <div className="mb-4">
@@ -6554,13 +6549,11 @@ export default function ServicesPage() {
                   <span className="text-zion-slate-light text-sm">({service.reviewCount})</span>
                 </div>
               </div>
-
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.slice(0, 3).map((tag, index) => (<span key={index} className="px-2 py-1 bg-zion-blue/10 text-zion-blue text-xs rounded-full">
                     {tag}
                   </span>))}
               </div>
-
               <div className="space-y-2 mb-4">
                 <div className="text-sm text-zion-slate-light">
                   <span className="font-medium">Category:</span> {service.category}
@@ -6569,7 +6562,6 @@ export default function ServicesPage() {
                   <span className="font-medium">AI Score:</span> {service.aiScore}/100
                 </div>
               </div>
-
               <Link to="/contact">
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   Get Quote
@@ -6577,7 +6569,6 @@ export default function ServicesPage() {
               </Link>
             </div>))}
         </div>
-
         {/* Service Categories Overview */}
         <div className="mt-12 bg-gray-50 rounded-xl p-8">
           <h2 className="text-2xl font-bold text-zion-blue mb-6 text-center">Service Categories Overview</h2>
@@ -6619,7 +6610,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-
         {/* Contact & Support Section */}
         <div className="mt-12 bg-gradient-to-r from-zion-purple to-zion-blue rounded-xl p-8 text-white">
           <div className="text-center mb-6">

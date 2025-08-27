@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface ComprehensiveInnovativeService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface ComprehensiveInnovativeService {
   rating: number;
   reviews: number;
 }
-
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI-Powered Business Intelligence Services
   {
@@ -94,7 +92,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.9,
     reviews: 156
   },
-
   // Quantum Computing Services
   {
     id: 'quantum-optimization-suite',
@@ -147,7 +144,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.9,
     reviews: 38
   },
-
   // Cybersecurity Services
   {
     id: 'zero-trust-security-platform',
@@ -200,7 +196,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.8,
     reviews: 189
   },
-
   // Cloud Infrastructure Services
   {
     id: 'multi-cloud-orchestration-platform',
@@ -253,7 +248,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.8,
     reviews: 142
   },
-
   // Data Analytics Services
   {
     id: 'real-time-data-streaming-platform',
@@ -306,7 +300,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.9,
     reviews: 78
   },
-
   // Blockchain Services
   {
     id: 'enterprise-blockchain-platform',
@@ -359,7 +352,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.8,
     reviews: 62
   },
-
   // IoT Services
   {
     id: 'ai-iot-platform',
@@ -412,7 +404,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.8,
     reviews: 98
   },
-
   // FinTech Services
   {
     id: 'ai-fintech-platform',
@@ -465,7 +456,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.9,
     reviews: 72
   },
-
   // Healthcare AI Services
   {
     id: 'ai-healthcare-platform',
@@ -518,7 +508,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     rating: 4.9,
     reviews: 58
   },
-
   // Autonomous Systems Services
   {
     id: 'autonomous-systems-platform',

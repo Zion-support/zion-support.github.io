@@ -9,11 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
-<<<<<<< HEAD
-import { cleanupAuthState } from "@/utils/authUtils";
-=======
 import { cleanupAuthState } from "../utils/auth-utils";
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 // Form validation schema
 const updatePasswordSchema = z
     .object({
@@ -125,7 +121,6 @@ export default function UpdatePassword() {
                 Enter your new password below.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
@@ -133,7 +128,6 @@ export default function UpdatePassword() {
                     Request new reset link
                   </Button>
                 </div>)}
-
               {success ? (<div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
                     <LockKeyhole className="h-6 w-6 text-zion-purple"/>
@@ -154,7 +148,6 @@ export default function UpdatePassword() {
                           </FormControl>
                           <FormMessage className="text-red-400"/>
                         </FormItem>)}/>
-
                     <FormField control={form.control} name="confirmPassword" render={({ field }) => (<FormItem>
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
                           <FormControl>
@@ -162,11 +155,9 @@ export default function UpdatePassword() {
                           </FormControl>
                           <FormMessage className="text-red-400"/>
                         </FormItem>)}/>
-
                     <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading || !accessToken}>
                       {isLoading ? "Updating..." : "Update Password"}
                     </Button>
-
                     <div className="text-center">
                       <Button variant="link" className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0" onClick={() => navigate("/login")} type="button">
                         Back to login

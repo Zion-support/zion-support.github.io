@@ -77,7 +77,6 @@ export default function MicroSaasServices() {
           </div>
         </div>
       </div>
-
       {/* Benefits Section */}
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -105,7 +104,6 @@ export default function MicroSaasServices() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -128,7 +126,6 @@ export default function MicroSaasServices() {
           </div>
         </div>
       </section>
-
       {/* Pricing Tiers */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -179,7 +176,6 @@ export default function MicroSaasServices() {
           </div>
         </div>
       </section>
-
       {/* Services by Category */}
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -246,7 +242,6 @@ export default function MicroSaasServices() {
           </Tabs>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -330,7 +325,6 @@ export default function MicroSaasServices() {
           </div>
         </div>
       </section>
-
       {/* Trusted By Section */}
       <TrustedBySection />
     </div>);

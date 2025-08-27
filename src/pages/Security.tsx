@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Key, Server, Users, CheckCircle, AlertTriangle } from 'lucide-react';
-
 export default function Security() {
   const securityFeatures = [
     {
@@ -35,7 +34,6 @@ export default function Security() {
       description: "Background-checked security professionals with ongoing security training."
     }
   ];
-
   const complianceStandards = [
     "SOC 2 Type II Compliance",
     "ISO 27001 Information Security",
@@ -44,7 +42,6 @@ export default function Security() {
     "HIPAA Compliance (Healthcare)",
     "PCI DSS Compliance (Financial)"
   ];
-
   const securityMeasures = [
     "Regular security audits and penetration testing",
     "24/7 security monitoring and incident response",
@@ -53,7 +50,6 @@ export default function Security() {
     "Employee security awareness training",
     "Vendor security assessments"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
       <div className="container mx-auto px-4 py-16">
@@ -75,7 +71,6 @@ export default function Security() {
             to protect your data, maintain privacy, and ensure compliance with global standards.
           </p>
         </motion.div>
-
         {/* Security Features Grid */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
@@ -100,7 +95,6 @@ export default function Security() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Compliance Section */}
         <motion.div 
           className="bg-zinc-800/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-8 mb-16"
@@ -142,7 +136,6 @@ export default function Security() {
             </div>
           </div>
         </motion.div>
-
         {/* Security Commitment */}
         <motion.div 
           className="text-center"
@@ -170,7 +163,6 @@ export default function Security() {
             </div>
           </div>
         </motion.div>
-
         {/* Contact Security Team */}
         <motion.div 
           className="text-center mt-16"

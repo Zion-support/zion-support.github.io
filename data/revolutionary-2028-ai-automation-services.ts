@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2028AIAutomationService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2028AIAutomationService {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomationService[] = [
   // AI-Powered Autonomous Manufacturing
   {
@@ -94,7 +92,6 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     rating: 4.9,
     reviews: 120
   },
-
   // AI-Powered Autonomous Agriculture
   {
     id: 'ai-autonomous-agriculture-2028',
@@ -147,7 +144,6 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     rating: 4.8,
     reviews: 240
   },
-
   // AI-Powered Autonomous Healthcare
   {
     id: 'ai-autonomous-healthcare-2028',
@@ -200,7 +196,6 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     rating: 4.9,
     reviews: 75
   },
-
   // AI-Powered Autonomous Logistics
   {
     id: 'ai-autonomous-logistics-2028',
@@ -253,7 +248,6 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     rating: 4.7,
     reviews: 210
   },
-
   // AI-Powered Autonomous Energy Management
   {
     id: 'ai-autonomous-energy-management-2028',

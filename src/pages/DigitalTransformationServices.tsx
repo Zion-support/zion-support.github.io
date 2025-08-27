@@ -13,7 +13,6 @@ import {
   Lightbulb,
   BarChart3
 } from 'lucide-react';
-
 export default function DigitalTransformationServices() {
   const transformationServices = [
     {
@@ -65,7 +64,6 @@ export default function DigitalTransformationServices() {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const transformationPhases = [
     {
       phase: "Assessment",
@@ -92,7 +90,6 @@ export default function DigitalTransformationServices() {
       icon: "⚡"
     }
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -115,7 +112,6 @@ export default function DigitalTransformationServices() {
       description: "Stay ahead of the competition with digital-first solutions"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -140,7 +136,6 @@ export default function DigitalTransformationServices() {
           </motion.div>
         </div>
       </section>
-
       {/* Transformation Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -182,7 +177,6 @@ export default function DigitalTransformationServices() {
           </div>
         </div>
       </section>
-
       {/* Transformation Phases Section */}
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
@@ -222,7 +216,6 @@ export default function DigitalTransformationServices() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -257,7 +250,6 @@ export default function DigitalTransformationServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">

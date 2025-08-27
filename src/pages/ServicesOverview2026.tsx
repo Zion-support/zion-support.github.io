@@ -25,7 +25,6 @@ import {
   Award
 } from 'lucide-react';
 import { INNOVATIVE_SERVICES_2026, SERVICE_CATEGORIES_2026 } from '../data/innovativeServices2026';
-
 export default function ServicesOverview2026() {
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -37,11 +36,9 @@ export default function ServicesOverview2026() {
       default: return Zap;
     }
   };
-
   const getCategoryServices = (category: string) => {
     return INNOVATIVE_SERVICES_2026.filter(service => service.category === category);
   };
-
   const getCategoryStats = (category: string) => {
     const services = getCategoryServices(category);
     const totalServices = services.length;
@@ -51,7 +48,6 @@ export default function ServicesOverview2026() {
     
     return { totalServices, featuredServices, avgRating: avgRating.toFixed(1), avgPrice: Math.round(avgPrice) };
   };
-
   const categoryDescriptions = {
     'AI Services': 'Cutting-edge artificial intelligence solutions that transform business operations, from autonomous business management to quantum AI trading platforms.',
     'IT Services': 'Advanced IT infrastructure and cloud solutions including quantum computing, zero-trust cybersecurity, and 5G enterprise networks.',
@@ -59,7 +55,6 @@ export default function ServicesOverview2026() {
     'Emerging Tech': 'Next-generation technology solutions including blockchain, space technology, and quantum neural networks.',
     'Industry Solutions': 'Specialized AI and technology solutions tailored for specific industries including healthcare, manufacturing, and financial services.'
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -101,7 +96,6 @@ export default function ServicesOverview2026() {
           </motion.div>
         </div>
       </section>
-
       {/* Service Categories Overview */}
       <section className="px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -130,7 +124,6 @@ export default function ServicesOverview2026() {
                       <p className="text-gray-400">{description}</p>
                     </div>
                   </div>
-
                   {/* Category Stats */}
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <div className="text-center">
@@ -146,7 +139,6 @@ export default function ServicesOverview2026() {
                       <div className="text-sm text-gray-400">Avg Rating</div>
                     </div>
                   </div>
-
                   {/* Sample Services */}
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Featured Services</h4>
@@ -165,7 +157,6 @@ export default function ServicesOverview2026() {
                       ))}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <Link
                     to="/innovative-services-2026"
@@ -180,7 +171,6 @@ export default function ServicesOverview2026() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-6">
@@ -192,7 +182,6 @@ export default function ServicesOverview2026() {
               We combine cutting-edge technology with proven expertise to deliver solutions that drive real business results.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -234,7 +223,6 @@ export default function ServicesOverview2026() {
           </div>
         </div>
       </section>
-
       {/* Pricing Tiers */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -246,7 +234,6 @@ export default function ServicesOverview2026() {
               Choose the pricing tier that best fits your business needs and scale as you grow.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -312,13 +299,11 @@ export default function ServicesOverview2026() {
                     </span>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className={`text-2xl font-bold text-${plan.color}-400 mb-2`}>{plan.tier}</h3>
                   <div className="text-4xl font-bold text-white mb-2">{plan.price}</div>
                   <div className="text-gray-400">{plan.description}</div>
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3">
@@ -327,7 +312,6 @@ export default function ServicesOverview2026() {
                     </li>
                   ))}
                 </ul>
-
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-${plan.color}-500 to-${plan.color === 'green' ? 'emerald' : plan.color === 'blue' ? 'cyan' : 'violet'}-600 text-white font-semibold rounded-lg hover:from-${plan.color}-600 hover:to-${plan.color === 'green' ? 'emerald' : plan.color === 'blue' ? 'cyan' : 'violet'}-700 transition-all duration-300`}
@@ -339,7 +323,6 @@ export default function ServicesOverview2026() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -372,7 +355,6 @@ export default function ServicesOverview2026() {
               </div>
             </div>
           </div>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:kleber@ziontechgroup.com"

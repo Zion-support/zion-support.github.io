@@ -11,7 +11,6 @@ import {
   Lock,
   Globe
 } from 'lucide-react';
-
 export default function Terms() {
   const termsSections = [
     {
@@ -39,7 +38,6 @@ export default function Terms() {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const keyTerms = [
     {
       term: "Services",
@@ -58,7 +56,6 @@ export default function Terms() {
       definition: "All patents, copyrights, trademarks, trade secrets, and other intellectual property rights owned by Zion Tech Group"
     }
   ];
-
   const userObligations = [
     "Provide accurate and complete information",
     "Use services only for lawful purposes",
@@ -67,7 +64,6 @@ export default function Terms() {
     "Comply with applicable laws and regulations",
     "Pay for services as agreed"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -92,7 +88,6 @@ export default function Terms() {
           </motion.div>
         </div>
       </section>
-
       {/* Terms Overview Section */}
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
@@ -125,7 +120,6 @@ export default function Terms() {
           </div>
         </div>
       </section>
-
       {/* Key Terms Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -157,7 +151,6 @@ export default function Terms() {
           </div>
         </div>
       </section>
-
       {/* User Obligations Section */}
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
@@ -189,7 +182,6 @@ export default function Terms() {
           </div>
         </div>
       </section>
-
       {/* Important Disclaimers Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -242,7 +234,6 @@ export default function Terms() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">

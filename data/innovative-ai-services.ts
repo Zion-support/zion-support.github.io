@@ -38,7 +38,6 @@ export interface InnovativeAIService {
   rating: number;
   reviews: number;
 }
-
 export const innovativeAIServices: InnovativeAIService[] = [
   {
     id: 'quantum-ai-content-generator',

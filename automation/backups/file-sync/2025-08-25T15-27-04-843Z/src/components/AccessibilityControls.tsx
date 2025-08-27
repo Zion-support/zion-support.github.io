@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Settings, Eye, Zap, X, Volume2, Keyboard, Monitor } from 'lucide-react';
 import { useAccessibility } from '../hooks/useAccessibility';
-
 interface AccessibilityControlsProps {
   className?: string;
   position?: 'top-right' | 'bottom-right' | 'floating';
 }
-
 export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({ 
   className = '',
   position = 'floating'
@@ -14,7 +12,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const { preferences, savePreferences, announceToScreenReader } = useAccessibility();
-
   // Close panel when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -24,29 +21,24 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         setIsExpanded(false);
       }
     };
-
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       return () => document.removeEventListener('mousedown', handleClickOutside);
     }
   }, [isOpen]);
-
   const togglePanel = () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
       announceToScreenReader('Accessibility controls opened');
     }
   };
-
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded);
   };
-
   const handlePreferenceChange = (key: keyof typeof preferences, value: boolean) => {
     savePreferences({ [key]: value });
     announceToScreenReader(`${key.replace(/([A-Z])/g, ' $1').toLowerCase()} ${value ? 'enabled' : 'disabled'}`);
   };
-
   const getPositionClasses = () => {
     switch (position) {
       case 'top-right':
@@ -58,7 +50,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         return 'bottom-4 right-4';
     }
   };
-
   return (
     <div className={`accessibility-controls fixed ${getPositionClasses()} z-50 ${className}`}>
       {/* Main Toggle Button */}
@@ -71,7 +62,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         <Settings className="w-6 h-6" />
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
       </button>
-
       {/* Accessibility Panel */}
       {isOpen && (
         <div className="absolute bottom-full right-0 mb-2 w-80 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
@@ -100,7 +90,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
               </div>
             </div>
           </div>
-
           {/* Content */}
           <div className="p-4 space-y-4">
             {/* Visual Preferences */}
@@ -132,7 +121,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 </label>
               </div>
             </div>
-
             {/* Motion Preferences */}
             <div className="space-y-3">
               <h4 className="font-medium text-gray-900 dark:text-white flex items-center gap-2">
@@ -152,7 +140,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 </label>
               </div>
             </div>
-
             {/* Navigation Preferences */}
             <div className="space-y-3">
               <h4 className="font-medium text-gray-900 dark:text-white flex items-center gap-2">
@@ -182,7 +169,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 </label>
               </div>
             </div>
-
             {/* Screen Reader Support */}
             <div className="space-y-3">
               <h4 className="font-medium text-gray-900 dark:text-white flex items-center gap-2">
@@ -202,7 +188,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 </label>
               </div>
             </div>
-
             {/* Keyboard Shortcuts Info */}
             <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
               <h4 className="font-medium text-gray-900 dark:text-white mb-2">Keyboard Shortcuts</h4>

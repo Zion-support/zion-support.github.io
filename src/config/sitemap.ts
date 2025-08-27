@@ -1,4 +1,3 @@
-
 // Define the types for our sitemap structure
 export type SitemapItem = {
   path: string;
@@ -11,10 +10,8 @@ export type SitemapItem = {
   requiredRoles?: Array<'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin'>;
   children?: SitemapItem[];
 };
-
 // Current date for lastmod
 const currentDate = '2025-05-15';
-
 // Public Pages - Accessible to all users
 export const publicPages: SitemapItem[] = [
   {
@@ -130,7 +127,6 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate,
   },
 ];
-
 // Authentication Pages
 export const authPages: SitemapItem[] = [
   {
@@ -176,7 +172,6 @@ export const authPages: SitemapItem[] = [
     lastmod: currentDate,
   },
 ];
-
 // Talent/Creator Routes - Requires authentication and appropriate role
 export const talentRoutes: SitemapItem[] = [
   {
@@ -220,7 +215,6 @@ export const talentRoutes: SitemapItem[] = [
     lastmod: currentDate,
   },
 ];
-
 // Client/Employer Routes - Requires authentication and appropriate role
 export const clientRoutes: SitemapItem[] = [
   {
@@ -254,7 +248,6 @@ export const clientRoutes: SitemapItem[] = [
     lastmod: currentDate,
   },
 ];
-
 // Shared Routes - Authenticated Users
 export const sharedRoutes: SitemapItem[] = [
   {
@@ -294,7 +287,6 @@ export const sharedRoutes: SitemapItem[] = [
     lastmod: currentDate,
   },
 ];
-
 // Admin Routes
 export const adminRoutes: SitemapItem[] = [
   {
@@ -328,7 +320,6 @@ export const adminRoutes: SitemapItem[] = [
     lastmod: currentDate,
   },
 ];
-
 // Dynamic Path Patterns
 export const dynamicPaths = {
   talentProfile: '/talent/:id',
@@ -339,7 +330,6 @@ export const dynamicPaths = {
   categoryDetails: '/categories/:slug',
   disputeDetails: '/dashboard/disputes/:disputeId',
 };
-
 // The complete sitemap
 export const completeSitemap: SitemapItem[] = [
   ...publicPages,
@@ -349,7 +339,6 @@ export const completeSitemap: SitemapItem[] = [
   ...sharedRoutes,
   ...adminRoutes,
 ];
-
 // Helper function to get appropriate routes based on user role
 export const getAccessibleRoutes = (
   isAuthenticated: boolean, 

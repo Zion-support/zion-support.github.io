@@ -15,7 +15,6 @@ export function NewServicesShowcase() {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-zion-cyan/10 rounded-full filter blur-3xl animate-pulse animation-delay-2000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-zion-blue/5 rounded-full filter blur-3xl animate-pulse animation-delay-4000"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -32,7 +31,6 @@ export function NewServicesShowcase() {
             on enterprise-grade technology solutions.
           </p>
         </div>
-
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredServices.map((service, index) => (<Card key={service.id} className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20" style={{ animationDelay: `${index * 200}ms` }}>
@@ -57,7 +55,6 @@ export function NewServicesShowcase() {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-
               <CardContent className="relative z-10 space-y-4">
                 {/* Pricing */}
                 <div className="flex items-center justify-between p-3 bg-zion-blue/20 rounded-lg border border-zion-blue-light/20">
@@ -78,7 +75,6 @@ export function NewServicesShowcase() {
                     </Badge>
                   </div>
                 </div>
-
                 {/* Key Features */}
                 <div>
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features</h4>
@@ -89,7 +85,6 @@ export function NewServicesShowcase() {
                       </div>))}
                   </div>
                 </div>
-
                 {/* AI Score */}
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center gap-2">
@@ -102,7 +97,6 @@ export function NewServicesShowcase() {
                     <span className="text-zion-slate-light">{service.reviewCount} reviews</span>
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group-hover:scale-105 transition-transform duration-300" asChild>
                   <Link to={service.contactLink}>
@@ -113,7 +107,6 @@ export function NewServicesShowcase() {
               </CardContent>
             </Card>))}
         </div>
-
         {/* Category Overview */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {SERVICE_CATEGORIES.map((category, index) => (<div key={category.name} className="text-center p-6 rounded-lg bg-zion-blue-dark/30 border border-zion-blue-light/20 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105" style={{ animationDelay: `${index * 300}ms` }}>
@@ -131,7 +124,6 @@ export function NewServicesShowcase() {
               </Button>
             </div>))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-blue-dark/50 to-zion-slate/50 rounded-2xl p-8 border border-zion-blue-light/20">

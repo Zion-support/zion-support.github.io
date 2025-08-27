@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle } from 'lucide-react';
-import { SEO } from "../components/SEOHead"';
+import SEOHead from "../components/SEOHead.jsx";
 export default function EnhancedServicesPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -66,7 +66,6 @@ export default function EnhancedServicesPage() {
     };
     return (<div className="min-h-screen bg-background">
       <SEOHead title="Enhanced IT & AI Services - Zion Tech Group" description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness." keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group" canonical="https://ziontechgroup.com/enhanced-services"/>
-
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -86,7 +85,6 @@ export default function EnhancedServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Pricing Tiers Overview */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -108,7 +106,6 @@ export default function EnhancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className="py-8 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -142,7 +139,6 @@ export default function EnhancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section id="services-grid" className="py-16 bg-background">
         <div className="container mx-auto px-4">
@@ -154,7 +150,6 @@ export default function EnhancedServicesPage() {
               Find the perfect solution for your business needs
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (<Card key={service.id} className="h-full hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
@@ -190,13 +185,11 @@ export default function EnhancedServicesPage() {
                       </div>
                     </div>
                   </div>
-
                   <div className="flex flex-wrap gap-2">
                     {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs">
                         {tag}
                       </Badge>))}
                   </div>
-
                   <div className="flex items-center justify-between text-sm text-zion-slate">
                     <div className="flex items-center gap-1">
                       <Globe className="w-4 h-4"/>
@@ -207,7 +200,6 @@ export default function EnhancedServicesPage() {
                       AI Score: {service.aiScore}
                     </div>
                   </div>
-
                   <div className="pt-4 border-t border-zion-slate-light">
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-zion-slate">By {service.author.name}</span>
@@ -221,7 +213,6 @@ export default function EnhancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Service Categories Tabs */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -263,7 +254,6 @@ export default function EnhancedServicesPage() {
           </Tabs>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -310,7 +300,6 @@ export default function EnhancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section id="contact-section" className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -345,7 +334,6 @@ export default function EnhancedServicesPage() {
                 </div>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light" onClick={() => window.open(`tel:${CONTACT_INFO.mobile}`, '_self')}>
                 <Phone className="w-5 h-5 mr-2"/>
@@ -360,7 +348,6 @@ export default function EnhancedServicesPage() {
                 Visit Website
               </Button>
             </div>
-
             <div className="mt-12 p-6 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
               <h3 className="text-xl font-bold text-white mb-4">Special Enterprise Offerings</h3>
               <p className="text-zion-slate-light mb-4">

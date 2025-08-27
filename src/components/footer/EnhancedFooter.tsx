@@ -24,7 +24,6 @@ import {
   Leaf
 } from 'lucide-react';
 import { CONTACT_INFO } from '@/data/enhancedServices2025';
-
 const footerNavigation = {
   services: {
     title: 'AI & ML Services',
@@ -116,7 +115,6 @@ const footerNavigation = {
     ],
   },
 };
-
 const socialLinks = [
   { name: 'LinkedIn', href: CONTACT_INFO.social.linkedin, icon: Linkedin },
   { name: 'Twitter', href: CONTACT_INFO.social.twitter, icon: Twitter },
@@ -124,12 +122,10 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
 ];
-
 export function EnhancedFooter() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   return (
     <footer className="bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark border-t border-zion-cyan/20 pt-20 pb-8 relative overflow-hidden">
       {/* Futuristic background elements */}
@@ -139,7 +135,6 @@ export function EnhancedFooter() {
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
         <div className="absolute top-1/3 right-1/3 w-20 h-20 border border-zion-blue rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-8 mb-16">
@@ -167,7 +162,6 @@ export function EnhancedFooter() {
               Leading the future with cutting-edge AI, quantum computing, and emerging technologies. 
               Empowering businesses worldwide with innovative solutions and transformative capabilities.
             </p>
-
             {/* Contact info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 text-zion-slate-light">
@@ -187,7 +181,6 @@ export function EnhancedFooter() {
                 <span>{CONTACT_INFO.address}</span>
               </div>
             </div>
-
             {/* Social links */}
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -205,7 +198,6 @@ export function EnhancedFooter() {
               ))}
             </div>
           </div>
-
           {/* Navigation sections */}
           {Object.entries(footerNavigation).map(([key, section]) => (
             <div key={key} className="lg:col-span-1">
@@ -235,7 +227,6 @@ export function EnhancedFooter() {
             </div>
           ))}
         </div>
-
         {/* Newsletter section */}
         <div className="border-t border-zion-cyan/20 pt-8 mb-8">
           <div className="max-w-2xl mx-auto text-center">
@@ -257,7 +248,6 @@ export function EnhancedFooter() {
             </div>
           </div>
         </div>
-
         {/* Bottom footer */}
         <div className="border-t border-zion-cyan/20 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -284,7 +274,6 @@ export function EnhancedFooter() {
           </div>
         </div>
       </div>
-
       {/* Scroll to top button */}
       <motion.button
         onClick={scrollToTop}
@@ -297,5 +286,4 @@ export function EnhancedFooter() {
     </footer>
   );
 }
-
 export default EnhancedFooter;

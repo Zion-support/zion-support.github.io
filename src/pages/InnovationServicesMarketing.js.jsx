@@ -58,7 +58,6 @@ const InnovationServicesMarketing = () => {
             </span>
           </div>
         </div>
-
         {/* Contact Information Banner */}
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 mb-16">
           <div className="text-center">
@@ -101,7 +100,6 @@ const InnovationServicesMarketing = () => {
             </div>
           </div>
         </div>
-
         {/* Service Categories Overview */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Service Categories</h2>
@@ -132,7 +130,6 @@ const InnovationServicesMarketing = () => {
         })}
           </div>
         </div>
-
         {/* Industry Solutions Overview */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Industry-Specific Solutions</h2>
@@ -160,7 +157,6 @@ const InnovationServicesMarketing = () => {
         })}
           </div>
         </div>
-
         {/* Featured Services */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Featured Innovation Services</h2>
@@ -183,7 +179,6 @@ const InnovationServicesMarketing = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-
                 <div className="grid grid-cols-2 gap-6 mb-6">
                   <div>
                     <h4 className="text-white font-semibold mb-3">Key Features</h4>
@@ -208,7 +203,6 @@ const InnovationServicesMarketing = () => {
                     </ul>
                   </div>
                 </div>
-
                 <div className="grid grid-cols-3 gap-4 text-sm mb-6">
                   <div>
                     <span className="text-gray-400">Market Price:</span>
@@ -223,7 +217,6 @@ const InnovationServicesMarketing = () => {
                     <div className="text-white font-medium">{service.setupTime}</div>
                   </div>
                 </div>
-
                 <div className="text-center">
                   <a href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`} className="inline-block w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200">
                     Get Started with {service.name}
@@ -232,7 +225,6 @@ const InnovationServicesMarketing = () => {
               </div>))}
           </div>
         </div>
-
         {/* Why Choose Zion Tech Group */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Why Choose Zion Tech Group?</h2>
@@ -275,7 +267,6 @@ const InnovationServicesMarketing = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-16">

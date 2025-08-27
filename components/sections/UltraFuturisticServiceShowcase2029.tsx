@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
-
 interface Service {
   id: string;
   name: string;
@@ -12,13 +11,11 @@ interface Service {
   features: string[];
   link: string;
 }
-
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
   title?: string;
   subtitle?: string;
 }
-
 export default function UltraFuturisticServiceShowcase2029({ 
   services, 
   title = "2029 Cutting-Edge Services", 
@@ -40,7 +37,6 @@ export default function UltraFuturisticServiceShowcase2029({
             {subtitle}
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.slice(0, 6).map((service, index) => (
             <motion.div
@@ -60,13 +56,11 @@ export default function UltraFuturisticServiceShowcase2029({
                   <span className="text-sm text-gray-300">5.0</span>
                 </div>
               </div>
-
               <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                 {service.name}
               </h3>
               <p className="text-gray-400 text-sm mb-3">{service.tagline}</p>
               <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-
               <div className="flex items-center justify-between mb-4">
                 <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                 <div className="flex items-center space-x-2">
@@ -75,7 +69,6 @@ export default function UltraFuturisticServiceShowcase2029({
                   <Brain className="w-4 h-4 text-purple-400" />
                 </div>
               </div>
-
               <Link
                 href={service.link}
                 className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
@@ -86,7 +79,6 @@ export default function UltraFuturisticServiceShowcase2029({
             </motion.div>
           ))}
         </div>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

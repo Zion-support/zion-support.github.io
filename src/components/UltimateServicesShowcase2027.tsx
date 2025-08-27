@@ -112,14 +112,12 @@ import {
 } from 'lucide-react';
 import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data/ultimateInnovativeServices2027';
 import { COMPREHENSIVE_PRICING_GUIDE_2027, MARKET_ANALYSIS_2027 } from '../data/comprehensivePricingGuide2027';
-
 export function UltimateServicesShowcase2027() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('innovation');
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -129,15 +127,12 @@ export function UltimateServicesShowcase2027() {
       },
       { threshold: 0.1 }
     );
-
     const element = document.getElementById('ultimate-services-showcase');
     if (element) {
       observer.observe(element);
     }
-
     return () => observer.disconnect();
   }, []);
-
   const categories = [
     { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5" />, color: 'from-zion-cyan to-zion-purple' },
     { id: 'Quantum AI & Business Automation', name: 'Quantum AI Business', icon: <Brain className="h-5 w-5" />, color: 'from-purple-500 to-pink-500' },
@@ -151,7 +146,6 @@ export function UltimateServicesShowcase2027() {
     { id: 'AI & Education', name: 'AI Education', icon: <GraduationCap className="h-5 w-5" />, color: 'from-teal-500 to-cyan-500' },
     { id: 'Quantum AI & Content Creation', name: 'Quantum Content', icon: <FileText className="h-5 w-5" />, color: 'from-violet-500 to-purple-500' }
   ];
-
   const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2027
     .filter(service => {
       const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
@@ -174,7 +168,6 @@ export function UltimateServicesShowcase2027() {
           return 0;
       }
     });
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Quantum AI & Business Automation': return <Brain className="h-6 w-6" />;
@@ -190,11 +183,9 @@ export function UltimateServicesShowcase2027() {
       default: return <Sparkles className="h-6 w-6" />;
     }
   };
-
   const getServicePricing = (serviceId: string) => {
     return COMPREHENSIVE_PRICING_GUIDE_2027.find(pricing => pricing.serviceId === serviceId);
   };
-
   return (
     <section id="ultimate-services-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark/50 via-zion-slate/30 to-zion-blue-dark/50 relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -204,7 +195,6 @@ export function UltimateServicesShowcase2027() {
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full animate-pulse delay-2000"></div>
         <div className="absolute top-1/3 right-1/3 w-20 h-20 border border-zion-blue rounded-full animate-pulse delay-1500"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
@@ -256,7 +246,6 @@ export function UltimateServicesShowcase2027() {
             </motion.div>
           </div>
         </motion.div>
-
         {/* Search and Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -276,7 +265,6 @@ export function UltimateServicesShowcase2027() {
                 className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark/50 border border-zion-slate-light/30 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
-
             {/* Sort */}
             <div className="flex items-center gap-4">
               <label className="text-zion-slate-light">Sort by:</label>
@@ -292,7 +280,6 @@ export function UltimateServicesShowcase2027() {
             </div>
           </div>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -317,7 +304,6 @@ export function UltimateServicesShowcase2027() {
             ))}
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -353,12 +339,10 @@ export function UltimateServicesShowcase2027() {
                     <span className="text-sm text-zion-slate-light">{service.innovationLevel}</span>
                   </div>
                 </div>
-
                 {/* Description */}
                 <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
                   {service.description}
                 </p>
-
                 {/* Key Features */}
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -378,7 +362,6 @@ export function UltimateServicesShowcase2027() {
                     )}
                   </div>
                 </div>
-
                 {/* Pricing and ROI */}
                 <div className="mb-4">
                   <div className="flex items-center justify-between mb-2">
@@ -393,7 +376,6 @@ export function UltimateServicesShowcase2027() {
                     <span className="text-zion-slate-light">{service.estimatedDelivery}</span>
                   </div>
                 </div>
-
                 {/* Market Comparison */}
                 {pricing && (
                   <div className="mb-4 p-3 bg-zion-slate-dark/30 rounded-lg border border-zion-slate-light/20">
@@ -409,7 +391,6 @@ export function UltimateServicesShowcase2027() {
                     </div>
                   </div>
                 )}
-
                 {/* Action Buttons */}
                 <div className="flex gap-3">
                   <button
@@ -427,7 +408,6 @@ export function UltimateServicesShowcase2027() {
                     Contact
                   </Link>
                 </div>
-
                 {/* Contact Info */}
                 <div className="mt-4 pt-4 border-t border-zion-slate-light/20">
                   <div className="flex items-center justify-between text-xs text-zion-slate-light">
@@ -445,7 +425,6 @@ export function UltimateServicesShowcase2027() {
             );
           })}
         </motion.div>
-
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
@@ -465,7 +444,6 @@ export function UltimateServicesShowcase2027() {
             </button>
           </motion.div>
         )}
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -500,7 +478,6 @@ export function UltimateServicesShowcase2027() {
           </div>
         </motion.div>
       </div>
-
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (
@@ -523,7 +500,6 @@ export function UltimateServicesShowcase2027() {
                 const pricing = getServicePricing(selectedService);
                 
                 if (!service) return null;
-
                 return (
                   <div>
                     <div className="flex items-start justify-between mb-6">
@@ -538,13 +514,11 @@ export function UltimateServicesShowcase2027() {
                         <XIcon className="h-6 w-6 text-zion-slate-light" />
                       </button>
                     </div>
-
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       {/* Service Details */}
                       <div>
                         <h3 className="text-lg font-semibold text-white mb-3">Description</h3>
                         <p className="text-zion-slate-light mb-4">{service.description}</p>
-
                         <h3 className="text-lg font-semibold text-white mb-3">Features</h3>
                         <ul className="space-y-2 mb-4">
                           {service.features.map((feature, idx) => (
@@ -554,7 +528,6 @@ export function UltimateServicesShowcase2027() {
                             </li>
                           ))}
                         </ul>
-
                         <h3 className="text-lg font-semibold text-white mb-3">Benefits</h3>
                         <ul className="space-y-2 mb-4">
                           {service.benefits.map((benefit, idx) => (
@@ -565,11 +538,10 @@ export function UltimateServicesShowcase2027() {
                           ))}
                         </ul>
                       </div>
-
                       {/* Pricing and Technical Details */}
                       <div>
                         {pricing && (
-                          <>
+<>
                             <h3 className="text-lg font-semibold text-white mb-3">Pricing Plans</h3>
                             <div className="space-y-3 mb-6">
                               {Object.entries(pricing.ourPricing).map(([tier, plan]) => (
@@ -606,9 +578,8 @@ export function UltimateServicesShowcase2027() {
                                 </div>
                               ))}
                             </div>
-                          </>
+</>
                         )}
-
                         <h3 className="text-lg font-semibold text-white mb-3">Technical Specifications</h3>
                         {service.technicalSpecs && (
                           <div className="space-y-3 mb-4">
@@ -635,7 +606,6 @@ export function UltimateServicesShowcase2027() {
                             </div>
                           </div>
                         )}
-
                         <div className="flex gap-3">
                           <Link
                             to={`/contact?service=${service.id}`}
@@ -664,7 +634,6 @@ export function UltimateServicesShowcase2027() {
     </section>
   );
 }
-
 // Helper component for graduation cap icon
 function GraduationCap(props: any) {
   return (

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -123,28 +123,11 @@ export default function CommunityProfilePage() {
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
           </Button>
-<<<<<<< HEAD
-        </div>
-      
-    );
-  }
-
-  return (
-    
-      <SEOHead 
-        title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
-        description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
-        keywords={`community, forum, profile, user profile, ${user.name}`}
-      />
-      
-      <div className="container py-8">
-=======
         </div>);
     }
     return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords={`community, forum, profile, user profile, ${user.name}`}/>
         ,
             <div className="container py-8">
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
             Forum

@@ -203,7 +203,6 @@ export function AdvancedDataVisualization() {
           </button>
         </div>
       </div>
-
       <div className="flex h-full">
         {/* Sidebar Controls */}
         <div className="w-80 border-r border-zion-slate-light p-4 overflow-y-auto">
@@ -225,7 +224,6 @@ export function AdvancedDataVisualization() {
                   </button>))}
               </div>
             </div>
-
             {/* Data Filtering */}
             <div>
               <h3 className="text-sm font-medium text-zion-slate mb-3">Data Filter</h3>
@@ -235,7 +233,6 @@ export function AdvancedDataVisualization() {
                   </option>))}
               </select>
             </div>
-
             {/* Color Palette */}
             <div>
               <h3 className="text-sm font-medium text-zion-slate mb-3">Color Palette</h3>
@@ -249,7 +246,6 @@ export function AdvancedDataVisualization() {
                   </button>))}
               </div>
             </div>
-
             {/* Chart Configuration */}
             <div>
               <h3 className="text-sm font-medium text-zion-slate mb-3">Chart Settings</h3>
@@ -272,7 +268,6 @@ export function AdvancedDataVisualization() {
                 </label>
               </div>
             </div>
-
             {/* Actions */}
             <div className="space-y-3">
               <button onClick={refreshData} disabled={isRefreshing} className="w-full px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
@@ -299,7 +294,6 @@ export function AdvancedDataVisualization() {
             </div>
           </div>
         </div>
-
         {/* Chart Display */}
         <div className="flex-1 p-6">
           <div className="mb-6">

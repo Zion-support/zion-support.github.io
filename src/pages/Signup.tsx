@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-
-export default function SignUp() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await axios.post('/auth/register', { email, password });
-    navigate('/marketplace');
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className="p-4 space-y-2">
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-        className="border px-2 py-1 w-full"
-      />
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="Password"
-        className="border px-2 py-1 w-full"
-      />
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2">
-        Sign Up
-      </button>
-    </form>
-  );
-=======
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
@@ -44,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useAuth } from '@/hooks/useAuth';
 import { Mail, Lock, User, Eye, EyeOff, CheckCircle } from 'lucide-react';
-
 export default function Signup() {
     const [formData, setFormData] = useState({
         firstName: '',
@@ -61,14 +22,12 @@ export default function Signup() {
     
     const { signup } = useAuth();
     const navigate = useNavigate();
-
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
             [e.target.name]: e.target.value
         }));
     };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         
@@ -76,10 +35,8 @@ export default function Signup() {
             setError('Passwords do not match');
             return;
         }
-
         setIsLoading(true);
         setError('');
-
         try {
             await signup({
                 firstName: formData.firstName,
@@ -98,7 +55,6 @@ export default function Signup() {
             setIsLoading(false);
         }
     };
-
     if (success) {
         return (
             <div className="min-h-screen bg-zion-blue flex items-center justify-center">
@@ -112,9 +68,8 @@ export default function Signup() {
             </div>
         );
     }
-
     return (
-        <>
+<>
             <SEO 
                 title="Sign Up - Zion Tech Group" 
                 description="Create your Zion Tech Group account to access the marketplace." 
@@ -128,13 +83,11 @@ export default function Signup() {
                             Join Zion Tech Group and start your journey
                         </p>
                     </div>
-
                     {error && (
                         <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
                             <p className="text-red-400 text-sm">{error}</p>
                         </div>
                     )}
-
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-2 gap-4">
                             <div>
@@ -171,7 +124,6 @@ export default function Signup() {
                                 />
                             </div>
                         </div>
-
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                                 Email Address
@@ -190,7 +142,6 @@ export default function Signup() {
                                 />
                             </div>
                         </div>
-
                         <div>
                             <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
                                 Password
@@ -217,7 +168,6 @@ export default function Signup() {
                                 </button>
                             </div>
                         </div>
-
                         <div>
                             <label htmlFor="confirmPassword" className="block text-sm font-medium text-white mb-2">
                                 Confirm Password
@@ -244,7 +194,6 @@ export default function Signup() {
                                 </button>
                             </div>
                         </div>
-
                         <Button
                             type="submit"
                             disabled={isLoading || !formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() || !formData.password.trim() || !formData.confirmPassword.trim()}
@@ -253,7 +202,6 @@ export default function Signup() {
                             {isLoading ? 'Creating Account...' : 'Create Account'}
                         </Button>
                     </form>
-
                     <div className="mt-8 text-center">
                         <p className="text-zion-slate-light text-sm">
                             Already have an account?{' '}
@@ -264,7 +212,6 @@ export default function Signup() {
                     </div>
                 </div>
             </div>
-        </>
+</>
     );
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 }

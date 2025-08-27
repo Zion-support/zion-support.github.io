@@ -11,7 +11,6 @@ import {
   Users,
   Award
 } from 'lucide-react';
-
 interface Testimonial {
   id: string;
   name: string;
@@ -25,13 +24,11 @@ interface Testimonial {
   results: string[];
   verified: boolean;
 }
-
 export function EnhancedTestimonials() {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const testimonials: Testimonial[] = [
     {
       id: '1',
@@ -99,43 +96,35 @@ export function EnhancedTestimonials() {
       verified: true
     }
   ];
-
   const stats = [
     { label: 'Happy Clients', value: '500+', icon: Users, color: 'text-zion-cyan' },
     { label: 'Success Rate', value: '99.8%', icon: CheckCircle, color: 'text-zion-green' },
     { label: 'Projects Completed', value: '1000+', icon: TrendingUp, color: 'text-zion-purple' },
     { label: 'Industry Awards', value: '25+', icon: Award, color: 'text-zion-orange' }
   ];
-
   useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setDirection(1);
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, testimonials.length]);
-
   const nextTestimonial = () => {
     setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     setIsAutoPlaying(false);
   };
-
   const prevTestimonial = () => {
     setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     setIsAutoPlaying(false);
   };
-
   const goToTestimonial = (index: number) => {
     setDirection(index > currentIndex ? 1 : -1);
     setCurrentIndex(index);
     setIsAutoPlaying(false);
   };
-
   const slideVariants = {
     enter: (direction: number) => ({
       x: direction > 0 ? 1000 : -1000,
@@ -152,12 +141,10 @@ export function EnhancedTestimonials() {
       opacity: 0
     })
   };
-
   const swipeConfidenceThreshold = 10000;
   const swipePower = (offset: number, velocity: number) => {
     return Math.abs(offset) * velocity;
   };
-
   const paginate = (newDirection: number) => {
     if (newDirection > 0) {
       nextTestimonial();
@@ -165,7 +152,6 @@ export function EnhancedTestimonials() {
       prevTestimonial();
     }
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="container mx-auto px-4">
@@ -184,7 +170,6 @@ export function EnhancedTestimonials() {
             {t('testimonials.subtitle', 'Discover why leading companies choose Zion Tech Group for their technology transformation needs.')}
           </p>
         </motion.div>
-
         {/* Stats Section */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -207,7 +192,6 @@ export function EnhancedTestimonials() {
             </div>
           ))}
         </motion.div>
-
         {/* Testimonials Carousel */}
         <div className="relative max-w-6xl mx-auto">
           {/* Navigation Arrows */}
@@ -218,7 +202,6 @@ export function EnhancedTestimonials() {
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
-
           <button
             onClick={nextTestimonial}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-zion-cyan/20 hover:bg-zion-cyan/40 text-zion-cyan rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm"
@@ -226,7 +209,6 @@ export function EnhancedTestimonials() {
           >
             <ChevronRight className="h-6 w-6" />
           </button>
-
           {/* Testimonial Display */}
           <div className="relative overflow-hidden">
             <AnimatePresence initial={false} custom={direction}>
@@ -246,7 +228,6 @@ export function EnhancedTestimonials() {
                 dragElastic={1}
                 onDragEnd={(e, { offset, velocity }) => {
                   const swipe = swipePower(offset.x, velocity.x);
-
                   if (swipe < -swipeConfidenceThreshold) {
                     paginate(1);
                   } else if (swipe > swipeConfidenceThreshold) {
@@ -262,7 +243,6 @@ export function EnhancedTestimonials() {
                       <Quote className="h-8 w-8 text-white" />
                     </div>
                   </div>
-
                   {/* Testimonial Content */}
                   <div className="text-center mb-8">
                     <p className="text-xl md:text-2xl text-white leading-relaxed italic mb-6">
@@ -275,7 +255,6 @@ export function EnhancedTestimonials() {
                         <Star key={i} className="h-6 w-6 text-zion-cyan fill-current" />
                       ))}
                     </div>
-
                     {/* Results */}
                     <div className="flex flex-wrap justify-center gap-3 mb-6">
                       {testimonials[currentIndex].results.map((result, index) => (
@@ -288,7 +267,6 @@ export function EnhancedTestimonials() {
                       ))}
                     </div>
                   </div>
-
                   {/* Author Info */}
                   <div className="text-center">
                     <div className="flex items-center justify-center gap-4 mb-4">
@@ -317,7 +295,6 @@ export function EnhancedTestimonials() {
               </motion.div>
             </AnimatePresence>
           </div>
-
           {/* Dots Indicator */}
           <div className="flex justify-center gap-3 mt-8">
             {testimonials.map((_, index) => (
@@ -334,7 +311,6 @@ export function EnhancedTestimonials() {
             ))}
           </div>
         </div>
-
         {/* Auto-play Toggle */}
         <div className="text-center mt-8">
           <button

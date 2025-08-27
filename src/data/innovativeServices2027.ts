@@ -36,7 +36,6 @@ export interface InnovativeService2027 {
   aiModel?: string;
   trainingData?: string;
 }
-
 export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
   // AI-Powered Autonomous DevOps Platform
   {
@@ -104,7 +103,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
     competitors: ["HashiCorp", "GitLab", "GitHub", "Atlassian"],
     marketTrend: "Explosive Growth"
   },
-
   // Quantum-Secure Blockchain Platform
   {
     id: "quantum-secure-blockchain-platform",
@@ -171,7 +169,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
     competitors: ["Ethereum", "Polkadot", "Solana", "Cardano"],
     marketTrend: "High Growth"
   },
-
   // AI-Powered Cybersecurity Threat Intelligence
   {
     id: "ai-cybersecurity-threat-intelligence",
@@ -238,7 +235,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
     competitors: ["CrowdStrike", "Palo Alto Networks", "FireEye", "Darktrace"],
     marketTrend: "High Growth"
   },
-
   // Edge AI Computing Platform
   {
     id: "edge-ai-computing-platform",
@@ -305,7 +301,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
     competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "FogHorn"],
     marketTrend: "Explosive Growth"
   },
-
   // AI-Powered Healthcare Diagnostics Platform
   {
     id: "ai-healthcare-diagnostics-platform",
@@ -372,7 +367,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips"],
     marketTrend: "High Growth"
   },
-
   // Quantum Machine Learning Platform
   {
     id: "quantum-machine-learning-platform",
@@ -439,7 +433,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
     competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Quantum", "Rigetti"],
     marketTrend: "Emerging Technology"
   },
-
   // Autonomous Business Process Automation
   {
     id: "autonomous-business-process-automation",
@@ -506,7 +499,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
     competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Celonis"],
     marketTrend: "High Growth"
   },
-
   // 5G Enterprise Network Orchestration
   {
     id: "5g-enterprise-network-orchestration",
@@ -573,7 +565,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
     competitors: ["Ericsson", "Nokia", "Huawei", "Cisco", "Juniper"],
     marketTrend: "High Growth"
   },
-
   // AI-Powered Legal Technology Platform
   {
     id: "ai-legal-technology-platform",
@@ -640,7 +631,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
     competitors: ["Clio", "MyCase", "PracticePanther", "LexisNexis", "Westlaw"],
     marketTrend: "High Growth"
   },
-
   // Sustainable Green Technology Platform
   {
     id: "sustainable-green-technology-platform",
@@ -708,5 +698,4 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
     marketTrend: "High Growth"
   }
 ];
-
 export default INNOVATIVE_SERVICES_2027;

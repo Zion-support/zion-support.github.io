@@ -121,7 +121,6 @@ export function AIChatAssistant() {
           </button>
         </div>
       </div>
-
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message) => (<div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>
@@ -137,12 +136,10 @@ export function AIChatAssistant() {
                 {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </span>
             </div>
-
             {message.type === 'user' && (<div className="w-8 h-8 bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-full flex items-center justify-center flex-shrink-0">
                 <User className="w-4 h-4 text-white"/>
               </div>)}
           </div>))}
-
         {/* Typing Indicator */}
         {isTyping && (<div className="flex gap-3 justify-start">
             <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center flex-shrink-0">
@@ -156,10 +153,8 @@ export function AIChatAssistant() {
               </div>
             </div>
           </div>)}
-
         <div ref={messagesEndRef}/>
       </div>
-
       {/* Input Area */}
       <div className="p-4 border-t border-zion-slate-light">
         <div className="flex items-center gap-2">

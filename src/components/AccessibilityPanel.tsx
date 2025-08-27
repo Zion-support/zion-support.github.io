@@ -118,7 +118,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
         </svg>
       </button>
-
       {/* Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial={{ opacity: 0, x: -400 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -400 }} className="fixed left-4 bottom-20 z-40 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
@@ -133,7 +132,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                 </button>
               </div>
             </div>
-
             {/* Tabs */}
             <div className="flex border-b border-gray-200 dark:border-slate-700">
               {tabs.map((tab) => (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${activeTab === tab.id
@@ -143,7 +141,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                   {tab.label}
                 </button>))}
             </div>
-
             {/* Content */}
             <div className="p-4 max-h-96 overflow-y-auto">
               <AnimatePresence mode="wait">
@@ -159,14 +156,12 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         Increases contrast for better readability
                       </p>
                     </div>
-
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Font Size: {settings.fontSize}%
                       </label>
                       <input type="range" min="50" max="200" step="10" value={settings.fontSize} onChange={(e) => updateSetting('fontSize', parseInt(e.target.value))} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>
                     </div>
-
                     <div>
                       <label className="flex items-center space-x-3">
                         <input type="checkbox" checked={settings.reducedMotion} onChange={(e) => updateSetting('reducedMotion', e.target.checked)} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
@@ -179,7 +174,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                       </p>
                     </div>
                   </motion.div>)}
-
                 {activeTab === 'visual' && (<motion.div key="visual" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -192,7 +186,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         <option value="tritanopia">Tritanopia (Blue-Blind)</option>
                       </select>
                     </div>
-
                     <div>
                       <label className="flex items-center space-x-3">
                         <input type="checkbox" checked={settings.focusIndicator} onChange={(e) => updateSetting('focusIndicator', e.target.checked)} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
@@ -205,7 +198,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                       </p>
                     </div>
                   </motion.div>)}
-
                 {activeTab === 'audio' && (<motion.div key="audio" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
                     <div>
                       <label className="flex items-center space-x-3">
@@ -218,7 +210,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         Optimizes content for screen readers
                       </p>
                     </div>
-
                     <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                       <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">
                         Keyboard Shortcuts
@@ -231,7 +222,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                       </div>
                     </div>
                   </motion.div>)}
-
                 {activeTab === 'navigation' && (<motion.div key="navigation" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
                     <div>
                       <label className="flex items-center space-x-3">
@@ -244,7 +234,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         Improves keyboard navigation experience
                       </p>
                     </div>
-
                     <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
                       <h4 className="text-sm font-medium text-green-800 dark:text-green-200 mb-2">
                         Navigation Tips
@@ -259,7 +248,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                   </motion.div>)}
               </AnimatePresence>
             </div>
-
             {/* Footer */}
             <div className="border-t border-gray-200 dark:border-slate-700 p-4 bg-gray-50 dark:bg-slate-700/50">
               <div className="flex space-x-2">

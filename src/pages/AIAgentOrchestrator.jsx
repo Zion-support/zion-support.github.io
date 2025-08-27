@@ -8,7 +8,6 @@ const AIAgentOrchestrator = () => {
         <meta name="description" content="Advanced AI agent orchestration platform for coordinating multiple AI systems and workflows seamlessly."/>
         <meta name="keywords" content="AI orchestrator, agent management, AI workflow, automation, multi-agent systems"/>
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 relative overflow-hidden">
@@ -32,7 +31,6 @@ const AIAgentOrchestrator = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -42,7 +40,6 @@ const AIAgentOrchestrator = () => {
                 Comprehensive tools for managing and orchestrating AI agents across your organization
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
             {
@@ -83,7 +80,6 @@ const AIAgentOrchestrator = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -93,7 +89,6 @@ const AIAgentOrchestrator = () => {
                 Transform your business operations with intelligent agent orchestration
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 gap-8">
               {[
             {
@@ -119,7 +114,6 @@ const AIAgentOrchestrator = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">

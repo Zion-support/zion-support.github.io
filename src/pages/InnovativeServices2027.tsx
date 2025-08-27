@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from "../components/SEOHead"';
+import SEOHead from "../components/SEOHead.jsx";
 import { INNOVATIVE_SERVICES_2027, InnovativeService } from '@/data/innovativeServices2027';
 import { 
   Brain, 
@@ -20,13 +20,10 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-
 const InnovativeServices2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchTerm, setSearchTerm] = useState<string>('');
-
   const categories = ['All', 'AI Services', 'Cybersecurity', 'Emerging Technology', 'IT Services', 'Telecommunications'];
-
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => {
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -34,7 +31,6 @@ const InnovativeServices2027: React.FC = () => {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -44,7 +40,6 @@ const InnovativeServices2027: React.FC = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -55,9 +50,8 @@ const InnovativeServices2027: React.FC = () => {
       }
     }
   };
-
   return (
-    <>
+<>
       <SEOHead 
         title="Innovative Services 2027 - Zion Tech Group"
         description="Discover cutting-edge AI, cybersecurity, quantum computing, and emerging technology solutions. Transform your business with Zion Tech Group's innovative services for 2027."
@@ -97,7 +91,6 @@ const InnovativeServices2027: React.FC = () => {
             </div>
           </motion.div>
         </div>
-
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 animate-float">
           <div className="w-4 h-4 bg-cyan-400 rounded-full opacity-60"></div>
@@ -109,7 +102,6 @@ const InnovativeServices2027: React.FC = () => {
           <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60"></div>
         </div>
       </section>
-
       {/* Contact Information Banner */}
       <section className="bg-gradient-to-r from-cyan-600 to-blue-600 py-8">
         <div className="max-w-7xl mx-auto px-6">
@@ -129,7 +121,6 @@ const InnovativeServices2027: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-12 bg-zion-slate">
         <div className="max-w-7xl mx-auto px-6">
@@ -149,7 +140,6 @@ const InnovativeServices2027: React.FC = () => {
                 </svg>
               </div>
             </div>
-
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -169,7 +159,6 @@ const InnovativeServices2027: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="max-w-7xl mx-auto px-6">
@@ -183,7 +172,6 @@ const InnovativeServices2027: React.FC = () => {
               <ServiceCard key={service.id} service={service} />
             ))}
           </motion.div>
-
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
               <div className="text-gray-400 text-xl mb-4">No services found</div>
@@ -192,7 +180,6 @@ const InnovativeServices2027: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -226,14 +213,12 @@ const InnovativeServices2027: React.FC = () => {
           </motion.div>
         </div>
       </section>
-    </>
+</>
   );
 };
-
 // Service Card Component
 const ServiceCard: React.FC<{ service: InnovativeService }> = ({ service }) => {
   const [isHovered, setIsHovered] = useState(false);
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI Services':
@@ -250,7 +235,6 @@ const ServiceCard: React.FC<{ service: InnovativeService }> = ({ service }) => {
         return <Globe className="w-6 h-6" />;
     }
   };
-
   return (
     <motion.div
       variants={itemVariants}
@@ -275,13 +259,11 @@ const ServiceCard: React.FC<{ service: InnovativeService }> = ({ service }) => {
           {getCategoryIcon(service.category)}
           <span className="text-white text-sm font-medium">{service.category}</span>
         </div>
-
         {/* AI Score Badge */}
         <div className="absolute top-4 right-4 bg-purple-500/90 backdrop-blur-sm px-3 py-1 rounded-full">
           <span className="text-white text-sm font-medium">AI Score: {service.aiScore}</span>
         </div>
       </div>
-
       {/* Service Content */}
       <div className="p-6">
         <div className="flex items-center justify-between mb-3">
@@ -292,9 +274,7 @@ const ServiceCard: React.FC<{ service: InnovativeService }> = ({ service }) => {
             <span className="text-gray-400 text-sm">({service.reviewCount})</span>
           </div>
         </div>
-
         <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
-
         {/* Features Preview */}
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
@@ -309,7 +289,6 @@ const ServiceCard: React.FC<{ service: InnovativeService }> = ({ service }) => {
             ))}
           </div>
         </div>
-
         {/* Pricing */}
         <div className="flex items-center justify-between mb-4">
           <div className="text-2xl font-bold text-cyan-400">
@@ -320,7 +299,6 @@ const ServiceCard: React.FC<{ service: InnovativeService }> = ({ service }) => {
             Market: {service.marketPrice}
           </div>
         </div>
-
         {/* Benefits */}
         <div className="mb-6">
           <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>
@@ -333,7 +311,6 @@ const ServiceCard: React.FC<{ service: InnovativeService }> = ({ service }) => {
             ))}
           </ul>
         </div>
-
         {/* Action Buttons */}
         <div className="flex space-x-3">
           <Link
@@ -350,7 +327,6 @@ const ServiceCard: React.FC<{ service: InnovativeService }> = ({ service }) => {
             Contact
           </Link>
         </div>
-
         {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {service.tags.slice(0, 3).map((tag, index) => (
@@ -366,5 +342,4 @@ const ServiceCard: React.FC<{ service: InnovativeService }> = ({ service }) => {
     </motion.div>
   );
 };
-
 export default InnovativeServices2027;

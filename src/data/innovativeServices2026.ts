@@ -1,5 +1,4 @@
 import { ProductListing } from "@/types/listings";
-
 // Innovative Micro SAAS Services, IT Services, and AI Services for 2026
 export const INNOVATIVE_SERVICES_2026: ProductListing[] = [
   // AI & Machine Learning Services
@@ -143,7 +142,6 @@ export const INNOVATIVE_SERVICES_2026: ProductListing[] = [
     contactEmail: "kleber@ziontechgroup.com",
     marketPrice: "$6,000-15,000/month"
   },
-
   // IT Infrastructure & Cloud Services
   {
     id: "quantum-cloud-infrastructure",
@@ -257,7 +255,6 @@ export const INNOVATIVE_SERVICES_2026: ProductListing[] = [
     contactEmail: "kleber@ziontechgroup.com",
     marketPrice: "$12,000-25,000/month"
   },
-
   // Micro SAAS Solutions
   {
     id: "ai-autonomous-code-review",
@@ -371,7 +368,6 @@ export const INNOVATIVE_SERVICES_2026: ProductListing[] = [
     contactEmail: "kleber@ziontechgroup.com",
     marketPrice: "$299-599/month"
   },
-
   // Emerging Technology Services
   {
     id: "blockchain-web3-platform",
@@ -457,7 +453,6 @@ export const INNOVATIVE_SERVICES_2026: ProductListing[] = [
     contactEmail: "kleber@ziontechgroup.com",
     marketPrice: "$40,000-80,000/month"
   },
-
   // Industry-Specific Solutions
   {
     id: "manufacturing-ai-solutions",
@@ -544,7 +539,6 @@ export const INNOVATIVE_SERVICES_2026: ProductListing[] = [
     marketPrice: "$30,000-60,000/month"
   }
 ];
-
 // Service Categories for 2026
 export const SERVICE_CATEGORIES_2026 = [
   "AI Services",
@@ -553,7 +547,6 @@ export const SERVICE_CATEGORIES_2026 = [
   "Emerging Tech",
   "Industry Solutions"
 ];
-
 // Service Subcategories for 2026
 export const SERVICE_SUBCATEGORIES_2026 = {
   "AI Services": [

@@ -38,7 +38,6 @@ export interface InnovativeITService {
   rating: number;
   reviews: number;
 }
-
 export const innovativeITServices: InnovativeITService[] = [
   {
     id: 'quantum-cloud-orchestrator',

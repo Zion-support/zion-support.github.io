@@ -9,7 +9,6 @@ import { ShoppingCart, Star, Truck, Shield, RotateCcw } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { EQUIPMENT_DETAILS } from "@/data/equipmentDetails";
-
 export const SAMPLE_EQUIPMENT = [
     {
         id: 1,
@@ -72,7 +71,6 @@ export const SAMPLE_EQUIPMENT = [
         warranty: "5-year enterprise warranty"
     }
 ];
-
 export default function EquipmentDetail() {
     const { equipmentId } = useParams();
     const navigate = useNavigate();
@@ -151,7 +149,6 @@ export default function EquipmentDetail() {
                       </div>))}
                   </div>)}
               </div>
-
               {/* Product Details Tabs */}
               <div className="mt-8">
                 <Tabs defaultValue="description" className="w-full">

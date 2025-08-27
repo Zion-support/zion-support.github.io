@@ -82,7 +82,6 @@ const QuantumComputing = () => {
           </div>
         </div>
       </section>
-
       {/* Quantum Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -119,7 +118,6 @@ const QuantumComputing = () => {
           </div>
         </div>
       </section>
-
       {/* Applications Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -143,7 +141,6 @@ const QuantumComputing = () => {
           </div>
         </div>
       </section>
-
       {/* Technology Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -188,7 +185,6 @@ const QuantumComputing = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

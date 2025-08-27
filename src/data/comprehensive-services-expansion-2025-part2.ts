@@ -5,7 +5,6 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
-
 export interface MicroSaasService {
   id: number;
   name: string;
@@ -28,7 +27,6 @@ export interface MicroSaasService {
   freeTier: boolean;
   trialPeriod: string;
 }
-
 export interface ITService {
   id: number;
   name: string;
@@ -48,7 +46,6 @@ export interface ITService {
   deliveryTime: string;
   support: string;
 }
-
 export interface AIService {
   id: number;
   name: string;
@@ -70,7 +67,6 @@ export interface AIService {
   aiScore: number;
   useCases: string[];
 }
-
 // Additional Advanced AI Services
 export const additionalAdvancedAIServices2025: AIService[] = [
   {
@@ -158,7 +154,6 @@ export const additionalAdvancedAIServices2025: AIService[] = [
     useCases: ["Supply chain automation", "Customer service", "Quality control", "Risk management"]
   }
 ];
-
 // Advanced Blockchain Services
 export const advancedBlockchainServices2025: MicroSaasService[] = [
   {
@@ -248,7 +243,6 @@ export const advancedBlockchainServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-
 // Advanced Cybersecurity Services
 export const advancedCybersecurityServices2025: ITService[] = [
   {
@@ -332,7 +326,6 @@ export const advancedCybersecurityServices2025: ITService[] = [
     support: "Business hours"
   }
 ];
-
 // Advanced Cloud & DevOps Services
 export const advancedCloudDevOpsServices2025: ITService[] = [
   {
@@ -376,7 +369,6 @@ export const advancedCloudDevOpsServices2025: ITService[] = [
     support: "Business hours"
   }
 ];
-
 // Advanced Healthcare Services
 export const advancedHealthcareServices2025: AIService[] = [
   {
@@ -422,7 +414,6 @@ export const advancedHealthcareServices2025: AIService[] = [
     useCases: ["Cancer research", "Rare diseases", "Drug development", "Clinical trials"]
   }
 ];
-
 // Advanced IoT Services
 export const advancedIoTServices2025: MicroSaasService[] = [
   {
@@ -469,7 +460,6 @@ export const advancedIoTServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-
 // Advanced Quantum Services
 export const advancedQuantumServices2025: AIService[] = [
   {
@@ -515,7 +505,6 @@ export const advancedQuantumServices2025: AIService[] = [
     useCases: ["Drug discovery", "Financial modeling", "Climate prediction", "Material science"]
   }
 ];
-
 // Advanced Space Services
 export const advancedSpaceServices2025: MicroSaasService[] = [
   {
@@ -562,7 +551,6 @@ export const advancedSpaceServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-
 // Advanced Sustainability Services
 export const advancedSustainabilityServices2025: MicroSaasService[] = [
   {
@@ -609,7 +597,6 @@ export const advancedSustainabilityServices2025: MicroSaasService[] = [
     trialPeriod: "21 days"
   }
 ];
-
 // Advanced Fintech Services
 export const advancedFintechServices2025: MicroSaasService[] = [
   {
@@ -656,7 +643,6 @@ export const advancedFintechServices2025: MicroSaasService[] = [
     trialPeriod: "21 days"
   }
 ];
-
 // Export all additional services
 export const allAdditionalServices2025 = {
   advancedAI: additionalAdvancedAIServices2025,
@@ -670,18 +656,15 @@ export const allAdditionalServices2025 = {
   sustainability: advancedSustainabilityServices2025,
   fintech: advancedFintechServices2025
 };
-
 // Combined services export
 export const allComprehensiveServices2025 = {
   ...allAdditionalServices2025
 };
-
 // Helper functions for additional services
 export const getAdditionalServicesByCategory = (category: string) => {
   const allServices = Object.values(allAdditionalServices2025).flat();
   return allServices.filter(service => service.category === category);
 };
-
 export const getAdditionalServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   const allServices = Object.values(allAdditionalServices2025).flat();
   return allServices.filter(service => {
@@ -694,12 +677,10 @@ export const getAdditionalServicesByPriceRange = (minPrice: number, maxPrice: nu
     return false;
   });
 };
-
 export const getAdditionalPopularServices = (limit: number = 10) => {
   const allServices = Object.values(allAdditionalServices2025).flat();
   return allServices.slice(0, limit);
 };
-
 export const searchAdditionalServices = (query: string) => {
   const allServices = Object.values(allAdditionalServices2025).flat();
   const searchTerm = query.toLowerCase();

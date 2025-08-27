@@ -8,7 +8,6 @@ const AdvancedCybersecuritySuite = () => {
         <meta name="description" content="Comprehensive cybersecurity solutions with advanced threat detection, prevention, and response capabilities."/>
         <meta name="keywords" content="cybersecurity, threat detection, security suite, enterprise security, cyber defense"/>
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 relative overflow-hidden">
@@ -32,7 +31,6 @@ const AdvancedCybersecuritySuite = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -42,7 +40,6 @@ const AdvancedCybersecuritySuite = () => {
                 Multi-layered security architecture designed to protect against sophisticated cyber threats
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
             {
@@ -83,7 +80,6 @@ const AdvancedCybersecuritySuite = () => {
             </div>
           </div>
         </section>
-
         {/* Security Metrics Section */}
         <section className="py-20 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -93,7 +89,6 @@ const AdvancedCybersecuritySuite = () => {
                 Proven results in threat detection and prevention across enterprise environments
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
             {
@@ -126,7 +121,6 @@ const AdvancedCybersecuritySuite = () => {
             </div>
           </div>
         </section>
-
         {/* Compliance Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -136,7 +130,6 @@ const AdvancedCybersecuritySuite = () => {
                 Meet industry standards and regulatory requirements with our certified security framework
               </p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
             'SOC 2 Type II',
@@ -154,7 +147,6 @@ const AdvancedCybersecuritySuite = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">

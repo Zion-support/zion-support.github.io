@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { SEO } from "../components/SEOHead";
-import Link from 'next/link';
-import { Search, Filter, MapPin, Briefcase, Star, Users, Zap, Building } from 'lucide-react';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { Search, MapPin, Briefcase, Star, GraduationCap } from 'lucide-react';
-
 interface Talent {
 	id: number;
 	name: string;
@@ -20,8 +13,6 @@ interface Talent {
 	projects: number;
 	avatar: string;
 }
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
 const TalentDirectory: React.FC = () => {
 	const talents: Talent[] = [
 		{
@@ -91,7 +82,6 @@ const TalentDirectory: React.FC = () => {
 			avatar: '👨‍💻',
 		},
 	];
-
 	const categories = [
 		'All',
 		'AI & Machine Learning',
@@ -102,17 +92,6 @@ const TalentDirectory: React.FC = () => {
 		'Mobile Development',
 		'UI/UX Design',
 	];
-
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="Talent Directory - Zion Tech Group"
-        description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more."
-        keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists"
-        canonical="https://ziontechgroup.com/talent-directory"
-      />
-=======
 	return (
 		<div className="min-h-screen bg-background">
 			<SEO
@@ -121,8 +100,6 @@ const TalentDirectory: React.FC = () => {
 				keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists"
 				canonical="https://ziontechgroup.com/talent-directory"
 			/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
 			{/* Hero Section */}
 			<section className="relative bg-gradient-to-br from-violet-900 via-violet-800 to-purple-900 text-white py-20">
 				<div className="absolute inset-0 bg-black/20"></div>
@@ -163,7 +140,6 @@ const TalentDirectory: React.FC = () => {
 					</motion.div>
 				</div>
 			</section>
-
 			{/* Filters Section */}
 			<section className="py-8 bg-white border-b border-gray-200">
 				<div className="container mx-auto px-4">
@@ -184,7 +160,6 @@ const TalentDirectory: React.FC = () => {
 					</div>
 				</div>
 			</section>
-
 			{/* Talent Grid */}
 			<section className="py-20 bg-gray-50">
 				<div className="container mx-auto px-4">
@@ -192,7 +167,6 @@ const TalentDirectory: React.FC = () => {
 						<h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Professionals</h2>
 						<p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover top-tier technology professionals ready to contribute to your next project</p>
 					</div>
-
 					<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 						{talents.map((talent, index) => (
 							<motion.div
@@ -217,7 +191,6 @@ const TalentDirectory: React.FC = () => {
 										<span className="text-sm text-gray-600">{talent.rating}</span>
 									</div>
 								</div>
-
 								{/* Details */}
 								<div className="space-y-3 mb-4">
 									<div className="flex items-center gap-2 text-sm text-gray-600">
@@ -233,7 +206,6 @@ const TalentDirectory: React.FC = () => {
 										<span>{talent.projects} projects completed</span>
 									</div>
 								</div>
-
 								{/* Skills */}
 								<div className="mb-6">
 									<h4 className="text-sm font-medium text-gray-700 mb-2">Key Skills</h4>
@@ -248,7 +220,6 @@ const TalentDirectory: React.FC = () => {
 										))}
 									</div>
 								</div>
-
 								{/* CTA */}
 								<button className="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
 									Connect with {talent.name.split(' ')[0]}
@@ -258,7 +229,6 @@ const TalentDirectory: React.FC = () => {
 					</div>
 				</div>
 			</section>
-
 			{/* CTA Section */}
 			<section className="py-20 bg-gradient-to-r from-violet-600 to-purple-600 text-white">
 				<div className="container mx-auto px-4 text-center">
@@ -279,5 +249,4 @@ const TalentDirectory: React.FC = () => {
 		</div>
 	);
 };
-
 export default TalentDirectory;

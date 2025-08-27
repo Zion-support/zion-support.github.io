@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles } from 'lucide-react';
 export default function NewServicesOverview() {
     const serviceCategories = [
@@ -215,7 +215,6 @@ export default function NewServicesOverview() {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-16 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -231,7 +230,6 @@ export default function NewServicesOverview() {
           </div>
         </div>
       </div>
-
       {/* Service Categories */}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -243,7 +241,6 @@ export default function NewServicesOverview() {
               From AI-powered solutions to enterprise security, we offer everything you need to modernize your business and stay ahead of the competition.
             </p>
           </div>
-
           <div className="space-y-16">
             {serviceCategories.map((category) => (<div key={category.id} className="bg-gray-800/30 border border-gray-700 rounded-2xl p-8">
                 <div className="flex items-center mb-8">
@@ -257,7 +254,6 @@ export default function NewServicesOverview() {
                     <p className="text-gray-400 text-lg">{category.description}</p>
                   </div>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {category.services.map((service, index) => (<div key={index} className="bg-gray-700/50 border border-gray-600 rounded-xl p-6 hover:border-blue-500/50 hover:bg-gray-700/70 transition-all duration-300">
                       <h4 className="text-xl font-semibold text-white mb-3">
@@ -273,7 +269,6 @@ export default function NewServicesOverview() {
                         </div>
                         <div className="text-sm text-gray-500">per month</div>
                       </div>
-
                       <div className="mb-6">
                         <h5 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h5>
                         <div className="space-y-1">
@@ -283,7 +278,6 @@ export default function NewServicesOverview() {
                             </div>))}
                         </div>
                       </div>
-
                       <Link to={service.path} className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4"/>
@@ -294,7 +288,6 @@ export default function NewServicesOverview() {
           </div>
         </div>
       </div>
-
       {/* Benefits Section */}
       <div className="py-16 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -306,7 +299,6 @@ export default function NewServicesOverview() {
               We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
@@ -318,7 +310,6 @@ export default function NewServicesOverview() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -330,7 +321,6 @@ export default function NewServicesOverview() {
               Our team of experts is ready to help you implement the perfect solution for your business needs. 
               Get in touch today to start your digital transformation journey.
             </p>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="flex justify-center mb-4">
@@ -357,7 +347,6 @@ export default function NewServicesOverview() {
                 <p className="text-gray-400">Middletown DE 19709</p>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 Schedule a Consultation

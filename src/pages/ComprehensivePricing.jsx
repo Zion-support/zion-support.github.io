@@ -27,17 +27,14 @@ import {
   BarChart3
 } from 'lucide-react';
 import { ENHANCED_MICRO_SAAS_SERVICES_2025, SERVICE_CATEGORIES, ZION_TECH_GROUP_CONTACT } from '../data/enhancedMicroSaasServices2025.js';
-
 export default function ComprehensivePricing() {
   const [services, setServices] = useState(ENHANCED_MICRO_SAAS_SERVICES_2025);
   const [filteredServices, setFilteredServices] = useState(ENHANCED_MICRO_SAAS_SERVICES_2025);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'table'
-
   useEffect(() => {
     let filtered = services;
-
     if (searchTerm) {
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -45,14 +42,11 @@ export default function ComprehensivePricing() {
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
-
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
-
     setFilteredServices(filtered);
   }, [services, searchTerm, selectedCategory]);
-
   const getCategoryIcon = (category) => {
     const iconMap = {
       'AI & Development': <Cpu className="w-5 h-5" />,
@@ -68,7 +62,6 @@ export default function ComprehensivePricing() {
     };
     return iconMap[category] || <Zap className="w-5 h-5" />;
   };
-
   const getCategoryColor = (category) => {
     const colorMap = {
       'AI & Development': 'from-blue-500 to-cyan-500',
@@ -84,7 +77,6 @@ export default function ComprehensivePricing() {
     };
     return colorMap[category] || 'from-gray-500 to-slate-500';
   };
-
   const pricingTiers = [
     {
       name: "Basic",
@@ -140,7 +132,6 @@ export default function ComprehensivePricing() {
       buttonVariant: "outline"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
@@ -183,7 +174,6 @@ export default function ComprehensivePricing() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information Banner */}
       <section className="py-6 bg-zion-blue-dark border-b border-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -203,7 +193,6 @@ export default function ComprehensivePricing() {
           </div>
         </div>
       </section>
-
       {/* Pricing Tiers Overview */}
       <section className="py-20 bg-zinc-800">
         <div className="container mx-auto px-4">
@@ -214,7 +203,6 @@ export default function ComprehensivePricing() {
               with additional capabilities unlocked at higher tiers.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((plan, index) => (
               <motion.div
@@ -233,7 +221,6 @@ export default function ComprehensivePricing() {
                     </span>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-zinc-800 mb-4">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -242,7 +229,6 @@ export default function ComprehensivePricing() {
                   </div>
                   <p className="text-zinc-600">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-3">
@@ -251,7 +237,6 @@ export default function ComprehensivePricing() {
                     </li>
                   ))}
                 </ul>
-
                 <Link to="/contact">
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.buttonVariant === 'primary'
@@ -266,7 +251,6 @@ export default function ComprehensivePricing() {
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-8 bg-zinc-800">
         <div className="container mx-auto px-4">
@@ -281,7 +265,6 @@ export default function ComprehensivePricing() {
                 className="w-full pl-10 pr-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
-
             <div className="flex items-center gap-4">
               <Filter className="w-5 h-5 text-zion-cyan" />
               <select
@@ -298,7 +281,6 @@ export default function ComprehensivePricing() {
           </div>
         </div>
       </section>
-
       {/* Services Grid View */}
       {viewMode === 'grid' && (
         <section className="py-16">
@@ -321,7 +303,6 @@ export default function ComprehensivePricing() {
                     <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                     <p className="text-sm opacity-90 line-clamp-2">{service.description}</p>
                   </div>
-
                   {/* Service Content */}
                   <div className="p-6">
                     {/* Price and Rating */}
@@ -336,7 +317,6 @@ export default function ComprehensivePricing() {
                         <span className="text-zinc-500 text-sm">(150+)</span>
                       </div>
                     </div>
-
                     {/* Key Features */}
                     <div className="mb-4">
                       <h4 className="font-semibold text-zinc-800 mb-2">Key Features:</h4>
@@ -349,7 +329,6 @@ export default function ComprehensivePricing() {
                         ))}
                       </div>
                     </div>
-
                     {/* Benefits */}
                     <div className="mb-4">
                       <h4 className="font-semibold text-zinc-800 mb-2">Benefits:</h4>
@@ -362,7 +341,6 @@ export default function ComprehensivePricing() {
                         ))}
                       </div>
                     </div>
-
                     {/* Service Details */}
                     <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                       <div className="flex items-center gap-2 text-zinc-600">
@@ -382,7 +360,6 @@ export default function ComprehensivePricing() {
                         <span>{service.innovationLevel}</span>
                       </div>
                     </div>
-
                     {/* Market Information */}
                     <div className="mb-6 p-3 bg-zinc-50 rounded-lg">
                       <div className="text-sm">
@@ -398,7 +375,6 @@ export default function ComprehensivePricing() {
                         )}
                       </div>
                     </div>
-
                     {/* CTA Buttons */}
                     <div className="space-y-3">
                       <Link to="/contact">
@@ -418,7 +394,6 @@ export default function ComprehensivePricing() {
           </div>
         </section>
       )}
-
       {/* Services Table View */}
       {viewMode === 'table' && (
         <section className="py-16">
@@ -494,7 +469,6 @@ export default function ComprehensivePricing() {
           </div>
         </section>
       )}
-
       {/* No Results */}
       {filteredServices.length === 0 && (
         <section className="py-16">
@@ -514,7 +488,6 @@ export default function ComprehensivePricing() {
           </div>
         </section>
       )}
-
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-purple">
         <div className="container mx-auto px-4 text-center">

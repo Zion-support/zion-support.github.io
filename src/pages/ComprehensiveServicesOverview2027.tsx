@@ -6,12 +6,10 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasS
 import { INNOVATIVE_IT_SERVICES_2027 } from '@/data/innovativeITServices2027';
 import { INNOVATIVE_AI_SERVICES_2027 } from '@/data/innovativeAIServices2027';
 import { COMPREHENSIVE_PRICING_GUIDE_2027 } from '@/data/comprehensivePricingGuide2027';
-
 const ComprehensiveServicesOverview2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('innovation');
-
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },
     { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
@@ -24,13 +22,11 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
     { id: 'healthcare', name: 'Healthcare', icon: '🏥' },
     { id: 'financial', name: 'Financial Services', icon: '💰' }
   ];
-
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2027,
     ...INNOVATIVE_IT_SERVICES_2027,
     ...INNOVATIVE_AI_SERVICES_2027
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
       service.category.toLowerCase().includes(selectedCategory) ||
@@ -42,7 +38,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
     
     return matchesCategory && matchesSearch;
   });
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
@@ -56,7 +51,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
         return 0;
     }
   });
-
   function getInnovationLevel(level: string): number {
     switch (level.toLowerCase()) {
       case 'revolutionary': return 3;
@@ -65,7 +59,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
       default: return 0;
     }
   }
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -75,7 +68,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -86,7 +78,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
@@ -121,7 +112,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
             Discover our revolutionary micro SAAS, IT, and AI services that are shaping the future of technology. 
             From quantum computing to blockchain solutions, we provide cutting-edge services for the digital age.
           </motion.p>
-
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -140,7 +130,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Filters and Search */}
       <section className="py-12 bg-black/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-6">
@@ -162,7 +151,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
                 </button>
               ))}
             </div>
-
             {/* Search and Sort */}
             <div className="flex flex-col sm:flex-row gap-4">
               <input
@@ -186,7 +174,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
@@ -214,27 +201,22 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
                     {service.innovationLevel}
                   </span>
                 </div>
-
                 {/* Service Icon */}
                 <div className="text-4xl mb-4">{service.icon || '🚀'}</div>
-
                 {/* Service Title */}
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                   {service.title}
                 </h3>
-
                 {/* Service Description */}
                 <p className="text-zion-cyan/70 mb-4 line-clamp-3">
                   {service.description}
                 </p>
-
                 {/* Service Category */}
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-xs text-zion-cyan/50">{service.category}</span>
                   <span className="text-zion-cyan/30">•</span>
                   <span className="text-xs text-zion-cyan/50">{service.subcategory}</span>
                 </div>
-
                 {/* Price Range */}
                 <div className="mb-4">
                   <span className="text-zion-neon font-semibold">
@@ -242,7 +224,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
                      (service as any).price ? `$${(service as any).price.toLocaleString()}/month` : 'Custom Pricing'}
                   </span>
                 </div>
-
                 {/* Key Features */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h4>
@@ -260,7 +241,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
                     )}
                   </div>
                 </div>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {service.tags?.slice(0, 3).map((tag, idx) => (
@@ -272,7 +252,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
                     </span>
                   ))}
                 </div>
-
                 {/* Market Info */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-xs text-zion-cyan/50">
@@ -282,7 +261,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
                     ROI: {(service as any).roi || 'High'}
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex gap-3">
                   <Link
@@ -301,7 +279,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
@@ -318,7 +295,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -339,7 +315,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
           >
             Contact our team of experts to discuss how our innovative services can drive your success in 2027 and beyond.
           </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -360,7 +335,6 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
               Call +1 302 464 0950
             </a>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -375,5 +349,4 @@ const ComprehensiveServicesOverview2027: React.FC = () => {
     </div>
   );
 };
-
 export default ComprehensiveServicesOverview2027;

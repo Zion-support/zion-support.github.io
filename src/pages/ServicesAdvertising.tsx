@@ -32,12 +32,10 @@ import {
   Lock,
   Globe as GlobeIcon
 } from 'lucide-react';
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { ALL_INNOVATIVE_SERVICES } from "@/data/innovativeMicroSaasServices2025.ts";
-
 export default function ServicesAdvertising() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'ai-content-marketing', name: 'AI Content & Marketing', icon: Code, color: 'from-zion-orange to-zion-pink' },
@@ -51,25 +49,21 @@ export default function ServicesAdvertising() {
     { id: 'supply-chain-logistics', name: 'Supply Chain & Logistics', icon: Truck, color: 'from-zion-green to-zion-purple' },
     { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' }
   ];
-
   const filteredServices = selectedCategory === 'all' 
     ? ALL_INNOVATIVE_SERVICES 
     : ALL_INNOVATIVE_SERVICES.filter(service => 
         service.category.toLowerCase().includes(selectedCategory.replace('-', ' '))
       );
-
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.icon : Zap;
   };
-
   const getCategoryColor = (category: string) => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
-
   return (
-    <>
+<>
       <SEOHead 
         title="Comprehensive Micro SAAS Services - Zion Tech Group"
         description="Discover our complete portfolio of innovative micro SAAS services including AI Content & Marketing, Data Privacy, Green Tech, Remote Work Tools, E-commerce Solutions, Healthcare Tech, EdTech, Real Estate Tech, Supply Chain AI, and Customer Support Automation."
@@ -84,7 +78,6 @@ export default function ServicesAdvertising() {
           <div className="absolute bottom-20 right-20 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>
         </div>
-
         <div className="container-responsive relative z-10">
           <motion.div 
             className="text-center max-w-5xl mx-auto"
@@ -145,7 +138,6 @@ export default function ServicesAdvertising() {
           </motion.div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container-responsive">
@@ -167,7 +159,6 @@ export default function ServicesAdvertising() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 bg-futuristic">
         <div className="container-responsive">
@@ -193,7 +184,6 @@ export default function ServicesAdvertising() {
                     </div>
                   </div>
                 </div>
-
                 {/* Pricing */}
                 <div className="bg-zion-slate-dark/50 rounded-xl p-4 mb-4">
                   <div className="flex items-center justify-between mb-2">
@@ -209,7 +199,6 @@ export default function ServicesAdvertising() {
                     ROI: {service.roi}
                   </div>
                 </div>
-
                 {/* Features */}
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-3">Key Features</h4>
@@ -227,7 +216,6 @@ export default function ServicesAdvertising() {
                     )}
                   </div>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-3">Benefits</h4>
@@ -239,7 +227,6 @@ export default function ServicesAdvertising() {
                     ))}
                   </div>
                 </div>
-
                 {/* Technical Specs */}
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-3">Technical Specifications</h4>
@@ -254,7 +241,6 @@ export default function ServicesAdvertising() {
                     </div>
                   </div>
                 </div>
-
                 {/* Delivery & Support */}
                 <div className="flex items-center justify-between mb-4 text-sm">
                   <div>
@@ -266,7 +252,6 @@ export default function ServicesAdvertising() {
                     <div className="text-white font-medium capitalize">{service.supportLevel}</div>
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <div className="flex gap-3">
                   <a
@@ -288,7 +273,6 @@ export default function ServicesAdvertising() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container-responsive">
@@ -348,7 +332,6 @@ export default function ServicesAdvertising() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 bg-futuristic">
         <div className="container-responsive">
@@ -466,6 +449,6 @@ export default function ServicesAdvertising() {
           </div>
         </div>
       </section>
-    </>
+</>
   );
 }

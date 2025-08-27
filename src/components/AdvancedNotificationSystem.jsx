@@ -135,7 +135,7 @@ export function AdvancedNotificationSystem() {
             const category = notification.category;
             if (!groups[category])
                 groups[category] = [];
-            groups[category].push(notification);
+            groups[category](notification);
             return groups;
         }, {})
         : { 'All': filteredNotifications };
@@ -184,7 +184,6 @@ export function AdvancedNotificationSystem() {
           </button>
         </div>
       </div>
-
       {/* Filters */}
       <div className="p-4 border-b border-zion-slate-light bg-zion-slate-light/5">
         <div className="space-y-3">
@@ -224,7 +223,6 @@ export function AdvancedNotificationSystem() {
           </div>
         </div>
       </div>
-
       {/* Notifications List */}
       <div className="flex-1 overflow-y-auto">
         {Object.entries(groupedNotifications).map(([category, categoryNotifications]) => (<div key={category}>

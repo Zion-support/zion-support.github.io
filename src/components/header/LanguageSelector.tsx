@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ChevronDown, Globe } from 'lucide-react';
-
 export function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('EN');
@@ -17,16 +16,13 @@ export function LanguageSelector() {
     { code: 'JA', name: '日本語', flag: '🇯🇵' },
     { code: 'KO', name: '한국어', flag: '🇰🇷' },
   ];
-
   const handleLanguageChange = (languageCode: string) => {
     setCurrentLanguage(languageCode);
     setIsOpen(false);
     // Here you would typically call a function to change the app's language
     console.log(`Language changed to: ${languageCode}`);
   };
-
   const currentLang = languages.find(lang => lang.code === currentLanguage);
-
   return (
     <div className="relative">
       <button
@@ -37,7 +33,6 @@ export function LanguageSelector() {
         <span className="text-sm font-medium">{currentLang?.code}</span>
         <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}/>
       </button>
-
       {isOpen && (
         <div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
           <div className="py-2">

@@ -29,7 +29,6 @@ const NotFoundPage = () => {
             Let us help you find what you need.
           </p>
         </div>
-
         {/* Quick Navigation */}
         <div className="mb-12">
           <h3 className="text-xl font-semibold text-white mb-6">Quick Navigation</h3>
@@ -40,7 +39,6 @@ const NotFoundPage = () => {
               </Link>))}
           </div>
         </div>
-
         {/* Popular Services */}
         <div className="mb-12">
           <h3 className="text-xl font-semibold text-white mb-6">Popular Services</h3>
@@ -54,7 +52,6 @@ const NotFoundPage = () => {
               </Link>))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="mb-8">
           <Link to="/" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -62,7 +59,6 @@ const NotFoundPage = () => {
             Back to Home
           </Link>
         </div>
-
         {/* Help Section */}
         <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
           <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
@@ -78,7 +74,6 @@ const NotFoundPage = () => {
             </Link>
           </div>
         </div>
-
         {/* Search Suggestion */}
         <div className="mt-8 text-gray-400">
           <p className="text-sm">

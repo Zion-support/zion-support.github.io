@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Globe, Star, Clock, Users, TrendingUp, Shield, Brain, Zap, Heart, DollarSign, BookOpen, Briefcase } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { ENHANCED_SERVICES_2025, EnhancedService2025 } from "../data/enhanced-services-2025";
-
 const categoryIcons: Record<string, React.ReactNode> = {
   "AI & Autonomous Systems": <Brain className="h-6 w-6" />,
   "Quantum Computing": <Zap className="h-6 w-6" />,
@@ -17,7 +16,6 @@ const categoryIcons: Record<string, React.ReactNode> = {
   "Supply Chain AI": <Briefcase className="h-6 w-6" />,
   "Education AI": <Users className="h-6 w-6" />
 };
-
 const categoryColors: Record<string, string> = {
   "AI & Autonomous Systems": "from-purple-600 to-indigo-700",
   "Quantum Computing": "from-blue-600 to-cyan-700",
@@ -30,14 +28,11 @@ const categoryColors: Record<string, string> = {
   "Supply Chain AI": "from-emerald-600 to-teal-700",
   "Education AI": "from-orange-600 to-red-700"
 };
-
 export default function EnhancedServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [sortBy, setSortBy] = useState<string>("rating");
-
   const categories = ["All", ...Array.from(new Set(ENHANCED_SERVICES_2025.map(service => service.category)))];
-
   const filteredServices = ENHANCED_SERVICES_2025.filter(service => {
     const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -45,7 +40,6 @@ export default function EnhancedServicesShowcase2025() {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case "rating":
@@ -60,7 +54,6 @@ export default function EnhancedServicesShowcase2025() {
         return 0;
     }
   });
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       <SEO 
@@ -93,7 +86,6 @@ export default function EnhancedServicesShowcase2025() {
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark py-4 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto text-center text-white">
@@ -103,7 +95,6 @@ export default function EnhancedServicesShowcase2025() {
           </p>
         </div>
       </div>
-
       {/* Filters and Search */}
       <div className="bg-zinc-800 py-6 px-4 border-b border-zinc-700">
         <div className="container mx-auto">
@@ -124,7 +115,6 @@ export default function EnhancedServicesShowcase2025() {
                 </button>
               ))}
             </div>
-
             {/* Search */}
             <div className="flex gap-4 items-center">
               <input
@@ -150,7 +140,6 @@ export default function EnhancedServicesShowcase2025() {
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -159,7 +148,6 @@ export default function EnhancedServicesShowcase2025() {
           ))}
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
@@ -186,10 +174,8 @@ export default function EnhancedServicesShowcase2025() {
     </div>
   );
 }
-
 function ServiceCard({ service }: { service: EnhancedService2025 }) {
   const [isExpanded, setIsExpanded] = useState(false);
-
   return (
     <div className="bg-white rounded-xl shadow-2xl overflow-hidden border border-zinc-200 hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
       {/* Header */}
@@ -210,7 +196,6 @@ function ServiceCard({ service }: { service: EnhancedService2025 }) {
         <h3 className="text-xl font-bold mb-2">{service.title}</h3>
         <p className="text-sm opacity-90 line-clamp-2">{service.description}</p>
       </div>
-
       {/* Content */}
       <div className="p-6">
         {/* Stats */}
@@ -226,7 +211,6 @@ function ServiceCard({ service }: { service: EnhancedService2025 }) {
             <span className="text-zinc-500 text-sm">AI Score</span>
           </div>
         </div>
-
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-4">
           {service.tags.slice(0, 3).map((tag, index) => (
@@ -235,7 +219,6 @@ function ServiceCard({ service }: { service: EnhancedService2025 }) {
             </span>
           ))}
         </div>
-
         {/* Features Preview */}
         <div className="mb-4">
           <h4 className="font-semibold text-zinc-800 mb-2">Key Features:</h4>
@@ -248,7 +231,6 @@ function ServiceCard({ service }: { service: EnhancedService2025 }) {
             ))}
           </ul>
         </div>
-
         {/* Expandable Details */}
         {isExpanded && (
           <div className="border-t border-zinc-200 pt-4 mt-4">
@@ -291,7 +273,6 @@ function ServiceCard({ service }: { service: EnhancedService2025 }) {
             </div>
           </div>
         )}
-
         {/* Actions */}
         <div className="flex gap-2 mt-4">
           <Button 

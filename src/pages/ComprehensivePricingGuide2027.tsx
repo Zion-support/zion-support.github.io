@@ -3,12 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { COMPREHENSIVE_PRICING_GUIDE_2027 } from '@/data/comprehensivePricingGuide2027';
-
 const ComprehensivePricingGuide2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },
     { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
@@ -21,13 +19,11 @@ const ComprehensivePricingGuide2027: React.FC = () => {
     { id: 'healthcare', name: 'Healthcare', icon: '🏥' },
     { id: 'financial', name: 'Financial Services', icon: '💰' }
   ];
-
   const filteredServices = COMPREHENSIVE_PRICING_GUIDE_2027.filter(service => {
     if (selectedCategory === 'all') return true;
     return service.category.toLowerCase().includes(selectedCategory) ||
            service.subcategory.toLowerCase().includes(selectedCategory);
   });
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -37,7 +33,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -48,7 +43,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
@@ -83,7 +77,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
             Transparent pricing for all our innovative services. Compare features, pricing tiers, and ROI across 
             our comprehensive portfolio of micro SAAS, IT, and AI solutions.
           </motion.p>
-
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -102,7 +95,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Filters and View Toggle */}
       <section className="py-12 bg-black/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-6">
@@ -124,7 +116,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                 </button>
               ))}
             </div>
-
             {/* View Toggle */}
             <div className="flex gap-2">
               <button
@@ -151,7 +142,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid/List */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
@@ -200,7 +190,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Pricing Tiers */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                   {/* Starter */}
@@ -222,7 +211,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   {/* Professional */}
                   <div className="bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg p-4 border border-zion-cyan/40 relative">
                     <div className="absolute -top-2 -right-2 bg-zion-cyan text-black text-xs px-2 py-1 rounded-full font-bold">
@@ -245,7 +233,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   {/* Enterprise */}
                   <div className="bg-black/30 rounded-lg p-4 border border-zion-purple/40">
                     <div className="text-center mb-3">
@@ -265,7 +252,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   {/* Custom */}
                   <div className="bg-gradient-to-br from-zion-neon/20 to-zion-cyan/20 rounded-lg p-4 border border-zion-neon/40">
                     <div className="text-center mb-3">
@@ -283,7 +269,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-
                 {/* Key Features and Benefits */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
@@ -309,7 +294,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-
                 {/* Use Cases and Target Audience */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
@@ -339,7 +323,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Competitors and Contact */}
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 border-t border-zion-cyan/20">
                   <div>
@@ -374,7 +357,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-
           {/* No Results */}
           {filteredServices.length === 0 && (
             <motion.div
@@ -391,7 +373,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -412,7 +393,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
           >
             Contact our team to discuss pricing, customization options, and how our services can drive your success.
           </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -433,7 +413,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
               Call +1 302 464 0950
             </a>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -451,5 +430,4 @@ const ComprehensivePricingGuide2027: React.FC = () => {
     </div>
   );
 };
-
 export default ComprehensivePricingGuide2027;

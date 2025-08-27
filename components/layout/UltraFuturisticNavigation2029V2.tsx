@@ -12,14 +12,12 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3, Eye
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: '🚀 2029 Futuristic AI Services',
@@ -94,7 +92,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -107,7 +104,6 @@ const mainNavigation = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Support', href: '/support', icon: MessageCircle }
 ];
-
 const quickLinks = [
   { name: '2029 Services Showcase', href: '/2029-ultra-futuristic-innovations', icon: Star },
   { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029', icon: Brain },
@@ -116,26 +112,21 @@ const quickLinks = [
   { name: 'Revolutionary 2027 Services', href: '/revolutionary-2027-services-showcase', icon: Rocket },
   { name: 'Market Pricing', href: '/market-pricing', icon: DollarSign }
 ];
-
 export default function UltraFuturisticNavigation2029V2() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   const handleDropdownToggle = (category: string) => {
     setActiveDropdown(activeDropdown === category ? null : category);
   };
-
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(service =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
-
   return (
     <nav className="relative bg-black/90 backdrop-blur-xl border-b border-white/10 z-50">
       {/* Top Contact Bar */}
@@ -159,7 +150,6 @@ export default function UltraFuturisticNavigation2029V2() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -180,7 +170,6 @@ export default function UltraFuturisticNavigation2029V2() {
               </div>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {mainNavigation.map((item) => (
@@ -194,7 +183,6 @@ export default function UltraFuturisticNavigation2029V2() {
               </Link>
             ))}
           </div>
-
           {/* Search and Actions */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
@@ -208,7 +196,6 @@ export default function UltraFuturisticNavigation2029V2() {
               />
               <Search className="absolute right-3 top-2.5 w-4 h-4 text-white/50" />
             </div>
-
             {/* Contact Button */}
             <Link
               href="/contact"
@@ -217,7 +204,6 @@ export default function UltraFuturisticNavigation2029V2() {
               Get Started
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
@@ -233,7 +219,6 @@ export default function UltraFuturisticNavigation2029V2() {
           </div>
         </div>
       </div>
-
       {/* Service Categories Bar */}
       <div className="bg-gradient-to-r from-black/50 via-gray-900/50 to-black/50 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -292,7 +277,6 @@ export default function UltraFuturisticNavigation2029V2() {
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -314,7 +298,6 @@ export default function UltraFuturisticNavigation2029V2() {
                 />
                 <Search className="absolute right-3 top-3.5 w-5 h-5 text-white/50" />
               </div>
-
               {/* Mobile Navigation */}
               <div className="space-y-4">
                 {mainNavigation.map((item) => (
@@ -329,7 +312,6 @@ export default function UltraFuturisticNavigation2029V2() {
                   </Link>
                 ))}
               </div>
-
               {/* Quick Links */}
               <div className="border-t border-white/20 pt-4">
                 <div className="text-sm font-semibold text-white/60 mb-3">Quick Links</div>
@@ -347,7 +329,6 @@ export default function UltraFuturisticNavigation2029V2() {
                   ))}
                 </div>
               </div>
-
               {/* Contact Info */}
               <div className="border-t border-white/20 pt-4">
                 <div className="text-sm font-semibold text-white/60 mb-3">Contact Information</div>
@@ -370,7 +351,6 @@ export default function UltraFuturisticNavigation2029V2() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Search Results Overlay */}
       {searchQuery && (
         <div className="absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-b border-white/20 z-50">

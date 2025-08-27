@@ -1,4 +1,3 @@
-
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -10,7 +9,6 @@ import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
-
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { FloatingCTA } from "@/components/FloatingCTA";
@@ -28,7 +26,6 @@ import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
 import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
 import { UltimateServicesShowcase2027 } from "@/components/UltimateServicesShowcase2027";
-
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 quantum-particles">
@@ -44,11 +41,9 @@ const EnhancedLoadingSpinner = () => (
     </div>
   </div>
 );
-
 // Performance-optimized stats section
 const StatsSection = React.memo(() => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -58,22 +53,18 @@ const StatsSection = React.memo(() => {
       },
       { threshold: 0.1 }
     );
-
     const element = document.getElementById('stats-section');
     if (element) {
       observer.observe(element);
     }
-
     return () => observer.disconnect();
   }, []);
-
   const stats = [
     { value: "500+", label: "Projects Delivered", description: "Successful implementations", icon: "🚀" },
     { value: "50+", label: "Expert Team", description: "Certified professionals", icon: "👥" },
     { value: "99.9%", label: "Uptime", description: "Reliable infrastructure", icon: "⚡" },
     { value: "24/7", label: "Support", description: "Always available", icon: "🛡️" }
   ];
-
   return (
     <section id="stats-section" className="py-20 bg-black/50 quantum-particles">
       <div className="max-w-7xl mx-auto px-6">
@@ -99,13 +90,10 @@ const StatsSection = React.memo(() => {
     </section>
   );
 });
-
 StatsSection.displayName = 'StatsSection';
-
 // Performance-optimized service categories
 const EnhancedServiceCategories = React.memo(() => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -115,15 +103,12 @@ const EnhancedServiceCategories = React.memo(() => {
       },
       { threshold: 0.1 }
     );
-
     const element = document.getElementById('service-categories');
     if (element) {
       observer.observe(element);
     }
-
     return () => observer.disconnect();
   }, []);
-
   const serviceCategories = [
     {
       title: "AI & Machine Learning",
@@ -154,7 +139,6 @@ const EnhancedServiceCategories = React.memo(() => {
       link: "/services/digital-transformation"
     }
   ];
-
   return (
     <section id="service-categories" className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">
@@ -171,7 +155,6 @@ const EnhancedServiceCategories = React.memo(() => {
             Comprehensive technology solutions designed to drive your business forward
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {serviceCategories.map((category, index) => (
             <motion.div
@@ -202,12 +185,10 @@ const EnhancedServiceCategories = React.memo(() => {
     </section>
   );
 });
-
 EnhancedServiceCategories.displayName = 'EnhancedServiceCategories';
-
 export default function Home() {
   return (
-    <>
+<>
       <SEO 
         title="Zion Tech Group - Leading Technology Solutions & Innovation"
         description="Transform your business with Zion Tech Group's cutting-edge technology solutions. AI, Cloud, Cybersecurity, and Digital Transformation services."
@@ -278,7 +259,6 @@ export default function Home() {
         <ITServiceRequestHero />
         <FloatingCTA />
       </Suspense>
-
       {/* Enhanced Featured Services Section */}
       <motion.section 
         className="py-24 bg-gradient-to-b from-zion-slate-dark to-background"
@@ -328,7 +308,6 @@ export default function Home() {
                 </Link>
               </div>
             </motion.div>
-
             {/* Cloud & DevOps */}
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="group">
               <div className="bg-gradient-to-br from-zion-blue/20 to-zion-purple/20 backdrop-blur-md p-8 rounded-3xl border border-zion-blue/30 hover:border-zion-blue/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-blue/25">
@@ -358,7 +337,6 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.section>
-
       {/* Innovative Services 2027 Section */}
       <motion.section 
         className="py-20 bg-zion-slate-dark"
@@ -375,7 +353,6 @@ export default function Home() {
               Next-generation technology solutions powered by AI and cutting-edge innovation
             </p>
           </motion.div>
-
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             initial="hidden"
@@ -408,7 +385,6 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-
             {/* Blockchain as a Service */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="group">
               <div className="bg-gradient-to-br from-zion-slate to-zion-slate-dark p-6 rounded-2xl border border-zion-slate-light hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
@@ -435,7 +411,6 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-
             {/* AI Content Creation */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="group">
               <div className="bg-gradient-to-br from-zion-slate to-zion-slate-dark p-6 rounded-2xl border border-zion-slate-light hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
@@ -463,7 +438,6 @@ export default function Home() {
               </div>
             </motion.div>
           </motion.div>
-
           <motion.div className="text-center mt-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
             <Link 
               to="/all-services-2027" 
@@ -477,38 +451,26 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.section>
-
       {/* Enhanced Feature Highlights */}
       <FeatureHighlights />
-
       {/* Enhanced Quick Access Section */}
       <QuickAccess />
-
-
-
       {/* Enhanced Categories Section */}
       <CategoriesSection />
-
       {/* Enhanced Innovative Services Showcase */}
       <EnhancedInnovativeServicesShowcase />
-
       {/* Ultimate Services Showcase 2027 */}
       <UltimateServicesShowcase2027 />
-
       {/* Enhanced Pricing Comparison */}
       <EnhancedPricingComparison />
-
       {/* Enhanced Benefits Section */}
       <BenefitsSection />
-
       {/* Enhanced How It Works Section */}
       <HowItWorksSection />
-
       {/* Enhanced Featured Listings Section */}
       <FeaturedListingsSection />
-
       {/* Enhanced Newsletter Section */}
       <NewsletterSection />
-    </>
+</>
   );
 }

@@ -13,7 +13,6 @@ import {
   Rocket,
   CheckCircle
 } from 'lucide-react';
-
 export default function AIServices() {
   const aiServices = [
     {
@@ -65,7 +64,6 @@ export default function AIServices() {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -88,7 +86,6 @@ export default function AIServices() {
       description: "Deploy AI solutions across multiple locations and markets"
     }
   ];
-
   const useCases = [
     {
       industry: "Healthcare",
@@ -107,7 +104,6 @@ export default function AIServices() {
       applications: ["Demand Forecasting", "Personalized Marketing", "Inventory Management", "Customer Behavior Analysis"]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -132,7 +128,6 @@ export default function AIServices() {
           </motion.div>
         </div>
       </section>
-
       {/* AI Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -174,7 +169,6 @@ export default function AIServices() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
@@ -209,7 +203,6 @@ export default function AIServices() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -246,7 +239,6 @@ export default function AIServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">

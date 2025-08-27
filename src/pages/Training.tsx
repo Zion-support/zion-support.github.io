@@ -1,41 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-const Training = () => {
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Training Programs
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            Enhance your team's skills with our comprehensive training programs.
-          </p>
-        </div>
-      </section>
-      
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
-            Coming Soon
-          </h2>
-          <p className="text-xl text-slate-600 mb-8">
-            We're developing comprehensive training programs. Check back soon!
-          </p>
-          <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-            Contact Us
-          </Link>
-        </div>
-      </section>
-    </div>);
-};
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, Users, Clock, Star, Play, Download, Certificate, Target, TrendingUp, Brain, Shield, Cloud, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 interface TrainingCourse {
   id: string;
   title: string;
@@ -51,7 +17,6 @@ interface TrainingCourse {
   icon: React.ComponentType<any>;
   color: string;
 }
-
 interface TrainingCategory {
   id: string;
   name: string;
@@ -60,11 +25,9 @@ interface TrainingCategory {
   color: string;
   courseCount: number;
 }
-
 const Training: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedLevel, setSelectedLevel] = useState<string>('all');
-
   const trainingCategories: TrainingCategory[] = [
     {
       id: 'ai-ml',
@@ -107,7 +70,6 @@ const Training: React.FC = () => {
       courseCount: 6
     }
   ];
-
   const trainingCourses: TrainingCourse[] = [
     // AI & ML Courses
     {
@@ -155,7 +117,6 @@ const Training: React.FC = () => {
       icon: Brain,
       color: 'bg-purple-500'
     },
-
     // Cybersecurity Courses
     {
       id: 'cyber-basics',
@@ -187,7 +148,6 @@ const Training: React.FC = () => {
       icon: Shield,
       color: 'bg-red-500'
     },
-
     // Cloud & DevOps Courses
     {
       id: 'aws-fundamentals',
@@ -219,7 +179,6 @@ const Training: React.FC = () => {
       icon: Cloud,
       color: 'bg-blue-500'
     },
-
     // Data Science Courses
     {
       id: 'data-analysis',
@@ -236,7 +195,6 @@ const Training: React.FC = () => {
       icon: TrendingUp,
       color: 'bg-green-500'
     },
-
     // Digital Transformation Courses
     {
       id: 'change-management',
@@ -254,13 +212,11 @@ const Training: React.FC = () => {
       color: 'bg-orange-500'
     }
   ];
-
   const filteredCourses = trainingCourses.filter(course => {
     const matchesCategory = selectedCategory === 'all' || course.category === selectedCategory;
     const matchesLevel = selectedLevel === 'all' || course.level === selectedLevel;
     return matchesCategory && matchesLevel;
   });
-
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'beginner': return 'bg-green-100 text-green-800';
@@ -269,7 +225,6 @@ const Training: React.FC = () => {
       default: return 'bg-gray-100 text-gray-800';
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header Section */}
@@ -290,7 +245,6 @@ const Training: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Training Categories */}
         <motion.div
@@ -321,7 +275,6 @@ const Training: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -345,7 +298,6 @@ const Training: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Training Courses */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -358,7 +310,6 @@ const Training: React.FC = () => {
             </h2>
             <span className="text-gray-500">{filteredCourses.length} courses found</span>
           </div>
-
           {filteredCourses.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {filteredCourses.map((course) => (
@@ -386,10 +337,8 @@ const Training: React.FC = () => {
                         </div>
                       </div>
                     </div>
-
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{course.title}</h3>
                     <p className="text-gray-600 mb-4">{course.description}</p>
-
                     {/* Course Details */}
                     <div className="flex items-center space-x-4 mb-4 text-sm text-gray-500">
                       <div className="flex items-center">
@@ -401,7 +350,6 @@ const Training: React.FC = () => {
                         <span>{course.instructor}</span>
                       </div>
                     </div>
-
                     {/* Course Features */}
                     <div className="mb-4">
                       <h4 className="text-sm font-medium text-gray-900 mb-2">What you'll learn:</h4>
@@ -414,7 +362,6 @@ const Training: React.FC = () => {
                         ))}
                       </div>
                     </div>
-
                     {/* Course Actions */}
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                       <div className="text-2xl font-bold text-zion-cyan">{course.price}</div>
@@ -451,7 +398,6 @@ const Training: React.FC = () => {
             </div>
           )}
         </motion.div>
-
         {/* Training Benefits */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -474,7 +420,6 @@ const Training: React.FC = () => {
                   Certificates recognized by leading tech companies
                 </p>
               </div>
-
               <div className="text-center">
                 <Users className="w-12 h-12 mx-auto mb-4 text-zion-cyan-light" />
                 <h3 className="text-lg font-semibold mb-2">Expert Instructors</h3>
@@ -482,7 +427,6 @@ const Training: React.FC = () => {
                   Learn from industry professionals and experts
                 </p>
               </div>
-
               <div className="text-center">
                 <Target className="w-12 h-12 mx-auto mb-4 text-zion-cyan-light" />
                 <h3 className="text-lg font-semibold mb-2">Career Focused</h3>
@@ -493,7 +437,6 @@ const Training: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Corporate Training */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -529,7 +472,6 @@ const Training: React.FC = () => {
                 Learn More <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>
-
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Enterprise Learning Platform</h3>
               <p className="text-gray-600 mb-4">
@@ -558,7 +500,6 @@ const Training: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -594,6 +535,4 @@ const Training: React.FC = () => {
     </div>
   );
 };
-
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 export default Training;

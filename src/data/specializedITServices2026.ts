@@ -1,6 +1,5 @@
 // Specialized IT Services 2026 - Zion Tech Group
 // Advanced IT infrastructure, cloud solutions, and enterprise services
-
 export const SPECIALIZED_IT_SERVICES_2026 = [
     // Advanced Cloud Infrastructure Solutions
     {
@@ -47,7 +46,6 @@ export const SPECIALIZED_IT_SERVICES_2026 = [
         trialPeriod: "30 days",
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"]
     },
-
     // Zero Trust Network Architecture
     {
         id: 2,
@@ -93,7 +91,6 @@ export const SPECIALIZED_IT_SERVICES_2026 = [
         trialPeriod: "21 days",
         compliance: ["NIST", "ISO 27001", "SOC 2", "GDPR", "HIPAA"]
     },
-
     // AI-Powered IT Asset Management
     {
         id: 3,
@@ -141,7 +138,6 @@ export const SPECIALIZED_IT_SERVICES_2026 = [
         accuracy: "94.5%",
         compliance: ["ITIL", "ISO 20000", "COBIT", "GDPR"]
     },
-
     // Advanced Data Center Solutions
     {
         id: 4,
@@ -187,7 +183,6 @@ export const SPECIALIZED_IT_SERVICES_2026 = [
         trialPeriod: "30 days",
         compliance: ["Uptime Institute", "TIA-942", "ISO 27001", "SOC 2"]
     },
-
     // 5G Enterprise Network Solutions
     {
         id: 5,
@@ -233,7 +228,6 @@ export const SPECIALIZED_IT_SERVICES_2026 = [
         trialPeriod: "30 days",
         compliance: ["3GPP standards", "Security standards", "Industry regulations"]
     },
-
     // AI-Powered IT Service Desk
     {
         id: 6,
@@ -281,7 +275,6 @@ export const SPECIALIZED_IT_SERVICES_2026 = [
         accuracy: "93.2%",
         compliance: ["ITIL", "ISO 20000", "GDPR"]
     },
-
     // Advanced Backup and Recovery
     {
         id: 7,
@@ -327,7 +320,6 @@ export const SPECIALIZED_IT_SERVICES_2026 = [
         trialPeriod: "30 days",
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"]
     },
-
     // Quantum-Ready Encryption Services
     {
         id: 8,
@@ -373,7 +365,6 @@ export const SPECIALIZED_IT_SERVICES_2026 = [
         trialPeriod: "21 days",
         compliance: ["FIPS 140-2", "Common Criteria", "SOC 2", "ISO 27001"]
     },
-
     // AI-Powered Network Monitoring
     {
         id: 9,
@@ -421,7 +412,6 @@ export const SPECIALIZED_IT_SERVICES_2026 = [
         accuracy: "95.8%",
         compliance: ["ISO 27001", "GDPR"]
     },
-
     // Advanced API Management Platform
     {
         id: 10,
@@ -470,7 +460,6 @@ export const SPECIALIZED_IT_SERVICES_2026 = [
         compliance: ["OAuth 2.0", "OpenID Connect", "GDPR", "SOC 2"]
     }
 ];
-
 // IT Service Categories
 export const IT_SERVICE_CATEGORIES_2026 = [
     {
@@ -544,6 +533,5 @@ export const IT_SERVICE_CATEGORIES_2026 = [
         color: "from-orange-500 to-red-600"
     }
 ];
-
 // Export all IT services
 export const ALL_IT_SERVICES_2026 = SPECIALIZED_IT_SERVICES_2026;

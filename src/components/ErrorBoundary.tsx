@@ -15,7 +15,6 @@ function ErrorFallback({ error, resetError }) {
             We encountered an unexpected error. Don't worry, our team has been notified.
           </p>
         </div>
-
         {error && process.env.NODE_ENV === 'development' && (<details className="mb-6 text-left">
             <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-2">
               Error Details (Development)
@@ -24,7 +23,6 @@ function ErrorFallback({ error, resetError }) {
               <pre>{error.stack}</pre>
             </div>
           </details>)}
-
         <div className="space-y-3">
           <Button onClick={resetError} className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
             <RefreshCw className="w-4 h-4 mr-2"/>
@@ -41,7 +39,6 @@ function ErrorFallback({ error, resetError }) {
             Go Home
           </Link>
         </div>
-
         <div className="mt-6 text-xs text-zion-slate-light">
           <p>If this problem persists, please contact our support team.</p>
           <p className="mt-1">

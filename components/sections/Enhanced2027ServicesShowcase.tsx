@@ -9,23 +9,19 @@ import {
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
-
 const Enhanced2027ServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState('name');
-
   // Combine all 2027 services
   const all2027Services = [
     ...cuttingEdge2027Innovations,
     ...practicalMicroSaas2027,
     ...emergingTech2027Services
   ];
-
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(all2027Services.map(service => service.category)))];
-
   // Filter and sort services
   const filteredServices = all2027Services
     .filter(service => {
@@ -47,7 +43,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           return 0;
       }
     });
-
   const getCategoryColor = (category: string) => {
     const colors = {
       'AI & Machine Learning': 'from-purple-500 to-indigo-600',
@@ -65,7 +60,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
     };
     return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
   };
-
   const getCategoryIcon = (category: string) => {
     const icons = {
       'AI & Machine Learning': <Brain className="w-5 h-5" />,
@@ -83,7 +77,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
     };
     return icons[category as keyof typeof icons] || <Zap className="w-5 h-5" />;
   };
-
   return (
     <section className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
@@ -105,7 +98,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             and transforms your business into a future-ready powerhouse.
           </p>
         </motion.div>
-
         {/* Search and Filters */}
         <motion.div 
           className="mb-12"
@@ -128,7 +120,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   />
                 </div>
               </div>
-
               {/* Category Filter */}
               <div className="flex items-center space-x-4">
                 <div className="relative">
@@ -145,7 +136,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
                 </div>
-
                 {/* Sort */}
                 <div className="relative">
                   <select
@@ -159,7 +149,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
                 </div>
-
                 {/* View Mode */}
                 <div className="flex bg-gray-700/50 rounded-xl p-1">
                   <button
@@ -187,7 +176,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Results Count */}
         <motion.div 
           className="mb-8"
@@ -200,7 +188,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <span className="text-cyan-400 font-semibold">{all2027Services.length}</span> services
           </p>
         </motion.div>
-
         {/* Services Grid/List */}
         <AnimatePresence mode="wait">
           {viewMode === 'grid' ? (
@@ -231,7 +218,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         <div className="text-sm text-gray-400">ROI: {service.roi}</div>
                       </div>
                     </div>
-
                     {/* Content */}
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                       {service.name}
@@ -239,7 +225,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     <p className="text-gray-300 mb-4 leading-relaxed">
                       {service.description}
                     </p>
-
                     {/* Features */}
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
@@ -252,7 +237,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-6">
                       {service.tags.slice(0, 3).map((tag, idx) => (
@@ -264,7 +248,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         </span>
                       ))}
                     </div>
-
                     {/* CTA */}
                     <Link
                       href={service.link}
@@ -306,7 +289,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                         </div>
                       </div>
-
                       {/* Content */}
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
@@ -326,7 +308,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           ))}
                         </div>
                       </div>
-
                       {/* Stats and CTA */}
                       <div className="flex flex-col items-end space-y-3">
                         <div className="text-right">
@@ -348,7 +329,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </motion.div>
           )}
         </AnimatePresence>
-
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div 
@@ -373,7 +353,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </button>
           </motion.div>
         )}
-
         {/* CTA Section */}
         <motion.div 
           className="mt-20 text-center"
@@ -411,5 +390,4 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
     </section>
   );
 };
-
 export default Enhanced2027ServicesShowcase;

@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 export default function Careers() {
   const [activeTab, setActiveTab] = useState("engineering");
   
@@ -77,7 +76,6 @@ export default function Careers() {
       }
     ]
   };
-
   // Benefits list
   const benefits = [
     {
@@ -101,7 +99,6 @@ export default function Careers() {
       icon: "💰"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-32 pb-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

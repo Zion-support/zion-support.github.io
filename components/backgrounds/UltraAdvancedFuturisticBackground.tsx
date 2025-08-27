@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-
 interface UltraAdvancedFuturisticBackgroundProps {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high' | 'extreme';
@@ -9,7 +8,6 @@ interface UltraAdvancedFuturisticBackgroundProps {
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean;
 }
-
 export default function UltraAdvancedFuturisticBackground({ 
   children, 
   intensity = 'medium',
@@ -20,14 +18,11 @@ export default function UltraAdvancedFuturisticBackground({
   enableQuantumEffects = true
 }: UltraAdvancedFuturisticBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -35,7 +30,6 @@ export default function UltraAdvancedFuturisticBackground({
     };
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Particle system
     class Particle {
       x: number;
@@ -51,7 +45,6 @@ export default function UltraAdvancedFuturisticBackground({
       rotation: number;
       rotationSpeed: number;
     }> = [];
-
     const colors = {
       quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080', '#8000ff', '#00ffff'],
       neon: ['#ff0066', '#00ffff', '#ff6600', '#9900ff', '#00ff99', '#ff1493', '#00bfff'],
@@ -59,9 +52,7 @@ export default function UltraAdvancedFuturisticBackground({
       cyberpunk: ['#ff0066', '#00ffff', '#ff6600', '#9900ff', '#00ff99', '#ff1493', '#00bfff'],
       'quantum-fusion': ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080', '#8000ff', '#00ffff', '#ff1493', '#00bfff']
     };
-
     const selectedColors = colors[theme] || colors.futuristic;
-
     // Initialize particles with enhanced properties
     const initParticles = () => {
       const count = intensity === 'extreme' ? particleCount * 2 : 
@@ -85,11 +76,9 @@ export default function UltraAdvancedFuturisticBackground({
           rotationSpeed: (Math.random() - 0.5) * 0.1 * animationSpeed
         });
       }
-
     // Enhanced animation loop with quantum effects
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Create gradient background
       const gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
@@ -109,7 +98,6 @@ export default function UltraAdvancedFuturisticBackground({
       
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles with enhanced effects
       particles.forEach((particle, index) => {
         // Update particle life
@@ -119,7 +107,6 @@ export default function UltraAdvancedFuturisticBackground({
           particle.x = Math.random() * canvas.width;
           particle.y = Math.random() * canvas.height;
         }
-
         // Update position with quantum effects
         if (enableQuantumEffects) {
           particle.x += particle.vx + Math.sin(particle.life * 0.1) * 0.5;
@@ -128,10 +115,8 @@ export default function UltraAdvancedFuturisticBackground({
           particle.x += particle.vx;
           particle.y += particle.vy;
         }
-
         // Update rotation
         particle.rotation += particle.rotationSpeed;
-
         // Bounce off edges with quantum tunneling effect
         if (particle.x <= 0 || particle.x >= canvas.width) {
           if (enableQuantumEffects && Math.random() < 0.1) {
@@ -149,13 +134,11 @@ export default function UltraAdvancedFuturisticBackground({
             particle.vy *= -1;
           }
         }
-
         // Wrap around edges
         if (this.x < 0) this.x = canvas.width;
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
-
         // Draw particle with enhanced effects
         ctx.save();
         ctx.globalAlpha = particle.opacity * (1 - particle.life / particle.maxLife);
@@ -233,10 +216,8 @@ export default function UltraAdvancedFuturisticBackground({
           ctx.shadowBlur = 20;
           ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
         }
-
         ctx.restore();
       });
-
       // Add quantum field effects
       if (enableQuantumEffects && theme === 'quantum-fusion') {
         ctx.save();
@@ -256,7 +237,6 @@ export default function UltraAdvancedFuturisticBackground({
         
         ctx.restore();
       }
-
       // Add holographic matrix effect
       if (enableHolographic && theme === 'holographic') {
         ctx.save();
@@ -281,7 +261,6 @@ export default function UltraAdvancedFuturisticBackground({
         
         ctx.restore();
       }
-
       // Add floating geometric shapes
       if (intensity === 'high') {
         const time = Date.now() * 0.001;
@@ -290,7 +269,6 @@ export default function UltraAdvancedFuturisticBackground({
           { x: canvas.width * 0.8, y: canvas.height * 0.7, size: 25, rotation: time * 0.3 },
           { x: canvas.width * 0.5, y: canvas.height * 0.8, size: 15, rotation: time * 0.7 }
         ];
-
         shapes.forEach(shape => {
           ctx.save();
           ctx.translate(shape.x, shape.y);
@@ -313,20 +291,16 @@ export default function UltraAdvancedFuturisticBackground({
           ctx.restore();
         });
       }
-
       animationRef.current = requestAnimationFrame(animate);
     };
-
     // Handle window resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-
     window.addEventListener('resize', handleResize);
     initParticles();
     animate();
-
     return () => {
       window.removeEventListener('resize', handleResize);
       if (animationRef.current) {
@@ -334,7 +308,6 @@ export default function UltraAdvancedFuturisticBackground({
       }
     };
   }, [intensity, theme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]);
-
   return (
     <div className="relative min-h-screen">
       <canvas

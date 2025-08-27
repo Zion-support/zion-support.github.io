@@ -84,7 +84,6 @@ import {
   X
 } from 'lucide-react';
 import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data/ultimateInnovativeServices2027';
-
 export function UltimateInnovativeServicesShowcase2027() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -92,7 +91,6 @@ export function UltimateInnovativeServicesShowcase2027() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi' | 'name'>('innovation');
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -102,15 +100,12 @@ export function UltimateInnovativeServicesShowcase2027() {
       },
       { threshold: 0.1 }
     );
-
     const element = document.getElementById('ultimate-services-showcase-2027');
     if (element) {
       observer.observe(element);
     }
-
     return () => observer.disconnect();
   }, []);
-
   const categories = [
     { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5" />, color: 'from-zion-cyan to-zion-purple' },
     { id: 'AI & Financial Technology', name: 'AI & FinTech', icon: <DollarSign className="h-5 w-5" />, color: 'from-green-500 to-emerald-500' },
@@ -123,7 +118,6 @@ export function UltimateInnovativeServicesShowcase2027() {
     { id: 'Business Solutions', name: 'Business', icon: <Briefcase className="h-5 w-5" />, color: 'from-teal-500 to-cyan-500' },
     { id: 'AI & Content Creation', name: 'Content AI', icon: <FileText className="h-5 w-5" />, color: 'from-yellow-500 to-amber-500' }
   ];
-
   const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2027
     .filter(service => {
       const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
@@ -148,7 +142,6 @@ export function UltimateInnovativeServicesShowcase2027() {
           return 0;
       }
     });
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Financial Technology': return <DollarSign className="h-6 w-6" />;
@@ -163,7 +156,6 @@ export function UltimateInnovativeServicesShowcase2027() {
       default: return <Sparkles className="h-6 w-6" />;
     }
   };
-
   const getInnovationBadge = (level: string) => {
     const badges = {
       'Revolutionary': { color: 'from-purple-500 to-pink-500', icon: <Crown className="h-4 w-4" /> },
@@ -179,7 +171,6 @@ export function UltimateInnovativeServicesShowcase2027() {
       </div>
     );
   };
-
   return (
     <section id="ultimate-services-showcase-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark/50 via-zion-slate/30 to-zion-blue-dark/50 relative overflow-hidden">
       {/* Futuristic Background Elements */}
@@ -189,7 +180,6 @@ export function UltimateInnovativeServicesShowcase2027() {
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-zion-blue rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
@@ -209,7 +199,6 @@ export function UltimateInnovativeServicesShowcase2027() {
             Discover our cutting-edge micro SAAS, IT, and AI services that are revolutionizing industries and driving the future of technology.
           </p>
         </motion.div>
-
         {/* Search and Filter Controls */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -229,7 +218,6 @@ export function UltimateInnovativeServicesShowcase2027() {
                 className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300"
               />
             </div>
-
             {/* Sort and View Controls */}
             <div className="flex items-center gap-4">
               <select
@@ -242,7 +230,6 @@ export function UltimateInnovativeServicesShowcase2027() {
                 <option value="roi">Sort by ROI</option>
                 <option value="name">Sort by Name</option>
               </select>
-
               <div className="flex bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-1">
                 <button
                   onClick={() => setViewMode('grid')}
@@ -268,7 +255,6 @@ export function UltimateInnovativeServicesShowcase2027() {
             </div>
           </div>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -293,7 +279,6 @@ export function UltimateInnovativeServicesShowcase2027() {
             ))}
           </div>
         </motion.div>
-
         {/* Services Grid/List */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -332,12 +317,10 @@ export function UltimateInnovativeServicesShowcase2027() {
                 </div>
                 {getInnovationBadge(service.innovationLevel)}
               </div>
-
               {/* Service Description */}
               <p className="text-zion-slate-light mb-6 leading-relaxed">
                 {service.description}
               </p>
-
               {/* Service Details */}
               <div className="space-y-4 mb-6">
                 {/* Pricing */}
@@ -348,20 +331,17 @@ export function UltimateInnovativeServicesShowcase2027() {
                     <span className="text-sm text-zion-slate-light">/{service.pricingModel}</span>
                   </span>
                 </div>
-
                 {/* ROI */}
                 <div className="flex items-center justify-between">
                   <span className="text-zion-slate-light">Expected ROI:</span>
                   <span className="text-lg font-semibold text-green-400">{service.roi}</span>
                 </div>
-
                 {/* Delivery */}
                 <div className="flex items-center justify-between">
                   <span className="text-zion-slate-light">Delivery Time:</span>
                   <span className="text-zion-slate-light">{service.estimatedDelivery}</span>
                 </div>
               </div>
-
               {/* Key Features */}
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
@@ -382,7 +362,6 @@ export function UltimateInnovativeServicesShowcase2027() {
                   )}
                 </div>
               </div>
-
               {/* Contact Information */}
               <div className="mb-6 p-4 bg-zion-slate-dark/30 rounded-xl border border-zion-cyan/20">
                 <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
@@ -411,7 +390,6 @@ export function UltimateInnovativeServicesShowcase2027() {
                   </div>
                 </div>
               </div>
-
               {/* Action Buttons */}
               <div className="flex gap-3">
                 <button
@@ -430,7 +408,6 @@ export function UltimateInnovativeServicesShowcase2027() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* No Results Message */}
         {filteredServices.length === 0 && (
           <motion.div
@@ -443,7 +420,6 @@ export function UltimateInnovativeServicesShowcase2027() {
             </div>
           </motion.div>
         )}
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -476,7 +452,6 @@ export function UltimateInnovativeServicesShowcase2027() {
           </div>
         </motion.div>
       </div>
-
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (
@@ -497,7 +472,6 @@ export function UltimateInnovativeServicesShowcase2027() {
               {(() => {
                 const service = ULTIMATE_INNOVATIVE_SERVICES_2027.find(s => s.id === selectedService);
                 if (!service) return null;
-
                 return (
                   <div>
                     <div className="flex items-start justify-between mb-6">
@@ -509,7 +483,6 @@ export function UltimateInnovativeServicesShowcase2027() {
                         <X className="h-6 w-6" />
                       </button>
                     </div>
-
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                       <div>
                         <h3 className="text-xl font-semibold text-white mb-4">Service Overview</h3>
@@ -533,7 +506,6 @@ export function UltimateInnovativeServicesShowcase2027() {
                             <span className="text-white">{service.estimatedDelivery}</span>
                           </div>
                         </div>
-
                         <h3 className="text-xl font-semibold text-white mb-4">Benefits</h3>
                         <ul className="space-y-2 mb-6">
                           {service.benefits.map((benefit, idx) => (
@@ -544,7 +516,6 @@ export function UltimateInnovativeServicesShowcase2027() {
                           ))}
                         </ul>
                       </div>
-
                       <div>
                         <h3 className="text-xl font-semibold text-white mb-4">Features</h3>
                         <ul className="space-y-2 mb-6">
@@ -555,7 +526,6 @@ export function UltimateInnovativeServicesShowcase2027() {
                             </li>
                           ))}
                         </ul>
-
                         <h3 className="text-xl font-semibold text-white mb-4">Use Cases</h3>
                         <div className="flex flex-wrap gap-2 mb-6">
                           {service.useCases.map((useCase, idx) => (
@@ -564,7 +534,6 @@ export function UltimateInnovativeServicesShowcase2027() {
                             </span>
                           ))}
                         </div>
-
                         <h3 className="text-xl font-semibold text-white mb-4">Technical Specifications</h3>
                         {service.technicalSpecs && (
                           <div className="space-y-3 mb-6">
@@ -588,7 +557,6 @@ export function UltimateInnovativeServicesShowcase2027() {
                             </div>
                           </div>
                         )}
-
                         <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-xl p-4">
                           <h4 className="text-white font-semibold mb-3">Get Started</h4>
                           <div className="space-y-3">

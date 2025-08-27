@@ -49,21 +49,18 @@ import { SEO } from "@/components/SEO";
 import { INNOVATIVE_NEW_SERVICES_2026, SERVICE_CATEGORIES_2026, PRICING_TIERS_2026, CONTACT_INFO_2026 } from "@/data/innovativeNewServices2026";
 import { SPECIALIZED_IT_SERVICES_2026, IT_SERVICE_CATEGORIES_2026 } from "@/data/specializedITServices2026";
 import { ADVANCED_AI_SERVICES_2026, AI_SERVICE_CATEGORIES_2026 } from "@/data/advancedAIServices2026";
-
 export default function ComprehensiveServicesShowcase2026() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
   const [selectedServiceType, setSelectedServiceType] = useState('all');
-
   // Combine all services
   const allServices = [
     ...INNOVATIVE_NEW_SERVICES_2026,
     ...SPECIALIZED_IT_SERVICES_2026,
     ...ADVANCED_AI_SERVICES_2026
   ];
-
   // Service types for filtering
   const serviceTypes = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
@@ -71,7 +68,6 @@ export default function ComprehensiveServicesShowcase2026() {
     { id: 'it', name: 'IT Services', icon: Server, color: 'from-zion-blue to-zion-cyan' },
     { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-zion-green to-zion-blue' }
   ];
-
   // Price ranges
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
@@ -79,7 +75,6 @@ export default function ComprehensiveServicesShowcase2026() {
     { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },
     { id: 'enterprise', name: 'Enterprise', range: '$5,000+' }
   ];
-
   // Sort options
   const sortOptions = [
     { id: 'featured', name: 'Featured' },
@@ -88,7 +83,6 @@ export default function ComprehensiveServicesShowcase2026() {
     { id: 'newest', name: 'Newest' },
     { id: 'popular', name: 'Most Popular' }
   ];
-
   // Filter and sort services
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -110,7 +104,6 @@ export default function ComprehensiveServicesShowcase2026() {
     
     return matchesSearch && matchesCategory && matchesPrice && matchesServiceType;
   });
-
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -124,23 +117,20 @@ export default function ComprehensiveServicesShowcase2026() {
         return 0;
     }
   });
-
   const getCategoryIcon = (category: string) => {
     const cat = SERVICE_CATEGORIES_2026.find(c => c.id === category.toLowerCase().replace(' ', '-')) ||
                 IT_SERVICE_CATEGORIES_2026.find(c => c.id === category.toLowerCase().replace(' ', '-')) ||
                 AI_SERVICE_CATEGORIES_2026.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.icon : Zap;
   };
-
   const getCategoryColor = (category: string) => {
     const cat = SERVICE_CATEGORIES_2026.find(c => c.id === category.toLowerCase().replace(' ', '-')) ||
                 IT_SERVICE_CATEGORIES_2026.find(c => c.id === category.toLowerCase().replace(' ', '-')) ||
                 AI_SERVICE_CATEGORIES_2026.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
-
   return (
-    <>
+<>
       <SEO 
         title="Comprehensive Services Showcase 2026 - Zion Tech Group"
         description="Discover our comprehensive collection of innovative micro SAAS services, IT solutions, and AI platforms for 2026. Transform your business with cutting-edge technology solutions."
@@ -157,7 +147,6 @@ export default function ComprehensiveServicesShowcase2026() {
           <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>
           <div className="absolute top-1/3 right-1/3 w-20 h-20 border border-zion-green rounded-full animate-pulse delay-1500"></div>
         </div>
-
         <div className="container-responsive relative z-10">
           <motion.div 
             className="text-center max-w-5xl mx-auto"
@@ -188,7 +177,6 @@ export default function ComprehensiveServicesShowcase2026() {
                 />
               </div>
             </div>
-
             {/* Quick Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <motion.div 
@@ -231,7 +219,6 @@ export default function ComprehensiveServicesShowcase2026() {
           </motion.div>
         </div>
       </section>
-
       {/* Filters Section */}
       <section className="py-12 bg-zion-slate-dark">
         <div className="container-responsive">
@@ -249,7 +236,6 @@ export default function ComprehensiveServicesShowcase2026() {
                 ))}
               </select>
             </div>
-
             {/* Category Filter */}
             <div>
               <label className="block text-zion-slate-light mb-2 font-medium">Category</label>
@@ -270,7 +256,6 @@ export default function ComprehensiveServicesShowcase2026() {
                 ))}
               </select>
             </div>
-
             {/* Price Range Filter */}
             <div>
               <label className="block text-zion-slate-light mb-2 font-medium">Price Range</label>
@@ -284,7 +269,6 @@ export default function ComprehensiveServicesShowcase2026() {
                 ))}
               </select>
             </div>
-
             {/* Sort Options */}
             <div>
               <label className="block text-zion-slate-light mb-2 font-medium">Sort By</label>
@@ -301,7 +285,6 @@ export default function ComprehensiveServicesShowcase2026() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 bg-futuristic">
         <div className="container-responsive">
@@ -313,7 +296,6 @@ export default function ComprehensiveServicesShowcase2026() {
               Explore our comprehensive collection of innovative services designed to transform your business
             </p>
           </div>
-
           {sortedServices.length === 0 ? (
             <div className="text-center py-16">
               <div className="text-6xl mb-4">🔍</div>
@@ -346,12 +328,10 @@ export default function ComprehensiveServicesShowcase2026() {
                         </div>
                       </div>
                     </div>
-
                     {/* Service Description */}
                     <p className="text-zion-slate-light mb-4 line-clamp-3">
                       {service.description}
                     </p>
-
                     {/* Key Features */}
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features</h4>
@@ -369,7 +349,6 @@ export default function ComprehensiveServicesShowcase2026() {
                         )}
                       </div>
                     </div>
-
                     {/* Pricing & Benefits */}
                     <div className="mb-4">
                       <div className="flex items-center justify-between mb-2">
@@ -383,7 +362,6 @@ export default function ComprehensiveServicesShowcase2026() {
                         ROI: {service.roi}
                       </div>
                     </div>
-
                     {/* Contact & Actions */}
                     <div className="border-t border-zion-cyan/20 pt-4">
                       <div className="flex items-center justify-between">
@@ -412,7 +390,6 @@ export default function ComprehensiveServicesShowcase2026() {
           )}
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container-responsive">
@@ -424,7 +401,6 @@ export default function ComprehensiveServicesShowcase2026() {
               Get in touch with our team to discuss how our innovative services can help you achieve your goals
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
@@ -433,7 +409,6 @@ export default function ComprehensiveServicesShowcase2026() {
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-zion-slate-light">{CONTACT_INFO_2026.phone}</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-8 h-8 text-white" />
@@ -441,7 +416,6 @@ export default function ComprehensiveServicesShowcase2026() {
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-zion-slate-light">{CONTACT_INFO_2026.email}</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-green to-zion-emerald rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
@@ -450,7 +424,6 @@ export default function ComprehensiveServicesShowcase2026() {
               <p className="text-zion-slate-light">{CONTACT_INFO_2026.address}</p>
             </div>
           </div>
-
           <div className="text-center mt-8">
             <Link
               to="/contact"
@@ -462,6 +435,6 @@ export default function ComprehensiveServicesShowcase2026() {
           </div>
         </div>
       </section>
-    </>
+</>
   );
 }

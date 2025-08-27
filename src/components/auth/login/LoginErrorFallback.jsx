@@ -1,5 +1,4 @@
 import React from 'react';
-
 export const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">
@@ -25,4 +24,3 @@ export const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
     </div>
   );
 };
-

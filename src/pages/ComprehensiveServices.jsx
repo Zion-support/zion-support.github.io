@@ -30,17 +30,14 @@ import {
   DollarSign
 } from 'lucide-react';
 import { ENHANCED_MICRO_SAAS_SERVICES_2025, SERVICE_CATEGORIES, ZION_TECH_GROUP_CONTACT } from '../data/enhancedMicroSaasServices2025.js';
-
 export default function ComprehensiveServices() {
   const [services, setServices] = useState(ENHANCED_MICRO_SAAS_SERVICES_2025);
   const [filteredServices, setFilteredServices] = useState(ENHANCED_MICRO_SAAS_SERVICES_2025);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
-
   useEffect(() => {
     let filtered = services;
-
     // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(service =>
@@ -49,12 +46,10 @@ export default function ComprehensiveServices() {
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
-
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
-
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -69,10 +64,8 @@ export default function ComprehensiveServices() {
           return a.title.localeCompare(b.title);
       }
     });
-
     setFilteredServices(filtered);
   }, [services, searchTerm, selectedCategory, sortBy]);
-
   const getCategoryIcon = (category) => {
     const iconMap = {
       'AI & Development': <Cpu className="w-5 h-5" />,
@@ -88,7 +81,6 @@ export default function ComprehensiveServices() {
     };
     return iconMap[category] || <Zap className="w-5 h-5" />;
   };
-
   const getCategoryColor = (category) => {
     const colorMap = {
       'AI & Development': 'from-blue-500 to-cyan-500',
@@ -104,7 +96,6 @@ export default function ComprehensiveServices() {
     };
     return colorMap[category] || 'from-gray-500 to-slate-500';
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
@@ -136,7 +127,6 @@ export default function ComprehensiveServices() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information Banner */}
       <section className="py-6 bg-zion-blue-dark border-b border-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -156,7 +146,6 @@ export default function ComprehensiveServices() {
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-8 bg-zinc-800">
         <div className="container mx-auto px-4">
@@ -172,7 +161,6 @@ export default function ComprehensiveServices() {
                 className="w-full pl-10 pr-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
-
             {/* Category Filter */}
             <div className="flex items-center gap-4">
               <Filter className="w-5 h-5 text-zion-cyan" />
@@ -187,7 +175,6 @@ export default function ComprehensiveServices() {
                 ))}
               </select>
             </div>
-
             {/* Sort */}
             <div className="flex items-center gap-4">
               <span className="text-zinc-300">Sort by:</span>
@@ -205,7 +192,6 @@ export default function ComprehensiveServices() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -227,7 +213,6 @@ export default function ComprehensiveServices() {
                   <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                   <p className="text-sm opacity-90 line-clamp-2">{service.description}</p>
                 </div>
-
                 {/* Service Content */}
                 <div className="p-6">
                   {/* Price and Rating */}
@@ -242,7 +227,6 @@ export default function ComprehensiveServices() {
                       <span className="text-zinc-500 text-sm">(150+)</span>
                     </div>
                   </div>
-
                   {/* Key Features */}
                   <div className="mb-4">
                     <h4 className="font-semibold text-zinc-800 mb-2">Key Features:</h4>
@@ -255,7 +239,6 @@ export default function ComprehensiveServices() {
                       ))}
                     </div>
                   </div>
-
                   {/* Benefits */}
                   <div className="mb-4">
                     <h4 className="font-semibold text-zinc-800 mb-2">Benefits:</h4>
@@ -268,7 +251,6 @@ export default function ComprehensiveServices() {
                       ))}
                     </div>
                   </div>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.tags.slice(0, 3).map((tag, idx) => (
@@ -277,7 +259,6 @@ export default function ComprehensiveServices() {
                       </span>
                     ))}
                   </div>
-
                   {/* Service Details */}
                   <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                     <div className="flex items-center gap-2 text-zinc-600">
@@ -297,7 +278,6 @@ export default function ComprehensiveServices() {
                       <span>{service.innovationLevel}</span>
                     </div>
                   </div>
-
                   {/* Market Information */}
                   <div className="mb-6 p-3 bg-zinc-50 rounded-lg">
                     <div className="text-sm">
@@ -313,7 +293,6 @@ export default function ComprehensiveServices() {
                       )}
                     </div>
                   </div>
-
                   {/* CTA Buttons */}
                   <div className="space-y-3">
                     <Link to="/contact">
@@ -330,7 +309,6 @@ export default function ComprehensiveServices() {
               </motion.div>
             ))}
           </div>
-
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
@@ -350,7 +328,6 @@ export default function ComprehensiveServices() {
           )}
         </div>
       </section>
-
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 bg-zinc-800">
         <div className="container mx-auto px-4">
@@ -361,7 +338,6 @@ export default function ComprehensiveServices() {
               solutions that drive real business value and competitive advantage.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -402,7 +378,6 @@ export default function ComprehensiveServices() {
           </div>
         </div>
       </section>
-
       {/* Pricing Tiers */}
       <section className="py-20 bg-zinc-900">
         <div className="container mx-auto px-4">
@@ -412,7 +387,6 @@ export default function ComprehensiveServices() {
               Choose the plan that best fits your business needs and scale as you grow
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
@@ -477,7 +451,6 @@ export default function ComprehensiveServices() {
                     </span>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-zinc-800 mb-4">{plan.name}</h3>
                   <div className="flex items-baseline justify-center">
@@ -485,7 +458,6 @@ export default function ComprehensiveServices() {
                     <span className="text-zinc-500 ml-1">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-3">
@@ -494,7 +466,6 @@ export default function ComprehensiveServices() {
                     </li>
                   ))}
                 </ul>
-
                 <Link to="/contact">
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.buttonVariant === 'primary'
@@ -509,7 +480,6 @@ export default function ComprehensiveServices() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-purple">
         <div className="container mx-auto px-4 text-center">

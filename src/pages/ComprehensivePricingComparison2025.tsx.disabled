@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD:src/pages/ComprehensivePricingComparison2025.tsx
-import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
-import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
-=======
 import { 
   Brain, 
   Shield, 
@@ -45,41 +41,15 @@ import {
   Calculator
 } from 'lucide-react';
 import { enhancedInnovativeMicroSaasServices2025 } from '../data/enhancedInnovativeServices2025';
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/ComprehensivePricingComparison2025.tsx.disabled
 
 const ComprehensivePricingComparison2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-<<<<<<< HEAD:src/pages/ComprehensivePricingComparison2025.tsx
-  const allServices = [
-    ...advancedInnovativeServicesExpansionV3,
-    ...specializedEnterpriseSolutions2025
-  ];
-
-  const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length },
-    { id: 'AI & Machine Learning', name: 'AI & Machine Learning', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine')).length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Security')).length },
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length },
-    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('Web3')).length },
-    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: allServices.filter(s => s.category.includes('IoT') || s.category.includes('Edge')).length },
-    { id: 'Digital Twin & Simulation', name: 'Digital Twin & Simulation', count: allServices.filter(s => s.category.includes('Digital Twin') || s.category.includes('Simulation')).length },
-    { id: 'Testing & Quality Assurance', name: 'Testing & Quality Assurance', count: allServices.filter(s => s.category.includes('Testing') || s.category.includes('Quality')).length },
-    { id: 'Compliance & Privacy', name: 'Compliance & Privacy', count: allServices.filter(s => s.category.includes('Compliance') || s.category.includes('Privacy')).length },
-    { id: 'Fintech & Digital Banking', name: 'Fintech & Digital Banking', count: allServices.filter(s => s.category.includes('Fintech') || s.category.includes('Banking')).length },
-    { id: 'Healthcare & Biotech', name: 'Healthcare & Biotech', count: allServices.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length },
-    { id: 'Space Technology', name: 'Space Technology', count: allServices.filter(s => s.category.includes('Space') || s.category.includes('Satellite')).length },
-    { id: 'Automotive & Transportation', name: 'Automotive & Transportation', count: allServices.filter(s => s.category.includes('Automotive') || s.category.includes('Transportation')).length },
-    { id: 'Energy & Sustainability', name: 'Energy & Sustainability', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Sustainability')).length },
-    { id: 'Manufacturing & Industrial', name: 'Manufacturing & Industrial', count: allServices.filter(s => s.category.includes('Manufacturing') || s.category.includes('Industrial')).length }
-  ];
-=======
   const categories = Array.from(new Set(enhancedInnovativeMicroSaasServices2025.map(service => service.category)));
 
   const filteredServices = enhancedInnovativeMicroSaasServices2025.filter(service =>
     selectedCategory === 'all' || service.category === selectedCategory
   );
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/ComprehensivePricingComparison2025.tsx.disabled
 
   const filteredServices = allServices.filter(service => {
     if (selectedCategory === 'all') return true;
@@ -128,27 +98,10 @@ const ComprehensivePricingComparison2025: React.FC = () => {
     return colorMap[categoryName] || 'from-blue-600 to-cyan-700';
   };
 
-<<<<<<< HEAD:src/pages/ComprehensivePricingComparison2025.tsx
-  const getCategoryStats = (categoryName: string) => {
-    const categoryServices = allServices.filter(service => {
-      if (categoryName === 'all') return true;
-      return service.category.includes(categoryName) || 
-             service.category.includes(categoryName.split(' ')[0]) ||
-             service.category.includes(categoryName.split(' ')[1]);
-    });
-    
-    const avgPrice = categoryServices.reduce((sum, service) => {
-      const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-      return sum + price;
-    }, 0) / categoryServices.length;
-    
-    const avgRating = categoryServices.reduce((sum, service) => sum + service.rating, 0) / categoryServices.length;
-=======
   const getCategoryStats = (category: string) => {
     const servicesInCategory = enhancedInnovativeMicroSaasServices2025.filter(service => service.category === category);
     const totalPrice = servicesInCategory.reduce((sum, service) => sum + service.price, 0);
     const avgPrice = totalPrice / servicesInCategory.length;
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/ComprehensivePricingComparison2025.tsx.disabled
     
     return {
       count: categoryServices.length,
@@ -157,8 +110,6 @@ const ComprehensivePricingComparison2025: React.FC = () => {
     };
   };
 
-<<<<<<< HEAD:src/pages/ComprehensivePricingComparison2025.tsx
-=======
   const getOverallStats = () => {
     const totalPrice = enhancedInnovativeMicroSaasServices2025.reduce((sum, service) => sum + service.price, 0);
     const avgPrice = totalPrice / enhancedInnovativeMicroSaasServices2025.length;
@@ -176,7 +127,6 @@ const ComprehensivePricingComparison2025: React.FC = () => {
 
   const overallStats = getOverallStats();
 
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/ComprehensivePricingComparison2025.tsx.disabled
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}

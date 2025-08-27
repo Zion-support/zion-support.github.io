@@ -47,7 +47,6 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Contact Information */}
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
@@ -73,7 +72,6 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Search and Filter Controls */}
       <div className="bg-zion-blue-dark py-8 px-4">
         <div className="container mx-auto">
@@ -103,7 +101,6 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -130,7 +127,6 @@ export default function ComprehensiveServicesPage() {
                         {tag}
                       </Badge>))}
                   </div>
-
                   {/* Service Details */}
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center gap-2 text-zion-slate-light">
@@ -142,7 +138,6 @@ export default function ComprehensiveServicesPage() {
                       <span>{service.location}</span>
                     </div>
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex gap-2 pt-2">
                     <Button className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -156,7 +151,6 @@ export default function ComprehensiveServicesPage() {
                 </CardContent>
               </Card>))}
           </div>
-
           {filteredServices.length === 0 && (<div className="text-center py-16">
               <div className="text-zion-slate-light text-xl mb-4">No services found matching your criteria</div>
               <Button onClick={() => {
@@ -170,7 +164,6 @@ export default function ComprehensiveServicesPage() {
             </div>)}
         </div>
       </div>
-
       {/* Service Categories Overview */}
       <div className="py-16 px-4 bg-zion-blue-dark">
         <div className="container mx-auto">
@@ -180,7 +173,6 @@ export default function ComprehensiveServicesPage() {
               Explore our comprehensive range of technology services
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
             {
@@ -213,7 +205,6 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Contact CTA Section */}
       <div className="py-20 px-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark">
         <div className="container mx-auto text-center">

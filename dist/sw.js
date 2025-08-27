@@ -1,7 +1,6 @@
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'zion-static-v1';
 const DYNAMIC_CACHE = 'zion-dynamic-v1';
-
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -12,7 +11,6 @@ const STATIC_ASSETS = [
   '/images/zion-logo-192.png',
   '/images/zion-logo-512.png'
 ];
-
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -27,7 +25,6 @@ self.addEventListener('install', (event) => {
       })
   );
 });
-
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -48,22 +45,18 @@ self.addEventListener('activate', (event) => {
       })
   );
 });
-
 // Fetch event - serve from cache or network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
-
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
   }
-
   // Skip chrome-extension and other non-http requests
   if (!url.protocol.startsWith('http')) {
     return;
   }
-
   // Handle different types of requests
   if (isStaticAsset(request)) {
     event.respondWith(handleStaticAsset(request));
@@ -73,7 +66,6 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(handleDynamicRequest(request));
   }
 });
-
 // Check if request is for a static asset
 function isStaticAsset(request) {
   const url = new URL(request.url);
@@ -88,13 +80,11 @@ function isStaticAsset(request) {
     url.pathname.endsWith('.svg')
   );
 }
-
 // Check if request is for an API endpoint
 function isAPIRequest(request) {
   const url = new URL(request.url);
   return url.pathname.startsWith('/api/') || url.hostname === 'api.ziontechgroup.com';
 }
-
 // Handle static asset requests
 async function handleStaticAsset(request) {
   try {
@@ -103,7 +93,6 @@ async function handleStaticAsset(request) {
     if (cachedResponse) {
       return cachedResponse;
     }
-
     // Fallback to network
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
@@ -118,7 +107,6 @@ async function handleStaticAsset(request) {
     return new Response('Static asset not available', { status: 404 });
   }
 }
-
 // Handle API requests
 async function handleAPIRequest(request) {
   try {
@@ -152,7 +140,6 @@ async function handleAPIRequest(request) {
     );
   }
 }
-
 // Handle dynamic requests (HTML pages)
 async function handleDynamicRequest(request) {
   try {
@@ -177,14 +164,12 @@ async function handleDynamicRequest(request) {
     return caches.match('/offline.html');
   }
 }
-
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync());
   }
 });
-
 async function doBackgroundSync() {
   try {
     // Get any pending requests from IndexedDB
@@ -202,7 +187,6 @@ async function doBackgroundSync() {
     console.log('Background sync failed:', error);
   }
 }
-
 // Push notification handling
 self.addEventListener('push', (event) => {
   const options = {
@@ -227,16 +211,13 @@ self.addEventListener('push', (event) => {
       }
     ]
   };
-
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
   );
 });
-
 // Notification click handling
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
@@ -247,18 +228,15 @@ self.addEventListener('notificationclick', (event) => {
     );
   }
 });
-
 // Helper functions for IndexedDB operations
 async function getPendingRequests() {
   // Implementation would depend on your IndexedDB setup
   return [];
 }
-
 async function removePendingRequest(id) {
   // Implementation would depend on your IndexedDB setup
   return Promise.resolve();
 }
-
 // Message handling for communication with main thread
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {

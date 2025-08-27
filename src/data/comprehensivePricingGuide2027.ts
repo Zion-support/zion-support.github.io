@@ -46,7 +46,6 @@ export interface ServicePricing {
   innovationLevel: string;
   marketSize: string;
 }
-
 export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
   // Quantum AI Business Intelligence Platform
   {
@@ -144,7 +143,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
     innovationLevel: "Revolutionary",
     marketSize: "$65 billion by 2030"
   },
-
   // Blockchain Supply Chain Management
   {
     id: "blockchain-supply-chain",
@@ -241,7 +239,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
     innovationLevel: "Advanced",
     marketSize: "$45 billion by 2027"
   },
-
   // AI-Powered Cybersecurity Platform
   {
     id: "ai-cybersecurity-platform",
@@ -338,7 +335,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
     innovationLevel: "Advanced",
     marketSize: "$75 billion by 2027"
   },
-
   // Metaverse Business Platform
   {
     id: "metaverse-business-platform",
@@ -435,7 +431,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
     innovationLevel: "Revolutionary",
     marketSize: "$120 billion by 2027"
   },
-
   // Quantum-Resistant Cryptography Platform
   {
     id: "quantum-resistant-cryptography",
@@ -532,7 +527,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
     innovationLevel: "Revolutionary",
     marketSize: "$35 billion by 2027"
   },
-
   // AI-Powered Healthcare Analytics Platform
   {
     id: "ai-healthcare-analytics",
@@ -629,7 +623,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
     innovationLevel: "Advanced",
     marketSize: "$85 billion by 2027"
   },
-
   // Sustainable Technology Platform
   {
     id: "sustainable-technology-platform",
@@ -726,7 +719,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
     innovationLevel: "Advanced",
     marketSize: "$55 billion by 2027"
   },
-
   // Edge Computing AI Platform
   {
     id: "edge-computing-ai-platform",
@@ -824,5 +816,4 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
     marketSize: "$40 billion by 2027"
   }
 ];
-
 export default COMPREHENSIVE_PRICING_GUIDE_2027;

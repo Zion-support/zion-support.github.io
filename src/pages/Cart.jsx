@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Skeleton from '@/components/ui/skeleton';
 import { useAuth } from '@/hooks/useAuth';
@@ -29,7 +29,7 @@ export default function CartPage() {
                 dispatch(setItemsAction([]));
             }
         }
-        ;
+
         load();
     }, [user, dispatch]);
     const updateQuantity = async (id, qty) => {
@@ -60,7 +60,7 @@ export default function CartPage() {
         dispatch(removeItemAction(id));
     };
     const handleCheckout = () => {
-        router.push('/checkout');
+        router('/checkout');
     };
     const applyCode = async () => {
         try {

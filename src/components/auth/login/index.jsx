@@ -1,6 +1,5 @@
 export { LoginForm } from './LoginForm';
 export { LoginErrorFallback } from './LoginErrorFallback';
-
 // Create a LoginContent component if it doesn't exist
 export const LoginContent = () => {
   return (

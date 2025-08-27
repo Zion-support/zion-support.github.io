@@ -1,5 +1,4 @@
 import { TalentProfile } from '@/types/talent';
-
 export const TALENT_SEEDS: TalentProfile[] = [
   {
     id: 'seed-1',

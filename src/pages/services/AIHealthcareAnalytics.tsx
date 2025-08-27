@@ -59,14 +59,12 @@ import {
   Zap,
   Target
 } from 'lucide-react';
-
 export default function AIHealthcareAnalytics() {
   const features = [
     {
   LineChart,
   Building
 } from 'lucide-react';
-
 const AIHealthcareAnalytics: React.FC = () => {
   const features = [
     {
@@ -146,7 +144,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       benefits: ["Evidence-based guidance", "Clinical pathways", "Best practice recommendations"]
     }
   ];
-
   const services = [
     {
       title: "Patient Analytics",
@@ -201,7 +198,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       description: "AI-powered care coordination that optimizes patient care pathways and resource allocation."
     }
   ];
-
   const benefits = [
     "Improve diagnostic accuracy by 85%",
     "Reduce treatment costs by 30-40%",
@@ -210,7 +206,6 @@ const AIHealthcareAnalytics: React.FC = () => {
     "Automate 75% of routine analytics tasks",
     "Enable proactive healthcare interventions"
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -283,7 +278,6 @@ const AIHealthcareAnalytics: React.FC = () => {
     "Increase operational efficiency by 40-60% through automation",
     "Achieve 95%+ accuracy in patient risk assessment"
   ];
-
   const useCases = [
     {
       title: "Clinical Decision Support",
@@ -306,7 +300,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       icon: Users
     }
   ];
-
   const healthcareProcesses = [
     {
       step: "01",
@@ -379,7 +372,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       metrics: ["Population Health", "Care Coordination", "Quality Metrics"]
     }
   ];
-
   const pricing = [
     {
       name: "Starter",
@@ -424,7 +416,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
@@ -457,7 +448,6 @@ const AIHealthcareAnalytics: React.FC = () => {
             </Link>
           </div>
         </div>
-
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -531,13 +521,11 @@ const AIHealthcareAnalytics: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
       </section>
-
       {/* Healthcare Processes Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-7xl mx-auto">
@@ -566,7 +554,6 @@ const AIHealthcareAnalytics: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -608,7 +595,6 @@ const AIHealthcareAnalytics: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -641,7 +627,6 @@ const AIHealthcareAnalytics: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -689,7 +674,6 @@ const AIHealthcareAnalytics: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* Benefits Section */}
         <div className="mb-20">
           <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8">
@@ -706,7 +690,6 @@ const AIHealthcareAnalytics: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Use Cases */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -748,7 +731,6 @@ const AIHealthcareAnalytics: React.FC = () => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-
         {/* Pricing */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -838,7 +820,6 @@ const AIHealthcareAnalytics: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8">
@@ -873,7 +854,6 @@ const AIHealthcareAnalytics: React.FC = () => {
     "Streamline clinical workflows",
     "Better resource allocation"
   ];
-
   const solutions = [
     {
       title: "Patient Analytics",
@@ -892,7 +872,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       description: "Advanced analytics for medical research and trials"
     }
   ];
-
   const specialties = [
     "Cardiology",
     "Oncology",
@@ -903,7 +882,6 @@ const AIHealthcareAnalytics: React.FC = () => {
     "Surgery",
     "Mental Health"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -937,7 +915,6 @@ const AIHealthcareAnalytics: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -956,7 +933,6 @@ const AIHealthcareAnalytics: React.FC = () => {
               medical expertise to revolutionize patient care and healthcare operations.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -977,7 +953,6 @@ const AIHealthcareAnalytics: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -995,7 +970,6 @@ const AIHealthcareAnalytics: React.FC = () => {
               Experience unprecedented insights and improvements in healthcare delivery with AI-powered analytics.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -1013,7 +987,6 @@ const AIHealthcareAnalytics: React.FC = () => {
                 ))}
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -1033,7 +1006,6 @@ const AIHealthcareAnalytics: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Specialties Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1052,7 +1024,6 @@ const AIHealthcareAnalytics: React.FC = () => {
               and clinical areas.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {specialties.map((specialty, index) => (
               <motion.div
@@ -1070,7 +1041,6 @@ const AIHealthcareAnalytics: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1097,7 +1067,6 @@ const AIHealthcareAnalytics: React.FC = () => {
             </div>
           </motion.div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -1107,7 +1076,6 @@ const AIHealthcareAnalytics: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of healthcare providers who have already revolutionized patient care with AI analytics.
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500/10 to-pink-500/10">
         <div className="max-w-4xl mx-auto text-center">
@@ -1138,7 +1106,6 @@ const AIHealthcareAnalytics: React.FC = () => {
     </div>
   );
 };
-
 export default AIHealthcareAnalytics;
     </div>
   );

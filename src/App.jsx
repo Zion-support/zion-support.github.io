@@ -3,10 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader.jsx';
 import { Footer } from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant.jsx';
-
 // Lazy load only the pages we know work
 const Home = lazy(() => import('./pages/Home.jsx'));
-
 const LoadingSpinner = () => (
   <div className="min-h-screen bg-futuristic flex items-center justify-center">
     <div className="text-center">
@@ -19,7 +17,6 @@ const LoadingSpinner = () => (
     </div>
   </div>
 );
-
 function App() {
   return (
     <Router>
@@ -53,5 +50,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

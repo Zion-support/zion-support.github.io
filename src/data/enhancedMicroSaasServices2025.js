@@ -64,7 +64,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     competitors: ["SonarQube", "CodeClimate", "DeepCode", "Snyk"],
     marketSize: "$2.1 billion by 2025"
   },
-
   // AI-Powered Marketing & Sales Services
   {
     id: "ai-marketing-automation-suite",
@@ -129,7 +128,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     competitors: ["HubSpot", "Marketo", "Pardot", "ActiveCampaign"],
     marketSize: "$8.2 billion by 2025"
   },
-
   // AI-Powered Customer Service
   {
     id: "ai-customer-service-bot",
@@ -194,7 +192,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     competitors: ["Intercom", "Zendesk", "Drift", "MobileMonkey"],
     marketSize: "$1.8 billion by 2025"
   },
-
   // AI-Powered Financial Services
   {
     id: "ai-financial-forecasting-platform",
@@ -259,7 +256,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     competitors: ["Bloomberg Terminal", "Morningstar", "YCharts", "FactSet"],
     marketSize: "$4.7 billion by 2025"
   },
-
   // AI-Powered Healthcare Services
   {
     id: "ai-healthcare-diagnostic-assistant",
@@ -324,7 +320,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Amazon Health"],
     marketSize: "$6.7 billion by 2025"
   },
-
   // AI-Powered Legal Services
   {
     id: "ai-legal-document-analyzer",
@@ -389,7 +384,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     competitors: ["Kira Systems", "Evisort", "ContractPodAi", "Luminance"],
     marketSize: "$3.2 billion by 2025"
   },
-
   // AI-Powered Education Services
   {
     id: "ai-personalized-learning-platform",
@@ -454,7 +448,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     competitors: ["Kira Systems", "Evisort", "ContractPodAi", "Luminance"],
     marketSize: "$5.3 billion by 2025"
   },
-
   // AI-Powered Supply Chain Services
   {
     id: "ai-supply-chain-optimizer",
@@ -519,7 +512,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     competitors: ["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"],
     marketSize: "$7.8 billion by 2025"
   },
-
   // AI-Powered Cybersecurity Services
   {
     id: "ai-threat-intelligence-platform",
@@ -584,7 +576,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
     marketSize: "$9.8 billion by 2025"
   },
-
   // AI-Powered Real Estate Services
   {
     id: "ai-real-estate-analytics-platform",
@@ -650,7 +641,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     marketSize: "$4.2 billion by 2025"
   }
 ];
-
 // Pricing tiers for different service levels
 export const SERVICE_PRICING_TIERS = {
   basic: {
@@ -669,7 +659,6 @@ export const SERVICE_PRICING_TIERS = {
     priceRange: "$399 - $1,999/month"
   }
 };
-
 // Service categories for easy filtering
 export const SERVICE_CATEGORIES = [
   "AI & Development",
@@ -683,7 +672,6 @@ export const SERVICE_CATEGORIES = [
   "AI & Cybersecurity",
   "AI & Real Estate"
 ];
-
 // Contact information for all services
 export const ZION_TECH_GROUP_CONTACT = {
   phone: "+1 302 464 0950",

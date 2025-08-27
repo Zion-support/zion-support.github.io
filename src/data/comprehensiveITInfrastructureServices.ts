@@ -29,7 +29,6 @@ export interface ComprehensiveITInfrastructureService {
   sla: string;
   uptime: string;
 }
-
 export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastructureService[] = [
   // Cloud-Native Infrastructure
   {
@@ -90,7 +89,6 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     sla: "99.99% uptime with 4-hour response time",
     uptime: "99.99%"
   },
-
   // Edge Computing Infrastructure
   {
     id: "edge-computing-infrastructure",
@@ -150,7 +148,6 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     sla: "99.9% uptime with 2-hour response time",
     uptime: "99.9%"
   },
-
   // Hybrid Cloud Management
   {
     id: "hybrid-cloud-management-platform",
@@ -210,7 +207,6 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     sla: "99.95% uptime with 6-hour response time",
     uptime: "99.95%"
   },
-
   // Network Security Infrastructure
   {
     id: "network-security-infrastructure",
@@ -270,7 +266,6 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     sla: "99.99% uptime with 1-hour response time",
     uptime: "99.99%"
   },
-
   // Data Center Infrastructure
   {
     id: "data-center-infrastructure",
@@ -330,7 +325,6 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     sla: "99.999% uptime with 4-hour response time",
     uptime: "99.999%"
   },
-
   // Storage Infrastructure
   {
     id: "storage-infrastructure-platform",
@@ -390,7 +384,6 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     sla: "99.9% uptime with 4-hour response time",
     uptime: "99.9%"
   },
-
   // Backup and Disaster Recovery
   {
     id: "backup-disaster-recovery-platform",
@@ -450,7 +443,6 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     sla: "99.9% uptime with 2-hour response time",
     uptime: "99.9%"
   },
-
   // Network Monitoring Infrastructure
   {
     id: "network-monitoring-infrastructure",
@@ -510,7 +502,6 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
     sla: "99.9% uptime with 4-hour response time",
     uptime: "99.9%"
   },
-
   // Virtualization Infrastructure
   {
     id: "virtualization-infrastructure-platform",

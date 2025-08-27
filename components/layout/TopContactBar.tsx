@@ -5,7 +5,6 @@ import {
   Clock, MessageCircle, X, ChevronDown,
   ExternalLink, Calendar, Headphones
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -14,17 +13,14 @@ const contactInfo = {
   hours: 'Mon-Fri: 9AM-6PM EST',
   support: '24/7 AI Support Available'
 };
-
 const quickActions = [
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" />, color: 'from-purple-500 to-pink-600' },
   { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" />, color: 'from-blue-500 to-cyan-600' },
   { name: 'Get Support', href: '/support', icon: <Headphones className="w-4 h-4" />, color: 'from-green-500 to-emerald-600' }
 ];
-
 export default function TopContactBar() {
   const [isVisible, setIsVisible] = useState(true);
   const [isExpanded, setIsExpanded] = useState(false);
-
   // Hide bar on scroll down, show on scroll up
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -40,13 +36,10 @@ export default function TopContactBar() {
       
       lastScrollY = currentScrollY;
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   if (!isVisible) return null;
-
   return (
     <motion.div
       initial={{ y: -100 }}
@@ -59,7 +52,6 @@ export default function TopContactBar() {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5" />
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
           {/* Left Side - Contact Info */}
@@ -71,7 +63,6 @@ export default function TopContactBar() {
                 {contactInfo.mobile}
               </a>
             </div>
-
             {/* Email */}
             <div className="hidden md:flex items-center space-x-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200">
               <Mail className="w-4 h-4" />
@@ -79,20 +70,17 @@ export default function TopContactBar() {
                 {contactInfo.email}
               </a>
             </div>
-
             {/* Address */}
             <div className="hidden lg:flex items-center space-x-2 text-cyan-300">
               <MapPin className="w-4 h-4" />
               <span>{contactInfo.address}</span>
             </div>
-
             {/* Hours */}
             <div className="hidden xl:flex items-center space-x-2 text-cyan-300">
               <Clock className="w-4 h-4" />
               <span>{contactInfo.hours}</span>
             </div>
           </div>
-
           {/* Right Side - Actions & Toggle */}
           <div className="flex items-center space-x-4">
             {/* Quick Actions */}
@@ -108,7 +96,6 @@ export default function TopContactBar() {
                 </a>
               ))}
             </div>
-
             {/* Expand/Collapse Button */}
             <button
               onClick={() => setIsExpanded(!isExpanded)}
@@ -117,7 +104,6 @@ export default function TopContactBar() {
               <span>{isExpanded ? 'Less' : 'More'}</span>
               <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
             </button>
-
             {/* Close Button */}
             <button
               onClick={() => setIsVisible(false)}
@@ -127,7 +113,6 @@ export default function TopContactBar() {
             </button>
           </div>
         </div>
-
         {/* Expanded Content */}
         <AnimatePresence>
           {isExpanded && (
@@ -167,7 +152,6 @@ export default function TopContactBar() {
                     </div>
                   </div>
                 </div>
-
                 {/* Location & Hours */}
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-white flex items-center space-x-2">
@@ -185,7 +169,6 @@ export default function TopContactBar() {
                     </div>
                   </div>
                 </div>
-
                 {/* Support & Services */}
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-white flex items-center space-x-2">
@@ -203,7 +186,6 @@ export default function TopContactBar() {
                     </div>
                   </div>
                 </div>
-
                 {/* Quick Actions */}
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-white flex items-center space-x-2">
@@ -231,5 +213,4 @@ export default function TopContactBar() {
     </motion.div>
   );
 };
-
 export default TopContactBar;

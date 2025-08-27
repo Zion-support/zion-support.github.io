@@ -171,7 +171,6 @@ const ServicesShowcase = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-16">
@@ -216,7 +215,6 @@ const ServicesShowcase = () => {
             </motion.div>))}
         </motion.div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

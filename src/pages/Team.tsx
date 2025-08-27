@@ -29,11 +29,9 @@ import {
   Building,
   Zap
 } from 'lucide-react';
-
 export default function Team() {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('all');
-
   const departments = [
     { id: 'all', name: 'All Departments', count: 45 },
     { id: 'leadership', name: 'Leadership', count: 8 },
@@ -41,20 +39,17 @@ export default function Team() {
     { id: 'ai-research', name: 'AI Research', count: 12 },
     { id: 'sales', name: 'Sales & Business', count: 7 }
   ];
-
   const locations = [
     { id: 'all', name: 'All Locations', count: 45 },
     { id: 'middletown', name: 'Middletown, DE', count: 25 },
     { id: 'remote', name: 'Remote', count: 15 },
     { id: 'amsterdam', name: 'Amsterdam, NL', count: 5 }
   ];
-
   const teamMembers = [
     {
 import React from 'react';
-import { SEO } from "../components/SEOHead"';
+import SEOHead from "../components/SEOHead.jsx";
 import { Link } from 'react-router-dom';
-
 export default function Team() {
   const leadership = [
     {
@@ -102,7 +97,6 @@ export default function Team() {
       achievements: ['MBA Business', '10+ Years Operations', 'Process Optimization']
     }
   ];
-
   const departmentHeads = [
     {
       name: 'Alex Thompson',
@@ -133,7 +127,6 @@ export default function Team() {
       avatar: 'MG'
     }
   ];
-
   const companyStats = [
     {
       number: '50+',
@@ -166,7 +159,6 @@ export default function Team() {
       description: 'We strive for excellence in everything we do'
     }
   ];
-
   const culture = [
     {
       title: 'Continuous Learning',
@@ -320,7 +312,6 @@ export default function Team() {
       featured: false
     }
   ];
-
   const departments = [
     {
   const advisors = [
@@ -339,7 +330,6 @@ export default function Team() {
       linkedin: 'https://linkedin.com/in/elena-petrova'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEOHead 
@@ -348,7 +338,6 @@ export default function Team() {
         tags={["team", "leadership", "experts", "AI specialists", "quantum physicists", "cybersecurity experts", "Zion Tech Group"]}
         url="https://ziontechgroup.com/team"
       />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
@@ -376,7 +365,6 @@ export default function Team() {
           </div>
         </div>
       </section>
-
       {/* Team Stats */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -400,7 +388,6 @@ export default function Team() {
           </div>
         </div>
       </section>
-
       {/* Leadership Team */}
       <section id="team" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -458,10 +445,8 @@ export default function Team() {
       memberCount: 1
     }
   ];
-
   const featuredMembers = teamMembers.filter(member => member.featured);
   const regularMembers = teamMembers.filter(member => !member.featured);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -494,7 +479,6 @@ export default function Team() {
           </div>
         </div>
       </div>
-
       {/* Department Overview */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Departments</h2>
@@ -517,7 +501,6 @@ export default function Team() {
           })}
         </div>
       </div>
-
       {/* Featured Team Members */}
       {featuredMembers.length > 0 && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
@@ -609,7 +592,6 @@ export default function Team() {
           </div>
         </div>
       )}
-
       {/* All Team Members */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Team</h2>
@@ -835,16 +817,13 @@ export default function Team() {
       ]
     }
   ];
-
   const filteredTeam = teamMembers.filter(member => {
     const matchesDepartment = selectedDepartment === 'all' || member.department === selectedDepartment;
     const matchesLocation = selectedLocation === 'all' || member.location === selectedLocation;
     return matchesDepartment && matchesLocation;
   });
-
   const featuredMembers = filteredTeam.filter(member => member.featured);
   const regularMembers = filteredTeam.filter(member => !member.featured);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -859,7 +838,6 @@ export default function Team() {
           </p>
         </div>
       </section>
-
       {/* Company Stats */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -874,7 +852,6 @@ export default function Team() {
           </div>
         </div>
       </section>
-
       {/* Leadership Team */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -906,7 +883,6 @@ export default function Team() {
                         ))}
                       </div>
                     </div>
-
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Achievements:</h4>
                       <div className="flex flex-wrap gap-2">
@@ -917,7 +893,6 @@ export default function Team() {
                         ))}
                       </div>
                     </div>
-
       {/* Department Heads */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -939,7 +914,6 @@ export default function Team() {
         keywords="team, leadership, founders, experts, AI, quantum computing, Zion Tech Group"
         canonical="https://ziontechgroup.com/team"
       />
-
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -952,7 +926,6 @@ export default function Team() {
             innovation to deliver transformative results.
           </p>
         </div>
-
         {/* Leadership Team */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Leadership Team</h2>
@@ -1037,8 +1010,6 @@ export default function Team() {
           ))}
         </div>
       </div>
-
-
         {/* Join Our Team */}
         <div className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 md:p-12 mb-16 border border-cyan-500/20">
           <div className="text-center">
@@ -1090,5 +1061,4 @@ export default function Team() {
     </div>
   );
 };
-
 export default Team;

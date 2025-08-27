@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from 'react';
-
 interface AccessibilityPreferences {
   highContrast: boolean;
   largeText: boolean;
@@ -8,14 +7,12 @@ interface AccessibilityPreferences {
   screenReader: boolean;
   keyboardNavigation: boolean;
 }
-
 interface AccessibilitySettings {
   fontSize: 'small' | 'medium' | 'large' | 'xlarge';
   colorScheme: 'default' | 'high-contrast' | 'dark' | 'light';
   motionPreference: 'reduce' | 'no-preference';
   focusStyle: 'default' | 'high-visibility' | 'minimal';
 }
-
 export const useAccessibility = () => {
   const [preferences, setPreferences] = useState<AccessibilityPreferences>({
     highContrast: false,
@@ -25,14 +22,12 @@ export const useAccessibility = () => {
     screenReader: false,
     keyboardNavigation: true
   });
-
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 'medium',
     colorScheme: 'default',
     motionPreference: 'no-preference',
     focusStyle: 'default'
   });
-
   // Load preferences from localStorage
   useEffect(() => {
     const savedPreferences = localStorage.getItem('zion-accessibility-preferences');
@@ -54,20 +49,17 @@ export const useAccessibility = () => {
       }
     }
   }, []);
-
   // Save preferences to localStorage
   const savePreferences = useCallback((newPreferences: Partial<AccessibilityPreferences>) => {
     const updatedPreferences = { ...preferences, ...newPreferences };
     setPreferences(updatedPreferences);
     localStorage.setItem('zion-accessibility-preferences', JSON.stringify(updatedPreferences));
   }, [preferences]);
-
   const saveSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings };
     setSettings(updatedSettings);
     localStorage.setItem('zion-accessibility-settings', JSON.stringify(updatedSettings));
   }, [settings]);
-
   // Apply accessibility features
   useEffect(() => {
     const root = document.documentElement;
@@ -106,7 +98,6 @@ export const useAccessibility = () => {
       root.classList.remove('focus-visible');
     }
   }, [preferences]);
-
   // Keyboard navigation support
   useEffect(() => {
     if (!preferences.keyboardNavigation) return;
@@ -136,7 +127,6 @@ export const useAccessibility = () => {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [preferences.keyboardNavigation]);
-
   // Screen reader announcements
   const announceToScreenReader = useCallback((message: string) => {
     if (preferences.screenReader) {
@@ -153,7 +143,6 @@ export const useAccessibility = () => {
       }, 1000);
     }
   }, [preferences.screenReader]);
-
   // Focus management
   const focusFirstInteractive = useCallback((container: HTMLElement) => {
     const focusableElements = container.querySelectorAll(
@@ -164,7 +153,6 @@ export const useAccessibility = () => {
       (focusableElements[0] as HTMLElement).focus();
     }
   }, []);
-
   const trapFocus = useCallback((container: HTMLElement) => {
     const focusableElements = Array.from(
       container.querySelectorAll(
@@ -199,7 +187,6 @@ export const useAccessibility = () => {
     container.addEventListener('keydown', handleTabKey);
     return () => container.removeEventListener('keydown', handleTabKey);
   }, []);
-
   return {
     preferences,
     settings,

@@ -82,7 +82,6 @@ export default function NextGenInnovativeServices() {
                 <div className="text-gray-300">Client Satisfaction</div>
               </div>
             </div>
-
             {/* Contact Information */}
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8 border border-blue-400/30">
               <h3 className="text-2xl font-bold text-blue-400 mb-4">Ready to Transform Your Business?</h3>
@@ -110,7 +109,6 @@ export default function NextGenInnovativeServices() {
           </motion.div>
         </div>
       </div>
-
       {/* Filters and Search */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-blue-400/30">
@@ -122,7 +120,6 @@ export default function NextGenInnovativeServices() {
                 <input type="text" placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-white/10 border border-blue-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"/>
               </div>
             </div>
-
             {/* Category Filter */}
             <div className="flex items-center gap-4">
               <Filter className="text-blue-400 w-5 h-5"/>
@@ -132,7 +129,6 @@ export default function NextGenInnovativeServices() {
                   </option>))}
               </select>
             </div>
-
             {/* View Mode Toggle */}
             <div className="flex items-center gap-2">
               <button onClick={() => setViewMode('grid')} className={`p-2 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-blue-400 text-white' : 'bg-white/10 text-gray-400'}`}>
@@ -145,7 +141,6 @@ export default function NextGenInnovativeServices() {
           </div>
         </div>
       </div>
-
       {/* Services Grid/List */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
@@ -168,7 +163,6 @@ export default function NextGenInnovativeServices() {
                   {service.description}
                 </p>
               </div>
-
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-white/10 text-gray-300 rounded-full">
@@ -178,7 +172,6 @@ export default function NextGenInnovativeServices() {
                     +{service.tags.length - 4} more
                   </span>)}
               </div>
-
               {/* Quick Info */}
               <div className="grid grid-cols-2 gap-4 text-sm mb-4">
                 <div className="flex items-center text-gray-400">
@@ -190,7 +183,6 @@ export default function NextGenInnovativeServices() {
                   {service.targetAudience.length} audiences
                 </div>
               </div>
-
               {/* Contact Info */}
               <div className="pt-4 border-t border-white/20">
                 <div className="flex items-center justify-between text-sm">
@@ -206,7 +198,6 @@ export default function NextGenInnovativeServices() {
               </div>
             </motion.div>))}
         </motion.div>
-
         {/* No Results */}
         {filteredServices.length === 0 && (<div className="text-center py-12">
             <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
@@ -218,7 +209,6 @@ export default function NextGenInnovativeServices() {
             </button>
           </div>)}
       </div>
-
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -241,7 +231,6 @@ export default function NextGenInnovativeServices() {
                   ✕
                 </button>
               </div>
-
               {/* Price and Support */}
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white/10 rounded-lg p-6">
@@ -269,7 +258,6 @@ export default function NextGenInnovativeServices() {
                     </div>
                   </div>
                 </div>
-
                 <div className="bg-white/10 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-4">Business Impact</h3>
                   <div className="space-y-3">
@@ -288,7 +276,6 @@ export default function NextGenInnovativeServices() {
                   </div>
                 </div>
               </div>
-
               {/* Features and Benefits */}
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
@@ -303,7 +290,6 @@ export default function NextGenInnovativeServices() {
                       </li>))}
                   </ul>
                 </div>
-
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                     <TrendingUp size={20} className="mr-2 text-blue-400"/>
@@ -317,7 +303,6 @@ export default function NextGenInnovativeServices() {
                   </ul>
                 </div>
               </div>
-
               {/* Use Cases and Target Audience */}
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
@@ -328,7 +313,6 @@ export default function NextGenInnovativeServices() {
                       </span>))}
                   </div>
                 </div>
-
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Target Audience</h3>
                   <div className="flex flex-wrap gap-2">
@@ -338,7 +322,6 @@ export default function NextGenInnovativeServices() {
                   </div>
                 </div>
               </div>
-
               {/* Competitive Advantage */}
               <div className="bg-white/10 rounded-lg p-6 mb-8">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -347,7 +330,6 @@ export default function NextGenInnovativeServices() {
                 </h3>
                 <p className="text-gray-300 text-lg">{selectedService.competitiveAdvantage}</p>
               </div>
-
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href={`mailto:${selectedService.contactInfo.email}?subject=Inquiry about ${selectedService.title}`} className="flex-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
@@ -366,7 +348,6 @@ export default function NextGenInnovativeServices() {
             </div>
           </motion.div>
         </div>)}
-
       {/* Contact CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }} className="text-center">

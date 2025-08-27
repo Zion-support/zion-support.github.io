@@ -7,14 +7,12 @@ import {
   Twitter, Facebook, Linkedin, Instagram, Youtube,
   Github, Zap, Sparkles, Shield, Cpu, Database
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: 'AI & Machine Learning',
@@ -57,7 +55,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const businessSolutions = [
   { name: 'E-commerce Optimization', href: '/ai-powered-ecommerce-optimization-2029' },
   { name: 'Financial Advisory', href: '/ai-financial-advisory-platform-2029' },
@@ -65,7 +62,6 @@ const businessSolutions = [
   { name: 'Supply Chain Optimization', href: '/ai-supply-chain-optimization-2029' },
   { name: 'Customer Success', href: '/ai-customer-success-automation-2029' }
 ];
-
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Our Team', href: '/team' },
@@ -74,7 +70,6 @@ const companyLinks = [
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Research & Development', href: '/research' }
 ];
-
 const supportLinks = [
   { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api' },
@@ -83,7 +78,6 @@ const supportLinks = [
   { name: 'Training & Certification', href: '/training' },
   { name: 'Community Forum', href: '/community' }
 ];
-
 const legalLinks = [
   { name: 'Privacy Policy', href: '/privacy' },
   { name: 'Terms of Service', href: '/terms' },
@@ -92,7 +86,6 @@ const legalLinks = [
   { name: 'Compliance', href: '/compliance' },
   { name: 'GDPR', href: '/gdpr' }
 ];
-
 const socialLinks = [
   { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
   { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' },
@@ -101,7 +94,6 @@ const socialLinks = [
   { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-500' },
   { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
 ];
-
 export default function UltraFuturisticFooter2029() {
   return (
     <footer className="bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
@@ -110,7 +102,6 @@ export default function UltraFuturisticFooter2029() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(120,119,198,0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(120,119,198,0.1),transparent_50%)]"></div>
       </div>
-
       {/* Main Footer Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Top Section */}
@@ -133,7 +124,6 @@ export default function UltraFuturisticFooter2029() {
               Leading the future of technology with revolutionary AI, quantum computing, space technology, 
               and emerging innovations that transform businesses and advance human progress.
             </p>
-
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
@@ -149,7 +139,6 @@ export default function UltraFuturisticFooter2029() {
                 <span>{contactInfo.address}</span>
               </div>
             </div>
-
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -163,7 +152,6 @@ export default function UltraFuturisticFooter2029() {
               ))}
             </div>
           </div>
-
           {/* Newsletter Signup */}
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-white">
@@ -189,7 +177,6 @@ export default function UltraFuturisticFooter2029() {
             </p>
           </div>
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {serviceCategories.map((category) => (
@@ -213,7 +200,6 @@ export default function UltraFuturisticFooter2029() {
             </div>
           ))}
         </div>
-
         {/* Additional Links */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           {/* Business Solutions */}
@@ -232,7 +218,6 @@ export default function UltraFuturisticFooter2029() {
               ))}
             </ul>
           </div>
-
           {/* Company */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Company</h3>
@@ -249,7 +234,6 @@ export default function UltraFuturisticFooter2029() {
               ))}
             </ul>
           </div>
-
           {/* Support */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Support</h3>
@@ -266,7 +250,6 @@ export default function UltraFuturisticFooter2029() {
               ))}
             </ul>
           </div>
-
           {/* Legal */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Legal</h3>
@@ -284,7 +267,6 @@ export default function UltraFuturisticFooter2029() {
             </ul>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
@@ -305,7 +287,6 @@ export default function UltraFuturisticFooter2029() {
           </div>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(10)].map((_, i) => (

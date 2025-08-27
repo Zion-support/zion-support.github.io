@@ -35,7 +35,6 @@ export function ExpandedServicesPreview() {
             designed to accelerate your business growth and digital transformation.
           </p>
         </div>
-
         {/* Service Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {SERVICE_CATEGORIES.map((category) => (<Card key={category.id} className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light">
@@ -61,7 +60,6 @@ export function ExpandedServicesPreview() {
               </CardContent>
             </Card>))}
         </div>
-
         {/* Featured Services Preview */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-center text-zion-blue-dark mb-8">
@@ -107,7 +105,6 @@ export function ExpandedServicesPreview() {
                 </Link>
               </CardContent>
             </Card>
-
             {/* Smart Inventory */}
             <Card className="hover:shadow-lg transition-all duration-300">
               <CardHeader>
@@ -147,7 +144,6 @@ export function ExpandedServicesPreview() {
                 </Link>
               </CardContent>
             </Card>
-
             {/* Cloud Migration */}
             <Card className="hover:shadow-lg transition-all duration-300">
               <CardHeader>
@@ -189,7 +185,6 @@ export function ExpandedServicesPreview() {
             </Card>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-blue to-zion-purple rounded-2xl p-8 text-white">

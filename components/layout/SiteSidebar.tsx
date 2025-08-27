@@ -1,5 +1,4 @@
 import Link from 'next/link'
-
 export default function SiteSidebar() {
 	return (
 		<aside className="hidden lg:block w-64 flex-shrink-0 border-r border-gray-200/60 pr-4">

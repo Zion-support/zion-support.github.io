@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2030CuttingEdgeInnovation {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2030CuttingEdgeInnovation {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2030CuttingEdgeInnovations: Revolutionary2030CuttingEdgeInnovation[] = [
   // Neuromorphic Computing Platform
   {
@@ -94,7 +92,6 @@ export const revolutionary2030CuttingEdgeInnovations: Revolutionary2030CuttingEd
     rating: 4.9,
     reviews: 28
   },
-
   // DNA Computing & Storage Platform
   {
     id: 'dna-computing-storage-platform-2030',
@@ -147,7 +144,6 @@ export const revolutionary2030CuttingEdgeInnovations: Revolutionary2030CuttingEd
     rating: 4.9,
     reviews: 15
   },
-
   // Photonic Computing & Quantum Internet Platform
   {
     id: 'photonic-computing-quantum-internet-2030',
@@ -200,7 +196,6 @@ export const revolutionary2030CuttingEdgeInnovations: Revolutionary2030CuttingEd
     rating: 4.8,
     reviews: 31
   },
-
   // Autonomous Reality Engineering Platform
   {
     id: 'autonomous-reality-engineering-2030',
@@ -253,7 +248,6 @@ export const revolutionary2030CuttingEdgeInnovations: Revolutionary2030CuttingEd
     rating: 5.0,
     reviews: 8
   },
-
   // Multiversal Technology Integration Platform
   {
     id: 'multiversal-technology-integration-2030',
@@ -306,7 +300,6 @@ export const revolutionary2030CuttingEdgeInnovations: Revolutionary2030CuttingEd
     rating: 5.0,
     reviews: 6
   },
-
   // AI Consciousness Evolution Platform
   {
     id: 'ai-consciousness-evolution-2030',
@@ -359,7 +352,6 @@ export const revolutionary2030CuttingEdgeInnovations: Revolutionary2030CuttingEd
     rating: 4.8,
     reviews: 38
   },
-
   // Quantum Multiverse Platform
   {
     id: 'quantum-multiverse-platform-2030',
@@ -412,7 +404,6 @@ export const revolutionary2030CuttingEdgeInnovations: Revolutionary2030CuttingEd
     rating: 4.9,
     reviews: 12
   },
-
   // Consciousness Quantum Integration Platform
   {
     id: 'consciousness-quantum-integration-2030',
@@ -465,7 +456,6 @@ export const revolutionary2030CuttingEdgeInnovations: Revolutionary2030CuttingEd
     rating: 4.8,
     reviews: 22
   },
-
   // Dimensional Technology Platform
   {
     id: 'dimensional-technology-platform-2030',

@@ -56,7 +56,6 @@ export function NewServices() {
             {Math.random() > 0.5 ? '1' : '0'}
           </div>))}
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header Section */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -87,7 +86,6 @@ export function NewServices() {
               <div className="text-zion-slate-light">Client Satisfaction</div>
             </div>
           </div>
-
           {/* Contact Information */}
           <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-6 mb-8 border border-zion-cyan/30">
             <h3 className="text-2xl font-bold text-zion-cyan mb-4">Ready to Transform Your Business?</h3>
@@ -122,7 +120,6 @@ export function NewServices() {
             </div>
           </div>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="mb-12">
           <div className="flex flex-wrap gap-4 justify-center">
@@ -133,7 +130,6 @@ export function NewServices() {
               </button>))}
           </div>
         </motion.div>
-
         {/* Featured Services Section */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8 text-zion-cyan">
@@ -161,7 +157,6 @@ export function NewServices() {
                     {service.description}
                   </p>
                 </div>
-
                 {/* Features */}
                 <div className="mb-4">
                   <h4 className="text-zion-cyan font-semibold mb-2">Key Features:</h4>
@@ -175,7 +170,6 @@ export function NewServices() {
                       </li>)}
                   </ul>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-4">
                   <h4 className="text-zion-cyan font-semibold mb-2">Benefits:</h4>
@@ -186,7 +180,6 @@ export function NewServices() {
                       </li>))}
                   </ul>
                 </div>
-
                 {/* Service Footer */}
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
@@ -203,7 +196,6 @@ export function NewServices() {
                     </span>
                   </div>
                 </div>
-
                 {/* Tags */}
                 {'tags' in service && service.tags && (<div className="mt-4 flex flex-wrap gap-2">
                     {('tags' in service ? service.tags : []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
@@ -213,7 +205,6 @@ export function NewServices() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* All Services Grid */}
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8 text-zion-cyan">
@@ -240,7 +231,6 @@ export function NewServices() {
                     {service.description}
                   </p>
                 </div>
-
                 {/* Features */}
                 <div className="mb-4">
                   <h4 className="text-zion-cyan font-semibold mb-2">Key Features:</h4>
@@ -254,7 +244,6 @@ export function NewServices() {
                       </li>)}
                   </ul>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-4">
                   <h4 className="text-zion-cyan font-semibold mb-2">Benefits:</h4>
@@ -265,7 +254,6 @@ export function NewServices() {
                       </li>))}
                   </ul>
                 </div>
-
                 {/* Service Footer */}
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
@@ -282,7 +270,6 @@ export function NewServices() {
                     </span>
                   </div>
                 </div>
-
                 {/* Tags */}
                 {'tags' in service && service.tags && (<div className="mt-4 flex flex-wrap gap-2">
                     {('tags' in service ? service.tags : []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">
@@ -292,7 +279,6 @@ export function NewServices() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* No Results */}
         {filteredServices.length === 0 && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-16">
             <div className="text-zion-slate-light text-xl mb-4">
@@ -305,7 +291,6 @@ export function NewServices() {
               Clear Filters
             </button>
           </motion.div>)}
-
         {/* Service Count */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-center mt-16 text-zion-slate-light">
           <p className="text-lg">
@@ -315,7 +300,6 @@ export function NewServices() {
             Contact us to learn more about any service or request a custom solution
           </p>
         </motion.div>
-
         {/* CTA Section */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
@@ -343,7 +327,6 @@ export function NewServices() {
           </div>
         </motion.div>
       </div>
-
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-zion-blue-dark border border-zion-cyan/30 rounded-xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -353,7 +336,6 @@ export function NewServices() {
                 ×
               </button>
             </div>
-
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold text-zion-cyan mb-3">Service Details</h3>
@@ -382,7 +364,6 @@ export function NewServices() {
                   </div>
                 </div>
               </div>
-
               <div>
                 <h3 className="text-xl font-semibold text-zion-cyan mb-3">Features & Benefits</h3>
                 
@@ -395,7 +376,6 @@ export function NewServices() {
                       </li>))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-white font-medium mb-2">Benefits:</h4>
                   <ul className="space-y-1">
@@ -405,7 +385,6 @@ export function NewServices() {
                       </li>))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-white font-medium mb-2">Use Cases:</h4>
                   <ul className="space-y-1">
@@ -417,7 +396,6 @@ export function NewServices() {
                 </div>
               </div>
             </div>
-
             {/* Contact Information */}
             <div className="mt-8 p-6 bg-zion-blue-light/20 rounded-lg border border-zion-cyan/30">
               <h3 className="text-xl font-semibold text-zion-cyan mb-4">Get Started Today</h3>

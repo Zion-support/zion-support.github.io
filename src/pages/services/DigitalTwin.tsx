@@ -20,7 +20,6 @@ import {
   Car,
   Plane
 } from 'lucide-react';
-
 const DigitalTwin: React.FC = () => {
   const features = [
     {
@@ -44,7 +43,6 @@ const DigitalTwin: React.FC = () => {
       description: "Interconnected digital twins that share data and insights across systems."
     }
   ];
-
   const benefits = [
     "Reduce operational costs by 25-40% through predictive maintenance",
     "Improve asset utilization by 20-30% with real-time optimization",
@@ -52,7 +50,6 @@ const DigitalTwin: React.FC = () => {
     "Enhance decision-making with comprehensive data visualization",
     "Accelerate innovation through virtual testing and simulation"
   ];
-
   const useCases = [
     {
       industry: "Manufacturing",
@@ -75,7 +72,6 @@ const DigitalTwin: React.FC = () => {
       description: "Patient monitoring, medical device management, and facility optimization"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -124,7 +120,6 @@ const DigitalTwin: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -163,7 +158,6 @@ const DigitalTwin: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
         <div className="max-w-7xl mx-auto">
@@ -199,7 +193,6 @@ const DigitalTwin: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -238,7 +231,6 @@ const DigitalTwin: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue/20 to-zion-purple/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -277,5 +269,4 @@ const DigitalTwin: React.FC = () => {
     </div>
   );
 };
-
 export default DigitalTwin;

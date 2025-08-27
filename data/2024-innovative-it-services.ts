@@ -8,11 +8,9 @@ export interface InnovativeITService2024 {
   rating: number;
   customers: string;
 }
-
 export const innovativeITServices2024: InnovativeITService2024[] = [
   {
   },
-
   // Zero Trust Network Architecture
   {
     id: 'zero-trust-network-architecture',
@@ -65,7 +63,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     rating: 4.9,
     reviews: 380
   },
-
   // Edge Computing Orchestration
   {
     id: 'edge-computing-orchestration',
@@ -118,7 +115,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     rating: 4.7,
     reviews: 420
   },
-
   // AI-Powered IT Operations Center
   {
     id: 'ai-powered-it-operations-center',
@@ -171,7 +167,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     rating: 4.8,
     reviews: 480
   },
-
   // Quantum-Secure Database Platform
   {
     id: 'quantum-secure-database-platform',
@@ -224,7 +219,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     rating: 4.9,
     reviews: 280
   },
-
   // AI-Powered API Management
   {
     id: 'ai-powered-api-management',
@@ -277,7 +271,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     rating: 4.7,
     reviews: 620
   },
-
   // Intelligent Cloud Cost Optimization
   {
     id: 'intelligent-cloud-cost-optimization',
@@ -330,7 +323,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     rating: 4.8,
     reviews: 950
   },
-
   // AI-Powered Network Security
   {
     id: 'ai-powered-network-security',

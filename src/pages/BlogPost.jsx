@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, ChevronLeft, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
-
 // Mock blog post data for now
 const MOCK_BLOG_POST = {
   id: 1,
@@ -33,13 +32,11 @@ const MOCK_BLOG_POST = {
   slug: "future-of-ai-business",
   tags: ["AI", "Business", "Technology", "Innovation", "Digital Transformation"]
 };
-
 export default function BlogPost() {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState(MOCK_BLOG_POST);
   const [showShareMenu, setShowShareMenu] = useState(false);
-
   useEffect(() => {
     // In a real app, you would fetch the post by slug from an API
     // For now, we'll use the mock data
@@ -49,7 +46,6 @@ export default function BlogPost() {
     // Scroll to top when post changes
     window.scrollTo(0, 0);
   }, [slug, navigate, post]);
-
   if (!post) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white p-8 flex justify-center items-center">
@@ -57,7 +53,6 @@ export default function BlogPost() {
       </div>
     );
   }
-
   // Helper function to get share URL
   const getShareUrl = (platform) => {
     const url = encodeURIComponent(window.location.href);
@@ -73,7 +68,6 @@ export default function BlogPost() {
         return '#';
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-32 pb-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

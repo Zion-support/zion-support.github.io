@@ -1,23 +1,17 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
 interface UltraFuturisticBackground2029Props {
   children: React.ReactNode;
 }
-
 export default function UltraFuturisticBackground2029({ children }: UltraFuturisticBackground2029Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
     let animationFrameId: number;
     let particles: Array<{
       x: number;
@@ -29,7 +23,6 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
       opacity: number;
       life: number;
     }> = [];
-
     const colors = [
       '#00ffff', // Cyan
       '#ff00ff', // Magenta
@@ -40,7 +33,6 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
       '#0080ff', // Blue
       '#ff8000'  // Orange
     ];
-
     // Create particles
     const createParticles = () => {
       for (let i = 0; i < 100; i++) {
@@ -56,11 +48,9 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
         });
       }
     };
-
     // Update and draw particles
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Create gradient background
       const gradient = ctx.createRadialGradient(
         canvas.width / 2,
@@ -77,19 +67,16 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
       
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.life--;
-
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-
         // Draw particle
         ctx.save();
         ctx.globalAlpha = particle.opacity;
@@ -101,18 +88,15 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore();
-
         // Remove dead particles
         if (particle.life <= 0) {
           particles.splice(index, 1);
         }
       });
-
       // Add new particles
       if (particles.length < 100) {
         createParticles();
       }
-
       // Draw connecting lines
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
       ctx.lineWidth = 1;
@@ -132,7 +116,6 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
           }
         }
       }
-
       // Draw grid pattern
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.05)';
       ctx.lineWidth = 0.5;
@@ -151,27 +134,21 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
         ctx.lineTo(canvas.width, y);
         ctx.stroke();
       }
-
       animationFrameId = requestAnimationFrame(animate);
     };
-
     createParticles();
     animate();
-
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-
     window.addEventListener('resize', handleResize);
-
     return () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
-
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
       {/* Animated Canvas Background */}
@@ -194,7 +171,6 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
         {/* Bottom-right gradient */}
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-blue-500/20 via-transparent to-transparent rounded-full blur-3xl" />
       </div>
-
       {/* Floating Elements */}
       <div className="fixed inset-0 z-20 pointer-events-none">
         {/* Floating orbs */}
@@ -253,12 +229,10 @@ export default function UltraFuturisticBackground2029({ children }: UltraFuturis
           }}
         />
       </div>
-
       {/* Content */}
       <div className="relative z-30">
         {children}
       </div>
-
       {/* Animated Border Glow */}
       <div className="fixed inset-0 z-40 pointer-events-none">
         <motion.div

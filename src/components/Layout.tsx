@@ -4,14 +4,12 @@ import { Menu, X, ChevronDown, ChevronRight, Home, Briefcase, Phone, Shield, Fil
 import ThemeToggle from './ThemeToggle';
 import Search from './Search';
 import ScrollToTop from './ScrollToTop';
-
 interface NavItem {
   label: string;
   href: string;
   children?: NavItem[];
   icon?: React.ComponentType<{ className?: string }>;
 }
-
 const navigation: NavItem[] = [
   { label: 'Home', href: '/', icon: Home },
   { 
@@ -31,7 +29,6 @@ const navigation: NavItem[] = [
   { label: 'About', href: '/about', icon: Building },
   { label: 'Contact', href: '/contact', icon: Phone }
 ];
-
 const sidebarNavigation: NavItem[] = [
   { label: 'Main', icon: Home, href: '/', children: [
     { label: 'Home', href: '/', icon: Home },
@@ -72,7 +69,6 @@ const sidebarNavigation: NavItem[] = [
     { label: 'GDPR Compliance', href: '/', icon: Lock }
   ]}
 ];
-
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -80,13 +76,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [sidebarDropdownOpen, setSidebarDropdownOpen] = useState<string | null>(null);
   const location = useLocation();
-
   const isActive = (href: string) => location.pathname === href;
-
   const toggleSidebarDropdown = (label: string) => {
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
@@ -106,7 +99,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </span>
               </Link>
             </div>
-
             {/* Desktop Navigation */}
             <div className="hidden lg:block">
               <div className="ml-10 flex items-baseline space-x-8">
@@ -155,7 +147,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 ))}
               </div>
             </div>
-
             {/* CTA Button and Search */}
             <div className="hidden lg:flex items-center space-x-4">
               <Search />
@@ -174,7 +165,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Get Started
               </Link>
             </div>
-
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center space-x-2">
               <button
@@ -196,7 +186,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
         </nav>
-
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="lg:hidden animate-in slide-in-from-top-2 duration-200">
@@ -250,7 +239,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         )}
       </header>
-
       {/* Sidebar */}
       {sidebarOpen && (
         <div className="fixed inset-0 z-50 overflow-hidden">
@@ -315,12 +303,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       )}
-
       {/* Main Content */}
       <main className="flex-1">
         {children}
       </main>
-
       {/* Footer */}
       <footer className="bg-slate-900 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
@@ -351,7 +337,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </a>
               </div>
             </div>
-
             {/* Quick Links */}
             <div>
               <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Services</h3>
@@ -363,7 +348,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><a href="/services" className="text-slate-400 hover:text-white transition-colors flex items-center"><Users className="w-4 h-4 mr-2" />Consulting</a></li>
               </ul>
             </div>
-
             {/* Contact Info */}
             <div>
               <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Contact</h3>
@@ -376,7 +360,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </ul>
             </div>
           </div>
-
           <div className="mt-8 pt-8 border-t border-slate-800">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-slate-400 text-sm text-center md:text-left">
@@ -391,7 +374,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
-
       <ScrollToTop />
     </div>
   );

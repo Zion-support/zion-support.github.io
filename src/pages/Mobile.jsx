@@ -122,7 +122,6 @@ const Mobile = () => {
                 we deliver exceptional mobile experiences that drive engagement and results.
               </p>
             </div>
-
             {/* Mobile Features */}
             <div className="mb-20">
               <h2 className="text-3xl font-semibold text-white text-center mb-12">
@@ -146,7 +145,6 @@ const Mobile = () => {
                   </div>))}
               </div>
             </div>
-
             {/* Mobile Services */}
             <div className="mb-20">
               <h2 className="text-3xl font-semibold text-white text-center mb-12">
@@ -170,7 +168,6 @@ const Mobile = () => {
                   </div>))}
               </div>
             </div>
-
             {/* Mobile Stats */}
             <div className="mb-20">
               <h2 className="text-3xl font-semibold text-white text-center mb-12">
@@ -190,7 +187,6 @@ const Mobile = () => {
                   </div>))}
               </div>
             </div>
-
             {/* Mobile Benefits */}
             <div className="mb-20">
               <h2 className="text-3xl font-semibold text-white text-center mb-12">
@@ -208,7 +204,6 @@ const Mobile = () => {
                   </div>))}
               </div>
             </div>
-
             {/* Zion Mobile App */}
             <div className="mb-20">
               <div className="max-w-4xl mx-auto">
@@ -231,7 +226,6 @@ const Mobile = () => {
                 </div>
               </div>
             </div>
-
             {/* Call to Action */}
             <div className="max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-8 text-center">

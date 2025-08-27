@@ -107,7 +107,6 @@ const AIAutonomousResearch = () => {
           </div>
         </div>
       </section>
-
       {/* Research Features */}
       <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -138,7 +137,6 @@ const AIAutonomousResearch = () => {
           </div>
         </div>
       </section>
-
       {/* Applications */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -163,7 +161,6 @@ const AIAutonomousResearch = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -201,7 +198,6 @@ const AIAutonomousResearch = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">

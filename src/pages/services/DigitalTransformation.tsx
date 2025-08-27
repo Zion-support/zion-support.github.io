@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, RefreshCw, Target, Users, Zap, Globe, Phone, Mail } from 'lucide-react';
-
 const DigitalTransformation: React.FC = () => {
   const transformationServices = [
     {
@@ -41,7 +40,6 @@ const DigitalTransformation: React.FC = () => {
       icon: "📊"
     }
   ];
-
   const benefits = [
     "Increased operational efficiency by 40-60%",
     "Reduced costs through automation and optimization",
@@ -50,7 +48,6 @@ const DigitalTransformation: React.FC = () => {
     "Faster time-to-market for new products/services",
     "Better employee productivity and satisfaction"
   ];
-
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 30 }}
@@ -91,14 +88,12 @@ const DigitalTransformation: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive digital transformation solutions designed to modernize your business 
               and position you for long-term success in the digital economy.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {transformationServices.map((service, index) => (
               <motion.div
@@ -126,7 +121,6 @@ const DigitalTransformation: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
@@ -145,7 +139,6 @@ const DigitalTransformation: React.FC = () => {
               changing how your business operates and delivers value to customers.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -167,7 +160,6 @@ const DigitalTransformation: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -183,5 +175,4 @@ const DigitalTransformation: React.FC = () => {
     </div>
   );
 };
-
 export default DigitalTransformation;

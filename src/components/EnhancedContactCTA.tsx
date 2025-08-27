@@ -14,11 +14,9 @@ import {
   Users,
   TrendingUp
 } from 'lucide-react';
-
 export function EnhancedContactCTA() {
   const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
-
   const contactMethods = [
     {
       icon: Phone,
@@ -48,7 +46,6 @@ export function EnhancedContactCTA() {
       link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008,+Middletown+DE+19709'
     }
   ];
-
   const whyChooseUs = [
     'Expert AI & Technology Specialists',
     'Proven ROI & Performance Metrics',
@@ -57,14 +54,12 @@ export function EnhancedContactCTA() {
     'Enterprise-Grade Security',
     'Global Service Coverage'
   ];
-
   const stats = [
     { label: 'Response Time', value: '< 2 hours', icon: Clock, color: 'text-zion-cyan' },
     { label: 'Client Satisfaction', value: '99.8%', icon: Star, color: 'text-zion-purple' },
     { label: 'Expert Team', value: '50+', icon: Users, color: 'text-zion-green' },
     { label: 'Success Rate', value: '95%', icon: TrendingUp, color: 'text-zion-orange' }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -75,7 +70,6 @@ export function EnhancedContactCTA() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -87,7 +81,6 @@ export function EnhancedContactCTA() {
       }
     }
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="container mx-auto px-4">
@@ -106,7 +99,6 @@ export function EnhancedContactCTA() {
             Our team is ready to help you achieve your digital transformation goals.
           </p>
         </motion.div>
-
         {/* Stats Section */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -133,7 +125,6 @@ export function EnhancedContactCTA() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Contact Methods Grid */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
@@ -174,7 +165,6 @@ export function EnhancedContactCTA() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Why Choose Us Section */}
         <motion.div 
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16"
@@ -221,7 +211,6 @@ export function EnhancedContactCTA() {
             </div>
           </div>
         </motion.div>
-
         {/* Final CTA */}
         <motion.div 
           className="text-center"

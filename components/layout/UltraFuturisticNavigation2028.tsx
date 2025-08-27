@@ -10,14 +10,12 @@ import {
   Eye, Car, Factory, Leaf, Building2, Wifi, LockKeyhole,
   FileText
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: '🚀 2028 Futuristic Innovations',
@@ -104,7 +102,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home },
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket },
@@ -127,7 +124,6 @@ const companyLinks = [
   { name: '📋 Terms', href: '/terms', icon: FileText },
   { name: '🔒 Privacy', href: '/privacy', icon: Lock }
 ];
-
 const quickServices = [
   { name: 'AI Climate Prediction', href: '/ai-climate-prediction-platform', icon: Leaf, color: 'from-emerald-500 to-teal-500' },
   { name: 'Quantum Security', href: '/quantum-cybersecurity-firewall', icon: ShieldCheck, color: 'from-purple-500 to-indigo-500' },
@@ -136,22 +132,18 @@ const quickServices = [
   { name: 'Smart Cities', href: '/smart-city-infrastructure-management', icon: Building2, color: 'from-gray-500 to-slate-500' },
   { name: '5G Optimization', href: '/5g-network-optimization-platform', icon: Wifi, color: 'from-green-500 to-emerald-500' }
 ];
-
 export default function UltraFuturisticNavigation2028() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   const filteredServices = serviceCategories.filter(category =>
     category.services.some(service =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
-
   return (
     <nav className="relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30">
       {/* Top Contact Bar */}
@@ -175,7 +167,6 @@ export default function UltraFuturisticNavigation2028() {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -196,7 +187,6 @@ export default function UltraFuturisticNavigation2028() {
               </div>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {/* Service Categories */}
@@ -211,7 +201,6 @@ export default function UltraFuturisticNavigation2028() {
                   <span className="font-medium">{category.title.split(' ')[0]}</span>
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
-
                 {/* Dropdown Menu */}
                 <AnimatePresence>
                   {activeCategory === category.title && (
@@ -250,7 +239,6 @@ export default function UltraFuturisticNavigation2028() {
                 </AnimatePresence>
               </div>
             ))}
-
             {/* Company Links */}
             <div className="flex items-center space-x-6">
               {companyLinks.slice(0, 6).map((link) => (
@@ -264,7 +252,6 @@ export default function UltraFuturisticNavigation2028() {
               ))}
             </div>
           </div>
-
           {/* Search and Mobile Menu Button */}
           <div className="flex items-center space-x-4">
             {/* Search Bar */}
@@ -278,7 +265,6 @@ export default function UltraFuturisticNavigation2028() {
               />
               <Search className="absolute right-3 top-2.5 h-5 w-5 text-purple-400" />
             </div>
-
             {/* Contact Button */}
             <Link
               href="/contact"
@@ -287,7 +273,6 @@ export default function UltraFuturisticNavigation2028() {
               <Phone className="w-4 h-4" />
               <span>Contact Us</span>
             </Link>
-
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -298,7 +283,6 @@ export default function UltraFuturisticNavigation2028() {
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -321,7 +305,6 @@ export default function UltraFuturisticNavigation2028() {
                 />
                 <Search className="absolute right-3 top-3.5 h-5 w-5 text-purple-400" />
               </div>
-
               {/* Quick Services */}
               <div>
                 <h3 className="text-lg font-bold text-white mb-4">Quick Services</h3>
@@ -339,7 +322,6 @@ export default function UltraFuturisticNavigation2028() {
                   ))}
                 </div>
               </div>
-
               {/* Service Categories */}
               <div>
                 <h3 className="text-lg font-bold text-white mb-4">All Services</h3>
@@ -366,7 +348,6 @@ export default function UltraFuturisticNavigation2028() {
                   ))}
                 </div>
               </div>
-
               {/* Company Links */}
               <div>
                 <h3 className="text-lg font-bold text-white mb-4">Company</h3>
@@ -384,7 +365,6 @@ export default function UltraFuturisticNavigation2028() {
                   ))}
                 </div>
               </div>
-
               {/* Contact Info */}
               <div className="pt-4 border-t border-purple-500/20">
                 <div className="space-y-2 text-sm text-purple-300">
@@ -406,7 +386,6 @@ export default function UltraFuturisticNavigation2028() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Floating Action Button */}
       <div className="fixed bottom-6 right-6 z-40">
         <Link

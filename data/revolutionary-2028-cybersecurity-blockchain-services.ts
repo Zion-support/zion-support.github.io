@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2028CybersecurityBlockchainService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2028CybersecurityBlockchainService {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028CybersecurityBlockchainService[] = [
   // AI-Powered Threat Intelligence Platform
   {
@@ -94,7 +92,6 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     rating: 4.9,
     reviews: 620
   },
-
   // Quantum-Resistant Blockchain Platform
   {
     id: 'quantum-resistant-blockchain-2028',
@@ -147,7 +144,6 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     rating: 4.8,
     reviews: 890
   },
-
   // AI-Powered Identity Verification Platform
   {
     id: 'ai-identity-verification-2028',
@@ -200,7 +196,6 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     rating: 4.9,
     reviews: 1650
   },
-
   // Blockchain-Based Supply Chain Security
   {
     id: 'blockchain-supply-chain-security-2028',
@@ -253,7 +248,6 @@ export const revolutionary2028CybersecurityBlockchainServices: Revolutionary2028
     rating: 4.7,
     reviews: 520
   },
-
   // AI-Powered Privacy-Preserving Analytics
   {
     id: 'ai-privacy-preserving-analytics-2028',

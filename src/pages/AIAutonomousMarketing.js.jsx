@@ -20,7 +20,6 @@ const AIAutonomousMarketing = () => {
               Revolutionize your marketing with AI that never sleeps - intelligent campaigns, automated content creation, and personalized customer experiences
             </p>
           </div>
-
           {/* Marketing Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -44,7 +43,6 @@ const AIAutonomousMarketing = () => {
               <p className="text-gray-300">Unified campaign management</p>
             </div>
           </div>
-
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -83,7 +81,6 @@ const AIAutonomousMarketing = () => {
               <p className="text-gray-300">Real-time analytics dashboard</p>
             </div>
           </div>
-
           {/* Marketing Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">AI Marketing Process</h2>
@@ -113,7 +110,6 @@ const AIAutonomousMarketing = () => {
               </div>
             </div>
           </div>
-
           {/* Marketing Channels */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Marketing Channels</h2>
@@ -123,7 +119,6 @@ const AIAutonomousMarketing = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Marketing Applications</h2>
@@ -144,7 +139,6 @@ const AIAutonomousMarketing = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI Marketing?</h2>

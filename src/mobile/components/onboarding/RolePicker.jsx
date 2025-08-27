@@ -12,7 +12,6 @@ export function RolePicker({ onSelect }) {
     return (<div className="space-y-4 px-4">
       <h2 className="text-xl font-medium">{t('onboarding.title')}</h2>
       <p className="text-muted-foreground">{t('onboarding.subtitle')}</p>
-
       <div className="space-y-3 mt-6">
         <Card className={`cursor-pointer transition-all ${selectedRole === 'talent'
             ? "border-primary bg-primary/5"
@@ -30,7 +29,6 @@ export function RolePicker({ onSelect }) {
             </div>
           </CardContent>
         </Card>
-
         <Card className={`cursor-pointer transition-all ${selectedRole === 'client'
             ? "border-primary bg-primary/5"
             : "border-border hover:border-primary/40"}`} onClick={() => handleSelect('client')}>

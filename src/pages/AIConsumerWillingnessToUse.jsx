@@ -20,7 +20,6 @@ const AIConsumerWillingnessToUse = () => {
               Understand usage readiness with AI that never sleeps - intelligent adoption analysis, usage likelihood assessment, and product utilization insights
             </p>
           </div>
-
           {/* Usage Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -44,7 +43,6 @@ const AIConsumerWillingnessToUse = () => {
               <p className="text-gray-300">Usage optimization plans</p>
             </div>
           </div>
-
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -83,7 +81,6 @@ const AIConsumerWillingnessToUse = () => {
               <p className="text-gray-300">Improves analysis over time</p>
             </div>
           </div>
-
           {/* Usage Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Usage Analysis Process</h2>
@@ -113,7 +110,6 @@ const AIConsumerWillingnessToUse = () => {
               </div>
             </div>
           </div>
-
           {/* Usage Factors */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Usage Factors</h2>
@@ -123,7 +119,6 @@ const AIConsumerWillingnessToUse = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Usage Applications</h2>
@@ -144,7 +139,6 @@ const AIConsumerWillingnessToUse = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI Usage Analysis?</h2>

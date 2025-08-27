@@ -3,7 +3,7 @@ import { JobsList } from "@/components/jobs/JobsList";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
@@ -51,12 +51,10 @@ function ClientDashboardContent() {
             </Button>
           </div>
         </div>
-
         {/* New Onboarding Steps */}
         <div className="mb-8">
           <ClientOnboardingSteps />
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value)}>

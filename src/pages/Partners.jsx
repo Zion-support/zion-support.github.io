@@ -10,7 +10,6 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
-
 export default function Partners() {
   const partnershipTypes = [
     {
@@ -38,7 +37,6 @@ export default function Partners() {
       benefits: ['Research collaboration', 'Talent pipeline', 'Innovation programs']
     }
   ];
-
   const existingPartners = [
     {
       name: 'Microsoft',
@@ -83,7 +81,6 @@ export default function Partners() {
       year: '2022'
     }
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -106,7 +103,6 @@ export default function Partners() {
       description: 'Expand your business presence across multiple countries and regions'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
       {/* Hero Section */}
@@ -132,7 +128,6 @@ export default function Partners() {
           </div>
         </div>
       </section>
-
       {/* Partnership Types */}
       <section id="partnership-types" className="py-16">
         <div className="container mx-auto px-4">
@@ -158,7 +153,6 @@ export default function Partners() {
           </div>
         </div>
       </section>
-
       {/* Benefits */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -178,7 +172,6 @@ export default function Partners() {
           </div>
         </div>
       </section>
-
       {/* Existing Partners */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -213,7 +206,6 @@ export default function Partners() {
           </div>
         </div>
       </section>
-
       {/* Partnership Process */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -252,7 +244,6 @@ export default function Partners() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
         <div className="container mx-auto px-4 text-center">

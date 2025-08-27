@@ -265,7 +265,6 @@ export function SiteHealthDashboard() {
           Comprehensive monitoring of website performance, SEO, accessibility, and user experience
         </p>
       </div>
-
       {/* Overall Score */}
       <div className="bg-white rounded-xl shadow-lg p-8 text-center">
         <h2 className="text-2xl font-bold mb-4">Overall Health Score</h2>
@@ -282,7 +281,6 @@ export function SiteHealthDashboard() {
                     'Critical - Immediate action required for optimal performance.'}
         </p>
       </div>
-
       {/* Health Categories */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {healthData.map((category, index) => {
@@ -320,7 +318,6 @@ export function SiteHealthDashboard() {
             </div>);
         })}
       </div>
-
       {/* Action Items */}
       <div className="bg-white rounded-xl shadow-lg p-8">
         <h2 className="text-2xl font-bold mb-6 flex items-center space-x-2">
@@ -368,7 +365,6 @@ export function SiteHealthDashboard() {
           </div>
         </div>
       </div>
-
       {/* Performance Trends */}
       <div className="bg-white rounded-xl shadow-lg p-8">
         <h2 className="text-2xl font-bold mb-6">Recent Improvements</h2>

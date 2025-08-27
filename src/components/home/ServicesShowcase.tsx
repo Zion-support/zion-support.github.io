@@ -23,7 +23,6 @@ export function ServicesShowcase() {
             Discover our comprehensive suite of micro SAAS solutions designed to accelerate your business growth and digital transformation.
           </p>
         </div>
-
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {featuredServices.map((service, index) => (<FuturisticCard key={index} glowColor={service.glowColor} intensity="medium" className="h-full group hover:scale-105 transition-transform duration-300">
@@ -43,7 +42,6 @@ export function ServicesShowcase() {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-
               <CardContent className="pt-0">
                 {/* Pricing */}
                 <div className="mb-4">
@@ -51,7 +49,6 @@ export function ServicesShowcase() {
                     ${service.price?.toLocaleString()}
                   </div>
                 </div>
-
                 {/* Tags */}
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
@@ -60,7 +57,6 @@ export function ServicesShowcase() {
                       </Badge>))}
                   </div>
                 </div>
-
                 {/* Rating */}
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex items-center gap-1">
@@ -69,7 +65,6 @@ export function ServicesShowcase() {
                     <span className="text-sm text-gray-500">({service.reviewCount} reviews)</span>
                   </div>
                 </div>
-
                 {/* Actions */}
                 <div className="space-y-2">
                   <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
@@ -85,7 +80,6 @@ export function ServicesShowcase() {
               </div>
             </FuturisticCard>))}
         </div>
-
         {/* Emerging Technologies */}
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold mb-4">
@@ -97,7 +91,6 @@ export function ServicesShowcase() {
             Stay ahead of the curve with cutting-edge technology solutions
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {emergingServices.map((service, index) => (<Card key={index} className="group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
               <CardHeader className="pb-3">
@@ -131,7 +124,6 @@ export function ServicesShowcase() {
               </CardContent>
             </Card>))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 rounded-2xl p-8 border border-zion-purple/20">

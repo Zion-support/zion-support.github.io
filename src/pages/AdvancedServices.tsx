@@ -15,7 +15,6 @@ const AdvancedServices = () => {
                 animationDuration: `${3 + Math.random() * 4}s`,
             }}/>))}
         </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h1 className="text-5xl lg:text-7xl font-bold mb-6">
@@ -51,7 +50,6 @@ const AdvancedServices = () => {
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
                 </motion.div>))}
             </div>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30">
@@ -64,10 +62,8 @@ const AdvancedServices = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Services Showcase */}
       <FuturisticServicesShowcase />
-
       {/* Technology Stack Section */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>
@@ -80,7 +76,6 @@ const AdvancedServices = () => {
               Our micro SAAS solutions leverage the latest advancements in artificial intelligence, quantum computing, and cloud-native architectures.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {[
             { name: "AI/ML", icon: "🤖", color: "from-cyan-400 to-blue-500" },
@@ -98,7 +93,6 @@ const AdvancedServices = () => {
           </div>
         </div>
       </section>
-
       {/* Why Choose Zion Tech Section */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-cyan-500/5"></div>
@@ -111,7 +105,6 @@ const AdvancedServices = () => {
               We combine deep technical expertise with business acumen to deliver solutions that drive real results.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
             {
@@ -159,7 +152,6 @@ const AdvancedServices = () => {
           </div>
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>

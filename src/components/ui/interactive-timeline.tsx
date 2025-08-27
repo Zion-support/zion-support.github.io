@@ -190,7 +190,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
           </Button>
         </div>
       </div>
-
       {/* Filters */}
       <div className="mb-6">
         <Button size="sm" variant="ghost" onClick={() => setShowFilters(!showFilters)} className="text-zinc-400 hover:text-white mb-3">
@@ -254,7 +253,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             </motion.div>)}
         </AnimatePresence>
       </div>
-
       {/* Progress Bar */}
       {showProgress && (<div className="mb-6">
           <div className="flex items-center justify-between text-sm text-zinc-300 mb-2">
@@ -265,7 +263,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             <motion.div className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full" initial={{ width: 0 }} whileInView={{ width: `${(filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 100}%` }} transition={{ duration: 1, ease: "easeOut" }}/>
           </div>
         </div>)}
-
       {/* Timeline View */}
       {viewMode === 'timeline' && (<div className="relative">
           {/* Timeline Line */}
@@ -292,7 +289,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                         <motion.circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan" strokeDasharray={2 * Math.PI * 28} strokeDashoffset={2 * Math.PI * 28 * (1 - event.metadata.progress / 100)} initial={{ strokeDashoffset: 2 * Math.PI * 28 }} animate={{ strokeDashoffset: 2 * Math.PI * 28 * (1 - event.metadata.progress / 100) }} transition={{ duration: 1, ease: "easeOut" }}/>
                       </svg>)}
                   </div>
-
                   {/* Event Content */}
                   <motion.div className={`flex-1 p-4 rounded-lg border transition-all duration-300 cursor-pointer ${isCurrent
                         ? 'border-zion-cyan/50 bg-zion-cyan/10'
@@ -345,14 +341,12 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                         </select>
                       </div>
                     </div>
-
                     {/* Tags */}
                     {event.tags.length > 0 && (<div className="flex flex-wrap gap-2 mt-3">
                         {event.tags.map((tag, tagIndex) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-400 hover:text-white">
                             {tag}
                           </Badge>))}
                       </div>)}
-
                     {/* Actions */}
                     {event.actions && event.actions.length > 0 && (<div className="flex items-center gap-2 mt-4 pt-3 border-t border-zion-blue-light/20">
                         {event.actions.map((action, actionIndex) => (<Button key={actionIndex} size="sm" variant={action.variant || 'outline'} onClick={(e) => {
@@ -368,7 +362,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             })}
           </div>
         </div>)}
-
       {/* List View */}
       {viewMode === 'list' && (<div className="space-y-3">
           {filteredEvents.map((event, index) => (<motion.div key={event.id} className="p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.05 }} onClick={() => handleEventClick(event)}>
@@ -394,7 +387,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               </div>
             </motion.div>))}
         </div>)}
-
       {/* Kanban View */}
       {viewMode === 'kanban' && (<div className="grid grid-cols-4 gap-4">
           {['upcoming', 'in-progress', 'completed', 'milestone'].map((status) => (<div key={status} className="space-y-3">
@@ -417,7 +409,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               </div>
             </div>))}
         </div>)}
-
       {/* Selected Event Details */}
       <AnimatePresence>
         {selectedEvent && (<motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -23,7 +23,6 @@ export default function FraudDetection() {
     false_positives: 0,
     actioned_count: 0,
   });
-
   // Fetch fraud flags
   const fetchFraudFlags = async () => {
     setIsLoading(true);
@@ -32,9 +31,7 @@ export default function FraudDetection() {
         .from("fraud_flags")
         .select("*")
         .order("timestamp", { ascending: false });
-
       if (error) throw error;
-
       setFlags(data || []);
       setFilteredFlags(data || []);
       
@@ -60,15 +57,12 @@ export default function FraudDetection() {
       setIsLoading(false);
     }
   };
-
   useEffect(() => {
     fetchFraudFlags();
   }, []);
-
   // Apply filters
   useEffect(() => {
     let result = [...flags];
-
     // Apply search filter
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
@@ -79,25 +73,20 @@ export default function FraudDetection() {
           flag.reason.toLowerCase().includes(query)
       );
     }
-
     // Apply status filter
     if (statusFilter) {
       result = result.filter((flag) => flag.status === statusFilter);
     }
-
     // Apply severity filter
     if (severityFilter) {
       result = result.filter((flag) => flag.severity === severityFilter);
     }
-
     // Apply content type filter
     if (contentTypeFilter) {
       result = result.filter((flag) => flag.content_type === contentTypeFilter);
     }
-
     setFilteredFlags(result);
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
-
   const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {
     try {
       const status = action === 'ignore' ? 'ignored' : 'actioned';
@@ -113,9 +102,7 @@ export default function FraudDetection() {
           reviewed_by: 'admin'
         })
         .eq("id", flagId);
-
       if (error) throw error;
-
       toast({
         title: "Flag updated",
         description: `Action '${action}' was applied successfully.`,
@@ -133,16 +120,13 @@ export default function FraudDetection() {
       });
     }
   };
-
   const resetFilters = () => {
     setSearchQuery("");
     setStatusFilter(null);
     setSeverityFilter(null);
     setContentTypeFilter(null);
   };
-
   const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
-
   return (
     
       <SEOHead 

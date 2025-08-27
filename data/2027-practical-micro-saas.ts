@@ -17,7 +17,6 @@ export interface PracticalMicroSaas2027 {
     address: string;
   };
 }
-
 export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
   {
     id: "2027-practical-micro-saas",
@@ -57,7 +56,6 @@ export interface Service {
   link: string;
   tags: string[];
 }
-
 export const practicalMicroSaas2027: Service[] = [
   {
     id: 'ai-content-factory',

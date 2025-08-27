@@ -34,7 +34,6 @@ export interface NextGenAIService2025 {
   aiModel?: string;
   trainingData?: string;
 }
-
 export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService2025[] = [
   // Autonomous AI Agents Platform
   {
@@ -102,7 +101,6 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService2025[] = [
     aiModel: "GPT-5 + Claude + Custom Models",
     trainingData: "Proprietary + Public Datasets"
   },
-
   // Federated Learning Platform
   {
     id: "federated-learning-platform",
@@ -169,7 +167,6 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService2025[] = [
     aiModel: "Custom Federated Models",
     trainingData: "Distributed Private Datasets"
   },
-
   // AI-Powered Creative Content Generation Suite
   {
     id: "ai-creative-content-generation",
@@ -236,7 +233,6 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService2025[] = [
     aiModel: "GPT-5 + DALL-E 3 + Custom Models",
     trainingData: "Proprietary + Licensed Content"
   },
-
   // Quantum Machine Learning Platform
   {
     id: "quantum-machine-learning",
@@ -303,7 +299,6 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService2025[] = [
     aiModel: "Quantum-Classical Hybrid Models",
     trainingData: "Quantum + Classical Datasets"
   },
-
   // AI-Powered Predictive Maintenance Platform
   {
     id: "ai-predictive-maintenance",

@@ -1,16 +1,13 @@
 /**
  * API Error Handler utility for consistent error handling across the application
  */
-
 import { toast } from '@/hooks/use-toast';
-
 export interface ApiError {
   message?: string;
   status?: number;
   code?: string;
   details?: any;
 }
-
 /**
  * Shows an API error using toast notifications
  */
@@ -29,18 +26,15 @@ export const showApiError = (error: any, fallbackMessage?: string): void => {
   } else if (error?.response?.data?.message) {
     errorMessage = error.response.data.message;
   }
-
   // Show error toast
   toast({
     title: 'Error',
     description: errorMessage,
     variant: 'destructive',
   });
-
   // Log error for debugging
   console.error('API Error:', error);
 };
-
 /**
  * Handles HTTP status codes and shows appropriate error messages
  */
@@ -86,10 +80,8 @@ export const handleHttpError = (status: number, error?: any): void => {
         message = error.message;
       }
   }
-
   showApiError({ message }, message);
 };
-
 /**
  * Safely extracts error message from various error formats
  */
@@ -120,7 +112,6 @@ export const extractErrorMessage = (error: any): string => {
   
   return 'An unexpected error occurred';
 };
-
 /**
  * Checks if an error is a network error
  */
@@ -132,7 +123,6 @@ export const isNetworkError = (error: any): boolean => {
     !navigator.onLine
   );
 };
-
 /**
  * Shows a network error message
  */
@@ -143,7 +133,6 @@ export const showNetworkError = (): void => {
     variant: 'destructive',
   });
 };
-
 /**
  * Handles authentication errors specifically
  */

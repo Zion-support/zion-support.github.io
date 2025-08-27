@@ -1,6 +1,5 @@
 // Advanced AI Services 2026 - Zion Tech Group
 // Cutting-edge artificial intelligence solutions and machine learning platforms
-
 export const ADVANCED_AI_SERVICES_2026 = [
     // Autonomous AI Business Operations
     {
@@ -49,7 +48,6 @@ export const ADVANCED_AI_SERVICES_2026 = [
         accuracy: "97.8%",
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"]
     },
-
     // Quantum AI Computing Platform
     {
         id: 2,
@@ -97,7 +95,6 @@ export const ADVANCED_AI_SERVICES_2026 = [
         accuracy: "99.2%",
         compliance: ["Research standards", "Security protocols", "International regulations"]
     },
-
     // AI-Powered Healthcare Diagnostics
     {
         id: 3,
@@ -145,7 +142,6 @@ export const ADVANCED_AI_SERVICES_2026 = [
         accuracy: "95.7%",
         compliance: ["HIPAA", "FDA", "CE Mark", "GDPR", "Medical device regulations"]
     },
-
     // AI-Powered Financial Intelligence
     {
         id: 4,
@@ -193,7 +189,6 @@ export const ADVANCED_AI_SERVICES_2026 = [
         accuracy: "94.3%",
         compliance: ["SEC", "FINRA", "GDPR", "Financial regulations"]
     },
-
     // AI-Powered Manufacturing Optimization
     {
         id: 5,
@@ -241,7 +236,6 @@ export const ADVANCED_AI_SERVICES_2026 = [
         accuracy: "96.1%",
         compliance: ["ISO 9001", "ISO 14001", "Industry 4.0 standards", "Safety regulations"]
     },
-
     // AI-Powered Content Generation
     {
         id: 6,
@@ -289,7 +283,6 @@ export const ADVANCED_AI_SERVICES_2026 = [
         accuracy: "93.8%",
         compliance: ["GDPR", "CCPA", "Content guidelines"]
     },
-
     // AI-Powered Customer Experience
     {
         id: 7,
@@ -337,7 +330,6 @@ export const ADVANCED_AI_SERVICES_2026 = [
         accuracy: "92.7%",
         compliance: ["GDPR", "CCPA", "Customer privacy regulations"]
     },
-
     // AI-Powered Research Assistant
     {
         id: 8,
@@ -385,7 +377,6 @@ export const ADVANCED_AI_SERVICES_2026 = [
         accuracy: "95.4%",
         compliance: ["Research ethics", "Data privacy", "Academic standards"]
     },
-
     // AI-Powered Legal Research
     {
         id: 9,
@@ -433,7 +424,6 @@ export const ADVANCED_AI_SERVICES_2026 = [
         accuracy: "96.8%",
         compliance: ["Legal standards", "Data privacy", "Professional ethics"]
     },
-
     // AI-Powered Education Platform
     {
         id: 10,
@@ -482,7 +472,6 @@ export const ADVANCED_AI_SERVICES_2026 = [
         compliance: ["FERPA", "COPPA", "GDPR", "Educational standards"]
     }
 ];
-
 // AI Service Categories
 export const AI_SERVICE_CATEGORIES_2026 = [
     {
@@ -556,6 +545,5 @@ export const AI_SERVICE_CATEGORIES_2026 = [
         color: "from-green-500 to-blue-600"
     }
 ];
-
 // Export all AI services
 export const ALL_AI_SERVICES_2026 = ADVANCED_AI_SERVICES_2026;

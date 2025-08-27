@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search, Star, Clock, Users, ArrowRight, CheckCircle, Phone, Mail, Globe, Zap, Shield, Brain, Cpu, TrendingUp, Rocket, Leaf, Eye, Network, Cube } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../components/SEOHead.jsx';
 // Import all service data
 import { ADVANCED_AI_SERVICES } from '../data/advancedAIServices';
 import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from '../data/innovativeITInfrastructure';
@@ -92,7 +92,6 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-12 bg-zion-slate-light">
         <div className="container mx-auto px-4">
@@ -126,7 +125,6 @@ const InnovativeServicesShowcase = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {sortedServices.length === 0 ? (<div className="text-center py-12">
@@ -163,7 +161,6 @@ const InnovativeServicesShowcase = () => {
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {service.description}
                   </p>
-
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <span className="flex items-center">
                       <Clock className="w-4 h-4 mr-1"/>
@@ -175,7 +172,6 @@ const InnovativeServicesShowcase = () => {
                     </span>
                   </div>
                 </div>
-
                 {/* Service Features */}
                 <div className="p-6 border-b border-gray-100">
                   <h4 className="font-medium text-gray-900 mb-3">Key Features</h4>
@@ -189,7 +185,6 @@ const InnovativeServicesShowcase = () => {
                       </div>)}
                   </div>
                 </div>
-
                 {/* Service Benefits */}
                 <div className="p-6 border-b border-gray-100">
                   <h4 className="font-medium text-gray-900 mb-3">Benefits</h4>
@@ -200,7 +195,6 @@ const InnovativeServicesShowcase = () => {
                       </div>))}
                   </div>
                 </div>
-
                 {/* Service Footer */}
                 <div className="p-6 bg-gray-50">
                   <div className="flex items-center justify-between mb-4">
@@ -213,7 +207,6 @@ const InnovativeServicesShowcase = () => {
                         </span>))}
                     </div>
                   </div>
-
                   <div className="flex space-x-3">
                     <Link to={'link' in service ? service.link : '#'} className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors flex items-center justify-center">
                       Learn More
@@ -230,7 +223,6 @@ const InnovativeServicesShowcase = () => {
               </div>))}
           </div>)}
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
@@ -257,7 +249,6 @@ const InnovativeServicesShowcase = () => {
               364 E Main St STE 1008, Middletown DE 19709
             </p>
           </div>
-
           {filteredServices.length === 0 ? (<div className="text-center py-20">
               <h3 className="text-2xl font-semibold text-zion-slate mb-4">No services found</h3>
               <p className="text-zion-slate-light mb-6">Try adjusting your search criteria or browse all categories.</p>
@@ -313,7 +304,6 @@ const InnovativeServicesShowcase = () => {
                           </li>)}
                       </ul>
                     </div>
-
                     {/* Benefits */}
                     <div>
                       <h4 className="font-semibold text-zion-blue-dark mb-2 flex items-center gap-2">
@@ -327,7 +317,6 @@ const InnovativeServicesShowcase = () => {
                           </li>))}
                       </ul>
                     </div>
-
                     {/* Pricing & Details */}
                     <div className="pt-4 border-t border-zion-slate-light">
                       <div className="flex items-center justify-between mb-3">
@@ -349,7 +338,6 @@ const InnovativeServicesShowcase = () => {
                           {service.supportLevel}
                         </span>
                       </div>
-
                       {/* Rating */}
                       {service.rating && (<div className="flex items-center gap-2 mb-4">
                           <div className="flex items-center gap-1">
@@ -359,19 +347,16 @@ const InnovativeServicesShowcase = () => {
                             {service.rating} ({service.reviewCount} reviews)
                           </span>
                         </div>)}
-
                       {/* Market Price */}
                       <div className="mb-4 p-3 bg-zion-slate-light rounded-lg">
                         <div className="text-sm text-zion-slate-light mb-1">Market Price Range</div>
                         <div className="font-semibold text-zion-blue-dark">{service.marketPrice}</div>
                       </div>
-
                       {/* ROI */}
                       <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg">
                         <div className="text-sm text-green-700 mb-1">Expected ROI</div>
                         <div className="font-semibold text-green-800">{service.roi}</div>
                       </div>
-
                       {/* Action Buttons */}
                       <div className="flex gap-2">
                         <Button asChild className="flex-1 bg-zion-blue hover:bg-zion-blue-dark">
@@ -384,7 +369,6 @@ const InnovativeServicesShowcase = () => {
                           <Link to="/request-quote">Quote</Link>
                         </Button>
                       </div>
-
                       {/* Contact Info */}
                       <div className="mt-4 pt-4 border-t border-zion-slate-light">
                         <div className="text-sm text-zion-slate-light mb-2">Ready to transform your business?</div>
@@ -403,7 +387,6 @@ const InnovativeServicesShowcase = () => {
             </div>)}
         </div>
       </section>
-
       {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple">
         <div className="container mx-auto px-4 text-center">
@@ -423,7 +406,6 @@ const InnovativeServicesShowcase = () => {
               <Link to="/request-quote">Get Custom Quote</Link>
             </Button>
           </div>
-
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { SEO } from "../components/SEOHead"';
+import SEOHead from "../components/SEOHead.jsx";
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -25,21 +25,6 @@ export default function AccountSettings() {
                 setEnableBackup(!!parsed.enableBackup);
             }
         }
-<<<<<<< HEAD
-      } catch (error) {
-        console.error('ENS lookup error:', error);
-      }
-      
-      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
-    } catch (error: any) {
-      toast.error(error.message || 'Failed to connect wallet');
-    }
-  };
-
-  return (
-    <>
-      <SEOHead title="Account Settings" description="Manage your account" />
-=======
         catch (e) {
             console.error('Error loading account settings', e);
         }
@@ -98,7 +83,6 @@ export default function AccountSettings() {
     };
     return (<>
       <SEO title="Account Settings" description="Manage your account"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>

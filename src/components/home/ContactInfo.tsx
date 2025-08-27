@@ -82,7 +82,6 @@ export function ContactInfo() {
             Ready to transform your business? Our team of experts is here to help you succeed with cutting-edge technology solutions.
           </p>
         </div>
-
         {/* Contact Methods Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {contactMethods.map((method, index) => (<FuturisticCard key={index} glowColor={method.color} intensity="medium" className="group hover:scale-105 transition-transform duration-300">
@@ -119,7 +118,6 @@ export function ContactInfo() {
               </CardContent>
             </FuturisticCard>))}
         </div>
-
         {/* Company Statistics */}
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold mb-4">
@@ -131,7 +129,6 @@ export function ContactInfo() {
             Proven track record of delivering exceptional results
           </p>
         </div>
-
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {companyStats.map((stat, index) => (<Card key={index} className="text-center group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
               <CardContent className="pt-6">
@@ -149,7 +146,6 @@ export function ContactInfo() {
               </CardContent>
             </Card>))}
         </div>
-
         {/* Quick Contact CTA */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 rounded-2xl p-8 border border-zion-purple/20">

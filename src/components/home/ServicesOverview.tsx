@@ -2,18 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-
 interface Service {
   category: string;
   icon: React.ComponentType<{ className?: string }>;
   color: string;
   items: string[];
 }
-
 interface ServicesOverviewProps {
   services: Service[];
 }
-
 const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   return (
     <section className="py-20 bg-zion-slate-dark/30" role="region" aria-labelledby="services-heading">
@@ -32,7 +29,6 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
             Comprehensive technology solutions designed to drive innovation and growth
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <motion.div
@@ -69,5 +65,4 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
     </section>
   );
 };
-
 export default ServicesOverview;

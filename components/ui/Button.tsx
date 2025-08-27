@@ -1,11 +1,9 @@
 import React from 'react';
-
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'default' | 'outline' | 'ghost' | 'destructive';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
 }
-
 export default function Button({ 
   variant = 'default', 
   size = 'md', 

@@ -116,7 +116,6 @@ const IncidentResponsePlatform = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/incident-response-platform"/>
         <link rel="canonical" href="https://ziontechgroup.com/services/incident-response-platform"/>
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -142,7 +141,6 @@ const IncidentResponsePlatform = () => {
                   <div className="text-sm text-gray-300">{benefit.description}</div>
                 </div>))}
             </motion.div>
-
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }}>
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">
                 Start Free Trial
@@ -153,7 +151,6 @@ const IncidentResponsePlatform = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -175,7 +172,6 @@ const IncidentResponsePlatform = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -223,7 +219,6 @@ const IncidentResponsePlatform = () => {
             </div>
           </div>
         </section>
-
         {/* Integrations & Use Cases */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -238,7 +233,6 @@ const IncidentResponsePlatform = () => {
                     </div>))}
                 </div>
               </motion.div>
-
               {/* Use Cases */}
               <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
                 <h3 className="text-2xl font-bold text-white mb-6">Perfect For</h3>
@@ -252,7 +246,6 @@ const IncidentResponsePlatform = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-red-900/50 to-pink-900/50">
           <div className="max-w-4xl mx-auto text-center">
@@ -272,7 +265,6 @@ const IncidentResponsePlatform = () => {
                 Call: +1 302 464 0950
               </a>
             </motion.div>
-
             <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }}>
               <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our Incident Response Platform?</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
@@ -294,7 +286,6 @@ const IncidentResponsePlatform = () => {
                 </div>
               </div>
             </motion.div>
-
             <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8 }}>
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>

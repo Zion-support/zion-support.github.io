@@ -2,22 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Play, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
-
 const Revolutionary2026UltimateHero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], [0, 300]);
   const springY = useSpring(y, { stiffness: 300, damping: 30 });
-
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
-
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
-
   const floatingIcons = [
     { icon: Brain, delay: 0, color: 'from-purple-500 to-pink-500' },
     { icon: Zap, delay: 0.5, color: 'from-blue-500 to-cyan-500' },
@@ -26,7 +22,6 @@ const Revolutionary2026UltimateHero = () => {
     { icon: Sparkles, delay: 2, color: 'from-indigo-500 to-purple-500' },
     { icon: Cpu, delay: 2.5, color: 'from-teal-500 to-cyan-500' }
   ];
-
   const features = [
     'AI Consciousness Orchestration',
     'Quantum Internet Infrastructure',
@@ -35,14 +30,12 @@ const Revolutionary2026UltimateHero = () => {
     'Space Debris Management AI',
     'Neural Interface Development'
   ];
-
   const stats = [
     { label: 'Revolutionary Services', value: '25+', icon: Sparkles },
     { label: 'AI-Powered Solutions', value: '100%', icon: Brain },
     { label: 'Quantum Technology', value: '15+', icon: Cpu },
     { label: 'Global Customers', value: '2,500+', icon: Globe }
   ];
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
       {/* Enhanced Background Effects */}
@@ -78,7 +71,6 @@ const Revolutionary2026UltimateHero = () => {
           ))}
         </div>
       </div>
-
       {/* Floating Icons */}
       {floatingIcons.map((item, index) => (
         <motion.div
@@ -97,7 +89,6 @@ const Revolutionary2026UltimateHero = () => {
           </div>
         </motion.div>
       ))}
-
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Hero Content */}
@@ -117,7 +108,6 @@ const Revolutionary2026UltimateHero = () => {
             <Sparkles className="w-4 h-4" />
             Revolutionary 2026 Technology
           </motion.div>
-
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -133,7 +123,6 @@ const Revolutionary2026UltimateHero = () => {
               Technology
             </span>
           </motion.h1>
-
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -144,7 +133,6 @@ const Revolutionary2026UltimateHero = () => {
             Experience the next generation of AI, quantum computing, and emerging technologies. 
             Transform your business with autonomous intelligence and quantum-powered solutions.
           </motion.p>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -166,7 +154,6 @@ const Revolutionary2026UltimateHero = () => {
               </button>
             </Link>
           </motion.div>
-
           {/* Features Grid */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -188,7 +175,6 @@ const Revolutionary2026UltimateHero = () => {
             ))}
           </motion.div>
         </motion.div>
-
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -212,7 +198,6 @@ const Revolutionary2026UltimateHero = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -247,7 +232,6 @@ const Revolutionary2026UltimateHero = () => {
           </div>
         </motion.div>
       </div>
-
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -267,7 +251,6 @@ const Revolutionary2026UltimateHero = () => {
           />
         </motion.div>
       </motion.div>
-
       {/* Mouse Follow Effect */}
       <motion.div
         className="fixed w-4 h-4 bg-purple-500 rounded-full pointer-events-none z-50 mix-blend-difference"
@@ -280,5 +263,4 @@ const Revolutionary2026UltimateHero = () => {
     </section>
   );
 };
-
 export default Revolutionary2026UltimateHero;

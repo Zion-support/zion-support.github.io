@@ -1,12 +1,10 @@
 import React, { memo } from 'react';
 import { motion } from 'framer-motion';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   showLogo?: boolean;
 }
-
 export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({ 
   size = 'md', 
   text = 'Loading amazing experiences...',
@@ -17,13 +15,11 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
     md: 'w-32 h-32',
     lg: 'w-48 h-48'
   };
-
   const textSizes = {
     sm: 'text-xs',
     md: 'text-sm',
     lg: 'text-base'
   };
-
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="relative">
@@ -62,9 +58,7 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
     </div>
   );
 });
-
 PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
-
 // Skeleton loader for content
 export function SkeletonLoader({ 
   className = "", 
@@ -92,7 +86,6 @@ export function SkeletonLoader({
     </div>
   );
 }
-
 // Card skeleton loader
 export function CardSkeleton({ className = "" }: { className?: string }) {
   return (
@@ -117,7 +110,6 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
     </div>
   );
 }
-
 // Grid skeleton loader
 export function GridSkeleton({ 
   columns = 3, 
@@ -136,7 +128,6 @@ export function GridSkeleton({
     </div>
   );
 }
-
 // Page skeleton loader
 export function PageSkeleton({ className = "" }: { className?: string }) {
   return (

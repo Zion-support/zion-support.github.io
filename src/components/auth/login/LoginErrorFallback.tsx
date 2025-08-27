@@ -1,11 +1,9 @@
 import React from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
-
 interface LoginErrorFallbackProps {
   error?: Error;
   resetErrorBoundary?: () => void;
 }
-
 export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginErrorFallbackProps) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -21,7 +19,6 @@ export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginE
             We encountered an error while loading the login page. Please try again.
           </p>
         </div>
-
         <div className="bg-red-50 border border-red-200 rounded-md p-4">
           <div className="flex">
             <div className="flex-shrink-0">
@@ -37,7 +34,6 @@ export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginE
             </div>
           </div>
         </div>
-
         <div className="flex flex-col space-y-3">
           <button
             onClick={resetErrorBoundary}
@@ -54,7 +50,6 @@ export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginE
             Go to Homepage
           </button>
         </div>
-
         <div className="text-center">
           <p className="text-xs text-gray-500">
             If the problem persists, please contact our support team

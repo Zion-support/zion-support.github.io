@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award } from 'lucide-react';
-=======
 import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
 const steps = [
   {
     icon: <Search className="w-8 h-8" />,
@@ -68,14 +63,12 @@ const steps = [
     success: "92% project success"
   }
 ];
-
 const stats = [
   { icon: <CheckCircle className="w-6 h-6" />, value: "10K+", label: "Projects Completed" },
   { icon: <Clock className="w-6 h-6" />, value: "24/7", label: "Support Available" },
   { icon: <Target className="w-6 h-6" />, value: "98%", label: "Client Satisfaction" },
   { icon: <TrendingUp className="w-6 h-6" />, value: "3x", label: "Faster Delivery" }
 ];
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -85,7 +78,6 @@ const containerVariants = {
     }
   }
 };
-
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -97,35 +89,8 @@ const itemVariants = {
     }
   }
 };
-
 export function HowItWorksSection() {
-<<<<<<< HEAD
-  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
-  const [activeStep, setActiveStep] = useState<number>(0);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-=======
   const [activeStep, setActiveStep] = useState<number | null>(null);
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background decorative elements */}
@@ -134,28 +99,14 @@ export function HowItWorksSection() {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-<<<<<<< HEAD
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            How We Work
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Our proven methodology ensures successful project delivery and maximum value for your business
-          </p>
-        </motion.div>
-
-        <motion.div 
-          className="relative"
-=======
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             How It Works
           </h2>
@@ -163,144 +114,14 @@ export function HowItWorksSection() {
             Our streamlined process makes it simple to find, connect, and collaborate with the perfect technology solutions for your business
           </p>
         </motion.div>
-
         {/* Steps Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20"
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-<<<<<<< HEAD
-          {/* Connection line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-zion-cyan/30 via-zion-purple/30 to-zion-blue/30 transform -translate-y-1/2 z-0"></div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
-            {steps.map((step, index) => (
-              <motion.div 
-                key={index} 
-                className="text-center group"
-                variants={itemVariants}
-                onHoverStart={() => setHoveredStep(index)}
-                onHoverEnd={() => setHoveredStep(null)}
-              >
-                <div className="relative">
-                  {/* Step number background */}
-                  <div className={`w-20 h-20 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl shadow-zion-cyan/25`}>
-                    {index + 1}
-                  </div>
-                  
-                  {/* Icon */}
-                  <div className={`w-16 h-16 bg-gradient-to-r ${step.bgColor} rounded-full flex items-center justify-center text-3xl mx-auto mb-6 shadow-lg border-2 border-zion-cyan/20 group-hover:scale-110 transition-transform duration-300`}>
-                    {step.icon}
-                  </div>
-                </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-zion-cyan transition-colors">
-                  {step.title}
-                </h3>
-                
-                <p className="text-zion-slate-light text-sm leading-relaxed mb-4">
-                  {step.description}
-                </p>
-
-                {/* Hover details */}
-                <AnimatePresence>
-                  {hoveredStep === index && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-4 border border-zion-cyan/20">
-                        <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h4>
-                        <ul className="space-y-1 text-xs text-zion-slate-light">
-                          {step.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-center">
-                              <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2"></div>
-                              {detail}
-                            </li>
-                          ))}
-                        </ul>
-                        <div className="mt-3 pt-3 border-t border-zion-cyan/20">
-                          <div className="flex justify-between text-xs">
-                            <span className="text-zion-cyan">Duration: {step.duration}</span>
-                            <span className="text-zion-cyan">Success: {step.success}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Stats Section */}
-        <motion.div 
-          className="mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div 
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30">
-                  <div className="text-zion-cyan">
-                    {stat.icon}
-                  </div>
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-zion-slate-light text-sm">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div 
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 rounded-3xl p-8 border border-zion-cyan/20 backdrop-blur-sm">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h3>
-            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto text-lg">
-              Our team is ready to guide you through every step of your digital transformation journey
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Your Project
-                <Rocket className="ml-2 w-5 h-5" />
-              </a>
-              <a
-                href="/services"
-                className="inline-flex items-center px-8 py-4 bg-transparent text-zion-cyan font-semibold rounded-xl border-2 border-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
-                Explore Services
-              </a>
-            </div>
-          </div>
-        </motion.div>
-=======
           {steps.map((step, index) => (
             <motion.div
               key={step.title}
@@ -314,14 +135,12 @@ export function HowItWorksSection() {
                 <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
                   {index + 1}
                 </div>
-
                 {/* Icon */}
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${step.bgColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <div className="text-zion-blue">
                     {step.icon}
                   </div>
                 </div>
-
                 {/* Content */}
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-zion-blue transition-colors">
                   {step.title}
@@ -329,7 +148,6 @@ export function HowItWorksSection() {
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   {step.description}
                 </p>
-
                 {/* Details */}
                 <div className="space-y-2 mb-6">
                   {step.details.map((detail, detailIndex) => (
@@ -339,7 +157,6 @@ export function HowItWorksSection() {
                     </div>
                   ))}
                 </div>
-
                 {/* Stats */}
                 <div className="flex justify-between items-center text-sm">
                   <div className="flex items-center text-zion-blue">
@@ -351,7 +168,6 @@ export function HowItWorksSection() {
                   </div>
                 </div>
               </div>
-
               {/* Hover effect overlay */}
               <AnimatePresence>
                 {activeStep === index && (
@@ -367,7 +183,6 @@ export function HowItWorksSection() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Stats Section */}
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
@@ -396,7 +211,6 @@ export function HowItWorksSection() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           className="text-center"
@@ -422,7 +236,6 @@ export function HowItWorksSection() {
             </div>
           </div>
         </motion.div>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       </div>
     </section>
   );

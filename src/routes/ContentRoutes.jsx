@@ -44,16 +44,12 @@ const ContentRoutes = () => {
       
       {/* Green IT Route */}
       <Route path="/green-it" element={<GreenIT />}/>
-
       {/* Careers Route */}
       <Route path="/careers" element={<Careers />}/>
-
       {/* Enterprise Route */}
       <Route path="/enterprise" element={<Enterprise />}/>
-
       {/* Legal Pages */}
       <Route path="/terms" element={<Terms />}/>
-
       {/* Account Settings */}
       <Route path="/settings/account" element={<AccountSettings />}/>
       
@@ -62,7 +58,6 @@ const ContentRoutes = () => {
       
       {/* Video Call */}
       <Route path="/video-call/:roomId" element={<VideoCall />}/>
-
       {/* Global Search Route */}
       <Route path="/search" element={<SearchPage />}/>
       

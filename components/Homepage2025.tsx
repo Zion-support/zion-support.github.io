@@ -5,14 +5,12 @@ import { motion } from 'framer-motion';
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
 import { real2036ITServices } from '../data/real-2036-it-services';
 import { real2036AIServices } from '../data/real-2036-ai-services';
-
 const Homepage2025: React.FC = () => {
   const featuredServices = [
     ...real2036InnovativeServices.filter(s => s.popular).slice(0, 3),
     ...real2036ITServices.filter(s => s.popular).slice(0, 2),
     ...real2036AIServices.filter(s => s.popular).slice(0, 1)
   ];
-
   return (
     <Layout>
       {/* Main Content */}
@@ -79,7 +77,6 @@ const Homepage2025: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Services Preview */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
@@ -96,7 +93,6 @@ const Homepage2025: React.FC = () => {
                 Experience the future with our comprehensive portfolio of {real2036InnovativeServices.length + real2036ITServices.length + real2036AIServices.length}+ innovative services spanning AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
               </p>
             </motion.div>
-
             {/* Featured Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {featuredServices.map((service, index) => (
@@ -124,7 +120,6 @@ const Homepage2025: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
             {/* Call to Action */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
@@ -141,7 +136,6 @@ const Homepage2025: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Technology Domains */}
         <section className="py-24 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
@@ -158,7 +152,6 @@ const Homepage2025: React.FC = () => {
                 Our expertise spans the most advanced and innovative technology domains, designed to transform businesses and drive the future forward
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
@@ -215,7 +208,6 @@ const Homepage2025: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Why Choose Us */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
@@ -232,7 +224,6 @@ const Homepage2025: React.FC = () => {
                 We're not just another technology company - we're pioneers shaping the future of business and technology
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -287,7 +278,6 @@ const Homepage2025: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Final CTA */}
         <section className="py-24 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
           <div className="max-w-4xl mx-auto text-center">
@@ -314,7 +304,6 @@ const Homepage2025: React.FC = () => {
           </div>
         </div>
       </nav>
-
       {/* Enhanced Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
         <div className="text-center z-10 max-w-6xl mx-auto">
@@ -343,7 +332,6 @@ const Homepage2025: React.FC = () => {
           >
             Revolutionary micro SAAS services, cutting-edge AI solutions, and emerging technologies that transform businesses and industries.
           </motion.p>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -363,7 +351,6 @@ const Homepage2025: React.FC = () => {
               Visit Website
             </a>
           </motion.div>
-
           {/* Enhanced Floating Service Cards */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -396,7 +383,6 @@ const Homepage2025: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Enhanced Services Section */}
       <section id="services" className="py-24 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
@@ -419,7 +405,6 @@ const Homepage2025: React.FC = () => {
               Discover our cutting-edge micro SAAS solutions that are transforming industries and empowering businesses worldwide.
             </p>
           </motion.div>
-
           {/* Service Categories Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-16">
             {[
@@ -447,7 +432,6 @@ const Homepage2025: React.FC = () => {
               </motion.div>
             ))}
           </div>
-
           {/* Featured Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.slice(0, 9).map((service, index) => (
@@ -483,7 +467,6 @@ const Homepage2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* AI Services Section */}
       <section id="ai" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-7xl mx-auto">
@@ -506,7 +489,6 @@ const Homepage2025: React.FC = () => {
               Harness the power of artificial intelligence with our cutting-edge AI services that drive innovation and efficiency.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovativeAIServicesEnhanced2025.slice(0, 6).map((service, index) => (
               <motion.div
@@ -541,7 +523,6 @@ const Homepage2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* IT Services Section */}
       <section id="it" className="py-24 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
@@ -564,7 +545,6 @@ const Homepage2025: React.FC = () => {
               Transform your IT infrastructure with our comprehensive enterprise solutions and cutting-edge technology services.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovativeITServicesEnhanced2025.slice(0, 6).map((service, index) => (
               <motion.div
@@ -599,7 +579,6 @@ const Homepage2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Emerging Tech Section */}
       <section id="emerging" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-gradient-to-r from-green-900/20 to-emerald-900/20">
         <div className="max-w-7xl mx-auto">
@@ -622,7 +601,6 @@ const Homepage2025: React.FC = () => {
               Stay ahead of the curve with our cutting-edge emerging technology services that define the future.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
               <motion.div
@@ -657,7 +635,6 @@ const Homepage2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Specialized Industry Solutions Section */}
       <section id="industry" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
         <div className="max-w-7xl mx-auto">
@@ -680,7 +657,6 @@ const Homepage2025: React.FC = () => {
               Industry-specific solutions designed to address unique challenges and drive innovation across sectors.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {specializedIndustrySolutionsExpansion.slice(0, 6).map((service, index) => (
               <motion.div
@@ -715,7 +691,6 @@ const Homepage2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Cutting-Edge Emerging Tech Section */}
       <section id="emerging-tech" className="py-24 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
@@ -738,7 +713,6 @@ const Homepage2025: React.FC = () => {
               Explore the future with our revolutionary emerging technology solutions that push the boundaries of what's possible.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cuttingEdgeEmergingTechServices.slice(0, 6).map((service, index) => (
               <motion.div
@@ -773,7 +747,6 @@ const Homepage2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
@@ -795,7 +768,6 @@ const Homepage2025: React.FC = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
               Get in touch with our team to discuss how our revolutionary services can transform your business.
             </p>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -809,7 +781,6 @@ const Homepage2025: React.FC = () => {
                   +1 302 464 0950
                 </a>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -822,7 +793,6 @@ const Homepage2025: React.FC = () => {
                   kleber@ziontechgroup.com
                 </a>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -837,7 +807,6 @@ const Homepage2025: React.FC = () => {
                 </p>
               </motion.div>
             </div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -857,5 +826,4 @@ const Homepage2025: React.FC = () => {
     </div>
   );
 };
-
 export default Homepage2025;

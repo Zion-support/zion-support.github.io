@@ -1,75 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
 import ultimateInnovativeServices2025 from '../../data/2025-ultimate-innovative-services-expansion';
 export default function UltimateHomepage2025() {
-<<<<<<< HEAD
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const featuredServices = ultimateInnovativeServices2025.filter(service => service.popular).slice(0, 6);
-  const allServices = ultimateInnovativeServices2025.slice(0, 9);
-
-  const stats = [
-    { number: '10+', label: 'Revolutionary Services', icon: Rocket },
-    { number: '500+', label: 'Happy Customers', icon: Users },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck },
-    { number: '24/7', label: 'Expert Support', icon: Clock }
-  ];
-
-  const benefits = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Shield,
-      title: 'Quantum-Secure Protection',
-      description: 'Unbreakable security with quantum-resistant encryption and AI-powered threat detection.',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Zap,
-      title: 'Autonomous Operations',
-      description: 'Self-managing systems that run your business operations with minimal human intervention.',
-      color: 'from-purple-500 to-indigo-500'
-    },
-    {
-      icon: BarChart3,
-      title: 'Predictive Analytics',
-      description: 'Forecast trends, identify opportunities, and make data-driven decisions with confidence.',
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const industries = [
-    { name: 'Financial Services', icon: TrendingUp, color: 'from-emerald-500 to-teal-500' },
-    { name: 'Healthcare', icon: Users, color: 'from-red-500 to-pink-500' },
-    { name: 'Manufacturing', icon: Building2, color: 'from-blue-500 to-cyan-500' },
-    { name: 'Retail & E-commerce', icon: Globe, color: 'from-yellow-500 to-orange-500' },
-    { name: 'Technology', icon: Cpu, color: 'from-purple-500 to-indigo-500' },
-    { name: 'Government', icon: Shield, color: 'from-gray-500 to-blue-500' }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOHead 
-        title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025"
-        description="Transform your business with our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Leading the future of technology."
-        keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, innovative solutions"
-      />
-=======
     const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
     useEffect(() => {
@@ -123,7 +57,6 @@ export default function UltimateHomepage2025() {
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025" description="Transform your business with our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Leading the future of technology." keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, innovative solutions"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -206,7 +139,6 @@ export default function UltimateHomepage2025() {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -241,7 +173,6 @@ export default function UltimateHomepage2025() {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -254,7 +185,6 @@ export default function UltimateHomepage2025() {
             </div>))}
         </div>
       </div>
-
       {/* Benefits Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -276,7 +206,6 @@ export default function UltimateHomepage2025() {
             </div>))}
         </div>
       </div>
-
       {/* Featured Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -329,7 +258,6 @@ export default function UltimateHomepage2025() {
           </Link>
         </div>
       </div>
-
       {/* Industries Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -352,7 +280,6 @@ export default function UltimateHomepage2025() {
             </div>))}
         </div>
       </div>
-
       {/* All Services Preview */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -394,7 +321,6 @@ export default function UltimateHomepage2025() {
           </Link>
         </div>
       </div>
-
       {/* Call to Action Section */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

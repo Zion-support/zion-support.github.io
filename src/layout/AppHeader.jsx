@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Globe, Sun, Moon } from 'lucide-react';
-
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const location = useLocation();
-
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -18,18 +16,15 @@ export function AppHeader() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
     setDropdownOpen(null);
   }, [location.pathname]);
-
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     // In a real app, this would toggle the theme
   };
-
   const navigationItems = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
@@ -80,14 +75,12 @@ export function AppHeader() {
     { path: '/contact', label: 'Contact' },
     { path: '/developers', label: 'Developers' }
   ];
-
   const isActiveRoute = (path) => {
     if (path === '/') {
       return location.pathname === '/';
     }
     return location.pathname.startsWith(path);
   };
-
   return (
     <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -132,7 +125,6 @@ export function AppHeader() {
               </motion.div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item, index) => (
@@ -195,7 +187,6 @@ export function AppHeader() {
               </div>
             ))}
           </nav>
-
           {/* Actions */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Theme Toggle */}
@@ -236,7 +227,6 @@ export function AppHeader() {
               </Link>
             </motion.div>
           </div>
-
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -247,7 +237,6 @@ export function AppHeader() {
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </motion.button>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {mobileMenuOpen && (

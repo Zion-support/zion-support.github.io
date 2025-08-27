@@ -120,7 +120,6 @@ const LinkHealthChecker = ({ links, className = '' }) => {
             </>)}
         </button>
       </div>
-
       {/* Summary Stats */}
       <div className="grid grid-cols-3 gap-4 mb-6">
         <div className="text-center p-3 bg-green-500/20 border border-green-500/30 rounded-lg">
@@ -136,7 +135,6 @@ const LinkHealthChecker = ({ links, className = '' }) => {
           <div className="text-sm text-blue-300">External</div>
         </div>
       </div>
-
       {/* Link Status List */}
       <div className="space-y-3">
         {links.map((link, index) => {
@@ -163,7 +161,6 @@ const LinkHealthChecker = ({ links, className = '' }) => {
             </div>);
         })}
       </div>
-
       {/* Recommendations */}
       {brokenCount > 0 && (<div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
           <h4 className="text-red-400 font-semibold mb-2">⚠️ Action Required</h4>
@@ -172,7 +169,6 @@ const LinkHealthChecker = ({ links, className = '' }) => {
             Please review and fix these links to improve user experience.
           </p>
         </div>)}
-
       {healthyCount === links.length && (<div className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
           <h4 className="text-green-400 font-semibold mb-2">✅ All Links Healthy</h4>
           <p className="text-sm text-green-300">

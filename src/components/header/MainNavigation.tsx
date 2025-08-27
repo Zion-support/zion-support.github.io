@@ -105,7 +105,6 @@ export function MainNavigation({ className }) {
             </div>
           </div>)}
       </div>
-
       {/* Company Dropdown */}
       <div className="relative group">
         <button
@@ -137,7 +136,6 @@ export function MainNavigation({ className }) {
           </div>
         )}
       </div>
-
       {/* Resources Dropdown */}
       <div className="relative group">
         <button
@@ -169,13 +167,11 @@ export function MainNavigation({ className }) {
           </div>
         )}
       </div>
-
       {/* Support */}
       <Link to="/help" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
         <HelpCircle className="w-4 h-4 mr-1" />
         Support
       </Link>
-
       {/* Pricing */}
       <Link to="/pricing" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
         <BarChart3 className="w-4 h-4 mr-1" />

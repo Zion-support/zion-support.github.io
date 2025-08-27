@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
 const NotFound = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark text-white pt-20 flex items-center justify-center">
@@ -16,7 +15,6 @@ const NotFound = () => {
             >
               404
             </motion.div>
-
             {/* Error Message */}
             <motion.h1 
               initial={{ opacity: 0, y: 30 }} 
@@ -26,7 +24,6 @@ const NotFound = () => {
             >
               Page Not Found
             </motion.h1>
-
             <motion.p 
               initial={{ opacity: 0, y: 30 }} 
               animate={{ opacity: 1, y: 0 }} 
@@ -36,7 +33,6 @@ const NotFound = () => {
               The page you're looking for doesn't exist or has been moved. 
               Let's get you back on track to exploring our amazing AI and technology services.
             </motion.p>
-
             {/* Navigation Options */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }} 
@@ -54,7 +50,6 @@ const NotFound = () => {
                     Return to our homepage and explore our services
                   </p>
                 </Link>
-
                 <Link to="/enhanced-services-2025" className="group bg-zion-slate/20 backdrop-blur-lg rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105">
                   <div className="text-4xl mb-4">🚀</div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
@@ -64,7 +59,6 @@ const NotFound = () => {
                     Discover what we can do for your business
                   </p>
                 </Link>
-
                 <Link to="/contact" className="group bg-zion-slate/20 backdrop-blur-lg rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105">
                   <div className="text-4xl mb-4">📞</div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
@@ -76,7 +70,6 @@ const NotFound = () => {
                 </Link>
               </div>
             </motion.div>
-
             {/* CTA Buttons */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }} 
@@ -104,7 +97,6 @@ const NotFound = () => {
                 Need Help?
               </Link>
             </motion.div>
-
             {/* Additional Help */}
             <motion.div 
               initial={{ opacity: 0 }} 
@@ -138,5 +130,4 @@ const NotFound = () => {
       </div>
     );
 };
-
 export default NotFound;

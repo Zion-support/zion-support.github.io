@@ -266,7 +266,6 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
               </motion.div>)}
           </AnimatePresence>
         </motion.button>)}
-
       {/* Device Type Indicator */}
       {enableResponsiveDesign && (<motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
           <div className="flex items-center space-x-2 text-sm">
@@ -276,19 +275,16 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
             <span className="text-gray-700 dark:text-gray-300 capitalize">{deviceType}</span>
           </div>
         </motion.div>)}
-
       {/* Scroll to Top Button */}
       <AnimatePresence>
         {showScrollToTop && (<motion.button ref={scrollToTopRef} initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToTop} className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="Scroll to top">
             <ArrowUp className="w-5 h-5"/>
           </motion.button>)}
       </AnimatePresence>
-
       {/* Floating Action Button */}
       <motion.button initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="UI Enhancements">
         <Palette className="w-5 h-5"/>
       </motion.button>
-
       {/* UI Enhancement Panel */}
       <AnimatePresence>
         {isVisible && (<motion.div initial={{ opacity: 0, y: 100, scale: 0.8 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 100, scale: 0.8 }} transition={{ type: "spring", damping: 25, stiffness: 300 }} className="fixed bottom-24 right-6 z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
@@ -304,7 +300,6 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
                 </button>
               </div>
             </div>
-
             {/* Content */}
             <div className="p-4 space-y-4">
               {/* Animation Controls */}
@@ -325,7 +320,6 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
                   </button>
                 </div>
               </div>
-
               {/* Visual Effects */}
               <div className="space-y-3">
                 <h4 className="font-semibold text-gray-900 dark:text-white">Visual Effects</h4>
@@ -344,7 +338,6 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
                   </button>
                 </div>
               </div>
-
               {/* Performance Info */}
               <div className="space-y-3">
                 <h4 className="font-semibold text-gray-900 dark:text-white">Performance</h4>
@@ -360,7 +353,6 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
             </div>
           </motion.div>)}
       </AnimatePresence>
-
       {/* Background Particles */}
       {enableParticles && (<div className="fixed inset-0 pointer-events-none z-0">
           {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-20" initial={{

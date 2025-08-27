@@ -1,176 +1,4 @@
-<<<<<<< HEAD
-
-import { useState } from "react";
-import CreatePostButton from "@/components/community/CreatePostButton";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "../components/SEOHead";
-import ForumCategories from "@/components/community/ForumCategories";
-import PostCard from "@/components/community/PostCard";
-import { useAuth } from "@/hooks/useAuth";
-import { ForumPost } from "@/types/community";
-
-// Mock data for featured posts
-const featuredPosts: ForumPost[] = [
-  {
-    id: "1",
-    title: "Best practices for AI model fine-tuning",
-    content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
-    author: {
-      id: "user1",
-      name: "Alex Johnson",
-      avatar: "https://i.pravatar.cc/150?img=3",
-      role: "Verified Talent"
-    },
-    authorId: "user1",
-    category: "ai-tools",
-    categoryId: "ai-tools",
-    tags: ["machine-learning", "fine-tuning", "gpt"],
-    createdAt: "2025-04-01T12:00:00Z",
-    updatedAt: "2025-04-01T12:00:00Z",
-    replies: [],
-    likes: 48,
-    views: 120,
-    upvotes: 48,
-    downvotes: 2,
-    replyCount: 12,
-    isPinned: false,
-    isLocked: false,
-    isAnswered: true,
-    authorName: "Alex Johnson",
-    authorAvatar: "https://i.pravatar.cc/150?img=3",
-    authorRole: "Verified Talent"
-  },
-  {
-    id: "2",
-    title: "How to build an effective AI talent profile?",
-    content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
-    author: {
-      id: "user2",
-      name: "Sarah Chen",
-      avatar: "https://i.pravatar.cc/150?img=5",
-      role: "Verified Talent"
-    },
-    authorId: "user2",
-    category: "getting-hired",
-    categoryId: "getting-hired",
-    tags: ["profile", "tips", "hiring"],
-    createdAt: "2025-04-03T09:15:00Z",
-    updatedAt: "2025-04-03T09:15:00Z",
-    replies: [],
-    likes: 32,
-    views: 89,
-    upvotes: 32,
-    downvotes: 0,
-    replyCount: 8,
-    isPinned: true,
-    isLocked: false,
-    isAnswered: false,
-    authorName: "Sarah Chen",
-    authorAvatar: "https://i.pravatar.cc/150?img=5",
-    authorRole: "Verified Talent"
-  }
-];
-
-// Mock data for recent posts
-const recentPosts: ForumPost[] = [
-  {
-    id: "3",
-    title: "Looking for feedback on my automated testing approach",
-    content: "I've set up a CI/CD pipeline with the following testing strategy...",
-    author: {
-      id: "user3",
-      name: "Michael Wong",
-      avatar: "https://i.pravatar.cc/150?img=7",
-      role: "Developer"
-    },
-    authorId: "user3",
-    category: "project-help",
-    categoryId: "project-help",
-    tags: ["testing", "automation", "ci-cd"],
-    createdAt: "2025-04-10T14:30:00Z",
-    updatedAt: "2025-04-10T14:30:00Z",
-    replies: [],
-    likes: 5,
-    views: 45,
-    upvotes: 5,
-    downvotes: 0,
-    replyCount: 2,
-    isPinned: false,
-    isLocked: false,
-    isAnswered: false,
-    authorName: "Michael Wong",
-    authorAvatar: "https://i.pravatar.cc/150?img=7",
-    authorRole: "Developer"
-  },
-  {
-    id: "4",
-    title: "Feature request: Team collaboration tools",
-    content: "It would be really helpful if we could have built-in tools for team collaboration...",
-    author: {
-      id: "user4",
-      name: "Emma Davis",
-      avatar: "https://i.pravatar.cc/150?img=9",
-      role: "Product Manager"
-    },
-    authorId: "user4",
-    category: "feedback",
-    categoryId: "feedback",
-    tags: ["feature-request", "teams", "collaboration"],
-    createdAt: "2025-04-09T18:45:00Z",
-    updatedAt: "2025-04-09T18:45:00Z",
-    replies: [],
-    likes: 12,
-    views: 67,
-    upvotes: 12,
-    downvotes: 1,
-    replyCount: 3,
-    isPinned: false,
-    isLocked: false,
-    isAnswered: false,
-    authorName: "Emma Davis",
-    authorAvatar: "https://i.pravatar.cc/150?img=9",
-    authorRole: "Product Manager"
-  },
-  {
-    id: "5",
-    title: "How to handle client scope creep?",
-    content: "I'm working on a project where the client keeps adding requirements...",
-    author: {
-      id: "user5",
-      name: "David Lin",
-      avatar: "https://i.pravatar.cc/150?img=11",
-      role: "Freelancer"
-    },
-    authorId: "user5",
-    category: "project-help",
-    categoryId: "project-help",
-    tags: ["client-management", "scope", "projects"],
-    createdAt: "2025-04-08T10:20:00Z",
-    updatedAt: "2025-04-08T10:20:00Z",
-    replies: [],
-    likes: 24,
-    views: 89,
-    upvotes: 24,
-    downvotes: 0,
-    replyCount: 7,
-    isPinned: false,
-    isLocked: false,
-    isAnswered: true,
-    authorName: "David Lin",
-    authorAvatar: "https://i.pravatar.cc/150?img=11",
-    authorRole: "Freelancer"
-  }
-];
-
-export default function CommunityPage() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("categories");
-  
-  return (
-import React from 'react';
-=======
 import React, { useState } from 'react';
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 import { Link } from 'react-router-dom';
 import { Header } from '@/components/header/Header';
 import { Footer } from '@/components/Footer';
@@ -180,10 +8,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Users, MessageCircle, TrendingUp, Star, Calendar, User, MessageSquare, ThumbsUp, Eye } from 'lucide-react';
-
 export default function CommunityPage() {
     const [activeTab, setActiveTab] = useState('featured');
-
     const featuredPosts = [
         {
             id: "1",
@@ -220,7 +46,6 @@ export default function CommunityPage() {
             isPinned: true
         }
     ];
-
     const recentPosts = [
         {
             id: "3",
@@ -240,69 +65,12 @@ export default function CommunityPage() {
             isPinned: false
         }
     ];
-
-<<<<<<< HEAD
-  return (
-    <>
-      <SEO
-        title="Community Forum | Zion AI Marketplace"
-        description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
-        keywords="community, forum, discussion, AI marketplace, questions, answers"
-        canonical="https://ziontechgroup.com/community"
-      />
-      
-      <div className="container py-8">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
-          <div>
-            <h1 className="text-3xl font-bold">Community Forum</h1>
-            <p className="text-muted-foreground mt-2">
-              Join the conversation, ask questions, and share your knowledge
-            </p>
-          </div>
-          
-          <CreatePostButton />
-        </div>
-        
-        <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
-          <TabsList className="mb-6">
-            <TabsTrigger value="categories">Categories</TabsTrigger>
-            <TabsTrigger value="featured">Featured</TabsTrigger>
-            <TabsTrigger value="recent">Recent</TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value="categories">
-            <ForumCategories />
-          </TabsContent>
-          
-          <TabsContent value="featured">
-            <div className="space-y-4">
-              {featuredPosts.map((post) => (
-                <PostCard key={post.id} post={post} />
-              ))}
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="recent">
-            <div className="space-y-4">
-              {recentPosts.map((post) => (
-                <PostCard key={post.id} post={post} />
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
-    </>
-          </div>
-        </div>
-=======
     const communityStats = [
         { label: "Active Members", value: "2,847", icon: Users },
         { label: "Total Posts", value: "15,392", icon: MessageCircle },
         { label: "Topics Discussed", value: "1,203", icon: TrendingUp },
         { label: "Success Stories", value: "892", icon: Star }
     ];
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         return date.toLocaleDateString('en-US', { 
@@ -311,9 +79,8 @@ export default function CommunityPage() {
             year: 'numeric'
         });
     };
-
     return (
-        <>
+<>
             <SEO 
                 title="Community - Zion Tech Group" 
                 description="Join our tech community and connect with fellow professionals." 
@@ -345,7 +112,6 @@ export default function CommunityPage() {
                                 </Button>
                             </div>
                         </div>
-
                         {/* Community Stats */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
                             {communityStats.map((stat, index) => (
@@ -360,7 +126,6 @@ export default function CommunityPage() {
                         </div>
                     </div>
                 </section>
-
                 {/* Community Content */}
                 <section className="py-16 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto">
@@ -376,34 +141,6 @@ export default function CommunityPage() {
                                     Trending Topics
                                 </TabsTrigger>
                             </TabsList>
-
-<<<<<<< HEAD
-        {/* Get Involved */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Get Involved?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of professionals who are already part of our community. Start connecting, learning, and growing today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
-                Join Now - It's Free!
-              </button>
-              <Link
-                to="/contact"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-=======
                             <TabsContent value="featured" className="mt-8">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     {featuredPosts.map((post) => (
@@ -454,7 +191,6 @@ export default function CommunityPage() {
                                                         {post.views}
                                                     </div>
                                                 </div>
-
                                                 <div className="flex flex-wrap gap-2 mt-4">
                                                     {post.tags.map((tag, index) => (
                                                         <Badge key={index} variant="secondary" className="text-xs">
@@ -467,7 +203,6 @@ export default function CommunityPage() {
                                     ))}
                                 </div>
                             </TabsContent>
-
                             <TabsContent value="recent" className="mt-8">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     {recentPosts.map((post) => (
@@ -516,7 +251,6 @@ export default function CommunityPage() {
                                     ))}
                                 </div>
                             </TabsContent>
-
                             <TabsContent value="trending" className="mt-8">
                                 <div className="text-center py-16">
                                     <div className="w-24 h-24 bg-zion-blue-light rounded-full flex items-center justify-center mx-auto mb-6">
@@ -534,7 +268,6 @@ export default function CommunityPage() {
                         </Tabs>
                     </div>
                 </section>
-
                 {/* Coming Soon Section */}
                 <section className="py-16 bg-zion-blue-dark">
                     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -556,7 +289,6 @@ export default function CommunityPage() {
                 </section>
             </main>
             <Footer />
-        </>
+</>
     );
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 }

@@ -175,7 +175,6 @@ import {
   SkipBack2Dodecagon,
   SkipForward2Dodecagon
 } from 'lucide-react';
-
 const footerNavigation = {
   aiServices: {
     title: 'AI Services',
@@ -258,7 +257,6 @@ const footerNavigation = {
     ],
   },
 };
-
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-marketplace', icon: Linkedin, color: 'hover:text-blue-600' },
@@ -266,19 +264,16 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
 ];
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const FuturisticFooter: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   return (
     <footer className="relative bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light border-t border-zion-cyan/20 overflow-hidden quantum-particles">
       {/* Animated background elements */}
@@ -289,7 +284,6 @@ export const FuturisticFooter: React.FC = () => {
           <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/10 rounded-full animate-pulse delay-2000 holographic"></div>
         </div>
       </div>
-
       <div className="relative z-10">
         {/* Main footer content */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -319,7 +313,6 @@ export const FuturisticFooter: React.FC = () => {
                   Leading the future of technology with cutting-edge AI services, innovative micro SAAS solutions, 
                   and comprehensive IT services. Empowering businesses to thrive in the digital age.
                 </p>
-
                 {/* Contact Information */}
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
@@ -345,7 +338,6 @@ export const FuturisticFooter: React.FC = () => {
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
-
                 {/* Social Links */}
                 <div className="flex space-x-4">
                   {socialLinks.map((social) => (
@@ -364,7 +356,6 @@ export const FuturisticFooter: React.FC = () => {
                 </div>
               </motion.div>
             </div>
-
             {/* Navigation sections */}
             {Object.entries(footerNavigation).map(([key, section], index) => (
               <motion.div
@@ -407,7 +398,6 @@ export const FuturisticFooter: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Bottom section */}
         <div className="border-t border-zion-cyan/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -424,7 +414,6 @@ export const FuturisticFooter: React.FC = () => {
                   Sitemap
                 </Link>
               </div>
-
               <div className="flex items-center space-x-4">
                 <motion.button
                   onClick={scrollToTop}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { AlertTriangle, Info, CheckCircle, XCircle } from 'lucide-react';
-
 const alertVariants = {
   default: "bg-background text-foreground",
   destructive: "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive",
@@ -8,7 +7,6 @@ const alertVariants = {
   warning: "border-yellow-500/50 text-yellow-600 dark:border-yellow-500 [&>svg]:text-yellow-600",
   info: "border-blue-500/50 text-blue-600 dark:border-blue-500 [&>svg]:text-blue-600"
 };
-
 const alertIcons = {
   default: Info,
   destructive: XCircle,
@@ -16,7 +14,6 @@ const alertIcons = {
   warning: AlertTriangle,
   info: Info
 };
-
 export function Alert({ className = "", variant = "default", children, ...props }) {
   const Icon = alertIcons[variant];
   
@@ -32,7 +29,6 @@ export function Alert({ className = "", variant = "default", children, ...props 
     </div>
   );
 }
-
 export function AlertTitle({ className = "", ...props }) {
   return (
     <h5
@@ -41,7 +37,6 @@ export function AlertTitle({ className = "", ...props }) {
     />
   );
 }
-
 export function AlertDescription({ className = "", ...props }) {
   return (
     <div

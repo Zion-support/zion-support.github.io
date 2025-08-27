@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-
 interface Testimonial {
   id: number;
   name: string;
@@ -14,11 +13,9 @@ interface Testimonial {
   projectType: string;
   results: string[];
 }
-
 export default function EnhancedTestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const testimonials: Testimonial[] = [
     {
       id: 1,
@@ -81,28 +78,22 @@ export default function EnhancedTestimonialsSection() {
       results: ["35% energy reduction", "Carbon neutral operations", "Cost savings achieved"]
     }
   ];
-
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     setIsAutoPlaying(false);
   };
-
   const prevTestimonial = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     setIsAutoPlaying(false);
   };
-
   const goToTestimonial = (index: number) => {
     setCurrentIndex(index);
     setIsAutoPlaying(false);
   };
-
   const toggleAutoPlay = () => {
     setIsAutoPlaying(!isAutoPlaying);
   };
-
   const currentTestimonial = testimonials[currentIndex];
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
       {/* Background decoration */}
@@ -110,7 +101,6 @@ export default function EnhancedTestimonialsSection() {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
       </div>
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <motion.div
@@ -127,7 +117,6 @@ export default function EnhancedTestimonialsSection() {
             Don't just take our word for it. Here's what industry leaders have to say about working with Zion Tech Group.
           </p>
         </motion.div>
-
         {/* Testimonials carousel */}
         <div className="max-w-6xl mx-auto">
           <div className="relative">
@@ -183,7 +172,6 @@ export default function EnhancedTestimonialsSection() {
                     </div>
                   </div>
                 </div>
-
                 {/* Center: Testimonial content */}
                 <div className="lg:col-span-2">
                   <blockquote className="text-lg lg:text-xl text-gray-300 leading-relaxed mb-8 italic">
@@ -211,7 +199,6 @@ export default function EnhancedTestimonialsSection() {
                 </div>
               </div>
             </motion.div>
-
             {/* Navigation controls */}
             <div className="flex items-center justify-center mt-8 space-x-4">
               <button
@@ -239,7 +226,6 @@ export default function EnhancedTestimonialsSection() {
                 <ChevronRight className="w-6 h-6 text-white" />
               </button>
             </div>
-
             {/* Dots indicator */}
             <div className="flex justify-center mt-6 space-x-2">
               {testimonials.map((_, index) => (
@@ -256,7 +242,6 @@ export default function EnhancedTestimonialsSection() {
             </div>
           </div>
         </div>
-
         {/* Trust indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

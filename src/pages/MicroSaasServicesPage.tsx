@@ -1,7 +1,6 @@
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark/80 border-b border-zion-blue-light">
         <div className="container mx-auto px-4 py-6">
@@ -21,7 +20,6 @@
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="py-8 bg-zion-blue-dark/50">
         <div className="container mx-auto px-4">
@@ -42,7 +40,6 @@
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="py-16">
         <div className="container mx-auto px-4">
@@ -121,7 +118,6 @@
             ))}
           </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
         <div className="container mx-auto px-4 text-center">

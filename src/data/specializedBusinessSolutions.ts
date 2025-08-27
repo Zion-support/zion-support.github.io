@@ -24,7 +24,6 @@ export interface SpecializedBusinessSolution {
   demoUrl?: string;
   documentationUrl?: string;
 }
-
 export const SPECIALIZED_BUSINESS_SOLUTIONS: SpecializedBusinessSolution[] = [
   // AI-Powered Sales & Revenue Optimization
   {
@@ -78,7 +77,6 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS: SpecializedBusinessSolution[] = [
     },
     websiteUrl: "https://ziontechgroup.com/ai-sales-optimization"
   },
-
   // Digital Transformation Consulting
   {
     id: "digital-transformation-consulting",
@@ -131,7 +129,6 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS: SpecializedBusinessSolution[] = [
     },
     websiteUrl: "https://ziontechgroup.com/digital-transformation"
   },
-
   // Data Analytics & Business Intelligence
   {
     id: "data-analytics-business-intelligence",
@@ -184,7 +181,6 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS: SpecializedBusinessSolution[] = [
     },
     websiteUrl: "https://ziontechgroup.com/data-analytics"
   },
-
   // Process Automation & Workflow Optimization
   {
     id: "process-automation-workflow-optimization",
@@ -237,7 +233,6 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS: SpecializedBusinessSolution[] = [
     },
     websiteUrl: "https://ziontechgroup.com/process-automation"
   },
-
   // Customer Experience & Engagement Platform
   {
     id: "customer-experience-engagement-platform",

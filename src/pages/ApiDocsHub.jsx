@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 export function ApiDocsHub() {
@@ -46,7 +46,6 @@ export function ApiDocsHub() {
         <p className="text-zinc-400 text-lg mb-12">
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.
         </p>
-
         <div className="grid gap-6 md:grid-cols-2">
           {sections.map((section) => (<Link key={section.path} to={section.path} className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all">
               <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>
@@ -60,7 +59,6 @@ export function ApiDocsHub() {
               </div>
             </Link>))}
         </div>
-
         <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
           <p className="text-zinc-400 mb-6">

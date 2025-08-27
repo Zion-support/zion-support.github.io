@@ -33,7 +33,6 @@ export default function PricingGuidePage() {
     };
     return (<div className="min-h-screen bg-background">
       <SEO title="Service Pricing Guide - Zion Tech Group" description="Complete pricing guide for all our IT and AI services. Compare prices, features, and choose the perfect solution for your business needs." keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost" canonical="https://ziontechgroup.com/pricing"/>
-
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -67,7 +66,6 @@ export default function PricingGuidePage() {
               <div className="text-zion-slate-light">Service Coverage</div>
             </div>
           </div>
-
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
             <h3 className="text-xl font-semibold mb-4">Need Custom Pricing?</h3>
@@ -88,7 +86,6 @@ export default function PricingGuidePage() {
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="bg-zion-blue-dark py-8 border-b border-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -105,7 +102,6 @@ export default function PricingGuidePage() {
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="container mx-auto px-4 py-12">
         <div className="mb-8">
@@ -118,7 +114,6 @@ export default function PricingGuidePage() {
             : `Specialized ${selectedCategory.toLowerCase()} solutions for your business needs`}
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.map((service) => {
             const tier = getServiceTier(service.price || 0);
@@ -135,7 +130,6 @@ export default function PricingGuidePage() {
                       Featured
                     </Badge>)}
                 </div>
-
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -159,12 +153,10 @@ export default function PricingGuidePage() {
                     </div>
                   </div>
                 </CardHeader>
-
                 <CardContent className="pt-0">
                   <CardDescription className="text-gray-600 mb-4 overflow-hidden text-ellipsis" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
                     {service.description}
                   </CardDescription>
-
                   {/* Service Details */}
                   <div className="space-y-2 text-sm text-gray-600 mb-4">
                     <div className="flex items-center space-x-2">
@@ -180,14 +172,12 @@ export default function PricingGuidePage() {
                       <span>Category: {service.category}</span>
                     </div>
                   </div>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1 mb-4">
                     {service.tags.slice(0, 3).map((tag) => (<Badge key={tag} variant="secondary" className="text-xs">
                         {tag}
                       </Badge>))}
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex space-x-2">
                     <Button className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white">
@@ -201,14 +191,12 @@ export default function PricingGuidePage() {
               </Card>);
         })}
         </div>
-
         {filteredServices.length === 0 && (<div className="text-center py-12">
             <div className="text-gray-400 text-6xl mb-4">🔍</div>
             <h3 className="text-xl font-semibold text-gray-600 mb-2">No services found</h3>
             <p className="text-gray-500">Try selecting a different category</p>
           </div>)}
       </div>
-
       {/* Pricing Tiers Explanation */}
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
@@ -220,7 +208,6 @@ export default function PricingGuidePage() {
               Our pricing reflects the complexity, scope, and value of each service
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -230,7 +217,6 @@ export default function PricingGuidePage() {
               <p className="text-gray-600 mb-2">$0 - $2K</p>
               <p className="text-gray-600 text-sm">Basic implementations and simple integrations</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-blue-600"/>
@@ -239,7 +225,6 @@ export default function PricingGuidePage() {
               <p className="text-gray-600 mb-2">$2K - $5K</p>
               <p className="text-gray-600 text-sm">Standard business solutions with customization</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-purple-600"/>
@@ -248,7 +233,6 @@ export default function PricingGuidePage() {
               <p className="text-gray-600 mb-2">$5K - $10K</p>
               <p className="text-gray-600 text-sm">Complex solutions with advanced features</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-orange-600"/>
@@ -260,7 +244,6 @@ export default function PricingGuidePage() {
           </div>
         </div>
       </div>
-
       {/* Value Proposition */}
       <div className="bg-zion-blue py-16">
         <div className="container mx-auto px-4 text-center">
@@ -276,7 +259,6 @@ export default function PricingGuidePage() {
               <h3 className="text-xl font-semibold text-white mb-2">No Hidden Fees</h3>
               <p className="text-zion-slate-light">Transparent pricing with all costs clearly outlined upfront</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white"/>
@@ -284,7 +266,6 @@ export default function PricingGuidePage() {
               <h3 className="text-xl font-semibold text-white mb-2">Rapid Delivery</h3>
               <p className="text-zion-slate-light">Faster turnaround times mean lower overall project costs</p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-white"/>
@@ -295,7 +276,6 @@ export default function PricingGuidePage() {
           </div>
         </div>
       </div>
-
       {/* Contact CTA */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-blue py-16">
         <div className="container mx-auto px-4 text-center">
@@ -316,7 +296,6 @@ export default function PricingGuidePage() {
               Call +1 302 464 0950
             </Button>
           </div>
-
           <div className="mt-8 text-zion-slate-light">
             <p>Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>

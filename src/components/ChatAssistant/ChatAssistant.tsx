@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { X, Send } from 'lucide-react';
-
 export interface Message {
   id: string;
   role: 'user' | 'assistant';
@@ -8,31 +7,25 @@ export interface Message {
   timestamp: Date;
   read?: boolean;
 }
-
 export interface ChatAssistantProps {
   isOpen?: boolean;
   onClose?: () => void;
 }
-
 export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
   const [isChatOpen, setIsChatOpen] = useState(isOpen);
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
-
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return;
-
     const userMessage: Message = {
       id: Date.now().toString(),
       role: 'user',
       message: message.trim(),
       timestamp: new Date(),
     };
-
     setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
-
     // Simulate AI response
     setTimeout(() => {
       const aiMessage: Message = {
@@ -44,21 +37,17 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
       setMessages(prev => [...prev, aiMessage]);
     }, 1000);
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     handleSendMessage(inputMessage);
   };
-
   const toggleChat = () => {
     setIsChatOpen(!isChatOpen);
   };
-
   const closeChat = () => {
     setIsChatOpen(false);
     if (onClose) onClose();
   };
-
   if (!isChatOpen) {
     return (
       <button
@@ -72,7 +61,6 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
       </button>
     );
   }
-
   return (
     <div className="fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50 flex flex-col">
       {/* Header */}
@@ -85,7 +73,6 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
           <X size={20} />
         </button>
       </div>
-
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.length === 0 ? (
@@ -115,7 +102,6 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
         )}
         <div ref={messagesEndRef} />
       </div>
-
       {/* Input */}
       <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">
         <div className="flex space-x-2">

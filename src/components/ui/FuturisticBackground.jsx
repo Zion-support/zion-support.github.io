@@ -31,7 +31,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
             // Create particles
             const particleCount = intensity === 'high' ? 200 : intensity === 'medium' ? 100 : 50;
             for (let i = 0; i < particleCount; i++) {
-                particles.push({
+                particles({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
                     vx: (Math.random() - 0.5) * 2,

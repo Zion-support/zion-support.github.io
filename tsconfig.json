@@ -10,31 +10,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": { "@/*": ["./src/*"] },
-    "allowSyntheticDefaultImports": true,
-<<<<<<< HEAD
-    "allowJs": true,
-    "incremental": true,
-    "strictNullChecks": true
-  },
-  "include": [
-    "src",
-    "pages",
-    "components",
-    "data",
-    "types"
-  ],
-=======
-    "jsx": "react-jsx"
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src", "components", "pages", "vite.config.ts", "tailwind.config.ts"],
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
   "exclude": [
     "node_modules",
     "dist/**",

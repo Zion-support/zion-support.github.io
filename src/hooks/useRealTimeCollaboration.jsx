@@ -114,7 +114,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         }
         else {
             // Queue message for later
-            messageQueueRef.current.push(fullMessage);
+            messageQueueRef.current(fullMessage);
             trackEvent('collaboration', 'message_queued', message.type, undefined, { messageId: fullMessage.id });
         }
     }, [trackEvent]);

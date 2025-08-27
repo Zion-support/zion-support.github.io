@@ -2,9 +2,7 @@ import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
-
 const rootElement = document.getElementById('root');
-
 function renderApp() {
   const app = React.createElement(React.StrictMode, null,
     React.createElement(App, null)
@@ -16,7 +14,6 @@ function renderApp() {
     createRoot(rootElement).render(app);
   }
 }
-
 function displayFatalError(message) {
   if (rootElement) {
     rootElement.innerHTML = `
@@ -26,19 +23,16 @@ function displayFatalError(message) {
       </div>`;
   }
 }
-
 try {
   renderApp();
 } catch (error) {
   console.error('Global error caught in main.jsx:', error);
   displayFatalError(error.message);
 }
-
 window.addEventListener('error', (e) => {
   console.error('Unhandled error:', e.error || e.message);
   displayFatalError(e.message);
 });
-
 // Add performance monitoring
 window.addEventListener('load', () => {
   if ('performance' in window) {

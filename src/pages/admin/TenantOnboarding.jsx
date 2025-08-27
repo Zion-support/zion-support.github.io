@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -110,7 +110,6 @@ export default function TenantOnboarding() {
               Create a new white-label instance of Zion Hire AI for a company.
             </p>
           </div>
-
           <Card>
             <CardHeader>
               <CardTitle>New Tenant Setup</CardTitle>

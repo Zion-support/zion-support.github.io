@@ -6,14 +6,12 @@ export interface SEOData {
   canonicalUrl?: string;
   structuredData?: object;
 }
-
 export interface ContentQualityIssue {
   page: string;
   issue: 'missing-title' | 'missing-description' | 'short-description' | 'no-headings' | 'minimal-content';
   severity: 'high' | 'medium' | 'low';
   suggestedFix: string;
 }
-
 export class SEOOptimizer {
   private static readonly DEFAULT_META_DESCRIPTIONS: Record<string, string> = {
     '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
@@ -33,7 +31,6 @@ export class SEOOptimizer {
     '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
     '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
   };
-
   private static readonly KEYWORD_MAPPINGS: Record<string, string[]> = {
     '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
     '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],
@@ -52,14 +49,12 @@ export class SEOOptimizer {
     '/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],
     '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology']
   };
-
   static generateSEOData(path: string): SEOData {
     const title = this.generateTitle(path);
     const description = this.generateDescription(path);
     const keywords = this.generateKeywords(path);
     const canonicalUrl = this.generateCanonicalUrl(path);
     const structuredData = this.generateStructuredData(path);
-
     return {
       title,
       description,
@@ -68,41 +63,33 @@ export class SEOOptimizer {
       structuredData
     };
   }
-
   static generateTitle(path: string): string {
     const baseTitle = 'Zion Tech Group';
     
     if (path === '/') {
       return `${baseTitle} - Revolutionary Technology Solutions`;
     }
-
     const pathSegments = path.split('/').filter(Boolean);
     if (pathSegments.length === 0) return baseTitle;
-
     const lastSegment = pathSegments[pathSegments.length - 1];
     const formattedSegment = lastSegment
       .split('-')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
-
     return `${formattedSegment} - ${baseTitle}`;
   }
-
   static generateDescription(path: string): string {
     return this.DEFAULT_META_DESCRIPTIONS[path] || 
            'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.';
   }
-
   static generateKeywords(path: string): string[] {
     return this.KEYWORD_MAPPINGS[path] || 
            ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];
   }
-
   static generateCanonicalUrl(path: string): string {
     const baseUrl = 'https://ziontechgroup.com';
     return `${baseUrl}${path}`;
   }
-
   static generateStructuredData(path: string): object {
     const baseData = {
       "@context": "https://schema.org",
@@ -117,7 +104,6 @@ export class SEOOptimizer {
         "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
       }
     };
-
     // Add specific structured data based on page type
     if (path === '/') {
       return {
@@ -143,7 +129,6 @@ export class SEOOptimizer {
         }
       };
     }
-
     if (path.startsWith('/services/')) {
       return {
         ...baseData,
@@ -155,68 +140,60 @@ export class SEOOptimizer {
         }
       };
     }
-
     return baseData;
   }
-
   static analyzeContentQuality(content: string, page: string): ContentQualityIssue[] {
     const issues: ContentQualityIssue[] = [];
     
     // Check for missing or short title
     if (!content.includes('<title>') || content.includes('<title></title>')) {
-      issues.push({
+      issues({
         page,
         issue: 'missing-title',
         severity: 'high',
         suggestedFix: 'Add a descriptive title tag with relevant keywords'
       });
     }
-
     // Check for missing meta description
     if (!content.includes('name="description"')) {
-      issues.push({
+      issues({
         page,
         issue: 'missing-description',
         severity: 'high',
         suggestedFix: 'Add a meta description tag with compelling content'
       });
     }
-
     // Check for short meta description
     const descMatch = content.match(/name="description" content="([^"]+)"/);
     if (descMatch && descMatch[1].length < 120) {
-      issues.push({
+      issues({
         page,
         issue: 'short-description',
         severity: 'medium',
         suggestedFix: 'Expand meta description to 120-160 characters for better SEO'
       });
     }
-
     // Check for missing headings
     if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
-      issues.push({
+      issues({
         page,
         issue: 'no-headings',
         severity: 'medium',
         suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
       });
     }
-
     // Check for minimal content
     const textContent = content.replace(/<[^>]*>/g, '').trim();
     if (textContent.length < 300) {
-      issues.push({
+      issues({
         page,
         issue: 'minimal-content',
         severity: 'medium',
         suggestedFix: 'Add more relevant content to improve user experience and SEO value'
       });
     }
-
     return issues;
   }
-
   static generateMetaTags(seoData: SEOData): string {
     return `
     <title>${seoData.title}</title>
@@ -244,5 +221,4 @@ export class SEOOptimizer {
     `;
   }
 }
-
 export const seoOptimizer = new SEOOptimizer();

@@ -1,9 +1,8 @@
 import React from 'react';
-import SEOHead from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Link } from 'react-router-dom';
 import { servicesCatalog } from '@/data/servicesCatalog';
 import { Phone, Mail, MapPin, ExternalLink, ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Cpu, Lock, Globe2, Database, Cloud } from 'lucide-react';
-
 export default function Services() {
     const contact = {
         mobile: '+1 302 464 0950',
@@ -11,7 +10,6 @@ export default function Services() {
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup.com'
     };
-
     const categoryIcons = {
         'Micro SaaS': Brain,
         'AI Solutions': Brain,
@@ -34,7 +32,6 @@ export default function Services() {
         'Real Estate Tech': TrendingUp,
         'Supply Chain Solutions': Globe2
     };
-
     const categoryColors = {
         'Micro SaaS': 'from-purple-500 to-pink-500',
         'AI Solutions': 'from-blue-500 to-cyan-500',
@@ -57,10 +54,8 @@ export default function Services() {
         'Real Estate Tech': 'from-yellow-500 to-orange-500',
         'Supply Chain Solutions': 'from-indigo-500 to-blue-500'
     };
-
     return (<>
 			<SEOHead title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group" description="Explore our comprehensive micro SaaS products, enterprise IT services, AI solutions, quantum computing, blockchain, and emerging technology solutions with transparent pricing and clear features." canonical="/services" url="https://ziontechgroup.com/services"/>
-
 			<main className="min-h-screen bg-zion-blue pt-24 pb-20">
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-12">
@@ -80,7 +75,6 @@ export default function Services() {
 							</div>
 						</div>
 					</div>
-
 					<div className="grid grid-cols-1 gap-16">
 						{servicesCatalog.map(category => {
 							const IconComponent = categoryIcons[category.name] || Brain;
@@ -109,14 +103,12 @@ export default function Services() {
 														<p className="text-zion-slate-light mt-2 text-sm leading-relaxed">{item.description}</p>
 													</div>
 												</div>
-
 												<div className="flex items-center justify-between mb-4">
 													<div className="text-zion-cyan font-bold text-lg">{item.price}</div>
 													<div className="text-zion-slate-light text-sm bg-zion-blue-light/20 px-3 py-1 rounded-full">
 														{item.billing === 'month' ? 'Monthly' : item.billing === 'hour' ? 'Hourly' : 'Project-based'}
 													</div>
 												</div>
-
 												<div className="mb-6">
 													<h4 className="text-white font-medium mb-3 text-sm uppercase tracking-wide">Key Features</h4>
 													<ul className="space-y-2">
@@ -128,7 +120,6 @@ export default function Services() {
 														))}
 													</ul>
 												</div>
-
 												<div className="flex items-center justify-between">
 													<Link 
 														to={item.href} 
@@ -150,7 +141,6 @@ export default function Services() {
 							);
 						})}
 					</div>
-
 					{/* Why Choose Zion Tech Group */}
 					<section className="mt-20 bg-gradient-to-r from-zion-blue-dark to-zion-blue rounded-2xl p-8 border border-zion-cyan/20">
 						<div className="text-center mb-12">
@@ -186,7 +176,6 @@ export default function Services() {
 							</div>
 						</div>
 					</section>
-
 					<section className="mt-16">
 						<h2 className="text-2xl md:text-3xl font-semibold text-white mb-6 text-center">Ready to Get Started?</h2>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -219,7 +208,6 @@ export default function Services() {
 							</Link>
 						</div>
 					</section>
-
 				</div>
 			</main>
 		</>);

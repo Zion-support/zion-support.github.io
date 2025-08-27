@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { ComprehensiveServicesShowcase } from '@/components/ComprehensiveServicesShowcase';
 import { SEO } from '@/components/SEO';
@@ -59,7 +57,6 @@ export default function ComprehensiveServices() {
         }
     ];
     return (_jsxs("div", { className: "min-h-screen bg-background", children: [_jsx(SEO, { title: "Comprehensive Technology Services - Zion Tech Group", description: "Transform your business with our comprehensive suite of AI, cybersecurity, cloud, and digital transformation services. Expert solutions tailored to drive innovation and growth.", keywords: "AI services, cybersecurity, cloud migration, digital transformation, IT consulting, technology services", canonical: "https://ziontechgroup.com/services" }), _jsx("section", { className: "bg-zion-blue-dark py-20 px-4", children: _jsxs("div", { className: "container mx-auto text-center", children: [_jsxs("h1", { className: "text-5xl md:text-7xl font-bold text-white mb-6", children: ["Professional ", _jsx("span", { className: "text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple", children: "Technology Services" })] }), _jsx("p", { className: "text-zion-slate-light text-xl md:text-2xl max-w-4xl mx-auto mb-8 leading-relaxed", children: "Transform your business with our comprehensive suite of AI, cybersecurity, cloud, and digital transformation services. Expert solutions tailored to drive innovation, efficiency, and competitive advantage." }), _jsxs("div", { className: "flex flex-wrap justify-center gap-4 mb-12", children: [_jsxs(Button, { size: "lg", className: "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg px-8 py-6", children: [_jsx(Phone, { className: "h-5 w-5 mr-2" }), "Get Free Consultation"] }), _jsxs(Button, { size: "lg", variant: "outline", className: "border-zion-purple text-zion-cyan hover:bg-zion-purple/10 text-lg px-8 py-6", children: [_jsx(MessageSquare, { className: "h-5 w-5 mr-2" }), "Request Quote"] })] }), _jsx("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto", children: stats.map((stat, index) => (_jsxs("div", { className: "text-center", children: [_jsx("div", { className: "flex justify-center mb-2 text-zion-cyan", children: stat.icon }), _jsx("div", { className: "text-2xl md:text-3xl font-bold text-white mb-1", children: stat.value }), _jsx("div", { className: "text-zion-slate-light text-sm", children: stat.label })] }, index))) })] }) }), _jsx("section", { className: "py-20 bg-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsxs("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-6", children: ["Why Choose ", _jsx("span", { className: "text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple", children: "Zion Tech Group" })] }), _jsx("p", { className: "text-zion-slate-light text-lg max-w-3xl mx-auto", children: "We combine deep technical expertise with business acumen to deliver solutions that drive real results" })] }), _jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6", children: whyChooseUs.map((item, index) => (_jsxs(Card, { className: "border-zion-blue-light bg-zion-blue-dark text-center hover:border-zion-purple/50 transition-all duration-300", children: [_jsxs(CardHeader, { children: [_jsx("div", { className: "flex justify-center mb-4 text-zion-cyan", children: item.icon }), _jsx(CardTitle, { className: "text-white text-xl", children: item.title })] }), _jsx(CardContent, { children: _jsx(CardDescription, { className: "text-zion-slate-light", children: item.description }) })] }, index))) })] }) }), _jsx("section", { className: "py-20 bg-zion-blue-dark", children: _jsxs("div", { className: "container mx-auto px-4", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsxs("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-6", children: ["Our ", _jsx("span", { className: "text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple", children: "Process" })] }), _jsx("p", { className: "text-zion-slate-light text-lg max-w-3xl mx-auto", children: "A proven methodology that ensures successful project delivery and maximum value for your investment" })] }), _jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8", children: processSteps.map((step, index) => (_jsxs("div", { className: "text-center relative", children: [_jsx("div", { className: "bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold", children: step.step }), _jsx("h3", { className: "text-white text-xl font-bold mb-4", children: step.title }), _jsx("p", { className: "text-zion-slate-light leading-relaxed", children: step.description }), index < processSteps.length - 1 && (_jsx("div", { className: "hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-zion-purple to-transparent transform translate-x-1/2" }))] }, index))) })] }) }), _jsx(ComprehensiveServicesShowcase, {}), _jsx("section", { className: "py-20 bg-zion-blue-dark", children: _jsxs("div", { className: "container mx-auto px-4", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsxs("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-6", children: ["Ready to ", _jsx("span", { className: "text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple", children: "Get Started" }), "?"] }), _jsx("p", { className: "text-zion-slate-light text-lg max-w-3xl mx-auto", children: "Our expert team is ready to help you implement the perfect technology solutions. Get in touch today for a personalized consultation and quote." })] }), _jsx("div", { className: "max-w-6xl mx-auto", children: _jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-8", children: [_jsxs("div", { className: "bg-zion-blue-light/10 rounded-lg p-8 border border-zion-blue-light/20", children: [_jsx("h3", { className: "text-2xl font-bold text-white mb-6", children: "Contact Information" }), _jsxs("div", { className: "space-y-6", children: [_jsxs("div", { className: "flex items-start gap-4", children: [_jsx(Phone, { className: "h-6 w-6 text-zion-cyan mt-1 flex-shrink-0" }), _jsxs("div", { children: [_jsx("div", { className: "text-white font-semibold", children: "Phone" }), _jsx("a", { href: "tel:+13024640950", className: "text-zion-cyan hover:text-zion-cyan-light text-lg", children: "+1 302 464 0950" })] })] }), _jsxs("div", { className: "flex items-start gap-4", children: [_jsx(Mail, { className: "h-6 w-6 text-zion-cyan mt-1 flex-shrink-0" }), _jsxs("div", { children: [_jsx("div", { className: "text-white font-semibold", children: "Email" }), _jsx("a", { href: "mailto:kleber@ziontechgroup.com", className: "text-zion-cyan hover:text-zion-cyan-light text-lg", children: "kleber@ziontechgroup.com" })] })] }), _jsxs("div", { className: "flex items-start gap-4", children: [_jsx(Globe, { className: "h-6 w-6 text-zion-cyan mt-1 flex-shrink-0" }), _jsxs("div", { children: [_jsx("div", { className: "text-white font-semibold", children: "Website" }), _jsx("a", { href: "https://ziontechgroup.com", target: "_blank", rel: "noopener noreferrer", className: "text-zion-cyan hover:text-zion-cyan-light text-lg", children: "ziontechgroup.com" })] })] }), _jsxs("div", { className: "flex items-start gap-4", children: [_jsx(MapPin, { className: "h-6 w-6 text-zion-cyan mt-1 flex-shrink-0" }), _jsxs("div", { children: [_jsx("div", { className: "text-white font-semibold", children: "Address" }), _jsxs("div", { className: "text-zion-slate-light text-lg", children: ["364 E Main St STE 1008", _jsx("br", {}), "Middletown DE 19709"] })] })] })] })] }), _jsxs("div", { className: "bg-zion-blue-light/10 rounded-lg p-8 border border-zion-blue-light/20", children: [_jsx("h3", { className: "text-2xl font-bold text-white mb-6", children: "Quick Contact" }), _jsxs("div", { className: "space-y-4", children: [_jsxs("div", { children: [_jsx("label", { className: "block text-zion-slate-light text-sm font-medium mb-2", children: "Name" }), _jsx("input", { type: "text", className: "w-full px-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:border-zion-purple focus:outline-none", placeholder: "Your full name" })] }), _jsxs("div", { children: [_jsx("label", { className: "block text-zion-slate-light text-sm font-medium mb-2", children: "Email" }), _jsx("input", { type: "email", className: "w-full px-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:border-zion-purple focus:outline-none", placeholder: "your.email@company.com" })] }), _jsxs("div", { children: [_jsx("label", { className: "block text-zion-slate-light text-sm font-medium mb-2", children: "Service Interest" }), _jsxs("select", { className: "w-full px-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white focus:border-zion-purple focus:outline-none", children: [_jsx("option", { value: "", children: "Select a service category" }), SERVICE_CATEGORIES.map((category) => (_jsx("option", { value: category.name, children: category.name }, category.name)))] })] }), _jsxs("div", { children: [_jsx("label", { className: "block text-zion-slate-light text-sm font-medium mb-2", children: "Message" }), _jsx("textarea", { rows: 4, className: "w-full px-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:border-zion-purple focus:outline-none", placeholder: "Tell us about your project or requirements..." })] }), _jsxs(Button, { className: "w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3", children: ["Send Message", _jsx(ArrowRight, { className: "h-4 w-4 ml-2" })] })] })] })] }) })] }) })] }));
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -104,100 +101,11 @@ export default function ComprehensiveServicesPage() {
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                 <DollarSign className="w-5 h-5 mr-2"/>
                 View Pricing
-<<<<<<< HEAD
-import { Search, Mail, Phone, MapPin, Star, Clock, Globe, Shield, Zap, Database, Cloud, Brain, Lock, TrendingUp } from 'lucide-react';
-import { SEO } from "../components/SEOHead"';
-import { Link } from 'react-router-dom';
-
-export default function ComprehensiveServices() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
-
-  const filteredServices = EXPANDED_SERVICES.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory;
-    
-    const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-    
-    const matchesPrice = priceRange === 'all' || 
-                        (priceRange === 'low' && service.price < 10000) ||
-                        (priceRange === 'medium' && service.price >= 10000 && service.price < 25000) ||
-                        (priceRange === 'high' && service.price >= 25000);
-    
-    return matchesSearch && matchesCategory && matchesSubcategory && matchesPrice;
-  });
-
-  const getSubcategories = () => {
-    if (selectedCategory === 'all') return [];
-    return EXPANDED_SERVICE_SUBCATEGORIES[selectedCategory as keyof typeof EXPANDED_SERVICE_SUBCATEGORIES] || [];
-  };
-
-  const getCategoryIcon = (category: string) => {
-    const icons: { [key: string]: React.ReactNode } = {
-      'AI Development': <Brain className="w-6 h-6" />,
-      'Cloud Services': <Cloud className="w-6 h-6" />,
-      'DevOps': <Zap className="w-6 h-6" />,
-      'Cybersecurity': <Shield className="w-6 h-6" />,
-      'Data & Analytics': <Database className="w-6 h-6" />,
-      'Digital Transformation': <TrendingUp className="w-6 h-6" />,
-      'Emerging Tech': <Globe className="w-6 h-6" />,
-      'Managed Services': <Lock className="w-6 h-6" />
-    };
-    return icons[category] || <Star className="w-6 h-6" />;
-  };
-
-  const formatPrice = (price: number) => {
-    if (price >= 1000) {
-      return `$${(price / 1000).toFixed(0)}K`;
-    }
-    return `$${price}`;
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
-      <SEOHead 
-        title="Comprehensive IT & AI Services - Zion Tech Group" 
-        description="Discover our complete range of enterprise IT services, AI solutions, cybersecurity, cloud migration, and digital transformation services. Expert consulting and implementation worldwide."
-        keywords="IT services, AI development, cybersecurity, cloud migration, digital transformation, managed services, blockchain, IoT, AR/VR"
-        canonical="https://ziontechgroup.com/comprehensive-services"
-      />
-
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Comprehensive IT & AI Services
-          </h1>
-          <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
-            Enterprise-grade technology solutions delivered by experts. From AI development to cybersecurity, 
-            we provide end-to-end services to transform your business.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan hover:text-white">
-              <Phone className="w-5 h-5 mr-2" />
-              +1 302 464 0950
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
-              <Mail className="w-5 h-5 mr-2" />
-              kleber@ziontechgroup.com
-            </Button>
-            <Link to="/pricing-guide">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
-                <TrendingUp className="w-5 h-5 mr-2" />
-                View Pricing Guide
-=======
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
               </Button>
             </Link>
           </div>
         </div>
       </div>
-
       {/* Contact Information */}
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
@@ -223,7 +131,6 @@ export default function ComprehensiveServices() {
           </div>
         </div>
       </div>
-
       {/* Search and Filter Controls */}
       <div className="bg-zion-blue-dark py-8 px-4">
         <div className="container mx-auto">
@@ -253,7 +160,6 @@ export default function ComprehensiveServices() {
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -280,7 +186,6 @@ export default function ComprehensiveServices() {
                         {tag}
                       </Badge>))}
                   </div>
-
                   {/* Service Details */}
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center gap-2 text-zion-slate-light">
@@ -292,7 +197,6 @@ export default function ComprehensiveServices() {
                       <span>{service.location}</span>
                     </div>
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex gap-2 pt-2">
                     <Button className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -306,7 +210,6 @@ export default function ComprehensiveServices() {
                 </CardContent>
               </Card>))}
           </div>
-
           {filteredServices.length === 0 && (<div className="text-center py-16">
               <div className="text-zion-slate-light text-xl mb-4">No services found matching your criteria</div>
               <Button onClick={() => {
@@ -320,7 +223,6 @@ export default function ComprehensiveServices() {
             </div>)}
         </div>
       </div>
-
       {/* Service Categories Overview */}
       <div className="py-16 px-4 bg-zion-blue-dark">
         <div className="container mx-auto">
@@ -330,7 +232,6 @@ export default function ComprehensiveServices() {
               Explore our comprehensive range of technology services
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
             {
@@ -363,7 +264,6 @@ export default function ComprehensiveServices() {
           </div>
         </div>
       </div>
-
       {/* Contact CTA Section */}
       <div className="py-20 px-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark">
         <div className="container mx-auto text-center">
@@ -388,8 +288,4 @@ export default function ComprehensiveServices() {
         </div>
       </div>
     </div>);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 }

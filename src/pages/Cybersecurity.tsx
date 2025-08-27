@@ -1,86 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from "../components/SEOHead";
-import { Shield, Lock, Eye, AlertTriangle, Users, Globe, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
-
-const Cybersecurity: React.FC = () => {
-  const securityServices = [
-    {
-      icon: Shield,
-      title: "Advanced Threat Detection",
-      description: "AI-powered threat detection and prevention systems",
-      features: ["Real-time Monitoring", "Behavioral Analysis", "Machine Learning", "Automated Response"],
-      path: "/ai-powered-enterprise-security"
-    },
-    {
-      icon: Lock,
-      title: "SOC2 Compliance Automation",
-      description: "Automated compliance management and reporting",
-      features: ["Automated Auditing", "Real-time Monitoring", "Compliance Reporting", "Risk Assessment"],
-      path: "/soc2-compliance-automation"
-    },
-    {
-      icon: Eye,
-      title: "Zero Trust Architecture",
-      description: "Comprehensive zero trust security implementation",
-      features: ["Identity Verification", "Continuous Monitoring", "Least Privilege Access", "Micro-segmentation"],
-      path: "/zero-trust-network-architecture"
-    },
-    {
-      icon: Network,
-      title: "Network Security",
-      description: "Advanced network protection and monitoring",
-      features: ["Firewall Management", "Intrusion Detection", "Traffic Analysis", "Vulnerability Scanning"],
-      path: "/network-security"
-    },
-    {
-      icon: Database,
-      title: "Data Protection",
-      description: "Comprehensive data security and privacy solutions",
-      features: ["Encryption", "Access Control", "Data Loss Prevention", "Privacy Compliance"],
-      path: "/data-protection"
-    },
-    {
-      icon: Users,
-      title: "Identity & Access Management",
-      description: "Secure identity management and access control",
-      features: ["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Identity Governance"],
-      path: "/identity-access-management"
-    }
-  ];
-
-  const securityFeatures = [
-    {
-      icon: CheckCircle,
-      title: "24/7 Monitoring",
-      description: "Continuous security monitoring and threat detection"
-    },
-    {
-      icon: Zap,
-      title: "Real-time Response",
-      description: "Instant automated response to security incidents"
-    },
-    {
-      icon: Target,
-      title: "Proactive Defense",
-      description: "Predictive security using AI and machine learning"
-    },
-    {
-      icon: BarChart3,
-      title: "Comprehensive Reporting",
-      description: "Detailed security analytics and compliance reporting"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background pt-20">
-      <SEOHead 
-        title="Cybersecurity Solutions - Zion Tech Group" 
-        description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group."
-        keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection"
-        canonical="https://ziontechgroup.com/cybersecurity"
-      />
-=======
 import { SEO } from "@/components/SEO";
 import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
 const Cybersecurity = () => {
@@ -152,8 +70,6 @@ const Cybersecurity = () => {
     ];
     return (<div className="min-h-screen bg-background pt-20">
       <SEO title="Cybersecurity Solutions - Zion Tech Group" description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group." keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection" canonical="https://ziontechgroup.com/cybersecurity"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -177,7 +93,6 @@ const Cybersecurity = () => {
           </div>
         </div>
       </section>
-
       {/* Security Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -190,7 +105,6 @@ const Cybersecurity = () => {
               protection for your organization's most valuable assets.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityServices.map((service) => (<div key={service.title} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group">
                 <div className="p-8">
@@ -213,7 +127,6 @@ const Cybersecurity = () => {
           </div>
         </div>
       </section>
-
       {/* Security Features */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -225,7 +138,6 @@ const Cybersecurity = () => {
               Experience enterprise-grade security with our proven solutions and expert implementation.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {securityFeatures.map((feature) => (<div key={feature.title} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-6">
@@ -237,7 +149,6 @@ const Cybersecurity = () => {
           </div>
         </div>
       </section>
-
       {/* Security Statistics */}
       <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -261,7 +172,6 @@ const Cybersecurity = () => {
           </div>
         </div>
       </section>
-
       {/* Compliance Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -322,7 +232,6 @@ const Cybersecurity = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

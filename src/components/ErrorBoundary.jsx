@@ -1,30 +1,24 @@
 import React, { Component } from 'react'
 import { AlertTriangle, RefreshCw } from 'lucide-react'
-
 export default class ErrorBoundary extends Component {
   constructor(props) {
     super(props)
     this.state = { hasError: false }
   }
-
   static getDerivedStateFromError(error) {
     return { hasError: true, error }
   }
-
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined })
   }
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback
       }
-
       return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="max-w-md mx-auto text-center px-6">
@@ -48,7 +42,6 @@ export default class ErrorBoundary extends Component {
         </div>
       )
     }
-
     return this.props.children
   }
 }

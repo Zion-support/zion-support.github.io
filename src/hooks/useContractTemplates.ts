@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import { ContractTemplate } from '@/types/contracts';
-
 export const useContractTemplates = () => {
   const [templates, setTemplates] = useState<ContractTemplate[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     const fetchTemplates = async () => {
       try {
@@ -81,7 +79,6 @@ export const useContractTemplates = () => {
             tags: ['nda', 'confidentiality', 'legal'],
           },
         ];
-
         setTemplates(mockTemplates);
         setError(null);
       } catch (err) {
@@ -90,18 +87,14 @@ export const useContractTemplates = () => {
         setLoading(false);
       }
     };
-
     fetchTemplates();
   }, []);
-
   const getTemplateById = (id: string) => {
     return templates.find(template => template.id === id);
   };
-
   const getTemplatesByCategory = (category: string) => {
     return templates.filter(template => template.category === category);
   };
-
   const searchTemplates = (query: string) => {
     const lowercaseQuery = query.toLowerCase();
     return templates.filter(template =>
@@ -110,7 +103,6 @@ export const useContractTemplates = () => {
       template.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
     );
   };
-
   return {
     templates,
     loading,

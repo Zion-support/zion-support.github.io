@@ -257,7 +257,6 @@ export const EnterpriseDashboard = () => {
           </div>
         </div>
       </div>
-
       {/* Navigation Tabs */}
       <div className="border-b border-gray-200 dark:border-gray-700">
         <nav className="flex space-x-8 px-6">
@@ -276,7 +275,6 @@ export const EnterpriseDashboard = () => {
             </button>))}
         </nav>
       </div>
-
       {/* Main Content */}
       <div className="p-6">
         <AnimatePresence mode="wait">
@@ -311,7 +309,6 @@ export const EnterpriseDashboard = () => {
                     </div>
                   </motion.div>))}
               </div>
-
               {/* Service Status Overview */}
               <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -342,7 +339,6 @@ export const EnterpriseDashboard = () => {
                     </div>))}
                 </div>
               </div>
-
               {/* Recent Security Alerts */}
               <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
                 <div className="flex items-center justify-between mb-4">
@@ -383,7 +379,6 @@ export const EnterpriseDashboard = () => {
                 </div>
               </div>
             </motion.div>)}
-
           {activeTab === 'performance' && (<motion.div key="performance" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
               <div className="text-center py-8">
                 <TrendingUp className="w-16 h-16 text-blue-500 mx-auto mb-4"/>
@@ -394,7 +389,6 @@ export const EnterpriseDashboard = () => {
                   Real-time performance metrics and system health monitoring
                 </p>
               </div>
-
               {/* Performance Charts Placeholder */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
@@ -418,7 +412,6 @@ export const EnterpriseDashboard = () => {
                 </div>
               </div>
             </motion.div>)}
-
           {activeTab === 'security' && (<motion.div key="security" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
               {/* Security Controls */}
               <div className="flex items-center gap-4 mb-6">
@@ -433,7 +426,6 @@ export const EnterpriseDashboard = () => {
                   <option value="false_positive">False Positive</option>
                 </select>
               </div>
-
               {/* Security Alerts */}
               <div className="space-y-4">
                 {filteredSecurityAlerts.map((alert) => (<motion.div key={alert.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
@@ -480,7 +472,6 @@ export const EnterpriseDashboard = () => {
                   </motion.div>))}
               </div>
             </motion.div>)}
-
           {activeTab === 'users' && (<motion.div key="users" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
               {/* User Activity Controls */}
               <div className="flex items-center gap-4 mb-6">
@@ -494,7 +485,6 @@ export const EnterpriseDashboard = () => {
                   <option value="30d">Last 30 Days</option>
                 </select>
               </div>
-
               {/* User Activities */}
               <div className="space-y-4">
                 {filteredUserActivities.map((activity) => (<motion.div key={activity.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
@@ -536,7 +526,6 @@ export const EnterpriseDashboard = () => {
                   </motion.div>))}
               </div>
             </motion.div>)}
-
           {activeTab === 'services' && (<motion.div key="services" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
               <div className="text-center py-8">
                 <Server className="w-16 h-16 text-green-500 mx-auto mb-4"/>
@@ -547,7 +536,6 @@ export const EnterpriseDashboard = () => {
                   Monitor and manage all system services
                 </p>
               </div>
-
               {/* Service Status Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {serviceStatuses.map((service) => (<motion.div key={service.id} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
@@ -592,7 +580,6 @@ export const EnterpriseDashboard = () => {
                   </motion.div>))}
               </div>
             </motion.div>)}
-
           {activeTab === 'analytics' && (<motion.div key="analytics" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
               <div className="text-center py-8">
                 <PieChart className="w-16 h-16 text-purple-500 mx-auto mb-4"/>
@@ -603,7 +590,6 @@ export const EnterpriseDashboard = () => {
                   Comprehensive analytics and business intelligence
                 </p>
               </div>
-
               {/* Analytics Charts Placeholder */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">

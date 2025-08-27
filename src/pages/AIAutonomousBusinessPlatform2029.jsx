@@ -30,7 +30,6 @@ const AIAutonomousBusinessPlatform2029 = () => {
           </div>
         </div>
       </section>
-
       {/* 2029 Revolutionary Features */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -49,7 +48,6 @@ const AIAutonomousBusinessPlatform2029 = () => {
                 human level and makes intuitive decisions with emotional intelligence.
               </p>
             </div>
-
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-2xl">🔮</span>
@@ -60,7 +58,6 @@ const AIAutonomousBusinessPlatform2029 = () => {
                 customer behavior, and business opportunities years in advance.
               </p>
             </div>
-
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-2xl">⚡</span>
@@ -71,7 +68,6 @@ const AIAutonomousBusinessPlatform2029 = () => {
                 and complex problem solving across multiple dimensions.
               </p>
             </div>
-
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-2xl">🌐</span>
@@ -82,7 +78,6 @@ const AIAutonomousBusinessPlatform2029 = () => {
                 markets, currencies, and regulatory frameworks simultaneously.
               </p>
             </div>
-
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-2xl">🚀</span>
@@ -93,7 +88,6 @@ const AIAutonomousBusinessPlatform2029 = () => {
                 expand, and evolve without human intervention.
               </p>
             </div>
-
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-2xl">🔒</span>
@@ -107,7 +101,6 @@ const AIAutonomousBusinessPlatform2029 = () => {
           </div>
         </div>
       </section>
-
       {/* Technology Stack 2029 */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -162,7 +155,6 @@ const AIAutonomousBusinessPlatform2029 = () => {
           </div>
         </div>
       </section>
-
       {/* Platform Modules 2029 */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -217,7 +209,6 @@ const AIAutonomousBusinessPlatform2029 = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -240,7 +231,6 @@ const AIAutonomousBusinessPlatform2029 = () => {
                 Pre-Order Now
               </button>
             </div>
-
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-8 rounded-2xl border border-purple-400/50 relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold">
                 Limited Release
@@ -261,7 +251,6 @@ const AIAutonomousBusinessPlatform2029 = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

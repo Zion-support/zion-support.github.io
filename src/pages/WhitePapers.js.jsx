@@ -87,7 +87,6 @@ const WhitePapers = () => {
       pageCount: 20
     }
   ];
-
   const categories = [
     {name}: "All", count: 6, active: true },
     {name}: "AI & Machine Learning", count: 2, active: false },
@@ -151,7 +150,6 @@ const WhitePapers = () => {
       pdfUrl: "#"
     }
   ];
-
   const categories = [
     "All Categories",
     "Artificial Intelligence",
@@ -163,10 +161,8 @@ const WhitePapers = () => {
     "Cloud Computing",
     "Data Analytics"
   ];
-
   const [selectedCategory, setSelectedCategory] = React.useState("All Categories");
   const [searchQuery, setSearchQuery] = React.useState("");
-
   const filteredPapers = whitePapers.filter(paper => {}
     const matchesCategory = selectedCategory === "All Categories" || paper.category === selectedCategory;
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -174,7 +170,6 @@ const WhitePapers = () => {
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -206,7 +201,6 @@ const WhitePapers = () => {
           </div>
         </div>
       </section>
-
       {/* White Papers Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -249,7 +243,6 @@ const WhitePapers = () => {
       downloadCount: "1,600+"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -329,7 +322,6 @@ const WhitePapers = () => {
             </div>)}
         </div>
       </section>
-
       {/* Featured Research */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -389,7 +381,6 @@ const WhitePapers = () => {
             </div>
           </div>
         </section>
-
         {/* Featured Paper */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-4xl mx-auto text-center">
@@ -417,7 +408,6 @@ const WhitePapers = () => {
             </div>
           </div>
         </section>
-
         {/* Newsletter Signup */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -439,7 +429,6 @@ const WhitePapers = () => {
             </p>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-4xl mx-auto text-center">
@@ -461,10 +450,9 @@ const WhitePapers = () => {
           </div>
         </section>
       </div>
-    </>
+</>
   );
 };
-
 export default WhitePapers;
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             $page
@@ -480,7 +468,6 @@ export default WhitePapers;
     </div>
   );
 };
-
 export default $page;
                     </></>))}</></></></></></></></></></>);
             }

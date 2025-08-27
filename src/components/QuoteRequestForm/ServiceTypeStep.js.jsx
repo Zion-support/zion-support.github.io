@@ -122,7 +122,6 @@ export function ServiceTypeStep({ formData, updateFormData }) {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4"/>
             <Input placeholder={`Search ${formData.serviceType}...`} value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"/>
           </div>
-
           {error && (<div className="text-center text-red-400 text-sm">{error}</div>)}
           
           <div className="grid grid-cols-1 gap-4 mt-4">

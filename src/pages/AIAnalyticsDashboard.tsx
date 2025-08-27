@@ -2,124 +2,6 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-import { SEO } from "../components/SEOHead";
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Crosshair, 
-  Users, 
-  DollarSign,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Shield
-} from "lucide-react";
-import { Link } from "react-router-dom";
-export default function AIAnalyticsDashboard() {
-  const features = [
-    {
-      title: "AI-Powered Insights",
-      description: "Advanced machine learning algorithms analyze your data to uncover hidden patterns and opportunities",
-      icon: <Brain className="h-6 w-6 text-zion-cyan" />
-    },
-    {
-      title: "Real-time Analytics",
-      description: "Monitor your business metrics in real-time with live dashboards and instant notifications",
-      icon: <Zap className="h-6 w-6 text-zion-purple" />
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast future trends and make data-driven decisions with confidence",
-      icon: <TrendingUp className="h-6 w-6 text-zion-blue" />
-    },
-    {
-      title: "Custom Dashboards",
-      description: "Build personalized dashboards tailored to your specific business needs",
-      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for small businesses getting started with AI analytics",
-      features: [
-        "Up to 5 data sources",
-        "Basic AI insights",
-        "Standard dashboards",
-        "Email support",
-        "Monthly reports"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Advanced analytics for growing businesses",
-      features: [
-        "Up to 20 data sources",
-        "Advanced AI insights",
-        "Custom dashboards",
-        "Priority support",
-        "Real-time alerts",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$799",
-      period: "/month",
-      description: "Full-scale AI analytics for large organizations",
-      features: [
-        "Unlimited data sources",
-        "Custom AI models",
-        "White-label dashboards",
-        "Dedicated support",
-        "Advanced security",
-        "Custom integrations"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      role: "CTO, TechFlow Inc.",
-      content: "Zion's AI Analytics Dashboard transformed how we understand our customer data. The insights are game-changing.",
-      rating: 5
-    },
-    {
-      name: "Marcus Rodriguez",
-      role: "Data Scientist, DataCorp",
-      content: "The predictive analytics capabilities are incredible. We've improved our forecasting accuracy by 40%.",
-      rating: 5
-    },
-    {
-      name: "Emily Watson",
-      role: "VP Operations, GrowthTech",
-      content: "Real-time dashboards help us make faster, better decisions. ROI was immediate.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
-      <SEOHead 
-        title="AI Analytics Dashboard - Zion Tech Group" 
-        description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get started today!"
-        keywords="AI analytics, business intelligence, predictive analytics, data insights, Zion Tech Group"
-        canonical="https://ziontechgroup.com/ai-analytics-dashboard"
-      />
-=======
 import { SEO } from "@/components/SEO";
 import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -214,8 +96,6 @@ export default function AIAnalyticsDashboard() {
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
       <SEO title="AI Analytics Dashboard - Zion Tech Group" description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get started today!" keywords="AI analytics, business intelligence, predictive analytics, data insights, Zion Tech Group" canonical="https://ziontechgroup.com/ai-analytics-dashboard"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
@@ -245,7 +125,6 @@ export default function AIAnalyticsDashboard() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -275,7 +154,6 @@ export default function AIAnalyticsDashboard() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 bg-zion-slate-dark/30">
         <div className="container mx-auto">
@@ -320,7 +198,6 @@ export default function AIAnalyticsDashboard() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -349,7 +226,6 @@ export default function AIAnalyticsDashboard() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto text-center">

@@ -10,7 +10,6 @@ import {
   Heart,
   Eye
 } from 'lucide-react';
-
 export default function Marketplace() {
   const categories = [
     { name: 'AI & Machine Learning', count: 156, icon: '🤖' },
@@ -22,7 +21,6 @@ export default function Marketplace() {
     { name: 'IoT Solutions', count: 45, icon: '🔌' },
     { name: 'Blockchain', count: 34, icon: '⛓️' }
   ];
-
   const featuredProducts = [
     {
       id: 1,
@@ -55,7 +53,6 @@ export default function Marketplace() {
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
       {/* Hero Section */}
@@ -82,7 +79,6 @@ export default function Marketplace() {
           </div>
         </div>
       </section>
-
       {/* Categories */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -106,7 +102,6 @@ export default function Marketplace() {
           </div>
         </div>
       </section>
-
       {/* Featured Products */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -173,7 +168,6 @@ export default function Marketplace() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
         <div className="container mx-auto px-4 text-center">

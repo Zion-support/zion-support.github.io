@@ -87,17 +87,14 @@ import {
   Users2 as Users2Icon,
   ShieldCheck as ShieldCheckIcon
 } from 'lucide-react';
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { enhancedZionServices2025 } from "@/data/enhancedZionServices2025";
-
 export default function ZionTechGroupMarketing2025() {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [selectedService, setSelectedService] = useState<string | null>(null);
-
   const toggleCategoryExpansion = (categorySlug: string) => {
     setExpandedCategory(expandedCategory === categorySlug ? null : categorySlug);
   };
-
   const getCategoryIcon = (categorySlug: string) => {
     const iconMap: { [key: string]: any } = {
       'advanced-ai-autonomous-systems': Brain,
@@ -115,7 +112,6 @@ export default function ZionTechGroupMarketing2025() {
     };
     return iconMap[categorySlug] || Globe;
   };
-
   const getCategoryColor = (categorySlug: string) => {
     const colorMap: { [key: string]: string } = {
       'advanced-ai-autonomous-systems': 'from-zion-cyan to-zion-purple',
@@ -133,9 +129,8 @@ export default function ZionTechGroupMarketing2025() {
     };
     return colorMap[categorySlug] || 'from-zion-cyan to-zion-blue';
   };
-
   return (
-    <>
+<>
       <SEO 
         title="Zion Tech Group - Premier Technology Solutions Provider | AI, Quantum Computing & Autonomous Systems"
         description="Zion Tech Group delivers cutting-edge technology solutions including autonomous AI systems, quantum computing platforms, advanced cybersecurity, and next-generation IoT solutions. Transform your business with the future of technology."
@@ -184,7 +179,6 @@ export default function ZionTechGroupMarketing2025() {
                   <div className="text-zion-gray-light">Technology Solutions</div>
                 </div>
               </div>
-
               {/* Contact Information */}
               <div className="bg-zion-slate-dark/50 backdrop-blur-sm rounded-2xl p-8 max-w-3xl mx-auto">
                 <h3 className="text-2xl font-semibold text-zion-cyan mb-6">Ready to Transform Your Business?</h3>
@@ -219,7 +213,6 @@ export default function ZionTechGroupMarketing2025() {
             </motion.div>
           </div>
         </section>
-
         {/* Why Choose Zion Tech Group */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -237,7 +230,6 @@ export default function ZionTechGroupMarketing2025() {
                 We combine cutting-edge technology with proven expertise to deliver solutions that drive real business transformation.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -254,7 +246,6 @@ export default function ZionTechGroupMarketing2025() {
                   We stay ahead of the curve with the latest technologies including AI, quantum computing, and autonomous systems.
                 </p>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -270,7 +261,6 @@ export default function ZionTechGroupMarketing2025() {
                   Your data and systems are protected with enterprise-grade security and compliance standards.
                 </p>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -289,7 +279,6 @@ export default function ZionTechGroupMarketing2025() {
             </div>
           </div>
         </section>
-
         {/* Services Overview */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -308,7 +297,6 @@ export default function ZionTechGroupMarketing2025() {
                 the most complex challenges facing modern businesses.
               </p>
             </motion.div>
-
             <div className="space-y-8">
               {enhancedZionServices2025.map((category, categoryIndex) => (
                 <motion.div
@@ -343,7 +331,6 @@ export default function ZionTechGroupMarketing2025() {
                       )}
                     </div>
                   </div>
-
                   {/* Services in Category */}
                   <AnimatePresence>
                     {expandedCategory === category.slug && (
@@ -372,7 +359,6 @@ export default function ZionTechGroupMarketing2025() {
                                   <span className="text-zion-gray-light text-sm">• {service.billing}</span>
                                 </div>
                               </div>
-
                               {/* Features */}
                               <div className="mb-4">
                                 <h5 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h5>
@@ -385,7 +371,6 @@ export default function ZionTechGroupMarketing2025() {
                                   ))}
                                 </div>
                               </div>
-
                               {/* Benefits */}
                               <div className="mb-4">
                                 <h5 className="text-sm font-semibold text-zion-green mb-2">Key Benefits:</h5>
@@ -398,7 +383,6 @@ export default function ZionTechGroupMarketing2025() {
                                   ))}
                                 </ul>
                               </div>
-
                               {/* CTA */}
                               <a
                                 href={service.href}
@@ -420,7 +404,6 @@ export default function ZionTechGroupMarketing2025() {
             </div>
           </div>
         </section>
-
         {/* Pricing Information */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -438,7 +421,6 @@ export default function ZionTechGroupMarketing2025() {
                 We offer flexible pricing models to meet your business needs, from startups to enterprise organizations.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -471,7 +453,6 @@ export default function ZionTechGroupMarketing2025() {
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -512,7 +493,6 @@ export default function ZionTechGroupMarketing2025() {
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -551,7 +531,6 @@ export default function ZionTechGroupMarketing2025() {
             </div>
           </div>
         </section>
-
         {/* Call to Action Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -585,7 +564,6 @@ export default function ZionTechGroupMarketing2025() {
                   Call +1 302 464 0950
                 </a>
               </div>
-
               {/* Contact Details */}
               <div className="bg-zion-slate-dark/50 backdrop-blur-sm rounded-2xl p-8">
                 <h3 className="text-2xl font-semibold text-zion-cyan mb-6">Contact Information</h3>
@@ -621,6 +599,6 @@ export default function ZionTechGroupMarketing2025() {
           </div>
         </section>
       </div>
-    </>
+</>
   );
 }

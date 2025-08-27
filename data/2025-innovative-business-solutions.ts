@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface InnovativeBusinessSolution {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface InnovativeBusinessSolution {
   rating: number;
   reviews: number;
 }
-
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
   // AI Business Intelligence Suite
   {
@@ -94,7 +92,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.8,
     reviews: 48
   },
-
   // AI Marketing Automation Platform
   {
     id: 'ai-marketing-automation-platform',
@@ -147,7 +144,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.7,
     reviews: 62
   },
-
   // AI Sales Intelligence Platform
   {
     id: 'ai-sales-intelligence-platform-v2',
@@ -200,7 +196,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.9,
     reviews: 45
   },
-
   // AI Customer Service Platform
   {
     id: 'ai-customer-service-platform',
@@ -253,7 +248,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.7,
     reviews: 38
   },
-
   // AI HR & Recruitment Platform
   {
     id: 'ai-hr-recruitment-platform',
@@ -306,7 +300,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.8,
     reviews: 29
   },
-
   // AI Project Management Suite
   {
     id: 'ai-project-management-suite',
@@ -359,7 +352,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.7,
     reviews: 26
   },
-
   // AI Financial Analytics Platform
   {
     id: 'ai-financial-analytics-platform',

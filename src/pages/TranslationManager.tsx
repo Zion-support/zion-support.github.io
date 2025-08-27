@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
@@ -46,57 +46,6 @@ export default function TranslationManager() {
                 currentTranslations[lang.code] = flattenObject(res);
             }
         });
-<<<<<<< HEAD
-        return;
-      }
-      
-      // Update edited translations with auto-translated content
-      setEditedTranslations({
-        ...editedTranslations,
-        [key]: translatedText
-      });
-      
-      toast({
-        title: t('translation.translation_success'),
-        description: t('translation.content_translated'),
-      });
-    } catch (error) {
-      console.error(`Error translating key ${key}:`, error);
-      toast({
-        title: t('translation.translation_failed'),
-        description: error instanceof Error ? error.message : t('translation.unknown_error'),
-        variant: "destructive",
-      });
-    }
-  };
-  
-  const handleCancel = () => {
-    setEditingKey(null);
-  };
-  
-  const handleChange = (lang: SupportedLanguage, key: string, value: string) => {
-    setEditedTranslations({
-      ...editedTranslations,
-      [key]: {
-        ...editedTranslations[key],
-        [lang]: value
-      }
-    });
-  };
-  
-  const getMissingLanguages = (key: string): SupportedLanguage[] => {
-    return supportedLanguages
-      .map(lang => lang.code)
-      .filter(lang => !translations[lang]?.[key]);
-  };
-  
-  return (
-    <>
-      <SEOHead 
-        title={t('translation.manager_title')} 
-        description={t('translation.manager_description')}
-      />
-=======
         setTranslations(currentTranslations);
         // Get all unique keys across all languages
         const allKeys = new Set();
@@ -123,7 +72,7 @@ export default function TranslationManager() {
             Object.entries(langTranslations).forEach(([key, value]) => {
                 if (key.toLowerCase().includes(query) ||
                     (typeof value === 'string' && value.toLowerCase().includes(query))) {
-                    filtered.push(key);
+                    filtered(key);
                 }
             });
         });
@@ -229,7 +178,6 @@ export default function TranslationManager() {
     };
     return (<>
       <SEO title={t('translation.manager_title')} description={t('translation.manager_description')}/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className={`container mx-auto px-${isMobile ? '4' : '6'} py-8`}>
         <Card>

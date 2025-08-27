@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
-
 interface PerformanceMetrics {
   fcp: number;
   lcp: number;
@@ -9,17 +8,14 @@ interface PerformanceMetrics {
   cls: number;
   ttfb: number;
 }
-
 export const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     // Only show in development or when explicitly enabled
     if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production') {
       setIsVisible(true);
     }
-
     // Performance monitoring
     if ('performance' in window && 'PerformanceObserver' in window) {
       // First Contentful Paint (FCP)
@@ -31,7 +27,6 @@ export const PerformanceMonitor: React.FC = () => {
         }
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
-
       // Largest Contentful Paint (LCP)
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -41,7 +36,6 @@ export const PerformanceMonitor: React.FC = () => {
         }
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
       // First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -51,7 +45,6 @@ export const PerformanceMonitor: React.FC = () => {
         }
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
-
       // Cumulative Layout Shift (CLS)
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
@@ -63,7 +56,6 @@ export const PerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ ...prev, cls: clsValue }));
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-
       // Time to First Byte (TTFB)
       const navigationObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -73,7 +65,6 @@ export const PerformanceMonitor: React.FC = () => {
         }
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });
-
       return () => {
         fcpObserver.disconnect();
         lcpObserver.disconnect();
@@ -83,9 +74,7 @@ export const PerformanceMonitor: React.FC = () => {
       };
     }
   }, []);
-
   if (!isVisible) return null;
-
   const getScore = (metric: keyof PerformanceMetrics, value: number): { score: number; color: string; label: string } => {
     const thresholds: Record<string, { good: number; needsImprovement: number }> = {
       fcp: { good: 1800, needsImprovement: 3000 },
@@ -94,10 +83,8 @@ export const PerformanceMonitor: React.FC = () => {
       cls: { good: 0.1, needsImprovement: 0.25 },
       ttfb: { good: 800, needsImprovement: 1800 }
     };
-
     const threshold = thresholds[metric];
     if (!threshold) return { score: 0, color: 'text-gray-400', label: 'Unknown' };
-
     if (value <= threshold.good) {
       return { score: 100, color: 'text-green-400', label: 'Good' };
     } else if (value <= threshold.needsImprovement) {
@@ -106,13 +93,11 @@ export const PerformanceMonitor: React.FC = () => {
       return { score: 0, color: 'text-red-400', label: 'Poor' };
     }
   };
-
   const formatMetric = (metric: keyof PerformanceMetrics, value: number): string => {
     if (metric === 'cls') return value.toFixed(3);
     if (metric === 'fid') return `${Math.round(value)}ms`;
     return `${Math.round(value)}ms`;
   };
-
   const metricsList = [
     { key: 'fcp' as keyof PerformanceMetrics, label: 'First Contentful Paint', icon: Activity },
     { key: 'lcp' as keyof PerformanceMetrics, label: 'Largest Contentful Paint', icon: TrendingUp },
@@ -120,7 +105,6 @@ export const PerformanceMonitor: React.FC = () => {
     { key: 'cls' as keyof PerformanceMetrics, label: 'Cumulative Layout Shift', icon: Clock },
     { key: 'ttfb' as keyof PerformanceMetrics, label: 'Time to First Byte', icon: Activity }
   ];
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -158,7 +142,6 @@ export const PerformanceMonitor: React.FC = () => {
           );
         })}
       </div>
-
       {metrics && (
         <div className="mt-3 pt-3 border-t border-zinc-700/50">
           <div className="flex items-center justify-between text-xs">
@@ -174,7 +157,6 @@ export const PerformanceMonitor: React.FC = () => {
           </div>
         </div>
       )}
-
       <div className="mt-3 text-xs text-zinc-500">
         <button
           onClick={() => setIsVisible(false)}

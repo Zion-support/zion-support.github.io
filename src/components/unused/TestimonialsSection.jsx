@@ -72,7 +72,6 @@ export function TestimonialsSection() {
             about their experience working with Zion Tech Group.
           </p>
         </motion.div>
-
         {/* Testimonials Grid */}
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (<motion.div key={index} variants={itemVariants} className="group">
@@ -100,7 +99,6 @@ export function TestimonialsSection() {
               </div>
             </motion.div>))}
         </motion.div>
-
         {/* Stats */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.5 }} className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

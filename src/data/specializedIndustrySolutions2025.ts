@@ -33,7 +33,6 @@ export interface SpecializedIndustrySolution2025 {
   marketSize?: string;
   compliance?: string[];
 }
-
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution2025[] = [
   // AI-Powered Healthcare Diagnostics Platform
   {
@@ -100,7 +99,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     marketSize: "$67.4 billion by 2025",
     compliance: ["HIPAA", "SOC 2", "ISO 27001", "GDPR", "FDA", "CE Mark"]
   },
-
   // Blockchain-Powered Financial Services Platform
   {
     id: "blockchain-financial-services",
@@ -166,7 +164,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     marketSize: "$19.9 billion by 2025",
     compliance: ["SOC 2", "ISO 27001", "PCI DSS", "GDPR", "Financial regulations"]
   },
-
   // Smart Manufacturing & Industry 4.0 Platform
   {
     id: "smart-manufacturing-platform",
@@ -232,7 +229,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     marketSize: "$156.6 billion by 2024",
     compliance: ["SOC 2", "ISO 27001", "IEC 62443", "GDPR", "Industry standards"]
   },
-
   // AI-Powered Retail Analytics & Personalization Platform
   {
     id: "ai-retail-analytics",
@@ -298,7 +294,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     marketSize: "$23.5 billion by 2025",
     compliance: ["SOC 2", "ISO 27001", "GDPR", "PCI DSS"]
   },
-
   // Renewable Energy Management & Optimization Platform
   {
     id: "renewable-energy-management",

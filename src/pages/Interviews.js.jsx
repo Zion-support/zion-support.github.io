@@ -40,7 +40,7 @@ function InterviewsContent() {
             if (!grouped[dateKey]) {
                 grouped[dateKey] = [];
             }
-            grouped[dateKey].push(interview);
+            grouped[dateKey](interview);
         });
         return grouped;
     };
@@ -72,7 +72,6 @@ function InterviewsContent() {
             <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>
           </div>
         </div>
-
         <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">
           <TabsList className="mb-6">
             <TabsTrigger value="upcoming" className="flex items-center">

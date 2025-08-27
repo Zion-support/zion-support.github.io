@@ -51,7 +51,6 @@ export function ITServiceRequestHero() {
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
       </div>
-
       <motion.div className="container mx-auto px-4 relative z-10" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
@@ -73,7 +72,6 @@ export function ITServiceRequestHero() {
               Request professional technicians anywhere in the world, anytime you need them. 
               Fast, reliable, and secure IT solutions for your business.
             </p>
-
             {/* Feature highlights */}
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3">
@@ -89,7 +87,6 @@ export function ITServiceRequestHero() {
                 <span className="text-zion-blue-light">Same-day response guarantee</span>
               </div>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/10">
               <div className="text-center">
@@ -106,7 +103,6 @@ export function ITServiceRequestHero() {
               </div>
             </div>
           </motion.div>
-
           {/* Right form */}
           <motion.div variants={itemVariants} className="relative">
             <div className="relative">
@@ -119,13 +115,11 @@ export function ITServiceRequestHero() {
                   <h3 className="text-2xl font-bold text-white mb-2">Request Service</h3>
                   <p className="text-zion-slate-light">Enter your location to get started</p>
                 </div>
-
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="relative">
                     <Input value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Enter service location (e.g., New York, NY)" className="w-full bg-white/10 border-white/30 focus:border-zion-cyan focus:ring-zion-cyan text-white placeholder-zion-slate-light rounded-xl py-4 px-4 text-lg backdrop-blur-sm" required/>
                     <MapPin className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan/50"/>
                   </div>
-
                   <Button type="submit" className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-lg py-4 rounded-xl shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 group">
                     <span className="flex items-center gap-2">
                       Request Service Now
@@ -133,7 +127,6 @@ export function ITServiceRequestHero() {
                     </span>
                   </Button>
                 </form>
-
                 {/* Trust indicators */}
                 <div className="mt-6 pt-6 border-t border-white/10">
                   <div className="flex items-center justify-center gap-4 text-xs text-zion-slate-light">
@@ -152,7 +145,6 @@ export function ITServiceRequestHero() {
                   </div>
                 </div>
               </div>
-
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-zion-cyan/30 rounded-full animate-pulse"></div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-zion-purple/30 rounded-full animate-pulse" style={{ animationDelay: "1s" }}></div>

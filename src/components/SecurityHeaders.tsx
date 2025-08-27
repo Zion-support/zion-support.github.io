@@ -50,7 +50,6 @@ export function SecurityHeaders({ className }) {
             to protect your business data and ensure regulatory adherence.
           </p>
         </div>
-
         {/* Security Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {securityFeatures.map((feature, index) => (<div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">
@@ -69,7 +68,6 @@ export function SecurityHeaders({ className }) {
               </div>
             </div>))}
         </div>
-
         {/* Compliance Section */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -94,7 +92,6 @@ export function SecurityHeaders({ className }) {
               </div>))}
           </div>
         </div>
-
         {/* Security Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
@@ -110,7 +107,6 @@ export function SecurityHeaders({ className }) {
             <div className="text-zion-slate-light">Security Monitoring</div>
           </div>
         </div>
-
         {/* Trust Indicators */}
         <div className="text-center">
           <div className="flex justify-center items-center gap-8 mb-6 opacity-60">

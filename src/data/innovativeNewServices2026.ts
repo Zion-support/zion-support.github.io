@@ -1,6 +1,5 @@
 // Innovative New Services 2026 - Zion Tech Group
 // Comprehensive collection of real, innovative micro SAAS services and solutions
-
 export const INNOVATIVE_NEW_SERVICES_2026 = [
     // AI-Powered Business Intelligence & Analytics
     {
@@ -49,7 +48,6 @@ export const INNOVATIVE_NEW_SERVICES_2026 = [
         accuracy: "94.2%",
         compliance: ["GDPR", "SOC 2", "ISO 27001"]
     },
-
     // Autonomous DevOps Platform
     {
         id: 2,
@@ -97,7 +95,6 @@ export const INNOVATIVE_NEW_SERVICES_2026 = [
         accuracy: "96.8%",
         compliance: ["SOC 2", "ISO 27001", "GDPR"]
     },
-
     // Quantum-Ready Cybersecurity Suite
     {
         id: 3,
@@ -145,7 +142,6 @@ export const INNOVATIVE_NEW_SERVICES_2026 = [
         accuracy: "99.9%",
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"]
     },
-
     // AI-Powered Content Creation Platform
     {
         id: 4,
@@ -193,7 +189,6 @@ export const INNOVATIVE_NEW_SERVICES_2026 = [
         accuracy: "92.5%",
         compliance: ["GDPR", "CCPA"]
     },
-
     // IoT Edge Computing Platform
     {
         id: 5,
@@ -241,7 +236,6 @@ export const INNOVATIVE_NEW_SERVICES_2026 = [
         accuracy: "95.7%",
         compliance: ["ISO 27001", "GDPR", "Industry-specific standards"]
     },
-
     // Blockchain Web3 Development Platform
     {
         id: 6,
@@ -289,7 +283,6 @@ export const INNOVATIVE_NEW_SERVICES_2026 = [
         accuracy: "93.4%",
         compliance: ["Blockchain standards", "Security best practices"]
     },
-
     // AI-Powered HR & Recruitment Platform
     {
         id: 7,
@@ -337,7 +330,6 @@ export const INNOVATIVE_NEW_SERVICES_2026 = [
         accuracy: "91.8%",
         compliance: ["EEOC", "GDPR", "Local employment laws"]
     },
-
     // Sustainable Technology Solutions
     {
         id: 8,
@@ -385,7 +377,6 @@ export const INNOVATIVE_NEW_SERVICES_2026 = [
         accuracy: "94.1%",
         compliance: ["GRI", "SASB", "TCFD", "Local regulations"]
     },
-
     // AI-Powered Legal Tech Platform
     {
         id: 9,
@@ -433,7 +424,6 @@ export const INNOVATIVE_NEW_SERVICES_2026 = [
         accuracy: "96.2%",
         compliance: ["Legal industry standards", "Data privacy regulations"]
     },
-
     // Space Technology Solutions
     {
         id: 10,
@@ -481,7 +471,6 @@ export const INNOVATIVE_NEW_SERVICES_2026 = [
         accuracy: "97.3%",
         compliance: ["Space regulations", "Government standards", "International treaties"]
     },
-
     // Digital Twin Technology Platform
     {
         id: 11,
@@ -529,7 +518,6 @@ export const INNOVATIVE_NEW_SERVICES_2026 = [
         accuracy: "95.8%",
         compliance: ["Industry standards", "Data privacy regulations"]
     },
-
     // AI-Powered Financial Trading Platform
     {
         id: 12,
@@ -578,7 +566,6 @@ export const INNOVATIVE_NEW_SERVICES_2026 = [
         compliance: ["SEC", "FINRA", "GDPR", "Financial regulations"]
     }
 ];
-
 // Service Categories for easy filtering
 export const SERVICE_CATEGORIES_2026 = [
     {
@@ -666,7 +653,6 @@ export const SERVICE_CATEGORIES_2026 = [
         color: "from-green-500 to-emerald-600"
     }
 ];
-
 // Pricing Tiers
 export const PRICING_TIERS_2026 = [
     {
@@ -691,7 +677,6 @@ export const PRICING_TIERS_2026 = [
         features: ["Custom features", "Unlimited users", "24/7 support", "Dedicated account manager"]
     }
 ];
-
 // Contact Information
 export const CONTACT_INFO_2026 = {
     phone: "+1 302 464 0950",
@@ -704,6 +689,5 @@ export const CONTACT_INFO_2026 = {
         facebook: "https://facebook.com/ziontechgroup"
     }
 };
-
 // Export all services for easy access
 export const ALL_INNOVATIVE_SERVICES_2026 = INNOVATIVE_NEW_SERVICES_2026;

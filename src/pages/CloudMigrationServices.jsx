@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CloudMigrationServices() {
@@ -126,7 +126,6 @@ export default function CloudMigrationServices() {
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
       <SEOHead title="Cloud Migration Services - Zion Tech Group" description="Expert cloud migration services for AWS, Azure, and Google Cloud. Seamless migration with zero downtime and cost optimization." keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud optimization, Zion Tech Group" canonical="https://ziontechgroup.com/cloud-migration-services"/>
-
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
@@ -156,7 +155,6 @@ export default function CloudMigrationServices() {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -189,7 +187,6 @@ export default function CloudMigrationServices() {
           </div>
         </div>
       </section>
-
       {/* Cloud Platforms Section */}
       <section className="py-20 px-4 bg-zion-slate-dark/30">
         <div className="container mx-auto">
@@ -224,7 +221,6 @@ export default function CloudMigrationServices() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -251,7 +247,6 @@ export default function CloudMigrationServices() {
                 </CardDescription>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-16 h-16 flex items-center justify-center">
@@ -265,7 +260,6 @@ export default function CloudMigrationServices() {
                 </CardDescription>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-16 h-16 flex items-center justify-center">
@@ -282,7 +276,6 @@ export default function CloudMigrationServices() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 bg-zion-slate-dark/30">
         <div className="container mx-auto">
@@ -327,7 +320,6 @@ export default function CloudMigrationServices() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -356,7 +348,6 @@ export default function CloudMigrationServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto text-center">

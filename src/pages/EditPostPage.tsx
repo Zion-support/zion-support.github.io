@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Button } from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
@@ -63,19 +63,6 @@ export default function EditPostPage() {
           </Button>
         </div>);
     }
-<<<<<<< HEAD
-  };
-
-  return (
-    
-      <SEOHead 
-        title="Edit Post | Community Forum | Zion AI Marketplace"
-        description="Edit your discussion post in the Zion AI Marketplace community forum."
-        keywords="community, forum, discussion, edit post"
-      />
-      
-      <div className="container py-8">
-=======
     const initialValues = {
         title: post.title,
         content: post.content,
@@ -104,7 +91,6 @@ export default function EditPostPage() {
     return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>
         ,
             <div className="container py-8">
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
             Forum

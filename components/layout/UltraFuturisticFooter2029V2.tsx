@@ -9,14 +9,12 @@ import {
   Facebook, Twitter, Linkedin, Instagram, Youtube,
   Github
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: 'AI & Machine Learning',
@@ -55,7 +53,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const quickLinks = [
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
@@ -66,7 +63,6 @@ const quickLinks = [
   { name: 'Contact', href: '/contact' },
   { name: 'About', href: '/about' }
 ];
-
 const showcasePages = [
   { name: '2029 Ultra Futuristic Innovations', href: '/2029-ultra-futuristic-innovations' },
   { name: 'AI Consciousness Evolution 2029', href: '/ai-consciousness-evolution-2029' },
@@ -75,7 +71,6 @@ const showcasePages = [
   { name: 'Revolutionary 2027 Services', href: '/revolutionary-2027-services-showcase' },
   { name: 'Market Pricing', href: '/market-pricing' }
 ];
-
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -84,7 +79,6 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
 ];
-
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className="relative bg-black/95 backdrop-blur-xl border-t border-white/10 overflow-hidden">
@@ -101,7 +95,6 @@ export default function UltraFuturisticFooter2029V2() {
           backgroundSize: '50px 50px'
         }} />
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
@@ -123,7 +116,6 @@ export default function UltraFuturisticFooter2029V2() {
               Leading the future with cutting-edge AI, quantum computing, and space technology solutions. 
               Transforming businesses through innovative micro SAAS services and enterprise solutions.
             </p>
-
             {/* Contact Information */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-white/70">
@@ -144,7 +136,6 @@ export default function UltraFuturisticFooter2029V2() {
               </div>
             </div>
           </div>
-
           {/* Service Categories */}
           {serviceCategories.map((category, index) => (
             <div key={category.title}>
@@ -167,7 +158,6 @@ export default function UltraFuturisticFooter2029V2() {
             </div>
           ))}
         </div>
-
         {/* Quick Links and Showcase */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Quick Links */}
@@ -188,7 +178,6 @@ export default function UltraFuturisticFooter2029V2() {
               ))}
             </div>
           </div>
-
           {/* Showcase Pages */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -208,7 +197,6 @@ export default function UltraFuturisticFooter2029V2() {
             </div>
           </div>
         </div>
-
         {/* Social Links and Newsletter */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Social Links */}
@@ -233,7 +221,6 @@ export default function UltraFuturisticFooter2029V2() {
               ))}
             </div>
           </div>
-
           {/* Newsletter Signup */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -255,7 +242,6 @@ export default function UltraFuturisticFooter2029V2() {
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
@@ -287,7 +273,6 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div

@@ -1,5 +1,4 @@
 import { ProductListing } from "@/types/listings";
-
 export const SERVICES: ProductListing[] = [
   {
     id: "service-1",

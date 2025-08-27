@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Shield, Lock, Eye, AlertTriangle, Users, Database, Network, Zap } from 'lucide-react';
-
 const Cybersecurity: React.FC = () => {
   const securityServices = [
     {
@@ -30,7 +29,6 @@ const Cybersecurity: React.FC = () => {
       features: ["Firewall Management", "Network Segmentation", "Intrusion Detection", "VPN Solutions"]
     }
   ];
-
   const complianceFrameworks = [
     {
       name: "SOC 2",
@@ -49,16 +47,14 @@ const Cybersecurity: React.FC = () => {
       description: "Health Insurance Portability and Accountability Act compliance for healthcare data"
     }
   ];
-
   const securityFeatures = [
     { name: "Zero Trust Architecture", icon: "🔐", description: "Never trust, always verify security model" },
     { name: "Multi-Factor Authentication", icon: "🔑", description: "Enhanced access control and security" },
     { name: "Encryption at Rest & Transit", icon: "🔒", description: "End-to-end data protection" },
     { name: "24/7 Security Operations", icon: "👁️", description: "Continuous monitoring and response" }
   ];
-
   return (
-    <>
+<>
       <Helmet>
         <title>Cybersecurity — Zion Tech Group | Advanced Security Solutions</title>
         <meta name="description" content="Protect your business with Zion Tech Group's comprehensive cybersecurity solutions. Advanced threat detection, access control, and compliance management." />
@@ -67,7 +63,6 @@ const Cybersecurity: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/cybersecurity" />
         <link rel="canonical" href="https://ziontechgroup.com/services/cybersecurity" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -95,7 +90,6 @@ const Cybersecurity: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -123,7 +117,6 @@ const Cybersecurity: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Compliance Frameworks */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
@@ -140,7 +133,6 @@ const Cybersecurity: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Security Features */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -158,7 +150,6 @@ const Cybersecurity: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -185,8 +176,7 @@ const Cybersecurity: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+</>
   );
 };
-
 export default Cybersecurity;

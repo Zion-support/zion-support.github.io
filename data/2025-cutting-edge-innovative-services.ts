@@ -37,7 +37,6 @@ export interface CuttingEdgeInnovativeService {
   rating: number;
   reviews: number;
 }
-
 export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] = [
   // AI-POWERED INNOVATIVE SERVICES
   {
@@ -90,7 +89,6 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     rating: 4.9,
     reviews: 28
   },
-
   // QUANTUM COMPUTING SERVICES
   {
     id: 'quantum-neural-network-platform',
@@ -142,7 +140,6 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     rating: 4.8,
     reviews: 15
   },
-
   // BLOCKCHAIN & WEB3 INNOVATIONS
   {
     id: 'autonomous-defi-trading-platform',
@@ -194,7 +191,6 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     rating: 4.7,
     reviews: 89
   },
-
   // CYBERSECURITY INNOVATIONS
   {
     id: 'ai-powered-threat-hunting-platform',
@@ -246,7 +242,6 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     rating: 4.9,
     reviews: 156
   },
-
   // IOT & EDGE COMPUTING
   {
     id: 'autonomous-iot-ecosystem-manager',
@@ -298,7 +293,6 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     rating: 4.6,
     reviews: 34
   },
-
   // HEALTHCARE AI INNOVATIONS
   {
     id: 'ai-autonomous-diagnostic-system',
@@ -350,7 +344,6 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     rating: 4.9,
     reviews: 45
   },
-
   // FINANCIAL TECHNOLOGY INNOVATIONS
   {
     id: 'quantum-financial-trading-platform',
@@ -402,7 +395,6 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     rating: 4.8,
     reviews: 23
   },
-
   // SPACE TECHNOLOGY INNOVATIONS
   {
     id: 'autonomous-satellite-management-system',
@@ -454,7 +446,6 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     rating: 4.9,
     reviews: 12
   },
-
   // GREEN TECHNOLOGY INNOVATIONS
   {
     id: 'ai-powered-carbon-capture-optimizer',
@@ -507,7 +498,6 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     reviews: 42
   }
 ];
-
 export const serviceCategories2025: string[] = Array.from(
   new Set(
     cuttingEdgeInnovativeServices2025
@@ -515,17 +505,14 @@ export const serviceCategories2025: string[] = Array.from(
       .filter((v): v is string => Boolean(v))
   )
 ).sort();
-
 export const getServicesByCategory2025 = (category: string) => {
   if (!category || category === 'All') return cuttingEdgeInnovativeServices2025;
   return cuttingEdgeInnovativeServices2025.filter((s) => s.category === category);
 };
-
 export const getPopularServices2025 = () =>
   cuttingEdgeInnovativeServices2025
     .filter((s) => !!s.popular)
     .sort((a, b) => (b.rating || 0) - (a.rating || 0));
-
 export const getServicesByTechnology = (technology: string) => {
   return cuttingEdgeInnovativeServices2025.filter((s) => 
     s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase()))

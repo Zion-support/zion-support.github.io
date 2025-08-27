@@ -33,7 +33,6 @@ export interface IoTEdgeComputingService2025 {
   marketSize?: string;
   compliance?: string[];
 }
-
 export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeComputingService2025[] = [
   // Smart City IoT Platform
   {
@@ -100,7 +99,6 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeComputingService2025[] = [
     marketSize: "$2.5 trillion by 2025",
     compliance: ["SOC 2", "ISO 27001", "IEC 62443", "GDPR", "Government standards"]
   },
-
   // Industrial IoT Edge Computing Platform
   {
     id: "industrial-iot-edge-platform",
@@ -166,7 +164,6 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeComputingService2025[] = [
     marketSize: "$1.1 trillion by 2025",
     compliance: ["SOC 2", "ISO 27001", "IEC 62443", "GDPR", "Industry standards"]
   },
-
   // Edge AI Computing Service
   {
     id: "edge-ai-computing-service",
@@ -232,7 +229,6 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeComputingService2025[] = [
     marketSize: "$15.7 billion by 2025",
     compliance: ["SOC 2", "ISO 27001", "GDPR", "AI safety standards"]
   },
-
   // IoT Security & Threat Detection Platform
   {
     id: "iot-security-threat-detection",
@@ -298,7 +294,6 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeComputingService2025[] = [
     marketSize: "$59.2 billion by 2025",
     compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "IoT security standards"]
   },
-
   // Connected Healthcare IoT Platform
   {
     id: "connected-healthcare-iot",

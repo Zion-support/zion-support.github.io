@@ -240,135 +240,6 @@ export const MICRO_SAAS_SERVICES = [
       currency: "$",
       features: ["Unlimited APIs", "Testing tools", "Performance monitoring", "Developer portal"]
     },
-<<<<<<< HEAD:src/data/microSaasServices.jsx
-    {
-        id: "devops-automation",
-        title: "DevOps Automation Platform",
-        description: "Complete DevOps automation solution with CI/CD pipelines, infrastructure as code, monitoring, and deployment automation. Accelerate development cycles and improve reliability.",
-        category: "IT Services",
-        subcategory: "DevOps",
-        price: 179,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "CI/CD pipeline automation",
-            "Infrastructure as Code",
-            "Container orchestration",
-            "Monitoring & alerting",
-            "Auto-scaling",
-            "Multi-environment support",
-            "GitOps workflows",
-            "Performance optimization"
-        ],
-        benefits: [
-            "10x faster deployments",
-            "Reduced manual errors",
-            "Improved reliability",
-            "Cost optimization",
-            "Team productivity boost"
-        ],
-        targetAudience: ["DevOps engineers", "Software teams", "System administrators", "IT managers"],
-        marketPrice: "$179-499/month",
-        website: "https://ziontechgroup.com/devops-automation",
-        contactEmail: "kleber@ziontechgroup.com",
-        tags: ["DevOps", "CI/CD", "Automation", "Infrastructure"],
-        aiScore: 93,
-        rating: 4.8,
-        reviewCount: 95,
-        featured: false,
-        location: "Global",
-        availability: "1-2 weeks",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-01-30T15:45:00.000Z"
-    },
-    {
-        id: "data-backup-recovery",
-        title: "Enterprise Data Backup & Recovery",
-        description: "Comprehensive data protection solution with automated backup, disaster recovery, and business continuity planning. Supports hybrid cloud environments with zero data loss guarantee.",
-        category: "IT Services",
-        subcategory: "Data Protection",
-        price: 129,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "Automated backup scheduling",
-            "Hybrid cloud storage",
-            "Disaster recovery",
-            "Zero data loss guarantee",
-            "Compliance support",
-            "Encryption at rest",
-            "Point-in-time recovery",
-            "24/7 support"
-        ],
-        benefits: [
-            "99.99% data availability",
-            "Instant disaster recovery",
-            "Compliance automation",
-            "Cost-effective storage",
-            "Peace of mind"
-        ],
-        targetAudience: ["Enterprise IT", "Data centers", "Healthcare", "Financial services"],
-        marketPrice: "$129-399/month",
-        website: "https://ziontechgroup.com/data-backup",
-        contactEmail: "kleber@ziontechgroup.com",
-        tags: ["Data Backup", "Disaster Recovery", "Business Continuity", "Cloud Storage"],
-        aiScore: 90,
-        rating: 4.7,
-        reviewCount: 67,
-        featured: false,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2024-02-15T12:00:00.000Z"
-    },
-    // Innovative Business Solutions
-    {
-        id: "ai-customer-support",
-        title: "AI Customer Support Suite",
-        description: "Intelligent customer support platform with AI-powered ticket routing, automated responses, sentiment analysis, and customer satisfaction tracking.",
-        category: "Business Solutions",
-        subcategory: "Customer Support",
-        price: 89,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI ticket routing",
-            "Automated responses",
-            "Sentiment analysis",
-            "Customer satisfaction tracking",
-            "Multi-channel support",
-            "Knowledge base"
-        ],
-        benefits: [
-            "Reduce response time by 70%",
-            "Improve customer satisfaction by 45%",
-            "Handle 10x more support requests",
-            "24/7 automated support availability"
-        ],
-        useCases: [
-            "Customer service automation",
-            "Ticket management",
-            "Customer feedback analysis",
-            "Support team optimization"
-        ],
-        targetAudience: ["Customer service teams", "E-commerce businesses", "SaaS companies", "Support agencies"],
-        integration: ["Zendesk", "Intercom", "Freshdesk", "Slack", "Microsoft Teams"],
-        support: ["24/7 chat support", "Video tutorials", "Live training sessions", "API documentation"],
-        link: "https://ziontechgroup.com/ai-customer-support",
-        badge: "Featured",
-        icon: "🎧"
-    }
-=======
     features: [
       "API design & development",
       "Automated testing suite",
@@ -397,7 +268,6 @@ export const MICRO_SAAS_SERVICES = [
     icon: "⚡"
   }
 ];
-
 // Service Categories for filtering
 export const MICRO_SAAS_CATEGORIES = [
   { label: 'AI Business Solutions', value: 'ai-business-solutions' },
@@ -408,16 +278,13 @@ export const MICRO_SAAS_CATEGORIES = [
   { label: 'HealthTech', value: 'healthtech' },
   { label: 'E-commerce', value: 'e-commerce' },
   { label: 'EdTech', value: 'edtech' }
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc:src/data/microSaasServices.js
 ];
-
 // Pricing tiers for different service levels
 export const PRICING_TIERS = {
   basic: { name: 'Basic', multiplier: 1 },
   professional: { name: 'Professional', multiplier: 1.5 },
   enterprise: { name: 'Enterprise', multiplier: 2.5 }
 };
-
 // Contact information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",
@@ -425,82 +292,12 @@ export const CONTACT_INFO = {
   address: "364 E Main St STE 1008 Middletown DE 19709",
   website: "https://ziontechgroup.com"
 };
-
 export const getMicroSaasServiceById = (id) => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id);
 };
-
 export const getMicroSaasServicesByCategory = (category) => {
   return MICRO_SAAS_SERVICES.filter(service => service.category === category);
 };
-
-<<<<<<< HEAD:src/data/microSaasServices.jsx
-export const MICRO_SAAS_CATEGORIES = [
-    "AI Services",
-    "IT Services",
-    "Business Solutions"
-];
-
-export const getMicroSaasCategories = () => {
-    return MICRO_SAAS_CATEGORIES;
-};
-
-export const PRICING_TIERS = [
-    {
-        name: "Starter",
-        price: 99,
-        currency: "USD",
-        period: "month",
-        features: [
-            "Basic AI Features",
-            "Email Support",
-            "Standard Security",
-            "5GB Storage",
-            "Basic Analytics"
-        ],
-        popular: false
-    },
-    {
-        name: "Professional",
-        price: 299,
-        currency: "USD",
-        period: "month",
-        features: [
-            "Advanced AI Features",
-            "Priority Support",
-            "Enhanced Security",
-            "25GB Storage",
-            "Advanced Analytics",
-            "Custom Integrations"
-        ],
-        popular: true
-    },
-    {
-        name: "Enterprise",
-        price: 999,
-        currency: "USD",
-        period: "month",
-        features: [
-            "Full AI Suite",
-            "24/7 Dedicated Support",
-            "Enterprise Security",
-            "Unlimited Storage",
-            "Custom Analytics",
-            "White-label Solutions",
-            "Dedicated Account Manager"
-        ],
-        popular: false
-    }
-];
-
-export const CONTACT_INFO = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    website: "https://ziontechgroup.com"
-};
-=======
 export const getMicroSaasCategories = () => {
   return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
 };
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc:src/data/microSaasServices.js

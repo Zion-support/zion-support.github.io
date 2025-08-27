@@ -71,7 +71,6 @@ export default function TokenManager() {
                 </div>
               </CardContent>
             </Card>
-
             <Tabs defaultValue="history">
               <TabsList>
                 <TabsTrigger value="history">Transaction History</TabsTrigger>

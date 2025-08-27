@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Zap, Server, ArrowRight, Star, Users } from 'lucide-react';
 const QuantumEdgeComputingPlatform = () => {
     const features = [
@@ -144,7 +144,6 @@ const QuantumEdgeComputingPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -166,7 +165,6 @@ const QuantumEdgeComputingPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -191,7 +189,6 @@ const QuantumEdgeComputingPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -214,7 +211,6 @@ const QuantumEdgeComputingPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -258,7 +254,6 @@ const QuantumEdgeComputingPlatform = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4 text-center">

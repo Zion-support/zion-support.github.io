@@ -5,7 +5,6 @@ export interface RealAugmentedService2025Batch3 {
   price: string;
   features: string[];
 }
-
 export const augmentedServicesBatch3: RealAugmentedService2025Batch3[] = [
   {
     id: 'batch3-service-1',

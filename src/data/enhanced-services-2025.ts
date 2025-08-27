@@ -30,7 +30,6 @@ export interface EnhancedService2025 {
     website: string;
   };
 }
-
 export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
   // AI-Powered Autonomous Services
   {
@@ -71,7 +70,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Quantum Computing Services
   {
     id: "quantum-neural-network-platform",
@@ -111,7 +109,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Advanced Cybersecurity Services
   {
     id: "zero-trust-security-suite",
@@ -151,7 +148,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Edge Computing & IoT Services
   {
     id: "edge-computing-platform",
@@ -191,7 +187,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // AI-Powered Healthcare Services
   {
     id: "ai-healthcare-assistant",
@@ -231,7 +226,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Financial AI Services
   {
     id: "ai-financial-advisor",
@@ -271,7 +265,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Legal AI Services
   {
     id: "ai-legal-review",
@@ -311,7 +304,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Marketing AI Services
   {
     id: "ai-marketing-automation",
@@ -351,7 +343,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Supply Chain AI Services
   {
     id: "ai-supply-chain-optimization",
@@ -391,7 +382,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Education AI Services
   {
     id: "ai-education-platform",

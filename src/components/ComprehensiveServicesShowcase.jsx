@@ -17,12 +17,10 @@ import {
   Award
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 // Import the new service data
 import { revolutionary2027AdvancedMicroSaasServices } from '../../data/revolutionary-2027-advanced-micro-saas';
 import { revolutionary2027ITInfrastructureCybersecurityServices } from '../../data/revolutionary-2027-it-infrastructure-cybersecurity';
 import { revolutionary2027AIInnovationServices } from '../../data/revolutionary-2027-ai-innovation-services';
-
 const serviceCategories = [
   {
     id: 'micro-saas',
@@ -46,14 +44,11 @@ const serviceCategories = [
     services: revolutionary2027AIInnovationServices
   }
 ];
-
 export function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('micro-saas');
   const [selectedService, setSelectedService] = useState(null);
-
   const currentCategory = serviceCategories.find(cat => cat.id === selectedCategory);
   const currentServices = currentCategory?.services || [];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -64,7 +59,6 @@ export function ComprehensiveServicesShowcase() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -76,7 +70,6 @@ export function ComprehensiveServicesShowcase() {
       }
     }
   };
-
   const cardVariants = {
     hidden: { scale: 0.95, opacity: 0 },
     visible: {
@@ -88,7 +81,6 @@ export function ComprehensiveServicesShowcase() {
       }
     }
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,7 +126,6 @@ export function ComprehensiveServicesShowcase() {
             </div>
           </div>
         </motion.div>
-
         {/* Category Navigation */}
         <motion.div 
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -157,7 +148,6 @@ export function ComprehensiveServicesShowcase() {
             </button>
           ))}
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -189,7 +179,6 @@ export function ComprehensiveServicesShowcase() {
                     </div>
                   )}
                 </div>
-
                 {/* Service Info */}
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                   {service.name}
@@ -197,7 +186,6 @@ export function ComprehensiveServicesShowcase() {
                 <p className="text-zion-cyan-light text-sm mb-4 line-clamp-2">
                   {service.tagline}
                 </p>
-
                 {/* Pricing */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
@@ -211,7 +199,6 @@ export function ComprehensiveServicesShowcase() {
                     <span className="text-zion-cyan-light text-sm">({service.reviews})</span>
                   </div>
                 </div>
-
                 {/* Features Preview */}
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
@@ -230,7 +217,6 @@ export function ComprehensiveServicesShowcase() {
                     )}
                   </div>
                 </div>
-
                 {/* Market Info */}
                 <div className="mb-4 p-3 bg-zion-slate/30 rounded-lg">
                   <div className="flex items-center justify-between text-xs">
@@ -242,7 +228,6 @@ export function ComprehensiveServicesShowcase() {
                     <span className="text-green-400 font-medium">{service.growthRate}</span>
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <div className="flex items-center justify-between">
                   <Link
@@ -260,7 +245,6 @@ export function ComprehensiveServicesShowcase() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div 
           className="text-center mt-16"
@@ -293,7 +277,6 @@ export function ComprehensiveServicesShowcase() {
           </div>
         </motion.div>
       </div>
-
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (
@@ -320,10 +303,8 @@ export function ComprehensiveServicesShowcase() {
                   ✕
                 </button>
               </div>
-
               <h2 className="text-3xl font-bold text-white mb-4">{selectedService.name}</h2>
               <p className="text-zion-cyan-light text-lg mb-6">{selectedService.description}</p>
-
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Features</h3>
@@ -336,7 +317,6 @@ export function ComprehensiveServicesShowcase() {
                     ))}
                   </ul>
                 </div>
-
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Service Details</h3>
                   <div className="space-y-3">
@@ -361,14 +341,12 @@ export function ComprehensiveServicesShowcase() {
                       <span className="text-white font-medium">{selectedService.rating}/5 ({selectedService.reviews} reviews)</span>
                     </div>
                   </div>
-
                   <div className="mt-6">
                     <h4 className="text-lg font-semibold text-white mb-2">ROI</h4>
                     <p className="text-zion-cyan-light text-sm">{selectedService.roi}</p>
                   </div>
                 </div>
               </div>
-
               <div className="mt-8 pt-6 border-t border-zion-cyan/20">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link

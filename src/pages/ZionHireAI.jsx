@@ -1,17 +1,15 @@
 import React from 'react';
-import { SEO } from "../components/SEOHead"';
+import SEOHead from "../components/SEOHead.jsx";
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
-
 const successMetrics = [
   { metric: '95%', label: 'Faster Hiring' },
   { metric: '3x', label: 'Better Matches' },
   { metric: '60%', label: 'Cost Reduction' },
   { metric: '24/7', label: 'AI Support' }
 ];
-
 const ZionHireAI = () => {
   return (
-    <>
+<>
       <SEOHead 
         title="Zion Hire AI - White-labeled AI Recruiting Assistant" 
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience." 
@@ -38,7 +36,6 @@ const ZionHireAI = () => {
               </a>
             </div>
           </div>
-
           {/* Success Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {successMetrics.map((item, index) => (
@@ -52,7 +49,6 @@ const ZionHireAI = () => {
               </div>
             ))}
           </div>
-
           {/* Demo Image */}
           <div className="relative hidden md:block mb-16">
             <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>
@@ -63,7 +59,6 @@ const ZionHireAI = () => {
               className="relative z-10 rounded-lg shadow-xl"
             />
           </div>
-
           {/* Contact Section */}
           <div className="bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-white text-center mb-4">
@@ -100,8 +95,7 @@ const ZionHireAI = () => {
           </div>
         </div>
       </main>
-    </>
+</>
   );
 };
-
 export default ZionHireAI;

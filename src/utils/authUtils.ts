@@ -15,7 +15,6 @@ export const cleanupAuthState = () => {
     localStorage.removeItem('auth');
   }
 };
-
 export const isTokenValid = (token: string | null): boolean => {
   if (!token) return false;
   
@@ -36,7 +35,6 @@ export const isTokenValid = (token: string | null): boolean => {
     return false;
   }
 };
-
 export const getStoredAuth = () => {
   try {
     const authData = localStorage.getItem('auth');
@@ -46,7 +44,6 @@ export const getStoredAuth = () => {
     return null;
   }
 };
-
 export const setStoredAuth = (authData: any) => {
   try {
     localStorage.setItem('auth', JSON.stringify(authData));
@@ -54,7 +51,6 @@ export const setStoredAuth = (authData: any) => {
     console.error('Error setting stored auth:', error);
   }
 };
-
 export const clearStoredAuth = () => {
   try {
     localStorage.removeItem('auth');

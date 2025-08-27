@@ -1,16 +1,13 @@
 import axios from 'axios';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
-
 const apiClient = axios.create({
   baseURL: '/api',
   withCredentials: true,
 });
-
 export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;
 }
-
 apiClient.interceptors.response.use(
   (response) => response,
   async (error) => {
@@ -30,5 +27,4 @@ apiClient.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-
 export default apiClient;

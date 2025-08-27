@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const Community = () => {
-    return (<>
-      <Helmet>
-        <title>Community - Zion Tech Group</title>
-        <meta name="description" content="Join the Zion Tech Group community. Connect with technology professionals, share knowledge, and stay updated on industry trends."/>
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Community</h1>
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Users, MessageSquare, Calendar, MapPin, Search, Filter, TrendingUp, Star, Heart, Share2, Bookmark, UserPlus, Users2, Globe, Video, FileText, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 interface CommunityEvent {
   id: string;
   title: string;
@@ -32,7 +16,6 @@ interface CommunityEvent {
   organizer: string;
   image: string;
 }
-
 interface ForumCategory {
   id: string;
   name: string;
@@ -42,7 +25,6 @@ interface ForumCategory {
   topicCount: number;
   postCount: number;
 }
-
 interface ForumTopic {
   id: string;
   title: string;
@@ -57,12 +39,10 @@ interface ForumTopic {
   isPinned: boolean;
   isSolved: boolean;
 }
-
 const Community: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedEventType, setSelectedEventType] = useState<string>('all');
-
   const forumCategories: ForumCategory[] = [
     {
       id: 'general',
@@ -119,7 +99,6 @@ const Community: React.FC = () => {
       postCount: 892
     }
   ];
-
   const communityEvents: CommunityEvent[] = [
     {
       id: 'ai-summit-2024',
@@ -178,7 +157,6 @@ const Community: React.FC = () => {
       image: '/images/networking-mixer.jpg'
     }
   ];
-
   const forumTopics: ForumTopic[] = [
     {
       id: 'ml-model-deployment',
@@ -223,14 +201,12 @@ const Community: React.FC = () => {
       isSolved: false
     }
   ];
-
   const filteredEvents = communityEvents.filter(event => {
     const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          event.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesType = selectedEventType === 'all' || event.type === selectedEventType;
     return matchesSearch && matchesType;
   });
-
   const filteredTopics = forumTopics.filter(topic => {
     if (selectedCategory !== 'all' && topic.category !== selectedCategory) return false;
     
@@ -242,7 +218,6 @@ const Community: React.FC = () => {
     
     return true;
   });
-
   const getEventTypeColor = (type: string) => {
     switch (type) {
       case 'virtual': return 'bg-blue-100 text-blue-800';
@@ -251,7 +226,6 @@ const Community: React.FC = () => {
       default: return 'bg-gray-100 text-gray-800';
     }
   };
-
   const getEventTypeIcon = (type: string) => {
     switch (type) {
       case 'virtual': return Video;
@@ -260,7 +234,6 @@ const Community: React.FC = () => {
       default: return Calendar;
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header Section */}
@@ -275,18 +248,12 @@ const Community: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               Zion Tech Community
             </h1>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Connect with fellow tech professionals, share knowledge, and grow together in our vibrant community.
             </p>
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
-    </>);
-};
-=======
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Search and Navigation */}
         <motion.div
@@ -318,7 +285,6 @@ const Community: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Community Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -349,7 +315,6 @@ const Community: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Upcoming Events */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -373,7 +338,6 @@ const Community: React.FC = () => {
               </select>
             </div>
           </div>
-
           {filteredEvents.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredEvents.map((event) => {
@@ -396,10 +360,8 @@ const Community: React.FC = () => {
                           <div className="text-xs text-gray-400">{event.organizer}</div>
                         </div>
                       </div>
-
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">{event.title}</h3>
                       <p className="text-gray-600 mb-4">{event.description}</p>
-
                       <div className="space-y-2 mb-4 text-sm text-gray-500">
                         <div className="flex items-center">
                           <Calendar className="w-4 h-4 mr-2" />
@@ -414,7 +376,6 @@ const Community: React.FC = () => {
                           <span>{event.attendees}/{event.maxAttendees} attendees</span>
                         </div>
                       </div>
-
                       <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                         <button className="text-zion-cyan hover:text-zion-cyan-dark font-medium text-sm">
                           Learn More
@@ -438,7 +399,6 @@ const Community: React.FC = () => {
             </div>
           )}
         </motion.div>
-
         {/* Forum Categories */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -471,7 +431,6 @@ const Community: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Recent Discussions */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -484,7 +443,6 @@ const Community: React.FC = () => {
             </h2>
             <span className="text-gray-500">{filteredTopics.length} topics found</span>
           </div>
-
           {filteredTopics.length > 0 ? (
             <div className="space-y-4">
               {filteredTopics.map((topic) => (
@@ -567,7 +525,6 @@ const Community: React.FC = () => {
             </div>
           )}
         </motion.div>
-
         {/* Community Features */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -590,7 +547,6 @@ const Community: React.FC = () => {
                   Engage in meaningful conversations
                 </p>
               </div>
-
               <div className="text-center">
                 <Calendar className="w-12 h-12 mx-auto mb-4 text-zion-cyan-light" />
                 <h3 className="text-lg font-semibold mb-2">Regular Events</h3>
@@ -598,7 +554,6 @@ const Community: React.FC = () => {
                   Attend workshops and meetups
                 </p>
               </div>
-
               <div className="text-center">
                 <Users className="w-12 h-12 mx-auto mb-4 text-zion-cyan-light" />
                 <h3 className="text-lg font-semibold mb-2">Networking</h3>
@@ -614,7 +569,6 @@ const Community: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Additional Resources */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -632,7 +586,6 @@ const Community: React.FC = () => {
               <h3 className="font-semibold text-gray-900 mb-2">Documentation</h3>
               <p className="text-sm text-gray-600">Technical guides and resources</p>
             </Link>
-
             <Link
               to="/webinars"
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-center"
@@ -641,7 +594,6 @@ const Community: React.FC = () => {
               <h3 className="font-semibold text-gray-900 mb-2">Webinars</h3>
               <p className="text-sm text-gray-600">Educational content and sessions</p>
             </Link>
-
             <Link
               to="/training"
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-center"
@@ -650,7 +602,6 @@ const Community: React.FC = () => {
               <h3 className="font-semibold text-gray-900 mb-2">Training</h3>
               <p className="text-sm text-gray-600">Professional development courses</p>
             </Link>
-
             <Link
               to="/help"
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-center"
@@ -665,6 +616,4 @@ const Community: React.FC = () => {
     </div>
   );
 };
-
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 export default Community;

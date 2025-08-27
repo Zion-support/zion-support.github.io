@@ -57,16 +57,14 @@ const ITInfrastructure = () => {
       icon: "🔒"
     }
   ];
-
   const infrastructureAreas = [
     {area}: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
     {area}: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
     {area}: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
     {area}: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
-
   return (
-    <>
+<>
       <Helmet>
         <title>IT Infrastructure — Zion Tech Group | Network & System Management</title>
         <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."/>
@@ -75,7 +73,6 @@ const ITInfrastructure = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure"/>
         <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure"/>
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -100,7 +97,6 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </section>
-
         {/* Infrastructure Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -132,7 +128,6 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </section>
-
         {/* Infrastructure Areas */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -158,7 +153,6 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -204,7 +198,6 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
@@ -220,9 +213,8 @@ const ITInfrastructure = () => {
           </div>
         </section>
       </div>
-    </>
+</>
   );
 };
-
 export default ITInfrastructure;</>);
 };

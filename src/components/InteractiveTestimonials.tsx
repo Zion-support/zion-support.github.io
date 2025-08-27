@@ -135,7 +135,6 @@ export function InteractiveTestimonials() {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-bounce"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-ping"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Section */}
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -155,7 +154,6 @@ export function InteractiveTestimonials() {
             Discover why leading companies choose Zion Tech Group for their AI and technology needs
           </p>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
           {categories.map((category, index) => (<motion.button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category
@@ -164,7 +162,6 @@ export function InteractiveTestimonials() {
               {category}
             </motion.button>))}
         </motion.div>
-
         {/* Main Testimonial Display */}
         <motion.div className="relative max-w-4xl mx-auto mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <AnimatePresence mode="wait">
@@ -179,12 +176,10 @@ export function InteractiveTestimonials() {
                 <div className="flex justify-center mb-6">
                   {renderStars(filteredTestimonials[currentIndex]?.rating || 0)}
                 </div>
-
                 {/* Content */}
                 <blockquote className="text-2xl md:text-3xl text-white font-light leading-relaxed mb-8 max-w-3xl mx-auto">
                   "{filteredTestimonials[currentIndex]?.content}"
                 </blockquote>
-
                 {/* Author */}
                 <div className="flex items-center justify-center gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
@@ -202,7 +197,6 @@ export function InteractiveTestimonials() {
                       ✓ Verified
                     </div>)}
                 </div>
-
                 {/* Category and date */}
                 <div className="flex items-center justify-center gap-4 text-zion-slate-light text-sm">
                   <span className="px-3 py-1 bg-white/10 rounded-full border border-white/20">
@@ -210,7 +204,6 @@ export function InteractiveTestimonials() {
                   </span>
                   <span>{filteredTestimonials[currentIndex]?.date}</span>
                 </div>
-
                 {/* Interactive elements */}
                 <div className="flex items-center justify-center gap-6 mt-8">
                   <motion.button onClick={() => toggleLike(filteredTestimonials[currentIndex]?.id || '')} className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${likedTestimonials.has(filteredTestimonials[currentIndex]?.id || '')
@@ -219,7 +212,6 @@ export function InteractiveTestimonials() {
                     <ThumbsUp className={`w-4 h-4 ${likedTestimonials.has(filteredTestimonials[currentIndex]?.id || '') ? 'fill-current' : ''}`}/>
                     {filteredTestimonials[currentIndex]?.likes || 0}
                   </motion.button>
-
                   <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-zion-slate-light border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <Share2 className="w-4 h-4"/>
                     Share
@@ -228,22 +220,18 @@ export function InteractiveTestimonials() {
               </div>
             </motion.div>
           </AnimatePresence>
-
           {/* Navigation Controls */}
           <div className="flex items-center justify-center gap-6 mt-8">
             <motion.button onClick={prevTestimonial} className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <ChevronLeft className="w-6 h-6"/>
             </motion.button>
-
             <motion.button onClick={() => setIsAutoPlaying(!isAutoPlaying)} className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               {isAutoPlaying ? <Pause className="w-6 h-6"/> : <Play className="w-6 h-6"/>}
             </motion.button>
-
             <motion.button onClick={nextTestimonial} className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 flex items-center justify-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <ChevronRight className="w-6 h-6"/>
             </motion.button>
           </div>
-
           {/* Progress indicators */}
           <div className="flex justify-center gap-2 mt-6">
             {filteredTestimonials.map((_, index) => (<motion.button key={index} onClick={() => setCurrentIndex(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
@@ -251,7 +239,6 @@ export function InteractiveTestimonials() {
                 : 'bg-white/20 hover:bg-white/40'}`} whileHover={{ scale: 1.2 }}/>))}
           </div>
         </motion.div>
-
         {/* Testimonial Grid */}
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {filteredTestimonials.map((testimonial, index) => (<motion.div key={testimonial.id} variants={itemVariants} whileHover={{
@@ -275,17 +262,14 @@ export function InteractiveTestimonials() {
                       ✓
                     </div>)}
                 </div>
-
                 {/* Rating */}
                 <div className="flex mb-3">
                   {renderStars(testimonial.rating)}
                 </div>
-
                 {/* Content preview */}
                 <p className="text-zion-slate-light text-sm leading-relaxed mb-4 line-clamp-3">
                   "{testimonial.content}"
                 </p>
-
                 {/* Footer */}
                 <div className="flex items-center justify-between text-xs text-zion-slate-light">
                   <span className="px-2 py-1 bg-white/10 rounded-full">
@@ -296,7 +280,6 @@ export function InteractiveTestimonials() {
               </div>
             </motion.div>))}
         </motion.div>
-
         {/* Enhanced CTA Section */}
         <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
           <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl p-12 border border-blue-500/30 backdrop-blur-sm">

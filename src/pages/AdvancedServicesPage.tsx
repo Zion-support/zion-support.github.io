@@ -4,75 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-<<<<<<< HEAD
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Clock, 
-  Globe, 
-  TrendingUp, 
-  Shield, 
-  Zap,
-  Brain,
-  Database,
-  Cloud,
-  Lock,
-  BarChart3,
-  Users,
-  DollarSign,
-  CheckCircle,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink
-} from 'lucide-react';
-import { SEO } from "../components/SEOHead"';
-
-export default function AdvancedServicesPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('featured');
-
-  // Filter services based on search and category
-  const filteredServices = ADVANCED_SERVICES.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
-    return matchesSearch && matchesCategory;
-  });
-
-  // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return (a.price || 0) - (b.price || 0);
-      case 'price-high':
-        return (b.price || 0) - (a.price || 0);
-      case 'rating':
-        return (b.rating || 0) - (a.rating || 0);
-      case 'ai-score':
-        return (b.aiScore || 0) - (a.aiScore || 0);
-      default:
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-    }
-  });
-
-  const uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)));
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SEOHead 
-        title="Advanced AI & IT Services - Zion Tech Group" 
-        description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation."
-        keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation"
-        canonical="https://ziontechgroup.com/advanced-services"
-      />
-=======
 import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 export default function AdvancedServicesPage() {
@@ -105,8 +36,6 @@ export default function AdvancedServicesPage() {
     const uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)));
     return (<div className="min-h-screen bg-background">
       <SEO title="Advanced AI & IT Services - Zion Tech Group" description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation." keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation" canonical="https://ziontechgroup.com/advanced-services"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
@@ -133,7 +62,6 @@ export default function AdvancedServicesPage() {
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
-
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
               Get Free Consultation
@@ -144,7 +72,6 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-8 bg-zion-blue-dark border-b border-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -171,7 +98,6 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Service Categories Overview */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -200,7 +126,6 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
@@ -212,13 +137,11 @@ export default function AdvancedServicesPage() {
               Expert solutions with proven results and comprehensive support
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedServices.map((service) => (<ServiceCard key={service.id} service={service}/>))}
           </div>
         </div>
       </section>
-
       {/* Pricing Tiers */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -253,7 +176,6 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Zion Tech Group */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
@@ -299,7 +221,6 @@ export default function AdvancedServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">

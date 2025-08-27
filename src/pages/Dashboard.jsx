@@ -8,7 +8,6 @@ import { createTestNotification, createOnboardingNotification, createSystemNotif
 import { NotificationCenter } from "@/components/NotificationCenter";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
-
 export default function Dashboard() {
     const { user, logout } = useAuth();
     const { toast } = useToast();
@@ -92,7 +91,6 @@ export default function Dashboard() {
                                         <Send size={16} className="text-zion-cyan"/>
                                         Send Test Notification
                                     </Button>
-
                                     <Button className="w-full flex items-center justify-center gap-2" variant="outline" onClick={async () => {
                                         await createOnboardingNotification({
                                             userId: user.id,
@@ -107,7 +105,6 @@ export default function Dashboard() {
                                         <Bell size={16} className="text-yellow-500"/>
                                         Send Onboarding Alert
                                     </Button>
-
                                     <Button className="w-full flex items-center justify-center gap-2" variant="outline" onClick={async () => {
                                         await createSystemNotification({
                                             userId: user.id,

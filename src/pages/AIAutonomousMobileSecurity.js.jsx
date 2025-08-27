@@ -20,7 +20,6 @@ const AIAutonomousMobileSecurity = () => {
               Your AI mobile security partner that continuously secures mobile devices, detects threats, and protects mobile infrastructure with intelligent autonomous operation
             </p>
           </div>
-
           {/* Mobile Security Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -44,7 +43,6 @@ const AIAutonomousMobileSecurity = () => {
               <p className="text-gray-300">Analyze security</p>
             </div>
           </div>
-
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -83,7 +81,6 @@ const AIAutonomousMobileSecurity = () => {
               <p className="text-gray-300">Learns new threats</p>
             </div>
           </div>
-
           {/* Mobile Security Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Mobile Security Process</h2>
@@ -119,7 +116,6 @@ const AIAutonomousMobileSecurity = () => {
               </div>
             </div>
           </div>
-
           {/* Mobile Security Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Mobile Security Solutions</h2>
@@ -129,7 +125,6 @@ const AIAutonomousMobileSecurity = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Mobile Security Applications</h2>
@@ -150,7 +145,6 @@ const AIAutonomousMobileSecurity = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-pink-600 to-rose-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Mobile Security?</h2>

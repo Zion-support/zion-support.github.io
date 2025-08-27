@@ -3,14 +3,12 @@ import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
 // import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { useDebounce } from "./useDebounce"; // Import the debounce hook
-
 const staticSearchSuggestions: SearchSuggestion[] = [
   { type: "recent", text: "Modern web app" },
   { type: "recent", text: "Data analysis script" },
   { type: "recent", text: "E-commerce site" }, // Changed "saved" to "recent"
   { type: "recent", text: "Mobile game" }, // Changed "saved" to "recent"
 ];
-
 const staticFilterOptions: FilterOptions = {
   productTypes: [
     { value: "app", label: "Web App" },
@@ -37,26 +35,19 @@ const staticFilterOptions: FilterOptions = {
   minPrice: 0, // Default value
   maxPrice: 10000, // Default value
 };
-
-
 export function useMarketplaceSearch() {
   // Immediate search query from input
   const [immediateSearchQuery, setImmediateSearchQuery] = useState("");
-
   // Debounced search query
   const debouncedSearchQuery = useDebounce(immediateSearchQuery, 300);
-
   const [searchQuery, setSearchQueryInternal] = useState(""); // This will store the debounced value
-
   // API Data states
   const [listings, setListings] = useState<ProductListing[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
-
   useEffect(() => {
     setSearchQueryInternal(debouncedSearchQuery);
   }, [debouncedSearchQuery]);
-
   useEffect(() => {
     const fetchProducts = async () => {
       setIsLoading(true);
@@ -85,21 +76,16 @@ export function useMarketplaceSearch() {
         setIsLoading(false);
       }
     };
-
     // Fetch when the component mounts or debouncedSearchQuery changes
     fetchProducts();
   }, [searchQuery]); // searchQuery here is the debounced value
-
-
   // Filter states
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-
   // Search suggestions
   const [searchSuggestions, setSearchSuggestions] = useState<SearchSuggestion[]>(staticSearchSuggestions);
-
   useEffect(() => {
     const fetchSuggestions = async () => {
       try {
@@ -114,20 +100,16 @@ export function useMarketplaceSearch() {
         console.error('Failed to fetch search suggestions', err);
       }
     };
-
     fetchSuggestions();
   }, []);
-
   const filterOptions: FilterOptions = useMemo(
     () => staticFilterOptions,
     [],
   );
-
   // Removed client-side filtering logic as the API now handles it.
   const filteredListings = useMemo(() => {
     return listings;
   }, [listings]);
-
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {

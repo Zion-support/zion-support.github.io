@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 export default function Index() {
 	const title = 'Zion Tech Group — AI, Cloud, and Cybersecurity Solutions'
 	const description = 'We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business.'
@@ -13,7 +12,6 @@ export default function Index() {
 		logo,
 		sameAs: ['https://www.linkedin.com/company/zion-technologies/'],
 	}
-
 	return (
 		<>
 			<Head>
@@ -73,7 +71,6 @@ export default function Index() {
 						</svg>
 					</div>
 				</section>
-
 				{/* Features Section */}
 				<section className="py-24 sm:py-32">
 					<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -146,7 +143,6 @@ export default function Index() {
 						</div>
 					</div>
 				</section>
-
 				{/* CTA Section */}
 				<section className="py-24 sm:py-32 bg-gray-50">
 					<div className="mx-auto max-w-7xl px-6 lg:px-8">

@@ -1,16 +1,13 @@
 import { ReactNode } from "react";
-
 interface StatItem {
   label: string;
   value: string | number;
   description?: string;
 }
-
 interface InteractiveStatsProps {
   stats: StatItem[];
   className?: string;
 }
-
 export default function InteractiveStats({ 
   stats, 
   className = "grid grid-cols-1 md:grid-cols-3 gap-6" 

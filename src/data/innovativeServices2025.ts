@@ -23,7 +23,6 @@ export interface InnovativeService2025 {
   rating: number;
   reviews: number;
 }
-
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
   {
     id: 'ai-autonomous-business-manager',
@@ -413,22 +412,18 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
     reviews: 142
   }
 ];
-
 // Helper functions
 export const getServicesByCategory = (category: string): InnovativeService2025[] => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.category === category);
 };
-
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number): InnovativeService2025[] => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
 };
-
 export const getTopRatedServices = (limit: number = 5): InnovativeService2025[] => {
   return INNOVATIVE_SERVICES_2025
     .sort((a, b) => b.rating - a.rating)
     .slice(0, limit);
 };
-
 export const getServicesByAIScore = (minScore: number): InnovativeService2025[] => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
 };

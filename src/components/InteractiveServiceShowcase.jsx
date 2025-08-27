@@ -154,7 +154,6 @@ const InteractiveServiceShowcase = () => {
             and drive innovation across all industries
           </p>
         </motion.div>
-
         {/* Category Filter Tabs */}
         <motion.div className="flex flex-wrap justify-center gap-4 mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${activeCategory === category.id
@@ -169,7 +168,6 @@ const InteractiveServiceShowcase = () => {
               </span>
             </button>))}
         </motion.div>
-
         {/* Services Grid */}
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <AnimatePresence mode="wait">
@@ -182,12 +180,10 @@ const InteractiveServiceShowcase = () => {
                     : 'bg-gradient-to-r from-zion-purple to-zion-cyan'}`}>
                         {service.isPopular ? '🔥 Popular' : '✨ New'}
                       </div>)}
-
                     {/* Service Icon */}
                     <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                       <span className="text-3xl">{service.icon}</span>
                     </div>
-
                     {/* Service Content */}
                     <div className="text-center">
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
@@ -201,7 +197,6 @@ const InteractiveServiceShowcase = () => {
                       <div className="text-zion-cyan font-bold text-lg mb-4">
                         {service.price}
                       </div>
-
                       {/* Features */}
                       <div className="space-y-2 mb-6">
                         {service.features.slice(0, 3).map((feature, index) => (<div key={index} className="flex items-center gap-2 text-zion-slate-light text-xs">
@@ -212,14 +207,12 @@ const InteractiveServiceShowcase = () => {
                             +{service.features.length - 3} more features
                           </div>)}
                       </div>
-
                       {/* CTA Button */}
                       <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/40 rounded-xl text-zion-cyan text-sm font-semibold group-hover:from-zion-cyan/30 group-hover:to-zion-blue/30 transition-all duration-300">
                         Learn More
                         <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                       </div>
                     </div>
-
                     {/* Hover Effect Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
                   </div>
@@ -227,7 +220,6 @@ const InteractiveServiceShowcase = () => {
               </motion.div>))}
           </AnimatePresence>
         </motion.div>
-
         {/* Bottom CTA Section */}
         <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">

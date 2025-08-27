@@ -20,7 +20,6 @@ const AIAutonomousDataSecurity = () => {
               Your AI data security partner that continuously protects data, detects breaches, and ensures privacy with intelligent autonomous operation
             </p>
           </div>
-
           {/* Data Security Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -44,7 +43,6 @@ const AIAutonomousDataSecurity = () => {
               <p className="text-gray-300">Analyze security</p>
             </div>
           </div>
-
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -83,7 +81,6 @@ const AIAutonomousDataSecurity = () => {
               <p className="text-gray-300">Learns new threats</p>
             </div>
           </div>
-
           {/* Data Security Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Data Security Process</h2>
@@ -119,7 +116,6 @@ const AIAutonomousDataSecurity = () => {
               </div>
             </div>
           </div>
-
           {/* Data Security Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Data Security Solutions</h2>
@@ -129,7 +125,6 @@ const AIAutonomousDataSecurity = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Data Security Applications</h2>
@@ -150,7 +145,6 @@ const AIAutonomousDataSecurity = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Data Security?</h2>
