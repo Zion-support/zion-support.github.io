@@ -147,6 +147,11 @@
 		}
 		</script>
 		
+<<<<<<< HEAD
+		<!-- Preload critical resources -->
+		<link rel="preload" href="/src/main.tsx" as="script" />
+		<link rel="preload" href="/src/index.css" as="style" />
+=======
 		<!-- Additional SEO -->
 		<link rel="canonical" href="https://ziontechgroup.com" />
 		<meta name="geo.region" content="US-DE" />
@@ -208,6 +213,7 @@
 				console.log('Gone offline');
 			});
 		</script>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
 	</head>
 	<body>
 		<div id="root"></div>

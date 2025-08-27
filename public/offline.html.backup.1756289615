@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zion Tech Group - Offline</title>
+<<<<<<< HEAD
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+=======
     <meta name="description" content="You're currently offline. Check your internet connection and try again.">
     <meta name="theme-color" content="#22ddd2">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -13,20 +20,47 @@
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
         
         * {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+<<<<<<< HEAD
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: #ffffff;
+=======
 =======
         
         body {
             font-family: 'Rajdhani', system-ui, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
             color: white;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+<<<<<<< HEAD
+        }
+        .offline-container {
+            text-align: center;
+            max-width: 500px;
+            padding: 2rem;
+        }
+        .offline-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+        h1 {
+            font-size: 2.5rem;
+=======
             padding: 20px;
             position: relative;
             overflow: hidden;
@@ -48,6 +82,7 @@
         .offline-title {
             font-family: 'Orbitron', monospace;
             font-size: 3rem;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
             font-weight: 700;
             margin-bottom: 20px;
             background: linear-gradient(135deg, #22ddd2 0%, #3b82f6 100%);
@@ -55,6 +90,64 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+<<<<<<< HEAD
+        .subtitle {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            border-radius: 12px;
+            margin-bottom: 32px;
+            font-size: 0.875rem;
+            color: #fca5a5;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #ef4444;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+        .features-list {
+            text-align: left;
+            margin: 32px 0;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .features-list h3 {
+            color: #0891b2;
+            margin-bottom: 16px;
+            font-size: 1.125rem;
+        }
+        .features-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features-list li {
+            padding: 8px 0;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .features-list li::before {
+            content: "✓";
+            color: #10b981;
+=======
         .offline-title {
             font-size: 2rem;
             font-weight: bold;
@@ -82,6 +175,7 @@
             line-height: 1.6;
         }
         
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
         .action-buttons {
             display: flex;
             gap: 20px;
@@ -89,6 +183,10 @@
             flex-wrap: wrap;
             margin-bottom: 40px;
         }
+<<<<<<< HEAD
+        .btn {
+            padding: 12px 24px;
+=======
         }
         .retry-button {
             background: linear-gradient(135deg, #22ddd2 0%, #3b82f6 100%);
@@ -117,21 +215,39 @@
             gap: 10px;
         }
         
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
         .btn-primary {
             background: linear-gradient(135deg, #22ddd2 0%, #3b82f6 100%);
             color: white;
         }
+<<<<<<< HEAD
+=======
         
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(34, 221, 210, 0.3);
         }
+<<<<<<< HEAD
+=======
         
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
         .btn-secondary {
             background: transparent;
             color: #22ddd2;
             border: 2px solid #22ddd2;
         }
+<<<<<<< HEAD
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        .retry-button {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            margin-top: 16px;
+        }
+=======
         .retry-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(34, 221, 210, 0.3);
@@ -162,16 +278,39 @@
         }
         
         .status-indicator {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
             display: flex;
             align-items: center;
             justify-content: center;
+<<<<<<< HEAD
+            flex-wrap: wrap;
+        }
+        .contact-link {
+            color: #0ea5e9;
+            text-decoration: none;
+            padding: 8px 16px;
+=======
             gap: 10px;
             margin-bottom: 30px;
             padding: 15px;
             background: rgba(34, 221, 210, 0.1);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
             border-radius: 8px;
             border: 1px solid rgba(34, 221, 210, 0.2);
         }
+<<<<<<< HEAD
+        .contact-link:hover {
+            background: rgba(14, 165, 233, 0.1);
+            border-color: rgba(14, 165, 233, 0.3);
+        }
+        @media (max-width: 640px) {
+            .offline-container {
+                padding: 32px 24px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+=======
         
         .status-dot {
             width: 12px;
@@ -287,16 +426,22 @@
                 font-size: 1.2rem;
             }
             
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
             .action-buttons {
                 flex-direction: column;
                 align-items: center;
             }
+<<<<<<< HEAD
+=======
             
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
             .btn {
                 width: 100%;
                 max-width: 300px;
                 justify-content: center;
             }
+<<<<<<< HEAD
+=======
             border-radius: 8px;
             font-size: 0.9rem;
 =======
@@ -304,6 +449,7 @@
             .features {
                 grid-template-columns: 1fr;
             }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
         }
     </style>
 </head>
@@ -316,21 +462,40 @@
     
     <div class="offline-container">
         <div class="offline-icon">📡</div>
+<<<<<<< HEAD
+        <h1 class="offline-title">You're Offline</h1>
+        <p class="offline-message">
+            It looks like you've lost your internet connection. Don't worry - some features of Zion Tech Group are still available offline.
+        </p>
+=======
         
         <h1 class="offline-title">You're Offline</h1>
         
         <p class="offline-subtitle">Don't worry, we're still here for you!</p>
         
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
         <div class="status-indicator">
             <div class="status-dot"></div>
             <span class="status-text">No internet connection detected</span>
         </div>
+<<<<<<< HEAD
+        <div class="features-list">
+            <h3>Available Offline Features:</h3>
+            <ul>
+                <li>View cached pages and content</li>
+                <li>Access previously loaded resources</li>
+                <li>Use basic navigation</li>
+                <li>View contact information</li>
+            </ul>
+        </div>
+=======
         
         <p class="offline-description">
             While you're offline, you can still access previously cached content and explore our services. 
             We'll automatically reconnect when your internet is restored.
         </p>
         
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
         <div class="action-buttons">
             <button class="btn btn-primary" onclick="window.location.reload()">
                 🔄 Retry Connection
@@ -339,6 +504,20 @@
                 📊 Check Status
             </button>
         </div>
+<<<<<<< HEAD
+        <button class="btn retry-button" onclick="checkConnection()">
+            🔍 Check Connection
+        </button>
+        <div class="contact-info">
+            <h3>Need Help?</h3>
+            <div class="contact-links">
+                <a href="mailto:support@ziontechgroup.com" class="contact-link">
+                    📧 Email Support
+                </a>
+                <a href="tel:+13024640950" class="contact-link">
+                    📞 Call Us
+                </a>
+=======
         
         <div class="features">
             <div class="feature">
@@ -357,6 +536,7 @@
                 <div class="feature-icon">🔄</div>
                 <div class="feature-title">Auto-Sync</div>
                 <div class="feature-description">Updates automatically when back online</div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
             </div>
 =======
         <button class="retry-button" onclick="window.location.reload()">
@@ -367,7 +547,10 @@
             <div>Last Online: <span id="lastOnline">Unknown</span></div>
         </div>
     </div>
+<<<<<<< HEAD
+=======
     
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
     <script>
         // Check connection status
         function updateConnectionStatus() {
@@ -376,6 +559,10 @@
             
         function checkConnection() {
             const statusDot = document.querySelector('.status-dot');
+<<<<<<< HEAD
+            const statusText = document.querySelector('.status-indicator span');
+            const retryButton = document.querySelector('.retry-button');
+=======
             if (navigator.onLine) {
                 statusElement.textContent = 'Online';
                 statusElement.style.color = '#22ddd2';
@@ -388,16 +575,40 @@
                 statusText.textContent = 'Internet connection restored!';
                 statusText.style.color = '#22c55e';
                 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
                 setTimeout(() => {
                     window.location.href = '/';
                 }, 1000);
             } else {
+<<<<<<< HEAD
+                statusElement.textContent = 'Offline';
+                statusElement.style.color = '#ef4444';
+            }
+        }
+
+        // Update last online time
+        function updateLastOnline() {
+            const lastOnline = localStorage.getItem('lastOnline');
+            if (lastOnline) {
+                document.getElementById('lastOnline').textContent = new Date(parseInt(lastOnline)).toLocaleString();
+            }
+        }
+
+        // Update last online time
+        function updateLastOnline() {
+            const lastOnline = localStorage.getItem('lastOnline');
+            if (lastOnline) {
+                document.getElementById('lastOnline').textContent = new Date(parseInt(lastOnline)).toLocaleString();
+            }
+        }
+=======
                 statusDot.style.background = '#ef4444';
                 statusText.textContent = 'Still offline - check your connection';
                 statusText.style.color = '#ef4444';
             }
         }
         
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
         // Listen for online/offline events
         window.addEventListener('online', updateConnectionStatus);
         window.addEventListener('offline', updateConnectionStatus);
@@ -414,7 +625,10 @@
         window.addEventListener('online', () => {
             checkConnection();
         });
+<<<<<<< HEAD
+=======
         
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
         window.addEventListener('offline', () => {
             const statusDot = document.querySelector('.status-dot');
             const statusText = document.querySelector('.status-text');
@@ -423,6 +637,15 @@
             statusText.textContent = 'Internet connection lost';
             statusText.style.color = '#ef4444';
         });
+<<<<<<< HEAD
+        // Auto-check connection every 5 seconds
+        setInterval(checkConnection, 5000);
+        // Service Worker registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('SW registered: ', registration);
+=======
         
         // Auto-check connection every 5 seconds
         setInterval(checkConnection, 5000);
@@ -443,16 +666,20 @@
                     if (response.ok) {
                         window.location.reload();
                     }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
                 })
                 .catch(() => {
                     // Connection failed, try again in 10 seconds
                     setTimeout(attemptReconnect, 10000);
                 });
         }
+<<<<<<< HEAD
+=======
 =======
         
         // Start reconnection attempts after 30 seconds
         setTimeout(attemptReconnect, 30000);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e6d9
     </script>
 </body>
 </html>
