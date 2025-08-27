@@ -61,25 +61,35 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'AI & Consciousness',
+      title: 'Services',
       links: [
-        { name: 'AI Consciousness Simulator', href: '/services' },
-        { name: 'Quantum Emotion Processor', href: '/services' },
-        { name: 'AI Autonomous Systems', href: '/services' },
-        { name: 'Neural Network Architect', href: '/services' },
-        { name: 'AI Ethics Framework', href: '/services' },
-        { name: 'Predictive Analytics', href: '/ai-services' }
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo' },
+        { name: 'Interview Assessment AI', href: '/services/interview-assessment' },
+        { name: 'Helpdesk Platform', href: '/services/helpdesk' },
+        { name: 'Website Analytics', href: '/services/website-analytics' },
+        { name: 'DSR Privacy Portal', href: '/services/dsr-portal' },
+        { name: 'Security Headers & CSP', href: '/services/security-headers-csp' }
       ]
     },
     {
-      title: 'Micro SAAS',
+      title: 'AI Products',
       links: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'Customer Experience Hub', href: '/micro-saas' },
-        { name: 'Quantum Computing Suite', href: '/services/quantum-computing' },
-        { name: 'Supply Chain Optimizer', href: '/services' },
-        { name: 'Cybersecurity Platform', href: '/services' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+        { name: 'Returns Management', href: '/services/returns-management' },
+        { name: 'Email Sequencer', href: '/services/email-sequencer' },
+        { name: 'Podcast Transcription', href: '/services/podcast-transcription' },
+        { name: 'Micro CRM', href: '/services/micro-crm' }
       ]
     },
     {
@@ -287,7 +297,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               <Link to="/terms" className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
                 Terms of Service
               </Link>
-              <Link to="/sitemap" className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
+              <Link to="/sitemap.xml" className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
                 Sitemap
               </Link>
             </div>

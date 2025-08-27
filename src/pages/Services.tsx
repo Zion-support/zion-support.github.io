@@ -98,6 +98,44 @@ const Services: React.FC = () => {
             </a>
           </div>
         </div>
+
+        {/* Marketing/Benefits Section */}
+        <div className="container mx-auto px-4 mt-16">
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <h3 className="text-lg font-semibold">Why Zion Tech Group</h3>
+              <ul className="mt-3 list-disc pl-5 text-sm text-slate-300 space-y-2">
+                <li>Productized delivery with clear timelines and fixed bids available</li>
+                <li>Security-first: SSO, RBAC, audit logs, and compliance guardrails</li>
+                <li>Cloud-native architectures with cost and reliability SLAs</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <h3 className="text-lg font-semibold">Typical Market Pricing</h3>
+              <ul className="mt-3 list-disc pl-5 text-sm text-slate-300 space-y-2">
+                <li>Micro SaaS subscriptions: $39–$199/mo per user/domain</li>
+                <li>AI solution projects: $5k–$60k+ depending on scope</li>
+                <li>IT modernization: $10k–$120k+ with optional managed services</li>
+              </ul>
+              <a className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">
+                View live pricing guidance <ArrowRight className="ml-1 h-4 w-4" />
+              </a>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <h3 className="text-lg font-semibold">Get Started</h3>
+              <p className="mt-3 text-sm text-slate-300">Book a strategy call or request a tailored proposal. We respond within 1 business day.</p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <Link to="/contact" className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500">Book a call</Link>
+                <Link to="/request-quote" className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5">Request a quote</Link>
+                <a href="mailto:kleber@ziontechgroup.com" className="rounded-lg border border-white/15 px-4 py-2 text-sm font-semibold text-slate-200 hover:bg-white/5">Email us</a>
+              </div>
+              <div className="mt-4 text-xs text-slate-400">Direct: +1 302 464 0950 · 364 E Main St STE 1008 Middletown DE 19709</div>
+              <a className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com" target="_blank" rel="noreferrer">
+                Visit ziontechgroup.com <ArrowRight className="ml-1 h-4 w-4" />
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
