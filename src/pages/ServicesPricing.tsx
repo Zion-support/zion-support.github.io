@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+<<<<<<< HEAD
 import { 
   Check, 
   X, 
@@ -25,6 +26,10 @@ import {
 } from 'lucide-react';
 import { SEO } from "../components/SEOHead"';
 
+=======
+import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 const pricingTiers = [
     {
         name: "Starter",
@@ -168,6 +173,7 @@ const benefits = [
     }
 ];
 export default function ServicesPricing() {
+<<<<<<< HEAD
   const [selectedTier, setSelectedTier] = useState<string>('professional');
 
   return (
@@ -178,6 +184,11 @@ export default function ServicesPricing() {
         keywords="micro SAAS pricing, service costs, AI services pricing, IT solutions pricing"
         url="https://ziontechgroup.com/services-pricing"
       />
+=======
+    const [selectedTier, setSelectedTier] = useState('professional');
+    return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
+      <SEO title="Micro SAAS Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS services. Choose from Starter, Professional, or Enterprise tiers to match your business needs and budget." keywords="micro SAAS pricing, service costs, AI services pricing, IT solutions pricing" url="https://ziontechgroup.com/services-pricing"/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">

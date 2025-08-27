@@ -1,5 +1,4 @@
 export const quantumSpaceTechServices2026 = [] as any[];
-=======
 export interface QuantumSpaceTechService2026 {
   id: string;
   name: string;

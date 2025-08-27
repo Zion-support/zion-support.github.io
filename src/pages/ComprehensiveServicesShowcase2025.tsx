@@ -39,9 +39,13 @@ import {
   Truck,
   Microscope,
   Atom,
-  CircuitBoard
+  CircuitBoard,
+  Phone,
+  Mail,
+  MapPin,
+  Download,
+  ExternalLink
 } from 'lucide-react';
-import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
 
 const ComprehensiveServicesShowcase2025 = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -62,11 +66,67 @@ const ComprehensiveServicesShowcase2025 = () => {
     { id: 'rating', name: 'Rating', icon: Star }
   ];
 
-  const filteredServices = COMPREHENSIVE_PRICING_GUIDE_2025
+  // Mock data for demonstration - replace with actual data import
+  const mockServices = [
+    {
+      id: 1,
+      title: "AI-Powered Business Intelligence Platform",
+      description: "Advanced analytics and insights platform leveraging machine learning for business decision making.",
+      category: "AI Services",
+      subcategory: "Business Intelligence",
+      innovationLevel: "Revolutionary",
+      price: 2999,
+      currency: "$",
+      pricingModel: "month",
+      rating: 4.8,
+      reviewCount: 156,
+      aiScore: "95%",
+      marketPrice: "$4,500",
+      roi: "340%",
+      features: ["Real-time analytics", "Predictive modeling", "Custom dashboards", "API integration"],
+      benefits: ["Increased efficiency", "Better decision making"],
+      reviews: 156,
+      customers: 89,
+      technology: ["Python", "TensorFlow", "React", "Node.js"],
+      compliance: ["GDPR", "SOC2"],
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com"
+      }
+    },
+    {
+      id: 2,
+      title: "Cloud-Native Microservices Platform",
+      description: "Scalable microservices architecture for modern cloud applications with automated deployment.",
+      category: "IT Services",
+      subcategory: "Cloud Infrastructure",
+      innovationLevel: "Advanced",
+      price: 1999,
+      currency: "$",
+      pricingModel: "month",
+      rating: 4.6,
+      reviewCount: 98,
+      aiScore: "87%",
+      marketPrice: "$3,200",
+      roi: "280%",
+      features: ["Auto-scaling", "Load balancing", "Monitoring", "CI/CD pipeline"],
+      benefits: ["Reduced costs", "Improved performance"],
+      reviews: 98,
+      customers: 67,
+      technology: ["Docker", "Kubernetes", "AWS", "Terraform"],
+      compliance: ["ISO 27001", "HIPAA"],
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com"
+      }
+    }
+  ];
+
+  const filteredServices = mockServices
     .filter(service => 
       service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      service.category.toLowerCase().includes(searchTerm.toLowerCase())
     )
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
     .sort((a, b) => {
@@ -111,6 +171,27 @@ const ComprehensiveServicesShowcase2025 = () => {
     }
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -131,17 +212,45 @@ const ComprehensiveServicesShowcase2025 = () => {
               Discover our cutting-edge micro SAAS, IT, and AI services that are revolutionizing industries. 
               Each service is designed with real-world applications, proven ROI, and market-leading innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#services" className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <motion.button 
+                whileHover={{ scale: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
+                className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
                 Explore Services
-              </a>
-              <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+              </motion.button>
+              <motion.button 
+                whileHover={{ scale: 1.05 }} 
+                whileTap={{ scale: 0.95 }} 
+                className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
                 Get Started
-              </a>
+              </motion.button>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Contact Information Banner */}
+      <div className="bg-gradient-to-r from-blue-800 to-purple-800 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-white">
+            <div className="flex items-center gap-4 mb-4 md:mb-0">
+              <Phone className="w-5 h-5 text-blue-300"/>
+              <span className="font-semibold">+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center gap-4 mb-4 md:mb-0">
+              <Mail className="w-5 h-5 text-blue-300"/>
+              <span className="font-semibold">kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <MapPin className="w-5 h-5 text-blue-300"/>
+              <span className="font-semibold">364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Search and Filter Section */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
@@ -206,13 +315,16 @@ const ComprehensiveServicesShowcase2025 = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <motion.div 
+            variants={containerVariants} 
+            initial="hidden" 
+            animate="visible" 
+            className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
+          >
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                variants={itemVariants}
                 className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300 group"
               >
                 {/* Service Header */}
@@ -246,6 +358,30 @@ const ComprehensiveServicesShowcase2025 = () => {
                     <Lightbulb className="w-3 h-3 mr-1" />
                     {service.innovationLevel}
                   </span>
+                </div>
+
+                {/* Technology & Compliance */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="text-white font-semibold text-sm">Technology Stack</h4>
+                    <h4 className="text-white font-semibold text-sm">Compliance</h4>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex flex-wrap gap-1">
+                      {service.technology.slice(0, 3).map((tech, techIndex) => (
+                        <span key={techIndex} className="px-2 py-1 bg-slate-700/50 text-blue-200 text-xs rounded">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex flex-wrap gap-1">
+                      {service.compliance.slice(0, 2).map((comp, compIndex) => (
+                        <span key={compIndex} className="px-2 py-1 bg-green-600/30 text-green-200 text-xs rounded">
+                          {comp}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
                 {/* Key Features */}
@@ -304,24 +440,63 @@ const ComprehensiveServicesShowcase2025 = () => {
                   </div>
                 </div>
 
-                {/* CTA Button */}
-                <div className="flex space-x-2">
-                  <a
-                    href={`/contact?service=${service.id}`}
-                    className="flex-1 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 text-center"
+                {/* Action Buttons */}
+                <div className="flex gap-3">
+                  <motion.button 
+                    whileHover={{ scale: 1.02 }} 
+                    whileTap={{ scale: 0.98 }} 
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                   >
-                    Get Started
-                  </a>
-                  <a
-                    href={`/services/${service.id}`}
-                    className="px-4 py-2 border border-white/20 text-white text-sm font-medium rounded-lg hover:bg-white/10 transition-all duration-300"
+                    <Play className="w-4 h-4"/>
+                    Request Demo
+                  </motion.button>
+                  <motion.button 
+                    whileHover={{ scale: 1.02 }} 
+                    whileTap={{ scale: 0.98 }} 
+                    className="px-4 py-3 border border-blue-400 text-blue-400 rounded-lg font-semibold text-sm flex items-center gap-2 hover:bg-blue-400 hover:text-white transition-all duration-300"
                   >
+                    <ExternalLink className="w-4 h-4"/>
                     Learn More
-                  </a>
+                  </motion.button>
+                </div>
+
+                {/* Contact Info */}
+                <div className="mt-4 pt-4 border-t border-white/20">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-blue-200">Contact:</span>
+                    <div className="flex items-center gap-2">
+                      <Phone className="w-3 h-3 text-blue-300"/>
+                      <span className="text-blue-100">{service.contactInfo.phone}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between text-sm mt-1">
+                    <span className="text-blue-200">Email:</span>
+                    <div className="flex items-center gap-2">
+                      <Mail className="w-3 h-3 text-blue-300"/>
+                      <span className="text-blue-100">{service.contactInfo.email}</span>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
+
+          {/* No Services Found */}
+          {filteredServices.length === 0 && (
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-16">
+              <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
+              <p className="text-blue-200 mb-6">Try adjusting your search criteria or browse all our services.</p>
+              <button 
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                }} 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+              >
+                View All Services
+              </button>
+            </motion.div>
+          )}
         </div>
       </section>
 
@@ -379,18 +554,20 @@ const ComprehensiveServicesShowcase2025 = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/contact" 
+            <motion.button 
+              whileHover={{ scale: 1.05 }} 
+              whileTap={{ scale: 0.95 }} 
               className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Start Your Journey
-            </a>
-            <a 
-              href="tel:+13024640950" 
+            </motion.button>
+            <motion.button 
+              whileHover={{ scale: 1.05 }} 
+              whileTap={{ scale: 0.95 }} 
               className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
               Call Now
-            </a>
+            </motion.button>
           </div>
         </div>
       </section>

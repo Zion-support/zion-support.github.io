@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+<<<<<<< HEAD
 import { 
   CheckCircle, 
   XCircle, 
@@ -26,6 +27,11 @@ import {
 import { SEO } from "../components/SEOHead"';
 import { ADVANCED_SERVICES, PRICING_TIERS } from '@/data/advancedServices';
 
+=======
+import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { PRICING_TIERS } from '@/data/advancedServices';
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 // Service comparison data
 const SERVICE_COMPARISONS = [
     {
@@ -98,6 +104,7 @@ const SERVICE_COMPARISONS = [
     }
 ];
 export default function ServicesComparisonPage() {
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState("AI & Automation");
 
   return (
@@ -108,6 +115,11 @@ export default function ServicesComparisonPage() {
         keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services"
         canonical="https://ziontechgroup.com/services-comparison"
       />
+=======
+    const [selectedCategory, setSelectedCategory] = useState("AI & Automation");
+    return (<div className="min-h-screen bg-background">
+      <SEO title="Services Comparison & Pricing - Zion Tech Group" description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget." keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services" canonical="https://ziontechgroup.com/services-comparison"/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">

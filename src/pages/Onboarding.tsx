@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+=======
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection";
 import { ProfileSetup } from "@/components/onboarding/ProfileSetup";
 import { Steps, Step } from "@/components/ui/steps";
@@ -93,6 +99,7 @@ export default function Onboarding() {
         navigate('/login');
         return null;
     }
+<<<<<<< HEAD
     return (<>
       
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -129,4 +136,11 @@ export default function Onboarding() {
       </div>
       
     </>);
+=======
+    return (_jsxs(_Fragment, { children: [_jsx(Header, {}), _jsx("div", { className: "min-h-screen bg-zion-blue py-12 px-4", children: _jsxs("div", { className: "max-w-4xl mx-auto", children: [_jsxs("div", { className: "text-center mb-12", children: [_jsx("h1", { className: "text-4xl font-bold text-white mb-4", children: "Welcome to Zion" }), _jsx("p", { className: "text-zion-slate-light text-xl", children: "Complete your profile to get started" })] }), _jsx("div", { className: "mb-12", children: _jsx(Steps, { currentStep: currentStep, className: "max-w-xl mx-auto", children: steps.map((step, index) => (_jsx(Step, { status: currentStep > index
+                                        ? "complete"
+                                        : currentStep === index
+                                            ? "current"
+                                            : "incomplete", label: step.label, description: step.description }, index))) }) }), _jsxs("div", { className: "bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light", children: [currentStep === 0 ? (_jsx(UserTypeSelection, { onSelect: handleUserTypeSelect, selectedType: userType })) : (_jsx(ProfileSetup, { onComplete: handleProfileComplete, userType: userType })), currentStep === 1 && (_jsx("div", { className: "mt-6", children: _jsx(Button, { variant: "outline", className: "w-full border-zion-blue-light text-white hover:bg-zion-blue-light", onClick: () => setCurrentStep(0), children: "Back to Role Selection" }) }))] })] }) }), _jsx(Footer, {})] }));
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 }

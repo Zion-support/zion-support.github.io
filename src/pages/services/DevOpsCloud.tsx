@@ -3,6 +3,7 @@ import { SEO } from "../components/SEOHead";
 import Link from 'next/link';
 import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from 'lucide-react';
 export default function DevOpsCloudServices() {
+<<<<<<< HEAD
   const devopsServices = [
     {
       icon: Cloud,
@@ -225,6 +226,218 @@ export default function DevOpsCloudServices() {
         keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation"
         canonical="https://ziontechgroup.com/services/devops-cloud"
       />
+=======
+    const devopsServices = [
+        {
+            icon: Cloud,
+            title: 'Cloud Migration & Strategy',
+            description: 'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.',
+            price: 'From $8,500/project',
+            marketPrice: '$7,000 - $25,000/project',
+            features: [
+                'Cloud readiness assessment',
+                'Multi-cloud strategy planning',
+                'Migration roadmap development',
+                'Cost optimization analysis',
+                'Security and compliance review',
+                'Performance benchmarking'
+            ],
+            benefits: [
+                'Reduced infrastructure costs by 30-50%',
+                'Improved scalability and flexibility',
+                'Enhanced disaster recovery',
+                'Better resource utilization'
+            ]
+        },
+        {
+            icon: Zap,
+            title: 'CI/CD Pipeline Development',
+            description: 'Automated continuous integration and deployment pipelines for faster, reliable software delivery.',
+            price: 'From $6,500/project',
+            marketPrice: '$5,500 - $18,000/project',
+            features: [
+                'Automated build and test pipelines',
+                'Deployment automation',
+                'Environment management',
+                'Rollback and recovery',
+                'Pipeline monitoring and alerts',
+                'Security scanning integration'
+            ],
+            benefits: [
+                'Faster time to market',
+                'Reduced deployment errors',
+                'Improved code quality',
+                'Enhanced team productivity'
+            ]
+        },
+        {
+            icon: Shield,
+            title: 'Infrastructure as Code (IaC)',
+            description: 'Automated infrastructure provisioning and management using modern IaC tools and practices.',
+            price: 'From $5,500/project',
+            marketPrice: '$4,500 - $15,000/project',
+            features: [
+                'Terraform and CloudFormation',
+                'Ansible and Puppet automation',
+                'Infrastructure versioning',
+                'Environment consistency',
+                'Automated scaling policies',
+                'Cost monitoring and alerts'
+            ],
+            benefits: [
+                'Consistent infrastructure deployment',
+                'Reduced manual configuration errors',
+                'Faster environment provisioning',
+                'Better cost control and visibility'
+            ]
+        },
+        {
+            icon: Database,
+            title: 'Container Orchestration & Kubernetes',
+            description: 'Enterprise-grade container management and orchestration with Kubernetes and Docker.',
+            price: 'From $7,500/project',
+            marketPrice: '$6,500 - $20,000/project',
+            features: [
+                'Kubernetes cluster design',
+                'Container security and scanning',
+                'Auto-scaling and load balancing',
+                'Service mesh implementation',
+                'Monitoring and logging',
+                'Backup and disaster recovery'
+            ],
+            benefits: [
+                'Improved application scalability',
+                'Better resource utilization',
+                'Enhanced deployment flexibility',
+                'Reduced operational overhead'
+            ]
+        },
+        {
+            icon: Users,
+            title: 'DevOps Consulting & Training',
+            description: 'Strategic DevOps consulting and comprehensive team training for organizational transformation.',
+            price: 'From $4,500/month',
+            marketPrice: '$3,500 - $12,000/month',
+            features: [
+                'DevOps maturity assessment',
+                'Process optimization',
+                'Team structure recommendations',
+                'Tool selection and implementation',
+                'Best practices training',
+                'Change management support'
+            ],
+            benefits: [
+                'Improved development velocity',
+                'Better team collaboration',
+                'Reduced operational costs',
+                'Enhanced software quality'
+            ]
+        },
+        {
+            icon: Server,
+            title: 'Monitoring & Observability',
+            description: 'Comprehensive monitoring, logging, and observability solutions for modern applications.',
+            price: 'From $4,800/month',
+            marketPrice: '$4,000 - $12,000/month',
+            features: [
+                'Application performance monitoring',
+                'Infrastructure monitoring',
+                'Centralized logging and analysis',
+                'Real-time alerting',
+                'Custom dashboards',
+                'Capacity planning insights'
+            ],
+            benefits: [
+                'Proactive issue detection',
+                'Improved system reliability',
+                'Better user experience',
+                'Data-driven optimization'
+            ]
+        }
+    ];
+    const cloudProviders = [
+        {
+            name: 'Amazon Web Services (AWS)',
+            services: 'EC2, S3, Lambda, RDS, EKS',
+            strengths: 'Market leader, extensive services',
+            pricing: 'Competitive, pay-as-you-use'
+        },
+        {
+            name: 'Microsoft Azure',
+            services: 'Virtual Machines, Blob Storage, Functions, AKS',
+            strengths: 'Enterprise integration, hybrid cloud',
+            pricing: 'Enterprise discounts, reserved instances'
+        },
+        {
+            name: 'Google Cloud Platform (GCP)',
+            services: 'Compute Engine, Cloud Storage, Cloud Functions, GKE',
+            strengths: 'AI/ML capabilities, global network',
+            pricing: 'Sustained use discounts, committed use'
+        },
+        {
+            name: 'Multi-Cloud Strategy',
+            services: 'Cross-platform orchestration, hybrid solutions',
+            strengths: 'Vendor independence, best-of-breed',
+            pricing: 'Optimized for each workload'
+        }
+    ];
+    const industries = [
+        'Financial Services & Banking',
+        'Healthcare & Life Sciences',
+        'E-commerce & Retail',
+        'Media & Entertainment',
+        'Manufacturing & Logistics',
+        'Education & Research',
+        'Government & Public Sector',
+        'Startups & Scale-ups'
+    ];
+    const technologies = [
+        'AWS, Azure, GCP',
+        'Kubernetes & Docker',
+        'Terraform & Ansible',
+        'Jenkins & GitLab CI',
+        'Prometheus & Grafana',
+        'ELK Stack & Splunk',
+        'Istio & Linkerd',
+        'Helm & ArgoCD'
+    ];
+    const benefits = [
+        'Faster software delivery and deployment',
+        'Improved system reliability and uptime',
+        'Reduced infrastructure costs',
+        'Enhanced security and compliance',
+        'Better scalability and performance',
+        'Improved team collaboration and productivity'
+    ];
+    const useCases = [
+        {
+            title: 'Microservices Migration',
+            description: 'Legacy monolithic application migration to microservices architecture with container orchestration.',
+            roi: '40-60% cost reduction',
+            implementation: '20-32 weeks'
+        },
+        {
+            title: 'Multi-Cloud Strategy',
+            description: 'Implementation of multi-cloud architecture for improved resilience and cost optimization.',
+            roi: '25-45% cost savings',
+            implementation: '16-24 weeks'
+        },
+        {
+            title: 'DevOps Transformation',
+            description: 'Complete organizational DevOps transformation with process optimization and tool implementation.',
+            roi: '30-50% efficiency improvement',
+            implementation: '24-36 weeks'
+        },
+        {
+            title: 'Cloud-Native Development',
+            description: 'Modern cloud-native application development with CI/CD and infrastructure automation.',
+            roi: '35-55% faster delivery',
+            implementation: '12-20 weeks'
+        }
+    ];
+    return (<div className="min-h-screen bg-background">
+      <SEO title="DevOps & Cloud Services - Zion Tech Group" description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery." keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation" canonical="https://ziontechgroup.com/services/devops-cloud"/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">

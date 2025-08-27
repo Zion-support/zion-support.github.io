@@ -16,6 +16,7 @@ export default function EnterpriseBilling() {
         }
         return null;
     }
+<<<<<<< HEAD
     return null;
   }
 
@@ -25,6 +26,10 @@ export default function EnterpriseBilling() {
         title="Enterprise Billing - Zion AI Marketplace"
         description="Manage your subscription, view invoice history, and download billing statements."
       />
+=======
+    return (<ProtectedRoute>
+      <SEO title="Enterprise Billing - Zion AI Marketplace" description="Manage your subscription, view invoice history, and download billing statements."/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className="min-h-screen bg-background">
         <BillingDashboard />

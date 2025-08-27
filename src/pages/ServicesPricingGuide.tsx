@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign } from 'lucide-react';
+<<<<<<< HEAD
 import { SEO } from "../components/SEOHead"';
 
 export default function ServicesPricingGuide() {
@@ -54,6 +55,44 @@ export default function ServicesPricingGuide() {
         keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing"
         canonical="https://ziontechgroup.com/services-pricing-guide"
       />
+=======
+import { SEO } from '@/components/SEO';
+export default function ServicesPricingGuide() {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const filteredServices = selectedCategory === 'all'
+        ? EXPANDED_SERVICES
+        : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
+    const getPriceTier = (price) => {
+        if (price < 10000)
+            return 'Starter';
+        if (price < 25000)
+            return 'Professional';
+        return 'Enterprise';
+    };
+    const getPriceTierColor = (tier) => {
+        switch (tier) {
+            case 'Starter': return 'bg-green-500';
+            case 'Professional': return 'bg-blue-500';
+            case 'Enterprise': return 'bg-purple-500';
+            default: return 'bg-gray-500';
+        }
+    };
+    const getServiceIcon = (category) => {
+        switch (category) {
+            case 'AI Development': return <TrendingUp className="w-5 h-5 text-blue-500"/>;
+            case 'Cloud Services': return <Globe className="w-5 h-5 text-green-500"/>;
+            case 'Cybersecurity': return <Shield className="w-5 h-5 text-red-500"/>;
+            case 'Data & Analytics': return <TrendingUp className="w-5 h-5 text-purple-500"/>;
+            case 'Digital Transformation': return <Zap className="w-5 h-5 text-yellow-500"/>;
+            case 'IoT & Edge Computing': return <Globe className="w-5 h-5 text-indigo-500"/>;
+            case 'Blockchain & Web3': return <TrendingUp className="w-5 h-5 text-orange-500"/>;
+            case 'AR/VR & Metaverse': return <Globe className="w-5 h-5 text-pink-500"/>;
+            default: return <TrendingUp className="w-5 h-5 text-gray-500"/>;
+        }
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
+      <SEO title="Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio." keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing" canonical="https://ziontechgroup.com/services-pricing-guide"/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
