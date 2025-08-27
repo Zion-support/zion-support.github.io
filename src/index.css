@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cfe48932b28a257d437f4fe13cc84eb19b3b6179
-=======
->>>>>>> 93cb4347559d7aad42ba431e1ae67c54c6aa6cb9
 @layer base {
   :root {
     --background: 0 0% 7%;
@@ -35,13 +27,39 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
->>>>>>> origin/website-improvements-2025
-=======
+
+/* Zion Tech Group Custom Styles */
+@layer utilities {
+  .bg-futuristic {
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  }
+  
+  .text-zion-cyan {
+    color: #00d4ff;
+  }
+  
+  .border-zion-cyan {
+    border-color: #00d4ff;
+  }
+  
+  .bg-zion-cyan {
+    background-color: #00d4ff;
+  }
+  
+  .hover\:bg-zion-cyan:hover {
+    background-color: #00d4ff;
+  }
+  
+  .hover\:text-zion-cyan:hover {
+    color: #00d4ff;
+  }
+  
+  .shadow-zion {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+  
+  .neon-glow {
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+  }
 }
->>>>>>> cfe48932b28a257d437f4fe13cc84eb19b3b6179
-=======
-}
->>>>>>> 93cb4347559d7aad42ba431e1ae67c54c6aa6cb9

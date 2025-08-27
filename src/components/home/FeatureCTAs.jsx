@@ -83,3 +83,60 @@ export function FeatureCTAs() {
             details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
         }
     ];
+
+    return (
+        <section className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                        Explore Our Comprehensive Solutions
+                    </h2>
+                    <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+                        From AI services to talent matching, discover how Zion Tech Group can transform your business and accelerate your growth.
+                    </p>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {features.map((feature, index) => (
+                        <Card key={index} className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20">
+                            <CardHeader className="pb-4">
+                                <div className="flex items-center justify-between mb-3">
+                                    <div className="p-2 rounded-lg bg-white/10">
+                                        {feature.icon}
+                                    </div>
+                                    {feature.badge && (
+                                        <Badge variant="secondary" className="bg-cyan-500/20 text-cyan-400 border-cyan-500/30">
+                                            {feature.badge}
+                                        </Badge>
+                                    )}
+                                </div>
+                                <CardTitle className="text-xl text-white">{feature.title}</CardTitle>
+                                <CardDescription className="text-slate-300">
+                                    {feature.description}
+                                </CardDescription>
+                            </CardHeader>
+                            
+                            <CardContent className="pb-4">
+                                <p className="text-slate-400 text-sm leading-relaxed">
+                                    {feature.details}
+                                </p>
+                            </CardContent>
+                            
+                            <CardFooter className="pt-0">
+                                <Link to={feature.link} className="w-full">
+                                    <Button 
+                                        variant="outline" 
+                                        className="w-full border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300"
+                                    >
+                                        Learn More
+                                        <ArrowRight className="ml-2 h-4 w-4" />
+                                    </Button>
+                                </Link>
+                            </CardFooter>
+                        </Card>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
