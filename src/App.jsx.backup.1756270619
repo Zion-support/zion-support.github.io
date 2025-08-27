@@ -4,6 +4,21 @@ import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant';
 
+<<<<<<< HEAD
+// Lazy load pages with better chunking
+const Home = lazy(() => import('./pages/Home.tsx'));
+const About = lazy(() => import('./pages/About.tsx'));
+const Contact = lazy(() => import('./pages/Contact.tsx'));
+const Blog = lazy(() => import('./pages/Blog.tsx'));
+const PartnersPage = lazy(() => import('./pages/Partners.tsx'));
+const Login = lazy(() => import('./pages/Login.jsx'));
+const FAQ = lazy(() => import('./pages/FAQ.tsx'));
+const Careers = lazy(() => import('./pages/Careers.tsx'));
+const Privacy = lazy(() => import('./pages/Privacy.tsx'));
+const Terms = lazy(() => import('./pages/Terms.tsx'));
+const Sitemap = lazy(() => import('./pages/Sitemap.tsx'));
+const GreenIT = lazy(() => import('./pages/GreenIT.tsx'));
+=======
 // Lazy load only the essential pages that we know exist
 const Home = React.lazy(() => import('./pages/Home.tsx'));
 const About = React.lazy(() => import('./pages/About.tsx'));
@@ -16,6 +31,7 @@ const Privacy = React.lazy(() => import('./pages/Privacy.tsx'));
 const Terms = React.lazy(() => import('./pages/Terms.tsx'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT.tsx'));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-0d28
 
 // Enhanced loading component with better UX
 const LoadingSpinner = () => (

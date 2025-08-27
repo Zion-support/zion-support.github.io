@@ -1,7 +1,13 @@
 import type { Config } from 'tailwindcss'
 
+<<<<<<< HEAD
+const config: Config = {
+<<<<<<< HEAD
+  darkMode: ["class"],
+=======
 export default {
   darkMode: 'class',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-0d28
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
@@ -124,6 +130,12 @@ export default {
       },
     },
   },
+<<<<<<< HEAD
+  plugins: [animatePlugin],
+};
+
+export default config;
+=======
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', './components/**/*.{ts,tsx}', './pages/**/*.{ts,tsx}'],
 	theme: {
 		extend: {
@@ -139,6 +151,7 @@ export default {
 }
 
 export default config
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 =======
   plugins: [
     require("@tailwindcss/forms"),
@@ -146,3 +159,4 @@ export default config
     require("@tailwindcss/aspect-ratio"),
   ],
 } satisfies Config
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-0d28
