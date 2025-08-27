@@ -95,6 +95,9 @@ const footerSections = [
     title: 'AI & Research Services',
     icon: Brain,
     links: [
+      { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator', icon: Workflow },
+      { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield },
+      { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Brain },
       { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
       { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
       { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },

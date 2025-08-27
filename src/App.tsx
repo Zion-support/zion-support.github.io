@@ -348,6 +348,11 @@ function App() {
                     <Route path="/services/dsr-portal" element={<DSRPortal />} />
                     <Route path="/services/zero-trust-network-access" element={<ZeroTrustNetworkAccess />} />
                     <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                    
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
+                    <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
+                    <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
                     <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/services/quantum-computing" element={<QuantumComputing />} />
                     <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
@@ -374,11 +379,6 @@ function App() {
                     <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
                     
                     {/* 2025 New Innovative Service Routes */}
-                    <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
-                    <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
-                    <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
-                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
-                    <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
                     <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
                     
                     {/* Additional Pages */}
