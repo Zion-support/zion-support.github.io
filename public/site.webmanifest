@@ -1,11 +1,11 @@
 {
   "name": "Zion Tech Group",
   "short_name": "Zion Tech",
-  "description": "Leading provider of AI-powered technology solutions and digital transformation services",
+  "description": "Leading provider of AI-powered business solutions, quantum computing, and autonomous business operations",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
-  "theme_color": "#22ddd2",
+  "theme_color": "#0ea5e9",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
@@ -41,54 +41,56 @@
   ],
   "shortcuts": [
     {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "View our technology services",
-      "url": "/services",
+      "name": "AI Services",
+      "short_name": "AI",
+      "description": "Explore our AI-powered solutions",
+      "url": "/ai-services",
       "icons": [
         {
-          "src": "/android-chrome-192x192.png",
-          "sizes": "192x192"
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
         }
       ]
     },
     {
-      "name": "Contact",
+      "name": "Contact Us",
       "short_name": "Contact",
-      "description": "Get in touch with us",
+      "description": "Get in touch with our team",
       "url": "/contact",
       "icons": [
         {
-          "src": "/android-chrome-192x192.png",
-          "sizes": "192x192"
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
         }
       ]
     },
     {
-      "name": "About",
-      "short_name": "About",
-      "description": "Learn more about Zion Tech Group",
-      "url": "/about",
+      "name": "Request Quote",
+      "short_name": "Quote",
+      "description": "Request a custom quote",
+      "url": "/request-quote",
       "icons": [
         {
-          "src": "/android-chrome-192x192.png",
-          "sizes": "192x192"
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
         }
       ]
     }
   ],
   "screenshots": [
     {
-      "src": "/screenshot-wide.png",
+      "src": "/screenshots/desktop-home.png",
       "sizes": "1280x720",
       "type": "image/png",
-      "form_factor": "wide"
+      "form_factor": "wide",
+      "label": "Homepage on desktop"
     },
     {
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "390x844",
       "type": "image/png",
-      "form_factor": "narrow"
+      "form_factor": "narrow",
+      "label": "Homepage on mobile"
     }
   ],
   "related_applications": [],

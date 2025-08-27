@@ -1,30 +1,50 @@
 import React, { useState, useEffect } from 'react';
 import { Sun, Moon } from 'lucide-react';
-const ThemeToggle = () => {
-    const [isDark, setIsDark] = useState(true);
-    useEffect(() => {
-        // Check for saved theme preference or default to dark
-        const savedTheme = localStorage.getItem('zion-theme');
-        if (savedTheme) {
-            setIsDark(savedTheme === 'dark');
-        }
-    }, []);
-    const toggleTheme = () => {
-        const newTheme = !isDark;
-        setIsDark(newTheme);
-        localStorage.setItem('zion-theme', newTheme ? 'dark' : 'light');
-        // Apply theme to document
-        if (newTheme) {
-            document.documentElement.classList.add('dark');
-            document.documentElement.classList.remove('light');
-        }
-        else {
-            document.documentElement.classList.add('light');
-            document.documentElement.classList.remove('dark');
-        }
-    };
-    return (<button onClick={toggleTheme} className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 group" aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}>
-      {isDark ? (<Sun className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300"/>) : (<Moon className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors duration-300"/>)}
-    </button>);
+
+export const ThemeToggle = () => {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = !isDark;
+    setIsDark(newTheme);
+    
+    if (newTheme) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
+
+  return (
+    <button
+      onClick={toggleTheme}
+      className="relative p-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+    >
+      <div className="relative w-6 h-6">
+        <Sun 
+          className={`absolute inset-0 w-6 h-6 text-white transition-all duration-300 ${
+            isDark ? 'opacity-0 rotate-90 scale-75' : 'opacity-100 rotate-0 scale-100'
+          }`}
+        />
+        <Moon 
+          className={`absolute inset-0 w-6 h-6 text-white transition-all duration-300 ${
+            isDark ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-75'
+          }`}
+        />
+      </div>
+    </button>
+  );
 };
-export default ThemeToggle;

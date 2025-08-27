@@ -11,8 +11,12 @@ import {
   Info,
   BarChart3,
   Gauge,
-  Monitor
+  Monitor,
+  HardDrive,
+  Wifi,
+  WifiOff
 } from 'lucide-react';
+
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -21,13 +25,31 @@ interface PerformanceMetrics {
   ttfb: number | null;
   domLoad: number | null;
   windowLoad: number | null;
+  loadTime: number;
+  renderTime: number;
+  memoryUsage?: number;
+  fps: number;
+  networkSpeed?: number;
+  isOnline: boolean;
 }
+
 interface PerformanceScore {
   score: number;
   grade: 'A' | 'B' | 'C' | 'D' | 'F';
   color: string;
 }
-export const PerformanceMonitor: React.FC = () => {
+
+interface PerformanceMonitorProps {
+  showMetrics?: boolean;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  className?: string;
+}
+
+export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  showMetrics = false,
+  onMetricsUpdate,
+  className = ''
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -36,11 +58,16 @@ export const PerformanceMonitor: React.FC = () => {
     cls: null,
     ttfb: null,
     domLoad: null,
-    windowLoad: null
+    windowLoad: null,
+    loadTime: 0,
+    renderTime: 0,
+    fps: 0,
+    isOnline: navigator.onLine
   });
   const [scores, setScores] = useState<Record<string, PerformanceScore>>({});
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
+
   const calculateScore = useCallback((metric: number, thresholds: number[]): PerformanceScore => {
     if (metric <= thresholds[0]) return { score: 100, grade: 'A', color: 'text-green-400' };
     if (metric <= thresholds[1]) return { score: 80, grade: 'B', color: 'text-yellow-400' };
@@ -48,29 +75,87 @@ export const PerformanceMonitor: React.FC = () => {
     if (metric <= thresholds[3]) return { score: 40, grade: 'D', color: 'text-red-400' };
     return { score: 20, grade: 'F', color: 'text-red-600' };
   }, []);
+
   const updateMetrics = useCallback(() => {
     if ('performance' in window) {
       const perf = performance;
-      // First Contentful Paint
+      
+      // Core Web Vitals
       const fcpEntry = perf.getEntriesByName('first-contentful-paint')[0] as PerformanceEntry;
       const fcp = fcpEntry ? fcpEntry.startTime : null;
-      // Largest Contentful Paint
+      
       const lcpEntry = perf.getEntriesByName('largest-contentful-paint')[0] as PerformanceEntry;
       const lcp = lcpEntry ? lcpEntry.startTime : null;
-      // First Input Delay
+      
       const fidEntry = perf.getEntriesByName('first-input-delay')[0] as PerformanceEntry;
-      const fid = fidEntry ? fidEntry.processingStart - fidEntry.startTime : null;
-      // Cumulative Layout Shift
+      const fid = fidEntry ? (fidEntry as any).processingStart - fidEntry.startTime : null;
+      
       const clsEntry = perf.getEntriesByName('cumulative-layout-shift')[0] as PerformanceEntry;
       const cls = clsEntry ? (clsEntry as any).value : null;
-      // Time to First Byte
+      
+      // Navigation timing
       const navigationEntry = perf.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const ttfb = navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart : null;
-      // DOM Load and Window Load
       const domLoad = navigationEntry ? navigationEntry.domContentLoadedEventEnd - navigationEntry.navigationStart : null;
       const windowLoad = navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.navigationStart : null;
-      const newMetrics = { fcp, lcp, fid, cls, ttfb, domLoad, windowLoad };
+      
+      // Additional metrics
+      const loadTime = navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.loadEventStart : 0;
+      const renderTime = performance.now();
+      
+      // Memory usage
+      let memoryUsage: number | undefined;
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
+      }
+
+      // FPS calculation
+      let fps = 0;
+      if (typeof requestAnimationFrame !== 'undefined') {
+        let frameCount = 0;
+        let lastTime = performance.now();
+        
+        const countFrames = () => {
+          frameCount++;
+          const currentTime = performance.now();
+          
+          if (currentTime - lastTime >= 1000) {
+            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+            frameCount = 0;
+            lastTime = currentTime;
+          }
+          
+          requestAnimationFrame(countFrames);
+        };
+        
+        requestAnimationFrame(countFrames);
+      }
+
+      // Network speed estimation
+      let networkSpeed: number | undefined;
+      if ('connection' in navigator) {
+        const connection = (navigator as any).connection;
+        if (connection && connection.effectiveType) {
+          const speedMap: { [key: string]: number } = {
+            'slow-2g': 0.5,
+            '2g': 1,
+            '3g': 3,
+            '4g': 10
+          };
+          networkSpeed = speedMap[connection.effectiveType] || 5;
+        }
+      }
+
+      const newMetrics: PerformanceMetrics = {
+        fcp, lcp, fid, cls, ttfb, domLoad, windowLoad,
+        loadTime, renderTime, memoryUsage, fps, networkSpeed,
+        isOnline: navigator.onLine
+      };
+
       setMetrics(newMetrics);
+      onMetricsUpdate?.(newMetrics);
+
       // Calculate scores
       const newScores = {
         fcp: fcp ? calculateScore(fcp, [1800, 3000, 4000, 5000]) : { score: 0, grade: 'F', color: 'text-gray-400' },
@@ -79,22 +164,40 @@ export const PerformanceMonitor: React.FC = () => {
         cls: cls ? calculateScore(cls, [0.1, 0.25, 0.4, 0.5]) : { score: 0, grade: 'F', color: 'text-gray-400' }
       };
       setScores(newScores);
+
       // Check for performance issues
       const issues = [];
       if (fcp && fcp > 3000) issues.push('First Contentful Paint is slow');
       if (lcp && lcp > 5000) issues.push('Largest Contentful Paint is slow');
       if (fid && fid > 500) issues.push('First Input Delay is high');
       if (cls && cls > 0.4) issues.push('Cumulative Layout Shift is poor');
+      
       if (issues.length > 0) {
         setAlertMessage(issues.join(', '));
         setShowAlert(true);
         setTimeout(() => setShowAlert(false), 5000);
       }
     }
-  };
+  }, [calculateScore, onMetricsUpdate]);
+
+  // Network status monitoring
+  useEffect(() => {
+    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnline: true }));
+    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnline: false }));
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, []);
+
   useEffect(() => {
     // Initial metrics
     updateMetrics();
+    
     // Set up performance observer for Core Web Vitals
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -106,22 +209,31 @@ export const PerformanceMonitor: React.FC = () => {
           }
         }
       });
+      
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
       return () => observer.disconnect();
     }
+    
     // Update metrics periodically
     const interval = setInterval(updateMetrics, 10000);
     return () => clearInterval(interval);
   }, [updateMetrics]);
+
   const formatMetric = (value: number | null, unit: string = 'ms'): string => {
     if (value === null) return 'N/A';
     if (unit === 'ms') return `${Math.round(value)}ms`;
     if (unit === 's') return `${(value / 1000).toFixed(2)}s`;
     return value.toFixed(3);
   };
+
   const getMetricColor = (score: PerformanceScore): string => {
     return score.color.replace('text-', 'bg-').replace('-400', '-500').replace('-600', '-700');
   };
+
+  if (!showMetrics) {
+    return null;
+  }
+
   return (
     <>
       {/* Performance Toggle Button */}
@@ -133,6 +245,7 @@ export const PerformanceMonitor: React.FC = () => {
       >
         <Activity size={24} />
       </button>
+
       {/* Performance Alert */}
       <AnimatePresence>
         {showAlert && (
@@ -153,6 +266,7 @@ export const PerformanceMonitor: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
       {/* Performance Panel */}
       <AnimatePresence>
         {isOpen && (
@@ -178,12 +292,14 @@ export const PerformanceMonitor: React.FC = () => {
                   <X size={20} />
                 </button>
               </div>
+
               {/* Core Web Vitals */}
               <div className="space-y-4 mb-6">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
                   <Zap size={20} className="text-zion-purple" />
                   Core Web Vitals
                 </h3>
+                
                 {/* FCP */}
                 <div className="p-3 bg-zion-slate-light/10 rounded-lg">
                   <div className="flex items-center justify-between mb-2">
@@ -202,6 +318,7 @@ export const PerformanceMonitor: React.FC = () => {
                     />
                   </div>
                 </div>
+
                 {/* LCP */}
                 <div className="p-3 bg-zion-slate-light/10 rounded-lg">
                   <div className="flex items-center justify-between mb-2">
@@ -220,6 +337,7 @@ export const PerformanceMonitor: React.FC = () => {
                     />
                   </div>
                 </div>
+
                 {/* FID */}
                 <div className="p-3 bg-zion-slate-light/10 rounded-lg">
                   <div className="flex items-center justify-between mb-2">
@@ -238,6 +356,7 @@ export const PerformanceMonitor: React.FC = () => {
                     />
                   </div>
                 </div>
+
                 {/* CLS */}
                 <div className="p-3 bg-zion-slate-light/10 rounded-lg">
                   <div className="flex items-center justify-between mb-2">
@@ -257,6 +376,7 @@ export const PerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               </div>
+
               {/* Additional Metrics */}
               <div className="space-y-4 mb-6">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
@@ -290,6 +410,54 @@ export const PerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Real-time Metrics */}
+              <div className="space-y-4 mb-6">
+                <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+                  <Gauge size={20} className="text-zion-purple" />
+                  Real-time Metrics
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4 text-blue-400" />
+                    <span className="text-sm text-zion-slate-light">Load Time:</span>
+                    <span className="text-white font-semibold">{metrics.loadTime.toFixed(0)}ms</span>
+                  </div>
+                  
+                  <div className="flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-yellow-400" />
+                    <span className="text-sm text-zion-slate-light">FPS:</span>
+                    <span className="text-white font-semibold">{metrics.fps}</span>
+                  </div>
+                  
+                  {metrics.memoryUsage && (
+                    <div className="flex items-center gap-2">
+                      <HardDrive className="w-4 h-4 text-green-400" />
+                      <span className="text-sm text-zion-slate-light">Memory:</span>
+                      <span className="text-white font-semibold">{metrics.memoryUsage.toFixed(1)}MB</span>
+                    </div>
+                  )}
+                  
+                  <div className="flex items-center gap-2">
+                    {metrics.isOnline ? (
+                      <Wifi className="w-4 h-4 text-green-400" />
+                    ) : (
+                      <WifiOff className="w-4 h-4 text-red-400" />
+                    )}
+                    <span className="text-sm text-zion-slate-light">Status:</span>
+                    <span className="text-white font-semibold">{metrics.isOnline ? 'Online' : 'Offline'}</span>
+                  </div>
+                  
+                  {metrics.networkSpeed && (
+                    <div className="flex items-center gap-2">
+                      <Zap className="w-4 h-4 text-purple-400" />
+                      <span className="text-sm text-zion-slate-light">Speed:</span>
+                      <span className="text-white font-semibold">{metrics.networkSpeed}G</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+
               {/* Performance Tips */}
               <div className="p-4 bg-zion-purple/10 border border-zion-purple/20 rounded-lg">
                 <h4 className="font-semibold text-zion-purple mb-2 flex items-center gap-2">
@@ -304,12 +472,13 @@ export const PerformanceMonitor: React.FC = () => {
                   <li>• Monitor Core Web Vitals regularly</li>
                 </ul>
               </div>
+
               {/* Refresh Button */}
               <button
                 onClick={updateMetrics}
                 className="w-full mt-6 p-3 bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark transition-colors flex items-center justify-center gap-2"
               >
-                <RefreshCw size={16} />
+                <TrendingUp size={16} />
                 Refresh Metrics
               </button>
             </div>
@@ -319,11 +488,3 @@ export const PerformanceMonitor: React.FC = () => {
     </>
   );
 };
-// Simple refresh icon component
-const RefreshCw: React.FC<{ size: number }> = ({ size }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M23 4v6h-6"/>
-    <path d="M1 20v-6h6"/>
-    <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
-  </svg>
-);
