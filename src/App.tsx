@@ -103,6 +103,9 @@ const AIBusinessIntelligenceAnalytics = lazy(() => import('./pages/services/AIBu
 const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustomerExperienceSupport'));
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 
+// New AI Quantum Hybrid Platform
+const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
+
 // 2029 Services Showcase
 const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
 
@@ -324,6 +327,9 @@ function App() {
                     <Route path="/services/ai-business-intelligence-analytics" element={<AIBusinessIntelligenceAnalytics />} />
                     <Route path="/services/ai-customer-experience-support" element={<AICustomerExperienceSupport />} />
                     <Route path="/services/ai-marketing-automation-personalization" element={<AIMarketingAutomationPersonalization />} />
+                    
+                    {/* New AI Quantum Hybrid Platform */}
+                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
                     
                     {/* 2029 Services Showcase */}
                     <Route path="/comprehensive-services-showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
