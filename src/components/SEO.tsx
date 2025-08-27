@@ -1,123 +1,375 @@
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
+export interface SEOProps {
+  title: string;
+  description: string;
   keywords?: string;
   image?: string;
+  canonical?: string;
+  ogImage?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'service';
-  canonical?: string;
-  structuredData?: object;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
   noindex?: boolean;
   nofollow?: boolean;
+  structuredData?: Record<string, any>;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterCreator?: string;
+  twitterSite?: string;
+  additionalMeta?: Array<{ name: string; content: string }>;
+  additionalLinks?: Array<{ rel: string; href: string }>;
 }
 
-export default function SEO({
-  title = 'Zion Tech Group - AI-Powered Business Solutions & IT Services',
-  description = 'Transform your business with Zion Tech Group\'s cutting-edge AI solutions, cloud infrastructure, cybersecurity services, and comprehensive IT consulting. Trusted by 500+ businesses worldwide.',
-  keywords = 'AI solutions, artificial intelligence, cloud computing, cybersecurity, IT services, digital transformation, quantum computing, blockchain, IoT, machine learning',
-  image = 'https://ziontechgroup.com/images/zion-tech-group-og.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
+export function SEO({
+  title,
+  description,
+  keywords,
+  image,
   canonical,
-  structuredData,
+  ogImage,
+  url,
+  type = 'website',
+  author,
+  publishedTime,
+  modifiedTime,
+  section,
+  tags,
   noindex = false,
-  nofollow = false
+  nofollow = false,
+  structuredData,
+  twitterCard = 'summary_large_image',
+  twitterCreator,
+  twitterSite,
+  additionalMeta = [],
+  additionalLinks = []
 }: SEOProps) {
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-    "description": "Leading provider of AI-powered business solutions and comprehensive IT services",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ZionTechGroup",
-      "https://www.facebook.com/ZionTechGroup"
-    ]
-  };
+  const location = useLocation();
+  
+  // Generate canonical URL
+  const canonicalUrl = useMemo(() => {
+    if (canonical) return canonical;
+    if (url) return url;
+    return `${window.location.origin}${location.pathname}`;
+  }, [canonical, url, location.pathname]);
+
+  // Generate Open Graph image URL
+  const ogImageUrl = useMemo(() => {
+    if (ogImage) return ogImage;
+    if (image) return image;
+    return `${window.location.origin}/og-image.jpg`;
+  }, [ogImage, image]);
+
+  // Generate structured data
+  const generateStructuredData = useMemo(() => {
+    if (structuredData) return structuredData;
+
+    const baseData = {
+      '@context': 'https://schema.org',
+      '@type': type === 'article' ? 'Article' : 'WebPage',
+      name: title,
+      description,
+      url: canonicalUrl,
+      image: ogImageUrl,
+      publisher: {
+        '@type': 'Organization',
+        name: 'Zion Tech Group',
+        logo: {
+          '@type': 'ImageObject',
+          url: `${window.location.origin}/logo.png`
+        }
+      }
+    };
+
+    if (type === 'article') {
+      return {
+        ...baseData,
+        '@type': 'Article',
+        headline: title,
+        description,
+        image: ogImageUrl,
+        author: author ? { '@type': 'Person', name: author } : undefined,
+        datePublished: publishedTime,
+        dateModified: modifiedTime,
+        articleSection: section,
+        keywords: tags?.join(', ')
+      };
+    }
+
+    if (type === 'product' || type === 'service') {
+      return {
+        ...baseData,
+        '@type': type === 'product' ? 'Product' : 'Service',
+        name: title,
+        description,
+        image: ogImageUrl,
+        offers: {
+          '@type': 'Offer',
+          availability: 'https://schema.org/InStock'
+        }
+      };
+    }
+
+    return baseData;
+  }, [
+    structuredData,
+    type,
+    title,
+    description,
+    canonicalUrl,
+    ogImageUrl,
+    author,
+    publishedTime,
+    modifiedTime,
+    section,
+    tags
+  ]);
+
+  // Update meta tags when props change
+  useEffect(() => {
+    // Update document title for better UX
+    document.title = title;
+    
+    // Update meta description for dynamic content
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    }
+
+    // Update Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', title);
+    }
+
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', description);
+    }
+
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    if (ogImage) {
+      ogImage.setAttribute('content', ogImageUrl);
+    }
+
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute('content', canonicalUrl);
+    }
+  }, [title, description, ogImageUrl, canonicalUrl]);
+
+  // Generate robots meta content
+  const robotsContent = useMemo(() => {
+    const parts = [];
+    if (noindex) parts.push('noindex');
+    if (nofollow) parts.push('nofollow');
+    if (parts.length === 0) parts.push('index', 'follow');
+    return parts.join(', ');
+  }, [noindex, nofollow]);
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="robots" content={robotsContent} />
+      {author && <meta name="author" content={author} />}
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph Meta Tags */}
+      <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
+      <meta property="og:image" content={ogImageUrl} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ZionTechGroup" />
-      <meta name="twitter:creator" content="@ZionTechGroup" />
+      <meta name="twitter:image" content={ogImageUrl} />
+      {twitterCreator && <meta name="twitter:creator" content={twitterCreator} />}
+      {twitterSite && <meta name="twitter:site" content={twitterSite} />}
       
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
+      {/* Article-specific meta tags */}
+      {type === 'article' && (
+        <>
+          {author && <meta property="article:author" content={author} />}
+          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          {section && <meta property="article:section" content={section} />}
+          {tags?.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
       
-      {/* Robots Meta Tags */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
+      {/* Additional meta tags */}
+      {additionalMeta.map((meta, index) => (
+        <meta key={index} name={meta.name} content={meta.content} />
+      ))}
       
-      {/* Additional Meta Tags */}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0ea5e9" />
-      <meta name="msapplication-TileColor" content="#0ea5e9" />
-      
-      {/* Preconnect for Performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* Additional link tags */}
+      {additionalLinks.map((link, index) => (
+        <link key={index} rel={link.rel} href={link.href} />
+      ))}
       
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(generateStructuredData)}
+        </script>
+      )}
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
       
-      {/* Favicon Links */}
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      {/* DNS prefetch for common external domains */}
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
     </Helmet>
   );
 }
+
+// Hook for managing SEO state
+export const useSEO = (defaultProps: Partial<SEOProps> = {}) => {
+  const [seoProps, setSEOProps] = React.useState<SEOProps>({
+    title: 'Zion Tech Group',
+    description: 'Leading the future of technology with cutting-edge AI solutions, innovative micro SAAS platforms, and next-generation IT infrastructure.',
+    ...defaultProps
+  });
+
+  const updateSEO = React.useCallback((updates: Partial<SEOProps>) => {
+    setSEOProps(prev => ({ ...prev, ...updates }));
+  }, []);
+
+  const resetSEO = React.useCallback(() => {
+    setSEOProps({
+      title: 'Zion Tech Group',
+      description: 'Leading the future of technology with cutting-edge AI solutions, innovative micro SAAS platforms, and next-generation IT infrastructure.',
+      ...defaultProps
+    });
+  }, [defaultProps]);
+
+  return {
+    seoProps,
+    updateSEO,
+    resetSEO
+  };
+};
+
+// Predefined SEO configurations for common page types
+export const seoConfigs = {
+  home: {
+    title: 'Zion Tech Group - Leading the Future of Technology',
+    description: 'Empowering businesses with cutting-edge AI solutions, innovative micro SAAS platforms, and next-generation IT infrastructure that drives growth and transformation.',
+    keywords: 'AI solutions, micro SAAS, IT infrastructure, technology consulting, digital transformation',
+    type: 'website' as const,
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
+      description: 'Leading the future of technology with cutting-edge AI solutions and innovative platforms.',
+      sameAs: [
+        'https://linkedin.com/company/zion-tech-group',
+        'https://twitter.com/ziontechgroup'
+      ]
+    }
+  },
+  
+  services: {
+    title: 'Our Services - Zion Tech Group',
+    description: 'Discover our comprehensive range of AI-powered solutions, micro SAAS platforms, and IT infrastructure services designed to transform your business.',
+    keywords: 'AI services, micro SAAS platforms, IT solutions, business transformation, technology services',
+    type: 'service' as const
+  },
+  
+  about: {
+    title: 'About Us - Zion Tech Group',
+    description: 'Learn about Zion Tech Group\'s mission to revolutionize technology and empower businesses with innovative solutions for the future.',
+    keywords: 'about Zion Tech Group, company history, mission, vision, technology leadership',
+    type: 'website' as const
+  },
+  
+  contact: {
+    title: 'Contact Us - Zion Tech Group',
+    description: 'Get in touch with Zion Tech Group. We\'re here to help you transform your business with cutting-edge technology solutions.',
+    keywords: 'contact Zion Tech Group, support, consultation, business inquiry',
+    type: 'website' as const
+  },
+  
+  blog: {
+    title: 'Blog - Zion Tech Group',
+    description: 'Stay updated with the latest insights, trends, and innovations in technology from Zion Tech Group\'s expert team.',
+    keywords: 'technology blog, AI insights, tech trends, innovation news',
+    type: 'website' as const
+  }
+};
+
+// Utility function to generate SEO props for dynamic content
+export const generateSEOProps = (
+  pageType: keyof typeof seoConfigs,
+  customProps: Partial<SEOProps> = {}
+): SEOProps => {
+  const baseConfig = seoConfigs[pageType];
+  return {
+    ...baseConfig,
+    ...customProps
+  };
+};
+
+// Utility function to generate article SEO props
+export const generateArticleSEO = (
+  article: {
+    title: string;
+    description: string;
+    author?: string;
+    publishedTime?: string;
+    modifiedTime?: string;
+    tags?: string[];
+    image?: string;
+  }
+): SEOProps => ({
+  title: `${article.title} - Zion Tech Group Blog`,
+  description: article.description,
+  keywords: article.tags?.join(', '),
+  image: article.image,
+  type: 'article',
+  author: article.author,
+  publishedTime: article.publishedTime,
+  modifiedTime: article.modifiedTime,
+  tags: article.tags,
+  structuredData: {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.description,
+    image: article.image,
+    author: article.author ? { '@type': 'Person', name: article.author } : undefined,
+    datePublished: article.publishedTime,
+    dateModified: article.modifiedTime,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://ziontechgroup.com/logo.png'
+      }
+    }
+  }
+});
