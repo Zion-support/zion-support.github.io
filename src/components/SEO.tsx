@@ -1,64 +1,40 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
   title: string;
   description: string;
-  keywords?: string[];
-  author?: string;
+  keywords?: string;
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'service';
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  canonical?: string;
   noindex?: boolean;
-  nofollow?: boolean;
-  children?: React.ReactNode;
   structuredData?: object;
 }
 
-export function SEO({
-  title,
-  description,
-  keywords = [],
-  author = 'Zion Tech Group',
-  image = '/images/zion-tech-group-og.jpg',
-  url,
+export function SEO({ 
+  title, 
+  description, 
+  keywords, 
+  image, 
+  url, 
   type = 'website',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  canonical,
   noindex = false,
-  nofollow = false,
-  children,
-  structuredData,
+  structuredData 
 }: SEOProps) {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url || window.location.href;
-  const fullImage = image.startsWith('http') ? image : `${window.location.origin}${image}`;
-
-  const metaKeywords = [
-    'Zion Tech Group',
-    'AI Solutions',
-    'Cybersecurity',
-    'Cloud Services',
-    'Digital Transformation',
-    'IT Consulting',
-    'Technology Services',
-    ...keywords
-  ].join(', ');
-
+  const siteName = 'Zion Tech Group';
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const defaultImage = '/images/zion-tech-group-og.jpg';
+  const defaultUrl = 'https://ziontechgroup.com';
+  
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-    "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud services, and digital transformation.",
+    "description": "Leading provider of AI-powered business solutions, IT services, and innovative technology solutions for modern enterprises.",
+    "foundingDate": "2014",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US"
@@ -70,80 +46,70 @@ export function SEO({
     },
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
-    ]
+      "https://twitter.com/ziontechgroup",
+      "https://facebook.com/ziontechgroup"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "category": "Technology Services"
+    }
   };
 
-  const finalStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
-
-  // Update document title and meta tags
-  React.useEffect(() => {
-    // Update document title
-    document.title = fullTitle;
-    
-    // Update or create meta tags
-    const updateMetaTag = (name: string, content: string, property?: string) => {
-      const selector = property ? `meta[property="${property}"]` : `meta[name="${name}"]`;
-      let meta = document.querySelector(selector) as HTMLMetaElement;
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
       
-      if (!meta) {
-        meta = document.createElement('meta');
-        if (property) {
-          meta.setAttribute('property', property);
-        } else {
-          meta.setAttribute('name', name);
-        }
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', content);
-    };
-
-    // Basic meta tags
-    updateMetaTag('description', description);
-    updateMetaTag('keywords', metaKeywords);
-    updateMetaTag('author', author);
-    updateMetaTag('robots', `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`);
-    
-    // Open Graph meta tags
-    updateMetaTag('og:title', fullTitle, 'og:title');
-    updateMetaTag('og:description', description, 'og:description');
-    updateMetaTag('og:type', type, 'og:type');
-    updateMetaTag('og:url', fullUrl, 'og:url');
-    updateMetaTag('og:image', fullImage, 'og:image');
-    updateMetaTag('og:site_name', 'Zion Tech Group', 'og:site_name');
-    
-    // Twitter Card meta tags
-    updateMetaTag('twitter:card', 'summary_large_image', 'twitter:card');
-    updateMetaTag('twitter:title', fullTitle, 'twitter:title');
-    updateMetaTag('twitter:description', description, 'twitter:description');
-    updateMetaTag('twitter:image', fullImage, 'twitter:image');
-    
-    // Canonical URL
-    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonicalLink);
-    }
-    canonicalLink.setAttribute('href', canonical || fullUrl);
-    
-    // Structured data
-    let script = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement;
-    if (!script) {
-      script = document.createElement('script');
-      script.setAttribute('type', 'application/ld+json');
-      document.head.appendChild(script);
-    }
-    script.textContent = JSON.stringify(finalStructuredData);
-    
-    // Cleanup function
-    return () => {
-      // Reset title to default
-      document.title = 'Zion Tech Group';
-    };
-  }, [fullTitle, description, metaKeywords, author, noindex, nofollow, type, fullUrl, fullImage, canonical, finalStructuredData]);
-
-  return null; // Component renders nothing, manages SEO via side effects
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url || defaultUrl} />
+      <meta property="og:image" content={image || defaultImage} />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image || defaultImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#2e73ea" />
+      <meta name="msapplication-TileColor" content="#2e73ea" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={url || defaultUrl} />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData || defaultStructuredData)}
+      </script>
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://images.unsplash.com" />
+      
+      {/* DNS Prefetch for performance */}
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    </Helmet>
+  );
 }
 
 export const SEOPresets = {
