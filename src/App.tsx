@@ -46,6 +46,7 @@ const Partners = createLazyComponent(() => import('./pages/Partners'));
 const News = createLazyComponent(() => import('./pages/News'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 const HelpCenter = createLazyComponent(() => import('./pages/HelpCenter'));
+const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
 // Enhanced loading component
 const EnhancedLoadingSpinner = () => (
@@ -101,6 +102,7 @@ function App() {
               <Route path="/news" element={<News />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/help" element={<HelpCenter />} />
+              <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
               
               {/* Catch-all route */}
               <Route path="*" element={<Home />} />
