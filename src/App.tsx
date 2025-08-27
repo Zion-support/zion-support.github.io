@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { FuturisticNavigation } from './components/FuturisticNavigation';
 import { FuturisticFooter } from './components/FuturisticFooter';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
+import { AIChatbotSystem } from './components/AIChatbotSystem';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { AccessibilityProvider } from './components/AccessibilityProvider';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
@@ -11,7 +12,15 @@ import { SEO } from './components/SEO';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/about'));
+const Contact = React.lazy(() => import('./pages/contact'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
+const CaseStudies = React.lazy(() => import('./pages/case-studies'));
+const Events = React.lazy(() => import('./pages/events'));
+const Products = React.lazy(() => import('./pages/products'));
+const ResearchDevelopment = React.lazy(() => import('./pages/research-development'));
+const Solutions = React.lazy(() => import('./pages/solutions'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 
 // Enhanced loading component with better UX
@@ -53,7 +62,15 @@ function App() {
                   <Routes>
                     {/* Main Routes */}
                     <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/blog/:slug" element={<BlogPost />} />
                     <Route path="/services" element={<Services />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
+                    <Route path="/events" element={<Events />} />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/research-development" element={<ResearchDevelopment />} />
+                    <Route path="/solutions" element={<Solutions />} />
                     <Route path="/green-it" element={<GreenIT />} />
                     
                     {/* Emerging Tech Routes */}
@@ -69,6 +86,9 @@ function App() {
               
               {/* Footer */}
               <FuturisticFooter />
+              
+              {/* AI Chatbot System */}
+              <AIChatbotSystem />
               
               {/* Performance Monitor */}
               <PerformanceMonitor />

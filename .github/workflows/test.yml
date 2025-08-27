@@ -37,28 +37,6 @@ jobs:
             echo "Build failed: dist folder not found"
             exit 1
           fi
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
-<<<<<<< HEAD
-          echo "✅ Build output verified - dist folder exists"
-      - name: Verify asset paths
-        run: |
-          echo "📁 Build contents:"
-          ls -la dist/
-          echo "📊 Build size:"
-          du -sh dist/
-      - name: Run type checking
-        run: npm run type-check
-      - name: Run linting
-        run: npm run lint
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
->>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
           echo "Build completed successfully"
           
       - name: Verify asset paths
@@ -104,35 +82,12 @@ jobs:
           path: coverage
         continue-on-error: true
         
-<<<<<<< HEAD
->>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
->>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: build
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           path: out
           retention-days: 30
-=======
->>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
-<<<<<<< HEAD
-          path: dist
-=======
-          path: out
-          retention-days: 30
->>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
-<<<<<<< HEAD
-=======
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
->>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

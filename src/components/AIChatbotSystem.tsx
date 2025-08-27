@@ -61,7 +61,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
+  const [showSettingsPanel, setShowSettingsPanel] = useState(false);
   const [settings, setSettings] = useState({
     voiceEnabled: false,
     autoResponse: true,
@@ -256,9 +256,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   </div>
                   
                   <div className="flex items-center gap-2">
-                    {showSettings && (
+                    {showSettingsPanel && (
                       <button
-                        onClick={() => setShowSettings(!showSettings)}
+                        onClick={() => setShowSettingsPanel(!showSettingsPanel)}
                         className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                         aria-label="Chat settings"
                       >
@@ -279,7 +279,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
             {/* Settings Panel */}
             <AnimatePresence>
-              {showSettings && (
+              {showSettingsPanel && (
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}

@@ -170,6 +170,25 @@ const Home: React.FC = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Floating Elements */}
+        <div className="relative">
+          <motion.div
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-20 left-10 w-20 h-20 border border-zion-cyan/20 rounded-full"
+          />
+          <motion.div
+            animate={{ y: [0, 20, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-40 right-20 w-16 h-16 border border-zion-purple/20 rounded-full"
+          />
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute bottom-40 left-1/4 w-12 h-12 border border-zion-blue/20 rounded-full"
+          />
+        </div>
       </section>
 
       {/* Enhanced Service Showcase */}
