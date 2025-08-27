@@ -53,7 +53,10 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME)
       .then(cache => {
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
+>>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -92,11 +95,14 @@ self.addEventListener('fetch', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
 =======
+>>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
 <<<<<<< HEAD
     caches.keys().then(cacheNames => {
       return Promise.all(

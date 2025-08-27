@@ -6,6 +6,9 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
+<<<<<<< HEAD
 Sitemap: https://ziontechgroup.com/sitemap
 
 # Allow all crawlers
@@ -19,7 +22,10 @@ Allow: /privacy
 Allow: /terms
 =======
 >>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
+<<<<<<< HEAD
+=======
 >>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
+>>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
 
 # Disallow admin and private areas
 Disallow: /admin/
@@ -75,6 +81,10 @@ Disallow: /
 User-agent: Omgilibot
 Disallow: /
 <<<<<<< HEAD
+>>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
 >>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
+>>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
