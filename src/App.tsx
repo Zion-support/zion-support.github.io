@@ -7,6 +7,8 @@ import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { AppWrapper } from './AppWrapper';
+import { PerformanceMonitor } from './components/ui/performance-monitor';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -97,8 +99,6 @@ const Careers = () => (
     </div>
   </div>
 );
-
-// (Removed inline Marketplace placeholder; we now use the dedicated page component)
 
 const NotFound = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -211,6 +211,7 @@ function App() {
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
+        <PerformanceMonitor enabled={true} autoRefresh={true} />
       </div>
     </ErrorBoundary>
   );
