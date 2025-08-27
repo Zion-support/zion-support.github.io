@@ -11,7 +11,10 @@ const Layout = ({ children }: LayoutProps) => {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
-    { name: 'Products', href: '/products', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'Research', href: '/research-development', current: false },
+    { name: 'Case Studies', href: '/case-studies', current: false },
+    { name: 'Events', href: '/events', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
@@ -27,6 +30,10 @@ const Layout = ({ children }: LayoutProps) => {
     { name: 'IoT Platforms', href: '/services#iot-platforms' },
     { name: 'Emerging Tech Services', href: '/emerging-tech-services' },
     { name: 'Advanced Cybersecurity', href: '/advanced-cybersecurity' },
+    { name: 'Solutions Overview', href: '/solutions' },
+    { name: 'Research & Development', href: '/research-development' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Events & Webinars', href: '/events' },
     { name: 'Expanded Services 2027', href: '/expanded-services-2027/' },
     { name: 'Pricing Guide 2027', href: '/expanded-services-pricing-2027/' },
   ];
