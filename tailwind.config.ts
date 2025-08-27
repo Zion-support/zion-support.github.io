@@ -4,13 +4,13 @@ import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
 
 const config: Config = {
-<<<<<<< HEAD
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./index.html",
   ],
   safelist: ['border-border'],
   theme: {
@@ -83,12 +83,6 @@ const config: Config = {
           dark: "#14847e",
           glow: "#22ddd2",
         },
-        "zion-purple": {
-          DEFAULT: "#8c15e9",
-          light: "#b971f2",
-          dark: "#530c8b",
-          neon: "#b971f2",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -148,20 +142,3 @@ const config: Config = {
 };
 
 export default config;
-=======
-	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', './components/**/*.{ts,tsx}', './pages/**/*.{ts,tsx}'],
-	theme: {
-		extend: {
-			colors: {
-				'zion-blue': { DEFAULT: '#1e3a8a', dark: '#172554', light: '#3b82f6' },
-				'zion-purple': { DEFAULT: '#8c15e9', dark: '#6b21a8', light: '#a855f7' },
-				'zion-cyan': { DEFAULT: '#22ddd2', dark: '#14b8a6', light: '#5fe8e0' },
-				'zion-slate': { DEFAULT: '#64748b', dark: '#334155', light: '#94a3b8' },
-			},
-		},
-	},
-	plugins: [],
-}
-
-export default config
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

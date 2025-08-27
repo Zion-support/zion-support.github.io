@@ -1,46 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Logo } from './Logo';
-import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
-<<<<<<< HEAD
-import { MainNavigation } from '@/layout/MainNavigation';
-import { MobileMenu } from './MobileMenu';
-import { useAuth } from '@/hooks/useAuth';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
-import { Menu, X, Search as SearchIcon, Sparkles } from "lucide-react";
-=======
 import { Button } from '@/components/ui/Button';
 import { Menu, X, Search, Phone, Mail } from 'lucide-react';
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-<<<<<<< HEAD
-  const searchSuggestions = generateSearchSuggestions();
-  
-  // If we have a white-label tenant and no specific customTheme is provided,
-  // use the tenant's primary color
-  const effectiveTheme = customTheme || (isWhitelabel ? {
-    primaryColor,
-    backgroundColor: '#000000', // Default dark background
-    textColor: '#ffffff', // Default light text
-  } : undefined);
-  
-  const headerStyle = effectiveTheme ? {
-    backgroundColor: effectiveTheme.backgroundColor,
-    color: effectiveTheme.textColor,
-    borderColor: `${effectiveTheme.primaryColor}20`
-  } : {};
-=======
   const location = useLocation();
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,10 +23,7 @@ export function Header() {
   const navigationItems = [
     { name: 'Home', path: '/', hasDropdown: false },
     { name: 'Services', path: '/services', hasDropdown: true },
-    { name: 'Talent', path: '/talent', hasDropdown: true },
-    { name: 'Equipment', path: '/equipment', hasDropdown: false },
     { name: 'About', path: '/about', hasDropdown: false },
-    { name: 'Pricing', path: '/pricing', hasDropdown: false },
     { name: 'Contact', path: '/contact', hasDropdown: false },
     { name: 'Blog', path: '/blog', hasDropdown: false },
   ];
@@ -69,450 +33,141 @@ export function Header() {
     { name: 'AI Services', path: '/services/ai' },
     { name: 'Cybersecurity', path: '/services/cybersecurity' },
     { name: 'Green IT', path: '/green-it' },
-    { name: 'On-Site Support', path: '/it-onsite-services' },
-    { name: 'Revolutionary Services 2025', path: '/revolutionary-services-2025' },
-  ];
-
-  const talentDropdownItems = [
-    { name: 'Browse Talents', path: '/talents' },
-    { name: 'Talent Directory', path: '/talent' },
-    { name: 'AI Matcher', path: '/match' },
-    { name: 'Hire Now', path: '/contact' },
+    { name: 'Enhanced Services', path: '/enhanced-services' },
   ];
 
   return (
-<<<<<<< HEAD
     <header 
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-purple-dark/95 to-zion-slate-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10"
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-slate-dark/95 to-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md neon-pulse"
-      style={headerStyle}
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20' 
+          : 'bg-slate-900/80 backdrop-blur-sm border-b border-transparent'
+      }`}
     >
-      {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
-      
-      {/* Glowing border effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" />
-      
-      <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
-        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
-
-        {/* Desktop Navigation */}
-
-        {/* Search Bar */}
-        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
-        <div className="ml-6 flex-1 hidden md:block">
-          <MainNavigation />
-        </div>
-
-        {/* Desktop Search */}
-        <form onSubmit={handleSubmit} className="hidden lg:block w-64 mx-4">
-          <EnhancedSearchInput
-            value={query}
-            onChange={setQuery}
-            onSelectSuggestion={(text) => {
-              navigate(`/search?q=${encodeURIComponent(text)}`);
-              setQuery("");
-            }}
-            searchSuggestions={searchSuggestions}
-          />
-        </form>
-
-      </div>
-      
-      {/* Animated Header Border */}
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
-        {/* Desktop Actions */}
-        <div className="hidden lg:flex items-center gap-3">
-          <Button 
-            asChild 
-            variant="outline" 
-            className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"
-          >
-            <Link to="/pricing">
-              <Sparkles className="h-4 w-4 mr-2" />
-              Pricing
-            </Link>
-          </Button>
-        {/* Desktop Actions */}
-        <div className="flex items-center gap-2 hidden md:flex">
-          <LanguageSelector />
-          {!hideLogin && <UserMenu />}
-        </div>
-
-        {/* Mobile Menu */}
-        <MobileMenu className="md:hidden" />
-      </div>
-    <>
-      <header 
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20' 
-            : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'
-        }`}
-        style={headerStyle}
-      >
-        <div className="container flex h-16 items-center px-4 sm:px-6">
-          <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Logo />
+          </div>
 
           {/* Desktop Navigation */}
-          <div className="ml-6 flex-1 hidden lg:block">
-            <MainNavigation />
-          </div>
-
-          {/* Search Bar */}
-          <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <EnhancedSearchInput
-                value={query}
-                onChange={setQuery}
-                onSelectSuggestion={(text) => {
-                  navigate(`/search?q=${encodeURIComponent(text)}`);
-                  setQuery("");
-                }}
-                searchSuggestions={searchSuggestions}
-              />
-              <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                <SearchIcon className="h-4 w-4 text-zion-slate-light" />
-              </div>
-=======
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
-        : 'bg-transparent'
-    }`}>
-      {/* Top bar */}
-      <div className="bg-zion-blue text-white text-sm py-2">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <Phone className="h-4 w-4" />
-              <span>+1 302 464 0950</span>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-            </div>
-            <div className="flex items-center space-x-2">
-              <Mail className="h-4 w-4" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <LanguageSelector />
-            <UserMenu />
-          </div>
-        </div>
-      </div>
-
-      {/* Main navigation */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
-            <Logo />
-            
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
-                  {item.hasDropdown ? (
-                    <div className="relative">
-                      <button className={`flex items-center space-x-1 py-2 px-3 rounded-lg transition-colors ${
-                        isActive(item.path)
-                          ? 'text-zion-blue bg-zion-blue/10'
-                          : 'text-gray-700 hover:text-zion-blue hover:bg-gray-50'
-                      }`}>
-                        <span>{item.name}</span>
-                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      
-                      <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
-                        <div className="py-2">
-                          {item.name === 'Services' && serviceDropdownItems.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              to={subItem.path}
-                              className="block px-4 py-3 text-gray-700 hover:text-zion-blue hover:bg-zion-blue/5 transition-colors"
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                          {item.name === 'Talent' && talentDropdownItems.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              to={subItem.path}
-                              className="block px-4 py-3 text-gray-700 hover:text-zion-blue hover:bg-zion-blue/5 transition-colors"
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
+          <nav className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <div key={item.name} className="relative group">
+                <Link
+                  to={item.path}
+                  className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    isActive(item.path)
+                      ? 'text-cyan-400 bg-cyan-500/10'
+                      : 'text-gray-300 hover:text-white hover:bg-slate-800/50'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+                
+                {/* Dropdown for Services */}
+                {item.hasDropdown && item.name === 'Services' && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 border border-slate-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
+                      {serviceDropdownItems.map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.path}
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
                     </div>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      className={`py-2 px-3 rounded-lg transition-colors ${
-                        isActive(item.path)
-                          ? 'text-zion-blue bg-zion-blue/10'
-                          : 'text-gray-700 hover:text-zion-blue hover:bg-gray-50'
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </nav>
-
-            {/* Desktop CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <Button variant="outline" size="sm">
-                <Search className="h-4 w-4 mr-2" />
-                Search
-              </Button>
-              <Button size="sm">
-                Get Started
-              </Button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="lg:hidden p-2 rounded-lg text-gray-700 hover:text-zion-blue hover:bg-gray-50"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-
-<<<<<<< HEAD
-        {/* Mobile Search Bar */}
-        <div className="lg:hidden px-4 pb-4">
-          <form onSubmit={handleSubmit}>
-            <div className="relative">
-              <EnhancedSearchInput
-                value={query}
-                onChange={setQuery}
-                onSelectSuggestion={(text) => {
-                  navigate(`/search?q=${encodeURIComponent(text)}`);
-                  setQuery("");
-                }}
-                searchSuggestions={searchSuggestions}
-                placeholder="Search services, talent, equipment..."
-              />
-              <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                <SearchIcon className="h-4 w-4 text-zion-slate-light" />
-              </div>
-            </div>
-          </form>
-        </div>
-      </header>
-
-      {/* Mobile Navigation Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-40 bg-zion-blue-dark/95 backdrop-blur-xl">
-          <div className="flex flex-col h-full">
-            <div className="flex justify-between items-center p-4 border-b border-zion-purple/30">
-              <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
-              <button
-                onClick={toggleMobileMenu}
-                className="p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10"
-              >
-                <X className="h-5 w-5" />
-              </button>
-            </div>
-            
-            <nav className="flex-1 p-4">
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    to="/"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-=======
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
-          <div className="container mx-auto px-4 py-4">
-            <nav className="space-y-2">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  <Link
-                    to={item.path}
-                    className={`block py-3 px-4 rounded-lg transition-colors ${
-                      isActive(item.path)
-                        ? 'text-zion-blue bg-zion-blue/10'
-                        : 'text-gray-700 hover:text-zion-blue hover:bg-gray-50'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-                  >
-                    {item.name}
-                  </Link>
-<<<<<<< HEAD
-                </li>
-                <li>
-                  <Link
-                    to="/services"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/talent"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
-                    Talent
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/equipment"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
-                    Equipment
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/community"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
-                    Community
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/ai-content-generator"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
-                    AI Content Generator
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/cybersecurity-suite"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
-                    Cybersecurity Suite
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/cloud-optimizer"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
-                    Cloud Cost Optimizer
-                  </Link>
-                </li>
-                {user && (
-                  <li>
-                    <Link
-                      to="/dashboard"
-                      onClick={toggleMobileMenu}
-                      className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                    >
-                      Dashboard
-                    </Link>
-                  </li>
-                )}
-              </ul>
-            </nav>
-
-            <div className="p-4 border-t border-zion-purple/30">
-              <div className="flex flex-col gap-3">
-                <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-medium hover:from-zion-purple-light hover:to-zion-cyan-light transition-all duration-300">
-                  <Sparkles className="h-4 w-4" />
-                  AI Assistant
-                </button>
-                {!user && (
-                  <div className="flex gap-2">
-                    <Link
-                      to="/login"
-                      onClick={toggleMobileMenu}
-                      className="flex-1 px-4 py-2 text-center rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      to="/signup"
-                      onClick={toggleMobileMenu}
-                      className="flex-1 px-4 py-2 text-center rounded-lg bg-zion-purple text-white hover:bg-zion-purple-dark transition-colors"
-                    >
-                      Sign Up
-                    </Link>
                   </div>
                 )}
               </div>
-=======
-                  
-                  {/* Mobile Dropdown Items */}
-                  {item.hasDropdown && item.name === 'Services' && (
-                    <div className="ml-4 mt-2 space-y-1">
-                      {serviceDropdownItems.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.path}
-                          className="block py-2 px-4 text-gray-600 hover:text-zion-blue transition-colors"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          • {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                  
-                  {item.hasDropdown && item.name === 'Talent' && (
-                    <div className="ml-4 mt-2 space-y-1">
-                      {talentDropdownItems.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.path}
-                          className="block py-2 px-4 text-gray-600 hover:text-zion-blue transition-colors"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          • {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </nav>
-            
-            {/* Mobile CTA Buttons */}
-            <div className="mt-6 pt-6 border-t border-gray-200 space-y-3">
-              <Button variant="outline" className="w-full">
-                <Search className="h-4 w-4 mr-2" />
-                Search
-              </Button>
-              <Button className="w-full">
-                Get Started
-              </Button>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-            </div>
+            ))}
+          </nav>
+
+          {/* Right side - Search and CTA */}
+          <div className="hidden md:flex items-center space-x-4">
+            {/* Search Button */}
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-gray-300 hover:text-white hover:bg-slate-800/50"
+            >
+              <Search className="h-4 w-4" />
+            </Button>
+
+            {/* Contact CTA */}
+            <Button
+              asChild
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white"
+            >
+              <Link to="/contact">Get Started</Link>
+            </Button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-300 hover:text-white hover:bg-slate-800/50"
+            >
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
           </div>
         </div>
-      )}
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/50 rounded-lg mt-2 border border-slate-700">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
+                    isActive(item.path)
+                      ? 'text-cyan-400 bg-cyan-500/10'
+                      : 'text-gray-300 hover:text-white hover:bg-slate-700/50'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              
+              {/* Mobile Services Dropdown */}
+              <div className="px-3 py-2">
+                <div className="text-sm font-medium text-gray-400 mb-2">Services:</div>
+                {serviceDropdownItems.map((service) => (
+                  <Link
+                    key={service.name}
+                    to={service.path}
+                    className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700/50 rounded transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Mobile CTA */}
+              <div className="px-3 pt-2">
+                <Button
+                  asChild
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white"
+                >
+                  <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                    Get Started
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </header>
-<<<<<<< HEAD
-    </>
-=======
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
   );
 }
