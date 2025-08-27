@@ -4,7 +4,7 @@
 
 [build]
   # Use `yarn install` for deterministic installs, Vite builds to dist/
-  command = "yarn cache clean && yarn install --frozen-lockfile && yarn build"
+  command = "corepack disable && npm i -g yarn@1.22.22 && yarn cache clean && yarn install --frozen-lockfile && yarn build"
   publish = "dist"
 
 [build.environment]
