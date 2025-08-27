@@ -1,22 +1,54 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { cn } from '../../utils/cn';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Loader2, 
+  Clock, 
+  CheckCircle, 
+  AlertCircle, 
+  Pause, 
+  Play,
+  RotateCcw,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Rocket
+} from 'lucide-react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'white' | 'gray';
-  className?: string;
-  showText?: boolean;
+  variant?: 'default' | 'pulse' | 'bounce' | 'spin' | 'wave' | 'dots' | 'bars';
+  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info';
   text?: string;
+  showProgress?: boolean;
+  progress?: number;
+  showPercentage?: boolean;
+  timeout?: number;
+  onTimeout?: () => void;
+  showSkeleton?: boolean;
+  skeletonLines?: number;
+  theme?: 'light' | 'dark' | 'auto';
 }
 
-export default function LoadingSpinner({ 
-  size = 'md', 
+export default function LoadingSpinner({
+  size = 'md',
+  variant = 'default',
   color = 'primary',
-  className = '',
-  showText = false,
-  text = 'Loading...'
+  text,
+  showProgress = false,
+  progress = 0,
+  showPercentage = false,
+  timeout = 30000,
+  onTimeout,
+  showSkeleton = false,
+  skeletonLines = 3,
+  theme = 'auto'
 }: LoadingSpinnerProps) {
+  const [timeoutReached, setTimeoutReached] = useState(false);
+  const [currentProgress, setCurrentProgress] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Size classes
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -24,29 +56,287 @@ export default function LoadingSpinner({
     xl: 'w-16 h-16'
   };
 
+  // Color classes
   const colorClasses = {
-    primary: 'border-cyan-400 border-t-transparent',
-    white: 'border-white border-t-transparent',
-    gray: 'border-gray-400 border-t-transparent'
+    primary: 'text-blue-500',
+    secondary: 'text-gray-500',
+    success: 'text-green-500',
+    warning: 'text-yellow-500',
+    error: 'text-red-500',
+    info: 'text-cyan-500'
+  };
+
+  // Theme classes
+  const themeClasses = {
+    light: 'bg-white text-gray-900',
+    dark: 'bg-gray-900 text-white',
+    auto: 'bg-white dark:bg-gray-900 text-gray-900 dark:text-white'
+  };
+
+  // Progress simulation
+  useEffect(() => {
+    if (showProgress && progress === 0) {
+      const interval = setInterval(() => {
+        if (!isPaused) {
+          setCurrentProgress(prev => {
+            if (prev >= 100) {
+              clearInterval(interval);
+              return 100;
+            }
+            return prev + Math.random() * 15;
+          });
+        }
+      }, 200);
+
+      return () => clearInterval(interval);
+    } else if (progress > 0) {
+      setCurrentProgress(progress);
+    }
+  }, [showProgress, progress, isPaused]);
+
+  // Timeout handling
+  useEffect(() => {
+    if (timeout > 0) {
+      const timer = setTimeout(() => {
+        setTimeoutReached(true);
+        onTimeout?.();
+      }, timeout);
+
+      return () => clearTimeout(timer);
+    }
+  }, [timeout, onTimeout]);
+
+  // Loading variants
+  const renderSpinner = () => {
+    const baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
+
+    switch (variant) {
+      case 'pulse':
+        return (
+          <motion.div
+            className={`${baseClasses} rounded-full bg-current`}
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+        );
+
+      case 'bounce':
+        return (
+          <motion.div
+            className={`${baseClasses} rounded-full bg-current`}
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+          />
+        );
+
+      case 'spin':
+        return (
+          <motion.div
+            className={`${baseClasses} rounded-full border-2 border-current border-t-transparent`}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          />
+        );
+
+      case 'wave':
+        return (
+          <div className="flex items-center gap-1">
+            {[0, 1, 2, 3].map((i) => (
+              <motion.div
+                key={i}
+                className={`w-1 h-4 bg-current rounded-full`}
+                animate={{ scaleY: [1, 2, 1] }}
+                transition={{ duration: 0.6, repeat: Infinity, delay: i * 0.1 }}
+              />
+            ))}
+          </div>
+        );
+
+      case 'dots':
+        return (
+          <div className="flex items-center gap-1">
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={i}
+                className={`w-2 h-2 bg-current rounded-full`}
+                animate={{ opacity: [0.3, 1, 0.3] }}
+                transition={{ duration: 1.4, repeat: Infinity, delay: i * 0.2 }}
+              />
+            ))}
+          </div>
+        );
+
+      case 'bars':
+        return (
+          <div className="flex items-center gap-1">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <motion.div
+                key={i}
+                className={`w-1 h-6 bg-current rounded-full`}
+                animate={{ scaleY: [0.3, 1, 0.3] }}
+                transition={{ duration: 1, repeat: Infinity, delay: i * 0.1 }}
+              />
+            ))}
+          </div>
+        );
+
+      default:
+        return (
+          <motion.div
+            className={`${baseClasses} rounded-full border-2 border-current border-t-transparent`}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+          />
+        );
+    }
+  };
+
+  // Skeleton loader
+  const renderSkeleton = () => {
+    if (!showSkeleton) return null;
+
+    return (
+      <div className="space-y-3 animate-pulse">
+        {Array.from({ length: skeletonLines }).map((_, i) => (
+          <div
+            key={i}
+            className={`h-4 bg-gray-200 dark:bg-gray-700 rounded ${
+              i === 0 ? 'w-3/4' : i === 1 ? 'w-1/2' : 'w-5/6'
+            }`}
+          />
+        ))}
+      </div>
+    );
+  };
+
+  // Progress bar
+  const renderProgress = () => {
+    if (!showProgress) return null;
+
+    return (
+      <div className="w-full max-w-xs">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            Loading...
+          </span>
+          {showPercentage && (
+            <span className="text-sm text-gray-500 dark:text-gray-400">
+              {Math.round(currentProgress)}%
+            </span>
+          )}
+        </div>
+        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+          <motion.div
+            className={`h-2 rounded-full ${
+              color === 'primary' ? 'bg-blue-500' :
+              color === 'success' ? 'bg-green-500' :
+              color === 'warning' ? 'bg-yellow-500' :
+              color === 'error' ? 'bg-red-500' :
+              color === 'info' ? 'bg-cyan-500' :
+              'bg-gray-500'
+            }`}
+            initial={{ width: 0 }}
+            animate={{ width: `${currentProgress}%` }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          />
+        </div>
+        <div className="flex items-center justify-between mt-2">
+          <button
+            onClick={() => setIsPaused(!isPaused)}
+            className="text-xs text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+          >
+            {isPaused ? <Play className="w-3 h-3" /> : <Pause className="w-3 h-3" />}
+          </button>
+          <button
+            onClick={() => setCurrentProgress(0)}
+            className="text-xs text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+          >
+            <RotateCcw className="w-3 h-3" />
+          </button>
+        </div>
+      </div>
+    );
+  };
+
+  // Timeout warning
+  const renderTimeoutWarning = () => {
+    if (!timeoutReached) return null;
+
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg"
+      >
+        <div className="flex items-center gap-2 text-yellow-800 dark:text-yellow-200">
+          <Clock className="w-4 h-4" />
+          <span className="text-sm">Loading is taking longer than expected</span>
+        </div>
+        <p className="text-xs text-yellow-600 dark:text-yellow-300 mt-1">
+          Please check your connection or try refreshing the page
+        </p>
+      </motion.div>
+    );
+  };
+
+  // Icon selection based on context
+  const getContextIcon = () => {
+    if (text?.toLowerCase().includes('ai') || text?.toLowerCase().includes('brain')) {
+      return <Brain className="w-4 h-4" />;
+    }
+    if (text?.toLowerCase().includes('cloud') || text?.toLowerCase().includes('deploy')) {
+      return <Cloud className="w-4 h-4" />;
+    }
+    if (text?.toLowerCase().includes('security') || text?.toLowerCase().includes('shield')) {
+      return <Shield className="w-4 h-4" />;
+    }
+    if (text?.toLowerCase().includes('launch') || text?.toLowerCase().includes('rocket')) {
+      return <Rocket className="w-4 h-4" />;
+    }
+    return <Zap className="w-4 h-4" />;
   };
 
   return (
-    <div className={cn('flex flex-col items-center justify-center', className)}>
-      <div className={cn(
-        'animate-spin rounded-full border-2',
-        sizeClasses[size],
-        colorClasses[color]
-      )} />
-      {showText && (
-        <motion.p
+    <div className={`flex flex-col items-center justify-center p-6 rounded-lg ${themeClasses[theme]}`}>
+      {/* Main Spinner */}
+      <div className="flex items-center justify-center mb-4">
+        {renderSpinner()}
+      </div>
+
+      {/* Loading Text */}
+      {text && (
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="mt-2 text-sm text-gray-500"
+          className="flex items-center gap-2 mb-4"
         >
-          {text}
-        </motion.p>
+          {getContextIcon()}
+          <span className="text-sm font-medium">{text}</span>
+        </motion.div>
       )}
+
+      {/* Progress Bar */}
+      {renderProgress()}
+
+      {/* Skeleton Loader */}
+      {renderSkeleton()}
+
+      {/* Timeout Warning */}
+      {renderTimeoutWarning()}
+
+      {/* Loading Tips */}
+      <AnimatePresence>
+        {showProgress && currentProgress > 0 && currentProgress < 100 && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="mt-4 text-xs text-gray-500 dark:text-gray-400 text-center max-w-xs"
+          >
+            <p>Please wait while we prepare your content...</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -85,7 +375,7 @@ export function ButtonLoader({
   className?: string;
 }) {
   return (
-    <div className={cn('inline-flex items-center', className)}>
+    <div className={`inline-flex items-center ${className}`}>
       <LoadingSpinner size={size} color="white" />
       <span className="ml-2">Loading...</span>
     </div>
