@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle } from 'lucide-react';
+import { ThemeToggle } from '../components/ThemeToggle';
+import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,10 +20,16 @@ export function AppHeader() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+      setIsSearching(true);
+      try {
+        await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate search
+        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+      } finally {
+        setIsSearching(false);
+      }
     }
   };
 
@@ -153,6 +162,9 @@ export function AppHeader() {
 
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
+              {/* Theme Toggle */}
+              <ThemeToggle />
+              
               {/* Search */}
               <form onSubmit={handleSearch} className="hidden md:block relative">
                 <div className="relative">
@@ -164,6 +176,17 @@ export function AppHeader() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-64 pl-10 pr-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
                   />
+                  <button
+                    type="submit"
+                    disabled={isSearching}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors p-1.5 hover:bg-zion-cyan/10 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSearching ? (
+                      <ZionLoadingSpinner size="sm" />
+                    ) : (
+                      <Search className="h-4 w-4" />
+                    )}
+                  </button>
                 </div>
               </form>
 
@@ -211,6 +234,17 @@ export function AppHeader() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
                   />
+                  <button
+                    type="submit"
+                    disabled={isSearching}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-cyan p-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSearching ? (
+                      <ZionLoadingSpinner size="sm" />
+                    ) : (
+                      <Search className="h-5 w-5" />
+                    )}
+                  </button>
                 </div>
               </form>
 

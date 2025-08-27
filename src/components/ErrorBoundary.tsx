@@ -211,9 +211,31 @@ export class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
 
-export default ErrorBoundary;
+// Optional: A hook to manually trigger an error boundary from a functional component
+export function useErrorHandler() {
+  const [error, setError] = React.useState<Error | null>(null);
+  React.useEffect(() => {
+    if (error) {
+      throw error;
+    }
+  }, [error]);
+  return setError;
+}
+
+// Optional: A Higher-Order Component (HOC) for convenience
+export function withErrorBoundary<P extends object>(
+  Component: React.ComponentType<P>,
+  fallback?: ReactNode
+): React.ComponentType<P> {
+  return function WithErrorBoundary(props: P) {
+    return (
+      <ErrorBoundary fallback={fallback}>
+        <Component {...props} />
+      </ErrorBoundary>
+    );
+  };
+}
