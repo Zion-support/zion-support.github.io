@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+export default function Login() {
+  const { isAuthenticated, user, isLoading } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { dispatch } = useCart();
+=======
 import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
@@ -13,12 +24,18 @@ export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501
   const reduxDispatch = useDispatch();
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
+<<<<<<< HEAD
+    // It runs when component mounts or location.search changes
+    const params = new URLSearchParams(location.search);
+=======
     const queryString = location.search;
     const params = new URLSearchParams(queryString);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501
     const token = params.get('token');
     if (token) {
       safeStorage.setItem('zion_token', token);
@@ -31,7 +48,11 @@ export default function Login() {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
       const next = new URLSearchParams(location.search).get('next') || '/dashboard';
+<<<<<<< HEAD
+      navigate(next, { replace: true });
+=======
       navigate(next);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501
     }
   }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
 

@@ -12,6 +12,18 @@ const LoadingSpinner = () => (
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+<<<<<<< HEAD
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const ServicesAdvertising = React.lazy(() => import('./pages/ServicesAdvertising'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices.jsx'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const NotFound = React.lazy(() => import('./pages/404.jsx'));
+const InnovativeServices2027 = React.lazy(() => import('./pages/InnovativeServices2027'));
+const ComprehensivePricing2027 = React.lazy(() => import('./pages/ComprehensivePricing2027'));
+const AllServices2027 = React.lazy(() => import('./pages/AllServices2027'));
+=======
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const PartnersPage = React.lazy(() => import('./pages/Partners'));
@@ -38,6 +50,7 @@ const LoadingFallback = () => (
     </div>
   </div>
 );
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501
 
 function App() {
   return (
@@ -51,6 +64,18 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+<<<<<<< HEAD
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services-advertising" element={<ServicesAdvertising />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/micro-saas-services" element={<MicroSaasServices />} />
+              <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+              <Route path="/hire-ai" element={<ZionHireAI />} />
+              <Route path="/innovative-services-2027" element={<InnovativeServices2027 />} />
+              <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricing2027 />} />
+              <Route path="/all-services-2027" element={<AllServices2027 />} />
+=======
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
@@ -85,6 +110,7 @@ function App() {
               <Route path="/neuromorphic-computing-platform" element={<InnovativeServicesShowcase2027 />} />
               
               {/* Catch-all route for undefined paths */}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
@@ -98,4 +124,8 @@ function App() {
   );
 }
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501

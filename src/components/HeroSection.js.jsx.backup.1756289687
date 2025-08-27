@@ -170,4 +170,8 @@ export function HeroSection() {
       </motion.div>
     </section>
   );
+<<<<<<<< HEAD:src/components/HeroSection.js.jsx
 }
+========
+}
+>>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501:src/components/HeroSection.jsx

@@ -1,15 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
+<<<<<<< HEAD
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+=======
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501
   ],
   darkMode: ["class"],
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
+        'zion-blue-dark': '#0f172a',
+        'zion-blue': '#1e293b',
+        'zion-blue-light': '#334155',
+        'zion-slate-dark': '#1e293b',
+        'zion-slate': '#475569',
+        'zion-slate-light': '#64748b',
+        'zion-cyan': '#06b6d4',
+        'zion-cyan-light': '#22d3ee',
+        'zion-purple': '#7c3aed',
+=======
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -32,6 +48,7 @@ export default {
         'zion-blue-light': '#2e73ea',
         'zion-purple': '#8c15e9',
         'zion-purple-dark': '#6b21a8',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501
         'zion-purple-light': '#a855f7',
       },
       fontFamily: {
@@ -68,6 +85,13 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+<<<<<<< HEAD
+        slideIn: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501
         glow: {
           "0%": { boxShadow: "0 0 20px rgba(147, 51, 234, 0.3)" },
           "100%": { boxShadow: "0 0 30px rgba(147, 51, 234, 0.6)" },
@@ -96,6 +120,60 @@ export default {
         "responsive-4xl": ["2.25rem", { lineHeight: "2.5rem" }],
         "responsive-5xl": ["3rem", { lineHeight: "1" }],
       },
+<<<<<<< HEAD
+      colors: {
+        neon: {
+          blue: "#00d4ff",
+          purple: "#8b5cf6",
+          pink: "#ec4899",
+          green: "#10b981",
+        },
+        cyber: {
+          dark: "#0f0f23",
+          darker: "#1a1a2e",
+          "dark-blue": "#16213e",
+          blue: "#0f3460",
+        },
+        zion: {
+          cyan: "#22ddd2",
+          "cyan-dark": "#14b8a6",
+          purple: "#8c15e9",
+          "purple-dark": "#6b21a8",
+          "purple-light": "#a855f7",
+          blue: "#2e73ea",
+          "blue-dark": "#172d67",
+          "blue-light": "#2e73ea",
+          green: "#22c55e",
+          orange: "#f97316",
+          pink: "#ec4899",
+          red: "#ef4444",
+          slate: "#64748b",
+          "slate-light": "#94a3b8",
+          "slate-dark": "#475569",
+        },
+        "high-contrast": "#ffffff",
+        "high-contrast-secondary": "#e5e7eb",
+      },
+      boxShadow: {
+        "neon-blue": "0 0 20px rgba(0, 212, 255, 0.5)",
+        "neon-purple": "0 0 20px rgba(139, 92, 246, 0.5)",
+        "neon-pink": "0 0 20px rgba(236, 72, 153, 0.5)",
+        "neon-green": "0 0 20px rgba(16, 185, 129, 0.5)",
+        "neon-glow":
+          "0 0 30px rgba(0, 212, 255, 0.3), 0 0 60px rgba(0, 212, 255, 0.1)",
+      },
+      opacity: {
+        "2": "0.02",
+        "3": "0.03",
+        "5": "0.05",
+      },
+      borderWidth: {
+        '3': '3px',
+        '4': '4px',
+        '5': '5px',
+      },
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501
       maxWidth: {
         '8xl': '88rem',
         '9xl': '96rem',

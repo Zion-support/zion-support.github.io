@@ -1,4 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
+
+=======
+<<<<<<<< HEAD:src/components/ui/badge.js.jsx
+
+========
+>>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501:src/components/ui/badge.jsx
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501
 export const Badge = ({ children, className = '', variant = 'default' }) => {
     const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
     const variantClasses = {

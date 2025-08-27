@@ -1,4 +1,10 @@
 export default {
+<<<<<<< HEAD
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+=======
 	plugins: {
 		tailwindcss: {},
 		autoprefixer: {},
@@ -12,4 +18,5 @@ export default {
 			}]
 		} : false,
 	},
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0501
 };
