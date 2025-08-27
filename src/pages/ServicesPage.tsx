@@ -724,6 +724,70 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Revolutionary 2025 Services Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">
+        <div className="container-responsive">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="heading-responsive font-bold mb-6">
+              Revolutionary <span className="text-gradient">2025 Services</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Cutting-edge AI, Quantum Computing, and Autonomous Technology Solutions
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
+            <motion.div
+              className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30 hover:border-purple-400 transition-all duration-300 group hover:from-purple-600/30 hover:to-indigo-700/30"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="inline-flex p-4 rounded-full mb-6 bg-gradient-to-r from-purple-500 to-indigo-600">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Revolutionary 2025 Services</h3>
+              <p className="text-zion-slate-light mb-6">
+                Explore our cutting-edge AI, Quantum Computing, and Autonomous Technology Solutions that are reshaping the future of business and technology.
+              </p>
+              
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center text-zion-slate-light">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                  AI-Powered Platforms
+                </div>
+                <div className="flex items-center text-zion-slate-light">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                  Quantum-Enhanced Solutions
+                </div>
+                <div className="flex items-center text-zion-slate-light">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                  Autonomous Operations
+                </div>
+                <div className="flex items-center text-zion-slate-light">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                  Next-Gen Technology
+                </div>
+              </div>
+              
+              <Link 
+                to="/revolutionary-2025-services"
+                className="btn-neon px-8 py-4 text-lg inline-flex items-center"
+              >
+                Explore Revolutionary Services <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive text-center">
