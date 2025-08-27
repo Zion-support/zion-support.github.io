@@ -12,13 +12,7 @@
   NODE_OPTIONS = "--max_old_space_size=4096"
   NPM_FLAGS = "--prefer-offline"
 
-# Configure Next.js plugin to skip processing for Vite project
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-    skip = true
-
-# Optional: a few redirects that were present
+# Redirects for legacy URLs
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -73,3 +67,9 @@
   from = "/browser-automation-cloud/"
   to = "/browser-automation-cloud"
   status = 301
+
+# Catch-all redirect for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
