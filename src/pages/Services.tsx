@@ -47,7 +47,7 @@ const Services: React.FC = () => {
 
       <section className="pb-20">
         <div className="container mx-auto px-4 grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {filtered.slice(0, 18).map((svc) => (
+          {filtered.slice(0, 30).map((svc) => (
             <div key={svc.id} className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-colors rounded-2xl p-6">
               <div className="text-xs uppercase tracking-wide text-cyan-300/70">{svc.category}</div>
               <h3 className="mt-2 text-xl font-semibold group-hover:text-cyan-300 transition-colors">{svc.title}</h3>
@@ -62,6 +62,11 @@ const Services: React.FC = () => {
             Explore Micro SaaS Solutions
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
+          <div className="mt-6 text-sm text-slate-300">
+            Questions? Call <a className="text-cyan-300 hover:text-cyan-200" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="text-cyan-300 hover:text-cyan-200" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.
+            Our office: 364 E Main St STE 1008 Middletown DE 19709.
+            See more at <a className="text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>.
+          </div>
         </div>
       </section>
     </div>
