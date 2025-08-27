@@ -98,12 +98,32 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Marketplace',
+      links: [
+        { name: 'Products', href: '/marketplace/products' },
+        { name: 'Talent', href: '/talent' },
+        { name: 'Equipment', href: '/equipment' },
+        { name: 'Services', href: '/marketplace/services' }
+      ]
+    },
+    {
       title: 'Company',
       links: [
         { name: 'About', href: '/about' },
-        { name: 'Blog', href: '/blog' },
+        { name: 'Team', href: '/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Contact', href: '/contact' }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'News', href: '/news' },
+        { name: 'Events', href: '/events' },
+        { name: 'Help Center', href: '/help' },
+        { name: 'Status', href: '/status' }
       ]
     }
   ];
@@ -111,12 +131,19 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Request Quote', href: '/request-quote' },
     { name: 'Help', href: '/help' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Green IT', href: '/green-it' },
     { name: 'Privacy', href: '/privacy' },
     { name: 'Terms', href: '/terms' },
-    { name: 'Sitemap', href: '/sitemap.xml' }
+    { name: 'Sitemap', href: '/sitemap' }
   ];
 
   const socialLinks = [
@@ -147,7 +174,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         {/* Main Footer Content */}
         <div className="py-16">
           {/* Top Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-6 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-7 gap-8 mb-12">
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
@@ -217,7 +244,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           {/* Quick Links Section */}
           <div className="border-t border-zion-cyan/20 pt-8 mb-8">
             <h3 className="text-zion-cyan font-semibold mb-4 text-lg">Quick Links</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {quickLinks.map((link) => (
                 <Link
                   key={link.name}
