@@ -176,6 +176,55 @@ export default function ServicesAdvertisingPage() {
             </div>
           </section>
           <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Spotlight: New Expert Services</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">Developer Productivity Copilot</h3>
+                <p className="text-slate-300 mb-2">AI PR reviews, test generation, and CI insights.</p>
+                <div className="text-sm text-slate-400">Typical: $19–$39/dev/mo</div>
+                <ul className="text-slate-300 space-y-1 mt-2">
+                  <li><a className="text-cyan-400 underline" href="https://github.com/features/copilot#pricing" target="_blank" rel="noopener noreferrer">github.com/features/copilot#pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://codeium.com/pricing" target="_blank" rel="noopener noreferrer">codeium.com/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://buildpulse.io/pricing" target="_blank" rel="noopener noreferrer">buildpulse.io/pricing</a></li>
+                </ul>
+                <div className="mt-3"><a href="/services/developer-productivity-copilot" className="text-cyan-400 underline">Learn more</a></div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">AI Sales Assistant</h3>
+                <p className="text-slate-300 mb-2">Qualify leads, personalize outreach, schedule meetings.</p>
+                <div className="text-sm text-slate-400">Typical: $30–$150/user/mo</div>
+                <ul className="text-slate-300 space-y-1 mt-2">
+                  <li><a className="text-cyan-400 underline" href="https://www.apollo.io/pricing" target="_blank" rel="noopener noreferrer">apollo.io/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://www.lemlist.com/pricing" target="_blank" rel="noopener noreferrer">lemlist.com/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://www.hubspot.com/pricing/sales" target="_blank" rel="noopener noreferrer">hubspot.com/pricing/sales</a></li>
+                </ul>
+                <div className="mt-3"><a href="/services/ai-sales-assistant" className="text-cyan-400 underline">Learn more</a></div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">Security Posture Guardian</h3>
+                <p className="text-slate-300 mb-2">Misconfig and secret scanning with auto-fixes.</p>
+                <div className="text-sm text-slate-400">Typical: $100–$2,000/mo</div>
+                <ul className="text-slate-300 space-y-1 mt-2">
+                  <li><a className="text-cyan-400 underline" href="https://www.wiz.io/pricing" target="_blank" rel="noopener noreferrer">wiz.io/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://snyk.io/plans/" target="_blank" rel="noopener noreferrer">snyk.io/plans</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://www.paloaltonetworks.com/prisma/cloud/pricing" target="_blank" rel="noopener noreferrer">paloaltonetworks.com/prisma/cloud/pricing</a></li>
+                </ul>
+                <div className="mt-3"><a href="/services/security-posture-guardian" className="text-cyan-400 underline">Learn more</a></div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">AI Data Pipeline Optimizer</h3>
+                <p className="text-slate-300 mb-2">Optimize ETL/ELT and RAG cost/latency.</p>
+                <div className="text-sm text-slate-400">Typical: $200–$2,000/mo</div>
+                <ul className="text-slate-300 space-y-1 mt-2">
+                  <li><a className="text-cyan-400 underline" href="https://www.databricks.com/product/pricing" target="_blank" rel="noopener noreferrer">databricks.com/product/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://www.snowflake.com/pricing/" target="_blank" rel="noopener noreferrer">snowflake.com/pricing</a></li>
+                  <li><a className="text-cyan-400 underline" href="https://www.getdbt.com/pricing" target="_blank" rel="noopener noreferrer">getdbt.com/pricing</a></li>
+                </ul>
+                <div className="mt-3"><a href="/services/ai-data-pipeline-optimizer" className="text-cyan-400 underline">Learn more</a></div>
+              </div>
+            </div>
+          </section>
+          <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New in Q2 2025</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
