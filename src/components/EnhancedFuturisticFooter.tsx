@@ -63,54 +63,54 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     {
       title: 'AI & Consciousness',
       links: [
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator' },
-        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion' },
-        { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems' },
-        { name: 'Neural Network Architect', href: '/ai-services/neural-architect' },
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics' },
-        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics' }
+        { name: 'AI Consciousness Simulator', href: '/services' },
+        { name: 'Quantum Emotion Processor', href: '/services' },
+        { name: 'AI Autonomous Systems', href: '/services' },
+        { name: 'Neural Network Architect', href: '/services' },
+        { name: 'AI Ethics Framework', href: '/services' },
+        { name: 'Predictive Analytics', href: '/ai-services' }
       ]
     },
     {
       title: 'Micro SAAS',
       links: [
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
-        { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience' },
-        { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing' },
-        { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain' },
-        { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity' },
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' }
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'Customer Experience Hub', href: '/micro-saas' },
+        { name: 'Quantum Computing Suite', href: '/services/quantum-computing' },
+        { name: 'Supply Chain Optimizer', href: '/services' },
+        { name: 'Cybersecurity Platform', href: '/services' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
       ]
     },
     {
       title: 'IT Services',
       links: [
-        { name: 'Infrastructure Management', href: '/it-services/infrastructure' },
-        { name: 'Digital Transformation', href: '/it-services/digital-transformation' },
-        { name: 'IT Consulting', href: '/it-services/consulting' },
-        { name: 'Onsite Support', href: '/it-services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/it-services/green-it' },
-        { name: '5G Network Solutions', href: '/it-services/5g-solutions' }
+        { name: 'Infrastructure Management', href: '/services/it-infrastructure' },
+        { name: 'Digital Transformation', href: '/services' },
+        { name: 'IT Consulting', href: '/it-services' },
+        { name: 'Onsite Support', href: '/services' },
+        { name: 'Green IT Solutions', href: '/services' },
+        { name: '5G Network Solutions', href: '/services' }
       ]
     },
     {
       title: 'Emerging Tech',
       links: [
-        { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing' },
-        { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi' },
-        { name: 'Space Technology', href: '/emerging-tech/space-tech' },
-        { name: 'Biotechnology', href: '/emerging-tech/biotech' },
-        { name: 'Nanotechnology', href: '/emerging-tech/nanotech' },
-        { name: 'Augmented Reality', href: '/emerging-tech/ar-vr' }
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Blockchain & DeFi', href: '/services' },
+        { name: 'Space Technology', href: '/services/space-tech' },
+        { name: 'Biotechnology', href: '/services' },
+        { name: 'Nanotechnology', href: '/services' },
+        { name: 'Augmented Reality', href: '/services' }
       ]
     }
   ];
 
   const quickLinks = [
-    { name: 'Services Overview', href: '/services-overview' },
-    { name: 'Pricing Guide', href: '/pricing-guide' },
-    { name: 'Innovative Services 2027', href: '/innovative-services-2027' },
-    { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027' },
+    { name: 'Services Overview', href: '/services' },
+    { name: 'Pricing Guide', href: '/pricing' },
+    { name: 'Innovative Services', href: '/enhanced-services' },
+    { name: 'Marketplace', href: '/marketplace' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
