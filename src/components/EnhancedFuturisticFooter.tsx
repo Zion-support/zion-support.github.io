@@ -40,7 +40,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: '2026 Services Overview', href: '/services2026', featured: true },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
         { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
         { name: 'AI Content Creation', href: '/services/ai-content-creation' },

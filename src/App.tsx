@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
+import { Sidebar } from './components/Sidebar';
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { AppLoadingSpinner } from './components/ui/LoadingSpinner.tsx';
@@ -50,13 +51,17 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SystemStatus = React.lazy(() => import('./pages/SystemStatus'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 
+// Additional missing service pages
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/ai-workflow-automation'));
+const GreenIT = React.lazy(() => import('./pages/services/green-it'));
+const QuantumComputingSolutions = React.lazy(() => import('./pages/services/quantum-computing-solutions'));
+
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Security = React.lazy(() => import('./pages/Security'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/Equipment'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const MarketplaceProducts = React.lazy(() => import('./pages/marketplace/Products'));
 const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'));
@@ -153,9 +158,10 @@ function App() {
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
         <FuturisticAnimatedBackground />
+        <Sidebar />
         <AppHeader />
         
-        <main className="flex-1 relative z-10">
+        <main className="flex-1 relative z-10 lg:ml-80">
           <Suspense fallback={<AppLoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -241,6 +247,11 @@ function App() {
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              
+              {/* Missing service routes from header navigation */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+              <Route path="/services/green-it" element={<GreenIT />} />
+              <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
               
               {/* 2026 Services routes */}
               <Route path="/services/quantum-computing" element={<QuantumComputing />} />
