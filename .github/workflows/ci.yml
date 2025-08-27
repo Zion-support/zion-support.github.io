@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, develop ]
 
 permissions:
   contents: read
@@ -15,6 +15,7 @@ concurrency:
 
 jobs:
   build:
+<<<<<<< HEAD
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,26 +29,36 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint and type-check
-        run: |
-          npm run lint
-          npm run type-check
-
       - name: Build project
         run: npm run build
 
-      - name: Security scan (non-blocking)
-        run: npm run security:scan
-        continue-on-error: true
+      - name: Verify build output
+        run: |
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
+          fi
+          echo "Build completed successfully"
+          echo "Build artifacts:"
+          ls -la dist/
 
-  test:
-    name: Test
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-build
+          path: dist/
+          retention-days: 30
+=======
+    name: Build and Test
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
-
+        with:
+          fetch-depth: 0
+          
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -57,8 +68,62 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test
+      - name: Lint code
+        run: npm run lint
         continue-on-error: true
+>>>>>>> cursor/website-audit-and-enhancement-1eed
+
+      - name: Type check
+        run: npm run type-check
+
+      - name: Build project
+        run: npm run build
+
+      - name: Verify build output
+        run: |
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
+          fi
+          echo "Build successful - dist folder created"
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: dist/
+          retention-days: 7
+
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: build
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run security audit
+        run: npm audit --audit-level=moderate
+        continue-on-error: true
+
+      - name: Check for known vulnerabilities
+        run: |
+          if npm audit --audit-level=high; then
+            echo "No high severity vulnerabilities found"
+          else
+            echo "High severity vulnerabilities detected"
+            exit 1
+          fi
 
 

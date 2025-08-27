@@ -1,4 +1,3 @@
-
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Marketplace from "@/pages/Marketplace";
@@ -22,89 +21,60 @@ import VideoCall from "@/pages/VideoCall";
 import Checkout from "@/pages/Checkout";
 import NewProductsPage from "@/pages/NewProductsPage";
 import MoreProductsPage from "@/pages/MoreProductsPage";
-
 const MarketplaceRoutes = () => {
-  return (
-    <Routes>
+    return (<Routes>
       {/* Marketplace Routes */}
-      <Route index element={<Marketplace />} />
-      <Route path="/categories" element={<Categories />} />
-      <Route path="/category/:slug" element={<CategoryDetail />} />
-      <Route path="/featured" element={<Featured />} />
-      <Route path="/marketplace/listing/:id" element={<ListingDetail />} />
-      <Route path="/listing/:id" element={<ListingDetail />} />
+      <Route index element={<Marketplace />}/>
+      <Route path="/categories" element={<Categories />}/>
+      <Route path="/category/:slug" element={<CategoryDetail />}/>
+      <Route path="/featured" element={<Featured />}/>
+      <Route path="/marketplace/listing/:id" element={<ListingDetail />}/>
+      <Route path="/listing/:id" element={<ListingDetail />}/>
       
       {/* Equipment Routes */}
-      <Route path="/equipment" element={<EquipmentPage />} />
-      <Route path="/equipment/:id" element={<EquipmentDetail />} />
-      <Route path="/new-products" element={<NewProductsPage />} />
-      <Route path="/more-products" element={<MoreProductsPage />} />
+      <Route path="/equipment" element={<EquipmentPage />}/>
+      <Route path="/equipment/:id" element={<EquipmentDetail />}/>
+      <Route path="/new-products" element={<NewProductsPage />}/>
+      <Route path="/more-products" element={<MoreProductsPage />}/>
       
       {/* Job Routes */}
-      <Route
-        path="/post-job" 
-        element={
-          <ProtectedRoute>
+      <Route path="/post-job" element={<ProtectedRoute>
             <PostJob />
-          </ProtectedRoute>
-        } 
-      />
-      <Route path="/jobs/:id" element={<JobDetails />} />
+          </ProtectedRoute>}/>
+      <Route path="/jobs/:id" element={<JobDetails />}/>
       
       {/* AI Matcher Routes */}
-      <Route path="/ai-matcher" element={<AIMatcher />} />
-      <Route path="/match" element={<AIMatcher />} />
+      <Route path="/ai-matcher" element={<AIMatcher />}/>
+      <Route path="/match" element={<AIMatcher />}/>
       
       {/* Creator Routes */}
-      <Route 
-        path="/publish" 
-        element={
-          <ProtectedRoute>
+      <Route path="/publish" element={<ProtectedRoute>
             <PublishProduct />
-          </ProtectedRoute>
-        } 
-      />
+          </ProtectedRoute>}/>
       
       {/* Service Routes */}
-      <Route path="/services" element={<ServicesPage />} />
-      <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
-      <Route path="/request-quote" element={<RequestQuote />} />
-      <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />
+      <Route path="/services" element={<ServicesPage />}/>
+      <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />}/>
+      <Route path="/request-quote" element={<RequestQuote />}/>
+      <Route path="/service-description-generator" element={<ServiceDescriptionGenerator />}/>
       
       {/* Search Route */}
-      <Route path="/search" element={<SearchPage />} />
+      <Route path="/search" element={<SearchPage />}/>
 
       {/* Checkout Route - accessible even in staging */}
-      <Route
-        path="/checkout"
-        element={
-          <ProtectedRoute>
+      <Route path="/checkout" element={<ProtectedRoute>
             <Checkout />
-          </ProtectedRoute>
-        }
-      />
+          </ProtectedRoute>}/>
       
       {/* Project Room Routes */}
-      <Route 
-        path="/project/:projectId" 
-        element={
-          <ProtectedRoute>
+      <Route path="/project/:projectId" element={<ProtectedRoute>
             <ProjectRoom />
-          </ProtectedRoute>
-        } 
-      />
+          </ProtectedRoute>}/>
       
       {/* Video Call Routes */}
-      <Route 
-        path="/call/:roomId" 
-        element={
-          <ProtectedRoute>
+      <Route path="/call/:roomId" element={<ProtectedRoute>
             <VideoCall />
-          </ProtectedRoute>
-        } 
-      />
-    </Routes>
-  );
+          </ProtectedRoute>}/>
+    </Routes>);
 };
-
 export default MarketplaceRoutes;
