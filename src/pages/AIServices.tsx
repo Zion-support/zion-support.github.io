@@ -59,6 +59,25 @@ const AIServices: React.FC = () => {
       desc: 'Transcription, speaker diarization, topic extraction, and highlight reels for calls, webinars, and support.',
       price: '$4,000 - $35,000+'
     }
+    ,
+    {
+      icon: FileText,
+      title: 'AI Contract Review & Risk Scoring',
+      desc: 'Clause extraction, risk flags, playbook suggestions, and bulk review workflows with human approvals.',
+      price: '$3,000 - $25,000+'
+    },
+    {
+      icon: Globe,
+      title: 'Multilingual CX Orchestrator',
+      desc: '50+ language detection, on‑brand translation memory, and locale QA pipelines across chat, email and voice.',
+      price: '$3,000 - $20,000+'
+    },
+    {
+      icon: Workflow,
+      title: 'Agentic Process Automation',
+      desc: 'Task-centric multi-agent systems integrating CRMs/ERPs/ticketing with guardrails and observability.',
+      price: '$6,000 - $55,000+'
+    }
   ];
 
   const ctas = [
