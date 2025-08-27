@@ -69,15 +69,15 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: '2026 Services Overview', href: '/services2026', featured: true },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
         { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
-        { name: 'AI Content Creation', href: '/services/ai-content-creation' },
+        { name: 'AI Content Generator', href: '/services/ai-content-generator' },
         { name: 'Digital Twin Platform', href: '/services/digital-twin' },
-        { name: 'AI HR Platform', href: '/services/ai-hr-platform' },
-        { name: 'Sustainable Technology', href: '/services/sustainable-technology' },
-        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance' },
-        { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning' }
+        { name: 'AI HR Platform', href: '/services/ai-hr-talent-platform' },
+        { name: 'Sustainability', href: '/services/sustainability' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI Project Manager', href: '/services/ai-project-manager' }
       ]
     },
     {
@@ -161,7 +161,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Terms of Service', href: '/terms' },
         { name: 'Support', href: '/support' },
         { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
+        { name: 'API Reference', href: '/developers' },
         { name: 'Developer Portal', href: '/developers' }
       ]
     }
