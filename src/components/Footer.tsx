@@ -63,6 +63,10 @@ export function Footer() {
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain },
+        // Newly exposed landing pages
+        { name: 'AI Services', path: '/ai-services', icon: Brain },
+        { name: 'IT Services', path: '/it-services', icon: Building },
+        { name: 'Micro SaaS', path: '/micro-saas', icon: Zap },
         { name: 'All Services', path: '/services', icon: Zap }
       ]
     },
@@ -258,9 +262,8 @@ export function Footer() {
           className="fixed bottom-8 right-8 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          aria-label="Scroll to top"
         >
-          <ArrowUp className="w-6 h-6" />
+          <ArrowUp className="w-5 h-5" />
         </motion.button>
       </div>
     </footer>
