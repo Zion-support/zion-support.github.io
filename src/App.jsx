@@ -27,6 +27,12 @@ const Profile = React.lazy(() => import('./pages/Profile'));
 const Signup = React.lazy(() => import('./pages/Signup'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 
+// Enhanced Service Pages
+const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
+
 // Simple loading component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -55,6 +61,12 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              
+              {/* Enhanced Service Routes */}
+              <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/comprehensive-services-overview-2027" element={<ComprehensiveServicesOverview2027 />} />
               
               {/* Information Pages */}
               <Route path="/faq" element={<FAQ />} />
