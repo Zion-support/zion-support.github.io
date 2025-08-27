@@ -13,29 +13,6 @@ export default function ServiceDescriptionGenerator() {
         <div className="animate-pulse text-zion-purple text-lg">
           Loading...
         </div>
-<<<<<<< HEAD
-      </div>
-    );
-  }
-  
-  // Redirect to login if not authenticated
-  if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
-  }
-
-  const handleDescriptionSave = (editedDescription: string) => {
-    setGeneratedDescription(editedDescription);
-    // Here you could also save to database if needed
-  };
-
-  return (
-    <div className="min-h-screen flex flex-col bg-zion-blue">
-      <SEOHead 
-        title="Service Description Generator" 
-        description="Generate professional service descriptions using AI"
-        keywords="service description, AI content, professional description generator"
-      />
-=======
       </div>);
     }
     // Redirect to login if not authenticated
@@ -48,7 +25,6 @@ export default function ServiceDescriptionGenerator() {
     };
     return (<div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO title="Service Description Generator" description="Generate professional service descriptions using AI" keywords="service description, AI content, professional description generator"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className="flex-1 p-6 md:p-10">
         <div className="max-w-4xl mx-auto">

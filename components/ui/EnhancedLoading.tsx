@@ -1,9 +1,15 @@
 import React from 'react';
 
-export default function EnhancedLoading() {
+type EnhancedLoadingProps = {
+  lines?: number;
+};
+
+export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
   return (
-    <div className="flex items-center justify-center p-4">
-      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+    <div className="space-y-2">
+      {Array.from({ length: lines }).map((_, idx) => (
+        <div key={idx} className="skeleton h-4 rounded" />
+      ))}
     </div>
   );
 }

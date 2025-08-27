@@ -1,0 +1,128 @@
+# This is a VITE project, NOT a Next.js project
+# The build process uses Vite to create a static site in the 'dist' folder
+# No Next.js plugins or configurations are needed
+
+[build]
+<<<<<<< HEAD
+  # Use `npm ci` for deterministic installs, Vite builds to dist folder
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max_old_space_size=4096"
+  NPM_FLAGS = "--prefer-offline"
+=======
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
+  NODE_ENV = "production"
+>>>>>>> origin/cursor/clean-merge-approach
+
+# Configure Next.js plugin to skip processing for Vite project
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    skip = true
+
+<<<<<<< HEAD
+# Optional: a few redirects that were present
+[[redirects]]
+  from = "/ai-autonomous-ecosystem"
+  to = "/ai-autonomous-ecosystem-manager"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-materials-discovery"
+  to = "/quantum-materials-discovery-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-vehicle-ai"
+  to = "/autonomous-vehicle-ai-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/ai-content-generator"
+  status = 301
+
+[[redirects]]
+  from = "/ai-customer-success-automation"
+  to = "/ai-customer-success-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/intelligent-content-automation-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/browser-automation-cloud/"
+  to = "/browser-automation-cloud"
+=======
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+# Static redirects for exported site
+[[redirects]]
+  from = "/ai-customer-success-platform"
+  to = "/services/ai-customer-success-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-sales-intelligence-platform"
+  to = "/services/ai-sales-intelligence-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-financial-planning-platform"
+  to = "/services/ai-financial-planning-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-powered-decision-engine"
+  to = "/services/ai-powered-decision-engine/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-content-automation-platform"
+  to = "/services/intelligent-content-automation-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-hr-analytics-platform"
+  to = "/services/intelligent-hr-analytics-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/smart-crm-intelligence-suite"
+  to = "/services/smart-crm-intelligence-suite/"
+  status = 301
+
+[[redirects]]
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+>>>>>>> origin/cursor/clean-merge-approach
+  status = 301

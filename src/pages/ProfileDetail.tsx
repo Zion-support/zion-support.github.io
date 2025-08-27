@@ -14,19 +14,17 @@ import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
     var _a, _b;
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useRouter } from "next/router";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
-import { SEO } from "../components/SEOHead";
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
-    // useParams is typed as `any` in this environment due to missing type
-    // definitions, so avoid passing a type argument to prevent TS2347.
-=======
     const { profileId } = useParams();
     const [profileData, setProfileData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -84,6 +82,59 @@ export default function ProfileDetail() {
                                         hourly_rate: (profileData === null || profileData === void 0 ? void 0 : profileData.hourly_rate) || 0
                                     } }), _jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6", children: [_jsx("h3", { className: "text-xl font-bold mb-4", children: "Contact" }), _jsxs("div", { className: "flex flex-col space-y-3", children: [profileData.email && (_jsxs("div", { className: "flex items-center gap-2 text-zion-slate-light", children: [_jsx(Mail, { className: "h-4 w-4" }), _jsx("a", { href: `mailto:${profileData.email}`, className: "hover:text-zion-cyan", children: profileData.email })] })), profileData.phone && (_jsxs("div", { className: "flex items-center gap-2 text-zion-slate-light", children: [_jsx(Phone, { className: "h-4 w-4" }), _jsx("span", { children: profileData.phone })] })), profileData.website && (_jsxs("div", { className: "flex items-center gap-2 text-zion-slate-light", children: [_jsx(Globe, { className: "h-4 w-4" }), _jsx("a", { href: profileData.website, target: "_blank", rel: "noopener noreferrer", className: "hover:text-zion-cyan", children: "Website" })] }))] })] }), _jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6", children: [_jsx("h3", { className: "text-xl font-bold mb-4", children: "Social" }), _jsxs("div", { className: "flex flex-col space-y-3", children: [profileData.github_url && (_jsxs("a", { href: profileData.github_url, target: "_blank", rel: "noopener noreferrer", className: "flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan", children: [_jsx(Github, { className: "h-4 w-4" }), "GitHub"] })), profileData.twitter_url && (_jsxs("a", { href: profileData.twitter_url, target: "_blank", rel: "noopener noreferrer", className: "flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan", children: [_jsx(Twitter, { className: "h-4 w-4" }), "Twitter"] })), profileData.linkedin_url && (_jsxs("a", { href: profileData.linkedin_url, target: "_blank", rel: "noopener noreferrer", className: "flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan", children: [_jsx(Linkedin, { className: "h-4 w-4" }), "LinkedIn"] }))] })] })] })] }) }), _jsx(Footer, {})] }));
         return (<div className="min-h-screen flex items-center justify-center">
+=======
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        if (!profileId) {
+          setError("Profile ID is missing.");
+          return;
+        }
+
+        const { data, error } = await supabase
+          .from("talent_profiles")
+          .select("*")
+          .eq("id", profileId)
+          .single();
+
+        if (error) {
+          throw new Error(error.message);
+        }
+
+        if (!data) {
+          setError("Profile not found.");
+          return;
+        }
+
+        setProfileData(data);
+      } catch (err: any) {
+        setError(err.message || "Failed to fetch profile.");
+        toast({
+          title: "Error",
+          description: err.message || "Failed to fetch profile.",
+          variant: "destructive",
+        });
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchProfile();
+  }, [profileId]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
       </div>);
     }
@@ -224,16 +275,42 @@ export default function ProfileDetail() {
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>
               <div className="flex flex-col space-y-3">
-                {profileData.github_url && (<a href={profileData.github_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="GitHub" title="GitHub">
-                    <Github className="h-4 w-4"/>
+                {profileData.github_url && (
+                  <a
+                    href={profileData.github_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="GitHub"
+                    title="GitHub"
+                  >
+                    <Github className="h-4 w-4" />
                     GitHub
-                  </a>)}
-                {profileData.twitter_url && (<a href={profileData.twitter_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="Twitter" title="Twitter">
-                    <Twitter className="h-4 w-4"/>
+                  </a>
+                )}
+                {profileData.twitter_url && (
+                  <a
+                    href={profileData.twitter_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="Twitter"
+                    title="Twitter"
+                  >
+                    <Twitter className="h-4 w-4" />
                     Twitter
-                  </a>)}
-                {profileData.linkedin_url && (<a href={profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn">
-                    <Linkedin className="h-4 w-4"/>
+                  </a>
+                )}
+                {profileData.linkedin_url && (
+                  <a
+                    href={profileData.linkedin_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
+                  >
+                    <Linkedin className="h-4 w-4" />
                     LinkedIn
                   </a>)}
               </div>
@@ -241,7 +318,7 @@ export default function ProfileDetail() {
           </div>
         </div>
       </div>
-      
-    </>);
 =======
+    </>
+  );
 }

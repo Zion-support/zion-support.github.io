@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
+import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
+
 
 
 export default function CloudPlatformPage() {
@@ -69,12 +70,12 @@ export default function CloudPlatformPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
-                Deploy Now
+                Start Analyzing
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a
                 href="/contact" className="border-white/20 hover:border-white/40">
-                View Documentation
+                View Demo
               </a>
             </div>
           </div>
@@ -168,7 +169,7 @@ export default function CloudPlatformPage() {
               </a>
               <a
                 href="/contact" className="border-white text-white hover:bg-white hover:text-blue-600">
-                Contact Sales
+                Schedule Demo
               </a>
             </div>
           </div>

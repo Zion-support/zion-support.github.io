@@ -3,15 +3,6 @@ export interface EmergingTechBreakthrough2029 {
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
-  features: string[];
-  category: string;
-  technology: string[];
-}
-
-export const emergingTechBreakthroughs2029: EmergingTechBreakthrough2029[] = [
-  {
   description: string;
   features: string[];
   link: string;

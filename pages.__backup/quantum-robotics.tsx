@@ -1,12 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Cpu as CpuIcon, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-
+import { Phone, Mail, MapPin, Check, ArrowRight, Car, Star } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
-export default function QuantumRoboticsPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-robotics'));
+export default function AutonomousVehicleAIPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-vehicle-ai-platform'));
   if (!service) return null;
 
   return (
@@ -14,17 +14,17 @@ export default function QuantumRoboticsPage() {
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />
-        <link rel="canonical" href="https://ziontechgroup.com/quantum-robotics" />
+        <link rel="canonical" href="https://ziontechgroup.com/autonomous-vehicle-ai-platform" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-rose-400 bg-clip-text text-transparent flex items-center justify-center gap-3 w-10 h-10"><CpuIcon />{service.name}</h1>
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-rose-400 bg-clip-text text-transparent flex items-center justify-center gap-3"><Car className="w-10 h-10" />{service.name}</h1>
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-orange-500/30 p-6">
-              <h2 className="text-2xl font-semibold mb-4">Platform capabilities</h2>
+              <h2 className="text-2xl font-semibold mb-4">Autonomous capabilities</h2>
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
@@ -40,7 +40,7 @@ export default function QuantumRoboticsPage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
-              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Request Demo<ArrowRight /></a>
+              <Button href="/contact" variant="quantum" size="lg" className="w-full">Schedule a Pilot<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
@@ -53,4 +53,3 @@ export default function QuantumRoboticsPage() {
     </Layout>
   );
 }
-

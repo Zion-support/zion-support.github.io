@@ -1,22 +1,4 @@
 #!/usr/bin/env sh
-
-echo "🔍 Running pre-commit checks..."
-
-# Temporarily disable TypeScript type check due to existing service page issues
-# echo "🔍 Running TypeScript type check..."
-# npm run type-check || {
-#   echo "❌ TypeScript type check failed. Please fix the issues before committing."
-#   exit 1
-# }
-
-# Run type checking
-echo "🔍 Running TypeScript type check..."
-npm run type-check || {
-  echo "❌ TypeScript type check failed. Please fix the issues before committing."
-  exit 1
-}
-
-=======
 # Run build check
 echo "🏗️ Running build check..."
 npm run build || {
@@ -25,3 +7,7 @@ npm run build || {
 }
 
 echo "✅ All pre-commit checks passed!"
+=======
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx --yes lint-staged

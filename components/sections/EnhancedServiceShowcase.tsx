@@ -264,7 +264,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
-            {filteredServices.slice(0, 12).map((service) => (
+            {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30, scale: 0.9 }}
@@ -280,7 +280,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       ⭐ Most Popular
                     </div>
                   )}
-                </div>
 
                   {/* Header */}
                   <div className="mb-6">
@@ -369,74 +368,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </div>
                   </div>
                 </div>
-
-                {/* Features */}
-                <div className="mb-6">
-                  <div className="text-sm text-gray-400 mb-2">Key Features:</div>
-                  <ul className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        <span className="line-clamp-1">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Market Info */}
-                <div className="mb-6 p-3 bg-gray-700/40 rounded-lg">
-                  <div className="text-xs text-gray-400 mb-1">Market Position</div>
-                  <div className="text-sm text-gray-300 line-clamp-2">
-                    {service.marketPosition}
-                  </div>
-                </div>
-
-                {/* ROI & Setup */}
-                <div className="flex items-center justify-between mb-6 text-sm">
-                  <div className="flex items-center space-x-1 text-green-400">
-                    <TrendingUp className="w-4 h-4" />
-                    <span>{(() => {
-                      const roi = (service as any).roi || '';
-                      const match = roi.match(/\b\d+\s*%|\b\d{2,4}x|\b\d+–\d+%/i);
-                      return match ? `${match[0]} ROI` : 'Proven ROI';
-                    })()}</span>
-                  </div>
-                  <div className="flex items-center space-x-1 text-blue-400">
-                    <Clock className="w-4 h-4" />
-                    <span>{service.setupTime}</span>
-                  </div>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex gap-3">
-                  <a
-                    href={service.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-                  >
-                    Learn More
-                    <ExternalLink className="w-4 h-4 ml-2" />
-                  </a>
-                  <a
-                    href="/contact"
-                    className="flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500"
-                  >
-                    Contact Us
-                  </a>
-                </div>
-
-                {/* Contact Info */}
-                {'contactInfo' in service && (service as any).contactInfo ? (
-                  <div className="mt-4 pt-4 border-t border-gray-700">
-                    <div className="text-xs text-gray-400 mb-2">Contact Information:</div>
-                    <div className="text-xs text-gray-300 space-y-1">
-                      <div>📱 {(service as any).contactInfo.mobile}</div>
-                      <div>✉️ {(service as any).contactInfo.email}</div>
-                      <div>🌐 {(service as any).contactInfo.website}</div>
-                    </div>
-                  </div>
-                ) : null}
               </motion.div>
             ))}
           </AnimatePresence>

@@ -1,199 +1,152 @@
-import React from 'react';
+
+import { GradientHeading } from "./GradientHeading";
+import Link from "next/link";
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+import { HelpCircle } from 'lucide-react'; // Added HelpCircle for default icon
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+
+// This is the type definition copied from Categories.tsx for consistency.
+// Ideally, this would be in a shared types file.
+interface CategoryType {
+  id: string;
+  name: string;
+  description?: string;
+  iconName?: string; // Example field if categories have icons
+  itemCount?: number; // Example field for number of items in a category
+  // Add a 'link' property if your API provides it, or construct it.
+  link?: string;
+}
+
+// Default static categories with translation keys
+const getDefaultCategories = (t: any) => [
   {
-    title: "Comprehensive Services",
-    description: "Micro SAAS, IT services, and AI solutions",
-    icon: <Briefcase className="w-10 h-10" />,
+    id: "services",
+    name: t('categories.services'),
+    description: t('categories.services_desc'),
+    iconName: "Briefcase", // Corresponds to lucide icon name
     link: "/services",
-    color: "from-zion-purple to-zion-purple-dark",
-    gradient: "from-zion-purple/20 to-zion-purple-dark/20",
-    features: ["24/7 Support", "Expert Team", "Custom Solutions"],
-    stats: "500+ Services"
+    color: "from-purple-500 to-indigo-600", // Keep color for styling
   },
   {
-    title: "Talents",
-    description: "Connect with AI experts, developers, and tech specialists",
-    icon: <Users className="w-10 h-10" />,
+    id: "talents",
+    name: t('categories.talents'),
+    description: t('categories.talents_desc'),
+    iconName: "Users",
     link: "/talent",
-    color: "from-zion-cyan to-zion-blue",
-    gradient: "from-zion-cyan/20 to-zion-blue/20",
-    features: ["AI Experts", "Global Network", "Verified Profiles"],
-    stats: "10K+ Experts"
+    color: "from-cyan-500 to-blue-600",
   },
   {
-    title: "Equipment",
-    description: "Rent or buy specialized hardware, servers, and devices",
-    icon: <HardDrive className="w-10 h-10" />,
+    id: "equipment",
+    name: t('categories.equipment'),
+    description: t('categories.equipment_desc'),
+    iconName: "HardDrive",
     link: "/equipment",
-    color: "from-zion-cyan-light to-zion-cyan",
-    gradient: "from-zion-cyan-light/20 to-zion-cyan/20",
-    features: ["High-Performance", "Flexible Rental", "24/7 Monitoring"],
-    stats: "1000+ Devices"
+    color: "from-amber-500 to-orange-600",
   },
   {
-    title: "Innovation",
-    description: "Discover cutting-edge solutions and tech breakthroughs",
-    icon: <Lightbulb className="w-10 h-10" />,
-    link: "/category/innovation",
-    color: "from-zion-purple-light to-zion-purple",
-    gradient: "from-zion-purple-light/20 to-zion-purple/20",
-    features: ["Latest Tech", "AI Solutions", "Future-Ready"],
-    stats: "100+ Innovations"
-  }
-];
-const specialServices = [
-  {
-    title: "IT Onsite Services",
-    link: "/it-onsite-services",
-    icon: <Shield className="w-5 h-5" />,
-    description: "Professional on-site technical support"
+    id: "innovation",
+    name: t('categories.innovation'),
+    description: t('categories.innovation_desc'),
+    iconName: "Lightbulb",
+    link: "/innovation",
+    color: "from-emerald-500 to-green-600",
   },
-  {
-    title: "Comprehensive Services",
-    link: "/comprehensive-services",
-    icon: <Rocket className="w-5 h-5" />,
-    description: "End-to-end technology solutions"
-  },
-  {
-    title: "AI Integration",
-    link: "/ai-integration",
-    icon: <Sparkles className="w-5 h-5" />,
-    description: "Seamless AI implementation"
-  },
-  {
-    title: "Cloud Solutions",
-    link: "/cloud-solutions",
-    icon: <Zap className="w-5 h-5" />,
-    description: "Scalable cloud infrastructure"
-  }
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
+// Helper to get icon component from name
+const getIcon = (iconName?: string) => {
+  switch (iconName) {
+    case "Briefcase": return <Briefcase className="w-10 h-10" />;
+    case "Users": return <Users className="w-10 h-10" />;
+    case "HardDrive": return <HardDrive className="w-10 h-10" />;
+    case "Lightbulb": return <Lightbulb className="w-10 h-10" />;
+    default: return <HelpCircle className="w-10 h-10" />; // Default icon
   }
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5
-    }
+const getSpecialServices = (t: any) => [
+  {
+    title: t('categories.it_onsite_services'),
+    link: "/it-onsite-services"
   }
-};
+];
 
-export function CategoriesSection() {
-  return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <GradientHeading
-            title="Explore Our Categories"
-            subtitle="Discover comprehensive solutions across all technology domains"
-            description="From AI-powered services to on-site IT support, we've got everything you need to transform your business"
-          />
+interface CategoriesSectionProps {
+  showTitle?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+  categories?: CategoryType[]; // Accept categories as a prop
+}
+
+export function CategoriesSection({
+  showTitle = true,
+  className,
+  style,
+  categories: fetchedCategories, // Rename prop for clarity
+}: CategoriesSectionProps) {
+  const { t } = useTranslation();
+  const defaultCategories = getDefaultCategories(t);
+  
+  // Use fetchedCategories if provided, otherwise fallback to defaultCategories
+  const displayCategories = fetchedCategories && fetchedCategories.length > 0
+    ? fetchedCategories.map(cat => ({
+        id: cat.id,
+        title: cat.name, // Map name to title
+        description: cat.description || "No description available.",
+        icon: getIcon(cat.iconName), // Get icon component
+        link: cat.link || `/category/${cat.id}`, // Construct link if not provided
+        // Assign a default color or implement logic to assign colors
+        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600",
+      }))
+    : defaultCategories.map(cat => ({
+        ...cat,
+        title: cat.name,
+        icon: getIcon(cat.iconName),
+      }));
+
+  // If fetchedCategories is an empty array, and we want to show nothing:
+  if (fetchedCategories && fetchedCategories.length === 0) {
+    return (
+      <section className={cn("py-20 bg-zion-blue text-center", className)} style={style}>
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-white mb-4">{t('home.no_categories_title')}</h2>
+          <p className="text-zion-slate-light text-lg mb-2">
+            {t('home.no_categories_desc')}
+          </p>
+          <p className="text-zion-slate-light text-md">
+            {t('home.no_categories_support')}
+          </p>
         </div>
+      </section>
+    );
+  }
 
-        {/* Main Categories Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {categories.map((category, index) => (
-            <motion.div
-              key={category.title}
-              variants={itemVariants}
-              className="group relative"
+  return (
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
+      <div className="container mx-auto px-4">
+        {showTitle && (
+          <div className="text-center mb-16">
+            <GradientHeading>{t('home.categories_title')}</GradientHeading>
+            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
+              {t('home.categories_subtitle')}
+            </p>
+          </div>
+        )}
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {displayCategories.map((category) => (
+            <Link
+              key={category.id}
+              href={category.link || '#'}
+              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
-              <Link
-                to={category.link}
-                className="block p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
-              >
-                {/* Icon */}
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${category.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <div className="text-white">
                     {category.icon}
                   </div>
                 </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-zion-blue transition-colors">
-                  {category.title}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {category.description}
-                </p>
-
-                {/* Features */}
-                <div className="space-y-2 mb-6">
-                  {category.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-sm text-gray-500">
-                      <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-
-                {/* Stats */}
-                <div className="text-sm font-semibold text-zion-blue mb-4">
-                  {category.stats}
-                </div>
-
-                {/* Arrow */}
-                <div className="flex items-center text-zion-blue font-medium group-hover:translate-x-2 transition-transform duration-300">
-                  Explore
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </div>
-              </Link>
-            </motion.div>))}
-        </motion.div>
-
-        {/* Special Services Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Specialized Services
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover our specialized offerings designed to meet your unique business needs
-          </p>
-        </div>
-
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {specialServices.map((service, index) => (
-            <motion.div
-              key={service.title}
-              variants={itemVariants}
-              className="group"
-            >
-              <Link
-                to={service.link}
-                className="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-zion-blue">
-                      {service.icon}
-                    </div>
-                  </div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-zion-blue transition-colors">
-                    {service.title}
-                  </h3>
-=======
 import { Link } from 'react-router-dom';
 
 export function CategoriesSection() {
@@ -320,4 +273,39 @@ export function CategoriesSection() {
         </div>
       </div>
     </section>);
+=======
+                <h3 className="text-white text-xl font-bold mb-2">{category.title}</h3>
+                <p className="text-zion-slate-light">{category.description}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+        
+        {/* Special services section with translations */}
+        <div className="mt-8">
+          <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {getSpecialServices(t).map((service) => (
+              <Link 
+                key={service.title}
+                href={service.link}
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+              >
+                {service.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+        
+        <div className="mt-12 flex justify-center">
+          <Link 
+            href="/categories/all"
+            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
+          >
+            {t('home.view_all_categories')}
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
 }

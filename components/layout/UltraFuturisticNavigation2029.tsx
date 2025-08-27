@@ -10,8 +10,7 @@ import {
   Earth, Factory, Car, Building, GraduationCap, Scale,
   Palette, Camera, Video, Music, Gamepad2, Heart,
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
-  Code, Wrench, Smartphone, BarChart3, Eye, CpuIcon,
-  Network, Server, DatabaseIcon, Globe2, ZapIcon
+  Code, Wrench, Smartphone, BarChart3, Eye, Timer
 } from 'lucide-react';
 
 const contactInfo = {
@@ -23,31 +22,28 @@ const contactInfo = {
 
 const serviceCategories = [
   {
-    title: '🚀 2029 Futuristic AI Services',
+    title: '🧠 2029 AI Consciousness & Innovation',
     icon: Brain,
-    color: 'from-violet-600 to-purple-600',
-    description: 'Next-generation AI consciousness and quantum hybrid computing',
+    color: 'from-purple-600 to-pink-600',
+    description: 'Beyond human consciousness simulation',
     services: [
-      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-2029', description: 'Develop genuine AI consciousness and self-awareness', price: '$24,999/month' },
-      { name: 'AI Quantum Hybrid Computing', href: '/ai-quantum-hybrid-computing-2029', description: 'Quantum-classical hybrid AI computing', price: '$19,999/month' },
-      { name: 'AI Multimodal Fusion Platform', href: '/ai-multimodal-fusion-platform-2029', description: 'Seamless text, image, video, and audio AI', price: '$12,999/month' },
-      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine-2029', description: 'Autonomous AI decision making with ethics', price: '$15,999/month' }
+      { name: 'AI Consciousness Simulation Platform', href: '/ai-consciousness-simulation-platform', description: 'Simulate human consciousness in AI systems', price: '$12,999/month' },
+      { name: 'Autonomous AI Corporation Platform', href: '/autonomous-ai-corporation-platform', description: 'AI systems that run entire corporations', price: '$45,999/month' },
+      { name: 'AI Reality Augmentation Platform', href: '/ai-reality-augmentation-platform', description: 'Real-time AI reality enhancement', price: '$18,999/month' }
     ]
   },
   {
-    title: '⚛️ 2029 Quantum Innovation Services',
+    title: '⚛️ 2029 Quantum & Neuroscience',
     icon: Atom,
-    color: 'from-indigo-600 to-blue-600',
-    description: 'Revolutionary quantum computing and communication',
+    color: 'from-indigo-600 to-purple-600',
+    description: 'Quantum brain-computer interfaces',
     services: [
-      { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol-2029', description: 'Faster-than-light quantum communication', price: '$29,999/month' },
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform-2029', description: 'Quantum-powered algorithmic trading', price: '$39,999/month' },
-      { name: 'Quantum Cybersecurity Firewall', href: '/quantum-cybersecurity-firewall-2029', description: 'Unbreakable quantum encryption', price: '$18,999/month' },
-      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform-2029', description: 'Quantum computing for ML acceleration', price: '$22,999/month' }
+      { name: 'Quantum Brain-Computer Interface', href: '/quantum-brain-computer-interface', description: 'Direct quantum communication with brain', price: '$25,999/month' },
+      { name: 'Quantum Time Manipulation Platform', href: '/quantum-time-manipulation-platform', description: 'Manipulate time perception', price: '$35,999/month' }
     ]
   },
   {
-    title: '🌌 2029 Emerging Technology Services',
+    title: '🚀 2029 Space Colonization & Mining',
     icon: Rocket,
     color: 'from-red-600 to-orange-600',
     description: 'Interplanetary expansion and resource extraction',

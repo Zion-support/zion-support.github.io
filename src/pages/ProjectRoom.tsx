@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { SEO } from "../components/SEOHead"';
+import { useRouter } from 'next/router'; // Changed from useParams
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react';
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react'
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
 export default function ProjectRoom() {
-<<<<<<< HEAD
-  const { projectId } = useParams() as { projectId: string };
+  const router = useRouter();
+  const { projectId: rawProjectId } = router.query;
+  const projectId = typeof rawProjectId === 'string' ? rawProjectId : ''; // Ensure string, default to empty if not
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -58,7 +60,7 @@ export default function ProjectRoom() {
     
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
     
-    if (!callParticipants.find(p => p.id === randomUser.id)) {
+    if (randomUser && !callParticipants.find(p => p.id === randomUser.id)) {
       setCallParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser.name} joined the call`);
     }
@@ -111,7 +113,6 @@ export default function ProjectRoom() {
     };
     return (<>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className="container mx-auto py-8">
         <div className="flex justify-between items-center mb-6">
@@ -261,6 +262,6 @@ export default function ProjectRoom() {
           </TabsContent>
         </Tabs>
       </main>
-      
-    </>);
+    </>
+  );
 }

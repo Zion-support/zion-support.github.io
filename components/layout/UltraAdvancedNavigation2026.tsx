@@ -25,8 +25,7 @@ const serviceCategories = [
       { name: 'AI Consciousness Simulation', href: '/ai-consciousness-simulation-platform', description: 'Simulate human consciousness', price: '$4,999/month' },
       { name: 'Autonomous AI Agents', href: '/autonomous-ai-agents-platform-2026', description: 'Create autonomous AI agents', price: '$199/month' },
       { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion-2026', description: 'Revolutionary healthcare AI', price: '$399/month' },
-      { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution', description: 'Unlimited AI content generation', price: '$599/month' },
-      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'AI that understands emotions', price: '$799/month' }
+      { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution', description: 'Unlimited AI content generation', price: '$599/month' }
     ]
   },
   {
