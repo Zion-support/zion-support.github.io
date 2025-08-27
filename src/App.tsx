@@ -142,6 +142,19 @@ const Partners = lazy(() => import('./pages/Partners'));
 const News = lazy(() => import('./pages/News'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
+const Marketplace = lazy(() => import('./pages/Marketplace'));
+const Leadership = lazy(() => import('./pages/Leadership'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+const GreenIT = lazy(() => import('./pages/services/GreenIT'));
+const Enterprise = lazy(() => import('./pages/Enterprise'));
+const Solutions = lazy(() => import('./pages/Solutions'));
+const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
+
+// Marketplace components
+const MarketplaceProducts = lazy(() => import('./pages/marketplace/Products'));
+const MarketplaceTalent = lazy(() => import('./pages/marketplace/Talent'));
+const MarketplaceEquipment = lazy(() => import('./pages/marketplace/Equipment'));
+const MarketplaceServices = lazy(() => import('./pages/marketplace/Services'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -260,6 +273,19 @@ function App() {
                       } 
                     />
                     <Route 
+                      path="/solutions" 
+                      element={
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Solutions />
+                        </motion.div>
+                      } 
+                    />
+                    <Route 
                       path="/contact" 
                       element={
                         <motion.div
@@ -307,6 +333,84 @@ function App() {
                     <Route path="/ai-solutions" element={<AiSolutions />} />
                     <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
                     <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
+                    <Route path="/healthcare-solutions" element={<HealthcareSolutions />} />
+                    
+                    {/* AI & Machine Learning Services */}
+                    <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                    <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                    <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                    <Route path="/services/ai-seo" element={<AIPoweredSEO />} />
+                    <Route path="/services/interview-assessment" element={<InterviewAssessmentAI />} />
+                    <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
+                    <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
+                    <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
+                    <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
+                    <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                    <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
+                    <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                    <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+                    <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+                    <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                    <Route path="/services/ai-content-creation-suite" element={<AIContentCreationSuite />} />
+                    <Route path="/services/ai-autonomous-code-reviewer" element={<AIAutonomousCodeReviewer />} />
+                    <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+                    
+                    {/* Cloud & DevOps Services */}
+                    <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                    <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                    <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+                    <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
+                    
+                    {/* Cybersecurity Services */}
+                    <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+                    <Route path="/services/dsr-portal" element={<DSRPortal />} />
+                    <Route path="/services/zero-trust-network-access" element={<ZeroTrustNetworkAccess />} />
+                    
+                    {/* Digital Transformation Services */}
+                    <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                    <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+                    <Route path="/it-consulting" element={<ITConsulting />} />
+                    
+                    {/* Emerging Technologies */}
+                    <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                    <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+                    <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                    <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                    <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
+                    <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
+                    <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
+                    <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
+                    <Route path="/space-tech" element={<SpaceTech />} />
+                    
+                    {/* Data & Analytics Services */}
+                    <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                    
+                    {/* Micro SaaS Solutions */}
+                    <Route path="/services/micro-crm" element={<MicroCRM />} />
+                    <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
+                    <Route path="/services/website-analytics" element={<WebsiteAnalytics />} />
+                    <Route path="/services/affiliate-tracking" element={<AffiliateTracking />} />
+                    <Route path="/services/mobile-survey" element={<MobileSurvey />} />
+                    <Route path="/services/ai-auto-email-responder" element={<AIAutoEmailResponder />} />
+                    <Route path="/services/customer-feedback-surveys" element={<CustomerFeedbackSurveys />} />
+                    <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
+                    <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
+                    <Route path="/services/returns-management" element={<ReturnsManagement />} />
+                    <Route path="/services/email-sequencer" element={<EmailSequencer />} />
+                    <Route path="/services/podcast-transcription" element={<PodcastTranscription />} />
+                    <Route path="/services/it-helpdesk" element={<ITHelpdesk />} />
+                    
+                    {/* Service Showcase Pages */}
+                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
+                    <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                    <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
+                    <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
+                    <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
+                    <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
+                    <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
+                    <Route path="/comprehensive-improvements-2025" element={<ComprehensiveImprovements2025 />} />
                     
                     {/* Additional Pages */}
                     <Route path="/dashboard" element={<Dashboard />} />
@@ -317,6 +421,17 @@ function App() {
                     <Route path="/news" element={<News />} />
                     <Route path="/case-studies" element={<CaseStudies />} />
                     <Route path="/help" element={<HelpCenter />} />
+                    <Route path="/marketplace" element={<Marketplace />} />
+                    <Route path="/leadership" element={<Leadership />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/green-it" element={<GreenIT />} />
+                    <Route path="/enterprise" element={<Enterprise />} />
+                    
+                    {/* Marketplace Sub-routes */}
+                    <Route path="/marketplace/products" element={<MarketplaceProducts />} />
+                    <Route path="/marketplace/talent" element={<MarketplaceTalent />} />
+                    <Route path="/marketplace/equipment" element={<MarketplaceEquipment />} />
+                    <Route path="/marketplace/services" element={<MarketplaceServices />} />
                     
                     {/* 404 Page */}
                     <Route 
