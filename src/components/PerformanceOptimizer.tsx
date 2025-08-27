@@ -1,42 +1,109 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { Zap, Clock, TrendingUp, Activity } from 'lucide-react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  className?: string;
-  threshold?: number;
-  rootMargin?: string;
-  delay?: number;
-  duration?: number;
-  y?: number;
-  scale?: number;
-  opacity?: number;
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  className = '',
-  threshold = 0.1,
-  rootMargin = '0px',
-  delay = 0,
-  duration = 0.6,
-  y = 20,
-  scale = 1,
-  opacity = 1
-}) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { threshold, rootMargin });
+export const PerformanceOptimizer: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isOptimizing, setIsOptimizing] = useState(false);
+
+  useEffect(() => {
+    // Measure performance metrics
+    const measurePerformance = () => {
+      if ('performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paint = performance.getEntriesByType('paint');
+        
+        const fcp = paint.find(entry => entry.name === 'first-contentful-paint');
+        const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
+        
+        setMetrics({
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          firstContentfulPaint: fcp ? fcp.startTime : 0,
+          largestContentfulPaint: lcp ? lcp.startTime : 0,
+          cumulativeLayoutShift: 0, // Would need to implement CLS measurement
+        });
+      }
+    };
+
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+      return () => window.removeEventListener('load', measurePerformance);
+    }
+  }, []);
+
+  const optimizePerformance = async () => {
+    setIsOptimizing(true);
+    
+    // Simulate optimization process
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    // Preload critical resources
+    const criticalResources = [
+      '/src/components/FuturisticNavigation.tsx',
+      '/src/components/Home.tsx',
+    ];
+    
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = 'script';
+      document.head.appendChild(link);
+    });
+    
+    setIsOptimizing(false);
+  };
+
+  if (!metrics) return null;
 
   return (
     <motion.div
-      ref={ref}
-      className={className}
-      initial={{ opacity: 0, y, scale: scale === 1 ? 1 : 0.95 }}
-      animate={isInView ? { opacity, y: 0, scale: 1 } : { opacity: 0, y, scale: scale === 1 ? 1 : 0.95 }}
-      transition={{ duration, delay, ease: 'easeOut' }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="fixed bottom-4 right-4 bg-zion-slate-dark/90 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-4 max-w-sm z-50"
     >
-      {children}
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-zion-cyan font-semibold text-sm">Performance Monitor</h3>
+        <button
+          onClick={optimizePerformance}
+          disabled={isOptimizing}
+          className="text-xs bg-zion-cyan/20 hover:bg-zion-cyan/30 text-zion-cyan px-2 py-1 rounded transition-colors disabled:opacity-50"
+        >
+          {isOptimizing ? 'Optimizing...' : 'Optimize'}
+        </button>
+      </div>
+      
+      <div className="space-y-2 text-xs">
+        <div className="flex items-center justify-between">
+          <span className="text-zion-slate-light">Load Time:</span>
+          <span className="text-white">{metrics.loadTime.toFixed(0)}ms</span>
+        </div>
+        <div className="flex items-center justify-between">
+          <span className="text-zion-slate-light">FCP:</span>
+          <span className="text-white">{metrics.firstContentfulPaint.toFixed(0)}ms</span>
+        </div>
+        <div className="flex items-center justify-between">
+          <span className="text-zion-slate-light">LCP:</span>
+          <span className="text-white">{metrics.largestContentfulPaint.toFixed(0)}ms</span>
+        </div>
+      </div>
+      
+      <div className="mt-3 pt-2 border-t border-zion-slate/20">
+        <div className="flex items-center text-xs text-zion-cyan">
+          <Activity className="h-3 w-3 mr-1" />
+          Performance Score: {metrics.loadTime < 1000 ? 'Excellent' : metrics.loadTime < 2000 ? 'Good' : 'Needs Improvement'}
+        </div>
+      </div>
     </motion.div>
   );
 };
@@ -228,128 +295,3 @@ export const MemoizedComponent = React.memo<{
 ));
 
 MemoizedComponent.displayName = 'MemoizedComponent';
-=======
-import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
-export const PerformanceOptimizer = ({ children }) => {
-    const location = useLocation();
-    // Preload critical resources
-    useEffect(() => {
-        const preloadCriticalResources = () => {
-            // Preload critical CSS
-            const criticalCSS = document.createElement('link');
-            criticalCSS.rel = 'preload';
-            criticalCSS.as = 'style';
-            criticalCSS.href = '/src/index.css';
-            document.head.appendChild(criticalCSS);
-            // Preload critical fonts
-            const criticalFonts = document.createElement('link');
-            criticalFonts.rel = 'preload';
-            criticalFonts.as = 'font';
-            criticalFonts.href = '/fonts/inter-var.woff2';
-            criticalFonts.crossOrigin = 'anonymous';
-            document.head.appendChild(criticalFonts);
-        };
-        preloadCriticalResources();
-    }, []);
-    // Optimize images on route change
-    useEffect(() => {
-        const optimizeImages = () => {
-            const images = document.querySelectorAll('img');
-            images.forEach((img) => {
-                // Add loading="lazy" to images below the fold
-                if (img.getBoundingClientRect().top > window.innerHeight) {
-                    img.loading = 'lazy';
-                }
-                // Add decoding="async" for better performance
-                img.decoding = 'async';
-                // Add error handling
-                img.onerror = () => {
-                    img.style.display = 'none';
-                };
-            });
-        };
-        // Use requestIdleCallback for non-critical optimization
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(optimizeImages);
-        }
-        else {
-            setTimeout(optimizeImages, 100);
-        }
-    }, [location.pathname]);
-    // Memoize expensive computations
-    const optimizedChildren = useMemo(() => children, [children]);
-    // Optimize scroll performance
-    const handleScroll = useCallback(() => {
-        // Throttle scroll events for better performance
-        if (!window.scrollTimeout) {
-            window.scrollTimeout = setTimeout(() => {
-                // Handle scroll-based optimizations here
-                window.scrollTimeout = null;
-            }, 16); // ~60fps
-        }
-    }, []);
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [handleScroll]);
-    // Service Worker registration for caching
-    useEffect(() => {
-        if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-            navigator.serviceWorker
-                .register('/sw.js')
-                .then((registration) => {
-                console.log('SW registered: ', registration);
-            })
-                .catch((registrationError) => {
-                console.log('SW registration failed: ', registrationError);
-            });
-        }
-    }, []);
-    // Intersection Observer for lazy loading
-    useEffect(() => {
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const target = entry.target;
-                        if (target.dataset.src) {
-                            target.src = target.dataset.src;
-                            target.removeAttribute('data-src');
-                            observer.unobserve(target);
-                        }
-                    }
-                });
-            }, {
-                rootMargin: '50px',
-                threshold: 0.1,
-            });
-            // Observe all images with data-src
-            const lazyImages = document.querySelectorAll('img[data-src]');
-            lazyImages.forEach((img) => observer.observe(img));
-            return () => observer.disconnect();
-        }
-    }, [location.pathname]);
-    return <>{optimizedChildren}</>;
-};
-// Add global performance optimizations
-if (typeof window !== 'undefined') {
-    // Optimize long tasks
-    if ('scheduler' in window && 'postTask' in window.scheduler) {
-        window.scheduler.postTask(() => {
-            // Run non-critical tasks during idle time
-        }, { priority: 'background' });
-    }
-    // Optimize memory usage
-    if ('memory' in performance) {
-        const memoryThreshold = 50 * 1024 * 1024; // 50MB
-        if (performance.memory.usedJSHeapSize > memoryThreshold) {
-            // Trigger garbage collection if available
-            if ('gc' in window) {
-                window.gc();
-            }
-        }
-    }
-}
-export default PerformanceOptimizer;
->>>>>>> cursor/website-audit-and-enhancement-1eed
