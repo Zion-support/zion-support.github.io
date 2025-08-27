@@ -26,7 +26,7 @@ import {
   Phone,
   Mail,
   MapPin,
-  Flask
+  TestTube
 } from 'lucide-react';
 
 const AIQuantumHybridPlatform: React.FC = () => {
@@ -63,11 +63,11 @@ const AIQuantumHybridPlatform: React.FC = () => {
       description: "Quantum-enhanced risk assessment and portfolio optimization",
       icon: BarChart3
     },
-    {
-      title: "Drug Discovery",
-      description: "Molecular simulation and protein folding optimization",
-      icon: Flask
-    },
+          {
+        title: "Drug Discovery",
+        description: "Molecular simulation and protein folding optimization",
+        icon: TestTube
+      },
     {
       title: "Climate Modeling",
       description: "Complex environmental simulations and prediction models",

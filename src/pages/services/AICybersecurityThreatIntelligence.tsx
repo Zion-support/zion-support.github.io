@@ -25,7 +25,6 @@ import {
   Mail,
   MapPin,
   Bug,
-  Virus,
   Fingerprint,
   Search
 } from 'lucide-react';
@@ -151,11 +150,11 @@ const AICybersecurityThreatIntelligence: React.FC = () => {
   ];
 
   const threatTypes = [
-    {
-      title: "Malware Detection",
-      description: "Advanced detection of viruses, ransomware, and other malicious software",
-      icon: Virus
-    },
+          {
+        title: "Malware Detection",
+        description: "Advanced detection of viruses, ransomware, and other malicious software",
+        icon: AlertTriangle
+      },
     {
       title: "Phishing Prevention",
       description: "AI-powered identification of sophisticated phishing attempts",

@@ -170,6 +170,16 @@ const footerSections = [
     ]
   },
   {
+    title: '2029 Services Showcase',
+    icon: Rocket,
+    links: [
+      { name: 'Comprehensive Services 2029', path: '/comprehensive-services-showcase-2029', icon: Star },
+      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
+      { name: 'AI Autonomous Supply Chain', path: '/services/ai-autonomous-supply-chain', icon: Truck },
+      { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', icon: Shield },
+    ]
+  },
+  {
     title: 'Additional Services',
     icon: Star,
     links: [
