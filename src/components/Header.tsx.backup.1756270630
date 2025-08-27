@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-29cd
 
 export function Header() {
 	return (
@@ -34,4 +38,5 @@ export function Header() {
         </div>
       </div>
     </header>);
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 }

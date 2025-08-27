@@ -2,6 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export function MainNavigation() {
+<<<<<<< HEAD
+  return (
+        Contact
+      </Link>
+    </nav>
+  );
+}
+=======
     return (
         <nav className="hidden md:flex space-x-8">
             <Link to="/services" className="text-gray-700 hover:text-zion-purple transition-colors">
@@ -19,3 +27,4 @@ export function MainNavigation() {
         </nav>
     );
 }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-29cd

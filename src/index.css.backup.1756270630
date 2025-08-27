@@ -1,10 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
+<<<<<<< HEAD
+/* Import enhanced futuristic styles */
+@import './styles/enhanced-futuristic.css';
+
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-29cd
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+/* Zion Tech Group Color Palette */
+:root {
+  --zion-blue: #1e40af;
+  --zion-blue-dark: #1e3a8a;
+  --zion-cyan: #06b6d4;
+  --zion-cyan-light: #22d3ee;
+  --zion-purple: #8b5cf6;
+  --zion-purple-light: #a855f7;
+  --zion-green: #10b981;
+  --zion-slate: #64748b;
+  --zion-slate-light: #94a3b8;
+  --zion-slate-dark: #475569;
+  --zion-slate-lighter: #cbd5e1;
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-29cd
 @layer base {
   :root {
     --font-sans: 'Orbitron', system-ui, sans-serif;
@@ -162,6 +185,7 @@
       scroll-behavior: auto !important;
     }
   }
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 }
 
 /* Futuristic Design System */
@@ -322,3 +346,7 @@
 }
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
