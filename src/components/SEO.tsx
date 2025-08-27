@@ -1,166 +1,93 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  title: string;
-  description: string;
-  canonical?: string;
-  url?: string;
+  title?: string;
+  description?: string;
+  keywords?: string;
   image?: string;
+  url?: string;
   type?: 'website' | 'article' | 'product' | 'service';
+  author?: string;
   publishedTime?: string;
   modifiedTime?: string;
-  author?: string;
-  keywords?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
-  structuredData?: object;
+  section?: string;
+  tags?: string[];
 }
 
-export const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  canonical,
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Leading AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation solutions. Expert IT consulting and innovative technology services.',
+  keywords = 'AI, artificial intelligence, cybersecurity, cloud computing, digital transformation, IT consulting, technology solutions, machine learning, blockchain, IoT, quantum computing',
+  image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
-  image = '/og-image.jpg',
   type = 'website',
+  author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
-  author = 'Zion Tech Group',
-  keywords = [],
-  noindex = false,
-  nofollow = false,
-  structuredData
+  section,
+  tags = []
 }) => {
-  // Enhanced SEO with dynamic meta tags
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullDescription = description.length > 160 ? `${description.substring(0, 157)}...` : description;
-  
-  // Default keywords
-  const defaultKeywords = [
-    'AI solutions',
-    'quantum technology',
-    'cybersecurity',
-    'IT services',
-    'business transformation',
-    'intelligent automation',
-    'Zion Tech Group',
-    'technology consulting',
-    'digital innovation',
-    'enterprise solutions'
-  ];
-  
-  const allKeywords = [...new Set([...defaultKeywords, ...keywords])];
-
-  // Default structured data
-  const defaultStructuredData = {
+  const structuredData: any = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Pioneering the future with cutting-edge AI solutions, quantum technology, and innovative IT services.",
-    "foundingDate": "2020",
+    "logo": "https://ziontechgroup.com/logo.svg",
+    "description": description,
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US"
     },
     "contactPoint": {
       "@type": "ContactPoint",
+      "telephone": "+1-555-0123",
       "contactType": "customer service",
-      "availableLanguage": "English"
+      "email": "contact@ziontechgroup.com"
     },
     "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup",
+      "https://facebook.com/ziontechgroup"
     ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Technology Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI Solutions",
-            "description": "Cutting-edge artificial intelligence solutions for business transformation"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Quantum Technology",
-            "description": "Next-generation quantum computing and technology solutions"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Cybersecurity",
-            "description": "Advanced cybersecurity and threat protection services"
-          }
-        }
-      ]
+    "foundingDate": "2020",
+    "numberOfEmployees": "50-100",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7128,
+        "longitude": -74.0060
+      },
+      "geoRadius": "50000"
     }
   };
 
-  // Merge custom structured data with default
-  const finalStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
-
-  // Performance optimization: Preload critical resources
-  useEffect(() => {
-    // Preload critical CSS and fonts
-    const preloadLinks = [
-      { rel: 'preload', href: '/src/index.css', as: 'style' },
-      { rel: 'preload', href: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap', as: 'style' }
-    ];
-
-    preloadLinks.forEach(({ rel, href, as }) => {
-      const link = document.createElement('link');
-      link.rel = rel;
-      link.href = href;
-      if (as) link.setAttribute('as', as);
-      document.head.appendChild(link);
-    });
-
-    // DNS prefetch for external domains
-    const dnsPrefetchDomains = [
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
-      'https://cdn.gpteng.co'
-    ];
-
-    dnsPrefetchDomains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'dns-prefetch';
-      link.href = domain;
-      document.head.appendChild(link);
-    });
-
-    return () => {
-      // Cleanup preload links on unmount
-      document.querySelectorAll('link[rel="preload"]').forEach(link => link.remove());
-      document.querySelectorAll('link[rel="dns-prefetch"]').forEach(link => link.remove());
+  if (type === 'article') {
+    structuredData["@type"] = "Article";
+    structuredData["headline"] = title;
+    structuredData["description"] = description;
+    structuredData["author"] = {
+      "@type": "Person",
+      "name": author
     };
-  }, []);
+    if (publishedTime) structuredData["datePublished"] = publishedTime;
+    if (modifiedTime) structuredData["dateModified"] = modifiedTime;
+    if (section) structuredData["articleSection"] = section;
+    if (tags.length > 0) structuredData["keywords"] = tags.join(', ');
+  }
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={allKeywords.join(', ')} />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-      
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
@@ -169,75 +96,51 @@ export const SEO: React.FC<SEOProps> = ({
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
       
-      {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === 'article' && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === 'article' && author && (
-        <meta property="article:author" content={author} />
-      )}
-      
-      {/* Enhanced Performance Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
-      {/* Enhanced Security Meta Tags */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
+        {JSON.stringify(structuredData)}
       </script>
       
-      {/* Additional Performance Optimizations */}
+      {/* Additional SEO Meta Tags */}
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      
+      {/* Mobile Meta Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      
+      {/* Security Meta Tags */}
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="Content-Language" content="en" />
+      
+      {/* Performance Meta Tags */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
       {/* Favicon and App Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Enhanced Mobile Meta Tags */}
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      
-      {/* Enhanced Social Media Meta Tags */}
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="Zion Tech Group - Pioneering AI & Quantum Technology Solutions" />
-      
-      {/* Enhanced Search Engine Meta Tags */}
-      <meta name="google-site-verification" content="your-verification-code" />
-      <meta name="bing-verification" content="your-verification-code" />
-      
-      {/* Enhanced Accessibility Meta Tags */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="msapplication-tooltip" content="Zion Tech Group - Technology Solutions" />
-      
-      {/* Enhanced Performance Meta Tags */}
-      <meta name="renderer" content="webkit" />
-      <meta name="force-rendering" content="webkit" />
-      <meta name="full-screen" content="yes" />
-      <meta name="browsermode" content="application" />
-      <meta name="x5-orientation" content="portrait" />
-      <meta name="x5-fullscreen" content="true" />
-      <meta name="x5-page-mode" content="app" />
     </Helmet>
   );
 };
+
+export default SEO;

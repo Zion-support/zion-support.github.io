@@ -299,8 +299,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-20 lg:py-32">
           <motion.div
