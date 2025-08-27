@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
@@ -35,6 +36,8 @@ export function AppHeader() {
 
   const navigation = [
     { name: 'Home', href: '/', current: true },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'AI Solutions', href: '/ai-solutions', current: false },
     { name: 'Services', href: '/services', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'About', href: '/about', current: false },
@@ -43,16 +46,11 @@ export function AppHeader() {
   ];
 
   const services = [
-    { name: 'AI & Analytics', href: '/services', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'Quantum Computing', href: '/services', icon: Rocket, description: 'Quantum AI & Optimization' },
-    { name: 'Cybersecurity', href: '/services', icon: Shield, description: 'AI-Powered Security' },
-    { name: 'Cloud Services', href: '/services', icon: Cloud, description: 'DevOps & Infrastructure' },
-    { name: 'IoT & Edge', href: '/services', icon: Cpu, description: 'Smart Devices & Networks' },
-    { name: 'Blockchain', href: '/services', icon: Lock, description: 'DeFi & Smart Contracts' },
-    { name: 'Healthcare Tech', href: '/services', icon: Heart, description: 'AI Medicine & Diagnostics' },
-    { name: 'Green Tech', href: '/services', icon: Globe, description: 'Sustainability Solutions' },
-    { name: 'Space Tech', href: '/services', icon: Rocket, description: 'Space Exploration & Mining' },
-    { name: 'Autonomous AI', href: '/services', icon: Brain, description: 'Self-Learning Systems' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'DevOps & Infrastructure' },
+    { name: 'Data Analytics', href: '/services/data-analytics', icon: TrendingUp, description: 'BI & Insights' },
+    { name: 'AI Solutions', href: '/ai-solutions', icon: Brain, description: 'ML, NLP, Vision' },
+    { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Process modernization' },
+    { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Building, description: 'Networks & Platforms' },
   ];
 
   const quickLinks = [
