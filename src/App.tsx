@@ -53,6 +53,11 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SystemStatus = React.lazy(() => import('./pages/SystemStatus'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const QuantumComputingSolutions = React.lazy(() => import('./pages/services/QuantumComputingSolutions'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const AISolutions = React.lazy(() => import('./pages/AISolutions'));
+const Leadership = React.lazy(() => import('./pages/Leadership'));
 
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
@@ -175,7 +180,9 @@ function App() {
               <Route path="/events" element={<Events />} />
               <Route path="/partners" element={<Partners />} />
               <Route path="/solutions" element={<Solutions />} />
+              <Route path="/ai-solutions" element={<AISolutions />} />
               <Route path="/team" element={<Team />} />
+              <Route path="/leadership" element={<Leadership />} />
               <Route path="/help" element={<HelpCenter />} />
               <Route path="/security" element={<Security />} />
               <Route path="/status" element={<Status />} />
@@ -208,8 +215,10 @@ function App() {
               <Route path="/support" element={<Support />} />
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/green-it" element={<GreenIT />} />
               
               {/* Service Routes - only for existing pages */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
               <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
               <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
@@ -245,9 +254,11 @@ function App() {
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              <Route path="/services/ai-solutions" element={<AISolutions />} />
               
               {/* 2026 Services routes */}
               <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+              <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
               <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
               <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
               <Route path="/services/ai-content-creation" element={<AIContentCreation />} />

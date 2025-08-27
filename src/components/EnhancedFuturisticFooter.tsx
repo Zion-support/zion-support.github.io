@@ -27,7 +27,8 @@ import {
   Infinity,
   Cloud,
   Cpu,
-  Users
+  Users,
+  Leaf
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
