@@ -1,5 +1,6 @@
 import SEO from '../SEO';
 const Mobile = () => {
+<<<<<<< HEAD
   const mobileFeatures = [
     {
       title: "Mobile-First Design",
@@ -116,6 +117,115 @@ const Mobile = () => {
         description="Experience mobile-first design and development with Zion Tech Group. From responsive websites to native mobile apps, we ensure optimal mobile experiences."
         canonical="/mobile"
       />
+=======
+    const mobileFeatures = [
+        {
+            title: "Mobile-First Design",
+            description: "We design with mobile users in mind first, ensuring optimal experience across all devices",
+            icon: "📱",
+            benefits: [
+                "Responsive design principles",
+                "Touch-friendly interfaces",
+                "Mobile performance optimization",
+                "Cross-platform compatibility"
+            ]
+        },
+        {
+            title: "Zion Mobile App",
+            description: "Access our services and manage your projects on the go with our mobile application",
+            icon: "🚀",
+            benefits: [
+                "Project management",
+                "Real-time updates",
+                "Client communication",
+                "Service booking"
+            ]
+        },
+        {
+            title: "Progressive Web Apps",
+            description: "Web applications that work like native apps with offline functionality",
+            icon: "🌐",
+            benefits: [
+                "No app store required",
+                "Offline capabilities",
+                "Push notifications",
+                "App-like experience"
+            ]
+        }
+    ];
+    const mobileServices = [
+        {
+            title: "iOS Development",
+            description: "Native iPhone and iPad applications using Swift and SwiftUI",
+            icon: "🍎",
+            features: ["Swift & SwiftUI", "App Store optimization", "iOS-specific features", "Performance tuning"]
+        },
+        {
+            title: "Android Development",
+            description: "Native Android applications using Kotlin and Jetpack Compose",
+            icon: "🤖",
+            features: ["Kotlin & Jetpack Compose", "Google Play optimization", "Material Design 3", "Android features"]
+        },
+        {
+            title: "Cross-Platform",
+            description: "Single codebase for iOS and Android using React Native or Flutter",
+            icon: "📱",
+            features: ["React Native", "Flutter", "Shared codebase", "Native performance"]
+        },
+        {
+            title: "Mobile Web",
+            description: "Responsive web applications optimized for mobile devices",
+            icon: "🌐",
+            features: ["Mobile-first design", "Progressive Web Apps", "Responsive layouts", "Touch optimization"]
+        }
+    ];
+    const mobileBenefits = [
+        {
+            title: "Increased Engagement",
+            description: "Mobile users are more engaged and likely to interact with your content",
+            icon: "📈"
+        },
+        {
+            title: "Better User Experience",
+            description: "Optimized mobile experiences lead to higher satisfaction and retention",
+            icon: "⭐"
+        },
+        {
+            title: "Wider Reach",
+            description: "Mobile-first approach ensures accessibility across all devices",
+            icon: "🌍"
+        },
+        {
+            title: "Competitive Advantage",
+            description: "Stay ahead with modern mobile solutions and user expectations",
+            icon: "🏆"
+        }
+    ];
+    const mobileStats = [
+        {
+            stat: "73%",
+            label: "Mobile Internet Usage",
+            description: "Of all internet traffic comes from mobile devices"
+        },
+        {
+            stat: "85%",
+            label: "User Preference",
+            description: "Of users prefer mobile-friendly websites"
+        },
+        {
+            stat: "60%",
+            label: "Mobile Search",
+            description: "Of searches are performed on mobile devices"
+        },
+        {
+            stat: "40%",
+            label: "Mobile Conversion",
+            description: "Higher conversion rates on mobile-optimized sites"
+        }
+    ];
+    return (<>
+      <SEO title="Mobile-First Solutions - Zion Tech Group" description="Experience mobile-first design and development with Zion Tech Group. From responsive websites to native mobile apps, we ensure optimal mobile experiences." canonical="/mobile"/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
         <main className="pt-12">

@@ -1,5 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive } from 'lucide-react';
 const ITServices = [
@@ -153,6 +159,7 @@ const ITServices = [
     }
 ];
 const categories = [
+<<<<<<< HEAD
 const ITServicesPage: React.FC = () => {
   const itServices = [
     {
@@ -452,6 +459,8 @@ const ITServicesPage: React.FC = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
+=======
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
     { name: "Cloud", value: "cloud", icon: <Cloud className="h-4 w-4"/> },
     { name: "Security", value: "security", icon: <Shield className="h-4 w-4"/> },
@@ -521,6 +530,7 @@ export default function ITServicesPage() {
                   {service.badge && (<Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
                       {service.badge}
                     </Badge>)}
+<<<<<<< HEAD
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
@@ -607,6 +617,20 @@ export default function ITServicesPage() {
                   >
                     Schedule Assessment
                   </Link>
+=======
+                </div>
+                <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
+                  {service.title}
+                </CardTitle>
+                <CardDescription className="text-zion-slate-light">
+                  {service.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pb-4">
+                <div className="mb-4">
+                  <p className="text-2xl font-bold text-zion-cyan mb-2">{service.price}</p>
+                  <p className="text-sm text-zion-slate-light">Starting price</p>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
                 </div>
                 
                 <div className="text-center">
@@ -669,5 +693,8 @@ export default function ITServicesPage() {
       </div>
     </div>);
 }
+<<<<<<< HEAD
 
 export default ITServicesPage;
+=======
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

@@ -5,10 +5,14 @@ import { ProjectMilestonesContent } from '@/components/projects/milestones/Proje
 function ProjectMilestones() {
     return (<ProtectedRoute>
       <>
+<<<<<<< HEAD
         <SEOHead 
           title="Payment Milestones | Zion AI Marketplace" 
           description="Manage project payment milestones and deliverables"
         />
+=======
+        <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables"/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
         
         <ProjectMilestonesContent />
         

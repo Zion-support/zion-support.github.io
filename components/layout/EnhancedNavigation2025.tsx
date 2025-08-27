@@ -8,10 +8,15 @@ import {
   Target, Microscope, Atom, Database,
   Lock, Cloud, BarChart3, Settings,
   Eye, Code, Palette, Layers,
+<<<<<<< HEAD
   Network, Server, ShieldCheck, ZapIcon,
   GlobeIcon, StarIcon, TrendingUpIcon, UsersIcon,
   CheckCircleIcon, ArrowRightIcon, CpuIcon,
   DollarSign, Phone, ArrowRight, Mail, MapPin, Dna, BookOpen, Building, Sparkles
+=======
+  Network, Server, ShieldCheck,
+  DollarSign, Phone, ArrowRight, Mail, MapPin, Dna, BookOpen, Building
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -22,14 +27,8 @@ interface NavigationItem {
   children?: NavigationItem[];
   badge?: string;
   title?: string;
+  submenu?: NavigationItem[];
 }
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
 
 const navigationItems: NavigationItem[] = [
   {
@@ -39,6 +38,12 @@ const navigationItems: NavigationItem[] = [
     description: 'Complete portfolio of all technology services',
     badge: 'Showcase',
     children: [
+      { name: 'View All Services', href: '/innovative-micro-saas-showcase', description: 'Complete services portfolio' },
+      { name: 'Service Categories', href: '/innovative-micro-saas-showcase#categories', description: 'Browse by category' },
+      { name: 'Pricing Comparison', href: '/pricing', description: 'Compare service costs' },
+      { name: 'Service Search', href: '/innovative-micro-saas-showcase#search', description: 'Find specific services' }
+    ],
+    submenu: [
       { name: 'View All Services', href: '/innovative-micro-saas-showcase', description: 'Complete services portfolio' },
       { name: 'Service Categories', href: '/innovative-micro-saas-showcase#categories', description: 'Browse by category' },
       { name: 'Pricing Comparison', href: '/pricing', description: 'Compare service costs' },
@@ -55,6 +60,19 @@ const navigationItems: NavigationItem[] = [
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution', description: 'Emotional intelligence and self-awareness' },
       { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion', description: 'Quantum-AI hybrid computing' },
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem', description: 'Self-managing AI systems' },
+<<<<<<< HEAD
+=======
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance', description: 'Ethical AI frameworks' },
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
+      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized AI learning' },
+      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Medical AI solutions' },
+      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' }
+    ],
+    submenu: [
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution', description: 'Emotional intelligence and self-awareness' },
+      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion', description: 'Quantum-AI hybrid computing' },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem', description: 'Self-managing AI systems' },
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance', description: 'Ethical AI frameworks' }
     ]
   },
@@ -68,7 +86,65 @@ const navigationItems: NavigationItem[] = [
       { name: 'Space Mining Platform', href: '/space-mining-platform', description: 'Asteroid mining and space resources' },
       { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing', description: 'Quantum-biological hybrid processing' },
       { name: 'Brain-Computer Interface', href: '/brain-computer-interface', description: 'Neural interface technology' },
+<<<<<<< HEAD
       { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' }
+=======
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' },
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery', description: 'Advanced material science' },
+      { name: 'Quantum Robotics', href: '/quantum-robotics', description: 'Quantum-enhanced robotics' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security', description: 'Unbreakable quantum encryption' },
+      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization', description: 'Quantum supply chain optimization' }
+    ],
+    submenu: [
+      { name: 'Space Mining Platform', href: '/space-mining-platform', description: 'Asteroid mining and space resources' },
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing', description: 'Quantum-biological hybrid processing' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface', description: 'Neural interface technology' },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' }
+    ]
+  },
+  {
+    name: '🏢 Enterprise IT',
+    href: '/enterprise-it',
+    icon: <Shield className="w-5 h-5" />,
+    description: 'Enterprise-grade IT infrastructure and security solutions',
+    children: [
+      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Distributed edge computing' },
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture', description: 'Advanced security framework' },
+      { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops', description: 'Intelligent development operations' },
+      { name: 'Quantum Networking', href: '/quantum-networking', description: 'Quantum communication networks' },
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations', description: 'Self-managing IT infrastructure' },
+      { name: 'Quantum Data Center', href: '/quantum-data-center', description: 'Quantum-enhanced data centers' },
+      { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration', description: 'Quantum cloud transformation' }
+    ],
+    submenu: [
+      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Distributed edge computing' },
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture', description: 'Advanced security framework' },
+      { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops', description: 'Intelligent development operations' }
+    ]
+  },
+  {
+    name: '🚀 Micro SAAS',
+    href: '/micro-saas',
+    icon: <Rocket className="w-5 h-5" />,
+    description: 'AI-powered micro SAAS solutions for modern businesses',
+    children: [
+      { name: 'AI Content Factory Platform', href: '/ai-content-factory', description: 'Automated content creation' },
+      { name: 'CRM Intelligence & Automation', href: '/crm-intelligence-automation', description: 'Smart customer management' },
+      { name: 'AI Decision Engine Platform', href: '/ai-decision-engine', description: 'Intelligent decision support' },
+      { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform', description: 'AI-powered e-commerce' },
+      { name: 'AI HR & Talent Platform', href: '/ai-hr-talent-platform', description: 'Intelligent HR solutions' },
+      { name: 'Financial Analytics Platform', href: '/financial-analytics-platform', description: 'Advanced financial insights' },
+      { name: 'Supply Chain Intelligence', href: '/supply-chain-intelligence', description: 'Smart supply chain management' },
+      { name: 'Marketing Automation Platform', href: '/marketing-automation-platform', description: 'Automated marketing campaigns' }
+    ],
+    submenu: [
+      { name: 'AI Content Factory Platform', href: '/ai-content-factory', description: 'Automated content creation' },
+      { name: 'CRM Intelligence & Automation', href: '/crm-intelligence-automation', description: 'Smart customer management' },
+      { name: 'AI Decision Engine Platform', href: '/ai-decision-engine', description: 'Intelligent decision support' },
+      { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform', description: 'AI-powered e-commerce' }
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
     ]
   }
 ];
@@ -76,6 +152,7 @@ const navigationItems: NavigationItem[] = [
 export default function EnhancedNavigation2025() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+<<<<<<< HEAD
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Close dropdowns when clicking outside
@@ -88,64 +165,67 @@ export default function EnhancedNavigation2025() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+=======
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
   const closeAllDropdowns = () => {
     setActiveDropdown(null);
-    setIsOpen(false);
   };
 
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800/50' : 'bg-transparent'
-    }`}>
-      {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-900/80 to-purple-900/80 backdrop-blur-sm border-b border-cyan-500/20">
-        <div className="max-w-7xl mx-auto px-4 py-2">
-          <div className="flex items-center justify-between text-sm">
-            <div className="flex items-center gap-6 text-cyan-300">
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span>{contactInfo.mobile}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <span>{contactInfo.email}</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
-              <span className="text-yellow-400 font-semibold">Revolutionary Technology Solutions</span>
-            </div>
-          </div>
-        </div>
-      </div>
+  const closeMenu = () => {
+    setIsOpen(false);
+    setActiveSubmenu(null);
+  };
 
-      {/* Main Navigation */}
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group" onClick={closeAllDropdowns}>
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-7 h-7 text-white" />
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (activeDropdown && !(event.target as Element).closest('.dropdown-container')) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [activeDropdown]);
+
+  return (
+    <nav className="bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 sticky top-0 z-50">
+      {/* Top Bar */}
+      <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-b border-cyan-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-2">
+            <div className="flex items-center space-x-6 text-sm">
+              <div className="flex items-center space-x-2 text-cyan-400">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
               </div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <div className="flex items-center space-x-2 text-purple-400">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
             </div>
-            <div>
-              <div className="text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent">
-                Zion Tech Group
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-green-400 text-sm">Live Support Available</span>
               </div>
-              <div className="text-xs text-gray-400">Revolutionary Technology</div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
+<<<<<<< HEAD
               <div key={item.name} className="relative group">
+=======
+              <div key={item.name} className="relative dropdown-container">
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
                 <button
                   onClick={() => toggleDropdown(item.name)}
                   className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/5"

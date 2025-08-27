@@ -1,5 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 import { Link } from 'react-router-dom';
 import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
 const AIServices = [
@@ -116,6 +122,7 @@ const AIServices = [
     }
 ];
 const categories = [
+<<<<<<< HEAD
 const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
@@ -319,6 +326,8 @@ const AIServicesPage: React.FC = () => {
                 </div>
               </motion.div>
             ))}
+=======
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
     { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
     { name: "Strategy", value: "strategy", icon: <CheckCircle className="h-4 w-4"/> },
     { name: "Development", value: "development", icon: <Code className="h-4 w-4"/> },
@@ -481,12 +490,21 @@ export default function AIServicesPage() {
                 </h3>
                 <p className="text-zion-slate-light mb-4 line-clamp-2">
                   {service.description}
+<<<<<<< HEAD
                 </p>
 
                 {/* Pricing */}
                 <div className="flex items-baseline mb-4">
                   <span className="text-3xl font-bold text-zion-cyan">{service.price}</span>
                   <span className="text-zion-slate-light ml-1">{service.period}</span>
+=======
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pb-4">
+                <div className="mb-4">
+                  <p className="text-2xl font-bold text-zion-cyan mb-2">{service.price}</p>
+                  <p className="text-sm text-zion-slate-light">Starting price</p>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
                 </div>
 
                   <div>
@@ -649,5 +667,8 @@ export default function AIServicesPage() {
       </div>
     </div>);
 }
+<<<<<<< HEAD
 
 export default AIServicesPage;
+=======
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

@@ -645,6 +645,7 @@ export default function MicroSAASServicesPage() {
                 : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"}`}>
                 {category}
               </Button>))}
+<<<<<<< HEAD
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-8 h-8 text-white" />
@@ -696,10 +697,13 @@ export default function MicroSAASServicesPage() {
                 </div>
               </motion.div>
             ))}
+=======
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* SAAS Solutions Overview */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -728,6 +732,12 @@ export default function MicroSAASServicesPage() {
                 viewport={{ once: true }}
                 className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
+=======
+      {/* Services Grid */}
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
             {filteredServices.map((service) => (<Card key={service.id} className="group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:scale-105 border-zion-blue-light/20 bg-zion-blue-dark/50 backdrop-blur-sm">
                 <CardHeader className="pb-4">
                   <div className="flex justify-between items-start mb-4">
@@ -933,5 +943,8 @@ export default function MicroSAASServicesPage() {
       </div>
     </div>);
 }
+<<<<<<< HEAD
 
 export default MicroSAASServicesPage;
+=======
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

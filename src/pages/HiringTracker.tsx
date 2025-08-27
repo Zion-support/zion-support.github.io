@@ -7,6 +7,7 @@ import { SEO } from "../components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from "lucide-react";
 function HiringTrackerContent() {
+<<<<<<< HEAD
   const { jobId } = useParams() as { jobId?: string };
   const [activeTab, setActiveTab] = useState<string>("kanban");
 
@@ -16,6 +17,12 @@ function HiringTrackerContent() {
         title="Hiring Tracker | Zion AI Marketplace" 
         description="Manage your candidate pipeline in the Zion AI Marketplace." 
       />
+=======
+    const { jobId } = useParams();
+    const [activeTab, setActiveTab] = useState("kanban");
+    return (<>
+      <SEO title="Hiring Tracker | Zion AI Marketplace" description="Manage your candidate pipeline in the Zion AI Marketplace."/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
