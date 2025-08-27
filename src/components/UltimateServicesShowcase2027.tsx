@@ -111,7 +111,7 @@ import {
   X as XIcon
 } from 'lucide-react';
 import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data/ultimateInnovativeServices2027';
-import { COMPREHENSIVE_PRICING_GUIDE_2027, MARKET_ANALYSIS_2027 } from '../data/comprehensivePricingGuide2027';
+import { COMPREHENSIVE_PRICING_GUIDE_2027 } from '../data/comprehensivePricingGuide2027';
 
 export function UltimateServicesShowcase2027() {
   const [activeCategory, setActiveCategory] = useState('all');
