@@ -65,6 +65,9 @@ const WebsiteAnalytics = React.lazy(() => import('./pages/services/WebsiteAnalyt
 const ITHelpdesk = React.lazy(() => import('./pages/services/ITHelpdesk'));
 const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTracking'));
 const MobileSurvey = React.lazy(() => import('./pages/services/MobileSurvey'));
+// Additional innovative services
+const AIAutonomousCodeReviewer = React.lazy(() => import('./pages/services/AIAutonomousCodeReviewer'));
+const ZeroTrustNetworkAccess = React.lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
 // Additional new service pages
 const AIPoweredSEO = React.lazy(() => import('./pages/services/AIPoweredSEO'));
 const InterviewAssessmentAI = React.lazy(() => import('./pages/services/InterviewAssessmentAI'));
@@ -178,6 +181,9 @@ function App() {
               <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
               <Route path="/services/dsr-portal" element={<DSRPortal />} />
               <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+              {/* Additional innovative service routes */}
+              <Route path="/services/ai-autonomous-code-reviewer" element={<AIAutonomousCodeReviewer />} />
+              <Route path="/services/zero-trust-network-access" element={<ZeroTrustNetworkAccess />} />
               
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
