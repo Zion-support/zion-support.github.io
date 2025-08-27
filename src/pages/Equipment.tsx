@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
-export default function Talent() {
+export default function Equipment() {
   const features = [
     {
       icon: Users,
@@ -49,9 +49,9 @@ export default function Talent() {
   return (
     <>
       <SEO 
-        title="Talent | Zion Tech Group"
-        description="Find exceptional tech professionals for your projects and teams. Experience the future of technology services and solutions."
-        keywords="talent, technology, services, solutions, innovation, Zion Tech Group"
+        title="Equipment | Zion Tech Group"
+        description="High-performance technology infrastructure and hardware solutions. Experience the future of technology services and solutions."
+        keywords="equipment, technology, services, solutions, innovation, Zion Tech Group"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -69,7 +69,7 @@ export default function Talent() {
                 {title}
               </h1>
               <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-                Find exceptional tech professionals for your projects and teams. Our platform connects you with the best technology 
+                High-performance technology infrastructure and hardware solutions. Our platform connects you with the best technology 
                 solutions and professionals to drive your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
