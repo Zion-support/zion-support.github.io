@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles, Bot, Shield, FileText, Users, BarChart3, Cloud, ShieldCheck, Server, Database, Network, Rocket, Mail, Activity, Brain, Cpu, Zap, Lock, Target, CheckCircle, Star, Clock, Smartphone } from 'lucide-react';
 import { SEO } from '@/components/SEO';
@@ -6,6 +6,9 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaas
 import { CUTTING_EDGE_AI_SERVICES_2026 } from '../data/cuttingEdgeAIServices2026';
 import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026 } from '../data/specializedITInfrastructureServices2026';
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2026 } from '../data/specializedIndustrySolutions2026';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { NEW_SERVICES_2025 } from '../data/newServices2025';
+import { NEW_INNOVATIVE_SERVICES_2025 } from '../data/newInnovativeServices2025';
 
 export default function Services() {
   const aiServices = [
@@ -81,6 +84,18 @@ export default function Services() {
       reviewCount: 134,
       category: "AI & Analytics"
     }
+  ];
+
+
+
+  // Combine all services for comprehensive coverage
+  const allServices = [
+    ...aiServices,
+    ...itServices,
+    ...microSaaSServices,
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...NEW_SERVICES_2025,
+    ...NEW_INNOVATIVE_SERVICES_2025
   ];
 
   const itServices = [
@@ -431,6 +446,13 @@ export default function Services() {
               <Link to="/innovative-services-2026" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 font-semibold">
                 <TrendingUp className="w-5 h-5 ml-2" />
                 Discover 2026 Revolutionary Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+            <div>
+              <Link to="/new-innovative-services" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg hover:from-green-400 hover:to-blue-400 transition-all duration-300 font-semibold">
+                <Rocket className="w-5 h-5 mr-2" />
+                Discover New Services 2025
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>

@@ -135,6 +135,12 @@ const QuantumMachineLearning = React.lazy(() => import('./pages/services/quantum
 const API = React.lazy(() => import('./pages/API'));
 const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
 
+// Additional Innovative Services
+const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
+const NewInnovativeServicesShowcase = React.lazy(() => import('./pages/NewInnovativeServicesShowcase'));
+
 // Accessibility page
 const Accessibility = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -289,6 +295,14 @@ function App() {
               {/* Additional routes */}
               <Route path="/api" element={<API />} />
               <Route path="/developers" element={<DeveloperPortal />} />
+              
+              {/* Additional Innovative Services */}
+              <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+              <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+              <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+              
+              {/* Showcase Pages */}
+              <Route path="/new-innovative-services" element={<NewInnovativeServicesShowcase />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
