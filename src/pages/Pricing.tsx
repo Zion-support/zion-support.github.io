@@ -350,14 +350,14 @@ export default function Pricing() {
           </div>
           
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="flex items-center justify-center space-x-3">
+            <a href="tel:+13024640950" className="flex items-center justify-center space-x-3 hover:underline">
               <Phone className="w-5 h-5 text-white" />
-              <span className="text-white">+1 (555) 123-4567</span>
-            </div>
-            <div className="flex items-center justify-center space-x-3">
+              <span className="text-white">+1 302 464 0950</span>
+            </a>
+            <a href="mailto:kleber@ziontechgroup.com" className="flex items-center justify-center space-x-3 hover:underline">
               <Mail className="w-5 h-5 text-white" />
-              <span className="text-white">sales@ziontechgroup.com</span>
-            </div>
+              <span className="text-white">kleber@ziontechgroup.com</span>
+            </a>
           </div>
         </div>
       </section>

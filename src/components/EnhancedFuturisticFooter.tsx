@@ -61,60 +61,56 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'AI & Consciousness',
+      title: 'Services',
       links: [
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator' },
-        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion' },
-        { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems' },
-        { name: 'Neural Network Architect', href: '/ai-services/neural-architect' },
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics' },
-        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics' }
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' }
       ]
     },
     {
-      title: 'Micro SAAS',
+      title: 'AI Products',
       links: [
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
-        { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience' },
-        { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing' },
-        { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain' },
-        { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity' },
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' }
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
+        { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' }
       ]
     },
     {
-      title: 'IT Services',
+      title: 'Business Tools',
       links: [
-        { name: 'Infrastructure Management', href: '/it-services/infrastructure' },
-        { name: 'Digital Transformation', href: '/it-services/digital-transformation' },
-        { name: 'IT Consulting', href: '/it-services/consulting' },
-        { name: 'Onsite Support', href: '/it-services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/it-services/green-it' },
-        { name: '5G Network Solutions', href: '/it-services/5g-solutions' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+        { name: 'Returns Management', href: '/services/returns-management' },
+        { name: 'Email Sequencer', href: '/services/email-sequencer' },
+        { name: 'Podcast Transcription', href: '/services/podcast-transcription' },
+        { name: 'Micro CRM', href: '/services/micro-crm' }
       ]
     },
     {
-      title: 'Emerging Tech',
+      title: 'Company',
       links: [
-        { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing' },
-        { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi' },
-        { name: 'Space Technology', href: '/emerging-tech/space-tech' },
-        { name: 'Biotechnology', href: '/emerging-tech/biotech' },
-        { name: 'Nanotechnology', href: '/emerging-tech/nanotech' },
-        { name: 'Augmented Reality', href: '/emerging-tech/ar-vr' }
+        { name: 'About', href: '/about' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Contact', href: '/contact' }
       ]
     }
   ];
 
   const quickLinks = [
-    { name: 'Services Overview', href: '/services-overview' },
-    { name: 'Pricing Guide', href: '/pricing-guide' },
-    { name: 'Innovative Services 2027', href: '/innovative-services-2027' },
-    { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Request Quote', href: '/request-quote' },
+    { name: 'Help', href: '/help' },
+    { name: 'Privacy', href: '/privacy' },
+    { name: 'Terms', href: '/terms' },
+    { name: 'Sitemap', href: '/sitemap.xml' }
   ];
 
   const socialLinks = [
@@ -287,7 +283,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               <Link to="/terms" className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
                 Terms of Service
               </Link>
-              <Link to="/sitemap" className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
+              <Link to="/sitemap.xml" className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
                 Sitemap
               </Link>
             </div>
