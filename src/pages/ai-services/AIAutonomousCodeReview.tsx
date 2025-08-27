@@ -1,8 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { 
+  Code, 
+  Shield, 
+  Zap, 
+  Brain, 
+  Users, 
+  BarChart3, 
+  Target, 
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Bug,
+  Lock,
+  Cpu,
+  Database,
+  GitBranch
+} from 'lucide-react';
+import { SEO } from "../components/SEOHead"';
+
 const features = [
     {
         title: "Automated Code Analysis",
@@ -74,8 +92,14 @@ const testimonials = [
     }
 ];
 export default function AIAutonomousCodeReview() {
-    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
-      <SEO title="AI Autonomous Code Review - Zion Tech Group" description="Revolutionize your code review process with AI-powered analysis. Automated security scanning, performance optimization, and quality assurance." keywords="AI code review, automated code review, code security, code quality, AI development tools, code analysis" canonical="https://ziontechgroup.com/ai-services/ai-autonomous-code-review/"/>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
+      <SEOHead 
+        title="AI Autonomous Code Review - Zion Tech Group" 
+        description="Revolutionize your code review process with AI-powered analysis. Automated security scanning, performance optimization, and quality assurance."
+        keywords="AI code review, automated code review, code security, code quality, AI development tools, code analysis"
+        canonical="https://ziontechgroup.com/ai-services/ai-autonomous-code-review/"
+      />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

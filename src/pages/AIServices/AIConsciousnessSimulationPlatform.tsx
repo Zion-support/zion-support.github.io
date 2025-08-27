@@ -38,8 +38,14 @@ const benefits = [
     "Gain competitive advantage"
 ];
 export default function AIConsciousnessSimulationPlatform() {
-    return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Consciousness Simulation Platform - Zion Tech Group" description="AI-powered consciousness simulation platform solution that transforms your operations with intelligent automation and real-time insights." keywords="AI consciousness simulation platform, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiconsciousnesssimulationplatform/"/>
+  return (
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <SEOHead 
+        title="Consciousness Simulation Platform - Zion Tech Group" 
+        description="AI-powered consciousness simulation platform solution that transforms your operations with intelligent automation and real-time insights."
+        keywords="AI consciousness simulation platform, automation, intelligent systems, business optimization"
+        canonical="https://ziontechgroup.com/aiconsciousnesssimulationplatform/"
+      />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

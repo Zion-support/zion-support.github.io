@@ -100,6 +100,7 @@ const Cookies = () => {
                   <strong>Email:</strong> privacy@ziontechgroup.com<br />
                   <strong>Phone:</strong> +1 (302) 464-0950<br />
                   <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
+=======
 const Cookies: React.FC = () => {}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -156,14 +157,15 @@ const Cookies: React.FC = () => {}
                 <p className="text-gray-300 text-sm">
                   Personalize content and improve functionality
                 </p>
-import {SEO} from "@/components/SEO";
+=======
+import {SEO} from "../components/SEOHead";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 
 export default function Cookies() {}
   return (
     <div className="min-h-screen bg-zion-blue">
-      <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https://ziontechgroup.com/cookies"/>
+      <SEOHead title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https://ziontechgroup.com/cookies"/>
       <Header />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -543,18 +545,20 @@ export default function Cookies() {}
 };
 
 export default Cookies;
+=======
       </main>
       <Footer />
     </div>
   );
 }
-import {SEO} from '@/components/SEO';
+=======
+import {SEO} from "../components/SEOHead"';
 import {GradientHeading} from '@/components/GradientHeading';
 
 export default function Cookies() {}
   return (
     <>
-      <SEO title="Cookie Policy - Zion Tech Group" description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience." keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy" canonical="https://ziontechgroup.com/cookies"/>
+      <SEOHead title="Cookie Policy - Zion Tech Group" description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience." keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy" canonical="https://ziontechgroup.com/cookies"/>
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

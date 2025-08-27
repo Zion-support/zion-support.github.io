@@ -1,6 +1,36 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+
+import React from 'react';
+    <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Request Quote - Zion Tech Group" 
+        description="Get a custom quote for your AI and tech project needs from Zion Tech Group."
+        keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group"
+        canonical="https://ziontechgroup.com/request-quote"
+      />
+      
+      <AppHeader />
+      
+      <main className="pt-16 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Request a Custom Quote
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Tell us about your project and we'll connect you with the perfect talent and services for your needs
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <QuoteRequestForm />
+          </div>
+        </div>
+import { SEO } from "../components/SEOHead";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle, Clock, Users, Zap } from "lucide-react";
 
 export default function RequestQuote() {
   const [formData, setFormData] = useState({
@@ -38,7 +68,7 @@ export default function RequestQuote() {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Request a Quote - Zion Tech Group"
         description="Get a custom quote for your technology project. Tell us about your needs and we'll provide a detailed proposal."
         canonical="/request-quote"

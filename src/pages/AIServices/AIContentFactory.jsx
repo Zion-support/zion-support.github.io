@@ -39,7 +39,7 @@ const benefits = [
 ];
 export default function AIContentFactory() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Content Factory - Zion Tech Group" description="AI-powered content factory solution that transforms your operations with intelligent automation and real-time insights." keywords="AI content factory, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicontentfactory/"/>
+      <SEOHead title="Content Factory - Zion Tech Group" description="AI-powered content factory solution that transforms your operations with intelligent automation and real-time insights." keywords="AI content factory, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicontentfactory/"/>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

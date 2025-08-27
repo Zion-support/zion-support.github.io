@@ -768,7 +768,7 @@ export default function AILegalTech() {
             </div>
           </div>
     <div className="min-h-screen bg-gradient-to-br from-black via-indigo-900 to-purple-900">
-      <SEO 
+      <SEOHead 
         title="AI Legal Tech Platform - Zion Tech Group" 
         description="Revolutionize your legal practice with AI-powered tools. Faster research, automated analysis, and intelligent compliance monitoring."
         keywords="AI legal tech, legal automation, contract analysis, legal research, compliance monitoring, legal software"

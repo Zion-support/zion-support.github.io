@@ -38,8 +38,14 @@ const benefits = [
     "Gain competitive advantage"
 ];
 export default function AIContentCreationRevolution() {
-    return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Content Creation Revolution - Zion Tech Group" description="AI-powered content creation revolution solution that transforms your operations with intelligent automation and real-time insights." keywords="AI content creation revolution, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicontentcreationrevolution/"/>
+  return (
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <SEOHead 
+        title="Content Creation Revolution - Zion Tech Group" 
+        description="AI-powered content creation revolution solution that transforms your operations with intelligent automation and real-time insights."
+        keywords="AI content creation revolution, automation, intelligent systems, business optimization"
+        canonical="https://ziontechgroup.com/aicontentcreationrevolution/"
+      />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

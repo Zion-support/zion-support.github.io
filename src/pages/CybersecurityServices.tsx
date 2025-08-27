@@ -1,297 +1,356 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { SEO } from "../components/SEOHead";
 import { 
   Shield, 
   Lock, 
   Eye, 
-  AlertTriangle,
-  Users,
-  Globe,
-  CheckCircle,
+  Zap, 
+  Target, 
+  Users, 
+  DollarSign,
   ArrowRight,
-  Zap,
-  Target
-} from 'lucide-react';
-
+  CheckCircle,
+  Star,
+  Globe,
+  AlertTriangle,
+  Network,
+  Database,
+  Cloud,
+  Smartphone,
+  Server
+} from "lucide-react";
+import { Link } from "react-router-dom";
 export default function CybersecurityServices() {
-  const securityServices = [
-    {
-      title: "Zero Trust Architecture",
-      description: "Implement comprehensive zero-trust security framework for your organization",
-      features: [
-        "Identity Verification",
-        "Device Trust Assessment",
-        "Network Segmentation",
-        "Continuous Monitoring"
-      ],
-      icon: Shield,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Threat Detection & Response",
-      description: "Advanced threat detection and automated response systems",
-      features: [
-        "Real-time Monitoring",
-        "AI-Powered Detection",
-        "Automated Response",
-        "Incident Investigation"
-      ],
-      icon: Eye,
-      color: "from-green-500 to-emerald-500"
-    },
+  const services = [
     {
       title: "Penetration Testing",
-      description: "Comprehensive security testing to identify vulnerabilities",
-      features: [
-        "External Testing",
-        "Internal Testing",
-        "Social Engineering",
-        "Physical Security"
-      ],
-      icon: Target,
-      color: "from-orange-500 to-red-500"
+      description: "Comprehensive security assessments to identify vulnerabilities in your systems",
+      icon: <Target className="h-6 w-6 text-zion-cyan" />,
+      price: "From $2,500"
     },
     {
-      title: "Security Audits & Compliance",
-      description: "Ensure compliance with industry standards and regulations",
-      features: [
-        "SOC 2 Compliance",
-        "ISO 27001",
-        "GDPR Compliance",
-        "HIPAA Security"
-      ],
-      icon: Lock,
-      color: "from-purple-500 to-pink-500"
+      title: "Security Audits",
+      description: "Thorough review of your security policies, procedures, and infrastructure",
+      icon: <Eye className="h-6 w-6 text-zion-purple" />,
+      price: "From $1,800"
+    },
+    {
+      title: "Incident Response",
+      description: "24/7 emergency response team for security breaches and cyber attacks",
+      icon: <AlertTriangle className="h-6 w-6 text-zion-blue" />,
+      price: "From $5,000"
+    },
+    {
+      title: "Security Training",
+      description: "Employee cybersecurity awareness and best practices training",
+      icon: <Users className="h-6 w-6 text-zion-cyan" />,
+      price: "From $500"
     }
   ];
 
   const securitySolutions = [
     {
-      category: "Network Security",
-      solutions: [
-        "Firewall Management",
-        "Intrusion Detection",
-        "VPN Solutions",
-        "Network Monitoring"
-      ]
+      title: "Network Security",
+      description: "Firewall configuration, intrusion detection, and network monitoring",
+      icon: <Network className="h-8 w-8 text-zion-cyan" />
     },
     {
-      category: "Endpoint Security",
-      solutions: [
-        "Antivirus Protection",
-        "Device Management",
-        "Data Encryption",
-        "Access Control"
-      ]
+      title: "Endpoint Protection",
+      description: "Advanced antivirus, malware protection, and device security",
+      icon: <Smartphone className="h-8 w-8 text-zion-purple" />
     },
     {
-      category: "Application Security",
-      solutions: [
-        "Code Review",
-        "Vulnerability Assessment",
-        "API Security",
-        "Secure Development"
-      ]
+      title: "Cloud Security",
+      description: "AWS, Azure, and Google Cloud security assessment and hardening",
+      icon: <Cloud className="h-8 w-8 text-zion-blue" />
     },
     {
-      category: "Data Protection",
-      solutions: [
-        "Data Encryption",
-        "Backup Security",
-        "Access Management",
-        "Compliance Monitoring"
-      ]
+      title: "Data Protection",
+      description: "Encryption, backup security, and data loss prevention",
+      icon: <Database className="h-8 w-8 text-zion-cyan" />
+    },
+    {
+      title: "Server Security",
+      description: "Server hardening, access control, and monitoring",
+      icon: <Server className="h-8 w-8 text-zion-purple" />
+    },
+    {
+      title: "Compliance",
+      description: "GDPR, HIPAA, SOC 2, and industry-specific compliance",
+      icon: <Shield className="h-8 w-8 text-zion-blue" />
     }
   ];
 
-  const benefits = [
+  const pricingPlans = [
     {
-      icon: Shield,
-      title: "Comprehensive Protection",
-      description: "Multi-layered security approach covering all attack vectors"
+      name: "Basic Security",
+      price: "$299",
+      period: "/month",
+      description: "Essential cybersecurity for small businesses",
+      features: [
+        "Security assessment",
+        "Basic monitoring",
+        "Monthly reports",
+        "Email support",
+        "Security training"
+      ],
+      popular: false
     },
     {
-      icon: Zap,
-      title: "24/7 Monitoring",
-      description: "Round-the-clock security monitoring and threat detection"
+      name: "Professional Security",
+      price: "$799",
+      period: "/month",
+      description: "Comprehensive protection for growing businesses",
+      features: [
+        "Full security audit",
+        "24/7 monitoring",
+        "Incident response",
+        "Priority support",
+        "Advanced training",
+        "Compliance assistance"
+      ],
+      popular: true
     },
     {
-      icon: Users,
-      title: "Expert Team",
-      description: "Certified cybersecurity professionals with industry experience"
+      name: "Enterprise Security",
+      price: "$1,999",
+      period: "/month",
+      description: "Full-scale cybersecurity for large organizations",
+      features: [
+        "Custom security solutions",
+        "Dedicated security team",
+        "Advanced threat hunting",
+        "White-label solutions",
+        "Custom integrations",
+        "Executive reporting"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Michael Chen",
+      role: "CISO, FinTech Solutions",
+      content: "Zion's cybersecurity team helped us achieve SOC 2 compliance in record time. Their expertise is unmatched.",
+      rating: 5
     },
     {
-      icon: Globe,
-      title: "Global Standards",
-      description: "Compliance with international security standards and best practices"
+      name: "Dr. Sarah Williams",
+      role: "IT Director, HealthCare Plus",
+      content: "The penetration testing revealed critical vulnerabilities we didn't know existed. Their thorough approach saved us.",
+      rating: 5
+    },
+    {
+      name: "Robert Johnson",
+      role: "CEO, E-commerce Pro",
+      content: "24/7 incident response gives us peace of mind. Zion's team responds faster than any other provider we've used.",
+      rating: 5
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
+      <SEOHead 
+        title="Cybersecurity Services - Zion Tech Group" 
+        description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response."
+        keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group"
+        canonical="https://ziontechgroup.com/cybersecurity-services"
+      />
+
       {/* Hero Section */}
-      <section className="pt-24 pb-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Cybersecurity Services
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced security solutions to protect your business from evolving cyber threats
-            </p>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              From zero-trust architecture to threat detection and compliance management, 
-              we provide comprehensive cybersecurity solutions that keep your business secure.
-            </p>
-          </motion.div>
+      <section className="relative overflow-hidden py-20 px-4">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
+        <div className="container mx-auto relative z-10 text-center">
+          <Badge className="mb-6 bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
+            🛡️ Enterprise-Grade Security
+          </Badge>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+            Cybersecurity Services
+          </h1>
+          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
+            Protect your business from evolving cyber threats with our comprehensive security services. 
+            From penetration testing to incident response, we've got you covered 24/7.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
+              <Link to="/contact">
+                Get Security Assessment
+                <ArrowRight className="ml-2 h-5 w-5"/>
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">
+              <Link to="/contact">
+                Emergency Response
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* Security Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      {/* Services Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Security Services
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive Security Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive cybersecurity solutions designed for modern threats
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our expert cybersecurity team provides a full range of security services to protect your business assets and data.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityServices.map((service, index) => (
-              <motion.div
-                key={index}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className={`inline-flex p-4 rounded-full mb-6 bg-gradient-to-r ${service.color}`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-400 flex items-center">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
+                <CardHeader className="text-center">
+                  <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-16 h-16 flex items-center justify-center">
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-white">{service.title}</CardTitle>
+                  <CardDescription className="text-zion-cyan font-semibold">
+                    {service.price}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-zion-slate-light text-center">
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>))}
           </div>
         </div>
       </section>
 
       {/* Security Solutions Section */}
-      <section className="py-20 bg-black/30">
-        <div className="container mx-auto px-4">
+      <section className="py-20 px-4 bg-zion-slate-dark/30">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Solutions
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Security Solutions for Every Need
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive security coverage across all aspects of your business
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              From network security to compliance, we provide comprehensive protection across all aspects of your infrastructure.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securitySolutions.map((solution, index) => (
-              <motion.div
-                key={index}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-bold text-cyan-400 mb-4">{solution.category}</h3>
-                <ul className="space-y-2">
-                  {solution.solutions.map((item, idx) => (
-                    <li key={idx} className="text-sm text-gray-300 flex items-center">
-                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {securitySolutions.map((solution, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 text-center">
+                <CardHeader>
+                  <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-20 h-20 flex items-center justify-center">
+                    {solution.icon}
+                  </div>
+                  <CardTitle className="text-white">{solution.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-zion-slate-light">
+                    {solution.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      {/* Pricing Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Security Solutions?
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Flexible Security Plans
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive protection backed by expertise and innovation
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Choose the security plan that fits your business needs. All plans include our core cybersecurity features.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                className="text-center group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {benefit.description}
-                </p>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>
+                {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
+                    Most Popular
+                  </Badge>)}
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl text-white mb-2">{plan.name}</CardTitle>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
+                    <span className="text-zion-slate-light">{plan.period}</span>
+                  </div>
+                  <CardDescription className="text-zion-slate-light">
+                    {plan.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 mb-6">
+                    {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">
+                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
+                        {feature}
+                      </li>))}
+                  </ul>
+                  <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                    <Link to="/contact">
+                      Get Started
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 bg-zion-slate-dark/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Trusted by Security Leaders
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              See what our clients say about our cybersecurity expertise and commitment to protecting their businesses.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
+                <CardContent className="pt-6">
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-5 w-5 text-yellow-400 fill-current"/>))}
+                  </div>
+                  <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>
+                  <div>
+                    <p className="font-semibold text-white">{testimonial.name}</p>
+                    <p className="text-sm text-zion-slate-light">{testimonial.role}</p>
+                  </div>
+                </CardContent>
+              </Card>))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Secure Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our cybersecurity solutions can protect your organization
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+            Don't wait until it's too late. Get expert cybersecurity protection today and sleep soundly knowing your business is secure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-            </Link>
-            <Link 
-              to="/services"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-            >
-              View All Services
-            </Link>
+            <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
+              <Link to="/contact">
+                Get Security Assessment
+                <ArrowRight className="ml-2 h-5 w-5"/>
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">
+              <Link to="/contact">
+                Contact Security Team
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 }

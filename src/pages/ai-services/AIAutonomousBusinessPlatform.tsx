@@ -1,8 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Brain, Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Play, Star, Globe, Cpu } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { 
+  Brain, 
+  Cloud, 
+  Zap, 
+  Shield, 
+  Users, 
+  BarChart3, 
+  Target, 
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Globe,
+  Lock,
+  Cpu,
+  Database
+} from 'lucide-react';
+import { SEO } from "../components/SEOHead"';
+
 const features = [
     {
         title: "Cloud-Native Architecture",
@@ -74,8 +91,14 @@ const testimonials = [
     }
 ];
 export default function AIAutonomousBusinessPlatform() {
-    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
-      <SEO title="AI Autonomous Business Platform - Zion Tech Group" description="Transform your business with our cloud-native AI platform. Scalable, secure, and intelligent business management for the modern enterprise." keywords="AI business platform, cloud AI platform, autonomous business platform, enterprise AI, business intelligence platform" canonical="https://ziontechgroup.com/ai-services/ai-autonomous-business-platform/"/>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
+      <SEOHead 
+        title="AI Autonomous Business Platform - Zion Tech Group" 
+        description="Transform your business with our cloud-native AI platform. Scalable, secure, and intelligent business management for the modern enterprise."
+        keywords="AI business platform, cloud AI platform, autonomous business platform, enterprise AI, business intelligence platform"
+        canonical="https://ziontechgroup.com/ai-services/ai-autonomous-business-platform/"
+      />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

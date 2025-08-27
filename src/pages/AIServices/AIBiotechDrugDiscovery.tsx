@@ -38,8 +38,14 @@ const benefits = [
     "Gain competitive advantage"
 ];
 export default function AIBiotechDrugDiscovery() {
-    return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Biotech Drug Discovery - Zion Tech Group" description="AI-powered biotech drug discovery solution that transforms your operations with intelligent automation and real-time insights." keywords="AI biotech drug discovery, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aibiotechdrugdiscovery/"/>
+  return (
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <SEOHead 
+        title="Biotech Drug Discovery - Zion Tech Group" 
+        description="AI-powered biotech drug discovery solution that transforms your operations with intelligent automation and real-time insights."
+        keywords="AI biotech drug discovery, automation, intelligent systems, business optimization"
+        canonical="https://ziontechgroup.com/aibiotechdrugdiscovery/"
+      />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
