@@ -1,493 +1,381 @@
 export const INNOVATIVE_MICRO_SAAS_2025 = [
-    // AI-Powered Business Intelligence
-    {
-        id: "ai-business-intelligence-suite",
-        title: "AI Business Intelligence Suite Pro",
-        description: "Comprehensive business intelligence platform powered by AI for real-time analytics, predictive insights, and automated reporting. Transforms raw data into actionable business intelligence.",
-        category: "Business Intelligence",
-        subcategory: "AI Analytics",
-        price: 399,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI-powered data analysis",
-            "Predictive analytics",
-            "Real-time dashboards",
-            "Automated reporting",
-            "Natural language queries",
-            "Data visualization",
-            "Custom alerts",
-            "API integrations"
-        ],
-        benefits: [
-            "10x faster insights generation",
-            "Predictive business trends",
-            "Automated decision support",
-            "Real-time business monitoring",
-            "Data-driven strategies"
-        ],
-        targetAudience: ["Business analysts", "Executives", "Data scientists", "Consultants"],
-        marketPrice: "$399-1,299/month",
-        website: "https://ziontechgroup.com/ai-business-intelligence",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Business Intelligence", "AI", "Analytics", "Predictive"],
-        aiScore: 96,
-        rating: 4.8,
-        reviewCount: 156,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-15T10:00:00.000Z"
-    },
-
-    // Advanced Customer Experience Platform
-    {
-        id: "ai-customer-experience-platform",
-        title: "AI Customer Experience Platform",
-        description: "Next-generation customer experience platform using AI to personalize interactions, predict customer needs, and optimize engagement across all touchpoints.",
-        category: "Customer Experience",
-        subcategory: "AI Personalization",
-        price: 299,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI personalization engine",
-            "Customer journey mapping",
-            "Predictive analytics",
-            "Omnichannel engagement",
-            "Sentiment analysis",
-            "Automated responses",
-            "Performance tracking",
-            "Integration APIs"
-        ],
-        benefits: [
-            "Increase customer satisfaction by 40%",
-            "Improve conversion rates by 25%",
-            "Reduce customer churn by 30%",
-            "Personalized experiences",
-            "Automated customer service"
-        ],
-        targetAudience: ["E-commerce", "SaaS companies", "Retail", "Service businesses"],
-        marketPrice: "$299-899/month",
-        website: "https://ziontechgroup.com/ai-customer-experience",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Customer Experience", "AI", "Personalization", "Engagement"],
-        aiScore: 94,
-        rating: 4.7,
-        reviewCount: 89,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-20T14:30:00.000Z"
-    },
-
-    // Intelligent Project Management
-    {
-        id: "ai-project-management-suite",
-        title: "AI Project Management Suite",
-        description: "Intelligent project management platform that uses AI to optimize resource allocation, predict project risks, and automate project workflows for maximum efficiency.",
-        category: "Project Management",
-        subcategory: "AI Optimization",
-        price: 199,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI resource optimization",
-            "Risk prediction",
-            "Automated workflows",
-            "Team collaboration",
-            "Progress tracking",
-            "Budget management",
-            "Reporting automation",
-            "Integration tools"
-        ],
-        benefits: [
-            "Reduce project delays by 35%",
-            "Optimize resource allocation",
-            "Predict and mitigate risks",
-            "Automate routine tasks",
-            "Improve team productivity"
-        ],
-        targetAudience: ["Project managers", "Teams", "Consultants", "Agencies"],
-        marketPrice: "$199-599/month",
-        website: "https://ziontechgroup.com/ai-project-management",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Project Management", "AI", "Automation", "Productivity"],
-        aiScore: 93,
-        rating: 4.6,
-        reviewCount: 67,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-01-25T11:15:00.000Z"
-    },
-
-    // Advanced Marketing Automation
-    {
-        id: "ai-marketing-automation-platform",
-        title: "AI Marketing Automation Platform",
-        description: "Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.",
-        category: "Marketing",
-        subcategory: "AI Automation",
-        price: 349,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI campaign optimization",
-            "Content personalization",
-            "Multi-channel automation",
-            "Lead scoring",
-            "A/B testing automation",
-            "Performance analytics",
-            "Customer segmentation",
-            "Integration ecosystem"
-        ],
-        benefits: [
-            "Increase marketing ROI by 50%",
-            "Automate campaign optimization",
-            "Personalize customer experiences",
-            "Reduce manual work by 70%",
-            "Data-driven marketing decisions"
-        ],
-        targetAudience: ["Marketing teams", "Agencies", "E-commerce", "B2B companies"],
-        marketPrice: "$349-999/month",
-        website: "https://ziontechgroup.com/ai-marketing-automation",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Marketing", "Automation", "AI", "Personalization"],
-        aiScore: 95,
-        rating: 4.8,
-        reviewCount: 123,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-01T09:00:00.000Z"
-    },
-
-    // Intelligent HR & Talent Management
-    {
-        id: "ai-hr-talent-platform",
-        title: "AI HR & Talent Management Platform",
-        description: "Comprehensive HR platform using AI for recruitment, employee engagement, performance management, and talent development. Optimizes the entire employee lifecycle.",
-        category: "Human Resources",
-        subcategory: "AI Management",
-        price: 249,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI recruitment matching",
-            "Employee engagement analytics",
-            "Performance tracking",
-            "Skills assessment",
-            "Learning path optimization",
-            "Retention prediction",
-            "Compliance monitoring",
-            "Integration tools"
-        ],
-        benefits: [
-            "Reduce hiring time by 40%",
-            "Improve employee retention by 25%",
-            "Optimize learning paths",
-            "Data-driven HR decisions",
-            "Automated compliance"
-        ],
-        targetAudience: ["HR departments", "Recruitment agencies", "Companies", "Consultants"],
-        marketPrice: "$249-799/month",
-        website: "https://ziontechgroup.com/ai-hr-talent",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["HR", "Talent Management", "AI", "Recruitment"],
-        aiScore: 94,
-        rating: 4.7,
-        reviewCount: 78,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-05T15:30:00.000Z"
-    },
-
-    // Advanced Sales Intelligence
-    {
-        id: "ai-sales-intelligence-platform",
-        title: "AI Sales Intelligence Platform",
-        description: "Intelligent sales platform that uses AI to identify prospects, predict sales opportunities, and optimize sales processes for maximum conversion rates.",
-        category: "Sales",
-        subcategory: "AI Intelligence",
-        price: 399,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI prospect identification",
-            "Sales opportunity prediction",
-            "Lead scoring automation",
-            "Pipeline optimization",
-            "Performance analytics",
-            "CRM integration",
-            "Sales forecasting",
-            "Team collaboration"
-        ],
-        benefits: [
-            "Increase sales by 35%",
-            "Improve lead quality by 50%",
-            "Optimize sales processes",
-            "Predict sales opportunities",
-            "Automated lead scoring"
-        ],
-        targetAudience: ["Sales teams", "B2B companies", "Sales consultants", "Agencies"],
-        marketPrice: "$399-1,199/month",
-        website: "https://ziontechgroup.com/ai-sales-intelligence",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Sales", "AI", "Intelligence", "Automation"],
-        aiScore: 95,
-        rating: 4.8,
-        reviewCount: 95,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-10T12:00:00.000Z"
-    },
-
-    // Intelligent Financial Planning
-    {
-        id: "ai-financial-planning-platform",
-        title: "AI Financial Planning & Advisory Platform",
-        description: "Advanced financial planning platform using AI to provide personalized financial advice, portfolio optimization, and automated financial management.",
-        category: "Financial Services",
-        subcategory: "AI Planning",
-        price: 199,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI financial advice",
-            "Portfolio optimization",
-            "Risk assessment",
-            "Goal tracking",
-            "Automated planning",
-            "Tax optimization",
-            "Retirement planning",
-            "Investment recommendations"
-        ],
-        benefits: [
-            "Personalized financial advice",
-            "Optimize investment returns",
-            "Automated financial planning",
-            "Risk management",
-            "Goal achievement tracking"
-        ],
-        targetAudience: ["Individuals", "Financial advisors", "Wealth managers", "Retail investors"],
-        marketPrice: "$199-599/month",
-        website: "https://ziontechgroup.com/ai-financial-planning",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Financial Planning", "AI", "Investment", "Advisory"],
-        aiScore: 93,
-        rating: 4.6,
-        reviewCount: 56,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-15T16:45:00.000Z"
-    },
-
-    // Advanced Data Privacy & Compliance
-    {
-        id: "ai-data-privacy-platform",
-        title: "AI Data Privacy & Compliance Platform",
-        description: "Intelligent data privacy platform that uses AI to automate compliance monitoring, data protection, and regulatory reporting across all data systems.",
-        category: "Data Privacy",
-        subcategory: "AI Compliance",
-        price: 499,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI compliance monitoring",
-            "Data protection automation",
-            "Regulatory reporting",
-            "Privacy impact assessment",
-            "Data mapping",
-            "Consent management",
-            "Breach detection",
-            "Audit trails"
-        ],
-        benefits: [
-            "Automate compliance by 80%",
-            "Reduce privacy risks",
-            "Automated reporting",
-            "Real-time monitoring",
-            "Regulatory confidence"
-        ],
-        targetAudience: ["Enterprises", "Healthcare", "Financial services", "Government"],
-        marketPrice: "$499-1,499/month",
-        website: "https://ziontechgroup.com/ai-data-privacy",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Data Privacy", "Compliance", "AI", "Security"],
-        aiScore: 96,
-        rating: 4.8,
-        reviewCount: 73,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-20T10:15:00.000Z"
-    },
-
-    // Intelligent Supply Chain Management
-    {
-        id: "ai-supply-chain-platform",
-        title: "AI Supply Chain Management Platform",
-        description: "Comprehensive supply chain platform using AI to optimize inventory, predict demand, and automate supply chain operations for maximum efficiency.",
-        category: "Supply Chain",
-        subcategory: "AI Management",
-        price: 599,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI demand prediction",
-            "Inventory optimization",
-            "Supplier management",
-            "Risk assessment",
-            "Cost optimization",
-            "Real-time tracking",
-            "Performance analytics",
-            "Integration tools"
-        ],
-        benefits: [
-            "Reduce inventory costs by 30%",
-            "Improve demand forecasting",
-            "Optimize supplier relationships",
-            "Risk mitigation",
-            "Cost optimization"
-        ],
-        targetAudience: ["Manufacturing", "Retail", "Logistics", "E-commerce"],
-        marketPrice: "$599-1,999/month",
-        website: "https://ziontechgroup.com/ai-supply-chain",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Supply Chain", "AI", "Optimization", "Management"],
-        aiScore: 95,
-        rating: 4.7,
-        reviewCount: 64,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-02-25T14:00:00.000Z"
-    },
-
-    // Advanced Business Process Automation
-    {
-        id: "ai-business-process-automation",
-        title: "AI Business Process Automation Platform",
-        description: "Intelligent business process automation platform that uses AI to identify, optimize, and automate complex business processes for maximum efficiency.",
-        category: "Business Automation",
-        subcategory: "AI Processes",
-        price: 449,
-        currency: "$",
-        pricingModel: "monthly",
-        features: [
-            "AI process discovery",
-            "Workflow automation",
-            "Process optimization",
-            "Performance monitoring",
-            "Integration automation",
-            "Custom workflows",
-            "Analytics dashboard",
-            "API ecosystem"
-        ],
-        benefits: [
-            "Automate processes by 70%",
-            "Reduce operational costs",
-            "Improve efficiency",
-            "Eliminate manual errors",
-            "Scalable automation"
-        ],
-        targetAudience: ["Enterprises", "Consultants", "Agencies", "Service businesses"],
-        marketPrice: "$449-1,299/month",
-        website: "https://ziontechgroup.com/ai-business-automation",
-        contactEmail: "kleber@ziontechgroup.com",
-        contactPhone: "+1 302 464 0950",
-        address: "364 E Main St STE 1008, Middletown DE 19709",
-        tags: ["Business Automation", "AI", "Processes", "Efficiency"],
-        aiScore: 94,
-        rating: 4.7,
-        reviewCount: 82,
-        featured: true,
-        location: "Global",
-        availability: "Immediate",
-        author: {
-            name: "Zion Tech Group",
-            id: "zion-tech-group",
-            verified: true
-        },
-        images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"],
-        createdAt: "2025-03-01T11:30:00.000Z"
-    }
+  // Emerging Technology Solutions
+  {
+    id: "metaverse-platform",
+    title: "Metaverse Business Platform",
+    description: "Comprehensive platform for businesses to establish presence in the metaverse with virtual offices, events, and commerce",
+    category: "Metaverse",
+    price: "$8,500/month",
+    features: [
+      "Virtual office creation",
+      "3D event hosting",
+      "Virtual commerce",
+      "Avatar management",
+      "Cross-platform compatibility",
+      "Analytics dashboard"
+    ],
+    benefits: [
+      "Early metaverse adoption",
+      "Virtual customer engagement",
+      "Cost-effective events",
+      "Global reach"
+    ],
+    link: "/services/metaverse-platform",
+    image: "/images/metaverse-platform.jpg",
+    technology: "VR/AR + 3D + AI",
+    marketSize: "$3.8B by 2025",
+    targetIndustry: "Retail, Events, Real Estate, Education"
+  },
+  {
+    id: "web3-infrastructure",
+    title: "Web3 Infrastructure Platform",
+    description: "Complete Web3 infrastructure for decentralized applications, NFTs, and blockchain integration",
+    category: "Web3",
+    price: "$12,500/month",
+    features: [
+      "Smart contract deployment",
+      "NFT marketplace",
+      "DeFi integration",
+      "Wallet management",
+      "Cross-chain bridges",
+      "Security auditing"
+    ],
+    benefits: [
+      "Decentralized infrastructure",
+      "NFT monetization",
+      "DeFi capabilities",
+      "Future-proof technology"
+    ],
+    link: "/services/web3-infrastructure",
+    image: "/images/web3-infrastructure.jpg",
+    technology: "Blockchain + Web3 + DeFi",
+    marketSize: "$4.2B by 2025",
+    targetIndustry: "Finance, Gaming, Art, Real Estate"
+  },
+  
+  // AI-Powered Business Solutions
+  {
+    id: "ai-customer-success",
+    title: "AI Customer Success Platform",
+    description: "Intelligent platform that predicts customer churn and automates retention strategies",
+    category: "Customer Success",
+    price: "$6,500/month",
+    features: [
+      "Churn prediction",
+      "Automated retention",
+      "Customer health scoring",
+      "Personalized engagement",
+      "Success metrics tracking",
+      "Integration APIs"
+    ],
+    benefits: [
+      "Reduce churn by 30%",
+      "Automated retention",
+      "Improved customer satisfaction",
+      "Data-driven insights"
+    ],
+    link: "/services/ai-customer-success",
+    image: "/images/ai-customer-success.jpg",
+    technology: "AI + ML + Analytics",
+    marketSize: "$2.8B by 2025",
+    targetIndustry: "SaaS, E-commerce, Services"
+  },
+  {
+    id: "ai-sales-optimization",
+    title: "AI Sales Optimization Platform",
+    description: "Comprehensive platform for optimizing sales processes, lead scoring, and revenue forecasting",
+    category: "Sales",
+    price: "$7,500/month",
+    features: [
+      "Lead scoring AI",
+      "Revenue forecasting",
+      "Sales process optimization",
+      "Pipeline analytics",
+      "Performance tracking",
+      "CRM integration"
+    ],
+    benefits: [
+      "Increase conversion rates",
+      "Accurate forecasting",
+      "Process optimization",
+      "Revenue growth"
+    ],
+    link: "/services/ai-sales-optimization",
+    image: "/images/ai-sales-optimization.jpg",
+    technology: "AI + Analytics + CRM",
+    marketSize: "$3.5B by 2025",
+    targetIndustry: "B2B, Enterprise, Sales Teams"
+  },
+  
+  // Data & Analytics Solutions
+  {
+    id: "real-time-analytics",
+    title: "Real-Time Business Analytics Platform",
+    description: "Live analytics platform for instant business insights and decision-making",
+    category: "Analytics",
+    price: "$5,500/month",
+    features: [
+      "Real-time dashboards",
+      "Live data streaming",
+      "Instant alerts",
+      "Predictive analytics",
+      "Custom metrics",
+      "Mobile access"
+    ],
+    benefits: [
+      "Instant insights",
+      "Real-time decisions",
+      "Proactive alerts",
+      "Competitive advantage"
+    ],
+    link: "/services/real-time-analytics",
+    image: "/images/real-time-analytics.jpg",
+    technology: "Real-time + Analytics + AI",
+    marketSize: "$2.4B by 2025",
+    targetIndustry: "E-commerce, Finance, Manufacturing"
+  },
+  {
+    id: "data-governance-platform",
+    title: "AI Data Governance Platform",
+    description: "Intelligent platform for automated data governance, compliance, and quality management",
+    category: "Data Governance",
+    price: "$9,500/month",
+    features: [
+      "Automated compliance",
+      "Data quality monitoring",
+      "Privacy protection",
+      "Audit trails",
+      "Policy enforcement",
+      "Regulatory reporting"
+    ],
+    benefits: [
+      "Automated compliance",
+      "Data quality improvement",
+      "Risk reduction",
+      "Regulatory adherence"
+    ],
+    link: "/services/data-governance",
+    image: "/images/data-governance.jpg",
+    technology: "AI + Compliance + Data",
+    marketSize: "$3.1B by 2025",
+    targetIndustry: "Enterprise, Healthcare, Finance"
+  },
+  
+  // Security & Compliance
+  {
+    id: "zero-trust-security",
+    title: "Zero Trust Security Platform",
+    description: "Comprehensive zero trust security platform for modern enterprise environments",
+    category: "Security",
+    price: "$11,500/month",
+    features: [
+      "Identity verification",
+      "Device trust scoring",
+      "Network segmentation",
+      "Continuous monitoring",
+      "Threat detection",
+      "Compliance reporting"
+    ],
+    benefits: [
+      "Enhanced security",
+      "Reduced attack surface",
+      "Compliance adherence",
+      "Modern security model"
+    ],
+    link: "/services/zero-trust-security",
+    image: "/images/zero-trust-security.jpg",
+    technology: "Zero Trust + AI + Security",
+    marketSize: "$4.8B by 2025",
+    targetIndustry: "Enterprise, Government, Healthcare"
+  },
+  {
+    id: "ai-compliance-automation",
+    title: "AI Compliance Automation Platform",
+    description: "Intelligent platform that automates regulatory compliance across multiple industries",
+    category: "Compliance",
+    price: "$8,500/month",
+    features: [
+      "Regulatory monitoring",
+      "Automated reporting",
+      "Compliance scoring",
+      "Risk assessment",
+      "Audit preparation",
+      "Multi-regulation support"
+    ],
+    benefits: [
+      "Automated compliance",
+      "Reduced manual work",
+      "Risk mitigation",
+      "Cost savings"
+    ],
+    link: "/services/ai-compliance",
+    image: "/images/ai-compliance.jpg",
+    technology: "AI + Compliance + Automation",
+    marketSize: "$2.9B by 2025",
+    targetIndustry: "Finance, Healthcare, Legal"
+  },
+  
+  // Collaboration & Productivity
+  {
+    id: "ai-collaboration-platform",
+    title: "AI Collaboration Platform",
+    description: "Intelligent platform that enhances team collaboration with AI-powered insights and automation",
+    category: "Collaboration",
+    price: "$4,500/month",
+    features: [
+      "Smart meeting scheduling",
+      "Task automation",
+      "Team analytics",
+      "Knowledge management",
+      "Workflow optimization",
+      "Integration tools"
+    ],
+    benefits: [
+      "Improved productivity",
+      "Better collaboration",
+      "Automated workflows",
+      "Team insights"
+    ],
+    link: "/services/ai-collaboration",
+    image: "/images/ai-collaboration.jpg",
+    technology: "AI + Collaboration + Automation",
+    marketSize: "$3.2B by 2025",
+    targetIndustry: "Enterprise, Remote Teams, Startups"
+  },
+  {
+    id: "virtual-reality-meetings",
+    title: "VR Meeting Platform",
+    description: "Immersive virtual reality platform for remote meetings and collaboration",
+    category: "VR Collaboration",
+    price: "$6,500/month",
+    features: [
+      "VR meeting rooms",
+      "3D presentations",
+      "Virtual whiteboards",
+      "Avatar customization",
+      "Spatial audio",
+      "Cross-platform support"
+    ],
+    benefits: [
+      "Immersive meetings",
+      "Better engagement",
+      "3D collaboration",
+      "Remote team building"
+    ],
+    link: "/services/vr-meetings",
+    image: "/images/vr-meetings.jpg",
+    technology: "VR + Collaboration + 3D",
+    marketSize: "$2.1B by 2025",
+    targetIndustry: "Enterprise, Education, Design"
+  },
+  
+  // Marketing & Growth
+  {
+    id: "ai-marketing-automation",
+    title: "AI Marketing Automation Platform",
+    description: "Intelligent marketing platform that automates campaigns and personalizes customer experiences",
+    category: "Marketing",
+    price: "$7,500/month",
+    features: [
+      "Campaign automation",
+      "Personalization engine",
+      "Customer segmentation",
+      "A/B testing",
+      "ROI optimization",
+      "Multi-channel support"
+    ],
+    benefits: [
+      "Automated campaigns",
+      "Personalized experiences",
+      "Improved ROI",
+      "Scalable marketing"
+    ],
+    link: "/services/ai-marketing",
+    image: "/images/ai-marketing.jpg",
+    technology: "AI + Marketing + Automation",
+    marketSize: "$4.5B by 2025",
+    targetIndustry: "E-commerce, B2B, SaaS"
+  },
+  {
+    id: "voice-search-optimization",
+    title: "Voice Search Optimization Platform",
+    description: "Platform for optimizing content and SEO for voice search and virtual assistants",
+    category: "Voice SEO",
+    price: "$4,500/month",
+    features: [
+      "Voice keyword research",
+      "Content optimization",
+      "Schema markup",
+      "Voice analytics",
+      "Performance tracking",
+      "Multi-language support"
+    ],
+    benefits: [
+      "Voice search visibility",
+      "Improved rankings",
+      "Mobile optimization",
+      "Future-ready SEO"
+    ],
+    link: "/services/voice-seo",
+    image: "/images/voice-seo.jpg",
+    technology: "Voice + SEO + AI",
+    marketSize: "$1.8B by 2025",
+    targetIndustry: "E-commerce, Content, Local Business"
+  },
+  
+  // Financial Technology
+  {
+    id: "ai-accounting-platform",
+    title: "AI Accounting Platform",
+    description: "Intelligent accounting platform with automated bookkeeping and financial insights",
+    category: "FinTech",
+    price: "$5,500/month",
+    features: [
+      "Automated bookkeeping",
+      "Expense categorization",
+      "Financial insights",
+      "Tax preparation",
+      "Compliance monitoring",
+      "Integration tools"
+    ],
+    benefits: [
+      "Automated accounting",
+      "Real-time insights",
+      "Cost savings",
+      "Compliance assurance"
+    ],
+    link: "/services/ai-accounting",
+    image: "/images/ai-accounting.jpg",
+    technology: "AI + Accounting + Automation",
+    marketSize: "$2.6B by 2025",
+    targetIndustry: "Small Business, Freelancers, Startups"
+  },
+  {
+    id: "crypto-payment-platform",
+    title: "Crypto Payment Platform",
+    description: "Complete platform for accepting and processing cryptocurrency payments",
+    category: "Crypto",
+    price: "$8,500/month",
+    features: [
+      "Multi-crypto support",
+      "Instant settlements",
+      "Fiat conversion",
+      "Security protocols",
+      "Compliance tools",
+      "Analytics dashboard"
+    ],
+    benefits: [
+      "Crypto acceptance",
+      "Global payments",
+      "Lower fees",
+      "Instant settlements"
+    ],
+    link: "/services/crypto-payments",
+    image: "/images/crypto-payments.jpg",
+    technology: "Blockchain + Crypto + Payments",
+    marketSize: "$3.4B by 2025",
+    targetIndustry: "E-commerce, Online Services, Gaming"
+  }
 ];
 
 export const INNOVATIVE_CATEGORIES = [
