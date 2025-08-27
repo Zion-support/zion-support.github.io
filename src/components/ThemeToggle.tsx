@@ -1,30 +1,64 @@
 import React, { useState, useEffect } from 'react';
-import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
-const ThemeToggle = () => {
-    const [isDark, setIsDark] = useState(true);
-    useEffect(() => {
-        // Check for saved theme preference or default to dark
-        const savedTheme = localStorage.getItem('zion-theme');
-        if (savedTheme) {
-            setIsDark(savedTheme === 'dark');
-        }
-    }, []);
-    const toggleTheme = () => {
-        const newTheme = !isDark;
-        setIsDark(newTheme);
-        localStorage.setItem('zion-theme', newTheme ? 'dark' : 'light');
-        // Apply theme to document
-        if (newTheme) {
-            document.documentElement.classList.add('dark');
-            document.documentElement.classList.remove('light');
-        }
-        else {
-            document.documentElement.classList.add('light');
-            document.documentElement.classList.remove('dark');
-        }
-    };
-    return (<button onClick={toggleTheme} className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 group" aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}>
-      {isDark ? (<SunIcon className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300"/>) : (<MoonIcon className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors duration-300"/>)}
-    </button>);
-};
-export default ThemeToggle;
+import { Sun, Moon, Monitor } from 'lucide-react';
+
+type Theme = 'dark' | 'light' | 'system';
+
+export function ThemeToggle() {
+  const [theme, setTheme] = useState<Theme>('system');
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const savedTheme = localStorage.getItem('zion-theme') as Theme;
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
+    const root = window.document.documentElement;
+    root.classList.remove('light', 'dark');
+
+    if (theme === 'system') {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.classList.add(systemTheme);
+    } else {
+      root.classList.add(theme);
+    }
+    localStorage.setItem('zion-theme', theme);
+  }, [theme, mounted]);
+
+  const toggleTheme = (newTheme: Theme) => {
+    setTheme(newTheme);
+  };
+
+  if (!mounted) return null;
+
+  return (
+    <div className="flex items-center space-x-2 p-1 bg-zion-slate-dark rounded-full border border-zion-slate-light/20">
+      <button
+        onClick={() => toggleTheme('light')}
+        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'light' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
+        aria-label="Switch to light theme"
+      >
+        <Sun className="h-5 w-5" />
+      </button>
+      <button
+        onClick={() => toggleTheme('dark')}
+        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'dark' ? 'bg-zion-purple text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
+        aria-label="Switch to dark theme"
+      >
+        <Moon className="h-5 w-5" />
+      </button>
+      <button
+        onClick={() => toggleTheme('system')}
+        className={`p-2 rounded-full transition-colors duration-200 ${theme === 'system' ? 'bg-zion-green text-white' : 'text-zion-slate-light hover:bg-zion-slate-light/10'}`}
+        aria-label="Switch to system theme"
+      >
+        <Monitor className="h-5 w-5" />
+      </button>
+    </div>
+  );
+}

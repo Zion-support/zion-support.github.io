@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
 import LoadingSpinner from './components/ui/LoadingSpinner';
-import SEO from './components/SEO';
+import { SEO } from './components/SEO';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Lazy load pages with enhanced services
 const Home = React.lazy(() => import('./pages/Home'));
@@ -137,13 +137,13 @@ const Marketplace = () => (
 
 function App() {
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-futuristic">
-          <SEO />
-          <AppHeader />
-          
-          <main className="flex-1">
+    <Router>
+      <div className="min-h-screen bg-futuristic">
+        <SEO />
+        <AppHeader />
+        
+        <main className="flex-1">
+          <ErrorBoundary>
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -192,13 +192,13 @@ function App() {
                 <Route path="*" element={<Home />} />
               </Routes>
             </Suspense>
-          </main>
-          
-          <Footer />
-          <ChatAssistant />
-        </div>
-      </Router>
-    </HelmetProvider>
+          </ErrorBoundary>
+        </main>
+        
+        <Footer />
+        <ChatAssistant />
+      </div>
+    </Router>
   );
 }
 
