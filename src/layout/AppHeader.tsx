@@ -487,7 +487,6 @@ export function AppHeader() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
 
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
