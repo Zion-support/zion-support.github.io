@@ -1,489 +1,501 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FileText, Download, Calendar, User, BookOpen, Brain, Atom, Shield, Wifi, Leaf, Cloud, BarChart3 } from 'lucide-react';
-const WhitePapers = () => {
-    const whitePapers = [
-        {
-            import: React, from, 'react': ,
-            import: { Link }, from, 'react-router-dom': ,
-            import: { CogIcon }, from, '@heroicons/react/24/outline': ,
-            const: $page, React, : .FC = () => {
-                return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400"/>
-            </div>
-      title: "AI-Powered Digital Transformation: A Comprehensive Guide for Enterprise Leaders",
-      category: "Digital Transformation",
-      date: "2025-01-10",
-      author: "Dr. Sarah Chen",
-      description: "This comprehensive white paper explores how AI is revolutionizing digital transformation initiatives across industries, providing actionable insights for enterprise leaders.",
-      topics: ["AI Strategy", "Digital Transformation", "Enterprise Leadership", "ROI Measurement"],
-      downloadUrl: "#",
-      isPremium: false,
-      readTime: "45 min read",
-      pageCount: 28
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  FileText, 
+  Download, 
+  Search,
+  Filter,
+  ArrowRight,
+  Calendar,
+  Clock,
+  Users,
+  Star,
+  TrendingUp,
+  Award,
+  Rocket,
+  Brain,
+  Shield,
+  Code,
+  Zap,
+  Lightbulb,
+  Target,
+  Building,
+  Globe,
+  CheckCircle,
+  Play,
+  Pause,
+  Stop,
+  Video,
+  BookOpen,
+  ChevronDown,
+  ChevronRight,
+  Plus,
+  Minus,
+  Eye,
+  Bookmark,
+  Share2
+} from 'lucide-react';
+
+const WhitePapers: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const categories = [
+    { id: 'all', name: 'All Categories', count: 35, icon: FileText },
+    { id: 'ai-ml', name: 'AI & Machine Learning', count: 12, icon: Brain },
+    { id: 'quantum', name: 'Quantum Computing', count: 8, icon: Atom },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 10, icon: Shield },
+    { id: 'iot', name: 'IoT & Edge Computing', count: 5, icon: Wifi }
+  ];
+
+  const whitePapers = [
+    {
+      id: 1,
+      title: 'The Future of AI: Autonomous Business Operations in 2027',
+      description: 'Comprehensive analysis of how AI will transform business operations, including autonomous decision-making, predictive analytics, and intelligent automation.',
+      category: 'ai-ml',
+      author: 'Dr. Sarah Chen',
+      date: '2025-01-15',
+      readTime: '25 min read',
+      downloads: 15420,
+      rating: 4.9,
+      image: '/white-papers/ai-autonomous-business-2027.jpg',
+      tags: ['AI', 'Business Operations', 'Automation', '2027 Trends'],
+      featured: true,
+      fileSize: '4.2 MB',
+      fileType: 'PDF',
+      downloadUrl: 'https://ziontechgroup.com/white-papers/ai-autonomous-business-2027.pdf',
+      abstract: 'This white paper explores the revolutionary impact of AI on business operations, examining how autonomous systems will reshape decision-making processes, operational efficiency, and competitive advantage in the coming years.'
     },
-    {id}: 2,
-      title: "Quantum Computing in Cybersecurity: Next-Generation Threat Detection",
-      category: "Cybersecurity",
-      date: "2024-12-15",
-      author: "Dr. James Wilson",
-      description: "Explore how quantum computing is transforming cybersecurity, from quantum-resistant cryptography to advanced threat detection algorithms.",
-      topics: ["Quantum Computing", "Cybersecurity", "Cryptography", "Threat Detection"],
-      downloadUrl: "#",
-      isPremium: true,
-      readTime: "60 min read",
-      pageCount: 35
+    {
+      id: 2,
+      title: 'Quantum Computing: Breaking the Classical Barrier',
+      description: 'Deep dive into quantum computing principles, current state of the technology, and its applications in solving previously intractable problems.',
+      category: 'quantum',
+      author: 'Dr. Michael Rodriguez',
+      date: '2025-01-10',
+      readTime: '30 min read',
+      downloads: 12850,
+      rating: 4.8,
+      image: '/white-papers/quantum-computing-breakthrough.jpg',
+      tags: ['Quantum Computing', 'Technology', 'Research', 'Innovation'],
+      featured: true,
+      fileSize: '5.1 MB',
+      fileType: 'PDF',
+      downloadUrl: 'https://ziontechgroup.com/white-papers/quantum-computing-breakthrough.pdf',
+      abstract: 'An in-depth exploration of quantum computing fundamentals, current technological achievements, and the roadmap to quantum advantage in practical applications.'
     },
-    {id}: 3,
-      title: "Autonomous AI Systems: Ethical Considerations and Implementation Guidelines",
-      category: "AI Ethics",
-      date: "2024-11-20",
-      author: "Dr. Emily Watson",
-      description: "A deep dive into the ethical considerations surrounding autonomous AI systems, with practical guidelines for responsible implementation.",
-      topics: ["AI Ethics", "Autonomous Systems", "Responsible AI", "Implementation"],
-      downloadUrl: "#",
-      isPremium: false,
-      readTime: "40 min read",
-      pageCount: 22
+    {
+      id: 3,
+      title: 'Zero Trust Security: The New Paradigm for Enterprise Protection',
+      description: 'Comprehensive guide to implementing zero trust security architecture, including best practices, implementation strategies, and real-world case studies.',
+      category: 'cybersecurity',
+      author: 'Alex Thompson',
+      date: '2025-01-08',
+      readTime: '20 min read',
+      downloads: 11230,
+      rating: 4.7,
+      image: '/white-papers/zero-trust-security-paradigm.jpg',
+      tags: ['Cybersecurity', 'Zero Trust', 'Enterprise Security', 'Best Practices'],
+      featured: false,
+      fileSize: '3.8 MB',
+      fileType: 'PDF',
+      downloadUrl: 'https://ziontechgroup.com/white-papers/zero-trust-security-paradigm.pdf',
+      abstract: 'This white paper examines the evolution of cybersecurity from traditional perimeter-based models to zero trust architectures, providing actionable insights for enterprise implementation.'
     },
-    {id}: 4,
-      title: "Cloud-Native Architecture: Building Scalable and Resilient Systems",
-      category: "Cloud & Infrastructure",
-      date: "2024-10-25",
-      author: "David Kim",
-      description: "Learn the principles of cloud-native architecture and how to design systems that are scalable, resilient, and cost-effective.",
-      topics: ["Cloud Architecture", "Scalability", "Resilience", "Cost Optimization"],
-      downloadUrl: "#",
-      isPremium: false,
-      readTime: "35 min read",
-      pageCount: 25
+    {
+      id: 4,
+      title: 'IoT Edge Computing: Transforming Data Processing at the Source',
+      description: 'Analysis of edge computing technologies and their role in IoT deployments, including performance optimization and real-time processing capabilities.',
+      category: 'iot',
+      author: 'Dr. Emily Watson',
+      date: '2025-01-05',
+      readTime: '18 min read',
+      downloads: 9870,
+      rating: 4.6,
+      image: '/white-papers/iot-edge-computing-transformation.jpg',
+      tags: ['IoT', 'Edge Computing', 'Data Processing', 'Real-time Analytics'],
+      featured: false,
+      fileSize: '3.2 MB',
+      fileType: 'PDF',
+      downloadUrl: 'https://ziontechgroup.com/white-papers/iot-edge-computing-transformation.pdf',
+      abstract: 'Exploring how edge computing is revolutionizing IoT deployments by enabling real-time data processing, reduced latency, and improved system reliability.'
     },
-    {id}: 5,
-      title: "Machine Learning Operations (MLOps): Best Practices for Production AI",
-      category: "AI & Machine Learning",
-      date: "2024-09-30",
-      author: "Marcus Rodriguez",
-      description: "Comprehensive guide to MLOps, covering model deployment, monitoring, and maintenance in production environments.",
-      topics: ["MLOps", "Model Deployment", "Production AI", "Monitoring"],
-      downloadUrl: "#",
-      isPremium: true,
-      readTime: "50 min read",
-      pageCount: 30
+    {
+      id: 5,
+      title: 'AI-Powered Healthcare: Revolutionizing Patient Care and Diagnosis',
+      description: 'Comprehensive study of AI applications in healthcare, including diagnostic accuracy, treatment optimization, and patient outcome improvements.',
+      category: 'ai-ml',
+      author: 'Dr. Sarah Chen',
+      date: '2024-12-28',
+      readTime: '22 min read',
+      downloads: 14560,
+      rating: 4.9,
+      image: '/white-papers/ai-powered-healthcare-revolution.jpg',
+      tags: ['AI', 'Healthcare', 'Diagnosis', 'Patient Care'],
+      featured: false,
+      fileSize: '4.5 MB',
+      fileType: 'PDF',
+      downloadUrl: 'https://ziontechgroup.com/white-papers/ai-powered-healthcare-revolution.pdf',
+      abstract: 'This research paper examines the transformative impact of AI on healthcare delivery, focusing on diagnostic accuracy, treatment optimization, and improved patient outcomes.'
     },
-    {id}: 6,
-      title: "Zero-Trust Security Architecture: Implementation and Best Practices",
-      category: "Cybersecurity",
-      date: "2024-08-15",
-      author: "Alex Thompson",
-      description: "Detailed implementation guide for zero-trust security architecture, including practical examples and best practices.",
-      topics: ["Zero-Trust", "Security Architecture", "Implementation", "Best Practices"],
-      downloadUrl: "#",
-      isPremium: false,
-      readTime: "30 min read",
-      pageCount: 20
+    {
+      id: 6,
+      title: 'Blockchain in Enterprise: Beyond Cryptocurrency',
+      description: 'Analysis of enterprise blockchain applications, including supply chain management, digital identity, and smart contract implementations.',
+      category: 'cybersecurity',
+      author: 'Marcus Chen',
+      date: '2024-12-20',
+      readTime: '16 min read',
+      downloads: 8760,
+      rating: 4.5,
+      image: '/white-papers/blockchain-enterprise-beyond-crypto.jpg',
+      tags: ['Blockchain', 'Enterprise', 'Supply Chain', 'Smart Contracts'],
+      featured: false,
+      fileSize: '2.9 MB',
+      fileType: 'PDF',
+      downloadUrl: 'https://ziontechgroup.com/white-papers/blockchain-enterprise-beyond-crypto.pdf',
+      abstract: 'Exploring practical enterprise applications of blockchain technology beyond cryptocurrency, focusing on supply chain transparency and digital identity management.'
+    },
+    {
+      id: 7,
+      title: '5G and Beyond: The Future of Wireless Communication',
+      description: 'Comprehensive analysis of 5G technology, its current deployment status, and the roadmap to 6G and beyond.',
+      category: 'iot',
+      author: 'Dr. James Wilson',
+      date: '2024-12-15',
+      readTime: '24 min read',
+      downloads: 10240,
+      rating: 4.7,
+      image: '/white-papers/5g-beyond-future-wireless.jpg',
+      tags: ['5G', 'Wireless Communication', 'Technology', 'Innovation'],
+      featured: false,
+      fileSize: '4.1 MB',
+      fileType: 'PDF',
+      downloadUrl: 'https://ziontechgroup.com/white-papers/5g-beyond-future-wireless.pdf',
+      abstract: 'This white paper examines the evolution of wireless communication technologies, from current 5G deployments to future 6G capabilities and applications.'
+    },
+    {
+      id: 8,
+      title: 'Machine Learning in Financial Services: Risk Assessment and Fraud Detection',
+      description: 'Analysis of ML applications in financial services, including risk modeling, fraud detection, and algorithmic trading.',
+      category: 'ai-ml',
+      author: 'Dr. Lisa Park',
+      date: '2024-12-10',
+      readTime: '19 min read',
+      downloads: 13450,
+      rating: 4.8,
+      image: '/white-papers/ml-financial-services-risk-fraud.jpg',
+      tags: ['Machine Learning', 'Financial Services', 'Risk Assessment', 'Fraud Detection'],
+      featured: false,
+      fileSize: '3.7 MB',
+      fileType: 'PDF',
+      downloadUrl: 'https://ziontechgroup.com/white-papers/ml-financial-services-risk-fraud.pdf',
+      abstract: 'Exploring how machine learning is transforming financial services through improved risk assessment, fraud detection, and algorithmic trading capabilities.'
     }
   ];
 
-  const categories = [
-    {name}: "All", count: 6, active: true },
-    {name}: "AI & Machine Learning", count: 2, active: false },
-    {name}: "Cybersecurity", count: 2, active: false },
-    {name}: "Digital Transformation", count: 1, active: false },
-    {name}: "Cloud & Infrastructure", count: 1, active: false },
-    {name}: "AI Ethics", count: 1, active: false }
-  ];
-      title: "AI-Powered Business Transformation: A Comprehensive Guide",
-      description: "Explore how artificial intelligence is revolutionizing business operations and driving digital transformation across industries.",
-      author: "Dr. Sarah Chen",
-      date: "December 2024",
-      category: "Artificial Intelligence",
-      downloads: "2,847",
-      tags: ["AI", "Digital Transformation", "Business Strategy"],
-      pdfUrl: "#"
-    },
-    {title}: "Quantum Computing in Enterprise: Opportunities and Challenges",
-      description: "An in-depth analysis of quantum computing applications in enterprise environments and implementation strategies.",
-      author: "Prof. Michael Rodriguez",
-      date: "November 2024",
-      category: "Quantum Computing",
-      downloads: "1,923",
-      tags: ["Quantum Computing", "Enterprise", "Technology"],
-      pdfUrl: "#"
-    },
-    {title}: "Cybersecurity in the Age of AI: Threats and Defenses",
-      description: "Understanding emerging cybersecurity challenges and AI-powered defense mechanisms for modern organizations.",
-      author: "Alex Thompson",
-      date: "October 2024",
-      category: "Cybersecurity",
-      downloads: "3,156",
-      tags: ["Cybersecurity", "AI", "Threat Defense"],
-      pdfUrl: "#"
-    },
-    {title}: "Edge Computing and IoT: Building the Connected Future",
-      description: "Comprehensive guide to edge computing infrastructure and IoT integration for smart city and industrial applications.",
-      author: "Dr. Emily Watson",
-      date: "September 2024",
-      category: "Edge Computing",
-      downloads: "1,654",
-      tags: ["Edge Computing", "IoT", "Smart Cities"],
-      pdfUrl: "#"
-    },
-    {title}: "Blockchain Technology: Beyond Cryptocurrency",
-      description: "Exploring blockchain applications in supply chain, healthcare, and enterprise systems.",
-      author: "David Kim",
-      date: "August 2024",
-      category: "Blockchain",
-      downloads: "2,341",
-      tags: ["Blockchain", "Supply Chain", "Enterprise"],
-      pdfUrl: "#"
-    },
-    {title}: "Green IT: Sustainable Technology Solutions",
-      description: "Implementing environmentally conscious technology solutions for modern businesses.",
-      author: "Lisa Anderson",
-      date: "July 2024",
-      category: "Green IT",
-      downloads: "1,789",
-      tags: ["Sustainability", "Green Technology", "Business"],
-      pdfUrl: "#"
-    }
-  ];
-
-  const categories = [
-    "All Categories",
-    "Artificial Intelligence",
-    "Quantum Computing",
-    "Cybersecurity",
-    "Edge Computing",
-    "Blockchain",
-    "Green IT",
-    "Cloud Computing",
-    "Data Analytics"
-  ];
-
-  const [selectedCategory, setSelectedCategory] = React.useState("All Categories");
-  const [searchQuery, setSearchQuery] = React.useState("");
-
-  const filteredPapers = whitePapers.filter(paper => {}
-    const matchesCategory = selectedCategory === "All Categories" || paper.category === selectedCategory;
+  const filteredWhitePapers = whitePapers.filter(paper => {
+    const matchesCategory = selectedCategory === 'all' || paper.category === selectedCategory;
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
+  const featuredWhitePapers = whitePapers.filter(paper => paper.featured);
+  const regularWhitePapers = filteredWhitePapers.filter(paper => !paper.featured);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
-              <FileText className="w-4 h-4 mr-2"/>
-              Research & Insights
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
               White
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Papers</span>
+              <span className="block text-zion-cyan">Papers</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Access our comprehensive research papers and technical documentation 
-              to stay ahead of technology trends and industry insights.
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
+              Deep insights, cutting-edge research, and thought leadership from Zion Tech Group. 
+              Download our comprehensive white papers on the latest technology trends and innovations.
             </p>
-          </div>
-      {/* Categories Filter */}
-      <section className="py-8 bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-4 justify-center">
-            {categories.map((category, index) => (<button key={index} className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${category.active
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
-                {category.name} ({category.count})
-              </button>))}
-          </div>
-        </div>
-      </section>
-
-      {/* White Papers Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPapers.map((paper, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
-                    {paper.category}
-                  </span>
-                  <div className="flex items-center text-gray-400 text-sm">
-                    <Download className="w-4 h-4 mr-1"/>
-                    {paper.downloads}
-                  </div>
-      title: "AI-Powered Business Transformation: A Comprehensive Guide",
-      description: "Explore how artificial intelligence is revolutionizing business operations and creating new opportunities for growth and innovation.",
-      category: "AI & Business",
-      date: "March 2024",
-      pages: "45",
-      downloadCount: "2,500+"
-    },
-    {title}: "Cybersecurity in the Digital Age: Threats and Solutions",
-      description: "Comprehensive analysis of modern cybersecurity challenges and effective defense strategies for enterprises.",
-      category: "Security",
-      date: "February 2024",
-      pages: "38",
-      downloadCount: "1,800+"
-    },
-    {title}: "Cloud Migration Strategies: Best Practices and Implementation",
-      description: "Step-by-step guide to successful cloud migration with real-world case studies and optimization techniques.",
-      category: "Cloud & DevOps",
-      date: "January 2024",
-      pages: "52",
-      downloadCount: "3,200+"
-    },
-    {title}: "Quantum Computing: Applications in Enterprise Technology",
-      description: "Understanding quantum computing's potential impact on business operations and future technology trends.",
-      category: "Emerging Tech",
-      date: "December 2023",
-      pages: "41",
-      downloadCount: "1,600+"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              White
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Papers
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              In-depth research and insights on technology trends, best practices, 
-              and innovative solutions for modern businesses
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {whitePapers.map((paper, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="mb-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">{paper.category}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{paper.title}</h3>
-                <p className="text-gray-300 mb-4">{paper.description}</p>
-                
-                <div className="flex items-center justify-between mb-4 text-sm text-gray-400">
-                  <span>Published: {paper.date}</span>
-                  <span>{paper.pages} pages</span>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-400">{paper.downloadCount} downloads</span>
-                  <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
-                    Download PDF
-                    <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                    </svg>
-                  </Link>
-                </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
-                  {paper.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-4 line-clamp-3">
-                  {paper.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {paper.tags.map((tag, idx) => (<span key={idx} className="px-2 py-1 bg-slate-700/50 text-gray-300 rounded text-xs">
-                      {tag}
-                    </span>))}
-                </div>
-                
-                <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <div className="flex items-center">
-                    <User className="w-4 h-4 mr-1"/>
-                    {paper.author}
-                  </div>
-                  <div className="flex items-center">
-                    <Calendar className="w-4 h-4 mr-1"/>
-                    {paper.date}
-                  </div>
-                </div>
-                
-                <a href={paper.pdfUrl} className="w-full flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                  <Download className="w-4 h-4 mr-2"/>
-                  Download PDF
-                </a>
-              </div>))}
-          </div>
-          
-          {filteredPapers.length === 0 && (<div className="text-center py-16">
-              <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4"/>
-              <h3 className="text-xl font-semibold text-white mb-2">No white papers found</h3>
-              <p className="text-gray-400">Try adjusting your search criteria or category filter.</p>
-            </div>)}
-        </div>
-      </section>
-
-      {/* Featured Research */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured Research Areas
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Explore our key research domains and stay informed about 
-              the latest technology trends and innovations.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {categories.slice(1, 9).map((category, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {category === "Artificial Intelligence" && <Brain className="w-8 h-8 text-white"/>}
-                  {category === "Quantum Computing" && <Atom className="w-8 h-8 text-white"/>}
-                  {category === "Cybersecurity" && <Shield className="w-8 h-8 text-white"/>}
-                  {category === "Edge Computing" && <Wifi className="w-8 h-8 text-white"/>}
-                  {category === "Blockchain" && <Link className="w-8 h-8 text-white"/>}
-                  {category === "Green IT" && <Leaf className="w-8 h-8 text-white"/>}
-                  {category === "Cloud Computing" && <Cloud className="w-8 h-8 text-white"/>}
-                  {category === "Data Analytics" && <BarChart3 className="w-8 h-8 text-white"/>}
-                </div>
-                <h3 className="text-lg font-semibold text-white">{category}</h3>
-              </div>))}
-          </div>
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Stay Informed with Our Research
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Get access to cutting-edge research and insights that can 
-            transform your business and technology strategy.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Request Custom Research
-            </a>
-            <a href="/resources" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Resources
-            </a>
-          
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
-              <p className="text-gray-300 mb-6">
-                Subscribe to receive new white papers, research insights, and industry analysis 
-                directly to your inbox.
-              </p>
-              <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                Subscribe to Updates
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Paper */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Featured Research
-            </h2>
-            <div className="bg-slate-700/50 p-8 rounded-2xl border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                The Future of AI in Enterprise: A Comprehensive Guide
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Our most popular white paper explores how artificial intelligence is transforming 
-                enterprise operations and provides actionable strategies for successful AI implementation.
-              </p>
-              <div className="flex items-center justify-center gap-6 text-sm text-gray-400 mb-6">
-                <span>By Dr. Sarah Chen, CTO</span>
-                <span>•</span>
-                <span>15 min read</span>
-                <span>•</span>
-                <span>2,847 downloads</span>
+            <div className="flex items-center justify-center space-x-8 text-zion-slate-light">
+              <div className="flex items-center">
+                <FileText className="w-6 h-6 mr-2 text-zion-cyan" />
+                <span>35+ White Papers</span>
               </div>
-              <a href="/assets/whitepapers/ai-enterprise-guide-2025.pdf" download className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
-                Download Featured Paper
-              </a>
+              <div className="flex items-center">
+                <Download className="w-6 h-6 mr-2 text-zion-cyan" />
+                <span>Free Downloads</span>
+              </div>
+              <div className="flex items-center">
+                <Users className="w-6 h-6 mr-2 text-zion-cyan" />
+                <span>Expert Authors</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Search and Filter Section */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search Bar */}
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+              <input
+                type="text"
+                placeholder="Search white papers..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
+                    selectedCategory === category.id
+                      ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/20'
+                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-cyan/20'
+                  }`}
+                >
+                  <category.icon className="w-4 h-4" />
+                  <span>{category.name}</span>
+                  <span className="text-xs opacity-75">({category.count})</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured White Papers */}
+      {featuredWhitePapers.length > 0 && (
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">Featured Research</h2>
+              <p className="text-zion-slate-light">Our most popular and impactful white papers</p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {featuredWhitePapers.map((paper, index) => (
+                <motion.article
+                  key={paper.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
+                    {/* White Paper Image Placeholder */}
+                    <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative">
+                      <FileText className="w-16 h-16 text-zion-cyan" />
+                      <div className="absolute top-4 right-4">
+                        <span className="px-3 py-1 bg-zion-cyan text-white text-xs rounded-full font-semibold">
+                          Featured
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div className="p-6">
+                      <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-4">
+                        <span className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          {paper.date}
+                        </span>
+                        <span className="flex items-center">
+                          <Clock className="w-4 h-4 mr-2" />
+                          {paper.readTime}
+                        </span>
+                        <span className="flex items-center">
+                          <Download className="w-4 h-4 mr-2" />
+                          {paper.downloads.toLocaleString()}
+                        </span>
+                      </div>
+
+                      <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                        {paper.title}
+                      </h3>
+                      
+                      <p className="text-zion-slate-light mb-4 leading-relaxed">
+                        {paper.description}
+                      </p>
+
+                      <div className="mb-4">
+                        <h4 className="text-zion-cyan font-semibold mb-3">Abstract:</h4>
+                        <p className="text-zion-slate-light text-sm leading-relaxed">
+                          {paper.abstract}
+                        </p>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {paper.tags.map((tag, idx) => (
+                          <span
+                            key={idx}
+                            className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center justify-between">
+                        <div className="text-sm">
+                          <p className="text-zion-cyan font-semibold">{paper.author}</p>
+                          <p className="text-zion-slate-light">{paper.fileSize} • {paper.fileType}</p>
+                        </div>
+                        <button className="flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 group">
+                          Download White Paper
+                          <Download className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
             </div>
           </div>
         </section>
+      )}
 
-        {/* Newsletter Signup */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Stay Updated with New Research
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Subscribe to our newsletter to receive notifications about new white papers, 
-              research updates, and technology insights.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-3 bg-slate-700 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors duration-300"/>
-              <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                Subscribe
-              </button>
-            </div>
-            <p className="text-gray-400 text-sm mt-4">
-              We respect your privacy. Unsubscribe at any time.
-            </p>
+      {/* Regular White Papers Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">All White Papers</h2>
+            <p className="text-zion-slate-light">Browse our complete collection of research and insights</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {regularWhitePapers.map((paper, index) => (
+              <motion.article
+                key={paper.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
+                  {/* White Paper Image Placeholder */}
+                  <div className="h-40 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
+                    <FileText className="w-12 h-12 text-zion-cyan" />
+                  </div>
+                  
+                  <div className="p-6 flex-1">
+                    <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-3">
+                      <span className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        {paper.date}
+                      </span>
+                      <span className="flex items-center">
+                        <Clock className="w-4 h-4 mr-2" />
+                        {paper.readTime}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300 line-clamp-2">
+                      {paper.title}
+                    </h3>
+                    
+                    <p className="text-zion-slate-light mb-4 leading-relaxed line-clamp-3">
+                      {paper.description}
+                    </p>
+
+                    <div className="mb-4">
+                      <h4 className="text-zion-cyan font-semibold mb-2 text-sm">Abstract:</h4>
+                      <p className="text-zion-slate-light text-xs leading-relaxed line-clamp-3">
+                        {paper.abstract}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {paper.tags.slice(0, 2).map((tag, idx) => (
+                        <span
+                          key={idx}
+                          className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex items-center justify-between mt-auto">
+                      <div className="text-sm">
+                        <p className="text-zion-cyan font-semibold">{paper.author}</p>
+                        <p className="text-zion-slate-light">{paper.fileSize}</p>
+                      </div>
+                      <button className="flex items-center text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-300 group">
+                        Download
+                        <Download className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Need Custom Research?
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Stay Ahead with Our Research
             </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Looking for specific research or insights? Our team can conduct custom research 
-              and create white papers tailored to your industry and needs.
+            <p className="text-xl text-zion-slate-light mb-8">
+              Get notified when we publish new white papers and research insights. 
+              Stay informed about the latest technology trends and innovations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Subscribe to Updates
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
                 Request Custom Research
-              </Link>
-              <Link to="/services" className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Explore Our Services
-              </Link>
+              </motion.button>
             </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default WhitePapers;
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            $page
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under development. Contact us for more information.
-          </p>
-          <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
-            Contact Us for More Information
-          </Link>
+          </motion.div>
         </div>
       </section>
     </div>
   );
 };
 
-export default $page;
-                    </></>))}</></></></></></></></></></>);
-            }
-        }
-    ];
-};
+export default WhitePapers;

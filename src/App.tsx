@@ -22,6 +22,17 @@ const Services = React.lazy(() => import('./pages/Services'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 
+// New pages
+const Team = React.lazy(() => import('./pages/Team'));
+const News = React.lazy(() => import('./pages/News'));
+const Events = React.lazy(() => import('./pages/Events'));
+const Resources = React.lazy(() => import('./pages/Resources'));
+const Support = React.lazy(() => import('./pages/Support'));
+const InnovativeServices = React.lazy(() => import('./pages/InnovativeServices'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+
 // New service pages
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
@@ -77,6 +88,17 @@ function App() {
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/enhanced-services" element={<EnhancedServices />} />
+              
+              {/* New Routes */}
+              <Route path="/team" element={<Team />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/support" element={<Support />} />
+              <Route path="/innovative-services" element={<InnovativeServices />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
+              <Route path="/webinars" element={<Webinars />} />
               
               {/* AI Services Routes */}
               <Route path="/ai-services" element={<AIServicesPage />} />
