@@ -164,7 +164,6 @@ const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/Comprehensi
 // Additional innovative AI services
 const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
-const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
 const AIAutonomousThreatIntelligence = lazy(() => import('./pages/AIAutonomousThreatIntelligence'));
 
 // Additional innovative services
@@ -172,14 +171,12 @@ const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrc
 const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
 const AICustomerExperienceAnalytics = lazy(() => import('./pages/services/AICustomerExperienceAnalytics'));
 const AIFinancialRiskManagement = lazy(() => import('./pages/services/AIFinancialRiskManagement'));
-const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AICodeReviewSecurityScanner = lazy(() => import('./pages/services/AICodeReviewSecurityScanner'));
 const AIDevOpsAutomationPlatform = lazy(() => import('./pages/services/AIDevOpsAutomationPlatform'));
 const AIBusinessIntelligenceAnalytics = lazy(() => import('./pages/services/AIBusinessIntelligenceAnalytics'));
 const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustomerExperienceSupport'));
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
-const ComprehensiveImprovements2025 = lazy(() => import('./pages/ComprehensiveImprovements2025'));
 
 function App() {
   return (
@@ -423,7 +420,6 @@ function App() {
                   <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
                   
                   {/* Additional innovative AI services */}
-                  <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
                   <Route path="/services/ai-autonomous-supply-chain" element={<AIAutonomousSupplyChain />} />
                   <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
                   <Route path="/services/ai-autonomous-threat-intelligence" element={<AIAutonomousThreatIntelligence />} />
