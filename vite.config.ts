@@ -13,7 +13,9 @@ export default defineConfig({
   build: {
     target: 'esnext',
     minify: 'esbuild',
-    sourcemap: true,
+    sourcemap: process.env.SOURCEMAP === 'true',
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
     outDir: 'dist',
     rollupOptions: {
       input: path.resolve(__dirname, 'index.html'),
