@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
+import { Sidebar } from '../components/Sidebar';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -40,8 +42,6 @@ export function AppHeader() {
     { name: 'AI Solutions', href: '/ai-solutions', current: false },
     { name: 'Services', href: '/services', current: false },
     { name: '2026 Services', href: '/services2026', current: false, featured: true },
-    { name: 'AI Solutions', href: '/ai-solutions', current: false },
-    { name: 'Solutions', href: '/solutions', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
@@ -98,6 +98,15 @@ export function AppHeader() {
     { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Zap, description: 'Next-generation quantum solutions', category: 'Quantum Computing', featured: true },
   ];
 
+  // Group services by category for better organization
+  const servicesByCategory = services.reduce((acc, service) => {
+    if (!acc[service.category]) {
+      acc[service.category] = [];
+    }
+    acc[service.category].push(service);
+    return acc;
+  }, {} as Record<string, typeof services>);
+
   return (
     <>
       <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -121,8 +130,18 @@ export function AppHeader() {
         </div>
         <div className="container-responsive">
           <div className="flex h-20 items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center">
+            {/* Left side - Logo and Sidebar Toggle */}
+            <div className="flex items-center space-x-4">
+              {/* Sidebar Toggle */}
+              <button
+                onClick={() => setSidebarOpen(true)}
+                className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors lg:hidden"
+                aria-label="Open navigation sidebar"
+              >
+                <PanelLeft className="w-5 h-5" />
+              </button>
+              
+              {/* Logo */}
               <Link to="/" className="flex-shrink-0 group">
                 <div className="flex items-center space-x-3">
                   <div className="relative">
@@ -175,7 +194,7 @@ export function AppHeader() {
                 {servicesDropdownOpen && (
                   <div 
                     id="services-menu"
-                    className="absolute top-full left-0 mt-2 w-[500px] bg-slate-800/95 border border-cyan-400/20 rounded-xl shadow-2xl backdrop-blur-xl animate-fade-in"
+                    className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 border border-cyan-400/20 rounded-xl shadow-2xl backdrop-blur-xl animate-fade-in"
                     onMouseEnter={() => setServicesDropdownOpen(true)}
                     onMouseLeave={() => setServicesDropdownOpen(false)}
                     role="menu"
@@ -213,14 +232,43 @@ export function AppHeader() {
                           ))}
                         </div>
                       </div>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
+
+                      {/* Services by Category */}
+                      <div className="grid grid-cols-2 gap-6">
+                        {Object.entries(servicesByCategory).map(([category, categoryServices]) => (
+                          <div key={category} className="space-y-3">
+                            <h4 className="text-sm font-semibold text-white border-b border-slate-700 pb-2">
+                              {category}
+                            </h4>
+                            <div className="space-y-2">
+                              {categoryServices.slice(0, 4).map((service) => (
+                                <Link
+                                  key={service.name}
+                                  to={service.href}
+                                  className="flex items-center p-2 rounded-lg hover:bg-slate-700/30 transition-colors duration-200 group"
+                                >
+                                  <service.icon className="w-4 h-4 text-cyan-400 mr-2 group-hover:text-cyan-300 transition-colors" />
+                                  <span className="text-sm text-slate-300 group-hover:text-white transition-colors">
+                                    {service.name}
+                                  </span>
+                                </Link>
+                              ))}
+                              {categoryServices.length > 4 && (
+                                <Link
+                                  to="/services"
+                                  className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1"
+                                >
+                                  View all {category} services
+                                  <ArrowRight className="w-3 h-3" />
+                                </Link>
+                              )}
+                            </div>
+                          </div>
+                        ))}
                       </div>
 
                       {/* Quick Actions */}
-                      <div className="space-y-4">
+                      <div className="mt-6 pt-6 border-t border-slate-700">
                         <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
                         <div className="space-y-3">
                           {quickLinks.map((link) => (
@@ -270,7 +318,6 @@ export function AppHeader() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-64 pl-10 pr-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
                   />
-                  <Search className="w-4 h-4 text-zinc-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
                   {isSearching && (
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                       <ZionLoadingSpinner size="sm" />
@@ -349,48 +396,43 @@ export function AppHeader() {
                     </div>
                   </div>
                 </nav>
-              </div>
 
-              {/* Mobile quick links */}
-              <div className="mt-6 pt-6 border-t border-slate-700/50">
-                <h3 className="text-slate-400 text-sm font-medium mb-4">Quick Links</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {quickLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      to={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200"
-                    >
-                      <link.icon className="w-4 h-4 text-cyan-400 mr-2" />
-                      <span className="text-white text-sm">{link.name}</span>
-                    </Link>
-                  ))}
+                {/* Mobile quick links */}
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
+                  <h3 className="text-slate-400 text-sm font-medium mb-4">Quick Links</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {quickLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200"
+                      >
+                        <link.icon className="w-4 h-4 text-cyan-400 mr-2" />
+                        <span className="text-white text-sm">{link.name}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
-                    >
-                      <link.icon className="w-4 h-4 text-cyan-400 mr-2" />
-                      <span className="text-white text-sm">{link.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
 
-              {/* Mobile CTA */}
-              <div className="mt-6 pt-6 border-t border-slate-700/50">
-                <Link
-                  to="/contact"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block w-full text-center py-3 px-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200"
-                >
-                  Get Started
-                </Link>
-              </div>
+                {/* Mobile CTA */}
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
+                  <Link
+                    to="/contact"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block w-full text-center py-3 px-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200"
+                  >
+                    Get Started
+                  </Link>
+                </div>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
-    </header>
+      </header>
+
+      {/* Sidebar */}
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+    </>
   );
 }
