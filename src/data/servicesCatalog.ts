@@ -122,6 +122,41 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Optimize Supply Chain',
 				href: 'https://ziontechgroup.com/contact'
 			}
+			,
+			{
+				id: 'soc2-compliance-automation-saas',
+				title: 'SOC 2 Compliance Automation SaaS',
+				description: 'Automate evidence collection, policy mapping, and control monitoring to pass SOC 2 audits faster.',
+				category: 'Micro SaaS',
+				price: '$249',
+				billing: 'month',
+				features: [
+					'Automated evidence collection',
+					'Control health dashboards',
+					'Policy templates & mapping',
+					'Integrations: AWS, GCP, Azure, Jira, GitHub',
+					'Audit-ready export'
+				],
+				ctaLabel: 'Start Compliance',
+				href: 'https://ziontechgroup.com/services'
+			},
+			{
+				id: 'mlops-observability',
+				title: 'MLOps Observability & Drift Monitor',
+				description: 'Track model performance, detect data drift, and automate retraining triggers with guardrails.',
+				category: 'Micro SaaS',
+				price: '$299',
+				billing: 'month',
+				features: [
+					'Latency, accuracy, bias metrics',
+					'Drift and anomaly alerts',
+					'Rollback and canary controls',
+					'Integration: SageMaker, Vertex AI, OpenAI',
+					'Compliance logging'
+				],
+				ctaLabel: 'Monitor Models',
+				href: 'https://ziontechgroup.com/services'
+			}
 		]
 	},
 	{
@@ -196,6 +231,41 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Vehicle Integration',
 				href: 'https://ziontechgroup.com/contact'
 			}
+			,
+			{
+				id: 'enterprise-rag-search',
+				title: 'Enterprise RAG Search Platform',
+				description: 'Private, secure Retrieval-Augmented Generation over your docs, wikis, tickets, and data.',
+				category: 'AI Solutions',
+				price: '$3,499',
+				billing: 'month',
+				features: [
+					'Hybrid vector + keyword search',
+					'PII redaction and access control',
+					'Grounding citations',
+					'Plugins: Confluence, Google Drive, SharePoint',
+					'On-prem or VPC deployment'
+				],
+				ctaLabel: 'Launch Secure Chat',
+				href: 'https://ziontechgroup.com/services'
+			},
+			{
+				id: 'agentic-copilot-suite',
+				title: 'Agentic Copilot Suite (Sales, Support, DevOps)',
+				description: 'Task-driven AI agents that execute workflows across CRM, ticketing, CI/CD, and cloud.',
+				category: 'AI Solutions',
+				price: '$4,999',
+				billing: 'month',
+				features: [
+					'Guardrailed tool use',
+					'Human-in-the-loop approvals',
+					'Observability and audit trails',
+					'Connectors: Salesforce, Zendesk, GitHub, AWS',
+					'Okta and SSO ready'
+				],
+				ctaLabel: 'Deploy Copilots',
+				href: 'https://ziontechgroup.com/services'
+			}
 		]
 	},
 	{
@@ -253,6 +323,41 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Edge Deployment',
 				href: 'https://ziontechgroup.com/contact'
 			}
+			,
+			{
+				id: 'platform-engineering-kubernetes',
+				title: 'Platform Engineering on Kubernetes',
+				description: 'Golden paths, IDP, and paved roads for developers with secure, standardized delivery.',
+				category: 'IT Services',
+				price: '$40,000',
+				billing: 'project',
+				features: [
+					'Backstage developer portal',
+					'GitOps with Argo CD or Flux',
+					'Policy-as-code (OPA/Gatekeeper)',
+					'Multi-cluster and multi-cloud',
+					'SRE playbooks and training'
+				],
+				ctaLabel: 'Build Your IDP',
+				href: 'https://ziontechgroup.com/services'
+			},
+			{
+				id: 'finops-cloud-cost-optimization',
+				title: 'FinOps Cloud Cost Optimization',
+				description: 'Reduce cloud spend 20–40% with rightsizing, reservations, and architectural optimizations.',
+				category: 'IT Services',
+				price: '$12,000',
+				billing: 'project',
+				features: [
+					'Cost anomaly detection',
+					'RI/Savings Plan strategy',
+					'Workload rightsizing',
+					'Kubernetes cost allocation',
+					'Executive reporting'
+				],
+				ctaLabel: 'Cut Cloud Costs',
+				href: 'https://ziontechgroup.com/services'
+			}
 		]
 	},
 	{
@@ -292,6 +397,41 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Quantum Security',
 				href: 'https://ziontechgroup.com/contact'
+			}
+			,
+			{
+				id: 'managed-detection-response',
+				title: 'Managed Detection & Response (MDR)',
+				description: '24/7 monitoring, threat hunting, and incident response with SIEM/SOAR integration.',
+				category: 'Cybersecurity',
+				price: '$3,499',
+				billing: 'month',
+				features: [
+					'SIEM setup and tuning',
+					'Playbooks and automation',
+					'Phishing and EDR integration',
+					'Compliance-ready reporting',
+					'Incident response retainers'
+				],
+				ctaLabel: 'Activate MDR',
+				href: 'https://ziontechgroup.com/services'
+			},
+			{
+				id: 'sase-rollout',
+				title: 'Secure Access Service Edge (SASE) Rollout',
+				description: 'Consolidate network and security with ZTNA, SWG, CASB, and SD-WAN.',
+				category: 'Cybersecurity',
+				price: '$20,000',
+				billing: 'project',
+				features: [
+					'Architecture and vendor selection',
+					'Pilot and phased migration',
+					'Policy baselines',
+					'User experience optimization',
+					'Runbooks and training'
+				],
+				ctaLabel: 'Deploy SASE',
+				href: 'https://ziontechgroup.com/services'
 			}
 		]
 	},
@@ -333,6 +473,41 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'BI Assessment',
 				href: 'https://ziontechgroup.com/contact'
 			}
+			,
+			{
+				id: 'data-quality-observability',
+				title: 'Data Quality & Observability',
+				description: 'Monitor freshness, completeness, and lineage to trust your analytics and AI.',
+				category: 'Data & Analytics',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'Column-level lineage',
+					'Great Expectations policies',
+					'Alerting and incident Mgmt',
+					'Connectors: Snowflake, BigQuery, Databricks',
+					'Root-cause analysis'
+				],
+				ctaLabel: 'Improve Data Trust',
+				href: 'https://ziontechgroup.com/services'
+			},
+			{
+				id: 'modern-etl-migration',
+				title: 'Modern ETL/ELT Migration',
+				description: 'Re-platform legacy pipelines to scalable ELT with dbt and cloud warehouses.',
+				category: 'Data & Analytics',
+				price: '$18,000',
+				billing: 'project',
+				features: [
+					'dbt modeling and tests',
+					'Incremental loads',
+					'CI for analytics',
+					'Cost-efficient storage',
+					'Knowledge transfer'
+				],
+				ctaLabel: 'Migrate Workloads',
+				href: 'https://ziontechgroup.com/services'
+			}
 		]
 	},
 	{
@@ -372,6 +547,41 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Cloud Migration',
 				href: 'https://ziontechgroup.com/contact'
+			}
+			,
+			{
+				id: 'serverless-application-factory',
+				title: 'Serverless Application Factory',
+				description: 'Blueprints and accelerators to build secure, low-cost serverless backends fast.',
+				category: 'Cloud & DevOps',
+				price: '$16,000',
+				billing: 'project',
+				features: [
+					'Patterns: EventBridge, Step Functions',
+					'IaC with CDK/Terraform',
+					'Observability baked-in',
+					'SECaaS and guardrails',
+					'Cost-efficiency targets'
+				],
+				ctaLabel: 'Build Serverless',
+				href: 'https://ziontechgroup.com/services'
+			},
+			{
+				id: 'disaster-recovery-blueprints',
+				title: 'Disaster Recovery Blueprints (RTO/RPO)',
+				description: 'Design and test DR strategies with automated failover and periodic game days.',
+				category: 'Cloud & DevOps',
+				price: '$20,000',
+				billing: 'project',
+				features: [
+					'Multi-region architectures',
+					'Automated chaos tests',
+					'Backup and restore pipelines',
+					'Compliance documentation',
+					'Executive tabletop exercises'
+				],
+				ctaLabel: 'Harden Resilience',
+				href: 'https://ziontechgroup.com/services'
 			}
 		]
 	},
@@ -493,6 +703,41 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Edge AI Demo',
 				href: 'https://ziontechgroup.com/contact'
 			}
+			,
+			{
+				id: 'predictive-maintenance-iot',
+				title: 'Predictive Maintenance for IoT Fleets',
+				description: 'Deploy sensors and analytics to predict failures and optimize uptime across assets.',
+				category: 'IoT & Edge',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'Edge telemetry ingestion',
+					'ML failure prediction',
+					'Work order integration (EAM/CMMS)',
+					'Kitting and rollout playbooks',
+					'Dashboards and alerts'
+				],
+				ctaLabel: 'Reduce Downtime',
+				href: 'https://ziontechgroup.com/services'
+			},
+			{
+				id: 'digital-twin-starter',
+				title: 'Digital Twin Starter Kit',
+				description: 'Model physical systems with twins to simulate scenarios and optimize operations.',
+				category: 'IoT & Edge',
+				price: '$14,000',
+				billing: 'project',
+				features: [
+					'3D/graph models',
+					'Stream processing',
+					'Integration with PLC/SCADA',
+					'KPI definition and alerts',
+					'Pilot-to-production plan'
+				],
+				ctaLabel: 'Build a Twin',
+				href: 'https://ziontechgroup.com/services'
+			}
 		]
 	},
 	{
@@ -532,6 +777,24 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Climate Demo',
 				href: 'https://ziontechgroup.com/contact'
+			}
+			,
+			{
+				id: 'carbon-accounting-saas',
+				title: 'Carbon Accounting & ESG Reporting',
+				description: 'Automate Scope 1–3 emissions tracking with audit-ready ESG disclosures.',
+				category: 'Green Tech',
+				price: '$999',
+				billing: 'month',
+				features: [
+					'GHG Protocol-aligned factors',
+					'Automated data pipelines',
+					'Supplier questionnaires',
+					'Assurance-ready exports',
+					'Target tracking (SBTi)'
+				],
+				ctaLabel: 'Start ESG Tracking',
+				href: 'https://ziontechgroup.com/services'
 			}
 		]
 	},
@@ -573,6 +836,24 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Connect Space',
 				href: 'https://ziontechgroup.com/contact'
 			}
+			,
+			{
+				id: 'satellite-imagery-analytics',
+				title: 'Satellite Imagery Analytics',
+				description: 'Computer vision on multi-spectral imagery for agriculture, insurance, and defense insights.',
+				category: 'Space Tech',
+				price: '$5,999',
+				billing: 'month',
+				features: [
+					'Change detection',
+					'Crop yield estimation',
+					'Object and damage detection',
+					'APIs and dashboards',
+					'Tasking provider integrations'
+				],
+				ctaLabel: 'Analyze Imagery',
+				href: 'https://ziontechgroup.com/services'
+			}
 		]
 	},
 	{
@@ -612,6 +893,24 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Analyze Genome',
 				href: 'https://ziontechgroup.com/contact'
+			}
+			,
+			{
+				id: 'telemedicine-ai-triage',
+				title: 'Telemedicine AI Triage',
+				description: 'AI symptom checker with escalation workflows to clinicians and EHR integration.',
+				category: 'BioTech & Health',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Clinical safety guardrails',
+					'HL7/FHIR integration',
+					'Language and accessibility',
+					'Analytics and outcomes tracking',
+					'Privacy and consent management'
+				],
+				ctaLabel: 'Enable Triage',
+				href: 'https://ziontechgroup.com/services'
 			}
 		]
 	},
@@ -653,6 +952,24 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Deploy Protocol',
 				href: 'https://ziontechgroup.com/contact'
 			}
+			,
+			{
+				id: 'kyc-aml-transaction-monitoring',
+				title: 'KYC/AML Transaction Monitoring',
+				description: 'Detect suspicious activity using rules + ML with investigator case management.',
+				category: 'FinTech & DeFi',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'Entity resolution',
+					'Sanctions and watchlists',
+					'Graph analytics',
+					'Case workflow and SAR exports',
+					'Audit and model governance'
+				],
+				ctaLabel: 'Strengthen Compliance',
+				href: 'https://ziontechgroup.com/services'
+			}
 		]
 	},
 	{
@@ -693,6 +1010,24 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Navigate AR',
 				href: 'https://ziontechgroup.com/contact'
 			}
+			,
+			{
+				id: 'vr-training-simulators',
+				title: 'VR Training Simulators',
+				description: 'Enterprise-grade immersive learning for safety, field ops, and medical procedures.',
+				category: 'Metaverse & AR/VR',
+				price: '$30,000',
+				billing: 'project',
+				features: [
+					'Curriculum design',
+					'Multi-user scenarios',
+					'LMS integration and analytics',
+					'Hardware procurement guidance',
+					'Operations and support'
+				],
+				ctaLabel: 'Build Simulator',
+				href: 'https://ziontechgroup.com/services'
+			}
 		]
 	},
 	{
@@ -732,6 +1067,24 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Deploy Robots',
 				href: 'https://ziontechgroup.com/contact'
+			}
+			,
+			{
+				id: 'warehouse-robotics-orchestration',
+				title: 'Warehouse Robotics Orchestration',
+				description: 'Coordinate AMRs, conveyors, and pick stations to maximize throughput and safety.',
+				category: 'Autonomous Systems',
+				price: '$9,999',
+				billing: 'month',
+				features: [
+					'Task allocation and routing',
+					'3D digital twin monitoring',
+					'Workforce and robot collaboration',
+					'Safety zones and policies',
+					'KPIs and optimization'
+				],
+				ctaLabel: 'Orchestrate Robots',
+				href: 'https://ziontechgroup.com/services'
 			}
 		]
 	}
