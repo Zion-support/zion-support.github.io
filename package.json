@@ -6,11 +6,11 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
-    "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
+    "dev": "next dev",
+    "build": "next build",
     "prebuild": "echo 'skip prebuild health-check'",
-    "export": "rm -rf dist && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
-    "start": "vite preview",
+    "export": "next build && next export",
+    "start": "next start",
     "postbuild": "echo 'Build completed successfully'",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
