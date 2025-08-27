@@ -38,6 +38,34 @@ const ComprehensiveServices: React.FC = () => {
       price: '$249–$1,249/mo',
       cta: 'https://ziontechgroup.com',
       features: ['Semantic retrieval over KB', 'Tone/style controls', 'Compliance guardrails', 'Export to Word/PDF']
+    },
+    {
+      title: 'FinOps Cost Anomaly Detector',
+      desc: 'Continuously scans AWS, Azure, and GCP for cost spikes, identifies root causes, and opens auto-remediation tickets.',
+      price: '$299–$1,299/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-pricing',
+      features: ['Real-time anomaly alerts', 'Service- and tag-level drilldowns', 'Forecast vs. actuals variance', 'Slack/Jira integrations']
+    },
+    {
+      title: 'Vendor Security Monitoring',
+      desc: 'Continuously monitors vendor attack surface, breach news, and policy compliance for third-party risk management.',
+      price: '$249–$999/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-services',
+      features: ['Dark web/domain monitoring', 'Security questionnaire scoring', 'Policy mapping to SOC 2/ISO 27001', 'Executive risk reports']
+    },
+    {
+      title: 'Data Quality & Lineage Monitor',
+      desc: 'Automated data tests, schema drift detection, and lineage maps across Snowflake, BigQuery, and Redshift.',
+      price: '$399–$1,499/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-pricing',
+      features: ['Column-level lineage', 'Freshness and completeness SLIs', 'dbt integration', 'Incident paging with ownership']
+    },
+    {
+      title: 'API Monetization Hub',
+      desc: 'Usage metering, subscription plans, rate limiting, and Stripe billing for your public/private APIs.',
+      price: '$199–$899/mo + 1% usage',
+      cta: 'https://ziontechgroup.com/comprehensive-services',
+      features: ['Per-endpoint metering', 'Self-serve developer portal', 'JWT/OAuth2 auth', 'Stripe/Chargebee integrations']
     }
   ];
 
@@ -69,6 +97,34 @@ const ComprehensiveServices: React.FC = () => {
       price: 'Projects from $9,000',
       cta: 'https://ziontechgroup.com',
       features: ['OpenTelemetry pipelines', 'SLO error budgets', 'Synthetic tests', 'Chaos experiments']
+    },
+    {
+      title: 'Microsoft 365 Security Hardening',
+      desc: 'Secure Microsoft 365 with baseline policies, Conditional Access, DLP, and identity governance.',
+      price: 'Packages from $7,500',
+      cta: 'https://ziontechgroup.com/contact',
+      features: ['Defender baseline policies', 'Conditional Access hardening', 'DLP and sensitivity labels', 'Admin RBAC and audit']
+    },
+    {
+      title: 'Modern Data Platform (Lakehouse)',
+      desc: 'Design and implement a scalable lakehouse on Databricks or Snowflake with medallion architecture.',
+      price: 'Projects from $25,000',
+      cta: 'https://ziontechgroup.com/comprehensive-services',
+      features: ['Ingestion with CDC', 'Bronze/Silver/Gold layers', 'Quality tests and lineage', 'Cost governance and caching']
+    },
+    {
+      title: 'SRE as a Service',
+      desc: 'Reliability engineering, SLOs, error budgets, incident response, and chaos drills for critical systems.',
+      price: '$6,000–$20,000/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-pricing',
+      features: ['SLO design and dashboards', 'On-call runbooks', 'Game days and chaos testing', 'Postmortem program']
+    },
+    {
+      title: 'Network Observability & Zero Trust',
+      desc: 'eBPF-powered observability, microsegmentation, and ZTNA rollout across hybrid networks.',
+      price: 'Engagements from $18,000',
+      cta: 'https://ziontechgroup.com/services/zero-trust-network-architecture',
+      features: ['eBPF flow visibility', 'Microsegmentation policy design', 'ZTNA rollout', 'Continuous verification']
     }
   ];
 
@@ -100,6 +156,34 @@ const ComprehensiveServices: React.FC = () => {
       price: 'Engagements from $20,000',
       cta: 'https://ziontechgroup.com',
       features: ['Prompt and function design', 'Eval suites and canaries', 'Safety filters and monitoring', 'Cost + latency SLO design']
+    },
+    {
+      title: 'Contact Center QA & Insights',
+      desc: 'Multilingual LLM scoring of calls/chats with auto-coaching, compliance checks, and CSAT prediction.',
+      price: '$1,499–$4,999/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-pricing',
+      features: ['Auto QA rubrics', 'Redaction and PII controls', 'Supervisor dashboards', 'CRM sync (Salesforce/HubSpot)']
+    },
+    {
+      title: 'Intelligent Document Processing',
+      desc: 'High-accuracy extraction and validation for invoices, claims, KYC, and logistics documents.',
+      price: '$0.02–$0.08/page + platform fee',
+      cta: 'https://ziontechgroup.com/comprehensive-services',
+      features: ['Few-shot templates', 'Human-in-the-loop validation', 'Field-level confidence', 'Export to ERP/DB']
+    },
+    {
+      title: 'AI Code & Security Reviewer',
+      desc: 'Static + LLM hybrid reviews for security, performance, and style with auto-fix suggestions.',
+      price: '$299–$999/repo/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-pricing',
+      features: ['OWASP/CWE checks', 'Performance anti-patterns', 'Org-wide policy gates', 'PR comments and autofix']
+    },
+    {
+      title: 'Managed MLOps Platform',
+      desc: 'End-to-end ML lifecycle with experiment tracking, model registry, deployment, and evaluations.',
+      price: '$2,499–$9,999/mo',
+      cta: 'https://ziontechgroup.com/comprehensive-services',
+      features: ['Feature store and lineage', 'Canary and shadow deploys', 'Live evals and guardrails', 'Cost and latency SLOs']
     }
   ];
 
