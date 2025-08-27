@@ -9,9 +9,6 @@ import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
-// Lazy load only the pages we are certain exist
-const Home = React.lazy(() => import('./pages/Index'));
-
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const Home2026 = React.lazy(() => import('./pages/Home2026'));
@@ -74,7 +71,6 @@ const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensiveP
 
 // Sitemap-aligned pages
 const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
-const Solutions = React.lazy(() => import('./pages/Solutions'));
 const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
 
