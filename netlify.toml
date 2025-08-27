@@ -6,6 +6,9 @@
   # Use npm for dependency management and Vite builds to dist/
   command = "npm ci && npm run build"
   publish = "dist"
+  # Force static site build (not Next.js)
+  functions = "netlify/functions"
+  edge_functions = "netlify/edge-functions"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -14,6 +17,11 @@
   NPM_FLAGS = "--ignore-scripts"
   # Skip Netlify's Next.js plugin since this is a Vite static site
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Force Vite/static site detection
+  NETLIFY_USE_YARN = "false"
+  NETLIFY_USE_NPM = "true"
+  # Disable framework detection
+  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
 
 # Explicitly disable Next.js plugin and configure only Vite-compatible plugins
@@ -21,10 +29,8 @@
   package = "netlify-plugin-cloudinary"
   inputs = {}
 
-# Explicitly disable the Next.js plugin
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  enabled = false
+# Note: Next.js plugin is not included since this is a Vite project
+# The plugin will not be loaded automatically if not specified
 
 # Redirects for SEO/legacy URLs
 [[redirects]]
