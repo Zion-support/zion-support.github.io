@@ -7,8 +7,6 @@ export interface RealAugmentedService2025Batch3 {
 }
 
 export const augmentedServicesBatch3: RealAugmentedService2025Batch3[] = [
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   {
     id: 'batch3-service-1',
     name: 'Batch 3 Service 1',

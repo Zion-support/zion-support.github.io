@@ -93,6 +93,89 @@ import {
   MicOff,
   Volume2,
   VolumeX,
+<<<<<<< HEAD
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Truck,
+  Package,
+  FileText,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
+  Repeat1,
+  Shuffle2,
+  SkipBack2,
+  SkipForward2,
+  PlayCircle,
+  PauseCircle,
+  StopCircle,
+  SkipBackCircle,
+  SkipForwardCircle,
+  RewindCircle,
+  FastForwardCircle,
+  ShuffleCircle,
+  RepeatCircle,
+  Repeat1Circle,
+  Shuffle2Circle,
+  SkipBack2Circle,
+  SkipForward2Circle,
+  PlaySquare,
+  PauseSquare,
+  StopSquare,
+  SkipBackSquare,
+  SkipForwardSquare,
+  RewindSquare,
+  FastForwardSquare,
+  ShuffleSquare,
+  RepeatSquare,
+  Repeat1Square,
+  Shuffle2Square,
+  SkipBack2Square,
+  SkipForward2Square,
+  PlayTriangle,
+  PauseTriangle,
+  StopTriangle,
+  SkipBackTriangle,
+  SkipForwardTriangle,
+  RewindTriangle,
+  FastForwardTriangle,
+  ShuffleTriangle,
+  RepeatTriangle,
+  Repeat1Triangle,
+  Shuffle2Triangle,
+  SkipBack2Triangle,
+  SkipForward2Triangle,
+  PlayOctagon,
+  PauseOctagon,
+  StopOctagon,
+  SkipBackOctagon,
+  SkipForwardOctagon,
+  RewindOctagon,
+  FastForwardOctagon,
+  ShuffleOctagon,
+  RepeatOctagon,
+  Repeat1Octagon,
+  Shuffle2Octagon,
+  SkipBack2Octagon,
+  SkipForward2Octagon,
+  PlayDodecagon,
+  PauseDodecagon,
+  StopDodecagon,
+  SkipBackDodecagon,
+  SkipForwardDodecagon,
+  RewindDodecagon,
+  FastForwardDodecagon,
+  ShuffleDodecagon,
+  RepeatDodecagon,
+  Repeat1Dodecagon,
+  Shuffle2Dodecagon,
+  SkipBack2Dodecagon,
+  SkipForward2Dodecagon
+=======
   Leaf,
   Space,
   Handshake,
@@ -100,18 +183,28 @@ import {
   FileText,
   BarChart3,
   Video
+>>>>>>> add-innovative-services-2025
 } from 'lucide-react';
 
 const footerSections = {
   aiServices: {
     title: 'AI Services',
     items: [
+<<<<<<< HEAD
+      { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
+      { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
+      { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
+      { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },
+      { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },
+      { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' }
+=======
       { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
       { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
       { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
       { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },
       { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },
       { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
+>>>>>>> add-innovative-services-2025
     ],
   },
   itServices: {
@@ -242,6 +335,12 @@ export const FuturisticFooter: React.FC = () => {
                     <Mail className="w-4 h-4 text-zion-cyan" />
                     <a href={`mailto:${contactInfo.email}`} className="hover:text-zion-cyan transition-colors duration-300">
                       {contactInfo.email}
+                    </a>
+                  </div>
+                  <div className="flex items-center space-x-3 text-zion-slate-light">
+                    <Globe className="w-4 h-4 text-zion-cyan" />
+                    <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan transition-colors duration-300">
+                      {contactInfo.website.replace('https://', '')}
                     </a>
                   </div>
                   <div className="flex items-center space-x-3 text-zion-slate-light">

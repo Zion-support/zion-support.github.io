@@ -1,330 +1,139 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  Map as SitemapIcon,
-  Home,
-  Users,
-  Briefcase,
-  FileText,
-  MessageSquare,
-  HelpCircle,
-  Shield,
-  Globe,
-  Building2,
-  Rocket,
-  Brain,
-  Cloud,
-  Code,
-  BookOpen,
-  Handshake,
-  LogIn,
-  ArrowRight,
-  ExternalLink
-} from 'lucide-react';
+import { AppLayout } from "@/layout/AppLayout";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
 
-const Sitemap: React.FC = () => {
-  const siteStructure = [
+export default function Sitemap() {
+  const sitemapSections = [
     {
-      title: 'Main Pages',
-      icon: Home,
+      title: "Company",
       links: [
-        { name: 'Home', path: '/', description: 'Main landing page' },
-        { name: 'About Us', path: '/about', description: 'Company information and mission' },
-        { name: 'Services', path: '/services', description: 'Overview of our services' },
-        { name: 'Contact', path: '/contact', description: 'Get in touch with us' }
+        { name: "About Us", path: "/about", description: "Learn about Zion Tech Group" },
+        { name: "Our Team", path: "/team", description: "Meet our leadership team" },
+        { name: "Careers", path: "/careers", description: "Join our team" },
+        { name: "Contact", path: "/contact", description: "Get in touch with us" }
       ]
     },
     {
-      title: 'Services',
-      icon: Briefcase,
+      title: "Services",
       links: [
-        { name: 'AI Services', path: '/ai-services', description: 'Artificial Intelligence solutions' },
-        { name: 'Micro SAAS', path: '/micro-saas', description: 'Specialized software solutions' },
-        { name: 'IT Services', path: '/it-services', description: 'Information Technology consulting' },
-        { name: 'Emerging Tech', path: '/emerging-tech', description: 'Cutting-edge technology' },
-        { name: 'Marketplace', path: '/marketplace', description: 'Technology marketplace' }
+        { name: "AI Services", path: "/services/ai", description: "Artificial Intelligence solutions" },
+        { name: "Cloud Services", path: "/services/cloud", description: "Cloud computing solutions" },
+        { name: "Cybersecurity", path: "/services/cybersecurity", description: "Security and compliance" },
+        { name: "Digital Transformation", path: "/services/digital-transformation", description: "Business transformation" }
       ]
     },
     {
-      title: 'Company',
-      icon: Building2,
+      title: "Resources",
       links: [
-        { name: 'Careers', path: '/careers', description: 'Job opportunities' },
-        { name: 'Partners', path: '/partners', description: 'Partnership information' },
-        { name: 'Blog', path: '/blog', description: 'Latest news and insights' },
-        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' }
+        { name: "Blog", path: "/blog", description: "Latest insights and news" },
+        { name: "Case Studies", path: "/case-studies", description: "Success stories" },
+        { name: "Documentation", path: "/docs", description: "Technical documentation" },
+        { name: "Support", path: "/support", description: "Help and support" }
       ]
     },
     {
-      title: 'Legal & Support',
-      icon: Shield,
+      title: "Legal",
       links: [
-        { name: 'Privacy Policy', path: '/privacy', description: 'Data protection information' },
-        { name: 'Terms of Service', path: '/terms', description: 'Service terms and conditions' },
-        { name: 'Sitemap', path: '/sitemap', description: 'Site navigation structure' }
-      ]
-    },
-    {
-      title: 'User Account',
-      icon: Users,
-      links: [
-        { name: 'Login', path: '/login', description: 'User authentication' },
-        { name: 'Sign Up', path: '/signup', description: 'Create new account' },
-        { name: 'Dashboard', path: '/dashboard', description: 'User dashboard' }
+        { name: "Privacy Policy", path: "/privacy", description: "Data protection and privacy" },
+        { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
+        { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" }
       ]
     }
   ];
 
-  const quickLinks = [
-    { name: 'Get Started', path: '/contact', icon: Rocket, color: 'from-zion-cyan to-zion-blue' },
-    { name: 'View Services', path: '/services', icon: Briefcase, color: 'from-zion-purple to-zion-cyan' },
-    { name: 'Read Blog', path: '/blog', icon: BookOpen, color: 'from-zion-blue to-zion-purple' },
-    { name: 'Join Team', path: '/careers', icon: Users, color: 'from-zion-cyan to-zion-green' }
-  ];
-
-  const externalLinks = [
-    { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: ExternalLink },
-    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: ExternalLink },
-    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: ExternalLink },
-    { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', icon: ExternalLink }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <SitemapIcon className="w-20 h-20 text-zion-cyan mx-auto mb-8" />
-              <h1 className="text-5xl md:text-7xl font-bold mb-8">
-                Site <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                  Navigation
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto">
-                Explore our complete website structure and find the information you need quickly and easily.
-              </p>
-            </motion.div>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Sitemap
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Navigate through all our pages and services. Find everything you need about Zion Tech Group's 
+            technology solutions, resources, and company information.
+          </p>
         </div>
-      </section>
 
-      {/* Quick Links */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Quick <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Access</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Popular destinations and key pages for quick navigation
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickLinks.map((link, index) => (
-              <motion.div
-                key={link.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Link
-                  to={link.path}
-                  className="block bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${link.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                    <link.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white text-center mb-2">{link.name}</h3>
-                  <div className="flex items-center justify-center text-zion-cyan">
-                    <span className="text-sm">Visit Page</span>
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Site Structure */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Complete <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Site Map</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Organized navigation structure for easy browsing
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {siteStructure.map((section, sectionIndex) => (
-              <motion.div
-                key={section.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: sectionIndex * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
-                    <section.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{section.title}</h3>
-                </div>
-
-                <div className="space-y-3">
-                  {section.links.map((link, linkIndex) => (
-                    <motion.div
-                      key={link.path}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: linkIndex * 0.05 }}
-                      viewport={{ once: true }}
+        {/* Sitemap Sections */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          {sitemapSections.map((section) => (
+            <div key={section.title} className="bg-slate-800/50 rounded-xl p-6 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-6 border-b border-white/20 pb-3">
+                {section.title}
+              </h2>
+              <div className="space-y-4">
+                {section.links.map((link) => (
+                  <div key={link.name} className="group">
+                    <Link
+                      to={link.path}
+                      className="block p-4 rounded-lg bg-slate-700/50 hover:bg-slate-700/80 transition-all duration-300 border border-transparent hover:border-blue-500/30"
                     >
-                      <Link
-                        to={link.path}
-                        className="block p-3 rounded-lg hover:bg-zion-slate-dark/30 transition-colors duration-300 group"
-                      >
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <h4 className="text-white font-semibold group-hover:text-zion-cyan transition-colors">
-                              {link.name}
-                            </h4>
-                            <p className="text-zion-slate-light text-sm">{link.description}</p>
-                          </div>
-                          <ArrowRight className="w-4 h-4 text-zion-cyan opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                        </div>
-                      </Link>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* External Links */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Connect <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">With Us</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Follow us on social media and explore our online presence
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {externalLinks.map((link, index) => (
-              <motion.div
-                key={link.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:transform hover:scale-105 text-center"
-                >
-                  <link.icon className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-                  <h3 className="text-lg font-bold text-white mb-2">{link.name}</h3>
-                  <div className="flex items-center justify-center text-zion-cyan text-sm">
-                    <span>Visit</span>
-                    <ExternalLink className="w-4 h-4 ml-1" />
+                      <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors duration-300 mb-2">
+                        {link.name}
+                      </h3>
+                      <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                        {link.description}
+                      </p>
+                      <div className="mt-3 flex items-center text-blue-400 text-sm font-medium">
+                        Visit Page
+                        <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </Link>
                   </div>
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Search & Navigation Help */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Need <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Help</span>?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-12">
-              Can't find what you're looking for? We're here to help you navigate our website.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="text-center">
-                <HelpCircle className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">FAQ Section</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Find answers to common questions about our services and website
-                </p>
-                <Link 
-                  to="/faq"
-                  className="inline-block px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-                >
-                  Browse FAQ
-                </Link>
-              </div>
-              
-              <div className="text-center">
-                <MessageSquare className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">Contact Support</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Get in touch with our team for personalized assistance
-                </p>
-                <Link 
-                  to="/contact"
-                  className="inline-block px-6 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 text-zion-cyan font-semibold rounded-xl hover:bg-zion-slate-dark/70 transition-all duration-300"
-                >
-                  Contact Us
-                </Link>
+                ))}
               </div>
             </div>
-          </motion.div>
+          ))}
         </div>
-      </section>
+
+        {/* Quick Links Section */}
+        <div className="mt-16 bg-slate-800/50 rounded-xl p-8 border border-white/10">
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">
+            Quick Navigation
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Link
+              to="/contact"
+              className="text-center p-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg text-white font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Get Started
+            </Link>
+            <Link
+              to="/services"
+              className="text-center p-4 bg-slate-700 rounded-lg text-white font-semibold hover:bg-slate-600 transition-all duration-300"
+            >
+              View Services
+            </Link>
+            <Link
+              to="/pricing"
+              className="text-center p-4 bg-slate-700 rounded-lg text-white font-semibold hover:bg-slate-600 transition-all duration-300"
+            >
+              Pricing
+            </Link>
+            <Link
+              to="/about"
+              className="text-center p-4 bg-slate-700 rounded-lg text-white font-semibold hover:bg-slate-600 transition-all duration-300"
+            >
+              About Us
+            </Link>
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="mt-16 text-center">
+          <h2 className="text-2xl font-bold text-white mb-6">
+            Need Help?
+          </h2>
+          <p className="text-gray-300 mb-8">
+            Can't find what you're looking for? Our team is here to help.
+          </p>
+        </div>
+      </div>
     </div>
   );
-};
-
-export default Sitemap;
+}

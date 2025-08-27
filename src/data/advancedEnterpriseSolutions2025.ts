@@ -1,367 +1,385 @@
-export interface AdvancedEnterpriseSolution2025 {
+export interface EnterpriseSolution {
   id: string;
   title: string;
   description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
+  longDescription: string;
+  icon: string;
+  color: string;
+  category: 'infrastructure' | 'cloud' | 'security' | 'consulting' | 'transformation' | 'integration' | 'analytics' | 'automation';
   features: string[];
   benefits: string[];
   useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
+  pricing: {
+    starter: string;
+    professional: string;
+    enterprise: string;
+    custom: string;
+  };
+  estimatedTime: string;
+  technologies: string[];
+  image?: string;
+  enterpriseScore: number;
   marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
-  competitors?: string[];
-  marketSize?: string;
-  compliance?: string[];
+  contactLink: string;
+  status: 'active' | 'beta' | 'coming-soon';
+  sla: string;
+  support: string;
 }
 
-export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[] = [
-  // AI-Powered Enterprise Resource Planning (ERP) Platform
+export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
   {
-    id: "ai-enterprise-resource-planning",
-    title: "AI-Powered Enterprise Resource Planning Platform",
-    description: "Next-generation ERP system that uses AI to automate business processes, predict resource needs, and optimize operations across all departments in real-time.",
-    category: "Enterprise Solutions",
-    subcategory: "Resource Planning",
-    price: 8999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'enterprise-cloud-migration',
+    title: 'Enterprise Cloud Migration & Strategy',
+    description: 'Comprehensive cloud migration strategy and implementation for large enterprises',
+    longDescription: 'Transform your enterprise infrastructure with our proven cloud migration methodology. We handle everything from strategy planning to implementation and optimization.',
+    icon: 'Cloud',
+    color: 'from-blue-500 to-cyan-600',
+    category: 'cloud',
     features: [
-      "AI-driven process automation",
-      "Predictive resource allocation",
-      "Real-time business intelligence",
-      "Cross-department integration",
-      "Advanced workflow management",
-      "Intelligent inventory optimization",
-      "Automated financial reporting",
-      "Supply chain optimization",
-      "Customer relationship management",
-      "Mobile-first interface"
+      'Cloud readiness assessment',
+      'Migration strategy planning',
+      'Multi-cloud architecture design',
+      'Data migration automation',
+      'Performance optimization',
+      'Cost optimization strategies'
     ],
     benefits: [
-      "Reduce operational costs by 35%",
-      "Improve resource utilization by 40%",
-      "Automate 80% of routine tasks",
-      "Real-time decision making",
-      "Scalable enterprise architecture"
+      '40% reduction in infrastructure costs',
+      '99.9% uptime guarantee',
+      'Scalable architecture',
+      'Improved security posture'
     ],
     useCases: [
-      "Manufacturing operations",
-      "Retail chain management",
-      "Healthcare administration",
-      "Financial services",
-      "Logistics and supply chain"
+      'Large enterprises',
+      'Financial institutions',
+      'Healthcare organizations',
+      'Government agencies'
     ],
-    targetAudience: [
-      "Enterprise CIOs",
-      "Operations managers",
-      "Business analysts",
-      "Financial controllers",
-      "Supply chain managers"
-    ],
-    tags: ["AI", "ERP", "Enterprise", "Automation", "Business Intelligence"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$8,999 - $25,000/month",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$50,000',
+      professional: '$150,000',
+      enterprise: '$500,000+',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Workday"],
-      apiEndpoints: 500,
-      uptime: "99.99%",
-      security: ["SOC 2 Type II", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"]
-    },
-    competitors: ["SAP S/4HANA", "Oracle ERP Cloud", "Microsoft Dynamics 365", "Workday"],
-    marketSize: "$45.2 billion by 2025",
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS", "SOX"]
+    estimatedTime: '6-18 months',
+    technologies: ['AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes', 'Docker'],
+    enterpriseScore: 98,
+    marketPrice: '$50,000-$500,000+',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    sla: '99.9% uptime guarantee',
+    support: '24/7 dedicated support team'
   },
-
-  // Quantum-Resistant Cybersecurity Platform
   {
-    id: "quantum-resistant-cybersecurity",
-    title: "Quantum-Resistant Cybersecurity Platform",
-    description: "Advanced cybersecurity solution that uses post-quantum cryptography and AI to protect against current and future quantum computing threats.",
-    category: "Cybersecurity",
-    subcategory: "Quantum Security",
-    price: 5999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'enterprise-cybersecurity',
+    title: 'Enterprise Cybersecurity Framework',
+    description: 'Comprehensive cybersecurity framework and threat protection',
+    longDescription: 'Protect your enterprise with our comprehensive cybersecurity framework. Includes threat detection, incident response, compliance management, and security training.',
+    icon: 'Shield',
+    color: 'from-red-500 to-orange-600',
+    category: 'security',
     features: [
-      "Post-quantum cryptography",
-      "AI-powered threat detection",
-      "Zero-trust architecture",
-      "Advanced encryption algorithms",
-      "Real-time threat monitoring",
-      "Automated incident response",
-      "Compliance management",
-      "Security analytics dashboard",
-      "Multi-factor authentication",
-      "Secure API gateway"
+      'Zero-trust architecture',
+      'Advanced threat detection',
+      'Incident response automation',
+      'Compliance management',
+      'Security awareness training',
+      'Vulnerability assessment'
     ],
     benefits: [
-      "Future-proof security against quantum threats",
-      "Reduce security incidents by 90%",
-      "Automated threat response",
-      "Compliance automation",
-      "Advanced threat intelligence"
+      '99.99% threat detection rate',
+      'Reduced security incidents',
+      'Compliance automation',
+      'Improved security posture'
     ],
     useCases: [
-      "Financial institutions",
-      "Healthcare organizations",
-      "Government agencies",
-      "Critical infrastructure",
-      "Enterprise networks"
+      'Fortune 500 companies',
+      'Financial services',
+      'Healthcare systems',
+      'Government entities'
     ],
-    targetAudience: [
-      "CISOs",
-      "Security architects",
-      "IT managers",
-      "Compliance officers",
-      "Risk managers"
-    ],
-    tags: ["Cybersecurity", "Quantum Computing", "AI", "Encryption", "Compliance"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$5,999 - $15,000/month",
-    roi: "400-600%",
-    innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$75,000',
+      professional: '$200,000',
+      enterprise: '$750,000+',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["Post-Quantum Cryptography", "AI/ML", "Blockchain", "Zero-Trust", "Kubernetes"],
-      integrations: ["Active Directory", "Okta", "CrowdStrike", "Palo Alto", "Cisco"],
-      apiEndpoints: 300,
-      uptime: "99.99%",
-      security: ["SOC 2 Type II", "ISO 27001", "FedRAMP", "NIST", "FIPS 140-2"]
-    },
-    competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Darktrace"],
-    marketSize: "$23.8 billion by 2025",
-    compliance: ["SOC 2", "ISO 27001", "FedRAMP", "NIST", "FIPS 140-2", "GDPR"]
+    estimatedTime: '3-12 months',
+    technologies: ['SIEM', 'EDR', 'XDR', 'Zero Trust', 'AI/ML', 'Automation'],
+    enterpriseScore: 99,
+    marketPrice: '$75,000-$750,000+',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    sla: '99.99% security guarantee',
+    support: '24/7 SOC team support'
   },
-
-  // AI-Powered Business Process Automation Suite
   {
-    id: "ai-business-process-automation",
-    title: "AI-Powered Business Process Automation Suite",
-    description: "Comprehensive automation platform that uses AI to identify, optimize, and automate complex business processes across the organization.",
-    category: "Business Automation",
-    subcategory: "Process Optimization",
-    price: 3999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'digital-transformation',
+    title: 'Digital Transformation Consulting',
+    description: 'End-to-end digital transformation strategy and implementation',
+    longDescription: 'Lead your industry with our comprehensive digital transformation services. We help enterprises modernize processes, adopt new technologies, and create competitive advantages.',
+    icon: 'Rocket',
+    color: 'from-purple-500 to-pink-600',
+    category: 'transformation',
     features: [
-      "AI process discovery",
-      "Intelligent workflow automation",
-      "RPA integration",
-      "Process mining and analytics",
-      "Custom automation builder",
-      "API automation",
-      "Document processing",
-      "Email automation",
-      "Scheduled task automation",
-      "Performance monitoring"
+      'Digital maturity assessment',
+      'Transformation roadmap',
+      'Process optimization',
+      'Technology adoption',
+      'Change management',
+      'ROI measurement'
     ],
     benefits: [
-      "Increase productivity by 60%",
-      "Reduce manual errors by 85%",
-      "Accelerate process execution by 3x",
-      "Cost savings of 40-60%",
-      "Improved compliance and audit trails"
+      '30% operational efficiency improvement',
+      'Enhanced customer experience',
+      'Competitive advantage',
+      'Future-ready organization'
     ],
     useCases: [
-      "Invoice processing",
-      "Customer onboarding",
-      "HR operations",
-      "Sales operations",
-      "Financial reporting"
+      'Traditional enterprises',
+      'Manufacturing companies',
+      'Retail chains',
+      'Service organizations'
     ],
-    targetAudience: [
-      "Process improvement managers",
-      "Operations directors",
-      "IT automation specialists",
-      "Business analysts",
-      "Digital transformation leaders"
-    ],
-    tags: ["Automation", "AI", "RPA", "Workflow", "Process Optimization"],
-    estimatedDelivery: "6-10 weeks",
-    supportLevel: "premium",
-    marketPrice: "$3,999 - $12,000/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$100,000',
+      professional: '$300,000',
+      enterprise: '$1,000,000+',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["Python", "UiPath", "Automation Anywhere", "Blue Prism", "Node.js"],
-      integrations: ["Salesforce", "SAP", "Oracle", "Microsoft Office", "Slack"],
-      apiEndpoints: 200,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "GDPR", "Data encryption"]
-    },
-    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
-    marketSize: "$19.6 billion by 2025",
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX"]
+    estimatedTime: '12-36 months',
+    technologies: ['AI/ML', 'Cloud Computing', 'IoT', 'Blockchain', 'RPA', 'Analytics'],
+    enterpriseScore: 97,
+    marketPrice: '$100,000-$1,000,000+',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    sla: 'Transformation success guarantee',
+    support: 'Dedicated transformation team'
   },
-
-  // Next-Generation Business Intelligence & Analytics Platform
   {
-    id: "next-gen-business-intelligence",
-    title: "Next-Generation Business Intelligence & Analytics Platform",
-    description: "Advanced BI platform that combines traditional analytics with AI, machine learning, and real-time data processing for actionable business insights.",
-    category: "Business Intelligence",
-    subcategory: "Advanced Analytics",
-    price: 6999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'enterprise-data-analytics',
+    title: 'Enterprise Data Analytics Platform',
+    description: 'Advanced data analytics and business intelligence for enterprises',
+    longDescription: 'Unlock the power of your data with our enterprise analytics platform. Features real-time processing, predictive analytics, and automated insights generation.',
+    icon: 'BarChart3',
+    color: 'from-green-500 to-emerald-600',
+    category: 'analytics',
     features: [
-      "AI-powered data analysis",
-      "Real-time streaming analytics",
-      "Advanced data visualization",
-      "Predictive modeling",
-      "Natural language queries",
-      "Automated reporting",
-      "Data governance",
-      "Multi-cloud integration",
-      "Mobile analytics",
-      "Collaborative dashboards"
+      'Real-time data processing',
+      'Predictive analytics',
+      'Machine learning models',
+      'Data visualization',
+      'Automated reporting',
+      'Data governance'
     ],
     benefits: [
-      "Faster insights delivery by 70%",
-      "Improved decision accuracy by 50%",
-      "Reduced data preparation time by 80%",
-      "Real-time business monitoring",
-      "Scalable analytics infrastructure"
+      'Data-driven decision making',
+      'Improved operational efficiency',
+      'Predictive insights',
+      'Automated business processes'
     ],
     useCases: [
-      "Financial performance analysis",
-      "Customer behavior insights",
-      "Operational efficiency tracking",
-      "Market trend analysis",
-      "Risk assessment"
+      'Financial services',
+      'Healthcare systems',
+      'Manufacturing',
+      'Retail chains'
     ],
-    targetAudience: [
-      "Data scientists",
-      "Business analysts",
-      "Executives",
-      "Marketing teams",
-      "Finance teams"
-    ],
-    tags: ["Business Intelligence", "Analytics", "AI", "Machine Learning", "Data Visualization"],
-    estimatedDelivery: "10-14 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$6,999 - $20,000/month",
-    roi: "300-450%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$60,000',
+      professional: '$180,000',
+      enterprise: '$600,000+',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Apache Kafka"],
-      integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "AWS"],
-      apiEndpoints: 400,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "GDPR", "Data encryption"]
-    },
-    competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Sisense"],
-    marketSize: "$29.9 billion by 2025",
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX"]
+    estimatedTime: '4-12 months',
+    technologies: ['Apache Spark', 'Kafka', 'TensorFlow', 'Tableau', 'Power BI', 'Python'],
+    enterpriseScore: 96,
+    marketPrice: '$60,000-$600,000+',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    sla: '99.9% data availability',
+    support: '24/7 analytics support'
   },
-
-  // Enterprise Digital Twin Platform
   {
-    id: "enterprise-digital-twin",
-    title: "Enterprise Digital Twin Platform",
-    description: "Comprehensive digital twin solution that creates virtual replicas of physical assets, processes, and systems for optimization and predictive maintenance.",
-    category: "Digital Twin",
-    subcategory: "Enterprise Solutions",
-    price: 12999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'enterprise-automation',
+    title: 'Enterprise Process Automation',
+    description: 'Intelligent process automation and workflow optimization',
+    longDescription: 'Automate complex business processes with our intelligent automation platform. Reduce manual work, improve accuracy, and increase operational efficiency.',
+    icon: 'Zap',
+    color: 'from-yellow-500 to-orange-600',
+    category: 'automation',
     features: [
-      "3D asset modeling",
-      "Real-time sensor integration",
-      "Predictive maintenance",
-      "Performance optimization",
-      "Simulation capabilities",
-      "IoT device management",
-      "Advanced analytics",
-      "Mobile visualization",
-      "API integration",
-      "Custom dashboards"
+      'RPA implementation',
+      'Workflow automation',
+      'Process optimization',
+      'Integration services',
+      'Monitoring & analytics',
+      'Continuous improvement'
     ],
     benefits: [
-      "Reduce maintenance costs by 30%",
-      "Improve asset utilization by 25%",
-      "Prevent unplanned downtime",
-      "Optimize operational efficiency",
-      "Enhanced decision making"
+      '70% process efficiency improvement',
+      'Reduced manual errors',
+      'Cost savings',
+      'Scalable operations'
     ],
     useCases: [
-      "Manufacturing plants",
-      "Smart buildings",
-      "Energy infrastructure",
-      "Transportation systems",
-      "Healthcare facilities"
+      'Finance & accounting',
+      'Human resources',
+      'Customer service',
+      'Supply chain management'
     ],
-    targetAudience: [
-      "Operations managers",
-      "Maintenance engineers",
-      "Facility managers",
-      "Asset managers",
-      "Digital transformation leaders"
+    pricing: {
+      starter: '$40,000',
+      professional: '$120,000',
+      enterprise: '$400,000+',
+      custom: 'Contact us'
+    },
+    estimatedTime: '3-9 months',
+    technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'RPA'],
+    enterpriseScore: 94,
+    marketPrice: '$40,000-$400,000+',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    sla: '95% automation success rate',
+    support: 'Automation support team'
+  },
+  {
+    id: 'enterprise-integration',
+    title: 'Enterprise System Integration',
+    description: 'Seamless integration of enterprise systems and applications',
+    longDescription: 'Connect your enterprise systems with our comprehensive integration platform. Enable data flow, automate processes, and create unified business operations.',
+    icon: 'Network',
+    color: 'from-indigo-500 to-purple-600',
+    category: 'integration',
+    features: [
+      'API development',
+      'Data integration',
+      'System connectivity',
+      'Real-time synchronization',
+      'Error handling',
+      'Performance monitoring'
     ],
-    tags: ["Digital Twin", "IoT", "Predictive Maintenance", "3D Modeling", "Asset Management"],
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$12,999 - $35,000/month",
-    roi: "400-600%",
-    innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    benefits: [
+      'Unified data view',
+      'Automated workflows',
+      'Improved efficiency',
+      'Reduced manual work'
+    ],
+    useCases: [
+      'ERP integration',
+      'CRM systems',
+      'Legacy system modernization',
+      'Cloud-to-on-premise'
+    ],
+    pricing: {
+      starter: '$35,000',
+      professional: '$100,000',
+      enterprise: '$350,000+',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["Unity 3D", "Unreal Engine", "Python", "Node.js", "PostgreSQL", "MQTT"],
-      integrations: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx", "AWS IoT", "Azure IoT"],
-      apiEndpoints: 600,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "IEC 62443", "Data encryption"]
+    estimatedTime: '2-8 months',
+    technologies: ['MuleSoft', 'Boomi', 'Apache Camel', 'Node.js', 'Python', 'APIs'],
+    enterpriseScore: 93,
+    marketPrice: '$35,000-$350,000+',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    sla: '99.5% integration uptime',
+    support: 'Integration support team'
+  },
+  {
+    id: 'enterprise-infrastructure',
+    title: 'Enterprise Infrastructure Modernization',
+    description: 'Modernize and optimize enterprise infrastructure',
+    longDescription: 'Transform your enterprise infrastructure with modern technologies. Improve performance, reduce costs, and enhance security with our infrastructure modernization services.',
+    icon: 'Server',
+    color: 'from-gray-500 to-slate-600',
+    category: 'infrastructure',
+    features: [
+      'Infrastructure assessment',
+      'Modernization planning',
+      'Performance optimization',
+      'Security enhancement',
+      'Scalability improvements',
+      'Cost optimization'
+    ],
+    benefits: [
+      'Improved performance',
+      'Reduced operational costs',
+      'Enhanced security',
+      'Scalable architecture'
+    ],
+    useCases: [
+      'Data centers',
+      'Network infrastructure',
+      'Storage systems',
+      'Computing resources'
+    ],
+    pricing: {
+      starter: '$80,000',
+      professional: '$250,000',
+      enterprise: '$800,000+',
+      custom: 'Contact us'
     },
-    competitors: ["Siemens", "GE Digital", "PTC", "Bentley Systems", "Autodesk"],
-    marketSize: "$86.1 billion by 2028",
-    compliance: ["SOC 2", "ISO 27001", "IEC 62443", "GDPR"]
+    estimatedTime: '6-18 months',
+    technologies: ['VMware', 'Hyper-V', 'Docker', 'Kubernetes', 'Terraform', 'Ansible'],
+    enterpriseScore: 95,
+    marketPrice: '$80,000-$800,000+',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    sla: '99.9% infrastructure uptime',
+    support: '24/7 infrastructure support'
+  },
+  {
+    id: 'enterprise-consulting',
+    title: 'Strategic IT Consulting',
+    description: 'Strategic IT consulting and technology advisory services',
+    longDescription: 'Get expert guidance on your technology strategy with our enterprise consulting services. We help you make informed decisions and optimize your IT investments.',
+    icon: 'Users',
+    color: 'from-teal-500 to-cyan-600',
+    category: 'consulting',
+    features: [
+      'Technology strategy',
+      'Architecture planning',
+      'Vendor selection',
+      'Risk assessment',
+      'ROI analysis',
+      'Implementation guidance'
+    ],
+    benefits: [
+      'Optimized technology investments',
+      'Reduced risks',
+      'Improved efficiency',
+      'Strategic alignment'
+    ],
+    useCases: [
+      'Technology strategy',
+      'Digital transformation',
+      'System selection',
+      'Risk management'
+    ],
+    pricing: {
+      starter: '$25,000',
+      professional: '$75,000',
+      enterprise: '$250,000+',
+      custom: 'Contact us'
+    },
+    estimatedTime: '1-6 months',
+    technologies: ['Strategy frameworks', 'Architecture tools', 'Analysis methods', 'Best practices'],
+    enterpriseScore: 96,
+    marketPrice: '$25,000-$250,000+',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    sla: 'Consulting success guarantee',
+    support: 'Strategic advisory team'
   }
 ];
+
+export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[] => {
+  if (category === 'All') {
+    return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
+  }
+  return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category);
+};
+
+export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {
+  return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
+};

@@ -13,7 +13,5 @@ export const realMarketServicesExtended: RealMarketServiceExtended[] = [
     tagline: 'Extended market coverage',
     price: '$599',
     features: ['Extended features', 'Market coverage', 'Advanced analytics']
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

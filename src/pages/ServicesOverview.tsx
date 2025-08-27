@@ -187,6 +187,7 @@ export default function ServicesOverview() {
                 ease: "easeOut"
             }
         }
+<<<<<<< HEAD
       ]
     },
     {
@@ -306,6 +307,11 @@ export default function ServicesOverview() {
         keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services"
         canonical="https://ziontechgroup.com/services"
       />
+=======
+    };
+    return (<div className="min-h-screen bg-background">
+      <SEO title="All Services - Zion Tech Group Comprehensive Technology Solutions" description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions." keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services" canonical="https://ziontechgroup.com/services"/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-20">

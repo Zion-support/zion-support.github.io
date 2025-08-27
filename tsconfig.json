@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "node",
@@ -20,19 +16,10 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
+    "paths": { "@/*": ["./src/*"] },
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "strictNullChecks": true
   },
   "include": [
@@ -40,12 +27,10 @@
     "pages",
     "components",
     "data",
-    "types",
-    ".next/types/**/*.ts"
+    "types"
   ],
   "exclude": [
     "node_modules",
-    ".next/**",
     "dist/**",
     "temp_components/**",
     "zion-os/**"

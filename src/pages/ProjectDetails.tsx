@@ -166,6 +166,7 @@ function ProjectDetailsContent() {
             </Button>
           </CardContent>
         </Card>
+<<<<<<< HEAD
       </div>
     );
   }
@@ -189,6 +190,22 @@ function ProjectDetailsContent() {
         title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
         description="View and manage your project details and collaboration."
       />
+=======
+      </div>);
+    }
+    // Check if user is either the client or the talent
+    const isClient = user?.id === project.client_id;
+    const isTalent = user?.id === project.talent_id;
+    if (!isClient && !isTalent) {
+        router.push("/unauthorized");
+        return null;
+    }
+    const isOfferPending = project.status === "offer_sent";
+    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+    const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+    return (<>
+      <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">

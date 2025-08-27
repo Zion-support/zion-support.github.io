@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
@@ -167,83 +168,80 @@ export default function CommunityPage() {
   
   return (
 import React from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 import { Link } from 'react-router-dom';
-import { Users, MessageCircle, Calendar, BookOpen, Award, Globe, Lightbulb, Rocket, Heart, Star, Zap, Target } from 'lucide-react';
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Users, MessageCircle, TrendingUp, Star, Calendar, User, MessageSquare, ThumbsUp, Eye } from 'lucide-react';
 
 export default function CommunityPage() {
-  const communityFeatures = [
-    {
-      icon: MessageCircle,
-      title: 'Discussion Forums',
-      description: 'Engage in meaningful conversations about AI, technology trends, and industry insights with fellow professionals.',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: BookOpen,
-      title: 'Knowledge Sharing',
-      description: 'Access and contribute to our growing library of technical articles, tutorials, and best practices.',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Calendar,
-      title: 'Events & Meetups',
-      description: 'Join our virtual and in-person events, workshops, and networking opportunities.',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Award,
-      title: 'Recognition Program',
-      description: 'Get recognized for your contributions and achievements within the community.',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Globe,
-      title: 'Global Network',
-      description: 'Connect with professionals from around the world and expand your professional network.',
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Innovation Hub',
-      description: 'Collaborate on innovative projects and share breakthrough ideas with the community.',
-      color: 'from-red-500 to-pink-500'
-    }
-  ];
+    const [activeTab, setActiveTab] = useState('featured');
 
-  const upcomingEvents = [
-    {
-      title: 'AI Ethics & Responsible Development',
-      date: 'March 15, 2024',
-      time: '2:00 PM EST',
-      type: 'Webinar',
-      attendees: 127,
-      icon: Rocket
-    },
-    {
-      title: 'Quantum Computing Workshop',
-      date: 'March 22, 2024',
-      time: '10:00 AM EST',
-      type: 'Workshop',
-      attendees: 89,
-      icon: Zap
-    },
-    {
-      title: 'Cybersecurity Best Practices',
-      date: 'March 29, 2024',
-      time: '3:00 PM EST',
-      type: 'Panel Discussion',
-      attendees: 156,
-      icon: Target
-    }
-  ];
+    const featuredPosts = [
+        {
+            id: "1",
+            title: "Best practices for AI model fine-tuning",
+            content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
+            author: {
+                name: "Alex Johnson",
+                avatar: "https://i.pravatar.cc/150?img=3",
+                role: "Verified Talent"
+            },
+            category: "AI Tools",
+            tags: ["machine-learning", "fine-tuning", "gpt"],
+            createdAt: "2025-04-01T12:00:00Z",
+            likes: 48,
+            views: 120,
+            replyCount: 12,
+            isPinned: false
+        },
+        {
+            id: "2",
+            title: "How to build an effective AI talent profile?",
+            content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
+            author: {
+                name: "Sarah Chen",
+                avatar: "https://i.pravatar.cc/150?img=5",
+                role: "Verified Talent"
+            },
+            category: "Getting Hired",
+            tags: ["profile", "tips", "hiring"],
+            createdAt: "2025-04-03T09:15:00Z",
+            likes: 32,
+            views: 89,
+            replyCount: 8,
+            isPinned: true
+        }
+    ];
 
-  const communityStats = [
-    { label: 'Active Members', value: '2,847', icon: Users },
-    { label: 'Discussions', value: '1,234', icon: MessageCircle },
-    { label: 'Resources Shared', value: '567', icon: BookOpen },
-    { label: 'Events Hosted', value: '89', icon: Calendar }
-  ];
+    const recentPosts = [
+        {
+            id: "3",
+            title: "Looking for feedback on my automated testing approach",
+            content: "I've set up a CI/CD pipeline with the following testing strategy...",
+            author: {
+                name: "Michael Wong",
+                avatar: "https://i.pravatar.cc/150?img=7",
+                role: "Developer"
+            },
+            category: "Project Help",
+            tags: ["testing", "automation", "ci-cd"],
+            createdAt: "2025-04-10T14:30:00Z",
+            likes: 5,
+            views: 45,
+            replyCount: 2,
+            isPinned: false
+        }
+    ];
 
+<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -296,138 +294,90 @@ export default function CommunityPage() {
     </>
           </div>
         </div>
+=======
+    const communityStats = [
+        { label: "Active Members", value: "2,847", icon: Users },
+        { label: "Total Posts", value: "15,392", icon: MessageCircle },
+        { label: "Topics Discussed", value: "1,203", icon: TrendingUp },
+        { label: "Success Stories", value: "892", icon: Star }
+    ];
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
-        {/* Community Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {communityStats.map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            );
-          })}
-        </div>
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', { 
+            month: 'short', 
+            day: 'numeric',
+            year: 'numeric'
+        });
+    };
 
-        {/* Community Features */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            What You'll Find in Our Community
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {communityFeatures.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-4`}>
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{feature.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+    return (
+        <>
+            <SEO 
+                title="Community - Zion Tech Group" 
+                description="Join our tech community and connect with fellow professionals." 
+                canonical="https://ziontechgroup.com/community" 
+            />
+            <Header />
+            <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+                {/* Hero Section */}
+                <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto text-center">
+                        <div className="mb-8">
+                            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
+                                <Users className="w-4 h-4 mr-2" />
+                                Community
+                            </div>
+                            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                                Connect with
+                                <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Tech Professionals</span>
+                            </h1>
+                            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                                Join our vibrant community of AI experts, developers, and tech enthusiasts. Share knowledge, ask questions, and grow your network.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <Button className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark">
+                                    Join Community
+                                </Button>
+                                <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                                    View Guidelines
+                                </Button>
+                            </div>
+                        </div>
 
-        {/* Upcoming Events */}
-        <div className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-white">Upcoming Events</h2>
-            <Link to="/events" className="text-blue-400 hover:text-blue-300 transition-colors">
-              View All Events →
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {upcomingEvents.map((event, index) => {
-              const Icon = event.icon;
-              return (
-                <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-white" />
+                        {/* Community Stats */}
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+                            {communityStats.map((stat, index) => (
+                                <div key={index} className="text-center">
+                                    <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <stat.icon className="w-8 h-8 text-zion-cyan" />
+                                    </div>
+                                    <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
+                                    <div className="text-zion-slate-light">{stat.label}</div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                    <div>
-                      <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
-                        {event.type}
-                      </span>
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-3">{event.title}</h3>
-                  <div className="space-y-2 text-sm text-gray-300 mb-4">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{event.date}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="w-4 h-4" />
-                      <span>{event.attendees} attending</span>
-                    </div>
-                  </div>
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2 rounded-lg font-medium transition-all duration-300">
-                    Register Now
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+                </section>
 
-        {/* Community Guidelines */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Community Guidelines
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Heart className="w-4 h-4 text-green-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Be Respectful</h3>
-                    <p className="text-gray-300 text-sm">Treat all community members with respect and kindness. Constructive feedback is welcome, but personal attacks are not.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Star className="w-4 h-4 text-blue-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Share Knowledge</h3>
-                    <p className="text-gray-300 text-sm">Contribute valuable insights, ask thoughtful questions, and help others learn from your experiences.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Target className="w-4 h-4 text-purple-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Stay On Topic</h3>
-                    <p className="text-gray-300 text-sm">Keep discussions relevant to technology, AI, and professional development. Off-topic content may be removed.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Zap className="w-4 h-4 text-orange-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Be Professional</h3>
-                    <p className="text-gray-300 text-sm">Maintain a professional tone and avoid spam, self-promotion, or inappropriate content.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                {/* Community Content */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto">
+                        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+                            <TabsList className="grid w-full grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
+                                <TabsTrigger value="featured" className="data-[state=active]:bg-zion-cyan data-[state=active]:text-zion-blue-dark">
+                                    Featured Posts
+                                </TabsTrigger>
+                                <TabsTrigger value="recent" className="data-[state=active]:bg-zion-cyan data-[state=active]:text-zion-blue-dark">
+                                    Recent Discussions
+                                </TabsTrigger>
+                                <TabsTrigger value="trending" className="data-[state=active]:bg-zion-cyan data-[state=active]:text-zion-blue-dark">
+                                    Trending Topics
+                                </TabsTrigger>
+                            </TabsList>
 
+<<<<<<< HEAD
         {/* Get Involved */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -453,4 +403,160 @@ export default function CommunityPage() {
       </div>
     </div>
   );
+=======
+                            <TabsContent value="featured" className="mt-8">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    {featuredPosts.map((post) => (
+                                        <Card key={post.id} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-cyan transition-all duration-300">
+                                            <CardHeader>
+                                                <div className="flex items-start justify-between mb-4">
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="w-10 h-10 bg-zion-cyan/20 rounded-full flex items-center justify-center">
+                                                            <User className="w-5 h-5 text-zion-cyan" />
+                                                        </div>
+                                                        <div>
+                                                            <div className="font-semibold text-white">{post.author.name}</div>
+                                                            <div className="text-sm text-zion-slate-light">{post.author.role}</div>
+                                                        </div>
+                                                    </div>
+                                                    {post.isPinned && (
+                                                        <Badge className="bg-zion-purple text-white">
+                                                            Pinned
+                                                        </Badge>
+                                                    )}
+                                                </div>
+                                                <CardTitle className="text-xl text-white mb-2">{post.title}</CardTitle>
+                                                <CardDescription className="text-zion-slate-light">
+                                                    {post.content}
+                                                </CardDescription>
+                                            </CardHeader>
+                                            <CardContent>
+                                                <div className="flex items-center gap-4 mb-4">
+                                                    <Badge variant="outline" className="border-zion-blue-light text-zion-slate-light">
+                                                        {post.category}
+                                                    </Badge>
+                                                    <div className="text-sm text-zion-slate-light">
+                                                        {formatDate(post.createdAt)}
+                                                    </div>
+                                                </div>
+                                                
+                                                <div className="flex items-center gap-4 text-sm text-zion-slate-light">
+                                                    <div className="flex items-center gap-1">
+                                                        <ThumbsUp className="w-4 h-4" />
+                                                        {post.likes}
+                                                    </div>
+                                                    <div className="flex items-center gap-1">
+                                                        <MessageSquare className="w-4 h-4" />
+                                                        {post.replyCount}
+                                                    </div>
+                                                    <div className="flex items-center gap-1">
+                                                        <Eye className="w-4 h-4" />
+                                                        {post.views}
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex flex-wrap gap-2 mt-4">
+                                                    {post.tags.map((tag, index) => (
+                                                        <Badge key={index} variant="secondary" className="text-xs">
+                                                            #{tag}
+                                                        </Badge>
+                                                    ))}
+                                                </div>
+                                            </CardContent>
+                                        </Card>
+                                    ))}
+                                </div>
+                            </TabsContent>
+
+                            <TabsContent value="recent" className="mt-8">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    {recentPosts.map((post) => (
+                                        <Card key={post.id} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-cyan transition-all duration-300">
+                                            <CardHeader>
+                                                <div className="flex items-center gap-3 mb-4">
+                                                    <div className="w-10 h-10 bg-zion-cyan/20 rounded-full flex items-center justify-center">
+                                                        <User className="w-5 h-5 text-zion-cyan" />
+                                                    </div>
+                                                    <div>
+                                                        <div className="font-semibold text-white">{post.author.name}</div>
+                                                        <div className="text-sm text-zion-slate-light">{post.author.role}</div>
+                                                    </div>
+                                                </div>
+                                                <CardTitle className="text-xl text-white mb-2">{post.title}</CardTitle>
+                                                <CardDescription className="text-zion-slate-light">
+                                                    {post.content}
+                                                </CardDescription>
+                                            </CardHeader>
+                                            <CardContent>
+                                                <div className="flex items-center gap-4 mb-4">
+                                                    <Badge variant="outline" className="border-zion-blue-light text-zion-slate-light">
+                                                        {post.category}
+                                                    </Badge>
+                                                    <div className="text-sm text-zion-slate-light">
+                                                        {formatDate(post.createdAt)}
+                                                    </div>
+                                                </div>
+                                                
+                                                <div className="flex items-center gap-4 text-sm text-zion-slate-light">
+                                                    <div className="flex items-center gap-1">
+                                                        <ThumbsUp className="w-4 h-4" />
+                                                        {post.likes}
+                                                    </div>
+                                                    <div className="flex items-center gap-1">
+                                                        <MessageSquare className="w-4 h-4" />
+                                                        {post.replyCount}
+                                                    </div>
+                                                    <div className="flex items-center gap-1">
+                                                        <Eye className="w-4 h-4" />
+                                                        {post.views}
+                                                    </div>
+                                                </div>
+                                            </CardContent>
+                                        </Card>
+                                    ))}
+                                </div>
+                            </TabsContent>
+
+                            <TabsContent value="trending" className="mt-8">
+                                <div className="text-center py-16">
+                                    <div className="w-24 h-24 bg-zion-blue-light rounded-full flex items-center justify-center mx-auto mb-6">
+                                        <TrendingUp className="w-12 h-12 text-zion-slate-light" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-white mb-4">Trending Topics Coming Soon</h3>
+                                    <p className="text-zion-slate-light mb-8">
+                                        We're working on bringing you the most popular and trending discussions from our community.
+                                    </p>
+                                    <Button className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark">
+                                        Get Notified
+                                    </Button>
+                                </div>
+                            </TabsContent>
+                        </Tabs>
+                    </div>
+                </section>
+
+                {/* Coming Soon Section */}
+                <section className="py-16 bg-zion-blue-dark">
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <div className="bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter">
+                            <h2 className="text-2xl font-bold text-white mb-6">Community Platform Coming Soon</h2>
+                            <p className="text-zion-slate-light mb-6">
+                                Our full community platform is currently under development. Soon you'll be able to create posts, join discussions, and connect with tech professionals worldwide.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <Button className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark">
+                                    Join Waitlist
+                                </Button>
+                                <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                                    Learn More
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <Footer />
+        </>
+    );
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 }

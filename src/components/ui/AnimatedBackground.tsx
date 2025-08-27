@@ -1,42 +1,77 @@
 import React, { useEffect, useRef } from 'react';
+
 export function AnimatedBackground({ className = '', variant = 'grid' }) {
-    const canvasRef = useRef(null);
-    useEffect(() => {
-        const canvas = canvasRef.current;
-        if (!canvas)
-            return;
-        const ctx = canvas.getContext('2d');
-        if (!ctx)
-            return;
-        let animationFrameId;
-        let particles = [];
-        const resizeCanvas = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        };
-        const initParticles = () => {
-            particles = [];
-            const particleCount = variant === 'particles' ? 100 : 50;
-            for (let i = 0; i < particleCount; i++) {
-                particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.5,
-                    vy: (Math.random() - 0.5) * 0.5,
-                    size: Math.random() * 2 + 1,
-                    opacity: Math.random() * 0.5 + 0.1,
-                });
-            }
-        };
-        const drawGrid = () => {
-            const gridSize = 40;
-            const offset = (Date.now() * 0.001) % gridSize;
-            ctx.strokeStyle = 'rgba(139, 21, 233, 0.1)';
-            ctx.lineWidth = 1;
 <<<<<<< HEAD
-            ctx.stroke();
-          }
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let animationFrameId;
+    let particles = [];
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    const initParticles = () => {
+      particles = [];
+      const particleCount = variant === 'particles' ? 100 : 50;
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 2 + 1,
+          opacity: Math.random() * 0.5 + 0.1,
         });
+      }
+    };
+
+    const drawGrid = () => {
+      const gridSize = 40;
+      const offset = (Date.now() * 0.001) % gridSize;
+      
+      ctx.strokeStyle = 'rgba(139, 21, 233, 0.1)';
+      ctx.lineWidth = 1;
+
+      // Draw vertical lines
+      for (let x = offset; x < canvas.width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+      }
+
+      // Draw horizontal lines
+      for (let y = offset; y < canvas.height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+    };
+
+    const drawParticles = () => {
+      particles.forEach(particle => {
+        ctx.fillStyle = `rgba(34, 221, 210, ${particle.opacity})`;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Update particle position
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Bounce off edges
+        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
+        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
       });
     };
 
@@ -98,28 +133,65 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
       animationFrameId = requestAnimationFrame(animate);
     };
 
+    const handleResize = () => {
+      resizeCanvas();
+      initParticles();
+    };
+
+    window.addEventListener('resize', handleResize);
     resizeCanvas();
     initParticles();
     animate();
 
-    window.addEventListener('resize', resizeCanvas);
-
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('resize', handleResize);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
     };
   }, [variant]);
 
   return (
     <canvas
       ref={canvasRef}
-      className={`fixed inset-0 pointer-events-none z-0 ${className}`}
-      style={{
-        background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)'
-      }}
+      className={`fixed inset-0 pointer-events-none ${className}`}
+      style={{ zIndex: -1 }}
     />
   );
 =======
+    const canvasRef = useRef(null);
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas)
+            return;
+        const ctx = canvas.getContext('2d');
+        if (!ctx)
+            return;
+        let animationFrameId;
+        let particles = [];
+        const resizeCanvas = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        };
+        const initParticles = () => {
+            particles = [];
+            const particleCount = variant === 'particles' ? 100 : 50;
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    size: Math.random() * 2 + 1,
+                    opacity: Math.random() * 0.5 + 0.1,
+                });
+            }
+        };
+        const drawGrid = () => {
+            const gridSize = 40;
+            const offset = (Date.now() * 0.001) % gridSize;
+            ctx.strokeStyle = 'rgba(139, 21, 233, 0.1)';
+            ctx.lineWidth = 1;
             // Vertical lines
             for (let x = offset; x < canvas.width; x += gridSize) {
                 ctx.beginPath();
@@ -235,7 +307,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{
             background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)'
         }}/>);
->>>>>>> cursor/website-audit-and-enhancement-1eed
+>>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
 }
 // Neon glow effect component
 export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
@@ -247,28 +319,6 @@ export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
     </div>);
 }
 // Floating particles component
-<<<<<<< HEAD
-export function FloatingParticles({ count = 20, className = '' }: {
-  count?: number;
-  className?: string;
-}) {
-  return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-      {Array.from({ length: count }).map((_, i) => (
-        <div
-          key={i}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 2}s`,
-            animationDuration: `${2 + Math.random() * 2}s`,
-          }}
-        />
-      ))}
-    </div>
-  );
-=======
 export function FloatingParticles({ count = 20, className = '' }) {
     return (<div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {Array.from({ length: count }).map((_, i) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style={{
@@ -278,26 +328,8 @@ export function FloatingParticles({ count = 20, className = '' }) {
                 animationDuration: `${2 + Math.random() * 2}s`,
             }}/>))}
     </div>);
->>>>>>> cursor/website-audit-and-enhancement-1eed
 }
 // Gradient border component
-<<<<<<< HEAD
-export function GradientBorder({ children, className = '', borderWidth = '2px' }: {
-  children: React.ReactNode;
-  className?: string;
-  borderWidth?: string;
-}) {
-  return (
-    <div
-      className={`relative ${className}`}
-      style={{
-        background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
-        padding: borderWidth,
-        borderRadius: 'inherit',
-      }}
-    >
-      <div className="bg-slate-800 rounded-[inherit] h-full w-full">
-=======
 export function GradientBorder({ children, className = '', borderWidth = '2px' }) {
     return (<div className={`relative ${className}`} style={{
             background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
@@ -305,7 +337,6 @@ export function GradientBorder({ children, className = '', borderWidth = '2px' }
             borderRadius: 'inherit',
         }}>
       <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
->>>>>>> cursor/website-audit-and-enhancement-1eed
         {children}
       </div>
     </div>);

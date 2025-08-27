@@ -13,7 +13,5 @@ export const added2026Q2Services: Added2026Q2Service[] = [
     tagline: 'Second quarter 2026 service',
     price: '$799',
     features: ['2026 Q2 features', 'Advanced capabilities', 'Enhanced performance']
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

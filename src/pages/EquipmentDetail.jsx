@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -7,70 +9,6 @@ import { ShoppingCart, Star, Truck, Shield, RotateCcw } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { EQUIPMENT_DETAILS } from "@/data/equipmentDetails";
-
-export const SAMPLE_EQUIPMENT = [
-    {
-        id: 1,
-        name: "AI Development Workstation",
-        category: "Hardware",
-        description: "High-performance workstation optimized for AI/ML development and training",
-        price: 2499,
-        currency: "USD",
-        rating: 4.8,
-        reviews: 127,
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-        features: [
-            "NVIDIA RTX 4090 GPU",
-            "Intel i9-13900K Processor",
-            "64GB DDR5 RAM",
-            "2TB NVMe SSD",
-            "Pre-installed AI frameworks"
-        ],
-        specifications: {
-            "GPU": "NVIDIA RTX 4090 24GB",
-            "CPU": "Intel Core i9-13900K",
-            "RAM": "64GB DDR5-5600",
-            "Storage": "2TB NVMe SSD",
-            "Power": "850W Gold",
-            "Cooling": "Liquid Cooling"
-        },
-        availability: "In Stock",
-        location: "Middletown, DE",
-        shipping: "Free 2-day shipping",
-        warranty: "3-year warranty"
-    },
-    {
-        id: 2,
-        name: "Cloud Computing Cluster",
-        category: "Infrastructure",
-        description: "Scalable cloud computing cluster for enterprise AI workloads",
-        price: 15999,
-        currency: "USD",
-        rating: 4.9,
-        reviews: 89,
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-        features: [
-            "Multi-GPU configuration",
-            "High-speed networking",
-            "Redundant power supplies",
-            "Enterprise management",
-            "24/7 monitoring"
-        ],
-        specifications: {
-            "GPUs": "8x NVIDIA A100",
-            "CPU": "AMD EPYC 7763",
-            "RAM": "512GB ECC DDR4",
-            "Storage": "10TB NVMe RAID",
-            "Network": "100Gbps InfiniBand",
-            "Power": "2400W Redundant"
-        },
-        availability: "Available for Order",
-        location: "Middletown, DE",
-        shipping: "Professional installation",
-        warranty: "5-year enterprise warranty"
-    }
-];
-
 export default function EquipmentDetail() {
     const { equipmentId } = useParams();
     const navigate = useNavigate();
@@ -81,16 +19,18 @@ export default function EquipmentDetail() {
     // In a real app, this would fetch from an API
     const equipment = equipmentId ? EQUIPMENT_DETAILS[equipmentId] : undefined;
     if (!equipment) {
-        return (
-        <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20 py-12 px-4">
+        return (<>
+        <Header />
+        <div className="min-h-screen bg-zion-blue py-12 px-4">
           <div className="container mx-auto">
             <div className="text-center py-20">
               <h1 className="text-3xl font-bold text-white mb-4">Equipment Not Found</h1>
-              <p className="text-gray-300 mb-8">The equipment you're looking for doesn't exist or has been removed.</p>
+              <p className="text-zion-slate-light mb-8">The equipment you're looking for doesn't exist or has been removed.</p>
             </div>
           </div>
         </div>
-      );
+        <Footer />
+      </>);
     }
     const handleAddToCart = () => {
         setIsAdding(true);

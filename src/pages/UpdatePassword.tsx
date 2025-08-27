@@ -9,7 +9,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
+<<<<<<< HEAD
 import { cleanupAuthState } from "@/utils/authUtils";
+=======
+import { cleanupAuthState } from "../utils/auth-utils";
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 // Form validation schema
 const updatePasswordSchema = z
     .object({
