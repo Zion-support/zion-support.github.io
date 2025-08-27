@@ -1,15 +1,12 @@
 [build]
-  # Use `npm ci` for deterministic installs, Next.js plugin expects .next
+  # Use `npm ci` for deterministic installs, Vite builds to dist folder
   command = "npm ci && npm run build"
-  publish = ".next"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max_old_space_size=4096"
   NPM_FLAGS = "--prefer-offline"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
 
 # Optional: a few redirects that were present
 [[redirects]]
@@ -66,3 +63,9 @@
   from = "/browser-automation-cloud/"
   to = "/browser-automation-cloud"
   status = 301
+
+# Add SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
