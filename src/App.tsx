@@ -23,6 +23,19 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Team = React.lazy(() => import('./pages/Team'));
+const News = React.lazy(() => import('./pages/News'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const ResearchDevelopment = React.lazy(() => import('./pages/research-development'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Training = React.lazy(() => import('./pages/Training'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Solutions = React.lazy(() => import('./pages/solutions'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -34,6 +47,13 @@ const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const AI = React.lazy(() => import('./pages/services/AI'));
+const Cloud = React.lazy(() => import('./pages/services/Cloud'));
+const Cybersecurity = React.lazy(() => import('./pages/services/Cybersecurity'));
+const Infrastructure = React.lazy(() => import('./pages/services/Infrastructure'));
+const Transformation = React.lazy(() => import('./pages/services/Transformation'));
+const QuantumTechnology = React.lazy(() => import('./pages/services/QuantumTechnology'));
+const SpaceTechnology = React.lazy(() => import('./pages/services/SpaceTech'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -75,15 +95,28 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/partners" element={<Partners />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/faq" element={<FAQ />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/cookies" element={<Cookies />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/documentation" element={<Documentation />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/webinars" element={<Webinars />} />
+                <Route path="/research-development" element={<ResearchDevelopment />} />
+                <Route path="/accessibility" element={<Accessibility />} />
+                <Route path="/status" element={<Status />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/community" element={<Community />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
@@ -95,6 +128,13 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                <Route path="/services/ai" element={<AI />} />
+                <Route path="/services/cloud" element={<Cloud />} />
+                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                <Route path="/services/infrastructure" element={<Infrastructure />} />
+                <Route path="/services/transformation" element={<Transformation />} />
+                <Route path="/services/quantum-technology" element={<QuantumTechnology />} />
+                <Route path="/services/space-technology" element={<SpaceTechnology />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />

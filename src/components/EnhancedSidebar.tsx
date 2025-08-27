@@ -76,37 +76,37 @@ export const EnhancedSidebar: React.FC = () => {
       title: "Services",
       icon: Zap,
       items: [
-        { name: "AI & Machine Learning", href: "/ai-services", icon: Brain },
-        { name: "Micro SAAS Solutions", href: "/micro-saas", icon: Cloud },
-        { name: "IT Infrastructure", href: "/it-services", icon: Server },
-        { name: "Emerging Technologies", href: "/emerging-tech", icon: Rocket },
-        { name: "Cybersecurity", href: "/it-services/cybersecurity", icon: Shield },
-        { name: "Cloud Solutions", href: "/it-services/cloud", icon: Cloud },
-        { name: "DevOps & Automation", href: "/it-services/devops", icon: Code },
-        { name: "Data Management", href: "/it-services/data", icon: Database }
+        { name: "AI & Machine Learning", href: "/services/ai", icon: Brain },
+        { name: "Micro SAAS Solutions", href: "/services/micro-saas", icon: Cloud },
+        { name: "IT Infrastructure", href: "/services/infrastructure", icon: Server },
+        { name: "Emerging Technologies", href: "/services", icon: Rocket },
+        { name: "Cybersecurity", href: "/services/cybersecurity", icon: Shield },
+        { name: "Cloud Solutions", href: "/services/cloud", icon: Cloud },
+        { name: "DevOps & Automation", href: "/services/cloud-devops", icon: Code },
+        { name: "Data Management", href: "/services/data-analytics", icon: Database }
       ]
     },
     {
       title: "Solutions",
       icon: Target,
       items: [
-        { name: "Quantum Computing", href: "/emerging-tech/quantum", icon: Atom },
-        { name: "Blockchain & Web3", href: "/emerging-tech/blockchain", icon: Link },
-        { name: "Edge Computing", href: "/emerging-tech/edge", icon: Network },
-        { name: "IoT Solutions", href: "/emerging-tech/iot", icon: Wifi },
-        { name: "Healthcare AI", href: "/ai-services/healthcare", icon: HeartPulse },
-        { name: "Financial AI", href: "/ai-services/financial", icon: DollarSign },
-        { name: "Green Technology", href: "/green-it", icon: Leaf }
+        { name: "Quantum Technology", href: "/services/quantum-technology", icon: Atom },
+        { name: "Blockchain & Web3", href: "/services/blockchain", icon: Link },
+        { name: "Edge Computing", href: "/services/iot-edge", icon: Network },
+        { name: "IoT Solutions", href: "/services/iot-services", icon: Wifi },
+        { name: "Healthcare AI", href: "/solutions/healthcare", icon: HeartPulse },
+        { name: "Financial AI", href: "/solutions/financial", icon: DollarSign },
+        { name: "Green Technology", href: "/services/green-it", icon: Leaf }
       ]
     },
     {
       title: "Resources",
       icon: BookOpen,
       items: [
-        { name: "Documentation", href: "/docs", icon: FileText },
+        { name: "Documentation", href: "/documentation", icon: FileText },
         { name: "API Reference", href: "/api", icon: Code },
         { name: "Developer Portal", href: "/developer", icon: Cpu },
-        { name: "Support Center", href: "/support", icon: HelpCircle },
+        { name: "Support Center", href: "/help-center", icon: HelpCircle },
         { name: "FAQ", href: "/faq", icon: HelpCircle },
         { name: "Blog", href: "/blog", icon: FileText },
         { name: "Case Studies", href: "/case-studies", icon: BarChart3 }
@@ -116,11 +116,11 @@ export const EnhancedSidebar: React.FC = () => {
       title: "Company",
       icon: Building,
       items: [
-        { name: "Our Team", href: "/about#team", icon: Users },
+        { name: "Our Team", href: "/team", icon: Users },
         { name: "Press Kit", href: "/press", icon: FileText },
         { name: "News & Updates", href: "/news", icon: Calendar },
         { name: "Investor Relations", href: "/investors", icon: TrendingUp },
-        { name: "Sustainability", href: "/sustainability", icon: Leaf }
+        { name: "Sustainability", href: "/services/green-it", icon: Leaf }
       ]
     }
   ];

@@ -52,7 +52,8 @@ export function Footer() {
         { name: 'Our Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'News & Updates', path: '/news', icon: Newspaper },
-        { name: 'Case Studies', path: '/case-studies', icon: CheckCircle }
+        { name: 'Case Studies', path: '/case-studies', icon: CheckCircle },
+        { name: 'Partners', path: '/partners', icon: Users }
       ]
     },
     {
@@ -64,8 +65,8 @@ export function Footer() {
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
         { name: 'Infrastructure', path: '/services/infrastructure', icon: Building },
         { name: 'Digital Transformation', path: '/services/transformation', icon: Rocket },
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
-        { name: 'Space Technology', path: '/space-technology', icon: Rocket }
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Cpu },
+        { name: 'Space Technology', path: '/services/space-technology', icon: Rocket }
       ]
     },
     {
@@ -85,7 +86,7 @@ export function Footer() {
       icon: FileText,
       links: [
         { name: 'Blog', path: '/blog', icon: FileText },
-        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'Documentation', path: '/documentation', icon: FileText },
         { name: 'White Papers', path: '/white-papers', icon: FileText },
         { name: 'Webinars', path: '/webinars', icon: Video },
         { name: 'Research & Development', path: '/research-development', icon: TestTube },
