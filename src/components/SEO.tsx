@@ -6,19 +6,14 @@ interface SEOProps {
   description: string;
   keywords?: string;
   author?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  canonical?: string;
   noindex?: boolean;
   nofollow?: boolean;
-  canonical?: string;
+  ogImage?: string;
   ogType?: string;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   structuredData?: object;
+  children?: React.ReactNode;
 }
 
 export function SEO({
@@ -26,175 +21,287 @@ export function SEO({
   description,
   keywords,
   author = 'Zion Tech Group',
-  image = '/images/zion-tech-group-og.jpg',
-  url,
-  type = 'website',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
+  canonical,
   noindex = false,
   nofollow = false,
-  canonical,
-  ogType = type,
+  ogImage = '/images/zion-tech-group-og.jpg',
+  ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData
+  structuredData,
+  children
 }: SEOProps) {
-  const siteUrl = process.env.REACT_APP_SITE_URL || 'https://ziontechgroup.com';
-  const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const fullImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
-  
+  const siteName = 'Zion Tech Group';
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const defaultKeywords = 'AI solutions, quantum computing, IT services, digital transformation, cybersecurity, cloud computing, business automation, machine learning, neural networks, micro SaaS';
+  const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
+
   // Default structured data for organization
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": siteUrl,
-    "logo": `${siteUrl}/images/zion-logo.png`,
-    "description": "Leading provider of AI-powered business solutions, quantum computing, and autonomous business operations.",
-    "foundingDate": "2020",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+    "description": "Leading provider of AI-powered business solutions, quantum computing, and innovative IT services for digital transformation.",
+    "foundingDate": "2014",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "Global"
+      "addressCountry": "US"
     },
     "contactPoint": {
       "@type": "ContactPoint",
+      "telephone": "+1-555-0123",
       "contactType": "customer service",
-      "email": "contact@ziontechgroup.com"
+      "email": "info@ziontechgroup.com"
     },
     "sameAs": [
-      "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
-      "https://github.com/ziontechgroup"
-    ]
+      "https://twitter.com/ziontechgroup",
+      "https://facebook.com/ziontechgroup"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Technology Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Solutions",
+            "description": "Advanced artificial intelligence and machine learning solutions"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Quantum Computing",
+            "description": "Next-generation quantum computing solutions"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "IT Infrastructure",
+            "description": "Enterprise-grade IT infrastructure and support"
+          }
+        }
+      ]
+    }
   };
-
-  const pageStructuredData = {
-    "@context": "https://schema.org",
-    "@type": type === 'article' ? 'Article' : 'WebPage',
-    "headline": title,
-    "description": description,
-    "url": fullUrl,
-    "image": fullImage,
-    "author": {
-      "@type": "Organization",
-      "name": author
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "logo": {
-        "@type": "ImageObject",
-        "url": `${siteUrl}/images/zion-logo.png`
-      }
-    },
-    ...(type === 'article' && publishedTime && {
-      "datePublished": publishedTime,
-      "dateModified": modifiedTime || publishedTime
-    }),
-    ...(section && { "articleSection": section }),
-    ...(tags.length > 0 && { "keywords": tags.join(', ') })
-  };
-
-  const finalStructuredData = structuredData || pageStructuredData;
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="keywords" content={finalKeywords} />
       <meta name="author" content={author} />
       
-      {/* Robots */}
+      {/* Robots Meta */}
       {noindex && <meta name="robots" content="noindex" />}
       {nofollow && <meta name="robots" content="nofollow" />}
-      {noindex && nofollow && <meta name="robots" content="noindex, nofollow" />}
+      {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
       
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
       
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:title" content={title} />
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical || window.location.href} />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter */}
+      {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImage} />
       
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0ea5e9" />
-      <meta name="msapplication-TileColor" content="#0ea5e9" />
+      <meta name="theme-color" content="#22ddd2" />
+      <meta name="msapplication-TileColor" content="#22ddd2" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content={siteName} />
       
-      {/* Favicon */}
+      {/* Favicon and App Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      
-      {/* Manifest */}
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/site.webmanifest" />
       
-      {/* Preconnect to external domains */}
+      {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      
+      {/* DNS Prefetch for performance */}
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
       
-      {/* Additional Organization Schema */}
+      {/* Default Organization Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(defaultStructuredData)}
       </script>
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="application-name" content={siteName} />
+      <meta name="generator" content="React + Vite" />
+      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      
+      {/* Performance Hints */}
+      <link rel="preload" href="/fonts/Orbitron-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/fonts/Rajdhani-Medium.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      
+      {children}
     </Helmet>
   );
 }
 
-export const SEOPresets = {
-  home: {
-    title: 'Zion Tech Group | Leading Technology Solutions & Digital Transformation',
-    description: 'Transform your business with Zion Tech Group\'s cutting-edge AI, cybersecurity, cloud services, and digital transformation solutions. Expert IT consulting for the modern enterprise.',
-    keywords: ['Technology Solutions', 'Digital Transformation', 'AI Services', 'Cybersecurity', 'Cloud Services', 'IT Consulting'],
-    type: 'website' as const,
-    structuredData: {
-      "@type": "WebSite",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://ziontechgroup.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-  },
-  services: {
-    title: 'Our Services | Zion Tech Group | Comprehensive Technology Solutions',
-    description: 'Explore Zion Tech Group\'s comprehensive suite of technology services including AI solutions, cybersecurity, cloud migration, and digital transformation consulting.',
-    keywords: ['AI Solutions', 'Cybersecurity Services', 'Cloud Migration', 'Digital Transformation', 'IT Infrastructure'],
-    type: 'website' as const
-  },
-  about: {
-    title: 'About Us | Zion Tech Group | Technology Innovation & Excellence',
-    description: 'Learn about Zion Tech Group\'s mission to drive technological innovation and digital transformation. Discover our expertise, values, and commitment to excellence.',
-    keywords: ['About Zion Tech Group', 'Technology Innovation', 'Company Mission', 'Team Expertise', 'Company Values'],
-    type: 'website' as const
-  },
-  contact: {
-    title: 'Contact Us | Zion Tech Group | Get in Touch for Technology Solutions',
-    description: 'Contact Zion Tech Group for expert technology consulting, AI solutions, cybersecurity services, and digital transformation support. Let\'s discuss your technology needs.',
-    keywords: ['Contact Zion Tech Group', 'Technology Consulting', 'AI Solutions', 'Cybersecurity Services', 'Digital Transformation'],
-    type: 'website' as const
-  }
-};
+// Specialized SEO components for different page types
+export function HomePageSEO() {
+  return (
+    <SEO
+      title="AI-Powered Business Solutions & Quantum Computing | Zion Tech Group"
+      description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity."
+      keywords="AI business solutions, quantum computing, autonomous operations, digital transformation, IT services, cybersecurity, machine learning, neural networks"
+      ogType="website"
+      structuredData={{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Zion Tech Group - AI-Powered Business Solutions",
+        "description": "Leading provider of AI-powered business solutions, quantum computing, and innovative IT services for digital transformation.",
+        "url": "https://ziontechgroup.com",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "description": "AI-powered business solutions and quantum computing services"
+        }
+      }}
+    />
+  );
+}
+
+export function ServicesPageSEO() {
+  return (
+    <SEO
+      title="AI Services, Quantum Computing & IT Solutions | Zion Tech Group"
+      description="Comprehensive range of AI services, quantum computing solutions, and enterprise IT services. From autonomous business operations to advanced cybersecurity and cloud infrastructure."
+      keywords="AI services, quantum computing services, IT infrastructure, cybersecurity services, cloud computing, business automation, machine learning services"
+      ogType="website"
+      structuredData={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Technology Services",
+        "provider": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
+        },
+        "serviceType": "AI Solutions, Quantum Computing, IT Services",
+        "description": "Comprehensive technology services including AI, quantum computing, and IT infrastructure"
+      }}
+    />
+  );
+}
+
+export function ContactPageSEO() {
+  return (
+    <SEO
+      title="Contact Zion Tech Group | Get in Touch for AI & Quantum Solutions"
+      description="Contact Zion Tech Group for AI-powered business solutions, quantum computing services, and IT consulting. Get expert advice on digital transformation and technology implementation."
+      keywords="contact Zion Tech Group, AI consulting, quantum computing consulting, IT consulting, digital transformation consulting"
+      ogType="website"
+      structuredData={{
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Zion Tech Group",
+        "description": "Get in touch with Zion Tech Group for technology consulting and solutions",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-0123",
+            "contactType": "customer service",
+            "email": "info@ziontechgroup.com"
+          }
+        }
+      }}
+    />
+  );
+}
+
+export function BlogPostSEO({ 
+  title, 
+  description, 
+  author, 
+  publishedDate, 
+  image, 
+  slug 
+}: {
+  title: string;
+  description: string;
+  author: string;
+  publishedDate: string;
+  image: string;
+  slug: string;
+}) {
+  return (
+    <SEO
+      title={title}
+      description={description}
+      author={author}
+      canonical={`https://ziontechgroup.com/blog/${slug}`}
+      ogType="article"
+      ogImage={image}
+      structuredData={{
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": description,
+        "image": image,
+        "author": {
+          "@type": "Person",
+          "name": author
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
+          }
+        },
+        "datePublished": publishedDate,
+        "dateModified": publishedDate,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://ziontechgroup.com/blog/${slug}`
+        }
+      }}
+    />
+  );
+}

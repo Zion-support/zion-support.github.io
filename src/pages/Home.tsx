@@ -39,6 +39,7 @@ import {
   Zap as ZapIcon
 } from 'lucide-react';
 import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
+import { HomePageSEO } from '../components/SEO';
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -95,6 +96,11 @@ const FuturisticBackground = () => (
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+
+  return (
+    <>
+      <HomePageSEO />
+      <div className="min-h-screen">
 
   useEffect(() => {
     setIsVisible(true);
@@ -229,6 +235,7 @@ export default function Home() {
 
   return (
     <>
+      <HomePageSEO />
       <FuturisticBackground />
       <div className="relative min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
         {/* Hero Section with Enhanced Futuristic Design */}
@@ -582,6 +589,7 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+      </div>
       </div>
     </>
   );

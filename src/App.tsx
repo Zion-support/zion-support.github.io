@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
-import { AppLoadingSpinner } from './components/ui/LoadingSpinner.tsx';
+import { FullScreenLoader } from './components/ui/LoadingSpinner.tsx';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
@@ -179,7 +179,7 @@ function App() {
         <AppHeader />
         
         <main className="flex-1 relative z-10">
-          <Suspense fallback={<AppLoadingSpinner />}>
+          <Suspense fallback={<FullScreenLoader />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home2026" element={<Home2026 />} />
