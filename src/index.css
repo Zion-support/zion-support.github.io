@@ -210,7 +210,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   body {
     font-family: var(--font-exo);
@@ -235,7 +235,6 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(45deg, var(--neon-purple), var(--neon-cyan));
-  }
   }
 }
 
@@ -289,6 +288,19 @@
   }
 
   .neon-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(34, 221, 210, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .neon-button:hover::before {
+    left: 100%;
+  }
 
   .neon-text-pink {
     text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink), 0 0 15px var(--neon-pink);
@@ -564,42 +576,140 @@
 
   /* Enhanced Button Styles */
   .btn-primary {
-    @apply px-6 py-3 bg-gradient-to-r from-zion-neon to-zion-cyan text-slate-900 font-semibold rounded-xl hover:from-zion-cyan hover:to-zion-neon transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-zion-neon/50;
+    padding: 1.5rem 1.5rem;
+    background: linear-gradient(to right, var(--zion-yellow), var(--zion-cyan));
+    color: #0f172a;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(to right, var(--zion-cyan), var(--zion-yellow));
+    transform: scale(1.05);
+  }
+
+  .btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(34, 221, 210, 0.5);
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-slate-700/50 border border-zion-neon/30 text-zion-neon font-semibold rounded-xl hover:bg-zion-neon/10 hover:border-zion-neon transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-neon/50;
+    padding: 1.5rem 1.5rem;
+    background: rgba(51, 65, 85, 0.5);
+    border: 1px solid rgba(221, 221, 34, 0.3);
+    color: var(--zion-yellow);
+    font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(221, 221, 34, 0.1);
+    border-color: var(--zion-yellow);
+  }
+
+  .btn-secondary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(221, 221, 34, 0.5);
   }
 
   .btn-outline {
-    @apply px-6 py-3 border-2 border-zion-neon text-zion-neon font-semibold rounded-xl hover:bg-zion-neon hover:text-slate-900 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-neon/50;
+    padding: 1.5rem 1.5rem;
+    border: 2px solid var(--zion-yellow);
+    color: var(--zion-yellow);
+    font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .btn-outline:hover {
+    background: var(--zion-yellow);
+    color: #0f172a;
+  }
+
+  .btn-outline:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(221, 221, 34, 0.5);
   }
 
   /* Card Styles */
   .card-futuristic {
-    @apply bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-zion-neon/20 overflow-hidden hover:border-zion-neon/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-neon/20;
+    background: rgba(51, 65, 85, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    border: 1px solid rgba(221, 221, 34, 0.2);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(221, 221, 34, 0.2);
+  }
+
+  .card-futuristic:hover {
+    border-color: rgba(221, 221, 34, 0.4);
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px -12px rgba(221, 221, 34, 0.2);
   }
 
   .card-glass {
-    @apply glass rounded-2xl p-6 border border-zion-neon/20 hover:border-zion-neon/40 transition-all duration-300;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(221, 221, 34, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .card-glass:hover {
+    border-color: rgba(221, 221, 34, 0.4);
   }
 
   /* Input Styles */
   .input-futuristic {
-    @apply w-full px-4 py-3 bg-slate-700/50 border border-zion-neon/30 rounded-xl text-white placeholder-zion-neon/60 focus:outline-none focus:border-zion-neon focus:ring-2 focus:ring-zion-neon/20 transition-all;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: rgba(51, 65, 85, 0.5);
+    border: 1px solid rgba(221, 221, 34, 0.3);
+    border-radius: 0.75rem;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  .input-futuristic::placeholder {
+    color: rgba(221, 221, 34, 0.6);
+  }
+
+  .input-futuristic:focus {
+    outline: none;
+    border-color: var(--zion-yellow);
+    box-shadow: 0 0 0 2px rgba(221, 221, 34, 0.2);
   }
 
   /* Text Utilities */
   .text-gradient {
-    @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent;
+    background: linear-gradient(to right, var(--zion-cyan), var(--zion-purple), var(--zion-cyan));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 
   .text-neon {
-    @apply text-zion-neon neon-glow;
+    color: var(--zion-yellow);
+    text-shadow: 0 0 5px var(--zion-yellow), 0 0 10px var(--zion-yellow), 0 0 15px var(--zion-yellow);
   }
 
   .text-neon-light {
-    @apply text-zion-neon/80;
+    color: rgba(221, 221, 34, 0.8);
   }
 
   /* Spacing Utilities */
@@ -666,6 +776,7 @@
   }
 }
 
+@layer components {
   .futuristic-nav-link {
     position: relative;
     color: white;
