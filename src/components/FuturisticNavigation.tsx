@@ -291,6 +291,7 @@ export const FuturisticNavigation: React.FC = () => {
       color: 'from-zion-green to-zion-emerald',
       dropdown: [
         { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' },
+        { name: 'Comprehensive Services Overview', href: '/comprehensive-services-overview', icon: BarChart3, description: 'Complete organized service categories' },
         { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' },
         { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' },
         { name: 'Innovative Services', href: '/innovative-services-2027', icon: Lightbulb, description: 'Cutting-edge innovative solutions' }
