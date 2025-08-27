@@ -40,6 +40,7 @@ export function AppHeader() {
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
@@ -56,6 +57,8 @@ export function AppHeader() {
     { name: 'Healthcare Tech', href: '/services', icon: Heart, description: 'AI Medicine & Diagnostics' },
     { name: 'Sustainability', href: '/services', icon: Globe, description: 'Green IT Solutions' },
     { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
+    { name: 'AI SEO Auditor', href: '/services/ai-seo-auditor', icon: Zap, description: 'CWV, schema, backlinks, autofix' },
+    { name: 'AI Agent Helpdesk', href: '/services/customer-support-chatbot', icon: Users, description: 'Autonomous support & assist' },
   ];
 
   const quickLinks = [

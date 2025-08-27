@@ -1,3 +1,54 @@
+import React from 'react'
+import { SEO } from '../components/SEO'
+import { CheckCircle2 } from 'lucide-react'
+
+export default function Pricing() {
+  const plans = [
+    { name: 'Starter', price: '$49/mo', includes: ['Email support', 'Basic analytics', 'Community access'] },
+    { name: 'Growth', price: '$149/mo', includes: ['Priority support', 'Automation tools', 'API access'] },
+    { name: 'Pro', price: '$399/mo', includes: ['SLA support', 'Advanced analytics', 'Custom integrations'] },
+  ]
+  return (
+    <div className="min-h-screen bg-futuristic">
+      <SEO title="Pricing - Zion Tech Group" description="Transparent pricing for AI, Micro SaaS, and IT services." canonical="https://ziontechgroup.com/pricing" />
+      <section className="pt-28 pb-12">
+        <div className="container-responsive">
+          <h1 className="heading-responsive text-gradient">Pricing</h1>
+          <p className="text-responsive text-zion-blue-light/80 max-w-2xl mt-4">
+            Fair, transparent pricing for products and services. Scale as you grow.
+          </p>
+        </div>
+      </section>
+      <section className="pb-16">
+        <div className="container-responsive grid grid-cols-1 md:grid-cols-3 gap-6">
+          {plans.map((p) => (
+            <div key={p.name} className="card-futuristic">
+              <div className="text-sm text-zion-blue-light/70">{p.name}</div>
+              <div className="text-3xl font-bold text-white mt-2">{p.price}</div>
+              <ul className="mt-4 space-y-2">
+                {p.includes.map((i) => (
+                  <li key={i} className="flex items-center gap-2 text-zion-blue-light/80">
+                    <CheckCircle2 className="w-4 h-4 text-zion-cyan" /> {i}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="pb-20">
+        <div className="container-responsive">
+          <div className="card-futuristic">
+            <h2 className="text-xl text-white font-semibold">Custom & Enterprise</h2>
+            <p className="text-zion-blue-light/80 mt-2">We tailor solutions for regulated and high-scale environments.</p>
+            <a href="https://ziontechgroup.com/contact" className="btn-futuristic mt-6 inline-block">Contact Sales</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
 import { Check, Zap, Shield, Cloud, Brain, Users, Globe, ArrowRight, Phone, Mail } from 'lucide-react';
 
 export default function Pricing() {

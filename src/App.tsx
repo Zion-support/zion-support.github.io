@@ -25,6 +25,7 @@ const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
@@ -41,6 +42,8 @@ const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusin
 const AISalesCopilot = React.lazy(() => import('./pages/services/AISalesCopilot'));
 const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
 const AIComplianceAssistant = React.lazy(() => import('./pages/services/AIComplianceAssistant'));
+const SEOAuditor = React.lazy(() => import('./pages/services/SEOAuditor'));
+const AIAgentHelpdesk = React.lazy(() => import('./pages/services/AIAgentHelpdesk'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -88,6 +91,7 @@ function App() {
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
+                <Route path="/pricing" element={<Pricing />} />
                 <Route path="/cookies" element={<Cookies />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/ai-services" element={<AIServices />} />
@@ -108,6 +112,8 @@ function App() {
                 <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
                 <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
                 <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                <Route path="/services/ai-seo-auditor" element={<SEOAuditor />} />
+                <Route path="/services/customer-support-chatbot" element={<AIAgentHelpdesk />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
