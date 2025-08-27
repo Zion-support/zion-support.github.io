@@ -120,6 +120,12 @@ const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectM
 const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
 const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
+const AIBusinessProcessOptimizer = React.lazy(() => import('./pages/services/AIBusinessProcessOptimizer'));
+const AICybersecurityThreatHunter = React.lazy(() => import('./pages/services/AICybersecurityThreatHunter'));
+const AIMarketingAutomationSuite = React.lazy(() => import('./pages/services/AIMarketingAutomationSuite'));
+const AIFinancialAnalyticsPlatform = React.lazy(() => import('./pages/services/AIFinancialAnalyticsPlatform'));
+const AICustomerSupportAutomationService = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
+const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/AIProjectManagementPlatform'));
 const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
 
 // Comprehensive improvements components
@@ -281,6 +287,12 @@ function App() {
               <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
               <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
               <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+              {/* Additional new AI services */}
+              <Route path="/services/ai-business-process-optimizer" element={<AIBusinessProcessOptimizer />} />
+              <Route path="/services/ai-cybersecurity-threat-hunter" element={<AICybersecurityThreatHunter />} />
+              <Route path="/services/ai-marketing-automation-suite" element={<AIMarketingAutomationSuite />} />
+              <Route path="/services/ai-financial-analytics-platform" element={<AIFinancialAnalyticsPlatform />} />
+              <Route path="/services/ai-project-management-platform" element={<AIProjectManagementPlatform />} />
               <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
               
               {/* New innovative AI services */}
