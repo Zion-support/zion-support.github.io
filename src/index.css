@@ -106,7 +106,7 @@
     border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-slate-900 text-white font-sans;
   }
   @keyframes pulse {
     0%, 100% {
