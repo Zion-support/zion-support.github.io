@@ -33,7 +33,7 @@ import {
   ShieldCheck,
   Globe2,
   Bot,
-  Workflow,
+  GitBranch,
   Eye,
   Sparkles,
   Zap as ZapIcon,

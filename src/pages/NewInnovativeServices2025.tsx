@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-  Workflow, 
+  GitBranch, 
   Shield, 
   Users, 
   BarChart3, 
@@ -59,7 +59,7 @@ import {
   AlertTriangle,
   Zap,
   Target,
-  Workflow as WorkflowIcon,
+  GitBranch as WorkflowIcon,
   BookOpen,
   FileCheck,
   UserCheck,
@@ -122,7 +122,7 @@ export default function NewInnovativeServices2025() {
     {
       title: "AI Workflow Orchestrator",
       description: "Transform business processes with AI-powered workflow automation and intelligent orchestration",
-      icon: Workflow,
+      icon: WorkflowIcon,
       category: "AI & Automation",
       price: "From $299/month",
       features: ["AI-powered process optimization", "Visual workflow designer", "Automated execution", "Performance analytics"],
@@ -196,7 +196,7 @@ export default function NewInnovativeServices2025() {
     },
     {
       name: "Business Process Automation",
-      icon: Workflow,
+      icon: WorkflowIcon,
       description: "Streamline operations with intelligent automation",
       services: [
         "AI Workflow Orchestrator",
