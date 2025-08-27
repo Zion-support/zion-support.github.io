@@ -9,6 +9,8 @@
   # Force static site build (not Next.js)
   functions = "netlify/functions"
   edge_functions = "netlify/edge-functions"
+  # Explicitly specify this is a static site, not a framework
+  base = "."
 
 [build.environment]
   NODE_VERSION = "20"
@@ -22,6 +24,10 @@
   NETLIFY_USE_NPM = "true"
   # Disable framework detection
   NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
+  # Force static site build
+  NETLIFY_FORCE_STATIC_BUILD = "true"
+  # Skip all framework plugins
+  NETLIFY_SKIP_FRAMEWORK_PLUGINS = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
 
 # Explicitly disable Next.js plugin and configure only Vite-compatible plugins
