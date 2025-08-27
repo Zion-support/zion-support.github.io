@@ -1,3 +1,45 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  Search, 
+  User, 
+  Bell, 
+  ChevronDown,
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  BarChart3,
+  FileImage,
+  TrendingUp,
+  MessageCircle,
+  Video,
+  FileText,
+  Heart,
+  PanelLeft,
+  ShoppingCart,
+  Settings,
+  LogOut,
+  HelpCircle,
+  BookOpen
+} from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
+=======
 =======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -313,10 +355,85 @@ export function AppHeader() {
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
               <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9742
                 Zion Tech Group
               </h1>
             </Link>
           </div>
+<<<<<<< HEAD
+          
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex ml-8 space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              >
+                {item.name}
+              </Link>
+            ))}
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                onMouseEnter={() => setServicesDropdownOpen(true)}
+                onMouseLeave={() => setServicesDropdownOpen(false)}
+                className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              >
+                Services
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {servicesDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 border border-slate-700/50 rounded-lg shadow-xl backdrop-blur-md"
+                  onMouseEnter={() => setServicesDropdownOpen(true)}
+                  onMouseLeave={() => setServicesDropdownOpen(false)}
+                >
+                  <div className="p-4">
+                    <div className="grid grid-cols-1 gap-2">
+                      {services.map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.href}
+                          className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200 group"
+                        >
+                          <div className="flex-1">
+                            <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                              {service.name}
+                            </div>
+                            <div className="text-sm text-gray-400">
+                              {service.description}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-slate-700/50">
+                      <Link
+                        to="/services"
+                        className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
+                      >
+                        View All Services →
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </nav>
+
+          {/* Search Bar - Hidden on mobile */}
+          <div className="hidden md:flex ml-6 flex-1 max-w-md">
+            <form onSubmit={handleSearch} className="relative w-full">
+              <input
+                type="text"
+                placeholder="Search services, talent, equipment..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+=======
                 className="w-full bg-slate-800/20 border border-slate-700/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
               <button
@@ -831,5 +948,6 @@ export function AppHeader() {
         )}
       </div>
     </header>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9742
   );
 }

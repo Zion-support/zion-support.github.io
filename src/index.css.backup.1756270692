@@ -2,6 +2,361 @@
 
 @tailwind base;
 @tailwind components;
+<<<<<<< HEAD
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Orbitron', system-ui, sans-serif;
+
+    --background: 0 0% 7%;
+    --foreground: 142 71% 45%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 142 71% 45%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 142 71% 45%;
+
+    --primary: 216 84% 50%;
+    --primary-foreground: 142 71% 45%;
+
+    --secondary: 0 0% 68%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 68%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 228 12% 92%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 142 71% 45%;
+
+    --border: 0 0% 68%;
+    --input: 0 0% 68%;
+    --ring: 216 84% 53%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 228 12% 92%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 216 84% 53%;
+    --sidebar-primary-foreground: 142 71% 45%;
+    --sidebar-accent: 0 0% 68%;
+
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 68%;
+    --sidebar-ring: 216 84% 53%;
+
+    /* Custom Zion variables */
+    --zion-cyan: #22ddd2;
+    --zion-blue: #2e73ea;
+    --zion-purple: #8c15e9;
+    --zion-slate: #17072b;
+    --zion-slate-light: #451582;
+    --zion-slate-dark: #000000;
+    
+    /* Accessibility variables */
+    --font-size: 16px;
+    --line-height: 1.5;
+    --letter-spacing: 0px;
+    --reduced-motion: no-preference;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 142 71% 45%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 142 71% 45%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 142 71% 45%;
+
+    --primary: 216 84% 50%;
+    --primary-foreground: 142 71% 45%;
+
+    --secondary: 0 0% 68%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 68%;
+    --muted-foreground: 215 20% 65%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 142 71% 45%;
+
+    --border: 0 0% 68%;
+    --input: 0 0% 68%;
+    --ring: 216 84% 53%;
+    --sidebar-background: 228 12% 92%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 216 84% 53%;
+    --sidebar-primary-foreground: 142 71% 45%;
+    --sidebar-accent: 0 0% 68%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 68%;
+    --sidebar-ring: 216 84% 53%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    --primary: 216 84% 50%;
+    --primary-foreground: 224 71% 4%;
+
+    --secondary: 0 0% 68%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 224 71% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 224 71% 4%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 216 84% 53%;
+    --sidebar-background: 228 12% 92%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 216 84% 53%;
+    --sidebar-primary-foreground: 0 0% 7%;
+    --sidebar-accent: 0 0% 68%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 68%;
+    --sidebar-ring: 216 84% 53%;
+  }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-zion-slate-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zion-cyan/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-zion-cyan;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-zion-cyan/20 text-white;
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-zion-cyan ring-offset-2 ring-offset-zion-slate-dark;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Typography improvements */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold;
+    text-rendering: optimizeLegibility;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Link improvements */
+  a {
+    @apply transition-all duration-200;
+  }
+
+  /* Button improvements */
+  button {
+    @apply transition-all duration-200;
+  }
+
+  /* Input improvements */
+  input, textarea, select {
+    @apply transition-all duration-200;
+  }
+
+@layer components {
+  /* Zion Tech Group specific components */
+  .zion-gradient {
+    @apply bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple;
+  }
+
+  .zion-gradient-text {
+    @apply bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent;
+  }
+
+  .zion-gradient-border {
+    @apply border border-transparent bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-border;
+  }
+
+  .zion-card {
+    @apply bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300;
+  }
+
+  .zion-button-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:scale-105 transition-all duration-300 shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40;
+  }
+
+  .zion-button-secondary {
+    @apply px-6 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300;
+  }
+
+  .zion-button-ghost {
+    @apply px-6 py-3 text-zion-cyan hover:bg-zion-cyan/10 rounded-lg font-semibold transition-all duration-300;
+  }
+
+  .zion-input {
+    @apply w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300;
+  }
+
+  .zion-text-gradient {
+    @apply bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent;
+  }
+
+  /* Enhanced animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delay-1 {
+    animation: float 6s ease-in-out infinite 1s;
+  }
+
+  .animate-float-delay-2 {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+
+  .animate-float-delay-3 {
+    animation: float 6s ease-in-out infinite 3s;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(34, 221, 210, 0.2), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+
+  /* Glass morphism effects */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20;
+  }
+
+  /* Enhanced shadows */
+  .shadow-zion {
+    box-shadow: 0 0 20px rgba(34, 221, 210, 0.3);
+  }
+
+  .shadow-zion-lg {
+    box-shadow: 0 0 40px rgba(34, 221, 210, 0.4);
+  }
+
+  .shadow-zion-xl {
+    box-shadow: 0 0 60px rgba(34, 221, 210, 0.5);
+  }
+
+  /* Gradient backgrounds */
+  .bg-zion-gradient {
+    background: linear-gradient(135deg, #22ddd2 0%, #2e73ea 50%, #8c15e9 100%);
+  }
+
+  .bg-zion-gradient-dark {
+    background: linear-gradient(135deg, #14847e 0%, #172d67 50%, #530c8b 100%);
+  }
+
+  /* Text shadows */
+  .text-shadow-zion {
+    text-shadow: 0 0 10px rgba(34, 221, 210, 0.5);
+  }
+
+  .text-shadow-zion-lg {
+    text-shadow: 0 0 20px rgba(34, 221, 210, 0.7);
+  }
+
+  /* Border gradients */
+  .border-gradient-zion {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #22ddd2, #2e73ea, #8c15e9) 1;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Enhanced Glass Effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Large Text Mode */
+  .large-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+=======
     @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
   }
 
@@ -433,3 +788,4 @@
 }
 =======
 @tailwind utilities;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9742
