@@ -39,6 +39,7 @@ import {
   Zap as ZapIcon
 } from 'lucide-react';
 import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
+import { SEO } from '../components/SEO';
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -320,6 +321,55 @@ export default function Home() {
 
   return (
     <>
+      <SEO 
+        title="Zion Tech Group - AI-Powered Business Solutions & Quantum Computing"
+        description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing platforms, and autonomous business operations. Leading provider of next-generation technology services."
+        keywords="AI, Artificial Intelligence, Quantum Computing, Cybersecurity, Business Solutions, Technology Services, Machine Learning, Neural Networks, Autonomous Operations"
+        type="website"
+        image="/images/zion-tech-group-og.jpg"
+        url="https://ziontechgroup.com"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Zion Tech Group - AI-Powered Business Solutions",
+          "description": "Leading provider of AI-powered business solutions, quantum computing, and cutting-edge technology services",
+          "url": "https://ziontechgroup.com",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "description": "AI-powered business solutions and quantum computing services",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/images/zion-logo.png",
+            "sameAs": [
+              "https://linkedin.com/company/zion-tech-group",
+              "https://twitter.com/ziontechgroup"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "AI & Technology Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI Business Intelligence",
+                    "description": "Advanced analytics and machine learning insights"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Quantum Computing Solutions",
+                    "description": "Revolutionary quantum processing power"
+                  }
+                }
+              ]
+            }
+          }
+        }}
+      />
+      
       <FuturisticBackground />
       <div className="relative min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
         {/* Hero Section with Enhanced Futuristic Design */}
@@ -414,6 +464,7 @@ export default function Home() {
                       ? 'bg-cyan-400 scale-125' 
                       : 'bg-white/30 hover:bg-white/50'
                   }`}
+                  aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
             </div>
@@ -421,7 +472,7 @@ export default function Home() {
         </section>
 
         {/* Enhanced Stats Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative" aria-label="Company Statistics">
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -438,7 +489,7 @@ export default function Home() {
                 >
                   <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <stat.icon className="w-8 h-8 text-white" />
+                      <stat.icon className="w-8 h-8 text-white" aria-hidden="true" />
                     </div>
                     <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors duration-300">
                       {stat.value}
@@ -453,7 +504,7 @@ export default function Home() {
         </section>
 
         {/* Enhanced Featured Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative" aria-label="Featured Services">
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
@@ -487,7 +538,7 @@ export default function Home() {
                 >
                   <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="w-8 h-8 text-white" />
+                      <service.icon className="w-8 h-8 text-white" aria-hidden="true" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                       {service.title}
@@ -498,7 +549,7 @@ export default function Home() {
                     
                     {/* Rating and price */}
                     <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center space-x-1">
+                      <div className="flex items-center space-x-1" aria-label={`Rating: ${service.rating} out of 5 stars`}>
                         {[...Array(5)].map((_, i) => (
                           <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current text-yellow-400' : 'text-gray-600'}`} />
                         ))}
@@ -513,7 +564,7 @@ export default function Home() {
                       <ul className="space-y-2">
                         {service.highlights.map((highlight, idx) => (
                           <li key={idx} className="text-sm text-gray-300 flex items-center">
-                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" aria-hidden="true" />
                             {highlight}
                           </li>
                         ))}
@@ -523,6 +574,7 @@ export default function Home() {
                     <Link
                       to={service.path}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                      aria-label={`Learn more about ${service.title}`}
                     >
                       Learn More
                     </Link>
@@ -534,7 +586,7 @@ export default function Home() {
         </section>
 
         {/* Enhanced Technology Stack Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative" aria-label="Technology Stack">
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
@@ -568,7 +620,7 @@ export default function Home() {
                 >
                   <div className="glass rounded-2xl p-6 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm">
                     <div className="text-4xl text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <tech.icon className="w-12 h-12 mx-auto" />
+                      <tech.icon className="w-12 h-12 mx-auto" aria-hidden="true" />
                     </div>
                     <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
                     <p className="text-sm text-gray-300">{tech.description}</p>
@@ -583,7 +635,7 @@ export default function Home() {
         <UltimateServicesShowcase2025 />
         
         {/* Enhanced Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative" aria-label="Why Choose Zion Tech Group">
           <div className="max-w-7xl mx-auto">
             <motion.div 
               className="text-center mb-16"
@@ -617,7 +669,7 @@ export default function Home() {
                 >
                   <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm text-center h-full">
                     <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <feature.icon className="w-10 h-10 text-white" />
+                      <feature.icon className="w-10 h-10 text-white" aria-hidden="true" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                       {feature.title}
@@ -633,7 +685,7 @@ export default function Home() {
         </section>
 
         {/* Enhanced CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative" aria-label="Call to Action">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div 
               className="glass rounded-3xl p-12 border border-white/20 backdrop-blur-sm"
@@ -655,6 +707,7 @@ export default function Home() {
                 <Link 
                   to="/contact"
                   className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+                  aria-label="Get started with Zion Tech Group"
                 >
                   Get Started Today
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -662,6 +715,7 @@ export default function Home() {
                 <Link 
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all duration-300 backdrop-blur-sm"
+                  aria-label="Request a free quote"
                 >
                   Request Free Quote
                 </Link>
