@@ -480,7 +480,6 @@ export default function ServicesPricingPage() {
               <div className="text-3xl font-bold text-zion-cyan">25+</div>
               <div className="text-sm">Services Available</div>
             </div>
-=======
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">
               <Mail className="mr-2 h-5 w-5" />
               Contact Sales
@@ -1059,7 +1058,6 @@ export default function ServicesPricingPage() {
             <p>Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
-=======
       {/* Contact Information Banner */}
       <div className="bg-zion-purple/20 border-b border-zion-purple/30">
         <div className="container mx-auto px-4 py-6">

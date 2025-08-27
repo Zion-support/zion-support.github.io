@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export const Badge = ({ children, className = '', variant = 'default' }) => {
@@ -14,3 +15,8 @@ export const Badge = ({ children, className = '', variant = 'default' }) => {
         </div>
     );
 };
+=======
+import { Badge } from './Badge.jsx';
+
+export { Badge };
+>>>>>>> cf2ffffd833531dbba8aa60328cfcb5452a016af

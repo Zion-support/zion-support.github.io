@@ -1,4 +1,3 @@
-=======
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -10,7 +9,6 @@ import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
-=======
   Play, 
   Sparkles, 
   Zap, 
@@ -20,7 +18,6 @@ import {
         <div className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center">
           <div className="w-1 h-3 bg-zion-cyan rounded-full mt-2 animate-pulse"></div>
         </div>
-=======
   Shield, 
   Globe, 
   ChevronDown,
@@ -190,7 +187,6 @@ export function EnhancedHeroSection() {
         </div>
       </div>
     </section>
-=======
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";

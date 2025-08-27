@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 export const Form = ({ children, onSubmit, className = '' }) => {
     return (
@@ -59,3 +60,5 @@ export const useForm = () => {
         trigger: () => Promise.resolve(true)
     };
 };
+=======
+>>>>>>> cf2ffffd833531dbba8aa60328cfcb5452a016af

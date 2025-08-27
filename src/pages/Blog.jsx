@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
-import { BLOG_POSTS } from "@/data/blog-posts";
+import SEOHead from "../components/SEOHead";
+import { Card, CardContent, CardFooter } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "../components/ui/select";
 import { Search } from "lucide-react";
 // Categories for filtering
 const CATEGORIES = [
@@ -19,16 +16,48 @@ const CATEGORIES = [
     "Recruitment",
     "Infrastructure"
 ];
+
+// Sample blog posts
+const SAMPLE_POSTS = [
+    {
+        id: 1,
+        title: "The Future of AI in Business",
+        excerpt: "Discover how artificial intelligence is transforming business operations and creating new opportunities for growth and innovation.",
+        category: "Trends",
+        isFeatured: true,
+        featuredImage: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500",
+        author: {
+            name: "Zion Tech Team",
+            avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150"
+        },
+        publishedDate: "Dec 15, 2024",
+        readTime: "5 min read",
+        slug: "future-ai-business",
+        tags: ["AI", "Business", "Innovation"]
+    },
+    {
+        id: 2,
+        title: "Cybersecurity Best Practices for 2025",
+        excerpt: "Essential security measures and strategies to protect your business in an increasingly digital world.",
+        category: "Infrastructure",
+        isFeatured: false,
+        featuredImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500",
+        author: {
+            name: "Security Expert",
+            avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150"
+        },
+        publishedDate: "Dec 12, 2024",
+        readTime: "7 min read",
+        slug: "cybersecurity-2025",
+        tags: ["Security", "Best Practices", "2025"]
+    }
+];
+
 export default function Blog() {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All Categories");
-    const [posts, setPosts] = useState([...BLOG_POSTS]);
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setPosts(prev => [...prev, generateRandomBlogPost()]);
-        }, 120000); // every 2 minutes
-        return () => clearInterval(interval);
-    }, []);
+    const [posts] = useState(SAMPLE_POSTS);
+    
     // Filter blog posts based on search and category
     const filteredPosts = posts.filter(post => {
         const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -40,11 +69,11 @@ export default function Blog() {
     // Get featured posts
     const featuredPosts = posts.filter(post => post.isFeatured);
     return (<>
-      <SEO title="Blog - AI & Tech Insights" description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT" canonical="https://ziontechgroup.com/blog"/>
+      <SEOHead title="Blog - AI & Tech Insights" description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT" url="https://ziontechgroup.com/blog"/>
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <GradientHeading>AI & Tech Insights</GradientHeading>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">AI & Tech Insights</h1>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>

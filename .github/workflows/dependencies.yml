@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b07a947e3ed806892d2ef9a89cd423d3d7cd59a2
 name: Dependency Management
 
 on:
@@ -319,4 +323,87 @@ jobs:
     - name: Send notifications
       run: |
         echo "📢 Sending team notifications..."
+<<<<<<< HEAD
         # Add notification logic here (Slack, email, etc.)
+=======
+        # Add notification logic here (Slack, email, etc.)
+=======
+name: Dependencies
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'  # Every Monday at 2 AM
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  security-events: write
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Check for outdated packages
+        run: |
+          echo "Checking for outdated packages..."
+          npm outdated || echo "All packages are up to date"
+      
+      - name: Run security audit
+        run: |
+          echo "Running security audit..."
+          npm audit --audit-level moderate || echo "Security audit completed"
+      
+      - name: Update dependencies
+        run: |
+          echo "Updating dependencies..."
+          npm update || echo "No updates available"
+      
+      - name: Install updated dependencies
+        run: npm ci
+      
+      - name: Build project
+        run: npm run build
+      
+      - name: Run tests (warnings only)
+        run: |
+          echo "Running linting (warnings only)..."
+          npm run lint || echo "Linting completed with warnings"
+          echo "Running type checking (warnings only)..."
+          npm run type-check || echo "Type checking completed with warnings"
+        continue-on-error: true
+      
+      - name: Create Pull Request
+        if: success()
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(deps): update dependencies"
+          title: "chore(deps): update dependencies and security patches"
+          body: |
+            Automated dependency update.
+            
+            - Updated npm packages to latest versions
+            - Ran security audit
+            - Verified build success
+            - Linting and type-checking completed with warnings
+          branch: automation/dependency-updates
+          delete-branch: true
+          labels: |
+            dependencies
+            automation
+            security
+>>>>>>> origin/cursor/add-new-services-2025
+>>>>>>> b07a947e3ed806892d2ef9a89cd423d3d7cd59a2
