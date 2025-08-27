@@ -146,75 +146,11 @@
 			}
 		}
 		</script>
-		
-		<!-- Additional SEO -->
-		<link rel="canonical" href="https://ziontechgroup.com" />
-		<meta name="geo.region" content="US-DE" />
-		<meta name="geo.placename" content="Middletown, Delaware" />
-		<meta name="geo.position" content="39.4496;-75.7163" />
-		<meta name="ICBM" content="39.4496, -75.7163" />
-		
-		<!-- Security Headers -->
-		<meta http-equiv="X-Content-Type-Options" content="nosniff" />
-		<meta http-equiv="X-Frame-Options" content="DENY" />
-		<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
-		<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-		
-		<!-- Performance monitoring -->
-		<script>
-			// Performance monitoring and PWA installation
-			window.addEventListener('load', () => {
-				// Performance monitoring
-				if ('performance' in window) {
-					const perfData = performance.getEntriesByType('navigation')[0];
-					console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
-				}
-				
-				// PWA installation prompt
-				let deferredPrompt;
-				window.addEventListener('beforeinstallprompt', (e) => {
-					e.preventDefault();
-					deferredPrompt = e;
-					
-					// Show install button or notification
-					showInstallPrompt();
-				});
-				
-				// Service Worker registration
-				if ('serviceWorker' in navigator) {
-					navigator.serviceWorker.register('/sw.js')
-						.then((registration) => {
-							console.log('SW registered: ', registration);
-						})
-						.catch((registrationError) => {
-							console.log('SW registration failed: ', registrationError);
-						});
-				}
-			});
-			
-			function showInstallPrompt() {
-				// You can implement a custom install prompt here
-				console.log('PWA install prompt available');
-			}
-			
-			// Offline detection
-			window.addEventListener('online', () => {
-				document.body.classList.remove('offline');
-				console.log('Back online');
-			});
-			
-			window.addEventListener('offline', () => {
-				document.body.classList.add('offline');
-				console.log('Gone offline');
-			});
-		</script>
-		<script type="module" crossorigin src="/js/index-33365c22.js"></script>
-		<link rel="modulepreload" crossorigin href="/js/react-vendor-26fc96c1.js">
-		<link rel="modulepreload" crossorigin href="/js/ui-vendor-b24dda65.js">
-		<link rel="modulepreload" crossorigin href="/js/router-vendor-9d231717.js">
-		<link rel="modulepreload" crossorigin href="/js/animation-vendor-7323c12e.js">
-		<link rel="modulepreload" crossorigin href="/js/icons-vendor-bb52d96f.js">
-		<link rel="stylesheet" href="/css/index-9970b365.css">
+		<script type="module" crossorigin src="/js/index-52cb5f3e.js"></script>
+		<link rel="modulepreload" crossorigin href="/js/react-vendor-7927b0b6.js">
+		<link rel="modulepreload" crossorigin href="/js/animation-vendor-494a0c68.js">
+		<link rel="modulepreload" crossorigin href="/js/icons-vendor-13baae7d.js">
+		<link rel="stylesheet" href="/assets/index-139c1ee1.css">
 	</head>
 	<body>
 		<div id="root"></div>
