@@ -5,6 +5,33 @@
 @tailwind utilities;
 
 @layer base {
+<<<<<<< HEAD
+  :root {
+    --font-sans: 'Orbitron', system-ui, sans-serif;
+    --font-rajdhani: 'Rajdhani', system-ui, sans-serif;
+
+    --background: 0 0% 7%;
+    --foreground: 142 71% 45%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 142 71% 45%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 142 71% 45%;
+
+    --primary: 216 84% 50%;
+    --primary-foreground: 142 71% 45%;
+
+    --secondary: 0 0% 68%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 68%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 228 12% 92%;
+    --accent-foreground: 0 0% 7%;
+
+=======
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -364,12 +391,159 @@
 
 @layer components {
   /* Enhanced Glass Effect */
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4c34
   .glass {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   }
+<<<<<<< HEAD
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(34, 221, 210, 0.2);
+  }
+
+  /* Gradient text utilities */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
+  }
+
+  .text-gradient-secondary {
+    @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
+  }
+
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-zion-blue to-zion-purple bg-clip-text text-transparent;
+  }
+
+  /* Enhanced button styles */
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-zion-cyan/50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center px-6 py-3 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-zion-cyan/50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center px-6 py-3 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-zion-cyan/50;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply card hover:bg-zion-slate-dark/70 hover:shadow-2xl hover:shadow-zion-cyan/20 transform hover:-translate-y-2;
+  }
+
+  /* Input styles */
+  .input-primary {
+    @apply w-full px-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 transition-all duration-300;
+  }
+
+  /* Loading states */
+  .loading-skeleton {
+    @apply animate-pulse bg-zion-slate-dark/30 rounded;
+  }
+
+  /* Responsive utilities */
+  .container-responsive {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Grid utilities */
+  .grid-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .grid-auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  /* Spacing utilities */
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+
+  .section-margin {
+    @apply my-20 lg:my-32;
+  }
+
+  /* Typography utilities */
+  .heading-1 {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-3xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+
+  .heading-3 {
+    @apply text-2xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  .body-large {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  .body-medium {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  .body-small {
+    @apply text-sm md:text-base leading-relaxed;
+  }
+
+  /* Accessibility improvements */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .focus-visible {
+    @apply outline-none ring-2 ring-zion-cyan/50 ring-offset-2 ring-offset-zion-slate-dark;
+  }
+
+  /* Print styles */
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .card {
+      @apply border-2 border-zion-cyan;
+    }
+    
+    .btn-primary {
+      @apply border-2 border-white;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+=======
   
   .glass-strong {
     background: rgba(255, 255, 255, 0.1);
@@ -382,6 +556,7 @@
   .neon-border {
     border: 1px solid transparent;
     background: linear-gradient(45deg, #06b6d4, #581c87) border-box;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4c34
   }
   
   .neon-border-cyan {

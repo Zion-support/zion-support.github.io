@@ -11,6 +11,40 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "@google-analytics/data": "^5.2.0",
+    "@google/generative-ai": "^0.24.1",
+    "@magneticwatermelon/mcp-toolkit": "^1.1.4",
+    "@modelcontextprotocol/sdk": "^1.17.1",
+    "@modelcontextprotocol/server-filesystem": "^2025.7.29",
+    "@modelcontextprotocol/server-memory": "^2025.8.4",
+    "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.39.0",
+
+    "@types/react-datepicker": "^6.2.0",
+    "autoprefixer": "^10.4.21",
+    "axios": "^1.11.0",
+    "cheerio": "^1.1.2",
+    "child_process": "^1.0.2",
+    "chokidar": "^4.0.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cron-parser": "^5.3.0",
+    "events": "^3.3.0",
+    "framer-motion": "^12.23.12",
+    "fuse.js": "^7.0.0",
+    "i18next": "^25.4.2",
+    "i18next-browser-languagedetector": "^8.0.2",
+    "input-otp": "^1.1.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.1",
+    "lodash.debounce": "^4.0.8",
+    "lucide-react": "^0.323.0",
+    "next": "^14.2.5",
+    "next-themes": "^0.2.1",
+    "notistack": "^3.0.0",
+=======
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
@@ -38,13 +72,23 @@
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.294.0",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4c34
     "react": "^18.2.0",
     "react-datepicker": "^8.4.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^6.0.0",
+<<<<<<< HEAD
+    "react-helmet-async": "^2.0.5",
+    "react-hook-form": "^7.47.0",
+    "react-hot-toast": "^2.6.0",
+    "react-i18next": "^15.7.2",
+    "react-redux": "^9.2.0",
+    "react-remove-scroll-bar": "^2.3.8",
+=======
     "react-hook-form": "^7.47.0",
     "react-hot-toast": "^2.6.0",
     "react-redux": "^9.2.0",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4c34
     "react-router-dom": "^6.20.0",
     "recharts": "^2.8.0",
     "tailwind-merge": "^2.0.0",
@@ -53,6 +97,28 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+<<<<<<< HEAD
+    "@eslint/js": "^9.32.0",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^24.2.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^9.32.0",
+    "eslint-config-next": "^14.0.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "husky": "^9.1.7",
+    "node": "^10.9.2",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+=======
     "@eslint/js": "^9.34.0",
     "@types/node": "^20.8.10",
     "@types/react": "^18.2.33",
@@ -70,5 +136,6 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^4.9.5",
     "vite": "^5.4.19"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4c34
   }
 }
