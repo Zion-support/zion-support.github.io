@@ -1,78 +1,70 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Globe, 
-  Cpu, 
-  Database, 
-  Network, 
+  Brain, 
+  TrendingUp, 
+  BarChart3, 
+  Target, 
   Zap, 
   Shield, 
-  Eye, 
-  TrendingUp,
+  Users, 
+  Globe,
   CheckCircle,
   ArrowRight,
   Star,
   Clock,
   DollarSign,
-  Lightbulb,
-  Building,
-  Factory,
-  Car,
-  Plane
+  Lightbulb
 } from 'lucide-react';
 
-const DigitalTwin: React.FC = () => {
+const AIBusinessIntelligence: React.FC = () => {
   const features = [
     {
-      icon: Globe,
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring and data collection from physical assets and systems."
+      icon: Brain,
+      title: "Predictive Analytics",
+      description: "Advanced machine learning algorithms that forecast trends and identify opportunities before they emerge."
     },
     {
-      icon: Cpu,
-      title: "AI-Powered Analytics",
-      description: "Advanced algorithms that process data and provide predictive insights."
+      icon: BarChart3,
+      title: "Real-time Dashboards",
+      description: "Interactive visualizations that provide instant insights into your business performance and KPIs."
     },
     {
-      icon: Database,
-      title: "Data Integration",
-      description: "Seamless integration with existing IoT devices and data sources."
+      icon: Target,
+      title: "Intelligent Forecasting",
+      description: "AI-powered forecasting models that help you make data-driven decisions with confidence."
     },
     {
-      icon: Network,
-      title: "Connected Ecosystem",
-      description: "Interconnected digital twins that share data and insights across systems."
+      icon: Zap,
+      title: "Automated Insights",
+      description: "Automatically discover patterns, anomalies, and actionable insights from your data."
     }
   ];
 
   const benefits = [
-    "Reduce operational costs by 25-40% through predictive maintenance",
-    "Improve asset utilization by 20-30% with real-time optimization",
-    "Minimize downtime by 60-80% with proactive issue detection",
-    "Enhance decision-making with comprehensive data visualization",
-    "Accelerate innovation through virtual testing and simulation"
+    "Increase revenue by 15-25% through predictive insights",
+    "Reduce operational costs by 20-30% with automated analytics",
+    "Improve decision-making speed by 60%",
+    "Enhance customer satisfaction through personalized insights",
+    "Identify new market opportunities faster than competitors"
   ];
 
   const useCases = [
     {
-      industry: "Manufacturing",
-      icon: Factory,
-      description: "Production line optimization, quality control, and predictive maintenance"
+      industry: "Retail",
+      description: "Customer behavior analysis, inventory optimization, and demand forecasting"
     },
     {
-      industry: "Smart Cities",
-      icon: Building,
-      description: "Infrastructure monitoring, traffic management, and energy optimization"
-    },
-    {
-      industry: "Transportation",
-      icon: Car,
-      description: "Fleet management, route optimization, and vehicle performance tracking"
+      industry: "Finance",
+      description: "Risk assessment, fraud detection, and investment portfolio optimization"
     },
     {
       industry: "Healthcare",
-      icon: Building,
-      description: "Patient monitoring, medical device management, and facility optimization"
+      description: "Patient outcome prediction, resource allocation, and treatment optimization"
+    },
+    {
+      industry: "Manufacturing",
+      description: "Predictive maintenance, quality control, and supply chain optimization"
     }
   ];
 
@@ -92,17 +84,17 @@ const DigitalTwin: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-6">
-              <Globe className="w-4 h-4 mr-2" />
-              Virtual Replica Technology
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Intelligence
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Digital Twin Solutions
+              AI Business Intelligence
             </h1>
             
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Create virtual replicas of your physical assets and systems to monitor, analyze, and optimize 
-              performance in real-time. Our digital twin technology provides unprecedented visibility and control.
+              Transform your business data into actionable intelligence with our advanced AI-powered analytics platform. 
+              Discover hidden patterns, predict future trends, and make data-driven decisions with confidence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -136,10 +128,10 @@ const DigitalTwin: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Advanced Features
+              Powerful Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our digital twin platform combines cutting-edge technology with intuitive design
+              Our AI Business Intelligence platform combines cutting-edge technology with intuitive design
             </p>
           </motion.div>
           
@@ -178,7 +170,7 @@ const DigitalTwin: React.FC = () => {
               Proven Benefits
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Join industry leaders who have transformed their operations with digital twin technology
+              Join thousands of businesses that have transformed their operations with AI-powered insights
             </p>
           </motion.div>
           
@@ -214,7 +206,7 @@ const DigitalTwin: React.FC = () => {
               Industry Applications
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our digital twin solutions are designed for diverse industries and use cases
+              Our AI Business Intelligence solutions are designed for diverse industries and use cases
             </p>
           </motion.div>
           
@@ -226,11 +218,8 @@ const DigitalTwin: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 text-center"
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <useCase.icon className="w-8 h-8 text-white" />
-                </div>
                 <h3 className="text-xl font-semibold text-zion-cyan mb-3">{useCase.industry}</h3>
                 <p className="text-zion-slate-light">{useCase.description}</p>
               </motion.div>
@@ -249,10 +238,10 @@ const DigitalTwin: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Ready to Create Your Digital Twin?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Start your digital transformation journey today and unlock the full potential of your assets
+              Start your AI Business Intelligence journey today and unlock the full potential of your data
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -278,4 +267,4 @@ const DigitalTwin: React.FC = () => {
   );
 };
 
-export default DigitalTwin;
+export default AIBusinessIntelligence;

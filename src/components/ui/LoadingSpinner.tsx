@@ -1,106 +1,47 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white' | 'custom';
-  customColor?: string;
   className?: string;
   text?: string;
-  showText?: boolean;
 }
 
-export function LoadingSpinner({
-  size = 'md',
-  color = 'primary',
-  customColor,
-  className,
-  text = 'Loading...',
-  showText = false
-}: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
-  };
-
-  const colorClasses = {
-    primary: 'border-zion-purple',
-    secondary: 'border-zion-cyan',
-    white: 'border-white',
-    custom: ''
-  };
-
-  const borderColor = customColor || colorClasses[color];
-
-  return (
-    <div className={cn('flex flex-col items-center justify-center', className)}>
-      <motion.div
-        className={cn(
-          'border-2 border-t-transparent rounded-full animate-spin',
-          sizeClasses[size],
-          borderColor
-        )}
-        animate={{ rotate: 360 }}
-        transition={{
-          duration: 1,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        role="status"
-        aria-label="Loading"
-export function LoadingSpinner({ 
-  size = 'md', 
-  color = 'primary', 
-  customColor,
+export default function LoadingSpinner({ 
+  size = 'lg', 
   className = '',
-  text = 'Loading...',
-  showText = false 
+  text = 'Loading...'
 }: LoadingSpinnerProps) {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16'
-  };
-
-  const colorClasses = {
-    primary: 'border-zion-cyan border-t-transparent',
-    secondary: 'border-zion-blue border-t-transparent',
-    white: 'border-white border-t-transparent',
-    custom: customColor ? `border-${customColor} border-t-transparent` : 'border-zion-cyan border-t-transparent'
-  };
-
-  const textSizes = {
-    sm: 'text-xs',
-    md: 'text-sm',
-    lg: 'text-base',
-    xl: 'text-lg'
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16',
+    xl: 'w-24 h-24'
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <motion.div
-        className={`${sizeClasses[size]} ${colorClasses[color]} border-2 rounded-full animate-spin`}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-        style={{
-          borderTopColor: customColor && color === 'custom' ? customColor : undefined
-        }}
-      />
-      
-      {showText && (
+    <div className={`flex flex-col items-center justify-center min-h-screen bg-futuristic ${className}`}>
+      <div className="relative">
+        <motion.div
+          className={`${sizeClasses[size]} border-4 border-zion-cyan/20 rounded-full`}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div
+          className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-zion-cyan border-t-transparent rounded-full`}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+        />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
+          ZION
+        </div>
+      </div>
+      {text && (
         <motion.p
-          className="mt-3 text-sm text-zion-slate-light text-center"
+          className="mt-4 text-zion-cyan text-center"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.3 }}
-          className={`mt-3 text-zion-slate-light ${textSizes[size]} font-medium`}
+          transition={{ delay: 0.3 }}
         >
           {text}
         </motion.p>

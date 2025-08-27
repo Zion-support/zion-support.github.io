@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
+import LoadingSpinner from './components/ui/LoadingSpinner';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -26,6 +27,7 @@ const News = React.lazy(() => import('./pages/News'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 
 // Service pages
 const AIServices = React.lazy(() => import('./pages/services/AIServices'));
@@ -64,18 +66,7 @@ const Security = React.lazy(() => import('./pages/Security'));
 const Status = React.lazy(() => import('./pages/Status'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-futuristic">
-    <div className="relative">
-      <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
-      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold">
-        ZION
-      </div>
-    </div>
-  </div>
-);
+
 
 function App() {
   return (
