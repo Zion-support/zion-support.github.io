@@ -339,13 +339,13 @@ export function EnhancedPricingSection2027() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden quantum-particles">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-zion-blue rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full animate-pulse holographic"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full animate-pulse holographic" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full animate-pulse holographic" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-zion-blue rounded-full animate-pulse holographic" style={{ animationDelay: '0.5s' }}></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -358,11 +358,11 @@ export function EnhancedPricingSection2027() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-center justify-center gap-3 mb-6">
-            <DollarSign className="h-8 w-8 text-zion-cyan" />
+            <DollarSign className="h-8 w-8 text-zion-cyan neon-glow" />
             <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Comprehensive <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Pricing</span> 2027
+              Comprehensive <span className="text-gradient">Pricing</span> 2027
             </h2>
-            <DollarSign className="h-8 w-8 text-zion-cyan" />
+            <DollarSign className="h-8 w-8 text-zion-cyan neon-glow" />
           </div>
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto leading-relaxed mb-8">
             Choose the perfect plan for your business. All plans include our core features with transparent pricing and no hidden fees.
