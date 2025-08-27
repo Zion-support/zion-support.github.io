@@ -3,9 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
-// Layout Components
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+// Import futuristic CSS
+import './styles/futuristic-design-system.css';
+
+// Enhanced Layout Components
+import { EnhancedHeader } from './components/EnhancedHeader';
+import { EnhancedFooter } from './components/EnhancedFooter';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -33,6 +36,9 @@ const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
 
 // 2029 Cutting-Edge Services
 const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
+
+// Enhanced Services Showcase 2025
+const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
@@ -208,7 +214,7 @@ function App() {
             <AdvancedAnalytics enabled={true} />
             
             {/* Header */}
-            <AppHeader />
+            <EnhancedHeader />
             
             {/* Main Content */}
             <main className="flex-1">
@@ -307,6 +313,13 @@ function App() {
                     <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                     <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                    
+                    {/* Enhanced Services Showcase 2025 */}
+                    <Route path="/enhanced-services-showcase-2025" element={
+                      <Suspense fallback={<div className="loading-spinner mx-auto mt-20"></div>}>
+                        <EnhancedServicesShowcase2025 />
+                      </Suspense>
+                    } />
                     
                     {/* Comprehensive Services Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
@@ -420,7 +433,7 @@ function App() {
             </main>
             
             {/* Footer */}
-            <Footer />
+            <EnhancedFooter />
             
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
