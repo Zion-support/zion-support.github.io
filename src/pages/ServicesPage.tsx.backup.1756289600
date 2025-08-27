@@ -31,6 +31,28 @@ import {
   Lightbulb,
   Award,
   Clock,
+<<<<<<< HEAD
+  DollarSign,
+  TrendingUp,
+  Eye,
+  Handshake,
+  Building,
+  Globe2,
+  ShieldCheck,
+  Network2,
+  Smartphone as Mobile,
+  Server as Infrastructure,
+  Monitor as Analytics,
+  Zap as Lightning,
+  Users2,
+  Award as Trophy,
+  Clock as Time,
+  DollarSign as Money,
+  TrendingUp as Growth,
+  Eye as Vision,
+  Handshake as Partnership,
+  Building as Enterprise
+=======
   CheckCircle,
   ArrowRight,
   Play,
@@ -45,6 +67,7 @@ import {
   Music,
   Building,
   Truck
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-fb60
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -367,6 +390,10 @@ export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
+<<<<<<< HEAD
+  const filteredServices = services.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+=======
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
@@ -434,6 +461,7 @@ export default function ServicesPage() {
   ];
 
   // Filter and sort services
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-fb60
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase()));

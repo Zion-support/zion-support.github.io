@@ -30,6 +30,15 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligenceService = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 
+<<<<<<< HEAD
+// New service pages
+const AIAnalytics = React.lazy(() => import('./pages/services/AIAnalytics'));
+const Cybersecurity = React.lazy(() => import('./pages/services/Cybersecurity'));
+const IoTEdge = React.lazy(() => import('./pages/services/IoTEdge'));
+const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
+const Blockchain = React.lazy(() => import('./pages/services/Blockchain'));
+const Sustainability = React.lazy(() => import('./pages/services/Sustainability'));
+=======
 // Innovative Services Pages
 const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025'));
 const AdvancedInnovativeServicesShowcase2026 = React.lazy(() => import('./pages/AdvancedInnovativeServicesShowcase2026'));
@@ -49,6 +58,7 @@ const FAQ = () => (
     </div>
   </div>
 );
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-fb60
 
 // Micro SAAS pages
 const AIBusinessIntelligence = React.lazy(() => import('./pages/micro-saas/AIBusinessIntelligence'));
@@ -125,6 +135,97 @@ const EnhancedLoadingSpinner = () => (
 
 function App() {
   return (
+<<<<<<< HEAD
+    <Router>
+      <div className="min-h-screen bg-futuristic">
+        <AppHeader />
+        
+        <main className="flex-1">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/search" element={<SearchPage />} />
+              <Route path="/help-center" element={<HelpCenter />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/request-quote" element={<RequestQuote />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
+              <Route path="/revolutionary-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
+              <Route path="/pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
+              
+              {/* Service Routes - only for existing pages */}
+              <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+              <Route path="/services/digital-twin" element={<DigitalTwin />} />
+              <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligenceService />} />
+              
+              {/* Revolutionary Services Routes - Preserved from our integration */}
+              <Route path="/revolutionary-services-2030" element={<RevolutionaryServicesShowcase2030 />} />
+              
+              {/* Micro SAAS Routes */}
+              <Route path="/micro-saas/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+              
+              {/* IT Services Routes */}
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/it-services/:service" element={<ITServicesPage />} />
+              
+              {/* 2028 Innovative Services Routes */}
+              <Route path="/innovative-services-2028" element={<InnovativeServices2028 />} />
+              <Route path="/micro-saas-2028" element={<MicroSAASServices2028 />} />
+              <Route path="/it-services-2028" element={<ITServices2028 />} />
+              <Route path="/comprehensive-pricing-guide-2028" element={<ComprehensivePricingGuide2028 />} />
+              
+              {/* Enhanced Services 2025 Routes */}
+              <Route path="/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />
+              <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+              <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+              
+              {/* Innovative Services 2027 Routes */}
+              <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
+              
+              {/* New Comprehensive Routes */}
+              <Route path="/services-overview" element={<ComprehensiveServicesOverview />} />
+              
+              {/* Emerging Tech Routes */}
+              <Route path="/emerging-tech" element={<GreenIT />} />
+              <Route path="/emerging-tech/:service" element={<GreenIT />} />
+              
+              {/* Marketplace Routes */}
+              <Route path="/marketplace/products" element={<Products />} />
+              
+              {/* Catch all route */}
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </Suspense>
+        </main>
+        
+        <Footer />
+        <ChatAssistant />
+      </div>
+    </Router>
+=======
     <HelmetProvider>
       <Router>
         <div className="min-h-screen bg-futuristic">
@@ -182,6 +283,7 @@ function App() {
         </div>
       </Router>
     </HelmetProvider>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-fb60
   );
 }
 
