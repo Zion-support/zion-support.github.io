@@ -2,136 +2,164 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
-import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
+import { SEO } from "../components/SEOHead";
+import { 
+  Shield, 
+  Lock, 
+  Eye, 
+  Zap, 
+  Target, 
+  Users, 
+  DollarSign,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Globe,
+  AlertTriangle,
+  Network,
+  Database,
+  Cloud,
+  Smartphone,
+  Server
+} from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CybersecurityServices() {
-    const services = [
-        {
-            title: "Penetration Testing",
-            description: "Comprehensive security assessments to identify vulnerabilities in your systems",
-            icon: <Target className="h-6 w-6 text-zion-cyan"/>,
-            price: "From $2,500"
-        },
-        {
-            title: "Security Audits",
-            description: "Thorough review of your security policies, procedures, and infrastructure",
-            icon: <Eye className="h-6 w-6 text-zion-purple"/>,
-            price: "From $1,800"
-        },
-        {
-            title: "Incident Response",
-            description: "24/7 emergency response team for security breaches and cyber attacks",
-            icon: <AlertTriangle className="h-6 w-6 text-zion-blue"/>,
-            price: "From $5,000"
-        },
-        {
-            title: "Security Training",
-            description: "Employee cybersecurity awareness and best practices training",
-            icon: <Users className="h-6 w-6 text-zion-cyan"/>,
-            price: "From $500"
-        }
-    ];
-    const securitySolutions = [
-        {
-            title: "Network Security",
-            description: "Firewall configuration, intrusion detection, and network monitoring",
-            icon: <Network className="h-8 w-8 text-zion-cyan"/>
-        },
-        {
-            title: "Endpoint Protection",
-            description: "Advanced antivirus, malware protection, and device security",
-            icon: <Smartphone className="h-8 w-8 text-zion-purple"/>
-        },
-        {
-            title: "Cloud Security",
-            description: "AWS, Azure, and Google Cloud security assessment and hardening",
-            icon: <Cloud className="h-8 w-8 text-zion-blue"/>
-        },
-        {
-            title: "Data Protection",
-            description: "Encryption, backup security, and data loss prevention",
-            icon: <Database className="h-8 w-8 text-zion-cyan"/>
-        },
-        {
-            title: "Server Security",
-            description: "Server hardening, access control, and monitoring",
-            icon: <Server className="h-8 w-8 text-zion-purple"/>
-        },
-        {
-            title: "Compliance",
-            description: "GDPR, HIPAA, SOC 2, and industry-specific compliance",
-            icon: <Shield className="h-8 w-8 text-zion-blue"/>
-        }
-    ];
-    const pricingPlans = [
-        {
-            name: "Basic Security",
-            price: "$299",
-            period: "/month",
-            description: "Essential cybersecurity for small businesses",
-            features: [
-                "Security assessment",
-                "Basic monitoring",
-                "Monthly reports",
-                "Email support",
-                "Security training"
-            ],
-            popular: false
-        },
-        {
-            name: "Professional Security",
-            price: "$799",
-            period: "/month",
-            description: "Comprehensive protection for growing businesses",
-            features: [
-                "Full security audit",
-                "24/7 monitoring",
-                "Incident response",
-                "Priority support",
-                "Advanced training",
-                "Compliance assistance"
-            ],
-            popular: true
-        },
-        {
-            name: "Enterprise Security",
-            price: "$1,999",
-            period: "/month",
-            description: "Full-scale cybersecurity for large organizations",
-            features: [
-                "Custom security solutions",
-                "Dedicated security team",
-                "Advanced threat hunting",
-                "White-label solutions",
-                "Custom integrations",
-                "Executive reporting"
-            ],
-            popular: false
-        }
-    ];
-    const testimonials = [
-        {
-            name: "Michael Chen",
-            role: "CISO, FinTech Solutions",
-            content: "Zion's cybersecurity team helped us achieve SOC 2 compliance in record time. Their expertise is unmatched.",
-            rating: 5
-        },
-        {
-            name: "Dr. Sarah Williams",
-            role: "IT Director, HealthCare Plus",
-            content: "The penetration testing revealed critical vulnerabilities we didn't know existed. Their thorough approach saved us.",
-            rating: 5
-        },
-        {
-            name: "Robert Johnson",
-            role: "CEO, E-commerce Pro",
-            content: "24/7 incident response gives us peace of mind. Zion's team responds faster than any other provider we've used.",
-            rating: 5
-        }
-    ];
-    return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
-      <SEO title="Cybersecurity Services - Zion Tech Group" description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response." keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group" canonical="https://ziontechgroup.com/cybersecurity-services"/>
+  const services = [
+    {
+      title: "Penetration Testing",
+      description: "Comprehensive security assessments to identify vulnerabilities in your systems",
+      icon: <Target className="h-6 w-6 text-zion-cyan" />,
+      price: "From $2,500"
+    },
+    {
+      title: "Security Audits",
+      description: "Thorough review of your security policies, procedures, and infrastructure",
+      icon: <Eye className="h-6 w-6 text-zion-purple" />,
+      price: "From $1,800"
+    },
+    {
+      title: "Incident Response",
+      description: "24/7 emergency response team for security breaches and cyber attacks",
+      icon: <AlertTriangle className="h-6 w-6 text-zion-blue" />,
+      price: "From $5,000"
+    },
+    {
+      title: "Security Training",
+      description: "Employee cybersecurity awareness and best practices training",
+      icon: <Users className="h-6 w-6 text-zion-cyan" />,
+      price: "From $500"
+    }
+  ];
+
+  const securitySolutions = [
+    {
+      title: "Network Security",
+      description: "Firewall configuration, intrusion detection, and network monitoring",
+      icon: <Network className="h-8 w-8 text-zion-cyan" />
+    },
+    {
+      title: "Endpoint Protection",
+      description: "Advanced antivirus, malware protection, and device security",
+      icon: <Smartphone className="h-8 w-8 text-zion-purple" />
+    },
+    {
+      title: "Cloud Security",
+      description: "AWS, Azure, and Google Cloud security assessment and hardening",
+      icon: <Cloud className="h-8 w-8 text-zion-blue" />
+    },
+    {
+      title: "Data Protection",
+      description: "Encryption, backup security, and data loss prevention",
+      icon: <Database className="h-8 w-8 text-zion-cyan" />
+    },
+    {
+      title: "Server Security",
+      description: "Server hardening, access control, and monitoring",
+      icon: <Server className="h-8 w-8 text-zion-purple" />
+    },
+    {
+      title: "Compliance",
+      description: "GDPR, HIPAA, SOC 2, and industry-specific compliance",
+      icon: <Shield className="h-8 w-8 text-zion-blue" />
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Basic Security",
+      price: "$299",
+      period: "/month",
+      description: "Essential cybersecurity for small businesses",
+      features: [
+        "Security assessment",
+        "Basic monitoring",
+        "Monthly reports",
+        "Email support",
+        "Security training"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional Security",
+      price: "$799",
+      period: "/month",
+      description: "Comprehensive protection for growing businesses",
+      features: [
+        "Full security audit",
+        "24/7 monitoring",
+        "Incident response",
+        "Priority support",
+        "Advanced training",
+        "Compliance assistance"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise Security",
+      price: "$1,999",
+      period: "/month",
+      description: "Full-scale cybersecurity for large organizations",
+      features: [
+        "Custom security solutions",
+        "Dedicated security team",
+        "Advanced threat hunting",
+        "White-label solutions",
+        "Custom integrations",
+        "Executive reporting"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Michael Chen",
+      role: "CISO, FinTech Solutions",
+      content: "Zion's cybersecurity team helped us achieve SOC 2 compliance in record time. Their expertise is unmatched.",
+      rating: 5
+    },
+    {
+      name: "Dr. Sarah Williams",
+      role: "IT Director, HealthCare Plus",
+      content: "The penetration testing revealed critical vulnerabilities we didn't know existed. Their thorough approach saved us.",
+      rating: 5
+    },
+    {
+      name: "Robert Johnson",
+      role: "CEO, E-commerce Pro",
+      content: "24/7 incident response gives us peace of mind. Zion's team responds faster than any other provider we've used.",
+      rating: 5
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
+      <SEOHead 
+        title="Cybersecurity Services - Zion Tech Group" 
+        description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response."
+        keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group"
+        canonical="https://ziontechgroup.com/cybersecurity-services"
+      />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">

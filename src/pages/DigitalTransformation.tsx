@@ -107,7 +107,7 @@ const stats = [
 export default function DigitalTransformation() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
+      <SEOHead 
         title="Digital Transformation Services - Zion Tech Group" 
         description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage."
         keywords="digital transformation, business modernization, process automation, technology modernization, change management"

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -25,64 +25,19 @@ export default function AccountSettings() {
                 setEnableBackup(!!parsed.enableBackup);
             }
         }
-        catch (e) {
-            console.error('Error loading account settings', e);
-        }
-    }, []);
-    const handleSave = () => {
-        setIsSubmitting(true);
-        // Simulate API call
-        setTimeout(() => {
-            try {
-                localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));
-                console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
-                toast.success('Account settings updated successfully');
-            }
-            catch (e) {
-                console.error('Failed to save settings', e);
-                toast.error('Failed to save settings');
-            }
-            finally {
-                setIsSubmitting(false);
-            }
-        }, 1000);
-    };
-    const handleConnectWallet = async () => {
-        try {
-            // Check if wallet is available
-            const ethereum = window.ethereum;
-            if (!ethereum) {
-                toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
-                return;
-            }
-            // Request accounts
-            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-            const address = accounts[0];
-            // Sign message to verify ownership
-            const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
-            await ethereum.request({
-                method: 'personal_sign',
-                params: [address, message]
-            });
-            // Auto-set DID handle if ENS is available
-            try {
-                const provider = new window.ethers.providers.Web3Provider(ethereum);
-                const ensName = await provider.lookupAddress(address);
-                if (ensName) {
-                    setDidHandle(ensName);
-                }
-            }
-            catch (error) {
-                console.error('ENS lookup error:', error);
-            }
-            toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
-        }
-        catch (error) {
-            toast.error(error.message || 'Failed to connect wallet');
-        }
-    };
-    return (<>
-      <SEO title="Account Settings" description="Manage your account"/>
+      } catch (error) {
+        console.error('ENS lookup error:', error);
+      }
+      
+      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
+    } catch (error: any) {
+      toast.error(error.message || 'Failed to connect wallet');
+    }
+  };
+
+  return (
+    <>
+      <SEOHead title="Account Settings" description="Manage your account" />
       
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>

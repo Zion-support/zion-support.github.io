@@ -42,6 +42,91 @@ export default function ComprehensiveServicesPage() {
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                 <DollarSign className="w-5 h-5 mr-2"/>
                 View Pricing
+import { Search, Mail, Phone, MapPin, Star, Clock, Globe, Shield, Zap, Database, Cloud, Brain, Lock, TrendingUp } from 'lucide-react';
+import { SEO } from "../components/SEOHead"';
+import { Link } from 'react-router-dom';
+
+export default function ComprehensiveServices() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
+
+  const filteredServices = EXPANDED_SERVICES.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory;
+    
+    const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
+    
+    const matchesPrice = priceRange === 'all' || 
+                        (priceRange === 'low' && service.price < 10000) ||
+                        (priceRange === 'medium' && service.price >= 10000 && service.price < 25000) ||
+                        (priceRange === 'high' && service.price >= 25000);
+    
+    return matchesSearch && matchesCategory && matchesSubcategory && matchesPrice;
+  });
+
+  const getSubcategories = () => {
+    if (selectedCategory === 'all') return [];
+    return EXPANDED_SERVICE_SUBCATEGORIES[selectedCategory as keyof typeof EXPANDED_SERVICE_SUBCATEGORIES] || [];
+  };
+
+  const getCategoryIcon = (category: string) => {
+    const icons: { [key: string]: React.ReactNode } = {
+      'AI Development': <Brain className="w-6 h-6" />,
+      'Cloud Services': <Cloud className="w-6 h-6" />,
+      'DevOps': <Zap className="w-6 h-6" />,
+      'Cybersecurity': <Shield className="w-6 h-6" />,
+      'Data & Analytics': <Database className="w-6 h-6" />,
+      'Digital Transformation': <TrendingUp className="w-6 h-6" />,
+      'Emerging Tech': <Globe className="w-6 h-6" />,
+      'Managed Services': <Lock className="w-6 h-6" />
+    };
+    return icons[category] || <Star className="w-6 h-6" />;
+  };
+
+  const formatPrice = (price: number) => {
+    if (price >= 1000) {
+      return `$${(price / 1000).toFixed(0)}K`;
+    }
+    return `$${price}`;
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
+      <SEOHead 
+        title="Comprehensive IT & AI Services - Zion Tech Group" 
+        description="Discover our complete range of enterprise IT services, AI solutions, cybersecurity, cloud migration, and digital transformation services. Expert consulting and implementation worldwide."
+        keywords="IT services, AI development, cybersecurity, cloud migration, digital transformation, managed services, blockchain, IoT, AR/VR"
+        canonical="https://ziontechgroup.com/comprehensive-services"
+      />
+
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Comprehensive IT & AI Services
+          </h1>
+          <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
+            Enterprise-grade technology solutions delivered by experts. From AI development to cybersecurity, 
+            we provide end-to-end services to transform your business.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan hover:text-white">
+              <Phone className="w-5 h-5 mr-2" />
+              +1 302 464 0950
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
+              <Mail className="w-5 h-5 mr-2" />
+              kleber@ziontechgroup.com
+            </Button>
+            <Link to="/pricing-guide">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
+                <TrendingUp className="w-5 h-5 mr-2" />
+                View Pricing Guide
               </Button>
             </Link>
           </div>

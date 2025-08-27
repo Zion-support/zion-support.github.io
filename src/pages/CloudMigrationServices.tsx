@@ -2,130 +2,158 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
-import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide-react";
+import { SEO } from "../components/SEOHead";
+import { 
+  Cloud, 
+  Server, 
+  Database, 
+  Zap, 
+  Target, 
+  Users, 
+  DollarSign,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Globe,
+  Shield,
+  Network,
+  BarChart3,
+  Settings,
+  Lock,
+  TrendingUp
+} from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CloudMigrationServices() {
-    const services = [
-        {
-            title: "Cloud Assessment",
-            description: "Comprehensive analysis of your current infrastructure and cloud readiness",
-            icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>,
-            price: "From $2,000"
-        },
-        {
-            title: "Migration Planning",
-            description: "Detailed roadmap and strategy for seamless cloud migration",
-            icon: <Target className="h-6 w-6 text-zion-purple"/>,
-            price: "From $3,500"
-        },
-        {
-            title: "Data Migration",
-            description: "Secure and efficient transfer of data to cloud platforms",
-            icon: <Database className="h-6 w-6 text-zion-blue"/>,
-            price: "From $5,000"
-        },
-        {
-            title: "Application Migration",
-            description: "Lift-and-shift or refactor applications for cloud deployment",
-            icon: <Server className="h-6 w-6 text-zion-cyan"/>,
-            price: "From $8,000"
-        }
-    ];
-    const cloudPlatforms = [
-        {
-            name: "AWS",
-            description: "Amazon Web Services migration and optimization",
-            icon: <Cloud className="h-8 w-8 text-zion-cyan"/>,
-            features: ["EC2", "RDS", "S3", "Lambda"]
-        },
-        {
-            name: "Azure",
-            description: "Microsoft Azure cloud migration services",
-            icon: <Cloud className="h-8 w-8 text-zion-purple"/>,
-            features: ["VM", "SQL Database", "Blob Storage", "Functions"]
-        },
-        {
-            name: "Google Cloud",
-            description: "Google Cloud Platform migration solutions",
-            icon: <Cloud className="h-8 w-8 text-zion-blue"/>,
-            features: ["Compute Engine", "Cloud SQL", "Cloud Storage", "Cloud Functions"]
-        },
-        {
-            name: "Multi-Cloud",
-            description: "Hybrid and multi-cloud migration strategies",
-            icon: <Network className="h-8 w-8 text-zion-cyan"/>,
-            features: ["Hybrid Cloud", "Multi-Cloud", "Cloud Bursting", "Disaster Recovery"]
-        }
-    ];
-    const pricingPlans = [
-        {
-            name: "Basic Migration",
-            price: "$5,000",
-            period: "one-time",
-            description: "Essential cloud migration for small businesses",
-            features: [
-                "Cloud assessment",
-                "Basic migration plan",
-                "Data migration",
-                "Basic optimization",
-                "30 days support"
-            ],
-            popular: false
-        },
-        {
-            name: "Professional Migration",
-            price: "$15,000",
-            period: "one-time",
-            description: "Comprehensive migration for growing businesses",
-            features: [
-                "Full cloud assessment",
-                "Detailed migration plan",
-                "Data & app migration",
-                "Performance optimization",
-                "90 days support",
-                "Training & documentation"
-            ],
-            popular: true
-        },
-        {
-            name: "Enterprise Migration",
-            price: "$50,000",
-            period: "one-time",
-            description: "Full-scale migration for large organizations",
-            features: [
-                "Custom migration strategy",
-                "Multi-cloud migration",
-                "Advanced optimization",
-                "Dedicated team",
-                "1 year support",
-                "Custom integrations"
-            ],
-            popular: false
-        }
-    ];
-    const testimonials = [
-        {
-            name: "Alex Rodriguez",
-            role: "CTO, RetailTech Solutions",
-            content: "Zion's cloud migration team transformed our infrastructure. We reduced costs by 40% and improved performance significantly.",
-            rating: 5
-        },
-        {
-            name: "Dr. Maria Santos",
-            role: "IT Director, HealthTech Innovations",
-            content: "The migration was seamless with zero downtime. Zion's expertise in healthcare compliance made all the difference.",
-            rating: 5
-        },
-        {
-            name: "James Wilson",
-            role: "VP Engineering, FinTech Startup",
-            content: "From on-premise to AWS in 6 weeks. Zion's team delivered beyond our expectations with excellent documentation.",
-            rating: 5
-        }
-    ];
-    return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
-      <SEO title="Cloud Migration Services - Zion Tech Group" description="Expert cloud migration services for AWS, Azure, and Google Cloud. Seamless migration with zero downtime and cost optimization." keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud optimization, Zion Tech Group" canonical="https://ziontechgroup.com/cloud-migration-services"/>
+  const services = [
+    {
+      title: "Cloud Assessment",
+      description: "Comprehensive analysis of your current infrastructure and cloud readiness",
+      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,
+      price: "From $2,000"
+    },
+    {
+      title: "Migration Planning",
+      description: "Detailed roadmap and strategy for seamless cloud migration",
+      icon: <Target className="h-6 w-6 text-zion-purple" />,
+      price: "From $3,500"
+    },
+    {
+      title: "Data Migration",
+      description: "Secure and efficient transfer of data to cloud platforms",
+      icon: <Database className="h-6 w-6 text-zion-blue" />,
+      price: "From $5,000"
+    },
+    {
+      title: "Application Migration",
+      description: "Lift-and-shift or refactor applications for cloud deployment",
+      icon: <Server className="h-6 w-6 text-zion-cyan" />,
+      price: "From $8,000"
+    }
+  ];
+
+  const cloudPlatforms = [
+    {
+      name: "AWS",
+      description: "Amazon Web Services migration and optimization",
+      icon: <Cloud className="h-8 w-8 text-zion-cyan" />,
+      features: ["EC2", "RDS", "S3", "Lambda"]
+    },
+    {
+      name: "Azure",
+      description: "Microsoft Azure cloud migration services",
+      icon: <Cloud className="h-8 w-8 text-zion-purple" />,
+      features: ["VM", "SQL Database", "Blob Storage", "Functions"]
+    },
+    {
+      name: "Google Cloud",
+      description: "Google Cloud Platform migration solutions",
+      icon: <Cloud className="h-8 w-8 text-zion-blue" />,
+      features: ["Compute Engine", "Cloud SQL", "Cloud Storage", "Cloud Functions"]
+    },
+    {
+      name: "Multi-Cloud",
+      description: "Hybrid and multi-cloud migration strategies",
+      icon: <Network className="h-8 w-8 text-zion-cyan" />,
+      features: ["Hybrid Cloud", "Multi-Cloud", "Cloud Bursting", "Disaster Recovery"]
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Basic Migration",
+      price: "$5,000",
+      period: "one-time",
+      description: "Essential cloud migration for small businesses",
+      features: [
+        "Cloud assessment",
+        "Basic migration plan",
+        "Data migration",
+        "Basic optimization",
+        "30 days support"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional Migration",
+      price: "$15,000",
+      period: "one-time",
+      description: "Comprehensive migration for growing businesses",
+      features: [
+        "Full cloud assessment",
+        "Detailed migration plan",
+        "Data & app migration",
+        "Performance optimization",
+        "90 days support",
+        "Training & documentation"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise Migration",
+      price: "$50,000",
+      period: "one-time",
+      description: "Full-scale migration for large organizations",
+      features: [
+        "Custom migration strategy",
+        "Multi-cloud migration",
+        "Advanced optimization",
+        "Dedicated team",
+        "1 year support",
+        "Custom integrations"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Alex Rodriguez",
+      role: "CTO, RetailTech Solutions",
+      content: "Zion's cloud migration team transformed our infrastructure. We reduced costs by 40% and improved performance significantly.",
+      rating: 5
+    },
+    {
+      name: "Dr. Maria Santos",
+      role: "IT Director, HealthTech Innovations",
+      content: "The migration was seamless with zero downtime. Zion's expertise in healthcare compliance made all the difference.",
+      rating: 5
+    },
+    {
+      name: "James Wilson",
+      role: "VP Engineering, FinTech Startup",
+      content: "From on-premise to AWS in 6 weeks. Zion's team delivered beyond our expectations with excellent documentation.",
+      rating: 5
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
+      <SEOHead 
+        title="Cloud Migration Services - Zion Tech Group" 
+        description="Expert cloud migration services for AWS, Azure, and Google Cloud. Seamless migration with zero downtime and cost optimization."
+        keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud optimization, Zion Tech Group"
+        canonical="https://ziontechgroup.com/cloud-migration-services"
+      />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
