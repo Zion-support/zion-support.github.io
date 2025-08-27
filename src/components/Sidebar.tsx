@@ -33,7 +33,9 @@ import {
   Sun,
   Moon,
   Infinity,
-  ArrowRight
+  ArrowRight,
+  DollarSign,
+  Workflow
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -55,20 +57,23 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const navigationSections = [
     {
-      title: 'Main',
+      title: 'Main Navigation',
       items: [
         { name: 'Home', href: '/', icon: Home },
         { name: 'About', href: '/about', icon: Users },
         { name: 'Contact', href: '/contact', icon: MessageCircle },
         { name: 'Blog', href: '/blog', icon: BookOpen },
         { name: 'FAQ', href: '/faq', icon: HelpCircle },
+        { name: 'Help Center', href: '/help', icon: HelpCircle },
       ]
     },
     {
-      title: '2026 Services',
+      title: 'Featured Services',
       featured: true,
       items: [
         { name: '2026 Services Overview', href: '/services2026', icon: Star, featured: true },
+        { name: '2027 Services Overview', href: '/services2027', icon: Star, featured: true },
+        { name: 'AI Solutions Hub', href: '/ai-solutions', icon: Brain, featured: true },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
@@ -80,7 +85,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     },
     {
-      title: 'AI & ML Services',
+      title: 'AI & Machine Learning',
       items: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield },
@@ -92,6 +97,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: BarChart3 },
         { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Rocket },
         { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Settings },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow },
       ]
     },
     {
@@ -99,25 +105,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: BarChart3 },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: TrendingUp },
-      ]
-    },
-    {
-      title: 'Cybersecurity',
-      items: [
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-        { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },
-        { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield },
-        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },
-      ]
-    },
-    {
-      title: 'Digital Transformation',
-      items: [
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3 },
         { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
         { name: 'IT Consulting', href: '/services/it-consulting', icon: Cpu },
+      ]
+    },
+    {
+      title: 'Cybersecurity & Privacy',
+      items: [
+        { name: 'Cybersecurity Services', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },
+        { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity', icon: Shield },
+        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },
+        { name: 'Privacy & Compliance', href: '/privacy', icon: Shield },
       ]
     },
     {
@@ -125,7 +128,20 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
         { name: 'Business Intelligence', href: '/services/business-intelligence', icon: TrendingUp },
+        { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: BarChart3 },
+        { name: 'Performance Analytics', href: '/services/performance-analytics', icon: TrendingUp },
         { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      items: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
+        { name: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Autonomous Research', href: '/services/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom },
       ]
     },
     {
@@ -133,42 +149,34 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Micro SaaS Platform', href: '/services/micro-saas-solutions', icon: ShoppingCart },
         { name: 'Micro CRM', href: '/services/micro-crm', icon: Users },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: MessageCircle },
+        { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle },
+        { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support', icon: MessageCircle },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', icon: MessageCircle },
-        { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle },
-        { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: BookOpen },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: MessageCircle },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: PenTool },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign },
         { name: 'Returns Management', href: '/services/returns-management', icon: ShoppingCart },
-        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },
-        { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle },
-        { name: 'Mobile Survey', href: '/services/mobile-survey', icon: MessageCircle },
+        { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle },
+        { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle },
       ]
     },
     {
-      title: 'Business Solutions',
+      title: 'Business & Support',
       items: [
         { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
         { name: 'Talent Solutions', href: '/talent', icon: Users },
         { name: 'Equipment Services', href: '/equipment', icon: Server },
-        { name: 'Green IT Solutions', href: '/green-it', icon: Globe },
         { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
         { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
         { name: 'Partners', href: '/partners', icon: Users },
-        { name: 'Careers', href: '/careers', icon: Heart },
-      ]
-    },
-    {
-      title: 'Resources',
-      items: [
-        { name: 'Pricing', href: '/pricing', icon: BarChart3 },
-        { name: 'Security', href: '/security', icon: Shield },
-        { name: 'Status', href: '/status', icon: Settings },
-        { name: 'Support', href: '/support', icon: HelpCircle },
-        { name: 'Documentation', href: '/docs', icon: BookOpen },
-        { name: 'API Reference', href: '/api', icon: PenTool },
-        { name: 'Developer Portal', href: '/developers', icon: Cpu },
-        { name: 'Training', href: '/training', icon: Users },
-        { name: 'Webinars', href: '/webinars', icon: Globe },
-        { name: 'White Papers', href: '/white-papers', icon: BookOpen },
+        { name: 'Careers', href: '/careers', icon: Star },
+        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },
+        { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: MessageCircle },
+        { name: 'Green IT Solutions', href: '/services/green-it', icon: Globe },
+        { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'Support', href: '/support', icon: MessageCircle },
       ]
     }
   ];
