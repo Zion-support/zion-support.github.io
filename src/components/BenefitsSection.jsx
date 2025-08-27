@@ -274,6 +274,4 @@ const BenefitsSection = () => {
       </div>
     </section>
   );
-};
-
-export default BenefitsSection;
+}

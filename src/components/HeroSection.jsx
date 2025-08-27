@@ -202,16 +202,18 @@ export function HeroSection() {
                         </Link>
                     </Button>
                     
-                    <Button 
-                        variant="outline" 
-                        className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300" 
-                        size="lg" 
-                        asChild
-                    >
-                        <Link to="/services" role="button" aria-label="Explore Services">
-                            Explore Services
-                        </Link>
-                    </Button>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <Button 
+                            variant="outline" 
+                            className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white text-lg py-6 px-8 transition-all duration-300" 
+                            size="lg" 
+                            asChild
+                        >
+                            <Link to="/services" role="button" aria-label="Explore Services">
+                                Explore Services
+                            </Link>
+                        </Button>
+                    </motion.div>
                 </motion.div>
 
                 {/* Trust indicators */}

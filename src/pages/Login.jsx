@@ -3,56 +3,47 @@ import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 export default function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle login logic here
-        console.log('Login attempt:', { email, password });
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO title="Login" description="Access your Zion Tech Group account" keywords="login, sign in, account access, Zion Tech Group" canonical="https://ziontechgroup.com/login"/>
+  const { isAuthenticated, user, isLoading } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { dispatch } = useCart();
+  const reduxDispatch = useDispatch();
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-md mx-auto">
-          <div className="text-center mb-8">
-            <GradientHeading>Welcome Back</GradientHeading>
-            <p className="text-zion-slate-light mt-2">
-              Sign in to your account to continue
-            </p>
-          </div>
+  useEffect(() => {
+    // This effect handles token processing (e.g., from magic link)
+    // It runs when component mounts or location.search changes
+    const params = new URLSearchParams(location.search);
+    const token = params.get('token');
+    if (token) {
+      safeStorage.setItem('zion_token', token);
+      // Clear token from URL to prevent re-processing
+      navigate(location.pathname, { replace: true });
+    }
+  }, [location.search, location.pathname, navigate]);
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
-                  Email Address
-                </label>
-                <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan" placeholder="Enter your email"/>
-              </div>
+  useEffect(() => {
+    if (!isLoading && isAuthenticated) {
+      reduxDispatch(setLoggedIn(true));
+      const next = new URLSearchParams(location.search).get('next') || '/dashboard';
+      navigate(next, { replace: true });
+    }
+  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
 
-              <div>
-                <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
-                  Password
-                </label>
-                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan" placeholder="Enter your password"/>
-              </div>
+  // Render LoginContent if not authenticated and auth is not loading
+  if (!isAuthenticated && !isLoading) {
+    return (
+      <ErrorBoundary FallbackComponent={LoginErrorFallback}>
+        <LoginContent />
+      </ErrorBoundary>
+    );
+  }
 
-              <Button type="submit" className="w-full">
-                Sign In
-              </Button>
-            </form>
+  // Optional: Render a loading indicator while isLoading is true
+  if (isLoading) {
+    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
+  }
 
-            <div className="mt-6 text-center">
-              <p className="text-zion-slate-light">
-                Don't have an account?{' '}
-                <a href="/signup" className="text-zion-cyan hover:underline">
-                  Sign up
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>);
+  // If authenticated and isLoading is false, the useEffect above should have navigated.
+  // Return null or a minimal layout if needed, though direct navigation is preferred.
+  return null;
 }

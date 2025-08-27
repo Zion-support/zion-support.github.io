@@ -19,10 +19,20 @@ import {
   Rocket,
   Code,
   Users,
+  Globe,
   Building,
   Award,
   Clock,
-  CheckCircle
+  CheckCircle,
+  DollarSign,
+  BookOpen,
+  Cpu,
+  ShoppingCart,
+  Play,
+  Brain,
+  Cloud,
+  Rocket,
+  Code
 } from 'lucide-react';
 
 const footerNavigation = {
@@ -30,26 +40,40 @@ const footerNavigation = {
     title: 'Services',
     items: [
       { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
+      { name: 'AI Finance', href: '/services/ai-finance', icon: DollarSign },
       { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
       { name: 'IoT & Edge', href: '/services/iot-edge', icon: Zap },
       { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
       { name: 'Blockchain', href: '/services/blockchain', icon: Code },
       { name: 'Digital Twin', href: '/services/digital-twin', icon: Building },
-      { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
+      { name: 'Sustainability', href: '/services/sustainability', icon: Heart },
+      { name: 'Education Tech', href: '/services/education-technology', icon: BookOpen },
+      { name: 'Real Estate Tech', href: '/services/real-estate-technology', icon: Building },
+      { name: 'Manufacturing Tech', href: '/services/manufacturing-technology', icon: Cpu },
+      { name: 'Energy Tech', href: '/services/energy-technology', icon: Zap },
+      { name: 'Retail Tech', href: '/services/retail-technology', icon: ShoppingCart },
+      { name: 'Media Tech', href: '/services/media-technology', icon: Play }
     ],
   },
   microSaas: {
     title: 'Micro SAAS',
     items: [
       { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
+      { name: 'AI Financial Advisory', href: '/micro-saas/ai-financial-advisory' },
       { name: 'Customer Experience', href: '/micro-saas/customer-experience' },
       { name: 'Quantum Computing', href: '/micro-saas/quantum-computing' },
       { name: 'Supply Chain', href: '/micro-saas/supply-chain' },
       { name: 'Cybersecurity', href: '/micro-saas/cybersecurity' },
       { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' },
       { name: 'Content Creation', href: '/micro-saas/content-creation' },
-      { name: 'HR Platform', href: '/micro-saas/hr-platform' }
+      { name: 'HR Platform', href: '/micro-saas/hr-platform' },
+      { name: 'EdTech Learning', href: '/micro-saas/edtech-learning' },
+      { name: 'Real Estate Analytics', href: '/micro-saas/real-estate-analytics' },
+      { name: 'Manufacturing AI', href: '/micro-saas/manufacturing-ai' },
+      { name: 'Smart Grid Energy', href: '/micro-saas/smart-grid-energy' },
+      { name: 'Retail Intelligence', href: '/micro-saas/retail-intelligence' },
+      { name: 'Media & Entertainment', href: '/micro-saas/media-entertainment' }
     ],
   },
   marketplace: {
@@ -85,17 +109,6 @@ const footerNavigation = {
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Security', href: '/security' },
       { name: 'System Status', href: '/status' },
-    ],
-  },
-  emerging: {
-    title: 'Emerging Technologies',
-    items: [
-      { name: 'Quantum AI', href: '/services/quantum-ai' },
-      { name: 'Neuromorphic Computing', href: '/services/neuromorphic' },
-      { name: 'Edge AI', href: '/services/edge-ai' },
-      { name: 'Federated Learning', href: '/services/federated-learning' },
-      { name: 'Quantum Cryptography', href: '/services/quantum-crypto' },
-      { name: 'Brain-Computer Interface', href: '/services/bci' },
     ],
   },
 };

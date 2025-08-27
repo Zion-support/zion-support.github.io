@@ -1,0 +1,69 @@
+name: NPM Package Check
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/*.md'
+      - '.github/**'
+      - 'docs/**'
+
+jobs:
+<<<<<<< HEAD
+  publish:
+    name: Publish to npm
+=======
+  check:
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-80f6
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+<<<<<<< HEAD
+          registry-url: 'https://registry.npmjs.org'
+=======
+          cache: 'npm'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-80f6
+
+      - name: Install dependencies
+        run: npm ci
+
+<<<<<<< HEAD
+      - name: Build project
+        run: npm run build
+
+      - name: Build project
+        if: steps.check-private.outputs.private == 'false'
+        run: npm run build
+
+      - name: Publish to npm
+        if: steps.check-private.outputs.private == 'false'
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish success
+        if: steps.check-private.outputs.private == 'false'
+        run: echo "Package published successfully to npm"
+=======
+      - name: Run tests
+        run: npm test
+
+      - name: Build project
+        run: npm run build
+
+      - name: Verify package
+        run: |
+          echo "Package verification completed"
+          echo "Package name: $(npm run --silent echo \$npm_package_name)"
+          echo "Package version: $(npm run --silent echo \$npm_package_version)"
+          echo "Package private: $(npm run --silent echo \$npm_package_private)"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-80f6
