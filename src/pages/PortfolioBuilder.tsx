@@ -1,17 +1,15 @@
-
 import { useState } from 'react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
-
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume');
   
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Portfolio Builder | Zion AI Marketplace" 
         description="Create and customize your resume and portfolio to showcase your skills and experience." 
       />
@@ -35,14 +33,10 @@ function PortfolioBuilderContent() {
         </Tabs>
       </main>
       
-    </>
-  );
+    </>);
 }
-
 export default function PortfolioBuilder() {
-  return (
-    <ProtectedRoute>
+    return (<ProtectedRoute>
       <PortfolioBuilderContent />
-    </ProtectedRoute>
-  );
+    </ProtectedRoute>);
 }

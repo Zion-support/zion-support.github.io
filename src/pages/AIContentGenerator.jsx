@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function AIContentGenerator() {
@@ -30,7 +30,7 @@ export default function AIContentGenerator() {
     ];
     const contentTypes = [
         {
-            import: { SEO }, from, "@/components/SEO": ,
+            import: { SEO }, from "../components/SEOHead": ,
             import: { Button }, from, "@/components/ui/button": ,
             import: { Card, CardContent, CardDescription, CardHeader, CardTitle }, from, "@/components/ui/card": ,
             import: { Badge }, from, "@/components/ui/badge": ,
@@ -169,7 +169,7 @@ export default function AIContentGenerator() {
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-slate-dark">
-      <SEO title="AI Content Generator - Zion Tech Group" description="Create engaging, high-quality content with AI-powered writing tools. Generate blogs, social media posts, and marketing copy instantly." keywords="AI content generator, content creation, AI writing, marketing copy, Zion Tech Group" canonical="https://ziontechgroup.com/ai-content-generator"/>
+      <SEOHead title="AI Content Generator - Zion Tech Group" description="Create engaging, high-quality content with AI-powered writing tools. Generate blogs, social media posts, and marketing copy instantly." keywords="AI content generator, content creation, AI writing, marketing copy, Zion Tech Group" canonical="https://ziontechgroup.com/ai-content-generator"/>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">

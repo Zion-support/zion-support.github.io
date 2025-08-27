@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 
@@ -11,6 +12,14 @@ export default function Solutions() {
         canonical="/solutions"
         url="https://ziontechgroup.com/solutions"
       />
+=======
+const Solutions = () => {
+    return (<>
+      <Helmet>
+        <title>Custom Solutions - Zion Tech Group</title>
+        <meta name="description" content="Custom technology solutions tailored to your business needs. Zion Tech Group delivers innovative solutions that drive results."/>
+      </Helmet>
+>>>>>>> cursor/website-audit-and-enhancement-1eed
       
       <main className="min-h-screen bg-futuristic text-white">
         {/* Hero Section */}
@@ -126,6 +135,7 @@ export default function Solutions() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* CTA Section */}
@@ -157,3 +167,10 @@ export default function Solutions() {
     </>
   );
 }
+=======
+        </div>
+      </div>
+    </>);
+};
+export default Solutions;
+>>>>>>> cursor/website-audit-and-enhancement-1eed

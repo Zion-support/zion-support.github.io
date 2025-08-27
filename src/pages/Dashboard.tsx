@@ -1,270 +1,94 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  BarChart3, 
+  Bell, 
+  LogOut, 
+  UserCheck, 
+  MessageSquare, 
   TrendingUp, 
   Users, 
-  DollarSign, 
-  Settings, 
-  Bell, 
-  Search,
-  Plus,
-  Calendar,
-  Clock,
-  CheckCircle,
-  AlertCircle,
-  XCircle,
-  ArrowUpRight,
-  ArrowDownRight,
   Activity,
-  Target,
-  Award,
-  Briefcase,
-  Globe,
+  Settings,
+  User,
   Shield,
   Zap,
-  Star,
-  Eye,
-  Download,
-  Filter,
-  MoreHorizontal
+  Globe
 } from 'lucide-react';
 
-interface StatCard {
-  title: string;
-  value: string;
-  change: number;
-  icon: any;
-  color: string;
-  trend: 'up' | 'down';
-}
-
-interface ActivityItem {
-  id: string;
-  type: 'service' | 'payment' | 'support' | 'update';
-  title: string;
-  description: string;
-  timestamp: string;
-  status: 'completed' | 'pending' | 'failed';
-  priority: 'low' | 'medium' | 'high';
-}
-
-interface QuickAction {
-  title: string;
-  description: string;
-  icon: any;
-  action: string;
-  color: string;
-}
-
-const statCards: StatCard[] = [
-  {
-    title: 'Total Revenue',
-    value: '$124,563.00',
-    change: 12.5,
-    icon: DollarSign,
-    color: 'from-green-500 to-emerald-600',
-    trend: 'up'
-  },
-  {
-    title: 'Active Services',
-    value: '47',
-    change: 8.2,
-    icon: Briefcase,
-    color: 'from-blue-500 to-cyan-600',
-    trend: 'up'
-  },
-  {
-    title: 'Total Customers',
-    value: '1,234',
-    change: -2.1,
-    icon: Users,
-    color: 'from-purple-500 to-pink-600',
-    trend: 'down'
-  },
-  {
-    title: 'Success Rate',
-    value: '98.7%',
-    change: 1.3,
-    icon: Target,
-    color: 'from-orange-500 to-red-600',
-    trend: 'up'
-  }
-];
-
-const recentActivities: ActivityItem[] = [
-  {
-    id: '1',
-    type: 'service',
-    title: 'AI Analytics Service Deployed',
-    description: 'Successfully deployed AI analytics solution for Client Corp',
-    timestamp: '2 hours ago',
-    status: 'completed',
-    priority: 'high'
-  },
-  {
-    id: '2',
-    type: 'payment',
-    title: 'Payment Received',
-    description: 'Payment of $15,000 received from Tech Solutions Inc',
-    timestamp: '4 hours ago',
-    status: 'completed',
-    priority: 'medium'
-  },
-  {
-    id: '3',
-    type: 'support',
-    title: 'Support Ticket Resolved',
-    description: 'Resolved critical issue with cloud infrastructure',
-    timestamp: '6 hours ago',
-    status: 'completed',
-    priority: 'high'
-  },
-  {
-    id: '4',
-    type: 'update',
-    title: 'System Update Completed',
-    description: 'Security patches and performance updates applied',
-    timestamp: '1 day ago',
-    status: 'completed',
-    priority: 'low'
-  },
-  {
-    id: '5',
-    type: 'service',
-    title: 'New Service Request',
-    description: 'Cybersecurity assessment requested by StartupXYZ',
-    timestamp: '1 day ago',
-    status: 'pending',
-    priority: 'medium'
-  }
-];
-
-const quickActions: QuickAction[] = [
-  {
-    title: 'Add New Service',
-    description: 'Create and deploy a new service',
-    icon: Plus,
-    action: 'Create',
-    color: 'from-blue-500 to-cyan-600'
-  },
-  {
-    title: 'View Analytics',
-    description: 'Check detailed performance metrics',
-    icon: BarChart3,
-    action: 'View',
-    color: 'from-green-500 to-emerald-600'
-  },
-  {
-    title: 'Manage Users',
-    description: 'Add or remove team members',
-    icon: Users,
-    action: 'Manage',
-    color: 'from-purple-500 to-pink-600'
-  },
-  {
-    title: 'System Settings',
-    description: 'Configure system preferences',
-    icon: Settings,
-    action: 'Configure',
-    color: 'from-orange-500 to-red-600'
-  }
-];
-
-const getStatusIcon = (status: string) => {
-  switch (status) {
-    case 'completed':
-      return <CheckCircle className="h-4 w-4 text-green-500" />;
-    case 'pending':
-      return <Clock className="h-4 w-4 text-yellow-500" />;
-    case 'failed':
-      return <XCircle className="h-4 w-4 text-red-500" />;
-    default:
-      return <AlertCircle className="h-4 w-4 text-gray-500" />;
-  }
-};
-
-const getPriorityColor = (priority: string) => {
-  switch (priority) {
-    case 'high':
-      return 'bg-red-100 text-red-800 border-red-200';
-    case 'medium':
-      return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-    case 'low':
-      return 'bg-green-100 text-green-800 border-green-200';
-    default:
-      return 'bg-gray-100 text-gray-800 border-gray-200';
-  }
-};
-
-const getTypeIcon = (type: string) => {
-  switch (type) {
-    case 'service':
-      return <Briefcase className="h-4 w-4" />;
-    case 'payment':
-      return <DollarSign className="h-4 w-4" />;
-    case 'support':
-      return <Shield className="h-4 w-4" />;
-    case 'update':
-      return <Zap className="h-4 w-4" />;
-    default:
-      return <Activity className="h-4 w-4" />;
-  }
-};
-
 export default function Dashboard() {
-  const [user, setUser] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [user] = useState({
+    displayName: 'John Doe',
+    email: 'john.doe@example.com',
+    avatar: '/images/avatar.jpg'
+  });
 
-  useEffect(() => {
-    // Simulate user authentication check
-    const checkAuth = () => {
-      const storedUser = localStorage.getItem('zion_user');
-      if (storedUser) {
-        try {
-          const userData = JSON.parse(storedUser);
-          setUser(userData);
-        } catch (error) {
-          console.error('Failed to parse stored user:', error);
-        }
-      }
-      setIsLoading(false);
-    };
+  const logout = () => {
+    // Handle logout logic
+    console.log('Logout clicked');
+  };
 
-    checkAuth();
-  }, []);
+  const stats = [
+    {
+      title: "Total Users",
+      value: "12,847",
+      change: "+12%",
+      icon: Users,
+      color: "text-blue-400"
+    },
+    {
+      title: "Active Projects",
+      value: "156",
+      change: "+8%",
+      icon: Activity,
+      color: "text-green-400"
+    },
+    {
+      title: "Revenue",
+      value: "$2.4M",
+      change: "+23%",
+      icon: TrendingUp,
+      color: "text-purple-400"
+    },
+    {
+      title: "Security Score",
+      value: "98.5%",
+      change: "+2%",
+      icon: Shield,
+      color: "text-yellow-400"
+    }
+  ];
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-zion-slate-light">Loading dashboard...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (!user) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Shield className="w-12 h-12 text-zion-cyan" />
-          </div>
-          <h2 className="text-2xl font-bold text-white mb-4">Access Denied</h2>
-          <p className="text-zion-slate-light mb-6">Please log in to access the dashboard.</p>
-          <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300">
-            Go to Login
-          </button>
-        </div>
-      </div>
-    );
-  }
+  const recentActivities = [
+    {
+      type: "login",
+      message: "User logged in from New York",
+      time: "2 minutes ago",
+      icon: User
+    },
+    {
+      type: "security",
+      message: "Two-factor authentication enabled",
+      time: "1 hour ago",
+      icon: Shield
+    },
+    {
+      type: "update",
+      message: "Profile information updated",
+      time: "3 hours ago",
+      icon: Settings
+    },
+    {
+      type: "activity",
+      message: "New project created",
+      time: "5 hours ago",
+      icon: Zap
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
-      <div className="container-responsive">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
+      <div className="container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div 
           className="mb-8"
@@ -272,250 +96,147 @@ export default function Dashboard() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+          <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-white mb-2">
-                Welcome back, {user.name || 'User'}! 👋
-              </h1>
-              <p className="text-zion-slate-light">
-                Here's what's happening with your Zion Tech Group services today.
-              </p>
+              <h1 className="text-3xl font-bold text-white">Dashboard</h1>
+              <p className="text-zion-slate-light">Welcome back, {user.displayName}</p>
             </div>
-            <div className="flex items-center gap-3">
-              <button className="relative p-3 bg-white/10 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:bg-white/20 transition-all duration-300">
-                <Bell className="h-5 w-5 text-zion-cyan" />
-                <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+            <div className="flex items-center gap-4">
+              <button className="p-2 text-zion-slate-light hover:text-white transition-colors">
+                <Bell className="w-6 h-6" />
               </button>
-              <button className="p-3 bg-white/10 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:bg-white/20 transition-all duration-300">
-                <Settings className="h-5 w-5 text-zion-cyan" />
+              <button 
+                onClick={logout}
+                className="px-4 py-2 bg-zinc-800/50 text-white rounded-lg hover:bg-zinc-700/50 transition-colors flex items-center gap-2"
+              >
+                <LogOut className="w-4 h-4" />
+                Logout
               </button>
             </div>
           </div>
         </motion.div>
 
-        {/* Stats Cards */}
+        {/* Stats Grid */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {statCards.map((stat, index) => (
+          {stats.map((stat, index) => (
             <motion.div
-              key={stat.title}
+              key={index}
+              className="bg-zinc-800/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300"
+              whileHover={{ y: -2, scale: 1.02 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-              className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
+              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
             >
               <div className="flex items-center justify-between mb-4">
-                <div className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center`}>
-                  <stat.icon className="h-6 w-6 text-white" />
+                <div className={`p-2 bg-zinc-700/50 rounded-lg`}>
+                  <stat.icon className={`w-6 h-6 ${stat.color}`} />
                 </div>
-                <div className={`flex items-center gap-1 text-sm font-medium ${
-                  stat.trend === 'up' ? 'text-green-500' : 'text-red-500'
-                }`}>
-                  {stat.trend === 'up' ? (
-                    <ArrowUpRight className="h-4 w-4" />
-                  ) : (
-                    <ArrowDownRight className="h-4 w-4" />
-                  )}
-                  {stat.change}%
-                </div>
+                <span className="text-sm text-green-400 font-medium">{stat.change}</span>
               </div>
-              <h3 className="text-zion-slate-light text-sm font-medium mb-1">{stat.title}</h3>
-              <p className="text-2xl font-bold text-white">{stat.value}</p>
+              <h3 className="text-2xl font-bold text-white mb-1">{stat.value}</h3>
+              <p className="text-zion-slate-light text-sm">{stat.title}</p>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Column - Quick Actions & Recent Activity */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Quick Actions */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <h2 className="text-xl font-bold text-white mb-6">Quick Actions</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {quickActions.map((action, index) => (
-                  <motion.div
-                    key={action.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                    className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group"
-                  >
-                    <div className={`w-12 h-12 bg-gradient-to-br ${action.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      <action.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-white font-semibold text-lg mb-2">{action.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-4">{action.description}</p>
-                    <button className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300">
-                      {action.action}
-                    </button>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Recent Activity */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            >
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-bold text-white">Recent Activity</h2>
-                <button className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors">
-                  View All
-                </button>
-              </div>
-              <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden">
-                <div className="p-6">
-                  <div className="space-y-4">
-                    {recentActivities.map((activity, index) => (
-                      <motion.div
-                        key={activity.id}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                        className="flex items-start gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300"
-                      >
-                        <div className="w-10 h-10 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                          {getTypeIcon(activity.type)}
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-start justify-between mb-2">
-                            <h4 className="text-white font-medium text-sm">{activity.title}</h4>
-                            <div className="flex items-center gap-2">
-                              {getStatusIcon(activity.status)}
-                              <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getPriorityColor(activity.priority)}`}>
-                                {activity.priority}
-                              </span>
-                            </div>
-                          </div>
-                          <p className="text-zion-slate-light text-sm mb-2">{activity.description}</p>
-                          <div className="flex items-center gap-2 text-xs text-zion-slate-light">
-                            <Clock className="h-3 w-3" />
-                            {activity.timestamp}
-                          </div>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Right Column - Performance Chart */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="space-y-8"
+          {/* Left Column */}
+          <motion.div 
+            className="lg:col-span-2"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
           >
-            {/* Performance Overview */}
-            <div>
-              <h2 className="text-xl font-bold text-white mb-6">Performance Overview</h2>
-              <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <h3 className="text-white font-semibold text-lg">Service Performance</h3>
-                    <p className="text-zion-slate-light text-sm">Last 30 days</p>
-                  </div>
-                  <button className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-                    <MoreHorizontal className="h-4 w-4 text-zion-cyan" />
-                  </button>
+            {/* Welcome Section */}
+            <div className="bg-zinc-800/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6 mb-6">
+              <h2 className="text-xl font-bold text-white mb-4">Welcome to Zion Tech Group</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="p-4 rounded-lg bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/20">
+                  <h3 className="text-lg font-medium text-white">Getting Started</h3>
+                  <p className="text-zion-slate-light mt-1">Complete your profile to unlock all features</p>
                 </div>
-                
-                {/* Mock Chart */}
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-slate-light text-sm">AI Services</span>
-                    <div className="flex items-center gap-2">
-                      <div className="w-24 h-2 bg-zion-slate rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full" style={{ width: '85%' }}></div>
-                      </div>
-                      <span className="text-white text-sm font-medium">85%</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-slate-light text-sm">Cloud Solutions</span>
-                    <div className="flex items-center gap-2">
-                      <div className="w-24 h-2 bg-zion-slate rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full" style={{ width: '92%' }}></div>
-                      </div>
-                      <span className="text-white text-sm font-medium">92%</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-slate-light text-sm">Cybersecurity</span>
-                    <div className="flex items-center gap-2">
-                      <div className="w-24 h-2 bg-zion-slate rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" style={{ width: '78%' }}></div>
-                      </div>
-                      <span className="text-white text-sm font-medium">78%</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-slate-light text-sm">IoT Services</span>
-                    <div className="flex items-center gap-2">
-                      <div className="w-24 h-2 bg-zion-slate rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full" style={{ width: '88%' }}></div>
-                      </div>
-                      <span className="text-white text-sm font-medium">88%</span>
-                    </div>
-                  </div>
+                <div className="p-4 rounded-lg bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/20">
+                  <h3 className="text-lg font-medium text-white">Explore Services</h3>
+                  <p className="text-zion-slate-light mt-1">Discover our AI-powered solutions</p>
                 </div>
               </div>
             </div>
 
-            {/* Quick Stats */}
-            <div>
-              <h2 className="text-xl font-bold text-white mb-6">Quick Stats</h2>
+            {/* Recent Activities */}
+            <div className="bg-zinc-800/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6">
+              <h2 className="text-xl font-bold text-white mb-4">Recent Activities</h2>
               <div className="space-y-4">
-                <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-zion-slate-light text-sm">Uptime</p>
-                      <p className="text-white font-semibold text-lg">99.9%</p>
+                {recentActivities.map((activity, index) => (
+                  <div key={index} className="flex items-center gap-4 p-3 bg-zinc-800/50 rounded-lg">
+                    <div className="p-2 bg-zinc-700/50 rounded-lg">
+                      <activity.icon className="w-5 h-5 text-zion-cyan" />
                     </div>
-                    <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center">
-                      <CheckCircle className="h-6 w-6 text-green-500" />
+                    <div className="flex-1">
+                      <p className="text-white text-sm">{activity.message}</p>
+                      <p className="text-zion-slate-light text-xs">{activity.time}</p>
                     </div>
                   </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Column */}
+          <motion.div 
+            className="space-y-6"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            {/* Quick Actions */}
+            <div className="bg-zinc-800/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-white mb-4">Quick Actions</h3>
+              <div className="space-y-3">
+                <Link 
+                  to="/profile" 
+                  className="flex items-center gap-3 p-3 bg-zinc-800/50 rounded-lg hover:bg-zinc-700/50 transition-colors"
+                >
+                  <User className="w-5 h-5 text-zion-cyan" />
+                  <span className="text-white">Edit Profile</span>
+                </Link>
+                <Link 
+                  to="/settings" 
+                  className="flex items-center gap-3 p-3 bg-zinc-800/50 rounded-lg hover:bg-zinc-700/50 transition-colors"
+                >
+                  <Settings className="w-5 h-5 text-zion-cyan" />
+                  <span className="text-white">Settings</span>
+                </Link>
+                <Link 
+                  to="/services" 
+                  className="flex items-center gap-3 p-3 bg-zinc-800/50 rounded-lg hover:bg-zinc-700/50 transition-colors"
+                >
+                  <Globe className="w-5 h-5 text-zion-cyan" />
+                  <span className="text-white">Browse Services</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* System Status */}
+            <div className="bg-zinc-800/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-white mb-4">System Status</h3>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-zion-slate-light">Website</span>
+                  <span className="text-green-400 text-sm">Operational</span>
                 </div>
-                
-                <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-zion-slate-light text-sm">Response Time</p>
-                      <p className="text-white font-semibold text-lg">45ms</p>
-                    </div>
-                    <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                      <Zap className="h-6 w-6 text-blue-500" />
-                    </div>
-                  </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-zion-slate-light">API Services</span>
+                  <span className="text-green-400 text-sm">Operational</span>
                 </div>
-                
-                <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-zion-slate-light text-sm">Customer Rating</p>
-                      <p className="text-white font-semibold text-lg">4.9/5.0</p>
-                    </div>
-                    <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center">
-                      <Star className="h-6 w-6 text-yellow-500" />
-                    </div>
-                  </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-zion-slate-light">Database</span>
+                  <span className="text-green-400 text-sm">Operational</span>
                 </div>
               </div>
             </div>

@@ -39,7 +39,7 @@ const benefits = [
 ];
 export default function AIContentCreation() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Content Creation - Zion Tech Group" description="AI-powered content creation solution that transforms your operations with intelligent automation and real-time insights." keywords="AI content creation, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicontentcreation/"/>
+      <SEOHead title="Content Creation - Zion Tech Group" description="AI-powered content creation solution that transforms your operations with intelligent automation and real-time insights." keywords="AI content creation, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicontentcreation/"/>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

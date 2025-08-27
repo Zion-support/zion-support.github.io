@@ -158,14 +158,14 @@ const Cookies: React.FC = () => {}
                   Personalize content and improve functionality
                 </p>
 =======
-import {SEO} from "@/components/SEO";
+import {SEO} from "../components/SEOHead";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 
 export default function Cookies() {}
   return (
     <div className="min-h-screen bg-zion-blue">
-      <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https://ziontechgroup.com/cookies"/>
+      <SEOHead title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https://ziontechgroup.com/cookies"/>
       <Header />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -552,13 +552,13 @@ export default Cookies;
   );
 }
 =======
-import {SEO} from '@/components/SEO';
+import {SEO} from "../components/SEOHead"';
 import {GradientHeading} from '@/components/GradientHeading';
 
 export default function Cookies() {}
   return (
     <>
-      <SEO title="Cookie Policy - Zion Tech Group" description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience." keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy" canonical="https://ziontechgroup.com/cookies"/>
+      <SEOHead title="Cookie Policy - Zion Tech Group" description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience." keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy" canonical="https://ziontechgroup.com/cookies"/>
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
