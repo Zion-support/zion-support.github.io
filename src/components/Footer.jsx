@@ -91,21 +91,20 @@ export function Footer() {
     {
       title: "Services",
       links: [
-        { label: "AI Solutions", path: "/services/ai" },
-        { label: "Cloud & DevOps", path: "/services/cloud" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "IT Infrastructure", path: "/services/infrastructure" },
-        { label: "Digital Transformation", path: "/services/transformation" },
-        { label: "Quantum Neural Network", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Operations", path: "/autonomous-business-operations-platform" },
-        { label: "IT Asset Management", path: "/ai-powered-it-asset-management" }
+        { label: "AI Services", path: "/ai-services" },
+        { label: "Cloud & DevOps", path: "/services/cloud-devops" },
+        { label: "Cybersecurity", path: "/services" },
+        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
+        { label: "Digital Transformation", path: "/services" },
+        { label: "Micro SAAS", path: "/micro-saas" },
+        { label: "Onsite Support", path: "/it-onsite-services" }
       ]
     },
     {
       title: "Company",
       links: [
         { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
+        { label: "Our Team", path: "/team" },
         { label: "Careers", path: "/careers" },
         { label: "News & Updates", path: "/news" },
         { label: "Case Studies", path: "/case-studies" },
@@ -116,12 +115,10 @@ export function Footer() {
       title: "Resources",
       links: [
         { label: "Blog", path: "/blog" },
-        { label: "Documentation", path: "/docs" },
-        { label: "White Papers", path: "/white-papers" },
-        { label: "Webinars", path: "/webinars" },
+        { label: "Sitemap", path: "/sitemap" },
         { label: "Research", path: "/research-development" },
         { label: "Events", path: "/events" },
-        { label: "Training", path: "/training" }
+        { label: "Green IT", path: "/green-it" }
       ]
     },
     {
@@ -132,7 +129,7 @@ export function Footer() {
         { label: "Support Portal", path: "/support" },
         { label: "FAQ", path: "/faq" },
         { label: "Consulting", path: "/services/consulting" },
-        { label: "Request Quote", path: "/contact" }
+        { label: "Request Quote", path: "/request-quote" }
       ]
     }
   ];
