@@ -76,24 +76,24 @@ export const EnhancedSidebar: React.FC = () => {
       title: "Services",
       icon: Zap,
       items: [
-        { name: "AI & Machine Learning", href: "/ai-services", icon: Brain },
+        { name: "AI & Analytics", href: "/services/ai-analytics", icon: Brain },
         { name: "Micro SAAS Solutions", href: "/micro-saas", icon: Cloud },
-        { name: "IT Infrastructure", href: "/it-services", icon: Server },
-        { name: "Emerging Technologies", href: "/emerging-tech", icon: Rocket },
-        { name: "Cybersecurity", href: "/it-services/cybersecurity", icon: Shield },
-        { name: "Cloud Solutions", href: "/it-services/cloud", icon: Cloud },
-        { name: "DevOps & Automation", href: "/it-services/devops", icon: Code },
-        { name: "Data Management", href: "/it-services/data", icon: Database }
+        { name: "IT Services", href: "/it-services", icon: Server },
+        { name: "Emerging Technologies", href: "/services/quantum-computing", icon: Rocket },
+        { name: "Cybersecurity", href: "/services/cybersecurity", icon: Shield },
+        { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
+        { name: "Digital Transformation", href: "/services/digital-transformation", icon: Code },
+        { name: "Data & Analytics", href: "/services/data-analytics", icon: Database }
       ]
     },
     {
       title: "Solutions",
       icon: Target,
       items: [
-        { name: "Quantum Computing", href: "/emerging-tech/quantum", icon: Atom },
-        { name: "Blockchain & Web3", href: "/emerging-tech/blockchain", icon: Link },
-        { name: "Edge Computing", href: "/emerging-tech/edge", icon: Network },
-        { name: "IoT Solutions", href: "/emerging-tech/iot", icon: Wifi },
+        { name: "Quantum Computing", href: "/services/quantum-computing", icon: Atom },
+        { name: "Blockchain & Web3", href: "/services/blockchain", icon: Link },
+        { name: "Edge Computing", href: "/services/iot-edge", icon: Network },
+        { name: "IoT Solutions", href: "/services/iot-edge", icon: Wifi },
         { name: "Healthcare AI", href: "/ai-services/healthcare", icon: HeartPulse },
         { name: "Financial AI", href: "/ai-services/financial", icon: DollarSign },
         { name: "Green Technology", href: "/green-it", icon: Leaf }
@@ -106,7 +106,7 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "Documentation", href: "/docs", icon: FileText },
         { name: "API Reference", href: "/api", icon: Code },
         { name: "Developer Portal", href: "/developer", icon: Cpu },
-        { name: "Support Center", href: "/support", icon: HelpCircle },
+        { name: "Support Center", href: "/help", icon: HelpCircle },
         { name: "FAQ", href: "/faq", icon: HelpCircle },
         { name: "Blog", href: "/blog", icon: FileText },
         { name: "Case Studies", href: "/case-studies", icon: BarChart3 }

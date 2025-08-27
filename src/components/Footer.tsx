@@ -59,13 +59,13 @@ export function Footer() {
       title: 'Services',
       icon: Zap,
       links: [
-        { name: 'AI Solutions', path: '/services/ai', icon: Brain },
-        { name: 'Cloud & DevOps', path: '/services/cloud', icon: Cloud },
+        { name: 'AI & Analytics', path: '/services/ai-analytics', icon: Brain },
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
         { name: 'Infrastructure', path: '/services/infrastructure', icon: Building },
-        { name: 'Digital Transformation', path: '/services/transformation', icon: Rocket },
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
-        { name: 'Space Technology', path: '/space-technology', icon: Rocket }
+        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
+        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Cpu },
+        { name: 'IoT & Edge', path: '/services/iot-edge', icon: Rocket }
       ]
     },
     {
@@ -108,8 +108,7 @@ export function Footer() {
   const legal = [
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Service", path: "/terms" },
-    { name: "Cookie Policy", path: "/cookies" },
-    { name: "Accessibility", path: "/accessibility" }
+    { name: "Cookie Policy", path: "/cookies" }
   ];
 
   const socialLinks = [

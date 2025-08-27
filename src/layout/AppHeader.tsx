@@ -43,16 +43,14 @@ export function AppHeader() {
   ];
 
   const services = [
-    { name: 'AI & Analytics', href: '/services', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'Quantum Computing', href: '/services', icon: Rocket, description: 'Quantum AI & Optimization' },
-    { name: 'Cybersecurity', href: '/services', icon: Shield, description: 'AI-Powered Security' },
-    { name: 'Cloud Services', href: '/services', icon: Cloud, description: 'DevOps & Infrastructure' },
-    { name: 'IoT & Edge', href: '/services', icon: Cpu, description: 'Smart Devices & Networks' },
-    { name: 'Blockchain', href: '/services', icon: Lock, description: 'DeFi & Smart Contracts' },
-    { name: 'Healthcare Tech', href: '/services', icon: Heart, description: 'AI Medicine & Diagnostics' },
-    { name: 'Green Tech', href: '/services', icon: Globe, description: 'Sustainability Solutions' },
-    { name: 'Space Tech', href: '/services', icon: Rocket, description: 'Space Exploration & Mining' },
-    { name: 'Autonomous AI', href: '/services', icon: Brain, description: 'Self-Learning Systems' },
+    { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket, description: 'Quantum AI & Optimization' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'DevOps & Infrastructure' },
+    { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'Blockchain', href: '/services/blockchain', icon: Lock, description: 'DeFi & Smart Contracts' },
+    { name: 'Healthcare Tech', href: '/services/data-analytics', icon: Heart, description: 'AI Medicine & Diagnostics' },
+    { name: 'Green IT', href: '/green-it', icon: Globe, description: 'Sustainability Solutions' },
   ];
 
   const quickLinks = [
