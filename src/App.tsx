@@ -4,21 +4,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Layout Components
-import { AppHeader } from './layout/AppHeader.tsx';
-import { Footer } from './components/Footer.tsx';
+import { AppHeader } from './layout/AppHeader';
+import { Footer } from './components/Footer';
 
 // Enhanced Components
-import { PerformanceOptimizer } from './components/PerformanceOptimizer.tsx';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer.tsx';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer.tsx';
-import { SEO } from './components/SEO.tsx';
-import { FloatingActionButton } from './components/FloatingActionButton.tsx';
-import { AdvancedAnalytics } from './components/AdvancedAnalytics.tsx';
-import { SmartNotificationSystem } from './components/SmartNotificationSystem.tsx';
-import { ChatAssistant } from './components/ChatAssistant.tsx';
-import { ErrorBoundary } from './components/ErrorBoundary.tsx';
-import { ErrorFallback } from './components/ErrorFallback.tsx';
-import { LoadingSpinner } from './components/ui/LoadingSpinner.tsx';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import { SEO } from './components/SEO';
+import { FloatingActionButton } from './components/FloatingActionButton';
+import { AdvancedAnalytics } from './components/AdvancedAnalytics';
+import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { ChatAssistant } from './components/ChatAssistant';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { ErrorFallback } from './components/ErrorFallback';
+import { LoadingSpinner } from './components/ui/LoadingSpinner';
 
 // Lazy-loaded pages for better performance
 const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
