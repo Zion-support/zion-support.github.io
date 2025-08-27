@@ -16,6 +16,11 @@ export default defineConfig({
     sourcemap: process.env.NODE_ENV !== 'production',
     reportCompressedSize: false,
     outDir: 'dist',
+    cssCodeSplit: true,
+    modulePreload: {
+      polyfill: true,
+    },
+    assetsInlineLimit: 4096,
     rollupOptions: {
       input: path.resolve(__dirname, 'index.html'),
       output: {
@@ -63,6 +68,11 @@ export default defineConfig({
       },
       external: [],
     },
+    terserOptions: undefined,
+  },
+  esbuild: {
+    legalComments: 'none',
+    logOverride: { 'this-is-undefined-in-esm': 'silent' },
   },
   server: {
     port: 3000,
