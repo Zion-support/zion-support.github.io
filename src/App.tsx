@@ -47,6 +47,9 @@ const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/Zion
 const Zion2026ComprehensivePricingGuide = React.lazy(() => import('./pages/Zion2026ComprehensivePricingGuide'));
 const Zion2026ServicesOverview = React.lazy(() => import('./pages/Zion2026ServicesOverview'));
 
+// Enhanced 2028 Services
+const EnhancedServicesShowcase2028 = React.lazy(() => import('./pages/EnhancedServicesShowcase2028'));
+
 // Revolutionary 2025 Services
 const Revolutionary2025ServicesShowcase = React.lazy(() => import('./pages/Revolutionary2025ServicesShowcase'));
 const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
@@ -218,6 +221,9 @@ function App() {
                 <Route path="/zion-2026-services" element={<Zion2026InnovativeServicesShowcase />} />
                 <Route path="/zion-2026-pricing" element={<Zion2026ComprehensivePricingGuide />} />
                 <Route path="/zion-2026-overview" element={<Zion2026ServicesOverview />} />
+                
+                {/* Enhanced 2028 Service Routes */}
+                <Route path="/enhanced-services-2028" element={<EnhancedServicesShowcase2028 />} />
                 
                 {/* Revolutionary 2025 Service Routes */}
                 <Route path="/revolutionary-2025" element={<Revolutionary2025ServicesShowcase />} />
