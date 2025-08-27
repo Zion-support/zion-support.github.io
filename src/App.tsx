@@ -22,6 +22,7 @@ const Equipment = React.lazy(() => import('./pages/EquipmentPage'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Security = React.lazy(() => import('./pages/Security'));
@@ -48,6 +49,9 @@ const AIServices = React.lazy(() => import('./pages/AIServicesPage.tsx'));
 const DigitalMarketingServices = React.lazy(() => import('./pages/DigitalMarketingServicesPage.tsx'));
 const FinancialSolutions = React.lazy(() => import('./pages/FinancialSolutions.tsx'));
 const ManufacturingSolutions = React.lazy(() => import('./pages/ManufacturingSolutions.tsx'));
+const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation.tsx'));
+const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting.tsx'));
+const CustomDevelopment = React.lazy(() => import('./pages/services/CustomDevelopment.tsx'));
 const EnterpriseSolutions = React.lazy(() => import('./pages/solutions/EnterpriseSolutions.tsx'));
 const HealthcareSolutions = React.lazy(() => import('./pages/solutions/HealthcareSolutions.tsx'));
 const GovernmentSolutions = React.lazy(() => import('./pages/solutions/GovernmentSolutions.tsx'));
@@ -104,6 +108,7 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
               <Route path="/help" element={<HelpCenter />} />
+              <Route path="/docs" element={<Documentation />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/security" element={<Security />} />
@@ -128,6 +133,9 @@ function App() {
               <Route path="/services/digital-marketing" element={<DigitalMarketingServices />} />
               <Route path="/services/financial" element={<FinancialSolutions />} />
               <Route path="/services/manufacturing" element={<ManufacturingSolutions />} />
+              <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+              <Route path="/services/it-consulting" element={<ITConsulting />} />
+              <Route path="/services/custom-development" element={<CustomDevelopment />} />
               
               {/* Solution Routes */}
               <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />

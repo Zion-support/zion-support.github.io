@@ -2,76 +2,106 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Rocket, 
-  Cpu, 
+  Code, 
+  Smartphone, 
+  Globe, 
   Database, 
-  Cloud, 
+  Zap, 
   Shield, 
   Users, 
-  BarChart3, 
-  Zap,
+  Target,
   ArrowRight,
   CheckCircle,
   Star,
-  Globe,
-  Target,
   Lightbulb,
   TrendingUp,
   Settings,
   Workflow,
   FileText,
   Monitor,
-  Smartphone
+  Smartphone,
+  BarChart3,
+  Rocket,
+  Building2,
+  Cpu,
+  Network
 } from 'lucide-react';
 
-export default function DigitalTransformation() {
+export default function CustomDevelopment() {
   const services = [
     {
-      title: 'Process Automation',
-      description: 'Streamline operations with intelligent automation solutions that reduce manual work and improve efficiency.',
+      title: 'Web Applications',
+      description: 'Custom web applications built with modern technologies and best practices for optimal performance and user experience.',
+      icon: Globe,
+      features: ['Responsive Design', 'Progressive Web Apps', 'E-commerce Solutions', 'Content Management Systems']
+    },
+    {
+      title: 'Mobile Applications',
+      description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',
+      icon: Smartphone,
+      features: ['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']
+    },
+    {
+      title: 'API Development',
+      description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
+      icon: Network,
+      features: ['RESTful APIs', 'GraphQL APIs', 'API Documentation', 'Integration Support']
+    },
+    {
+      title: 'System Integration',
+      description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
       icon: Workflow,
-      features: ['RPA Implementation', 'Workflow Optimization', 'Business Process Mapping', 'Performance Monitoring']
+      features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
+    }
+  ];
+
+  const technologies = [
+    {
+      title: 'Frontend',
+      description: 'Modern frontend frameworks and libraries for responsive and interactive user interfaces.',
+      icon: Monitor,
+      stack: ['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']
     },
     {
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud with minimal disruption and maximum benefits.',
-      icon: Cloud,
-      features: ['Migration Strategy', 'Data Transfer', 'Application Modernization', 'Performance Optimization']
+      title: 'Backend',
+      description: 'Robust backend technologies for scalable and secure applications.',
+      icon: Cpu, // Changed from Server to Cpu
+      stack: ['Node.js', 'Python', 'Java', 'C#', 'Go']
     },
     {
-      title: 'Data Strategy',
-      description: 'Develop a comprehensive data strategy that turns information into actionable business intelligence.',
+      title: 'Mobile',
+      description: 'Cross-platform and native mobile development technologies.',
+      icon: Smartphone,
+      stack: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
+    },
+    {
+      title: 'Database',
+      description: 'Modern database solutions for data storage and management.',
       icon: Database,
-      features: ['Data Architecture', 'Analytics Implementation', 'Data Governance', 'Business Intelligence']
-    },
-    {
-      title: 'Change Management',
-      description: 'Guide your organization through digital transformation with proven change management methodologies.',
-      icon: Users,
-      features: ['Stakeholder Engagement', 'Training Programs', 'Communication Strategy', 'Success Metrics']
+      stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
     }
   ];
 
   const benefits = [
     {
-      title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and optimize workflows to boost productivity by up to 40%.',
+      title: 'Custom Solutions',
+      description: 'Tailored software solutions designed specifically for your business needs and workflows.',
+      icon: Target
+    },
+    {
+      title: 'Scalability',
+      description: 'Applications built to grow with your business and handle increasing demands.',
       icon: TrendingUp
     },
     {
-      title: 'Cost Reduction',
-      description: 'Reduce operational costs through automation and cloud optimization.',
-      icon: BarChart3
+      title: 'Security',
+      description: 'Enterprise-grade security measures built into every application.',
+      icon: Shield
     },
     {
-      title: 'Better Customer Experience',
-      description: 'Deliver faster, more personalized services through digital channels.',
-      icon: Star
-    },
-    {
-      title: 'Competitive Advantage',
-      description: 'Stay ahead of the competition with cutting-edge digital capabilities.',
-      icon: Target
+      title: 'Support & Maintenance',
+      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',
+      icon: Settings
     }
   ];
 
@@ -92,24 +122,24 @@ export default function DigitalTransformation() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
-              Digital Transformation
+              Custom Development
             </h1>
             <p className="text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business for the digital age with comprehensive technology solutions that drive innovation, 
-              efficiency, and growth. Our expert team guides you through every step of your digital journey.
+              Tailored software solutions designed specifically for your business needs. 
+              From web applications to mobile apps, we build custom software that drives results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
               >
-                Start Your Transformation
+                Start Your Project
               </Link>
               <Link 
-                to="/solutions" 
+                to="/services" 
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
               >
-                View Solutions
+                View All Services
               </Link>
             </div>
           </motion.div>
@@ -126,11 +156,11 @@ export default function DigitalTransformation() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our Digital Transformation Services
+              Our Custom Development Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive digital transformation services designed to modernize your business operations 
-              and position you for future success.
+              Comprehensive custom development services designed to create software solutions 
+              that perfectly align with your business requirements.
             </p>
           </motion.div>
 
@@ -170,7 +200,7 @@ export default function DigitalTransformation() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Technology Stack */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -180,10 +210,55 @@ export default function DigitalTransformation() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Why Choose Digital Transformation?
+              Our Technology Stack
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Digital transformation delivers measurable benefits that impact every aspect of your business.
+              We use cutting-edge technologies and proven frameworks to build robust, 
+              scalable, and maintainable applications.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {technologies.map((tech, index) => (
+              <motion.div 
+                key={index}
+                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <tech.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3">{tech.title}</h3>
+                <p className="text-zion-slate-light mb-4 leading-relaxed text-sm">{tech.description}</p>
+                
+                <div className="space-y-2">
+                  {tech.stack.map((item, itemIndex) => (
+                    <div key={itemIndex} className="text-zion-cyan text-sm font-medium">{item}</div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Why Choose Custom Development?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Custom development offers unique advantages that off-the-shelf solutions cannot provide.
             </p>
           </motion.div>
 
@@ -208,7 +283,7 @@ export default function DigitalTransformation() {
       </section>
 
       {/* Industries Section */}
-      <section className="py-20">
+      <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -220,8 +295,8 @@ export default function DigitalTransformation() {
               Industries We Serve
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our digital transformation expertise spans across multiple industries, 
-              each with unique challenges and opportunities.
+              Our custom development expertise spans across multiple industries, 
+              each with unique software requirements and challenges.
             </p>
           </motion.div>
 
@@ -241,8 +316,8 @@ export default function DigitalTransformation() {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
+      {/* Development Process */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -251,19 +326,19 @@ export default function DigitalTransformation() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our Transformation Process
+              Our Development Process
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              A proven methodology that ensures successful digital transformation outcomes.
+              A proven agile development methodology that ensures successful project delivery and client satisfaction.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: '01', title: 'Assessment', description: 'Evaluate current state and identify transformation opportunities' },
-              { step: '02', title: 'Strategy', description: 'Develop comprehensive digital transformation roadmap' },
-              { step: '03', title: 'Implementation', description: 'Execute transformation plan with expert guidance' },
-              { step: '04', title: 'Optimization', description: 'Continuously improve and scale digital capabilities' }
+              { step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' },
+              { step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' },
+              { step: '03', title: 'Development', description: 'Build the application using agile development practices' },
+              { step: '04', title: 'Deployment', description: 'Deploy and launch with ongoing support and maintenance' }
             ].map((phase, index) => (
               <motion.div 
                 key={index}
@@ -284,7 +359,7 @@ export default function DigitalTransformation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div 
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"
@@ -293,10 +368,10 @@ export default function DigitalTransformation() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+              Ready to Build Your Custom Solution?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let our digital transformation experts guide you through your journey to digital excellence. 
+              Let our development experts create the perfect software solution for your business. 
               Get started with a free consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -304,13 +379,13 @@ export default function DigitalTransformation() {
                 to="/contact" 
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
               >
-                Schedule Consultation
+                Start Your Project
               </Link>
               <Link 
-                to="/solutions" 
+                to="/services" 
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
               >
-                Explore Solutions
+                Explore Services
               </Link>
             </div>
           </motion.div>

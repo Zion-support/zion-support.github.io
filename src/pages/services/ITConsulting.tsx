@@ -2,75 +2,110 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Rocket, 
-  Cpu, 
-  Database, 
-  Cloud, 
-  Shield, 
   Users, 
-  BarChart3, 
-  Zap,
+  Cpu, 
+  Shield, 
+  Cloud, 
+  Database, 
+  Network, 
+  Zap, 
+  Target,
   ArrowRight,
   CheckCircle,
   Star,
   Globe,
-  Target,
   Lightbulb,
   TrendingUp,
   Settings,
   Workflow,
   FileText,
   Monitor,
-  Smartphone
+  Smartphone,
+  BarChart3,
+  Rocket,
+  Building2
 } from 'lucide-react';
 
-export default function DigitalTransformation() {
+export default function ITConsulting() {
   const services = [
     {
-      title: 'Process Automation',
-      description: 'Streamline operations with intelligent automation solutions that reduce manual work and improve efficiency.',
-      icon: Workflow,
-      features: ['RPA Implementation', 'Workflow Optimization', 'Business Process Mapping', 'Performance Monitoring']
+      title: 'Technology Strategy',
+      description: 'Develop comprehensive technology roadmaps aligned with your business objectives and growth plans.',
+      icon: Target,
+      features: ['Technology Assessment', 'Strategic Planning', 'Roadmap Development', 'Investment Planning']
     },
     {
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud with minimal disruption and maximum benefits.',
-      icon: Cloud,
-      features: ['Migration Strategy', 'Data Transfer', 'Application Modernization', 'Performance Optimization']
+      title: 'Architecture Design',
+      description: 'Design scalable, secure, and efficient technology architectures that support your business needs.',
+      icon: Building2,
+      features: ['System Architecture', 'Cloud Architecture', 'Security Architecture', 'Integration Design']
     },
     {
-      title: 'Data Strategy',
-      description: 'Develop a comprehensive data strategy that turns information into actionable business intelligence.',
-      icon: Database,
-      features: ['Data Architecture', 'Analytics Implementation', 'Data Governance', 'Business Intelligence']
+      title: 'Risk Assessment',
+      description: 'Identify and mitigate technology risks to protect your business and ensure compliance.',
+      icon: Shield,
+      features: ['Security Audits', 'Compliance Reviews', 'Risk Mitigation', 'Security Frameworks']
     },
     {
-      title: 'Change Management',
-      description: 'Guide your organization through digital transformation with proven change management methodologies.',
-      icon: Users,
-      features: ['Stakeholder Engagement', 'Training Programs', 'Communication Strategy', 'Success Metrics']
+      title: 'Performance Optimization',
+      description: 'Optimize your technology infrastructure for maximum performance and efficiency.',
+      icon: Zap,
+      features: ['Performance Analysis', 'Bottleneck Identification', 'Optimization Strategies', 'Monitoring Setup']
+    }
+  ];
+
+  const expertise = [
+    {
+      title: 'Enterprise Architecture',
+      description: 'Design and implement enterprise-grade technology solutions.',
+      icon: Building2
+    },
+    {
+      title: 'Cloud Strategy',
+      description: 'Develop cloud migration and optimization strategies.',
+      icon: Cloud
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Implement comprehensive security frameworks and protocols.',
+      icon: Shield
+    },
+    {
+      title: 'Data Management',
+      description: 'Design data strategies and governance frameworks.',
+      icon: Database
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Guide organizations through technology modernization.',
+      icon: Rocket
+    },
+    {
+      title: 'IT Operations',
+      description: 'Optimize IT operations and service delivery.',
+      icon: Settings
     }
   ];
 
   const benefits = [
     {
-      title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and optimize workflows to boost productivity by up to 40%.',
-      icon: TrendingUp
-    },
-    {
-      title: 'Cost Reduction',
-      description: 'Reduce operational costs through automation and cloud optimization.',
-      icon: BarChart3
-    },
-    {
-      title: 'Better Customer Experience',
-      description: 'Deliver faster, more personalized services through digital channels.',
+      title: 'Expert Guidance',
+      description: 'Access to industry experts with deep technology knowledge and experience.',
       icon: Star
     },
     {
+      title: 'Cost Optimization',
+      description: 'Identify opportunities to reduce technology costs while improving performance.',
+      icon: BarChart3
+    },
+    {
+      title: 'Risk Mitigation',
+      description: 'Proactively identify and address technology risks before they impact your business.',
+      icon: Shield
+    },
+    {
       title: 'Competitive Advantage',
-      description: 'Stay ahead of the competition with cutting-edge digital capabilities.',
+      description: 'Leverage technology to gain competitive advantages in your market.',
       icon: Target
     }
   ];
@@ -92,24 +127,24 @@ export default function DigitalTransformation() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
-              Digital Transformation
+              IT Consulting
             </h1>
             <p className="text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform your business for the digital age with comprehensive technology solutions that drive innovation, 
-              efficiency, and growth. Our expert team guides you through every step of your digital journey.
+              Strategic IT consulting services that align technology with your business objectives. 
+              Our expert consultants help you make informed technology decisions that drive growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
               >
-                Start Your Transformation
+                Get Expert Advice
               </Link>
               <Link 
-                to="/solutions" 
+                to="/services" 
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
               >
-                View Solutions
+                View All Services
               </Link>
             </div>
           </motion.div>
@@ -126,11 +161,11 @@ export default function DigitalTransformation() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our Digital Transformation Services
+              Our IT Consulting Services
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive digital transformation services designed to modernize your business operations 
-              and position you for future success.
+              Comprehensive IT consulting services designed to help you make the right technology decisions 
+              and implement solutions that drive business success.
             </p>
           </motion.div>
 
@@ -170,7 +205,7 @@ export default function DigitalTransformation() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Expertise Areas */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -180,10 +215,48 @@ export default function DigitalTransformation() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Why Choose Digital Transformation?
+              Areas of Expertise
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Digital transformation delivers measurable benefits that impact every aspect of your business.
+              Deep expertise across all major technology domains to provide comprehensive consulting solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {expertise.map((area, index) => (
+              <motion.div 
+                key={index}
+                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <area.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3">{area.title}</h3>
+                <p className="text-zion-slate-light leading-relaxed">{area.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Why Choose Our IT Consulting?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our consulting services deliver measurable value and help you achieve your technology goals.
             </p>
           </motion.div>
 
@@ -208,7 +281,7 @@ export default function DigitalTransformation() {
       </section>
 
       {/* Industries Section */}
-      <section className="py-20">
+      <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -220,8 +293,8 @@ export default function DigitalTransformation() {
               Industries We Serve
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our digital transformation expertise spans across multiple industries, 
-              each with unique challenges and opportunities.
+              Our IT consulting expertise spans across multiple industries, 
+              each with unique technology challenges and requirements.
             </p>
           </motion.div>
 
@@ -242,7 +315,7 @@ export default function DigitalTransformation() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -251,19 +324,19 @@ export default function DigitalTransformation() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our Transformation Process
+              Our Consulting Process
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              A proven methodology that ensures successful digital transformation outcomes.
+              A proven methodology that ensures successful consulting outcomes and lasting value.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: '01', title: 'Assessment', description: 'Evaluate current state and identify transformation opportunities' },
-              { step: '02', title: 'Strategy', description: 'Develop comprehensive digital transformation roadmap' },
-              { step: '03', title: 'Implementation', description: 'Execute transformation plan with expert guidance' },
-              { step: '04', title: 'Optimization', description: 'Continuously improve and scale digital capabilities' }
+              { step: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' },
+              { step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' },
+              { step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' },
+              { step: '04', title: 'Implementation', description: 'Support implementation and measure results' }
             ].map((phase, index) => (
               <motion.div 
                 key={index}
@@ -284,7 +357,7 @@ export default function DigitalTransformation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div 
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"
@@ -293,10 +366,10 @@ export default function DigitalTransformation() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+              Ready for Expert IT Guidance?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let our digital transformation experts guide you through your journey to digital excellence. 
+              Let our IT consulting experts help you make the right technology decisions. 
               Get started with a free consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -307,10 +380,10 @@ export default function DigitalTransformation() {
                 Schedule Consultation
               </Link>
               <Link 
-                to="/solutions" 
+                to="/services" 
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
               >
-                Explore Solutions
+                Explore Services
               </Link>
             </div>
           </motion.div>

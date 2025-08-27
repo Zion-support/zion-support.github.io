@@ -29,6 +29,8 @@ export function AppHeader() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-white hover:text-zion-cyan transition-colors duration-300">Home</Link>
+            <Link to="/services" className="text-white hover:text-zion-cyan transition-colors duration-300">Services</Link>
+            <Link to="/solutions" className="text-white hover:text-zion-cyan transition-colors duration-300">Solutions</Link>
             
             {/* Services Dropdown */}
             <div className="relative group">
@@ -49,18 +51,18 @@ export function AppHeader() {
                     <div>
                       <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Core Services</h3>
                       <ul className="space-y-2">
-                        <li><Link to="/ai-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">AI Services</Link></li>
-                        <li><Link to="/cybersecurity" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Cybersecurity</Link></li>
-                        <li><Link to="/cloud-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Cloud Services</Link></li>
-                        <li><Link to="/blockchain-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Blockchain</Link></li>
-                        <li><Link to="/quantum-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Quantum Computing</Link></li>
+                        <li><Link to="/services/ai" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">AI Services</Link></li>
+                        <li><Link to="/services/cybersecurity" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Cybersecurity</Link></li>
+                        <li><Link to="/services/cloud" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Cloud Services</Link></li>
+                        <li><Link to="/services/blockchain" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Blockchain</Link></li>
+                        <li><Link to="/services/quantum" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Quantum Computing</Link></li>
                       </ul>
                     </div>
                     <div>
                       <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Specialized</h3>
                       <ul className="space-y-2">
-                        <li><Link to="/iot-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">IoT Services</Link></li>
-                        <li><Link to="/digital-marketing-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Digital Marketing</Link></li>
+                        <li><Link to="/services/iot" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">IoT Services</Link></li>
+                        <li><Link to="/services/digital-marketing" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Digital Marketing</Link></li>
                         <li><Link to="/it-onsite-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">IT Onsite</Link></li>
                         <li><Link to="/green-it" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Green IT</Link></li>
                       </ul>
@@ -89,18 +91,18 @@ export function AppHeader() {
                     <div>
                       <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Industry</h3>
                       <ul className="space-y-2">
-                        <li><Link to="/enterprise-solutions" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Enterprise</Link></li>
-                        <li><Link to="/healthcare-solutions" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Healthcare</Link></li>
-                        <li><Link to="/government-solutions" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Government</Link></li>
-                        <li><Link to="/retail-solutions" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Retail</Link></li>
+                        <li><Link to="/solutions/enterprise" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Enterprise</Link></li>
+                        <li><Link to="/solutions/healthcare" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Healthcare</Link></li>
+                        <li><Link to="/solutions/government" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Government</Link></li>
+                        <li><Link to="/solutions/retail" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Retail</Link></li>
                       </ul>
                     </div>
                     <div>
                       <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Business</h3>
                       <ul className="space-y-2">
-                        <li><Link to="/digital-transformation" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Digital Transformation</Link></li>
-                        <li><Link to="/it-consulting" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">IT Consulting</Link></li>
-                        <li><Link to="/custom-development" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Custom Development</Link></li>
+                        <li><Link to="/services/digital-transformation" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Digital Transformation</Link></li>
+                        <li><Link to="/services/it-consulting" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">IT Consulting</Link></li>
+                        <li><Link to="/services/custom-development" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Custom Development</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -167,15 +169,35 @@ export function AppHeader() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-zion-cyan/20">
-          <div className="px-4 py-6 space-y-4">
-            <Link to="/" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Home</Link>
-            <Link to="/services" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Services</Link>
-            <Link to="/solutions" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Solutions</Link>
-            <Link to="/about" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">About</Link>
-            <Link to="/pricing" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Pricing</Link>
-            <Link to="/marketplace" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Marketplace</Link>
-            <Link to="/blog" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Blog</Link>
-            <Link to="/contact" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Contact</Link>
+          <div className="px-4 py-6">
+            {/* Main Navigation */}
+            <div className="space-y-4 mb-6">
+              <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wide mb-3">Main</h3>
+              <Link to="/" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Home</Link>
+              <Link to="/services" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Services</Link>
+              <Link to="/solutions" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Solutions</Link>
+              <Link to="/about" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">About</Link>
+              <Link to="/marketplace" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Marketplace</Link>
+            </div>
+            
+            {/* Services */}
+            <div className="space-y-4 mb-6">
+              <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wide mb-3">Services</h3>
+              <Link to="/services/ai" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">AI Services</Link>
+              <Link to="/services/cybersecurity" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Cybersecurity</Link>
+              <Link to="/services/cloud" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Cloud Services</Link>
+              <Link to="/services/blockchain" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Blockchain</Link>
+              <Link to="/services/iot" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">IoT Services</Link>
+            </div>
+            
+            {/* Company */}
+            <div className="space-y-4 mb-6">
+              <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wide mb-3">Company</h3>
+              <Link to="/blog" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Blog</Link>
+              <Link to="/careers" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Careers</Link>
+              <Link to="/partners" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Partners</Link>
+              <Link to="/contact" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Contact</Link>
+            </div>
             
             <div className="pt-4 border-t border-zion-cyan/20 space-y-3">
               <Link 
