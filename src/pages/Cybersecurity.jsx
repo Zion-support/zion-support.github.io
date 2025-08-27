@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import SEOHead from "../components/SEOHead.jsx";
+=======
+import { SEO } from "../components/SEOHead";
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
 const Cybersecurity = () => {
     const securityServices = [
@@ -70,6 +74,10 @@ const Cybersecurity = () => {
     ];
     return (<div className="min-h-screen bg-background pt-20">
       <SEOHead title="Cybersecurity Solutions - Zion Tech Group" description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group." keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection" canonical="https://ziontechgroup.com/cybersecurity"/>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

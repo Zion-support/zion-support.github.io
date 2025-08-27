@@ -40,6 +40,10 @@ const benefits = [
 export default function AIComputerVisionPlatform() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEOHead title="Computer Vision Platform - Zion Tech Group" description="AI-powered computer vision platform solution that transforms your operations with intelligent automation and real-time insights." keywords="AI computer vision platform, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicomputervisionplatform/"/>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple/20"></div>

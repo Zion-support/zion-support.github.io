@@ -40,6 +40,10 @@ const benefits = [
 export default function AIBusinessIntelligenceElite() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEOHead title="Business Intelligence Elite - Zion Tech Group" description="AI-powered business intelligence elite solution that transforms your operations with intelligent automation and real-time insights." keywords="AI business intelligence elite, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aibusinessintelligenceelite/"/>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple/20"></div>

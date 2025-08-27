@@ -2,7 +2,11 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+<<<<<<< HEAD
 import SEOHead from "../components/SEOHead";
+=======
+import { SEO } from "../components/SEOHead"';
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 const markdown = `
 # Privacy Policy
 Your privacy is important to us. This policy explains how Zion Tech Group collects, uses, and protects your information. Additional details will be added in a future revision.

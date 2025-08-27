@@ -38,7 +38,11 @@ export default function Partners() {
       benefits: ['Research collaboration', 'Talent pipeline', 'Innovation programs']
     }
   ];
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
   const existingPartners = [
     {
       name: 'Microsoft',
@@ -83,7 +87,11 @@ export default function Partners() {
       year: '2022'
     }
   ];
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
   const benefits = [
     {
       icon: TrendingUp,
@@ -98,53 +106,73 @@ export default function Partners() {
     {
       icon: Award,
       title: 'Brand Recognition',
-      description: 'Leverage our established reputation in the tech industry'
+      description: 'Leverage our established brand and market presence'
     },
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Expand your business presence across multiple countries and regions'
+      icon: Building,
+      title: 'Resource Sharing',
+      description: 'Access shared resources, expertise, and infrastructure'
     }
   ];
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
+    <div className="min-h-screen bg-zion-slate-dark pt-24">
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Partner with Zion Tech Group
+            Strategic <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Partnerships</span>
           </h1>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Join our ecosystem of innovative partners and together we'll shape the future of technology
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Join forces with Zion Tech Group to create innovative solutions, expand your market reach, 
+            and drive technological advancement together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <button className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform">
-                Become a Partner
-              </button>
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
+            >
+              Become a Partner
             </Link>
-            <Link to="#partnership-types">
-              <button className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-zion-blue transition-colors">
-                Learn More
-              </button>
+            <Link
+              to="/about"
+              className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
+            >
+              Learn More
             </Link>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+=======
       
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
       {/* Partnership Types */}
-      <section id="partnership-types" className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Partnership Opportunities
-          </h2>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Partnership <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Opportunities</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Discover the different ways we can collaborate to create mutual value and drive innovation.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {partnershipTypes.map((type, index) => (
-              <div key={index} className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105">
+              <div
+                key={type.title}
+                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+              >
                 <div className="text-4xl mb-4">{type.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
-                <p className="text-zion-slate-light text-sm mb-4">{type.description}</p>
+                <p className="text-zion-slate-light mb-4">{type.description}</p>
                 <ul className="space-y-2">
                   {type.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-zion-slate-light text-sm">
@@ -158,6 +186,21 @@ export default function Partners() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Why <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Partner</span> With Us?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Experience the advantages of partnering with a forward-thinking technology company.
+            </p>
+          </div>
+
+=======
       
       {/* Benefits */}
       <section className="py-16 bg-zion-slate-dark">
@@ -165,54 +208,70 @@ export default function Partners() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Why Partner With Us?
           </h2>
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-zion-cyan" />
+              <div
+                key={benefit.title}
+                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                <h3 className="text-lg font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-zion-slate-light text-sm">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+=======
       
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
       {/* Existing Partners */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Our Trusted Partners
-          </h2>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Partners</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Join an elite network of technology leaders and innovators.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {existingPartners.map((partner, index) => (
-              <div key={index} className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300">
+              <div
+                key={partner.name}
+                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+              >
                 <div className="flex items-center space-x-4 mb-4">
-                  <img 
-                    src={partner.logo} 
+                  <img
+                    src={partner.logo}
                     alt={partner.name}
                     className="w-16 h-16 rounded-lg object-cover"
                   />
                   <div>
                     <h3 className="text-lg font-semibold text-white">{partner.name}</h3>
-                    <span className="text-sm text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded-full">
-                      {partner.category}
-                    </span>
+                    <p className="text-zion-cyan text-sm">{partner.category}</p>
                   </div>
                 </div>
-                <p className="text-zion-slate-light text-sm mb-3">{partner.description}</p>
+                <p className="text-zion-slate-light mb-4">{partner.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-zion-slate-light">Partner since {partner.year}</span>
-                  <button className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm">
-                    Learn More
-                  </button>
+                  <span className="text-zion-slate-light text-sm">Partner since {partner.year}</span>
+                  <CheckCircle className="w-5 h-5 text-zion-cyan" />
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+
+=======
       
       {/* Partnership Process */}
       <section className="py-16 bg-zion-slate-dark">
@@ -253,26 +312,29 @@ export default function Partners() {
         </div>
       </section>
       
+>>>>>>> f586d65b60879d2bb8f7439b01dc83f1e4614bf1
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Join Our Partner Network?
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-slate-dark to-zion-slate">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Partner</span> With Us?
           </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            Let's explore how we can work together to create innovative solutions and drive mutual success in the technology industry.
+          <p className="text-xl text-zion-slate-light mb-8">
+            Let's discuss how we can create value together and drive innovation in the technology sector.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <button className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform flex items-center space-x-2">
-                <span>Start Partnership Discussion</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Partnership Discussion
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link to="/about">
-              <button className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-zion-blue transition-colors">
-                Learn About Zion Tech
-              </button>
+            <Link
+              to="/about"
+              className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
+            >
+              Learn More About Us
             </Link>
           </div>
         </div>
