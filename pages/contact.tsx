@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import Head from 'next/head'
-import React from 'react'
-export default function Contact(){
-	return (
-		<main style={{padding:20,fontFamily:'sans-serif',lineHeight:1.6,maxWidth:800,margin:'0 auto'}}>
-			<Head>
-				<title>Contact | Zion Tech Group</title>
-				<meta name='description' content='Contact Zion Tech Group for Micro SaaS, IT, and AI services. Get in touch for a tailored solution.' />
-			</Head>
-			<h1>Contact</h1>
-			<p>We'd love to hear about your project. Reach us via any of the channels below.</p>
-			<ul style={{listStyle:'none',padding:0}}>
-				<li style={{margin:'8px 0'}}><strong>Mobile:</strong> <a href="tel:+13024640950" style={{color:'#2563eb'}}>+1 302 464 0950</a></li>
-				<li style={{margin:'8px 0'}}><strong>E‑mail:</strong> <a href="mailto:kleber@ziontechgroup.com" style={{color:'#2563eb'}}>kleber@ziontechgroup.com</a></li>
-				<li style={{margin:'8px 0'}}><strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709</li>
-				<li style={{margin:'8px 0'}}><strong>Website:</strong> <a href="https://ziontechgroup.com" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com</a></li>
-			</ul>
-			<p>Prefer a quick start? Tell us about your goals and timeline, and we'll propose a path forward within 1–2 business days.</p>
-			<p><a href="/services" style={{color:'#2563eb'}}>Explore our services</a></p>
-		</main>
-	)
-}
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
@@ -101,7 +77,7 @@ const Contact: NextPage = () => {
                     <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 text-lg">
                       +1 (302) 464-0950
                     </a>
-                    <p className="text-gray-300 text-sm">Available Monday - Friday, 9:00 AM - 6:00 PM EST</p>
+                    <p className="text-gray-300 text-sm">Available Monday-Friday, 9 AM - 6 PM EST</p>
                   </div>
                 </div>
 
@@ -116,7 +92,7 @@ const Contact: NextPage = () => {
                     <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-lg">
                       kleber@ziontechgroup.com
                     </a>
-                    <p className="text-gray-300 text-sm">We respond within 2-4 hours during business hours</p>
+                    <p className="text-gray-300 text-sm">We respond within 24 hours</p>
                   </div>
                 </div>
 
@@ -129,11 +105,9 @@ const Contact: NextPage = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
-                    <p className="text-gray-300 text-lg">
-                      364 E Main St STE 1008<br />
-                      Middletown, DE 19709<br />
-                      United States
-                    </p>
+                    <p className="text-white text-lg">364 E Main St STE 1008</p>
+                    <p className="text-white text-lg">Middletown, DE 19709</p>
+                    <p className="text-gray-300 text-sm">United States</p>
                   </div>
                 </div>
 
@@ -145,38 +119,10 @@ const Contact: NextPage = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Business Hours</h3>
-                    <p className="text-gray-300 text-lg">
-                      Monday - Friday: 9:00 AM - 6:00 PM EST<br />
-                      Saturday: 10:00 AM - 2:00 PM EST<br />
-                      Sunday: Closed
-                    </p>
+                    <p className="text-white text-lg">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                    <p className="text-white text-lg">Saturday: 10:00 AM - 2:00 PM EST</p>
+                    <p className="text-gray-300 text-sm">Sunday: Closed</p>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <span className="text-gray-300">Free initial consultation</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <span className="text-gray-300">Custom solution design</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <span className="text-gray-300">24/7 support for enterprise clients</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <span className="text-gray-300">Competitive pricing and flexible payment terms</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <span className="text-gray-300">Ongoing maintenance and support</span>
                 </div>
               </div>
             </div>
@@ -200,10 +146,10 @@ const Contact: NextPage = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your full name"
+                    placeholder="Enter your full name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-white font-semibold mb-2">
                     Email Address *
@@ -216,7 +162,7 @@ const Contact: NextPage = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
+                    placeholder="Enter your email address"
                   />
                 </div>
               </div>
@@ -233,10 +179,10 @@ const Contact: NextPage = () => {
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your company name"
+                    placeholder="Enter your company name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="phone" className="block text-white font-semibold mb-2">
                     Phone Number
@@ -248,7 +194,7 @@ const Contact: NextPage = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="Enter your phone number"
                   />
                 </div>
               </div>
@@ -347,4 +293,3 @@ const Contact: NextPage = () => {
 };
 
 export default Contact;
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
