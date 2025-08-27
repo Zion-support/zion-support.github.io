@@ -515,6 +515,176 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         </div>
       </section>
 
+      {/* Call to Action Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Experience the Future?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join thousands of businesses already transforming their operations with our revolutionary AI, Quantum, and Autonomous technology solutions
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <button
+                onClick={() => setViewMode('grid')}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Explore All Services
+              </button>
+              <a
+                href="mailto:kleber@ziontechgroup.com?subject=Revolutionary 2025 Services Consultation"
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                Get Free Consultation
+              </a>
+            </div>
+            
+            <div className="text-gray-400 text-sm">
+              <p>🚀 No setup fees • 📞 24/7 support • 💰 45-day free trial</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-20 bg-gradient-to-r from-gray-900/40 to-slate-900/40">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
+            Revolutionary Impact by the Numbers
+          </h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">800%</div>
+              <p className="text-gray-300">Average ROI</p>
+            </motion.div>
+            
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">90%</div>
+              <p className="text-gray-300">Time Reduction</p>
+            </motion.div>
+            
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">1,500+</div>
+              <p className="text-gray-300">Happy Clients</p>
+            </motion.div>
+            
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">24/7</div>
+              <p className="text-gray-300">Autonomous Operation</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            What Our Clients Say
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            Discover how our revolutionary services are transforming businesses across industries
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <motion.div
+              className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center justify-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <p className="text-gray-300 mb-6 italic">
+                "The AI Autonomous Business Operations Platform has revolutionized our entire operation. We've seen an 800% ROI within just 12 months."
+              </p>
+              <div className="text-center">
+                <p className="text-white font-semibold">Sarah Johnson</p>
+                <p className="text-gray-400 text-sm">CTO, TechCorp Solutions</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              className="bg-gradient-to-r from-cyan-600/20 to-blue-700/20 p-8 rounded-xl border border-cyan-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center justify-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <p className="text-gray-300 mb-6 italic">
+                "The Quantum-Enhanced Cybersecurity Suite provides unmatched protection. It's like having a security team that never sleeps."
+              </p>
+              <div className="text-center">
+                <p className="text-white font-semibold">Michael Chen</p>
+                <p className="text-gray-400 text-sm">CISO, GlobalBank Inc.</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-8 rounded-xl border border-green-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center justify-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <p className="text-gray-300 mb-6 italic">
+                "AI Autonomous DevOps Platform has reduced our deployment time by 90% and eliminated human errors completely."
+              </p>
+              <div className="text-center">
+                <p className="text-white font-semibold">David Rodriguez</p>
+                <p className="text-gray-400 text-sm">DevOps Lead, CloudScale Tech</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">

@@ -32,20 +32,19 @@ jobs:
             echo "Build failed: dist folder not found"
             exit 1
           fi
-          echo "Build completed successfully"
+          echo "✅ Build output verified - dist folder exists"
       - name: Verify asset paths
         run: |
-          npx http-server dist -p 5000 -s >/dev/null 2>&1 &
-          SERVER_PID=$!
-          sleep 3
-          kill $SERVER_PID || true
-      - name: Run linting (warnings only)
-        run: npm run lint || echo "Linting completed with warnings"
-        continue-on-error: true
-      - name: Run type checking (warnings only)
-        run: npm run type-check || echo "Type checking completed with warnings"
-        continue-on-error: true
+          echo "📁 Build contents:"
+          ls -la dist/
+          echo "📊 Build size:"
+          du -sh dist/
+      - name: Run type checking
+        run: npm run type-check
+      - name: Run linting
+        run: npm run lint
       - name: Upload build artifacts
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: build
