@@ -6,6 +6,7 @@ import { ChatAssistant } from './components/ChatAssistant';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { FloatingActionButton } from './components/ui/FloatingActionButton';
 
 // Lazy load pages with enhanced services
 const Home = React.lazy(() => import('./pages/Home'));
@@ -197,6 +198,7 @@ function App() {
         
         <Footer />
         <ChatAssistant />
+        <FloatingActionButton />
       </div>
     </Router>
   );
