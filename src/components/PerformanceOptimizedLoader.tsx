@@ -1,16 +1,19 @@
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
+
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
   fullScreen?: boolean;
 }
+
 export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({ 
   size = 'md', 
   color = 'primary', 
   text,
   fullScreen = false 
-}: LoaderProps) {
+}: LoadingSpinnerProps) => {
   const sizeClasses = {
     sm: 'w-6 h-6',
     md: 'w-12 h-12',
@@ -21,6 +24,9 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
     md: 'text-sm',
     lg: 'text-base'
   };
+
+  const showLogo = true; // Add this variable
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="relative">
@@ -56,6 +62,7 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
     </div>
   );
 });
+
 PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 // Skeleton loader for content
 export function SkeletonLoader({ 
