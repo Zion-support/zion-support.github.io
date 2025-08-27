@@ -121,6 +121,40 @@ export default function Services() {
 			{/* Services Grid */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					{/* Market References */}
+					<div className="mb-12 rounded-2xl border border-gray-200 bg-white p-6">
+						<h3 className="text-lg font-semibold text-gray-900 mb-3">Average Market Prices</h3>
+						<p className="text-sm text-gray-600 mb-4">Representative ranges for popular categories with public references:</p>
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+							<div>
+								<div className="font-medium text-gray-800 mb-1">AI Platforms</div>
+								<ul className="text-blue-700 list-disc list-inside">
+									<li><a className="underline" href="https://openai.com/api/pricing" target="_blank" rel="noreferrer">openai.com/api/pricing</a></li>
+									<li><a className="underline" href="https://www.anthropic.com/pricing" target="_blank" rel="noreferrer">anthropic.com/pricing</a></li>
+									<li><a className="underline" href="https://cloud.google.com/vertex-ai/pricing" target="_blank" rel="noreferrer">cloud.google.com/vertex-ai/pricing</a></li>
+								</ul>
+								<div className="text-gray-500 mt-1">SMB: $100–$2,000/mo+</div>
+							</div>
+							<div>
+								<div className="font-medium text-gray-800 mb-1">Security & Compliance</div>
+								<ul className="text-blue-700 list-disc list-inside">
+									<li><a className="underline" href="https://www.cloudflare.com/products/zero-trust/pricing/" target="_blank" rel="noreferrer">cloudflare.com/zero-trust/pricing</a></li>
+									<li><a className="underline" href="https://www.okta.com/pricing/" target="_blank" rel="noreferrer">okta.com/pricing</a></li>
+									<li><a className="underline" href="https://snyk.io/plans/" target="_blank" rel="noreferrer">snyk.io/plans</a></li>
+								</ul>
+								<div className="text-gray-500 mt-1">SMB: $200–$5,000/mo</div>
+							</div>
+							<div>
+								<div className="font-medium text-gray-800 mb-1">Vector & Search</div>
+								<ul className="text-blue-700 list-disc list-inside">
+									<li><a className="underline" href="https://www.pinecone.io/pricing/" target="_blank" rel="noreferrer">pinecone.io/pricing</a></li>
+									<li><a className="underline" href="https://weaviate.io/pricing" target="_blank" rel="noreferrer">weaviate.io/pricing</a></li>
+									<li><a className="underline" href="https://www.elastic.co/pricing/" target="_blank" rel="noreferrer">elastic.co/pricing</a></li>
+								</ul>
+								<div className="text-gray-500 mt-1">SMB: $50–$1,000/mo</div>
+							</div>
+						</div>
+					</div>
 					{/* Results Count */}
 					<div className="mb-8">
 						<p className="text-gray-600">
