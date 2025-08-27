@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React from 'react'
 import Link from 'next/link'
 import { Users, Target, Award, Globe, Zap, Shield, TrendingUp, CheckCircle } from 'lucide-react'
-import PageTransition from '../src/components/PageTransition'
 export default function About() {
 	const values = [
 		{
@@ -494,4 +492,4 @@ const About: NextPage = () => {
 };
 
 export default About;
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
+

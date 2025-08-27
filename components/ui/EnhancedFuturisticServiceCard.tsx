@@ -2,11 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Users, Globe, Cpu, Brain, Atom, Sparkles, Mail } from 'lucide-react';
 import Button from './Button';
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
 
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 interface EnhancedFuturisticServiceCardProps {
   service: {
     id: string;

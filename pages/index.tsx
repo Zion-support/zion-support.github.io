@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head'
 export default function Index() {
 	const title = 'Zion Tech Group — AI, Cloud, and Cybersecurity Solutions'
@@ -47,7 +46,7 @@ export default function Index() {
 								>
 									Get Started
 									<svg className="ml-2 h-4 w-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l8 8m0 0l-8 8m8-8H3" />
 									</svg>
 								</a>
 								<a
@@ -442,4 +441,4 @@ const Home: NextPage = () => {
 };
 
 export default Home;
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
+
