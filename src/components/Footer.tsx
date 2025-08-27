@@ -36,7 +36,12 @@ import {
   GraduationCap,
   BarChart3,
   Sparkles,
-  Award
+  Award,
+  Workflow,
+  Lock,
+  Star,
+  BookOpen,
+  MessageCircle
 } from 'lucide-react';
 
 export function Footer() {
@@ -57,7 +62,9 @@ export function Footer() {
         { name: 'Solutions', path: '/solutions', icon: Target },
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'Blog', path: '/blog', icon: Newspaper },
-        { name: 'Contact', path: '/contact', icon: Phone }
+        { name: 'Contact', path: '/contact', icon: Phone },
+        { name: 'Press', path: '/press', icon: Newspaper },
+        { name: 'Leadership', path: '/leadership', icon: Users },
       ]
     },
     {
@@ -71,7 +78,9 @@ export function Footer() {
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
         { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
         { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp }
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
+        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', icon: Workflow },
+        { name: 'AI Data Analytics', path: '/services/ai-data-analytics', icon: BarChart3 },
       ]
     },
     {
@@ -81,11 +90,12 @@ export function Footer() {
         { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
         { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
         { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Cpu },
-        { name: 'Space Technology', path: '/services/space-tech', icon: Rocket },
-        { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
         { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
+        { name: 'Blockchain Solutions', path: '/services/blockchain', icon: Lock },
         { name: 'Green IT Solutions', path: '/services/green-it', icon: Heart },
-        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Shield }
+        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Shield },
+        { name: 'Space Technology', path: '/services/space-tech', icon: Rocket },
       ]
     },
     {
@@ -99,6 +109,7 @@ export function Footer() {
         { name: 'IT Services', path: '/it-services', icon: Building },
         { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Zap },
         { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
         { name: 'All Services', path: '/services', icon: Zap }
       ]
     },
@@ -112,7 +123,24 @@ export function Footer() {
         { name: 'Services 2026', path: '/services-2026', icon: Target },
         { name: 'New Services 2025', path: '/new-services-showcase-2025', icon: TrendingUp },
         { name: 'Ultimate Services 2025', path: '/ultimate-services-showcase-2025', icon: Award },
-        { name: 'Comprehensive Services 2025', path: '/comprehensive-services-landing-2025', icon: Globe }
+        { name: 'Comprehensive Services 2025', path: '/comprehensive-services-landing-2025', icon: Globe },
+        { name: 'Revolutionary Services 2030', path: '/revolutionary-services-2030', icon: Rocket },
+        { name: 'Advanced Services 2026', path: '/advanced-innovative-services-showcase-2026', icon: Star },
+      ]
+    },
+    {
+      title: 'Support & Resources',
+      icon: HelpCircle,
+      links: [
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Documentation', path: '/documentation', icon: FileText },
+        { name: 'Training', path: '/training', icon: GraduationCap },
+        { name: 'Webinars', path: '/webinars', icon: Video },
+        { name: 'Case Studies', path: '/case-studies', icon: BookOpen },
+        { name: 'White Papers', path: '/white-papers', icon: FileText },
+        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Support', path: '/support', icon: MessageCircle },
+        { name: 'System Status', path: '/system-status', icon: Activity },
       ]
     }
   ];

@@ -35,7 +35,12 @@ import {
   Infinity,
   ArrowRight,
   DollarSign,
-  Workflow
+  Workflow,
+  Newspaper,
+  GraduationCap,
+  Video,
+  FileText,
+  Activity
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -65,6 +70,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Blog', href: '/blog', icon: BookOpen },
         { name: 'FAQ', href: '/faq', icon: HelpCircle },
         { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'Careers', href: '/careers', icon: Star },
+        { name: 'Partners', href: '/partners', icon: Users },
+        { name: 'Press', href: '/press', icon: Newspaper },
+        { name: 'Leadership', href: '/leadership', icon: Users },
       ]
     },
     {
@@ -73,6 +82,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: '2026 Services Overview', href: '/services2026', icon: Star, featured: true },
         { name: '2027 Services Overview', href: '/services2027', icon: Star, featured: true },
+        { name: '2025 Services Overview', href: '/comprehensive-services-showcase-2025', icon: Star, featured: true },
         { name: 'AI Solutions Hub', href: '/ai-solutions', icon: Brain, featured: true },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield },
@@ -98,6 +108,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Rocket },
         { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Settings },
         { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3 },
+        { name: 'AI HR Talent Platform', href: '/services/ai-hr-talent-platform', icon: Users },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
       ]
     },
     {
@@ -110,6 +123,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
         { name: 'IT Consulting', href: '/services/it-consulting', icon: Cpu },
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
+        { name: 'Infrastructure Services', href: '/it-services/infrastructure', icon: Server },
       ]
     },
     {
@@ -121,6 +136,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity', icon: Shield },
         { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },
         { name: 'Privacy & Compliance', href: '/privacy', icon: Shield },
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: Shield },
+        { name: 'Incident Response Platform', href: '/services/incident-response-platform', icon: Shield },
       ]
     },
     {
@@ -131,6 +148,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: BarChart3 },
         { name: 'Performance Analytics', href: '/services/performance-analytics', icon: TrendingUp },
         { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
+        { name: 'AI Analytics', href: '/services/ai-analytics', icon: BarChart3 },
+        { name: 'Analytics Dashboard', href: '/analytics', icon: BarChart3 },
       ]
     },
     {
@@ -142,6 +161,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
         { name: 'AI Autonomous Research', href: '/services/ai-autonomous-research-assistant', icon: Brain },
         { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom },
+        { name: 'Space Technology', href: '/services/space-tech', icon: Rocket },
+        { name: 'Quantum Technology', href: '/quantum-technology', icon: Atom },
+        { name: 'Green IT Solutions', href: '/services/green-it', icon: Globe },
       ]
     },
     {
@@ -160,6 +182,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Returns Management', href: '/services/returns-management', icon: ShoppingCart },
         { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle },
         { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle },
+        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },
+        { name: 'Mobile Survey', href: '/services/mobile-survey', icon: MessageCircle },
       ]
     },
     {
@@ -177,6 +201,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Green IT Solutions', href: '/services/green-it', icon: Globe },
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'Support', href: '/support', icon: MessageCircle },
+        { name: 'Training', href: '/training', icon: GraduationCap },
+        { name: 'Webinars', href: '/webinars', icon: Video },
+        { name: 'White Papers', href: '/white-papers', icon: FileText },
+        { name: 'Documentation', href: '/documentation', icon: FileText },
+        { name: 'System Status', href: '/system-status', icon: Activity },
       ]
     }
   ];

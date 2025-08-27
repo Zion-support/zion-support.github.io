@@ -144,6 +144,8 @@ const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/C
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
+const SpaceTechnology = React.lazy(() => import('./pages/services/space-tech'));
+const IncidentResponsePlatform = React.lazy(() => import('./pages/services/incident-response-platform'));
 
 // 2026 Services pages
 const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
@@ -294,6 +296,8 @@ function App() {
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
               <Route path="/services/ai" element={<AiSolutions />} />
+              <Route path="/services/space-tech" element={<SpaceTechnology />} />
+              <Route path="/services/incident-response-platform" element={<IncidentResponsePlatform />} />
               
               {/* 2026 Services routes */}
               <Route path="/services/quantum-computing" element={<QuantumComputing />} />
