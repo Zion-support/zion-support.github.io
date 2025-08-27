@@ -1,378 +1,208 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  Database, 
   Users, 
-  Globe, 
-  ArrowRight,
+  TrendingUp, 
+  Shield, 
+  Zap, 
   CheckCircle,
-  AlertTriangle,
-  FileText,
-  Calendar,
-  Mail,
-  Phone,
-  MapPin
+  BarChart3,
+  Globe,
+  Rocket,
+  Star,
+  Heart
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
-const Privacy: React.FC = () => {
-  const lastUpdated = 'January 15, 2025';
-  const companyInfo = {
-    name: 'Zion Tech Group',
-    address: '123 Innovation Drive, Tech Valley, CA 94000',
-    email: 'privacy@ziontechgroup.com',
-    phone: '+1 (555) 123-4567',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const dataCategories = [
+export default function Privacy() {
+  const features = [
     {
-      title: 'Personal Information',
-      description: 'Name, email address, phone number, company information',
-      examples: ['Contact forms', 'Account registration', 'Newsletter signup']
+      icon: Users,
+      title: "Professional Excellence",
+      description: "Connect with top-tier professionals and cutting-edge solutions."
     },
     {
-      title: 'Technical Data',
-      description: 'IP address, browser type, device information, usage analytics',
-      examples: ['Website analytics', 'Performance monitoring', 'Security logs']
+      icon: Shield,
+      title: "Trusted Platform",
+      description: "Secure, reliable, and transparent marketplace operations."
     },
     {
-      title: 'Business Information',
-      description: 'Company details, project requirements, service preferences',
-      examples: ['Service inquiries', 'Project consultations', 'Client communications']
+      icon: Zap,
+      title: "Fast & Efficient",
+      description: "Streamlined processes that save you time and money."
     },
     {
-      title: 'Communication Data',
-      description: 'Email correspondence, chat logs, support tickets',
-      examples: ['Customer support', 'Project updates', 'Marketing communications']
+      icon: Star,
+      title: "Quality Assured",
+      description: "Vetted professionals and verified service providers."
     }
   ];
 
-  const dataUses = [
-    {
-      purpose: 'Service Delivery',
-      description: 'To provide and maintain our technology services and solutions'
-    },
-    {
-      purpose: 'Communication',
-      description: 'To respond to inquiries and provide customer support'
-    },
-    {
-      purpose: 'Improvement',
-      description: 'To enhance our services and develop new features'
-    },
-    {
-      purpose: 'Security',
-      description: 'To protect against fraud and ensure system security'
-    },
-    {
-      purpose: 'Compliance',
-      description: 'To meet legal obligations and regulatory requirements'
-    },
-    {
-      purpose: 'Marketing',
-      description: 'To send relevant updates and promotional materials (with consent)'
-    }
-  ];
-
-  const dataSharing = [
-    {
-      category: 'Service Providers',
-      description: 'Trusted third-party vendors who assist in service delivery',
-      examples: ['Cloud hosting providers', 'Payment processors', 'Analytics services']
-    },
-    {
-      category: 'Legal Requirements',
-      description: 'When required by law or to protect our rights',
-      examples: ['Court orders', 'Government requests', 'Legal proceedings']
-    },
-    {
-      category: 'Business Transfers',
-      description: 'In connection with business mergers or acquisitions',
-      examples: ['Company sale', 'Asset transfer', 'Corporate restructuring']
-    },
-    {
-      category: 'Consent',
-      description: 'When you explicitly authorize us to share your information',
-      examples: ['Partner integrations', 'Case studies', 'Testimonials']
-    }
+  const benefits = [
+    "Access to top tech talent worldwide",
+    "Secure and transparent transactions",
+    "24/7 platform availability",
+    "Comprehensive service coverage",
+    "Competitive pricing and value"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Privacy
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {" "}Policy
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Your privacy is important to us. Learn how we collect, use, and protect your information.
-            </p>
-            <p className="text-lg text-gray-400">
-              Last updated: {lastUpdated}
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Data Collection Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Information We Collect
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We collect information to provide and improve our services, communicate with you, and ensure security.
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {dataCategories.map((category, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl border border-zinc-700"
-              >
-                <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
-                  <Database className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {category.title}
-                </h3>
-                <p className="text-gray-400 mb-4">
-                  {category.description}
-                </p>
-                <ul className="space-y-2">
-                  {category.examples.map((example, exampleIndex) => (
-                    <li key={exampleIndex} className="flex items-center text-gray-300 text-sm">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      {example}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Data Usage Section */}
-      <section className="py-20 bg-black/20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              How We Use Your Information
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We use your information responsibly and only for purposes that benefit you and our services.
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {dataUses.map((use, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl border border-zinc-700"
-              >
-                <div className="bg-gradient-to-r from-green-500 to-blue-500 p-4 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
-                  <CheckCircle className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {use.purpose}
-                </h3>
-                <p className="text-gray-400">
-                  {use.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Data Sharing Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Information Sharing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We do not sell your personal information. We only share information in specific, limited circumstances.
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {dataSharing.map((share, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-xl border border-zinc-700"
-              >
-                <div className="bg-gradient-to-r from-orange-500 to-red-500 p-4 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
-                  <Shield className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{share.category}</h3>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  {share.description}
-                </p>
-                <ul className="space-y-2">
-                  {share.examples.map((example, exampleIndex) => (
-                    <li key={exampleIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                      {example}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Data Security Section */}
-      <section className="py-20 bg-black/20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <>
+      <SEO 
+        title="Privacy Policy | Zion Tech Group"
+        description="How we protect and handle your personal information. Experience the future of technology services and solutions."
+        keywords="privacy policy, technology, services, solutions, innovation, Zion Tech Group"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20"></div>
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
             >
-              <div className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-xl border border-zinc-700">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-                  <Lock className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Data Security</h3>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  We implement industry-standard security measures to protect your personal information, 
-                  including encryption, access controls, and regular security audits.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                    End-to-end encryption for sensitive data
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                    Regular security assessments and penetration testing
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                    Employee training on data protection
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-xl border border-zinc-700">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Contact Us</h3>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  If you have questions about this privacy policy or want to exercise your data rights, 
-                  please contact our privacy team.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center text-gray-300">
-                    <Mail className="w-5 h-5 text-purple-400 mr-3" />
-                    <span>{companyInfo.email}</span>
-                  </div>
-                  <div className="flex items-center text-gray-300">
-                    <Phone className="w-5 h-5 text-purple-400 mr-3" />
-                    <span>{companyInfo.phone}</span>
-                  </div>
-                  <div className="flex items-center text-gray-300">
-                    <MapPin className="w-5 h-5 text-purple-400 mr-3" />
-                    <span>{companyInfo.address}</span>
-                  </div>
-                </div>
-                <Link 
-                  to="/contact"
-                  className="inline-flex items-center mt-6 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
-                >
-                  Contact Privacy Team
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Updates & Changes */}
-      <section className="py-20 bg-black/30">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Policy <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Updates</span>
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              We may update this privacy policy from time to time to reflect changes in our practices or applicable laws. 
-              We will notify you of any material changes by posting the new policy on our website.
-            </p>
-            <div className="bg-gradient-to-br from-zinc-800 to-zinc-900 border border-zinc-700 rounded-xl p-6">
-              <div className="flex items-center justify-center mb-4">
-                <AlertTriangle className="w-8 h-8 text-blue-400 mr-3" />
-                <span className="text-blue-400 font-semibold">Important Notice</span>
-              </div>
-              <p className="text-gray-300 text-center">
-                This privacy policy was last updated on <strong>{lastUpdated}</strong>. 
-                Please review it periodically to stay informed about how we protect your information.
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                {title}
+              </h1>
+              <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
+                How we protect and handle your personal information. Our platform connects you with the best technology 
+                solutions and professionals to drive your business forward.
               </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-};
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300"
+                >
+                  Get Started
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-zinc-400 text-zinc-300 rounded-lg font-semibold text-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-300"
+                >
+                  Learn More
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
-export default Privacy;
+        {/* Features Section */}
+        <section className="py-20 bg-zinc-800/50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Us
+              </h2>
+              <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+                Our platform delivers exceptional value and results for businesses 
+                of all sizes and industries.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700 hover:border-indigo-500/50 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-zinc-400 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Platform Benefits
+              </h2>
+              <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+                Experience the advantages of our comprehensive technology platform.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex items-start space-x-4"
+                >
+                  <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
+                  <p className="text-zinc-300 text-lg">{benefit}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-12 text-center border border-indigo-500/20"
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
+                Join thousands of businesses already using our platform to succeed.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300"
+                >
+                  Start Today
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-zinc-400 text-zinc-300 rounded-lg font-semibold text-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-300"
+                >
+                  Contact Us
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}

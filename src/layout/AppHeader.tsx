@@ -32,9 +32,20 @@ import {
   Settings,
   LogOut,
   HelpCircle,
-  BookOpen
+  BookOpen,
+  Building,
+  Package,
+  Info,
+  UserCheck,
+  Server,
+  Leaf,
+  LinkIcon,
+  Briefcase,
+  BarChart3 as BarChart3Icon
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
+import { ThemeToggle } from '../components/ThemeToggle';
+import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,6 +53,7 @@ export function AppHeader() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [searchFocused, setSearchFocused] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
   const location = useLocation();
   const { user, logout } = useAuth();
 
@@ -60,18 +72,30 @@ export function AppHeader() {
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = (e: React.FormEvent) => {
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
+  }, [location.pathname]);
+
+  const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // Navigate to search results
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+      setIsSearching(true);
+      try {
+        // Simulate search processing
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+      } finally {
+        setIsSearching(false);
+      }
     }
   };
 
@@ -100,7 +124,6 @@ export function AppHeader() {
       name: 'Micro SAAS',
       href: '/micro-saas',
       icon: Code,
-      color: 'from-zion-purple to-zion-cyan',
       dropdown: [
         { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: Brain, description: 'Smart analytics platform' },
         { name: 'Customer Experience', href: '/micro-saas/customer-experience', icon: Users, description: 'Enhanced customer engagement' },
@@ -116,7 +139,6 @@ export function AppHeader() {
       name: 'Marketplace',
       href: '/marketplace',
       icon: ShoppingCart,
-      color: 'from-zion-blue to-zion-purple',
       dropdown: [
         { name: 'Products', href: '/marketplace/products', icon: FileImage, description: 'Browse tech products' },
         { name: 'Services', href: '/services', icon: Code, description: 'Professional services' },
@@ -223,126 +245,145 @@ export function AppHeader() {
           {/* Search Bar */}
           <div className="hidden md:flex items-center flex-1 max-w-md mx-8">
             <form onSubmit={handleSearch} className="relative w-full">
-              <input
-                type="text"
-                placeholder="Search for services, talent, equipment..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onFocus={() => setSearchFocused(true)}
-                onBlur={() => setSearchFocused(false)}
-                className={`w-full bg-white/10 backdrop-blur-xl border rounded-xl px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 ${
-                  searchFocused ? 'border-zion-cyan/50 bg-white/15' : 'border-zion-cyan/20'
-                }`}
-              />
-              <button
-                type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-1.5 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
-              >
-                <Search className="h-4 w-4" />
-              </button>
+              <div className={`relative transition-all duration-300 ${
+                searchFocused ? 'ring-2 ring-zion-cyan/50' : ''
+              }`}>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
+                <input
+                  type="text"
+                  placeholder="Search services, solutions, talent..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => setSearchFocused(true)}
+                  onBlur={() => setSearchFocused(false)}
+                  className="w-full bg-zinc-800/50 border border-zinc-700/50 rounded-lg pl-10 pr-12 py-2 text-white placeholder-zinc-400 focus:outline-none focus:border-zion-cyan transition-all duration-300"
+                />
+                <button
+                  type="submit"
+                  disabled={isSearching}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-zion-cyan transition-colors disabled:opacity-50"
+                >
+                  {isSearching ? (
+                    <ZionLoadingSpinner size="sm" />
+                  ) : (
+                    <Search className="w-4 h-4" />
+                  )}
+                </button>
+              </div>
             </form>
           </div>
 
-          {/* User Menu & Actions */}
-          <div className="flex items-center space-x-4">
+          {/* Right side actions */}
+          <div className="flex items-center space-x-3">
+            {/* Theme Toggle */}
+            <ThemeToggle />
+            
             {/* Notifications */}
-            <button className="relative p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+            <button className="p-2 text-zinc-400 hover:text-zion-cyan transition-colors relative">
               <Bell className="h-5 w-5" />
-              <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
             </button>
 
-            {/* User Menu */}
-            {user ? (
-              <div className="dropdown-container relative">
-                <button
-                  onClick={() => toggleDropdown('user')}
-                  className="flex items-center space-x-2 text-white hover:text-zion-cyan transition-colors duration-300"
+            {/* User menu */}
+            <div className="relative dropdown-container">
+              <button
+                onClick={() => toggleDropdown('user')}
+                className="flex items-center p-2 text-zinc-400 hover:text-zion-cyan transition-colors rounded-lg hover:bg-zinc-800/50"
+              >
+                <User className="h-5 w-5" />
+              </button>
+              
+              {activeDropdown === 'user' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute top-full right-0 mt-2 w-48 bg-zinc-800/95 border border-zinc-700/50 rounded-xl shadow-2xl backdrop-blur-md z-50"
                 >
-                  <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
-                    <User className="h-4 w-4 text-white" />
-                  </div>
-                  <span className="hidden sm:block">{user.name}</span>
-                  <ChevronDown className={`h-3 w-3 transition-transform duration-300 ${
-                    activeDropdown === 'user' ? 'rotate-180' : ''
-                  }`} />
-                </button>
-
-                {/* User Dropdown */}
-                <AnimatePresence>
-                  {activeDropdown === 'user' && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full right-0 mt-2 w-56 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl shadow-2xl shadow-zion-cyan/10 overflow-hidden"
+                  <div className="p-2">
+                    <Link
+                      to="/profile"
+                      className="flex items-center px-3 py-2 text-zinc-300 hover:text-white hover:bg-zinc-700/50 rounded-lg text-sm transition-colors"
                     >
-                      <div className="p-2">
-                        <Link
-                          to="/dashboard"
-                          className="flex items-center space-x-3 p-3 rounded-xl hover:bg-zion-cyan/10 transition-all duration-300 text-white"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          <PanelLeft className="h-4 w-4" />
-                          <span>Dashboard</span>
-                        </Link>
-                        <Link
-                          to="/profile"
-                          className="flex items-center space-x-3 p-3 rounded-xl hover:bg-zion-cyan/10 transition-all duration-300 text-white"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          <User className="h-4 w-4" />
-                          <span>Profile</span>
-                        </Link>
-                        <Link
-                          to="/settings"
-                          className="flex items-center space-x-3 p-3 rounded-xl hover:bg-zion-cyan/10 transition-all duration-300 text-white"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          <Settings className="h-4 w-4" />
-                          <span>Settings</span>
-                        </Link>
-                        <hr className="border-zion-cyan/20 my-2" />
-                        <button
-                          onClick={() => {
-                            logout();
-                            setActiveDropdown(null);
-                          }}
-                          className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-red-500/10 transition-all duration-300 text-red-400"
-                        >
-                          <LogOut className="h-4 w-4" />
-                          <span>Logout</span>
-                        </button>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ) : (
-              <div className="flex items-center space-x-3">
-                <Link
-                  to="/login"
-                  className="text-white hover:text-zion-cyan transition-colors duration-300"
-                >
-                  Login
-                </Link>
-                <Link
-                  to="/signup"
-                  className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
-                >
-                  Get Started
-                </Link>
-              </div>
-            )}
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors duration-300"
-            >
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+                      <User className="w-4 h-4 mr-2" />
+                      Profile
+                    </Link>
+                    <Link
+                      to="/dashboard"
+                      className="flex items-center px-3 py-2 text-zinc-300 hover:text-white hover:bg-zinc-700/50 rounded-lg text-sm transition-colors"
+                    >
+                      <PanelLeft className="w-4 h-4 mr-2" />
+                      Dashboard
+                    </Link>
+                    <Link
+                      to="/settings"
+                      className="flex items-center px-3 py-2 text-zinc-300 hover:text-white hover:bg-zinc-700/50 rounded-lg text-sm transition-colors"
+                    >
+                      <Settings className="w-4 h-4 mr-2" />
+                      Settings
+                    </Link>
+                    <div className="border-t border-zinc-700/50 my-1"></div>
+                    <button className="w-full flex items-center px-3 py-2 text-zinc-300 hover:text-red-400 hover:bg-zinc-700/50 rounded-lg text-sm transition-colors">
+                      <LogOut className="w-4 h-4 mr-2" />
+                      Sign Out
+                    </button>
+                  </div>
+                </motion.div>
+              )}
+            </div>
           </div>
+
+          {/* User Dropdown */}
+          <AnimatePresence>
+            {activeDropdown === 'user' && (
+              <motion.div
+                initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                className="absolute top-full right-0 mt-2 w-56 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl shadow-2xl shadow-zion-cyan/10 overflow-hidden"
+              >
+                <div className="p-2">
+                  <Link
+                    to="/dashboard"
+                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-zion-cyan/10 transition-all duration-300 text-white"
+                    onClick={() => setActiveDropdown(null)}
+                  >
+                    <PanelLeft className="h-4 w-4" />
+                    <span>Dashboard</span>
+                  </Link>
+                  <Link
+                    to="/profile"
+                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-zion-cyan/10 transition-all duration-300 text-white"
+                    onClick={() => setActiveDropdown(null)}
+                  >
+                    <User className="h-4 w-4" />
+                    <span>Profile</span>
+                  </Link>
+                  <Link
+                    to="/settings"
+                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-zion-cyan/10 transition-all duration-300 text-white"
+                    onClick={() => setActiveDropdown(null)}
+                  >
+                    <Settings className="h-4 w-4" />
+                    <span>Settings</span>
+                  </Link>
+                  <hr className="border-zion-cyan/20 my-2" />
+                  <button
+                    onClick={() => {
+                      logout();
+                      setActiveDropdown(null);
+                    }}
+                    className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-red-500/10 transition-all duration-300 text-red-400"
+                  >
+                    <LogOut className="h-4 w-4" />
+                    <span>Logout</span>
+                  </button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
 

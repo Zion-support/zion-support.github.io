@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
-export default function Accessibility() {
+export default function Help() {
   const features = [
     {
       icon: Users,
@@ -49,9 +49,9 @@ export default function Accessibility() {
   return (
     <>
       <SEO 
-        title="Accessibility | Zion Tech Group"
-        description="Our commitment to making our platform accessible to everyone. Experience the future of technology services and solutions."
-        keywords="accessibility, technology, services, solutions, innovation, Zion Tech Group"
+        title="Help | Zion Tech Group"
+        description="Get support and assistance when you need it most. Experience the future of technology services and solutions."
+        keywords="help, technology, services, solutions, innovation, Zion Tech Group"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -69,7 +69,7 @@ export default function Accessibility() {
                 {title}
               </h1>
               <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-                Our commitment to making our platform accessible to everyone. Our platform connects you with the best technology 
+                Get support and assistance when you need it most. Our platform connects you with the best technology 
                 solutions and professionals to drive your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

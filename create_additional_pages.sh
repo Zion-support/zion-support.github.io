@@ -1,3 +1,29 @@
+#!/bin/bash
+
+# Create additional missing pages
+ADDITIONAL_PAGES=(
+    "Marketplace:Marketplace:Discover and connect with the best tech talent, services, and equipment"
+    "Talent:Talent:Find exceptional tech professionals for your projects and teams"
+    "Equipment:Equipment:High-performance technology infrastructure and hardware solutions"
+    "GreenIT:Green IT:Sustainable technology solutions for a better future"
+    "Blog:Blog:Insights, news, and updates from the world of technology"
+    "Partners:Partners:Strategic partnerships that drive innovation and growth"
+    "Careers:Careers:Join our team and shape the future of technology"
+    "FAQ:FAQ:Frequently asked questions about our services and platform"
+    "Help:Help:Get support and assistance when you need it most"
+    "Terms:Terms of Service:Our terms and conditions for using our platform"
+    "Privacy:Privacy Policy:How we protect and handle your personal information"
+    "Security:Security:Our commitment to keeping your data safe and secure"
+    "Status:System Status:Real-time status of our platform and services"
+    "Sitemap:Sitemap:Complete overview of our website structure and pages"
+    "Cookies:Cookies:Information about how we use cookies and tracking"
+    "Accessibility:Accessibility:Our commitment to making our platform accessible to everyone"
+)
+
+for page in "${ADDITIONAL_PAGES[@]}"; do
+    IFS=':' read -r filename title description <<< "$page"
+    
+    cat > "src/pages/${filename}.tsx" << EOF
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -14,7 +40,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
-export default function Accessibility() {
+export default function ${filename}() {
   const features = [
     {
       icon: Users,
@@ -49,9 +75,9 @@ export default function Accessibility() {
   return (
     <>
       <SEO 
-        title="Accessibility | Zion Tech Group"
-        description="Our commitment to making our platform accessible to everyone. Experience the future of technology services and solutions."
-        keywords="accessibility, technology, services, solutions, innovation, Zion Tech Group"
+        title="${title} | Zion Tech Group"
+        description="${description}. Experience the future of technology services and solutions."
+        keywords="${title,,}, technology, services, solutions, innovation, Zion Tech Group"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -69,7 +95,7 @@ export default function Accessibility() {
                 {title}
               </h1>
               <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-                Our commitment to making our platform accessible to everyone. Our platform connects you with the best technology 
+                ${description}. Our platform connects you with the best technology 
                 solutions and professionals to drive your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -206,3 +232,9 @@ export default function Accessibility() {
     </>
   );
 }
+EOF
+
+    echo "Created ${filename}.tsx"
+done
+
+echo "All additional pages created successfully!"

@@ -44,6 +44,60 @@ const ConsultingServices = React.lazy(() => import('./pages/services/ConsultingS
 const ITOnsiteServices = React.lazy(() => import('./pages/services/ITOnsiteServices'));
 const FiveGSolutions = React.lazy(() => import('./pages/services/FiveGNetworkOptimization'));
 
+// AI Services Pages
+const AICustomerSuccessAutomation = React.lazy(() => import('./pages/services/ai/AICustomerSuccessAutomation.tsx'));
+const AIContentMarketingAutomation = React.lazy(() => import('./pages/services/ai/AIContentMarketingAutomation.tsx'));
+const AIConsciousnessEvolution = React.lazy(() => import('./pages/services/ai/AIConsciousnessEvolution.tsx'));
+const AIAutonomousEcosystem = React.lazy(() => import('./pages/services/ai/AIAutonomousEcosystem.tsx'));
+const AIEthicsGovernance = React.lazy(() => import('./pages/services/ai/AIEthicsGovernance.tsx'));
+const AIAutonomousBusinessProcessAutomation = React.lazy(() => import('./pages/services/ai/AIAutonomousBusinessProcessAutomation.tsx'));
+const AICustomerIntelligencePlatform = React.lazy(() => import('./pages/services/ai/AICustomerIntelligencePlatform.tsx'));
+const AIFinancialFraudDetection = React.lazy(() => import('./pages/services/ai/AIFinancialFraudDetection.tsx'));
+const AutonomousVehicleAI = React.lazy(() => import('./pages/services/ai/AutonomousVehicleAI.tsx'));
+
+// Quantum Services Pages
+const QuantumEncryptionGateway = React.lazy(() => import('./pages/services/quantum/QuantumEncryptionGateway.tsx'));
+const QuantumThreatDetection = React.lazy(() => import('./pages/services/quantum/QuantumThreatDetection.tsx'));
+const QuantumIdentityVerification = React.lazy(() => import('./pages/services/quantum/QuantumIdentityVerification.tsx'));
+const QuantumComplianceAutomation = React.lazy(() => import('./pages/services/quantum/QuantumComplianceAutomation.tsx'));
+const QuantumNetworkSecurity = React.lazy(() => import('./pages/services/quantum/QuantumNetworkSecurity.tsx'));
+const QuantumNetworking = React.lazy(() => import('./pages/services/quantum/QuantumNetworking.tsx'));
+const QuantumDataCenter = React.lazy(() => import('./pages/services/quantum/QuantumDataCenter.tsx'));
+const QuantumMaterialsDiscovery = React.lazy(() => import('./pages/services/quantum/QuantumMaterialsDiscovery.tsx'));
+const QuantumInternetSecurity = React.lazy(() => import('./pages/services/quantum/QuantumInternetSecurity.tsx'));
+
+// Blockchain & Web3 Services Pages
+const BlockchainEnterprisePlatform = React.lazy(() => import('./pages/services/blockchain/BlockchainEnterprisePlatform.tsx'));
+
+// Autonomous IT Services Pages
+const AutonomousITOperations = React.lazy(() => import('./pages/services/autonomous/AutonomousITOperations.tsx'));
+
+// Additional Service Pages
+const Marketplace = React.lazy(() => import('./pages/Marketplace.tsx'));
+const Talent = React.lazy(() => import('./pages/Talent.tsx'));
+const Equipment = React.lazy(() => import('./pages/Equipment.tsx'));
+const Partners = React.lazy(() => import('./pages/Partners.tsx'));
+const Help = React.lazy(() => import('./pages/Help.tsx'));
+const Security = React.lazy(() => import('./pages/Security.tsx'));
+const Status = React.lazy(() => import('./pages/Status.tsx'));
+const Cookies = React.lazy(() => import('./pages/Cookies.tsx'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility.tsx'));
+
+// Enhanced loading spinner with accessibility
+const LoadingSpinner = () => (
+  <div 
+    className="min-h-screen bg-futuristic flex items-center justify-center"
+    role="status"
+    aria-label="Loading page content"
+  >
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-zion-cyan text-lg">Loading...</p>
+      <div className="sr-only">Loading page content, please wait...</div>
+    </div>
+  </div>
+);
+
 // Micro SAAS pages
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const CustomerExperience = React.lazy(() => import('./pages/services/AICustomerServiceAutomation'));
@@ -103,14 +157,8 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/careers" element={<Careers />} />
-              <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/talent" element={<Talent />} />
-              <Route path="/equipment" element={<Equipment />} />
-              <Route path="/green-it" element={<GreenIT />} />
-              <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
-              <Route path="/help" element={<HelpCenter />} />
-              <Route path="/terms" element={<Terms />} />
               <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
               <Route path="/sitemap" element={<Sitemap />} />
               
               {/* Service Routes */}
@@ -134,6 +182,52 @@ function App() {
               <Route path="/services/supply-chain" element={<SupplyChain />} />
               <Route path="/services/content-creation" element={<ContentCreation />} />
               <Route path="/services/hr-platform" element={<HRPlatform />} />
+              
+              {/* AI Services Routes */}
+              <Route path="/ai-customer-success-automation" element={<AICustomerSuccessAutomation />} />
+              <Route path="/ai-content-marketing-automation" element={<AIContentMarketingAutomation />} />
+              <Route path="/ai-consciousness-evolution" element={<AIConsciousnessEvolution />} />
+              <Route path="/ai-autonomous-ecosystem" element={<AIAutonomousEcosystem />} />
+              <Route path="/ai-ethics-governance" element={<AIEthicsGovernance />} />
+              <Route path="/ai-autonomous-business-process-automation" element={<AIAutonomousBusinessProcessAutomation />} />
+              <Route path="/ai-customer-intelligence-platform" element={<AICustomerIntelligencePlatform />} />
+              <Route path="/ai-financial-fraud-detection" element={<AIFinancialFraudDetection />} />
+              <Route path="/autonomous-vehicle-ai" element={<AutonomousVehicleAI />} />
+              
+              {/* Quantum Services Routes */}
+              <Route path="/quantum-encryption-gateway" element={<QuantumEncryptionGateway />} />
+              <Route path="/quantum-threat-detection" element={<QuantumThreatDetection />} />
+              <Route path="/quantum-identity-verification" element={<QuantumIdentityVerification />} />
+              <Route path="/quantum-compliance-automation" element={<QuantumComplianceAutomation />} />
+              <Route path="/quantum-network-security" element={<QuantumNetworkSecurity />} />
+              <Route path="/quantum-networking" element={<QuantumNetworking />} />
+              <Route path="/quantum-data-center" element={<QuantumDataCenter />} />
+              <Route path="/quantum-materials-discovery" element={<QuantumMaterialsDiscovery />} />
+              <Route path="/quantum-internet-security" element={<QuantumInternetSecurity />} />
+              
+              {/* Blockchain & Web3 Services Routes */}
+              <Route path="/blockchain-enterprise-platform" element={<BlockchainEnterprisePlatform />} />
+              
+              {/* Autonomous IT Services Routes */}
+              <Route path="/autonomous-it-operations" element={<AutonomousITOperations />} />
+              
+              {/* Additional Service Routes */}
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/talent" element={<Talent />} />
+              <Route path="/equipment" element={<Equipment />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/security" element={<Security />} />
+              <Route path="/status" element={<Status />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/accessibility" element={<Accessibility />} />
               
               {/* Catch-all route for 404 */}
               <Route path="*" element={<div className="text-center py-20"><h1>Page Not Found</h1></div>} />
