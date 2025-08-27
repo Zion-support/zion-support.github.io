@@ -1,9 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { FuturisticNavigation } from './components/FuturisticNavigation';
-import { FuturisticFooter } from './components/FuturisticFooter';
-import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
-import { ChatAssistant } from './components/ChatAssistant';
+import { AppHeader } from './layout/AppHeader';
+import { Footer } from './components/Footer';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -32,9 +30,10 @@ const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Comprehen
 const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
 const ComprehensiveServicesOverview = React.lazy(() => import('./pages/ComprehensiveServicesOverview'));
 const ComprehensivePricingGuide2027New = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
     <div className="relative">
       <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
       <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
@@ -51,12 +50,9 @@ const EnhancedLoadingSpinner = () => (
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
-        {/* Futuristic Animated Background */}
-        <FuturisticAnimatedBackground />
-        
+      <div className="min-h-screen futuristic-bg relative">
         {/* Navigation */}
-        <FuturisticNavigation />
+        <AppHeader />
         
         <main className="flex-1 relative z-10">
           <Suspense fallback={<EnhancedLoadingSpinner />}>
@@ -112,10 +108,7 @@ function App() {
         </main>
         
         {/* Footer */}
-        <FuturisticFooter />
-        
-        {/* Chat Assistant */}
-        <ChatAssistant />
+        <Footer />
       </div>
     </Router>
   );
