@@ -68,6 +68,7 @@ const LoginPage = React.lazy(() => import('./pages/Login'));
 const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
 const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
+const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
 
 // Sitemap-aligned pages
 const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
@@ -114,6 +115,14 @@ const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AI
 const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
+
+// New innovative AI services
+const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIContentMarketingSuite = React.lazy(() => import('./pages/services/AIContentMarketingSuite'));
+const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
+const AICybersecurityPlatform = React.lazy(() => import('./pages/services/AICybersecurityPlatform'));
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthcarePlatform'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 
@@ -259,6 +268,14 @@ function App() {
               <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
               <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
               
+              {/* New innovative AI services */}
+              <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
+              <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+              <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
+              <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+              
               {/* New 2025 service routes */}
               <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
               <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
@@ -268,6 +285,10 @@ function App() {
               <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
               <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
               <Route path="/pricing-2026" element={<ComprehensivePricing2026 />} />
+              
+              {/* 2028 Pricing */}
+              <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
+              <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
               
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
