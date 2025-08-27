@@ -92,6 +92,16 @@ const AIFinancialAnalytics = lazy(() => import('./pages/services/AIFinancialAnal
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
 
+// Additional innovative AI services
+const AICodeReviewSecurityScanner = lazy(() => import('./pages/services/AICodeReviewSecurityScanner'));
+const AIDevOpsAutomationPlatform = lazy(() => import('./pages/services/AIDevOpsAutomationPlatform'));
+const AIBusinessIntelligenceAnalytics = lazy(() => import('./pages/services/AIBusinessIntelligenceAnalytics'));
+const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustomerExperienceSupport'));
+const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
+
+// 2029 Comprehensive Services Showcase
+const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
+
 // 2025 New Innovative Services
 const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
 const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
@@ -389,7 +399,21 @@ function App() {
                     <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
                     
                     {/* 2025 New Innovative Service Routes */}
+                    <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
+                    <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
+                    <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
+                    <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
                     <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
+                    
+                    {/* Additional innovative AI service routes */}
+                    <Route path="/services/ai-code-review-security-scanner" element={<AICodeReviewSecurityScanner />} />
+                    <Route path="/services/ai-devops-automation-platform" element={<AIDevOpsAutomationPlatform />} />
+                    <Route path="/services/ai-business-intelligence-analytics" element={<AIBusinessIntelligenceAnalytics />} />
+                    <Route path="/services/ai-customer-experience-support" element={<AICustomerExperienceSupport />} />
+                    <Route path="/services/ai-marketing-automation-personalization" element={<AIMarketingAutomationPersonalization />} />
+                    
+                    {/* 2029 Services Showcase */}
+                    <Route path="/comprehensive-services-showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
                     
                     {/* Additional Pages */}
                     <Route path="/dashboard" element={<Dashboard />} />
