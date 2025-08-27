@@ -40,6 +40,7 @@ import {
 } from 'lucide-react';
 import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
 import ComprehensiveServicesShowcase2025 from '../components/ComprehensiveServicesShowcase2025';
+import { PerformanceMonitor } from '../components/PerformanceMonitor';
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -724,6 +725,9 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+
+        {/* Performance Monitor */}
+        <PerformanceMonitor showDetails={false} />
       </div>
     </>
   );
