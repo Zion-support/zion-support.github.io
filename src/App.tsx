@@ -1,12 +1,14 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
+import { AppLoadingSpinner } from './components/ui/LoadingSpinner.tsx';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { PWAUpdater } from './components/PWAUpdater';
+import { Accessibility } from './components/Accessibility';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -128,10 +130,14 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
+        {/* Skip to content link for accessibility */}
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <AppHeader />
         
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
+        <main id="main-content" className="flex-1">
+          <Suspense fallback={<AppLoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home2026" element={<Home2026 />} />
@@ -223,6 +229,7 @@ function App() {
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
+        <PWAUpdater />
       </div>
     </ErrorBoundary>
   );
