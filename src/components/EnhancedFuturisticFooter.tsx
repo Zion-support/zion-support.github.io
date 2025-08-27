@@ -23,7 +23,6 @@ import {
   Sparkles,
   Flame,
   Thunder,
-  Lightning,
   Sun,
   Moon,
   Planet,
@@ -310,7 +309,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         <Rocket className="w-8 h-8 text-zion-purple animate-pulse" />
       </div>
       <div className="absolute bottom-20 left-20 opacity-20">
-        <Atom className="w-8 h-8 text-zion-cyan animate-spin" />
+        <Brain className="w-8 h-8 text-zion-cyan animate-spin" />
       </div>
       <div className="absolute bottom-10 right-10 opacity-20">
         <Shield className="w-8 h-8 text-zion-purple animate-bounce delay-1000" />

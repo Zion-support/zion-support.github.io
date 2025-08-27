@@ -40,6 +40,10 @@ export function AppHeader() {
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
+    { name: 'Products', href: '/products', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'Case Studies', href: '/case-studies', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
@@ -72,6 +76,20 @@ export function AppHeader() {
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
           : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
       }`}>
+        {/* Top contact bar */}
+        <div className="hidden md:block border-b border-slate-700/40 bg-slate-900/60">
+          <div className="container-responsive py-2 flex items-center justify-between text-xs text-gray-300">
+            <div className="flex items-center gap-4">
+              <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a>
+              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a>
+              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">ziontechgroup.com</a>
+            </div>
+            <div className="hidden md:flex items-center gap-3">
+              <Link to="/request-quote" className="text-cyan-400 hover:text-cyan-300">Request Quote</Link>
+              <Link to="/contact" className="text-cyan-400 hover:text-cyan-300">Contact</Link>
+            </div>
+          </div>
+        </div>
         <div className="container-responsive">
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}

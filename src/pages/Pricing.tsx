@@ -1,3 +1,57 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+export default function Pricing() {
+  return (
+    <div className="min-h-screen bg-futuristic text-white">
+      <div className="container-responsive py-20">
+        <h1 className="heading-responsive text-gradient mb-4">Simple, transparent pricing</h1>
+        <p className="text-responsive text-gray-300 max-w-2xl">Choose a plan that fits. Annual billing saves 20%.</p>
+
+        <div className="grid-responsive mt-10">
+          <div className="card-futuristic">
+            <h3 className="text-xl font-semibold">Starter</h3>
+            <div className="text-4xl font-bold mt-2">$99<span className="text-base text-gray-400">/mo</span></div>
+            <ul className="mt-4 text-gray-300 space-y-2">
+              <li>AI analytics dashboard</li>
+              <li>Basic cloud infrastructure</li>
+              <li>Email support</li>
+            </ul>
+            <Link to="/contact" className="btn-futuristic mt-6 inline-block">Get Started</Link>
+          </div>
+          <div className="card-futuristic">
+            <h3 className="text-xl font-semibold">Professional</h3>
+            <div className="text-4xl font-bold mt-2">$299<span className="text-base text-gray-400">/mo</span></div>
+            <ul className="mt-4 text-gray-300 space-y-2">
+              <li>Advanced AI decision engine</li>
+              <li>Priority support</li>
+              <li>Enhanced security & compliance</li>
+            </ul>
+            <Link to="/contact" className="btn-futuristic mt-6 inline-block">Start Free Trial</Link>
+          </div>
+          <div className="card-futuristic">
+            <h3 className="text-xl font-semibold">Enterprise</h3>
+            <div className="text-4xl font-bold mt-2">Custom</div>
+            <ul className="mt-4 text-gray-300 space-y-2">
+              <li>Custom AI solutions</li>
+              <li>24/7 dedicated support</li>
+              <li>On-premise options</li>
+            </ul>
+            <Link to="/contact" className="btn-futuristic mt-6 inline-block">Contact Sales</Link>
+          </div>
+        </div>
+
+        <div className="mt-12 text-sm text-gray-400">
+          Market references: 
+          <a className="underline ml-2" href="https://openai.com/api/pricing" target="_blank" rel="noreferrer">OpenAI</a>,
+          <a className="underline ml-2" href="https://www.cloudflare.com/products/zero-trust/pricing/" target="_blank" rel="noreferrer">Cloudflare Zero Trust</a>,
+          <a className="underline ml-2" href="https://www.pinecone.io/pricing/" target="_blank" rel="noreferrer">Pinecone</a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 import { Check, Zap, Shield, Cloud, Brain, Users, Globe, ArrowRight, Phone, Mail } from 'lucide-react';
 
 export default function Pricing() {
