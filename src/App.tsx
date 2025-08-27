@@ -1,30 +1,29 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import { EnhancedFuturisticNavigation } from './components/EnhancedFuturisticNavigation';
+import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
+import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { ChatAssistant } from './components/ChatAssistant';
-import LoadingSpinner from './components/ui/LoadingSpinner';
+import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import SEO from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
-// Lazy load pages with enhanced services
+// Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const Solutions = React.lazy(() => import('./pages/Solutions'));
-const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
-const News = React.lazy(() => import('./pages/News'));
+const Services = React.lazy(() => import('./pages/Services'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
-const SearchPage = React.lazy(() => import('./pages/SearchPage'));
-const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const Login = React.lazy(() => import('./pages/Login'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
 // Enhanced services pages
 const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.tsx'));
@@ -45,19 +44,6 @@ const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastruct
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 
 // Simple placeholder pages for missing ones
-const FAQ = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="FAQ - Zion Tech Group"
-      description="Frequently asked questions about our AI-powered technology solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">FAQ</h1>
-      <p className="text-xl text-gray-300">Frequently asked questions</p>
-    </div>
-  </div>
-);
-
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
     <SEO 
@@ -67,58 +53,6 @@ const Careers = () => (
     <div className="text-center text-white">
       <h1 className="text-4xl font-bold mb-4">Careers</h1>
       <p className="text-xl text-gray-300">Join our team</p>
-    </div>
-  </div>
-);
-
-const Privacy = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Privacy Policy - Zion Tech Group"
-      description="Learn how Zion Tech Group protects your data and maintains privacy in our technology solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
-      <p className="text-xl text-gray-300">How we protect your data</p>
-    </div>
-  </div>
-);
-
-const Terms = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Terms of Service - Zion Tech Group"
-      description="Terms and conditions for using Zion Tech Group's AI-powered technology solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
-      <p className="text-xl text-gray-300">Terms and conditions</p>
-    </div>
-  </div>
-);
-
-const Sitemap = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Sitemap - Zion Tech Group"
-      description="Complete sitemap of Zion Tech Group's website and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
-      <p className="text-xl text-gray-300">Site navigation guide</p>
-    </div>
-  </div>
-);
-
-const Signup = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Sign Up - Zion Tech Group"
-      description="Create your account and start using Zion Tech Group's AI-powered technology solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Sign Up</h1>
-      <p className="text-xl text-gray-300">Create your account</p>
     </div>
   </div>
 );
@@ -140,12 +74,16 @@ function App() {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-futuristic">
-          <SEO />
-          <AppHeader />
+        <div className="App">
+          {/* Animated Background */}
+          <FuturisticAnimatedBackground />
           
-          <main className="flex-1">
-            <Suspense fallback={<LoadingSpinner />}>
+          {/* Enhanced Futuristic Navigation */}
+          <EnhancedFuturisticNavigation />
+          
+          {/* Main Content */}
+          <main className="pt-24">
+            <Suspense fallback={<LoadingSpinner size="xl" />}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -156,19 +94,11 @@ function App() {
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
-                <Route path="/sitemap" element={<Sitemap />} />
-                <Route path="/green-it" element={<GreenIT />} />
-                <Route path="/partners" element={<PartnersPage />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/search" element={<SearchPage />} />
-                <Route path="/help-center" element={<HelpCenter />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/solutions" element={<Solutions />} />
-                <Route path="/research-development" element={<ResearchDevelopment />} />
-                <Route path="/news" element={<News />} />
+                <Route path="/cookies" element={<Cookies />} />
+                <Route path="/services" element={<Services />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
                 
                 {/* Enhanced Services Routes */}
@@ -195,7 +125,10 @@ function App() {
             </Suspense>
           </main>
           
-          <Footer />
+          {/* Enhanced Futuristic Footer */}
+          <EnhancedFuturisticFooter />
+          
+          {/* Chat Assistant */}
           <ChatAssistant />
           <PerformanceOptimizer />
         </div>
