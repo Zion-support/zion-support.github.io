@@ -1,7 +1,4 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
 import { 
   Settings, 
@@ -18,7 +15,6 @@ import {
   Smartphone,
   TrendingUp as Activity
 } from "lucide-react";
-import { TrustedBySection } from "../TrustedBySection";
 
 const iotServices = [
   {
@@ -213,15 +209,15 @@ export default function IoTServicesPage() {
               advanced analytics, we deliver comprehensive IoT solutions that drive innovation and efficiency.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/request-quote">
-                <Button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3">
+              <Link to="/request-quote">
+                <button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3 rounded-lg">
                   Start IoT Project
-                </Button>
+                </button>
               </Link>
-              <Link href="/contact">
-                <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+              <Link to="/contact">
+                <button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3 rounded-lg">
                   Schedule Demo
-                </Button>
+                </button>
               </Link>
             </div>
           </div>
@@ -289,7 +285,7 @@ export default function IoTServicesPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {iotServices.map((service) => (
-              <Card key={service.id} className="overflow-hidden hover:shadow-lg transition-all duration-300">
+              <div key={service.id} className="overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="aspect-video overflow-hidden">
                   <img 
                     src={service.image} 
@@ -297,28 +293,28 @@ export default function IoTServicesPage() {
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <CardHeader className="pb-3">
+                <div className="pb-3">
                   <div className="flex justify-between items-start mb-2">
-                    <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple">
+                    <span className="bg-zion-purple/20 text-zion-purple px-3 py-1 rounded-full text-sm font-medium">
                       {service.category}
-                    </Badge>
+                    </span>
                     {service.badge && (
-                      <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
+                      <span className="border-zion-cyan text-zion-cyan px-3 py-1 rounded-full text-sm font-medium">
                         {service.badge}
-                      </Badge>
+                      </span>
                     )}
                   </div>
                   <div className="flex items-center gap-3 mb-3">
                     <div className="p-2 bg-zion-blue/10 rounded-lg">
                       {service.icon}
                     </div>
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                    <h3 className="text-xl">{service.title}</h3>
                   </div>
-                  <CardDescription className="text-base">
+                  <p className="text-base">
                     {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pb-4">
+                  </p>
+                </div>
+                <div className="pb-4">
                   <div className="mb-4">
                     <span className="text-3xl font-bold text-zion-purple">
                       {service.currency}{service.price}
@@ -333,16 +329,16 @@ export default function IoTServicesPage() {
                       </li>
                     ))}
                   </ul>
-                </CardContent>
-                <CardContent className="pt-0">
-                  <Button asChild className="w-full">
-                    <Link href={service.link}>
+                </div>
+                <div className="pt-0">
+                  <Link to={service.link}>
+                    <button className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3 rounded-lg">
                       Learn More
                       <ArrowRight className="h-4 w-4 ml-2" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
+                    </button>
+                  </Link>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -359,15 +355,15 @@ export default function IoTServicesPage() {
               Join the IoT revolution and transform your business with connected technology
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/request-quote">
-                <Button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3">
+              <Link to="/request-quote">
+                <button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3 rounded-lg">
                   Get IoT Quote
-                </Button>
+                </button>
               </Link>
-              <Link href="/contact">
-                <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+              <Link to="/contact">
+                <button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3 rounded-lg">
                   Contact IoT Experts
-                </Button>
+                </button>
               </Link>
             </div>
             <div className="mt-8 text-zion-slate-light">
@@ -379,7 +375,23 @@ export default function IoTServicesPage() {
         </div>
       </section>
 
-      <TrustedBySection />
+      {/* Trusted By Section */}
+      <section className="py-16 bg-zion-blue-dark">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Trusted by Leading Companies</h2>
+          <p className="text-zion-slate-light text-lg mb-8">
+            Our solutions are trusted by global enterprises and innovative startups.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+            <img src="/assets/logos/logo1.png" alt="Company 1" className="w-full h-12 object-contain" />
+            <img src="/assets/logos/logo2.png" alt="Company 2" className="w-full h-12 object-contain" />
+            <img src="/assets/logos/logo3.png" alt="Company 3" className="w-full h-12 object-contain" />
+            <img src="/assets/logos/logo4.png" alt="Company 4" className="w-full h-12 object-contain" />
+            <img src="/assets/logos/logo5.png" alt="Company 5" className="w-full h-12 object-contain" />
+            <img src="/assets/logos/logo6.png" alt="Company 6" className="w-full h-12 object-contain" />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
