@@ -272,7 +272,6 @@ export default function ComprehensiveServicesOverview2027() {
       </div>
     </motion.div>
   );
-const ComprehensiveServicesOverview2027 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 

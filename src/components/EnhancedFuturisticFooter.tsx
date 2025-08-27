@@ -19,6 +19,7 @@ import {
   Brain,
   Rocket,
   Heart,
+  Atom,
   Crown,
   Sparkles,
   Flame,
@@ -61,60 +62,33 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'AI & Consciousness',
+      title: 'Explore',
       links: [
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator' },
-        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion' },
-        { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems' },
-        { name: 'Neural Network Architect', href: '/ai-services/neural-architect' },
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics' },
-        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics' }
+        { name: 'Services', href: '/services' },
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' }
       ]
     },
     {
-      title: 'Micro SAAS',
+      title: 'Company',
       links: [
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
-        { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience' },
-        { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing' },
-        { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain' },
-        { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity' },
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' }
-      ]
-    },
-    {
-      title: 'IT Services',
-      links: [
-        { name: 'Infrastructure Management', href: '/it-services/infrastructure' },
-        { name: 'Digital Transformation', href: '/it-services/digital-transformation' },
-        { name: 'IT Consulting', href: '/it-services/consulting' },
-        { name: 'Onsite Support', href: '/it-services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/it-services/green-it' },
-        { name: '5G Network Solutions', href: '/it-services/5g-solutions' }
-      ]
-    },
-    {
-      title: 'Emerging Tech',
-      links: [
-        { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing' },
-        { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi' },
-        { name: 'Space Technology', href: '/emerging-tech/space-tech' },
-        { name: 'Biotechnology', href: '/emerging-tech/biotech' },
-        { name: 'Nanotechnology', href: '/emerging-tech/nanotech' },
-        { name: 'Augmented Reality', href: '/emerging-tech/ar-vr' }
+        { name: 'About', href: '/about' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Contact', href: '/contact' },
+        { name: 'Blog', href: '/blog' }
       ]
     }
   ];
 
   const quickLinks = [
-    { name: 'Services Overview', href: '/services-overview' },
-    { name: 'Pricing Guide', href: '/pricing-guide' },
-    { name: 'Innovative Services 2027', href: '/innovative-services-2027' },
-    { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027' },
+    { name: 'Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Careers', href: '/careers' },
+    { name: 'Marketplace', href: '/marketplace' }
   ];
 
   const socialLinks = [

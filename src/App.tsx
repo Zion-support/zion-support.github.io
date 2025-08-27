@@ -28,6 +28,12 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
+// Additional pages referenced by navigation/components
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const Help = React.lazy(() => import('./pages/Help'));
+const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
+
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
@@ -103,6 +109,10 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/login" element={<Login />} />
               <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/services-comparison" element={<ServicesComparisonPage />} />
+              <Route path="/comprehensive-services" element={<ComprehensiveServicesOverview2027 />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
