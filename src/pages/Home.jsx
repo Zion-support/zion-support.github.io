@@ -10,8 +10,142 @@ import {
   Users, 
   TrendingUp,
   CheckCircle,
-  Star
+  Star,
+  Globe,
+  Cpu,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  MessageCircle,
+  BarChart3,
+  FileText,
+  Video,
+  Heart,
+  Settings,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Target,
+  Lightbulb,
+  ShieldCheck,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Atom,
+  Dna,
+  Microscope,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
+  Eye,
+  Ear,
+  Hand,
+  Foot,
+  Bone,
+  Tooth,
+  Pill,
+  Bandage,
+  Thermometer,
+  Scale,
+  Calculator,
+  ChartBar,
+  PieChart,
+  LineChart,
+  Activity,
+  TrendingDown,
+  Minus,
+  Plus,
+  Equal,
+  Divide,
+  Percent,
+  DollarSign,
+  Euro,
+  Pound,
+  Yen,
+  Bitcoin,
+  Ethereum,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
+  Key,
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX,
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
+  Repeat1,
+  Shuffle2,
+  SkipBack2,
+  SkipForward2,
+  PlayTriangle,
+  PauseTriangle,
+  StopTriangle,
+  SkipBackTriangle,
+  SkipForwardTriangle,
+  RewindTriangle,
+  FastForwardTriangle,
+  ShuffleTriangle,
+  RepeatTriangle,
+  Repeat1Triangle,
+  Shuffle2Triangle,
+  SkipBack2Triangle,
+  SkipForward2Triangle,
+  PlayOctagon,
+  PauseOctagon,
+  StopOctagon,
+  SkipBackOctagon,
+  SkipForwardOctagon,
+  RewindOctagon,
+  FastForwardOctagon,
+  ShuffleOctagon,
+  RepeatOctagon,
+  Repeat1Triangle,
+  Shuffle2Triangle,
+  SkipBack2Triangle,
+  SkipForward2Triangle,
+  PlayDodecagon,
+  PauseDodecagon,
+  StopDodecagon,
+  SkipBackDodecagon,
+  SkipForwardDodecagon,
+  RewindDodecagon,
+  FastForwardDodecagon,
+  ShuffleDodecagon,
+  RepeatDodecagon,
+  Repeat1Triangle,
+  Shuffle2Triangle,
+  SkipBack2Triangle,
+  SkipForward2Triangle
 } from 'lucide-react';
+
+// Import the enhanced services showcase component
+import { EnhancedServicesShowcase } from '../components/home/EnhancedServicesShowcase';
 
 export default function Home() {
   const fadeInUp = {
@@ -27,6 +161,73 @@ export default function Home() {
       }
     }
   };
+
+  const quickAccessItems = [
+    {
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence and machine learning services',
+      icon: Brain,
+      color: 'from-zion-cyan to-zion-blue',
+      link: '/services/ai'
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced threat protection and security consulting',
+      icon: Shield,
+      color: 'from-zion-purple to-zion-cyan',
+      link: '/services/cybersecurity'
+    },
+    {
+      title: 'Cloud Services',
+      description: 'Scalable cloud infrastructure and management',
+      icon: Cloud,
+      color: 'from-zion-blue to-zion-purple',
+      link: '/services/cloud'
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'End-to-end business transformation solutions',
+      icon: Zap,
+      color: 'from-zion-cyan to-zion-purple',
+      link: '/services/digital-transformation'
+    }
+  ];
+
+  const featureHighlights = [
+    {
+      title: 'AI-Powered Innovation',
+      description: 'Leading-edge artificial intelligence solutions that drive business growth',
+      icon: Brain,
+      benefits: ['Predictive Analytics', 'Process Automation', 'Intelligent Insights']
+    },
+    {
+      title: 'Enterprise Security',
+      description: 'Comprehensive cybersecurity solutions for modern threats',
+      icon: Shield,
+      benefits: ['Threat Detection', 'Zero Trust Security', 'Compliance Management']
+    },
+    {
+      title: 'Global Infrastructure',
+      description: 'Worldwide network and cloud infrastructure support',
+      icon: Globe,
+      benefits: ['Multi-Cloud Management', 'Edge Computing', 'Global CDN']
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support and monitoring',
+      icon: MessageCircle,
+      benefits: ['Live Chat', 'Phone Support', 'Emergency Response']
+    }
+  ];
+
+  const serviceCategories = [
+    { name: 'AI & Machine Learning', icon: Brain, count: 25, color: 'from-zion-cyan to-zion-blue' },
+    { name: 'Cybersecurity', icon: Shield, count: 18, color: 'from-zion-purple to-zion-cyan' },
+    { name: 'Cloud & DevOps', icon: Cloud, count: 22, color: 'from-zion-blue to-zion-purple' },
+    { name: 'Data & Analytics', icon: TrendingUp, count: 20, color: 'from-zion-cyan to-zion-purple' },
+    { name: 'IoT & Edge Computing', icon: Network, count: 15, color: 'from-zion-purple to-zion-blue' },
+    { name: 'Quantum Computing', icon: Rocket, count: 8, color: 'from-zion-blue to-zion-cyan' }
+  ];
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -45,6 +246,17 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Trust Badge */}
+            <motion.div
+              className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Star className="w-4 h-4 mr-2" />
+              Trusted by 500+ Global Companies
+            </motion.div>
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Welcome to <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Zion Tech Group</span>
             </h1>
@@ -95,6 +307,70 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Quick Access Section */}
+      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, #22ddd2 2px, transparent 2px)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Quick Access to Premium Services
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Get instant access to our most popular and in-demand technology solutions
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            {quickAccessItems.map((item, index) => (
+              <Link
+                key={item.title}
+                to={item.link}
+                className="group block"
+                aria-label={`Access ${item.title} services`}
+              >
+                <motion.div 
+                  className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:transform hover:scale-105"
+                  whileHover={{ y: -5 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <item.icon className="w-8 h-8 text-white" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-zion-slate-light text-sm">
+                    {item.description}
+                  </p>
+                </motion.div>
+              </Link>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Services Preview Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
@@ -136,7 +412,7 @@ export default function Home() {
             ].map((service, index) => (
               <motion.div
                 key={service.title}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
+                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:transform hover:scale-105"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -150,6 +426,116 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Enhanced Services Showcase */}
+      <EnhancedServicesShowcase />
+
+      {/* Feature Highlights Section */}
+      <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 75% 75%, #22ddd2 2px, transparent 2px)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Discover the unique advantages that set us apart in the technology industry
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            {featureHighlights.map((feature, index) => (
+              <motion.div 
+                key={feature.title}
+                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" aria-hidden="true" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-zion-slate-light mb-6">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-zion-cyan">
+                      <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0" />
+                      <span className="text-white">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Service Categories Overview */}
+      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, #22ddd2 2px, transparent 2px)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl font-bold text-white mb-8">
+              Explore Our Service Categories
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {serviceCategories.map((category, index) => (
+                <motion.div 
+                  key={category.name}
+                  className="group cursor-pointer"
+                  whileHover={{ scale: 1.05 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className={`w-20 h-20 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <category.icon className="w-10 h-10 text-white" />
+                  </div>
+                  <h4 className="text-white font-medium text-sm group-hover:text-zion-cyan transition-colors">
+                    {category.name}
+                  </h4>
+                  <p className="text-zion-slate-light text-xs mt-1">{category.count} services</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
