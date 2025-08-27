@@ -1,18 +1,23 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import { LoadingSpinner } from './components/ui/loading-spinner';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { HelmetProvider } from 'react-helmet-async';
+
+// Layout Components
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
-import { ChatAssistant } from './components/ChatAssistant';
-import { SEO } from './components/SEO';
+
+// Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import { SEO } from './components/SEO';
 import { FloatingActionButton } from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { ChatAssistant } from './components/ChatAssistant';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { LoadingSpinner } from './components/ui/loading-spinner';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -153,137 +158,139 @@ const EnhancedLoadingSpinner = () => (
 
 function App() {
   return (
-    <ErrorBoundary>
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-        <SEO 
-          title="Zion Tech Group - Leading AI & Technology Solutions"
-          description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
-          keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
-          ogImage="/og-image.jpg"
-          canonicalUrl="https://ziontechgroup.com"
-        />
-        
-        <AppHeader />
-        
-        <main className="relative">
-          <Suspense fallback={<EnhancedLoadingSpinner />}>
-            <Routes>
-              {/* Core Routes */}
-              <Route path="/" element={<Home />} />
-              <Route path="/home2026" element={<Home2026 />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/help" element={<HelpCenter />} />
-              <Route path="/security" element={<Security />} />
-              <Route path="/status" element={<Status />} />
-              <Route path="/cookies" element={<Cookies />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/talent" element={<Talent />} />
-              <Route path="/equipment" element={<Equipment />} />
-              <Route path="/request-quote" element={<RequestQuote />} />
-              <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/marketplace/products" element={<MarketplaceProducts />} />
-              <Route path="/marketplace/talent" element={<MarketplaceTalent />} />
-              <Route path="/marketplace/equipment" element={<MarketplaceEquipment />} />
-              <Route path="/marketplace/services" element={<MarketplaceServices />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/services2026" element={<Services2026 />} />
-              <Route path="/services2027" element={<Services2027 />} />
-              
-              {/* Service Routes */}
-              <Route path="/ai-services" element={<AIServices />} />
-              <Route path="/ai-solutions" element={<AISolutions />} />
-              <Route path="/it-services" element={<ITServices />} />
-              <Route path="/micro-saas" element={<MicroSaaS />} />
-              <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
-              <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
-              <Route path="/mobile-launch" element={<MobileLaunch />} />
-              <Route path="/analytics" element={<Analytics />} />
-              <Route path="/match" element={<Match />} />
-              <Route path="/search" element={<SearchPage />} />
-              <Route path="/case-studies" element={<CaseStudies />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/white-papers" element={<WhitePapers />} />
-              <Route path="/press" element={<Press />} />
-              <Route path="/webinars" element={<Webinars />} />
-              <Route path="/training" element={<Training />} />
-              <Route path="/support" element={<Support />} />
-              <Route path="/documentation" element={<Documentation />} />
-              <Route path="/developers" element={<Developers />} />
-              <Route path="/research-development" element={<ResearchDevelopment />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/green-it" element={<GreenIT />} />
-              <Route path="/space-tech" element={<Accessibility />} />
-              <Route path="/quantum-technology" element={<Accessibility />} />
-              <Route path="/financial-solutions" element={<Accessibility />} />
-              <Route path="/mobile" element={<Accessibility />} />
-              <Route path="/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
-              <Route path="/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
-              <Route path="/ai-financial-trading" element={<AIFinancialTrading />} />
-              <Route path="/ai-content-creation-suite" element={<AIContentCreationSuite />} />
-              
-              {/* New innovative AI services */}
-              <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
-              <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
-              <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
-              <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
-              <Route path="/services/ai-hr-talent-acquisition" element={<AIHRTalentAcquisition />} />
-              <Route path="/services/ai-iot-edge-computing" element={<AIIoTEdgeComputing />} />
-              <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
-              <Route path="/services/ai-sustainable-technology" element={<AISustainableTechnology />} />
-              <Route path="/services/ai-quantum-machine-learning" element={<AIQuantumMachineLearning />} />
+    <HelmetProvider>
+      <ErrorBoundary>
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+          <SEO 
+            title="Zion Tech Group - Leading AI & Technology Solutions"
+            description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
+            keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
+            ogImage="/og-image.jpg"
+            canonicalUrl="https://ziontechgroup.com"
+          />
+          
+          <AppHeader />
+          
+          <main className="relative">
+            <Suspense fallback={<EnhancedLoadingSpinner />}>
+              <Routes>
+                {/* Core Routes */}
+                <Route path="/" element={<Home />} />
+                <Route path="/home2026" element={<Home2026 />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/help" element={<HelpCenter />} />
+                <Route path="/security" element={<Security />} />
+                <Route path="/status" element={<Status />} />
+                <Route path="/cookies" element={<Cookies />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/talent" element={<Talent />} />
+                <Route path="/equipment" element={<Equipment />} />
+                <Route path="/request-quote" element={<RequestQuote />} />
+                <Route path="/marketplace" element={<Marketplace />} />
+                <Route path="/marketplace/products" element={<MarketplaceProducts />} />
+                <Route path="/marketplace/talent" element={<MarketplaceTalent />} />
+                <Route path="/marketplace/equipment" element={<MarketplaceEquipment />} />
+                <Route path="/marketplace/services" element={<MarketplaceServices />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/services2026" element={<Services2026 />} />
+                <Route path="/services2027" element={<Services2027 />} />
+                
+                {/* Service Routes */}
+                <Route path="/ai-services" element={<AIServices />} />
+                <Route path="/ai-solutions" element={<AISolutions />} />
+                <Route path="/it-services" element={<ITServices />} />
+                <Route path="/micro-saas" element={<MicroSaaS />} />
+                <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
+                <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
+                <Route path="/mobile-launch" element={<MobileLaunch />} />
+                <Route path="/analytics" element={<Analytics />} />
+                <Route path="/match" element={<Match />} />
+                <Route path="/search" element={<SearchPage />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/press" element={<Press />} />
+                <Route path="/webinars" element={<Webinars />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/documentation" element={<Documentation />} />
+                <Route path="/developers" element={<Developers />} />
+                <Route path="/research-development" element={<ResearchDevelopment />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/green-it" element={<GreenIT />} />
+                <Route path="/space-tech" element={<Accessibility />} />
+                <Route path="/quantum-technology" element={<Accessibility />} />
+                <Route path="/financial-solutions" element={<Accessibility />} />
+                <Route path="/mobile" element={<Accessibility />} />
+                <Route path="/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+                <Route path="/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+                <Route path="/ai-financial-trading" element={<AIFinancialTrading />} />
+                <Route path="/ai-content-creation-suite" element={<AIContentCreationSuite />} />
+                
+                {/* New innovative AI services */}
+                <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
+                <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
+                <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
+                <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
+                <Route path="/services/ai-hr-talent-acquisition" element={<AIHRTalentAcquisition />} />
+                <Route path="/services/ai-iot-edge-computing" element={<AIIoTEdgeComputing />} />
+                <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
+                <Route path="/services/ai-sustainable-technology" element={<AISustainableTechnology />} />
+                <Route path="/services/ai-quantum-machine-learning" element={<AIQuantumMachineLearning />} />
 
-              {/* Innovative services showcase */}
-              <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
-              
-              {/* New 2025 service routes */}
-              <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
-              <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
-              <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
-              <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
-              <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
-              <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
-              
-              {/* 2029 Cutting-Edge Services */}
-              <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
-              <Route path="/cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
-              
-              {/* Additional routes */}
-              <Route path="/api" element={<API />} />
-              <Route path="/developer-portal" element={<DeveloperPortal />} />
-              <Route path="/digital-twin" element={<DigitalTwin />} />
-              <Route path="/data-analytics" element={<DataAnalytics />} />
-              <Route path="/quantum-computing" element={<QuantumComputing />} />
-              <Route path="/ai-cybersecurity" element={<AICybersecurity />} />
-              <Route path="/iot-edge-computing" element={<IoTEdgeComputing />} />
-              <Route path="/ai-content-creation" element={<AIContentCreation />} />
-              <Route path="/ai-hr-platform" element={<AIHRPlatform />} />
-              <Route path="/sustainable-technology" element={<SustainableTechnology />} />
-              <Route path="/quantum-machine-learning" element={<QuantumMachineLearning />} />
-              
-              {/* Catch-all route */}
-              <Route path="*" element={<Home />} />
-            </Routes>
-          </Suspense>
-        </main>
-        
-        <Footer />
-        <ChatAssistant />
-        <PerformanceOptimizer />
-        <EnhancedAccessibilityEnhancer enabled={true} showControls={true} />
-        <MobileExperienceEnhancer enabled={true} />
-        <PerformanceMonitor enabled={true} showMetrics={true} />
-        <AdvancedAnalytics enabled={true} showMetrics={true} />
-        <SmartNotificationSystem enabled={true} />
-        <FloatingActionButton />
-      </div>
-    </ErrorBoundary>
+                {/* Innovative services showcase */}
+                <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
+                
+                {/* New 2025 service routes */}
+                <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
+                <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
+                <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
+                <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
+                <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                
+                {/* 2029 Cutting-Edge Services */}
+                <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
+                <Route path="/cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
+                
+                {/* Additional routes */}
+                <Route path="/api" element={<API />} />
+                <Route path="/developer-portal" element={<DeveloperPortal />} />
+                <Route path="/digital-twin" element={<DigitalTwin />} />
+                <Route path="/data-analytics" element={<DataAnalytics />} />
+                <Route path="/quantum-computing" element={<QuantumComputing />} />
+                <Route path="/ai-cybersecurity" element={<AICybersecurity />} />
+                <Route path="/iot-edge-computing" element={<IoTEdgeComputing />} />
+                <Route path="/ai-content-creation" element={<AIContentCreation />} />
+                <Route path="/ai-hr-platform" element={<AIHRPlatform />} />
+                <Route path="/sustainable-technology" element={<SustainableTechnology />} />
+                <Route path="/quantum-machine-learning" element={<QuantumMachineLearning />} />
+                
+                {/* Catch-all route */}
+                <Route path="*" element={<Home />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
+          <ChatAssistant />
+          <PerformanceOptimizer />
+          <EnhancedAccessibilityEnhancer enabled={true} showControls={true} />
+          <MobileExperienceEnhancer enabled={true} />
+          <PerformanceMonitor enabled={true} showMetrics={true} />
+          <AdvancedAnalytics enabled={true} showMetrics={true} />
+          <SmartNotificationSystem enabled={true} />
+          <FloatingActionButton />
+        </div>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 
