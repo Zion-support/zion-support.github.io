@@ -1,61 +1,63 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, Zap, Shield, Users, Clock, TrendingUp, Star, Award, Globe, Lock } from 'lucide-react';
+import { Star, Award, Globe, Lock, Zap, Shield, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 
 const benefits = [
   {
-    icon: <Zap className="w-8 h-8"/>,
-    title: "Lightning Fast",
-    description: "Get your projects delivered in record time with our efficient development process",
-    color: "from-zion-cyan to-zion-blue",
-    bgColor: "from-zion-cyan/20 to-zion-blue/20",
-    stats: "3x Faster",
-    features: ["Rapid Prototyping", "Quick Deployment", "Fast Iteration"]
+    icon: <Zap className="w-10 h-10" />,
+    title: "Lightning-Fast Performance",
+    description: "Our optimized solutions deliver exceptional speed and responsiveness, ensuring your applications run smoothly under any load.",
+    stats: "99.9% Uptime",
+    color: "from-yellow-500 to-orange-600",
+    bgColor: "from-yellow-500/20 to-orange-600/20",
+    features: [
+      "Advanced caching mechanisms",
+      "CDN optimization",
+      "Database query optimization",
+      "Real-time performance monitoring"
+    ]
   },
   {
-    icon: <Shield className="w-8 h-8"/>,
-    title: "Enterprise Security",
-    description: "Bank-grade security measures to protect your data and applications",
-    color: "from-zion-purple to-zion-purple-dark",
-    bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-    stats: "99.99% Uptime",
-    features: ["SOC 2 Compliant", "GDPR Ready", "End-to-End Encryption"]
+    icon: <Shield className="w-10 h-10" />,
+    title: "Enterprise-Grade Security",
+    description: "Bank-level security protocols protect your data with multiple layers of encryption and advanced threat detection.",
+    stats: "256-bit Encryption",
+    color: "from-green-500 to-emerald-600",
+    bgColor: "from-green-500/20 to-emerald-600/20",
+    features: [
+      "End-to-end encryption",
+      "Multi-factor authentication",
+      "Regular security audits",
+      "Compliance certifications"
+    ]
   },
   {
-    icon: <Users className="w-8 h-8"/>,
-    title: "Expert Team",
-    description: "Work with certified professionals with years of industry experience",
-    color: "from-zion-cyan-light to-zion-cyan",
-    bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-    stats: "500+ Experts",
-    features: ["Certified Professionals", "Global Network", "Industry Veterans"]
+    icon: <Users className="w-10 h-10" />,
+    title: "24/7 Expert Support",
+    description: "Our dedicated team of technology experts is available around the clock to ensure your success.",
+    stats: "15min Response",
+    color: "from-blue-500 to-cyan-600",
+    bgColor: "from-blue-500/20 to-cyan-600/20",
+    features: [
+      "Live chat support",
+      "Phone and email support",
+      "Knowledge base access",
+      "Video tutorials and guides"
+    ]
   },
   {
-    icon: <Clock className="w-8 h-8"/>,
-    title: "24/7 Support",
-    description: "Round-the-clock assistance whenever you need help or have questions",
-    color: "from-zion-purple-light to-zion-purple",
-    bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-    stats: "24/7",
-    features: ["Live Chat", "Phone Support", "Email Response"]
-  },
-  {
-    icon: <TrendingUp className="w-8 h-8"/>,
+    icon: <TrendingUp className="w-10 h-10" />,
     title: "Scalable Solutions",
-    description: "Built to grow with your business, from startup to enterprise",
-    color: "from-zion-cyan to-zion-purple",
-    bgColor: "from-zion-cyan/20 to-zion-purple/20",
-    stats: "10x Growth",
-    features: ["Auto-scaling", "Load Balancing", "Performance Monitoring"]
-  },
-  {
-    icon: <CheckCircle className="w-8 h-8"/>,
-    title: "Quality Guaranteed",
-    description: "100% satisfaction guarantee with our comprehensive testing process",
-    color: "from-zion-purple to-zion-cyan",
-    bgColor: "from-zion-purple/20 to-zion-cyan/20",
-    stats: "100% Success",
-    features: ["Comprehensive Testing", "Quality Assurance", "Satisfaction Guarantee"]
+    description: "Grow with confidence knowing our solutions scale seamlessly with your business needs.",
+    stats: "10x Growth Ready",
+    color: "from-purple-500 to-pink-600",
+    bgColor: "from-purple-500/20 to-pink-600/20",
+    features: [
+      "Auto-scaling infrastructure",
+      "Load balancing",
+      "Performance optimization",
+      "Capacity planning"
+    ]
   }
 ];
 
@@ -91,6 +93,29 @@ export function BenefitsSection() {
       }
     }
   };
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark/20 to-zion-purple-dark/20"></div>
+      
+      {/* Floating Particles */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-32 w-1 h-1 bg-zion-purple rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-zion-blue rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-20 right-20 w-1 h-1 bg-zion-green rounded-full animate-pulse delay-3000"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Header Section */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             The <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">Zion Advantage</span>
           </h2>
@@ -100,6 +125,19 @@ export function BenefitsSection() {
           </p>
         </motion.div>
 
+        {/* Stats Section */}
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {additionalStats.map((stat, index) => (
+            <motion.div 
+              key={index} 
+              variants={itemVariants}
+              className="text-center p-6 rounded-xl bg-gradient-to-br from-zion-slate/50 to-zion-slate-dark/50 backdrop-blur-sm border border-zion-slate-light/30 hover:border-zion-cyan/50 transition-all duration-300"
             >
               <div className="text-zion-cyan mb-2 flex justify-center">
                 {stat.icon}
@@ -110,6 +148,7 @@ export function BenefitsSection() {
           ))}
         </motion.div>
         
+        {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
             <motion.div 
@@ -187,10 +226,11 @@ export function BenefitsSection() {
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
               <p className="text-white text-lg mb-4">
-                Ready to experience the Zion difference?
+                Ready to experience the Zion advantage?
               </p>
-              <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+              <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 group">
                 Get Started Today
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           </div>
