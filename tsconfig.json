@@ -18,7 +18,6 @@
     "baseUrl": ".",
     "paths": { "@/*": ["./src/*"] },
     "allowSyntheticDefaultImports": true,
-<<<<<<< HEAD
     "allowJs": true,
     "incremental": true,
     "strictNullChecks": true
@@ -30,11 +29,6 @@
     "data",
     "types"
   ],
-=======
-    "jsx": "react-jsx"
-  },
-  "include": ["src", "components", "pages", "vite.config.ts", "tailwind.config.ts"],
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
   "exclude": [
     "node_modules",
     "dist/**",
