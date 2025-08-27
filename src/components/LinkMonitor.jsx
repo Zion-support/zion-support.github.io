@@ -18,7 +18,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             if (href) {
                 const result = LinkValidator.validateLink(href, window.location.pathname);
                 if (result.status === 'broken') {
-                    results(result);
+                    results.push(result);
                     if (autoFix) {
                         await fixBrokenLink(href, result);
                     }
@@ -114,6 +114,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             </button>)}
         </div>
       </div>
+
       {/* Scan Progress */}
       {isScanning && (<div className="mb-6">
           <div className="flex items-center justify-between mb-2">
@@ -126,6 +127,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             <div className="bg-blue-600 h-2 rounded-full transition-all duration-300" style={{ width: `${scanProgress}%` }}></div>
           </div>
         </div>)}
+
       {/* Status Summary */}
       {showStatus && (<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
@@ -147,6 +149,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             <div className="text-sm text-blue-600 dark:text-blue-400">Last Scan</div>
           </div>
         </div>)}
+
       {/* Broken Links List */}
       {brokenLinks.length > 0 && (<div className="mb-6">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -171,6 +174,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
               </div>))}
           </div>
         </div>)}
+
       {/* Fixed Links List */}
       {fixedLinks.length > 0 && (<div className="mb-6">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -189,6 +193,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
               </div>))}
           </div>
         </div>)}
+
       {/* Action Buttons */}
       <div className="flex flex-wrap gap-2">
         <button onClick={generateRedirectRules} className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
@@ -198,6 +203,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           Export Report
         </button>
       </div>
+
       {/* Recommendations */}
       {brokenLinks.length > 0 && (<div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
           <h4 className="font-semibold text-yellow-800 dark:text-yellow-200 mb-2">

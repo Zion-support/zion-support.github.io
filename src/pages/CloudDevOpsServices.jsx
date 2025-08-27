@@ -173,6 +173,7 @@ const CloudDevOpsServices = () => {
             Scalable cloud infrastructure, automated DevOps pipelines, and container orchestration solutions that accelerate your development cycle
           </p>
         </div>
+
         {/* Search and Filters */}
         <div className="mb-8 space-y-4">
           <div className="relative">
@@ -194,6 +195,7 @@ const CloudDevOpsServices = () => {
             </select>
           </div>
         </div>
+
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.map((service) => (<div key={service.id} className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
@@ -224,6 +226,7 @@ const CloudDevOpsServices = () => {
                 </div>
                 <div className="text-sm text-gray-400">{service.userLimit}</div>
               </div>
+
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                 <div className="flex flex-wrap gap-2">
@@ -232,6 +235,7 @@ const CloudDevOpsServices = () => {
                     </span>))}
                 </div>
               </div>
+
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
                 <div className="flex flex-wrap gap-2">
@@ -240,6 +244,7 @@ const CloudDevOpsServices = () => {
                     </span>))}
                 </div>
               </div>
+
               <div className="border-t border-gray-600 pt-4">
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span>Delivery: {service.deliveryTime}</span>
@@ -250,6 +255,7 @@ const CloudDevOpsServices = () => {
               </div>
             </div>))}
         </div>
+
         {/* Contact Information */}
         <div className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">

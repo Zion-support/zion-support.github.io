@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Video, Brain, Cpu, Shield, Zap, Rocket, Building } from 'lucide-react';
 export default function Webinars() {
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -111,6 +111,7 @@ export default function Webinars() {
           </div>
 =======
 import {CogIcon} from '@heroicons/react/24/outline';
+
 const $page: React.FC = () => {}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -135,6 +136,7 @@ const $page: React.FC = () => {}
     </div>
   );
 };
+
 export default $page;
         </></></>);
     };

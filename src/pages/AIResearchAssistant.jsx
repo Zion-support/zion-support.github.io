@@ -71,6 +71,7 @@ export default function AIResearchAssistant() {
             </button>
           </div>
         </div>
+
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {features.map((feature, index) => (<div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
@@ -85,6 +86,7 @@ export default function AIResearchAssistant() {
               </ul>
             </div>))}
         </div>
+
         {/* Use Cases */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Research Applications Across Industries</h2>
@@ -99,6 +101,7 @@ export default function AIResearchAssistant() {
               </div>))}
           </div>
         </div>
+
         {/* Research Tools Integration */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Integrated Research Tools</h2>
@@ -115,6 +118,7 @@ export default function AIResearchAssistant() {
               </div>))}
           </div>
         </div>
+
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/30">

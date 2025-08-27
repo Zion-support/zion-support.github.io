@@ -83,6 +83,7 @@ export default function HelpCenterPage() {
               </div>
             </div>
           </div>
+
           {/* Help Categories */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">How can we help you?</h2>
@@ -113,6 +114,7 @@ export default function HelpCenterPage() {
                 </Card>))}
             </div>
           </section>
+
           {/* FAQs */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
@@ -127,6 +129,7 @@ export default function HelpCenterPage() {
                 </Card>))}
             </div>
           </section>
+
           {/* Contact Support */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Still need help?</h2>
@@ -147,6 +150,7 @@ export default function HelpCenterPage() {
                   </Button>
                 </CardContent>
               </Card>
+
               <Card className="bg-zion-blue-dark border-zion-blue-light text-white text-center">
                 <CardHeader>
                   <div className="flex justify-center mb-4">
@@ -163,6 +167,7 @@ export default function HelpCenterPage() {
                   </Button>
                 </CardContent>
               </Card>
+
               <Card className="bg-zion-blue-dark border-zion-blue-light text-white text-center">
                 <CardHeader>
                   <div className="flex justify-center mb-4">
@@ -181,6 +186,7 @@ export default function HelpCenterPage() {
               </Card>
             </div>
           </section>
+
           {/* Additional Resources */}
           <section className="text-center">
             <Card className="bg-zion-blue-dark border-zion-cyan/30 text-white max-w-3xl mx-auto">

@@ -96,6 +96,7 @@ export default function AIAnalyticsDashboard() {
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
       <SEO title="AI Analytics Dashboard - Zion Tech Group" description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get started today!" keywords="AI analytics, business intelligence, predictive analytics, data insights, Zion Tech Group" canonical="https://ziontechgroup.com/ai-analytics-dashboard"/>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
@@ -125,6 +126,7 @@ export default function AIAnalyticsDashboard() {
           </div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -154,6 +156,7 @@ export default function AIAnalyticsDashboard() {
           </div>
         </div>
       </section>
+
       {/* Pricing Section */}
       <section className="py-20 px-4 bg-zion-slate-dark/30">
         <div className="container mx-auto">
@@ -198,6 +201,7 @@ export default function AIAnalyticsDashboard() {
           </div>
         </div>
       </section>
+
       {/* Testimonials Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -226,6 +230,7 @@ export default function AIAnalyticsDashboard() {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto text-center">

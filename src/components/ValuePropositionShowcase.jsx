@@ -16,6 +16,7 @@ import {
   Users,
   BarChart3
 } from 'lucide-react';
+
 const valueMetrics = [
   {
     icon: <TrendingUp className="w-8 h-8" />,
@@ -46,6 +47,7 @@ const valueMetrics = [
     color: "from-red-500 to-pink-600"
   }
 ];
+
 const competitiveAdvantages = [
   {
     title: "AI-Powered Intelligence",
@@ -72,6 +74,7 @@ const competitiveAdvantages = [
     color: "from-orange-500 to-red-600"
   }
 ];
+
 const marketComparison = [
   {
     category: "AI Business Intelligence",
@@ -98,6 +101,7 @@ const marketComparison = [
     advantage: "AI-powered detection, comprehensive zero-trust implementation"
   }
 ];
+
 const successStories = [
   {
     company: "TechCorp Solutions",
@@ -124,6 +128,7 @@ const successStories = [
     roi: "400% in 6 months"
   }
 ];
+
 export function ValuePropositionShowcase() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -135,6 +140,7 @@ export function ValuePropositionShowcase() {
       }
     }
   };
+
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
@@ -146,6 +152,7 @@ export function ValuePropositionShowcase() {
       }
     }
   };
+
   const cardVariants = {
     hidden: { scale: 0.95, opacity: 0 },
     visible: {
@@ -157,6 +164,7 @@ export function ValuePropositionShowcase() {
       }
     }
   };
+
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,6 +183,7 @@ export function ValuePropositionShowcase() {
             exceptional value with proven returns that transform your business operations.
           </p>
         </motion.div>
+
         {/* Value Metrics */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
@@ -201,6 +210,7 @@ export function ValuePropositionShowcase() {
             </motion.div>
           ))}
         </motion.div>
+
         {/* Competitive Advantages */}
         <motion.div 
           className="mb-16"
@@ -228,6 +238,7 @@ export function ValuePropositionShowcase() {
             ))}
           </div>
         </motion.div>
+
         {/* Market Comparison */}
         <motion.div 
           className="mb-16"
@@ -284,6 +295,7 @@ export function ValuePropositionShowcase() {
             ))}
           </div>
         </motion.div>
+
         {/* Success Stories */}
         <motion.div 
           className="mb-16"
@@ -328,6 +340,7 @@ export function ValuePropositionShowcase() {
             ))}
           </div>
         </motion.div>
+
         {/* Call to Action */}
         <motion.div 
           className="text-center"

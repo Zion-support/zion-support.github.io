@@ -84,9 +84,11 @@ import {
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
+
 export default function ComprehensiveServicesOverview2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+
   const serviceCategories = [
     {
       id: 'quantum-ai',
@@ -210,15 +212,19 @@ export default function ComprehensiveServicesOverview2026() {
       innovationLevel: 'Advanced'
     }
   ];
+
   const filteredCategories = selectedCategory === 'all' 
     ? serviceCategories 
     : serviceCategories.filter(cat => cat.id === selectedCategory);
+
   const toggleCategoryExpansion = (categoryId: string) => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
+
   const totalServices = ULTIMATE_INNOVATIVE_SERVICES_2026.length;
   const totalMarketSize = '$3.2+ trillion';
   const avgROI = '400-1500%';
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
@@ -274,6 +280,7 @@ export default function ComprehensiveServicesOverview2026() {
           </motion.div>
         </div>
       </section>
+
       {/* Category Filter */}
       <section className="py-12 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -309,6 +316,7 @@ export default function ComprehensiveServicesOverview2026() {
           </div>
         </div>
       </section>
+
       {/* Services Overview */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -320,6 +328,7 @@ export default function ComprehensiveServicesOverview2026() {
               Each category represents a breakthrough in technology innovation
             </p>
           </div>
+
           <div className="space-y-8">
             <AnimatePresence>
               {filteredCategories.map((category, index) => (
@@ -348,6 +357,7 @@ export default function ComprehensiveServicesOverview2026() {
                       <div className="text-sm text-zion-slate-400 mt-1">Avg ROI: {category.avgROI}</div>
                     </div>
                   </div>
+
                   {/* Innovation Level Badge */}
                   <div className="flex items-center gap-4 mb-6">
                     <div className={`px-4 py-2 rounded-full text-sm font-semibold ${
@@ -363,6 +373,7 @@ export default function ComprehensiveServicesOverview2026() {
                       {category.services.length} service{category.services.length !== 1 ? 's' : ''}
                     </div>
                   </div>
+
                   {/* Services Preview */}
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                     {category.services.slice(0, 3).map((service, serviceIndex) => (
@@ -387,23 +398,25 @@ export default function ComprehensiveServicesOverview2026() {
                       </div>
                     )}
                   </div>
+
                   {/* Expand/Collapse Button */}
                   <button
                     onClick={() => toggleCategoryExpansion(category.id)}
                     className="w-full flex items-center justify-center gap-2 py-3 text-zion-cyan hover:text-white transition-colors border-t border-zion-slate-600/30"
                   >
                     {expandedCategory === category.id ? (
-<>
+                      <>
                         <EyeOff className="w-4 h-4" />
                         Show Less
-</>
+                      </>
                     ) : (
-<>
+                      <>
                         <Eye className="w-4 h-4" />
                         View All Services
-</>
+                      </>
                     )}
                   </button>
+
                   {/* Expanded Services Details */}
                   <AnimatePresence>
                     {expandedCategory === category.id && (
@@ -476,6 +489,7 @@ export default function ComprehensiveServicesOverview2026() {
           </div>
         </div>
       </section>
+
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-purple/10">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">

@@ -62,6 +62,7 @@ const ComprehensivePricing2025 = () => {
               Annual <span className="text-green-400 text-sm">(Save up to 40%)</span>
             </span>
           </div>
+
           {/* Key Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
@@ -83,6 +84,7 @@ const ComprehensivePricing2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Category Filter */}
       <section className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -172,6 +174,7 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
                     {service.category}
                   </span>
                 </div>
+
                 <div className="mb-6">
                   <div className="text-3xl font-bold text-green-400 mb-2">
                     {billingCycle === 'annual' && service.annualDiscount
@@ -183,6 +186,7 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
                       {service.annualDiscount} off annual billing
                     </div>)}
                 </div>
+
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -196,6 +200,7 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
                       </li>)}
                   </ul>
                 </div>
+
                 <div className="mb-6">
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
                     <span>Setup Fee:</span>
@@ -210,6 +215,7 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
                     <span className="text-white">{service.setupTime}</span>
                   </div>
                 </div>
+
                 <div className="space-y-3">
                   <a href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`} className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                     Get Started
@@ -218,6 +224,7 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
                     Call for Demo
                   </a>
                 </div>
+
                 <div className="mt-6 pt-6 border-t border-white/20">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-400">Rating:</span>
@@ -339,9 +346,9 @@ className = "bg-gradient-to-r from-green-800 to-blue-800 py-16" >
           </div>
         </div>;
 div >
-
+;
 div >
-
-
-
+;
+;
+;
 export default ComprehensivePricing2025;

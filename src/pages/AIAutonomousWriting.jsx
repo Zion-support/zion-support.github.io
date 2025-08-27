@@ -20,6 +20,7 @@ const AIAutonomousWriting = () => {
               Your AI writing partner that never gets writer's block, never runs out of ideas, and creates compelling content 24/7
             </p>
           </div>
+
           {/* Writing Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousWriting = () => {
               <p className="text-gray-300">AI-powered content research</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousWriting = () => {
               <p className="text-gray-300">Write in multiple languages</p>
             </div>
           </div>
+
           {/* Writing Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Writing Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousWriting = () => {
               </div>
             </div>
           </div>
+
           {/* Content Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Content Types</h2>
@@ -125,6 +129,7 @@ const AIAutonomousWriting = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Writing Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousWriting = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Writing?</h2>

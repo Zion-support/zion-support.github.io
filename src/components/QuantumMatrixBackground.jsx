@@ -18,7 +18,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
         const intensityMultiplier = intensity === 'high' ? 2 : intensity === 'medium' ? 1.5 : 1;
         // Initialize particles
         for (let i = 0; i < 50 * intensityMultiplier; i++) {
-            particles({
+            particles.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 vx: (Math.random() - 0.5) * 2,
@@ -128,8 +128,10 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
     return (<div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {/* Quantum Matrix Canvas */}
       {showParticles && (<canvas ref={canvasRef} className="absolute inset-0 w-full h-full" style={{ opacity: intensity === 'high' ? 0.8 : intensity === 'medium' ? 0.6 : 0.4 }}/>)}
+
       {/* Cyber Grid Background */}
       {showGrid && (<div className="absolute inset-0 cyber-grid-dense opacity-20"/>)}
+
       {/* Holographic Projections */}
       {showHolograms && (<>
           {/* Floating Holographic Elements */}
@@ -145,6 +147,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 repeat: Infinity,
                 ease: "easeInOut"
             }}/>
+
           <motion.div className="absolute top-40 right-32 w-24 h-24" style={{
                 background: 'linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.3))',
                 clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
@@ -157,6 +160,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 repeat: Infinity,
                 ease: "easeInOut"
             }}/>
+
           <motion.div className="absolute bottom-32 left-1/4 w-20 h-20 rounded-full" style={{
                 background: 'conic-gradient(from 0deg, rgba(34, 221, 210, 0.4), rgba(139, 92, 246, 0.4), rgba(59, 130, 246, 0.4), rgba(34, 221, 210, 0.4))'
             }} animate={{
@@ -167,6 +171,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 repeat: Infinity,
                 ease: "linear"
             }}/>
+
           {/* Matrix Rain Effect */}
           <div className="absolute inset-0 overflow-hidden">
             {Array.from({ length: 20 }).map((_, i) => (<motion.div key={i} className="absolute text-zion-cyan text-xs font-mono" style={{
@@ -183,6 +188,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
               </motion.div>))}
           </div>
         </>)}
+
       {/* Quantum Energy Fields */}
       <div className="absolute inset-0">
         <motion.div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full" style={{
@@ -196,6 +202,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             repeat: Infinity,
             ease: "easeInOut"
         }}/>
+
         <motion.div className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full" style={{
             background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%)',
             border: '1px solid rgba(139, 92, 246, 0.2)'
@@ -208,6 +215,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             ease: "easeInOut"
         }}/>
       </div>
+
       {/* Neural Network Nodes */}
       <div className="absolute inset-0">
         {Array.from({ length: 15 }).map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 rounded-full bg-zion-cyan" style={{

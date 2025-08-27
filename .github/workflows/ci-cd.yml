@@ -82,7 +82,12 @@ jobs:
     - name: Build size analysis
       run: |
         echo "Build size analysis:"
-        du -sh dist/ || echo "Build size analysis completed"
+        du -sh dist/ || echo "dist folder not found"
+        if [ -d dist ]; then
+          echo "Build files:"
+          find dist -type f -name "*.js" -exec du -h {} \;
+          find dist -type f -name "*.css" -exec du -h {} \;
+        fi
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:

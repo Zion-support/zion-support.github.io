@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';
-import SEOHead from "../components/SEOHead";
+import { SEO } from '@/components/SEO';
 const features = [
     {
         title: "Intelligent Decision Making",
@@ -75,7 +75,8 @@ const testimonials = [
 ];
 export default function AIAutonomousBusinessManager() {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
-      <SEOHead title="AI Autonomous Business Manager - Zion Tech Group" description="Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, real-time analytics, and automated operations." keywords="AI business manager, autonomous business, AI decision making, business automation, predictive analytics" canonical="https://ziontechgroup.com/ai-services/ai-autonomous-business-manager/"/>
+      <SEO title="AI Autonomous Business Manager - Zion Tech Group" description="Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, real-time analytics, and automated operations." keywords="AI business manager, autonomous business, AI decision making, business automation, predictive analytics" canonical="https://ziontechgroup.com/ai-services/ai-autonomous-business-manager/"/>
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-purple-900/50 to-cyan-900/50"></div>
@@ -110,6 +111,7 @@ export default function AIAutonomousBusinessManager() {
           </motion.div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,6 +123,7 @@ export default function AIAutonomousBusinessManager() {
               Our AI system provides comprehensive business management capabilities that adapt and learn from your operations.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => {
             const IconComponent = feature.icon;
@@ -135,6 +138,7 @@ export default function AIAutonomousBusinessManager() {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,6 +150,7 @@ export default function AIAutonomousBusinessManager() {
               Experience unprecedented business growth and efficiency with our cutting-edge AI technology.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (<motion.div key={benefit} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"/>
@@ -154,6 +159,7 @@ export default function AIAutonomousBusinessManager() {
           </div>
         </div>
       </section>
+
       {/* Use Cases Section */}
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -165,6 +171,7 @@ export default function AIAutonomousBusinessManager() {
               From startups to enterprise corporations, our AI system adapts to your specific business needs.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => {
             const IconComponent = useCase.icon;
@@ -179,6 +186,7 @@ export default function AIAutonomousBusinessManager() {
           </div>
         </div>
       </section>
+
       {/* Testimonials Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -190,6 +198,7 @@ export default function AIAutonomousBusinessManager() {
               Don't just take our word for it. Here's what business leaders have to say about our AI system.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (<motion.div key={testimonial.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8">
                 <div className="flex gap-1 mb-4">
@@ -206,6 +215,7 @@ export default function AIAutonomousBusinessManager() {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

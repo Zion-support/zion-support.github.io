@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from "../../components/SEOHead.jsx";
+import { SEO } from "@/components/SEO";
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const AIServices = () => {
     const features = [
@@ -32,7 +32,8 @@ const AIServices = () => {
         "Scalable AI solutions that grow with your business"
     ];
     return (<div className="min-h-screen bg-background">
-      <SEOHead title="AI Services - Zion Tech Group" description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy." keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics" canonical="https://ziontechgroup.com/services/ai-services"/>
+      <SEO title="AI Services - Zion Tech Group" description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy." keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics" canonical="https://ziontechgroup.com/services/ai-services"/>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -54,6 +55,7 @@ const AIServices = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -63,6 +65,7 @@ const AIServices = () => {
               Comprehensive AI services designed to meet your business challenges
             </p>
           </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -74,6 +77,7 @@ const AIServices = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -84,6 +88,7 @@ const AIServices = () => {
                 Experience the transformative power of AI with our proven approach
               </p>
             </div>
+
             <div className="space-y-6">
               {benefits.map((benefit, index) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                   <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-4">
@@ -95,6 +100,7 @@ const AIServices = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-pink-600 to-rose-600 text-white">
         <div className="container mx-auto px-4 text-center">

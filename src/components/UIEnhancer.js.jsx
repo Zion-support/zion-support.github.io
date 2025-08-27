@@ -79,6 +79,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
               </svg>)}
           </motion.button>
+
           {/* Particle Mode Toggle */}
           <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleParticleMode} className={`w-12 h-12 rounded-full shadow-lg border flex items-center justify-center transition-all duration-300 hover:shadow-xl ${isParticleMode
                 ? 'bg-purple-500 text-white border-purple-600'
@@ -87,11 +88,13 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
           </motion.button>
+
           {/* Device Indicator */}
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg flex items-center justify-center text-white text-xs font-bold" title={`Current device: ${deviceType}`}>
             {deviceType === 'mobile' ? '📱' : deviceType === 'tablet' ? '📱' : '💻'}
           </motion.div>
         </div>)}
+
       {/* Scroll to Top Button */}
       <AnimatePresence>
         {showScrollToTop && enableScrollEffects && (<motion.button initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }} onClick={scrollToTop} className="fixed bottom-4 left-20 z-40 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-110" title="Scroll to top">
@@ -100,6 +103,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
             </svg>
           </motion.button>)}
       </AnimatePresence>
+
       {/* Particle Background */}
       {isParticleMode && (<div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute inset-0 overflow-hidden">
@@ -118,6 +122,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
                 }}/>))}
           </div>
         </div>)}
+
       {/* Theme Auto Mode Button */}
       <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => handleThemeChange('auto')} className={`fixed top-4 left-4 z-40 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${theme === 'auto'
             ? 'bg-blue-600 text-white shadow-lg'
@@ -129,6 +134,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
           <span>Auto</span>
         </span>
       </motion.button>
+
       {/* UI Enhancement Panel */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="fixed top-4 right-20 z-40 bg-white/10 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dark:border-slate-700/50">
         <div className="flex items-center space-x-3 text-sm text-white">

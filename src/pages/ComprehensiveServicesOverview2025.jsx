@@ -1,32 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Factory, 
-  Heart, 
-  ShoppingCart, 
-  Building2, 
-  GraduationCap, 
-  Leaf, 
-  Truck,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  TrendingUp,
-  Star,
-  Clock,
-  Users,
-  DollarSign,
-  Target,
-  CheckCircle
-} from 'lucide-react';
-import { ULTIMATE_INNOVATIVE_SERVICES_2025 } from '../data/2025-ultimate-innovative-services-expansion.js';
-import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data/2025-specialized-industry-solutions-ultimate.js';
+import { Link } from 'react-router-dom';
+import { allEnhancedServices } from '../data/enhanced-2025-comprehensive-services';
 const ComprehensiveServicesOverview2025 = () => {
     const [selectedService, setSelectedService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -363,27 +337,19 @@ const ComprehensiveServicesOverview2025 = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Explore Our Services?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Our team of experts is ready to help you implement the perfect solution 
-            for your business needs. Get in touch today to start your transformation journey.
+          <p className="text-xl text-gray-300 mb-8">
+            Contact us today to learn more about our comprehensive services and how they can transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/ultimate-services-2025"
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold text-lg"
-            >
-              Explore All Services
+            <a href="tel:+13024640950" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
+              Call Now: +1 302 464 0950
             </a>
-            <a
-              href="/contact"
-              className="px-8 py-4 border-2 border-blue-500 text-blue-500 rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300 font-semibold text-lg"
-            >
-              Contact Us
+            <a href="mailto:kleber@ziontechgroup.com" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
+              Email: kleber@ziontechgroup.com
             </a>
           </div>
         </div>
-      </motion.div>
-    </div>
-  );
+      </section>
+    </div>);
 };
 export default ComprehensiveServicesOverview2025;

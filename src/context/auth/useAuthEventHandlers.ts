@@ -1,31 +1,30 @@
 import { useCallback } from 'react';
-import { User } from './useAuthState';
+
+interface User {
+  id: string;
+  email: string;
+  displayName?: string;
+  avatar?: string;
+  role?: string;
+  isEmailVerified?: boolean;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
 export const useAuthEventHandlers = (
   setUser: (user: User | null) => void,
-  setOnboardingStep: (step: any) => void
+  setOnboardingStep: (step: number) => void
 ) => {
   const handleSignedIn = useCallback((user: User) => {
     setUser(user);
-    // Reset onboarding step when user signs in
-    setOnboardingStep({
-      current: 1,
-      total: 3,
-      completed: false
-    });
-    
-    console.log('User signed in:', user);
+    setOnboardingStep(1); // Start onboarding process
   }, [setUser, setOnboardingStep]);
+
   const handleSignedOut = useCallback(() => {
     setUser(null);
-    // Reset onboarding step when user signs out
-    setOnboardingStep({
-      current: 1,
-      total: 3,
-      completed: false
-    });
-    
-    console.log('User signed out');
+    setOnboardingStep(0); // Reset onboarding
   }, [setUser, setOnboardingStep]);
+
   return {
     handleSignedIn,
     handleSignedOut

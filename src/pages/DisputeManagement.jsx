@@ -3,7 +3,7 @@ import SEO from '../SEO';
 export default function DisputeManagement() {
     const [activeTab, setActiveTab] = useState('overview');
     return (<>
-      <SEOHead title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https://ziontechgroup.com/admin/disputes"/>
+      <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https://ziontechgroup.com/admin/disputes"/>
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
@@ -15,6 +15,7 @@ export default function DisputeManagement() {
               Admin dashboard for managing marketplace disputes and ensuring fair resolution
             </p>
           </div>
+
           {/* Navigation Tabs */}
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-2 mb-8">
             <div className="flex flex-wrap gap-2">
@@ -40,6 +41,7 @@ export default function DisputeManagement() {
               </button>
             </div>
           </div>
+
           {/* Tab Content */}
           {activeTab === 'overview' && (<div className="space-y-8">
               {/* Stats Cards */}
@@ -60,6 +62,7 @@ export default function DisputeManagement() {
                     <span className="text-green-400 text-sm">↓ 12% from last month</span>
                   </div>
                 </div>
+
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -76,6 +79,7 @@ export default function DisputeManagement() {
                     <span className="text-yellow-400 text-sm">3 require immediate attention</span>
                   </div>
                 </div>
+
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -92,6 +96,7 @@ export default function DisputeManagement() {
                     <span className="text-green-400 text-sm">↑ 8% from last month</span>
                   </div>
                 </div>
+
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -110,6 +115,7 @@ export default function DisputeManagement() {
                   </div>
                 </div>
               </div>
+
               {/* Recent Activity */}
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">
                 <h2 className="text-xl font-bold text-white mb-6">Recent Activity</h2>
@@ -140,6 +146,7 @@ export default function DisputeManagement() {
                   </div>
                 </div>
               </div>
+
               {/* Quick Actions */}
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">
                 <h2 className="text-xl font-bold text-white mb-6">Quick Actions</h2>
@@ -156,6 +163,7 @@ export default function DisputeManagement() {
                 </div>
               </div>
             </div>)}
+
           {activeTab === 'disputes' && (<div className="space-y-6">
               <div className="flex justify-between items-center">
                 <h2 className="text-2xl font-bold text-white">Active Disputes</h2>
@@ -176,6 +184,7 @@ export default function DisputeManagement() {
                   </select>
                 </div>
               </div>
+
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl overflow-hidden">
                 <div className="overflow-x-auto">
                   <table className="w-full">
@@ -253,6 +262,7 @@ export default function DisputeManagement() {
                 </div>
               </div>
             </div>)}
+
           {activeTab === 'resolutions' && (<div className="space-y-6">
               <h2 className="text-2xl font-bold text-white">Resolution History</h2>
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">
@@ -261,6 +271,7 @@ export default function DisputeManagement() {
                 </p>
               </div>
             </div>)}
+
           {activeTab === 'settings' && (<div className="space-y-6">
               <h2 className="text-2xl font-bold text-white">Dispute Management Settings</h2>
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">

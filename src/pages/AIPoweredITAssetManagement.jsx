@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive } from 'lucide-react';
 import { Users, Globe, BarChart3 } from 'lucide-react';
-import SEOHead from '../components/SEOHead.jsx';
+import SEOHead from '../components/SEOHead';
 import { Helmet } from 'react-helmet-async';
 import { Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer } from 'lucide-react';
 import { Clock } from 'lucide-react';
@@ -411,6 +411,7 @@ const AIPoweredITAssetManagement = () => {
         <div className="container mx-auto max-w-6xl">
 import {motion} from 'framer-motion';
 import {Server, Shield, BarChart3, Zap, Users, Globe, Settings, Database} from 'lucide-react';
+
 const AIPoweredITAssetManagement: React.FC = () => {}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
@@ -441,20 +442,22 @@ const AIPoweredITAssetManagement: React.FC = () => {}
 import {Helmet} from 'react-helmet-async';
 import {Cpu, Shield, Database, Network, TrendingUp, ArrowRight, Star, Rocket, Globe, Brain, Zap, Users} from 'lucide-react';
 import {Link} from 'react-router-dom';
+
 const AIPoweredITAssetManagement: React.FC = () => {}
   return (
-<>
+    <>
       <Helmet>
         <title>AI-Powered IT Asset Management - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered IT asset management platform that automatically tracks, monitors, and optimizes your entire IT infrastructure. Reduce costs and improve efficiency."/>
         <meta name="keywords" content="AI IT asset management, IT asset tracking, IT infrastructure management, AI-powered IT, asset optimization, IT cost reduction"/>
-<>
+    <>
       <Helmet>
         <title>AI-Powered IT Asset Management - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered IT asset management platform that provides complete visibility, predictive maintenance, and automated lifecycle management for all your technology assets."/>
         <meta name="keywords" content="IT asset management, AI asset management, IT infrastructure management, asset tracking, predictive maintenance, IT compliance"/>
         <link rel="canonical" href="https://ziontechgroup.com/ai-powered-it-asset-management"/>
       </Helmet>
+
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -547,6 +550,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
     "Virtual Machines",
     "Data Storage Systems"
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -555,6 +559,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
     "Security Devices",
     "Mobile Devices"
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       <SEOHead title="AI-Powered IT Asset Management - Zion Tech Group" description="Revolutionary AI-powered platform for comprehensive IT asset management, optimization, and security compliance." keywords="IT asset management, AI asset tracking, IT inventory, asset optimization, IT compliance, AI management"/>
@@ -613,6 +618,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
           </div>
         </div>
       </section>
+
       {/* Features Section */}
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -799,6 +805,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
             </div>
           </div>)}
         </section>
+
         {/* Asset Types Section */}
         <section className="py-20 relative bg-gray-900/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -828,6 +835,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
             </div>
           </div>
         </section>
+
         {/* Capabilities Section */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -857,6 +865,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
             </div>
           </div>
         </section>
+
         {/* Benefits Section */}
         <section className="py-20 relative bg-gray-900/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -910,6 +919,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
             </div>
           </div>
         </section>
+
               ))}
             </div>
           </div>
@@ -997,6 +1007,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
           </motion.div>
         </></div>
       </></section>
+
       {/* Key Features */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -1048,6 +1059,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
           </div>
         </div>
       </section>
+
       {/* Capabilities Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -1116,6 +1128,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
           </div>
         </div>
       </section>
+
       {/* Asset Types Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -1146,6 +1159,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
               Leverage AI to gain complete visibility and control over your IT infrastructure
             </p>))}
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
                                 {
@@ -1200,6 +1214,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
           </div>
         </div>)}
       </section>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Comprehensive Asset Coverage
             </h2>
@@ -1207,6 +1222,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
               Manage all types of IT assets from a single, intelligent platform.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {assetTypes.map((assetType, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300">
                 <h3 className="text-2xl font-semibold mb-4 text-blue-400">{assetType.title}</h3>
@@ -1222,6 +1238,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
               Transform your IT operations with intelligent automation and insights
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
                                         { metric: "90%", description: "Reduction in manual asset tracking" },
@@ -1243,6 +1260,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
               Transform your IT operations with intelligent asset management
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-r from-indigo-500/10 to-purple-600/10 rounded-2xl p-8 border border-indigo-500/20">
               <h3 className="text-2xl font-semibold text-white mb-4">Operational Excellence</h3>
@@ -1265,6 +1283,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
                 </li>
               </ul>
             </div>
+
             <div className="bg-gradient-to-r from-blue-500/10 to-cyan-600/10 rounded-2xl p-8 border border-blue-500/20">
               <h3 className="text-2xl font-semibold text-white mb-4">Cost Optimization</h3>
               <ul className="space-y-3 text-gray-300">
@@ -1427,7 +1446,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
           </div>
         </section>
       </div>
-</>
+    </>
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1474,6 +1493,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
       benefits: ["Performance metrics", "Utilization analysis", "ROI tracking"]
     }
   ];
+
   const useCases = [
     {title}: "Enterprise Infrastructure",
       description: "Manage complex multi-site IT infrastructure with AI-powered insights",
@@ -1496,14 +1516,16 @@ const AIPoweredITAssetManagement: React.FC = () => {}
       impact: "25% license savings"
     }
   ];
+
   const stats = [
     {icon}: Users, value: "500+", label: "Enterprises Served", description: "Trusted by Fortune 500 companies" },
     {icon}: TrendingUp, value: "45%", label: "Cost Reduction", description: "Average savings across clients" },
     {icon}: Award, value: "99.9%", label: "Uptime", description: "Enterprise-grade reliability" },
     {icon}: Globe, value: "60+", label: "Countries", description: "Global deployment network" }
   ];
+
   return (
-<>
+    <>
       <SEOHead customData={{
                                 title: "AI-Powered IT Asset Management - Zion Tech Group",
                                 description: "Revolutionary AI-powered platform for comprehensive IT asset management. Automate discovery, optimize lifecycle, and reduce costs with intelligent asset tracking and analytics.",
@@ -1547,6 +1569,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
             </div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -1576,6 +1599,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
             </div>
           </div>
         </section>
+
         {/* Use Cases Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
@@ -1606,6 +1630,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1627,7 +1652,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
           </div>
         </section>
       </div>
-</>
+    </>
   );
 }
               className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
@@ -1643,6 +1668,7 @@ const AIPoweredITAssetManagement: React.FC = () => {}
     </div>))};
 }
 };
+
 export default AIPoweredITAssetManagement;
                     </></>))}</></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></></>);
             }

@@ -1,40 +1,94 @@
-# Zion Tech Group - Innovative IT & AI Services Platform
+# Zion Tech Group Website
 
-[![Zion Tech Group](https://img.shields.io/badge/Zion%20Tech%20Group-Innovative%20Solutions-blue?style=for-the-badge&logo=react)](https://ziontechgroup.com)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
-[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)](https://github.com/Zion-Holdings/zion.app)
+A modern, responsive website for Zion Tech Group, showcasing our technology services and solutions.
 
-[![CI/CD Pipeline](https://github.com/your-username/zion-tech-group/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/your-username/zion-tech-group/actions/workflows/ci-cd.yml)
-[![Testing](https://github.com/your-username/zion-tech-group/actions/workflows/testing.yml/badge.svg)](https://github.com/your-username/zion-tech-group/actions/workflows/testing.yml)
-[![Security](https://github.com/your-username/zion-tech-group/actions/workflows/security.yml/badge.svg)](https://github.com/your-username/zion-tech-group/actions/workflows/security.yml)
-[![Release](https://github.com/your-username/zion-tech-group/actions/workflows/release.yml/badge.svg)](https://github.com/your-username/zion-tech-group/actions/workflows/release.yml)
+## Features
 
-## 🚀 About Zion Tech Group
+- **Modern Design**: Clean, professional design with Zion Tech Group branding
+- **Responsive Layout**: Optimized for all devices and screen sizes
+- **Comprehensive Navigation**: Easy-to-use navigation with organized sections
+- **Service Showcase**: Detailed information about our technology services
+- **Contact Forms**: Easy ways for customers to get in touch
+- **News & Events**: Company updates and upcoming events
+- **Case Studies**: Real-world examples of our work
+- **Career Opportunities**: Job listings and application forms
 
-Zion Tech Group is a leading technology solutions provider offering cutting-edge AI, quantum computing, cybersecurity, cloud infrastructure, and digital transformation services. Our platform serves businesses worldwide with innovative technology solutions designed to drive innovation, efficiency, and competitive advantage.
+## Tech Stack
 
-**🌐 Website**: [https://ziontechgroup.com](https://ziontechgroup.com)  
-**📱 Contact**: +1 302 464 0950  
-**✉️ Email**: kleber@ziontechgroup.com  
-**📍 Address**: 364 E Main St STE 1008, Middletown DE 19709
+- **Frontend**: React 18 with TypeScript
+- **Styling**: Tailwind CSS
+- **Build Tool**: Vite
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **Deployment**: Optimized for production
 
-## 🌟 Our Comprehensive Service Portfolio
-
-
-## 🛠️ Technology Stack
-
-This application is built with modern, cutting-edge technologies:
-
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS, Framer Motion
-- **UI Components**: shadcn/ui, Lucide React Icons
-- **Build Tool**: Vite with optimized bundling
-- **Deployment**: Netlify with automatic deployments
-- **Version Control**: Git with GitHub integration
-
+## Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
-- npm, yarn, or pnpm
-- Modern web browser
 
+- Node.js 20.18.1 or higher
+- npm 10.0.0 or higher
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd zion-tech-group-website
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000`
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory.
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+├── layout/             # Layout components (header, footer, sidebar)
+├── pages/              # Page components
+├── App.tsx             # Main application component
+├── main.tsx            # Application entry point
+└── index.css           # Global styles
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+This project is proprietary to Zion Tech Group.
+
+## Contact
+
+For questions or support, please contact our team at [contact@ziontechgroup.com](mailto:contact@ziontechgroup.com)

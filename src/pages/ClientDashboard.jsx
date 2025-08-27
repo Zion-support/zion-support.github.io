@@ -3,7 +3,7 @@ import { JobsList } from "@/components/jobs/JobsList";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
-import SEOHead from "../components/SEOHead.jsx";
+import { SEO } from "@/components/SEO";
 import { BriefcaseIcon, PlusCircle, Kanban } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
@@ -30,7 +30,7 @@ function ClientDashboardContent() {
         setSelectedJobTitle(jobTitle);
     };
     return (<>
-      <SEOHead title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
+      <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
       
       <main className="container mx-auto px-4 py-8">
         <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
@@ -51,10 +51,12 @@ function ClientDashboardContent() {
             </Button>
           </div>
         </div>
+
         {/* New Onboarding Steps */}
         <div className="mb-8">
           <ClientOnboardingSteps />
         </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value)}>

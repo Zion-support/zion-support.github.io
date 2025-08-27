@@ -114,6 +114,7 @@ export function TestimonialCarousel() {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -124,6 +125,7 @@ export function TestimonialCarousel() {
             Join thousands of satisfied customers who have transformed their businesses with Zion Tech Group
           </p>
         </motion.div>
+
         {/* Testimonial Carousel */}
         <div className="relative max-w-6xl mx-auto">
           <AnimatePresence initial={false} custom={direction}>
@@ -145,14 +147,17 @@ export function TestimonialCarousel() {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple mb-8 shadow-lg">
                     <Quote className="w-8 h-8 text-white"/>
                   </div>
+
                   {/* Rating */}
                   <div className="flex justify-center gap-1 mb-6">
                     {[...Array(testimonials[currentIndex].rating)].map((_, i) => (<Star key={i} className="w-6 h-6 text-yellow-400 fill-current"/>))}
                   </div>
+
                   {/* Content */}
                   <blockquote className="text-zion-slate-light text-lg md:text-xl leading-relaxed mb-8 max-w-4xl mx-auto italic">
                     "{testimonials[currentIndex].content}"
                   </blockquote>
+
                   {/* Author info */}
                   <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
                     <div className="flex items-center gap-4">
@@ -169,6 +174,7 @@ export function TestimonialCarousel() {
                       </div>
                     </div>
                   </div>
+
                   {/* Project info */}
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-blue-light/20 rounded-full border border-zion-cyan/30">
                     <span className="text-zion-cyan text-sm font-medium">
@@ -183,6 +189,7 @@ export function TestimonialCarousel() {
               </div>
             </motion.div>
           </AnimatePresence>
+
           {/* Navigation arrows */}
           <button className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10" onClick={() => paginate(-1)}>
             <ChevronLeft className="w-6 h-6"/>
@@ -192,12 +199,14 @@ export function TestimonialCarousel() {
             <ChevronRight className="w-6 h-6"/>
           </button>
         </div>
+
         {/* Dots indicator */}
         <div className="flex justify-center gap-3 mt-8">
           {testimonials.map((_, index) => (<button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
                 ? 'bg-zion-cyan scale-125'
                 : 'bg-zion-slate-light/40 hover:bg-zion-slate-light/60'}`}/>))}
         </div>
+
         {/* Stats section */}
         <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
           <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">

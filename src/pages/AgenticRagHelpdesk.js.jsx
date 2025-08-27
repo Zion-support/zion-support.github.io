@@ -85,6 +85,7 @@ export default function AgenticRagHelpdesk() {
           </div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -114,6 +115,7 @@ export default function AgenticRagHelpdesk() {
           </div>
         </div>
       </section>
+
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -145,6 +147,7 @@ export default function AgenticRagHelpdesk() {
           </div>
         </div>
       </section>
+
       {/* How It Works Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -192,6 +195,7 @@ export default function AgenticRagHelpdesk() {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -237,6 +241,7 @@ export default function AgenticRagHelpdesk() {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

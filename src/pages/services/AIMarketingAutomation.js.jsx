@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clock, Analytics } from 'lucide-react';
+import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clock, BarChart3 } from 'lucide-react';
 const AIMarketingAutomation = () => {
     const features = [
         {
@@ -17,7 +17,7 @@ const AIMarketingAutomation = () => {
             benefits: ["Dynamic segmentation", "Behavioral analysis", "Predictive modeling", "Personalization"]
         },
         {
-            icon: Analytics,
+            icon: BarChart3,
             title: "Predictive Analytics",
             description: "Forecast customer behavior, campaign performance, and market trends using historical data and AI models",
             benefits: ["Customer lifetime value", "Churn prediction", "Demand forecasting", "Market trends"]
@@ -89,7 +89,7 @@ const AIMarketingAutomation = () => {
         {
             name: "Predictive Analytics",
             description: "Data-driven forecasting and optimization",
-            icon: Analytics
+            icon: BarChart3
         },
         {
             name: "Marketing Automation",
@@ -178,6 +178,7 @@ const AIMarketingAutomation = () => {
           </motion.div>
         </div>
       </div>
+
       {/* Features Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
@@ -187,6 +188,7 @@ const AIMarketingAutomation = () => {
             proven marketing strategies to deliver exceptional results.
           </p>
         </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {features.map((feature, index) => (<motion.div key={feature.title} variants={itemVariants} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-green-500/50 transition-all duration-300">
               <div className="flex items-start mb-4">
@@ -211,6 +213,7 @@ const AIMarketingAutomation = () => {
             </motion.div>))}
         </div>
       </div>
+
       {/* Solutions by Channel */}
       <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-t border-green-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -221,6 +224,7 @@ const AIMarketingAutomation = () => {
               to create cohesive, data-driven marketing strategies.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((category, index) => (<motion.div key={category.category} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">
                 <div className="flex items-center mb-6">
@@ -240,6 +244,7 @@ const AIMarketingAutomation = () => {
           </div>
         </div>
       </div>
+
       {/* Benefits Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -249,6 +254,7 @@ const AIMarketingAutomation = () => {
             and competitive position in the market.
           </p>
         </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -259,6 +265,7 @@ const AIMarketingAutomation = () => {
             </motion.div>))}
         </div>
       </div>
+
       {/* Technology Stack */}
       <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-t border-green-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -269,6 +276,7 @@ const AIMarketingAutomation = () => {
               performance, and reliability for enterprise marketing automation.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (<motion.div key={tech.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -280,6 +288,7 @@ const AIMarketingAutomation = () => {
           </div>
         </div>
       </div>
+
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">

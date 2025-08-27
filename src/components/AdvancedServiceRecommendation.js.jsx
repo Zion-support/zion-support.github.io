@@ -219,6 +219,7 @@ const AdvancedServiceRecommendation = () => {
           Our AI analyzes your profile to suggest the perfect solutions for your business.
         </p>
       </motion.div>
+
       {/* Client Profile Form */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">
@@ -267,6 +268,7 @@ const AdvancedServiceRecommendation = () => {
             </select>
           </div>
         </div>
+
         <div className="mt-6">
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -283,6 +285,7 @@ const AdvancedServiceRecommendation = () => {
               </label>))}
           </div>
         </div>
+
         <div className="mt-6">
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -299,6 +302,7 @@ const AdvancedServiceRecommendation = () => {
               </label>))}
           </div>
         </div>
+
         <div className="mt-8 text-center">
           <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4" onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>
             {isAnalyzing ? (<>
@@ -311,6 +315,7 @@ const AdvancedServiceRecommendation = () => {
           </Button>
         </div>
       </motion.div>
+
       {/* Recommendations Results */}
       {showResults && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">

@@ -46,10 +46,10 @@ export function ConversationDetailView() {
         const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
         const existingGroup = groupedMessages.find(group => group.date === messageDate);
         if (existingGroup) {
-            existingGroup.messages(message);
+            existingGroup.messages.push(message);
         }
         else {
-            groupedMessages({
+            groupedMessages.push({
                 date: messageDate,
                 messages: [message]
             });

@@ -39,7 +39,15 @@ export const MobileAppRoutes = {
 export const ContentRoutes = {
     blog: '/blog',
     blogPost: '/blog/:slug',
-    resources: '/resources'
+    resources: '/resources',
+    about: '/about',
+    contact: '/contact',
+    careers: '/careers',
+    solutions: '/solutions',
+    caseStudies: '/case-studies',
+    researchDevelopment: '/research-development',
+    privacyPolicy: '/privacy-policy',
+    termsOfService: '/terms-of-service'
 };
 // Error routes
 export const ErrorRoutes = {

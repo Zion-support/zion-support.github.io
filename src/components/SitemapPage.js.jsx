@@ -25,6 +25,7 @@ export default function SitemapPage() {
             Complete navigation guide for Zion Tech Group
           </p>
         </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Public Routes */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -37,6 +38,7 @@ export default function SitemapPage() {
                 </li>))}
             </ul>
           </div>
+
           {/* Talent Routes */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">Talent & Job Seeker Pages</h2>
@@ -48,6 +50,7 @@ export default function SitemapPage() {
                 </li>))}
             </ul>
           </div>
+
           {/* Employer Routes */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">Employer & Buyer Pages</h2>
@@ -59,6 +62,7 @@ export default function SitemapPage() {
                 </li>))}
             </ul>
           </div>
+
           {/* Admin Routes */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">Administrative Pages</h2>
@@ -71,6 +75,7 @@ export default function SitemapPage() {
             </ul>
           </div>
         </div>
+
         {/* All Routes List */}
         <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">
           <h2 className="text-2xl font-semibold text-zion-cyan mb-6">Complete Route List</h2>

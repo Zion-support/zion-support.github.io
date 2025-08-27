@@ -1,125 +1,244 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Home, Briefcase, Users, ShoppingCart, Building, FileText, HelpCircle, Settings, Shield, Globe, MessageSquare, Star } from 'lucide-react';
-export default function Sitemap() {
-    const sitemapSections = [
-        {
-            title: 'Main Pages',
-            icon: Home,
-            links: [
-                { name: 'Home', path: '/', description: 'Main landing page' },
-                { name: 'About Us', path: '/about', description: 'Company information and mission' },
-                { name: 'Contact', path: '/contact', description: 'Get in touch with us' },
-                { name: 'Careers', path: '/careers', description: 'Job opportunities' },
-                { name: 'Partners', path: '/partners', description: 'Partnership programs' },
-                { name: 'Sitemap', path: '/sitemap', description: 'Site navigation guide' },
-            ]
-        },
-        {
-            title: 'Services',
-            icon: Briefcase,
-            links: [
-                { name: 'IT Solutions', path: '/services/it-solutions', description: 'Infrastructure and IT services' },
-                { name: 'AI Services', path: '/services/ai-services', description: 'Artificial intelligence solutions' },
-                { name: 'Cybersecurity', path: '/services/cybersecurity', description: 'Security and protection services' },
-                { name: 'Green IT', path: '/green-it', description: 'Sustainable technology solutions' },
-                { name: 'On-Site Support', path: '/it-onsite-services', description: 'Local technical support' },
-                { name: 'Request Quote', path: '/request-quote', description: 'Get a custom quote' },
-            ]
-        },
-        {
-            title: 'Talent & Recruitment',
-            icon: Users,
-            links: [
-                { name: 'Browse Talents', path: '/talents', description: 'Find skilled professionals' },
-                { name: 'Talent Directory', path: '/talent-directory', description: 'Comprehensive talent database' },
-                { name: 'AI Matcher', path: '/ai-matcher', description: 'AI-powered talent matching' },
-                { name: 'Hire Now', path: '/hire-now', description: 'Quick hiring process' },
-                { name: 'Post a Job', path: '/post-job', description: 'Create job listings' },
-                { name: 'Zion Hire AI', path: '/zion-hire-ai', description: 'AI recruitment platform' },
-            ]
-        },
-        {
-            title: 'Marketplace',
-            icon: ShoppingCart,
-            links: [
-                { name: 'Equipment', path: '/equipment', description: 'Tech equipment and hardware' },
-                { name: 'Equipment Details', path: '/equipment-detail', description: 'Detailed product information' },
-                { name: 'Categories', path: '/categories', description: 'Browse by category' },
-                { name: 'Featured', path: '/featured', description: 'Highlighted products' },
-                { name: 'Deals', path: '/deals', description: 'Special offers and discounts' },
-            ]
-        },
-        {
-            title: 'Company & Business',
-            icon: Building,
-            links: [
-                { name: 'About Us', path: '/about', description: 'Company overview' },
-                { name: 'Careers', path: '/careers', description: 'Employment opportunities' },
-                { name: 'Partners', path: '/partners', description: 'Business partnerships' },
-                { name: 'Press & Media', path: '/press', description: 'News and press releases' },
-                { name: 'Enterprise Solutions', path: '/enterprise', description: 'Large-scale business solutions' },
-            ]
-        },
-        {
-            title: 'Resources & Content',
-            icon: FileText,
-            links: [
-                { name: 'Blog', path: '/blog', description: 'Industry insights and articles' },
-                { name: 'Documentation', path: '/docs', description: 'Technical documentation' },
-                { name: 'API Reference', path: '/api', description: 'API documentation' },
-                { name: 'Tutorials', path: '/tutorials', description: 'Learning resources' },
-                { name: 'Case Studies', path: '/case-studies', description: 'Success stories' },
-                { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
-            ]
-        },
-        {
-            title: 'Support & Help',
-            icon: HelpCircle,
-            links: [
-                { name: 'Help Center', path: '/help-center', description: 'Comprehensive help resources' },
-                { name: 'FAQ', path: '/faq', description: 'Common questions and answers' },
-                { name: 'Contact Support', path: '/contact', description: 'Get help from our team' },
-                { name: 'Live Chat', path: '/chat', description: 'Real-time support chat' },
-                { name: 'Status Page', path: '/status', description: 'Service status updates' },
-                { name: 'Support Ticket', path: '/support-ticket', description: 'Submit support requests' },
-            ]
-        },
-        {
-            title: 'Tools & Applications',
-            icon: Settings,
-            links: [
-                { name: 'Analytics Dashboard', path: '/analytics', description: 'Business analytics and insights' },
-                { name: 'Mobile App', path: '/mobile-launch', description: 'Mobile application' },
-                { name: 'Community Platform', path: '/community', description: 'User community and forums' },
-                { name: 'Developer Portal', path: '/developers', description: 'Developer resources and tools' },
-            ]
-        },
-        {
-            title: 'Legal & Compliance',
-            icon: Shield,
-            links: [
-                { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy' },
-                { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
-                { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information' },
-                { name: 'GDPR Compliance', path: '/gdpr', description: 'Data protection compliance' },
-                { name: 'Accessibility', path: '/accessibility', description: 'Accessibility standards' },
-            ]
-        }
-    ];
-    const quickLinks = [
-        { name: 'Get Started', path: '/get-started', icon: Star, color: 'bg-green-100 text-green-700' },
-        { name: 'Request Demo', path: '/demo', icon: Play, color: 'bg-blue-100 text-blue-700' },
-        { name: 'Contact Sales', path: '/contact-sales', icon: MessageSquare, color: 'bg-purple-100 text-purple-700' },
-        { name: 'Support', path: '/support', icon: HelpCircle, color: 'bg-orange-100 text-orange-700' },
-    ];
-    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Sitemap - Zion Tech Group", description: "Complete site navigation guide for Zion Tech Group. Find all pages, services, and resources organized by category.", keywords: "sitemap, navigation, site structure, pages, services, Zion Tech Group" }), _jsx(Header, {}), _jsx("main", { className: "pt-32 pb-20", children: _jsxs("div", { className: "container mx-auto px-4", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx("h1", { className: "text-4xl md:text-5xl font-bold text-gray-900 mb-6", children: "Site Navigation Guide" }), _jsx("p", { className: "text-xl text-gray-600 max-w-3xl mx-auto", children: "Explore our comprehensive website structure. Find all pages, services, and resources organized by category for easy navigation." })] }), _jsx("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-4 mb-16", children: quickLinks.map((link, index) => (_jsxs(Link, { to: link.path, className: `${link.color} p-4 rounded-lg text-center hover:scale-105 transition-transform duration-200`, children: [_jsx(link.icon, { className: "h-8 w-8 mx-auto mb-2" }), _jsx("div", { className: "font-semibold text-sm", children: link.name })] }, index))) }), _jsx("div", { className: "grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8", children: sitemapSections.map((section, index) => (_jsxs(Card, { className: "hover:shadow-lg transition-shadow duration-300", children: [_jsx(CardHeader, { children: _jsxs("div", { className: "flex items-center space-x-3 mb-4", children: [_jsx("div", { className: "w-10 h-10 bg-zion-blue/10 rounded-lg flex items-center justify-center", children: _jsx(section.icon, { className: "h-5 w-5 text-zion-blue" }) }), _jsx(CardTitle, { className: "text-xl", children: section.title })] }) }), _jsx(CardContent, { children: _jsx("div", { className: "space-y-3", children: section.links.map((link, linkIndex) => (_jsxs("div", { className: "border-l-2 border-gray-200 pl-4", children: [_jsx(Link, { to: link.path, className: "block text-zion-blue hover:text-zion-blue-dark font-medium mb-1 transition-colors", children: link.name }), _jsx("p", { className: "text-sm text-gray-600", children: link.description })] }, linkIndex))) }) })] }, index))) }), _jsxs("div", { className: "mt-16 grid grid-cols-1 md:grid-cols-2 gap-8", children: [_jsxs(Card, { children: [_jsx(CardHeader, { children: _jsxs(CardTitle, { className: "flex items-center space-x-2", children: [_jsx(Globe, { className: "h-5 w-5 text-zion-blue" }), _jsx("span", { children: "Site Information" })] }) }), _jsx(CardContent, { children: _jsxs("div", { className: "space-y-3 text-sm text-gray-600", children: [_jsxs("div", { className: "flex justify-between", children: [_jsx("span", { children: "Total Pages:" }), _jsx("span", { className: "font-medium", children: "50+" })] }), _jsxs("div", { className: "flex justify-between", children: [_jsx("span", { children: "Last Updated:" }), _jsx("span", { className: "font-medium", children: new Date().toLocaleDateString() })] }), _jsxs("div", { className: "flex justify-between", children: [_jsx("span", { children: "Site Version:" }), _jsx("span", { className: "font-medium", children: "2.0.0" })] })] }) })] }), _jsxs(Card, { children: [_jsx(CardHeader, { children: _jsxs(CardTitle, { className: "flex items-center space-x-2", children: [_jsx(MessageSquare, { className: "h-5 w-5 text-zion-blue" }), _jsx("span", { children: "Need Help?" })] }) }), _jsxs(CardContent, { children: [_jsx("p", { className: "text-sm text-gray-600 mb-4", children: "Can't find what you're looking for? Our support team is here to help." }), _jsxs("div", { className: "space-y-2", children: [_jsx(Link, { to: "/contact", className: "block text-zion-blue hover:text-zion-blue-dark text-sm font-medium", children: "Contact Support \u2192" }), _jsx(Link, { to: "/help-center", className: "block text-zion-blue hover:text-zion-blue-dark text-sm font-medium", children: "Visit Help Center \u2192" })] })] })] })] })] }) }), _jsx(Footer, {})] }));
-}
-// Play icon component for demo link
-function Play({ className }) {
-    return (_jsx("svg", { className: className, fill: "currentColor", viewBox: "0 0 20 20", children: _jsx("path", { fillRule: "evenodd", d: "M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z", clipRule: "evenodd" }) }));
+import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase } from 'lucide-react';
+export default function SitemapPage() {
+  const siteStructure = [
+    {
+      title: "Main Pages",
+      icon: Home,
+      links: [
+        { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
+        { name: "About Us", path: "/about", description: "Learn about our company and mission" },
+        { name: "Contact", path: "/contact", description: "Get in touch with our team" },
+        { name: "Services Overview", path: "/services", description: "Explore all our services" }
+      ]
+    },
+    {
+      title: "Services",
+      icon: Settings,
+      links: [
+        { name: "AI & Machine Learning", path: "/services/ai", description: "Cutting-edge AI solutions" },
+        { name: "Cloud & DevOps", path: "/services/cloud", description: "Scalable cloud infrastructure" },
+        { name: "Cybersecurity", path: "/services/cybersecurity", description: "Advanced security solutions" },
+        { name: "IT Infrastructure", path: "/services/infrastructure", description: "Robust IT foundations" },
+        { name: "Digital Transformation", path: "/services/transformation", description: "Business modernization" },
+        { name: "Data Analytics", path: "/services/data-analytics", description: "Business intelligence" },
+        { name: "IoT & Edge Computing", path: "/services/iot-edge-computing", description: "Connected ecosystems" },
+        { name: "Quantum Technology", path: "/services/quantum-technology", description: "Next-gen computing" },
+        { name: "Space Technology", path: "/services/space-tech", description: "Aerospace innovation" },
+        { name: "Green IT", path: "/services/green-it", description: "Sustainable technology" },
+        { name: "Micro SAAS", path: "/services/micro-saas", description: "Scalable software solutions" },
+        { name: "Consulting", path: "/services/consulting", description: "Strategic technology consulting" }
+      ]
+    },
+    {
+      title: "Company",
+      icon: Building,
+      links: [
+        { name: "Careers", path: "/careers", description: "Join our team" },
+        { name: "Partners", path: "/partners", description: "Strategic partnerships" },
+        { name: "Case Studies", path: "/case-studies", description: "Success stories and projects" }
+      ]
+    },
+    {
+      title: "Support & Resources",
+      icon: HelpCircle,
+      links: [
+        { name: "Help Center", path: "/help", description: "Find answers to common questions" },
+        { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
+        { name: "Support Portal", path: "/support", description: "Technical support and assistance" }
+      ]
+    },
+    {
+      title: "Legal",
+      icon: Shield,
+      links: [
+        { name: "Privacy Policy", path: "/privacy", description: "How we protect your data" },
+        { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
+        { name: "Sitemap", path: "/sitemap", description: "Complete site structure" }
+      ]
+    }
+  ];
+  const quickLinks = [
+    { name: "Get Started", path: "/contact", description: "Start your project with us" },
+    { name: "Request Quote", path: "/contact", description: "Get a custom quote" },
+    { name: "Schedule Demo", path: "/contact", description: "See our solutions in action" },
+    { name: "Download Brochure", path: "/contact", description: "Get our company overview" }
+  ];
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">
+              <Sitemap className="h-10 w-10 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Sitemap
+            </h1>
+            <p className="text-xl text-slate-300 mb-4 max-w-3xl mx-auto">
+              Navigate our website easily with this comprehensive overview of all pages and sections.
+            </p>
+            <p className="text-slate-400">
+              Last updated: December 2024
+            </p>
+          </div>
+        </div>
+        {/* Background Elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+        </div>
+      </section>
+      {/* Quick Links Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Quick Actions</h2>
+            <p className="text-xl text-slate-300">Get started quickly with these popular actions</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {quickLinks.map((link, index) => (
+              <Link
+                key={index}
+                to={link.path}
+                className="group bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                    <Briefcase className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
+                    {link.name}
+                  </h3>
+                  <p className="text-slate-400 text-sm">{link.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Main Sitemap Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">Complete Site Structure</h2>
+            <p className="text-xl text-slate-300">Explore all pages and sections of our website</p>
+          </div>
+          <div className="space-y-12">
+            {siteStructure.map((section, sectionIndex) => (
+              <div key={sectionIndex} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
+                    <section.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white ml-4">{section.title}</h3>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {section.links.map((link, linkIndex) => (
+                    <Link
+                      key={linkIndex}
+                      to={link.path}
+                      className="group p-4 bg-slate-700/30 rounded-lg hover:bg-slate-700/50 transition-all duration-200 border border-transparent hover:border-cyan-500/30"
+                    >
+                      <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
+                        {link.name}
+                      </h4>
+                      <p className="text-slate-400 text-sm">{link.description}</p>
+                      <div className="mt-3 text-cyan-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                        Visit page →
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Additional Resources Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Additional Resources</h2>
+            <p className="text-xl text-slate-300">External resources and helpful links</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                <FileText className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Documentation</h3>
+              <p className="text-slate-300 mb-4">Technical documentation and API references</p>
+              <a 
+                href="https://docs.ziontechgroup.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-300 underline"
+              >
+                View Documentation →
+              </a>
+            </div>
+            <div className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                <Users className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Community</h3>
+              <p className="text-slate-300 mb-4">Join our developer and user community</p>
+              <a 
+                href="https://community.ziontechgroup.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-300 underline"
+              >
+                Join Community →
+              </a>
+            </div>
+            <div className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                <Mail className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Newsletter</h3>
+              <p className="text-slate-300 mb-4">Stay updated with our latest news and insights</p>
+              <a 
+                href="/contact" 
+                className="text-cyan-400 hover:text-cyan-300 underline"
+              >
+                Subscribe →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Can't Find What You're Looking For?
+            </h2>
+            <p className="text-xl text-slate-300 mb-8">
+              Our team is here to help you navigate and find the information you need.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+              >
+                Contact Support
+              </Link>
+              <Link
+                to="/help"
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+              >
+                Help Center
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }

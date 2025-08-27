@@ -8,18 +8,8 @@ export interface Message {
   read?: boolean;
 }
 export interface ChatAssistantProps {
-  isOpen: boolean;
-  onClose: () => void;
-  recipient: {
-    id: string;
-    name: string;
-    avatarUrl?: string;
-    role?: string;
-  };
-  conversationId?: string;
-  initialMessages?: Message[];
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>;
-  contextHeader?: ReactNode;
+  isOpen?: boolean;
+  onClose?: () => void;
 }
 export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
   const [isChatOpen, setIsChatOpen] = useState(isOpen);
@@ -31,8 +21,8 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
     const userMessage: Message = {
       id: Date.now().toString(),
       role: 'user',
-      message: guestMessage,
-      timestamp: new Date()
+      message: message.trim(),
+      timestamp: new Date(),
     };
     setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
@@ -108,44 +98,9 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
                 </p>
               </div>
             </div>
-          </div>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-white hover:bg-zion-purple/10 rounded-full"
-            onClick={onClose}
-            aria-label="Close chat"
-          >
-            <X className="h-5 w-5" />
-          </Button>
-        </div>
-        {/* Context Header (Optional) */}
-        {contextHeader && (
-          <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">
-            {contextHeader}
-          </div>
+          ))
         )}
-        {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">
-          {currentMessages.length === 0 ? (
-            <div className="text-center text-zion-slate py-8">
-              <p>Start a conversation with {recipient.name}</p>
-            </div>
-          ) : (
-            currentMessages.map((msg) => (
-              <ChatMessage
-                key={msg.id} 
-                role={msg.role}
-                message={msg.message}
-              />
-            ))
-          )}
-          <div ref={messagesEndRef} />
-        </div>
-        {/* Input */}
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage} />
-        </div>
+        <div ref={messagesEndRef} />
       </div>
       {/* Input */}
       <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">
@@ -164,7 +119,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
             <Send size={20} />
           </button>
         </div>
-      )}
+      </form>
     </div>
   );
 }

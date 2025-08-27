@@ -27,13 +27,14 @@ export function MobileMenu({ className }) {
         { href: '/community', label: t('nav.community'), icon: Users, matches: (path) => path.startsWith('/community') },
     ];
     if (isAuthenticated) {
-        navigationItems({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') });
+        navigationItems.push({ href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path) => path.startsWith('/dashboard') });
     }
     return (<div className={cn("md:hidden", className)}>
       {/* Mobile menu button */}
       <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20" aria-label={isOpen ? 'Close menu' : 'Open menu'}>
         {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
       </Button>
+
       {/* Mobile menu overlay */}
       {isOpen && (<div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
           <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">
@@ -43,6 +44,7 @@ export function MobileMenu({ className }) {
                 <X className="h-5 w-5"/>
               </Button>
             </div>
+
             {/* Navigation items */}
             <nav className="p-4 space-y-2">
               {navigationItems.map((item) => {
@@ -56,6 +58,7 @@ export function MobileMenu({ className }) {
                   </Link>);
             })}
             </nav>
+
             {/* User section */}
             <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zion-purple/20">
               {isAuthenticated ? (<div className="space-y-3">

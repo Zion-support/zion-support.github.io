@@ -61,7 +61,8 @@ const modules = [
 ];
 export default function AIAutonomousBusinessPlatform() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEOHead title="AI Autonomous Business Platform - Zion Tech Group" description="Unified AI-powered business platform that integrates all operations. Streamline workflows, automate processes, and scale your business efficiently." keywords="AI business platform, unified business solution, business automation, integrated business management" canonical="https://ziontechgroup.com/ai-autonomous-business-platform/"/>
+      <SEO title="AI Autonomous Business Platform - Zion Tech Group" description="Unified AI-powered business platform that integrates all operations. Streamline workflows, automate processes, and scale your business efficiently." keywords="AI business platform, unified business solution, business automation, integrated business management" canonical="https://ziontechgroup.com/ai-autonomous-business-platform/"/>
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple/20"></div>
@@ -96,6 +97,7 @@ export default function AIAutonomousBusinessPlatform() {
           </motion.div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,6 +109,7 @@ export default function AIAutonomousBusinessPlatform() {
               Everything you need to run your business efficiently, all in one intelligent platform.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => {
             const IconComponent = feature.icon;
@@ -121,6 +124,7 @@ export default function AIAutonomousBusinessPlatform() {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,6 +136,7 @@ export default function AIAutonomousBusinessPlatform() {
               Experience the future of business management with our comprehensive AI platform.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (<motion.div key={benefit} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"/>
@@ -140,6 +145,7 @@ export default function AIAutonomousBusinessPlatform() {
           </div>
         </div>
       </section>
+
       {/* Modules Section */}
       <section className="py-20 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -151,6 +157,7 @@ export default function AIAutonomousBusinessPlatform() {
               Every aspect of your business, perfectly integrated and AI-powered.
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {modules.map((module, index) => {
             const IconComponent = module.icon;
@@ -165,6 +172,7 @@ export default function AIAutonomousBusinessPlatform() {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

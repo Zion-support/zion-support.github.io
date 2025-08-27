@@ -24,6 +24,7 @@ function HiringTrackerContent() {
             </p>
           </div>
         </div>
+
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>

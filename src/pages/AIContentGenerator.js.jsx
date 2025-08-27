@@ -170,6 +170,7 @@ export default function AIContentGenerator() {
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-slate-dark">
       <SEO title="AI Content Generator - Zion Tech Group" description="Create engaging, high-quality content with AI-powered writing tools. Generate blogs, social media posts, and marketing copy instantly." keywords="AI content generator, content creation, AI writing, marketing copy, Zion Tech Group" canonical="https://ziontechgroup.com/ai-content-generator"/>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
@@ -199,6 +200,7 @@ export default function AIContentGenerator() {
           </div>
         </div>
       </section>
+
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -247,6 +249,7 @@ export default function AIContentGenerator() {
           </div>
         </div>)}
       </section>
+
       {/* Use Cases */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -296,6 +299,7 @@ export default function AIContentGenerator() {
           </div>
         </div>
       </section>
+
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -340,6 +344,7 @@ export default function AIContentGenerator() {
           </div>
         </div>
       </section>
+
       {/* Contact Section */}
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto text-center">
@@ -391,6 +396,7 @@ export default function AIContentGenerator() {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto text-center">

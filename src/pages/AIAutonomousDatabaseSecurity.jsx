@@ -20,6 +20,7 @@ const AIAutonomousDatabaseSecurity = () => {
               Your AI database security partner that continuously secures databases, detects threats, and protects database infrastructure with intelligent autonomous operation
             </p>
           </div>
+
           {/* Database Security Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousDatabaseSecurity = () => {
               <p className="text-gray-300">Analyze security</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousDatabaseSecurity = () => {
               <p className="text-gray-300">Learns new threats</p>
             </div>
           </div>
+
           {/* Database Security Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Database Security Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousDatabaseSecurity = () => {
               </div>
             </div>
           </div>
+
           {/* Database Security Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Database Security Solutions</h2>
@@ -125,6 +129,7 @@ const AIAutonomousDatabaseSecurity = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Database Security Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousDatabaseSecurity = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Database Security?</h2>

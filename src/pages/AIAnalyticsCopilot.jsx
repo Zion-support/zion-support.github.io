@@ -8,6 +8,7 @@ const AIAnalyticsCopilot = () => {
         <meta name="description" content="Intelligent analytics copilot that transforms raw data into actionable insights with AI-powered analysis and visualization."/>
         <meta name="keywords" content="AI analytics, data insights, business intelligence, analytics copilot, data visualization"/>
       </Helmet>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 relative overflow-hidden">
@@ -31,6 +32,7 @@ const AIAnalyticsCopilot = () => {
             </div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -40,6 +42,7 @@ const AIAnalyticsCopilot = () => {
                 Advanced AI capabilities that work alongside your team to unlock data insights
               </p>
             </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
             {
@@ -80,6 +83,7 @@ const AIAnalyticsCopilot = () => {
             </div>
           </div>
         </section>
+
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -89,6 +93,7 @@ const AIAnalyticsCopilot = () => {
                 Accelerate decision-making and drive growth with AI-powered analytics
               </p>
             </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
             {
@@ -116,6 +121,7 @@ const AIAnalyticsCopilot = () => {
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">

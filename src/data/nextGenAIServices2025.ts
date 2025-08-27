@@ -2,437 +2,381 @@ export interface NextGenAIService {
   id: string;
   title: string;
   description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
+  longDescription: string;
+  icon: string;
+  color: string;
+  category: 'ai' | 'machine-learning' | 'deep-learning' | 'nlp' | 'computer-vision' | 'autonomous-systems' | 'ai-ethics' | 'ai-research';
   features: string[];
   benefits: string[];
   useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  demoUrl?: string;
-  documentationUrl?: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-    address: string;
+  pricing: {
+    starter: string;
+    professional: string;
+    enterprise: string;
+    custom: string;
   };
+  estimatedTime: string;
+  technologies: string[];
+  image?: string;
+  aiScore: number;
+  marketPrice: string;
+  contactLink: string;
+  status: 'active' | 'beta' | 'coming-soon';
+  researchLevel: 'production' | 'research' | 'experimental';
+  ethicalCompliance: string[];
 }
-export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService2025[] = [
-  // Autonomous AI Agents Platform
+export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   {
-    id: "ai-consciousness-simulator",
-    title: "AI Consciousness Simulation Platform",
-    description: "Revolutionary AI platform that simulates human-like consciousness for advanced decision-making, emotional intelligence, and creative problem-solving in enterprise environments.",
-    category: "Advanced AI",
-    subcategory: "Consciousness Simulation",
-    price: 25000,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'autonomous-ai-systems',
+    title: 'Autonomous AI Systems',
+    description: 'Self-learning and self-optimizing artificial intelligence systems',
+    longDescription: 'Develop truly autonomous AI systems that learn, adapt, and optimize themselves. Our platform enables the creation of AI agents that can operate independently and continuously improve.',
+    icon: 'Brain',
+    color: 'from-purple-500 to-pink-600',
+    category: 'autonomous-systems',
     features: [
-      "Consciousness-level reasoning",
-      "Emotional intelligence processing",
-      "Creative problem solving",
-      "Self-aware decision making",
-      "Human-like intuition simulation",
-      "Advanced pattern recognition",
-      "Contextual understanding",
-      "Autonomous learning adaptation"
+      'Self-learning algorithms',
+      'Autonomous decision making',
+      'Continuous optimization',
+      'Adaptive behavior',
+      'Goal-oriented learning',
+      'Ethical constraint enforcement'
     ],
     benefits: [
-      "Revolutionary decision accuracy (98%+)",
-      "Human-level creative solutions",
-      "Reduced cognitive load on teams",
-      "Enhanced innovation capabilities",
-      "24/7 intelligent assistance",
-      "Breakthrough problem solving"
+      'Reduced human intervention',
+      'Continuous improvement',
+      'Adaptive problem solving',
+      'Scalable AI operations'
     ],
     useCases: [
-      "Strategic business planning",
-      "Creative content generation",
-      "Complex problem resolution",
-      "Innovation management",
-      "Research and development",
-      "Executive decision support"
+      'Autonomous vehicles',
+      'Smart cities',
+      'Industrial automation',
+      'Robotic systems'
     ],
-    targetAudience: [
-      "Fortune 500 companies",
-      "Research institutions",
-      "Innovation labs",
-      "Technology companies",
-      "Government agencies"
-    ],
-    tags: ["AI", "Autonomous Agents", "Machine Learning", "Automation", "NLP"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$7,999 - $25,000/month",
-    roi: "350-500%",
-    innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$2,999/month',
+      professional: '$7,999/month',
+      enterprise: '$19,999/month',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["GPT-5", "Claude", "LangChain", "Python", "React", "Node.js"],
-      integrations: ["OpenAI", "Anthropic", "AWS", "Azure", "Google Cloud"],
-      apiEndpoints: 500,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "GDPR", "AI Safety", "Data encryption"]
+    estimatedTime: '8-16 weeks',
+    technologies: ['Reinforcement Learning', 'Deep Learning', 'Neural Networks', 'Python', 'PyTorch', 'TensorFlow'],
+    aiScore: 98,
+    marketPrice: '$2,999-$19,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'beta',
+    researchLevel: 'research',
+    ethicalCompliance: ['AI Safety', 'Transparency', 'Accountability', 'Bias Prevention']
+  },
+  {
+    id: 'advanced-nlp-platform',
+    title: 'Advanced Natural Language Processing',
+    description: 'State-of-the-art NLP with multilingual understanding and generation',
+    longDescription: 'Break language barriers with our advanced NLP platform. Features multilingual understanding, context-aware generation, and domain-specific language models.',
+    icon: 'MessageCircle',
+    color: 'from-blue-500 to-indigo-600',
+    category: 'nlp',
+    features: [
+      'Multilingual understanding',
+      'Context-aware generation',
+      'Domain-specific models',
+      'Sentiment analysis',
+      'Entity recognition',
+      'Language translation'
+    ],
+    benefits: [
+      'Global communication',
+      'Improved customer service',
+      'Content localization',
+      'Multilingual support'
+    ],
+    useCases: [
+      'Global businesses',
+      'Customer service',
+      'Content creation',
+      'Language learning'
+    ],
+    pricing: {
+      starter: '$799/month',
+      professional: '$1,999/month',
+      enterprise: '$4,999/month',
+      custom: 'Contact us'
     },
-    competitors: ["OpenAI", "Anthropic", "AutoGPT", "LangChain", "Microsoft"],
-    marketSize: "$15.7 billion by 2025",
-    aiModel: "GPT-5 + Claude + Custom Models",
-    trainingData: "Proprietary + Public Datasets"
+    estimatedTime: '4-8 weeks',
+    technologies: ['GPT-4', 'BERT', 'Transformer Models', 'Python', 'Hugging Face', 'FastAPI'],
+    aiScore: 96,
+    marketPrice: '$799-$4,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    researchLevel: 'production',
+    ethicalCompliance: ['Bias Detection', 'Content Filtering', 'Privacy Protection', 'Transparency']
   },
-  // Federated Learning Platform
   {
-    id: "federated-learning-platform",
-    title: "Federated Learning Platform",
-    description: "Privacy-preserving machine learning platform that enables collaborative model training across distributed data sources without sharing raw data.",
-    category: "AI & Machine Learning",
-    subcategory: "Federated Learning",
-    price: 5999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'computer-vision-ai',
+    title: 'Advanced Computer Vision AI',
+    description: 'Next-generation computer vision with 3D understanding and spatial awareness',
+    longDescription: 'See the world through AI eyes with our advanced computer vision platform. Features 3D understanding, spatial awareness, and real-time object recognition.',
+    icon: 'Eye',
+    color: 'from-green-500 to-emerald-600',
+    category: 'computer-vision',
     features: [
-      "Distributed model training",
-      "Privacy-preserving algorithms",
-      "Secure aggregation",
-      "Multi-party computation",
-      "Model versioning",
-      "Performance monitoring",
-      "Custom algorithm support",
-      "API integration",
-      "Scalable infrastructure",
-      "Compliance tools"
+      '3D object recognition',
+      'Spatial understanding',
+      'Real-time processing',
+      'Multi-modal vision',
+      'Depth perception',
+      'Motion tracking'
     ],
     benefits: [
-      "Maintain data privacy",
-      "Collaborate across organizations",
-      "Reduce data transfer costs",
-      "Comply with regulations",
-      "Scale AI capabilities"
+      'Enhanced visual understanding',
+      'Improved accuracy',
+      'Real-time processing',
+      '3D spatial awareness'
     ],
     useCases: [
-      "Healthcare research",
-      "Financial services",
-      "Manufacturing optimization",
-      "Retail analytics",
-      "Cross-border collaboration"
+      'Autonomous vehicles',
+      'Robotics',
+      'Augmented reality',
+      'Security systems'
     ],
-    targetAudience: [
-      "Data scientists",
-      "Privacy officers",
-      "AI researchers",
-      "Healthcare organizations",
-      "Financial institutions"
-    ],
-    tags: ["Federated Learning", "Privacy", "Machine Learning", "Collaboration", "Security"],
-    estimatedDelivery: "10-14 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$5,999 - $18,000/month",
-    roi: "300-450%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    pricing: {
+      starter: '$1,299/month',
+      professional: '$3,299/month',
+      enterprise: '$7,999/month',
+      custom: 'Contact us'
     },
-    technicalSpecs: {
-      technology: ["TensorFlow Federated", "PyTorch", "Python", "Kubernetes", "Docker"],
-      integrations: ["AWS", "Azure", "Google Cloud", "Hugging Face", "MLflow"],
-      apiEndpoints: 300,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "Data encryption"]
+    estimatedTime: '6-12 weeks',
+    technologies: ['OpenCV', 'PyTorch', 'TensorFlow', 'CUDA', '3D Vision', 'Computer Vision'],
+    aiScore: 97,
+    marketPrice: '$1,299-$7,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    researchLevel: 'production',
+    ethicalCompliance: ['Privacy Protection', 'Bias Prevention', 'Transparency', 'Accountability']
+  },
+  {
+    id: 'ai-ethics-platform',
+    title: 'AI Ethics & Governance Platform',
+    description: 'Comprehensive AI ethics framework and governance tools',
+    longDescription: 'Ensure responsible AI development with our comprehensive ethics platform. Features bias detection, fairness metrics, transparency tools, and governance frameworks.',
+    icon: 'Shield',
+    color: 'from-teal-500 to-cyan-600',
+    category: 'ai-ethics',
+    features: [
+      'Bias detection & mitigation',
+      'Fairness metrics',
+      'Transparency tools',
+      'Governance frameworks',
+      'Ethical guidelines',
+      'Compliance monitoring'
+    ],
+    benefits: [
+      'Responsible AI development',
+      'Regulatory compliance',
+      'Reduced bias',
+      'Trustworthy AI systems'
+    ],
+    useCases: [
+      'AI development teams',
+      'Regulatory bodies',
+      'Ethics committees',
+      'Compliance officers'
+    ],
+    pricing: {
+      starter: '$599/month',
+      professional: '$1,499/month',
+      enterprise: '$3,999/month',
+      custom: 'Contact us'
     },
-    competitors: ["OpenMined", "IBM Federated Learning", "Google TensorFlow Federated", "Microsoft"],
-    marketSize: "$8.9 billion by 2025",
-    aiModel: "Custom Federated Models",
-    trainingData: "Distributed Private Datasets"
-  },
-  // AI-Powered Creative Content Generation Suite
-  {
-    id: "ai-creative-content-generation",
-    title: "AI-Powered Creative Content Generation Suite",
-    description: "Comprehensive creative AI platform that generates high-quality text, images, videos, and audio content for marketing, entertainment, and business applications.",
-    category: "AI & Creative",
-    subcategory: "Content Generation",
-    price: 2999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Multi-modal content generation",
-      "Brand voice customization",
-      "Content optimization",
-      "Plagiarism detection",
-      "SEO optimization",
-      "Multi-language support",
-      "Content scheduling",
-      "Performance analytics",
-      "API integration",
-      "Custom templates"
-    ],
-    benefits: [
-      "Increase content production by 10x",
-      "Reduce content creation costs by 60%",
-      "Improve content quality and consistency",
-      "Faster time to market",
-      "Scalable content operations"
-    ],
-    useCases: [
-      "Marketing content creation",
-      "Social media management",
-      "Blog and article writing",
-      "Video and audio production",
-      "Product descriptions"
-    ],
-    targetAudience: [
-      "Marketing managers",
-      "Content creators",
-      "Social media managers",
-      "E-commerce businesses",
-      "Agencies"
-    ],
-    tags: ["AI", "Content Generation", "Creative", "Marketing", "Multimodal"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "24/7 Premium Support",
-    marketPrice: "Starting from $25,000/month",
-    demoUrl: "https://ziontechgroup.com/demo/ai-consciousness",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-consciousness",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  },
-  // Quantum Machine Learning Platform
-  {
-    id: "quantum-ai-optimization",
-    title: "Quantum-Enhanced AI Optimization Suite",
-    description: "Cutting-edge quantum computing integration with AI for exponentially faster optimization, complex modeling, and breakthrough problem-solving capabilities.",
-    category: "Quantum AI",
-    subcategory: "Optimization",
-    price: 35000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum-classical hybrid computing",
-      "Exponential optimization speed",
-      "Complex system modeling",
-      "Quantum machine learning",
-      "Advanced cryptography",
-      "Quantum neural networks",
-      "Real-time quantum processing",
-      "Scalable quantum algorithms"
-    ],
-    benefits: [
-      "10,000x faster optimization",
-      "Solve previously impossible problems",
-      "Revolutionary computational power",
-      "Quantum advantage applications",
-      "Future-proof technology",
-      "Competitive market edge"
-    ],
-    useCases: [
-      "Financial portfolio optimization",
-      "Drug discovery acceleration",
-      "Supply chain optimization",
-      "Traffic flow management",
-      "Weather prediction",
-      "Cryptographic security"
-    ],
-    targetAudience: [
-      "Financial institutions",
-      "Pharmaceutical companies",
-      "Government research",
-      "Technology corporations",
-      "Academic institutions"
-    ],
-    tags: ["Quantum", "AI", "Optimization", "Revolutionary", "Future-tech"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "24/7 Quantum Expert Support",
-    marketPrice: "Starting from $35,000/month",
-    demoUrl: "https://ziontechgroup.com/demo/quantum-ai",
-    documentationUrl: "https://ziontechgroup.com/docs/quantum-ai",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  },
-  // AI-Powered Predictive Maintenance Platform
-  {
-    id: "neural-architecture-search",
-    title: "Autonomous Neural Architecture Search Platform",
-    description: "Self-evolving AI system that automatically designs, tests, and optimizes neural network architectures for specific business problems without human intervention.",
-    category: "AutoML",
-    subcategory: "Neural Architecture",
-    price: 18000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Automated architecture design",
-      "Self-evolving neural networks",
-      "Performance optimization",
-      "Resource-efficient models",
-      "Multi-objective optimization",
-      "Continuous learning",
-      "Automated hyperparameter tuning",
-      "Model compression techniques"
-    ],
-    benefits: [
-      "90% reduction in AI development time",
-      "Superior model performance",
-      "Minimal human expertise required",
-      "Cost-effective AI solutions",
-      "Continuous improvement",
-      "Scalable deployment"
-    ],
-    useCases: [
-      "Custom AI model development",
-      "Computer vision applications",
-      "Natural language processing",
-      "Time series forecasting",
-      "Recommendation systems",
-      "Anomaly detection"
-    ],
-    targetAudience: [
-      "AI development teams",
-      "Data scientists",
-      "Technology startups",
-      "Enterprise IT departments",
-      "Research organizations"
-    ],
-    tags: ["AutoML", "Neural Networks", "AI Development", "Automation"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "24/7 Technical Support",
-    marketPrice: "Starting from $18,000/month",
-    demoUrl: "https://ziontechgroup.com/demo/neural-search",
-    documentationUrl: "https://ziontechgroup.com/docs/neural-search",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    estimatedTime: '2-6 weeks',
+    technologies: ['Python', 'Fairness Metrics', 'Bias Detection', 'Explainable AI', 'Governance Tools'],
+    aiScore: 94,
+    marketPrice: '$599-$3,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    researchLevel: 'production',
+    ethicalCompliance: ['Ethical Guidelines', 'Bias Prevention', 'Transparency', 'Accountability']
   },
   {
-    id: "multimodal-ai-platform",
-    title: "Unified Multimodal AI Intelligence Platform",
-    description: "Advanced AI platform that seamlessly processes text, images, audio, video, and sensor data simultaneously for comprehensive understanding and intelligent responses.",
-    category: "Multimodal AI",
-    subcategory: "Unified Intelligence",
-    price: 22000,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'quantum-ai-hybrid',
+    title: 'Quantum-Classical AI Hybrid',
+    description: 'Hybrid quantum-classical AI for complex problem solving',
+    longDescription: 'Combine the power of quantum computing with classical AI to solve previously intractable problems. Our hybrid approach delivers exponential speedups for specific applications.',
+    icon: 'Rocket',
+    color: 'from-violet-500 to-fuchsia-600',
+    category: 'ai-research',
     features: [
-      "Text-to-everything generation",
-      "Cross-modal understanding",
-      "Unified content processing",
-      "Real-time multimodal analysis",
-      "Interactive AI conversations",
-      "3D scene understanding",
-      "Emotional recognition",
-      "Contextual reasoning"
+      'Quantum neural networks',
+      'Hybrid algorithms',
+      'Quantum advantage',
+      'Classical AI integration',
+      'Optimization problems',
+      'Research tools'
     ],
     benefits: [
-      "Comprehensive data understanding",
-      "Enhanced user experiences",
-      "Unified AI capabilities",
-      "Reduced integration complexity",
-      "Advanced content generation",
-      "Intelligent automation"
+      'Exponential speedups',
+      'New problem-solving capabilities',
+      'Research breakthroughs',
+      'Competitive advantage'
     ],
     useCases: [
-      "Customer service automation",
-      "Content creation platforms",
-      "Educational technology",
-      "Healthcare diagnostics",
-      "Security surveillance",
-      "Entertainment production"
+      'Pharmaceutical research',
+      'Financial modeling',
+      'Climate science',
+      'Materials science'
     ],
-    targetAudience: [
-      "Media companies",
-      "Healthcare providers",
-      "Educational institutions",
-      "Security agencies",
-      "Entertainment industry"
-    ],
-    tags: ["Multimodal", "AI", "Content Generation", "Intelligence"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "24/7 Expert Support",
-    marketPrice: "Starting from $22,000/month",
-    demoUrl: "https://ziontechgroup.com/demo/multimodal-ai",
-    documentationUrl: "https://ziontechgroup.com/docs/multimodal-ai",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    pricing: {
+      starter: '$4,999/month',
+      professional: '$12,999/month',
+      enterprise: '$29,999/month',
+      custom: 'Contact us'
+    },
+    estimatedTime: '12-20 weeks',
+    technologies: ['Qiskit', 'Cirq', 'PyTorch', 'TensorFlow', 'Quantum Hardware', 'Hybrid Algorithms'],
+    aiScore: 99,
+    marketPrice: '$4,999-$29,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'beta',
+    researchLevel: 'research',
+    ethicalCompliance: ['AI Safety', 'Quantum Ethics', 'Research Ethics', 'Transparency']
   },
   {
-    id: "ai-digital-twin-creator",
-    title: "AI-Powered Digital Twin Creation Platform",
-    description: "Revolutionary platform that creates intelligent digital twins of physical systems, processes, and organizations using AI for predictive maintenance, optimization, and simulation.",
-    category: "Digital Twins",
-    subcategory: "AI Simulation",
-    price: 28000,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'federated-learning-platform',
+    title: 'Federated Learning Platform',
+    description: 'Privacy-preserving distributed machine learning',
+    longDescription: 'Train AI models across distributed data sources without sharing raw data. Our federated learning platform ensures privacy while enabling collaborative AI development.',
+    icon: 'Network',
+    color: 'from-orange-500 to-red-600',
+    category: 'machine-learning',
     features: [
-      "Automated twin creation",
-      "Real-time synchronization",
-      "Predictive modeling",
-      "Scenario simulation",
-      "Performance optimization",
-      "Anomaly prediction",
-      "Digital-physical integration",
-      "AI-driven insights"
+      'Distributed training',
+      'Privacy preservation',
+      'Secure aggregation',
+      'Model synchronization',
+      'Performance monitoring',
+      'Collaborative learning'
     ],
     benefits: [
-      "95% predictive accuracy",
-      "Reduced downtime by 80%",
-      "Optimized performance",
-      "Cost savings up to 60%",
-      "Risk mitigation",
-      "Enhanced decision making"
+      'Privacy preservation',
+      'Collaborative learning',
+      'Reduced data transfer',
+      'Regulatory compliance'
     ],
     useCases: [
-      "Manufacturing optimization",
-      "Smart city planning",
-      "Healthcare system modeling",
-      "Supply chain management",
-      "Infrastructure monitoring",
-      "Product development"
+      'Healthcare collaboration',
+      'Financial services',
+      'Cross-organization AI',
+      'Privacy-sensitive domains'
     ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Smart city projects",
-      "Healthcare systems",
-      "Infrastructure companies",
-      "Engineering firms"
+    pricing: {
+      starter: '$1,999/month',
+      professional: '$4,999/month',
+      enterprise: '$12,999/month',
+      custom: 'Contact us'
+    },
+    estimatedTime: '8-16 weeks',
+    technologies: ['Federated Learning', 'Homomorphic Encryption', 'Secure Multi-party Computation', 'Python', 'PyTorch', 'TensorFlow'],
+    aiScore: 95,
+    marketPrice: '$1,999-$12,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    researchLevel: 'production',
+    ethicalCompliance: ['Privacy Protection', 'Data Security', 'Transparency', 'Accountability']
+  },
+  {
+    id: 'ai-research-platform',
+    title: 'AI Research & Development Platform',
+    description: 'Comprehensive platform for AI research and experimentation',
+    longDescription: 'Accelerate your AI research with our comprehensive platform. Features experimental tools, research frameworks, and collaboration tools for AI researchers.',
+    icon: 'TestTube',
+    color: 'from-indigo-500 to-purple-600',
+    category: 'ai-research',
+    features: [
+      'Experimental frameworks',
+      'Research tools',
+      'Collaboration features',
+      'Version control',
+      'Experiment tracking',
+      'Result analysis'
     ],
-    tags: ["Digital Twins", "AI", "Simulation", "Predictive", "IoT"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "24/7 Premium Support",
-    marketPrice: "Starting from $28,000/month",
-    demoUrl: "https://ziontechgroup.com/demo/digital-twins",
-    documentationUrl: "https://ziontechgroup.com/docs/digital-twins",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    benefits: [
+      'Faster research cycles',
+      'Better collaboration',
+      'Reproducible results',
+      'Research acceleration'
+    ],
+    useCases: [
+      'AI research labs',
+      'Academic institutions',
+      'Corporate R&D',
+      'Startup research'
+    ],
+    pricing: {
+      starter: '$299/month',
+      professional: '$799/month',
+      enterprise: '$1,999/month',
+      custom: 'Contact us'
+    },
+    estimatedTime: '2-4 weeks',
+    technologies: ['Research Tools', 'Experiment Tracking', 'Version Control', 'Collaboration Tools', 'Python', 'Jupyter'],
+    aiScore: 93,
+    marketPrice: '$299-$1,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    researchLevel: 'research',
+    ethicalCompliance: ['Research Ethics', 'Transparency', 'Reproducibility', 'Open Science']
+  },
+  {
+    id: 'ai-optimization-engine',
+    title: 'AI Optimization Engine',
+    description: 'Advanced optimization algorithms for complex decision making',
+    longDescription: 'Solve complex optimization problems with our AI-powered engine. Features genetic algorithms, neural optimization, and multi-objective optimization for business applications.',
+    icon: 'Target',
+    color: 'from-yellow-500 to-orange-600',
+    category: 'machine-learning',
+    features: [
+      'Genetic algorithms',
+      'Neural optimization',
+      'Multi-objective optimization',
+      'Constraint handling',
+      'Real-time optimization',
+      'Scalable algorithms'
+    ],
+    benefits: [
+      'Optimal solutions',
+      'Faster decision making',
+      'Cost optimization',
+      'Resource efficiency'
+    ],
+    useCases: [
+      'Supply chain optimization',
+      'Resource allocation',
+      'Scheduling problems',
+      'Portfolio optimization'
+    ],
+    pricing: {
+      starter: '$899/month',
+      professional: '$2,299/month',
+      enterprise: '$5,999/month',
+      custom: 'Contact us'
+    },
+    estimatedTime: '4-8 weeks',
+    technologies: ['Genetic Algorithms', 'Neural Networks', 'Optimization Libraries', 'Python', 'SciPy', 'NumPy'],
+    aiScore: 94,
+    marketPrice: '$899-$5,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active',
+    researchLevel: 'production',
+    ethicalCompliance: ['Fairness', 'Transparency', 'Bias Prevention', 'Accountability']
   }
 ];
+export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[] => {
+  if (category === 'All') {
+    return NEXT_GEN_AI_SERVICES_2025;
+  }
+  return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category);
+};
+export const getAllNextGenAIServices = (): NextGenAIService[] => {
+  return NEXT_GEN_AI_SERVICES_2025;
+};

@@ -265,6 +265,7 @@ export function AdvancedPerformanceMonitor() {
           </button>
         </div>
       </div>
+
       {/* Controls */}
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">
         <div className="flex items-center justify-between">
@@ -296,6 +297,7 @@ export function AdvancedPerformanceMonitor() {
           </div>
         </div>
       </div>
+
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">
         {[
@@ -314,6 +316,7 @@ export function AdvancedPerformanceMonitor() {
             </button>);
         })}
       </div>
+
       {/* Content */}
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">
         {activeTab === 'overview' && (<div className="space-y-6">
@@ -348,6 +351,7 @@ export function AdvancedPerformanceMonitor() {
                     </div>)}
                 </div>))}
             </div>
+
             {/* Quick Status */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">
@@ -376,6 +380,7 @@ export function AdvancedPerformanceMonitor() {
                   </div>
                 </div>
               </div>
+
               <div className="bg-gradient-to-r from-zion-green/10 to-zion-emerald/10 p-6 rounded-xl border border-zion-green/20">
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">
                   <TrendingUp className="w-5 h-5 text-zion-green"/>
@@ -392,6 +397,7 @@ export function AdvancedPerformanceMonitor() {
               </div>
             </div>
           </div>)}
+
         {activeTab === 'metrics' && (<div className="space-y-4">
             {filteredMetrics.map(metric => (<div key={metric.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-center gap-3">
@@ -430,6 +436,7 @@ export function AdvancedPerformanceMonitor() {
                 </div>
               </div>))}
           </div>)}
+
         {activeTab === 'alerts' && (<div className="space-y-4">
             {performanceAlerts.map(alert => (<div key={alert.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -473,6 +480,7 @@ export function AdvancedPerformanceMonitor() {
                 </div>
               </div>))}
           </div>)}
+
         {activeTab === 'scalability' && (<div className="space-y-4">
             {scalabilityMetrics.map(metric => (<div key={metric.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-center gap-3">
@@ -514,6 +522,7 @@ export function AdvancedPerformanceMonitor() {
                 </div>
               </div>))}
           </div>)}
+
         {activeTab === 'analytics' && (<div className="space-y-6">
             <div className="text-center text-zion-slate-light">
               <Zap className="w-16 h-16 mx-auto mb-4 opacity-50"/>

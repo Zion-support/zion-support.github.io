@@ -1,10 +1,10 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
-import { Button } from "../components/ui/button";
-import { Badge } from "../components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
+import { Button } from "../ui/button";
+import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
 import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-import { TrustedBySection } from "../components/TrustedBySection";
+import { TrustedBySection } from "../TrustedBySection";
 const blockchainServices = [
     {
         id: "smart-contracts",
@@ -208,6 +208,7 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -230,6 +231,7 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
+
       {/* Use Cases Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -252,6 +254,7 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
+
       {/* Blockchain Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -311,6 +314,7 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
@@ -341,6 +345,7 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
+
       <TrustedBySection />
     </div>);
 }

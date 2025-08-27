@@ -53,6 +53,7 @@ export function NewsletterSection() {
             backgroundSize: '50px 50px'
         }}/>
       </div>
+
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
@@ -74,6 +75,7 @@ export function NewsletterSection() {
             Get the latest updates on new services, tech insights, and exclusive offers delivered straight to your inbox. 
             Join thousands of professionals staying ahead of the curve.
           </p>
+
           {/* Stats section */}
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
             {stats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -93,6 +95,7 @@ export function NewsletterSection() {
               </motion.div>
             </button>
           </motion.div>
+
           {/* Benefits grid */}
           <AnimatePresence>
             {showBenefits && (<motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.4 }}>
@@ -122,6 +125,7 @@ export function NewsletterSection() {
                     </>)}
                 </button>
               </form>
+
               {/* Special offer */}
               <motion.div className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan px-6 py-3 rounded-xl mb-6" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.6 }}>
                 <Gift className="w-5 h-5"/>

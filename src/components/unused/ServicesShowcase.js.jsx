@@ -83,6 +83,7 @@ export function ServicesShowcase() {
             and digital transformation journey.
           </p>
         </motion.div>
+
         {/* Services Grid */}
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (<motion.div key={index} variants={itemVariants} className="group">
@@ -112,6 +113,7 @@ export function ServicesShowcase() {
               </Link>
             </motion.div>))}
         </motion.div>
+
         {/* CTA */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.5 }} className="text-center mt-16">
           <Link to="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30">

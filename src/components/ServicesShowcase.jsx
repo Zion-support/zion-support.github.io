@@ -89,6 +89,7 @@ export function ServicesShowcase() {
             </Link>
           </div>
         </div>
+
         {/* Categories Overview */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           {MICRO_SAAS_CATEGORIES.map((category) => {
@@ -109,6 +110,7 @@ export function ServicesShowcase() {
               </Card>);
         })}
         </div>
+
         {/* Featured Services */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -152,6 +154,7 @@ export function ServicesShowcase() {
               </Card>))}
           </div>
         </div>
+
         {/* Features Grid */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -166,6 +169,7 @@ export function ServicesShowcase() {
               </div>))}
           </div>
         </div>
+
         {/* Benefits Section */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -185,6 +189,7 @@ export function ServicesShowcase() {
               </Card>))}
           </div>
         </div>
+
         {/* Contact Section */}
         <div className="bg-white rounded-2xl p-8 md:p-12">
           <div className="text-center mb-12">

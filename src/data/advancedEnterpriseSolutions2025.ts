@@ -25,8 +25,7 @@ export interface EnterpriseSolution {
   sla: string;
   support: string;
 }
-export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[] = [
-  // AI-Powered Enterprise Resource Planning (ERP) Platform
+export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
   {
     id: 'enterprise-cloud-migration',
     title: 'Enterprise Cloud Migration & Strategy',
@@ -70,7 +69,6 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     sla: '99.9% uptime guarantee',
     support: '24/7 dedicated support team'
   },
-  // Quantum-Resistant Cybersecurity Platform
   {
     id: 'enterprise-cybersecurity',
     title: 'Enterprise Cybersecurity Framework',
@@ -114,7 +112,6 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     sla: '99.99% security guarantee',
     support: '24/7 SOC team support'
   },
-  // AI-Powered Business Process Automation Suite
   {
     id: 'digital-transformation',
     title: 'Digital Transformation Consulting',
@@ -158,7 +155,6 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     sla: 'Transformation success guarantee',
     support: 'Dedicated transformation team'
   },
-  // Next-Generation Business Intelligence & Analytics Platform
   {
     id: 'enterprise-data-analytics',
     title: 'Enterprise Data Analytics Platform',
@@ -202,7 +198,6 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     sla: '99.9% data availability',
     support: '24/7 analytics support'
   },
-  // Enterprise Digital Twin Platform
   {
     id: 'enterprise-automation',
     title: 'Enterprise Process Automation',

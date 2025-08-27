@@ -87,6 +87,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
             {description}
           </p>
         </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">
@@ -185,6 +186,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </div>
               </div>
             </div>
+
             <div className="mb-6">
               <p className="text-zion-slate-light">
                 Showing {paginatedListings.length} of {filteredListings.length} results
@@ -192,6 +194,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
+
             {isLoading ? (<div className={view === "grid"
                 ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                 : "flex flex-col gap-6"}>

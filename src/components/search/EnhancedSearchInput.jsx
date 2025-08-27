@@ -91,6 +91,7 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
           </button>
         </div>
       </form>
+
       {showSuggestions && filteredSuggestions.length > 0 && (<div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
           {filteredSuggestions.map((suggestion, index) => (<button key={suggestion.id} onClick={() => handleSuggestionClick(suggestion)} className={`w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors ${index === selectedIndex ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''}`}>
               <div className="flex items-center gap-3">

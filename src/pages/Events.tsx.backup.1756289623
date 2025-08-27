@@ -1,0 +1,671 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Calendar, 
+  Clock, 
+  MapPin, 
+  Users, 
+  ExternalLink, 
+  Play,
+  Mic,
+  Video,
+  Globe,
+  Star,
+  ArrowRight,
+  Filter,
+  Search,
+  Tag,
+  BookOpen,
+  Award,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  Lock,
+  Code,
+  Heart
+} from 'lucide-react';
+const events = [
+  {
+    id: 'ai-summit-2025',
+    title: 'AI Innovation Summit 2025',
+    type: 'Conference',
+    date: '2025-03-15',
+    time: '09:00 AM - 06:00 PM',
+    location: 'San Francisco Convention Center',
+    virtual: false,
+    price: '$299',
+    capacity: 500,
+    registered: 342,
+    category: 'AI & Analytics',
+    description: 'Join industry leaders and AI experts for a day of insights, networking, and cutting-edge technology demonstrations.',
+    speakers: [
+      { name: 'Dr. Sarah Chen', title: 'Chief AI Officer, TechCorp', avatar: 'SC' },
+      { name: 'Michael Rodriguez', title: 'AI Research Director, Zion Tech', avatar: 'MR' },
+      { name: 'Dr. James Wilson', title: 'Quantum Computing Expert', avatar: 'JW' }
+    ],
+    agenda: [
+      '09:00 - Keynote: Future of AI in Enterprise',
+      '10:30 - AI Ethics and Responsible Development',
+      '12:00 - Networking Lunch',
+      '13:30 - Quantum AI Breakthroughs',
+      '15:00 - AI Implementation Case Studies',
+      '16:30 - Panel Discussion: AI Trends 2025'
+    ],
+    tags: ['AI/ML', 'Quantum Computing', 'Enterprise', 'Networking'],
+    featured: true
+  },
+  {
+    id: 'cybersecurity-webinar',
+    title: 'Next-Gen Cybersecurity Threats & Solutions',
+    type: 'Webinar',
+    date: '2025-02-28',
+    time: '02:00 PM - 04:00 PM',
+    location: 'Virtual Event',
+    virtual: true,
+    price: 'Free',
+    capacity: 1000,
+    registered: 756,
+    category: 'Cybersecurity',
+    description: 'Learn about emerging cybersecurity threats and how AI-powered solutions are revolutionizing threat detection and response.',
+    speakers: [
+      { name: 'Lisa Thompson', title: 'Cybersecurity Expert', avatar: 'LT' },
+      { name: 'David Park', title: 'Security Architect', avatar: 'DP' }
+    ],
+    agenda: [
+      '02:00 - Emerging Threat Landscape',
+      '02:30 - AI in Cybersecurity',
+      '03:00 - Live Threat Demo',
+      '03:30 - Q&A Session'
+    ],
+    tags: ['Cybersecurity', 'AI Security', 'Threat Detection', 'Free'],
+    featured: false
+  },
+  {
+    id: 'quantum-workshop',
+    title: 'Quantum Computing Workshop Series',
+    type: 'Workshop',
+    date: '2025-03-08',
+    time: '10:00 AM - 04:00 PM',
+    location: 'Zion Tech Innovation Lab',
+    virtual: false,
+    price: '$199',
+    capacity: 50,
+    registered: 48,
+    category: 'Quantum Computing',
+    description: 'Hands-on workshop covering quantum algorithms, quantum machine learning, and practical applications.',
+    speakers: [
+      { name: 'Dr. Elena Rodriguez', title: 'Quantum Physicist', avatar: 'ER' },
+      { name: 'Alex Chen', title: 'Quantum Software Engineer', avatar: 'AC' }
+    ],
+    agenda: [
+      '10:00 - Quantum Computing Fundamentals',
+      '11:00 - Quantum Algorithms',
+      '12:00 - Lunch Break',
+      '13:00 - Quantum Machine Learning',
+      '14:00 - Hands-on Lab Session',
+      '15:30 - Real-world Applications'
+    ],
+    tags: ['Quantum Computing', 'Workshop', 'Hands-on', 'Advanced'],
+    featured: true
+  },
+  {
+    id: 'cloud-migration-summit',
+    title: 'Cloud Migration & Digital Transformation Summit',
+    type: 'Conference',
+    date: '2025-04-12',
+    time: '08:30 AM - 05:30 PM',
+    location: 'Austin Convention Center',
+    virtual: true,
+    price: '$399',
+    capacity: 300,
+    registered: 189,
+    category: 'Cloud & DevOps',
+    description: 'Comprehensive insights into cloud migration strategies, DevOps best practices, and digital transformation success stories.',
+    speakers: [
+      { name: 'Rachel Green', title: 'Cloud Architecture Lead', avatar: 'RG' },
+      { name: 'Tom Martinez', title: 'DevOps Director', avatar: 'TM' },
+      { name: 'Jennifer Lee', title: 'Digital Transformation Consultant', avatar: 'JL' }
+    ],
+    agenda: [
+      '08:30 - Registration & Networking',
+      '09:00 - Cloud Migration Strategies',
+      '10:30 - DevOps Best Practices',
+      '12:00 - Lunch & Networking',
+      '13:30 - Digital Transformation Case Studies',
+      '15:00 - Future of Cloud Computing',
+      '16:30 - Panel Discussion & Q&A'
+    ],
+    tags: ['Cloud Computing', 'DevOps', 'Digital Transformation', 'Migration'],
+    featured: false
+  },
+  {
+    id: 'iot-edge-conference',
+    title: 'IoT & Edge Computing Conference',
+    type: 'Conference',
+    date: '2025-05-20',
+    time: '09:00 AM - 06:00 PM',
+    location: 'Seattle Tech Hub',
+    virtual: false,
+    price: '$299',
+    capacity: 400,
+    registered: 267,
+    category: 'IoT & Edge',
+    description: 'Explore the latest developments in IoT, edge computing, and their applications in smart cities and industrial automation.',
+    speakers: [
+      { name: 'Dr. Robert Kim', title: 'IoT Research Director', avatar: 'RK' },
+      { name: 'Maria Santos', title: 'Edge Computing Specialist', avatar: 'MS' },
+      { name: 'Kevin Johnson', title: 'Smart City Architect', avatar: 'KJ' }
+    ],
+    agenda: [
+      '09:00 - IoT Landscape Overview',
+      '10:30 - Edge Computing Technologies',
+      '12:00 - Networking Lunch',
+      '13:30 - Smart City Applications',
+      '15:00 - Industrial IoT Solutions',
+      '16:30 - Future Trends & Innovation'
+    ],
+    tags: ['IoT', 'Edge Computing', 'Smart Cities', 'Industrial'],
+    featured: false
+  },
+  {
+    id: 'blockchain-symposium',
+    title: 'Blockchain & Web3 Innovation Symposium',
+    type: 'Symposium',
+    date: '2025-06-15',
+    time: '10:00 AM - 05:00 PM',
+    location: 'Miami Innovation Center',
+    virtual: true,
+    price: '$199',
+    capacity: 250,
+    registered: 198,
+    category: 'Blockchain',
+    description: 'Discover the latest blockchain innovations, DeFi applications, and Web3 technologies shaping the future of digital finance.',
+    speakers: [
+      { name: 'Dr. Amanda Foster', title: 'Blockchain Researcher', avatar: 'AF' },
+      { name: 'Carlos Mendez', title: 'DeFi Protocol Developer', avatar: 'CM' },
+      { name: 'Sophie Turner', title: 'Web3 Strategist', avatar: 'ST' }
+    ],
+    agenda: [
+      '10:00 - Blockchain Fundamentals',
+      '11:00 - DeFi Revolution',
+      '12:00 - Lunch Break',
+      '13:00 - Web3 Applications',
+      '14:00 - Smart Contract Security',
+      '15:00 - Future of Decentralization'
+    ],
+    tags: ['Blockchain', 'DeFi', 'Web3', 'Smart Contracts'],
+    featured: true
+  }
+];
+const eventTypes = [
+  { name: 'All Events', value: 'all', icon: Calendar },
+  { name: 'Conferences', value: 'conference', icon: Users },
+  { name: 'Webinars', value: 'webinar', icon: Video },
+  { name: 'Workshops', value: 'workshop', icon: BookOpen },
+  { name: 'Symposiums', value: 'symposium', icon: Mic }
+];
+const categories = [
+  { name: 'All Categories', value: 'all', icon: Globe },
+  { name: 'AI & Analytics', value: 'ai', icon: Brain },
+  { name: 'Cybersecurity', value: 'cybersecurity', icon: Shield },
+  { name: 'Cloud & DevOps', value: 'cloud', icon: Cloud },
+  { name: 'IoT & Edge', value: 'iot', icon: Zap },
+  { name: 'Quantum Computing', value: 'quantum', icon: Rocket },
+  { name: 'Blockchain', value: 'blockchain', icon: Lock },
+  { name: 'Digital Twin', value: 'digital-twin', icon: Code },
+  { name: 'Sustainability', value: 'sustainability', icon: Heart }
+];
+export default function Events() {
+  const [selectedType, setSelectedType] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredEvents, setFilteredEvents] = useState(events);
+  React.useEffect(() => {
+    let filtered = events;
+    // Filter by type
+    if (selectedType !== 'all') {
+      filtered = filtered.filter(event => 
+        event.type.toLowerCase() === selectedType.toLowerCase()
+      );
+    }
+    // Filter by category
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(event => 
+        event.category.toLowerCase().includes(selectedCategory.toLowerCase())
+      );
+    }
+    // Filter by search query
+    if (searchQuery.trim()) {
+      filtered = filtered.filter(event =>
+        event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        event.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        event.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      );
+    }
+    setFilteredEvents(filtered);
+  }, [selectedType, selectedCategory, searchQuery]);
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+  const isEventUpcoming = (dateString: string) => {
+    return new Date(dateString) > new Date();
+  };
+  const upcomingEvents = filteredEvents.filter(event => isEventUpcoming(event.date));
+  const pastEvents = filteredEvents.filter(event => !isEventUpcoming(event.date));
+  return (
+    <div className="min-h-screen bg-futuristic">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan/20 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/20 rounded-full animate-pulse delay-2000"></div>
+        </div>
+        <div className="container-responsive relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-6">
+              Events & Conferences
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Join Zion Tech Group at industry-leading events, conferences, and workshops. 
+              Connect with experts, discover cutting-edge technologies, and accelerate your digital transformation journey.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center space-x-2 text-zion-cyan">
+                <Calendar className="w-5 h-5" />
+                <span className="font-semibold">50+ Events Annually</span>
+              </div>
+              <div className="flex items-center space-x-2 text-zion-purple">
+                <Users className="w-5 h-5" />
+                <span className="font-semibold">10,000+ Attendees</span>
+              </div>
+              <div className="flex items-center space-x-2 text-zion-blue">
+                <Globe className="w-5 h-5" />
+                <span className="font-semibold">Global Reach</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Search and Filters */}
+      <section className="py-12 bg-zion-slate-dark/50">
+        <div className="container-responsive">
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+              <input
+                type="text"
+                placeholder="Search events, topics, or speakers..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 bg-zion-slate-dark border border-zion-slate-light/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan/50 focus:ring-2 focus:ring-zion-cyan/20"
+              />
+            </div>
+          </div>
+          {/* Event Type Filters */}
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
+            {eventTypes.map((type) => (
+              <motion.button
+                key={type.value}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setSelectedType(type.value)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 ${
+                  selectedType === type.value
+                    ? 'border-zion-cyan bg-zion-cyan/10 text-zion-cyan'
+                    : 'border-zion-slate-light/30 text-zion-slate-light hover:border-zion-cyan/50 hover:text-zion-cyan'
+                }`}
+              >
+                <type.icon className="w-4 h-4" />
+                <span className="font-medium">{type.name}</span>
+              </motion.button>
+            ))}
+          </div>
+          {/* Category Filters */}
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((category) => (
+              <motion.button
+                key={category.value}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setSelectedCategory(category.value)}
+                className={`flex items-center space-x-2 px-4 py-2 rounded-full border transition-all duration-300 ${
+                  selectedCategory === category.value
+                    ? 'border-zion-purple bg-zion-purple/10 text-zion-purple'
+                    : 'border-zion-slate-light/30 text-zion-slate-light hover:border-zion-purple/50 hover:text-zion-purple'
+                }`}
+              >
+                <category.icon className="w-3 h-3" />
+                <span className="text-sm font-medium">{category.name}</span>
+              </motion.button>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Featured Events */}
+      {upcomingEvents.filter(event => event.featured).length > 0 && (
+        <section className="py-20">
+          <div className="container-responsive">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Featured Events
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Don't miss our most anticipated events featuring industry leaders and cutting-edge technology insights.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {upcomingEvents.filter(event => event.featured).map((event, index) => (
+                <motion.div
+                  key={event.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group bg-gradient-to-br from-zion-slate-dark/80 to-zion-slate/80 border border-zion-cyan/30 rounded-2xl overflow-hidden hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
+                >
+                  {/* Event Header */}
+                  <div className="p-8">
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
+                          <Calendar className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <span className="inline-flex items-center px-3 py-1 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium">
+                            {event.type}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-zion-cyan">{event.price}</div>
+                        <div className="text-sm text-zion-slate-light">Registration</div>
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
+                      {event.title}
+                    </h3>
+                    <p className="text-zion-slate-light mb-6 leading-relaxed">
+                      {event.description}
+                    </p>
+                    {/* Event Details */}
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="flex items-center space-x-2 text-zion-slate-light">
+                        <Calendar className="w-4 h-4 text-zion-cyan" />
+                        <span className="text-sm">{formatDate(event.date)}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-zion-slate-light">
+                        <Clock className="w-4 h-4 text-zion-cyan" />
+                        <span className="text-sm">{event.time}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-zion-slate-light">
+                        <MapPin className="w-4 h-4 text-zion-cyan" />
+                        <span className="text-sm">{event.location}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-zion-slate-light">
+                        <Users className="w-4 h-4 text-zion-cyan" />
+                        <span className="text-sm">{event.registered}/{event.capacity}</span>
+                      </div>
+                    </div>
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {event.tags.map((tag, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-full text-zion-slate-light text-xs"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    {/* CTA */}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4 text-sm text-zion-slate-light">
+                        <span className="flex items-center space-x-1">
+                          <Star className="w-4 h-4 text-yellow-400" />
+                          <span>Featured Event</span>
+                        </span>
+                      </div>
+                      <Link
+                        to={`/events/${event.id}`}
+                        className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105"
+                      >
+                        <span>Register Now</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      {/* All Upcoming Events */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Upcoming Events
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Explore our calendar of upcoming events, webinars, and workshops designed to keep you ahead of the technology curve.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            {upcomingEvents.map((event, index) => (
+              <motion.div
+                key={event.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group bg-zion-slate-dark/50 border border-zion-slate-light/20 rounded-2xl overflow-hidden hover:border-zion-cyan/30 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10"
+              >
+                {/* Event Image Placeholder */}
+                <div className="h-48 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20 flex items-center justify-center">
+                  <div className="text-6xl font-bold text-zion-cyan/30">
+                    {event.type.charAt(0)}
+                  </div>
+                </div>
+                <div className="p-6">
+                  {/* Event Type & Price */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-flex items-center px-3 py-1 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium">
+                      {event.type}
+                    </span>
+                    <div className="text-right">
+                      <div className="text-lg font-bold text-zion-cyan">{event.price}</div>
+                    </div>
+                  </div>
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                    {event.title}
+                  </h3>
+                  {/* Description */}
+                  <p className="text-zion-slate-light text-sm mb-4 line-clamp-2">
+                    {event.description}
+                  </p>
+                  {/* Event Details */}
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center space-x-2 text-zion-slate-light text-sm">
+                      <Calendar className="w-4 h-4 text-zion-cyan" />
+                      <span>{formatDate(event.date)}</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-zion-slate-light text-sm">
+                      <Clock className="w-4 h-4 text-zion-cyan" />
+                      <span>{event.time}</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-zion-slate-light text-sm">
+                      <MapPin className="w-4 h-4 text-zion-cyan" />
+                      <span>{event.location}</span>
+                    </div>
+                  </div>
+                  {/* Registration Status */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-2 text-sm text-zion-slate-light">
+                      <Users className="w-4 h-4" />
+                      <span>{event.registered}/{event.capacity} registered</span>
+                    </div>
+                    <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">
+                      <div 
+                        className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full"
+                        style={{ width: `${(event.registered / event.capacity) * 100}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {event.tags.slice(0, 3).map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-1 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-full text-zion-slate-light text-xs"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  {/* CTA */}
+                  <Link
+                    to={`/events/${event.id}`}
+                    className="w-full inline-flex items-center justify-center space-x-2 px-4 py-3 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                  >
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          {upcomingEvents.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-20"
+            >
+              <div className="text-6xl mb-4">📅</div>
+              <h3 className="text-2xl font-bold text-white mb-2">No upcoming events found</h3>
+              <p className="text-zion-slate-light">Try adjusting your filters or check back later for new events.</p>
+            </motion.div>
+          )}
+        </div>
+      </section>
+      {/* Past Events */}
+      {pastEvents.length > 0 && (
+        <section className="py-20 bg-zion-slate-dark/30">
+          <div className="container-responsive">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Past Events
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Missed an event? Explore recordings, presentations, and resources from our previous conferences and workshops.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {pastEvents.slice(0, 6).map((event, index) => (
+                <motion.div
+                  key={event.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-zion-slate-dark/50 border border-zion-slate-light/20 rounded-xl p-6 hover:border-zion-slate-light/40 transition-all duration-300"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-full text-zion-slate-light text-sm">
+                      {event.type}
+                    </span>
+                    <span className="text-zion-slate-light text-sm">{formatDate(event.date)}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3">{event.title}</h3>
+                  <p className="text-zion-slate-light text-sm mb-4 line-clamp-2">{event.description}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-2 text-zion-slate-light text-sm">
+                      <Users className="w-4 h-4" />
+                      <span>{event.registered} attendees</span>
+                    </div>
+                    <Link
+                      to={`/events/${event.id}`}
+                      className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium"
+                    >
+                      View Resources
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-slate">
+        <div className="container-responsive text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Stay Connected
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Never miss an important event! Subscribe to our newsletter for updates on upcoming events, 
+              exclusive content, and early registration opportunities.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105"
+              >
+                Subscribe to Updates
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                Host an Event
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

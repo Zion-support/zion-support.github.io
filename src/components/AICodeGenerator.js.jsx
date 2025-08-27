@@ -124,6 +124,7 @@ export const AICodeGenerator = () => {
           </div>
         </div>
       </div>
+
       {/* Navigation Tabs */}
       <div className="border-b border-gray-200 dark:border-gray-700">
         <nav className="flex space-x-8 px-6">
@@ -141,6 +142,7 @@ export const AICodeGenerator = () => {
             </button>))}
         </nav>
       </div>
+
       {/* Main Content */}
       <div className="p-6">
         <AnimatePresence mode="wait">
@@ -153,6 +155,7 @@ export const AICodeGenerator = () => {
                   </label>
                   <textarea value={form.prompt} onChange={(e) => setForm(prev => ({ ...prev, prompt: e.target.value }))} placeholder="e.g., Create a React component for a user profile card with avatar, name, email, and edit button..." className="w-full h-32 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none" required/>
                 </div>
+
                 {/* Basic Options */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div>
@@ -170,6 +173,7 @@ export const AICodeGenerator = () => {
                       <option value="rust">Rust</option>
                     </select>
                   </div>
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Framework
@@ -186,6 +190,7 @@ export const AICodeGenerator = () => {
                       <option value="dotnet">.NET</option>
                     </select>
                   </div>
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Style
@@ -197,6 +202,7 @@ export const AICodeGenerator = () => {
                       <option value="declarative">Declarative</option>
                     </select>
                   </div>
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Quality
@@ -208,11 +214,13 @@ export const AICodeGenerator = () => {
                     </select>
                   </div>
                 </div>
+
                 {/* Advanced Options Toggle */}
                 <button type="button" onClick={() => setShowAdvanced(!showAdvanced)} className="flex items-center gap-2 text-sm text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300">
                   <Settings className="w-4 h-4"/>
                   {showAdvanced ? 'Hide' : 'Show'} Advanced Options
                 </button>
+
                 {/* Advanced Options */}
                 {showAdvanced && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     {[
@@ -227,6 +235,7 @@ export const AICodeGenerator = () => {
                         <span className="text-sm text-gray-700 dark:text-gray-300">{label}</span>
                       </label>))}
                   </motion.div>)}
+
                 <button type="submit" disabled={isGenerating || !form.prompt.trim()} className="w-full py-3 px-6 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">
                   {isGenerating ? (<>
                       <Loader2 className="w-5 h-5 animate-spin"/>
@@ -237,6 +246,7 @@ export const AICodeGenerator = () => {
                     </>)}
                 </button>
               </form>
+
               {/* Generated Code Display */}
               {generatedCode && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -262,6 +272,7 @@ export const AICodeGenerator = () => {
                   </div>
                 </motion.div>)}
             </motion.div>)}
+
           {activeTab === 'analyze' && (<motion.div key="analyze" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -269,6 +280,7 @@ export const AICodeGenerator = () => {
                 </label>
                 <textarea value={customCode} onChange={(e) => setCustomCode(e.target.value)} placeholder="Paste your code here for AI-powered analysis..." className="w-full h-48 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"/>
               </div>
+
               <button onClick={handleAnalyzeCustomCode} disabled={isAnalyzing || !customCode.trim()} className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">
                 {isAnalyzing ? (<>
                     <Loader2 className="w-5 h-5 animate-spin"/>
@@ -278,6 +290,7 @@ export const AICodeGenerator = () => {
                     Analyze Code
                   </>)}
               </button>
+
               {/* Analysis Results */}
               {codeAnalysis && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
                   {/* Metrics Overview */}
@@ -302,6 +315,7 @@ export const AICodeGenerator = () => {
                     return null;
                 })}
                   </div>
+
                   {/* Code Metrics */}
                   <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                     <h4 className="font-medium text-gray-900 dark:text-white mb-3">Code Metrics</h4>
@@ -314,6 +328,7 @@ export const AICodeGenerator = () => {
                         </div>))}
                     </div>
                   </div>
+
                   {/* Issues */}
                   {codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                       <h4 className="font-medium text-gray-900 dark:text-white mb-3">Issues Found</h4>
@@ -335,6 +350,7 @@ export const AICodeGenerator = () => {
                     </div>)}
                 </motion.div>)}
             </motion.div>)}
+
           {activeTab === 'optimize' && (<motion.div key="optimize" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
               <div className="text-center py-8">
                 <Zap className="w-16 h-16 text-yellow-500 mx-auto mb-4"/>
@@ -345,6 +361,7 @@ export const AICodeGenerator = () => {
                   Select an optimization focus area to improve your code
                 </p>
               </div>
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
                 { key: 'performance', label: 'Performance', icon: Gauge, color: 'blue' },
@@ -359,6 +376,7 @@ export const AICodeGenerator = () => {
                   </button>))}
               </div>
             </motion.div>)}
+
           {activeTab === 'tests' && (<motion.div key="tests" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
               <div className="text-center py-8">
                 <TestTube className="w-16 h-16 text-green-500 mx-auto mb-4"/>
@@ -369,11 +387,13 @@ export const AICodeGenerator = () => {
                   Automatically generate comprehensive test suites for your code
                 </p>
               </div>
+
               <button onClick={handleGenerateTests} disabled={!generatedCode && !customCode} className="w-full py-4 px-6 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">
                 <TestTube className="w-5 h-5"/>
                 Generate Test Suite
               </button>
             </motion.div>)}
+
           {activeTab === 'docs' && (<motion.div key="docs" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-6">
               <div className="text-center py-8">
                 <FileText className="w-16 h-16 text-indigo-500 mx-auto mb-4"/>
@@ -384,12 +404,14 @@ export const AICodeGenerator = () => {
                   Create comprehensive documentation for your code
                 </p>
               </div>
+
               <button onClick={handleGenerateDocs} disabled={!generatedCode && !customCode} className="w-full py-4 px-6 bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">
                 <FileText className="w-5 h-5"/>
                 Generate Documentation
               </button>
             </motion.div>)}
         </AnimatePresence>
+
         {/* Suggestions Panel */}
         {suggestions.length > 0 && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -438,6 +460,7 @@ export const AICodeGenerator = () => {
                 </motion.div>))}
             </div>
           </motion.div>)}
+
         {/* History Panel */}
         {history.length > 0 && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">
             <div className="flex items-center justify-between mb-4">

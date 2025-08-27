@@ -116,6 +116,7 @@ export function CollaborationPlatform() {
           </button>
         </div>
       </div>
+
       <div className="flex h-full">
         {/* Main Content */}
         <div className={`flex-1 flex flex-col ${activeChat ? 'w-2/3' : 'w-full'}`}>
@@ -131,10 +132,12 @@ export function CollaborationPlatform() {
                         <span className="text-4xl">{participant.avatar}</span>
                       </div>)}
                   </div>
+
                   {/* Participant Info */}
                   <div className="absolute bottom-2 left-2 bg-black/60 backdrop-blur-sm rounded-lg px-2 py-1">
                     <span className="text-white text-sm font-medium">{participant.name}</span>
                   </div>
+
                   {/* Status Indicators */}
                   <div className="absolute top-2 right-2 flex gap-1">
                     {!participant.isAudioOn && (<div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
@@ -144,11 +147,13 @@ export function CollaborationPlatform() {
                         <Monitor className="w-3 h-3 text-white"/>
                       </div>)}
                   </div>
+
                   {/* Speaking Indicator */}
                   {participant.isSpeaking && (<div className="absolute inset-0 border-2 border-zion-emerald rounded-lg animate-pulse"></div>)}
                 </div>))}
             </div>
           </div>
+
           {/* Controls */}
           <div className="p-4 border-t border-zion-slate-light bg-zion-slate-light/5">
             <div className="flex items-center justify-center gap-4">
@@ -157,27 +162,32 @@ export function CollaborationPlatform() {
             : 'bg-red-500 text-white'}`} title={localUser.isVideoOn ? 'Turn Off Video' : 'Turn On Video'}>
                 {localUser.isVideoOn ? <Video className="w-5 h-5"/> : <VideoOff className="w-5 h-5"/>}
               </button>
+
               <button onClick={toggleAudio} className={`p-3 rounded-full transition-all duration-200 ${localUser.isAudioOn
             ? 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'
             : 'bg-red-500 text-white'}`} title={localUser.isAudioOn ? 'Mute' : 'Unmute'}>
                 {localUser.isAudioOn ? <Mic className="w-5 h-5"/> : <MicOff className="w-5 h-5"/>}
               </button>
+
               <button onClick={toggleScreenShare} className={`p-3 rounded-full transition-all duration-200 ${localUser.isScreenSharing
             ? 'bg-zion-cyan text-white'
             : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'}`} title={localUser.isScreenSharing ? 'Stop Sharing' : 'Share Screen'}>
                 <Monitor className="w-5 h-5"/>
               </button>
+
               <button onClick={toggleChat} className={`p-3 rounded-full transition-all duration-200 ${activeChat
             ? 'bg-zion-purple text-white'
             : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'}`} title="Toggle Chat">
                 <MessageSquare className="w-5 h-5"/>
               </button>
+
               <button onClick={() => setIsOpen(false)} className="p-3 bg-red-500 hover:bg-red-600 text-white rounded-full transition-all duration-200" title="Leave Meeting">
                 <PhoneOff className="w-5 h-5"/>
               </button>
             </div>
           </div>
         </div>
+
         {/* Chat Sidebar */}
         {activeChat && (<div className="w-1/3 border-l border-zion-slate-light flex flex-col">
             <div className="p-4 border-b border-zion-slate-light bg-zion-slate-light/5">

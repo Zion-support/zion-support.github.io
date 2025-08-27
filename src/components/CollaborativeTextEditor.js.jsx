@@ -106,7 +106,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             const suggestions = [];
             // Grammar suggestions
             if (editorState.content.includes('its')) {
-                suggestions({
+                suggestions.push({
                     id: `suggestion_${Date.now()}_1`,
                     type: 'grammar',
                     text: "it's",
@@ -119,7 +119,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             }
             // Style suggestions
             if (editorState.content.includes('very')) {
-                suggestions({
+                suggestions.push({
                     id: `suggestion_${Date.now()}_2`,
                     type: 'style',
                     text: "extremely",
@@ -132,7 +132,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             }
             // Completion suggestions
             if (editorState.content.endsWith('The main benefits')) {
-                suggestions({
+                suggestions.push({
                     id: `suggestion_${Date.now()}_3`,
                     type: 'completion',
                     text: " include improved efficiency, cost savings, and enhanced user experience.",
@@ -300,6 +300,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
           </div>
         </div>
       </div>
+
       {/* Main Editor Area */}
       <div className="flex h-96">
         {/* Editor */}
@@ -317,6 +318,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             </span>
           </div>
         </div>
+
         {/* Sidebar */}
         <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">
           {/* AI Suggestions */}
@@ -357,6 +359,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                   </p>)}
               </div>
             </div>)}
+
           {/* Collaborators */}
           {enableCollaboration && showCollaborators && (<div className="p-4 border-b border-gray-200 dark:border-gray-600">
               <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">
@@ -384,6 +387,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                   </div>))}
               </div>
             </div>)}
+
           {/* Actions */}
           <div className="p-4">
             <h4 className="font-medium text-gray-900 dark:text-white mb-3">Actions</h4>
@@ -407,6 +411,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
           </div>
         </div>
       </div>
+
       {/* Collaboration Cursors Overlay */}
       {enableCollaboration && (<div ref={collaborationRef} className="absolute inset-0 pointer-events-none" style={{ zIndex: 10 }}>
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} className="absolute w-4 h-4" style={{

@@ -55,6 +55,7 @@ export default function TokenIntegrations() {
           <h1 className="text-3xl font-bold text-white">ZION$ Integrations</h1>
           <ConnectWalletButton />
           {isConnected && (<p className="text-white">Connected wallet: {address}</p>)}
+
           <Card>
             <CardHeader>
               <CardTitle>LayerZero Cross-Chain Bridge</CardTitle>
@@ -93,6 +94,7 @@ export default function TokenIntegrations() {
               {status && <p className="text-white">{status}</p>}
             </CardContent>
           </Card>
+
           <Card>
             <CardHeader>
               <CardTitle>DePIN Rewards</CardTitle>
@@ -102,6 +104,7 @@ export default function TokenIntegrations() {
               <p>Earn ZION$ for proof-of-compute, completed IoT jobs, and data streaming.</p>
             </CardContent>
           </Card>
+
           <Card>
             <CardHeader>
               <CardTitle>Operator AI</CardTitle>

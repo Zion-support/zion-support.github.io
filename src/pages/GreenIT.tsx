@@ -1,27 +1,43 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/Button";
-import { Leaf, Server, Cloud } from "lucide-react";
-import { Link } from "react-router-dom";
-export default function GreenIT() {
-    const greenITSolutions = [
-        {
-            title: "Energy-Efficient Hardware",
-            description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
-            icon: Server,
-        },
-        {
-            title: "Optimized Cooling Systems",
-            description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-            icon: Cloud,
-        },
-        {
-            title: "Renewable Energy Integration",
-            description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
-            icon: Leaf,
-        }
-    ];
-    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Green IT Solutions - Sustainable Technology", description: "Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance.", keywords: "green IT, sustainable technology, eco-friendly computing, energy efficient hardware", canonical: "https://ziontechgroup.com/green-it" }), _jsx("main", { className: "min-h-screen bg-zion-blue pt-24 pb-20", children: _jsxs("div", { className: "container mx-auto px-4 sm:px-6 lg:px-8", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Green IT Solutions" }), _jsx("p", { className: "mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto", children: "Sustainable technology solutions that reduce environmental impact without compromising performance" })] }), _jsxs("div", { className: "mb-16", children: [_jsx("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16", children: _jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-12 items-center", children: [_jsxs("div", { children: [_jsx("h2", { className: "text-3xl font-bold text-white mb-6", children: "Sustainable IT for a Better Future" }), _jsx("p", { className: "text-zion-slate-light text-lg mb-6", children: "As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure while maintaining performance and reliability." }), _jsx("p", { className: "text-zion-slate-light text-lg mb-6", children: "From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions for reducing your carbon footprint." }), _jsx("div", { className: "mt-8", children: _jsx(Button, { className: "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple", children: "Explore Green IT Solutions" }) })] }), _jsx("div", { className: "rounded-lg overflow-hidden", children: _jsx("img", { src: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600", alt: "Green IT sustainability", className: "object-cover w-full h-full" }) })] }) }), _jsxs("div", { className: "mb-16", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-8", children: "Our Green IT Solutions" }), _jsx("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-8", children: greenITSolutions.map((solution, index) => (_jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors", children: [_jsx("div", { className: "flex justify-center mb-4", children: _jsx(solution.icon, { className: "h-12 w-12 text-zion-cyan" }) }), _jsx("h3", { className: "text-white font-medium text-xl text-center mb-3", children: solution.title }), _jsx("p", { className: "text-zion-slate-light text-center", children: solution.description })] }, index))) })] }), _jsxs("div", { className: "mb-16", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Why Choose Green IT?" }), _jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-8", children: [_jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6", children: [_jsx("h3", { className: "text-white font-medium text-xl mb-4", children: "Environmental Benefits" }), _jsxs("ul", { className: "text-zion-slate-light space-y-2", children: [_jsx("li", { children: "\u2022 Reduced carbon footprint and greenhouse gas emissions" }), _jsx("li", { children: "\u2022 Lower energy consumption and resource utilization" }), _jsx("li", { children: "\u2022 Decreased electronic waste through better lifecycle management" }), _jsx("li", { children: "\u2022 Support for renewable energy initiatives" })] })] }), _jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6", children: [_jsx("h3", { className: "text-white font-medium text-xl mb-4", children: "Business Benefits" }), _jsxs("ul", { className: "text-zion-slate-light space-y-2", children: [_jsx("li", { children: "\u2022 Significant cost savings on energy and cooling" }), _jsx("li", { children: "\u2022 Enhanced brand reputation and stakeholder relations" }), _jsx("li", { children: "\u2022 Compliance with emerging environmental regulations" }), _jsx("li", { children: "\u2022 Improved operational efficiency and performance" })] })] })] })] })] }), _jsxs("div", { className: "bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center", children: [_jsx("h2", { className: "text-3xl font-bold text-white mb-6", children: "Ready to implement Green IT solutions?" }), _jsx("p", { className: "text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto", children: "Connect with our experts to discuss how we can help you build a more sustainable IT infrastructure." }), _jsx(Button, { className: "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple", asChild: true, children: _jsx(Link, { to: "/contact", children: "Contact Our Team" }) })] })] }) })] }));
-}
-export {};
+import React from 'react';
+import { SEO } from '@/components/SEO';
+const GreenIT = () => {
+  return (
+    <>
+      <SEO 
+        title="Green IT Solutions - Zion Tech Group"
+        description="Sustainable technology solutions for a greener future. Eco-friendly IT services and green computing solutions."
+        keywords="green IT, sustainable technology, eco-friendly computing, green solutions"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-900 to-green-800 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Green <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">IT Solutions</span>
+            </h1>
+            <p className="text-xl text-green-200 max-w-3xl mx-auto">
+              Sustainable technology solutions for a greener, more efficient future
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-green-400/20">
+              <div className="text-4xl mb-4">🌱</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Energy Efficiency</h3>
+              <p className="text-green-200 mb-4">Optimize power consumption and reduce carbon footprint</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-green-400/20">
+              <div className="text-4xl mb-4">♻️</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Sustainable Practices</h3>
+              <p className="text-green-200 mb-4">Implement eco-friendly IT strategies and policies</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-green-400/20">
+              <div className="text-4xl mb-4">🌍</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Environmental Impact</h3>
+              <p className="text-green-200 mb-4">Reduce environmental impact through smart technology</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+export default GreenIT;

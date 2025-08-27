@@ -107,7 +107,8 @@ export default function DeveloperPortal() {
         }
     ];
     return (<div className="min-h-screen bg-background">
-      <SEOHead title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https://ziontechgroup.com/developers"/>
+      <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https://ziontechgroup.com/developers"/>
+
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -133,6 +134,7 @@ export default function DeveloperPortal() {
             </Button>
           </div>
         </div>
+
         {/* API Features */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Powerful APIs & Tools</h2>
@@ -164,6 +166,7 @@ export default function DeveloperPortal() {
         })}
           </div>
         </div>
+
         {/* Quick Start */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Started in 4 Steps</h2>
@@ -186,6 +189,7 @@ export default function DeveloperPortal() {
               </Card>))}
           </div>
         </div>
+
         {/* Resources */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Developer Resources</h2>
@@ -217,6 +221,7 @@ export default function DeveloperPortal() {
         })}
           </div>
         </div>
+
         {/* API Status */}
         <Card className="mb-16 border-zion-blue-light">
           <CardHeader>
@@ -253,6 +258,7 @@ export default function DeveloperPortal() {
             </div>
           </CardContent>
         </Card>
+
         {/* Get Help */}
         <Card className="border-zion-blue-light bg-zion-blue-dark/50">
           <CardHeader className="text-center">

@@ -1,548 +1,588 @@
-export interface InnovativeService2028 {
-  id: string;
-  name: string;
-  category: string;
-  pricing: string;
-  description: string;
-  price: number;
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  tags: string[];
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  marketPrice: number;
-  competitors: string[];
-  roi: string;
-  setupTime: string;
-  integrations: string[];
-  freeTier: boolean;
-  trialPeriod: string;
-}
-
-export const innovativeServices2028: InnovativeService2028[] = [
+// Innovative Micro SAAS Services for 2028 - Zion Tech Group
+export const innovativeServices2028 = [
+  // AI-Powered Business Intelligence Services
   {
-    id: 'ai-bi-elite-2028',
-    name: 'AI Business Intelligence Elite',
-    category: 'AI & Machine Learning',
-    pricing: 'Enterprise',
-    description: 'Advanced AI-powered business intelligence platform with predictive analytics, real-time insights, and automated decision-making capabilities.',
-    price: 2499,
-    features: [
-      'Real-time data processing and analytics',
-      'Predictive modeling and forecasting',
-      'Natural language query interface',
-      'Automated report generation',
-      'Custom dashboard creation',
-      'Multi-source data integration',
-      'Advanced visualization tools',
-      'Machine learning model training'
-    ],
-    benefits: [
-      'Increase operational efficiency by 40%',
-      'Reduce decision-making time by 60%',
-      'Improve forecasting accuracy by 35%',
-      'Enable data-driven strategic planning',
-      'Automate routine analytical tasks',
-      'Provide actionable business insights'
-    ],
-    targetAudience: [
-      'Enterprise businesses',
-      'Data-driven organizations',
-      'Financial institutions',
-      'Healthcare providers',
-      'Manufacturing companies',
-      'Retail chains'
-    ],
-    tags: ['AI', 'Business Intelligence', 'Analytics', 'Machine Learning', 'Predictive Modeling'],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    marketPrice: 3500,
-    competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker'],
-    roi: '300% within 12 months',
-    setupTime: '2-4 weeks',
-    integrations: ['Salesforce', 'SAP', 'Oracle', 'Microsoft Dynamics', 'HubSpot', 'Slack'],
-    freeTier: false,
-    trialPeriod: '30 days'
-  },
-  {
-    id: 'ai-autonomous-research-2028',
-    name: 'AI Autonomous Research Platform',
-    category: 'AI & Machine Learning',
-    pricing: 'Professional',
-    description: 'Fully autonomous AI research platform that conducts independent research, generates insights, and produces comprehensive reports across multiple domains.',
-    price: 1899,
-    features: [
-      'Autonomous research execution',
-      'Multi-domain knowledge synthesis',
-      'Real-time data collection',
-      'Automated report generation',
-      'Citation and source tracking',
-      'Custom research methodologies',
-      'Collaborative research tools',
-      'Advanced NLP capabilities'
-    ],
-    benefits: [
-      'Accelerate research by 10x',
-      'Reduce research costs by 70%',
-      'Improve research quality and consistency',
-      'Enable 24/7 research operations',
-      'Generate insights from multiple sources',
-      'Automate literature reviews'
-    ],
-    targetAudience: [
-      'Research institutions',
-      'Universities',
-      'Pharmaceutical companies',
-      'Market research firms',
-      'Consulting companies',
-      'Government agencies'
-    ],
-    tags: ['AI Research', 'Automation', 'Knowledge Synthesis', 'NLP', 'Machine Learning'],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    marketPrice: 2500,
-    competitors: ['IBM Watson', 'Google AI', 'OpenAI', 'Anthropic'],
-    roi: '400% within 18 months',
-    setupTime: '3-5 weeks',
-    integrations: ['PubMed', 'arXiv', 'Google Scholar', 'ResearchGate', 'Mendeley', 'Zotero'],
-    freeTier: true,
-    trialPeriod: '60 days'
-  },
-  {
-    id: 'quantum-computing-2028',
-    name: 'Quantum Computing Solutions',
-    category: 'Quantum Technology',
-    pricing: 'Enterprise',
-    description: 'Next-generation quantum computing solutions for complex problem-solving, optimization, and cryptographic applications.',
-    price: 4999,
-    features: [
-      'Quantum algorithm development',
-      'Quantum-safe cryptography',
-      'Optimization problem solving',
-      'Quantum machine learning',
-      'Quantum simulation tools',
-      'Hybrid classical-quantum computing',
-      'Quantum error correction',
-      'Custom quantum circuits'
-    ],
-    benefits: [
-      'Solve previously intractable problems',
-      'Exponential speedup for specific algorithms',
-      'Future-proof cryptographic solutions',
-      'Enable breakthrough scientific discoveries',
-      'Optimize complex systems',
-      'Advance AI capabilities'
-    ],
-    targetAudience: [
-      'Financial institutions',
-      'Pharmaceutical companies',
-      'Government agencies',
-      'Research institutions',
-      'Technology companies',
-      'Defense contractors'
-    ],
-    tags: ['Quantum Computing', 'Cryptography', 'Optimization', 'Machine Learning', 'Simulation'],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    marketPrice: 7500,
-    competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Azure Quantum', 'D-Wave'],
-    roi: '500% within 24 months',
-    setupTime: '6-8 weeks',
-    integrations: ['Python', 'Qiskit', 'Cirq', 'PennyLane', 'TensorFlow', 'PyTorch'],
-    freeTier: false,
-    trialPeriod: '45 days'
-  },
-  {
-    id: 'blockchain-web3-2028',
-    name: 'Blockchain & Web3 Solutions',
-    category: 'Blockchain & Web3',
-    pricing: 'Professional',
-    description: 'Comprehensive blockchain and Web3 solutions including smart contracts, DeFi platforms, NFT marketplaces, and decentralized applications.',
+    id: 1,
+    name: "AI Business Intelligence Elite",
+    category: "AI & Analytics",
+    pricing: "Enterprise",
+    description: "Advanced AI-powered business intelligence platform with predictive analytics, real-time insights, and automated decision-making capabilities",
     price: 2999,
+    pricingModel: "monthly",
+    userLimit: "Unlimited users",
     features: [
-      'Smart contract development',
-      'DeFi platform creation',
-      'NFT marketplace development',
-      'Cross-chain interoperability',
-      'Decentralized identity solutions',
-      'Token economics design',
-      'Blockchain analytics',
-      'Security auditing'
+      "Real-time data processing",
+      "Predictive analytics engine",
+      "Natural language querying",
+      "Automated reporting",
+      "Custom dashboards",
+      "Machine learning models",
+      "Data visualization",
+      "API integrations"
     ],
     benefits: [
-      'Enable decentralized business models',
-      'Reduce transaction costs by 80%',
-      'Increase transparency and trust',
-      'Create new revenue streams',
-      'Improve security and immutability',
-      'Enable global accessibility'
+      "500% ROI within 6 months",
+      "Real-time business insights",
+      "Automated decision support",
+      "Competitive advantage",
+      "Cost reduction through automation",
+      "Improved customer experience"
     ],
-    targetAudience: [
-      'Financial services companies',
-      'Gaming companies',
-      'Art and entertainment',
-      'Supply chain companies',
-      'Healthcare providers',
-      'Real estate companies'
-    ],
-    tags: ['Blockchain', 'Web3', 'DeFi', 'NFTs', 'Smart Contracts', 'Cryptocurrency'],
+    targetAudience: ["Enterprise companies", "Data-driven organizations", "C-level executives", "Business analysts"],
+    tags: ["AI", "Business Intelligence", "Analytics", "Machine Learning", "Predictive Analytics"],
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-business-intelligence",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: 4500,
-    competitors: ['Consensys', 'Chainlink', 'OpenZeppelin', 'Alchemy'],
-    roi: '350% within 15 months',
-    setupTime: '4-6 weeks',
-    integrations: ['Ethereum', 'Polygon', 'Solana', 'Binance Smart Chain', 'MetaMask', 'WalletConnect'],
-    freeTier: true,
-    trialPeriod: '30 days'
+    marketPrice: "$2,999-5,999/month",
+    competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
+    roi: "500% within 6 months",
+    setupTime: "2-4 weeks",
+    integrations: ["Salesforce", "HubSpot", "Google Analytics", "AWS", "Azure", "Snowflake"],
+    freeTier: false,
+    trialPeriod: "30 days"
   },
+
+  // Autonomous AI Research Platform
   {
-    id: 'iot-edge-computing-2028',
-    name: 'IoT & Edge Computing Platform',
-    category: 'IoT & Edge Computing',
-    pricing: 'Enterprise',
-    description: 'Advanced IoT and edge computing platform for real-time data processing, device management, and intelligent automation.',
-    price: 3499,
+    id: 2,
+    name: "AI Autonomous Research Platform",
+    category: "AI Research",
+    pricing: "Research",
+    description: "Next-generation autonomous AI research platform that conducts independent research, generates hypotheses, and discovers new insights across multiple domains",
+    price: 4999,
+    pricingModel: "monthly",
+    userLimit: "Research teams up to 50",
     features: [
-      'Real-time data processing',
-      'Edge AI capabilities',
-      'Device management and monitoring',
-      'Predictive maintenance',
-      'Energy optimization',
-      'Security and encryption',
-      'Scalable architecture',
-      'Custom sensor integration'
+      "Autonomous research execution",
+      "Cross-domain knowledge synthesis",
+      "Hypothesis generation",
+      "Literature review automation",
+      "Data analysis pipelines",
+      "Research paper generation",
+      "Collaborative research tools",
+      "Advanced NLP capabilities"
     ],
     benefits: [
-      'Reduce latency by 90%',
-      'Lower bandwidth costs by 70%',
-      'Improve operational efficiency',
-      'Enable real-time decision making',
-      'Reduce infrastructure costs',
-      'Enhance security and privacy'
+      "10x faster research cycles",
+      "Novel discovery generation",
+      "Cross-disciplinary insights",
+      "Reduced research costs",
+      "24/7 research capability",
+      "Accelerated innovation"
     ],
-    targetAudience: [
-      'Manufacturing companies',
-      'Smart cities',
-      'Healthcare providers',
-      'Energy companies',
-      'Transportation companies',
-      'Retail chains'
-    ],
-    tags: ['IoT', 'Edge Computing', 'Real-time Processing', 'AI', 'Automation', 'Predictive Maintenance'],
+    targetAudience: ["Research institutions", "Pharmaceutical companies", "Universities", "R&D departments"],
+    tags: ["AI Research", "Autonomous Systems", "Scientific Discovery", "Machine Learning", "Research Automation"],
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-autonomous-research",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: 5000,
-    competitors: ['AWS IoT', 'Microsoft Azure IoT', 'Google Cloud IoT', 'IBM Watson IoT'],
-    roi: '400% within 18 months',
-    setupTime: '5-7 weeks',
-    integrations: ['MQTT', 'CoAP', 'HTTP', 'LoRaWAN', 'Zigbee', 'Bluetooth'],
-    freeTier: true,
-    trialPeriod: '45 days'
+    marketPrice: "$4,999-8,999/month",
+    competitors: ["IBM Watson", "Google Research", "OpenAI Research", "Anthropic"],
+    roi: "1000% within 12 months",
+    setupTime: "4-6 weeks",
+    integrations: ["PubMed", "arXiv", "Research databases", "Cloud computing platforms"],
+    freeTier: false,
+    trialPeriod: "60 days"
   },
+
+  // Quantum Computing Solutions
   {
-    id: 'cybersecurity-zero-trust-2028',
-    name: 'Cybersecurity Zero Trust Platform',
-    category: 'Cybersecurity',
-    pricing: 'Enterprise',
-    description: 'Comprehensive zero-trust cybersecurity platform with advanced threat detection, identity management, and continuous monitoring.',
+    id: 3,
+    name: "Quantum Computing Solutions",
+    category: "Quantum Technology",
+    pricing: "Enterprise",
+    description: "Cutting-edge quantum computing services for optimization, cryptography, and complex problem-solving across industries",
+    price: 7999,
+    pricingModel: "monthly",
+    userLimit: "Enterprise access",
+    features: [
+      "Quantum algorithm development",
+      "Optimization problem solving",
+      "Quantum cryptography",
+      "Quantum machine learning",
+      "Simulation services",
+      "Custom quantum solutions",
+      "Expert consultation",
+      "Training programs"
+    ],
+    benefits: [
+      "Exponential speed improvements",
+      "Unbreakable encryption",
+      "Complex optimization solutions",
+      "Competitive advantage",
+      "Future-proof technology",
+      "Innovation leadership"
+    ],
+    targetAudience: ["Financial institutions", "Pharmaceutical companies", "Logistics companies", "Government agencies"],
+    tags: ["Quantum Computing", "Optimization", "Cryptography", "Machine Learning", "Innovation"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-computing",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$7,999-15,999/month",
+    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
+    roi: "2000% within 18 months",
+    setupTime: "8-12 weeks",
+    integrations: ["Cloud quantum platforms", "Traditional computing systems", "Industry-specific software"],
+    freeTier: false,
+    trialPeriod: "90 days"
+  },
+
+  // Blockchain & Web3 Solutions
+  {
+    id: 4,
+    name: "Blockchain & Web3 Solutions",
+    category: "Blockchain",
+    pricing: "Custom",
+    description: "Comprehensive blockchain and Web3 development services including DeFi, NFTs, smart contracts, and decentralized applications",
     price: 3999,
+    pricingModel: "monthly",
+    userLimit: "Project-based",
     features: [
-      'Zero-trust architecture',
-      'Advanced threat detection',
-      'Identity and access management',
-      'Continuous monitoring',
-      'Automated incident response',
-      'Compliance management',
-      'Security analytics',
-      'Penetration testing'
+      "Smart contract development",
+      "DeFi platform creation",
+      "NFT marketplace development",
+      "Blockchain consulting",
+      "Security auditing",
+      "Token economics design",
+      "DApp development",
+      "Cross-chain solutions"
     ],
     benefits: [
-      'Reduce security breaches by 95%',
-      'Improve compliance scores',
-      'Lower security costs by 40%',
-      'Enable secure remote work',
-      'Automate security operations',
-      'Provide real-time threat intelligence'
+      "Transparent transactions",
+      "Reduced intermediaries",
+      "Enhanced security",
+      "Global accessibility",
+      "Innovation opportunities",
+      "Cost reduction"
     ],
-    targetAudience: [
-      'Financial institutions',
-      'Healthcare providers',
-      'Government agencies',
-      'Technology companies',
-      'Educational institutions',
-      'Manufacturing companies'
-    ],
-    tags: ['Cybersecurity', 'Zero Trust', 'Threat Detection', 'Identity Management', 'Compliance', 'Incident Response'],
+    targetAudience: ["Startups", "Financial institutions", "Gaming companies", "Art organizations"],
+    tags: ["Blockchain", "Web3", "DeFi", "NFTs", "Smart Contracts", "DApps"],
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/blockchain-web3",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: 6000,
-    competitors: ['CrowdStrike', 'Palo Alto Networks', 'Cisco', 'Fortinet'],
-    roi: '450% within 20 months',
-    setupTime: '6-8 weeks',
-    integrations: ['Active Directory', 'LDAP', 'SAML', 'OAuth', 'SIEM', 'EDR'],
+    marketPrice: "$3,999-12,999/month",
+    competitors: ["Consensys", "Chainlink", "Alchemy", "Infura"],
+    roi: "800% within 12 months",
+    setupTime: "6-10 weeks",
+    integrations: ["Ethereum", "Polygon", "Solana", "Binance Smart Chain", "Traditional systems"],
     freeTier: false,
-    trialPeriod: '30 days'
+    trialPeriod: "45 days"
   },
+
+  // IoT & Edge Computing Platform
   {
-    id: 'ar-vr-development-2028',
-    name: 'AR/VR Development Platform',
-    category: 'AR/VR Development',
-    pricing: 'Professional',
-    description: 'Comprehensive AR/VR development platform for creating immersive experiences, training simulations, and interactive applications.',
-    price: 2499,
-    features: [
-      '3D modeling and animation',
-      'Spatial computing capabilities',
-      'Multi-platform deployment',
-      'Interactive storytelling tools',
-      'Performance optimization',
-      'Analytics and insights',
-      'Collaborative development',
-      'Asset management'
-    ],
-    benefits: [
-      'Create engaging user experiences',
-      'Reduce training costs by 60%',
-      'Improve learning outcomes',
-      'Enable remote collaboration',
-      'Increase customer engagement',
-      'Create new revenue streams'
-    ],
-    targetAudience: [
-      'Gaming companies',
-      'Training organizations',
-      'Real estate companies',
-      'Healthcare providers',
-      'Educational institutions',
-      'Retail companies'
-    ],
-    tags: ['AR/VR', '3D Modeling', 'Spatial Computing', 'Immersive Technology', 'Training', 'Gaming'],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    marketPrice: 3500,
-    competitors: ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],
-    roi: '300% within 16 months',
-    setupTime: '4-6 weeks',
-    integrations: ['Unity', 'Unreal Engine', 'Blender', 'Maya', '3ds Max', 'Substance'],
-    freeTier: true,
-    trialPeriod: '60 days'
-  },
-  {
-    id: 'fintech-solutions-2028',
-    name: 'FinTech Solutions Platform',
-    category: 'FinTech',
-    pricing: 'Enterprise',
-    description: 'Comprehensive FinTech platform for digital banking, payment processing, investment management, and financial analytics.',
-    price: 4499,
-    features: [
-      'Digital banking solutions',
-      'Payment processing',
-      'Investment management',
-      'Risk assessment',
-      'Compliance automation',
-      'Financial analytics',
-      'API integration',
-      'Multi-currency support'
-    ],
-    benefits: [
-      'Reduce operational costs by 50%',
-      'Improve customer experience',
-      'Increase transaction volume',
-      'Enable new financial products',
-      'Improve compliance efficiency',
-      'Reduce fraud risk'
-    ],
-    targetAudience: [
-      'Banks and credit unions',
-      'Payment processors',
-      'Investment firms',
-      'Insurance companies',
-      'E-commerce companies',
-      'Startups'
-    ],
-    tags: ['FinTech', 'Digital Banking', 'Payments', 'Investment', 'Compliance', 'Analytics'],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    marketPrice: 6500,
-    competitors: ['Stripe', 'Square', 'Plaid', 'Adyen'],
-    roi: '400% within 22 months',
-    setupTime: '8-10 weeks',
-    integrations: ['ACH', 'SWIFT', 'SEPA', 'Visa', 'Mastercard', 'PayPal'],
-    freeTier: false,
-    trialPeriod: '45 days'
-  },
-  {
-    id: 'green-technology-2028',
-    name: 'Green Technology Solutions',
-    category: 'Green Technology',
-    pricing: 'Professional',
-    description: 'Sustainable technology solutions for energy efficiency, carbon reduction, environmental monitoring, and green infrastructure.',
+    id: 5,
+    name: "IoT & Edge Computing Platform",
+    category: "IoT & Edge",
+    pricing: "Scalable",
+    description: "Advanced IoT platform with edge computing capabilities for real-time data processing, device management, and intelligent automation",
     price: 1999,
+    pricingModel: "monthly",
+    userLimit: "Up to 10,000 devices",
     features: [
-      'Energy efficiency monitoring',
-      'Carbon footprint tracking',
-      'Environmental monitoring',
-      'Sustainable resource management',
-      'Green building solutions',
-      'Renewable energy integration',
-      'Waste reduction systems',
-      'Sustainability reporting'
+      "Device management",
+      "Real-time analytics",
+      "Edge computing processing",
+      "Predictive maintenance",
+      "Security monitoring",
+      "Data visualization",
+      "API management",
+      "Scalable infrastructure"
     ],
     benefits: [
-      'Reduce energy costs by 30%',
-      'Improve sustainability scores',
-      'Meet regulatory requirements',
-      'Enhance brand reputation',
-      'Reduce environmental impact',
-      'Enable ESG compliance'
+      "Real-time insights",
+      "Reduced latency",
+      "Lower bandwidth costs",
+      "Enhanced security",
+      "Scalable operations",
+      "Predictive capabilities"
     ],
-    targetAudience: [
-      'Manufacturing companies',
-      'Real estate companies',
-      'Energy companies',
-      'Government agencies',
-      'Educational institutions',
-      'Healthcare providers'
-    ],
-    tags: ['Green Technology', 'Sustainability', 'Energy Efficiency', 'Carbon Reduction', 'ESG', 'Environmental Monitoring'],
+    targetAudience: ["Manufacturing companies", "Smart cities", "Healthcare providers", "Retail chains"],
+    tags: ["IoT", "Edge Computing", "Real-time Analytics", "Device Management", "Predictive Maintenance"],
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/iot-edge-computing",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: 2800,
-    competitors: ['Schneider Electric', 'Siemens', 'Honeywell', 'Johnson Controls'],
-    roi: '250% within 14 months',
-    setupTime: '3-5 weeks',
-    integrations: ['Building Management Systems', 'IoT Sensors', 'Energy Meters', 'Solar Panels', 'Wind Turbines'],
+    marketPrice: "$1,999-4,999/month",
+    competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
+    roi: "400% within 9 months",
+    setupTime: "3-6 weeks",
+    integrations: ["Cloud platforms", "Legacy systems", "Mobile apps", "Analytics tools"],
     freeTier: true,
-    trialPeriod: '45 days'
+    trialPeriod: "30 days"
   },
+
+  // Cybersecurity & Zero Trust Platform
   {
-    id: '5g-network-optimization-2028',
-    name: '5G Network Optimization',
-    category: '5G & Networking',
-    pricing: 'Enterprise',
-    description: 'Advanced 5G network optimization solutions for improved performance, coverage, and user experience.',
-    price: 3999,
+    id: 6,
+    name: "Cybersecurity Zero Trust Platform",
+    category: "Cybersecurity",
+    pricing: "Enterprise",
+    description: "Comprehensive zero-trust cybersecurity platform with advanced threat detection, automated response, and compliance management",
+    price: 3499,
+    pricingModel: "monthly",
+    userLimit: "Unlimited users",
     features: [
-      'Network performance monitoring',
-      'Coverage optimization',
-      'Capacity planning',
-      'Quality of service management',
-      'Network slicing',
-      'Edge computing integration',
-      'Security optimization',
-      'Analytics and reporting'
+      "Zero trust architecture",
+      "Advanced threat detection",
+      "Automated incident response",
+      "Compliance management",
+      "Security awareness training",
+      "Vulnerability assessment",
+      "Penetration testing",
+      "24/7 monitoring"
     ],
     benefits: [
-      'Improve network performance by 40%',
-      'Reduce operational costs by 35%',
-      'Enhance user experience',
-      'Enable new 5G applications',
-      'Improve network reliability',
-      'Optimize resource utilization'
+      "Enhanced security posture",
+      "Reduced breach risk",
+      "Compliance automation",
+      "Cost savings",
+      "Peace of mind",
+      "Competitive advantage"
     ],
-    targetAudience: [
-      'Telecommunications companies',
-      'Mobile network operators',
-      'Internet service providers',
-      'Enterprise networks',
-      'Smart cities',
-      'Industrial IoT companies'
-    ],
-    tags: ['5G', 'Network Optimization', 'Performance Monitoring', 'Coverage', 'Capacity Planning', 'Edge Computing'],
+    targetAudience: ["Financial institutions", "Healthcare providers", "Government agencies", "Enterprise companies"],
+    tags: ["Cybersecurity", "Zero Trust", "Threat Detection", "Compliance", "Incident Response"],
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/cybersecurity-zero-trust",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: 5500,
-    competitors: ['Ericsson', 'Nokia', 'Huawei', 'Cisco'],
-    roi: '350% within 20 months',
-    setupTime: '6-8 weeks',
-    integrations: ['Core Network', 'Radio Access Network', 'Edge Computing', 'Cloud Infrastructure', 'SDN/NFV'],
+    marketPrice: "$3,499-6,999/month",
+    competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Cisco"],
+    roi: "600% within 12 months",
+    setupTime: "4-8 weeks",
+    integrations: ["SIEM systems", "EDR solutions", "Identity providers", "Cloud platforms"],
     freeTier: false,
-    trialPeriod: '30 days'
+    trialPeriod: "30 days"
+  },
+
+  // AR/VR Development Platform
+  {
+    id: 7,
+    name: "AR/VR Development Platform",
+    category: "AR/VR",
+    pricing: "Custom",
+    description: "Complete AR/VR development platform for creating immersive experiences, virtual training, and interactive applications",
+    price: 2499,
+    pricingModel: "monthly",
+    userLimit: "Project-based",
+    features: [
+      "3D modeling tools",
+      "Interactive development",
+      "Multi-platform support",
+      "Analytics dashboard",
+      "Content management",
+      "User experience design",
+      "Performance optimization",
+      "Deployment tools"
+    ],
+    benefits: [
+      "Immersive experiences",
+      "Enhanced training",
+      "Increased engagement",
+      "Competitive advantage",
+      "Innovation leadership",
+      "New revenue streams"
+    ],
+    targetAudience: ["Gaming companies", "Training organizations", "Real estate", "Healthcare providers"],
+    tags: ["AR/VR", "3D Modeling", "Interactive Design", "Immersive Technology", "Virtual Training"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ar-vr-development",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$2,499-7,999/month",
+    competitors: ["Unity", "Unreal Engine", "Vuforia", "ARKit"],
+    roi: "700% within 15 months",
+    setupTime: "8-16 weeks",
+    integrations: ["VR headsets", "Mobile devices", "Web browsers", "Cloud platforms"],
+    freeTier: true,
+    trialPeriod: "45 days"
+  },
+
+  // FinTech Solutions Platform
+  {
+    id: 8,
+    name: "FinTech Solutions Platform",
+    category: "FinTech",
+    pricing: "Enterprise",
+    description: "Comprehensive FinTech platform offering payment processing, lending solutions, investment tools, and financial analytics",
+    price: 4499,
+    pricingModel: "monthly",
+    userLimit: "Unlimited users",
+    features: [
+      "Payment processing",
+      "Lending automation",
+      "Investment management",
+      "Risk assessment",
+      "Compliance monitoring",
+      "Financial analytics",
+      "API integrations",
+      "Multi-currency support"
+    ],
+    benefits: [
+      "Streamlined operations",
+      "Enhanced customer experience",
+      "Reduced costs",
+      "Compliance automation",
+      "Data-driven insights",
+      "Competitive advantage"
+    ],
+    targetAudience: ["Banks", "Credit unions", "Investment firms", "FinTech startups"],
+    tags: ["FinTech", "Payments", "Lending", "Investments", "Financial Analytics"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/fintech-solutions",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$4,499-9,999/month",
+    competitors: ["Stripe", "Square", "Plaid", "Adyen"],
+    roi: "900% within 18 months",
+    setupTime: "6-12 weeks",
+    integrations: ["Banking systems", "Payment gateways", "Accounting software", "CRM systems"],
+    freeTier: false,
+    trialPeriod: "60 days"
+  },
+
+  // Green Technology Solutions
+  {
+    id: 9,
+    name: "Green Technology Solutions",
+    category: "Green Tech",
+    pricing: "Custom",
+    description: "Sustainable technology solutions for energy optimization, carbon tracking, and environmental impact reduction",
+    price: 2999,
+    pricingModel: "monthly",
+    userLimit: "Organization-wide",
+    features: [
+      "Energy monitoring",
+      "Carbon footprint tracking",
+      "Sustainability reporting",
+      "Green procurement",
+      "Waste reduction",
+      "Renewable energy integration",
+      "Environmental compliance",
+      "Impact analytics"
+    ],
+    benefits: [
+      "Reduced environmental impact",
+      "Cost savings",
+      "Regulatory compliance",
+      "Brand enhancement",
+      "Sustainability leadership",
+      "Stakeholder satisfaction"
+    ],
+    targetAudience: ["Manufacturing companies", "Energy providers", "Retail chains", "Government agencies"],
+    tags: ["Green Technology", "Sustainability", "Energy Optimization", "Carbon Tracking", "Environmental Impact"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/green-technology",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$2,999-6,999/month",
+    competitors: ["Carbon Trust", "EcoAct", "South Pole", "ClimatePartner"],
+    roi: "500% within 12 months",
+    setupTime: "4-8 weeks",
+    integrations: ["Energy management systems", "ERP systems", "IoT devices", "Reporting platforms"],
+    freeTier: true,
+    trialPeriod: "30 days"
+  },
+
+  // 5G Network Optimization
+  {
+    id: 10,
+    name: "5G Network Optimization",
+    category: "5G & Networking",
+    pricing: "Enterprise",
+    description: "Advanced 5G network optimization services for telecommunications companies, enterprises, and smart city implementations",
+    price: 5999,
+    pricingModel: "monthly",
+    userLimit: "Network-wide",
+    features: [
+      "Network performance optimization",
+      "Coverage analysis",
+      "Capacity planning",
+      "Quality of service management",
+      "Interference mitigation",
+      "Energy efficiency optimization",
+      "Real-time monitoring",
+      "Predictive maintenance"
+    ],
+    benefits: [
+      "Improved network performance",
+      "Enhanced user experience",
+      "Reduced operational costs",
+      "Increased capacity",
+      "Better coverage",
+      "Future-ready infrastructure"
+    ],
+    targetAudience: ["Telecom companies", "Enterprises", "Smart cities", "Industrial facilities"],
+    tags: ["5G", "Network Optimization", "Telecommunications", "Smart Cities", "Network Performance"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/5g-network-optimization",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$5,999-12,999/month",
+    competitors: ["Ericsson", "Nokia", "Huawei", "Cisco"],
+    roi: "1200% within 24 months",
+    setupTime: "12-20 weeks",
+    integrations: ["Network equipment", "Monitoring systems", "Analytics platforms", "Management systems"],
+    freeTier: false,
+    trialPeriod: "90 days"
   }
 ];
 
+// Service Categories for Navigation
 export const serviceCategories = [
-  'AI & Machine Learning',
-  'Quantum Technology',
-  'Blockchain & Web3',
-  'IoT & Edge Computing',
-  'Cybersecurity',
-  'AR/VR Development',
-  'FinTech',
-  'Green Technology',
-  '5G & Networking'
+  {
+    id: "ai-ml",
+    name: "AI & Machine Learning",
+    description: "Cutting-edge artificial intelligence and machine learning solutions",
+    icon: "Brain",
+    color: "from-purple-500 to-pink-500",
+    services: [1, 2]
+  },
+  {
+    id: "quantum",
+    name: "Quantum Technology",
+    description: "Next-generation quantum computing solutions",
+    icon: "Zap",
+    color: "from-blue-500 to-cyan-500",
+    services: [3]
+  },
+  {
+    id: "blockchain",
+    name: "Blockchain & Web3",
+    description: "Decentralized solutions and blockchain technology",
+    icon: "Lock",
+    color: "from-green-500 to-emerald-500",
+    services: [4]
+  },
+  {
+    id: "iot",
+    name: "IoT & Edge Computing",
+    description: "Internet of Things and edge computing solutions",
+    icon: "Cloud",
+    color: "from-orange-500 to-red-500",
+    services: [5]
+  },
+  {
+    id: "cybersecurity",
+    name: "Cybersecurity",
+    description: "Advanced security and zero-trust solutions",
+    icon: "Shield",
+    color: "from-red-500 to-pink-500",
+    services: [6]
+  },
+  {
+    id: "ar-vr",
+    name: "AR/VR Development",
+    description: "Immersive technology and virtual experiences",
+    icon: "Users",
+    color: "from-indigo-500 to-purple-500",
+    services: [7]
+  },
+  {
+    id: "fintech",
+    name: "FinTech Solutions",
+    description: "Financial technology and digital banking",
+    icon: "Database",
+    color: "from-yellow-500 to-orange-500",
+    services: [8]
+  },
+  {
+    id: "green-tech",
+    name: "Green Technology",
+    description: "Sustainable and environmental solutions",
+    icon: "Shield",
+    color: "from-green-400 to-teal-500",
+    services: [9]
+  },
+  {
+    id: "5g-networking",
+    name: "5G & Networking",
+    description: "Next-generation network optimization",
+    icon: "Network",
+    color: "from-blue-600 to-indigo-600",
+    services: [10]
+  }
 ];
 
+// Pricing Tiers
 export const pricingTiers = [
   {
-    name: 'Starter',
-    price: 499,
-    features: ['Basic features', 'Limited integrations', 'Community support', 'Basic analytics'],
-    bestFor: 'Small businesses and startups'
+    name: "Starter",
+    price: "$999",
+    period: "month",
+    description: "Perfect for small businesses and startups",
+    features: [
+      "Basic features",
+      "Email support",
+      "Standard integrations",
+      "Community forum access"
+    ],
+    recommended: false
   },
   {
-    name: 'Professional',
-    price: 1999,
-    features: ['Advanced features', 'Full integrations', 'Priority support', 'Advanced analytics', 'Custom branding'],
-    bestFor: 'Growing businesses and teams'
+    name: "Professional",
+    price: "$2,999",
+    period: "month",
+    description: "Ideal for growing businesses",
+    features: [
+      "Advanced features",
+      "Priority support",
+      "Custom integrations",
+      "Dedicated account manager",
+      "Training sessions"
+    ],
+    recommended: true
   },
   {
-    name: 'Enterprise',
-    price: 4999,
-    features: ['All features', 'Unlimited integrations', '24/7 support', 'Custom analytics', 'White-label solution', 'Dedicated account manager'],
-    bestFor: 'Large enterprises and organizations'
+    name: "Enterprise",
+    price: "Custom",
+    period: "month",
+    description: "For large organizations with complex needs",
+    features: [
+      "All features",
+      "24/7 support",
+      "Custom development",
+      "On-site training",
+      "SLA guarantees",
+      "White-label options"
+    ],
+    recommended: false
   }
 ];
 
+// Contact Information
 export const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709",
+  social: {
+    twitter: "https://twitter.com/ziontechgroup",
+    linkedin: "https://www.linkedin.com/company/zion-tech-group",
+    facebook: "https://www.facebook.com/ziontechgroup",
+    instagram: "https://www.instagram.com/ziontechgroup"
+  }
 };

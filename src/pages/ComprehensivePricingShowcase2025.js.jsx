@@ -143,6 +143,7 @@ const ComprehensivePricingShowcase2025 = () => {
               </a>
             </div>
           </div>
+
           {/* Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link to="/advanced-innovative-services-showcase-2025" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105">
@@ -157,6 +158,7 @@ const ComprehensivePricingShowcase2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Filters Section */}
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -171,6 +173,7 @@ const ComprehensivePricingShowcase2025 = () => {
                     </option>))}
                 </select>
               </div>
+
               {/* Price Range Filter */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
@@ -181,6 +184,7 @@ const ComprehensivePricingShowcase2025 = () => {
                 </select>
               </div>
             </div>
+
             <div className="text-center">
               <p className="text-gray-300">
                 Showing <span className="text-white font-semibold">{filteredServices.length}</span> of{' '}
@@ -190,6 +194,7 @@ const ComprehensivePricingShowcase2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Pricing Grid */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
@@ -206,6 +211,7 @@ const ComprehensivePricingShowcase2025 = () => {
                   </span>
                   <span className="text-3xl">{service.icon || '🚀'}</span>
                 </div>
+
                 {/* Service Name and Category */}
                 <h3 className="text-xl font-bold mb-2 text-white group-hover:text-blue-400 transition-colors">
                   {service.name}
@@ -213,17 +219,21 @@ const ComprehensivePricingShowcase2025 = () => {
                 <p className="text-sm text-gray-400 mb-3 flex items-center">
                   {getCategoryIcon(service.category)} {service.category}
                 </p>
+
                 {/* Tagline */}
                 {service.tagline && (<p className="text-gray-300 mb-4 italic">{service.tagline}</p>)}
+
                 {/* Pricing - Prominent Display */}
                 <div className="mb-6 text-center p-4 bg-white/5 rounded-lg">
                   {getPriceDisplay(service)}
                   {service.projectRate && (<p className="text-sm text-gray-400 mt-2">{service.projectRate}</p>)}
                 </div>
+
                 {/* Description */}
                 <p className="text-gray-300 mb-4 line-clamp-3">
                   {service.description}
                 </p>
+
                 {/* Key Features */}
                 {service.features && (<div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
@@ -237,11 +247,13 @@ const ComprehensivePricingShowcase2025 = () => {
                         </li>)}
                     </ul>
                   </div>)}
+
                 {/* Market Position */}
                 {service.marketPosition && (<div className="mb-4 p-3 bg-white/5 rounded-lg">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Market Position:</h4>
                     <p className="text-xs text-gray-400">{service.marketPosition}</p>
                   </div>)}
+
                 {/* ROI and Benefits */}
                 <div className="mb-4">
                   {service.roi && (<div className="mb-2">
@@ -256,6 +268,7 @@ const ComprehensivePricingShowcase2025 = () => {
                       </span>
                     </div>)}
                 </div>
+
                 {/* Trial and Setup Info */}
                 <div className="mb-4 p-3 bg-white/5 rounded-lg">
                   <div className="grid grid-cols-2 gap-4 text-xs">
@@ -269,6 +282,7 @@ const ComprehensivePricingShowcase2025 = () => {
                       </div>)}
                   </div>
                 </div>
+
                 {/* Contact and Action */}
                 <div className="border-t border-white/20 pt-4">
                   <div className="flex justify-between items-center">
@@ -285,6 +299,7 @@ const ComprehensivePricingShowcase2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Pricing Summary */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-4xl mx-auto">
@@ -310,6 +325,7 @@ const ComprehensivePricingShowcase2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Call to Action */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-4xl mx-auto text-center">

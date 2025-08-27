@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import SEOHead from "../components/SEOHead.jsx";
+import { SEO } from "@/components/SEO";
 import { useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 const getNotificationIcon = (type, className = "h-5 w-5") => {
@@ -98,7 +98,7 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
 export default function NotificationsPage() {
     const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
     return (<>
-      <SEOHead title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace."/>
+      <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace."/>
       
       <main className="container mx-auto px-4 py-8 min-h-screen">
         <div className="flex justify-between items-center mb-6">

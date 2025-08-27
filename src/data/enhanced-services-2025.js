@@ -1,598 +1,174 @@
-const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-};
 export const enhancedServices2025 = [
-    // MICRO SAAS SERVICES
-    {
-        id: 'ai-powered-code-review-assistant',
-        name: 'AI-Powered Code Review Assistant',
-        tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',
-        description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
-        category: 'micro-saas',
-        pricing: {
-            monthly: '$199/month',
-            yearly: '$1,999/year',
-            enterprise: 'Custom pricing',
-            setup: '$299 one-time'
-        },
-        features: [
-            'Automated security vulnerability detection',
-            'Code quality scoring and metrics',
-            'Best practice recommendations',
-            'Integration with GitHub/GitLab/Bitbucket',
-            'Custom rule configuration',
-            'Team performance analytics',
-            'Automated PR comments',
-            'Compliance checking (SOC2, HIPAA)',
-            'Performance impact analysis',
-            'Multi-language support'
-        ],
-        benefits: [
-            'Reduce code review time by 40-60%',
-            'Improve code quality by 25%',
-            'Catch security issues before deployment',
-            'Standardize coding practices',
-            'Reduce technical debt'
-        ],
-        technology: ['AI/ML', 'Static Analysis', 'Security Scanning', 'Git Integration'],
-        integrations: ['GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Teams'],
-        useCases: ['Code quality improvement', 'Security compliance', 'Team productivity', 'DevOps automation'],
-        targetAudience: 'Development teams, DevOps engineers, CTOs, Engineering managers',
-        marketPosition: 'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus',
-        competitors: ['SonarQube', 'CodeClimate', 'Snyk', 'DeepCode'],
-        roi: 'Reduce code review time by 40-60% and improve code quality by 25%',
-        trialDays: 14,
-        setupTime: '2 hours',
-        icon: '🔍',
-        color: 'from-blue-600 to-indigo-700',
-        link: '/services/ai-code-review-assistant',
-        contactInfo
+  {
+    id: 1,
+    title: "AI & Machine Learning Solutions",
+    description: "Cutting-edge artificial intelligence and machine learning services to transform your business operations.",
+    icon: "🤖",
+    category: "AI & ML",
+    features: [
+      "Custom AI Model Development",
+      "Machine Learning Pipeline Design",
+      "Natural Language Processing",
+      "Computer Vision Solutions",
+      "Predictive Analytics",
+      "AI Strategy Consulting"
+    ],
+    pricing: {
+      starter: "$5,000",
+      professional: "$15,000",
+      enterprise: "Custom"
     },
-    {
-        id: 'intelligent-incident-response-platform',
-        name: 'Intelligent Incident Response Platform',
-        tagline: 'AI-driven incident detection, automated response, and post-mortem analysis',
-        description: 'Comprehensive incident management platform that uses AI to detect, respond to, and analyze security incidents in real-time, reducing response time and improving resolution quality.',
-        category: 'micro-saas',
-        pricing: {
-            monthly: '$299/month',
-            yearly: '$2,999/year',
-            enterprise: 'Custom pricing',
-            setup: '$499 one-time'
-        },
-        features: [
-            'AI-powered threat detection',
-            'Automated incident response workflows',
-            'Real-time alerting and notifications',
-            'Incident timeline tracking',
-            'Post-mortem analysis tools',
-            'Integration with security tools',
-            'Compliance reporting',
-            'Team collaboration features',
-            'Knowledge base management',
-            'Performance metrics dashboard'
-        ],
-        benefits: [
-            'Reduce incident response time by 70%',
-            'Improve incident resolution by 45%',
-            'Automate routine response tasks',
-            'Enhance team collaboration',
-            'Maintain compliance standards'
-        ],
-        technology: ['AI/ML', 'Automation', 'Security Orchestration', 'Real-time Analytics'],
-        integrations: ['SIEM', 'EDR', 'Firewall', 'Slack', 'Teams', 'Jira'],
-        useCases: ['Security incident management', 'IT operations', 'Compliance management', 'Team collaboration'],
-        targetAudience: 'Security teams, IT operations, SOC analysts, Compliance officers',
-        marketPosition: 'Competes with PagerDuty, ServiceNow; adds AI-powered automation and security focus',
-        competitors: ['PagerDuty', 'ServiceNow', 'VictorOps', 'OpsGenie'],
-        roi: 'Reduce incident response time by 70% and improve resolution quality by 45%',
-        trialDays: 14,
-        setupTime: '4 hours',
-        icon: '🚨',
-        color: 'from-red-600 to-pink-700',
-        link: '/services/incident-response-platform',
-        contactInfo
+    technologies: ["TensorFlow", "PyTorch", "OpenAI", "Hugging Face", "AWS SageMaker"]
+  },
+  {
+    id: 2,
+    title: "Quantum Computing Services",
+    description: "Next-generation quantum computing solutions for complex problem-solving and optimization.",
+    icon: "⚛️",
+    category: "Quantum",
+    features: [
+      "Quantum Algorithm Development",
+      "Quantum Machine Learning",
+      "Quantum Optimization",
+      "Quantum Simulation",
+      "Quantum Security",
+      "Quantum Strategy Planning"
+    ],
+    pricing: {
+      starter: "$10,000",
+      professional: "$25,000",
+      enterprise: "Custom"
     },
-    {
-        id: 'smart-invoice-management-system',
-        name: 'Smart Invoice Management System',
-        tagline: 'AI-powered invoice processing, approval workflows, and payment tracking',
-        description: 'Intelligent invoice management platform that automates the entire invoice lifecycle from receipt to payment, reducing processing time and improving accuracy.',
-        category: 'micro-saas',
-        pricing: {
-            monthly: '$79/month',
-            yearly: '$799/year',
-            enterprise: 'Custom pricing',
-            setup: '$199 one-time'
-        },
-        features: [
-            'OCR invoice processing',
-            'Automated approval workflows',
-            'Payment integration',
-            'Analytics dashboard',
-            'Multi-currency support',
-            'Vendor management',
-            'Compliance checking',
-            'Mobile app access',
-            'API integration',
-            'Custom reporting'
-        ],
-        benefits: [
-            'Reduce processing time by 90%',
-            'Improve accuracy by 95%',
-            'Automate approval processes',
-            'Enhance vendor relationships',
-            'Maintain compliance standards'
-        ],
-        technology: ['AI/ML', 'OCR', 'Workflow Automation', 'Cloud Computing'],
-        integrations: ['QuickBooks', 'Xero', 'Sage', 'Stripe', 'PayPal', 'Bank APIs'],
-        useCases: ['Accounts payable', 'Vendor management', 'Financial compliance', 'Process automation'],
-        targetAudience: 'Finance teams, Accounting professionals, Small businesses, Enterprises',
-        marketPosition: 'Competes with Bill.com, AvidXchange; adds AI-powered automation and analytics',
-        competitors: ['Bill.com', 'AvidXchange', 'Coupa', 'SAP Ariba'],
-        roi: 'Reduce invoice processing costs by 60% and improve accuracy by 95%',
-        trialDays: 30,
-        setupTime: '1 hour',
-        icon: '📄',
-        color: 'from-green-600 to-emerald-700',
-        link: '/services/invoice-management',
-        contactInfo
+    technologies: ["IBM Qiskit", "Google Cirq", "Microsoft Q#", "D-Wave", "Rigetti"]
+  },
+  {
+    id: 3,
+    title: "Blockchain & Web3 Development",
+    description: "Decentralized solutions and blockchain infrastructure for the future of digital transactions.",
+    icon: "🔗",
+    category: "Blockchain",
+    features: [
+      "Smart Contract Development",
+      "DeFi Platform Creation",
+      "NFT Marketplace Development",
+      "Blockchain Infrastructure",
+      "Web3 Integration",
+      "Cryptocurrency Solutions"
+    ],
+    pricing: {
+      starter: "$8,000",
+      professional: "$20,000",
+      enterprise: "Custom"
     },
-    {
-        id: 'ai-customer-success-automation',
-        name: 'AI Customer Success Automation',
-        tagline: 'Intelligent customer onboarding, support, and retention automation',
-        description: 'AI-driven platform that automates customer success processes, predicts churn, and optimizes customer experience to improve retention and satisfaction.',
-        category: 'micro-saas',
-        pricing: {
-            monthly: '$149/month',
-            yearly: '$1,499/year',
-            enterprise: 'Custom pricing',
-            setup: '$299 one-time'
-        },
-        features: [
-            'Automated onboarding workflows',
-            'Predictive churn analysis',
-            'Support ticket routing',
-            'Success metrics tracking',
-            'Customer health scoring',
-            'Automated outreach campaigns',
-            'Integration with CRM systems',
-            'Performance analytics',
-            'Custom dashboards',
-            'API access'
-        ],
-        benefits: [
-            'Increase customer retention by 25%',
-            'Reduce churn by 30%',
-            'Automate routine tasks',
-            'Improve customer satisfaction',
-            'Scale customer success operations'
-        ],
-        technology: ['AI/ML', 'Predictive Analytics', 'Automation', 'CRM Integration'],
-        integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zendesk', 'Intercom', 'Slack'],
-        useCases: ['Customer success', 'Customer support', 'Retention optimization', 'Onboarding automation'],
-        targetAudience: 'Customer success teams, SaaS companies, Customer support managers, Growth teams',
-        marketPosition: 'Competes with Gainsight, Totango; adds AI-powered automation and predictive analytics',
-        competitors: ['Gainsight', 'Totango', 'ChurnZero', 'CustomerSuccessBox'],
-        roi: 'Increase customer retention by 25% and reduce churn by 30%',
-        trialDays: 14,
-        setupTime: '3 hours',
-        icon: '🎯',
-        color: 'from-purple-600 to-violet-700',
-        link: '/services/customer-success-automation',
-        contactInfo
+    technologies: ["Ethereum", "Solana", "Polygon", "Solidity", "Web3.js"]
+  },
+  {
+    id: 4,
+    title: "IoT & Edge Computing",
+    description: "Internet of Things solutions and edge computing infrastructure for connected devices.",
+    icon: "🌐",
+    category: "IoT",
+    features: [
+      "IoT Device Development",
+      "Edge Computing Solutions",
+      "Sensor Network Design",
+      "Real-time Data Processing",
+      "IoT Security",
+      "Cloud Integration"
+    ],
+    pricing: {
+      starter: "$6,000",
+      professional: "$18,000",
+      enterprise: "Custom"
     },
-    {
-        id: 'intelligent-data-analytics-dashboard',
-        name: 'Intelligent Data Analytics Dashboard',
-        tagline: 'Real-time business intelligence and KPI monitoring platform',
-        description: 'Advanced analytics platform that provides real-time insights, custom dashboards, and predictive analytics to drive data-driven decision making.',
-        category: 'micro-saas',
-        pricing: {
-            monthly: '$199/month',
-            yearly: '$1,999/year',
-            enterprise: 'Custom pricing',
-            setup: '$399 one-time'
-        },
-        features: [
-            'Real-time data visualization',
-            'Custom dashboard builder',
-            'Predictive analytics',
-            'Data integration tools',
-            'Automated reporting',
-            'Mobile app access',
-            'API access',
-            'Custom alerts',
-            'Data export capabilities',
-            'Team collaboration'
-        ],
-        benefits: [
-            'Improve decision making by 40%',
-            'Reduce reporting time by 80%',
-            'Identify new opportunities',
-            'Optimize business processes',
-            'Enhance team productivity'
-        ],
-        technology: ['AI/ML', 'Real-time Analytics', 'Data Visualization', 'Cloud Computing'],
-        integrations: ['Google Analytics', 'Salesforce', 'HubSpot', 'Stripe', 'Shopify', 'Database APIs'],
-        useCases: ['Business intelligence', 'Performance monitoring', 'Data analysis', 'Reporting automation'],
-        targetAudience: 'Business analysts, Data scientists, Executives, Marketing teams',
-        marketPosition: 'Competes with Tableau, Power BI; adds AI-powered insights and real-time capabilities',
-        competitors: ['Tableau', 'Power BI', 'Looker', 'Metabase'],
-        roi: 'Improve decision making by 40% and reduce reporting time by 80%',
-        trialDays: 14,
-        setupTime: '2 hours',
-        icon: '📊',
-        color: 'from-cyan-600 to-blue-700',
-        link: '/services/analytics-dashboard',
-        contactInfo
+    technologies: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP"]
+  },
+  {
+    id: 5,
+    title: "Cybersecurity & Threat Intelligence",
+    description: "Advanced security solutions and threat detection systems to protect your digital assets.",
+    icon: "🛡️",
+    category: "Security",
+    features: [
+      "Penetration Testing",
+      "Security Auditing",
+      "Threat Detection",
+      "Incident Response",
+      "Security Training",
+      "Compliance Management"
+    ],
+    pricing: {
+      starter: "$7,000",
+      professional: "$22,000",
+      enterprise: "Custom"
     },
-    // IT SERVICES
-    {
-        id: 'network-security-monitoring',
-        name: 'Network Security Monitoring',
-        tagline: '24/7 network security monitoring and threat detection',
-        description: 'Comprehensive network security monitoring service that provides real-time threat detection, incident response, and compliance reporting for enterprise networks.',
-        category: 'it-services',
-        pricing: {
-            monthly: '$1,500/month',
-            yearly: '$15,000/year',
-            enterprise: 'Custom pricing',
-            setup: '$2,000 one-time'
-        },
-        features: [
-            '24/7 network monitoring',
-            'Real-time threat detection',
-            'Incident response support',
-            'Compliance reporting',
-            'Vulnerability assessment',
-            'Security consulting',
-            'Penetration testing',
-            'Security awareness training',
-            'Incident post-mortem',
-            'Continuous improvement'
-        ],
-        benefits: [
-            'Proactive threat detection',
-            '24/7 security monitoring',
-            'Compliance assurance',
-            'Reduced security risks',
-            'Expert security guidance'
-        ],
-        technology: ['SIEM', 'EDR', 'Network Monitoring', 'Threat Intelligence'],
-        integrations: ['Firewall', 'IDS/IPS', 'VPN', 'Email Security', 'Cloud Security'],
-        useCases: ['Enterprise security', 'Compliance management', 'Threat detection', 'Incident response'],
-        targetAudience: 'Enterprise IT teams, Security professionals, Compliance officers, CISOs',
-        marketPosition: 'Competes with managed security service providers; adds AI-powered threat detection',
-        competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne', 'Managed MSSPs'],
-        roi: 'Reduce security incidents by 60% and improve compliance by 90%',
-        trialDays: 0,
-        setupTime: '1-2 weeks',
-        icon: '🛡️',
-        color: 'from-red-600 to-orange-700',
-        link: '/services/network-security-monitoring',
-        contactInfo
+    technologies: ["Metasploit", "Wireshark", "Nmap", "Burp Suite", "Snort"]
+  },
+  {
+    id: 6,
+    title: "Cloud Infrastructure & DevOps",
+    description: "Scalable cloud solutions and DevOps practices for modern application development.",
+    icon: "☁️",
+    category: "Cloud",
+    features: [
+      "Cloud Architecture Design",
+      "DevOps Implementation",
+      "Container Orchestration",
+      "CI/CD Pipeline Setup",
+      "Infrastructure as Code",
+      "Cloud Migration"
+    ],
+    pricing: {
+      starter: "$4,000",
+      professional: "$12,000",
+      enterprise: "Custom"
     },
-    {
-        id: 'data-backup-recovery-solutions',
-        name: 'Data Backup & Recovery Solutions',
-        tagline: 'Automated backup solutions with disaster recovery planning',
-        description: 'Comprehensive data protection service that includes automated backups, cloud storage, disaster recovery planning, and business continuity solutions.',
-        category: 'it-services',
-        pricing: {
-            monthly: '$800/month',
-            yearly: '$8,000/year',
-            enterprise: 'Custom pricing',
-            setup: '$1,500 one-time'
-        },
-        features: [
-            'Automated backup scheduling',
-            'Cloud storage integration',
-            'Disaster recovery planning',
-            'Recovery testing',
-            'RTO optimization',
-            'Data encryption',
-            'Compliance support',
-            '24/7 support',
-            'Recovery documentation',
-            'Business continuity planning'
-        ],
-        benefits: [
-            '99.99% recovery success rate',
-            'Automated backup processes',
-            'Cloud redundancy',
-            'Compliance assurance',
-            'Business continuity'
-        ],
-        technology: ['Cloud Storage', 'Backup Software', 'Encryption', 'Disaster Recovery'],
-        integrations: ['AWS S3', 'Azure Blob', 'Google Cloud', 'On-premise Storage', 'VMware', 'Hyper-V'],
-        useCases: ['Data protection', 'Disaster recovery', 'Business continuity', 'Compliance management'],
-        targetAudience: 'IT administrators, Data center managers, Compliance officers, Business continuity managers',
-        marketPosition: 'Competes with Veeam, Commvault; adds cloud-native and AI-powered optimization',
-        competitors: ['Veeam', 'Commvault', 'Rubrik', 'Cohesity'],
-        roi: 'Ensure 99.99% data recovery and reduce downtime by 80%',
-        trialDays: 0,
-        setupTime: '1-2 weeks',
-        icon: '💾',
-        color: 'from-blue-600 to-indigo-700',
-        link: '/services/backup-recovery',
-        contactInfo
+    technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"]
+  },
+  {
+    id: 7,
+    title: "AR/VR & Metaverse Development",
+    description: "Immersive experiences and metaverse solutions for the next generation of digital interaction.",
+    icon: "🥽",
+    category: "AR/VR",
+    features: [
+      "Virtual Reality Applications",
+      "Augmented Reality Solutions",
+      "Metaverse Platform Development",
+      "3D Content Creation",
+      "Spatial Computing",
+      "Immersive Training"
+    ],
+    pricing: {
+      starter: "$9,000",
+      professional: "$28,000",
+      enterprise: "Custom"
     },
-    {
-        id: 'it-asset-management-platform',
-        name: 'IT Asset Management Platform',
-        tagline: 'Comprehensive IT asset tracking and lifecycle management',
-        description: 'Complete IT asset management solution that tracks hardware, software, licenses, and provides lifecycle management, cost optimization, and compliance reporting.',
-        category: 'it-services',
-        pricing: {
-            monthly: '$500/month',
-            yearly: '$5,000/year',
-            enterprise: 'Custom pricing',
-            setup: '$1,000 one-time'
-        },
-        features: [
-            'Asset discovery and tracking',
-            'License management',
-            'Depreciation tracking',
-            'Maintenance scheduling',
-            'Cost optimization',
-            'Compliance reporting',
-            'Vendor management',
-            'Contract tracking',
-            'Mobile app access',
-            'API integration'
-        ],
-        benefits: [
-            'Optimize IT costs by 30%',
-            'Improve compliance tracking',
-            'Automate maintenance scheduling',
-            'Enhance asset visibility',
-            'Reduce audit time'
-        ],
-        technology: ['Asset Discovery', 'Database Management', 'Reporting Engine', 'Mobile Development'],
-        integrations: ['Active Directory', 'SCCM', 'ServiceNow', 'Jira', 'Slack', 'Email systems'],
-        useCases: ['IT asset management', 'License compliance', 'Cost optimization', 'Audit preparation'],
-        targetAudience: 'IT asset managers, IT administrators, Compliance officers, Finance teams',
-        marketPosition: 'Competes with ServiceNow, BMC; adds AI-powered optimization and mobile access',
-        competitors: ['ServiceNow', 'BMC', 'Ivanti', 'ManageEngine'],
-        roi: 'Optimize IT costs by 30% and improve compliance by 95%',
-        trialDays: 14,
-        setupTime: '1 week',
-        icon: '🏷️',
-        color: 'from-green-600 to-emerald-700',
-        link: '/services/asset-management',
-        contactInfo
+    technologies: ["Unity", "Unreal Engine", "Oculus", "HoloLens", "WebXR"]
+  },
+  {
+    id: 8,
+    title: "Green Technology Solutions",
+    description: "Sustainable technology solutions to reduce environmental impact and improve efficiency.",
+    icon: "🌱",
+    category: "Green Tech",
+    features: [
+      "Energy Management Systems",
+      "Sustainable Computing",
+      "Green Data Centers",
+      "Carbon Footprint Tracking",
+      "Renewable Energy Integration",
+      "Environmental Monitoring"
+    ],
+    pricing: {
+      starter: "$6,500",
+      professional: "$19,000",
+      enterprise: "Custom"
     },
-    // AI SERVICES
-    {
-        id: 'ai-chatbot-development',
-        name: 'AI Chatbot Development',
-        tagline: 'Custom AI chatbots for customer service and support',
-        description: 'Intelligent chatbot solutions that provide 24/7 customer support, handle complex queries, and integrate seamlessly with your existing systems.',
-        category: 'ai-services',
-        pricing: {
-            monthly: '$2,000/month',
-            yearly: '$20,000/year',
-            enterprise: 'Custom pricing',
-            setup: '$5,000 one-time'
-        },
-        features: [
-            'Natural language processing',
-            'Multi-language support',
-            'Integration APIs',
-            'Analytics dashboard',
-            'Custom training',
-            'Voice recognition',
-            'Sentiment analysis',
-            'Escalation handling',
-            'Knowledge base integration',
-            'Performance monitoring'
-        ],
-        benefits: [
-            '24/7 customer support',
-            'Instant response times',
-            'Reduce support costs by 40%',
-            'Improve customer satisfaction',
-            'Scale support operations'
-        ],
-        technology: ['NLP', 'Machine Learning', 'API Development', 'Cloud Computing'],
-        integrations: ['Website', 'Mobile Apps', 'CRM Systems', 'Help Desk', 'Slack', 'Teams'],
-        useCases: ['Customer support', 'Sales assistance', 'FAQ handling', 'Appointment booking'],
-        targetAudience: 'Customer support teams, E-commerce businesses, Service companies, Marketing teams',
-        marketPosition: 'Competes with Intercom, Drift; adds advanced AI capabilities and custom development',
-        competitors: ['Intercom', 'Drift', 'Zendesk', 'Freshchat'],
-        roi: 'Reduce support costs by 40% and improve customer satisfaction by 35%',
-        trialDays: 7,
-        setupTime: '2-4 weeks',
-        icon: '🤖',
-        color: 'from-purple-600 to-violet-700',
-        link: '/services/ai-chatbot',
-        contactInfo
-    },
-    {
-        id: 'predictive-analytics-platform',
-        name: 'Predictive Analytics Platform',
-        tagline: 'AI-powered predictive analytics for business forecasting',
-        description: 'Advanced predictive analytics platform that uses machine learning to forecast trends, identify opportunities, and optimize business decisions.',
-        category: 'ai-services',
-        pricing: {
-            monthly: '$3,500/month',
-            yearly: '$35,000/year',
-            enterprise: 'Custom pricing',
-            setup: '$8,000 one-time'
-        },
-        features: [
-            'Data modeling and analysis',
-            'Forecasting algorithms',
-            'Visualization tools',
-            'API integration',
-            'Custom model training',
-            'Real-time predictions',
-            'Performance monitoring',
-            'Automated insights',
-            'Scenario planning',
-            'Risk assessment'
-        ],
-        benefits: [
-            'Improve decision making by 50%',
-            'Identify new opportunities',
-            'Reduce risks',
-            'Optimize operations',
-            'Increase revenue'
-        ],
-        technology: ['Machine Learning', 'Statistical Analysis', 'Data Processing', 'Visualization'],
-        integrations: ['Database Systems', 'CRM', 'ERP', 'Business Intelligence', 'Cloud Platforms'],
-        useCases: ['Sales forecasting', 'Demand planning', 'Risk management', 'Performance optimization'],
-        targetAudience: 'Data scientists, Business analysts, Executives, Operations managers',
-        marketPosition: 'Competes with SAS, IBM SPSS; adds cloud-native and AI-powered automation',
-        competitors: ['SAS', 'IBM SPSS', 'RapidMiner', 'Alteryx'],
-        roi: 'Improve decision making by 50% and increase revenue by 20%',
-        trialDays: 14,
-        setupTime: '3-4 weeks',
-        icon: '🔮',
-        color: 'from-indigo-600 to-purple-700',
-        link: '/services/predictive-analytics',
-        contactInfo
-    },
-    {
-        id: 'computer-vision-solutions',
-        name: 'Computer Vision Solutions',
-        tagline: 'AI-powered image and video analysis for various industries',
-        description: 'Advanced computer vision solutions that analyze images and videos for quality control, process automation, and business intelligence across multiple industries.',
-        category: 'ai-services',
-        pricing: {
-            monthly: '$4,000/month',
-            yearly: '$40,000/year',
-            enterprise: 'Custom pricing',
-            setup: '$10,000 one-time'
-        },
-        features: [
-            'Object detection and recognition',
-            'Image classification',
-            'Video analysis',
-            'Custom model training',
-            'Real-time processing',
-            'Quality control automation',
-            'Process monitoring',
-            'Analytics dashboard',
-            'API access',
-            'Mobile integration'
-        ],
-        benefits: [
-            'Automate quality control by 80%',
-            'Improve process efficiency',
-            'Reduce human error',
-            '24/7 monitoring',
-            'Scalable solutions'
-        ],
-        technology: ['Computer Vision', 'Deep Learning', 'Image Processing', 'Real-time Analytics'],
-        integrations: ['Cameras', 'IoT Devices', 'Manufacturing Systems', 'Quality Control Tools'],
-        useCases: ['Quality control', 'Process automation', 'Security monitoring', 'Retail analytics'],
-        targetAudience: 'Manufacturing companies, Retail businesses, Security firms, Quality control teams',
-        marketPosition: 'Competes with Cognex, Keyence; adds AI-powered analysis and cloud integration',
-        competitors: ['Cognex', 'Keyence', 'Basler', 'Teledyne'],
-        roi: 'Automate quality control by 80% and reduce defects by 60%',
-        trialDays: 7,
-        setupTime: '4-6 weeks',
-        icon: '👁️',
-        color: 'from-cyan-600 to-blue-700',
-        link: '/services/computer-vision',
-        contactInfo
-    },
-    // EMERGING TECH SERVICES
-    {
-        id: 'quantum-computing-solutions',
-        name: 'Quantum Computing Solutions',
-        tagline: 'Next-generation quantum computing services for complex problem solving',
-        description: 'Cutting-edge quantum computing solutions that solve complex optimization problems, cryptography challenges, and scientific simulations.',
-        category: 'emerging-tech',
-        pricing: {
-            monthly: '$10,000/month',
-            yearly: '$100,000/year',
-            enterprise: 'Custom pricing',
-            setup: '$25,000 one-time'
-        },
-        features: [
-            'Quantum algorithm development',
-            'Optimization problem solving',
-            'Cryptography services',
-            'Scientific simulations',
-            'Quantum consulting',
-            'Training and education',
-            'Research collaboration',
-            'Performance benchmarking',
-            'Custom development',
-            'Ongoing support'
-        ],
-        benefits: [
-            'Solve previously intractable problems',
-            'Exponential performance improvements',
-            'Future-proof technology',
-            'Competitive advantage',
-            'Research leadership'
-        ],
-        technology: ['Quantum Computing', 'Quantum Algorithms', 'Quantum Software', 'Cloud Quantum'],
-        integrations: ['IBM Quantum', 'Google Quantum', 'Microsoft Azure Quantum', 'Amazon Braket'],
-        useCases: ['Optimization problems', 'Cryptography', 'Scientific research', 'Financial modeling'],
-        targetAudience: 'Research institutions, Financial services, Pharmaceutical companies, Government agencies',
-        marketPosition: 'Leading edge quantum computing services with expertise in multiple quantum platforms',
-        competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Quantum', 'D-Wave'],
-        roi: 'Solve complex problems 1000x faster than classical computing',
-        trialDays: 0,
-        setupTime: '2-3 months',
-        icon: '⚛️',
-        color: 'from-violet-600 to-purple-700',
-        link: '/services/quantum-computing',
-        contactInfo
-    },
-    {
-        id: 'blockchain-web3-solutions',
-        name: 'Blockchain & Web3 Solutions',
-        tagline: 'Decentralized applications and blockchain infrastructure development',
-        description: 'Comprehensive blockchain and Web3 solutions including smart contract development, DeFi applications, NFT platforms, and decentralized infrastructure.',
-        category: 'emerging-tech',
-        pricing: {
-            monthly: '$5,000/month',
-            yearly: '$50,000/year',
-            enterprise: 'Custom pricing',
-            setup: '$15,000 one-time'
-        },
-        features: [
-            'Smart contract development',
-            'DeFi application building',
-            'NFT platform development',
-            'Blockchain infrastructure',
-            'Web3 consulting',
-            'Security auditing',
-            'Token economics',
-            'Governance systems',
-            'Cross-chain solutions',
-            'Mobile integration'
-        ],
-        benefits: [
-            'Decentralized solutions',
-            'Transparent operations',
-            'Reduced intermediaries',
-            'Enhanced security',
-            'Innovation leadership'
-        ],
-        technology: ['Blockchain', 'Smart Contracts', 'Web3', 'DeFi', 'NFTs'],
-        integrations: ['Ethereum', 'Polygon', 'Solana', 'Binance Smart Chain', 'MetaMask', 'WalletConnect'],
-        useCases: ['DeFi applications', 'NFT marketplaces', 'Supply chain tracking', 'Digital identity'],
-        targetAudience: 'Startups, Financial services, Gaming companies, Supply chain businesses',
-        marketPosition: 'Leading blockchain development services with expertise in multiple protocols',
-        competitors: ['ConsenSys', 'Chainlink Labs', 'Alchemy', 'Infura'],
-        roi: 'Reduce transaction costs by 90% and increase transparency by 100%',
-        trialDays: 0,
-        setupTime: '2-4 months',
-        icon: '🔗',
-        color: 'from-orange-600 to-red-700',
-        link: '/services/blockchain-web3',
-        contactInfo
-    }
+    technologies: ["IoT Sensors", "Machine Learning", "Cloud Computing", "Data Analytics"]
+  }
 ];
-export default enhancedServices2025;
+
+export const ENHANCED_SERVICES_2025 = enhancedServices2025;
+
+export const EnhancedService2025 = enhancedServices2025[0]; // Default export for compatibility

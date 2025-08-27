@@ -25,9 +25,11 @@ import {
   Lock,
   Eye
 } from 'lucide-react';
+
 export default function QuantumTechnology() {
   const [selectedApplication, setSelectedApplication] = useState('all');
   const [activeTab, setActiveTab] = useState('overview');
+
   const quantumServices = [
     {
       icon: Atom,
@@ -72,6 +74,7 @@ export default function QuantumTechnology() {
       color: "from-zion-indigo to-zion-purple"
     }
   ];
+
   const applications = [
     { id: 'all', name: 'All Applications', icon: Globe },
     { id: 'finance', name: 'Financial Services', icon: BarChart3 },
@@ -80,6 +83,7 @@ export default function QuantumTechnology() {
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
     { id: 'research', name: 'Research', icon: Lightbulb }
   ];
+
   const quantumApplications = [
     {
       title: "Portfolio Optimization",
@@ -124,6 +128,7 @@ export default function QuantumTechnology() {
       icon: Brain
     }
   ];
+
   const quantumTechnologies = [
     {
       name: "Superconducting Qubits",
@@ -162,12 +167,14 @@ export default function QuantumTechnology() {
       icon: Atom
     }
   ];
+
   const quantumAdvantages = [
     { metric: "1000x", label: "Faster Processing", description: "Exponential speedup for specific problems" },
     { metric: "∞", label: "Parallel Processing", description: "Simultaneous computation of multiple states" },
     { metric: "100%", label: "Security", description: "Unbreakable quantum cryptography" },
     { metric: "24/7", label: "Availability", description: "Continuous quantum computing access" }
   ];
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -177,6 +184,7 @@ export default function QuantumTechnology() {
       }
     }
   };
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -185,9 +193,11 @@ export default function QuantumTechnology() {
       transition: { duration: 0.6 }
     }
   };
+
   const filteredApplications = selectedApplication === 'all' 
     ? quantumApplications 
     : quantumApplications.filter(app => app.category === selectedApplication);
+
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -235,6 +245,7 @@ export default function QuantumTechnology() {
           </motion.div>
         </div>
       </section>
+
       {/* Quantum Services Overview */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -253,6 +264,7 @@ export default function QuantumTechnology() {
               from computing and cryptography to networking and sensing.
             </p>
           </motion.div>
+
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -287,6 +299,7 @@ export default function QuantumTechnology() {
           </motion.div>
         </div>
       </section>
+
       {/* Quantum Applications */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -305,6 +318,7 @@ export default function QuantumTechnology() {
               and creating new possibilities for innovation and growth.
             </p>
           </motion.div>
+
           {/* Application Filter */}
           <motion.div 
             className="flex flex-wrap justify-center gap-4 mb-12"
@@ -331,6 +345,7 @@ export default function QuantumTechnology() {
               );
             })}
           </motion.div>
+
           {/* Applications Grid */}
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -371,6 +386,7 @@ export default function QuantumTechnology() {
           </motion.div>
         </div>
       </section>
+
       {/* Quantum Technologies */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -389,6 +405,7 @@ export default function QuantumTechnology() {
               to deliver the best solutions for your specific needs.
             </p>
           </motion.div>
+
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -426,6 +443,7 @@ export default function QuantumTechnology() {
           </motion.div>
         </div>
       </section>
+
       {/* Quantum Advantages */}
       <section className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-pink">
         <div className="container mx-auto px-4">
@@ -444,6 +462,7 @@ export default function QuantumTechnology() {
               exponential speedups and capabilities beyond classical computing.
             </p>
           </motion.div>
+
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
@@ -467,6 +486,7 @@ export default function QuantumTechnology() {
           </motion.div>
         </div>
       </section>
+
       {/* Implementation Process */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -485,6 +505,7 @@ export default function QuantumTechnology() {
               and maximum value for your organization.
             </p>
           </motion.div>
+
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
@@ -542,6 +563,7 @@ export default function QuantumTechnology() {
           </motion.div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-purple-dark">
         <div className="container mx-auto px-4 text-center">

@@ -37,6 +37,7 @@ const FloatingActionButton = ({ className = '' }) => {
               </motion.div>))}
           </motion.div>)}
       </AnimatePresence>
+
       <motion.button onClick={toggleMenu} className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}>
         <AnimatePresence mode="wait">
           {isOpen ? (<motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>

@@ -20,6 +20,7 @@ const AIAutonomousArchitecture = () => {
               Your AI architecture partner that continuously designs systems, creates blueprints, and plans structures with intelligent autonomous operation
             </p>
           </div>
+
           {/* Architecture Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousArchitecture = () => {
               <p className="text-gray-300">Design layouts</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousArchitecture = () => {
               <p className="text-gray-300">Learns new patterns</p>
             </div>
           </div>
+
           {/* Architecture Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Architecture Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousArchitecture = () => {
               </div>
             </div>
           </div>
+
           {/* Architecture Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Architecture Solutions</h2>
@@ -125,6 +129,7 @@ const AIAutonomousArchitecture = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Architecture Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousArchitecture = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-slate-600 to-gray-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Architecture?</h2>

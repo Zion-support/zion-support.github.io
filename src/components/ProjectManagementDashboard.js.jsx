@@ -130,6 +130,7 @@ export function ProjectManagementDashboard() {
           </button>
         </div>
       </div>
+
       <div className="p-6 overflow-y-auto h-full">
         {/* Controls */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
@@ -169,6 +170,7 @@ export function ProjectManagementDashboard() {
             </button>
           </div>
         </div>
+
         {/* Projects Grid */}
         {viewMode === 'grid' && (<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {filteredProjects.map((project) => (<div key={project.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer" onClick={() => setSelectedProject(project)}>
@@ -187,6 +189,7 @@ export function ProjectManagementDashboard() {
                     </span>
                   </div>
                 </div>
+
                 {/* Progress Bar */}
                 <div className="mb-4">
                   <div className="flex items-center justify-between mb-2">
@@ -197,6 +200,7 @@ export function ProjectManagementDashboard() {
                     <div className={`h-2 rounded-full transition-all duration-500 ${getProgressColor(project.progress)}`} style={{ width: `${project.progress}%` }}></div>
                   </div>
                 </div>
+
                 {/* Project Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="text-center">
@@ -208,6 +212,7 @@ export function ProjectManagementDashboard() {
                     <div className="text-xs text-zion-slate-light">Total Tasks</div>
                   </div>
                 </div>
+
                 {/* Budget Info */}
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-zion-slate-light">Budget</span>
@@ -215,6 +220,7 @@ export function ProjectManagementDashboard() {
                     ${project.spent.toLocaleString()} / ${project.budget.toLocaleString()}
                   </span>
                 </div>
+
                 {/* Timeline */}
                 <div className="mt-4 pt-4 border-t border-zion-slate-light">
                   <div className="flex items-center gap-2 text-xs text-zion-slate-light">
@@ -222,6 +228,7 @@ export function ProjectManagementDashboard() {
                     <span>{new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}</span>
                   </div>
                 </div>
+
                 {/* Health Indicator */}
                 <div className="mt-3 flex items-center gap-2">
                   <div className={`w-2 h-2 rounded-full ${calculateProjectHealth(project) === 'healthy' ? 'bg-zion-emerald' :
@@ -232,6 +239,7 @@ export function ProjectManagementDashboard() {
                 </div>
               </div>))}
           </div>)}
+
         {/* List View */}
         {viewMode === 'list' && (<div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl overflow-hidden">
             <div className="overflow-x-auto">
@@ -302,6 +310,7 @@ export function ProjectManagementDashboard() {
               </table>
             </div>
           </div>)}
+
         {/* Gantt View */}
         {viewMode === 'gantt' && (<div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
             <h3 className="text-lg font-semibold text-zion-slate mb-4">Project Timeline</h3>
@@ -328,6 +337,7 @@ export function ProjectManagementDashboard() {
             </div>
           </div>)}
       </div>
+
       {/* Project Detail Modal */}
       {selectedProject && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white dark:bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">

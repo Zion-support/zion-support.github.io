@@ -20,6 +20,7 @@ const AIAutonomousLearningSystem = () => {
               The future of education is here - an AI system that learns how you learn and creates the perfect learning experience for you
             </p>
           </div>
+
           {/* Learning Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousLearningSystem = () => {
               <p className="text-gray-300">Always improving and adapting</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousLearningSystem = () => {
               <p className="text-gray-300">Comprehensive progress monitoring</p>
             </div>
           </div>
+
           {/* Learning Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Learning Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousLearningSystem = () => {
               </div>
             </div>
           </div>
+
           {/* Learning Domains */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Learning Domains</h2>
@@ -125,6 +129,7 @@ const AIAutonomousLearningSystem = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">System Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousLearningSystem = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-violet-600 to-purple-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for Autonomous Learning?</h2>

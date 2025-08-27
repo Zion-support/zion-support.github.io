@@ -208,6 +208,7 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -230,6 +231,7 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
+
       {/* Use Cases Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -252,6 +254,7 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
+
       {/* Blockchain Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -311,6 +314,7 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
@@ -341,6 +345,7 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
+
       <TrustedBySection />
     </div>);
 }

@@ -24,6 +24,7 @@ const Cookies = () => {
                 Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better browsing experience and allow us to improve our website based on how you use it.
               </p>
             </div>
+
             <div>
               <h2 className="text-2xl font-bold mb-4">How We Use Cookies</h2>
               <p className="text-gray-300 mb-4">
@@ -37,6 +38,7 @@ const Cookies = () => {
                 <li><strong>Marketing Cookies:</strong> Help us deliver relevant content and advertisements</li>
               </ul>
             </div>
+
             <div>
               <h2 className="text-2xl font-bold mb-4">Types of Cookies We Use</h2>
               <div className="space-y-4">
@@ -60,6 +62,7 @@ const Cookies = () => {
                 </div>
               </div>
             </div>
+
             <div>
               <h2 className="text-2xl font-bold mb-4">Managing Your Cookie Preferences</h2>
               <p className="text-gray-300 mb-4">
@@ -72,18 +75,21 @@ const Cookies = () => {
                 <li>Contact us to request changes to your cookie preferences</li>
               </ul>
             </div>
+
             <div>
               <h2 className="text-2xl font-bold mb-4">Cookie Consent</h2>
               <p className="text-gray-300 mb-4">
                 When you first visit our website, you'll see a cookie consent banner. By clicking "Accept" or continuing to use our website, you consent to our use of cookies as described in this policy.
               </p>
             </div>
+
             <div>
               <h2 className="text-2xl font-bold mb-4">Updates to This Policy</h2>
               <p className="text-gray-300 mb-4">
                 We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We encourage you to review this policy periodically.
               </p>
             </div>
+
             <div>
               <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
               <p className="text-gray-300 mb-4">
@@ -94,6 +100,7 @@ const Cookies = () => {
                   <strong>Email:</strong> privacy@ziontechgroup.com<br />
                   <strong>Phone:</strong> +1 (302) 464-0950<br />
                   <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
+=======
 const Cookies: React.FC = () => {}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -119,6 +126,7 @@ const Cookies: React.FC = () => {}
           </div>
         </div>
       </section>
+
       {/* Cookie Information */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
@@ -149,9 +157,11 @@ const Cookies: React.FC = () => {}
                 <p className="text-gray-300 text-sm">
                   Personalize content and improve functionality
                 </p>
+=======
 import {SEO} from "@/components/SEO";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
+
 export default function Cookies() {}
   return (
     <div className="min-h-screen bg-zion-blue">
@@ -166,6 +176,7 @@ export default function Cookies() {}
               <p className="text-zion-slate-light mb-6">
                 Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
               </p>
+
               <div className="space-y-8">
                 <section>
                   <h2 className="text-2xl font-semibold text-white mb-4">What Are Cookies?</h2>
@@ -175,6 +186,7 @@ export default function Cookies() {}
                     analyzing how you use our site, and personalizing content.
                   </p>
                 </section>
+
                 <section>
                   <h2 className="text-2xl font-semibold text-white mb-4">How We Use Cookies</h2>
                   <p className="text-zion-slate-light mb-4">
@@ -187,6 +199,7 @@ export default function Cookies() {}
                     <li><strong>Marketing Cookies:</strong> Deliver relevant advertisements and content</li>
                   </ul>
                 </section>
+
                 <section>
                   <h2 className="text-2xl font-semibold text-white mb-4">Types of Cookies We Use</h2>
                   
@@ -198,6 +211,7 @@ export default function Cookies() {}
                         They include cookies for security, authentication, and basic site functionality.
                       </p>
                     </div>
+
                     <div className="border-l-4 border-zion-purple pl-4">
                       <h3 className="text-xl font-medium text-white mb-2">Analytics Cookies</h3>
                       <p className="text-zion-slate-light">
@@ -205,6 +219,7 @@ export default function Cookies() {}
                         information anonymously. This helps us improve our services.
                       </p>
                     </div>
+
                     <div className="border-l-4 border-zion-purple-light pl-4">
                       <h3 className="text-xl font-medium text-white mb-2">Preference Cookies</h3>
                       <p className="text-zion-slate-light">
@@ -212,6 +227,7 @@ export default function Cookies() {}
                         such as your preferred language or region.
                       </p>
                     </div>
+
                     <div className="border-l-4 border-zion-cyan pl-4">
                       <h3 className="text-xl font-medium text-white mb-2">Marketing Cookies</h3>
                       <p className="text-zion-slate-light">
@@ -220,6 +236,7 @@ export default function Cookies() {}
                     </div>
                   </div>
                 </section>
+
                 <section>
                   <h2 className="text-2xl font-semibold text-white mb-4">Third-Party Cookies</h2>
                   <p className="text-zion-slate-light leading-relaxed">
@@ -228,6 +245,7 @@ export default function Cookies() {}
                     These third parties have their own privacy policies and cookie policies.
                   </p>
                 </section>
+
                 <section>
                   <h2 className="text-2xl font-semibold text-white mb-4">Managing Your Cookie Preferences</h2>
                   <p className="text-zion-slate-light mb-4">
@@ -240,6 +258,7 @@ export default function Cookies() {}
                     <li>Contact us to update your preferences</li>
                   </ul>
                 </section>
+
                 <section>
                   <h2 className="text-2xl font-semibold text-white mb-4">Browser Settings</h2>
                   <p className="text-zion-slate-light leading-relaxed">
@@ -248,6 +267,7 @@ export default function Cookies() {}
                     disabling certain cookies may affect the functionality of our website.
                   </p>
                 </section>
+
                 <section>
                   <h2 className="text-2xl font-semibold text-white mb-4">Updates to This Policy</h2>
                   <p className="text-zion-slate-light leading-relaxed">
@@ -256,6 +276,7 @@ export default function Cookies() {}
                     changes by posting the new policy on this page.
                   </p>
                 </section>
+
                 <section>
                   <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
                   <p className="text-zion-slate-light leading-relaxed">
@@ -273,6 +294,7 @@ export default function Cookies() {}
             </div>
           </div>
         </div>
+
       {/* Types of Cookies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -294,6 +316,7 @@ export default function Cookies() {}
                 <li>• User authentication</li>
               </ul>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-blue-600/20 rounded-lg w-fit mb-4">
                 <Cog6ToothIcon className="h-8 w-8 text-blue-400"/>
@@ -308,6 +331,7 @@ export default function Cookies() {}
                 <li>• Form data</li>
               </ul>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-purple-600/20 rounded-lg w-fit mb-4">
                                  <CakeIcon className="h-8 w-8 text-purple-400"/>
@@ -322,6 +346,7 @@ export default function Cookies() {}
                 <li>• Performance metrics</li>
               </ul>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-orange-600/20 rounded-lg w-fit mb-4">
                 <ShieldCheckIcon className="h-8 w-8 text-orange-400"/>
@@ -336,6 +361,7 @@ export default function Cookies() {}
                 <li>• Social media integration</li>
               </ul>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-cyan-600/20 rounded-lg w-fit mb-4">
                                  <Cog6ToothIcon className="h-8 w-8 text-cyan-400"/>
@@ -350,6 +376,7 @@ export default function Cookies() {}
                 <li>• Payment processors</li>
               </ul>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="p-3 bg-pink-600/20 rounded-lg w-fit mb-4">
                                  <CakeIcon className="h-8 w-8 text-pink-400"/>
@@ -367,6 +394,7 @@ export default function Cookies() {}
           </div>
         </div>
       </section>
+
       {/* Cookie Management */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
@@ -386,6 +414,7 @@ export default function Cookies() {}
                 <li>• Set cookie preferences</li>
               </ul>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-blue-400">Cookie Consent</h3>
               <p className="text-gray-300 mb-4">
@@ -398,6 +427,7 @@ export default function Cookies() {}
                 <li>• Learn more about our cookie policy</li>
               </ul>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-purple-400">Opt-Out Options</h3>
               <p className="text-gray-300 mb-4">
@@ -413,6 +443,7 @@ export default function Cookies() {}
           </div>
         </div>
       </section>
+
       {/* Specific Cookies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -431,6 +462,7 @@ export default function Cookies() {}
                 <p><strong>Duration:</strong> Up to 2 years</p>
               </div>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-3 text-green-400">Authentication</h3>
               <p className="text-gray-300 mb-3">
@@ -442,6 +474,7 @@ export default function Cookies() {}
                 <p><strong>Duration:</strong> Session or up to 30 days</p>
               </div>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-3 text-purple-400">Preferences</h3>
               <p className="text-gray-300 mb-3">
@@ -456,6 +489,7 @@ export default function Cookies() {}
           </div>
         </div>
       </section>
+
       {/* Updates and Contact */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
@@ -471,6 +505,7 @@ export default function Cookies() {}
                 policy on our website and updating the "Last updated" date.
               </p>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">Contact Us</h3>
               <p className="text-gray-300 mb-4">
@@ -485,6 +520,7 @@ export default function Cookies() {}
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-600/20 to-red-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -507,17 +543,21 @@ export default function Cookies() {}
     </></div>
   );
 };
+
 export default Cookies;
+=======
       </main>
       <Footer />
     </div>
   );
 }
+=======
 import {SEO} from '@/components/SEO';
 import {GradientHeading} from '@/components/GradientHeading';
+
 export default function Cookies() {}
   return (
-<>
+    <>
       <SEO title="Cookie Policy - Zion Tech Group" description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience." keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy" canonical="https://ziontechgroup.com/cookies"/>
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -542,6 +582,7 @@ export default function Cookies() {}
                 or "persistent cookies" (which remain on your device for a set period of time).
               </p>
             </section>
+
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">2. How We Use Cookies</h2>
               <p className="text-zion-slate-light mb-4">
@@ -555,6 +596,7 @@ export default function Cookies() {}
                 <li><strong>Analytics Cookies:</strong> Help us analyze website traffic and usage patterns</li>
               </ul>
             </section>
+
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">3. Types of Cookies We Use</h2>
               
@@ -583,6 +625,7 @@ export default function Cookies() {}
                 by these companies to build a profile of your interests and show you relevant advertisements.
               </p>
             </section>
+
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">4. Third-Party Cookies</h2>
               <p className="text-zion-slate-light mb-4">
@@ -599,6 +642,7 @@ export default function Cookies() {}
                 We encourage you to review their policies for more information.
               </p>
             </section>
+
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">5. Managing Your Cookie Preferences</h2>
               <p className="text-zion-slate-light mb-4">
@@ -614,6 +658,7 @@ export default function Cookies() {}
                 Please note that disabling certain cookies may affect the functionality of our website.
               </p>
             </section>
+
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">6. Cookie Duration</h2>
               <p className="text-zion-slate-light mb-4">
@@ -625,6 +670,7 @@ export default function Cookies() {}
                 <li><strong>Essential Cookies:</strong> May persist for longer periods to maintain functionality</li>
               </ul>
             </section>
+
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">7. Updates to This Policy</h2>
               <p className="text-zion-slate-light mb-4">
@@ -633,6 +679,7 @@ export default function Cookies() {}
                 material changes by posting the updated policy on our website.
               </p>
             </section>
+
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">8. Contact Us</h2>
               <p className="text-zion-slate-light mb-4">
@@ -650,6 +697,7 @@ export default function Cookies() {}
                 </p>
               </div>
             </section>
+
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">9. Additional Resources</h2>
               <p className="text-zion-slate-light mb-4">
@@ -664,7 +712,7 @@ export default function Cookies() {}
           </div>
         </div>
       </main>
-</>
+    </>
   );
 }
     </></></></></></></></></></></>);

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+
 interface User {
   id: string;
   email: string;
@@ -8,41 +9,86 @@ interface User {
   displayName?: string;
   avatarUrl?: string;
 }
+
+interface AuthState {
+  user: User | null;
+  isAuthenticated: boolean;
+  isLoading: boolean;
+}
+
 export function useAuth() {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [authState, setAuthState] = useState<AuthState>({
+    user: null,
+    isAuthenticated: false,
+    isLoading: true,
+  });
+
   useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
     const checkAuth = () => {
       const storedUser = localStorage.getItem('zion_user');
-      if (storedUser) {
+      const token = localStorage.getItem('authToken');
+      
+      if (storedUser && token) {
         try {
-          setUser(JSON.parse(storedUser));
+          const user = JSON.parse(storedUser);
+          setAuthState({
+            user,
+            isAuthenticated: true,
+            isLoading: false,
+          });
         } catch (error) {
           console.error('Error parsing stored user:', error);
+          setAuthState({
+            user: null,
+            isAuthenticated: false,
+            isLoading: false,
+          });
         }
+      } else {
+        setAuthState({
+          user: null,
+          isAuthenticated: false,
+          isLoading: false,
+        });
       }
-      setLoading(false);
     };
+
     checkAuth();
   }, []);
-  const login = async (email: string, password: string) => {
-    // Implement actual login logic here
+
+  const login = async (email: string, _password: string) => {
+    // In a real app, you would make an API call to your backend
     const mockUser: User = {
       id: '1',
       email,
-      name: 'User',
-      role: 'user'
+      name: 'John Doe',
+      role: 'user',
+      userType: 'creator',
     };
     
-    setUser(mockUser);
+    setAuthState({
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false,
+    });
+    
+    localStorage.setItem('authToken', 'dummy-token');
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    
     return mockUser;
   };
+
   const logout = () => {
-    setUser(null);
+    setAuthState({
+      user: null,
+      isAuthenticated: false,
+      isLoading: false,
+    });
     localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken');
   };
+
   const register = async (email: string, password: string, name: string) => {
     // Implement actual registration logic here
     const mockUser: User = {
@@ -52,17 +98,26 @@ export function useAuth() {
       role: 'user'
     };
     
-    setUser(mockUser);
+    setAuthState({
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false,
+    });
+    
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken', 'dummy-token');
+    
     return mockUser;
   };
+
   return {
-    user,
-    loading,
+    user: authState.user,
+    loading: authState.isLoading,
     login,
     logout,
     register,
-    isAuthenticated: !!user,
-    isAdmin: user?.role === 'admin'
+    isAuthenticated: authState.isAuthenticated,
+    isLoading: authState.isLoading,
+    isAdmin: authState.user?.role === 'admin'
   };
 }

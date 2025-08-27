@@ -72,6 +72,7 @@ const ComprehensivePricing2026 = () => {
             Transparent pricing for all our innovative services. Choose the plan that fits your business needs 
             with flexible billing options and enterprise-grade support.
           </motion.p>
+
           {/* Billing Toggle */}
           <motion.div className="flex items-center justify-center gap-4 mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
@@ -82,6 +83,7 @@ const ComprehensivePricing2026 = () => {
               Annual <span className="text-cyan-400 text-sm">(Save 20%)</span>
             </span>
           </motion.div>
+
           {/* Contact Information */}
           <motion.div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8 max-w-2xl mx-auto" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h3>
@@ -102,6 +104,7 @@ const ComprehensivePricing2026 = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Category Filter */}
       <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
@@ -114,6 +117,7 @@ const ComprehensivePricing2026 = () => {
           </div>
         </div>
       </section>
+
       {/* Pricing Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -127,6 +131,7 @@ const ComprehensivePricing2026 = () => {
                         Popular
                       </span>)}
                   </div>
+
                   {/* Service Info */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {service.name}
@@ -145,10 +150,12 @@ const ComprehensivePricing2026 = () => {
                         Save 20% with annual billing
                       </div>)}
                   </div>
+
                   {/* Category */}
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-sm text-gray-400">{service.category}</span>
                   </div>
+
                   {/* Key Features */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -159,6 +166,7 @@ const ComprehensivePricing2026 = () => {
                         </li>))}
                     </ul>
                   </div>
+
                   {/* Market Info */}
                   <div className="mb-4 text-xs text-gray-400">
                     <div className="flex justify-between mb-1">
@@ -174,16 +182,19 @@ const ComprehensivePricing2026 = () => {
                       <span className="text-yellow-400">{service.rating}/5 ({service.reviews} reviews)</span>
                     </div>
                   </div>
+
                   {/* ROI */}
                   <div className="mb-4 p-3 bg-green-500/10 border border-green-500/20 rounded-lg">
                     <p className="text-xs text-green-400 font-semibold">ROI: {service.roi}</p>
                   </div>
+
                   {/* Trial Info */}
                   <div className="mb-4 text-center p-2 bg-blue-500/10 border border-blue-500/20 rounded-lg">
                     <span className="text-xs text-blue-400">
                       {service.trialDays}-day free trial • Setup in {service.setupTime}
                     </span>
                   </div>
+
                   {/* Action Buttons */}
                   <div className="flex gap-2">
                     <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center">
@@ -196,6 +207,7 @@ const ComprehensivePricing2026 = () => {
                 </div>
               </motion.div>))}
           </motion.div>
+
           {/* No Results */}
           {filteredServices.length === 0 && (<motion.div className="text-center py-16" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               <div className="text-6xl mb-4">🔍</div>
@@ -204,6 +216,7 @@ const ComprehensivePricing2026 = () => {
             </motion.div>)}
         </div>
       </section>
+
       {/* Enterprise Plans */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto text-center">
@@ -244,6 +257,7 @@ const ComprehensivePricing2026 = () => {
           </motion.div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -273,6 +287,7 @@ const ComprehensivePricing2026 = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Footer Info */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto text-center">

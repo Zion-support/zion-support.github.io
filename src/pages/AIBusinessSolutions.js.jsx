@@ -143,6 +143,7 @@ export default function AIBusinessSolutions() {
             </button>
           </div>
         </div>
+
         {/* Business Solutions Grid */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Comprehensive Business Solutions</h2>
@@ -166,6 +167,7 @@ export default function AIBusinessSolutions() {
               </div>))}
           </div>
         </div>
+
         {/* Business Benefits */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Measurable Business Impact</h2>
@@ -178,6 +180,7 @@ export default function AIBusinessSolutions() {
               </div>))}
           </div>
         </div>
+
         {/* Industry Applications */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Industry-Specific Applications</h2>
@@ -192,6 +195,7 @@ export default function AIBusinessSolutions() {
               </div>))}
           </div>
         </div>
+
         {/* Implementation Process */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Implementation Process</h2>
@@ -228,6 +232,7 @@ export default function AIBusinessSolutions() {
             </div>
           </div>
         </div>
+
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/30">

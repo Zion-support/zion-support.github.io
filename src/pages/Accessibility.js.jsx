@@ -121,6 +121,7 @@ const Accessibility = () => {
           </div>
         </div>
       </section>
+
       {/* Accessibility Features */}
       <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -151,6 +152,7 @@ const Accessibility = () => {
           </div>
         </div>
       </section>
+
       {/* Compliance Standards */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -178,6 +180,7 @@ const Accessibility = () => {
           </div>
         </div>
       </section>
+
       {/* Tools and Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -202,6 +205,7 @@ const Accessibility = () => {
           </div>
         </div>
       </section>
+
       {/* Ongoing Improvements */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -239,6 +243,7 @@ const Accessibility = () => {
           </div>
         </div>
       </section>
+
       {/* Contact Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

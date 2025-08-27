@@ -325,6 +325,7 @@ export default function MicroSAASPage() {
           </div>
         </div>
       </div>
+
       {/* Benefits Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -366,6 +367,7 @@ export default function MicroSAASPage() {
           </div>
         </div>
       </div>
+
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -376,6 +378,7 @@ export default function MicroSAASPage() {
             </Button>))}
         </div>
       </div>
+
       {/* Services Grid */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -453,6 +456,7 @@ export default function MicroSAASPage() {
             </Card>))}
         </div>
       </div>
+
       {/* Comparison Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -516,6 +520,7 @@ export default function MicroSAASPage() {
           </div>
         </div>
       </div>
+
       {/* Contact Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">

@@ -30,6 +30,7 @@ const AIAutonomousBusinessManager = () => {
           </div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -46,6 +47,7 @@ const AIAutonomousBusinessManager = () => {
                 Automatically identify, optimize, and execute business processes with minimal human intervention.
               </p>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">
               <div className="p-3 bg-green-600/20 rounded-lg w-fit mb-4">
                 <ChartBarIcon className="h-8 w-8 text-green-400"/>
@@ -55,6 +57,7 @@ const AIAutonomousBusinessManager = () => {
                 Real-time monitoring and analysis of business metrics with predictive insights and recommendations.
               </p>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">
               <div className="p-3 bg-purple-600/20 rounded-lg w-fit mb-4">
                 <ShieldCheckIcon className="h-8 w-8 text-purple-400"/>
@@ -64,6 +67,7 @@ const AIAutonomousBusinessManager = () => {
                 Proactive identification and mitigation of business risks using advanced AI algorithms.
               </p>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">
               <div className="p-3 bg-orange-600/20 rounded-lg w-fit mb-4">
                 <RocketLaunchIcon className="h-8 w-8 text-orange-400"/>
@@ -73,6 +77,7 @@ const AIAutonomousBusinessManager = () => {
                 Automatically scale operations up or down based on demand and resource availability.
               </p>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">
               <div className="p-3 bg-cyan-600/20 rounded-lg w-fit mb-4">
                 <UserGroupIcon className="h-8 w-8 text-cyan-400"/>
@@ -82,6 +87,7 @@ const AIAutonomousBusinessManager = () => {
                 Intelligent task assignment and team coordination based on skills, availability, and priorities.
               </p>
             </div>
+
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">
               <div className="p-3 bg-pink-600/20 rounded-lg w-fit mb-4">
                                  <CogIcon className="h-8 w-8 text-pink-400"/>
@@ -94,6 +100,7 @@ const AIAutonomousBusinessManager = () => {
           </div>
         </div>
       </section>
+
       {/* How It Works Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -131,6 +138,7 @@ const AIAutonomousBusinessManager = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -211,6 +219,7 @@ const AIAutonomousBusinessManager = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">

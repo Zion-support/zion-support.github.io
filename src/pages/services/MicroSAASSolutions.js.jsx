@@ -80,6 +80,7 @@ export default function MicroSAASSolutions() {
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO title="Micro SAAS Solutions - Zion Tech Group" description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries." keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software" canonical="https://ziontechgroup.com/services/micro-saas-solutions"/>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
@@ -104,6 +105,7 @@ export default function MicroSAASSolutions() {
           </div>
         </div>
       </section>
+
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -138,6 +140,7 @@ export default function MicroSAASSolutions() {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -166,6 +169,7 @@ export default function MicroSAASSolutions() {
           </div>
         </div>
       </section>
+
       {/* Industry Solutions */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -193,6 +197,7 @@ export default function MicroSAASSolutions() {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">

@@ -69,7 +69,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     link.status = 'unknown';
                     link.fixable = true;
                 }
-                links(link);
+                links.push(link);
             }
         });
         return links;
@@ -253,6 +253,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
       <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-32 right-4 z-50 w-14 h-14 bg-orange-600 hover:bg-orange-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`} aria-label="Broken Link Checker" aria-expanded={isOpen}>
         <LinkIcon className="w-6 h-6"/>
       </motion.button>
+
       {/* Broken Link Fixer Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} className="fixed bottom-32 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
@@ -265,6 +266,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 <XMarkIcon className="w-5 h-5"/>
               </button>
             </div>
+
             {/* Tabs */}
             <div className="flex border-b border-gray-200 dark:border-gray-700">
               {['overview', 'broken', 'healthy', 'actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab
@@ -273,6 +275,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>))}
             </div>
+
             {/* Content */}
             <div className="p-4 max-h-96 overflow-y-auto">
               {/* Overview Tab */}
@@ -315,6 +318,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                       </div>
                     </div>
                   </div>
+
                   {/* Health Score */}
                   {stats.total > 0 && (<div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                       <div className="text-center">
@@ -326,11 +330,13 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         </div>
                       </div>
                     </div>)}
+
                   {/* Check Button */}
                   <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
                     {isChecking ? 'Checking...' : 'Check All Links'}
                   </button>
                 </div>)}
+
               {/* Broken Links Tab */}
               {activeTab === 'broken' && (<div className="space-y-4">
                   {links.filter(link => link.status === 'broken').length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">
@@ -366,6 +372,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                           </div>))}
                     </div>)}
                 </div>)}
+
               {/* Healthy Links Tab */}
               {activeTab === 'healthy' && (<div className="space-y-4">
                   {links.filter(link => link.status === 'healthy').length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">
@@ -395,21 +402,25 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                           </div>))}
                     </div>)}
                 </div>)}
+
               {/* Actions Tab */}
               {activeTab === 'actions' && (<div className="space-y-4">
                   <div className="text-center text-gray-500 dark:text-gray-400">
                     <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-orange-500"/>
                     <p>Take action to fix broken links</p>
                   </div>
+
                   {/* Auto-fix Button */}
                   {links.filter(link => link.status === 'broken' && link.fixable).length > 0 && (<button onClick={autoFixBrokenLinks} className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
                       Auto-fix Broken Links
                     </button>)}
+
                   {/* Re-check Button */}
                   <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
                     <ArrowPathIcon className="w-4 h-4 inline mr-2"/>
                     {isChecking ? 'Checking...' : 'Re-check Links'}
                   </button>
+
                   {/* Export Report */}
                   {links.length > 0 && (<button onClick={() => {
                         const report = {
@@ -437,6 +448,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             </div>
           </motion.div>)}
       </AnimatePresence>
+
       {/* CSS for highlighting */}
       <style>{`
         .broken-link-highlight {

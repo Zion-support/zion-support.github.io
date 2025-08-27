@@ -20,6 +20,7 @@ const AIAutonomousTesting = () => {
               Your AI testing partner that never stops testing, never gets tired, and continuously ensures quality 24/7
             </p>
           </div>
+
           {/* Testing Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -43,6 +44,7 @@ const AIAutonomousTesting = () => {
               <p className="text-gray-300">Generate reports</p>
             </div>
           </div>
+
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -81,6 +83,7 @@ const AIAutonomousTesting = () => {
               <p className="text-gray-300">Learns new scenarios</p>
             </div>
           </div>
+
           {/* Testing Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Testing Process</h2>
@@ -116,6 +119,7 @@ const AIAutonomousTesting = () => {
               </div>
             </div>
           </div>
+
           {/* Testing Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Testing Solutions</h2>
@@ -125,6 +129,7 @@ const AIAutonomousTesting = () => {
                 </div>))}
             </div>
           </div>
+
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Testing Applications</h2>
@@ -145,6 +150,7 @@ const AIAutonomousTesting = () => {
               </div>
             </div>
           </div>
+
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Testing?</h2>

@@ -196,6 +196,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             {Math.min(messages.length, 9)}
           </div>)}
       </motion.button>
+
       {/* Chatbot Interface */}
       <AnimatePresence>
         {isOpen && (<motion.div initial={{ opacity: 0, scale: 0.9, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9, y: 20 }} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}>
@@ -220,6 +221,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                 </div>
               </div>
             </div>
+
             {/* Chat Content */}
             {!isMinimized && (<>
                 {/* Messages */}
@@ -255,6 +257,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                   {/* Scroll anchor */}
                   <div ref={messagesEndRef}/>
                 </div>
+
                 {/* Input Area */}
                 <div className="p-4 border-t border-gray-200 dark:border-gray-700">
                   <form onSubmit={handleSubmit} className="flex gap-2">

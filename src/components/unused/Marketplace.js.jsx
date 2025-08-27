@@ -291,6 +291,7 @@ export default function Marketplace() {
           </div>
         </div>
       </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Search and Filters */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">
@@ -302,6 +303,7 @@ export default function Marketplace() {
                 <input type="text" placeholder="Search products, services, or solutions..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
               </div>
             </div>
+
             {/* Category Filter */}
             <div>
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
@@ -310,6 +312,7 @@ export default function Marketplace() {
                   </option>))}
               </select>
             </div>
+
             {/* Price Range Filter */}
             <div>
               <select value={selectedPriceRange} onChange={(e) => setSelectedPriceRange(e.target.value)} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
@@ -319,6 +322,7 @@ export default function Marketplace() {
               </select>
             </div>
           </div>
+
           {/* Sort Options */}
           <div className="mt-4 flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -334,6 +338,7 @@ export default function Marketplace() {
             </div>
           </div>
         </div>
+
         {/* Featured Products Banner */}
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/10 mb-8">
           <div className="text-center">
@@ -358,6 +363,7 @@ export default function Marketplace() {
             </div>
           </div>
         </div>
+
         {/* Products Grid */}
         {sortedProducts.length > 0 ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sortedProducts.map((product) => (<div key={product.id} className={`bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden transition-transform duration-200 hover:scale-105 ${product.featured ? 'ring-2 ring-yellow-500' : ''}`}>
@@ -380,6 +386,7 @@ export default function Marketplace() {
                     </div>
                   </div>
                 </div>
+
                 {/* Product Content */}
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
@@ -398,6 +405,7 @@ export default function Marketplace() {
                       </button>
                     </div>
                   </div>
+
                   <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">
                     {product.name}
                   </h3>
@@ -405,6 +413,7 @@ export default function Marketplace() {
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                     {product.description}
                   </p>
+
                   {/* Features */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
@@ -415,12 +424,14 @@ export default function Marketplace() {
                         </li>))}
                     </ul>
                   </div>
+
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {product.tags.slice(0, 3).map((tag, index) => (<span key={index} className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full border border-white/20">
                         {tag}
                       </span>))}
                   </div>
+
                   {/* Price and Rating */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-2">
@@ -437,6 +448,7 @@ export default function Marketplace() {
                       <span className="text-gray-400 text-sm">({product.reviewCount})</span>
                     </div>
                   </div>
+
                   {/* Action Buttons */}
                   <div className="flex gap-2">
                     <button className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200 flex items-center justify-center">
@@ -454,6 +466,7 @@ export default function Marketplace() {
             <h3 className="text-xl font-semibold text-gray-300 mb-2">No products found</h3>
             <p className="text-gray-400">Try adjusting your search or filter criteria.</p>
           </div>)}
+
         {/* Call to Action */}
         <div className="mt-16 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/10">
           <div className="text-center">
@@ -474,6 +487,7 @@ export default function Marketplace() {
             </div>
           </div>
         </div>
+
         {/* Marketplace Statistics */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">

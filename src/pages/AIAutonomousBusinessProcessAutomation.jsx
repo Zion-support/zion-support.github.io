@@ -25,6 +25,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
           </div>
         </div>
       </section>
+
       {/* Process Automation Overview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -102,6 +103,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
           </div>
         </div>
       </section>
+
       {/* Process Types Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -126,6 +128,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
                 <li>• Response Management</li>
               </ul>
             </div>
+
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-2xl">📊</span>
@@ -142,6 +145,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
                 <li>• Insight Delivery</li>
               </ul>
             </div>
+
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-2xl">🛒</span>
@@ -158,6 +162,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
                 <li>• Deal Management</li>
               </ul>
             </div>
+
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-2xl">👥</span>
@@ -174,6 +179,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
                 <li>• Employee Management</li>
               </ul>
             </div>
+
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-2xl">💰</span>
@@ -190,6 +196,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
                 <li>• Financial Reporting</li>
               </ul>
             </div>
+
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-2xl">🔧</span>
@@ -209,6 +216,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
           </div>
         </div>
       </section>
+
       {/* Technology Features */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -263,6 +271,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
           </div>
         </div>
       </section>
+
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -285,6 +294,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
                 Get Started
               </button>
             </div>
+
             <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 p-8 rounded-2xl border border-cyan-400/50 relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-bold">
                 Most Popular
@@ -302,6 +312,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
                 Get Started
               </button>
             </div>
+
             <div className="bg-gray-800/50 p-8 rounded-2xl border border-gray-600 hover:border-cyan-400/50 transition-all duration-300">
               <h3 className="text-2xl font-bold mb-4 text-white">Enterprise Automation</h3>
               <div className="text-4xl font-bold mb-6 text-cyan-400">$7,999<span className="text-lg text-gray-400">/month</span></div>
@@ -319,6 +330,7 @@ const AIAutonomousBusinessProcessAutomation = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

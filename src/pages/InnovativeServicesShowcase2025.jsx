@@ -34,6 +34,7 @@ const InnovativeServicesShowcase2025 = () => {
               <div className="text-sm text-gray-300">Support Available</div>
             </div>
           </div>
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#services" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
@@ -48,6 +49,7 @@ const InnovativeServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -111,6 +113,7 @@ const InnovativeServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Service Categories Overview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -162,6 +165,7 @@ const InnovativeServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Market Position & Competitive Advantage */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -221,10 +225,12 @@ const InnovativeServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
+
       {/* Services Showcase */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
         <EnhancedComprehensiveServicesShowcase />
       </section>
+
       {/* Contact & Get Started */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">

@@ -264,6 +264,7 @@ export function AdvancedAIBusinessProcessAutomation() {
           </button>
         </div>
       </div>
+
       {/* Controls */}
       <div className="p-4 border-b border-zion-slate-light bg-zion-slate-light/10">
         <div className="flex items-center gap-4 mb-4">
@@ -306,6 +307,7 @@ export function AdvancedAIBusinessProcessAutomation() {
           </label>
         </div>
       </div>
+
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">
         {['overview', 'processes', 'automation', 'analytics', 'optimization'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === tab
@@ -314,6 +316,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
           </button>))}
       </div>
+
       {/* Content */}
       <div className="flex-1 overflow-auto p-6">
         {activeTab === 'overview' && (<div className="space-y-6">
@@ -361,6 +364,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                 </div>
               </div>
             </div>
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -379,6 +383,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                     </div>))}
                 </div>
               </div>
+
               <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <Activity className="w-5 h-5 text-zion-blue"/>
@@ -407,6 +412,7 @@ export function AdvancedAIBusinessProcessAutomation() {
               </div>
             </div>
           </div>)}
+
         {activeTab === 'processes' && (<div className="space-y-4">
             {filteredProcesses.map(process => (<div key={process.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start justify-between mb-4">
@@ -429,6 +435,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                     </button>
                   </div>
                 </div>
+
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                   <div className="text-center">
                     <p className="text-2xl font-bold text-zion-blue">{formatPercentage(process.efficiency)}</p>
@@ -447,6 +454,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                     <p className="text-xs text-zion-slate-light">Executions</p>
                   </div>
                 </div>
+
                 <div className="flex items-center gap-3 mb-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(process.status)}`}>
                     {process.status}
@@ -458,6 +466,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                     {process.automationLevel.replace('-', ' ')}
                   </span>
                 </div>
+
                 {showAIInsights && (<div className="mb-4">
                     <h4 className="font-medium text-sm mb-2 flex items-center gap-2">
                       <Brain className="w-4 h-4 text-zion-blue"/>
@@ -470,6 +479,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                         </div>))}
                     </div>
                   </div>)}
+
                 {showAutomation && (<div>
                     <h4 className="font-medium text-sm mb-2 flex items-center gap-2">
                                              <Settings className="w-4 h-4 text-zion-blue"/>
@@ -500,6 +510,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                   </div>)}
               </div>))}
           </div>)}
+
         {activeTab === 'automation' && (<div className="space-y-6">
             <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -526,6 +537,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                 </div>
               </div>
             </div>
+
             <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <Settings className="w-5 h-5 text-zion-blue"/>
@@ -565,6 +577,7 @@ export function AdvancedAIBusinessProcessAutomation() {
               </div>
             </div>
           </div>)}
+
         {activeTab === 'analytics' && (<div className="space-y-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
@@ -586,6 +599,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                 </div>
               </div>
             </div>
+
             <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4">Process Performance Metrics</h3>
               <div className="overflow-x-auto">
@@ -628,6 +642,7 @@ export function AdvancedAIBusinessProcessAutomation() {
               </div>
             </div>
           </div>)}
+
         {activeTab === 'optimization' && (<div className="space-y-6">
             <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -658,6 +673,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                   </div>))}
               </div>
             </div>
+
             <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-zion-blue"/>

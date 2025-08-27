@@ -51,6 +51,7 @@ const ServiceCategory = ({ category, services }) => {
           <p className="text-zion-slate-light">{categoryServices.length} services available</p>
         </div>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {categoryServices.map((service) => (<Card key={service.id} className="h-full border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300">
             <CardHeader className="pb-3">
@@ -76,6 +77,7 @@ const ServiceCategory = ({ category, services }) => {
                       {tag}
                     </Badge>))}
                 </div>
+
                 {/* Metrics */}
                 <div className="flex items-center justify-between text-sm text-zion-slate-light">
                   <div className="flex items-center space-x-4">
@@ -94,6 +96,7 @@ const ServiceCategory = ({ category, services }) => {
                     <span>{service.availability}</span>
                   </div>
                 </div>
+
                 {/* Pricing */}
                 <div className="flex items-center justify-between">
                   <div className="space-y-1">
@@ -109,6 +112,7 @@ const ServiceCategory = ({ category, services }) => {
                     Get Started
                   </Button>
                 </div>
+
                 {/* Location */}
                 <div className="flex items-center space-x-2 text-sm text-zion-slate-light">
                   <Globe className="w-4 h-4"/>
@@ -129,6 +133,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
           with cutting-edge technology and proven solutions.
         </p>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="text-center">
           <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
@@ -140,6 +145,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
             processes and gain valuable insights.
           </p>
         </div>
+
         <div className="text-center">
           <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
             <Shield className="w-8 h-8 text-white"/>
@@ -150,6 +156,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
             and meet regulatory requirements.
           </p>
         </div>
+
         <div className="text-center">
           <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
             <Zap className="w-8 h-8 text-white"/>
@@ -160,6 +167,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
             delivering value in weeks, not months.
           </p>
         </div>
+
         <div className="text-center">
           <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
             <Users className="w-8 h-8 text-white"/>
@@ -170,6 +178,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
             and maximize ROI.
           </p>
         </div>
+
         <div className="text-center">
           <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
             <BarChart3 className="w-8 h-8 text-white"/>
@@ -180,6 +189,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
             with flexible pricing options.
           </p>
         </div>
+
         <div className="text-center">
           <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
             <CheckCircle className="w-8 h-8 text-white"/>
@@ -232,6 +242,7 @@ const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-z
           </div>
         </div>
       </div>
+
       <div className="flex flex-wrap justify-center gap-4">
         <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick={() => window.open('mailto:kleber@ziontechgroup.com', '_blank')}>
           Contact Sales Team
@@ -269,12 +280,15 @@ export default function EnhancedServicesOverview() {
           </Link>
         </div>
       </div>
+
       {/* Service Categories */}
       <div className="space-y-16">
         {ENHANCED_SERVICE_CATEGORIES.map((category) => (<ServiceCategory key={category.value} category={category.label} services={ENHANCED_SERVICES}/>))}
       </div>
+
       {/* Benefits Section */}
       <BenefitsSection />
+
       {/* Contact Section */}
       <ContactSection />
     </div>);

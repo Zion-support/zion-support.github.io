@@ -42,6 +42,7 @@ export default function ComprehensiveContact() {
           </p>
         </div>
       </div>
+
       {/* Contact Information */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-16">
@@ -77,6 +78,7 @@ export default function ComprehensiveContact() {
                       <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter phone number"/>
                     </div>
                   </div>
+
                   <div>
                     <Label htmlFor="service" className="text-white">Service Interest</Label>
                     <select id="service" name="service" value={formData.service} onChange={handleChange} className="w-full p-3 rounded-md bg-white/10 border border-zion-cyan/30 text-white">
@@ -92,10 +94,12 @@ export default function ComprehensiveContact() {
                       <option value="other">Other</option>
                     </select>
                   </div>
+
                   <div>
                     <Label htmlFor="message" className="text-white">Message *</Label>
                     <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={5} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Tell us about your project or requirements..."/>
                   </div>
+
                   <Button type="submit" className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white py-3">
                     <Send className="mr-2 h-5 w-5"/>
                     Send Message
@@ -104,6 +108,7 @@ export default function ComprehensiveContact() {
               </CardContent>
             </Card>
           </div>
+
           {/* Contact Details */}
           <div className="space-y-8">
             <div>
@@ -147,6 +152,7 @@ export default function ComprehensiveContact() {
                 </div>
               </div>
             </div>
+
             {/* Quick Actions */}
             <div>
               <h3 className="text-xl font-semibold text-white mb-4">Quick Actions</h3>
@@ -168,6 +174,7 @@ export default function ComprehensiveContact() {
           </div>
         </div>
       </div>
+
       {/* Services Overview */}
       <div className="bg-white/5 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -177,6 +184,7 @@ export default function ComprehensiveContact() {
               Comprehensive technology solutions designed to drive your business forward in the digital age.
             </p>
           </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICE_CATEGORIES.map((category) => (<Card key={category.id} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
                 <CardHeader className="text-center">
@@ -201,6 +209,7 @@ export default function ComprehensiveContact() {
           </div>
         </div>
       </div>
+
       {/* Why Choose Us */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -209,6 +218,7 @@ export default function ComprehensiveContact() {
             We combine cutting-edge technology with proven expertise to deliver exceptional results.
           </p>
         </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
@@ -219,6 +229,7 @@ export default function ComprehensiveContact() {
               </p>
             </CardContent>
           </Card>
+
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
               <Shield className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
@@ -228,6 +239,7 @@ export default function ComprehensiveContact() {
               </p>
             </CardContent>
           </Card>
+
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
               <TrendingUp className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
@@ -237,6 +249,7 @@ export default function ComprehensiveContact() {
               </p>
             </CardContent>
           </Card>
+
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
               <Users className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
@@ -246,6 +259,7 @@ export default function ComprehensiveContact() {
               </p>
             </CardContent>
           </Card>
+
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
               <Building className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
@@ -255,6 +269,7 @@ export default function ComprehensiveContact() {
               </p>
             </CardContent>
           </Card>
+
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
               <Star className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
@@ -266,6 +281,7 @@ export default function ComprehensiveContact() {
           </Card>
         </div>
       </div>
+
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
         <div className="container mx-auto px-4 text-center">
@@ -287,6 +303,7 @@ export default function ComprehensiveContact() {
           </div>
         </div>
       </div>
+
       {/* Footer */}
       <footer className="bg-zion-blue-dark py-12">
         <div className="container mx-auto px-4">
