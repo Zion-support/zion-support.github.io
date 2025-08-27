@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
@@ -28,42 +28,105 @@ import {
   MapPin,
   ExternalLink,
   Search,
-  Clock
+  Clock,
+  DollarSign,
+  Award,
+  Lightbulb,
+  BarChart,
+  PieChart,
+  Activity,
+  Eye,
+  Heart,
+  MessageCircle,
+  Settings,
+  Wifi,
+  HardDrive,
+  Layers,
+  GitBranch,
+  Zap as ZapIcon,
+  Sparkles,
+  Infinity,
+  ShieldCheck,
+  Globe2,
+  Smartphone as SmartphoneIcon,
+  Monitor as MonitorIcon,
+  Server as ServerIcon,
+  Code as CodeIcon,
+  Palette as PaletteIcon,
+  Target as TargetIcon,
+  Rocket as RocketIcon,
+  Star as StarIcon,
+  CheckCircle as CheckCircleIcon,
+  ArrowRight as ArrowRightIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  ExternalLink as ExternalLinkIcon,
+  Search as SearchIcon,
+  Clock as ClockIcon,
+  DollarSign as DollarSignIcon,
+  Award as AwardIcon,
+  Lightbulb as LightbulbIcon,
+  BarChart as BarChartIcon,
+  PieChart as PieChartIcon,
+  Activity as ActivityIcon,
+  Eye as EyeIcon,
+  Heart as HeartIcon,
+  MessageCircle as MessageCircleIcon,
+  Settings as SettingsIcon,
+  Wifi as WifiIcon,
+  HardDrive as HardDriveIcon,
+  Layers as LayersIcon,
+  GitBranch as GitBranchIcon
 } from 'lucide-react';
 import { ADVANCED_AI_SERVICES_2028 } from '../data/advancedAIServices2028';
 import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from '../data/comprehensiveITInfrastructure2028';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
 import { comprehensivePricingGuide2028 } from '../data/comprehensivePricingGuide2028';
 
-const InnovativeServicesShowcase2028: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+const ComprehensiveServicesLanding2028: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('ai');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const allServices = [
-    ...ADVANCED_AI_SERVICES_2028,
-    ...COMPREHENSIVE_IT_INFRASTRUCTURE_2028,
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2028
+  const serviceCategories = [
+    {
+      id: 'ai',
+      name: 'AI & Machine Learning',
+      description: 'Revolutionary AI solutions that transform business operations',
+      icon: Brain,
+      services: ADVANCED_AI_SERVICES_2028,
+      color: 'from-blue-600 to-purple-600',
+      bgColor: 'bg-blue-500/10',
+      borderColor: 'border-blue-500/30'
+    },
+    {
+      id: 'infrastructure',
+      name: 'IT Infrastructure',
+      description: 'Next-generation infrastructure solutions for modern businesses',
+      icon: Server,
+      services: COMPREHENSIVE_IT_INFRASTRUCTURE_2028,
+      color: 'from-green-600 to-emerald-600',
+      bgColor: 'bg-green-500/10',
+      borderColor: 'border-green-500/30'
+    },
+    {
+      id: 'saas',
+      name: 'Micro SAAS',
+      description: 'Innovative micro SAAS solutions for every business need',
+      icon: Cloud,
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2028,
+      color: 'from-purple-600 to-pink-600',
+      bgColor: 'bg-purple-500/10',
+      borderColor: 'border-purple-500/30'
+    }
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },
-    { id: 'ai', name: 'AI Services', icon: Brain, count: ADVANCED_AI_SERVICES_2028.length },
-    { id: 'infrastructure', name: 'IT Infrastructure', icon: Server, count: COMPREHENSIVE_IT_INFRASTRUCTURE_2028.length },
-    { id: 'saas', name: 'Micro SAAS', icon: Cloud, count: INNOVATIVE_MICRO_SAAS_SERVICES_2028.length }
-  ];
-
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || 
-      (activeCategory === 'ai' && ADVANCED_AI_SERVICES_2028.includes(service)) ||
-      (activeCategory === 'infrastructure' && COMPREHENSIVE_IT_INFRASTRUCTURE_2028.includes(service)) ||
-      (activeCategory === 'saas' && INNOVATIVE_MICRO_SAAS_SERVICES_2028.includes(service));
-    
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    return matchesCategory && matchesSearch;
-  });
+  const activeServices = serviceCategories.find(cat => cat.id === activeTab)?.services || [];
+  const filteredServices = activeServices.filter(service =>
+    service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    service.category.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -96,14 +159,20 @@ const InnovativeServicesShowcase2028: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-6">
+              <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
+              Comprehensive Services 2028
+            </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Innovative Services 2028
+                Transform Your Business
               </span>
+              <br />
+              <span className="text-white">With Cutting-Edge Technology</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover the future of technology with our cutting-edge AI, IT infrastructure, and micro SAAS solutions. 
-              Transform your business with revolutionary services designed for tomorrow's challenges.
+              Discover our comprehensive suite of AI, IT infrastructure, and micro SAAS solutions designed to revolutionize 
+              your business operations and drive unprecedented growth in 2028 and beyond.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -118,7 +187,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Get Quote
+                Get Free Consultation
               </a>
             </div>
           </motion.div>
@@ -145,48 +214,59 @@ const InnovativeServicesShowcase2028: React.FC = () => {
         </div>
       </section>
 
-      {/* Search and Filter Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            <div className="flex-1 max-w-md">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-4 py-3 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                    activeCategory === category.id
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  <category.icon className="w-4 h-4" />
-                  <span>{category.name}</span>
-                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
-                    {category.count}
-                  </span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
+      {/* Service Categories Tabs */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Comprehensive Service Categories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our diverse range of innovative solutions across multiple domains and industries
+            </p>
+          </motion.div>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {serviceCategories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveTab(category.id)}
+                className={`flex items-center space-x-3 px-6 py-3 rounded-lg transition-all duration-300 ${
+                  activeTab === category.id
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                <category.icon className="w-5 h-5" />
+                <span className="font-medium">{category.name}</span>
+                <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
+                  {category.services.length}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Search Bar */}
+          <div className="max-w-md mx-auto mb-8">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-4 py-3 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            </div>
+          </div>
+
+          {/* Services Grid */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -258,7 +338,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {
         </div>
       </section>
 
-      {/* Market Insights Section */}
+      {/* Market Analysis Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -269,15 +349,15 @@ const InnovativeServicesShowcase2028: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Market Insights & Competitive Analysis
+              Market Analysis & Competitive Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Stay ahead of the competition with our comprehensive market analysis and competitive intelligence
+              Stay ahead of the competition with our comprehensive market insights and competitive analysis
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {comprehensivePricingGuide2028.slice(0, 3).map((item, index) => (
+            {comprehensivePricingGuide2028.map((item, index) => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -333,6 +413,70 @@ const InnovativeServicesShowcase2028: React.FC = () => {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We deliver cutting-edge technology solutions with unmatched expertise and proven results
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: Award,
+                title: "Industry Expertise",
+                description: "20+ years of experience in cutting-edge technology solutions",
+                color: "from-blue-600 to-purple-600"
+              },
+              {
+                icon: Rocket,
+                title: "Fast Implementation",
+                description: "Get up and running in weeks, not months with our proven methodology",
+                color: "from-purple-600 to-pink-600"
+              },
+              {
+                icon: TrendingUp,
+                title: "Proven ROI",
+                description: "See measurable results within 90 days with our data-driven approach",
+                color: "from-pink-600 to-red-600"
+              },
+              {
+                icon: Shield,
+                title: "Enterprise Security",
+                description: "Bank-grade security and compliance for your peace of mind",
+                color: "from-red-600 to-orange-600"
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
+                  <feature.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-400">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -350,30 +494,6 @@ const InnovativeServicesShowcase2028: React.FC = () => {
               advanced infrastructure, and cutting-edge micro SAAS solutions.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Rocket className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Fast Implementation</h3>
-                <p className="text-gray-400">Get up and running in weeks, not months</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Proven ROI</h3>
-                <p className="text-gray-400">See measurable results within 90 days</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Enterprise Security</h3>
-                <p className="text-gray-400">Bank-grade security and compliance</p>
-              </div>
-            </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"
@@ -387,7 +507,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Schedule Demo
+                Schedule Free Consultation
               </a>
             </div>
           </motion.div>
@@ -454,4 +574,4 @@ const InnovativeServicesShowcase2028: React.FC = () => {
   );
 };
 
-export default InnovativeServicesShowcase2028;
+export default ComprehensiveServicesLanding2028;
