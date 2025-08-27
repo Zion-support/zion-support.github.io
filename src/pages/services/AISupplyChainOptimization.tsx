@@ -1,322 +1,445 @@
-import { Truck, BarChart3, Globe, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Zap, Target, TrendingUp, Shield, Package, Route } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Network, 
+  TrendingUp, 
+  Package, 
+  Truck, 
+  Warehouse, 
+  Globe, 
+  Zap, 
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  Database,
+  BarChart3,
+  FileText,
+  Lightbulb,
+  Target,
+  Award,
+  Rocket,
+  Sparkles,
+  Route,
+  BarChart,
+  AlertTriangle,
+  RefreshCw
+} from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+const AISupplyChainOptimization = () => {
   const features = [
-    'AI-powered demand forecasting and inventory optimization',
-    'Real-time supply chain visibility and tracking',
-    'Automated route optimization and logistics planning',
-    'Supplier performance analytics and risk assessment',
-    'Predictive maintenance and equipment monitoring',
-    'Multi-warehouse optimization and distribution',
-    'Sustainability tracking and carbon footprint analysis',
-    'Integration with ERP, WMS, and TMS systems'
+    {
+      icon: <Network className="w-6 h-6" />,
+      title: "End-to-End Visibility",
+      description: "Real-time tracking and monitoring across your entire supply chain network with AI-powered insights."
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Predictive Analytics",
+      description: "Forecast demand, optimize inventory levels, and predict supply chain disruptions before they happen."
+    },
+    {
+      icon: <Package className="w-6 h-6" />,
+      title: "Inventory Optimization",
+      description: "AI algorithms that automatically balance stock levels, reduce waste, and optimize reorder points."
+    },
+    {
+      icon: <Truck className="w-6 h-6" />,
+      title: "Route Optimization",
+      description: "Intelligent routing that reduces delivery times, fuel costs, and carbon footprint."
+    },
+    {
+      icon: <Warehouse className="w-6 h-6" />,
+      title: "Warehouse Management",
+      description: "Smart warehouse operations with automated picking, packing, and storage optimization."
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: "Global Supply Chain",
+      description: "Manage complex international supply chains with multi-currency and multi-language support."
+    }
   ];
 
-  const benefits = [
-    'Reduce inventory costs by 20-30%',
-    'Improve delivery times by 25%',
-    'Reduce supply chain disruptions by 40%',
-    'Optimize warehouse space utilization',
-    'Automate routine supply chain tasks',
-    'Real-time visibility across the entire network'
-  ];
-
-  const pricing = [
-    { 
-      name: 'Starter', 
-      price: '$299/mo', 
-      features: ['Up to 5 locations', 'Basic AI forecasting', 'Standard reporting', 'Email support'],
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$199",
+      period: "/month",
+      description: "Perfect for small businesses and startups",
+      features: [
+        "Up to 100 SKUs",
+        "Basic demand forecasting",
+        "Inventory tracking",
+        "Email support",
+        "Standard reporting"
+      ],
       popular: false
     },
-    { 
-      name: 'Professional', 
-      price: '$799/mo', 
-      features: ['Up to 20 locations', 'Advanced AI analytics', 'Real-time tracking', 'Priority support', 'Custom integrations'],
+    {
+      name: "Professional",
+      price: "$499",
+      period: "/month",
+      description: "Ideal for growing businesses and mid-market companies",
+      features: [
+        "Up to 1,000 SKUs",
+        "Advanced AI algorithms",
+        "Multi-location support",
+        "Priority support",
+        "Advanced analytics",
+        "API access"
+      ],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
-      price: '$1,999/mo', 
-      features: ['Unlimited locations', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'API access', 'White-label solutions'],
+    {
+      name: "Enterprise",
+      price: "$1,299",
+      period: "/month",
+      description: "For large enterprises with complex supply chains",
+      features: [
+        "Unlimited SKUs",
+        "Custom AI model training",
+        "Global supply chain support",
+        "Dedicated support team",
+        "Advanced reporting & insights",
+        "Custom integrations",
+        "White-label solutions"
+      ],
       popular: false
     }
   ];
 
   const useCases = [
-    'Manufacturing supply chain optimization',
-    'Retail inventory management',
-    'E-commerce fulfillment optimization',
-    'Cold chain logistics management',
-    'Pharmaceutical supply chains',
-    'Automotive parts distribution'
+    {
+      title: "Retail & E-commerce",
+      description: "Optimize inventory levels, reduce stockouts, and improve customer satisfaction with AI-powered demand forecasting.",
+      icon: <Package className="w-8 h-8 text-blue-500" />
+    },
+    {
+      title: "Manufacturing",
+      description: "Streamline production planning, optimize raw material procurement, and reduce lead times with intelligent automation.",
+      icon: <Factory className="w-8 h-8 text-green-500" />
+    },
+    {
+      title: "Logistics & Transportation",
+      description: "Optimize routes, reduce fuel costs, and improve delivery efficiency with AI-powered logistics management.",
+      icon: <Truck className="w-8 h-8 text-yellow-500" />
+    },
+    {
+      title: "Healthcare & Pharmaceuticals",
+      description: "Ensure critical supplies are always available, manage cold chain logistics, and maintain compliance with AI oversight.",
+      icon: <Heart className="w-8 h-8 text-red-500" />
+    }
   ];
 
-  const optimizationAreas = [
-    'Demand Forecasting',
-    'Inventory Management',
-    'Route Optimization',
-    'Warehouse Operations',
-    'Supplier Management',
-    'Risk Assessment',
-    'Sustainability Tracking',
-    'Performance Analytics'
+  const benefits = [
+    {
+      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
+      title: "Cost Reduction",
+      value: "15-25%",
+      description: "Reduce inventory costs, transportation expenses, and operational overhead"
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-blue-500" />,
+      title: "Lead Time Improvement",
+      value: "30-40%",
+      description: "Faster order fulfillment and reduced delivery times"
+    },
+    {
+      icon: <BarChart className="w-8 h-8 text-purple-500" />,
+      title: "Efficiency Gain",
+      value: "20-35%",
+      description: "Improved warehouse operations and supply chain visibility"
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-cyan-500" />,
+      title: "Risk Mitigation",
+      value: "50-70%",
+      description: "Better risk assessment and proactive disruption management"
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-600 via-teal-700 to-cyan-800 py-20 text-center text-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Route className="w-4 h-4 mr-2" /> AI-Powered Supply Chain Optimization
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Supply Chain Optimization</h1>
-          <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
-            Transform your supply chain with AI-driven insights, predictive analytics, and automated optimization. 
-            Reduce costs, improve efficiency, and gain competitive advantage.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#pricing" className="px-8 py-4 bg-white text-teal-600 rounded-lg font-semibold hover:bg-teal-50 transition-colors">
-              View Pricing
-            </a>
-            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
-              Learn More
-            </a>
+      <section className="relative overflow-hidden py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
+              <Network className="w-4 h-4 mr-2" />
+              AI-Powered Supply Chain
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Supply Chain
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+                {" "}Optimization
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your supply chain with AI that predicts, optimizes, and automates every aspect of your operations for maximum efficiency and cost savings.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-green-500/30 text-green-400 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-300"
+              >
+                Watch Demo
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Proven Results Across Industries
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              See how AI-powered supply chain optimization delivers measurable improvements for businesses of all sizes.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center hover:border-green-500/30 transition-all duration-300"
+              >
+                <div className="flex justify-center mb-4">
+                  {benefit.icon}
+                </div>
+                <div className="text-3xl font-bold text-green-400 mb-2">{benefit.value}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Supply Chain Intelligence</h2>
-          <p className="text-xl text-gray-600">Everything you need to optimize your supply chain operations</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Capabilities</h3>
-            <ul className="space-y-4">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Intelligent Supply Chain Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI platform provides comprehensive tools to optimize every aspect of your supply chain operations.
+            </p>
+          </motion.div>
           
-          <div className="bg-gray-50 rounded-xl p-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>
-            <ul className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start">
-                  <TrendingUp className="w-6 h-6 text-teal-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Optimization Areas Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Comprehensive Optimization Areas</h2>
-            <p className="text-xl text-gray-600">From forecasting to sustainability, we optimize every aspect of your supply chain</p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-6">
-            {optimizationAreas.map((area, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
-                <Package className="w-8 h-8 text-teal-500 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 text-sm">{area}</h3>
-              </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center text-white mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>
-          <p className="text-xl text-gray-600">Ideal for organizations seeking to optimize their supply chain operations</p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-6">
-          {useCases.map((useCase, index) => (
-            <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-              <Target className="w-8 h-8 text-teal-500 mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* AI Capabilities Section */}
-      <section className="py-16 bg-teal-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">AI-Powered Capabilities</h2>
-            <p className="text-xl text-gray-600">Leverage artificial intelligence to make smarter supply chain decisions</p>
-          </div>
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry-Specific Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Tailored AI solutions designed for the unique challenges of different industries and business models.
+            </p>
+          </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <BarChart3 className="w-12 h-12 text-teal-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Analytics</h3>
-              <p className="text-gray-600">AI algorithms predict demand patterns with 90%+ accuracy</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <Route className="w-12 h-12 text-teal-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Route Optimization</h3>
-              <p className="text-gray-600">Automatically optimize delivery routes and reduce fuel costs</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <Shield className="w-12 h-12 text-teal-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Risk Management</h3>
-              <p className="text-gray-600">Identify and mitigate supply chain risks before they impact operations</p>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8 hover:border-green-500/30 transition-all duration-300"
+              >
+                <div className="flex items-start space-x-4">
+                  {useCase.icon}
+                  <div>
+                    <h3 className="text-2xl font-semibold text-white mb-3">{useCase.title}</h3>
+                    <p className="text-gray-300 text-lg">{useCase.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-xl text-gray-600">Choose the plan that fits your supply chain complexity and needs</p>
-          </div>
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Choose Your Optimization Plan
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Flexible pricing options designed to scale with your business and supply chain complexity.
+            </p>
+          </motion.div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${
-                plan.popular ? 'border-teal-500 ring-2 ring-teal-500/20' : 'border-gray-200'
-              }`}>
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+                  plan.popular 
+                    ? 'border-green-500/50 bg-gradient-to-b from-green-500/10 to-transparent' 
+                    : 'border-slate-700/50'
+                }`}
+              >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-teal-600 mb-2">{plan.price}</div>
-                  <p className="text-gray-600">per month</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-4">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  plan.popular 
-                    ? 'bg-teal-600 text-white hover:bg-teal-700' 
-                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                }`}>
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600'
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                  }`}
+                >
                   Get Started
-                </button>
-              </div>
+                </motion.button>
+              </motion.div>
             ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Need a custom plan? Contact us for enterprise pricing</p>
-            <a href="mailto:kleber@ziontechgroup.com" className="text-teal-600 hover:text-teal-700 font-semibold">
-              Contact Sales Team
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ROI Section */}
-      <section className="py-16 bg-teal-50">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Proven Results</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-teal-600 mb-2">20-30%</div>
-              <p className="text-gray-700">Reduced inventory costs</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-teal-600 mb-2">25%</div>
-              <p className="text-gray-700">Improved delivery times</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-teal-600 mb-2">40%</div>
-              <p className="text-gray-700">Fewer disruptions</p>
-            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-900 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Supply Chain?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join hundreds of organizations already using AI Supply Chain Optimization to reduce costs and improve efficiency.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-teal-600 text-white rounded-lg font-semibold hover:bg-teal-700 transition-colors">
-              Start Free Trial
-            </a>
-            <a href="tel:+13024640950" className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
-              Call Us
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-16 max-w-4xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Questions? We're Here to Help</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <Phone className="w-8 h-8 text-teal-500 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
-            <p className="text-gray-600 mb-4">Speak with our supply chain optimization experts</p>
-            <a href="tel:+13024640950" className="text-teal-600 hover:text-teal-700 font-semibold">
-              +1 302 464 0950
-            </a>
-          </div>
-          
-          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <Mail className="w-8 h-8 text-teal-500 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
-            <p className="text-gray-600 mb-4">Get detailed information and pricing</p>
-            <a href="mailto:kleber@ziontechgroup.com" className="text-teal-600 hover:text-teal-700 font-semibold">
-              kleber@ziontechgroup.com
-            </a>
-          </div>
-        </div>
-        
-        <div className="mt-12 p-6 bg-gray-50 rounded-xl">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Our Website</h3>
-          <p className="text-gray-600 mb-4">
-            Learn more about our complete suite of AI-powered business solutions
-          </p>
-          <a 
-            href="https://ziontechgroup.com" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold"
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-2xl p-12"
           >
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Optimize Your Supply Chain?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join leading companies that are already using AI to transform their supply chain operations and gain competitive advantages.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300"
+              >
+                Start Free Trial
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-green-500/30 text-green-400 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-300"
+              >
+                Contact Sales
+              </motion.button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+// Add missing icon components
+const Factory = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+  </svg>
+);
+
+const Heart = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+  </svg>
+);
+
+export default AISupplyChainOptimization;

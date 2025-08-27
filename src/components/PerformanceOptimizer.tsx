@@ -23,175 +23,146 @@ const PerformanceOptimizer: React.FC = () => {
             console.log('FCP:', entry.startTime);
             // Send to analytics
             if (window.gtag) {
-              window.gtag('event', 'performance_metric', {
+              window.gtag('event', 'performance', {
                 metric_name: 'FCP',
-                value: Math.round(entry.startTime),
-                page: location.pathname
+                value: Math.round(entry.startTime)
               });
             }
           }
         });
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          console.log('LCP:', lastEntry.startTime);
-          if (window.gtag) {
-            window.gtag('event', 'performance_metric', {
-              metric_name: 'LCP',
-              value: Math.round(lastEntry.startTime),
-              page: location.pathname
-            });
+        entries.forEach((entry) => {
+          if (entry.name === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+            if (window.gtag) {
+              window.gtag('event', 'performance', {
+                metric_name: 'LCP',
+                value: Math.round(entry.startTime)
+              });
+            }
           }
-        }
+        });
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          console.log('FID:', entry.processingStart - entry.startTime);
-          if (window.gtag) {
-            window.gtag('event', 'performance_metric', {
-              metric_name: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
-              page: location.pathname
-            });
+          if (entry.name === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+            if (window.gtag) {
+              window.gtag('event', 'performance', {
+                metric_name: 'FID',
+                value: Math.round(entry.processingStart - entry.startTime)
+              });
+            }
           }
         });
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+        entries.forEach((entry) => {
+          if (entry.name === 'layout-shift') {
+            console.log('CLS:', entry.value);
+            if (window.gtag) {
+              window.gtag('event', 'performance', {
+                metric_name: 'CLS',
+                value: entry.value
+              });
+            }
           }
         });
-        console.log('CLS:', clsValue);
-        if (window.gtag) {
-          window.gtag('event', 'performance_metric', {
-            metric_name: 'CLS',
-            value: Math.round(clsValue * 1000) / 1000,
-            page: location.pathname
-          });
+      });
+
+      try {
+        fcpObserver.observe({ entryTypes: ['paint'] });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch (error) {
+        console.warn('PerformanceObserver not supported:', error);
+      }
+    }
+  }, []);
+
+  // Resource optimization
+  const optimizeResources = useCallback(() => {
+    // Lazy load images
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
         }
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-    }
-  }, [location.pathname]);
+    });
 
-  // Resource preloading
-  const preloadCriticalResources = useCallback(() => {
+    images.forEach((img) => imageObserver.observe(img));
+
+    // Preload critical resources
     const criticalResources = [
-      '/images/hero-ai-solutions.jpg',
-      '/images/hero-quantum.jpg',
-      '/images/hero-autonomous.jpg'
+      '/fonts/inter-var.woff2',
+      '/css/critical.css'
     ];
 
-    criticalResources.forEach(resource => {
+    criticalResources.forEach((resource) => {
       const link = document.createElement('link');
       link.rel = 'preload';
-      link.as = 'image';
       link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
+      link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     });
   }, []);
-
-  // Image optimization
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      // Add loading="lazy" for images below the fold
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
-      
-      // Add decoding="async" for better performance
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
-  }, []);
-
-  // Intersection Observer for animations
-  const setupIntersectionObserver = useCallback(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
-        }
-      });
-    }, observerOptions);
-
-    // Observe all elements with data-animate attribute
-    const animatedElements = document.querySelectorAll('[data-animate]');
-    animatedElements.forEach(el => observer.observe(el));
-
-    return observer;
-  }, []);
-
-  // Memory management
-  const cleanupMemory = useCallback(() => {
-    // Clean up event listeners and observers
-    if (window.performance && window.performance.memory) {
-      const memoryInfo = window.performance.memory;
-      if (memoryInfo.usedJSHeapSize > 50 * 1024 * 1024) { // 50MB threshold
-        console.warn('High memory usage detected:', memoryInfo.usedJSHeapSize / 1024 / 1024, 'MB');
-        // Trigger garbage collection if available
-        if (window.gc) {
-          window.gc();
-        }
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    measurePerformance();
-    preloadCriticalResources();
-    optimizeImages();
-    
-    const observer = setupIntersectionObserver();
-    const memoryInterval = setInterval(cleanupMemory, 30000); // Check every 30 seconds
-
-    return () => {
-      if (observer) {
-        observer.disconnect();
-      }
-      clearInterval(memoryInterval);
-    };
-  }, [measurePerformance, preloadCriticalResources, optimizeImages, setupIntersectionObserver, cleanupMemory]);
 
   // Route change optimization
   useEffect(() => {
     // Prefetch next likely routes
     const prefetchRoutes = () => {
-      const likelyRoutes = ['/services', '/about', '/contact'];
-      likelyRoutes.forEach(route => {
-        const link = document.createElement('link');
-        link.rel = 'prefetch';
-        link.href = route;
-        document.head.appendChild(link);
+      const links = document.querySelectorAll('a[href^="/"]');
+      links.forEach((link) => {
+        const href = link.getAttribute('href');
+        if (href && !href.includes('#')) {
+          const prefetchLink = document.createElement('link');
+          prefetchLink.rel = 'prefetch';
+          prefetchLink.href = href;
+          document.head.appendChild(prefetchLink);
+        }
       });
     };
 
-    // Delay prefetching to avoid blocking initial load
-    const timeoutId = setTimeout(prefetchRoutes, 2000);
+    // Debounce prefetching
+    const timeoutId = setTimeout(prefetchRoutes, 1000);
     return () => clearTimeout(timeoutId);
-  }, [location.pathname]);
+  }, [location]);
+
+  // Initialize performance monitoring
+  useEffect(() => {
+    measurePerformance();
+    optimizeResources();
+  }, [measurePerformance, optimizeResources]);
+
+  // Service Worker registration for caching
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
 
   return null; // This component doesn't render anything
 };
