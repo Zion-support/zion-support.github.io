@@ -7,7 +7,7 @@ import { ChatAssistant } from './components/ChatAssistant';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 import SEO from './components/SEO';
 
-// Lazy load pages - only import existing ones
+// Lazy load pages with enhanced services
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
@@ -24,6 +24,16 @@ const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+
+// Enhanced services pages
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.tsx'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
+const EnhancedZionServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedZionServicesShowcase2025.tsx'));
+const ZionTechGroupMarketing2025 = React.lazy(() => import('./pages/ZionTechGroupMarketing2025.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -159,6 +169,16 @@ function App() {
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/marketplace" element={<Marketplace />} />
                 
+                {/* Enhanced Services Routes */}
+                <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
+                <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
+                <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
+                <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
+                <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
+                <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
+                <Route path="/enhanced-zion-services-2025" element={<EnhancedZionServicesShowcase2025 />} />
+                <Route path="/zion-tech-group-marketing-2025" element={<ZionTechGroupMarketing2025 />} />
+                
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
@@ -167,7 +187,7 @@ function App() {
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                 
                 {/* Catch all route */}
-                <Route path="/" element={<Home />} />
+                <Route path="*" element={<Home />} />
               </Routes>
             </Suspense>
           </main>
