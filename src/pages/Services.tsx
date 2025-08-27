@@ -424,8 +424,7 @@ export default function Services() {
               </Link>
             ))}
           </div>
-            ))}
-          </motion.div>
+        </motion.div>
         </div>
       </section>
 
