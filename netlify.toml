@@ -8,11 +8,12 @@
   NODE_OPTIONS = "--max_old_space_size=4096"
   NPM_FLAGS = "--prefer-offline"
 
-# Remove Next.js plugin since this is a Vite project
-# [[plugins]]
-#   package = "@netlify/plugin-nextjs"
+# IMPORTANT: This is a Vite project, NOT a Next.js project
+# The @netlify/plugin-nextjs plugin is NOT needed and should NOT be installed
+# This plugin is specifically for Next.js projects and will cause build failures
+# if configured incorrectly (e.g., with invalid inputs like "skip: true")
 
-# Optional: a few redirects that were present
+# Redirects for legacy routes
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
