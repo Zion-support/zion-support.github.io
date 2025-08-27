@@ -6,6 +6,7 @@ import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBac
 import { ChatAssistant } from './components/ChatAssistant';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { NotificationSystem } from './components/NotificationSystem';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -137,6 +138,9 @@ function App() {
           
           {/* Performance Optimizer */}
           <PerformanceOptimizer />
+          
+          {/* Notification System */}
+          <NotificationSystem />
         </div>
       </Router>
     </ErrorBoundary>
