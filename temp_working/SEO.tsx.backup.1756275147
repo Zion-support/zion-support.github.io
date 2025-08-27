@@ -30,6 +30,13 @@ export function SEO({
   noindex = false,
   nofollow = false
 }: SEOProps) {
+<<<<<<< HEAD:temp_working/SEO.tsx
+  const siteName = 'Zion Tech Group';
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullCanonical = canonical || window.location.href;
+  // Default structured data for organization
+  const defaultStructuredData = {
+=======
   const siteUrl = 'https://ziontechgroup.com';
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
@@ -50,6 +57,7 @@ export function SEO({
 
   // Structured data for organization
   const organizationSchema = {
+>>>>>>> origin/cursor/enhance-app-clean-merge:src/components/SEO.tsx
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -117,6 +125,10 @@ export function SEO({
       ]
     }
   };
+<<<<<<< HEAD:temp_working/SEO.tsx
+  // Merge with custom structured data
+  const finalStructuredData = structuredData || defaultStructuredData;
+=======
 
   // Structured data for the current page
   const pageSchema = {
@@ -150,10 +162,23 @@ export function SEO({
     })
   };
 
+>>>>>>> origin/cursor/enhance-app-clean-merge:src/components/SEO.tsx
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
+<<<<<<< HEAD:temp_working/SEO.tsx
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="author" content={author || 'Zion Tech Group'} />
+      {/* Canonical URL */}
+      <link rel="canonical" href={fullCanonical} />
+      {/* Robots Meta */}
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+=======
       <meta name="description" content={metaDescription} />
       <meta name="robots" content={robotsContent} />
       
@@ -161,6 +186,7 @@ export function SEO({
       {canonical && <link rel="canonical" href={`${siteUrl}${canonical}`} />}
       
       {/* Open Graph / Facebook */}
+>>>>>>> origin/cursor/enhance-app-clean-merge:src/components/SEO.tsx
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
@@ -170,6 +196,27 @@ export function SEO({
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
+<<<<<<< HEAD:temp_working/SEO.tsx
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      {/* Article-specific meta tags */}
+      {type === 'article' && (
+        <>
+          {author && <meta property="article:author" content={author} />}
+          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          {section && <meta property="article:section" content={section} />}
+          {tags && tags.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
+=======
       
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -179,14 +226,24 @@ export function SEO({
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={fullImageUrl} />
       
+>>>>>>> origin/cursor/enhance-app-clean-merge:src/components/SEO.tsx
       {/* Additional Meta Tags */}
       <meta name="author" content={author} />
       <meta name="keywords" content={tags.join(', ')} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD:temp_working/SEO.tsx
+      <meta name="theme-color" content="#2e73ea" />
+      <meta name="msapplication-TileColor" content="#2e73ea" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content={siteName} />
+      {/* Favicon and App Icons */}
+=======
       <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
       
       {/* Favicon */}
+>>>>>>> origin/cursor/enhance-app-clean-merge:src/components/SEO.tsx
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -195,8 +252,11 @@ export function SEO({
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+<<<<<<< HEAD:temp_working/SEO.tsx
+=======
       <link rel="preconnect" href="https://cdn.gpteng.co" />
       
+>>>>>>> origin/cursor/enhance-app-clean-merge:src/components/SEO.tsx
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}
@@ -205,12 +265,19 @@ export function SEO({
         {JSON.stringify(pageSchema)}
       </script>
       {/* Additional SEO Meta Tags */}
+<<<<<<< HEAD:temp_working/SEO.tsx
+      <meta name="application-name" content={siteName} />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="format-detection" content="telephone=no" />
+      {/* Security Meta Tags */}
+=======
       <meta name="application-name" content="Zion Tech Group" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       
       {/* Security Headers */}
+>>>>>>> origin/cursor/enhance-app-clean-merge:src/components/SEO.tsx
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />

@@ -39,6 +39,11 @@ export interface InnovativeITService2024 {
   reviews: number;
 }
 export const innovativeITServices2024: InnovativeITService2024[] = [
+<<<<<<< HEAD
+  {
+  },
+=======
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   // Zero Trust Network Architecture
   {
     id: 'zero-trust-network-architecture',
