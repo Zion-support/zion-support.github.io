@@ -49,6 +49,7 @@ export function Footer() {
       icon: Globe,
       links: [
         { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Partners', path: '/partners', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Blog', path: '/blog', icon: Newspaper },
         { name: 'Contact', path: '/contact', icon: Phone }
@@ -67,6 +68,15 @@ export function Footer() {
         { name: 'AI Services', path: '/ai-services', icon: Brain },
         { name: 'IT Services', path: '/it-services', icon: Building },
         { name: 'Micro SaaS', path: '/micro-saas', icon: Zap },
+        { name: 'AI Auto Email', path: '/services/ai-auto-email-responder', icon: Mail },
+        { name: 'Feedback Surveys', path: '/services/mobile-feedback-surveys', icon: Users },
+        { name: 'Compliance Copilot', path: '/services/ai-compliance-copilot', icon: Shield },
+        { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: FileText },
+        { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
+        { name: 'Returns Management', path: '/services/returns-management', icon: ShoppingCart },
+        { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
+        { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: FileText },
+        { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
         { name: 'All Services', path: '/services', icon: Zap }
       ]
     },
@@ -76,16 +86,19 @@ export function Footer() {
       links: [
         { name: 'Blog', path: '/blog', icon: FileText },
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
-        { name: 'Request a Quote', path: '/request-quote', icon: FileText }
+        { name: 'Request a Quote', path: '/request-quote', icon: FileText },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe }
       ]
     },
     {
       title: 'Support',
       icon: Shield,
       links: [
-        { name: 'Contact Us', path: '/contact', icon: Phone },
+        { name: 'Contact Us', path: '/contact', icon: Phone }, 
         { name: 'Dashboard', path: '/dashboard', icon: Activity },
-        { name: 'Login', path: '/login', icon: HelpCircle }
+        { name: 'Login', path: '/login', icon: HelpCircle },
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Support', path: '/support', icon: HelpCircle }
       ]
     }
   ];
