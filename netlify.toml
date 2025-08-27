@@ -12,6 +12,7 @@
   NODE_OPTIONS = "--max_old_space_size=4096"
   # Skip Netlify's Next.js plugin since this is a Vite static site
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  CANONICAL_URL = "https://ziontechgroup.com"
 
 # Removed Next.js plugin since this is a Vite project
 
