@@ -1,108 +1,150 @@
-import React from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { EnhancedHeader } from './components/header/EnhancedHeader';
-import { EnhancedFooter } from './components/footer/EnhancedFooter';
-import { FuturisticAnimatedBackground } from './components/backgrounds/FuturisticAnimatedBackground';
+import { AppHeader } from './layout/AppHeader.jsx';
+import { Footer } from './components/Footer.jsx';
+import { ChatAssistant } from './components/ChatAssistant.jsx';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 
-// Import pages
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact.tsx';
-import ServicesPage from './pages/ServicesPage';
-import EnhancedServicesShowcase2025 from './pages/EnhancedServicesShowcase2025';
-import UltimateServicesShowcase2026 from './pages/UltimateServicesShowcase2026';
-import NotFound from './pages/NotFound';
+// Lazy load pages with better chunking
+const Home = React.lazy(() => import('./pages/Home.jsx'));
+const About = React.lazy(() => import('./pages/About.jsx'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.tsx'));
+const Contact = React.lazy(() => import('./pages/Contact.jsx'));
+const Login = React.lazy(() => import('./pages/Login.jsx'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
+const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026.tsx'));
 
-// Import other pages as needed
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Dashboard from './pages/Dashboard';
-import Blog from './pages/Blog';
-import Careers from './pages/Careers';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import FAQ from './pages/FAQ';
-import RequestQuote from './pages/RequestQuote';
+// Enhanced loading spinner with accessibility
+const LoadingSpinner = () => (
+  <div 
+    className="min-h-screen bg-futuristic flex items-center justify-center"
+    role="status"
+    aria-label="Loading page content"
+  >
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-zion-cyan text-lg">Loading...</p>
+      <div className="sr-only">Loading page content, please wait...</div>
+    </div>
+  </div>
+);
+
+// Error boundary component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen bg-futuristic flex items-center justify-center p-4">
+    <div className="text-center max-w-md">
+      <h2 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h2>
+      <p className="text-zion-slate-light mb-6">{error.message}</p>
+      <button
+        onClick={resetErrorBoundary}
+        className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors"
+      >
+        Try again
+      </button>
+    </div>
+  </div>
+);
 
 function App() {
+  // Performance monitoring
+  useEffect(() => {
+    if ('performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
+      
+      return () => observer.disconnect();
+    }
+  }, []);
+
   return (
     <Router>
       <div className="App min-h-screen bg-zion-slate-dark">
-        {/* Futuristic animated background */}
-        <FuturisticAnimatedBackground variant="default" intensity="low" />
+        {/* Performance Monitor */}
+        <PerformanceMonitor />
         
         {/* Enhanced Header */}
-        <EnhancedHeader />
+        <AppHeader />
         
         {/* Main Content */}
         <main className="pt-24">
-          <Routes>
-            {/* Home Route */}
-            <Route path="/" element={<Home />} />
-            
-            {/* Main Pages */}
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
-            <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
-            
-            {/* Auth Pages */}
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            
-            {/* Content Pages */}
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/request-quote" element={<RequestQuote />} />
-            
-            {/* Legal Pages */}
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/faq" element={<FAQ />} />
-            
-            {/* Service Detail Pages */}
-            <Route path="/services/:serviceId" element={<ServicesPage />} />
-            
-            {/* AI Services Routes */}
-            <Route path="/ai-services" element={<EnhancedServicesShowcase2025 />} />
-            <Route path="/cloud-devops" element={<EnhancedServicesShowcase2025 />} />
-            <Route path="/emerging-tech" element={<EnhancedServicesShowcase2025 />} />
-            <Route path="/solutions" element={<EnhancedServicesShowcase2025 />} />
-            
-            {/* Company Routes */}
-            <Route path="/leadership" element={<About />} />
-            <Route path="/news" element={<Blog />} />
-            <Route path="/case-studies" element={<About />} />
-            <Route path="/partners" element={<About />} />
-            
-            {/* Resources Routes */}
-            <Route path="/docs" element={<About />} />
-            <Route path="/api" element={<About />} />
-            <Route path="/help" element={<FAQ />} />
-            <Route path="/training" element={<About />} />
-            <Route path="/webinars" element={<About />} />
-            <Route path="/white-papers" element={<About />} />
-            <Route path="/research" element={<About />} />
-            
-            {/* Industry Solutions Routes */}
-            <Route path="/solutions/healthcare" element={<EnhancedServicesShowcase2025 />} />
-            <Route path="/solutions/financial" element={<EnhancedServicesShowcase2025 />} />
-            <Route path="/solutions/manufacturing" element={<EnhancedServicesShowcase2025 />} />
-            <Route path="/solutions/retail" element={<EnhancedServicesShowcase2025 />} />
-            <Route path="/solutions/transportation" element={<EnhancedServicesShowcase2025 />} />
-            <Route path="/solutions/energy" element={<EnhancedServicesShowcase2025 />} />
-            <Route path="/solutions/real-estate" element={<EnhancedServicesShowcase2025 />} />
-            <Route path="/solutions/agriculture" element={<EnhancedServicesShowcase2025 />} />
-            
-            {/* 404 Route */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              {/* Home Route */}
+              <Route path="/" element={<Home />} />
+              
+              {/* Main Pages */}
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/enhanced-services-2025" element={<EnhancedServicesPage />} />
+              <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
+              
+              {/* Auth Pages */}
+              <Route path="/login" element={<Login />} />
+              
+              {/* Service Pages */}
+              <Route path="/comprehensive-services-overview-2027" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/ultimate-innovative-services-showcase-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
+              <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
+              
+              {/* Service Detail Pages */}
+              <Route path="/services/:serviceId" element={<ServicesPage />} />
+              
+              {/* AI Services Routes */}
+              <Route path="/ai-services" element={<EnhancedServicesPage />} />
+              <Route path="/cloud-devops" element={<EnhancedServicesPage />} />
+              <Route path="/emerging-tech" element={<EnhancedServicesPage />} />
+              <Route path="/solutions" element={<EnhancedServicesPage />} />
+              
+              {/* Company Routes */}
+              <Route path="/leadership" element={<About />} />
+              <Route path="/news" element={<About />} />
+              <Route path="/case-studies" element={<About />} />
+              <Route path="/partners" element={<About />} />
+              
+              {/* Resources Routes */}
+              <Route path="/docs" element={<About />} />
+              <Route path="/api" element={<About />} />
+              <Route path="/help" element={<About />} />
+              <Route path="/training" element={<About />} />
+              <Route path="/webinars" element={<About />} />
+              <Route path="/white-papers" element={<About />} />
+              <Route path="/research" element={<About />} />
+              
+              {/* Industry Solutions Routes */}
+              <Route path="/solutions/healthcare" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/financial" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/manufacturing" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/retail" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/transportation" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/energy" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/real-estate" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/agriculture" element={<EnhancedServicesPage />} />
+              
+              {/* 404 Route */}
+              <Route path="*" element={<About />} />
+            </Routes>
+          </Suspense>
         </main>
         
         {/* Enhanced Footer */}
-        <EnhancedFooter />
+        <Footer />
+        
+        {/* Chat Assistant */}
+        <ChatAssistant />
       </div>
     </Router>
   );
