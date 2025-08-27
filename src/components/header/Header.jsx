@@ -1,35 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
-import { Menu, X, Search as SearchIcon, Sparkles } from 'lucide-react';
-import { Button } from '../ui/button';
-import { Logo } from './Logo';
-import { MainNavigation } from './MainNavigation';
-import { MobileMenu } from './MobileMenu';
-import { LanguageSelector } from './LanguageSelector';
-import { UserMenu } from './UserMenu';
-import { EnhancedSearchInput } from './EnhancedSearchInput';
-
-const Header = ({ 
-  customLogo, 
-  customColor, 
-  hideLogin = false, 
-  searchSuggestions = [],
-  onSearch 
-}) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [query, setQuery] = useState('');
-  const navigate = useNavigate();
-
-=======
 import { Button } from '@/components/ui/button';
 import { Logo } from './Logo';
 import { MainNavigation } from './MainNavigation';
 import { MobileMenu } from './MobileMenu';
 import { UserMenu } from './UserMenu';
 import { LanguageSelector } from './LanguageSelector';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { SearchIcon, Sparkles, Menu, X } from 'lucide-react';
 
 export function Header({ 
@@ -46,8 +23,6 @@ export function Header({
 
   // Mock user state - replace with actual auth context
   const user = null;
-
->>>>>>> 9173be5b34b2cc8dd2ed0cd34804fc967a792df3
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -64,22 +39,8 @@ export function Header({
   const handleSubmit = (e) => {
     e.preventDefault();
     if (query.trim()) {
-<<<<<<< HEAD
-      navigate(`/search?q=${encodeURIComponent(query)}`);
-      setQuery('');
-    }
-  };
-
-  const headerStyle = {
-    '--zion-cyan': customColor?.cyan || '#22DDD2',
-    '--zion-purple': customColor?.purple || '#8B5CF6',
-    '--zion-blue': customColor?.blue || '#1E40AF',
-    '--zion-blue-dark': customColor?.blueDark || '#1E3A8A',
-    '--zion-slate-light': customColor?.slateLight || '#94A3B8'
-  };
-
-=======
       navigate(`/search?q=${encodeURIComponent(query.trim())}`);
+      setQuery('');
     }
   };
 
@@ -92,8 +53,6 @@ export function Header({
     '--zion-primary': `var(--${effectiveTheme.primaryColor})`,
     '--zion-secondary': `var(--${effectiveTheme.secondaryColor})`
   };
-
->>>>>>> 9173be5b34b2cc8dd2ed0cd34804fc967a792df3
   return (
     <>
       <header 
@@ -179,11 +138,7 @@ export function Header({
         <div className="lg:hidden fixed inset-0 z-40 bg-zion-blue-dark/95 backdrop-blur-xl">
           <div className="flex flex-col h-full">
             <div className="flex justify-between items-center p-4 border-b border-zion-purple/30">
-<<<<<<< HEAD
-              <Logo customLogo={customLogo} customColor={customColor} />
-=======
               <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor}/>
->>>>>>> 9173be5b34b2cc8dd2ed0cd34804fc967a792df3
               <button 
                 onClick={toggleMobileMenu} 
                 className="p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10"
@@ -239,8 +194,6 @@ export function Header({
                     Community
                   </Link>
                 </li>
-<<<<<<< HEAD
-=======
                 <li>
                   <Link 
                     to="/ai-content-generator" 
@@ -279,7 +232,6 @@ export function Header({
                     </Link>
                   </li>
                 )}
->>>>>>> 9173be5b34b2cc8dd2ed0cd34804fc967a792df3
               </ul>
             </nav>
 
@@ -289,11 +241,6 @@ export function Header({
                   <Sparkles className="h-4 w-4"/>
                   AI Assistant
                 </button>
-<<<<<<< HEAD
-                {!hideLogin && (
-                  <div className="flex gap-2">
-                    <Link to="/login" onClick={toggleMobileMenu} className="flex-1 px-4 py-2 text-center rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors">
-=======
                 {!user && (
                   <div className="flex gap-2">
                     <Link 
@@ -301,7 +248,6 @@ export function Header({
                       onClick={toggleMobileMenu} 
                       className="flex-1 px-4 py-2 text-center rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
                     >
->>>>>>> 9173be5b34b2cc8dd2ed0cd34804fc967a792df3
                       Login
                     </Link>
                     <Link 
@@ -323,11 +269,7 @@ export function Header({
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"/>
     </>
   );
-<<<<<<< HEAD
 };
 
 export { Header };
 export default Header;
-=======
-}
->>>>>>> 9173be5b34b2cc8dd2ed0cd34804fc967a792df3
