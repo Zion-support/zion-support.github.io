@@ -30,7 +30,8 @@ import {
   TrendingUp,
   Shield as SecurityIcon,
   BookOpen,
-  MessageCircle
+  MessageCircle,
+  FlaskConical
 } from 'lucide-react';
 
 const footerNavigation = {
@@ -45,6 +46,28 @@ const footerNavigation = {
       { name: 'Blockchain', href: '/services/blockchain', icon: Code, description: 'Decentralized solutions' },
       { name: 'Digital Twin', href: '/services/digital-twin', icon: Building, description: 'Virtual replica technology' },
       { name: 'Sustainability', href: '/services/sustainability', icon: Heart, description: 'Green IT solutions' }
+    ],
+  },
+  solutions: {
+    title: 'Solutions',
+    items: [
+      { name: 'AI & Machine Learning', href: '/solutions#ai-ml', icon: Brain, description: 'Intelligent automation solutions' },
+      { name: 'Cybersecurity', href: '/solutions#cybersecurity', icon: Shield, description: 'Comprehensive security frameworks' },
+      { name: 'Cloud Computing', href: '/solutions#cloud-computing', icon: Cloud, description: 'Scalable cloud infrastructure' },
+      { name: 'Data Analytics', href: '/solutions#data-analytics', icon: Zap, description: 'Advanced data insights' },
+      { name: 'IoT & Edge', href: '/solutions#iot-edge', icon: Rocket, description: 'Connected device ecosystems' },
+      { name: 'Digital Transformation', href: '/solutions#digital-transformation', icon: Code, description: 'Business modernization' }
+    ],
+  },
+  research: {
+    title: 'Research',
+    items: [
+      { name: 'Research Areas', href: '/research-development#research-areas', icon: FlaskConical, description: 'Innovation frontiers' },
+      { name: 'Active Projects', href: '/research-development#active-projects', icon: Rocket, description: 'Current initiatives' },
+      { name: 'Publications', href: '/research-development#publications', icon: BookOpen, description: 'Research insights' },
+      { name: 'Patents', href: '/research-development#patents', icon: Award, description: 'Intellectual property' },
+      { name: 'Case Studies', href: '/case-studies', icon: TrendingUp, description: 'Success stories' },
+      { name: 'Events', href: '/events', icon: MessageCircle, description: 'Research events' }
     ],
   },
   microSaas: {
@@ -194,7 +217,7 @@ export function Footer() {
         </motion.div>
 
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-8 mb-12">
           {/* Company info */}
           <div className="lg:col-span-2">
             <motion.div 
@@ -297,6 +320,8 @@ export function Footer() {
             >
               <h4 className="text-lg font-semibold text-white flex items-center gap-2">
                 {section.title === 'Services' && <Zap className="w-5 h-5 text-zion-cyan" />}
+                {section.title === 'Solutions' && <Rocket className="w-5 h-5 text-zion-cyan" />}
+                {section.title === 'Research' && <FlaskConical className="w-5 h-5 text-zion-purple" />}
                 {section.title === 'Micro SAAS' && <Code className="w-5 h-5 text-zion-purple" />}
                 {section.title === 'Marketplace' && <Building className="w-5 h-5 text-zion-blue" />}
                 {section.title === 'Company' && <Users className="w-5 h-5 text-zion-cyan" />}

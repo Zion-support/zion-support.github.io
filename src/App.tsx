@@ -17,6 +17,8 @@ const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 const Solutions = React.lazy(() => import('./pages/Solutions'));
 const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const Events = React.lazy(() => import('./pages/Events'));
 const News = React.lazy(() => import('./pages/News'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
@@ -88,6 +90,8 @@ function App() {
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/solutions" element={<Solutions />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/events" element={<Events />} />
               <Route path="/news" element={<News />} />
               <Route path="/request-quote" element={<RequestQuote />} />
               <Route path="/marketplace" element={<Marketplace />} />
