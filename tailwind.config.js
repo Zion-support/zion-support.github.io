@@ -33,6 +33,12 @@ export default {
         'zion-purple': '#8c15e9',
         'zion-purple-dark': '#6b21a8',
         'zion-purple-light': '#a855f7',
+        // Added brand tokens used by header/footer
+        'zion-cyan': '#06b6d4',
+        'zion-cyan-light': '#22d3ee',
+        'zion-slate-dark': '#0b1220',
+        'zion-slate': '#111827',
+        'zion-slate-light': '#1f2937',
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],

@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp } from "lucide-react";
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from "lucide-react";
 export function MainNavigation({ className }) {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+    const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+    const [isResourcesOpen, setIsResourcesOpen] = useState(false);
     return (<nav className={cn("hidden md:flex items-center space-x-6", className)}>
       <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
         Home
