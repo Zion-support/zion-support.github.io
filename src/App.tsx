@@ -205,7 +205,6 @@ function App() {
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-              <Route path="/services/green-it" element={<GreenIT />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
               
               {/* Catch-all */}
