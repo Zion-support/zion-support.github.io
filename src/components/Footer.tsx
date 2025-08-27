@@ -59,11 +59,15 @@ export function Footer() {
       title: 'Services',
       icon: Zap,
       links: [
+        { name: 'AI Solutions', path: '/services/ai-business-intelligence', icon: Brain },
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
         { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
+        { name: 'Quantum Technology', path: '/services/quantum-computing', icon: Cpu },
+        { name: 'Space Technology', path: '/services/space-tech', icon: Rocket },
         // Newly exposed landing pages
         { name: 'AI Services', path: '/ai-services', icon: Brain },
         { name: 'IT Services', path: '/it-services', icon: Building },
@@ -73,7 +77,7 @@ export function Footer() {
         { name: 'Compliance Copilot', path: '/services/ai-compliance-copilot', icon: Shield },
         { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: FileText },
         { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
-        { name: 'Returns Management', path: '/services/returns-management', icon: ShoppingCart },
+        { name: 'Returns Management', path: '/services/returns-management', icon: Users },
         { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
         { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: FileText },
         { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
@@ -81,13 +85,30 @@ export function Footer() {
       ]
     },
     {
+      title: 'Solutions',
+      icon: Shield,
+      links: [
+        { name: 'Enterprise Solutions', path: '/solutions', icon: Building },
+        { name: 'SMB Solutions', path: '/solutions', icon: Target },
+        { name: 'Startup Solutions', path: '/solutions', icon: Rocket },
+        { name: 'Government Solutions', path: '/solutions', icon: Shield },
+        { name: 'Healthcare Solutions', path: '/solutions', icon: Heart },
+        { name: 'Financial Solutions', path: '/solutions', icon: DollarSign }
+      ]
+    },
+    {
       title: 'Resources',
       icon: FileText,
       links: [
         { name: 'Blog', path: '/blog', icon: FileText },
+        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'White Papers', path: '/white-papers', icon: FileText },
+        { name: 'Webinars', path: '/webinars', icon: Video },
+        { name: 'Research & Development', path: '/research-development', icon: TestTube },
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Request a Quote', path: '/request-quote', icon: FileText },
-        { name: 'Sitemap', path: '/sitemap', icon: Globe }
+        { name: 'Sitemap', path: '/sitemap', icon: Globe },
+        { name: 'Insights', path: '/blog', icon: TrendingUp }
       ]
     },
     {
