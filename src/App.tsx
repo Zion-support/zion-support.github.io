@@ -112,6 +112,16 @@ const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
 // New AI-powered micro SAAS services
 const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
+const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
+const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
+const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
+
+// Comprehensive improvements components
+const AdvancedAIServicesHub = React.lazy(() => import('./components/AdvancedAIServicesHub'));
+const PerformanceAnalytics = React.lazy(() => import('./components/PerformanceAnalytics'));
+const EnhancedSEOManager = React.lazy(() => import('./components/EnhancedSEOManager'));
+const ComprehensiveImprovements2025 = React.lazy(() => import('./pages/ComprehensiveImprovements2025'));
 
 // New innovative AI services
 const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
@@ -251,6 +261,10 @@ function App() {
               <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
               {/* New AI-powered micro SAAS service routes */}
               <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
+              <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
+              <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
+              <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+              <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
               
               {/* New innovative AI services */}
               <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
