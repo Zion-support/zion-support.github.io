@@ -17,6 +17,7 @@ const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Comprehen
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
 const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
+const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026.tsx'));
 
 // Enhanced loading spinner with accessibility
 const LoadingSpinner = () => (
@@ -68,28 +69,82 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+      <div className="App min-h-screen bg-zion-slate-dark">
+        {/* Performance Monitor */}
+        <PerformanceMonitor />
+        
+        {/* Enhanced Header */}
         <AppHeader />
-        <main className="flex-1" role="main">
+        
+        {/* Main Content */}
+        <main className="pt-24">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
+              {/* Home Route */}
               <Route path="/" element={<Home />} />
+              
+              {/* Main Pages */}
               <Route path="/about" element={<About />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/enhanced-services-2025" element={<EnhancedServicesPage />} />
+              <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
+              
+              {/* Auth Pages */}
               <Route path="/login" element={<Login />} />
-              <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
-              <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
-              <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
-              <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
-              <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
+              
+              {/* Service Pages */}
+              <Route path="/comprehensive-services-overview-2027" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/ultimate-innovative-services-showcase-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
+              <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
+              
+              {/* Service Detail Pages */}
+              <Route path="/services/:serviceId" element={<ServicesPage />} />
+              
+              {/* AI Services Routes */}
+              <Route path="/ai-services" element={<EnhancedServicesPage />} />
+              <Route path="/cloud-devops" element={<EnhancedServicesPage />} />
+              <Route path="/emerging-tech" element={<EnhancedServicesPage />} />
+              <Route path="/solutions" element={<EnhancedServicesPage />} />
+              
+              {/* Company Routes */}
+              <Route path="/leadership" element={<About />} />
+              <Route path="/news" element={<About />} />
+              <Route path="/case-studies" element={<About />} />
+              <Route path="/partners" element={<About />} />
+              
+              {/* Resources Routes */}
+              <Route path="/docs" element={<About />} />
+              <Route path="/api" element={<About />} />
+              <Route path="/help" element={<About />} />
+              <Route path="/training" element={<About />} />
+              <Route path="/webinars" element={<About />} />
+              <Route path="/white-papers" element={<About />} />
+              <Route path="/research" element={<About />} />
+              
+              {/* Industry Solutions Routes */}
+              <Route path="/solutions/healthcare" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/financial" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/manufacturing" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/retail" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/transportation" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/energy" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/real-estate" element={<EnhancedServicesPage />} />
+              <Route path="/solutions/agriculture" element={<EnhancedServicesPage />} />
+              
+              {/* 404 Route */}
+              <Route path="*" element={<About />} />
             </Routes>
           </Suspense>
         </main>
+        
+        {/* Enhanced Footer */}
         <Footer />
+        
+        {/* Chat Assistant */}
         <ChatAssistant />
-        <PerformanceMonitor />
       </div>
     </Router>
   );
