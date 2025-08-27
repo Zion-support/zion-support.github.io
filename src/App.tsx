@@ -37,6 +37,7 @@ const ForgotPassword = React.lazy(() => import('./pages/ForgotPassword'));
 const ResetPassword = React.lazy(() => import('./pages/ResetPassword'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
 
 // Service pages
 const CybersecurityServices = React.lazy(() => import('./pages/CybersecurityServices.tsx'));
@@ -112,6 +113,7 @@ function App() {
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/enhanced-services" element={<EnhancedServices />} />
+              <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
               
               {/* User Dashboard */}
               <Route path="/dashboard" element={<Dashboard />} />
