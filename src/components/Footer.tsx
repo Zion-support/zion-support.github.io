@@ -73,6 +73,10 @@ export function Footer() {
         { name: 'Compliance Copilot', path: '/services/ai-compliance-copilot', icon: Shield },
         { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: FileText },
         { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
+        { name: 'Returns Management', path: '/services/returns-management', icon: ShoppingCart },
+        { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
+        { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: FileText },
+        { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
         { name: 'All Services', path: '/services', icon: Zap }
       ]
     },

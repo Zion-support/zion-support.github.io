@@ -27,6 +27,13 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
+const Help = React.lazy(() => import('./pages/Help'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const GenericPage = React.lazy(() => import('./pages/[...slug]'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -46,6 +53,10 @@ const CustomerFeedbackSurveys = React.lazy(() => import('./pages/services/Custom
 const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplianceCopilot'));
 const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
 const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
+const ReturnsManagement = React.lazy(() => import('./pages/services/ReturnsManagement'));
+const EmailSequencer = React.lazy(() => import('./pages/services/EmailSequencer'));
+const PodcastTranscription = React.lazy(() => import('./pages/services/PodcastTranscription'));
+const MicroCRM = React.lazy(() => import('./pages/services/MicroCRM'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -103,6 +114,12 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/login" element={<Login />} />
               <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+              <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
@@ -118,9 +135,13 @@ function App() {
               <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
               <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
               <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+              <Route path="/services/returns-management" element={<ReturnsManagement />} />
+              <Route path="/services/email-sequencer" element={<EmailSequencer />} />
+              <Route path="/services/podcast-transcription" element={<PodcastTranscription />} />
+              <Route path="/services/micro-crm" element={<MicroCRM />} />
               
-              {/* Catch all route */}
-              <Route path="*" element={<Home />} />
+              {/* Catch all route to generic page (covers docs, webinars, training, enterprise, etc.) */}
+              <Route path="*" element={<GenericPage />} />
             </Routes>
           </Suspense>
         </main>

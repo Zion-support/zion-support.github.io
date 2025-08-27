@@ -1859,6 +1859,111 @@ export const SPECIALIZED_SERVICES = [
     price: 2100,
     marketPrice: "$1,000 - $8,000/month"
   }
+  ,
+  {
+    id: "seo-technical-monitor",
+    title: "SEO Technical Monitor",
+    description: "Automated crawls, schema validation, Core Web Vitals, sitemap and robots checks with weekly reports.",
+    category: "Growth & SEO",
+    price: 39,
+    marketPrice: "$29 - $199/month"
+  },
+  {
+    id: "csp-security-headers-manager",
+    title: "CSP & Security Headers Manager",
+    description: "Continuously audits and deploys HTTP security headers and CSP across domains with safe rollouts.",
+    category: "Security",
+    price: 49,
+    marketPrice: "$29 - $149/domain/month"
+  },
+  {
+    id: "status-incident-hub",
+    title: "Status & Incident Hub",
+    description: "Hosted status pages, synthetic checks, on-call notifications, and incident postmortems.",
+    category: "SRE & Reliability",
+    price: 59,
+    marketPrice: "$29 - $299/month"
+  },
+  {
+    id: "checkout-ab-optimizer",
+    title: "Checkout A/B Optimizer",
+    description: "Low-code experiments for checkout steps, fields, copy, and payment options with KPI tracking.",
+    category: "E-commerce",
+    price: 99,
+    marketPrice: "$49 - $299/month"
+  },
+  {
+    id: "billing-dunning-recovery",
+    title: "Billing Dunning & Recovery",
+    description: "Smart retries, reminders, and card updater integrations to reduce failed payments and churn.",
+    category: "FinTech",
+    price: 79,
+    marketPrice: "$49 - $199/month + 0.5%–2% recovered"
+  },
+  {
+    id: "multilingual-ux-localizer",
+    title: "Multilingual UX Localizer",
+    description: "String extraction, machine translation + human review, and per-locale rollout controls.",
+    category: "Localization",
+    price: 69,
+    marketPrice: "$49 - $399/month"
+  },
+  {
+    id: "privacy-dsar-portal",
+    title: "Privacy Request Portal (DSAR)",
+    description: "Hosted data subject request intake with verification, workflow, and export/delete automation.",
+    category: "Privacy & Compliance",
+    price: 99,
+    marketPrice: "$79 - $499/month + usage"
+  },
+  {
+    id: "lead-enrichment-studio",
+    title: "Lead Enrichment Studio",
+    description: "Enrich leads with firmographics and intent, deduplicate, and score for routing to SDRs.",
+    category: "RevOps",
+    price: 89,
+    marketPrice: "$49 - $399/month + usage"
+  },
+  {
+    id: "contracts-clause-extractor",
+    title: "Contracts Clause Extractor",
+    description: "AI-powered clause extraction, risk flags, and playbook suggestions with bulk uploads.",
+    category: "Legal Tech",
+    price: 149,
+    marketPrice: "$99 - $799/month"
+  },
+  {
+    id: "meeting-notes-copilot",
+    title: "Meeting Notes Copilot",
+    description: "Auto-notes, action items, summaries and CRM sync for Zoom/Meet/Teams.",
+    category: "Productivity",
+    price: 39,
+    marketPrice: "$15 - $59/user/month"
+  },
+  {
+    id: "analytics-pulse",
+    title: "Analytics Pulse",
+    description: "Plug-and-play dashboards with anomaly alerts and goal tracking across GA4, Stripe, HubSpot.",
+    category: "Analytics",
+    price: 59,
+    marketPrice: "$29 - $199/month"
+  },
+  {
+    id: "onboarding-flow-kit",
+    title: "Onboarding Flow Kit",
+    description: "Guided walkthroughs, tooltips, checklists and in-app NPS with no-code targeting segments.",
+    category: "Product-Led Growth",
+    price: 69,
+    marketPrice: "$49 - $299/month"
+  },
+  {
+    id: "sales-prospecting-cadence",
+    title: "Sales Prospecting Cadence",
+    description: "Sequenced multi-channel outreach with AI personalization and reply intent classification.",
+    category: "Sales Tech",
+    price: 79,
+    marketPrice: "$39 - $199/user/month"
+  }
 ];
 
 export default INNOVATIVE_MICRO_SAAS_SERVICES_2025;
