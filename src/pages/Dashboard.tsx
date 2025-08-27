@@ -27,7 +27,9 @@ import {
   Eye,
   Download,
   Filter,
-  MoreHorizontal
+  MoreHorizontal,
+  MessageCircle,
+  FileText
 } from 'lucide-react';
 
 interface StatCard {
@@ -97,7 +99,7 @@ const recentActivities: ActivityItem[] = [
     id: '1',
     type: 'service',
     title: 'AI Analytics Service Deployed',
-    description: 'Successfully deployed AI analytics solution for Client Corp',
+    description: 'Successfully deployed AI analytics service for Client XYZ',
     timestamp: '2 hours ago',
     status: 'completed',
     priority: 'high'
@@ -106,16 +108,16 @@ const recentActivities: ActivityItem[] = [
     id: '2',
     type: 'payment',
     title: 'Payment Received',
-    description: 'Payment of $15,000 received from Tech Solutions Inc',
+    description: 'Payment of $5,000 received from Client ABC',
     timestamp: '4 hours ago',
     status: 'completed',
-    priority: 'medium'
+    priority: 'low'
   },
   {
     id: '3',
     type: 'support',
     title: 'Support Ticket Resolved',
-    description: 'Resolved critical issue with cloud infrastructure',
+    description: 'Resolved critical issue for Client DEF',
     timestamp: '6 hours ago',
     status: 'completed',
     priority: 'high'
@@ -124,18 +126,9 @@ const recentActivities: ActivityItem[] = [
     id: '4',
     type: 'update',
     title: 'System Update Completed',
-    description: 'Security patches and performance updates applied',
+    description: 'Scheduled maintenance completed successfully',
     timestamp: '1 day ago',
     status: 'completed',
-    priority: 'low'
-  },
-  {
-    id: '5',
-    type: 'service',
-    title: 'New Service Request',
-    description: 'Cybersecurity assessment requested by StartupXYZ',
-    timestamp: '1 day ago',
-    status: 'pending',
     priority: 'medium'
   }
 ];
@@ -143,385 +136,327 @@ const recentActivities: ActivityItem[] = [
 const quickActions: QuickAction[] = [
   {
     title: 'Add New Service',
-    description: 'Create and deploy a new service',
+    description: 'Deploy a new service for your clients',
     icon: Plus,
-    action: 'Create',
+    action: 'Create Service',
     color: 'from-blue-500 to-cyan-600'
   },
   {
-    title: 'View Analytics',
-    description: 'Check detailed performance metrics',
+    title: 'Generate Report',
+    description: 'Create comprehensive analytics report',
     icon: BarChart3,
-    action: 'View',
-    color: 'from-green-500 to-emerald-600'
-  },
-  {
-    title: 'Manage Users',
-    description: 'Add or remove team members',
-    icon: Users,
-    action: 'Manage',
+    action: 'Generate',
     color: 'from-purple-500 to-pink-600'
   },
   {
-    title: 'System Settings',
-    description: 'Configure system preferences',
+    title: 'Schedule Meeting',
+    description: 'Book a meeting with your team',
+    icon: Calendar,
+    action: 'Schedule',
+    color: 'from-green-500 to-emerald-600'
+  },
+  {
+    title: 'Update Settings',
+    description: 'Modify your account preferences',
     icon: Settings,
     action: 'Configure',
     color: 'from-orange-500 to-red-600'
   }
 ];
 
-const getStatusIcon = (status: string) => {
-  switch (status) {
-    case 'completed':
-      return <CheckCircle className="h-4 w-4 text-green-500" />;
-    case 'pending':
-      return <Clock className="h-4 w-4 text-yellow-500" />;
-    case 'failed':
-      return <XCircle className="h-4 w-4 text-red-500" />;
-    default:
-      return <AlertCircle className="h-4 w-4 text-gray-500" />;
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
   }
 };
 
-const getPriorityColor = (priority: string) => {
-  switch (priority) {
-    case 'high':
-      return 'bg-red-100 text-red-800 border-red-200';
-    case 'medium':
-      return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-    case 'low':
-      return 'bg-green-100 text-green-800 border-green-200';
-    default:
-      return 'bg-gray-100 text-gray-800 border-gray-200';
-  }
-};
-
-const getTypeIcon = (type: string) => {
-  switch (type) {
-    case 'service':
-      return <Briefcase className="h-4 w-4" />;
-    case 'payment':
-      return <DollarSign className="h-4 w-4" />;
-    case 'support':
-      return <Shield className="h-4 w-4" />;
-    case 'update':
-      return <Zap className="h-4 w-4" />;
-    default:
-      return <Activity className="h-4 w-4" />;
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
   }
 };
 
 export default function Dashboard() {
-  const [user, setUser] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedFilter, setSelectedFilter] = useState('all');
+  const [notifications, setNotifications] = useState(3);
 
-  useEffect(() => {
-    // Simulate user authentication check
-    const checkAuth = () => {
-      const storedUser = localStorage.getItem('zion_user');
-      if (storedUser) {
-        try {
-          const userData = JSON.parse(storedUser);
-          setUser(userData);
-        } catch (error) {
-          console.error('Failed to parse stored user:', error);
-        }
-      }
-      setIsLoading(false);
-    };
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Implement search functionality
+    console.log('Searching for:', searchQuery);
+  };
 
-    checkAuth();
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-zion-slate-light">Loading dashboard...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (!user) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Shield className="w-12 h-12 text-zion-cyan" />
-          </div>
-          <h2 className="text-2xl font-bold text-white mb-4">Access Denied</h2>
-          <p className="text-zion-slate-light mb-6">Please log in to access the dashboard.</p>
-          <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300">
-            Go to Login
-          </button>
-        </div>
-      </div>
-    );
-  }
+  const clearNotification = () => {
+    setNotifications(prev => Math.max(0, prev - 1));
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
-      <div className="container-responsive">
-        {/* Header */}
-        <motion.div 
-          className="mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-            <div>
-              <h1 className="text-3xl font-bold text-white mb-2">
-                Welcome back, {user.name || 'User'}! 👋
-              </h1>
-              <p className="text-zion-slate-light">
-                Here's what's happening with your Zion Tech Group services today.
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <button className="relative p-3 bg-white/10 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:bg-white/20 transition-all duration-300">
-                <Bell className="h-5 w-5 text-zion-cyan" />
-                <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
-              </button>
-              <button className="p-3 bg-white/10 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:bg-white/20 transition-all duration-300">
-                <Settings className="h-5 w-5 text-zion-cyan" />
-              </button>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Stats Cards */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          {statCards.map((stat, index) => (
-            <motion.div
-              key={stat.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-              className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center`}>
-                  <stat.icon className="h-6 w-6 text-white" />
-                </div>
-                <div className={`flex items-center gap-1 text-sm font-medium ${
-                  stat.trend === 'up' ? 'text-green-500' : 'text-red-500'
-                }`}>
-                  {stat.trend === 'up' ? (
-                    <ArrowUpRight className="h-4 w-4" />
-                  ) : (
-                    <ArrowDownRight className="h-4 w-4" />
-                  )}
-                  {stat.change}%
-                </div>
-              </div>
-              <h3 className="text-zion-slate-light text-sm font-medium mb-1">{stat.title}</h3>
-              <p className="text-2xl font-bold text-white">{stat.value}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Column - Quick Actions & Recent Activity */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Quick Actions */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <h2 className="text-xl font-bold text-white mb-6">Quick Actions</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {quickActions.map((action, index) => (
-                  <motion.div
-                    key={action.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                    className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group"
-                  >
-                    <div className={`w-12 h-12 bg-gradient-to-br ${action.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      <action.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-white font-semibold text-lg mb-2">{action.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-4">{action.description}</p>
-                    <button className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300">
-                      {action.action}
-                    </button>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Recent Activity */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            >
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-bold text-white">Recent Activity</h2>
-                <button className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors">
-                  View All
-                </button>
-              </div>
-              <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden">
-                <div className="p-6">
-                  <div className="space-y-4">
-                    {recentActivities.map((activity, index) => (
-                      <motion.div
-                        key={activity.id}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                        className="flex items-start gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300"
-                      >
-                        <div className="w-10 h-10 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                          {getTypeIcon(activity.type)}
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-start justify-between mb-2">
-                            <h4 className="text-white font-medium text-sm">{activity.title}</h4>
-                            <div className="flex items-center gap-2">
-                              {getStatusIcon(activity.status)}
-                              <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getPriorityColor(activity.priority)}`}>
-                                {activity.priority}
-                              </span>
-                            </div>
-                          </div>
-                          <p className="text-zion-slate-light text-sm mb-2">{activity.description}</p>
-                          <div className="flex items-center gap-2 text-xs text-zion-slate-light">
-                            <Clock className="h-3 w-3" />
-                            {activity.timestamp}
-                          </div>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Right Column - Performance Chart */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="space-y-8"
+      {/* Header Section */}
+      <section className="py-8">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
           >
-            {/* Performance Overview */}
-            <div>
-              <h2 className="text-xl font-bold text-white mb-6">Performance Overview</h2>
-              <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <h3 className="text-white font-semibold text-lg">Service Performance</h3>
-                    <p className="text-zion-slate-light text-sm">Last 30 days</p>
+            <motion.div variants={itemVariants}>
+              <h1 className="text-4xl font-bold text-white mb-2">Dashboard</h1>
+              <p className="text-zion-slate-light">Welcome back! Here's what's happening with your business.</p>
+            </motion.div>
+
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4"
+              variants={itemVariants}
+            >
+              {/* Search Bar */}
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  placeholder="Search dashboard..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full sm:w-80 px-4 py-2 bg-white/10 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                />
+                <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+              </form>
+
+              {/* Notifications */}
+              <button className="relative p-2 bg-white/10 border border-zion-cyan/20 rounded-lg text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-all duration-300">
+                <Bell className="h-5 w-5" />
+                {notifications > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                    {notifications}
+                  </span>
+                )}
+              </button>
+
+              {/* Settings */}
+              <button className="p-2 bg-white/10 border border-zion-cyan/20 rounded-lg text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-all duration-300">
+                <Settings className="h-5 w-5" />
+              </button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Cards Section */}
+      <section className="py-8">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {statCards.map((stat, index) => (
+              <motion.div
+                key={stat.title}
+                className="p-6 rounded-2xl bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group hover:scale-105"
+                variants={itemVariants}
+                whileHover={{ y: -10 }}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <stat.icon className="h-6 w-6 text-white" />
                   </div>
-                  <button className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
-                    <MoreHorizontal className="h-4 w-4 text-zion-cyan" />
+                  <div className={`flex items-center space-x-1 text-sm ${
+                    stat.trend === 'up' ? 'text-green-400' : 'text-red-400'
+                  }`}>
+                    {stat.trend === 'up' ? (
+                      <ArrowUpRight className="h-4 w-4" />
+                    ) : (
+                      <ArrowDownRight className="h-4 w-4" />
+                    )}
+                    <span>{Math.abs(stat.change)}%</span>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">{stat.value}</h3>
+                <p className="text-zion-slate-light">{stat.title}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Main Content Grid */}
+      <section className="py-8">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Recent Activities */}
+            <motion.div 
+              className="lg:col-span-2"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <div className="p-6 rounded-2xl bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-2xl font-bold text-white">Recent Activities</h2>
+                  <button className="text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">
+                    View All
                   </button>
                 </div>
                 
-                {/* Mock Chart */}
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-slate-light text-sm">AI Services</span>
-                    <div className="flex items-center gap-2">
-                      <div className="w-24 h-2 bg-zion-slate rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full" style={{ width: '85%' }}></div>
+                  {recentActivities.map((activity, index) => (
+                    <motion.div
+                      key={activity.id}
+                      className="flex items-start space-x-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300"
+                      variants={itemVariants}
+                      whileHover={{ x: 10 }}
+                    >
+                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                        activity.status === 'completed' ? 'bg-green-500/20' :
+                        activity.status === 'pending' ? 'bg-yellow-500/20' :
+                        'bg-red-500/20'
+                      }`}>
+                        {activity.status === 'completed' ? (
+                          <CheckCircle className="h-5 w-5 text-green-400" />
+                        ) : activity.status === 'pending' ? (
+                          <Clock className="h-5 w-5 text-yellow-400" />
+                        ) : (
+                          <XCircle className="h-5 w-5 text-red-400" />
+                        )}
                       </div>
-                      <span className="text-white text-sm font-medium">85%</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-slate-light text-sm">Cloud Solutions</span>
-                    <div className="flex items-center gap-2">
-                      <div className="w-24 h-2 bg-zion-slate rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full" style={{ width: '92%' }}></div>
+                      
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-white font-semibold mb-1">{activity.title}</h4>
+                        <p className="text-zion-slate-light text-sm mb-2">{activity.description}</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-zion-slate-light">{activity.timestamp}</span>
+                          <span className={`px-2 py-1 text-xs rounded-full ${
+                            activity.priority === 'high' ? 'bg-red-500/20 text-red-400' :
+                            activity.priority === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                            'bg-green-500/20 text-green-400'
+                          }`}>
+                            {activity.priority}
+                          </span>
+                        </div>
                       </div>
-                      <span className="text-white text-sm font-medium">92%</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-slate-light text-sm">Cybersecurity</span>
-                    <div className="flex items-center gap-2">
-                      <div className="w-24 h-2 bg-zion-slate rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" style={{ width: '78%' }}></div>
-                      </div>
-                      <span className="text-white text-sm font-medium">78%</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-zion-slate-light text-sm">IoT Services</span>
-                    <div className="flex items-center gap-2">
-                      <div className="w-24 h-2 bg-zion-slate rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full" style={{ width: '88%' }}></div>
-                      </div>
-                      <span className="text-white text-sm font-medium">88%</span>
-                    </div>
-                  </div>
+                    </motion.div>
+                  ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Quick Stats */}
-            <div>
-              <h2 className="text-xl font-bold text-white mb-6">Quick Stats</h2>
-              <div className="space-y-4">
-                <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-zion-slate-light text-sm">Uptime</p>
-                      <p className="text-white font-semibold text-lg">99.9%</p>
-                    </div>
-                    <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center">
-                      <CheckCircle className="h-6 w-6 text-green-500" />
-                    </div>
-                  </div>
-                </div>
+            {/* Quick Actions */}
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              <div className="p-6 rounded-2xl bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20">
+                <h2 className="text-2xl font-bold text-white mb-6">Quick Actions</h2>
                 
-                <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-zion-slate-light text-sm">Response Time</p>
-                      <p className="text-white font-semibold text-lg">45ms</p>
-                    </div>
-                    <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                      <Zap className="h-6 w-6 text-blue-500" />
-                    </div>
-                  </div>
+                <div className="space-y-4">
+                  {quickActions.map((action, index) => (
+                    <motion.div
+                      key={action.title}
+                      className="p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 group cursor-pointer"
+                      variants={itemVariants}
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <div className={`w-12 h-12 bg-gradient-to-br ${action.color} rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                        <action.icon className="h-6 w-6 text-white" />
+                      </div>
+                      <h3 className="text-white font-semibold mb-2">{action.title}</h3>
+                      <p className="text-zion-slate-light text-sm mb-3">{action.description}</p>
+                      <button className="text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300 font-medium">
+                        {action.action} →
+                      </button>
+                    </motion.div>
+                  ))}
                 </div>
-                
-                <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-zion-slate-light text-sm">Customer Rating</p>
-                      <p className="text-white font-semibold text-lg">4.9/5.0</p>
-                    </div>
-                    <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center">
-                      <Star className="h-6 w-6 text-yellow-500" />
-                    </div>
-                  </div>
-                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Performance Chart Section */}
+      <section className="py-8">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="p-6 rounded-2xl bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-white">Performance Overview</h2>
+              <div className="flex items-center space-x-4">
+                <select 
+                  value={selectedFilter}
+                  onChange={(e) => setSelectedFilter(e.target.value)}
+                  className="px-3 py-2 bg-white/10 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                >
+                  <option value="all">All Time</option>
+                  <option value="week">This Week</option>
+                  <option value="month">This Month</option>
+                  <option value="year">This Year</option>
+                </select>
+                <button className="p-2 bg-white/10 border border-zion-cyan/20 rounded-lg text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-all duration-300">
+                  <Download className="h-4 w-4" />
+                </button>
+              </div>
+            </div>
+            
+            {/* Chart Placeholder */}
+            <div className="h-64 bg-white/5 rounded-xl border border-zion-cyan/20 flex items-center justify-center">
+              <div className="text-center">
+                <BarChart3 className="h-16 w-16 text-zion-cyan/50 mx-auto mb-4" />
+                <p className="text-zion-slate-light">Performance chart will be displayed here</p>
+                <p className="text-zion-slate-light text-sm">Select different time periods to view trends</p>
               </div>
             </div>
           </motion.div>
         </div>
-      </div>
+      </section>
+
+      {/* Bottom CTA Section */}
+      <section className="py-8">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center p-8 rounded-2xl bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">Need Help?</h2>
+            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+              Our support team is available 24/7 to help you with any questions or issues you may have.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="btn-primary group">
+                Contact Support
+                <MessageCircle className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+              </button>
+              <button className="btn-secondary group">
+                View Documentation
+                <FileText className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }

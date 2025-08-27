@@ -1,8 +1,8 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
+<<<<<<< HEAD
 import { 
   ChevronDown, 
   Zap, 
@@ -41,21 +41,26 @@ export function MainNavigation({ className }: MainNavigationProps) {
           )
         }
       >
+=======
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp } from "lucide-react";
+export function MainNavigation({ className }) {
+    const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+    return (<nav className={cn("hidden md:flex items-center space-x-6", className)}>
+      <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
+>>>>>>> cursor/website-audit-and-enhancement-1eed
         Home
       </NavLink>
       
       {/* Services Dropdown */}
       <div className="relative group">
-        <button
-          onMouseEnter={() => setIsServicesOpen(true)}
-          onMouseLeave={() => setIsServicesOpen(false)}
-          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-        >
-          <Zap className="w-4 h-4" />
+        <button onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+          <Zap className="w-4 h-4"/>
           <span>Services</span>
-          <ChevronDown className="w-3 h-3" />
+          <ChevronDown className="w-3 h-3"/>
         </button>
         
+<<<<<<< HEAD
         {isServicesOpen && (
           <div
             onMouseEnter={() => setIsServicesOpen(true)}
@@ -68,6 +73,15 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <Rocket className="w-4 h-4 mr-2" />
                     Core Services
+=======
+        {isServicesOpen && (<div onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
+            <div className="p-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                    <Zap className="w-4 h-4 mr-2"/>
+                    Micro SAAS
+>>>>>>> cursor/website-audit-and-enhancement-1eed
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/services/ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Solutions</Link></li>
@@ -80,8 +94,13 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 </div>
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+<<<<<<< HEAD
                     <Shield className="w-4 h-4 mr-2" />
                     Advanced Solutions
+=======
+                    <Shield className="w-4 h-4 mr-2"/>
+                    IT Services
+>>>>>>> cursor/website-audit-and-enhancement-1eed
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Neural Network</Link></li>
@@ -93,31 +112,31 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
+<<<<<<< HEAD
                 <Link 
                   to="/services" 
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
+=======
+                <Link to="/enhanced-services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+>>>>>>> cursor/website-audit-and-enhancement-1eed
                   View All Services
-                  <TrendingUp className="w-4 h-4 ml-2" />
+                  <TrendingUp className="w-4 h-4 ml-2"/>
                 </Link>
               </div>
             </div>
-          </div>
-        )}
+          </div>)}
       </div>
       
       {/* Solutions Dropdown */}
       <div className="relative group">
-        <button
-          onMouseEnter={() => setIsSolutionsOpen(true)}
-          onMouseLeave={() => setIsSolutionsOpen(false)}
-          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-        >
-          <Brain className="w-4 h-4" />
+        <button onMouseEnter={() => setIsSolutionsOpen(true)} onMouseLeave={() => setIsSolutionsOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+          <Brain className="w-4 h-4"/>
           <span>Solutions</span>
-          <ChevronDown className="w-3 h-3" />
+          <ChevronDown className="w-3 h-3"/>
         </button>
         
+<<<<<<< HEAD
         {isSolutionsOpen && (
           <div
             onMouseEnter={() => setIsSolutionsOpen(true)}
@@ -130,6 +149,15 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                     <Users className="w-4 h-4 mr-2" />
                     Talent Solutions
+=======
+        {isSolutionsOpen && (<div onMouseEnter={() => setIsSolutionsOpen(true)} onMouseLeave={() => setIsSolutionsOpen(false)} className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
+            <div className="p-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                    <Users className="w-4 h-4 mr-2"/>
+                    Talent
+>>>>>>> cursor/website-audit-and-enhancement-1eed
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Find Experts</Link></li>
@@ -140,8 +168,13 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 </div>
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+<<<<<<< HEAD
                     <Building2 className="w-4 h-4 mr-2" />
                     Enterprise
+=======
+                    <HardDrive className="w-4 h-4 mr-2"/>
+                    Resources
+>>>>>>> cursor/website-audit-and-enhancement-1eed
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Enterprise Solutions</Link></li>
@@ -152,17 +185,22 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
+<<<<<<< HEAD
                 <Link 
                   to="/solutions" 
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
                   View All Solutions
                   <TrendingUp className="w-4 h-4 ml-2" />
+=======
+                <Link to="/request-quote" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                  Get Custom Quote
+                  <TrendingUp className="w-4 h-4 ml-2"/>
+>>>>>>> cursor/website-audit-and-enhancement-1eed
                 </Link>
               </div>
             </div>
-          </div>
-        )}
+          </div>)}
       </div>
 
       {/* Company Dropdown */}
@@ -241,6 +279,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
         Pricing
       </Link>
       
+<<<<<<< HEAD
       {/* Get Started Button */}
       <NavLink
         to="/signup"
@@ -252,8 +291,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
           )
         }
       >
+=======
+      <NavLink to="/signup" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground", "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1")}>
+>>>>>>> cursor/website-audit-and-enhancement-1eed
         Get Started
       </NavLink>
-    </nav>
-  );
+    </nav>);
 }

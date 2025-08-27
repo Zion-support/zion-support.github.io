@@ -2,36 +2,42 @@ name: Test
 
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
   pull_request:
-    branches: [main]
+    branches: [main, develop]
 
 permissions:
   contents: read
 
 jobs:
-  main:
-    name: Main Job
+  test:
+    name: Test Suite
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
+          
       - name: Install dependencies
         run: npm ci
+        
       - name: Build project
         run: npm run build
+        
       - name: Verify build output
         run: |
           if [ ! -d dist ]; then
             echo "Build failed: dist folder not found"
             exit 1
           fi
+<<<<<<< HEAD
           echo "Build completed successfully"
       - name: Verify asset paths
         run: |
@@ -45,11 +51,40 @@ jobs:
       - name: Run type checking (warnings only)
         run: npm run type-check || echo "Type checking completed with warnings"
         continue-on-error: true
+=======
+          echo "Build successful - dist folder created"
+          
+      - name: Verify asset paths
+        run: |
+          if [ -f dist/index.html ]; then
+            echo "✓ index.html found"
+          else
+            echo "✗ index.html not found"
+            exit 1
+          fi
+          
+          if [ -f dist/assets ]; then
+            echo "✓ assets folder found"
+          else
+            echo "✗ assets folder not found"
+            exit 1
+          fi
+
+      - name: Run linting
+        run: npm run lint
+        continue-on-error: true
+        
+      - name: Run type checking
+        run: npm run type-check
+        continue-on-error: true
+
+>>>>>>> cursor/website-audit-and-enhancement-1eed
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: build
-          path: dist
+          name: build-artifacts
+          path: dist/
+          retention-days: 7
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
