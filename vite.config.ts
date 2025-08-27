@@ -32,7 +32,6 @@ export default defineConfig({
 					'ui-vendor': [
 						'@radix-ui/react-accordion',
 						'@radix-ui/react-alert-dialog',
-						'@radix-ui/react-aspect-ratio',
 						'@radix-ui/react-avatar',
 						'@radix-ui/react-checkbox',
 						'@radix-ui/react-context-menu',
@@ -53,14 +52,9 @@ export default defineConfig({
 						'@radix-ui/react-tooltip'
 					],
 					'animation-vendor': ['framer-motion'],
-					'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
 					'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
 					'icons-vendor': ['lucide-react'],
-					'charts-vendor': ['recharts'],
-					'date-vendor': ['date-fns', 'react-day-picker'],
-					'i18n-vendor': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
 					'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
-					'query-vendor': ['@tanstack/react-query'],
 					'router-vendor': ['react-router-dom']
 				},
 				chunkFileNames: 'js/[name]-[hash].js',
