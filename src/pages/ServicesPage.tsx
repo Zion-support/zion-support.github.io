@@ -138,11 +138,6 @@ export default function ServicesPage() {
   ];
 
   // Filter and sort services
-<<<<<<< HEAD
-  const filteredServices = ALL_INNOVATIVE_SERVICES.filter(service => {
-=======
-  const filteredServices = allServices.filter(service => {
->>>>>>> cursor/add-new-services-2025
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -256,11 +251,6 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-<<<<<<< HEAD
-                <div className="text-3xl font-bold text-zion-cyan mb-2">{ALL_INNOVATIVE_SERVICES.length}+</div>
-=======
-                <div className="text-3xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
->>>>>>> cursor/add-new-services-2025
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               <motion.div 
@@ -368,11 +358,6 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-zion-slate-light">
-<<<<<<< HEAD
-              Showing {sortedServices.length} of {ALL_INNOVATIVE_SERVICES.length} services
-=======
-              Showing {sortedServices.length} of {allServices.length} services
->>>>>>> cursor/add-new-services-2025
             </div>
           </motion.div>
         </div>
