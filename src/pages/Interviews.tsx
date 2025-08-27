@@ -60,6 +60,7 @@ function InterviewsContent() {
                     await fetchInterviews();
                 }}/>))}
           </div>
+<<<<<<< HEAD
         </div>
       ));
   };
@@ -70,6 +71,12 @@ function InterviewsContent() {
         title="Interviews | Zion AI Marketplace" 
         description="Manage your scheduled interviews with clients and talent" 
       />
+=======
+        </div>));
+    };
+    return (<>
+      <SEO title="Interviews | Zion AI Marketplace" description="Manage your scheduled interviews with clients and talent"/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">

@@ -151,7 +151,9 @@ export const FuturisticNavigation: React.FC = () => {
         { name: 'Zero Trust Security', href: '/innovative-services#cybersecurity', icon: Shield, description: 'Advanced cybersecurity platform' },
         { name: 'Digital Twin Technology', href: '/innovative-services#digital-twin', icon: Eye, description: 'Digital twin and simulation platform' },
         { name: 'Metaverse & VR', href: '/innovative-services#metaverse', icon: Globe2, description: 'Metaverse and virtual reality platform' },
-        { name: 'Green Tech Solutions', href: '/innovative-services#green-tech', icon: Leaf, description: 'Sustainability and green technology' }
+        { name: 'Green Tech Solutions', href: '/innovative-services#green-tech', icon: Leaf, description: 'Sustainability and green technology' },
+        { name: 'Emerging Tech Services', href: '/emerging-tech-services', icon: Rocket, description: 'Revolutionary emerging technology solutions' },
+        { name: 'Advanced Cybersecurity', href: '/advanced-cybersecurity', icon: Shield, description: 'Military-grade cybersecurity services' }
       ]
     },
     {
@@ -222,24 +224,12 @@ export const FuturisticNavigation: React.FC = () => {
         { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Frequently asked questions' },
         { name: 'Support', href: '/support', icon: HelpCircle, description: 'Technical support and help' }
       ]
-    },
-    {
-      name: 'Comprehensive',
-      href: '/services-overview',
-      icon: BarChart3,
-      color: 'from-zion-green to-zion-emerald',
-      dropdown: [
-        { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' },
-        { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' },
-        { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' },
-        { name: 'Innovative Services', href: '/innovative-services-2027', icon: Lightbulb, description: 'Cutting-edge innovative solutions' }
-      ]
     }
   ];
 
   return (
     <>
-      <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${
+      <header className={`sticky top-0 z-50 w-full transition-all duration-500 quantum-particles ${
         scrolled 
           ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
           : 'bg-transparent'
@@ -255,14 +245,14 @@ export const FuturisticNavigation: React.FC = () => {
             >
               <Link to="/" className="flex items-center space-x-3 group">
                 <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-zion-cyan/25">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-zion-cyan/25 holographic neon-glow">
                     <span className="text-2xl font-bold text-white">Z</span>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-xl opacity-25 group-hover:opacity-50 transition-opacity duration-300"></div>
                 </div>
                 <div className="hidden sm:block">
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+                  <h1 className="text-2xl font-bold text-gradient">
                     ZION TECH GROUP
                   </h1>
                   <p className="text-xs text-zion-slate-light font-medium">Innovation • Intelligence • Impact</p>

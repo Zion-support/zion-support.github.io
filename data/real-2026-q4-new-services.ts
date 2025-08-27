@@ -13,7 +13,5 @@ export const real2026Q4NewServices: Real2026Q4NewService[] = [
     tagline: 'Fourth quarter 2026 new service',
     price: '$1099',
     features: ['Q4 2026 new features', 'Brand new innovations', 'Cutting-edge solutions']
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

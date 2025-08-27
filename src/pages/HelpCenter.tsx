@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
   Search, 
   BookOpen, 
@@ -13,15 +12,12 @@ import {
   CheckCircle,
   ArrowRight,
   ChevronDown,
-  ChevronRight,
-  HelpCircle
+  ChevronRight
 } from 'lucide-react';
 
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-  const [expandedFAQ, setExpandedFAQ] = useState<string | null>(null);
-  const [showContactForm, setShowContactForm] = useState(false);
 
   const helpCategories = [
     {
@@ -114,45 +110,8 @@ export default function HelpCenter() {
     }
   ];
 
-  const faqs = [
-    {
-      id: '1',
-      question: 'How do I get started with Zion Tech Group services?',
-      answer: 'Getting started is easy! Simply create an account, browse our service catalog, and select the solutions that best fit your needs. Our team will guide you through the onboarding process.',
-      tags: ['Getting Started', 'Account Setup', 'Services']
-    },
-    {
-      id: '2',
-      question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients. All payments are processed securely through our platform.',
-      tags: ['Billing', 'Payments', 'Security']
-    },
-    {
-      id: '3',
-      question: 'How quickly can you deploy a new service?',
-      answer: 'Deployment times vary by service complexity. Simple services can be deployed within 24-48 hours, while complex enterprise solutions typically take 1-2 weeks. We\'ll provide a detailed timeline during consultation.',
-      tags: ['Deployment', 'Timeline', 'Services']
-    },
-    {
-      id: '4',
-      question: 'Do you provide ongoing support after deployment?',
-      answer: 'Yes! All our services include ongoing support and maintenance. We offer 24/7 monitoring, regular updates, and dedicated support teams to ensure your solutions continue performing optimally.',
-      tags: ['Support', 'Maintenance', 'Monitoring']
-    },
-    {
-      id: '5',
-      question: 'Can I customize services to fit my specific needs?',
-      answer: 'Absolutely! We specialize in customizing our services to meet your unique requirements. Our team will work closely with you to understand your needs and tailor solutions accordingly.',
-      tags: ['Customization', 'Tailored Solutions', 'Consultation']
-    }
-  ];
-
   const toggleCategory = (categoryId: string) => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
-  };
-
-  const toggleFAQ = (faqId: string) => {
-    setExpandedFAQ(expandedFAQ === faqId ? null : faqId);
   };
 
   const filteredCategories = helpCategories.filter(category =>
@@ -161,35 +120,6 @@ export default function HelpCenter() {
       article.title.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
-
-  const filteredFAQs = faqs.filter(faq =>
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
@@ -262,54 +192,40 @@ export default function HelpCenter() {
               >
                 <button
                   onClick={() => toggleCategory(category.id)}
-                  className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-all duration-300"
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-zion-slate-dark/70 transition-colors duration-300"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="text-zion-cyan">
-                      {category.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{category.title}</h3>
-                      <p className="text-zion-slate-light text-sm">
-                        {category.articles.length} articles available
-                      </p>
-                    </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="text-zion-cyan">{category.icon}</div>
+                    <h3 className="text-xl font-semibold text-white">{category.title}</h3>
                   </div>
-                  <ChevronDown 
-                    className={`h-5 w-5 text-zion-cyan transition-transform duration-300 ${
-                      expandedCategory === category.id ? 'rotate-180' : ''
-                    }`} 
-                  />
+                  {expandedCategory === category.id ? (
+                    <ChevronDown className="w-5 h-5 text-zion-cyan" />
+                  ) : (
+                    <ChevronRight className="w-5 h-5 text-zion-cyan" />
+                  )}
                 </button>
                 
-                <AnimatePresence>
-                  {expandedCategory === category.id && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-6 pb-6 border-t border-zion-cyan/20">
-                        <div className="pt-4 space-y-3">
-                          {category.articles.map((article, articleIndex) => (
-                            <Link
-                              key={articleIndex}
-                              to={article.url}
-                              className="flex items-center justify-between p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group"
-                            >
-                              <span className="text-zion-slate-light group-hover:text-white transition-colors">
-                                {article.title}
-                              </span>
-                              <ArrowRight className="h-4 w-4 text-zion-cyan opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                {expandedCategory === category.id && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="px-6 pb-6 border-t border-zion-cyan/20"
+                  >
+                    <div className="pt-4 space-y-3">
+                      {category.articles.map((article, articleIndex) => (
+                        <a
+                          key={articleIndex}
+                          href={article.url}
+                          className="block text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-zion-cyan/10"
+                        >
+                          {article.title}
+                        </a>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
               </motion.div>
             ))}
           </div>
@@ -317,7 +233,7 @@ export default function HelpCenter() {
       </section>
 
       {/* Popular Articles */}
-      <section className="py-20 bg-zion-slate-dark/20">
+      <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -326,10 +242,10 @@ export default function HelpCenter() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Popular Articles
+              Popular Help Articles
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Start with these frequently accessed help resources to get up and running quickly.
+              Get started with these frequently accessed help articles and guides.
             </p>
           </motion.div>
 
@@ -337,34 +253,28 @@ export default function HelpCenter() {
             {popularArticles.map((article, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 group cursor-pointer"
-                whileHover={{ y: -2, scale: 1.02 }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer group"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
-                    <FileText className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
-                    {article}
-                  </h3>
+                <div className="flex items-center justify-between mb-4">
+                  <FileText className="w-6 h-6 text-zion-cyan" />
+                  <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
-                <p className="text-zion-slate-light text-sm mb-4">
-                  Learn more about this topic and find detailed guidance to help you succeed.
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
+                  {article}
+                </h3>
+                <p className="text-zion-slate-light text-sm">
+                  Learn more about this topic and find detailed solutions.
                 </p>
-                <div className="flex items-center text-zion-cyan text-sm font-medium group-hover:text-zion-cyan-light transition-colors">
-                  Read More
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Methods */}
+      {/* Contact Support */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -374,10 +284,10 @@ export default function HelpCenter() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Get in Touch
+              Still Need Help?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Can't find what you're looking for? Our support team is here to help.
+              Our support team is here to help you with any questions or issues you may have.
             </p>
           </motion.div>
 
@@ -388,22 +298,18 @@ export default function HelpCenter() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center p-8 bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300"
-                whileHover={{ y: -5, scale: 1.02 }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                  <div className="text-white">
-                    {method.icon}
-                  </div>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full mb-6">
+                  <div className="text-white">{method.icon}</div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{method.title}</h3>
                 <p className="text-zion-slate-light mb-4">{method.description}</p>
                 <a
                   href={method.link}
-                  className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
                 >
                   {method.action}
-                  <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </motion.div>
             ))}
@@ -411,127 +317,37 @@ export default function HelpCenter() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-zion-slate-dark/20">
+      {/* CTA Section */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Frequently Asked Questions
+              Can't Find What You're Looking For?
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Quick answers to common questions about our services and platform.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Let us know what you need help with, and we'll create the resources to assist you.
             </p>
-          </motion.div>
-
-          <motion.div 
-            className="max-w-4xl mx-auto space-y-4"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {filteredFAQs.map((faq, index) => (
-              <motion.div
-                key={faq.id}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden"
-                variants={itemVariants}
-                whileHover={{ scale: 1.01 }}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center"
               >
-                <button
-                  onClick={() => toggleFAQ(faq.id)}
-                  className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-all duration-300"
-                >
-                  <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                  <ChevronDown 
-                    className={`h-5 w-5 text-zion-cyan transition-transform duration-300 ${
-                      expandedFAQ === faq.id ? 'rotate-180' : ''
-                    }`} 
-                  />
-                </button>
-                
-                <AnimatePresence>
-                  {expandedFAQ === faq.id && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-6 pb-6">
-                        <p className="text-zion-slate-light leading-relaxed mb-4">{faq.answer}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {faq.tags.map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-sm rounded-full"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* No Results Message */}
-          {filteredFAQs.length === 0 && (
-            <motion.div 
-              className="text-center py-12"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            >
-              <HelpCircle className="h-16 w-16 text-zion-cyan/50 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
-              <p className="text-zion-slate-light mb-6">
-                Try adjusting your search terms or browse our help categories above.
-              </p>
-              <button
-                onClick={() => setShowContactForm(true)}
-                className="btn-primary group"
+                Request Help Article
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
                 Contact Support
-                <MessageCircle className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-              </button>
-            </motion.div>
-          )}
-        </div>
-      </section>
-
-      {/* Contact Support CTA */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center max-w-4xl mx-auto"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-              Still Need Help?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Our support team is here to help you succeed. Don't hesitate to reach out for personalized assistance.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="btn-primary group">
-                Contact Support
-                <MessageCircle className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-              </button>
-              <button className="btn-secondary group">
-                Schedule a Call
-                <Phone className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         </div>

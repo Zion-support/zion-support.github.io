@@ -1,6 +1,5 @@
-
+import React from 'react';
 import { cn } from "@/lib/utils";
-import React from "react";
 
 interface GradientHeadingProps {
   children: React.ReactNode;
@@ -9,12 +8,17 @@ interface GradientHeadingProps {
   id?: string;
 }
 
-export function GradientHeading({ children, className, level = "h2", id }: GradientHeadingProps) {
-  const Tag = level;
+export function GradientHeading({ 
+  children, 
+  className, 
+  level = "h2", 
+  id 
+}: GradientHeadingProps) {
+  const Tag = level as keyof JSX.IntrinsicElements;
   
   return (
     <Tag 
-      id={id}
+      id={id} 
       className={cn(
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
         className

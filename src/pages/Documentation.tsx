@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 const Documentation = () => {
     return (<>
@@ -26,3 +27,17 @@ const Documentation = () => {
     </>);
 };
 export default Documentation;
+<<<<<<< HEAD
+=======
+=======
+
+export default function Documentation() {
+  return (
+    <div className="container mx-auto px-4 py-12 text-white">
+      <h1 className="text-3xl font-bold mb-4">Documentation</h1>
+      <p className="text-gray-300">Developer and user documentation will be organized here.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/website-audit-and-enhancement-5885
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

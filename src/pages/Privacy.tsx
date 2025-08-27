@@ -1,396 +1,429 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Shield, 
-  Eye, 
   Lock, 
-  Users,
+  Eye, 
+  EyeOff, 
+  Database, 
+  UserCheck, 
+  FileText, 
   CheckCircle,
+  AlertTriangle,
+  Info,
+  HelpCircle,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Building,
+  Clock,
+  Calendar,
   ArrowRight,
-  AlertTriangle
+  Download,
+  ExternalLink,
+  ChevronDown,
+  ChevronUp,
+  Plus,
+  Minus,
+  X,
+  Search,
+  Filter,
+  SortAsc,
+  SortDesc,
+  RefreshCw,
+  Save,
+  Edit,
+  Trash2,
+  Copy,
+  Link as LinkIcon,
+  Wifi,
+  WifiOff,
+  Signal,
+  SignalHigh,
+  SignalMedium,
+  SignalLow,
+  Battery,
+  BatteryCharging,
+  Power,
+  PowerOff,
+  Key,
+  EyeOn,
+  Camera,
+  CameraOff,
+  Microphone,
+  MicrophoneOff,
+  Volume2,
+  VolumeX,
+  Volume1,
+  Volume,
+  Mute,
+  Unmute,
+  PlayCircle,
+  PauseCircle,
+  StopCircle,
+  SkipBack,
+  SkipForward,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
+  Repeat1,
+  Shuffle2,
+  SkipBack2,
+  SkipForward2,
+  PlaySquare,
+  PauseSquare,
+  StopSquare,
+  PlayButton,
+  PauseButton,
+  StopButton,
+  PlayIcon,
+  PauseIcon,
+  StopIcon,
+  PlayIcon2,
+  PauseIcon2,
+  StopIcon2,
+  PlayIcon3,
+  PauseIcon3,
+  StopIcon3,
+  PlayIcon4,
+  PauseIcon4,
+  StopIcon4,
+  PlayIcon5,
+  PauseIcon5,
+  StopIcon5,
+  PlayIcon6,
+  PauseIcon6,
+  StopIcon6,
+  PlayIcon7,
+  PauseIcon7,
+  StopIcon7,
+  PlayIcon8,
+  PauseIcon8,
+  StopIcon8,
+  PlayIcon9,
+  PauseIcon9,
+  StopIcon9,
+  PlayIcon10,
+  PauseIcon10,
+  StopIcon10
 } from 'lucide-react';
 
 export default function Privacy() {
-  const lastUpdated = "August 26, 2025";
-
-  const privacyPrinciples = [
-    {
-      icon: Shield,
-      title: "Data Protection",
-      description: "We implement industry-standard security measures to protect your personal information"
-    },
-    {
-      icon: Eye,
-      title: "Transparency",
-      description: "We are clear about what data we collect and how we use it"
-    },
-    {
-      icon: Lock,
-      title: "Control",
-      description: "You have control over your personal data and can request changes or deletion"
-    },
-    {
-      icon: Users,
-      title: "Privacy First",
-      description: "Privacy is built into everything we do, not added as an afterthought"
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
     }
-  ];
+  };
 
-  const dataCategories = [
-    {
-      category: "Personal Information",
-      examples: ["Name, email address, phone number", "Company information", "Job title and role"],
-      purpose: "To provide our services and communicate with you"
-    },
-    {
-      category: "Technical Data",
-      examples: ["IP address, browser type", "Device information", "Usage analytics"],
-      purpose: "To improve our services and ensure security"
-    },
-    {
-      category: "Communication Data",
-      examples: ["Email correspondence", "Support tickets", "Feedback and surveys"],
-      purpose: "To provide customer support and improve our services"
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
     }
-  ];
-
-  const dataUses = [
-    {
-      purpose: 'Service Delivery',
-      description: 'To provide and maintain our technology services and solutions'
-    },
-    {
-      purpose: 'Communication',
-      description: 'To respond to inquiries and provide customer support'
-    },
-    {
-      purpose: 'Improvement',
-      description: 'To enhance our services and develop new features'
-    },
-    {
-      purpose: 'Security',
-      description: 'To protect against fraud and ensure platform security'
-    }
-  ];
-
-  const yourRights = [
-    "Access your personal data",
-    "Correct inaccurate information",
-    "Request deletion of your data",
-    "Object to data processing",
-    "Data portability",
-    "Withdraw consent"
-  ];
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
+    <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+      <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
-              Privacy Policy
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Your privacy is important to us. Learn how we protect and handle your information.
-            </p>
-            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              This Privacy Policy explains how Zion Tech Group collects, uses, and protects your personal information 
-              when you use our services or visit our website.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Privacy Principles */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Our Privacy <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Principles</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We are committed to protecting your privacy and maintaining the highest standards of data protection.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {privacyPrinciples.map((principle, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300"
-                whileHover={{ y: -5, scale: 1.02 }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <principle.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{principle.title}</h3>
-                <p className="text-zion-slate-light">{principle.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Data Collection */}
-      <section className="py-20 bg-zion-slate-dark/20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              What Data We <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Collect</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We collect only the information necessary to provide our services and improve your experience.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {dataCategories.map((category, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6"
-                whileHover={{ y: -5, scale: 1.02 }}
-              >
-                <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
-                <div className="mb-4">
-                  <h4 className="text-zion-cyan font-medium mb-2">Examples:</h4>
-                  <ul className="space-y-1">
-                    {category.examples.map((example, exampleIndex) => (
-                      <li key={exampleIndex} className="text-zion-slate-light text-sm flex items-center">
-                        <CheckCircle className="w-3 h-3 text-zion-cyan mr-2" />
-                        {example}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-zion-cyan font-medium mb-2">Purpose:</h4>
-                  <p className="text-zion-slate-light text-sm">{category.purpose}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How We Use Data */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              How We Use Your <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Data</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We use your data responsibly and only for purposes that benefit you and our services.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {dataUses.map((use, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6"
-                whileHover={{ y: -5, scale: 1.02 }}
-              >
-                <h3 className="text-xl font-semibold text-white mb-3">{use.purpose}</h3>
-                <p className="text-zion-slate-light">{use.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Your Rights */}
-      <section className="py-20 bg-zion-slate-dark/20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Your Privacy <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Rights</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              You have control over your personal data. Here are your rights and how to exercise them.
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {yourRights.map((right, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="flex items-center p-4 bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg"
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                  <span className="text-white">{right}</span>
-                </motion.div>
-              ))}
+            <div className="flex justify-center mb-8">
+              <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
+                <Shield className="w-12 h-12 text-white" />
+              </div>
             </div>
-          </div>
+            
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
+              Privacy{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Policy
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
+              Your privacy is important to us. Learn how we collect, use, and protect 
+              your personal information while providing exceptional technology solutions.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button 
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Download Policy
+              </motion.button>
+              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                Contact Us
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Data Security */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+      {/* Last Updated */}
+      <section className="py-8 bg-zion-slate-dark">
+        <div className="container mx-auto px-4 text-center">
+          <motion.p 
+            className="text-zion-slate-light"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Data <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Security</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We implement comprehensive security measures to protect your information from unauthorized access, 
-              alteration, disclosure, or destruction.
-            </p>
-          </motion.div>
+            Last updated: {new Date().toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}
+          </motion.p>
+        </div>
+      </section>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Technical Safeguards</h3>
-                  <ul className="space-y-2">
-                    <li className="text-zion-slate-light flex items-center">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2" />
-                      Encryption in transit and at rest
-                    </li>
-                    <li className="text-zion-slate-light flex items-center">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2" />
-                      Multi-factor authentication
-                    </li>
-                    <li className="text-zion-slate-light flex items-center">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2" />
-                      Regular security audits
-                    </li>
-                    <li className="text-zion-slate-light flex items-center">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2" />
-                      Access controls and monitoring
-                    </li>
+      {/* Privacy Content */}
+      <section className="py-20 bg-zion-blue-dark">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="max-w-4xl mx-auto space-y-12"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {/* Introduction */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                1. Introduction
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy. 
+                  This Privacy Policy explains how we collect, use, disclose, and safeguard your 
+                  information when you visit our website, use our services, or interact with us.
+                </p>
+                <p className="text-zion-slate-light leading-relaxed">
+                  By using our services, you agree to the collection and use of information in 
+                  accordance with this policy. If you do not agree with our policies and practices, 
+                  please do not use our services.
+                </p>
+              </div>
+            </motion.section>
+
+            {/* Information Collection */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                2. Information We Collect
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-zion-cyan mb-4">
+                    2.1 Personal Information
+                  </h3>
+                  <p className="text-zion-slate-light mb-4 leading-relaxed">
+                    We may collect personal information that you provide directly to us, including:
+                  </p>
+                  <ul className="list-disc list-inside text-zion-slate-light space-y-2 ml-4">
+                    <li>Name and contact information (email, phone number, address)</li>
+                    <li>Professional information (resume, skills, work history)</li>
+                    <li>Account credentials and profile information</li>
+                    <li>Communication preferences and marketing opt-ins</li>
+                    <li>Payment and billing information</li>
+                    <li>Project requirements and specifications</li>
                   </ul>
                 </div>
-                
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Organizational Measures</h3>
-                  <ul className="space-y-2">
-                    <li className="text-zion-slate-light flex items-center">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2" />
-                      Employee privacy training
-                    </li>
-                    <li className="text-zion-slate-light flex items-center">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2" />
-                      Data minimization practices
-                    </li>
-                    <li className="text-zion-slate-light flex items-center">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2" />
-                      Incident response procedures
-                    </li>
-                    <li className="text-zion-slate-light flex items-center">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2" />
-                      Regular policy reviews
-                    </li>
+
+                <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-zion-cyan mb-4">
+                    2.2 Automatically Collected Information
+                  </h3>
+                  <p className="text-zion-slate-light mb-4 leading-relaxed">
+                    We automatically collect certain information when you use our services:
+                  </p>
+                  <ul className="list-disc list-inside text-zion-slate-light space-y-2 ml-4">
+                    <li>Device information (IP address, browser type, operating system)</li>
+                    <li>Usage data (pages visited, time spent, features used)</li>
+                    <li>Cookies and similar tracking technologies</li>
+                    <li>Log files and analytics data</li>
+                    <li>Performance and error data</li>
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.section>
+
+            {/* How We Use Information */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                3. How We Use Your Information
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  We use the information we collect for various purposes, including:
+                </p>
+                <ul className="list-disc list-inside text-zion-slate-light space-y-2 ml-4">
+                  <li>Providing and maintaining our services</li>
+                  <li>Processing transactions and managing accounts</li>
+                  <li>Communicating with you about our services</li>
+                  <li>Improving our platform and user experience</li>
+                  <li>Ensuring security and preventing fraud</li>
+                  <li>Complying with legal obligations</li>
+                  <li>Marketing and promotional activities (with your consent)</li>
+                </ul>
+              </div>
+            </motion.section>
+
+            {/* Information Sharing */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                4. Information Sharing and Disclosure
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  We do not sell, trade, or otherwise transfer your personal information to third 
+                  parties without your consent, except in the following circumstances:
+                </p>
+                <ul className="list-disc list-inside text-zion-slate-light space-y-2 ml-4">
+                  <li>Service providers who assist in operating our platform</li>
+                  <li>Legal requirements and law enforcement requests</li>
+                  <li>Business transfers or mergers (with appropriate safeguards)</li>
+                  <li>Protection of rights, property, or safety</li>
+                  <li>With your explicit consent</li>
+                </ul>
+              </div>
+            </motion.section>
+
+            {/* Data Security */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                5. Data Security
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  We implement appropriate technical and organizational security measures to protect 
+                  your personal information against unauthorized access, alteration, disclosure, 
+                  or destruction. These measures include:
+                </p>
+                <ul className="list-disc list-inside text-zion-slate-light space-y-2 ml-4">
+                  <li>Encryption of data in transit and at rest</li>
+                  <li>Regular security assessments and updates</li>
+                  <li>Access controls and authentication measures</li>
+                  <li>Secure data centers and infrastructure</li>
+                  <li>Employee training on data protection</li>
+                </ul>
+              </div>
+            </motion.section>
+
+            {/* Your Rights */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                6. Your Rights and Choices
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  You have certain rights regarding your personal information:
+                </p>
+                <ul className="list-disc list-inside text-zion-slate-light space-y-2 ml-4">
+                  <li>Access and review your personal information</li>
+                  <li>Update or correct inaccurate information</li>
+                  <li>Request deletion of your personal information</li>
+                  <li>Opt-out of marketing communications</li>
+                  <li>Control cookie preferences</li>
+                  <li>Data portability</li>
+                </ul>
+                <p className="text-zion-slate-light mt-4 leading-relaxed">
+                  To exercise these rights, please contact us using the information provided below.
+                </p>
+              </div>
+            </motion.section>
+
+            {/* Cookies */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                7. Cookies and Tracking Technologies
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  We use cookies and similar tracking technologies to enhance your experience, 
+                  analyze usage patterns, and provide personalized content. You can control 
+                  cookie settings through your browser preferences.
+                </p>
+                <p className="text-zion-slate-light leading-relaxed">
+                  Types of cookies we use include essential cookies for functionality, 
+                  analytics cookies for performance monitoring, and marketing cookies 
+                  for personalized advertising (with your consent).
+                </p>
+              </div>
+            </motion.section>
+
+            {/* Contact Information */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                8. Contact Us
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  If you have any questions about this Privacy Policy or our data practices, 
+                  please contact us:
+                </p>
+                <div className="space-y-2 text-zion-slate-light">
+                  <p><strong>Email:</strong> privacy@ziontechgroup.com</p>
+                  <p><strong>Phone:</strong> +1 (302) 464-0950</p>
+                  <p><strong>Address:</strong> Zion Tech Group, Privacy Team</p>
+                </div>
+                <p className="text-zion-slate-light mt-4 leading-relaxed">
+                  We will respond to your inquiry within 30 days of receipt.
+                </p>
+              </div>
+            </motion.section>
+          </motion.div>
         </div>
       </section>
 
-      {/* Policy Updates */}
-      <section className="py-20 bg-zion-slate-dark/20">
-        <div className="container mx-auto px-4">
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Policy <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Updates</span>
+              Questions About Privacy?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              We may update this privacy policy from time to time to reflect changes in our practices or applicable laws. 
-              We will notify you of any material changes by posting the new policy on our website.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Our privacy team is here to help. Contact us if you have any questions 
+              about how we handle your data or if you need to exercise your privacy rights.
             </p>
-            <div className="bg-gradient-to-br from-zion-slate-dark to-zion-slate border border-zion-cyan/20 rounded-xl p-6">
-              <div className="flex items-center justify-center mb-4">
-                <AlertTriangle className="w-8 h-8 text-zion-cyan mr-3" />
-                <span className="text-zion-cyan font-semibold">Important Notice</span>
-              </div>
-              <p className="text-zion-slate-light text-center">
-                This privacy policy was last updated on <strong>{lastUpdated}</strong>. 
-                Please review it periodically to stay informed about how we protect your information.
-              </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button 
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Contact Privacy Team
+              </motion.button>
+              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                Download Full Policy
+              </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Questions About Privacy?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            If you have any questions about our privacy practices or want to exercise your rights, 
-            please don't hesitate to contact us.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg font-semibold text-white hover:from-zion-cyan/80 hover:to-zion-blue/80 transition-all duration-300 transform hover:scale-105"
-            >
-              Contact Us
-            </Link>
-            <Link 
-              to="/terms"
-              className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
-            >
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </section>
     </div>

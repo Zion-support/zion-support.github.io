@@ -1,120 +1,6 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  ArrowLeft, 
-  Calendar, 
-  Clock, 
-  Share2, 
-  Facebook, 
-  Twitter, 
-  Linkedin,
-  User,
-  Tag
-} from 'lucide-react';
-
-// Mock blog post data
-const MOCK_BLOG_POST = {
-  id: 1,
-  title: "The Future of AI in Enterprise: 2025 and Beyond",
-  excerpt: "Discover how artificial intelligence is transforming business operations and what to expect in the coming years.",
-  content: `
-    <p>Artificial Intelligence has evolved from a futuristic concept to a practical business tool that's reshaping industries across the globe. As we move into 2025, the enterprise AI landscape is experiencing unprecedented growth and transformation.</p>
-    
-    <h2>The Current State of Enterprise AI</h2>
-    <p>Today, more than 80% of enterprises are actively implementing AI solutions, with the market expected to reach $500 billion by 2025. The adoption has accelerated due to several key factors:</p>
-    <ul>
-      <li>Improved AI model performance and accuracy</li>
-      <li>Reduced implementation costs and complexity</li>
-      <li>Increased availability of AI talent and expertise</li>
-      <li>Growing pressure to remain competitive in digital markets</li>
-    </ul>
-    
-    <h2>Key Trends Shaping Enterprise AI</h2>
-    <p>Several emerging trends are defining the future of enterprise AI:</p>
-    
-    <h3>1. Autonomous Business Operations</h3>
-    <p>AI systems are becoming increasingly autonomous, capable of making complex business decisions without human intervention. This includes automated customer service, intelligent process optimization, and predictive maintenance systems.</p>
-    
-    <h3>2. AI-Powered Decision Intelligence</h3>
-    <p>Organizations are leveraging AI to enhance decision-making processes by analyzing vast amounts of data in real-time and providing actionable insights to business leaders.</p>
-    
-    <h3>3. Ethical AI and Responsible Innovation</h3>
-    <p>As AI becomes more pervasive, companies are prioritizing ethical considerations, transparency, and responsible AI development to build trust with customers and stakeholders.</p>
-    
-    <h2>Implementation Strategies for 2025</h2>
-    <p>To successfully implement AI in enterprise environments, organizations should consider the following strategies:</p>
-    
-    <h3>Start with Clear Use Cases</h3>
-    <p>Begin with well-defined, high-impact use cases that can demonstrate clear ROI. Common starting points include customer service automation, predictive analytics, and process optimization.</p>
-    
-    <h3>Invest in Data Infrastructure</h3>
-    <p>AI systems require high-quality, well-organized data. Organizations must invest in robust data infrastructure, including data lakes, data governance, and data quality management.</p>
-    
-    <h3>Focus on Change Management</h3>
-    <p>Successful AI implementation requires significant organizational change. Companies must invest in training, communication, and change management to ensure smooth adoption.</p>
-    
-    <h2>The Road Ahead</h2>
-    <p>As we look toward 2025 and beyond, enterprise AI will continue to evolve rapidly. Organizations that embrace these technologies and invest in the right strategies will be well-positioned to thrive in the AI-powered future.</p>
-    
-    <p>The key to success lies not just in implementing AI technology, but in creating a culture of innovation and continuous learning that can adapt to the ever-changing AI landscape.</p>
-  `,
-  author: {
-    name: "Dr. Sarah Chen",
-    avatar: "/images/avatar-1.jpg",
-    bio: "AI Research Director at Zion Tech Group with 15+ years of experience in machine learning and enterprise AI solutions."
-  },
-  publishedDate: "2025-01-15",
-  readTime: "8 min read",
-  category: "AI & Technology",
-  tags: ["AI", "Enterprise", "Innovation", "Future Tech", "Digital Transformation"],
-  featuredImage: "/images/blog-ai-enterprise.jpg",
-  slug: "future-ai-enterprise-2025"
-};
-
-const RELATED_POSTS = [
-  {
-    id: 2,
-    title: "Cybersecurity Trends: Protecting Your Digital Assets",
-    excerpt: "Learn about the latest cybersecurity threats and how to safeguard your organization's digital infrastructure.",
-    featuredImage: "/images/blog-cybersecurity.jpg",
-    slug: "cybersecurity-trends-2025",
-    category: "Cybersecurity"
-  },
-  {
-    id: 3,
-    title: "Green IT: Sustainable Technology Solutions",
-    excerpt: "Explore how organizations are implementing eco-friendly technology solutions to reduce their carbon footprint.",
-    featuredImage: "/images/blog-green-it.jpg",
-    slug: "green-it-sustainable-solutions",
-    category: "Sustainability"
-  },
-  {
-    id: 4,
-    title: "Quantum Computing: Breaking New Grounds",
-    excerpt: "Understanding the revolutionary potential of quantum computing and its applications in various industries.",
-    featuredImage: "/images/blog-quantum.jpg",
-    slug: "quantum-computing-breakthroughs",
-    category: "Quantum Technology"
-  }
-];
-
-export default function BlogPost() {
-  const { slug } = useParams();
-  const navigate = useNavigate();
-  const [showShareMenu, setShowShareMenu] = useState(false);
-
-  // In a real app, you would fetch the post data based on the slug
-  const post = MOCK_BLOG_POST;
-  const relatedPosts = RELATED_POSTS;
-
-  // Helper function to get share URL
-  const getShareUrl = (platform) => {
-    const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent(post.title);
-=======
 import { motion } from 'framer-motion';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { 
@@ -301,7 +187,6 @@ const BlogPost: React.FC = () => {
   const handleShare = (platform: string) => {
     const url = window.location.href;
     const title = blogPost.title;
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7
     
     switch (platform) {
       case 'facebook':
@@ -331,14 +216,6 @@ const BlogPost: React.FC = () => {
     }
   };
 
-<<<<<<< HEAD
-  if (!post) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-zion-cyan text-lg">Loading article...</p>
-=======
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'ai': return Brain;
@@ -363,247 +240,12 @@ const BlogPost: React.FC = () => {
           <Link to="/blog" className="text-zion-cyan hover:text-zion-blue transition-colors">
             Return to blog
           </Link>
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7
         </div>
       </div>
     );
   }
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
-      <div className="container mx-auto px-4 py-16">
-        {/* Back to blog button */}
-        <motion.div 
-          className="mb-8"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <Link 
-            to="/blog"
-            className="inline-flex items-center text-zion-cyan hover:text-white transition-colors font-medium"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to all articles
-          </Link>
-        </motion.div>
-
-        {/* Article Header */}
-        <motion.div 
-          className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="max-w-4xl mx-auto">
-            {/* Category and Date */}
-            <div className="flex items-center gap-4 text-sm text-zion-slate-light mb-4">
-              <span className="text-zion-cyan bg-zion-cyan/10 px-3 py-1 rounded-full">
-                {post.category}
-              </span>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                {post.publishedDate}
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                {post.readTime}
-              </div>
-            </div>
-
-            {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              {post.title}
-            </h1>
-
-            {/* Excerpt */}
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              {post.excerpt}
-            </p>
-
-            {/* Author Info */}
-            <div className="flex items-center gap-4 mb-8">
-              <img
-                src={post.author.avatar}
-                alt={post.author.name}
-                className="w-12 h-12 rounded-full"
-                onError={(e) => {
-                  const target = e.currentTarget;
-                  target.src = "https://via.placeholder.com/48x48/374151/9ca3af?text=U";
-                }}
-              />
-              <div>
-                <p className="text-white font-medium">{post.author.name}</p>
-                <p className="text-zion-slate-light text-sm">{post.author.bio}</p>
-              </div>
-            </div>
-
-            {/* Featured Image */}
-            <div className="aspect-video overflow-hidden rounded-lg mb-8">
-              <img
-                src={post.featuredImage}
-                alt={post.title}
-                className="object-cover w-full h-full"
-                onError={(e) => {
-                  const target = e.currentTarget;
-                  target.src = "https://via.placeholder.com/800x450/1f2937/6b7280?text=Blog+Image";
-                }}
-              />
-            </div>
-
-            {/* Share and Actions */}
-            <div className="flex items-center justify-between py-4 border-b border-zinc-700">
-              <div className="flex items-center gap-4">
-                <span className="text-zion-slate-light">Share this article:</span>
-                <div className="flex gap-2">
-                  <a
-                    href={getShareUrl('twitter')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-                  >
-                    <Twitter className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={getShareUrl('facebook')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-                  >
-                    <Facebook className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={getShareUrl('linkedin')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Article Content */}
-        <motion.div 
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className="max-w-4xl mx-auto">
-            <div 
-              className="prose prose-invert prose-lg max-w-none"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-          </div>
-        </motion.div>
-
-        {/* Tags */}
-        <motion.div 
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-2 mb-4">
-              <Tag className="w-5 h-5 text-zion-cyan" />
-              <span className="text-white font-medium">Tags:</span>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {post.tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 bg-zinc-800/50 text-zion-cyan border border-zion-cyan/20 rounded-full text-sm hover:border-zion-cyan/40 transition-colors"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Related Posts */}
-        <motion.div 
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Related Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {relatedPosts.map((relatedPost, index) => (
-              <motion.article
-                key={relatedPost.id}
-                className="bg-zinc-800/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg overflow-hidden hover:border-zion-cyan/40 transition-all duration-300"
-                whileHover={{ y: -3, scale: 1.02 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
-              >
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={relatedPost.featuredImage}
-                    alt={relatedPost.title}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      const target = e.currentTarget;
-                      target.src = "https://via.placeholder.com/400x300/1f2937/6b7280?text=Blog+Image";
-                    }}
-                  />
-                </div>
-                <div className="p-6">
-                  <span className="text-xs text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded-full mb-3 inline-block">
-                    {relatedPost.category}
-                  </span>
-                  <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2">
-                    {relatedPost.title}
-                  </h3>
-                  <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
-                    {relatedPost.excerpt}
-                  </p>
-                  <Link 
-                    to={`/blog/${relatedPost.slug}`}
-                    className="text-zion-cyan hover:text-white transition-colors font-medium text-sm"
-                  >
-                    Read More →
-                  </Link>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-        >
-          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Stay Updated</h3>
-            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-              Get the latest insights on AI, technology, and digital transformation delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-zinc-800/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan/40 focus:outline-none transition-colors"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Navigation */}
       <div className="pt-24 pb-8">
@@ -984,9 +626,299 @@ const BlogPost: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7
     </div>
   );
 };
 
 export default BlogPost;
+=======
+import React, { useState, useEffect } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft, Calendar, Clock, ChevronLeft, Share2, Facebook, Twitter, Linkedin, User } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
+
+export default function BlogPost() {
+    const { slug } = useParams();
+    const navigate = useNavigate();
+    const [post, setPost] = useState(null);
+    const [relatedPosts, setRelatedPosts] = useState([]);
+    const [showShareMenu, setShowShareMenu] = useState(false);
+
+    // Mock blog post data
+    const mockPost = {
+        id: 1,
+        title: "The Future of AI in Enterprise: 2024 Trends and Predictions",
+        excerpt: "Discover how artificial intelligence is reshaping enterprise operations and what to expect in the coming year.",
+        content: `
+            <p>Artificial Intelligence has become the cornerstone of modern enterprise transformation. As we move through 2024, several key trends are emerging that will define how businesses leverage AI to drive growth and innovation.</p>
+            
+            <h2>1. AI-Powered Decision Intelligence</h2>
+            <p>Organizations are increasingly adopting AI-driven decision intelligence platforms that combine data analytics, machine learning, and business intelligence to provide actionable insights in real-time.</p>
+            
+            <h2>2. Generative AI in Business Applications</h2>
+            <p>Generative AI is moving beyond content creation to become a fundamental tool for business process automation, customer service, and product development.</p>
+            
+            <h2>3. AI Ethics and Governance</h2>
+            <p>As AI becomes more pervasive, companies are prioritizing ethical AI practices and governance frameworks to ensure responsible deployment.</p>
+            
+            <h2>4. Edge AI and IoT Integration</h2>
+            <p>The convergence of edge computing and AI is enabling real-time processing and decision-making at the network edge, revolutionizing IoT applications.</p>
+            
+            <p>These trends represent just the beginning of AI's transformative impact on enterprise operations. Organizations that embrace these technologies early will gain significant competitive advantages.</p>
+        `,
+        category: "AI & Machine Learning",
+        author: {
+            name: "Dr. Sarah Chen",
+            title: "AI Research Director",
+            avatarUrl: "/images/blog/author-1.jpg"
+        },
+        publishedDate: "Dec 15, 2024",
+        readTime: "8 min read",
+        featuredImage: "/images/blog/ai-enterprise.jpg",
+        tags: ["artificial-intelligence", "enterprise", "trends", "machine-learning", "digital-transformation"]
+    };
+
+    const mockRelatedPosts = [
+        {
+            id: 2,
+            title: "Zero Trust Security: Building a Modern Cybersecurity Framework",
+            category: "Cybersecurity",
+            featuredImage: "/images/blog/zero-trust.jpg",
+            slug: "zero-trust-security-framework"
+        },
+        {
+            id: 3,
+            title: "Cloud Migration Strategies: A Comprehensive Guide for Enterprises",
+            category: "Cloud Computing",
+            featuredImage: "/images/blog/cloud-migration.jpg",
+            slug: "cloud-migration-strategies"
+        }
+    ];
+
+    useEffect(() => {
+        // Simulate API call
+        setPost(mockPost);
+        setRelatedPosts(mockRelatedPosts);
+        window.scrollTo(0, 0);
+    }, [slug]);
+
+    if (!post) {
+        return (
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-8 flex justify-center items-center">
+                <div className="animate-pulse text-xl">Loading article...</div>
+            </div>
+        );
+    }
+
+    // Helper function to get share URL
+    const getShareUrl = (platform) => {
+        const url = encodeURIComponent(window.location.href);
+        const title = encodeURIComponent(post.title);
+        switch (platform) {
+            case 'facebook':
+                return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            case 'twitter':
+                return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+            case 'linkedin':
+                return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
+            default:
+                return '#';
+        }
+    };
+
+    return (
+        <>
+            <SEO 
+                title={post.title} 
+                description={post.excerpt} 
+                keywords={post.tags.join(", ")} 
+                image={post.featuredImage} 
+                canonical={`https://ziontechgroup.com/blog/${post.slug}`} 
+            />
+            <Header />
+            <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-12 pb-20 px-4">
+                <div className="container mx-auto">
+                    {/* Back to blog button */}
+                    <div className="mb-8">
+                        <Button variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" asChild>
+                            <Link to="/blog">
+                                <ArrowLeft className="mr-2 h-4 w-4"/>
+                                Back to all articles
+                            </Link>
+                        </Button>
+                    </div>
+                    
+                    {/* Article header */}
+                    <div className="mb-8 max-w-4xl mx-auto">
+                        <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
+                            {post.category}
+                        </span>
+                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                            {post.title}
+                        </h1>
+                        <p className="text-xl text-zion-slate-light mb-8">
+                            {post.excerpt}
+                        </p>
+                        
+                        {/* Author and metadata */}
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
+                            <div className="flex items-center mb-4 sm:mb-0">
+                                <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center mr-3">
+                                    <User className="w-6 h-6 text-zion-cyan" />
+                                </div>
+                                <div>
+                                    <p className="text-white font-medium">{post.author.name}</p>
+                                    <p className="text-sm text-zion-slate-light">{post.author.title}</p>
+                                </div>
+                            </div>
+                            
+                            <div className="flex items-center space-x-4">
+                                <div className="flex items-center text-zion-slate-light">
+                                    <Calendar className="h-4 w-4 mr-1" />
+                                    <span className="text-sm">{post.publishedDate}</span>
+                                </div>
+                                <div className="flex items-center text-zion-slate-light">
+                                    <Clock className="h-4 w-4 mr-1" />
+                                    <span className="text-sm">{post.readTime}</span>
+                                </div>
+                                <div className="relative">
+                                    <Button 
+                                        variant="ghost" 
+                                        size="sm" 
+                                        className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
+                                        onClick={() => setShowShareMenu(!showShareMenu)}
+                                    >
+                                        <Share2 className="h-4 w-4 mr-1" />
+                                        <span className="text-sm">Share</span>
+                                    </Button>
+                                    
+                                    {showShareMenu && (
+                                        <div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">
+                                            <a 
+                                                href={getShareUrl('facebook')} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
+                                                aria-label="Share on Facebook"
+                                                title="Share on Facebook"
+                                            >
+                                                <Facebook className="h-4 w-4 mr-2" />
+                                                <span>Facebook</span>
+                                            </a>
+                                            <a 
+                                                href={getShareUrl('twitter')} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
+                                                aria-label="Share on Twitter"
+                                                title="Share on Twitter"
+                                            >
+                                                <Twitter className="h-4 w-4 mr-2" />
+                                                <span>Twitter</span>
+                                            </a>
+                                            <a 
+                                                href={getShareUrl('linkedin')} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
+                                                aria-label="Share on LinkedIn"
+                                                title="Share on LinkedIn"
+                                            >
+                                                <Linkedin className="h-4 w-4 mr-2" />
+                                                <span>LinkedIn</span>
+                                            </a>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {/* Featured image */}
+                    <div className="mb-12 max-w-5xl mx-auto">
+                        <div className="aspect-[21/9] rounded-lg overflow-hidden bg-zion-blue-dark">
+                            <div className="w-full h-full flex items-center justify-center">
+                                <div className="text-center">
+                                    <div className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <User className="w-12 h-12 text-zion-cyan" />
+                                    </div>
+                                    <p className="text-zion-slate-light">Featured Image</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {/* Article content */}
+                    <div className="max-w-4xl mx-auto">
+                        <div 
+                            className="prose prose-lg prose-invert max-w-none text-zion-slate-light"
+                            dangerouslySetInnerHTML={{ __html: post.content }}
+                        />
+                        
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2 mt-12">
+                            {post.tags.map(tag => (
+                                <span key={tag} className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full">
+                                    #{tag}
+                                </span>
+                            ))}
+                        </div>
+                        
+                        <Separator className="my-12 bg-zion-blue-light" />
+                        
+                        {/* Related articles */}
+                        {relatedPosts.length > 0 && (
+                            <div className="mt-12">
+                                <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    {relatedPosts.map(relatedPost => (
+                                        <Link 
+                                            key={relatedPost.id}
+                                            to={`/blog/${relatedPost.slug}`} 
+                                            className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
+                                        >
+                                            <div className="aspect-[16/9] relative bg-zion-blue-dark">
+                                                <div className="w-full h-full flex items-center justify-center">
+                                                    <div className="text-center">
+                                                        <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                                                            <User className="w-6 h-6 text-zion-cyan" />
+                                                        </div>
+                                                        <p className="text-zion-slate-light text-sm">Blog Image</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="p-4">
+                                                <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
+                                                <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                        
+                        {/* Back to blog */}
+                        <div className="flex justify-between items-center mt-12">
+                            <Button 
+                                variant="outline" 
+                                className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" 
+                                asChild
+                            >
+                                <Link to="/blog">
+                                    <ChevronLeft className="mr-2 h-4 w-4" />
+                                    All Articles
+                                </Link>
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <Footer />
+        </>
+    );
+}
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

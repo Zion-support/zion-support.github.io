@@ -1,43 +1,67 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Mail } from 'lucide-react';
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
 export function FooterNewsletter() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the email to your newsletter service
-    setIsSubscribed(true);
-    setEmail('');
+    if (!email.trim()) return;
+    
+    setIsLoading(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubscribed(true);
+      setIsLoading(false);
+      setEmail('');
+    }, 1000);
   };
 
   if (isSubscribed) {
     return (
-      <div className="text-green-400 text-sm">
-        Thank you for subscribing!
+      <div className="text-center p-4 bg-zion-purple/10 rounded-lg border border-zion-purple/20">
+        <p className="text-zion-cyan text-sm font-medium">
+          Thank you for subscribing! 🎉
+        </p>
+        <p className="text-zion-slate-light text-xs mt-1">
+          You'll receive our latest updates soon.
+        </p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
-        className="flex-1 px-3 py-2 bg-zion-slate-dark border border-zion-slate rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-        required
-      />
-      <button
+    <form onSubmit={handleSubmit} className="space-y-3">
+      <div className="relative">
+        <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+        <Input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
+          required
+        />
+      </div>
+      <Button
         type="submit"
-        className="px-4 py-2 bg-zion-cyan text-zion-slate-dark font-medium rounded-md hover:bg-zion-cyan-light transition-colors"
+        disabled={isLoading || !email.trim()}
+        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Subscribe
-      </button>
+        {isLoading ? 'Subscribing...' : 'Subscribe'}
+      </Button>
     </form>
   );
 }
+<<<<<<< HEAD
 import { Mail, Send, CheckCircle } from 'lucide-react';
 
 export const FooterNewsletter: React.FC = () => {
@@ -125,3 +149,5 @@ export const FooterNewsletter: React.FC = () => {
     </div>
   );
 };
+=======
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
