@@ -1,52 +1,52 @@
-import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Package, TrendingUp, Globe, Zap, Target, Clock, Shield } from 'lucide-react';
+import { Wrench, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, AlertTriangle, TrendingUp, Zap, Target, Clock, Shield, Settings } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AIPredictiveMaintenance() {
   const features = [
-    'AI-powered demand forecasting and inventory optimization',
-    'Real-time supply chain monitoring and risk assessment',
-    'Intelligent route optimization and logistics planning',
-    'Automated supplier performance analysis and scoring',
-    'Predictive maintenance for supply chain equipment',
-    'Advanced cost optimization and budget management',
-    'Multi-tier supplier relationship management',
-    'Real-time shipment tracking and visibility',
-    'AI-driven supply chain risk mitigation',
-    'Automated compliance and regulatory reporting'
+    'AI-powered equipment health monitoring and analysis',
+    'Real-time predictive maintenance scheduling',
+    'Intelligent failure prediction and prevention',
+    'Advanced sensor data analysis and processing',
+    'Automated maintenance workflow optimization',
+    'Real-time equipment performance tracking',
+    'Advanced anomaly detection and alerting',
+    'Predictive parts inventory management',
+    'AI-driven maintenance cost optimization',
+    'Comprehensive maintenance history and analytics'
   ];
 
   const benefits = [
-    'Reduce supply chain costs by 25-40%',
-    'Improve inventory accuracy by 90%',
-    'Reduce lead times by 30-50%',
-    'Increase supplier performance by 35%',
-    'Eliminate stockouts and overstock situations',
-    'Enable real-time supply chain visibility'
+    'Reduce unplanned downtime by 70-90%',
+    'Lower maintenance costs by 25-40%',
+    'Extend equipment lifespan by 20-30%',
+    'Improve operational efficiency by 35%',
+    'Reduce spare parts inventory by 30%',
+    'Enable proactive maintenance planning'
   ];
 
   const useCases = [
-    'Manufacturing supply chain optimization',
-    'Retail inventory and distribution management',
-    'Healthcare supply chain and logistics',
-    'E-commerce fulfillment optimization',
-    'Food and beverage supply chain',
-    'Automotive parts and logistics'
+    'Manufacturing and industrial equipment',
+    'HVAC and building management systems',
+    'Transportation and fleet management',
+    'Energy and utility infrastructure',
+    'Healthcare and medical equipment',
+    'Data center and IT infrastructure'
   ];
 
   const tiers = [
     { 
-      name: 'Supply Chain Starter', 
-      price: '$599/mo', 
-      details: ['Up to 100 SKUs', 'Basic AI optimization', 'Standard reporting', 'Email support'] 
+      name: 'Maintenance Starter', 
+      price: '$399/mo', 
+      details: ['Up to 50 assets', 'Basic AI prediction', 'Standard monitoring', 'Email support'] 
     },
     { 
-      name: 'Supply Chain Pro', 
-      price: '$1,499/mo', 
-      details: ['Up to 1,000 SKUs', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+      name: 'Maintenance Professional', 
+      price: '$999/mo', 
+      details: ['Up to 500 assets', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
     { 
-      name: 'Enterprise Supply Chain', 
-      price: '$4,999/mo', 
-      details: ['Unlimited SKUs', 'Full AI suite', 'White-label options', '24/7 support'] 
+      name: 'Enterprise Maintenance', 
+      price: '$2,999/mo', 
+      details: ['Unlimited assets', 'Full AI suite', 'White-label options', '24/7 support'] 
     },
   ];
 
@@ -55,17 +55,17 @@ export default function AISupplyChainOptimization() {
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Truck className="w-4 h-4 mr-2" /> AI-powered supply chain optimization
+            <Wrench className="w-4 h-4 mr-2" /> AI-powered predictive maintenance
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Supply Chain Optimization</h1>
-          <p className="text-zion-slate-light text-xl">Revolutionize your supply chain with AI-powered optimization that predicts demand, optimizes inventory, and streamlines logistics for maximum efficiency.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Predictive Maintenance</h1>
+          <p className="text-zion-slate-light text-xl">Transform your maintenance operations with AI-powered predictive maintenance that prevents failures, reduces downtime, and optimizes equipment performance.</p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Intelligent Supply Chain Features</h2>
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Intelligent Maintenance Features</h2>
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
@@ -114,9 +114,9 @@ export default function AISupplyChainOptimization() {
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {[
-            { icon: Package, title: 'Inventory Optimization', desc: 'AI-powered demand forecasting and stock management' },
-            { icon: TrendingUp, title: 'Cost Reduction', desc: 'Intelligent cost optimization and budget management' },
-            { icon: Clock, title: 'Lead Time Reduction', desc: 'Streamlined logistics and faster delivery times' }
+            { icon: AlertTriangle, title: 'Failure Prediction', desc: 'AI-powered equipment failure prediction and prevention' },
+            { icon: TrendingUp, title: 'Performance Optimization', desc: 'Real-time equipment performance monitoring and optimization' },
+            { icon: Settings, title: 'Smart Scheduling', desc: 'Intelligent maintenance scheduling and workflow optimization' }
           ].map((item) => (
             <div key={item.title} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <item.icon className="w-6 h-6 text-zion-cyan mb-3" />
@@ -139,7 +139,7 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-14 text-center">
-          <div className="text-sm text-zion-slate-light mb-2">Ready to optimize your supply chain?</div>
+          <div className="text-sm text-zion-slate-light mb-2">Ready to transform your maintenance operations?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950

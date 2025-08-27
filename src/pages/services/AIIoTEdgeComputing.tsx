@@ -1,52 +1,52 @@
-import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Package, TrendingUp, Globe, Zap, Target, Clock, Shield } from 'lucide-react';
+import { Cpu, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Wifi, TrendingUp, Zap, Target, Clock, Shield, Globe } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AIIoTEdgeComputing() {
   const features = [
-    'AI-powered demand forecasting and inventory optimization',
-    'Real-time supply chain monitoring and risk assessment',
-    'Intelligent route optimization and logistics planning',
-    'Automated supplier performance analysis and scoring',
-    'Predictive maintenance for supply chain equipment',
-    'Advanced cost optimization and budget management',
-    'Multi-tier supplier relationship management',
-    'Real-time shipment tracking and visibility',
-    'AI-driven supply chain risk mitigation',
-    'Automated compliance and regulatory reporting'
+    'AI-powered edge computing and processing',
+    'Real-time IoT device management and monitoring',
+    'Intelligent edge analytics and decision making',
+    'Advanced device connectivity and protocol support',
+    'Automated edge device provisioning and updates',
+    'Real-time data processing and filtering',
+    'Advanced security and encryption at the edge',
+    'Scalable edge computing infrastructure',
+    'AI-driven predictive maintenance for IoT devices',
+    'Multi-cloud edge orchestration and management'
   ];
 
   const benefits = [
-    'Reduce supply chain costs by 25-40%',
-    'Improve inventory accuracy by 90%',
-    'Reduce lead times by 30-50%',
-    'Increase supplier performance by 35%',
-    'Eliminate stockouts and overstock situations',
-    'Enable real-time supply chain visibility'
+    'Reduce latency by 80-90%',
+    'Lower bandwidth costs by 60%',
+    'Improve device reliability by 75%',
+    'Enable real-time decision making',
+    'Reduce cloud computing costs by 40%',
+    'Enhance data privacy and security'
   ];
 
   const useCases = [
-    'Manufacturing supply chain optimization',
-    'Retail inventory and distribution management',
-    'Healthcare supply chain and logistics',
-    'E-commerce fulfillment optimization',
-    'Food and beverage supply chain',
-    'Automotive parts and logistics'
+    'Smart manufacturing and Industry 4.0',
+    'Connected healthcare and medical devices',
+    'Smart cities and infrastructure',
+    'Autonomous vehicles and transportation',
+    'Energy management and smart grids',
+    'Retail and supply chain monitoring'
   ];
 
   const tiers = [
     { 
-      name: 'Supply Chain Starter', 
-      price: '$599/mo', 
-      details: ['Up to 100 SKUs', 'Basic AI optimization', 'Standard reporting', 'Email support'] 
+      name: 'Edge Starter', 
+      price: '$499/mo', 
+      details: ['Up to 100 devices', 'Basic AI processing', 'Standard monitoring', 'Email support'] 
     },
     { 
-      name: 'Supply Chain Pro', 
-      price: '$1,499/mo', 
-      details: ['Up to 1,000 SKUs', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+      name: 'Edge Professional', 
+      price: '$1,299/mo', 
+      details: ['Up to 1,000 devices', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
     { 
-      name: 'Enterprise Supply Chain', 
-      price: '$4,999/mo', 
-      details: ['Unlimited SKUs', 'Full AI suite', 'White-label options', '24/7 support'] 
+      name: 'Enterprise Edge', 
+      price: '$3,999/mo', 
+      details: ['Unlimited devices', 'Full AI suite', 'White-label options', '24/7 support'] 
     },
   ];
 
@@ -55,17 +55,17 @@ export default function AISupplyChainOptimization() {
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Truck className="w-4 h-4 mr-2" /> AI-powered supply chain optimization
+            <Cpu className="w-4 h-4 mr-2" /> AI-powered IoT edge computing
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Supply Chain Optimization</h1>
-          <p className="text-zion-slate-light text-xl">Revolutionize your supply chain with AI-powered optimization that predicts demand, optimizes inventory, and streamlines logistics for maximum efficiency.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI IoT Edge Computing</h1>
+          <p className="text-zion-slate-light text-xl">Transform your IoT infrastructure with AI-powered edge computing that processes data locally, reduces latency, and enables real-time intelligent decision making.</p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Intelligent Supply Chain Features</h2>
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Advanced Edge Computing Features</h2>
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
@@ -114,9 +114,9 @@ export default function AISupplyChainOptimization() {
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {[
-            { icon: Package, title: 'Inventory Optimization', desc: 'AI-powered demand forecasting and stock management' },
-            { icon: TrendingUp, title: 'Cost Reduction', desc: 'Intelligent cost optimization and budget management' },
-            { icon: Clock, title: 'Lead Time Reduction', desc: 'Streamlined logistics and faster delivery times' }
+            { icon: Wifi, title: 'Device Connectivity', desc: 'Advanced IoT device management and monitoring' },
+            { icon: TrendingUp, title: 'Real-time Processing', desc: 'Local AI processing for instant decisions' },
+            { icon: Shield, title: 'Edge Security', desc: 'Advanced security and encryption at the edge' }
           ].map((item) => (
             <div key={item.title} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <item.icon className="w-6 h-6 text-zion-cyan mb-3" />
@@ -139,7 +139,7 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-14 text-center">
-          <div className="text-sm text-zion-slate-light mb-2">Ready to optimize your supply chain?</div>
+          <div className="text-sm text-zion-slate-light mb-2">Ready to transform your IoT infrastructure?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
