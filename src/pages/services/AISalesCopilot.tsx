@@ -1,126 +1,291 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, MessageCircle, Zap, CheckCircle, BarChart3, Sparkles, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  Users, 
+  Target, 
+  TrendingUp, 
+  MessageCircle, 
+  BarChart3, 
+  CheckCircle, 
+  ArrowRight,
+  Play,
+  Settings,
+  Cpu,
+  Cloud,
+  Activity,
+  Sparkles,
+  Search,
+  Zap,
+  Globe,
+  Building,
+  DollarSign,
+  Lock,
+  Eye,
+  FileText,
+  Brain,
+  Phone,
+  Mail
+} from 'lucide-react';
 
-export default function AISalesCopilot() {
+const AISalesCopilot = () => {
   const features = [
-    'Email, call, and meeting summarization with action items',
-    'CRM auto-updates (Salesforce, HubSpot) with entity extraction',
-    'Lead scoring and next-best action suggestions',
-    'Playbooks and messaging tuned by industry and ICP',
+    {
+      icon: Brain,
+      title: 'AI-Powered Lead Scoring',
+      description: 'Intelligent lead qualification and prioritization using machine learning algorithms'
+    },
+    {
+      icon: Target,
+      title: 'Predictive Sales Analytics',
+      description: 'Forecast sales outcomes and identify high-probability opportunities'
+    },
+    {
+      icon: MessageCircle,
+      title: 'Automated Follow-ups',
+      description: 'Smart email sequences and follow-up scheduling based on prospect behavior'
+    },
+    {
+      icon: BarChart3,
+      title: 'Performance Insights',
+      description: 'Real-time sales metrics and performance optimization recommendations'
+    },
+    {
+      icon: Users,
+      title: 'Customer Segmentation',
+      description: 'AI-driven customer classification for personalized sales strategies'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Revenue Optimization',
+      description: 'Data-driven strategies to maximize deal size and win rates'
+    }
   ];
 
   const benefits = [
-    'Reduce admin time by 40–60% per rep',
-    'Improve conversion rates with consistent follow-ups',
-    'Shorten sales cycles through prioritized outreach',
-    'Increase forecast accuracy with cleaner CRM data',
+    'Increase sales conversion rates by 35%',
+    'Reduce sales cycle time by 40%',
+    'Improve lead qualification accuracy by 80%',
+    'Boost average deal size by 25%',
+    'Automate 70% of repetitive sales tasks',
+    'Enhance customer relationship management'
   ];
 
-  const stack = [
-    { name: 'OpenAI', url: 'https://platform.openai.com/' },
-    { name: 'LangChain', url: 'https://www.langchain.com/' },
-    { name: 'Salesforce APIs', url: 'https://developer.salesforce.com/docs' },
-    { name: 'HubSpot APIs', url: 'https://developers.hubspot.com/' },
+  const useCases = [
+    {
+      industry: 'B2B Sales',
+      description: 'Enterprise sales optimization, lead nurturing, and account-based marketing'
+    },
+    {
+      industry: 'E-commerce',
+      description: 'Customer segmentation, personalized recommendations, and cart abandonment recovery'
+    },
+    {
+      industry: 'Real Estate',
+      description: 'Lead qualification, market analysis, and client relationship management'
+    },
+    {
+      industry: 'Financial Services',
+      description: 'Investment recommendations, client onboarding, and portfolio management'
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Sales <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Copilot Suite</span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
+              <Users className="w-4 h-4 mr-2" />
+              AI-Powered Sales Intelligence
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Sales
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Copilot</span>
             </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Automate notes, enrich CRM data, and guide reps with actionable insights.
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Revolutionize your sales process with AI-powered intelligence that identifies opportunities, 
+              optimizes strategies, and drives revenue growth through data-driven insights.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
-                Get Demo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
-                Visit Site
-              </a>
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
+                <Play className="w-5 h-5 mr-2" />
+                Start Free Trial
+              </button>
+              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200 flex items-center justify-center">
+                <Settings className="w-5 h-5 mr-2" />
+                Schedule Demo
+              </button>
             </div>
-          </div>
-        </div>
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
-          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
-            <div className="flex items-center mb-4">
-              <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
-                <Brain className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="ml-3 text-xl font-semibold text-white">Key Features</h3>
-            </div>
-            <ul className="space-y-3">
-              {features.map((item) => (
-                <li key={item} className="flex items-center text-slate-300">
-                  <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced Sales Intelligence Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI-powered platform provides comprehensive sales optimization capabilities 
+              that transform your sales process and drive results.
+            </p>
+          </motion.div>
 
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
-            <div className="flex items-center mb-4">
-              <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg">
-                <Zap className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="ml-3 text-xl font-semibold text-white">Business Impact</h3>
-            </div>
-            <ul className="space-y-3">
-              {benefits.map((item) => (
-                <li key={item} className="flex items-center text-slate-300">
-                  <CheckCircle className="h-5 w-5 text-purple-400 mr-3" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
-            <div className="flex items-center mb-4">
-              <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg">
-                <BarChart3 className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
-            </div>
-            <ul className="space-y-3 text-slate-300">
-              <li>Starter: From $1,500/month (up to 10 reps)</li>
-              <li>Growth: From $4,000/month (up to 50 reps)</li>
-              <li>Enterprise: Custom + SSO, SOC2, DLP</li>
-            </ul>
-            <div className="mt-6 text-sm text-slate-400">
-              Avg. market reference: see <a className="text-cyan-400 hover:underline" href="https://www.gartner.com/en/articles/generative-ai-in-sales" target="_blank" rel="noreferrer">Gartner GenAI in Sales</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
-          <h3 className="text-2xl font-semibold text-white mb-4">Tech Stack</h3>
-          <div className="flex flex-wrap gap-3">
-            {stack.map((s) => (
-              <a key={s.name} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500">
-                {s.name}
-              </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your Sales Performance
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience measurable improvements in sales efficiency, conversion rates, and revenue growth.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              {benefits.slice(0, 3).map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+            <div className="space-y-6">
+              {benefits.slice(3).map((benefit, index) => (
+                <motion.div
+                  key={index + 3}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI Sales Copilot adapts to various industries, providing tailored sales 
+              optimization strategies for your specific business needs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Boost Your Sales Performance Today
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join forward-thinking sales teams that use AI-powered intelligence to close 
+              more deals and drive sustainable revenue growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default AISalesCopilot;
 
