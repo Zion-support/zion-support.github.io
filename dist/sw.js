@@ -185,7 +185,6 @@ self.addEventListener('sync', (event) => {
   }
 });
 
-
 =======
 async function doBackgroundSync() {
   try {

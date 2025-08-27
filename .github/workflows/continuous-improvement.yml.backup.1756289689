@@ -33,13 +33,29 @@ jobs:
         run: npm run build
       - name: Run code quality checks
         run: |
+<<<<<<< HEAD
+          echo "Running continuous improvement checks..."
+          npm run automation:improvement || echo "Automation improvement script not configured"
+          npm run diversify || echo "Diversification script not configured"
+=======
           npm run lint -- --fix || true
           npm run type-check || true
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+<<<<<<< HEAD
+          commit-message: "chore(improvement): continuous improvement and code quality"
+          title: "chore(improvement): apply continuous improvement and code quality"
+          body: |
+            Automated improvement and code quality loop.
+
+            - Runs linting checks
+            - Runs type checking
+            - Ensures build success
+=======
           commit-message: "chore(improvement): continuous improvement and code quality updates"
           title: "chore(improvement): apply continuous improvement and code quality updates"
           body: |
@@ -48,6 +64,7 @@ jobs:
             - Runs linting with auto-fix
             - Runs type checking
             - Builds project to ensure everything works
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
           branch: automation/continuous-improvement
           delete-branch: true
           signoff: false

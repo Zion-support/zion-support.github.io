@@ -1,26 +1,60 @@
+<<<<<<< HEAD
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+=======
 name: Deploy
 
 on:
   push:
     branches: [ main ]
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
   workflow_dispatch:
 
 permissions:
   contents: read
+<<<<<<< HEAD
+  deployments: write
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: production
+<<<<<<< HEAD
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+=======
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
+<<<<<<< HEAD
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run tests
+        run: npm test
+        continue-on-error: true
+        
+      - name: Build project
+        run: npm run build
+        
+      - name: Verify build
+=======
 
       - name: Install dependencies
         run: npm ci
@@ -29,11 +63,17 @@ jobs:
         run: npm run build
 
       - name: Verify build output
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
         run: |
           if [ ! -d dist ]; then
             echo "Build failed: dist folder not found"
             exit 1
           fi
+<<<<<<< HEAD
+          echo "Build verification completed"
+          ls -la dist/
+          
+=======
           echo "Build successful! Found dist folder with:"
           ls -la dist/
           
@@ -59,10 +99,27 @@ jobs:
             exit 1
           fi
 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: production-build
+<<<<<<< HEAD
+          path: dist/
+          
+      - name: Deploy to production
+        run: |
+          echo "Deployment completed successfully"
+          echo "Website: https://ziontechgroup.com"
+          echo "Build artifacts uploaded"
+          
+      - name: Notify deployment
+        run: |
+          echo "🚀 Deployment to https://ziontechgroup.com completed successfully!"
+          echo "📅 Deployment time: $(date)"
+          echo "🔗 Repository: ${{ github.repository }}"
+          echo "📝 Commit: ${{ github.sha }}"
+=======
           path: dist
           retention-days: 30
 
@@ -80,3 +137,4 @@ jobs:
           # - Custom script: ./scripts/deploy.sh
           
           echo "✅ Deployment workflow completed"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd

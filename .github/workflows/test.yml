@@ -37,14 +37,30 @@ jobs:
             echo "Build failed: dist folder not found"
             exit 1
           fi
-          echo "Build completed successfully"
-          
+          echo "Build successful! Found dist folder with:"
+          ls -la dist/
       - name: Verify asset paths
         run: |
-          echo "Build verification completed"
-          ls -la dist/
-      - name: Run tests
-        run: npm test
+          if [ -f dist/index.html ]; then
+            echo "✓ index.html found"
+          else
+            echo "✗ index.html not found"
+            exit 1
+          fi
+          if [ -f dist/css/index-*.css ]; then
+            echo "✓ CSS files found"
+          else
+            echo "✗ CSS files not found"
+            exit 1
+          fi
+          if [ -f dist/js/index-*.js ]; then
+            echo "✓ JavaScript files found"
+          else
+            echo "✗ JavaScript files not found"
+            exit 1
+          fi
+      - name: Run tests (if available)
+        run: npm test --if-present
         continue-on-error: true
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4

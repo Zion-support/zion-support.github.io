@@ -1,82 +1,85 @@
-name: Deploy
+name: Test
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
 
 permissions:
   contents: read
 
 jobs:
-  deploy:
+  test:
+    name: Test Suite
     runs-on: ubuntu-latest
-    environment: production
+    timeout-minutes: 20
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-
+          
       - name: Install dependencies
         run: npm ci
-
+        
       - name: Build project
         run: npm run build
-
+        
       - name: Verify build output
         run: |
           if [ ! -d dist ]; then
             echo "Build failed: dist folder not found"
             exit 1
           fi
+<<<<<<< HEAD
+          echo "Build completed successfully"
+          
+      - name: Verify asset paths
+        run: |
+          echo "Build verification completed"
+          ls -la dist/
+      - name: Run tests
+        run: npm test
+=======
           echo "Build successful! Found dist folder with:"
           ls -la dist/
-          
-          # Check for essential files
+      - name: Verify asset paths
+        run: |
           if [ -f dist/index.html ]; then
             echo "✓ index.html found"
           else
             echo "✗ index.html not found"
             exit 1
           fi
-          
           if [ -f dist/css/index-*.css ]; then
             echo "✓ CSS files found"
           else
             echo "✗ CSS files not found"
             exit 1
           fi
-          
           if [ -f dist/js/index-*.js ]; then
             echo "✓ JavaScript files found"
           else
             echo "✗ JavaScript files not found"
             exit 1
           fi
-
+      - name: Run tests (if available)
+        run: npm test --if-present
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
+        continue-on-error: true
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: production-build
-          path: dist
+          name: build
+          path: out
           retention-days: 30
 
-      - name: Deploy to production
-        run: |
-          echo "🚀 Deploying to production..."
-          echo "Build completed successfully at $(date)"
-          echo "Ready for deployment to your hosting platform"
-          
-          # Add your deployment commands here
-          # Examples:
-          # - AWS S3: aws s3 sync dist/ s3://your-bucket-name/
-          # - Netlify: npx netlify-cli deploy --prod --dir=dist
-          # - Vercel: npx vercel --prod --cwd=dist
-          # - Custom script: ./scripts/deploy.sh
-          
-          echo "✅ Deployment workflow completed"
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true

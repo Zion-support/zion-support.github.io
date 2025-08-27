@@ -1,11 +1,33 @@
 import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
+import { safeStorage } from '@/utils/safeStorage';
+import { LoginForm } from '@/components/auth/login/LoginForm';
+
+
+import { useDispatch } from 'react-redux';
+import { setLoggedIn } from '@/store/authSlice';
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
 
 export default function Login() {
   const { isAuthenticated, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+<<<<<<< HEAD
+
+  const reduxDispatch = useDispatch();
+
+  useEffect(() => {
+    // This effect handles token processing (e.g., from magic link)
+    const queryString = location.search;
+    const params = new URLSearchParams(queryString);
+    const token = params.get('token');
+    if (token) {
+      safeStorage.setItem('zion_token', token);
+      // Clear token from URL to prevent re-processing
+=======
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
@@ -16,12 +38,26 @@ export default function Login() {
       // Store token in localStorage for now
       localStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing and clean up history
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
       navigate(location.pathname, { replace: true });
     }
   }, [location.search, location.pathname, navigate]);
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
+<<<<<<< HEAD
+      reduxDispatch(setLoggedIn(true));
+      const next = new URLSearchParams(location.search).get('next') || '/dashboard';
+      navigate(next);
+    }
+  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
+
+  // Render LoginForm if not authenticated and auth is not loading
+  if (!isAuthenticated && !isLoading) {
+    return (
+      <div>
+        <LoginForm />
+=======
       const next = new URLSearchParams(location.search).get('next') || '/dashboard';
       navigate(next, { replace: true });
     }
@@ -73,12 +109,16 @@ export default function Login() {
             </p>
           </div>
         </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
       </div>
     );
   }
 
   // Optional: Render a loading indicator while isLoading is true
   if (isLoading) {
+<<<<<<< HEAD
+    return <div className="p-4 text-center text-foreground">Loading...</div>;
+=======
     return (
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">
         <div className="text-center">
@@ -87,6 +127,7 @@ export default function Login() {
         </div>
       </div>
     );
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
   }
 
   // If authenticated and isLoading is false, the useEffect above should have navigated.

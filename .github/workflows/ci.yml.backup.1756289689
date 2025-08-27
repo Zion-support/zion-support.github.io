@@ -43,8 +43,12 @@ jobs:
             echo "Build failed: dist folder not found"
             exit 1
           fi
+<<<<<<< HEAD
+          echo "Build completed successfully"
+=======
           echo "Build successful! Found dist folder with:"
           ls -la dist/
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
 
   test:
     name: Test
@@ -69,8 +73,33 @@ jobs:
       - name: Build project
         run: npm run build
 
+<<<<<<< HEAD
+      - name: Verify build output
+        run: |
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
+          fi
+
+      - name: Build project
+        run: npm run build
+
+      - name: Verify build output
+        run: |
+          if [ ! -d out ]; then
+            echo "Build failed: out folder not found"
+            exit 1
+          fi
+          echo "Build completed successfully"
+          echo "Build artifacts:"
+          ls -la out/
+
+      - name: Security scan (non-blocking)
+        run: npm run security:scan || echo "Security scan not configured"
+=======
       - name: Run tests (if available)
         run: npm test --if-present
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5edd
         continue-on-error: true
 
       - name: Build for testing
