@@ -30,7 +30,7 @@ export class ServiceWorkerManager {
         return existingRegistration;
       }
 
-      // Register new service worker
+      // Register new service worker with better error handling
       const registration = await navigator.serviceWorker.register('/sw.js', {
         scope: '/',
         updateViaCache: 'none'
@@ -38,6 +38,9 @@ export class ServiceWorkerManager {
 
       console.log('Service Worker registered successfully:', registration);
       this.swRegistration = registration;
+
+      // Wait for service worker to be ready before setting up handlers
+      await navigator.serviceWorker.ready;
 
       // Handle updates
       this.handleUpdates(registration);
@@ -53,51 +56,70 @@ export class ServiceWorkerManager {
   }
 
   private handleUpdates(registration: ServiceWorkerRegistration) {
-    // Check for updates
-    registration.addEventListener('updatefound', () => {
-      const newWorker = registration.installing;
-      if (newWorker) {
-        newWorker.addEventListener('statechange', () => {
-          if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-            // New version available
-            this.showUpdateNotification();
-          }
-        });
-      }
-    });
+    try {
+      // Check for updates
+      registration.addEventListener('updatefound', () => {
+        const newWorker = registration.installing;
+        if (newWorker) {
+          newWorker.addEventListener('statechange', () => {
+            try {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New version available
+                this.showUpdateNotification();
+              }
+            } catch (error) {
+              console.error('Error handling worker state change:', error);
+            }
+          });
+        }
+      });
 
-    // Handle controller change
-    let refreshing = false;
-    navigator.serviceWorker.addEventListener('controllerchange', () => {
-      if (!refreshing) {
-        refreshing = true;
-        window.location.reload();
-      }
-    });
+      // Handle controller change
+      let refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        try {
+          if (!refreshing) {
+            refreshing = true;
+            window.location.reload();
+          }
+        } catch (error) {
+          console.error('Error handling controller change:', error);
+        }
+      });
+    } catch (error) {
+      console.error('Error setting up update handlers:', error);
+    }
   }
 
   private handleMessages() {
     navigator.serviceWorker.addEventListener('message', (event) => {
-      console.log('Message from Service Worker:', event.data);
-      
-      switch (event.data.type) {
-        case 'CACHE_UPDATED':
-          console.log('Cache updated:', event.data.payload);
-          break;
-        case 'OFFLINE_READY':
-          console.log('App is ready for offline use');
-          break;
-        case 'ERROR':
-          console.error('Service Worker error:', event.data.payload);
-          break;
+      try {
+        console.log('Message from Service Worker:', event.data);
+        
+        switch (event.data.type) {
+          case 'CACHE_UPDATED':
+            console.log('Cache updated:', event.data.payload);
+            break;
+          case 'OFFLINE_READY':
+            console.log('App is ready for offline use');
+            break;
+          case 'ERROR':
+            console.error('Service Worker error:', event.data.payload);
+            break;
+          default:
+            console.log('Unknown message type:', event.data.type);
+        }
+      } catch (error) {
+        console.error('Error handling service worker message:', error);
       }
     });
   }
 
   private showUpdateNotification() {
-    // Create update notification
-    const notification = document.createElement('div');
-    notification.className = 'fixed top-4 right-4 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+    try {
+      // Create update notification
+      const notification = document.createElement('div');
+      notification.className = 'fixed top-4 right-4 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
     notification.innerHTML = `
       <div class="flex items-center space-x-3">
         <span>🔄 New version available</span>
@@ -135,6 +157,9 @@ export class ServiceWorkerManager {
         notification.remove();
       }
     }, 10000);
+    } catch (error) {
+      console.error('Error showing update notification:', error);
+    }
   }
 
   async updateServiceWorker() {
