@@ -40,6 +40,7 @@ const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/
 const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/Zion2026InnovativeServicesShowcase'));
 const Zion2026ServicesOverview = React.lazy(() => import('./pages/Zion2026ServicesOverview'));
 const Zion2026ComprehensivePricingGuide = React.lazy(() => import('./pages/Zion2026ComprehensivePricingGuide'));
+const Zion2026ComprehensiveServicesShowcase = React.lazy(() => import('./pages/Zion2026ComprehensiveServicesShowcase'));
 
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 
@@ -98,6 +99,7 @@ function App() {
               <Route path="/zion-2026-services" element={<Zion2026InnovativeServicesShowcase />} />
               <Route path="/zion-2026-overview" element={<Zion2026ServicesOverview />} />
               <Route path="/zion-2026-pricing" element={<Zion2026ComprehensivePricingGuide />} />
+              <Route path="/zion-2026-comprehensive-services" element={<Zion2026ComprehensiveServicesShowcase />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
