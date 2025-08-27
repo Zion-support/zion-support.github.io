@@ -34,17 +34,17 @@ export const FuturisticAnimatedBackground: React.FC = () => {
 
     // Initialize particles
     const particles: Particle[] = [];
-    const particleCount = 150;
+    const particleCount = 200; // Increased particle count
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.8 + 0.2,
-        color: ['#22ddd2', '#8c15e9', '#2e73ea'][Math.floor(Math.random() * 3)]
+        vx: (Math.random() - 0.5) * 0.8, // Increased velocity
+        vy: (Math.random() - 0.5) * 0.8,
+        size: Math.random() * 3 + 1, // Increased size range
+        opacity: Math.random() * 0.9 + 0.1,
+        color: ['#22ddd2', '#8c15e9', '#2e73ea', '#ff6b6b', '#4ecdc4', '#45b7d1'][Math.floor(Math.random() * 6)] // More colors
       });
     }
 
@@ -53,10 +53,13 @@ export const FuturisticAnimatedBackground: React.FC = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw grid
-      ctx.strokeStyle = 'rgba(34, 221, 210, 0.1)';
-      ctx.lineWidth = 0.5;
-      const gridSize = 50;
+      // Draw enhanced grid with pulsing effect
+      const time = Date.now() * 0.001;
+      const pulseIntensity = Math.sin(time * 2) * 0.1 + 0.15;
+      
+      ctx.strokeStyle = `rgba(34, 221, 210, ${pulseIntensity})`;
+      ctx.lineWidth = 0.8;
+      const gridSize = 60;
 
       for (let x = 0; x < canvas.width; x += gridSize) {
         ctx.beginPath();
@@ -69,6 +72,22 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+
+      // Draw diagonal lines for more futuristic look
+      ctx.strokeStyle = `rgba(140, 21, 233, ${pulseIntensity * 0.5})`;
+      ctx.lineWidth = 0.3;
+      
+      for (let i = 0; i < canvas.width + canvas.height; i += 80) {
+        ctx.beginPath();
+        ctx.moveTo(i, 0);
+        ctx.lineTo(0, i);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(canvas.width - i, 0);
+        ctx.lineTo(canvas.width, i);
         ctx.stroke();
       }
 
@@ -89,7 +108,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
         ctx.fill();
 
-        // Draw connections
+        // Draw enhanced connections with varying opacity and thickness
         particles.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
           
@@ -98,15 +117,34 @@ export const FuturisticAnimatedBackground: React.FC = () => {
             Math.pow(particle.y - otherParticle.y, 2)
           );
 
-          if (distance < 100) {
+          if (distance < 120) { // Increased connection range
+            const opacity = 0.15 * (1 - distance / 120);
+            const lineWidth = 0.8 * (1 - distance / 120);
+            
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(34, 221, 210, ${0.1 * (1 - distance / 100)})`;
-            ctx.lineWidth = 0.5;
+            ctx.strokeStyle = `rgba(34, 221, 210, ${opacity})`;
+            ctx.lineWidth = lineWidth;
             ctx.stroke();
+            
+            // Draw secondary connections for closer particles
+            if (distance < 60) {
+              ctx.strokeStyle = `rgba(140, 21, 233, ${opacity * 0.7})`;
+              ctx.lineWidth = lineWidth * 0.5;
+              ctx.stroke();
+            }
           }
         });
+
+        // Add particle glow effect
+        ctx.shadowColor = particle.color;
+        ctx.shadowBlur = particle.size * 2;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
+        ctx.fill();
+        ctx.shadowBlur = 0; // Reset shadow
       });
 
       animationRef.current = requestAnimationFrame(animate);
