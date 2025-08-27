@@ -125,61 +125,16 @@ export default function DigitalTwin() {
       examples: ["Traffic optimization", "Energy management", "Public safety"]
     },
     {
-<<<<<<< HEAD
-      title: 'Healthcare',
-      description: 'Track medical equipment, patient monitoring systems, and facility operations.',
-      benefits: ['Improved patient care', 'Equipment optimization', 'Operational efficiency']
-    },
-    {
-      title: 'Energy & Utilities',
-      description: 'Monitor power grids, water systems, and renewable energy installations.',
-      benefits: ['Grid stability', 'Resource optimization', 'Renewable integration']
-    }
-  ];
-
-  const technologies = [
-    {
-      name: 'IoT Sensors',
-      description: 'High-precision sensors for data collection from physical assets',
-      icon: Cpu
-    },
-    {
-      name: 'Edge Computing',
-      description: 'Local processing for real-time decision making and reduced latency',
-      icon: Database
-    },
-    {
-      name: '5G Networks',
-      description: 'Ultra-fast connectivity for seamless data transmission',
-      icon: Network
-    },
-    {
-      name: 'AI/ML Models',
-      description: 'Advanced algorithms for pattern recognition and predictions',
-      icon: Brain
-    },
-    {
-      name: 'Cloud Infrastructure',
-      description: 'Scalable cloud platforms for data storage and processing',
-      icon: Cloud
-    },
-    {
-      name: 'Blockchain',
-      description: 'Secure and transparent data sharing and verification',
-      icon: Shield
-=======
       icon: Cloud,
       title: "Healthcare",
       description: "Patient monitoring, medical device management, and facility optimization",
       examples: ["Patient care", "Equipment tracking", "Resource optimization"]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-80ee
     }
   ];
 
   return (
     <div className="min-h-screen bg-futuristic relative overflow-hidden">
       <SEO 
-<<<<<<< HEAD
         title="Digital Twin Solutions | Zion Tech Group"
         description="Transform your physical assets into intelligent digital twins with real-time monitoring, predictive analytics, and automated optimization."
         keywords={['Digital Twin', 'IoT', 'Real-time Monitoring', 'Predictive Analytics', 'Smart Manufacturing', 'Smart Cities']}
@@ -196,22 +151,25 @@ export default function DigitalTwin() {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Digital Twin
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                Solutions
-              </span>
+              Create <span className="bg-gradient-to-r from-green-400 via-blue-500 to-cyan-500 bg-clip-text text-transparent">Virtual Replicas</span> of Reality
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Create virtual replicas of your physical assets and systems for real-time monitoring, 
-              predictive analytics, and intelligent automation.
+              Transform your physical assets into intelligent digital twins with real-time monitoring, 
+              predictive analytics, and automated optimization.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105"
+              >
                 Get Started
-              </button>
-              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+              </Link>
+              <Link
+                to="/services"
+                className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
                 Learn More
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -425,7 +383,8 @@ export default function DigitalTwin() {
           </motion.div>
         </div>
       </section>
-=======
+
+      <SEO
         title="Digital Twin Services - Zion Tech Group"
         description="Create virtual replicas of your physical systems with our advanced Digital Twin technology. Real-time monitoring, predictive analytics, and AI-powered insights."
         keywords="digital twin, IoT monitoring, predictive analytics, 3D visualization, smart manufacturing, smart cities"
@@ -717,7 +676,6 @@ export default function DigitalTwin() {
           </div>
         </section>
       </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-80ee
     </div>
   );
 }

@@ -361,4 +361,4 @@ export default function CloudDevOps() {
     </div>
   );
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-80ee
+

@@ -235,7 +235,6 @@ export function AppHeader() {
                           >
                             View All Services
                           </Link>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-80ee
                         </div>
                       </div>
                     </div>
