@@ -13,13 +13,13 @@ export interface Revolutionary2028IoTEdgeComputingService {
   textColor: string;
   link: string;
   marketPosition: string;
-  targetAudience: string;
+  targetAudience: string[];
   trialDays: number;
   setupTime: string;
   category: string;
   realService: boolean;
   technology: string[];
-  integrations: [];
+  integrations: string[];
   useCases: string[];
   roi: string;
   competitors: string[];
@@ -66,7 +66,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-smart-city-platform-2028',
     marketPosition: 'Competes with Cisco Smart Cities ($500,000/year), Siemens Smart Cities ($800,000/year), and IBM Smart Cities ($1,000,000/year). Our advantage: AI-powered optimization, edge computing, and competitive pricing.',
-    targetAudience: 'City governments, Municipalities, Urban planners, Infrastructure companies, Technology companies',
+    targetAudience: ['City governments', 'Municipalities', 'Urban planners', 'Infrastructure companies', 'Technology companies'],
     trialDays: 90,
     setupTime: '6 months',
     category: 'Smart Cities',
@@ -118,7 +118,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/industrial-iot-edge-computing-2028',
     marketPosition: 'Competes with GE Digital ($200,000/year), Siemens Mindsphere ($300,000/year), and PTC ThingWorx ($150,000/year). Our advantage: Edge computing, AI optimization, and competitive pricing.',
-    targetAudience: 'Manufacturing companies, Industrial facilities, Oil and gas companies, Mining companies, Chemical plants',
+    targetAudience: ['Manufacturing companies', 'Industrial facilities', 'Oil and gas companies', 'Mining companies', 'Chemical plants'],
     trialDays: 60,
     setupTime: '3 months',
     category: 'Industrial IoT',
@@ -170,7 +170,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-healthcare-iot-platform-2028',
     marketPosition: 'Competes with Philips Healthcare ($500,000/year), Medtronic ($400,000/year), and GE Healthcare ($600,000/year). Our advantage: AI-powered insights, edge computing, and comprehensive healthcare integration.',
-    targetAudience: 'Hospitals', 'Medical clinics', 'Healthcare networks', 'Medical device companies', 'Research institutions',
+    targetAudience: ['Hospitals', 'Medical clinics', 'Healthcare networks', 'Medical device companies', 'Research institutions'],
     trialDays: 60,
     setupTime: '4 months',
     category: 'Healthcare IoT',
@@ -222,7 +222,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/smart-agriculture-iot-platform-2028',
     marketPosition: 'Competes with John Deere ($50,000/year), Trimble ($30,000/year), and Raven ($25,000/year). Our advantage: AI-powered insights, comprehensive IoT integration, and competitive pricing.',
-    targetAudience: 'Large-scale farms', 'Agricultural cooperatives', 'Food producers', 'Research institutions', 'Government agencies',
+    targetAudience: ['Large-scale farms', 'Agricultural cooperatives', 'Food producers', 'Research institutions', 'Government agencies'],
     trialDays: 45,
     setupTime: '2 months',
     category: 'Agriculture IoT',
@@ -274,7 +274,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/edge-ai-computing-infrastructure-2028',
     marketPosition: 'Competes with AWS Outposts ($100,000/year), Azure Stack ($80,000/year), and Google Anthos ($100,000/year). Our advantage: AI optimization, edge computing, and competitive pricing.',
-    targetAudience: 'Technology companies', 'IoT companies', 'Manufacturing companies', 'Healthcare organizations', 'Research institutions',
+    targetAudience: ['Technology companies', 'IoT companies', 'Manufacturing companies', 'Healthcare organizations', 'Research institutions'],
     trialDays: 30,
     setupTime: '2 months',
     category: 'Edge Computing',

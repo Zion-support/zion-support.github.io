@@ -1,11 +1,19 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+=======
+import { SEO } from '@/components/SEO';
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 import { 
-  Lightbulb, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Zap, 
   Rocket, 
+<<<<<<< HEAD
   Globe, 
   Users,
   TrendingUp,
@@ -15,9 +23,15 @@ import {
   Brain,
   Cloud,
   Zap,
+=======
+  Users, 
+  Award, 
+  TrendingUp,
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   ArrowRight,
   CheckCircle,
   Star,
+  Globe,
   Cpu,
   Database,
   Network,
@@ -34,6 +48,24 @@ import {
   HelpCircle,
   BookOpen,
   Briefcase,
+  Target,
+  Lightbulb,
+  ShieldCheck,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Atom,
+  Dna,
+  Microscope,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
   Eye,
   Ear,
   Hand,
@@ -41,37 +73,36 @@ import {
   Bone,
   Tooth,
   Pill,
+  Bandage,
+  Thermometer,
+  Scale,
+  Calculator,
+  ChartBar,
+  PieChart,
+  LineChart,
   Activity,
-  AlertTriangle,
-  CheckSquare,
-  Clock,
+  TrendingDown,
+  Minus,
+  Plus,
+  Equal,
+  Divide,
+  Percent,
   DollarSign,
-  Download,
-  EyeOff,
-  File,
-  FileCheck,
-  FileX,
-  Filter,
-  Flag,
-  Folder,
-  FolderOpen,
-  Gift,
-  GitBranch,
-  GitCommit,
-  GitMerge,
-  GitPullRequest,
-  Github,
-  Gitlab,
-  Globe2,
-  Hash,
-  Headphones,
-  HeartOff,
-  HelpCircle2,
-  Home,
-  Image,
-  Inbox,
-  Info,
+  Euro,
+  Pound,
+  Yen,
+  Bitcoin,
+  Ethereum,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
   Key,
+<<<<<<< HEAD
   Layers,
   Layout,
   LifeBuoy,
@@ -87,107 +118,19 @@ import {
   Maximize2,
   Menu,
   MessageSquare,
+=======
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   Mic,
   MicOff,
-  Minimize,
-  Minimize2,
-  Monitor2,
-  Moon,
-  MoreHorizontal,
-  MoreVertical,
-  MousePointer,
-  Move,
-  Music,
-  Navigation,
-  Navigation2,
-  Package,
-  Paperclip,
-  Pause,
-  PauseCircle,
-  Phone,
-  PhoneCall,
-  PhoneForwarded,
-  PhoneIncoming,
-  PhoneMissed,
-  PhoneOff,
-  PhoneOutgoing,
-  PieChart,
-  Play,
-  PlayCircle,
-  Plus,
-  PlusCircle,
-  PlusSquare,
-  Pocket,
-  Power,
-  Printer,
-  Radio,
-  RefreshCw,
-  RefreshCcw,
-  Repeat,
-  RotateCcw,
-  RotateCw,
-  Rss,
-  Save,
-  Scissors,
-  Search,
-  Send,
-  Server2,
-  Settings2,
-  Share,
-  Share2,
-  Shield2,
-  ShieldOff,
-  ShoppingBag,
-  ShoppingCart2,
-  Shuffle,
-  Sidebar,
-  SkipBack,
-  SkipForward,
-  Slash,
-  Sliders,
-  Smartphone2,
-  Smile,
-  Speaker,
-  Square,
-  Star2,
-  StopCircle,
-  Sun,
-  Sunrise,
-  Sunset,
-  Tablet,
-  Tag,
-  Target2,
-  Terminal,
-  Thermometer,
-  ThumbsDown,
-  ThumbsUp,
-  ToggleLeft,
-  ToggleRight,
-  Tool,
-  Trash,
-  Trash2,
-  TrendingDown,
-  TrendingUp2,
-  Truck,
-  Tv,
-  Type,
-  Umbrella,
-  Underline,
-  Unlock,
-  Upload,
-  User,
-  UserCheck,
-  UserMinus,
-  UserPlus,
-  UserX,
-  Users2,
-  Video2,
-  VideoOff,
-  Voicemail,
-  Volume,
-  Volume1,
   Volume2,
   VolumeX,
+<<<<<<< HEAD
   Watch,
   Wifi2,
   WifiOff,
@@ -199,51 +142,95 @@ import {
   Zap2,
   ZoomIn,
   ZoomOut
+=======
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Rewind,
+  FastForward,
+  ChevronRight,
+  MapPin,
+  Phone,
+  Mail,
+  Clock
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 } from 'lucide-react';
 
-export default function About() {
-  const values = [
+const About: React.FC = () => {
+  const stats = [
     {
+<<<<<<< HEAD
       icon: Lightbulb,
       title: "Innovation First",
       description: "We constantly push the boundaries of what's possible, embracing emerging technologies and creative solutions to solve complex challenges.",
       color: "from-zion-cyan to-zion-blue"
+=======
+      icon: Users,
+      value: "500+",
+      label: "Global Clients",
+      description: "Serving businesses worldwide"
+    },
+    {
+      icon: Globe,
+      value: "25+",
+      label: "Countries",
+      description: "Global presence"
+    },
+    {
+      icon: Code,
+      value: "1000+",
+      label: "Projects",
+      description: "Successfully delivered"
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
     },
     {
       icon: Award,
-      title: "Excellence",
-      description: "We maintain the highest standards in everything we do, from code quality to customer service, ensuring exceptional results for our clients.",
-      color: "from-zion-green to-emerald-500"
-    },
-    {
-      icon: Users,
-      title: "Collaboration",
-      description: "We believe in the power of teamwork and partnerships, working closely with clients and stakeholders to achieve shared success.",
-      color: "from-zion-purple to-pink-500"
+      value: "99%",
+      label: "Client Satisfaction",
+      description: "Proven track record"
     }
   ];
 
-  const stats = [
-    { value: "500+", label: "Global Clients", description: "Serving businesses worldwide" },
-    { value: "25+", label: "Countries", description: "Global presence" },
-    { value: "1000+", label: "Projects", description: "Successfully delivered" },
-    { value: "99.9%", label: "Uptime", description: "Reliable service" }
+  const values = [
+    {
+      icon: Brain,
+      title: "Innovation First",
+      description: "We stay ahead of the curve with cutting-edge technologies and forward-thinking solutions that drive business transformation."
+    },
+    {
+      icon: Shield,
+      title: "Excellence & Quality",
+      description: "Every project we undertake is executed with the highest standards of quality, security, and performance."
+    },
+    {
+      icon: Users,
+      title: "Client Partnership",
+      description: "We work closely with our clients to understand their needs and deliver solutions that exceed expectations."
+    },
+    {
+      icon: Rocket,
+      title: "Future-Ready",
+      description: "Our solutions are designed to scale and adapt to future technological advancements and business needs."
+    }
   ];
 
   const team = [
     {
-      name: "Dr. Sarah Chen",
-      role: "Chief Technology Officer",
-      description: "Leading our AI and quantum computing initiatives with 15+ years of experience in emerging technologies.",
-      image: "/images/team/sarah-chen.jpg"
+      name: "Kleber",
+      role: "Founder & CEO",
+      description: "Visionary leader with 15+ years in technology innovation and business transformation.",
+      expertise: ["AI & Machine Learning", "Strategic Planning", "Business Development"]
     },
     {
-      name: "Marcus Rodriguez",
-      role: "Head of Cybersecurity",
-      description: "Expert in zero-trust architecture and advanced threat protection with certifications in multiple security frameworks.",
-      image: "/images/team/marcus-rodriguez.jpg"
+      name: "AI Team",
+      role: "AI Research & Development",
+      description: "Expert team specializing in cutting-edge artificial intelligence and machine learning solutions.",
+      expertise: ["Neural Networks", "Computer Vision", "Natural Language Processing"]
     },
     {
+<<<<<<< HEAD
       name: "Dr. Elena Petrov",
       role: "Quantum Research Lead",
       description: "Pioneering quantum algorithms and quantum-classical hybrid systems for enterprise applications.",
@@ -276,10 +263,42 @@ export default function About() {
       year: "2024",
       title: "Industry Leadership",
       description: "Recognized as a leader in AI and quantum technology solutions."
+=======
+      name: "Security Team",
+      role: "Cybersecurity Specialists",
+      description: "Dedicated professionals ensuring the highest levels of digital security and compliance.",
+      expertise: ["Threat Detection", "Zero Trust Architecture", "Compliance"]
+    },
+    {
+      name: "Development Team",
+      role: "Software Engineers",
+      description: "Skilled developers creating robust, scalable, and innovative software solutions.",
+      expertise: ["Full-Stack Development", "Cloud Architecture", "DevOps"]
+    }
+  ];
+
+  const technologies = [
+    {
+      category: "Artificial Intelligence",
+      items: ["Machine Learning", "Deep Learning", "Computer Vision", "NLP", "AI Ethics"]
+    },
+    {
+      category: "Cybersecurity",
+      items: ["Zero Trust", "Threat Intelligence", "Penetration Testing", "Compliance", "Incident Response"]
+    },
+    {
+      category: "Cloud & Infrastructure",
+      items: ["Multi-Cloud", "DevOps", "Containerization", "Serverless", "Edge Computing"]
+    },
+    {
+      category: "Emerging Tech",
+      items: ["Quantum Computing", "Blockchain", "IoT", "5G", "Biotechnology"]
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
     }
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -343,20 +362,129 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+=======
+    <>
+      <SEO 
+        title="About Us - Zion Tech Group"
+        description="Learn about Zion Tech Group's mission to transform businesses through cutting-edge AI, cybersecurity, and emerging technology solutions."
+        keywords="about us, company, mission, vision, team, expertise, AI, cybersecurity, technology"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mb-8"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Our <span className="text-zion-cyan">Mission</span>
-              </h2>
-              <p className="text-lg text-zion-slate-light mb-6">
-                To democratize access to advanced technology and empower businesses of all sizes to achieve 
-                unprecedented growth through innovative AI solutions, quantum computing, and comprehensive IT services.
-              </p>
-              <p className="text-zion-slate-light">
-                We believe that cutting-edge technology should be accessible to everyone, not just large corporations. 
-                Our team of experts works tirelessly to develop solutions that level the playing field and enable 
-                businesses to compete in the digital age.
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+                <Rocket className="w-4 h-4 mr-2" />
+                About Zion Tech Group
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Transforming Business Through
+                <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Innovation</span>
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Zion Tech Group is a leading technology company dedicated to empowering businesses 
+                with cutting-edge AI solutions, cybersecurity excellence, and digital transformation services.
               </p>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <stat.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>
+                  <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
+                  <div className="text-gray-400">{stat.description}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Mission & Vision */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
+                  <p className="text-gray-300 leading-relaxed">
+                    To democratize access to cutting-edge technology solutions, enabling businesses of all sizes 
+                    to leverage the power of AI, cybersecurity, and emerging technologies to achieve sustainable growth 
+                    and competitive advantage in the digital economy.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
+                    <Lightbulb className="w-8 h-8 text-white" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-white mb-4">Our Vision</h2>
+                  <p className="text-gray-300 leading-relaxed">
+                    To be the global leader in AI-powered business solutions, pioneering the next generation 
+                    of technology that transforms how businesses operate, compete, and thrive in an increasingly 
+                    digital and AI-driven world.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Values */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Our Core Values
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                The principles that guide everything we do and every solution we deliver
+              </p>
+            </motion.div>
+<<<<<<< HEAD
 
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -499,10 +627,79 @@ export default function About() {
                 <div className="flex-1"></div>
               </motion.div>
             ))}
+=======
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
+        {/* Team Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Meet Our Team
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Passionate experts dedicated to delivering exceptional technology solutions
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {team.map((member, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
+                >
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2 text-center">{member.name}</h3>
+                  <div className="text-blue-400 text-center mb-3">{member.role}</div>
+                  <p className="text-gray-300 text-sm mb-4 text-center">{member.description}</p>
+                  <div className="space-y-1">
+                    {member.expertise.map((skill, idx) => (
+                      <div key={idx} className="flex items-center text-xs text-gray-400">
+                        <CheckCircle className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
+                        {skill}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
+          </div>
+        </section>
+
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -656,3 +853,88 @@ export default function About() {
 	);
 >>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 }
+=======
+        {/* Technology Expertise */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Technology Expertise
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive knowledge across cutting-edge technologies and industry best practices
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {technologies.map((tech, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-slate-800/30 border border-slate-700 rounded-lg p-6"
+                >
+                  <h3 className="text-lg font-semibold text-white mb-4 text-center">{tech.category}</h3>
+                  <div className="space-y-2">
+                    {tech.items.map((item, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-gray-400">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></div>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Work Together?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Let's discuss how our expertise and innovative solutions can transform your business 
+                and drive sustainable growth in the digital age.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 transform hover:scale-105"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+                <a
+                  href="/services"
+                  className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-all duration-200"
+                >
+                  View Our Services
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default About;
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87

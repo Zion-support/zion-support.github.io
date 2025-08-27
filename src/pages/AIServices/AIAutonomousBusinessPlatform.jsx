@@ -62,6 +62,10 @@ const modules = [
 export default function AIAutonomousBusinessPlatform() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEOHead title="AI Autonomous Business Platform - Zion Tech Group" description="Unified AI-powered business platform that integrates all operations. Streamline workflows, automate processes, and scale your business efficiently." keywords="AI business platform, unified business solution, business automation, integrated business management" canonical="https://ziontechgroup.com/ai-autonomous-business-platform/"/>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple/20"></div>

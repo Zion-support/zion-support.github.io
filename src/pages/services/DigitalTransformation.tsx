@@ -59,8 +59,33 @@ const DigitalTransformation: React.FC = () => {
       icon: "🏗️"
     }
   ];
+<<<<<<< HEAD
   const benefits = [
     "Increased operational efficiency by 50%",
+=======
+
+  const transformationAreas = [
+    { 
+      area: "Business Processes", 
+      solutions: ["Workflow automation", "Process optimization", "Digital workflows", "Performance monitoring"] 
+    },
+    { 
+      area: "Technology Infrastructure", 
+      solutions: ["Cloud migration", "Modern architecture", "Integration", "Scalability"] 
+    },
+    { 
+      area: "Data & Analytics", 
+      solutions: ["Data strategy", "Analytics platforms", "Business intelligence", "Data governance"] 
+    },
+    { 
+      area: "Customer Experience", 
+      solutions: ["Digital touchpoints", "User experience", "Customer journey", "Feedback systems"] 
+    }
+  ];
+
+  const benefits = [
+    "Improved operational efficiency and productivity",
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
     "Enhanced customer experience and satisfaction",
     "Reduced operational costs and waste",
     "Improved decision-making with real-time data",
@@ -203,6 +228,7 @@ const DigitalTransformation: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
+<<<<<<< HEAD
                 <div className="text-5xl mb-6">{service.icon}</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -224,6 +250,21 @@ const DigitalTransformation: React.FC = () => {
         </div>
       </section>
 <<<<<<< HEAD
+=======
+                <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
+                <ul className="space-y-2">
+                  {area.solutions.map((solution, solutionIndex) => (
+                    <li key={solutionIndex} className="flex items-center text-gray-300">
+                      <span className="text-cyan-400 mr-2">•</span>
+                      {solution}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -250,6 +291,7 @@ const DigitalTransformation: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
+<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-white mb-3">Increased Efficiency</h3>
               <p className="text-gray-300">Streamlined processes and automated workflows</p>
             </motion.div>
@@ -285,10 +327,14 @@ const DigitalTransformation: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Data-Driven Insights</h3>
               <p className="text-gray-300">Informed decision making and strategy</p>
             </motion.div>
+=======
+            ))}
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Process Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -324,6 +370,8 @@ const DigitalTransformation: React.FC = () => {
 
 =======
 >>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
+=======
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">

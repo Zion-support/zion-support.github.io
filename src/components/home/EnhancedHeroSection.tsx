@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+import Link from 'next/link';
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 import { 
   ArrowRight, 
   Play, 

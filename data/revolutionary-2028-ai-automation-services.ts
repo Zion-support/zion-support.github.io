@@ -13,7 +13,7 @@ export interface Revolutionary2028AIAutomationService {
   textColor: string;
   link: string;
   marketPosition: string;
-  targetAudience: string;
+  targetAudience: string[];
   trialDays: number;
   setupTime: string;
   category: string;
@@ -66,7 +66,7 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-autonomous-manufacturing-2028',
     marketPosition: 'Competes with Siemens Digital Industries ($100,000/year), Rockwell Automation ($150,000/year), and ABB ($200,000/year). Our advantage: Full autonomy, AI-powered optimization, and competitive pricing.',
-    targetAudience: 'Manufacturing companies, Industrial automation firms, Automotive manufacturers, Electronics producers, Chemical plants',
+    targetAudience: ['Manufacturing companies', 'Industrial automation firms', 'Automotive manufacturers', 'Electronics producers', 'Chemical plants'],
     trialDays: 90,
     setupTime: '3 months',
     category: 'AI Manufacturing',
@@ -118,7 +118,7 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-autonomous-agriculture-2028',
     marketPosition: 'Competes with John Deere ($50,000/year), Trimble ($30,000/year), and Raven ($25,000/year). Our advantage: Full autonomy, AI-powered insights, and comprehensive farm management.',
-    targetAudience: 'Large-scale farms, Agricultural cooperatives, Food producers, Research institutions, Government agencies',
+    targetAudience: ['Large-scale farms', 'Agricultural cooperatives', 'Food producers', 'Research institutions', 'Government agencies'],
     trialDays: 60,
     setupTime: '2 months',
     category: 'AI Agriculture',
@@ -170,7 +170,7 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-autonomous-healthcare-2028',
     marketPosition: 'Competes with Epic ($1,000,000/year), Cerner ($800,000/year), and Allscripts ($500,000/year). Our advantage: AI autonomy, comprehensive automation, and competitive pricing.',
-    targetAudience: 'Hospitals', 'Medical clinics', 'Research institutions', 'Pharmaceutical companies', 'Healthcare networks',
+    targetAudience: ['Hospitals', 'Medical clinics', 'Research institutions', 'Pharmaceutical companies', 'Healthcare networks'],
     trialDays: 90,
     setupTime: '4 months',
     category: 'AI Healthcare',
@@ -222,7 +222,7 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-logistics-2028',
     marketPosition: 'Competes with Manhattan Associates ($100,000/year), JDA Software ($150,000/year), and SAP SCM ($200,000/year). Our advantage: Full autonomy, AI-powered optimization, and competitive pricing.',
-    targetAudience: 'Logistics companies', 'E-commerce businesses', 'Manufacturing companies', 'Retail chains', 'Distribution centers',
+    targetAudience: ['Logistics companies', 'E-commerce businesses', 'Manufacturing companies', 'Retail chains', 'Distribution centers'],
     trialDays: 60,
     setupTime: '3 months',
     category: 'AI Logistics',
@@ -274,7 +274,7 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-autonomous-energy-management-2028',
     marketPosition: 'Competes with Siemens Energy ($200,000/year), GE Digital ($150,000/year), and Schneider Electric ($100,000/year). Our advantage: AI autonomy, comprehensive optimization, and competitive pricing.',
-    targetAudience: 'Utility companies', 'Energy producers', 'Industrial facilities', 'Commercial buildings', 'Government agencies',
+    targetAudience: ['Utility companies', 'Energy producers', 'Industrial facilities', 'Commercial buildings', 'Government agencies'],
     trialDays: 60,
     setupTime: '2 months',
     category: 'AI Energy',

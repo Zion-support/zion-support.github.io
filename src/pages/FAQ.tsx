@@ -123,8 +123,28 @@ const FAQ: React.FC = () => {
   };
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
+=======
+  const toggleCategory = (title: string) => {
+    setExpandedCategory(expandedCategory === title ? null : title);
+  };
+
+  const filteredCategories = useMemo(() => {
+    if (!searchQuery.trim()) return faqData;
+    
+    return faqData.map(category => ({
+      ...category,
+      questions: category.questions.filter(q =>
+        q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        q.answer.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    })).filter(category => category.questions.length > 0);
+  }, [searchQuery]);
+
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header Section */}

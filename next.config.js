@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
@@ -18,5 +19,22 @@ const nextConfig = {
 			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true },
 		];
 	},
+=======
+  reactStrictMode: true,
+  trailingSlash: true,
+  output: 'export',
+  assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || '',
+  images: {
+    unoptimized: true
+  },
+  pageExtensions: ['page.tsx','page.ts','page.jsx','page.js'],
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 };
 module.exports = nextConfig;

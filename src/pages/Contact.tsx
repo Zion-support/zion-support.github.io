@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 import { motion } from 'framer-motion';
 import { 
   Mail, 
   Phone, 
   MapPin, 
   Clock, 
+<<<<<<< HEAD
   Send, 
   MessageSquare, 
   Globe, 
@@ -16,6 +20,16 @@ import {
   Mailbox,
   Calendar,
   Star
+=======
+  MessageCircle,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Building,
+  Globe,
+  Users,
+  Award
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 } from 'lucide-react';
 
 export default function Contact() {
@@ -25,6 +39,7 @@ export default function Contact() {
     email: '',
     company: '',
     phone: '',
+<<<<<<< HEAD
     subject: '',
     message: '',
     department: 'general'
@@ -34,6 +49,16 @@ export default function Contact() {
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const handleInputChange = (e) => {
+=======
+    service: '',
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -41,6 +66,7 @@ export default function Contact() {
     }));
   };
 
+<<<<<<< HEAD
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -101,6 +127,74 @@ export default function Contact() {
     { id: 'partnerships', name: 'Partnerships', description: 'Explore collaboration opportunities' },
     { id: 'careers', name: 'Careers', description: 'Job opportunities and recruitment' },
     { id: 'media', name: 'Media & Press', description: 'Press inquiries and media relations' }
+=======
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      setSubmitStatus('success');
+      
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setSubmitStatus('idle');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          company: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      }, 3000);
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: "Phone",
+      details: "+1 302 464 0950",
+      description: "Available 24/7 for urgent support"
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      details: "kleber@ziontechgroup.com",
+      description: "Get a response within 2 hours"
+    },
+    {
+      icon: MapPin,
+      title: "Office",
+      details: "364 E Main St STE 1008 Middletown DE 19709",
+      description: "Visit us for in-person consultations"
+    },
+    {
+      icon: Clock,
+      title: "Business Hours",
+      details: "Mon-Fri: 9AM-6PM EST",
+      description: "Extended hours available by appointment"
+    }
+  ];
+
+  const services = [
+    "AI & Machine Learning",
+    "Cloud Infrastructure",
+    "Cybersecurity",
+    "Digital Transformation",
+    "Quantum Computing",
+    "IoT Solutions",
+    "Blockchain Services",
+    "Custom Development"
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   ];
 
   const officeHours = [
@@ -131,6 +225,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
@@ -138,6 +233,11 @@ export default function Contact() {
         </div>
         
         <div className="container mx-auto px-4 text-center relative z-10">
+=======
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20"></div>
+        <div className="relative z-10 container mx-auto px-4">
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -215,8 +315,13 @@ export default function Contact() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Contact Form & Office Info */}
       <section className="py-20 bg-zion-blue-dark">
+=======
+      {/* Main Content */}
+      <section className="py-20">
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
@@ -226,6 +331,7 @@ export default function Contact() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
               <div className="mb-8">
                 <h2 className="text-4xl font-bold text-white mb-4">Send Us a Message</h2>
                 <p className="text-zion-slate-light text-lg">
@@ -395,12 +501,179 @@ export default function Contact() {
             </motion.div>
 
             {/* Office Information */}
+=======
+              <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+              
+              {submitStatus === 'success' && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400"
+                >
+                  <div className="flex items-center">
+                    <CheckCircle className="h-5 w-5 mr-2" />
+                    Message sent successfully! We'll get back to you soon.
+                  </div>
+                </motion.div>
+              )}
+
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400"
+                >
+                  <div className="flex items-center">
+                    <AlertCircle className="h-5 w-5 mr-2" />
+                    Something went wrong. Please try again.
+                  </div>
+                </motion.div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors"
+                      placeholder="Enter your first name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors"
+                      placeholder="Enter your last name"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      Phone
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors"
+                    placeholder="Enter your company name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-zion-slate-light mb-2">
+                    Service Interest
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate/30 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors"
+                  >
+                    <option value="">Select a service</option>
+                    {services.map((service, index) => (
+                      <option key={index} value={service}>{service}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-2">
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors resize-none"
+                    placeholder="Tell us about your project or inquiry..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <Send className="ml-2 h-5 w-5" />
+                    </>
+                  )}
+                </button>
+              </form>
+            </motion.div>
+
+            {/* Contact Information */}
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
               <div className="mb-8">
                 <h2 className="text-4xl font-bold text-white mb-4">Office Information</h2>
                 <p className="text-zion-slate-light text-lg">
@@ -598,10 +871,66 @@ export default function Contact() {
               </button>
             </div>
           </motion.div>
+=======
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
+                <p className="text-zion-slate-light mb-8">
+                  Get in touch with our team of experts. We're here to help you transform your business 
+                  with cutting-edge technology solutions.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex items-start space-x-4"
+                  >
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
+                      <info.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
+                      <p className="text-zion-cyan font-medium mb-1">{info.details}</p>
+                      <p className="text-zion-slate-light text-sm">{info.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="bg-zion-slate-dark/30 rounded-xl p-6 border border-zion-slate/20">
+                <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    <span>Expert team with 15+ years of experience</span>
+                  </div>
+                  <div className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    <span>Cutting-edge AI and quantum technology</span>
+                  </div>
+                  <div className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    <span>Global presence in 50+ countries</span>
+                  </div>
+                  <div className="flex items-center text-zion-slate-light">
+                    <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    <span>24/7 support and maintenance</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 =======
 import { Header } from '@/components/header/Header';
 import { Footer } from '@/components/Footer';
@@ -908,4 +1237,6 @@ export default function Contact() {
 </>
     );
 >>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
+=======
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 }

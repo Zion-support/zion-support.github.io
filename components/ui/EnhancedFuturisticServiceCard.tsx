@@ -1,7 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Users, Globe, Cpu, Brain, Atom, Sparkles } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Users, Globe, Cpu, Brain, Atom, Sparkles, Mail } from 'lucide-react';
 import Button from './Button';
+<<<<<<< HEAD
+=======
+import Link from 'next/link';
+
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 interface EnhancedFuturisticServiceCardProps {
   service: {
     id: string;
@@ -226,25 +231,27 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
           </div>
           {/* Action Buttons */}
           <div className="flex gap-3 mt-auto">
-            <Button
-              href={service.link}
-              variant="primary"
-              size="sm"
-              className="flex-1 group-hover:bg-purple-600 transition-all duration-300 transform group-hover:scale-105"
-            >
-              Learn More
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link href={service.link}>
+              <Button
+                variant="default"
+                size="sm"
+                className="flex-1 group-hover:bg-purple-600 transition-all duration-300 transform group-hover:scale-105"
+              >
+                Learn More
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
             
-            <Button
-              href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-              variant="secondary"
-              size="sm"
-              className="px-4 hover:bg-gray-700 transition-colors duration-300"
-            >
-              <span className="hidden sm:inline">Contact</span>
-              <span className="sm:hidden">📧</span>
-            </Button>
+            <Link href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}>
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex-1 border-purple-500/30 text-purple-400 hover:bg-purple-500/10 transition-all duration-300"
+              >
+                Contact Sales
+                <Mail className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
           </div>
           {/* Contact Info */}
           <div className="mt-4 pt-4 border-t border-gray-700/50">

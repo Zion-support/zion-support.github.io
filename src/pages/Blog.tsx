@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+=======
+
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 import { 
   Search, 
   Filter, 
@@ -149,6 +155,7 @@ const Blog: React.FC = () => {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+<<<<<<< HEAD
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     
     return matchesSearch && matchesCategory;
@@ -156,6 +163,23 @@ const Blog: React.FC = () => {
 
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
+=======
+      const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+      return matchesSearch && matchesCategory;
+    });
+  }, [searchQuery, selectedCategory]);
+
+  const featuredPost = blogPosts.find(post => post.featured);
+  const regularPosts = filteredPosts.filter(post => !post.featured);
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
