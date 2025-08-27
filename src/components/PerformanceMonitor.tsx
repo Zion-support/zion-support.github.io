@@ -91,7 +91,7 @@ export const PerformanceMonitor: React.FC = () => {
         setTimeout(() => setShowAlert(false), 5000);
       }
     }
-  };
+  }, []);
   useEffect(() => {
     // Initial metrics
     updateMetrics();

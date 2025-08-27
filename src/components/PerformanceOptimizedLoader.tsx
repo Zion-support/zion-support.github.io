@@ -1,16 +1,21 @@
+import React, { memo } from 'react';
 import { motion } from 'framer-motion';
-interface LoadingSpinnerProps {
+
+interface LoaderProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
   fullScreen?: boolean;
+  showLogo?: boolean;
 }
-export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({ 
+
+export const PerformanceOptimizedLoader = memo<LoaderProps>(({ 
   size = 'md', 
   color = 'primary', 
   text,
-  fullScreen = false 
-}: LoaderProps) {
+  fullScreen = false,
+  showLogo = false
+}: LoaderProps) => {
   const sizeClasses = {
     sm: 'w-6 h-6',
     md: 'w-12 h-12',
@@ -56,6 +61,7 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
     </div>
   );
 });
+
 PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 // Skeleton loader for content
 export function SkeletonLoader({ 
