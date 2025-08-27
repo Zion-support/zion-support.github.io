@@ -354,7 +354,7 @@ export function AppHeader() {
             </div>
           </div>
         )}
-      
+      </div>
     </header>
   );
 }
