@@ -16,7 +16,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Orbitron', 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
             color: #ffffff;
             min-height: 100vh;
@@ -29,18 +29,18 @@
         .offline-container {
             text-align: center;
             max-width: 600px;
-            background: rgba(30, 41, 59, 0.8);
+            background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(14, 165, 233, 0.3);
-            border-radius: 24px;
-            padding: 48px 32px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.25);
         }
 
         .offline-icon {
             width: 120px;
             height: 120px;
-            margin: 0 auto 32px;
+            margin: 0 auto 30px;
             background: linear-gradient(135deg, #0ea5e9, #3b82f6);
             border-radius: 50%;
             display: flex;
@@ -49,12 +49,18 @@
             font-size: 48px;
             color: white;
             box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
         }
 
         .offline-title {
-            font-size: 36px;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             background: linear-gradient(135deg, #0ea5e9, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -62,39 +68,66 @@
         }
 
         .offline-subtitle {
-            font-size: 18px;
+            font-size: 1.2rem;
             color: #94a3b8;
             margin-bottom: 32px;
             line-height: 1.6;
         }
 
-        .offline-description {
-            font-size: 16px;
-            color: #cbd5e1;
-            margin-bottom: 32px;
-            line-height: 1.6;
+        .offline-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
         }
 
-        .offline-actions {
+        .feature {
+            background: rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #0ea5e9;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #e2e8f0;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+
+        .actions {
+            margin-top: 40px;
             display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 32px;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 16px 32px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 12px;
-            font-size: 16px;
+            border-radius: 8px;
             font-weight: 600;
+            text-decoration: none;
             cursor: pointer;
             transition: all 0.3s ease;
-            text-decoration: none;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
+            font-size: 1rem;
         }
 
         .btn-primary {
@@ -109,229 +142,206 @@
         }
 
         .btn-secondary {
-            background: rgba(51, 65, 85, 0.8);
-            color: #e2e8f0;
-            border: 1px solid rgba(148, 163, 184, 0.3);
+            background: transparent;
+            color: #0ea5e9;
+            border: 2px solid #0ea5e9;
         }
 
         .btn-secondary:hover {
-            background: rgba(51, 65, 85, 1);
-            border-color: rgba(148, 163, 184, 0.5);
-        }
-
-        .offline-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 32px;
-        }
-
-        .feature {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(14, 165, 233, 0.2);
-            border-radius: 16px;
-            padding: 24px;
-            text-align: center;
-        }
-
-        .feature-icon {
-            width: 48px;
-            height: 48px;
-            margin: 0 auto 16px;
-            background: linear-gradient(135deg, #0ea5e9, #3b82f6);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: white;
-        }
-
-        .feature-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #e2e8f0;
-            margin-bottom: 8px;
-        }
-
-        .feature-description {
-            font-size: 14px;
-            color: #94a3b8;
-            line-height: 1.5;
+            background: rgba(14, 165, 233, 0.1);
+            transform: translateY(-2px);
         }
 
         .connection-status {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(239, 68, 68, 0.9);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(239, 68, 68, 0.3);
+            margin-top: 30px;
+            padding: 15px;
+            background: rgba(14, 165, 233, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(14, 165, 233, 0.2);
         }
 
-        .connection-status.online {
-            background: rgba(34, 197, 94, 0.9);
-            border-color: rgba(34, 197, 94, 0.3);
+        .status-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .status-offline {
+            background: #ef4444;
+            animation: blink 1.5s infinite;
+        }
+
+        .status-online {
+            background: #10b981;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+
+        .service-showcase {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(14, 165, 233, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(14, 165, 233, 0.1);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(14, 165, 233, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(14, 165, 233, 0.2);
+        }
+
+        .service-icon {
+            font-size: 1.5rem;
+            color: #0ea5e9;
+            margin-bottom: 8px;
+        }
+
+        .service-name {
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            font-weight: 500;
         }
 
         @media (max-width: 768px) {
             .offline-container {
-                padding: 32px 24px;
+                padding: 30px 20px;
                 margin: 20px;
             }
 
             .offline-title {
-                font-size: 28px;
+                font-size: 2rem;
             }
 
-            .offline-subtitle {
-                font-size: 16px;
+            .offline-features {
+                grid-template-columns: 1fr;
             }
 
-            .offline-actions {
+            .actions {
                 flex-direction: column;
+                align-items: center;
             }
 
             .btn {
                 width: 100%;
-            }
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
+                max-width: 300px;
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
-    <div class="connection-status" id="connectionStatus">
-        <span id="statusText">Offline</span>
-    </div>
-
     <div class="offline-container">
-        <div class="offline-icon pulse">
-            📡
-        </div>
+        <div class="offline-icon">📡</div>
         
         <h1 class="offline-title">You're Offline</h1>
-        
-        <p class="offline-subtitle">
-            Don't worry! Zion Tech Group is still here to help, even when you're offline.
-        </p>
-        
-        <p class="offline-description">
-            We're working to get you back online. In the meantime, you can still access some of our cached content and learn about our AI-powered business solutions.
-        </p>
-        
-        <div class="offline-actions">
-            <button class="btn btn-primary" onclick="retryConnection()">
-                🔄 Try Again
-            </button>
-            <button class="btn btn-secondary" onclick="goHome()">
-                🏠 Go Home
-            </button>
-        </div>
+        <p class="offline-subtitle">Don't worry! Zion Tech Group is here to help you get back online and continue your journey.</p>
 
         <div class="offline-features">
             <div class="feature">
-                <div class="feature-icon">🤖</div>
-                <h3 class="feature-title">AI Solutions</h3>
-                <p class="feature-description">Cutting-edge artificial intelligence for your business</p>
+                <div class="feature-icon">🚀</div>
+                <div class="feature-title">AI-Powered Solutions</div>
+                <div class="feature-desc">Cutting-edge artificial intelligence services</div>
             </div>
-            
-            <div class="feature">
-                <div class="feature-icon">☁️</div>
-                <h3 class="feature-title">Cloud Services</h3>
-                <p class="feature-description">Scalable cloud infrastructure and DevOps solutions</p>
-            </div>
-            
             <div class="feature">
                 <div class="feature-icon">🔒</div>
-                <h3 class="feature-title">Cybersecurity</h3>
-                <p class="feature-description">Advanced security and compliance solutions</p>
+                <div class="feature-title">Cybersecurity</div>
+                <div class="feature-desc">Advanced security and compliance services</div>
             </div>
-            
             <div class="feature">
-                <div class="feature-icon">📱</div>
-                <h3 class="feature-title">Digital Transformation</h3>
-                <p class="feature-description">Modernize your business with our expertise</p>
+                <div class="feature-icon">☁️</div>
+                <div class="feature-title">Cloud Services</div>
+                <div class="feature-desc">Scalable cloud infrastructure solutions</div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-primary" onclick="window.location.reload()">
+                🔄 Try Again
+            </button>
+            <button class="btn btn-secondary" onclick="checkConnection()">
+                📡 Check Connection
+            </button>
+        </div>
+
+        <div class="connection-status">
+            <span class="status-indicator status-offline"></span>
+            <span id="status-text">Currently offline - checking connection...</span>
+        </div>
+
+        <div class="service-showcase">
+            <h3 style="color: #0ea5e9; margin-bottom: 15px;">Our Services</h3>
+            <div class="service-grid">
+                <div class="service-item">
+                    <div class="service-icon">🤖</div>
+                    <div class="service-name">AI Services</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🛡️</div>
+                    <div class="service-name">Security</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">💻</div>
+                    <div class="service-name">IT Solutions</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">📱</div>
+                    <div class="service-name">Mobile Apps</div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Connection status monitoring
-        function updateConnectionStatus() {
-            const statusElement = document.getElementById('connectionStatus');
-            const statusText = document.getElementById('statusText');
+        // Check connection status
+        function checkConnection() {
+            const statusText = document.getElementById('status-text');
+            const statusIndicator = document.querySelector('.status-indicator');
             
             if (navigator.onLine) {
-                statusElement.classList.add('online');
-                statusText.textContent = 'Online';
-                
-                // Redirect to main page after a short delay
+                statusText.textContent = 'Connection restored! Redirecting...';
+                statusIndicator.className = 'status-indicator status-online';
                 setTimeout(() => {
-                    window.location.href = '/';
+                    window.location.reload();
                 }, 2000);
             } else {
-                statusElement.classList.remove('online');
-                statusText.textContent = 'Offline';
+                statusText.textContent = 'Still offline - please check your internet connection';
+                statusIndicator.className = 'status-indicator status-offline';
             }
         }
 
-        // Retry connection
-        function retryConnection() {
-            if (navigator.onLine) {
-                window.location.reload();
-            } else {
-                // Show retry animation
-                const retryBtn = document.querySelector('.btn-primary');
-                retryBtn.innerHTML = '🔄 Checking...';
-                retryBtn.disabled = true;
-                
-                setTimeout(() => {
-                    if (navigator.onLine) {
-                        window.location.reload();
-                    } else {
-                        retryBtn.innerHTML = '🔴 Still Offline';
-                        setTimeout(() => {
-                            retryBtn.innerHTML = '🔄 Try Again';
-                            retryBtn.disabled = false;
-                        }, 2000);
-                    }
-                }, 3000);
-            }
-        }
+        // Listen for online/offline events
+        window.addEventListener('online', () => {
+            checkConnection();
+        });
 
-        // Go home
-        function goHome() {
-            window.location.href = '/';
-        }
+        window.addEventListener('offline', () => {
+            const statusText = document.getElementById('status-text');
+            const statusIndicator = document.querySelector('.status-indicator');
+            statusText.textContent = 'Connection lost - you are now offline';
+            statusIndicator.className = 'status-indicator status-offline';
+        });
 
-        // Event listeners
-        window.addEventListener('online', updateConnectionStatus);
-        window.addEventListener('offline', updateConnectionStatus);
-        
-        // Initial status check
-        updateConnectionStatus();
+        // Check connection on page load
+        window.addEventListener('load', () => {
+            setTimeout(checkConnection, 1000);
+        });
 
-        // Periodic connection check
-        setInterval(updateConnectionStatus, 5000);
-
-        // Service Worker registration
+        // Register service worker if supported
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js')
                 .then(registration => {
@@ -341,22 +351,6 @@
                     console.log('Service Worker registration failed:', error);
                 });
         }
-
-        // Add some interactivity
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add hover effects to features
-            const features = document.querySelectorAll('.feature');
-            features.forEach(feature => {
-                feature.addEventListener('mouseenter', () => {
-                    feature.style.transform = 'translateY(-5px)';
-                    feature.style.transition = 'transform 0.3s ease';
-                });
-                
-                feature.addEventListener('mouseleave', () => {
-                    feature.style.transform = 'translateY(0)';
-                });
-            });
-        });
     </script>
 </body>
 </html>

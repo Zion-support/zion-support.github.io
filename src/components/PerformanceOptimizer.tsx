@@ -1,222 +1,155 @@
-import React, { useEffect, useCallback, useRef } from 'react'
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface PerformanceMetrics {
-  fcp: number
-  lcp: number
-  fid: number
-  cls: number
-  ttfb: number
-  domLoad: number
-  windowLoad: number
+  loadTime: number;
+  memoryUsage: number;
+  cpuUsage: number;
 }
 
-interface PerformanceOptimizerProps {
-  enabled?: boolean
-  autoRefresh?: boolean
-  refreshInterval?: number
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
-}
+export const PerformanceOptimizer: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    memoryUsage: 0,
+    cpuUsage: 0
+  });
 
-export function PerformanceOptimizer({
-  enabled = true,
-  autoRefresh = false,
-  refreshInterval = 5000,
-  onMetricsUpdate
-}: PerformanceOptimizerProps) {
-  const metricsRef = useRef<PerformanceMetrics>({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0,
-    domLoad: 0,
-    windowLoad: 0
-  })
-
-  const observerRef = useRef<PerformanceObserver | null>(null)
-  const intervalRef = useRef<NodeJS.Timeout | null>(null)
-
-  // Measure Core Web Vitals
-  const measureCoreWebVitals = useCallback(() => {
-    if (!('PerformanceObserver' in window)) return
-
-    try {
-      // First Contentful Paint (FCP)
-      observerRef.current = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {
-            metricsRef.current.fcp = entry.startTime
-            onMetricsUpdate?.(metricsRef.current)
-          }
-        })
-      })
-      observerRef.current.observe({ entryTypes: ['paint'] })
-
-      // Largest Contentful Paint (LCP)
-      observerRef.current = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            metricsRef.current.lcp = entry.startTime
-            onMetricsUpdate?.(metricsRef.current)
-          }
-        })
-      })
-      observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] })
-
-      // First Input Delay (FID)
-      observerRef.current = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry) => {
-          if (entry.entryType === 'first-input') {
-            metricsRef.current.fid = entry.processingStart - entry.startTime
-            onMetricsUpdate?.(metricsRef.current)
-          }
-        })
-      })
-      observerRef.current.observe({ entryTypes: ['first-input'] })
-
-      // Cumulative Layout Shift (CLS)
-      observerRef.current = new PerformanceObserver((list) => {
-        let clsValue = 0
-        const entries = list.getEntries()
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value
-          }
-        })
-        metricsRef.current.cls = clsValue
-        onMetricsUpdate?.(metricsRef.current)
-      })
-      observerRef.current.observe({ entryTypes: ['layout-shift'] })
-    } catch (error) {
-      console.warn('PerformanceObserver not supported:', error)
-    }
-  }, [onMetricsUpdate])
-
-  // Measure additional performance metrics
-  const measureAdditionalMetrics = useCallback(() => {
-    if ('performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if (navigation) {
-        metricsRef.current.ttfb = navigation.responseStart - navigation.requestStart
-        metricsRef.current.domLoad = navigation.domContentLoadedEventEnd - navigation.navigationStart
-        metricsRef.current.windowLoad = navigation.loadEventEnd - navigation.navigationStart
-        onMetricsUpdate?.(metricsRef.current)
-      }
-    }
-  }, [onMetricsUpdate])
-
-  // Optimize images with lazy loading
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img[data-src]')
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement
-          img.src = img.dataset.src!
-          img.classList.remove('lazy')
-          imageObserver.unobserve(img)
-        }
-      })
-    })
-
-    images.forEach((img) => imageObserver.observe(img))
-  }, [])
-
-  // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {
-    const criticalResources = [
-      '/fonts/inter-var.woff2',
-      '/images/zion-logo.png',
-      '/images/zion-tech-group-og.jpg'
-    ]
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image'
-      link.crossOrigin = resource.startsWith('http') ? 'anonymous' : undefined
-      document.head.appendChild(link)
-    })
-  }, [])
-
-  // Optimize fonts
-  const optimizeFonts = useCallback(() => {
-    if ('fonts' in document) {
-      // Preload and optimize font loading
-      const fontFaceSet = document.fonts
-      fontFaceSet.ready.then(() => {
-        console.log('Fonts loaded successfully')
-      })
-    }
-  }, [])
-
-  // Monitor memory usage
-  const monitorMemory = useCallback(() => {
-    if ('memory' in performance) {
-      const memory = (performance as any).memory
-      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
-        console.warn('High memory usage detected')
-      }
-    }
-  }, [])
-
-  // Setup performance monitoring
   useEffect(() => {
-    if (!enabled) return
+    // Performance monitoring
+    const measurePerformance = () => {
+      if ('performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+        
+        setMetrics(prev => ({
+          ...prev,
+          loadTime: Math.round(loadTime)
+        }));
+      }
+    };
 
-    // Measure initial metrics
-    measureCoreWebVitals()
-    measureAdditionalMetrics()
+    // Memory usage monitoring
+    const measureMemory = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        setMetrics(prev => ({
+          ...prev,
+          memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024)
+        }));
+      }
+    };
 
-    // Optimize resources
-    optimizeImages()
-    preloadCriticalResources()
-    optimizeFonts()
+    // CPU usage monitoring
+    const measureCPU = () => {
+      if ('getEntriesByType' in performance) {
+        const paintEntries = performance.getEntriesByType('paint');
+        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcp) {
+          setMetrics(prev => ({
+            ...prev,
+            cpuUsage: Math.round(fcp.startTime)
+          }));
+        }
+      }
+    };
 
-    // Setup auto-refresh if enabled
-    if (autoRefresh) {
-      intervalRef.current = setInterval(() => {
-        measureAdditionalMetrics()
-        monitorMemory()
-      }, refreshInterval)
-    }
+    // Run measurements after page load
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        measurePerformance();
+        measureMemory();
+        measureCPU();
+      }, 100);
+    });
 
     // Cleanup
     return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect()
-      }
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current)
-      }
-    }
-  }, [enabled, autoRefresh, refreshInterval, measureCoreWebVitals, measureAdditionalMetrics, optimizeImages, preloadCriticalResources, optimizeFonts, monitorMemory])
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, []);
 
-  // Log performance metrics to console in development
+  // Performance optimization features
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      const logMetrics = () => {
-        console.group('🚀 Performance Metrics')
-        console.log('FCP:', metricsRef.current.fcp.toFixed(2), 'ms')
-        console.log('LCP:', metricsRef.current.lcp.toFixed(2), 'ms')
-        console.log('FID:', metricsRef.current.fid.toFixed(2), 'ms')
-        console.log('CLS:', metricsRef.current.cls.toFixed(4))
-        console.log('TTFB:', metricsRef.current.ttfb.toFixed(2), 'ms')
-        console.log('DOM Load:', metricsRef.current.domLoad.toFixed(2), 'ms')
-        console.log('Window Load:', metricsRef.current.windowLoad.toFixed(2), 'ms')
-        console.groupEnd()
-      }
+    // Lazy load images
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
 
-      // Log metrics after a delay to allow them to be measured
-      const timeoutId = setTimeout(logMetrics, 3000)
-      return () => clearTimeout(timeoutId)
-    }
-  }, [])
+    lazyImages.forEach(img => imageObserver.observe(img));
 
-  // Return null as this is a utility component
-  return null
-}
+    // Preload critical resources
+    const preloadLinks = [
+      { rel: 'preload', href: '/fonts/orbitron-v16-latin-400.woff2', as: 'font', type: 'font/woff2' },
+      { rel: 'preload', href: '/fonts/orbitron-v16-latin-600.woff2', as: 'font', type: 'font/woff2' }
+    ];
+
+    preloadLinks.forEach(link => {
+      const linkElement = document.createElement('link');
+      Object.assign(linkElement, link);
+      document.head.appendChild(linkElement);
+    });
+
+    return () => {
+      imageObserver.disconnect();
+    };
+  }, []);
+
+  // Only show in development or when explicitly enabled
+  if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
+
+  return (
+    <motion.div
+      className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm text-white p-4 rounded-lg shadow-2xl border border-cyan-400/50 z-50"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <h3 className="text-sm font-bold text-cyan-400 mb-2">Performance Monitor</h3>
+      <div className="space-y-1 text-xs">
+        <div className="flex justify-between">
+          <span>Load Time:</span>
+          <span className={metrics.loadTime > 3000 ? 'text-red-400' : 'text-green-400'}>
+            {metrics.loadTime}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>Memory:</span>
+          <span className={metrics.memoryUsage > 100 ? 'text-yellow-400' : 'text-green-400'}>
+            {metrics.memoryUsage}MB
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className={metrics.cpuUsage > 2000 ? 'text-red-400' : 'text-green-400'}>
+            {metrics.cpuUsage}ms
+          </span>
+        </div>
+      </div>
+      
+      {/* Performance tips */}
+      <div className="mt-3 pt-2 border-t border-cyan-400/30">
+        <div className="text-xs text-cyan-300">
+          {metrics.loadTime > 3000 && (
+            <div className="mb-1">⚠️ Consider code splitting</div>
+          )}
+          {metrics.memoryUsage > 100 && (
+            <div className="mb-1">⚠️ Memory usage high</div>
+          )}
+          {metrics.cpuUsage > 2000 && (
+            <div>⚠️ Optimize rendering</div>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
+};

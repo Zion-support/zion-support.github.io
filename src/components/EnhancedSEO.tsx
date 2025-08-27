@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -67,7 +67,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   const fullCanonicalUrl = canonicalUrl || fullUrl;
   
   // Default structured data for Zion Tech Group
-  const defaultStructuredData = {
+  const defaultStructuredData = useMemo(() => ({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -93,63 +93,34 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       description: 'AI-Powered Business Solutions',
       category: 'Technology Services'
     }
-  };
+  }), []);
 
-  const finalStructuredData = structuredData || defaultStructuredData;
+  // Merge custom structured data with defaults
+  const finalStructuredData = useMemo(() => {
+    if (structuredData) {
+      return {
+        ...defaultStructuredData,
+        ...structuredData
+      };
+    }
+    return defaultStructuredData;
+  }, [structuredData, defaultStructuredData]);
 
+  // Preload critical resources
   useEffect(() => {
-    // Update document title for better UX
-    document.title = fullTitle;
-    
-    // Add meta description to document head if not present
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
-
-    // Add viewport meta tag if not present
-    let viewportMeta = document.querySelector('meta[name="viewport"]');
-    if (!viewportMeta) {
-      viewportMeta = document.createElement('meta');
-      viewportMeta.setAttribute('name', 'viewport');
-      document.head.appendChild(viewportMeta);
-    }
-    viewportMeta.setAttribute('content', viewport);
-
-    // Add charset meta tag if not present
-    let charsetMeta = document.querySelector('meta[charset]');
-    if (!charsetMeta) {
-      charsetMeta = document.createElement('meta');
-      charsetMeta.setAttribute('charset', charset);
-      document.head.appendChild(charsetMeta);
-    }
-
-    // Preload critical resources
     const preloadLinks = [
-      { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
-      { rel: 'preload', href: '/images/zion-tech-group-logo.png', as: 'image' },
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://cdn.jsdelivr.net' }
+      { rel: 'preload', href: '/css/main.css', as: 'style' },
+      { rel: 'preload', href: '/js/main.js', as: 'script' },
+      { rel: 'preload', href: image, as: 'image' }
     ];
 
     preloadLinks.forEach(link => {
       const linkElement = document.createElement('link');
-      Object.entries(link).forEach(([key, value]) => {
-        if (key === 'rel') {
-          linkElement.setAttribute('rel', value);
-        } else {
-          linkElement.setAttribute(key, value);
-        }
-      });
+      Object.assign(linkElement, link);
       document.head.appendChild(linkElement);
     });
 
-    // Cleanup function
     return () => {
-      // Remove preload links on unmount
       preloadLinks.forEach(link => {
         const existingLink = document.querySelector(`link[href="${link.href}"]`);
         if (existingLink) {
@@ -157,9 +128,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         }
       });
     };
-  }, [fullTitle, description, viewport, charset]);
-
-  const robotsValue = robots || `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
+  }, [image]);
 
   return (
     <Helmet>
@@ -168,14 +137,21 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content={author} />
-      <meta name="robots" content={robotsValue} />
-      <meta name="viewport" content={viewport} />
-      <meta charSet={charset} />
       
       {/* Canonical URL */}
       <link rel="canonical" href={fullCanonicalUrl} />
       
-      {/* Open Graph Meta Tags */}
+      {/* Robots */}
+      <meta name="robots" content={robots || `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
+      
+      {/* Viewport and Charset */}
+      <meta name="viewport" content={viewport} />
+      <meta charSet={charset} />
+      
+      {/* Theme Color */}
+      <meta name="theme-color" content={themeColor} />
+      
+      {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
@@ -183,14 +159,8 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.map(tag => (
-        <meta key={tag} property="article:tag" content={tag} />
-      ))}
       
-      {/* Twitter Card Meta Tags */}
+      {/* Twitter Cards */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:creator" content={twitterCreator} />
@@ -198,61 +168,44 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       
-      {/* Additional Meta Tags */}
-      <meta name="theme-color" content={themeColor} />
-      <meta name="msapplication-TileColor" content={msTileColor} />
-      <meta name="msapplication-config" content={msConfig} />
+      {/* Article specific meta tags */}
+      {type === 'article' && (
+        <>
+          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          {section && <meta property="article:section" content={section} />}
+          {tags.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
       
-      {/* Favicon and App Icons */}
+      {/* Icons and Manifest */}
       <link rel="icon" href={favicon} />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
       <link rel="manifest" href={manifest} />
+      
+      {/* Microsoft Tiles */}
+      <meta name="msapplication-TileColor" content={msTileColor} />
+      <meta name="msapplication-config" content={msConfig} />
       
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      {/* Additional SEO optimizations */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
-      {/* Security Meta Tags */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="referrer" content="strict-origin-when-cross-origin" />
-      
-      {/* Performance Meta Tags */}
-      <meta name="renderer" content="webkit" />
-      <meta name="force-rendering" content="webkit" />
-      
-      {/* Language and Region */}
-      <meta httpEquiv="Content-Language" content="en" />
-      <meta name="language" content="English" />
-      <meta name="geo.region" content="US" />
-      <meta name="geo.placename" content="United States" />
-      
-      {/* Business Information */}
-      <meta name="business:contact_data:street_address" content="Zion Tech Group" />
-      <meta name="business:contact_data:locality" content="Technology Services" />
-      <meta name="business:contact_data:region" content="AI Solutions" />
-      <meta name="business:contact_data:postal_code" content="Digital Innovation" />
-      <meta name="business:contact_data:country_name" content="United States" />
-      <meta name="business:contact_data:phone_number" content="AI-Powered Solutions" />
-      <meta name="business:contact_data:email" content="contact@ziontechgroup.com" />
-      
-      {/* Service Information */}
-      <meta name="service:name" content="AI-Powered Business Solutions" />
-      <meta name="service:type" content="Technology Services" />
-      <meta name="service:description" content="Comprehensive AI and technology solutions for modern businesses" />
-      
-      {/* Industry and Category */}
-      <meta name="industry" content="Technology" />
-      <meta name="category" content="AI Services" />
-      <meta name="classification" content="Business Technology Solutions" />
+      {/* Performance hints */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     </Helmet>
   );
 };
