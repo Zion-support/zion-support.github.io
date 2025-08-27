@@ -11,7 +11,7 @@ export default defineConfig({
     }
   },
   build: {
-    target: 'es2019',
+    target: 'es2022',
     minify: 'terser',
     sourcemap: process.env.NODE_ENV !== 'production' ? 'hidden' : false,
     reportCompressedSize: false,

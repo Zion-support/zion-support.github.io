@@ -51,7 +51,6 @@ const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/Equipment'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const MarketplaceProducts = React.lazy(() => import('./pages/marketplace/Products'));
 const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'));
