@@ -35,8 +35,11 @@
   package = "netlify-plugin-cloudinary"
   inputs = {}
 
-# Note: Next.js plugin is not included since this is a Vite project
-# The plugin will not be loaded automatically if not specified
+# Include Next.js plugin but skip it for Vite project
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    skip = true
 
 # Redirects for SEO/legacy URLs
 [[redirects]]
